@@ -14,8 +14,17 @@ function dgc_defaults() {
 		'zalo'          => '0988769317',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
 
-		'hero_title'    => 'Đăng ký tên miền và hosting giá tốt, kích hoạt ngay',
-		'hero_sub'      => 'Kiểm tra tên miền bạn muốn, chọn gói hosting phù hợp. Đội ngũ Digicom hỗ trợ kỹ thuật tận tình từ lúc đăng ký đến khi vận hành.',
+		'hero_title'    => 'Digicom - Đối tác công nghệ và marketing số cho doanh nghiệp',
+		'hero_sub'      => 'Tên miền, hosting, thiết kế website và các dịch vụ marketing off-page SEO - Digicom đồng hành cùng doanh nghiệp xây dựng nền tảng số vững chắc.',
+
+		// so lieu gioi thieu (demo, can cap nhat so that): so | nhan
+		'about_stats'   => "5+ | Năm hoạt động\n80+ | Khách hàng doanh nghiệp\n4 | Dịch vụ chính\n24/7 | Hỗ trợ kỹ thuật",
+
+		// Doan gioi thieu ngan tren trang chu
+		'about_teaser'  => "Digicom là đối tác công nghệ và marketing số cho doanh nghiệp vừa và nhỏ tại Việt Nam. Chúng tôi cung cấp hạ tầng website (tên miền, hosting) và các dịch vụ off-page SEO (textlink, backlink, guest post, booking báo PR), giúp doanh nghiệp xây dựng và phát triển hiện diện trực tuyến.",
+
+		// Logo bao chi (demo/placeholder - thay bang logo that khi co)
+		'press_logos'   => "Báo A\nBáo B\nBáo C\nBáo D\nBáo E",
 
 		// tld | gia/nam | nhan (tuy chon)
 		'domain_tlds'   => ".com | 199.000đ | Phổ biến\n.vn | 250.000đ | Uy tín VN\n.com.vn | 150.000đ | \n.net | 230.000đ | \n.org | 230.000đ | \n.info | 90.000đ | Giá tốt\n.store | 70.000đ | \n.online | 60.000đ | ",
@@ -30,7 +39,7 @@ function dgc_defaults() {
 		'reasons'       => "Hạ tầng ổn định | Uptime cao, máy chủ tối ưu cho website tại Việt Nam\nKích hoạt tức thì | Tên miền và hosting sẵn sàng ngay sau khi thanh toán\nHỗ trợ 24/7 | Đội ngũ kỹ thuật trực qua hotline, Zalo và email\nGiá minh bạch | Niêm yết rõ ràng, không phí ẩn, gia hạn đúng giá ưu đãi",
 
 		// FAQ (cau hoi | tra loi)
-		'faqs'          => "Đăng ký tên miền cần giấy tờ gì? | Với tên miền quốc tế (.com, .net) chỉ cần email. Tên miền .vn cần bản khai theo quy định, Digicom hướng dẫn chi tiết từng bước.\nHosting có hỗ trợ WordPress không? | Có. Tất cả các gói đều chạy tốt WordPress; riêng gói WordPress được tối ưu sẵn cache và bảo mật.\nChuyển tên miền từ nhà cung cấp khác như thế nào? | Bạn cung cấp mã EPP, Digicom xử lý chuyển về trong 5 đến 7 ngày, website không bị gián đoạn.\nThanh toán bằng những hình thức nào? | Chuyển khoản ngân hàng, ví điện tử và quẹt thẻ. Dịch vụ kích hoạt ngay sau khi xác nhận thanh toán.",
+		'faqs'          => "Digicom cung cấp những dịch vụ gì? | Tên miền, hosting, và các dịch vụ marketing off-page SEO (textlink, backlink, guest post, booking báo PR). Xem chi tiết tại mục Dịch vụ.\nLàm sao để bắt đầu hợp tác với Digicom? | Để lại thông tin liên hệ hoặc gọi hotline, đội ngũ Digicom sẽ tư vấn giải pháp phù hợp trong thời gian sớm nhất.\nDigicom hỗ trợ kỹ thuật như thế nào? | Đội ngũ hỗ trợ qua hotline, Zalo và email trong giờ làm việc, phản hồi nhanh với các vấn đề khẩn cấp.\nThanh toán bằng những hình thức nào? | Chuyển khoản ngân hàng, ví điện tử và quẹt thẻ. Dịch vụ triển khai ngay sau khi xác nhận thanh toán.",
 
 		// Dich vu theo nhom. Dong bat dau bang # = ten nhom; dong con lai: ten | mo ta
 		'services'      => "# Tên miền & Hosting\nTên miền | Đăng ký, gia hạn và quản lý tên miền .com, .vn và nhiều đuôi khác.\nHosting | Hosting SSD tốc độ cao, tối ưu sẵn cho WordPress.\n# Marketing & SEO\nDịch vụ SEO / GEO | Tối ưu thứ hạng trên Google và các công cụ tìm kiếm AI.\nTextlink, Backlink, Guest Post, Booking PR | Off-page SEO trọn gói - xem chi tiết tại mục Dịch vụ.\nGoogle Ads | Thiết lập và tối ưu quảng cáo Google, tăng chuyển đổi.",
@@ -89,11 +98,14 @@ function dgc_settings_page() {
 				?>
 			</table>
 
-			<h2>2. Hero (dau trang)</h2>
+			<h2>2. Hero + Gioi thieu cong ty (trang chu)</h2>
 			<table class="form-table">
 				<?php
 				dgc_field( 'hero_title', 'Tieu de lon' );
 				dgc_field( 'hero_sub', 'Mo ta phu', '', 'textarea' );
+				dgc_field( 'about_stats', 'So lieu gioi thieu (DEMO - sua thanh so that)', 'Moi dong: so | nhan. VD: 5+ | Nam hoat dong', 'textarea' );
+				dgc_field( 'about_teaser', 'Doan gioi thieu ngan', '', 'textarea' );
+				dgc_field( 'press_logos', 'Ten bao chi (DEMO - thay bang logo/ten bao that khi co)', 'Moi dong 1 ten bao. Hien placeholder cho den khi co logo that.', 'textarea' );
 				?>
 			</table>
 

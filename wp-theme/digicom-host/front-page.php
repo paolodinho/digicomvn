@@ -1,38 +1,40 @@
 <?php
 /**
- * Trang chu Digicom - ban ten mien & hosting.
+ * Trang chu Digicom - gioi thieu cong ty va dich vu.
+ * Tra cuu/bang gia ten mien va hosting nam o trang /ten-mien/ va /hosting/.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 ?>
 
-<!-- 02. HERO + DOMAIN SEARCH (tam diem trang chu, luon o man hinh dau) -->
-<section class="hero" id="domains">
+<!-- 01. HERO - GIOI THIEU CONG TY -->
+<section class="hero">
 	<div class="wrap hero-inner">
-		<span class="eyebrow">Tên miền &middot; Hosting &middot; SEO</span>
+		<span class="eyebrow">Tên miền &middot; Hosting &middot; Marketing &amp; SEO</span>
 		<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 		<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 
-		<div class="search-card">
-			<form class="search-box" onsubmit="window.open('https://www.pavietnam.vn/','_blank');return false;">
-				<input type="text" placeholder="Nhập tên miền bạn muốn tìm..." aria-label="Tên miền">
-				<button type="submit">Kiểm tra</button>
-			</form>
-			<div class="tld-row">
-				<?php foreach ( dgc_lines( 'domain_tlds' ) as $d ) :
-					$tld   = $d[0] ?? '';
-					$price = $d[1] ?? '';
-					if ( $tld === '' ) continue; ?>
-					<span class="tld-chip"><?php echo esc_html( $tld ); ?> <b><?php echo esc_html( $price ); ?></b></span>
-				<?php endforeach; ?>
-			</div>
-			<p class="muted" style="font-size:12.5px;margin:10px 2px 0">Đăng ký tên miền và hosting qua đối tác PA Việt Nam - Digicom hỗ trợ tư vấn và kỹ thuật.</p>
+		<div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:6px">
+			<a class="btn btn-primary" href="#services">Xem dịch vụ</a>
+			<a class="btn btn-ghost" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Liên hệ</a>
 		</div>
 
-		<div class="trust-row">
-			<div class="t"><b>Kích hoạt</b> tức thì</div>
-			<div class="t"><b>SSL</b> miễn phí</div>
-			<div class="t"><b>Hỗ trợ</b> 24/7</div>
+		<div class="trust-row" style="margin-top:38px">
+			<?php foreach ( dgc_lines( 'about_stats' ) as $s ) :
+				$num = $s[0] ?? ''; $label = $s[1] ?? ''; if ( $num === '' ) continue; ?>
+				<div class="t"><b style="font-size:20px"><?php echo esc_html( $num ); ?></b> <?php echo esc_html( $label ); ?></div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+
+<!-- 02. VE DIGICOM - TEASER -->
+<section class="sec-tight">
+	<div class="wrap">
+		<div class="center" style="max-width:760px;margin:0 auto">
+			<span class="eyebrow">Về Digicom</span>
+			<p class="muted" style="font-size:16.5px;line-height:1.75"><?php echo esc_html( dgc( 'about_teaser' ) ); ?></p>
+			<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="margin-top:12px">Tìm hiểu thêm về Digicom</a>
 		</div>
 	</div>
 </section>
@@ -51,63 +53,11 @@ get_header();
 	</div>
 </section>
 
-<!-- 04. DOMAIN PRICING -->
-<section class="sec">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:36px">
-			<span class="eyebrow">Bảng giá tên miền</span>
-			<h2>Chọn đuôi tên miền phù hợp</h2>
-			<p class="muted">Giá đã bao gồm quản lý DNS và hỗ trợ chuyển về miễn phí.</p>
-		</div>
-		<div class="dom-grid">
-			<?php foreach ( dgc_lines( 'domain_tlds' ) as $d ) :
-				$tld = $d[0] ?? ''; $price = $d[1] ?? ''; $badge = $d[2] ?? '';
-				if ( $tld === '' ) continue; ?>
-				<div class="dom-card">
-					<div class="tld"><?php echo esc_html( $tld ); ?></div>
-					<div class="badge"><?php echo esc_html( $badge ); ?></div>
-					<div class="price"><?php echo esc_html( $price ); ?></div>
-					<div class="per">/ năm</div>
-					<a class="btn btn-ghost btn-sm" href="https://www.pavietnam.vn/" target="_blank" rel="noopener">Đăng ký</a>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
-
-<!-- 05. HOSTING PLANS -->
-<section class="sec" id="hosting" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:42px">
-			<span class="eyebrow">Web Hosting</span>
-			<h2>Gói hosting tốc độ cao</h2>
-			<p class="muted">Ổ cứng SSD, LiteSpeed, SSL miễn phí. Phù hợp từ website cá nhân đến doanh nghiệp.</p>
-		</div>
-		<div class="host-grid">
-			<?php foreach ( dgc_lines( 'hosting_plans' ) as $h ) :
-				$name = $h[0] ?? ''; $price = $h[1] ?? ''; $feats = $h[2] ?? ''; $feat = ( ( $h[3] ?? '0' ) === '1' );
-				if ( $name === '' ) continue; ?>
-				<div class="host-card<?php echo $feat ? ' feat' : ''; ?>">
-					<?php if ( $feat ) : ?><span class="tag-feat">Phổ biến nhất</span><?php endif; ?>
-					<div class="pname"><?php echo esc_html( $name ); ?></div>
-					<div class="pprice"><?php echo esc_html( $price ); ?></div>
-					<ul>
-						<?php foreach ( array_filter( array_map( 'trim', explode( ';', $feats ) ) ) as $f ) : ?>
-							<li><?php echo esc_html( $f ); ?></li>
-						<?php endforeach; ?>
-					</ul>
-					<a class="btn <?php echo $feat ? 'btn-primary' : 'btn-navy'; ?>" href="https://www.pavietnam.vn/" target="_blank" rel="noopener">Chọn gói</a>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
-
-<!-- 06. DICH VU THEO NHOM -->
+<!-- 04. DICH VU THEO NHOM -->
 <?php
 $svc_meta = array(
-	'Tên miền & Hosting'   => array( 'eyebrow' => 'Hạ tầng', 'path' => 'M3 7h18M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7M9 11h6' ),
-	'Marketing & SEO'      => array( 'eyebrow' => 'Marketing', 'path' => 'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
+	'Tên miền & Hosting'   => array( 'path' => 'M3 7h18M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7M9 11h6', 'url' => home_url( '/ten-mien/' ), 'cta' => 'Xem tên miền & hosting' ),
+	'Marketing & SEO'      => array( 'path' => 'M4 19V10M10 19V5M16 19v-6M20 19H3', 'url' => home_url( '/dich-vu/' ), 'cta' => 'Xem dịch vụ marketing' ),
 );
 ?>
 <section class="sec" id="services" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
@@ -117,9 +67,9 @@ $svc_meta = array(
 			<h2>Giải pháp số trọn gói cho doanh nghiệp</h2>
 			<p class="muted">Tên miền, hosting và các dịch vụ marketing off-page SEO.</p>
 		</div>
-		<div class="svc-groups">
+		<div class="svc-groups" style="grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto">
 			<?php foreach ( dgc_service_groups() as $g ) :
-				$meta = $svc_meta[ $g['title'] ] ?? array( 'eyebrow' => '', 'path' => 'M5 12h14' ); ?>
+				$meta = $svc_meta[ $g['title'] ] ?? array( 'path' => 'M5 12h14', 'url' => home_url( '/lien-he/' ), 'cta' => 'Tìm hiểu thêm' ); ?>
 				<div class="svc-group">
 					<div class="svc-ghead">
 						<span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $meta['path'] ); ?>"/></svg></span>
@@ -133,13 +83,14 @@ $svc_meta = array(
 							</li>
 						<?php endforeach; ?>
 					</ul>
+					<a class="btn btn-navy btn-sm" href="<?php echo esc_url( $meta['url'] ); ?>" style="margin:14px 0 16px;width:100%;justify-content:center"><?php echo esc_html( $meta['cta'] ); ?></a>
 				</div>
 			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
 
-<!-- 07. REASONS -->
+<!-- 05. REASONS -->
 <section class="sec band-navy">
 	<div class="wrap">
 		<div class="center">
@@ -158,7 +109,26 @@ $svc_meta = array(
 	</div>
 </section>
 
-<!-- 07b. TESTIMONIALS -->
+<!-- 05b. BAO CHI NOI VE CHUNG TOI (demo - cho logo/ten bao that) -->
+<section class="sec-tight">
+	<div class="wrap">
+		<div class="center" style="margin-bottom:22px">
+			<span class="eyebrow">Báo chí nói về chúng tôi</span>
+		</div>
+		<div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;opacity:.55">
+			<?php foreach ( dgc_lines( 'press_logos' ) as $pr ) :
+				$name = $pr[0] ?? ''; if ( $name === '' ) continue; ?>
+				<div style="border:1px dashed var(--line-2);border-radius:var(--r-sm);padding:14px 26px;
+					font-family:var(--font-display);font-weight:600;color:var(--ink-soft);font-size:14px">
+					<?php echo esc_html( $name ); ?>
+				</div>
+			<?php endforeach; ?>
+		</div>
+		<p class="muted center" style="font-size:12.5px;margin-top:14px">Khu vực demo - cập nhật logo báo chí thật khi có bài đăng chính thức.</p>
+	</div>
+</section>
+
+<!-- 06. TESTIMONIALS -->
 <section class="sec" id="danh-gia">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:38px">
@@ -182,13 +152,13 @@ $svc_meta = array(
 	</div>
 </section>
 
-<!-- 08. CTA BAND -->
+<!-- 07. CTA BAND -->
 <section class="sec-tight">
 	<div class="wrap">
 		<div class="cta-band">
 			<div>
-				<h2>Chưa biết chọn gói nào?</h2>
-				<p>Để đội ngũ Digicom tư vấn miễn phí gói tên miền và hosting phù hợp với bạn.</p>
+				<h2>Sẵn sàng hợp tác cùng Digicom?</h2>
+				<p>Để lại thông tin, đội ngũ Digicom sẽ tư vấn giải pháp phù hợp cho doanh nghiệp của bạn.</p>
 			</div>
 			<div class="cta-actions">
 				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
@@ -198,7 +168,7 @@ $svc_meta = array(
 	</div>
 </section>
 
-<!-- 09. FAQ -->
+<!-- 08. FAQ -->
 <section class="sec" id="faq">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:34px">
@@ -216,7 +186,7 @@ $svc_meta = array(
 	</div>
 </section>
 
-<!-- 10. TIN TUC & SU KIEN -->
+<!-- 09. TIN TUC & SU KIEN -->
 <?php
 $news = new WP_Query( array(
 	'post_type'           => 'post',

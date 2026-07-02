@@ -13,10 +13,11 @@ get_header();
 		<h1><?php echo esc_html( get_the_title() ?: 'Đăng ký tên miền giá tốt' ); ?></h1>
 		<p class="lead">Kiểm tra và đăng ký tên miền .com, .vn và nhiều đuôi khác. Quản lý DNS dễ dùng, hỗ trợ chuyển về miễn phí.</p>
 		<div class="search-card" style="margin-top:26px">
-			<form class="search-box" onsubmit="return false;">
+			<form class="search-box" onsubmit="window.open('https://www.pavietnam.vn/','_blank');return false;">
 				<input type="text" placeholder="Nhập tên miền bạn muốn tìm..." aria-label="Tên miền">
 				<button type="submit">Kiểm tra</button>
 			</form>
+			<p class="muted" style="font-size:12.5px;margin:10px 2px 0">Đăng ký qua đối tác PA Việt Nam - Digicom hỗ trợ tư vấn và kỹ thuật.</p>
 		</div>
 	</div>
 </section>
@@ -31,7 +32,7 @@ get_header();
 				$tld = $d[0] ?? ''; $price = $d[1] ?? ''; if ( $tld === '' ) continue; ?>
 				<tr><td class="tld"><?php echo esc_html( $tld ); ?></td>
 					<td class="p"><?php echo esc_html( $price ); ?></td>
-					<td><a class="btn btn-ghost btn-sm" href="#">Đăng ký</a></td></tr>
+					<td><a class="btn btn-ghost btn-sm" href="https://www.pavietnam.vn/" target="_blank" rel="noopener">Đăng ký</a></td></tr>
 			<?php endforeach; ?>
 			</tbody>
 		</table>
