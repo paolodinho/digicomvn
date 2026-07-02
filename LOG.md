@@ -164,3 +164,18 @@
   svc_meta) va page-bang-gia.php khong con nhac toi 3 dich vu nay.
   Menu con lai: Ten mien / Hosting / Dich vu / Lien he (4 muc).
 - Push GitHub 2 lan (nhanh main + gh-pages) phan anh ca 2 thay doi tren.
+
+## 2026-07-02 (cap nhat 3) - trang chu chuyen sang gioi thieu cong ty + them "suc song" UI
+- Hieu phan hoi giao dien qua nhat/phang -> them theo ui-anti-slop: grain texture toan site,
+  blob mau blur sau hero, o tim kiem xoay -0.4deg, promo/dom-card/host-card co mau/xoay/shadow
+  ro hon, band "Vi sao chon" them gradient + so gradient cam, CTA band them vong tron trang tri.
+- Hieu yeu cau trang chu KHONG con thuan ve ban ten mien nua, ma gioi thieu chung cong ty/
+  dich vu/bao chi; noi dung chua co thi dung demo (khong bia so lieu/logo bao that).
+  Rebuild front-page.php: hero gioi thieu Digicom (khong con o tim kiem ten mien), so lieu
+  demo (5+ nam, 80+ khach hang...), doan "Ve Digicom" + link trang /ve-digicom/, 2 khoi tong
+  quan dich vu (Ten mien & Hosting / Marketing & SEO) dan sang trang rieng, khu vuc "Bao chi
+  noi ve chung toi" placeholder MO + ghi ro "demo, chua co logo that" (khong dat ten bao cu
+  the de tranh gia mao). O tim kiem + bang gia ten mien van du o /ten-mien/ (khong mat noi dung).
+  Them 3 option field moi trong Admin: about_stats, about_teaser, press_logos (sua duoc, co
+  ghi chu DEMO trong nhan field de Hieu biet can cap nhat so that).
+- Push GitHub 2 lan (main + gh-pages), da QA truc quan bang trinh duyet that.
