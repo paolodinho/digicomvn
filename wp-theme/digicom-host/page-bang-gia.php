@@ -42,18 +42,18 @@ get_header();
 	</div>
 </section>
 
-<!-- Ban quyen + Dich vu -->
+<!-- Dich vu khac -->
 <section class="sec">
 	<div class="wrap">
 		<div class="row" style="gap:24px">
 			<div class="col card">
-				<h3 style="margin-top:0">Bản quyền phần mềm</h3>
-				<p class="muted" style="font-size:14.5px">Google Workspace từ 83.000đ/người/tháng. Office 365, Windows 11 và phần mềm khác báo giá theo nhu cầu.</p>
-				<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/google-workspace/' ) ); ?>">Xem chi tiết</a>
+				<h3 style="margin-top:0">Textlink, Backlink, Guest Post, Booking báo &amp; PR</h3>
+				<p class="muted" style="font-size:14.5px">Dịch vụ off-page SEO trọn gói - xem chi tiết từng gói tại mục Dịch vụ.</p>
+				<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/' ) ); ?>">Xem chi tiết</a>
 			</div>
 			<div class="col card">
-				<h3 style="margin-top:0">Dịch vụ (báo giá theo dự án)</h3>
-				<p class="muted" style="font-size:14.5px">Lập trình website, SEO/GEO, Backlink &amp; PR, Google Ads, Automation - báo giá theo phạm vi công việc.</p>
+				<h3 style="margin-top:0">Dịch vụ khác (báo giá theo dự án)</h3>
+				<p class="muted" style="font-size:14.5px">SEO/GEO, Google Ads - báo giá theo phạm vi công việc.</p>
 				<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Nhận báo giá</a>
 			</div>
 		</div>

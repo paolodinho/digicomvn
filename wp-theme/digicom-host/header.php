@@ -46,12 +46,9 @@
 </header>
 
 <div class="mnav" id="mnav">
-	<a href="#services">Lập trình web</a>
 	<a href="#domains">Tên miền</a>
 	<a href="#hosting">Hosting</a>
-	<a href="#services">Bản quyền phần mềm</a>
-	<a href="#services">Marketing & SEO</a>
-	<a href="#services">Automation</a>
+	<a href="<?php echo esc_url( home_url( '/dich-vu/' ) ); ?>">Dịch vụ</a>
 	<a href="#faq">Câu hỏi thường gặp</a>
 	<a href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 </div>

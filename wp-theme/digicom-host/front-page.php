@@ -9,7 +9,7 @@ get_header();
 <!-- 02. HERO + DOMAIN SEARCH (tam diem trang chu, luon o man hinh dau) -->
 <section class="hero" id="domains">
 	<div class="wrap hero-inner">
-		<span class="eyebrow">Website &middot; Tên miền &middot; Hosting &middot; Bản quyền phần mềm &middot; SEO</span>
+		<span class="eyebrow">Tên miền &middot; Hosting &middot; SEO</span>
 		<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 		<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 
@@ -106,10 +106,8 @@ get_header();
 <!-- 06. DICH VU THEO NHOM -->
 <?php
 $svc_meta = array(
-	'Hạ tầng & Website'    => array( 'eyebrow' => 'Hạ tầng', 'path' => 'M3 7h18M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7M9 11h6' ),
-	'Bản quyền phần mềm'   => array( 'eyebrow' => 'License', 'path' => 'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
+	'Tên miền & Hosting'   => array( 'eyebrow' => 'Hạ tầng', 'path' => 'M3 7h18M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7M9 11h6' ),
 	'Marketing & SEO'      => array( 'eyebrow' => 'Marketing', 'path' => 'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
-	'Tự động hóa'          => array( 'eyebrow' => 'Automation', 'path' => 'M12 8V4m0 0H8m4 0h4M6 12a6 6 0 1 0 12 0 6 6 0 0 0-12 0M12 12l3 2' ),
 );
 ?>
 <section class="sec" id="services" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
@@ -117,7 +115,7 @@ $svc_meta = array(
 		<div class="center" style="margin-bottom:40px">
 			<span class="eyebrow">Dịch vụ của Digicom</span>
 			<h2>Giải pháp số trọn gói cho doanh nghiệp</h2>
-			<p class="muted">Từ hạ tầng website, bản quyền phần mềm đến marketing và tự động hóa.</p>
+			<p class="muted">Tên miền, hosting và các dịch vụ marketing off-page SEO.</p>
 		</div>
 		<div class="svc-groups">
 			<?php foreach ( dgc_service_groups() as $g ) :
