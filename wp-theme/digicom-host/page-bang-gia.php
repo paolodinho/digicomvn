@@ -11,52 +11,50 @@ get_header();
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Bảng giá</span>
 		<h1>Bảng giá dịch vụ Digicom</h1>
-		<p class="lead">Textlink, Backlink, Guest Post và Booking báo &amp; PR - giá cụ thể theo yêu cầu, site/báo và khối lượng. Liên hệ để nhận báo giá chi tiết.</p>
+		<p class="lead">Giá tham khảo, chưa gồm VAT. Liên hệ để nhận ưu đãi theo kỳ hạn và số lượng.</p>
 	</div>
 </section>
 
-<!-- Bang gia rut gon 4 dich vu -->
+<!-- Ten mien -->
 <section class="sec">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:26px"><span class="eyebrow">Tổng quan</span><h2>4 dịch vụ off-page SEO</h2></div>
+		<div class="center" style="margin-bottom:26px"><span class="eyebrow">Tên miền</span><h2>Giá tên miền</h2></div>
 		<table class="price-table">
-			<thead><tr><th>Dịch vụ</th><th>Giá</th><th></th></tr></thead>
+			<thead><tr><th>Đuôi</th><th>Đăng ký (/năm)</th><th></th></tr></thead>
 			<tbody><?php foreach ( dgc_lines( 'domain_tlds' ) as $d ) { if ( empty( $d[0] ) ) continue;
-				echo '<tr><td class="tld">' . esc_html( $d[0] ) . '</td><td class="p">' . esc_html( $d[1] ?? '' ) . '</td><td><a class="btn btn-ghost btn-sm" href="' . esc_url( home_url( '/lien-he/' ) ) . '#lien-he">Nhận báo giá</a></td></tr>';
+				echo '<tr><td class="tld">' . esc_html( $d[0] ) . '</td><td class="p">' . esc_html( $d[1] ?? '' ) . '</td><td><a class="btn btn-ghost btn-sm" href="' . esc_url( home_url( '/ten-mien/' ) ) . '">Đăng ký</a></td></tr>';
 			} ?></tbody>
 		</table>
 	</div>
 </section>
 
-<!-- Chi tiet goi -->
+<!-- Hosting -->
 <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:26px"><span class="eyebrow">Chi tiết</span><h2>Nội dung từng gói dịch vụ</h2></div>
+		<div class="center" style="margin-bottom:26px"><span class="eyebrow">Hosting</span><h2>Giá Web Hosting</h2></div>
 		<table class="price-table">
-			<thead><tr><th>Gói</th><th>Giá</th><th>Bao gồm</th><th></th></tr></thead>
+			<thead><tr><th>Gói</th><th>Giá</th><th>Cấu hình</th><th></th></tr></thead>
 			<tbody><?php foreach ( dgc_lines( 'hosting_plans' ) as $h ) { if ( empty( $h[0] ) ) continue;
 				$feats = implode( ', ', array_slice( array_filter( array_map( 'trim', explode( ';', $h[2] ?? '' ) ) ), 0, 3 ) );
-				echo '<tr><td class="tld">' . esc_html( $h[0] ) . '</td><td class="p">' . esc_html( $h[1] ?? '' ) . '</td><td>' . esc_html( $feats ) . '</td><td><a class="btn btn-ghost btn-sm" href="' . esc_url( home_url( '/lien-he/' ) ) . '#lien-he">Nhận tư vấn</a></td></tr>';
+				echo '<tr><td class="tld">' . esc_html( $h[0] ) . '</td><td class="p">' . esc_html( $h[1] ?? '' ) . '</td><td>' . esc_html( $feats ) . '</td><td><a class="btn btn-ghost btn-sm" href="' . esc_url( home_url( '/hosting/' ) ) . '">Chọn</a></td></tr>';
 			} ?></tbody>
 		</table>
 	</div>
 </section>
 
-<!-- Link ra 4 pillar -->
+<!-- Ban quyen + Dich vu -->
 <section class="sec">
 	<div class="wrap">
 		<div class="row" style="gap:24px">
 			<div class="col card">
-				<h3 style="margin-top:0">Mua Textlink &amp; Dịch vụ Backlink</h3>
-				<p class="muted" style="font-size:14.5px">Chèn link vào bài có sẵn hoặc xây hệ thống backlink chất lượng, theo dõi index, có báo cáo.</p>
-				<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/mua-textlink/' ) ); ?>">Xem Textlink</a>
-				<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/dich-vu-backlink/' ) ); ?>">Xem Backlink</a>
+				<h3 style="margin-top:0">Bản quyền phần mềm</h3>
+				<p class="muted" style="font-size:14.5px">Google Workspace từ 83.000đ/người/tháng. Office 365, Windows 11 và phần mềm khác báo giá theo nhu cầu.</p>
+				<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/google-workspace/' ) ); ?>">Xem chi tiết</a>
 			</div>
 			<div class="col card">
-				<h3 style="margin-top:0">Guest Post &amp; Booking báo PR</h3>
-				<p class="muted" style="font-size:14.5px">Viết bài đăng trên site đúng chủ đề, hoặc booking đăng bài PR trên báo điện tử theo yêu cầu.</p>
-				<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Xem Guest Post</a>
-				<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/booking-bao-pr/' ) ); ?>">Xem Booking PR</a>
+				<h3 style="margin-top:0">Dịch vụ (báo giá theo dự án)</h3>
+				<p class="muted" style="font-size:14.5px">Lập trình website, SEO/GEO, Backlink &amp; PR, Google Ads, Automation - báo giá theo phạm vi công việc.</p>
+				<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Nhận báo giá</a>
 			</div>
 		</div>
 	</div>

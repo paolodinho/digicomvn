@@ -1,31 +1,38 @@
 <?php
 /**
- * Trang chu Digicom - dich vu Textlink, Backlink, Guest Post, Booking bao & PR.
+ * Trang chu Digicom - ban ten mien & hosting.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 ?>
 
-<!-- 02. HERO -->
-<section class="hero" id="dich-vu">
+<!-- 02. HERO + DOMAIN SEARCH (tam diem trang chu, luon o man hinh dau) -->
+<section class="hero" id="domains">
 	<div class="wrap hero-inner">
-		<span class="eyebrow">Textlink &middot; Backlink &middot; Guest Post &middot; Booking báo &amp; PR</span>
+		<span class="eyebrow">Website &middot; Tên miền &middot; Hosting &middot; Bản quyền phần mềm &middot; SEO</span>
 		<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 		<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 
 		<div class="search-card">
-			<div class="tld-row" style="justify-content:center">
-				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/mua-textlink/' ) ); ?>">Mua Textlink</a>
-				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/dich-vu-backlink/' ) ); ?>">Dịch vụ Backlink</a>
-				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Guest Post</a>
-				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/booking-bao-pr/' ) ); ?>">Booking báo &amp; PR</a>
+			<form class="search-box" onsubmit="window.open('https://www.pavietnam.vn/','_blank');return false;">
+				<input type="text" placeholder="Nhập tên miền bạn muốn tìm..." aria-label="Tên miền">
+				<button type="submit">Kiểm tra</button>
+			</form>
+			<div class="tld-row">
+				<?php foreach ( dgc_lines( 'domain_tlds' ) as $d ) :
+					$tld   = $d[0] ?? '';
+					$price = $d[1] ?? '';
+					if ( $tld === '' ) continue; ?>
+					<span class="tld-chip"><?php echo esc_html( $tld ); ?> <b><?php echo esc_html( $price ); ?></b></span>
+				<?php endforeach; ?>
 			</div>
+			<p class="muted" style="font-size:12.5px;margin:10px 2px 0">Đăng ký tên miền và hosting qua đối tác PA Việt Nam - Digicom hỗ trợ tư vấn và kỹ thuật.</p>
 		</div>
 
 		<div class="trust-row">
-			<div class="t"><b>Site</b> chọn lọc theo chỉ số</div>
-			<div class="t"><b>Báo giá</b> minh bạch</div>
-			<div class="t"><b>Hỗ trợ</b> tư vấn tận tình</div>
+			<div class="t"><b>Kích hoạt</b> tức thì</div>
+			<div class="t"><b>SSL</b> miễn phí</div>
+			<div class="t"><b>Hỗ trợ</b> 24/7</div>
 		</div>
 	</div>
 </section>
@@ -44,43 +51,44 @@ get_header();
 	</div>
 </section>
 
-<!-- 04. BANG GIA DICH VU (rut gon) -->
+<!-- 04. DOMAIN PRICING -->
 <section class="sec">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:36px">
-			<span class="eyebrow">Bảng giá dịch vụ</span>
-			<h2>4 dịch vụ off-page SEO chính</h2>
-			<p class="muted">Giá cụ thể theo yêu cầu, site/báo và khối lượng - liên hệ để nhận báo giá chi tiết.</p>
+			<span class="eyebrow">Bảng giá tên miền</span>
+			<h2>Chọn đuôi tên miền phù hợp</h2>
+			<p class="muted">Giá đã bao gồm quản lý DNS và hỗ trợ chuyển về miễn phí.</p>
 		</div>
 		<div class="dom-grid">
 			<?php foreach ( dgc_lines( 'domain_tlds' ) as $d ) :
-				$name = $d[0] ?? ''; $price = $d[1] ?? ''; $badge = $d[2] ?? '';
-				if ( $name === '' ) continue; ?>
+				$tld = $d[0] ?? ''; $price = $d[1] ?? ''; $badge = $d[2] ?? '';
+				if ( $tld === '' ) continue; ?>
 				<div class="dom-card">
-					<div class="tld"><?php echo esc_html( $name ); ?></div>
+					<div class="tld"><?php echo esc_html( $tld ); ?></div>
 					<div class="badge"><?php echo esc_html( $badge ); ?></div>
 					<div class="price"><?php echo esc_html( $price ); ?></div>
-					<a class="btn btn-ghost btn-sm" href="#lien-he">Nhận báo giá</a>
+					<div class="per">/ năm</div>
+					<a class="btn btn-ghost btn-sm" href="https://www.pavietnam.vn/" target="_blank" rel="noopener">Đăng ký</a>
 				</div>
 			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
 
-<!-- 05. GOI DICH VU CHI TIET -->
-<section class="sec" id="goi-dich-vu" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<!-- 05. HOSTING PLANS -->
+<section class="sec" id="hosting" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:42px">
-			<span class="eyebrow">Chi tiết gói</span>
-			<h2>Digicom triển khai như thế nào</h2>
-			<p class="muted">Mỗi dịch vụ có quy trình chọn lọc site/báo và bàn giao riêng, đảm bảo minh bạch.</p>
+			<span class="eyebrow">Web Hosting</span>
+			<h2>Gói hosting tốc độ cao</h2>
+			<p class="muted">Ổ cứng SSD, LiteSpeed, SSL miễn phí. Phù hợp từ website cá nhân đến doanh nghiệp.</p>
 		</div>
 		<div class="host-grid">
 			<?php foreach ( dgc_lines( 'hosting_plans' ) as $h ) :
 				$name = $h[0] ?? ''; $price = $h[1] ?? ''; $feats = $h[2] ?? ''; $feat = ( ( $h[3] ?? '0' ) === '1' );
 				if ( $name === '' ) continue; ?>
 				<div class="host-card<?php echo $feat ? ' feat' : ''; ?>">
-					<?php if ( $feat ) : ?><span class="tag-feat">Được chọn nhiều nhất</span><?php endif; ?>
+					<?php if ( $feat ) : ?><span class="tag-feat">Phổ biến nhất</span><?php endif; ?>
 					<div class="pname"><?php echo esc_html( $name ); ?></div>
 					<div class="pprice"><?php echo esc_html( $price ); ?></div>
 					<ul>
@@ -88,7 +96,7 @@ get_header();
 							<li><?php echo esc_html( $f ); ?></li>
 						<?php endforeach; ?>
 					</ul>
-					<a class="btn <?php echo $feat ? 'btn-primary' : 'btn-navy'; ?>" href="#lien-he">Nhận tư vấn</a>
+					<a class="btn <?php echo $feat ? 'btn-primary' : 'btn-navy'; ?>" href="https://www.pavietnam.vn/" target="_blank" rel="noopener">Chọn gói</a>
 				</div>
 			<?php endforeach; ?>
 		</div>
@@ -98,18 +106,18 @@ get_header();
 <!-- 06. DICH VU THEO NHOM -->
 <?php
 $svc_meta = array(
-	'Mua Textlink'          => array( 'eyebrow' => 'Textlink', 'path' => 'M13.5 6.5L17 3a4 4 0 1 1 5.5 5.5L19 12M10.5 17.5L7 21a4 4 0 1 1-5.5-5.5L5 12M8 16l8-8' ),
-	'Dịch vụ Backlink'      => array( 'eyebrow' => 'Backlink', 'path' => 'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
-	'Guest Post'            => array( 'eyebrow' => 'Guest Post', 'path' => 'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5' ),
-	'Booking báo & PR'      => array( 'eyebrow' => 'Booking PR', 'path' => 'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
+	'Hạ tầng & Website'    => array( 'eyebrow' => 'Hạ tầng', 'path' => 'M3 7h18M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7M9 11h6' ),
+	'Bản quyền phần mềm'   => array( 'eyebrow' => 'License', 'path' => 'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
+	'Marketing & SEO'      => array( 'eyebrow' => 'Marketing', 'path' => 'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
+	'Tự động hóa'          => array( 'eyebrow' => 'Automation', 'path' => 'M12 8V4m0 0H8m4 0h4M6 12a6 6 0 1 0 12 0 6 6 0 0 0-12 0M12 12l3 2' ),
 );
 ?>
 <section class="sec" id="services" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:40px">
 			<span class="eyebrow">Dịch vụ của Digicom</span>
-			<h2>Off-page SEO trọn gói cho doanh nghiệp</h2>
-			<p class="muted">Từ mua textlink, backlink, guest post đến booking đăng bài PR trên báo điện tử.</p>
+			<h2>Giải pháp số trọn gói cho doanh nghiệp</h2>
+			<p class="muted">Từ hạ tầng website, bản quyền phần mềm đến marketing và tự động hóa.</p>
 		</div>
 		<div class="svc-groups">
 			<?php foreach ( dgc_service_groups() as $g ) :
@@ -138,7 +146,7 @@ $svc_meta = array(
 	<div class="wrap">
 		<div class="center">
 			<span class="eyebrow">Vì sao chọn Digicom</span>
-			<h2>Site chọn lọc, báo giá minh bạch</h2>
+			<h2>Hạ tầng vững, hỗ trợ thật</h2>
 		</div>
 		<div class="reason-grid">
 			<?php $i = 1; foreach ( dgc_lines( 'reasons' ) as $r ) : ?>
@@ -181,8 +189,8 @@ $svc_meta = array(
 	<div class="wrap">
 		<div class="cta-band">
 			<div>
-				<h2>Chưa biết chọn dịch vụ nào?</h2>
-				<p>Để đội ngũ Digicom tư vấn miễn phí gói Textlink, Backlink, Guest Post hoặc Booking báo PR phù hợp.</p>
+				<h2>Chưa biết chọn gói nào?</h2>
+				<p>Để đội ngũ Digicom tư vấn miễn phí gói tên miền và hosting phù hợp với bạn.</p>
 			</div>
 			<div class="cta-actions">
 				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
