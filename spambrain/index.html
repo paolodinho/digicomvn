@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SpamBrain Google: Thuật Toán AI Chống Spam Là Gì? - Digicom</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel="alternate" type="application/rss+xml" title="Digicom &raquo; SpamBrain Google: Thuật Toán AI Chống Spam Là Gì? Dòng bình luận" href="feed/index.html" />
+<link rel="alternate" title="oNhúng (JSON)" type="application/json+oembed" href="http://digicom.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdigicom.local%2Fspambrain%2F" />
+<link rel="alternate" title="oNhúng (XML)" type="text/xml+oembed" href="http://digicom.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdigicom.local%2Fspambrain%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=http://digicom.local/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-list-inline-css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=http://digicom.local/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=http://digicom.local/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-group-inline-css">
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=http://digicom.local/wp-includes/blocks/group/style.min.css */
+</style>
+<style id="wp-block-table-inline-css">
+.wp-block-table{overflow-x:auto}.wp-block-table table{border-collapse:collapse;width:100%}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{border:1px solid;padding:.5em}.wp-block-table .has-fixed-layout{table-layout:fixed;width:100%}.wp-block-table .has-fixed-layout td,.wp-block-table .has-fixed-layout th{word-break:break-word}.wp-block-table.aligncenter,.wp-block-table.alignleft,.wp-block-table.alignright{display:table;width:auto}.wp-block-table.aligncenter td,.wp-block-table.aligncenter th,.wp-block-table.alignleft td,.wp-block-table.alignleft th,.wp-block-table.alignright td,.wp-block-table.alignright th{word-break:break-word}.wp-block-table .has-subtle-light-gray-background-color{background-color:#f3f4f5}.wp-block-table .has-subtle-pale-green-background-color{background-color:#e9fbe5}.wp-block-table .has-subtle-pale-blue-background-color{background-color:#e7f5fe}.wp-block-table .has-subtle-pale-pink-background-color{background-color:#fcf0ef}.wp-block-table.is-style-stripes{background-color:initial;border-collapse:inherit;border-spacing:0}.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:#f0f0f0}.wp-block-table.is-style-stripes.has-subtle-light-gray-background-color tbody tr:nth-child(odd){background-color:#f3f4f5}.wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tbody tr:nth-child(odd){background-color:#e9fbe5}.wp-block-table.is-style-stripes.has-subtle-pale-blue-background-color tbody tr:nth-child(odd){background-color:#e7f5fe}.wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tbody tr:nth-child(odd){background-color:#fcf0ef}.wp-block-table.is-style-stripes td,.wp-block-table.is-style-stripes th{border-color:#0000}.wp-block-table.is-style-stripes{border-bottom:1px solid #f0f0f0}.wp-block-table .has-border-color td,.wp-block-table .has-border-color th,.wp-block-table .has-border-color tr,.wp-block-table .has-border-color>*{border-color:inherit}.wp-block-table table[style*=border-top-color] tr:first-child,.wp-block-table table[style*=border-top-color] tr:first-child td,.wp-block-table table[style*=border-top-color] tr:first-child th,.wp-block-table table[style*=border-top-color]>*,.wp-block-table table[style*=border-top-color]>* td,.wp-block-table table[style*=border-top-color]>* th{border-top-color:inherit}.wp-block-table table[style*=border-top-color] tr:not(:first-child){border-top-color:initial}.wp-block-table table[style*=border-right-color] td:last-child,.wp-block-table table[style*=border-right-color] th,.wp-block-table table[style*=border-right-color] tr,.wp-block-table table[style*=border-right-color]>*{border-right-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:last-child,.wp-block-table table[style*=border-bottom-color] tr:last-child td,.wp-block-table table[style*=border-bottom-color] tr:last-child th,.wp-block-table table[style*=border-bottom-color]>*,.wp-block-table table[style*=border-bottom-color]>* td,.wp-block-table table[style*=border-bottom-color]>* th{border-bottom-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:not(:last-child){border-bottom-color:initial}.wp-block-table table[style*=border-left-color] td:first-child,.wp-block-table table[style*=border-left-color] th,.wp-block-table table[style*=border-left-color] tr,.wp-block-table table[style*=border-left-color]>*{border-left-color:inherit}.wp-block-table table[style*=border-style] td,.wp-block-table table[style*=border-style] th,.wp-block-table table[style*=border-style] tr,.wp-block-table table[style*=border-style]>*{border-style:inherit}.wp-block-table table[style*=border-width] td,.wp-block-table table[style*=border-width] th,.wp-block-table table[style*=border-width] tr,.wp-block-table table[style*=border-width]>*{border-style:inherit;border-width:inherit}
+/*# sourceURL=http://digicom.local/wp-includes/blocks/table/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='tutor-icon-css' href='http://digicom.local/wp-content/plugins/tutor/assets/css/tutor-icon.min.css?ver=3.9.13' media='all' />
+<link rel='stylesheet' id='tutor-css' href='http://digicom.local/wp-content/plugins/tutor/assets/css/tutor.min.css?ver=3.9.13' media='all' />
+<link rel='stylesheet' id='tutor-frontend-css' href='http://digicom.local/wp-content/plugins/tutor/assets/css/tutor-front.min.css?ver=3.9.13' media='all' />
+<style id="tutor-frontend-inline-css">
+.mce-notification.mce-notification-error{display: none !important;}
+:root{--tutor-color-primary:#3E64DE;--tutor-color-primary-rgb:62, 100, 222;--tutor-color-primary-hover:#3A5CCC;--tutor-color-primary-hover-rgb:58, 92, 204;--tutor-body-color:#212327;--tutor-body-color-rgb:33, 35, 39;--tutor-border-color:#E3E5EB;--tutor-border-color-rgb:227, 229, 235;--tutor-color-gray:#CDCFD5;--tutor-color-gray-rgb:205, 207, 213;}
+/*# sourceURL=tutor-frontend-inline-css */
+</style>
+<link rel='stylesheet' id='dgc-fonts-css' href='https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&#038;family=Inter:wght@400;500;600;700&#038;display=swap' media='all' />
+<link rel='stylesheet' id='dgc-main-css' href='http://digicom.local/wp-content/themes/digicom-host/assets/css/main.css?ver=0.1.0' media='all' />
+<script id="jquery-core-js" src="http://digicom.local/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="http://digicom.local/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="http://digicom.local/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="http://digicom.local/wp-json/wp/v2/posts/405" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://digicom.local/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0" />
+<meta name="generator" content="TutorLMS 3.9.13" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='http://digicom.local/?p=405' />
+</head>
+<body class="wp-singular post-template-default single single-post postid-405 single-format-standard wp-custom-logo wp-theme-digicom-host tutor-lms">
+
+<div class="topbar">
+	<div class="wrap">
+		<div class="tb-left">Hotline: <a href="tel:0988769317"><strong>0988 769 317</strong></a> <span class="hide-sm">&middot; Thứ 2 - Thứ 6, 8:00 - 18:00</span></div>
+		<div class="tb-right">
+			<a href="mailto:info@digicomvn.com" class="hide-sm">info@digicomvn.com</a><span class="sep hide-sm">|</span>
+			<a href="https://zalo.me/0988769317">Chat Zalo</a>
+		</div>
+	</div>
+</div>
+
+<header class="site-header">
+	<div class="wrap">
+		<a href="../index.html" class="custom-logo-link" rel="home"><img width="600" height="219" src="../wp-content/uploads/2026/04/logo-digicom.png" class="custom-logo" alt="Digicom" decoding="async" fetchpriority="high" srcset="../wp-content/uploads/2026/04/logo-digicom.png 600w, ../wp-content/uploads/2026/04/logo-digicom-300x110.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></a>
+		<nav class="nav">
+			<ul><li id="menu-item-516" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-516"><a href="../index.html" onClick="return true">Trang chủ</a></li>
+<li id="menu-item-517" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-517"><a href="../dich-vu/index.html" onClick="return true">Dịch vụ</a>
+<ul class="sub-menu">
+	<li id="menu-item-518" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-518"><a href="../dich-vu/mua-textlink/index.html" onClick="return true">Mua Textlink</a></li>
+	<li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="../dich-vu/dich-vu-backlink/index.html" onClick="return true">Dịch vụ Backlink</a></li>
+	<li id="menu-item-520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a href="../dich-vu/guest-post/index.html" onClick="return true">Guest Post</a></li>
+	<li id="menu-item-521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="../dich-vu/booking-bao-pr/index.html" onClick="return true">Booking báo &#038; PR</a></li>
+</ul>
+</li>
+<li id="menu-item-522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-522"><a href="../bang-gia/index.html" onClick="return true">Bảng giá</a></li>
+<li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523"><a href="../ve-digicom/index.html" onClick="return true">Về Digicom</a></li>
+<li id="menu-item-524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524"><a href="../lien-he/index.html" onClick="return true">Liên hệ</a></li>
+</ul>		</nav>
+
+		<div class="header-cta">
+			<a class="phone" href="tel:0988769317">0988 769 317</a>
+			<a class="btn btn-primary btn-sm" href="../lien-he/index.html#lien-he">Đặt bài ngay</a>
+			<button class="burger" aria-label="Menu" onclick="document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
+		</div>
+	</div>
+</header>
+
+<div class="mnav" id="mnav">
+	<ul><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-516"><a href="../index.html" onClick="return true">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-517"><a href="../dich-vu/index.html" onClick="return true">Dịch vụ</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-518"><a href="../dich-vu/mua-textlink/index.html" onClick="return true">Mua Textlink</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="../dich-vu/dich-vu-backlink/index.html" onClick="return true">Dịch vụ Backlink</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a href="../dich-vu/guest-post/index.html" onClick="return true">Guest Post</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="../dich-vu/booking-bao-pr/index.html" onClick="return true">Booking báo &#038; PR</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-522"><a href="../bang-gia/index.html" onClick="return true">Bảng giá</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523"><a href="../ve-digicom/index.html" onClick="return true">Về Digicom</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524"><a href="../lien-he/index.html" onClick="return true">Liên hệ</a></li>
+</ul>	<ul class="cta-item"><li><a href="tel:0988769317">Gọi 0988 769 317</a></li></ul>
+</div>
+<section class="sec">
+	<div class="wrap">
+									<article style="max-width:820px;margin:0 auto 40px">
+					<h1>SpamBrain Google: Thuật Toán AI Chống Spam Là Gì?</h1>
+					<div class="entry">
+<div class="wp-block-group summary"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+
+<ul class="wp-block-list">
+<li><strong>SpamBrain</strong> là hệ thống AI chống spam của Google, ra mắt 2018, nâng cấp lớn năm 2022 và 2023.</li>
+<li>Khác Penguin: SpamBrain <strong>devalue</strong> (vô hiệu hóa) link spam thay vì penalize - site không bị phạt, chỉ mất giá trị link.</li>
+<li>Update 2022: bắt được <strong>50 lần nhiều hơn</strong> link spam site so với các update trước; 2023: mở rộng sang tiếng Việt, Hindi, Thổ Nhĩ Kỳ, Trung Quốc.</li>
+<li>Dấu hiệu bị ảnh hưởng: traffic giảm đột ngột sau <strong>spam update</strong> (không phải core update).</li>
+</ul>
+
+</div></div>
+
+
+
+<h1 class="wp-block-heading">SpamBrain Google: Hệ Thống AI Chống Spam và Ý Nghĩa Thực Chiến 2026</h1>
+
+
+
+<p class="wp-block-paragraph" style="font-size: 1.1em; line-height: 1.6;">SpamBrain là hệ thống phát hiện spam bằng AI của Google, hoạt động liên tục từ 2018 và được nâng cấp đáng kể vào 2022-2023. SpamBrain không phạt site trực tiếp - nó vô hiệu hóa link spam, khiến toàn bộ chiến lược mua link trở nên lãng phí tiền mà không có hậu quả rõ ràng ngay lập tức.</p>
+
+
+
+<p class="wp-block-paragraph">Tên &#8220;SpamBrain&#8221; được Google công bố chính thức lần đầu vào tháng 4/2022 - dù hệ thống đã hoạt động từ 2018. Trước đó, Google gọi chung là &#8220;spam detection systems&#8221; mà không nêu tên cụ thể. Việc đặt tên và công bố là tín hiệu rõ ràng: Google muốn cộng đồng SEO biết rằng link spam đang được phát hiện bằng AI, không phải manual review.</p>
+
+
+
+<p class="wp-block-paragraph">Từ góc nhìn thực chiến, SpamBrain thay đổi cơ bản cách nghĩ về rủi ro link building. Với Penguin cũ, mua link xấu có thể bị manual penalty rõ ràng - và bạn biết mình bị phạt. Với SpamBrain, link xấu chỉ đơn giản bị devalue âm thầm. Kết quả là bạn đã chi tiền mua link nhưng không nhận được giá trị - và không nhận được cảnh báo nào.</p>
+
+
+
+<h2 class="wp-block-heading">SpamBrain Là Gì và Hoạt Động Như Thế Nào?</h2>
+
+
+
+<p class="wp-block-paragraph">SpamBrain (tên đầy đủ: SpamBrain AI-powered spam prevention system) là hệ thống machine learning được Google train để phát hiện các tín hiệu spam trong web graph - bao gồm link spam, content spam, cloaking và các dạng thao túng search khác.</p>
+
+
+
+<p class="wp-block-paragraph">Cơ chế hoạt động cốt lõi: SpamBrain học từ hàng tỷ data point về link patterns, content patterns và behavior patterns. Khi phát hiện tín hiệu bất thường - ví dụ một site nhận 10.000 link mới trong 1 tuần từ các domain có pattern tương tự nhau - SpamBrain đánh dấu và xử lý. Không cần reviewer con người xem xét từng link.</p>
+
+
+
+<h3 class="wp-block-heading">SpamBrain Phát Hiện Những Loại Spam Nào?</h3>
+
+
+
+<p class="wp-block-paragraph">SpamBrain không chỉ tập trung vào link spam. Hệ thống được design để phát hiện nhiều loại spam song song:</p>
+
+
+
+<figure class="wp-block-table">
+<table style="width:100%; border-collapse:collapse;">
+<tr style="background:#f0f0f0;">
+  <th style="border:1px solid #ddd; padding:10px;">Loại spam</th>
+  <th style="border:1px solid #ddd; padding:10px;">Mô tả</th>
+  <th style="border:1px solid #ddd; padding:10px;">SpamBrain xử lý thế nào</th>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Link spam (mua/bán link)</td>
+  <td style="border:1px solid #ddd; padding:10px;">Link có giao dịch tiền tệ, không có editorial value</td>
+  <td style="border:1px solid #ddd; padding:10px;">Devalue - link không truyền PageRank</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Hacked website spam</td>
+  <td style="border:1px solid #ddd; padding:10px;">Site bị hack, chèn link/content spam</td>
+  <td style="border:1px solid #ddd; padding:10px;">Deindex trang bị hack hoặc cảnh báo trong GSC</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Scraped content</td>
+  <td style="border:1px solid #ddd; padding:10px;">Nội dung copy từ site khác, không original</td>
+  <td style="border:1px solid #ddd; padding:10px;">Derank trang duplicate, ưu tiên source gốc</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Auto-generated pages</td>
+  <td style="border:1px solid #ddd; padding:10px;">Pages tạo tự động không có giá trị người dùng</td>
+  <td style="border:1px solid #ddd; padding:10px;">Noindex hoặc derank toàn bộ domain</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Cloaking</td>
+  <td style="border:1px solid #ddd; padding:10px;">Hiển thị nội dung khác với Googlebot và user</td>
+  <td style="border:1px solid #ddd; padding:10px;">Manual action + deindex</td>
+</tr>
+</table>
+</figure>
+
+
+
+<h2 class="wp-block-heading">SpamBrain Khác Google Penguin Thế Nào?</h2>
+
+
+
+<p class="wp-block-paragraph">Đây là câu hỏi quan trọng nhất vì nhiều SEOer nhầm lẫn giữa hai hệ thống. <a href="../google-penguin/index.html">Google Penguin</a> và SpamBrain đều liên quan đến link - nhưng cách tiếp cận và mục tiêu khác nhau:</p>
+
+
+
+<figure class="wp-block-table">
+<table style="width:100%; border-collapse:collapse;">
+<tr style="background:#f0f0f0;">
+  <th style="border:1px solid #ddd; padding:10px;">Tiêu chí</th>
+  <th style="border:1px solid #ddd; padding:10px;">Google Penguin</th>
+  <th style="border:1px solid #ddd; padding:10px;">SpamBrain</th>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Ra mắt</td>
+  <td style="border:1px solid #ddd; padding:10px;">2012, tích hợp core 2016</td>
+  <td style="border:1px solid #ddd; padding:10px;">2018, công bố tên 2022</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Mục tiêu chính</td>
+  <td style="border:1px solid #ddd; padding:10px;">Anchor text manipulation, over-optimized links</td>
+  <td style="border:1px solid #ddd; padding:10px;">Broader spam signals: link spam, content spam, cloaking</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Cơ chế</td>
+  <td style="border:1px solid #ddd; padding:10px;">Penalize site nhận/gửi link spam</td>
+  <td style="border:1px solid #ddd; padding:10px;">Devalue link - không penalize, chỉ vô hiệu hóa giá trị</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Tín hiệu nhắm đến</td>
+  <td style="border:1px solid #ddd; padding:10px;">Anchor text ratio bất thường</td>
+  <td style="border:1px solid #ddd; padding:10px;">Link pattern, site network, transaction signals</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">AI/ML</td>
+  <td style="border:1px solid #ddd; padding:10px;">Rule-based + basic ML</td>
+  <td style="border:1px solid #ddd; padding:10px;">Deep learning, liên tục cải thiện</td>
+</tr>
+<tr>
+  <td style="border:1px solid #ddd; padding:10px;">Recoverable?</td>
+  <td style="border:1px solid #ddd; padding:10px;">Có, sau khi disavow + link cleanup</td>
+  <td style="border:1px solid #ddd; padding:10px;">Link bị devalue vĩnh viễn - không phải penalty cần &#8220;recover&#8221;</td>
+</tr>
+</table>
+</figure>
+
+
+
+<p class="wp-block-paragraph">Điểm quan trọng nhất: SpamBrain chủ yếu <strong>devalue</strong>, không penalize. Điều này có nghĩa site mua link xấu không bị phạt ranking - chỉ mất giá trị từ những link đó. Google đã nói rõ điều này trong tài liệu về December 2022 Link Spam Update.</p>
+
+
+
+<h2 class="wp-block-heading">Lịch Sử Các SpamBrain Update Quan Trọng</h2>
+
+
+
+<h3 class="wp-block-heading">2018: SpamBrain Ra Đời Âm Thầm</h3>
+
+
+
+<p class="wp-block-paragraph">SpamBrain được deploy vào 2018 nhưng không có announcement chính thức. Đến 2022 Google mới xác nhận hệ thống đã tồn tại từ thời điểm này. Trong giai đoạn 2018-2021, SpamBrain đã loại bỏ được 200 lần nhiều spam hơn so với thời điểm ra mắt - theo Google spam report 2021.</p>
+
+
+
+<h3 class="wp-block-heading">Tháng 10/2022: SpamBrain Link Spam Update</h3>
+
+
+
+<p class="wp-block-paragraph">Update quan trọng nhất - Google sử dụng SpamBrain để neutralize link spam ở quy mô lớn. Số liệu Google công bố: bắt được <strong>50 lần nhiều site link spam</strong> so với các link update trước. Đặc biệt cải thiện khả năng phát hiện hacked website spam (tăng 10 lần). Đây là update đầu tiên mà Google explicitly nêu tên SpamBrain trong thông báo.</p>
+
+
+
+<h3 class="wp-block-heading">Tháng 12/2022: December Link Spam Update</h3>
+
+
+
+<p class="wp-block-paragraph">Chỉ 2 tháng sau October 2022, Google tiếp tục roll out December 2022 Link Spam Update - lần này nhấn mạnh vào việc neutralize paid links và link networks. Google xác nhận rõ: mục tiêu là <strong>neutralize impact</strong> (vô hiệu hóa tác động), không phải penalize. Site bán link cũng bị xử lý - không chỉ site mua.</p>
+
+
+
+<h3 class="wp-block-heading">Tháng 10/2023: Mở Rộng Đa Ngôn Ngữ - Bao Gồm Tiếng Việt</h3>
+
+
+
+<p class="wp-block-paragraph">October 2023 Spam Update là update quan trọng nhất với thị trường Việt Nam. SpamBrain được cải thiện đáng kể cho <strong>tiếng Việt, Hindi, Thổ Nhĩ Kỳ và Trung Quốc</strong> - 4 ngôn ngữ trước đây SpamBrain xử lý kém hơn tiếng Anh. Ngoài link spam, update này còn cải thiện phát hiện cloaked pages và scraped content bằng tiếng Việt. Với các site SEO tiếng Việt dùng chiến lược mua link, đây là thời điểm chứng kiến traffic giảm đầu tiên từ SpamBrain.</p>
+
+
+
+<h2 class="wp-block-heading">Dấu Hiệu Site Bị SpamBrain Ảnh Hưởng</h2>
+
+
+
+<p class="wp-block-paragraph">Với SEO specialist và agency, phân biệt SpamBrain với core update là kỹ năng quan trọng vì cách xử lý khác nhau hoàn toàn.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Dấu hiệu SpamBrain (không phải core update):</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Traffic giảm trùng đúng ngày Google thông báo <strong>spam update</strong> (không phải core update) - theo dõi tại searchengineland.com hoặc seranking.com</li>
+<li>Keyword ranking giảm đồng loạt trên toàn site, không phân biệt chủ đề trang</li>
+<li>Ahrefs/SEMrush báo cáo referring domains giảm mạnh - dấu hiệu link bị devalue</li>
+<li>Domain Rating (DR) hoặc Domain Authority (DA) giảm không giải thích được</li>
+<li>Google Search Console có manual action về &#8220;unnatural links&#8221; (cực đoan hơn - cần cleanup ngay)</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"><strong>Phân biệt với core update:</strong> core update thường ảnh hưởng chọn lọc - site mạnh về E-E-A-T tăng, site yếu về content giảm. SpamBrain ảnh hưởng đồng loạt và liên quan trực tiếp đến link profile.</p>
+
+
+
+<h2 class="wp-block-heading">Với Agency và SEO Specialist: Cần Biết Gì?</h2>
+
+
+
+<h3 class="wp-block-heading">Với agency đang quản lý link building cho client:</h3>
+
+
+
+<p class="wp-block-paragraph">Với agency đang quản lý link building, SpamBrain thay đổi fundamentally cách đánh giá rủi ro. Ba nguyên tắc cần áp dụng từ 2026: (1) Link từ site có traffic thực và editorial relevance mới có giá trị - không phải chỉ DA cao; (2) Link pattern tự nhiên quan trọng hơn số lượng - 10 link chất lượng từ 10 domain khác nhau tốt hơn 100 link từ 1 network; (3) Tốc độ link building tự nhiên - đột ngột nhận 1.000 link trong 1 tuần là tín hiệu rõ ràng cho SpamBrain, dù link từ site &#8220;sạch&#8221;.</p>
+
+
+
+<h3 class="wp-block-heading">Với in-house SEO tại doanh nghiệp:</h3>
+
+
+
+<p class="wp-block-paragraph">Với in-house SEO, SpamBrain quan trọng nhất ở khía cạnh kiểm tra lịch sử link profile khi tiếp nhận dự án mới. Nếu site đã từng mua link trước đây, những link đó có thể đã bị devalue bởi SpamBrain - giải thích tại sao ranking không cải thiện dù content tốt. Audit <a href="../backlink/index.html">backlink</a> với Ahrefs và so sánh trend DR theo thời gian để xác định liệu có link devalue đã xảy ra chưa.</p>
+
+
+
+<h2 class="wp-block-heading">Quy Trình Audit Link Profile 2026 Sau SpamBrain</h2>
+
+
+
+<p class="wp-block-paragraph">SpamBrain không yêu cầu bạn disavow link - vì nó đã tự devalue. Nhưng nếu site nhận manual action về unnatural links, cần quy trình xử lý rõ ràng:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Bước 1:</strong> Export toàn bộ backlink từ Ahrefs (hoặc <a href="../majestic-seo/index.html">Majestic</a>) và Google Search Console Links report</li>
+<li><strong>Bước 2:</strong> Lọc referring domain có traffic = 0, mới tạo dưới 1 năm, hoặc có pattern URL bất thường (random string, nhiều ngôn ngữ lẫn lộn)</li>
+<li><strong>Bước 3:</strong> Liên hệ webmaster xin xóa link - chỉ thực hiện với link thực sự có vấn đề, không xóa link tốt vì lo ngại không có cơ sở</li>
+<li><strong>Bước 4:</strong> Tạo disavow file cho link không thể liên hệ xóa - submit qua Google Search Console Disavow Tool</li>
+<li><strong>Bước 5:</strong> Tập trung xây dựng link mới chất lượng - SpamBrain devalue link xấu, nhưng link tốt vẫn có giá trị đầy đủ</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"><strong>Lưu ý quan trọng:</strong> Nếu site chỉ bị SpamBrain devalue (không có manual action), KHÔNG cần disavow. Disavow chỉ cần thiết khi có manual action về unnatural links trong GSC. Disavow không cần thiết sẽ làm mất đi những link tốt còn lại.</p>
+
+
+
+<h2 class="wp-block-heading">Câu Hỏi Thường Gặp Về SpamBrain</h2>
+
+
+
+<h3 class="wp-block-heading">SpamBrain có xử lý tiếng Việt tốt không?</h3>
+
+
+
+<p class="wp-block-paragraph">Từ October 2023, SpamBrain được cải thiện đáng kể cho tiếng Việt. Google explicitly nêu tiếng Việt là một trong 4 ngôn ngữ được update trong lần này. Nghĩa là các chiến lược mua link PBN (private blog network) tiếng Việt, link từ forum spam hay directory spam tiếng Việt đều bị SpamBrain nhận diện tốt hơn trước. Thị trường SEO tiếng Việt đang chuyển dần sang link building tự nhiên vì lý do này.</p>
+
+
+
+<h3 class="wp-block-heading">Nếu competitor dùng negative SEO (spam link vào site tôi), có bị ảnh hưởng không?</h3>
+
+
+
+<p class="wp-block-paragraph">Google đã tính đến vấn đề này. SpamBrain chủ yếu devalue link chứ không penalize site nhận link - đây là lý do Google từ bỏ Penguin-style penalty. Nếu có dấu hiệu negative SEO (đột ngột nhận hàng nghìn spam link), monitor qua GSC và submit disavow file phòng ngừa - dù Google nói không cần thiết trong hầu hết trường hợp. Rủi ro từ negative SEO đã giảm đáng kể từ khi SpamBrain devalue thay vì penalize.</p>
+
+
+
+<h3 class="wp-block-heading">SpamBrain update bao lâu 1 lần?</h3>
+
+
+
+<p class="wp-block-paragraph">SpamBrain hoạt động liên tục (real-time), không chỉ theo các update được thông báo. Các &#8220;spam updates&#8221; Google thông báo là những lần nâng cấp model lớn - nhưng hệ thống đang re-evaluate link profile của mọi site liên tục. Theo dõi Google Search Central Blog và các tool như SEMrush Sensor để nhận thông báo về spam updates.</p>
+
+
+
+<h2 class="wp-block-heading">Kết Luận</h2>
+
+
+
+<p class="wp-block-paragraph">SpamBrain đánh dấu sự chuyển dịch từ &#8220;penalize rồi recover&#8221; sang &#8220;devalue âm thầm&#8221; trong cách Google xử lý link spam. Với <a href="../thuat-toan-google/index.html">thuật toán Google</a> ngày càng phức tạp và SpamBrain liên tục được train thêm data, chiến lược link building bền vững duy nhất trong 2026 là editorial links tự nhiên - nơi site khác link đến vì nội dung của bạn thực sự có giá trị với độc giả của họ. Không có shortcut nào qua được SpamBrain lâu dài.</p>
+
+
+
+<p class="wp-block-paragraph">Cần audit link profile hoặc xây dựng chiến lược link building bền vững? Liên hệ Digicom để được tư vấn trực tiếp.</p>
+
+
+
+<ul class="wp-block-list">
+<li>Hotline: <strong>0988 769 317</strong></li>
+<li>Email: <strong>info@digicomvn.com</strong></li>
+<li><a href="../lien-he/index.html">Tư vấn miễn phí tại đây</a></li>
+</ul>
+
+
+
+<div class="wp-block-group author-box"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<p class="author-label wp-block-paragraph"><strong>VỀ TÁC GIẢ</strong></p>
+<p class="wp-block-paragraph"><strong>Đỗ Hiếu</strong><br>Founder &amp; Digital Marketing Strategist</p>
+<p class="wp-block-paragraph">Founder &amp; Digital Marketing Strategist tại Digicom. Hơn 10 năm kinh nghiệm thực chiến trong lĩnh vực SEO, Entity Branding, PR báo chí và xây dựng thương hiệu.</p>
+<p class="wp-block-paragraph"><a href="../author/do-hieu/index.html">→ Xem tất cả bài viết</a></p>
+</div></div>
+</div>
+				</article>
+						<div class="wrap"></div>
+			</div>
+</section>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<div class="foot-grid">
+			<div>
+													<img class="footer-logo" src="../wp-content/uploads/2026/04/logo-digicom.png" alt="Digicom">
+								<p>Cung cấp tên miền, hosting và dịch vụ hạ tầng website cho doanh nghiệp và cá nhân.</p>
+				<p style="font-size:13px;color:#8aa0b7">Công ty TNHH DVTT Digito Combat<br>MST: 0109816406</p>
+			</div>
+			<div>
+				<h4>Dịch vụ</h4>
+				<ul>
+					<li><a href="index.html#services">Lập trình website</a></li>
+					<li><a href="index.html#domains">Tên miền</a></li>
+					<li><a href="index.html#hosting">Hosting</a></li>
+					<li><a href="index.html#services">Bản quyền phần mềm</a></li>
+					<li><a href="index.html#services">Dịch vụ SEO / GEO</a></li>
+					<li><a href="index.html#services">Google Ads</a></li>
+					<li><a href="index.html#services">Automation workflow</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4>Hỗ trợ</h4>
+				<ul>
+					<li><a href="index.html#faq">Câu hỏi thường gặp</a></li>
+					<li><a href="index.html#">Hướng dẫn thanh toán</a></li>
+					<li><a href="index.html#">Chuyển tên miền</a></li>
+					<li><a href="index.html#">Quản lý dịch vụ</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4>Liên hệ</h4>
+				<ul>
+					<li>Hotline: <a href="tel:0988769317"><strong style="color:#fff">0988 769 317</strong></a></li>
+					<li>Email: <a href="mailto:info@digicomvn.com">info@digicomvn.com</a></li>
+					<li>Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội</li>
+					<li>Thứ 2 - Thứ 6, 8:00 - 18:00</li>
+				</ul>
+			</div>
+		</div>
+		<div class="foot-bottom">
+			<span>&copy; 2026 Digicom - Digito Combat. All rights reserved.</span>
+			<span>Điều khoản &middot; Chính sách bảo mật</span>
+		</div>
+	</div>
+</footer>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/digicom-host/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-hooks-js" src="http://digicom.local/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="http://digicom.local/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="react-js" src="http://digicom.local/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1"></script>
+<script id="react-dom-js" src="http://digicom.local/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1"></script>
+<script id="wp-escape-html-js" src="http://digicom.local/wp-includes/js/dist/escape-html.min.js?ver=3f093e5cca67aa0f8b56"></script>
+<script id="wp-element-js" src="http://digicom.local/wp-includes/js/dist/element.min.js?ver=15ba804677f72a8db97b"></script>
+<script id="tutor-script-js-extra">
+var _tutorobject = {"ajaxurl":"http://digicom.local/wp-admin/admin-ajax.php","home_url":"http://digicom.local","site_url":"http://digicom.local","site_title":"Digicom","base_path":"/","tutor_url":"http://digicom.local/wp-content/plugins/tutor/","tutor_pro_url":null,"nonce_key":"_tutor_nonce","_tutor_nonce":"b9320c00a9","loading_icon_url":"http://digicom.local/wp-admin/images/wpspin_light.gif","placeholder_img_src":"http://digicom.local/wp-content/plugins/tutor/assets/images/placeholder.svg","enable_lesson_classic_editor":"","tutor_frontend_dashboard_url":"http://digicom.local/dashboard/","wp_date_format":"MMMM d, yyyy","start_of_week":"1","is_admin":"","is_admin_bar_showing":"","addons_data":[{"name":"B\u1ed9 kh\u00f3a h\u1ecdc","description":"Nh\u00f3m nhi\u1ec1u kh\u00f3a h\u1ecdc \u0111\u1ec3 b\u00e1n c\u00f9ng nhau.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/course-bundle/thumbnail.svg","base_name":"course-bundle","is_enabled":0},{"name":"\u0110\u0103ng k\u00fd","description":"Qu\u1ea3n l\u00fd \u0111\u0103ng k\u00fd","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/subscription/thumbnail.png","base_name":"subscription","is_enabled":0},{"name":"Content Bank","description":"Create content once and use it across multiple courses.","is_new":true,"url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/content-bank/thumbnail.png","base_name":"content-bank","is_enabled":0},{"name":"\u0110\u0103ng nh\u1eadp m\u1ea1ng x\u00e3 h\u1ed9i","description":"Cho ph\u00e9p ng\u01b0\u1eddi d\u00f9ng \u0111\u0103ng k\u00fd & \u0111\u0103ng nh\u1eadp th\u00f4ng qua m\u1ea1ng x\u00e3 h\u1ed9i.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/social-login/thumbnail.svg","base_name":"social-login","is_enabled":0},{"name":"N\u1ed9i dung nh\u1ecf gi\u1ecdt","description":"M\u1edf kh\u00f3a b\u00e0i h\u1ecdc theo l\u1ecbch tr\u00ecnh ho\u1eb7c khi h\u1ecdc vi\u00ean \u0111\u00e1p \u1ee9ng \u0111i\u1ec1u ki\u1ec7n c\u1ee5 th\u1ec3.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/content-drip/thumbnail.png","base_name":"content-drip","is_enabled":0},{"name":"Tutor nhi\u1ec1u gi\u1ea3ng vi\u00ean","description":"H\u1ee3p t\u00e1c v\u00e0 th\u00eam nhi\u1ec1u gi\u1ea3ng vi\u00ean v\u00e0o m\u1ed9t kh\u00f3a h\u1ecdc.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-multi-instructors/thumbnail.png","base_name":"tutor-multi-instructors","is_enabled":0},{"name":"B\u00e0i t\u1eadp c\u1ee7a Tutor","description":"\u0110\u00e1nh gi\u00e1 vi\u1ec7c h\u1ecdc c\u1ee7a h\u1ecdc vi\u00ean b\u1eb1ng b\u00e0i t\u1eadp.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-assignments/thumbnail.png","base_name":"tutor-assignments","is_enabled":0},{"name":"Xem tr\u01b0\u1edbc kh\u00f3a h\u1ecdc Tutor","description":"Cung c\u1ea5p b\u1ea3n xem tr\u01b0\u1edbc mi\u1ec5n ph\u00ed c\u00e1c b\u00e0i h\u1ecdc c\u1ee5 th\u1ec3 tr\u01b0\u1edbc khi \u0111\u0103ng k\u00fd.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-course-preview/thumbnail.png","base_name":"tutor-course-preview","is_enabled":0},{"name":"T\u00e0i li\u1ec7u \u0111\u00ednh k\u00e8m kh\u00f3a h\u1ecdc Tutor","description":"Th\u00eam c\u00e1c t\u1ec7p \u0111\u00ednh k\u00e8m/t\u1ec7p ri\u00eang kh\u00f4ng gi\u1edbi h\u1ea1n v\u00e0o b\u1ea5t k\u1ef3 kh\u00f3a h\u1ecdc Tutor n\u00e0o","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-course-attachments/thumbnail.png","base_name":"tutor-course-attachments","is_enabled":0},{"name":"Tutor t\u00edch h\u1ee3p Google Meet","description":"T\u1ed5 ch\u1ee9c c\u00e1c l\u1edbp h\u1ecdc tr\u1ef1c ti\u1ebfp v\u1edbi Google Meet, tr\u1ef1c ti\u1ebfp t\u1eeb trang b\u00e0i h\u1ecdc c\u1ee7a b\u1ea1n.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/google-meet/thumbnail.png","base_name":"google-meet","is_enabled":0},{"name":"B\u00e1o c\u00e1o Tutor","description":"Ki\u1ec3m tra hi\u1ec7u su\u1ea5t kh\u00f3a h\u1ecdc c\u1ee7a b\u1ea1n th\u00f4ng qua th\u1ed1ng k\u00ea B\u00e1o c\u00e1o Tutor.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-report/thumbnail.png","base_name":"tutor-report","is_enabled":0},{"name":"E-mail","description":"G\u1eedi email t\u1ef1 \u0111\u1ed9ng v\u00e0 t\u00f9y ch\u1ec9nh cho c\u00e1c s\u1ef1 ki\u1ec7n c\u1ee7a Tutor.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-email/thumbnail.png","base_name":"tutor-email","is_enabled":0},{"name":"L\u1ecbch","description":"B\u1eadt \u0111\u1ec3 cho ph\u00e9p h\u1ecdc vi\u00ean xem t\u1ea5t c\u1ea3 c\u00e1c s\u1ef1 ki\u1ec7n kh\u00f3a h\u1ecdc c\u1ee7a b\u1ea1n \u1edf m\u1ed9t n\u01a1i.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/calendar/thumbnail.png","base_name":"calendar","is_enabled":0},{"name":"Th\u00f4ng b\u00e1o","description":"Gi\u1eef cho h\u1ecdc vi\u00ean v\u00e0 ng\u01b0\u1eddi h\u01b0\u1edbng d\u1eabn \u0111\u01b0\u1ee3c th\u00f4ng b\u00e1o v\u1ec1 c\u00e1c s\u1ef1 ki\u1ec7n c\u1ee7a kh\u00f3a h\u1ecdc tr\u00ean b\u1ea3ng \u0111i\u1ec1u khi\u1ec3n c\u1ee7a h\u1ecd.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-notifications/thumbnail.png","base_name":"tutor-notifications","is_enabled":0},{"name":"T\u00edch h\u1ee3p Google L\u1edbp h\u1ecdc","description":"B\u1eadt \u0111\u1ec3 t\u00edch h\u1ee3p Tutor LMS v\u1edbi Google Classroom.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/google-classroom/thumbnail.png","base_name":"google-classroom","is_enabled":0},{"name":"T\u00edch h\u1ee3p Tutor Zoom","description":"K\u1ebft n\u1ed1i Tutor LMS v\u1edbi Zoom \u0111\u1ec3 t\u1ed5 ch\u1ee9c c\u00e1c l\u1edbp h\u1ecdc tr\u1ef1c tuy\u1ebfn.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-zoom/thumbnail.png","base_name":"tutor-zoom","is_enabled":0},{"name":"Xu\u1ea5t/Nh\u1eadp b\u00e0i ki\u1ec3m tra","description":"Ti\u1ebft ki\u1ec7m th\u1eddi gian b\u1eb1ng c\u00e1ch xu\u1ea5t/nh\u1eadp d\u1eef li\u1ec7u b\u00e0i ki\u1ec3m tra v\u1edbi c\u00e1c t\u00f9y ch\u1ecdn d\u1ec5 d\u00e0ng.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/quiz-import-export/thumbnail.png","base_name":"quiz-import-export","is_enabled":0},{"name":"Ghi danh","description":"B\u1eadt \u0111\u1ec3 \u0111\u0103ng k\u00fd h\u1ecdc vi\u00ean v\u00e0o c\u00e1c kh\u00f3a h\u1ecdc c\u1ee7a b\u1ea1n.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/enrollments/thumbnail.png","base_name":"enrollments","is_enabled":0},{"name":"Ch\u1ee9ng ch\u1ec9 Tutor","description":"B\u1eadt \u0111\u1ec3 trao ch\u1ee9ng ch\u1ec9 sau khi ho\u00e0n th\u00e0nh kh\u00f3a h\u1ecdc.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-certificate/thumbnail.png","base_name":"tutor-certificate","is_enabled":0},{"name":"S\u1ed5 \u0111i\u1ec3m","description":"Theo d\u00f5i ti\u1ebfn \u0111\u1ed9 c\u1ee7a h\u1ecdc vi\u00ean v\u1edbi s\u1ed5 \u0111i\u1ec3m t\u1eadp trung.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/gradebook/thumbnail.png","base_name":"gradebook","is_enabled":0},{"name":"\u0110i\u1ec1u ki\u1ec7n ti\u00ean quy\u1ebft c\u1ee7a Tutor","description":"\u0110\u1eb7t \u0111i\u1ec1u ki\u1ec7n ti\u00ean quy\u1ebft c\u1ee7a kh\u00f3a h\u1ecdc \u0111\u1ec3 h\u01b0\u1edbng d\u1eabn l\u1ed9 tr\u00ecnh h\u1ecdc t\u1eadp hi\u1ec7u qu\u1ea3.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-prerequisites/thumbnail.png","base_name":"tutor-prerequisites","is_enabled":0},{"name":"BuddyPress","description":"T\u0103ng c\u01b0\u1eddng s\u1ef1 thu h\u00fat v\u1edbi c\u00e1c t\u00ednh n\u0103ng x\u00e3 h\u1ed9i th\u00f4ng qua BuddyPress cho Tutor LMS.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/buddypress/thumbnail.png","base_name":"buddypress","is_enabled":0},{"name":"\u0110\u0103ng k\u00fd WooCommerce","description":"Thu th\u1eadp doanh thu d\u01b0 v\u1edbi Thanh to\u00e1n \u0111\u1ecbnh k\u1ef3.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/wc-subscriptions/thumbnail.png","base_name":"wc-subscriptions","is_enabled":0},{"name":"Th\u00e0nh vi\u00ean tr\u1ea3 ph\u00ed Pro","description":"T\u0103ng doanh thu b\u1eb1ng c\u00e1ch b\u00e1n t\u01b0 c\u00e1ch th\u00e0nh vi\u00ean kh\u00f3a h\u1ecdc.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/pmpro/thumbnail.png","base_name":"pmpro","is_enabled":0},{"name":"Restrict Content Pro","description":"B\u1eadt \u0111\u1ec3 qu\u1ea3n l\u00fd quy\u1ec1n truy c\u1eadp n\u1ed9i dung th\u00f4ng qua Restrict Content Pro. ","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/restrict-content-pro/thumbnail.png","base_name":"restrict-content-pro","is_enabled":0},{"name":"Weglot","description":"D\u1ecbch v\u00e0 qu\u1ea3n l\u00fd c\u00e1c kh\u00f3a h\u1ecdc \u0111a ng\u00f4n ng\u1eef \u0111\u1ec3 ti\u1ebfp c\u1eadn to\u00e0n c\u1ea7u.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-weglot/thumbnail.png","base_name":"tutor-weglot","is_enabled":0},{"name":"WPML","description":"T\u1ea1o c\u00e1c kh\u00f3a h\u1ecdc, b\u00e0i h\u1ecdc, b\u1ea3ng \u0111i\u1ec1u khi\u1ec3n v\u00e0 h\u01a1n th\u1ebf n\u1eefa \u0111a ng\u00f4n ng\u1eef.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-wpml/thumbnail.png","base_name":"tutor-wpml","is_enabled":0},{"name":"H5P","description":"T\u00edch h\u1ee3p H5P \u0111\u1ec3 th\u00eam t\u00ednh t\u01b0\u01a1ng t\u00e1c v\u00e0 s\u1ef1 thu h\u00fat v\u00e0o c\u00e1c kh\u00f3a h\u1ecdc c\u1ee7a b\u1ea1n.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/h5p/thumbnail.png","base_name":"h5p","is_enabled":0}],"current_user":[],"content_change_event":"tutor_content_changed_event","is_tutor_course_edit":"","assignment_max_file_allowed":"0","current_page":"","quiz_answer_display_time":"0","is_ssl":"","course_list_page_url":"http://digicom.local/wp-admin/admin.php?page=tutor","course_post_type":"courses","tutor_currency":{"symbol":"$","currency":"USD","position":"left","thousand_separator":",","decimal_separator":".","no_of_decimal":"2"},"local":"vi","settings":{"monetize_by":"tutor"},"max_upload_size":"314572800","monetize_by":"tutor"};
+//# sourceURL=tutor-script-js-extra
+</script>
+<script id="tutor-script-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "tutor", {"translation-revision-date":"2025-04-11 15:07:21+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"vi_VN"},"Something went wrong":["\u0110\u00e3 x\u1ea3y ra s\u1ef1 c\u1ed1"],"Something Went Wrong!":["\u0110\u00e3 x\u1ea3y ra s\u1ef1 c\u1ed1!"],"Show More":["Hi\u1ec3n th\u1ecb th\u00eam"],"Warning!":["C\u1ea3nh b\u00e1o!"],"Are you sure to delete?":["B\u1ea1n c\u00f3 ch\u1eafc ch\u1eafn l\u00e0 mu\u1ed1n X\u00d3A?"],"Select or Upload Media Of Your Chosen Persuasion":["Ch\u1ecdn ho\u1eb7c t\u1ea3i l\u00ean ph\u01b0\u01a1ng ti\u1ec7n truy\u1ec1n th\u00f4ng c\u1ee7a s\u1ef1 thuy\u1ebft ph\u1ee5c b\u1ea1n \u0111\u00e3 ch\u1ecdn"],"Use this media":["S\u1eed d\u1ee5ng ph\u01b0\u01a1ng ti\u1ec7n n\u00e0y"],"Loading...":["\u0110ang t\u1ea3i..."],"Success":["Th\u00e0nh c\u00f4ng"],"Updated":["C\u1eadp nh\u1eadt"],"Error":["L\u1ed7i"],"Time":["Th\u1eddi gian"],"Failed":["Kh\u00f4ng \u0111\u1ea1t"],"Apply":["\u00c1p d\u1ee5ng"]}},"comment":{"reference":"assets\/js\/tutor.js"}} );
+//# sourceURL=tutor-script-js-translations
+</script>
+<script id="tutor-script-js" src="http://digicom.local/wp-content/plugins/tutor/assets/js/tutor.js?ver=3.9.13"></script>
+<script id="quicktags-js-extra">
+var quicktagsL10n = {"closeAllOpenTags":"\u0110\u00f3ng t\u1ea5t c\u1ea3 c\u00e1c th\u1ebb","closeTags":"\u0111\u00f3ng th\u1ebb","enterURL":"\u0110i\u1ec1n \u0111\u01b0\u1eddng d\u1eabn","enterImageURL":"\u0110i\u1ec1n \u0111\u01b0\u1eddng d\u1eabn c\u1ee7a \u1ea3nh","enterImageDescription":"\u0110i\u1ec1n m\u00f4 t\u1ea3 c\u1ee7a \u1ea3nh","textdirection":"h\u01b0\u1edbng \u0111\u1ecdc v\u0103n b\u1ea3n","toggleTextdirection":"Chuy\u1ec3n \u0111\u1ed5i h\u01b0\u1edbng \u0111\u1ecdc v\u0103n b\u1ea3n c\u1ee7a b\u1ed9 so\u1ea1n th\u1ea3o","dfw":"Ch\u1ebf \u0111\u1ed9 vi\u1ebft ch\u1ed1ng xao nh\u00e3ng","strong":"\u0110\u1eadm","strongClose":"\u0110\u00f3ng nh\u00e3n \u0111\u1eadm","em":"Nghi\u00eang","emClose":"\u0110\u00f3ng nh\u00e3n nghi\u00eang","link":"Th\u00eam \u0111\u01b0\u1eddng d\u1eabn","blockquote":"Tr\u00edch d\u1eabn","blockquoteClose":"\u0110\u00f3ng nh\u00e3n d\u1ea5u nh\u00e1y k\u00e9p","del":"V\u0103n b\u1ea3n \u0111\u00e3 x\u00f3a (g\u1ea1ch ngang gi\u1eefa ch\u1eef)","delClose":"\u0110\u00f3ng nh\u00e3n v\u0103n b\u1ea3n \u0111\u00e3 x\u00f3a","ins":"V\u0103n b\u1ea3n \u0111\u00e3 ch\u00e8n","insClose":"\u0110\u00f3ng th\u1ebb v\u0103n b\u1ea3n \u0111\u00e3 ch\u00e8n","image":"Ch\u00e8n \u1ea3nh","ul":"Danh s\u00e1ch li\u1ec7t k\u00ea \u0111\u01b0\u1ee3c \u0111\u00e1nh s\u1ed1","ulClose":"\u0110\u00f3ng nh\u00e3n danh s\u00e1ch \u0111\u01b0\u1ee3c k\u00ed hi\u1ec7u","ol":"Danh s\u00e1ch \u0111\u01b0\u1ee3c \u0111\u00e1nh s\u1ed1","olClose":"\u0110\u00f3ng nh\u00e3n danh s\u00e1ch \u0111\u01b0\u1ee3c \u0111\u00e1nh s\u1ed1","li":"M\u1ee5c danh s\u00e1ch","liClose":"\u0110\u00f3ng nh\u00e3n m\u1ee5c danh s\u00e1ch","code":"M\u00e3 code","codeClose":"\u0110\u00f3ng nh\u00e3n m\u00e3","more":"Ch\u00e8n th\u1ebb \u0110\u1ecdc Th\u00eam"};
+//# sourceURL=quicktags-js-extra
+</script>
+<script id="quicktags-js" src="http://digicom.local/wp-includes/js/quicktags.min.js?ver=7.0"></script>
+<script id="jquery-ui-core-js" src="http://digicom.local/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-mouse-js" src="http://digicom.local/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-sortable-js" src="http://digicom.local/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3"></script>
+<script id="jquery-touch-punch-js" src="http://digicom.local/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2"></script>
+<script id="tutor-social-share-js" src="http://digicom.local/wp-content/plugins/tutor/assets/lib/SocialShare/SocialShare.min.js?ver=3.9.13"></script>
+<script id="moment-js" src="http://digicom.local/wp-includes/js/dist/vendor/moment.min.js?ver=2.30.1"></script>
+<script id="moment-js-after">
+moment.updateLocale( 'vi', {"months":["Th\u00e1ng 1","Th\u00e1ng 2","Th\u00e1ng 3","Th\u00e1ng 4","Th\u00e1ng 5","Th\u00e1ng 6","Th\u00e1ng 7","Th\u00e1ng 8","Th\u00e1ng 9","Th\u00e1ng 10","Th\u00e1ng 11","Th\u00e1ng 12"],"monthsShort":["Th1","Th2","Th3","Th4","Th5","Th6","Th7","Th8","Th9","Th10","Th11","Th12"],"weekdays":["Ch\u1ee7 Nh\u1eadt","Th\u1ee9 Hai","Th\u1ee9 Ba","Th\u1ee9 T\u01b0","Th\u1ee9 N\u0103m","Th\u1ee9 S\u00e1u","Th\u1ee9 B\u1ea3y"],"weekdaysShort":["CN","T2","T3","T4","T5","T6","T7"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"j F, Y g:i a","LLLL":null}} );
+//# sourceURL=moment-js-after
+</script>
+<script id="wp-deprecated-js" src="http://digicom.local/wp-includes/js/dist/deprecated.min.js?ver=990e85f234fee8f7d446"></script>
+<script id="wp-date-js" src="http://digicom.local/wp-includes/js/dist/date.min.js?ver=c9f8e7dd3232716f34e9"></script>
+<script id="wp-date-js-after">
+wp.date.setSettings( {"l10n":{"locale":"vi","months":["Th\u00e1ng 1","Th\u00e1ng 2","Th\u00e1ng 3","Th\u00e1ng 4","Th\u00e1ng 5","Th\u00e1ng 6","Th\u00e1ng 7","Th\u00e1ng 8","Th\u00e1ng 9","Th\u00e1ng 10","Th\u00e1ng 11","Th\u00e1ng 12"],"monthsShort":["Th1","Th2","Th3","Th4","Th5","Th6","Th7","Th8","Th9","Th10","Th11","Th12"],"weekdays":["Ch\u1ee7 Nh\u1eadt","Th\u1ee9 Hai","Th\u1ee9 Ba","Th\u1ee9 T\u01b0","Th\u1ee9 N\u0103m","Th\u1ee9 S\u00e1u","Th\u1ee9 B\u1ea3y"],"weekdaysShort":["CN","T2","T3","T4","T5","T6","T7"],"meridiem":{"am":"s\u00e1ng","pm":"chi\u1ec1u","AM":"S\u00e1ng","PM":"Chi\u1ec1u"},"relative":{"future":"%s t\u1eeb b\u00e2y gi\u1edd","past":"%s tr\u01b0\u1edbc","s":"m\u1ed9t gi\u00e2y","ss":"%d gi\u00e2y","m":"m\u1ed9t ph\u00fat","mm":"%d ph\u00fat","h":"m\u1ed9t gi\u1edd","hh":"%d gi\u1edd","d":"m\u1ed9t ng\u00e0y","dd":"%d ng\u00e0y","M":"m\u1ed9t th\u00e1ng","MM":"%d th\u00e1ng","y":"m\u1ed9t n\u0103m","yy":"%d n\u0103m"},"startOfWeek":1},"formats":{"time":"g:i a","date":"F j, Y","datetime":"j F, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":0,"offsetFormatted":"0","string":"","abbr":""}} );
+//# sourceURL=wp-date-js-after
+</script>
+<script id="tutor-frontend-js-extra">
+var _tutorobject = {"ajaxurl":"http://digicom.local/wp-admin/admin-ajax.php","home_url":"http://digicom.local","site_url":"http://digicom.local","site_title":"Digicom","base_path":"/","tutor_url":"http://digicom.local/wp-content/plugins/tutor/","tutor_pro_url":null,"nonce_key":"_tutor_nonce","_tutor_nonce":"b9320c00a9","loading_icon_url":"http://digicom.local/wp-admin/images/wpspin_light.gif","placeholder_img_src":"http://digicom.local/wp-content/plugins/tutor/assets/images/placeholder.svg","enable_lesson_classic_editor":"","tutor_frontend_dashboard_url":"http://digicom.local/dashboard/","wp_date_format":"MMMM d, yyyy","start_of_week":"1","is_admin":"","is_admin_bar_showing":"","addons_data":[{"name":"B\u1ed9 kh\u00f3a h\u1ecdc","description":"Nh\u00f3m nhi\u1ec1u kh\u00f3a h\u1ecdc \u0111\u1ec3 b\u00e1n c\u00f9ng nhau.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/course-bundle/thumbnail.svg","base_name":"course-bundle","is_enabled":0},{"name":"\u0110\u0103ng k\u00fd","description":"Qu\u1ea3n l\u00fd \u0111\u0103ng k\u00fd","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/subscription/thumbnail.png","base_name":"subscription","is_enabled":0},{"name":"Content Bank","description":"Create content once and use it across multiple courses.","is_new":true,"url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/content-bank/thumbnail.png","base_name":"content-bank","is_enabled":0},{"name":"\u0110\u0103ng nh\u1eadp m\u1ea1ng x\u00e3 h\u1ed9i","description":"Cho ph\u00e9p ng\u01b0\u1eddi d\u00f9ng \u0111\u0103ng k\u00fd & \u0111\u0103ng nh\u1eadp th\u00f4ng qua m\u1ea1ng x\u00e3 h\u1ed9i.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/social-login/thumbnail.svg","base_name":"social-login","is_enabled":0},{"name":"N\u1ed9i dung nh\u1ecf gi\u1ecdt","description":"M\u1edf kh\u00f3a b\u00e0i h\u1ecdc theo l\u1ecbch tr\u00ecnh ho\u1eb7c khi h\u1ecdc vi\u00ean \u0111\u00e1p \u1ee9ng \u0111i\u1ec1u ki\u1ec7n c\u1ee5 th\u1ec3.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/content-drip/thumbnail.png","base_name":"content-drip","is_enabled":0},{"name":"Tutor nhi\u1ec1u gi\u1ea3ng vi\u00ean","description":"H\u1ee3p t\u00e1c v\u00e0 th\u00eam nhi\u1ec1u gi\u1ea3ng vi\u00ean v\u00e0o m\u1ed9t kh\u00f3a h\u1ecdc.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-multi-instructors/thumbnail.png","base_name":"tutor-multi-instructors","is_enabled":0},{"name":"B\u00e0i t\u1eadp c\u1ee7a Tutor","description":"\u0110\u00e1nh gi\u00e1 vi\u1ec7c h\u1ecdc c\u1ee7a h\u1ecdc vi\u00ean b\u1eb1ng b\u00e0i t\u1eadp.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-assignments/thumbnail.png","base_name":"tutor-assignments","is_enabled":0},{"name":"Xem tr\u01b0\u1edbc kh\u00f3a h\u1ecdc Tutor","description":"Cung c\u1ea5p b\u1ea3n xem tr\u01b0\u1edbc mi\u1ec5n ph\u00ed c\u00e1c b\u00e0i h\u1ecdc c\u1ee5 th\u1ec3 tr\u01b0\u1edbc khi \u0111\u0103ng k\u00fd.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-course-preview/thumbnail.png","base_name":"tutor-course-preview","is_enabled":0},{"name":"T\u00e0i li\u1ec7u \u0111\u00ednh k\u00e8m kh\u00f3a h\u1ecdc Tutor","description":"Th\u00eam c\u00e1c t\u1ec7p \u0111\u00ednh k\u00e8m/t\u1ec7p ri\u00eang kh\u00f4ng gi\u1edbi h\u1ea1n v\u00e0o b\u1ea5t k\u1ef3 kh\u00f3a h\u1ecdc Tutor n\u00e0o","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-course-attachments/thumbnail.png","base_name":"tutor-course-attachments","is_enabled":0},{"name":"Tutor t\u00edch h\u1ee3p Google Meet","description":"T\u1ed5 ch\u1ee9c c\u00e1c l\u1edbp h\u1ecdc tr\u1ef1c ti\u1ebfp v\u1edbi Google Meet, tr\u1ef1c ti\u1ebfp t\u1eeb trang b\u00e0i h\u1ecdc c\u1ee7a b\u1ea1n.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/google-meet/thumbnail.png","base_name":"google-meet","is_enabled":0},{"name":"B\u00e1o c\u00e1o Tutor","description":"Ki\u1ec3m tra hi\u1ec7u su\u1ea5t kh\u00f3a h\u1ecdc c\u1ee7a b\u1ea1n th\u00f4ng qua th\u1ed1ng k\u00ea B\u00e1o c\u00e1o Tutor.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-report/thumbnail.png","base_name":"tutor-report","is_enabled":0},{"name":"E-mail","description":"G\u1eedi email t\u1ef1 \u0111\u1ed9ng v\u00e0 t\u00f9y ch\u1ec9nh cho c\u00e1c s\u1ef1 ki\u1ec7n c\u1ee7a Tutor.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-email/thumbnail.png","base_name":"tutor-email","is_enabled":0},{"name":"L\u1ecbch","description":"B\u1eadt \u0111\u1ec3 cho ph\u00e9p h\u1ecdc vi\u00ean xem t\u1ea5t c\u1ea3 c\u00e1c s\u1ef1 ki\u1ec7n kh\u00f3a h\u1ecdc c\u1ee7a b\u1ea1n \u1edf m\u1ed9t n\u01a1i.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/calendar/thumbnail.png","base_name":"calendar","is_enabled":0},{"name":"Th\u00f4ng b\u00e1o","description":"Gi\u1eef cho h\u1ecdc vi\u00ean v\u00e0 ng\u01b0\u1eddi h\u01b0\u1edbng d\u1eabn \u0111\u01b0\u1ee3c th\u00f4ng b\u00e1o v\u1ec1 c\u00e1c s\u1ef1 ki\u1ec7n c\u1ee7a kh\u00f3a h\u1ecdc tr\u00ean b\u1ea3ng \u0111i\u1ec1u khi\u1ec3n c\u1ee7a h\u1ecd.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-notifications/thumbnail.png","base_name":"tutor-notifications","is_enabled":0},{"name":"T\u00edch h\u1ee3p Google L\u1edbp h\u1ecdc","description":"B\u1eadt \u0111\u1ec3 t\u00edch h\u1ee3p Tutor LMS v\u1edbi Google Classroom.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/google-classroom/thumbnail.png","base_name":"google-classroom","is_enabled":0},{"name":"T\u00edch h\u1ee3p Tutor Zoom","description":"K\u1ebft n\u1ed1i Tutor LMS v\u1edbi Zoom \u0111\u1ec3 t\u1ed5 ch\u1ee9c c\u00e1c l\u1edbp h\u1ecdc tr\u1ef1c tuy\u1ebfn.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-zoom/thumbnail.png","base_name":"tutor-zoom","is_enabled":0},{"name":"Xu\u1ea5t/Nh\u1eadp b\u00e0i ki\u1ec3m tra","description":"Ti\u1ebft ki\u1ec7m th\u1eddi gian b\u1eb1ng c\u00e1ch xu\u1ea5t/nh\u1eadp d\u1eef li\u1ec7u b\u00e0i ki\u1ec3m tra v\u1edbi c\u00e1c t\u00f9y ch\u1ecdn d\u1ec5 d\u00e0ng.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/quiz-import-export/thumbnail.png","base_name":"quiz-import-export","is_enabled":0},{"name":"Ghi danh","description":"B\u1eadt \u0111\u1ec3 \u0111\u0103ng k\u00fd h\u1ecdc vi\u00ean v\u00e0o c\u00e1c kh\u00f3a h\u1ecdc c\u1ee7a b\u1ea1n.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/enrollments/thumbnail.png","base_name":"enrollments","is_enabled":0},{"name":"Ch\u1ee9ng ch\u1ec9 Tutor","description":"B\u1eadt \u0111\u1ec3 trao ch\u1ee9ng ch\u1ec9 sau khi ho\u00e0n th\u00e0nh kh\u00f3a h\u1ecdc.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-certificate/thumbnail.png","base_name":"tutor-certificate","is_enabled":0},{"name":"S\u1ed5 \u0111i\u1ec3m","description":"Theo d\u00f5i ti\u1ebfn \u0111\u1ed9 c\u1ee7a h\u1ecdc vi\u00ean v\u1edbi s\u1ed5 \u0111i\u1ec3m t\u1eadp trung.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/gradebook/thumbnail.png","base_name":"gradebook","is_enabled":0},{"name":"\u0110i\u1ec1u ki\u1ec7n ti\u00ean quy\u1ebft c\u1ee7a Tutor","description":"\u0110\u1eb7t \u0111i\u1ec1u ki\u1ec7n ti\u00ean quy\u1ebft c\u1ee7a kh\u00f3a h\u1ecdc \u0111\u1ec3 h\u01b0\u1edbng d\u1eabn l\u1ed9 tr\u00ecnh h\u1ecdc t\u1eadp hi\u1ec7u qu\u1ea3.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-prerequisites/thumbnail.png","base_name":"tutor-prerequisites","is_enabled":0},{"name":"BuddyPress","description":"T\u0103ng c\u01b0\u1eddng s\u1ef1 thu h\u00fat v\u1edbi c\u00e1c t\u00ednh n\u0103ng x\u00e3 h\u1ed9i th\u00f4ng qua BuddyPress cho Tutor LMS.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/buddypress/thumbnail.png","base_name":"buddypress","is_enabled":0},{"name":"\u0110\u0103ng k\u00fd WooCommerce","description":"Thu th\u1eadp doanh thu d\u01b0 v\u1edbi Thanh to\u00e1n \u0111\u1ecbnh k\u1ef3.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/wc-subscriptions/thumbnail.png","base_name":"wc-subscriptions","is_enabled":0},{"name":"Th\u00e0nh vi\u00ean tr\u1ea3 ph\u00ed Pro","description":"T\u0103ng doanh thu b\u1eb1ng c\u00e1ch b\u00e1n t\u01b0 c\u00e1ch th\u00e0nh vi\u00ean kh\u00f3a h\u1ecdc.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/pmpro/thumbnail.png","base_name":"pmpro","is_enabled":0},{"name":"Restrict Content Pro","description":"B\u1eadt \u0111\u1ec3 qu\u1ea3n l\u00fd quy\u1ec1n truy c\u1eadp n\u1ed9i dung th\u00f4ng qua Restrict Content Pro. ","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/restrict-content-pro/thumbnail.png","base_name":"restrict-content-pro","is_enabled":0},{"name":"Weglot","description":"D\u1ecbch v\u00e0 qu\u1ea3n l\u00fd c\u00e1c kh\u00f3a h\u1ecdc \u0111a ng\u00f4n ng\u1eef \u0111\u1ec3 ti\u1ebfp c\u1eadn to\u00e0n c\u1ea7u.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-weglot/thumbnail.png","base_name":"tutor-weglot","is_enabled":0},{"name":"WPML","description":"T\u1ea1o c\u00e1c kh\u00f3a h\u1ecdc, b\u00e0i h\u1ecdc, b\u1ea3ng \u0111i\u1ec1u khi\u1ec3n v\u00e0 h\u01a1n th\u1ebf n\u1eefa \u0111a ng\u00f4n ng\u1eef.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/tutor-wpml/thumbnail.png","base_name":"tutor-wpml","is_enabled":0},{"name":"H5P","description":"T\u00edch h\u1ee3p H5P \u0111\u1ec3 th\u00eam t\u00ednh t\u01b0\u01a1ng t\u00e1c v\u00e0 s\u1ef1 thu h\u00fat v\u00e0o c\u00e1c kh\u00f3a h\u1ecdc c\u1ee7a b\u1ea1n.","url":"http://digicom.local/wp-content/plugins/tutor/assets/images/addons/h5p/thumbnail.png","base_name":"h5p","is_enabled":0}],"current_user":[],"content_change_event":"tutor_content_changed_event","is_tutor_course_edit":"","assignment_max_file_allowed":"0","current_page":"","quiz_answer_display_time":"0","is_ssl":"","course_list_page_url":"http://digicom.local/wp-admin/admin.php?page=tutor","course_post_type":"courses","tutor_currency":{"symbol":"$","currency":"USD","position":"left","thousand_separator":",","decimal_separator":".","no_of_decimal":"2"},"local":"vi","settings":{"monetize_by":"tutor"},"max_upload_size":"314572800","monetize_by":"tutor"};
+//# sourceURL=tutor-frontend-js-extra
+</script>
+<script id="tutor-frontend-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "tutor", {"translation-revision-date":"2025-04-11 15:07:21+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"vi_VN"},"N\/A":["N\/A"],"Something went wrong":["\u0110\u00e3 x\u1ea3y ra s\u1ef1 c\u1ed1"],"Something Went Wrong!":["\u0110\u00e3 x\u1ea3y ra s\u1ef1 c\u1ed1!"],"Select":["L\u1ef1a ch\u1ecdn"],"Processing":["\u0110ang x\u1eed l\u00fd"],"Yes, leave quiz":["v\u00e2ng, r\u1eddi Quiz"],"The answer for this question is required":["C\u00e2u tr\u1ea3 l\u1eddi cho c\u00e2u h\u1ecfi n\u00e0y l\u00e0 b\u1eaft bu\u1ed9c"],"Please select at least one option to answer.":["Vui l\u00f2ng ch\u1ecdn \u00edt nh\u1ea5t m\u1ed9t t\u00f9y ch\u1ecdn \u0111\u1ec3 tr\u1ea3 l\u1eddi."],"Please select an option to answer":["Vui l\u00f2ng ch\u1ecdn m\u1ed9t t\u00f9y ch\u1ecdn \u0111\u1ec3 tr\u1ea3 l\u1eddi"],"Request Error":["Y\u00eau c\u1ea7u l\u1ed7i"],"No Limit":["Kh\u00f4ng gi\u1edbi h\u1ea1n"],"Success":["Th\u00e0nh c\u00f4ng"],"View Cart":["Xem gi\u1ecf h\u00e0ng"],"Correct Answer":["C\u00e2u tr\u1ea3 l\u1eddi \u0111\u00fang"],"Delete":["X\u00f3a"],"Error":["L\u1ed7i"],"Failed":["Kh\u00f4ng \u0111\u1ea1t"]}},"comment":{"reference":"assets\/js\/tutor-front.js"}} );
+//# sourceURL=tutor-frontend-js-translations
+</script>
+<script id="tutor-frontend-js" src="http://digicom.local/wp-content/plugins/tutor/assets/js/tutor-front.js?ver=3.9.13"></script>
+<script id="jquery-ui-datepicker-js" src="http://digicom.local/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-datepicker-js-after">
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"\u0110\u00f3ng","currentText":"H\u00f4m nay","monthNames":["Th\u00e1ng 1","Th\u00e1ng 2","Th\u00e1ng 3","Th\u00e1ng 4","Th\u00e1ng 5","Th\u00e1ng 6","Th\u00e1ng 7","Th\u00e1ng 8","Th\u00e1ng 9","Th\u00e1ng 10","Th\u00e1ng 11","Th\u00e1ng 12"],"monthNamesShort":["Th1","Th2","Th3","Th4","Th5","Th6","Th7","Th8","Th9","Th10","Th11","Th12"],"nextText":"Ti\u1ebfp theo","prevText":"Tr\u01b0\u1edbc \u0111\u00f3","dayNames":["Ch\u1ee7 Nh\u1eadt","Th\u1ee9 Hai","Th\u1ee9 Ba","Th\u1ee9 T\u01b0","Th\u1ee9 N\u0103m","Th\u1ee9 S\u00e1u","Th\u1ee9 B\u1ea3y"],"dayNamesShort":["CN","T2","T3","T4","T5","T6","T7"],"dayNamesMin":["C","H","B","T","N","S","B"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"http://digicom.local/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=http://digicom.local/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>
