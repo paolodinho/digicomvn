@@ -10,16 +10,16 @@ get_header();
 <section class="page-hero">
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Về chúng tôi</span>
-		<h1>Digicom - đối tác số của doanh nghiệp</h1>
-		<p class="lead">Cung cấp hạ tầng website, bản quyền phần mềm, marketing và tự động hóa - đồng hành cùng doanh nghiệp trên hành trình chuyển đổi số.</p>
+		<h1>Digicom - đối tác off-page SEO của doanh nghiệp</h1>
+		<p class="lead">Chuyên Textlink, Backlink, Guest Post và Booking báo &amp; PR - đồng hành cùng doanh nghiệp xây dựng hệ thống liên kết chất lượng và hiện diện trên báo chí.</p>
 	</div>
 </section>
 
 <section class="sec">
 	<div class="wrap page-content">
 		<?php if ( get_the_content() ) : the_content(); else : ?>
-			<p>Digicom là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat. Chúng tôi giúp doanh nghiệp và cá nhân xây dựng hiện diện trực tuyến trọn gói: từ tên miền, hosting, website đến phần mềm bản quyền và các giải pháp marketing.</p>
-			<p>Với đội ngũ kỹ thuật và marketing nhiều kinh nghiệm, Digicom hướng tới sự minh bạch về giá, tốc độ triển khai nhanh và hỗ trợ tận tâm sau bàn giao.</p>
+			<p>Digicom là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat. Chúng tôi tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử.</p>
+			<p>Digicom chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
 		<?php endif; ?>
 	</div>
 </section>
@@ -28,10 +28,10 @@ get_header();
 	<div class="wrap">
 		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Lĩnh vực</span><h2>Chúng tôi làm gì</h2></div>
 		<div class="feat-row">
-			<div class="feat"><h3>Hạ tầng &amp; Website</h3><p>Lập trình website, tên miền, hosting tốc độ cao.</p></div>
-			<div class="feat"><h3>Bản quyền phần mềm</h3><p>Google Workspace, Office 365, Windows 11 và phần mềm khác.</p></div>
-			<div class="feat"><h3>Marketing &amp; SEO</h3><p>SEO/GEO, backlink &amp; bài PR, Google Ads.</p></div>
-			<div class="feat"><h3>Tự động hóa</h3><p>Xây dựng quy trình tự động cho doanh nghiệp.</p></div>
+			<div class="feat"><h3>Mua Textlink</h3><p>Chèn link vào bài viết có sẵn, chọn site theo DR/traffic.</p></div>
+			<div class="feat"><h3>Dịch vụ Backlink</h3><p>Hệ thống backlink chất lượng, tự nhiên, đa nguồn.</p></div>
+			<div class="feat"><h3>Guest Post</h3><p>Viết bài và đăng trên site đúng chủ đề, link dofollow.</p></div>
+			<div class="feat"><h3>Booking báo &amp; PR</h3><p>Đặt lịch đăng bài PR trên báo điện tử theo yêu cầu.</p></div>
 		</div>
 	</div>
 </section>

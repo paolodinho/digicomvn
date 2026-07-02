@@ -30,7 +30,7 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 		<label class="fl" for="dgc_service">Dịch vụ quan tâm</label>
 		<select id="dgc_service" name="dgc_service">
 			<?php
-			$opts = array( 'Lập trình website', 'Tên miền', 'Hosting', 'Bản quyền phần mềm', 'Dịch vụ SEO / GEO', 'Backlink & Bài PR', 'Google Ads', 'Automation workflow' );
+			$opts = array( 'Mua Textlink', 'Dịch vụ Backlink', 'Guest Post', 'Booking báo & PR', 'Khác / chưa rõ' );
 			foreach ( $opts as $o ) {
 				printf( '<option%s>%s</option>', selected( $dgc_form_service, $o, false ), esc_html( $o ) );
 			}

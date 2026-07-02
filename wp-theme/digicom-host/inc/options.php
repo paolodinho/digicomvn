@@ -14,38 +14,30 @@ function dgc_defaults() {
 		'zalo'          => '0988769317',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
 
-		'hero_title'    => 'Digicom - Đối tác công nghệ và marketing số cho doanh nghiệp',
-		'hero_sub'      => 'Tên miền, hosting, thiết kế website và các dịch vụ marketing off-page SEO - Digicom đồng hành cùng doanh nghiệp xây dựng nền tảng số vững chắc.',
+		'hero_title'    => 'Backlink, Guest Post, Textlink và Booking báo PR uy tín',
+		'hero_sub'      => 'Digicom cung cấp trọn gói off-page SEO: mua textlink chất lượng, dịch vụ backlink an toàn, guest post đúng chủ đề và booking đăng bài PR trên các đầu báo lớn.',
 
-		// so lieu gioi thieu (demo, can cap nhat so that): so | nhan
-		'about_stats'   => "5+ | Năm hoạt động\n80+ | Khách hàng doanh nghiệp\n4 | Dịch vụ chính\n24/7 | Hỗ trợ kỹ thuật",
-
-		// Doan gioi thieu ngan tren trang chu
-		'about_teaser'  => "Digicom là đối tác công nghệ và marketing số cho doanh nghiệp vừa và nhỏ tại Việt Nam. Chúng tôi cung cấp hạ tầng website (tên miền, hosting) và các dịch vụ off-page SEO (textlink, backlink, guest post, booking báo PR), giúp doanh nghiệp xây dựng và phát triển hiện diện trực tuyến.",
-
-		// Logo bao chi (demo/placeholder - thay bang logo that khi co)
-		'press_logos'   => "Báo A\nBáo B\nBáo C\nBáo D\nBáo E",
-
-		// tld | gia/nam | nhan (tuy chon)
-		'domain_tlds'   => ".com | 199.000đ | Phổ biến\n.vn | 250.000đ | Uy tín VN\n.com.vn | 150.000đ | \n.net | 230.000đ | \n.org | 230.000đ | \n.info | 90.000đ | Giá tốt\n.store | 70.000đ | \n.online | 60.000đ | ",
+		// dich vu | gia tu | nhan (tuy chon) - hien o hero + trang bang gia
+		// DEMO - gia minh hoa, can Hieu xac nhan gia that truoc khi cong khai chinh thuc
+		'domain_tlds'   => "Mua Textlink | Từ 300.000đ/link | Theo DR/traffic\nDịch vụ Backlink | Từ 500.000đ/backlink | Theo khối lượng\nGuest Post | Từ 800.000đ/bài | Theo site đăng\nBooking báo & PR | Từ 700.000đ/bài | Theo đầu báo",
 
 		// Khuyen mai noi bat (tieu de | mo ta ngan)
-		'promos'        => ".VN từ 250K/năm | Khi đăng ký 3 năm\n.COM.VN từ 150K | Ưu đãi giới hạn\nHosting giảm 50% | Cho tháng đầu tiên\nTrọn gói tên miền và hosting | Tiết kiệm hơn khi mua cùng",
+		'promos'        => "Báo giá theo từng đầu báo | Minh bạch, không phí ẩn\nGói combo Backlink + Guest Post | Tiết kiệm hơn khi đặt cùng lúc\nTư vấn miễn phí | Chọn đúng site/báo theo ngành hàng\nCam kết đúng tiến độ | Báo cáo link/bài đã lên sau khi hoàn thành",
 
 		// ten goi | gia | dac diem cach nhau dau ; | noi bat(1/0)
-		'hosting_plans' => "Khởi đầu | 39.000đ/tháng | 1 GB SSD;1 website;Băng thông không giới hạn;SSL miễn phí;Sao lưu hàng tuần | 0\nDoanh nghiệp | 79.000đ/tháng | 5 GB SSD;5 website;Băng thông không giới hạn;SSL miễn phí;Sao lưu hàng ngày | 1\nChuyên nghiệp | 149.000đ/tháng | 15 GB SSD;Website không giới hạn;LiteSpeed cache;SSL miễn phí;Sao lưu hàng ngày | 0\nWordPress | 99.000đ/tháng | 10 GB SSD;Tối ưu cho WordPress;LiteSpeed và cache;SSL miễn phí;Tự động cập nhật | 0",
+		'hosting_plans' => "Gói Textlink | Liên hệ báo giá | Đặt link trong bài có sẵn;Chọn theo DR/traffic site;Vị trí link tự nhiên;Bàn giao vị trí đăng | 0\nGói Backlink | Liên hệ báo giá | Backlink chất lượng, đa dạng nguồn;Anchor text tự nhiên;Theo dõi index;Báo cáo chi tiết | 1\nGói Guest Post | Liên hệ báo giá | Viết bài + đăng trên site đúng chủ đề;Link dofollow tự nhiên;Duyệt nội dung trước khi đăng;Bàn giao link bài | 0\nGói Booking báo & PR | Liên hệ báo giá | Đăng bài PR trên báo điện tử;Viết bài chuẩn theo tôn chỉ báo;Hỗ trợ chọn chuyên mục;Bàn giao link bài đã lên | 0",
 
 		// Ly do chon (tieu de | mo ta)
-		'reasons'       => "Hạ tầng ổn định | Uptime cao, máy chủ tối ưu cho website tại Việt Nam\nKích hoạt tức thì | Tên miền và hosting sẵn sàng ngay sau khi thanh toán\nHỗ trợ 24/7 | Đội ngũ kỹ thuật trực qua hotline, Zalo và email\nGiá minh bạch | Niêm yết rõ ràng, không phí ẩn, gia hạn đúng giá ưu đãi",
+		'reasons'       => "Nguồn site/báo chọn lọc | Ưu tiên site có traffic thật, báo uy tín, hạn chế site rác\nBáo giá minh bạch | Niêm yết theo từng dịch vụ, không phát sinh phí ẩn\nHỗ trợ tư vấn | Chọn đúng site/báo theo ngành hàng và ngân sách\nBàn giao rõ ràng | Báo cáo link/bài đã đăng, theo dõi index sau khi lên",
 
 		// FAQ (cau hoi | tra loi)
-		'faqs'          => "Digicom cung cấp những dịch vụ gì? | Tên miền, hosting, và các dịch vụ marketing off-page SEO (textlink, backlink, guest post, booking báo PR). Xem chi tiết tại mục Dịch vụ.\nLàm sao để bắt đầu hợp tác với Digicom? | Để lại thông tin liên hệ hoặc gọi hotline, đội ngũ Digicom sẽ tư vấn giải pháp phù hợp trong thời gian sớm nhất.\nDigicom hỗ trợ kỹ thuật như thế nào? | Đội ngũ hỗ trợ qua hotline, Zalo và email trong giờ làm việc, phản hồi nhanh với các vấn đề khẩn cấp.\nThanh toán bằng những hình thức nào? | Chuyển khoản ngân hàng, ví điện tử và quẹt thẻ. Dịch vụ triển khai ngay sau khi xác nhận thanh toán.",
+		'faqs'          => "Textlink khác backlink như thế nào? | Textlink là link chèn vào bài viết đã có sẵn trên site khác; backlink là link trỏ về từ nhiều nguồn khác nhau (bài mới, site, diễn đàn...) theo chiến dịch tổng thể.\nGuest Post có được viết nội dung riêng không? | Có. Digicom viết bài theo đúng chủ đề site đăng, kèm link tự nhiên, gửi Hiếu duyệt trước khi đăng.\nBooking báo PR mất bao lâu để lên bài? | Tùy đầu báo, thường 2 đến 7 ngày làm việc sau khi nội dung được duyệt.\nThanh toán và bàn giao như thế nào? | Thanh toán theo báo giá đã thống nhất, bàn giao link/bài đã lên kèm báo cáo sau khi hoàn thành.",
 
 		// Dich vu theo nhom. Dong bat dau bang # = ten nhom; dong con lai: ten | mo ta
-		'services'      => "# Tên miền & Hosting\nTên miền | Đăng ký, gia hạn và quản lý tên miền .com, .vn và nhiều đuôi khác.\nHosting | Hosting SSD tốc độ cao, tối ưu sẵn cho WordPress.\n# Marketing & SEO\nDịch vụ SEO / GEO | Tối ưu thứ hạng trên Google và các công cụ tìm kiếm AI.\nTextlink, Backlink, Guest Post, Booking PR | Off-page SEO trọn gói - xem chi tiết tại mục Dịch vụ.\nGoogle Ads | Thiết lập và tối ưu quảng cáo Google, tăng chuyển đổi.",
+		'services'      => "# Mua Textlink\nTextlink theo DR/Traffic | Chèn link trong bài có sẵn trên site đã chọn lọc theo chỉ số.\nTextlink theo ngành hàng | Ưu tiên site cùng lĩnh vực để tăng độ liên quan.\n# Dịch vụ Backlink\nBacklink chất lượng | Xây dựng hệ thống backlink tự nhiên, đa nguồn.\nBacklink theo ngách | Backlink chuyên biệt cho từng lĩnh vực, ví dụ bất động sản.\n# Guest Post\nGuest Post trọn gói | Viết bài và đăng trên site đúng chủ đề, có link dofollow.\nGuest Post theo site khách chọn | Đăng trên site do khách hàng chỉ định (nếu đủ điều kiện).\n# Booking báo & PR\nBooking đăng bài PR | Đặt lịch đăng bài PR trên báo điện tử theo yêu cầu.\nViết bài PR chuẩn báo chí | Viết bài đúng văn phong, tôn chỉ từng đầu báo.",
 
 		// Khach hang noi ve (noi dung | nguoi/vai tro | dich vu)
-		'testimonials'  => "Website luôn trực tuyến, đội ngũ hỗ trợ phản hồi nhanh kể cả ngoài giờ. | Chủ cửa hàng thương mại điện tử | Web Hosting\nĐăng ký và chuyển tên miền nhanh, giá rõ ràng, không phát sinh chi phí. | Quản lý IT doanh nghiệp | Tên miền\nEmail theo tên miền riêng giúp khách hàng tin tưởng hơn khi liên hệ. | Trưởng phòng kinh doanh | Email doanh nghiệp\nChuyển hosting sang Digicom rất mượt, tốc độ website cải thiện rõ rệt. | Founder startup công nghệ | Web Hosting\nGói hosting ổn định, kích hoạt ngay, phù hợp ngân sách doanh nghiệp nhỏ. | Chủ phòng khám | Web Hosting\nChứng chỉ SSL cài đặt nhanh, website hiện khóa bảo mật chỉ trong ngày. | Quản trị viên website | SSL",
+		'testimonials'  => "Link bàn giao đúng như báo giá, có báo cáo rõ ràng để đối chiếu. | Trưởng phòng Marketing | Dịch vụ Backlink\nBài guest post lên đúng site đã chọn, nội dung tự nhiên không lộ quảng cáo. | Chủ doanh nghiệp SME | Guest Post\nBooking báo nhanh, hỗ trợ chọn chuyên mục phù hợp ngành hàng. | Quản lý truyền thông | Booking báo & PR\nTextlink đặt đúng vị trí, site có traffic thật chứ không phải site rác. | SEO Specialist | Mua Textlink",
 	);
 }
 
@@ -83,7 +75,7 @@ function dgc_settings_page() {
 	?>
 	<div class="wrap">
 		<h1>Cau hinh Digicom</h1>
-		<p>Sua thong tin lien he, gia ten mien va goi hosting o day. Khong can dong vao code.</p>
+		<p>Sua thong tin lien he, gia va goi dich vu (Textlink, Backlink, Guest Post, Booking bao PR) o day. Khong can dong vao code.</p>
 		<form method="post" action="options.php">
 			<?php settings_fields( 'dgc_group' ); ?>
 
@@ -98,29 +90,26 @@ function dgc_settings_page() {
 				?>
 			</table>
 
-			<h2>2. Hero + Gioi thieu cong ty (trang chu)</h2>
+			<h2>2. Hero (dau trang)</h2>
 			<table class="form-table">
 				<?php
 				dgc_field( 'hero_title', 'Tieu de lon' );
 				dgc_field( 'hero_sub', 'Mo ta phu', '', 'textarea' );
-				dgc_field( 'about_stats', 'So lieu gioi thieu (DEMO - sua thanh so that)', 'Moi dong: so | nhan. VD: 5+ | Nam hoat dong', 'textarea' );
-				dgc_field( 'about_teaser', 'Doan gioi thieu ngan', '', 'textarea' );
-				dgc_field( 'press_logos', 'Ten bao chi (DEMO - thay bang logo/ten bao that khi co)', 'Moi dong 1 ten bao. Hien placeholder cho den khi co logo that.', 'textarea' );
 				?>
 			</table>
 
-			<h2>3. Ten mien</h2>
+			<h2>3. Bang gia 4 dich vu (hien o trang chu + trang Bang gia)</h2>
 			<table class="form-table">
 				<?php
-				dgc_field( 'domain_tlds', 'Bang gia ten mien', 'Moi dong 1 duoi: duoi | gia | nhan. VD: .com | 199.000d | Pho bien', 'textarea' );
+				dgc_field( 'domain_tlds', 'Bang gia rut gon', 'Moi dong: ten dich vu | gia tu | nhan. VD: Mua Textlink | Lien he bao gia | Theo DR/traffic', 'textarea' );
 				dgc_field( 'promos', 'O khuyen mai', 'Moi dong: tieu de | mo ta', 'textarea' );
 				?>
 			</table>
 
-			<h2>4. Hosting</h2>
+			<h2>4. Goi dich vu chi tiet</h2>
 			<table class="form-table">
 				<?php
-				dgc_field( 'hosting_plans', 'Goi hosting', 'Moi dong 1 goi: ten | gia | dac diem (cach nhau dau ;) | noi bat 1/0', 'textarea' );
+				dgc_field( 'hosting_plans', 'Goi dich vu', 'Moi dong 1 goi: ten | gia | dac diem (cach nhau dau ;) | noi bat 1/0', 'textarea' );
 				?>
 			</table>
 

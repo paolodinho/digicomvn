@@ -13,10 +13,8 @@
 	<div class="wrap">
 		<div class="tb-left">Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong><?php echo esc_html( dgc( 'hotline', '0988 769 317' ) ); ?></strong></a> <span class="hide-sm">&middot; <?php echo esc_html( dgc( 'working_hours' ) ); ?></span></div>
 		<div class="tb-right">
-			<a href="#" class="hide-sm">Đăng nhập</a><span class="sep hide-sm">|</span>
-			<a href="#" class="hide-sm">Hỗ trợ</a><span class="sep hide-sm">|</span>
-			<a href="#">Giỏ hàng</a><span class="sep">|</span>
-			<a href="#">VI</a>
+			<a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>" class="hide-sm"><?php echo esc_html( dgc( 'email' ) ); ?></a><span class="sep hide-sm">|</span>
+			<a href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', dgc( 'zalo' ) ) ); ?>">Chat Zalo</a>
 		</div>
 	</div>
 </div>
@@ -30,25 +28,26 @@
 		<nav class="nav">
 			<?php
 			if ( has_nav_menu( 'primary' ) ) {
-				wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'items_wrap' => '%3$s', 'depth' => 1 ) );
+				wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'depth' => 0 ) );
 			} else {
-				echo '<a href="#services">Lập trình web</a><a href="#domains">Tên miền</a><a href="#hosting">Hosting</a><a href="#services">Bản quyền PM</a><a href="#services">Marketing</a><a href="#services">Automation</a><a href="#faq">Liên hệ</a>';
+				echo '<ul><li><a href="' . esc_url( home_url( '/' ) ) . '">Trang chủ</a></li><li><a href="' . esc_url( home_url( '/dich-vu/' ) ) . '">Dịch vụ</a></li><li><a href="' . esc_url( home_url( '/bang-gia/' ) ) . '">Bảng giá</a></li><li><a href="' . esc_url( home_url( '/lien-he/' ) ) . '">Liên hệ</a></li></ul>';
 			}
 			?>
 		</nav>
 
 		<div class="header-cta">
 			<a class="phone" href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-			<a class="btn btn-primary btn-sm" href="#domains">Tư vấn ngay</a>
+			<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt bài ngay</a>
 			<button class="burger" aria-label="Menu" onclick="document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
 		</div>
 	</div>
 </header>
 
 <div class="mnav" id="mnav">
-	<a href="#domains">Tên miền</a>
-	<a href="#hosting">Hosting</a>
-	<a href="<?php echo esc_url( home_url( '/dich-vu/' ) ); ?>">Dịch vụ</a>
-	<a href="#faq">Câu hỏi thường gặp</a>
-	<a href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+	<?php
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'depth' => 0 ) );
+	}
+	?>
+	<ul class="cta-item"><li><a href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a></li></ul>
 </div>
