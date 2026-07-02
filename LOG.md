@@ -147,3 +147,20 @@
   o M5 truoc khi demo khach.
 - Cap nhat CLAUDE.md (tach chi tiet ra `.claude/rules/pivot-2026-07.md` de giu <=50 dong),
   `dich-vu.md` (danh muc moi), PLAN.md, DECISIONS.md theo pivot.
+
+## 2026-07-02 (cap nhat 2) - dao lai trong tam + fix demo + bo 3 dich vu chua trien khai
+- Hieu xac nhan Ten mien/Hosting/VPS (qua doi tac PA Viet Nam) van la mang kinh doanh chinh.
+  Dao lai front-page.php/header.php/options.php/page-bang-gia.php ve ban goc (restore tu
+  backup pivot-build), giu nguyen 4 trang dich vu Textlink/Backlink/GuestPost/BookingPR da
+  build o /dich-vu/ nhung chuyen thanh trang con qua menu "Dich vu".
+  Nut Dang ky/Chon goi tam tro ra pavietnam.vn (chua co ma affiliate, Hieu xac nhan dung link thuong).
+- Fix loi hien thi tren demo GitHub Pages: lenh wget mirror co reject-regex chan dau "?" de
+  tranh trang dong, nhung CSS/JS cua WordPress deu co "?ver=..." nen bi chan theo -> trang
+  hien khong co style. Bo dieu kien chan "?", giu lai chan wp-admin/cart/wp-login. Da verify
+  lai bang trinh duyet that: CSS load day du.
+- Hieu yeu cau bo 3 dich vu chua trien khai: Thiet ke website (lap-trinh-website), Ban quyen
+  phan mem (+ 3 trang con Google Workspace/Office 365/Windows 11), Automation. Da draft toan
+  bo (khong xoa), go khoi menu chinh va mnav mobile, sua front-page.php (eyebrow, nhom dich vu,
+  svc_meta) va page-bang-gia.php khong con nhac toi 3 dich vu nay.
+  Menu con lai: Ten mien / Hosting / Dich vu / Lien he (4 muc).
+- Push GitHub 2 lan (nhanh main + gh-pages) phan anh ca 2 thay doi tren.
