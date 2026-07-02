@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe - Trang chu digicomvn.com</title>
+<style>
+  :root{
+    --line:#9aa0a6; --line-dark:#5f6368; --fill:#f1f3f4; --fill2:#e8eaed;
+    --ink:#3c4043; --muted:#80868b; --note:#1a73e8; --accent:#dde3ea;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);
+    font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px;line-height:1.5}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px}
+  .page-title{font-size:20px;font-weight:700;letter-spacing:-.3px}
+  .page-sub{color:var(--muted);margin:4px 0 20px}
+  .frame{border:1.5px solid var(--line-dark);border-radius:6px;overflow:hidden;margin-bottom:28px;background:#fff}
+  .sec{border-bottom:1.5px dashed var(--line);padding:18px 20px;position:relative}
+  .sec:last-child{border-bottom:none}
+  .tag{position:absolute;top:8px;right:10px;font-size:11px;color:var(--note);
+    border:1px solid var(--note);border-radius:10px;padding:1px 8px;background:#eef4ff}
+  .box{border:1.5px solid var(--line);border-radius:4px;background:var(--fill);
+    display:flex;align-items:center;justify-content:center;color:var(--muted);
+    text-align:center;padding:10px;font-size:12px}
+  .box.dark{background:var(--fill2)}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  .col{flex:1;min-width:0}
+  h2.s{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+    color:var(--line-dark);margin:0 0 12px}
+  .ph{height:14px;background:var(--fill2);border-radius:3px;margin:6px 0}
+  .ph.w40{width:40%}.ph.w60{width:60%}.ph.w80{width:80%}.ph.w30{width:30%}
+  .btn{display:inline-block;border:1.5px solid var(--line-dark);border-radius:4px;
+    padding:8px 18px;color:var(--ink);font-size:12px;background:#fff;font-weight:600}
+  .btn.solid{background:var(--line-dark);color:#fff}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .grid6{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+  .card{border:1.5px solid var(--line);border-radius:5px;padding:14px;background:#fff}
+  .card .ico{width:34px;height:34px;border-radius:6px;background:var(--fill2);
+    border:1px solid var(--line);margin-bottom:10px}
+  .pricecard{border:1.5px solid var(--line);border-radius:6px;padding:16px;background:#fff;text-align:center}
+  .pricecard.feat{border:2px solid var(--line-dark);background:var(--fill)}
+  .search{border:2px solid var(--line-dark);border-radius:6px;display:flex;
+    align-items:center;background:#fff;overflow:hidden}
+  .search .inp{flex:1;padding:16px 18px;color:var(--muted);font-size:14px}
+  .search .go{background:var(--line-dark);color:#fff;padding:16px 28px;font-weight:700}
+  .tld{border:1px solid var(--line);border-radius:20px;padding:5px 14px;font-size:12px;
+    color:var(--ink);background:var(--fill)}
+  .legend{border:1px solid var(--note);border-radius:6px;background:#eef4ff;
+    padding:12px 16px;color:#174ea6;font-size:13px;margin-bottom:24px}
+  .note{color:var(--note);font-size:12px;margin-top:6px}
+  .menu{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  .menu .item{font-weight:600;font-size:13px}
+  .center{text-align:center}
+  .logo{font-weight:800;letter-spacing:-.5px;font-size:18px;color:var(--line-dark)}
+  .flag{display:inline-block;background:#fff3e0;border:1px solid #f9ab00;color:#b06000;
+    border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-left:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="page-title">Wireframe - Trang chu digicomvn.com</div>
+  <div class="page-sub">Ban ten mien + hosting | Tham chieu cau truc pavietnam.vn | Low-fidelity (chua mau/font/anh that)</div>
+
+  <div class="legend">
+    <b>Cach doc:</b> O xam = vung noi dung/anh se dien sau &middot; Thanh xam = dong chu (text placeholder)
+    &middot; Nhan xanh goc phai moi khoi = ten section &middot; Day la BAN KHUNG, khong phai thiet ke cuoi.
+  </div>
+
+  <!-- ================= HOME ================= -->
+  <div class="frame">
+
+    <!-- TOP BAR -->
+    <div class="sec" style="background:var(--fill)">
+      <span class="tag">00. Top bar</span>
+      <div class="menu" style="justify-content:flex-end;font-size:12px;color:var(--muted)">
+        <span>Hotline 0988 769 317</span><span>|</span><span>Dang nhap / Dang ky</span>
+        <span>|</span><span>Ho tro</span><span>|</span><span>Gio hang</span><span>|</span><span>VI / EN</span>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="sec">
+      <span class="tag">01. Header + Menu chinh</span>
+      <div class="row" style="align-items:center">
+        <div class="logo">[ LOGO DIGICOM ]</div>
+        <div class="col"></div>
+        <div class="menu">
+          <span class="item">Ten mien</span>
+          <span class="item">Hosting</span>
+          <span class="item">Email</span>
+          <span class="item">Server / VPS</span>
+          <span class="item">SSL &amp; Bao mat</span>
+          <span class="item">Thiet ke web</span>
+          <span class="item">Lien he</span>
+        </div>
+        <span class="btn solid">Tu van ngay</span>
+      </div>
+      <div class="note">Menu 1 dong, khong wrap. Uu tien Ten mien + Hosting o dau menu.</div>
+    </div>
+
+    <!-- HERO + DOMAIN SEARCH -->
+    <div class="sec" style="background:var(--fill)">
+      <span class="tag">02. Hero + O tim ten mien (quan trong nhat)</span>
+      <div class="center" style="max-width:760px;margin:0 auto">
+        <div class="ph w60" style="height:26px;margin:8px auto"></div>
+        <div class="ph w40" style="height:16px;margin:8px auto 18px"></div>
+        <div style="color:var(--muted);font-size:12px;margin-bottom:8px">Headline: "Kiem tra &amp; dang ky ten mien gia tot" + sub-headline</div>
+        <div class="search">
+          <div class="inp">Nhap ten mien ban muon... (vd: tencongty)</div>
+          <div class="go">KIEM TRA &middot; .com .vn .net</div>
+        </div>
+        <div class="row" style="justify-content:center;margin-top:14px">
+          <span class="tld">.vn &nbsp;250K</span><span class="tld">.com.vn &nbsp;150K</span>
+          <span class="tld">.com &nbsp;199K</span><span class="tld">.net</span>
+          <span class="tld">.xyz</span><span class="tld">.store</span><span class="tld">.online</span>
+        </div>
+      </div>
+      <div class="note center">CTA chinh cua site. O tim ten mien noi bat, dat ngay tren man hinh dau.</div>
+    </div>
+
+    <!-- FLASH SALE / KHUYEN MAI -->
+    <div class="sec">
+      <span class="tag">03. Khuyen mai / Flash sale</span>
+      <div class="grid4">
+        <div class="box dark" style="height:70px">.VN tu 250K/nam<br>(dang ky 3 nam)</div>
+        <div class="box dark" style="height:70px">.COM.VN tu 150K</div>
+        <div class="box dark" style="height:70px">Hosting -50% thang dau</div>
+        <div class="box dark" style="height:70px">Combo Domain + Hosting</div>
+      </div>
+    </div>
+
+    <!-- BANG GIA TEN MIEN -->
+    <div class="sec" style="background:var(--fill)">
+      <span class="tag">04. Bang gia ten mien pho bien</span>
+      <h2 class="s">Gia ten mien</h2>
+      <div class="grid6">
+        <div class="pricecard">.com<div class="ph w60" style="margin:8px auto"></div><span class="btn">Mua</span></div>
+        <div class="pricecard">.vn<div class="ph w60" style="margin:8px auto"></div><span class="btn">Mua</span></div>
+        <div class="pricecard">.com.vn<div class="ph w60" style="margin:8px auto"></div><span class="btn">Mua</span></div>
+        <div class="pricecard">.net<div class="ph w60" style="margin:8px auto"></div><span class="btn">Mua</span></div>
+        <div class="pricecard">.org<div class="ph w60" style="margin:8px auto"></div><span class="btn">Mua</span></div>
+        <div class="pricecard">.info<div class="ph w60" style="margin:8px auto"></div><span class="btn">Mua</span></div>
+      </div>
+      <div class="note">Link "Xem bang gia day du tat ca duoi" -&gt; trang Ten mien.</div>
+    </div>
+
+    <!-- BANG GIA HOSTING -->
+    <div class="sec">
+      <span class="tag">05. Goi Hosting (money block #2)</span>
+      <h2 class="s">Bang gia Web Hosting</h2>
+      <div class="grid4">
+        <div class="pricecard">
+          <b>Starter</b>
+          <div class="ph w60" style="height:22px;margin:10px auto"></div>
+          <div class="ph w80" style="margin:6px auto"></div>
+          <div class="ph w80" style="margin:6px auto"></div>
+          <div class="ph w60" style="margin:6px auto 12px"></div>
+          <span class="btn">Chon goi</span>
+        </div>
+        <div class="pricecard feat">
+          <b>Business</b> <span class="flag">PHO BIEN</span>
+          <div class="ph w60" style="height:22px;margin:10px auto"></div>
+          <div class="ph w80" style="margin:6px auto"></div>
+          <div class="ph w80" style="margin:6px auto"></div>
+          <div class="ph w60" style="margin:6px auto 12px"></div>
+          <span class="btn solid">Chon goi</span>
+        </div>
+        <div class="pricecard">
+          <b>Pro</b>
+          <div class="ph w60" style="height:22px;margin:10px auto"></div>
+          <div class="ph w80" style="margin:6px auto"></div>
+          <div class="ph w80" style="margin:6px auto"></div>
+          <div class="ph w60" style="margin:6px auto 12px"></div>
+          <span class="btn">Chon goi</span>
+        </div>
+        <div class="pricecard">
+          <b>WordPress</b>
+          <div class="ph w60" style="height:22px;margin:10px auto"></div>
+          <div class="ph w80" style="margin:6px auto"></div>
+          <div class="ph w80" style="margin:6px auto"></div>
+          <div class="ph w60" style="margin:6px auto 12px"></div>
+          <span class="btn">Chon goi</span>
+        </div>
+      </div>
+      <div class="note">Bang so sanh thong so (dung luong, bang thong, SSL, backup...) co the dat ngay duoi.</div>
+    </div>
+
+    <!-- NHOM DICH VU CHINH -->
+    <div class="sec" style="background:var(--fill)">
+      <span class="tag">06. Nhom dich vu chinh</span>
+      <h2 class="s">Dich vu cua Digicom</h2>
+      <div class="grid4">
+        <div class="card"><div class="ico"></div><b>Ten mien</b><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ico"></div><b>Hosting</b><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ico"></div><b>Email doanh nghiep</b><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ico"></div><b>SSL / Bao mat</b><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ico"></div><b>Cloud Server / VPS</b><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ico"></div><b>Thiet ke Website</b><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ico"></div><b>Email Marketing</b><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ico"></div><b>Chuyen ten mien ve</b><div class="ph w80"></div><div class="ph w60"></div></div>
+      </div>
+    </div>
+
+    <!-- LY DO CHON -->
+    <div class="sec">
+      <span class="tag">07. Ly do chon Digicom (tin cay)</span>
+      <div class="grid4">
+        <div class="card center"><div class="ico" style="margin:0 auto 10px"></div><b>Ha tang on dinh</b><div class="ph w80" style="margin:8px auto"></div></div>
+        <div class="card center"><div class="ico" style="margin:0 auto 10px"></div><b>Ho tro 24/7</b><div class="ph w80" style="margin:8px auto"></div></div>
+        <div class="card center"><div class="ico" style="margin:0 auto 10px"></div><b>Kich hoat tuc thi</b><div class="ph w80" style="margin:8px auto"></div></div>
+        <div class="card center"><div class="ico" style="margin:0 auto 10px"></div><b>Gia minh bach</b><div class="ph w80" style="margin:8px auto"></div></div>
+      </div>
+    </div>
+
+    <!-- CTA BANNER -->
+    <div class="sec" style="background:var(--fill2)">
+      <span class="tag">08. CTA dai (chuyen doi)</span>
+      <div class="row center" style="align-items:center;justify-content:center">
+        <div>
+          <b style="font-size:16px">Chua biet chon goi nao? De Digicom tu van mien phi</b>
+          <div class="ph w60" style="margin:8px auto"></div>
+        </div>
+        <span class="btn solid">Goi 0988 769 317</span>
+        <span class="btn">Chat Zalo</span>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="sec">
+      <span class="tag">09. Cau hoi thuong gap (FAQ)</span>
+      <h2 class="s">FAQ</h2>
+      <div class="box" style="height:40px;justify-content:flex-start;padding-left:16px">+ Dang ky ten mien can giay to gi?</div>
+      <div class="box" style="height:40px;justify-content:flex-start;padding-left:16px;margin-top:8px">+ Hosting co ho tro WordPress khong?</div>
+      <div class="box" style="height:40px;justify-content:flex-start;padding-left:16px;margin-top:8px">+ Chuyen ten mien tu nha cung cap khac the nao?</div>
+      <div class="note">Dung de gan schema FAQ (tot cho SEO/AI).</div>
+    </div>
+
+    <!-- TESTIMONIAL -->
+    <div class="sec" style="background:var(--fill)">
+      <span class="tag">10. Khach hang / Doi tac</span>
+      <div class="grid3">
+        <div class="card"><div class="ph w40"></div><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ph w40"></div><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="ph w40"></div><div class="ph w80"></div><div class="ph w60"></div></div>
+      </div>
+      <div class="note">Logo doi tac/cong nghe (cPanel, LiteSpeed, .vn...) - dung anh that, khong ve SVG fake.</div>
+    </div>
+
+    <!-- TIN TUC -->
+    <div class="sec">
+      <span class="tag">11. Tin tuc / Blog (SEO)</span>
+      <div class="grid3">
+        <div class="card"><div class="box" style="height:90px">Anh bai viet</div><div class="ph w80" style="margin-top:10px"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="box" style="height:90px">Anh bai viet</div><div class="ph w80" style="margin-top:10px"></div><div class="ph w60"></div></div>
+        <div class="card"><div class="box" style="height:90px">Anh bai viet</div><div class="ph w80" style="margin-top:10px"></div><div class="ph w60"></div></div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="sec" style="background:var(--line-dark);color:#fff">
+      <span class="tag" style="color:#fff;border-color:#fff;background:transparent">12. Footer</span>
+      <div class="row">
+        <div class="col"><div class="logo" style="color:#fff">[ LOGO ]</div>
+          <div class="ph w80" style="background:#7b8085"></div><div class="ph w60" style="background:#7b8085"></div>
+          <div style="font-size:12px;color:#cfd3d7;margin-top:8px">Cong ty TNHH DVTT Digito Combat &middot; MST 0109816406</div>
+        </div>
+        <div class="col"><b>San pham</b><div class="ph w60" style="background:#7b8085"></div><div class="ph w60" style="background:#7b8085"></div><div class="ph w40" style="background:#7b8085"></div></div>
+        <div class="col"><b>Ho tro</b><div class="ph w60" style="background:#7b8085"></div><div class="ph w60" style="background:#7b8085"></div><div class="ph w40" style="background:#7b8085"></div></div>
+        <div class="col"><b>Lien he</b>
+          <div style="font-size:12px;color:#cfd3d7;margin-top:6px">Hotline 0988 769 317<br>info@digicomvn.com<br>Gamuda Garden, Hoang Mai, HN</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /frame -->
+
+  <!-- SITEMAP -->
+  <div class="page-title" style="font-size:16px">Cay trang (sitemap) de xuat</div>
+  <div class="row" style="margin-top:12px;gap:20px">
+    <div class="card col"><b>Trang chinh</b>
+      <div class="ph w80"></div>Trang chu<br>Ten mien (tra cuu + bang gia)<br>Hosting (cac goi)<br>Email<br>Server / VPS<br>SSL<br>Thiet ke web<br>Bang gia<br>Lien he
+    </div>
+    <div class="card col"><b>Tai khoan / Giao dich</b>
+      <div class="ph w80"></div>Dang nhap / Dang ky<br>Gio hang &middot; Thanh toan<br>Quan ly dich vu (client area)<br>Tra cuu hoa don<br>Huong dan thanh toan
+    </div>
+    <div class="card col"><b>Noi dung / SEO</b>
+      <div class="ph w80"></div>Blog / Tin tuc<br>Huong dan (knowledge base)<br>Khuyen mai<br>Ve Digicom<br>Dieu khoan &middot; Bao mat
+    </div>
+  </div>
+  <div class="note" style="margin-top:10px">Giai doan dau co the lam tinh (catalog + form tu van/dat hang), tich hop cong dang ky ten mien/thanh toan o giai doan sau.</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/*
+Theme Name: Digicom Host
+Theme URI: https://digicomvn.com
+Description: Theme ban ten mien & hosting cho Digicom. Trang chu dang catalog + tra cuu ten mien, bang gia hosting. Noi dung lien he/gia sua duoc tu WP Admin (menu Digicom).
+Author: Digicom (Digito Combat)
+Version: 0.1.0
+Requires at least: 6.0
+Tested up to: 7.0
+Requires PHP: 8.0
+Text Domain: digicom-host
+*/
+
+/* CSS that styles the site lives in assets/css/main.css (enqueued in functions.php). */
