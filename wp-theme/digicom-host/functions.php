@@ -45,6 +45,7 @@ add_action( 'wp_enqueue_scripts', function () {
  * Tat ca lien he + gia sua duoc tu Admin, khong cham PHP.
  * ------------------------------------------------------------------------- */
 require_once get_template_directory() . '/inc/options.php';
+require_once get_template_directory() . '/inc/cpt-gia.php';
 
 /**
  * Helper doc 1 option.
