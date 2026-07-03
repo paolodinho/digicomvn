@@ -24,3 +24,29 @@
   24h, CafeF) o trang thai DRAFT (chua xac nhan bao that hop tac - KHONG bia case study).
   Rebuild menu (dropdown Dich vu), front-page.php, options.php, page-bang-gia.php.
   Backup DB + theme truoc khi sua: `_backups/2026-07-02/pivot-build/`.
+
+## 2026-07-03 - Audit internal link blog (thuat toan attractor, /internal-link-audit)
+- Trich link that tu post_content 96 bai publish qua WP-CLI eval-file (629 link noi bo),
+  chay thuat toan attractor (khong dem inlink tho) de tim pillar/cluster that.
+- Phat hien 5 pillar that: /backlink/ (19 bai), /on-page-seo/ (16), /technical-seo/ (11),
+  /schema-markup/ (6), /google-search-console/ (5). 37/96 bai (~39%) chua thuoc cluster nao.
+- MISMATCH CHIEN LUOC: 91/96 bai la kho kien thuc SEO tong quat tu thoi agency cu (SEO
+  onpage/technical/tool/thuat toan Google...), KHONG map vao 4 dich vu hien tai. Chi 2 bai
+  moi (textlink-khac-backlink-the-nao, guest-post-la-gi) dung huong, link dung ra money page
+  moi. Money page /dich-vu/booking-bao-pr/ va /dich-vu/mua-textlink/ gan nhu chua co bai
+  blog nao ho tro SEO.
+- LOI KY THUAT phat hien: ~89 bai cluster /backlink/ cu dang link ra URL phang
+  `/dich-vu-backlink/` - day KHONG con la trang dich vu tien (da bi 1 bai blog cu, post ID 227,
+  chiem slug) - trang pillar that nam o `/dich-vu/dich-vu-backlink/` (page ID 268). Link equity
+  dang chay sai dich.
+- Da cap nhat `.claude/context/brand-info.md` muc 4 + 7 khop pivot 2026-07-02 (ban cu tu
+  2026-06-10 con mo ta cau truc agency cu, gay sai lech khi chay skill generic).
+- HIEU QUYET DINH: chuyen draft NGAY 73 bai thuoc 7 category khong lien quan (On-page/
+  Technical, Content/Keyword, Kien thuc SEO, Local SEO/Entity, Thuat toan Google,
+  SEO E-commerce, SEO AI/GEO). Giu publish 23 bai category "Backlink & Off-page"
+  (gom 2 bai moi Textlink/Guest Post).
+- Da thuc thi 2026-07-03: backup DB truoc (`_backups/2026-07-03/draft-73-bai/
+  digicom-db-before-draft-73.sql`), chuyen draft 73/73 bai thanh cong qua wp_update_post,
+  sua 12 bai con lai co link `/dich-vu-backlink/` cu sang pillar that
+  `/dich-vu/dich-vu-backlink/`, verify khong con bai publish nao link chet toi bai da draft.
+  Con 23 bai publish + 2 page dich vu moi + cac trang he thong.

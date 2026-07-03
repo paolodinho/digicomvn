@@ -34,15 +34,22 @@
 
 | # | Dịch vụ | URL / slug | Trạng thái |
 |---|---|---|---|
-| 1 | PR Báo chí | `/pr-bao-chi/` | URL thật |
-| 2 | Backlink SEO | `/dich-vu-backlink/` | URL thật |
-| 3 | Entity Branding | `/entity-branding/` | URL thật |
-| 4 | Thiết kế Website | `/thiet-ke-website/` | URL thật |
-| 5 | Chăm sóc Website | `/cham-soc-website/` | URL thật |
-| 6 | Blog SEO / Content SEO | `/dich-vu-blog-seo/` | placeholder (đang phát triển) |
+| 1 | Mua Textlink | `/dich-vu/mua-textlink/` | URL thật (pivot 2026-07-02) |
+| 2 | Dịch vụ Backlink | `/dich-vu/dich-vu-backlink/` | URL thật (ngách BĐS: `/dich-vu/dich-vu-backlink/bat-dong-san/`) |
+| 3 | Guest Post | `/dich-vu/guest-post/` | URL thật |
+| 4 | Booking báo & PR | `/dich-vu/booking-bao-pr/` | URL thật (con theo đầu báo đang draft) |
 
-Money page khác đã có: Entity Social `/dich-vu-entity/`. Blog Hub `/blog-hub/`, Liên hệ `/lien-he/`.
-Placeholder tương lai (chỉ dùng khi đã build): `/dich-vu-seo/`, `/audit-seo/`, `/seo-local/`.
+Hub dịch vụ: `/dich-vu/`. Bảng giá: `/bang-gia/` (209 dòng giá thật theo CPT `dgc_gia`).
+Đặt bài: `/dat-bai/`. Về Digicom: `/ve-digicom/`. Liên hệ: `/lien-he/`.
+
+**QUAN TRỌNG - URL cũ đã đổi cấu trúc (pivot 2026-07-02):** Toàn bộ URL dịch vụ cũ dạng
+phẳng (`/dich-vu-backlink/`, `/pr-bao-chi/`, `/entity-branding/`, `/thiet-ke-website/`,
+`/cham-soc-website/`) KHÔNG còn là money page thật. `/dich-vu-backlink/` hiện là URL của
+1 bài blog cũ (post ID 227, trùng slug với page pillar mới nhưng khác cấp - page pillar
+thật nằm ở `/dich-vu/dich-vu-backlink/`). Bài blog cũ nào còn link ra các URL phẳng này
+cần sửa lại trỏ đúng sang `/dich-vu/...` (xem DECISIONS.md 2026-07-03).
+Trang tên miền/hosting/bản quyền/automation/SEO tổng thể đã chuyển DRAFT, không dùng làm
+đích internal link cho tới khi publish lại (xem `.claude/rules/pivot-2026-07.md`).
 
 ## 5. Khách hàng mục tiêu
 
@@ -56,20 +63,36 @@ Lĩnh vực: SEO (on-page, off-page, technical, local, e-commerce), Backlink, En
 
 ## 7. Cụm chủ đề & Internal link
 
-URL pattern blog: `/blog/[slug]/` (một số pillar dùng slug gốc). Tối đa 5 internal link/bài, ≥1 link money page.
+> Cập nhật 2026-07-03 sau audit `/internal-link-audit` (thuật toán attractor, dựa trên
+> link graph thật trong post_content của 96 bài publish, không đoán theo từ khoá).
+> Xem chi tiết đầy đủ DECISIONS.md 2026-07-03.
 
-| Cluster | Money page gắn | Slug tiêu biểu |
+URL pattern blog: `/[slug]/` (flat, không nested `/blog/`). Tối đa 5 internal link/bài, ≥1 link money page.
+
+**Pillar THẬT phát hiện được (≥5 bài vote làm attractor):**
+
+| Pillar | Số bài cluster | Loại nội dung |
 |---|---|---|
-| 1. SEO Cơ bản / Định nghĩa | - | seo-la-gi, seo-la-lam-gi, seo-trong-marketing, uu-nhuoc-diem-seo-vs-ads, seo-vs-sem |
-| 2. On / Off / Technical | - | seo-onpage-la-gi, seo-offpage-la-gi, technical-seo, 4-pillars-seo, black-hat-seo |
-| 3. Backlink / Off-page | `/dich-vu-backlink/` | backlink (pillar), back-link-chat-luong, back-link-hieu-qua, back-link-gov, backlink-dofollow-va-nofollow, backlink-social, phan-mem-di-back-link, dien-dan-di-backlink, kiem-tra-backlink, trao-doi-backlink, di-backlink-cho-fanpage |
-| 4. Entity Branding | `/entity-branding/`, `/dich-vu-entity/` | entity-branding-la-gi, entity-seo, schema-markup, knowledge-graph, personal-branding |
-| 5. PR Báo chí | `/pr-bao-chi/` | pr-bao-chi-la-gi, digital-pr, press-release-template, pr-vs-advertising |
-| 6. Website | `/thiet-ke-website/`, `/cham-soc-website/` | thiet-ke-website-chuan-seo, cham-soc-website, toi-uu-chuan-seo, core-web-vitals |
-| 7. Content / Blog SEO | - | viet-bai-chuan-seo, nghien-cuu-tu-khoa-seo, seo-content-la-gi, eeat-seo, ke-hoach-seo-6-thang |
-| 8. Trend / AI | - | geo-vs-seo-ai, voice-search-seo, xu-huong-seo-2026, ai-overview-seo |
+| `/backlink/` | 19 | Kiến thức Backlink/Off-page (kho blog cũ, agency tổng quát) |
+| `/on-page-seo/` | 16 | On-page SEO |
+| `/technical-seo/` | 11 | Technical SEO |
+| `/schema-markup/` | 6 | Schema/Local/Entity |
+| `/google-search-console/` | 5 | Đo lường GSC/GA4 |
 
-Quy tắc: bài đề cập service chưa có page → link blog pillar tương ứng + `/lien-he/`. Không bịa URL.
+37/96 bài (~39%) chưa thuộc pillar nào (mồ côi hoặc outlink quá yếu) - danh sách đầy đủ trong DECISIONS.md.
+
+**Mismatch quan trọng với pivot 4 dịch vụ (2026-07-02):** 91/96 bài là kho kiến thức SEO
+tổng quát từ thời agency cũ, KHÔNG map trực tiếp vào 4 dịch vụ hiện tại (Mua Textlink/
+Dịch vụ Backlink/Guest Post/Booking báo & PR). Chỉ 2 bài mới (`textlink-khac-backlink-the-nao`,
+`guest-post-la-gi`) link đúng ra money page mới. Money page `/dich-vu/booking-bao-pr/` và
+`/dich-vu/mua-textlink/` gần như chưa có bài blog nào hỗ trợ SEO thật sự.
+
+**Lỗi link cần sửa:** ~89 bài trong cluster `/backlink/` cũ đang link ra `/dich-vu-backlink/`
+(URL phẳng, hiện là bài blog cũ post ID 227 - không phải trang dịch vụ tiền thật) thay vì
+`/dich-vu/dich-vu-backlink/` (page pillar thật, ID 268). Xem mục 4.
+
+Quy tắc: bài đề cập service chưa có page → link đúng `/dich-vu/[slug]/` theo mục 4 + `/lien-he/`.
+Không bịa URL, không dùng lại URL phẳng cũ.
 
 ## 8. WordPress / Publish
 
