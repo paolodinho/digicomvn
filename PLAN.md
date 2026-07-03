@@ -16,21 +16,22 @@ web/tên miền/hosting ở giai đoạn 2.
 - [x] M4b - Bảng giá đầy đủ 209 dòng (CPT `dgc_gia`) + tool tra cứu/ước tính trên `/bang-gia/` - 2026-07-03
 - [x] M4c - Đối chiếu 6 file từ khoá thật, viết + đăng 12 bài blog mới cho 4 dịch vụ
       (4 P0 + 8 P1/P2), sửa lỗi trùng H1 toàn site - 2026-07-03
-- [ ] M5 - Xác nhận đầu báo thật + publish trang con booking-bao-pr + QA mobile thực tế + deploy demo
+- [x] M4d - Xác nhận đầu báo hợp tác thật (Hiếu confirm), publish 5 trang con booking-bao-pr,
+      thêm mục "Đầu báo hỗ trợ đặt bài" trên trang chủ với 16 logo thật (15 tải trực tiếp từ
+      website báo, 1 từ Wikimedia Commons vì laodong.vn chặn bot) - 2026-07-03
+- [ ] M5 - QA mobile thực tế + deploy demo bản mới nhất
 
 ### Sắp làm (cần Hiếu quyết định/bổ sung)
-- [ ] Xác nhận danh sách đầu báo THẬT Digicom hợp tác -> publish (hoặc sửa) trang con booking-bao-pr
-      (VnExpress, Kenh14, Dân Trí, 24h, CafeF đã dựng; Vietnamnet/Thanh Niên/Tuổi Trẻ/Zing/Soha/
-      Afamily/Eva.vn/Cafebiz/Webtretho/Báo Đầu Tư đã có giá sẵn trong CPT, chưa có trang riêng)
 - [ ] QA mobile 390px thực tế (lần này chỉ QA desktop do giới hạn công cụ trong session)
 - [ ] Duyệt lại 209 dòng giá trong WP Admin > Digicom > Bảng giá trước khi công khai chính thức
 - [ ] Gắn ảnh/thumbnail cho 12 bài blog mới (2026-07-03) - skill mặc định bỏ qua ảnh
-- [ ] Re-export static demo gh-pages với nội dung mới nhất (12 bài blog + bảng giá mới chưa lên demo)
+- [ ] Re-export static demo gh-pages với nội dung mới nhất (12 bài blog + bảng giá + logo báo
+      chí + 5 trang con booking-bao-pr đều chưa lên bản demo GitHub Pages)
+- [ ] Cân nhắc dựng thêm trang con booking-bao-pr cho 10 báo đã có giá sẵn nhưng chưa có trang
+      riêng (Vietnamnet, Thanh Niên, Tuổi Trẻ, Zing, Soha, Afamily, Eva.vn, Cafebiz, Webtretho,
+      Báo Đầu Tư)
 
 ### Backlog (giai đoạn 2 - sau khi 4 dịch vụ ổn định)
 - [ ] Mở lại Thiết kế website / Tên miền / Hosting / Bản quyền phần mềm (trang đang draft, giữ nguyên)
 - [ ] Cổng đăng ký/thanh toán thật
 - [ ] Client area / quản lý dịch vụ
-
-## Blocker / Chờ quyết định
-- Danh sách đầu báo thật Digicom hợp tác (để publish đúng, không bịa quan hệ chưa có).
