@@ -205,3 +205,19 @@
   ngang o 390px), header-cta (nut "Dat bai ngay" + burger) du cho trong 346px content width.
   Phat hien thieu rule global `text-wrap:balance/pretty` (wording-orphans.md) - bo sung vao
   main.css cho h1-h4 va doan van, push len gh-pages.
+
+## 2026-07-03 (cap nhat 4) - 10 trang con bao moi, fix pillar mo coi, anh 23 bai cu
+- Kiem tra trang pillar /dich-vu/booking-bao-pr/ khong link toi BAT KY trang con nao (ca 5
+  trang cu vnexpress/kenh14/dan-tri/24h/cafef deu mo coi, khong chi rieng dan-tri nhu phat
+  hien truoc). Da them muc "Chon bao gia theo tung dau bao" tren trang pillar, link toi du
+  15 trang con.
+- Tao 10 trang con moi (Vietnamnet, Thanh Nien, Tuoi Tre, Znews, Soha, Afamily, Eva, CafeBiz,
+  Webtretho, Bao Dau Tu) - noi dung tham chieu dung khoang gia that tu CPT dgc_gia (khong bia),
+  cung template tpl-service.php nhu 5 trang cu.
+- Gan anh that (Wikimedia Commons) cho 23 bai blog cu con lai (chu de: chi so backlink/DR/DA/TF/
+  CF dung anh dashboard/chart, thuat toan Google Penguin dung anh chim canh cut that (dung ten
+  thuat toan), SpamBrain/AI dung anh robot, cac bai ky thuat backlink dung anh chain/network/
+  social/handshake). 35/35 bai blog publish deu co featured image, 0 placeholder tren /blog/.
+- Re-export static demo lan 3, gap lai đung loi CSS convert-link nhu lan truoc (wget khong
+  convert link co query string ?ver=) - ap dung lai script Python fix da viet lan truoc.
+  Push gh-pages thanh cong (commit 5921da2).

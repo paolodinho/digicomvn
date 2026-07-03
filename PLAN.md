@@ -22,13 +22,14 @@ web/tên miền/hosting ở giai đoạn 2.
 - [x] M5 - Duyệt giá, gắn ảnh 12 bài blog, build lại template blog/single, fix CSS demo tĩnh,
       re-export + push gh-pages, QA mobile - 2026-07-03
 
-### Sắp làm (cần Hiếu quyết định/bổ sung)
-- [ ] Cân nhắc dựng thêm trang con booking-bao-pr cho 10 báo đã có giá sẵn nhưng chưa có trang
-      riêng (Vietnamnet, Thanh Niên, Tuổi Trẻ, Zing, Soha, Afamily, Eva.vn, Cafebiz, Webtretho,
-      Báo Đầu Tư)
-- [ ] Gắn thumbnail cho 23 bài blog cũ (cluster Backlink) - đợt này chỉ gắn 12 bài mới
-- [ ] Trang /dich-vu/booking-bao-pr/dan-tri/ đang mồ côi (không có link nội bộ trỏ tới) -
-      cân nhắc thêm link từ trang hub booking-bao-pr hoặc bảng giá
+- [x] M6 - Thêm 10 trang con booking-bao-pr (Vietnamnet, Thanh Niên, Tuổi Trẻ, Znews, Soha,
+      Afamily, Eva, CafeBiz, Webtretho, Báo Đầu Tư - tổng 15 trang con), fix trang pillar
+      booking-bao-pr mồ côi (thêm link tới cả 15 trang con), gắn thumbnail cho 23 bài blog cũ
+      còn lại (35/35 bài blog đều có ảnh thật) - 2026-07-03
+
+### Sắp làm
+Không còn việc gấp - 4 dịch vụ đã đủ nội dung, giá, ảnh, demo. Việc tiếp theo tuỳ Hiếu quyết định
+khi nào chuyển sang giai đoạn 2 bên dưới.
 
 ### Backlog (giai đoạn 2 - sau khi 4 dịch vụ ổn định)
 - [ ] Mở lại Thiết kế website / Tên miền / Hosting / Bản quyền phần mềm (trang đang draft, giữ nguyên)
