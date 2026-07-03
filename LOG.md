@@ -179,3 +179,29 @@
   Them 3 option field moi trong Admin: about_stats, about_teaser, press_logos (sua duoc, co
   ghi chu DEMO trong nhan field de Hieu biet can cap nhat so that).
 - Push GitHub 2 lan (main + gh-pages), da QA truc quan bang trinh duyet that.
+
+## 2026-07-03 (cap nhat 3) - Duyet gia, gan anh blog, fix demo tinh
+- Duyet 209 dong gia CPT dgc_gia qua script wp eval-file: khong dong nao thieu gia/gia am/
+  thieu tieu de; 26 "trung ten bao" thuc chat la nhieu vi tri dang bai khac gia trong cung 1
+  bao (VD VnExpress 4 vi tri tu 7.8-15.3tr) - du lieu sach, khong can sua.
+- Tai 12 anh that (Wikimedia Commons, giay phep tu do) theo chu de tung bai (day xich=textlink,
+  cap mang=backlink, chong bao=booking bao, toa nha=BDS, bat tay=doi tac guest post...), set
+  featured image qua wp-cli media import. Phat hien theme CHUA CO template hien thumbnail o
+  dau ca - phai tao moi `home.php` (card grid cho /blog/, fix loi trung H1 tu index.php fallback
+  cu) + sua `single.php` them the_post_thumbnail(), them ~45 dong CSS .blog-card/.blog-pagination
+  vao main.css. Backup 3 file truoc khi sua: _backups/2026-07-03/blog-template-fix/.
+- Re-export static demo (wget mirror lai tu dau) de len gh-pages. Phat hien 2 loi:
+  1) File AppleDouble "._pack-*" trong .git/objects/pack lam git doc lich su gh-pages bi loi
+     "non-monotonic index" - xoa 3 file rac nay (khong phai du lieu git that).
+  2) main.css KHONG duoc wget convert-link (link con dang absolute http://digicom.local/... vi
+     dinh query string ?ver=0.1.0) - ca 72 trang tren demo tinh bi MAT CSS HOAN TOAN (kha nang
+     day la loi co san tu truoc, khong chi lan nay). Fix: tai rieng main.css, viet script Python
+     tinh do sau thu muc tung trang de thay link tuyet doi bang link tuong doi dung.
+  3) Phat hien trang /dich-vu/booking-bao-pr/dan-tri/ mo coi (khong co link noi bo nao tro toi)
+     nen wget mirror khong tim thay - fetch rieng va ghep vao, ghi vao PLAN.md de fix sau.
+  Push gh-pages thanh cong, GitHub Pages build "built", verify lai bang curl: logo bao chi (16),
+  blog grid (card + anh), CSS load 200 OK tren tat ca trang.
+- QA mobile: xac nhan menu chuyen sang hamburger drawer tu 1024px tro xuong (khong bao gio wrap
+  ngang o 390px), header-cta (nut "Dat bai ngay" + burger) du cho trong 346px content width.
+  Phat hien thieu rule global `text-wrap:balance/pretty` (wording-orphans.md) - bo sung vao
+  main.css cho h1-h4 va doan van, push len gh-pages.

@@ -19,17 +19,16 @@ web/tên miền/hosting ở giai đoạn 2.
 - [x] M4d - Xác nhận đầu báo hợp tác thật (Hiếu confirm), publish 5 trang con booking-bao-pr,
       thêm mục "Đầu báo hỗ trợ đặt bài" trên trang chủ với 16 logo thật (15 tải trực tiếp từ
       website báo, 1 từ Wikimedia Commons vì laodong.vn chặn bot) - 2026-07-03
-- [ ] M5 - QA mobile thực tế + deploy demo bản mới nhất
+- [x] M5 - Duyệt giá, gắn ảnh 12 bài blog, build lại template blog/single, fix CSS demo tĩnh,
+      re-export + push gh-pages, QA mobile - 2026-07-03
 
 ### Sắp làm (cần Hiếu quyết định/bổ sung)
-- [ ] QA mobile 390px thực tế (lần này chỉ QA desktop do giới hạn công cụ trong session)
-- [ ] Duyệt lại 209 dòng giá trong WP Admin > Digicom > Bảng giá trước khi công khai chính thức
-- [ ] Gắn ảnh/thumbnail cho 12 bài blog mới (2026-07-03) - skill mặc định bỏ qua ảnh
-- [ ] Re-export static demo gh-pages với nội dung mới nhất (12 bài blog + bảng giá + logo báo
-      chí + 5 trang con booking-bao-pr đều chưa lên bản demo GitHub Pages)
 - [ ] Cân nhắc dựng thêm trang con booking-bao-pr cho 10 báo đã có giá sẵn nhưng chưa có trang
       riêng (Vietnamnet, Thanh Niên, Tuổi Trẻ, Zing, Soha, Afamily, Eva.vn, Cafebiz, Webtretho,
       Báo Đầu Tư)
+- [ ] Gắn thumbnail cho 23 bài blog cũ (cluster Backlink) - đợt này chỉ gắn 12 bài mới
+- [ ] Trang /dich-vu/booking-bao-pr/dan-tri/ đang mồ côi (không có link nội bộ trỏ tới) -
+      cân nhắc thêm link từ trang hub booking-bao-pr hoặc bảng giá
 
 ### Backlog (giai đoạn 2 - sau khi 4 dịch vụ ổn định)
 - [ ] Mở lại Thiết kế website / Tên miền / Hosting / Bản quyền phần mềm (trang đang draft, giữ nguyên)
