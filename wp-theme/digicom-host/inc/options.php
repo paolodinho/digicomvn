@@ -41,7 +41,7 @@ function dgc_defaults() {
 
 		// Dau bao Digicom co the dat bai/booking. Moi dong: ten bao | ten file logo trong /uploads/press-logos/ (rong = chua co logo).
 		// Nguon: bang gia CPT dgc_gia that. Logo tai that tu website tung bao 2026-07-03.
-		'press_partners' => "VnExpress | vnexpress.png\nDân Trí | dantri.png\nTuổi Trẻ | tuoitre.png\nThanh Niên | thanhnien.png\nVietNamNet | vietnamnet.png\nLao Động | \nTiền Phong | tienphong.png\nVOV | vov.png\nVTV | vtv.png\nNhân Dân | nhandan.png\nKenh14 | kenh14.png\n24h | tw24h.png\nCafeF | cafef.png\nZing News | znews.png\nSoha | soha.png\nNgười Đưa Tin | nguoiduatin.png",
+		'press_partners' => "VnExpress | vnexpress.png\nDân Trí | dantri.png\nTuổi Trẻ | tuoitre.png\nThanh Niên | thanhnien.png\nVietNamNet | vietnamnet.png\nLao Động | laodong.png\nTiền Phong | tienphong.png\nVOV | vov.png\nVTV | vtv.png\nNhân Dân | nhandan.png\nKenh14 | kenh14.png\n24h | tw24h.png\nCafeF | cafef.png\nZing News | znews.png\nSoha | soha.png\nNgười Đưa Tin | nguoiduatin.png",
 	);
 }
 

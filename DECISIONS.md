@@ -107,3 +107,9 @@
   khong tim duoc file logo/icon nao khả dung - GIU nguyen dang chu, khong bia/ve logo gia.
   Convert ve PNG bang sips, luu tai wp-content/uploads/press-logos/, doi cau truc option
   `press_partners` thanh "ten bao | ten file logo" de sua duoc tu WP Admin.
+- Tim tiep logo Lao Dong theo yeu cau Hieu: laodong.vn co bot-protection (Cloudrity, JS
+  cookie-challenge) chan het favicon/apple-touch-icon qua curl. Tim thay qua Wikipedia tieng
+  Viet (bai "Lao Dong (bao)") -> anh trong infobox tren Wikimedia Commons
+  (upload.wikimedia.org/wikipedia/commons/5/51/Báo_Lao_Động.png, 250x62, dang logo wordmark
+  that, khong phai favicon) - da xem lai anh xac nhan dung logo "LAO DONG" chu do + sao vang.
+  Gio du 16/16 dau bao co logo that.
