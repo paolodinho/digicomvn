@@ -38,6 +38,9 @@ function dgc_defaults() {
 
 		// Khach hang noi ve (noi dung | nguoi/vai tro | dich vu)
 		'testimonials'  => "Link bàn giao đúng như báo giá, có báo cáo rõ ràng để đối chiếu. | Trưởng phòng Marketing | Dịch vụ Backlink\nBài guest post lên đúng site đã chọn, nội dung tự nhiên không lộ quảng cáo. | Chủ doanh nghiệp SME | Guest Post\nBooking báo nhanh, hỗ trợ chọn chuyên mục phù hợp ngành hàng. | Quản lý truyền thông | Booking báo & PR\nTextlink đặt đúng vị trí, site có traffic thật chứ không phải site rác. | SEO Specialist | Mua Textlink",
+
+		// Dau bao Digicom co the dat bai/booking (moi dong 1 ten bao). Nguon: bang gia CPT dgc_gia that.
+		'press_partners' => "VnExpress\nDân Trí\nTuổi Trẻ\nThanh Niên\nVietNamNet\nLao Động\nTiền Phong\nVOV\nVTV\nNhân Dân\nKenh14\n24h\nCafeF\nZing News\nSoha\nNgười Đưa Tin",
 	);
 }
 
@@ -126,6 +129,13 @@ function dgc_settings_page() {
 				<?php
 				dgc_field( 'services', 'Dich vu theo nhom', 'Dong bat dau bang # = ten nhom. Cac dong khac: ten dich vu | mo ta ngan.', 'textarea' );
 				dgc_field( 'testimonials', 'Khach hang noi ve Digicom', 'Moi dong: noi dung danh gia | nguoi/vai tro | dich vu', 'textarea' );
+				?>
+			</table>
+
+			<h2>7. Dau bao co the dat bai (hien o trang chu)</h2>
+			<table class="form-table">
+				<?php
+				dgc_field( 'press_partners', 'Danh sach dau bao', 'Moi dong 1 ten bao. Chi liet ke bao Digicom that su dat/booking bai duoc, khong bia.', 'textarea' );
 				?>
 			</table>
 

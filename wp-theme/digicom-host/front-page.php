@@ -152,6 +152,22 @@ $svc_meta = array(
 	</div>
 </section>
 
+<!-- 07a. DAU BAO CO THE DAT BAI -->
+<section class="sec press-strip">
+	<div class="wrap">
+		<div class="center" style="margin-bottom:22px">
+			<span class="eyebrow">Mạng lưới báo chí</span>
+			<h2>Đầu báo Digicom hỗ trợ đặt bài, booking PR</h2>
+			<p class="muted" style="max-width:600px;margin:8px auto 0">Danh sách rút gọn, xem đầy đủ tại <a href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>" style="color:var(--action);font-weight:600">Bảng giá</a>.</p>
+		</div>
+		<div class="press-grid">
+			<?php foreach ( dgc_lines( 'press_partners' ) as $pp ) : if ( empty( $pp[0] ) ) continue; ?>
+				<div class="press-chip"><?php echo esc_html( $pp[0] ); ?></div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+
 <!-- 07b. TESTIMONIALS -->
 <section class="sec" id="danh-gia">
 	<div class="wrap">

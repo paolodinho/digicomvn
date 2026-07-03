@@ -85,3 +85,18 @@
   quy-trinh-trien-khai-guest-post, so-sanh-booking-bao-pr-va-quang-cao-bao. Tong 35 bai dang
   publish (23 cu + 12 moi dot nay). Verify het: HTTP 200 + dung 1 H1/bai, khong em dash.
   File nguon luu tai `_content-p1/` va `_content-p2/` trong project (chua commit).
+
+## 2026-07-03 (cap nhat 2) - Xac nhan doi tac bao chi that, publish 5 trang con
+- Hieu xac nhan (truc tiep, qua AskUserQuestion) Digicom/Digito Combat THAT SU co quan he
+  dat bai/booking voi cac dau bao trong bang gia CPT dgc_gia (khong phai bia) - truoc do da
+  hoi lai vi nghi ngo "doi tac" vs "co the booking qua kenh trung gian" la 2 muc do khac nhau,
+  Hieu chon giu nguyen tu "doi tac" vi da co quan he that.
+- Chon 16 dau bao lon nhat/quen thuoc nhat trong 92 dau bao co gia (VnExpress, Dan Tri, Tuoi
+  Tre, Thanh Nien, VietNamNet, Lao Dong, Tien Phong, VOV, VTV, Nhan Dan, Kenh14, 24h, CafeF,
+  Zing News, Soha, Nguoi Dua Tin) -> them option field moi `press_partners` (WP Admin > Digicom
+  > muc 7) + section "Dau bao Digicom ho tro dat bai, booking PR" tren trang chu (chip grid,
+  khong dung logo anh vi chua co file that - chi dung text, dung rule "khong SVG/anh gia").
+- Publish 5 trang con booking-bao-pr da dung san tu truoc (vnexpress, kenh14, dan-tri, 24h,
+  cafef - post ID 508-512) tu draft sang publish, vi da co xac nhan hop tac that.
+- Sync theme, ghi lai brand-info.md/dich-vu.md khong can sua them (danh sach dau bao van
+  nam trong theme option, khong hardcode PHP).
