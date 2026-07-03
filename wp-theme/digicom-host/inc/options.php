@@ -39,8 +39,9 @@ function dgc_defaults() {
 		// Khach hang noi ve (noi dung | nguoi/vai tro | dich vu)
 		'testimonials'  => "Link bàn giao đúng như báo giá, có báo cáo rõ ràng để đối chiếu. | Trưởng phòng Marketing | Dịch vụ Backlink\nBài guest post lên đúng site đã chọn, nội dung tự nhiên không lộ quảng cáo. | Chủ doanh nghiệp SME | Guest Post\nBooking báo nhanh, hỗ trợ chọn chuyên mục phù hợp ngành hàng. | Quản lý truyền thông | Booking báo & PR\nTextlink đặt đúng vị trí, site có traffic thật chứ không phải site rác. | SEO Specialist | Mua Textlink",
 
-		// Dau bao Digicom co the dat bai/booking (moi dong 1 ten bao). Nguon: bang gia CPT dgc_gia that.
-		'press_partners' => "VnExpress\nDân Trí\nTuổi Trẻ\nThanh Niên\nVietNamNet\nLao Động\nTiền Phong\nVOV\nVTV\nNhân Dân\nKenh14\n24h\nCafeF\nZing News\nSoha\nNgười Đưa Tin",
+		// Dau bao Digicom co the dat bai/booking. Moi dong: ten bao | ten file logo trong /uploads/press-logos/ (rong = chua co logo).
+		// Nguon: bang gia CPT dgc_gia that. Logo tai that tu website tung bao 2026-07-03.
+		'press_partners' => "VnExpress | vnexpress.png\nDân Trí | dantri.png\nTuổi Trẻ | tuoitre.png\nThanh Niên | thanhnien.png\nVietNamNet | vietnamnet.png\nLao Động | \nTiền Phong | tienphong.png\nVOV | vov.png\nVTV | vtv.png\nNhân Dân | nhandan.png\nKenh14 | kenh14.png\n24h | tw24h.png\nCafeF | cafef.png\nZing News | znews.png\nSoha | soha.png\nNgười Đưa Tin | nguoiduatin.png",
 	);
 }
 
@@ -135,7 +136,7 @@ function dgc_settings_page() {
 			<h2>7. Dau bao co the dat bai (hien o trang chu)</h2>
 			<table class="form-table">
 				<?php
-				dgc_field( 'press_partners', 'Danh sach dau bao', 'Moi dong 1 ten bao. Chi liet ke bao Digicom that su dat/booking bai duoc, khong bia.', 'textarea' );
+				dgc_field( 'press_partners', 'Danh sach dau bao', 'Moi dong: ten bao | ten file logo (dat trong wp-content/uploads/press-logos/, de trong neu chua co logo). Chi liet ke bao Digicom that su dat/booking bai duoc, khong bia.', 'textarea' );
 				?>
 			</table>
 

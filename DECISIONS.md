@@ -100,3 +100,10 @@
   cafef - post ID 508-512) tu draft sang publish, vi da co xac nhan hop tac that.
 - Sync theme, ghi lai brand-info.md/dich-vu.md khong can sua them (danh sach dau bao van
   nam trong theme option, khong hardcode PHP).
+- Hieu yeu cau tai logo that ve thay vi chi hien ten chu. Tai duoc 15/16 logo that truc tiep
+  tu website chinh thuc tung bao (favicon/apple-touch-icon, mot so phai do URL CDN that tu
+  HTML nguon vi favicon.ico mac dinh bi chan/404: cafef/kenh14/soha/tuoitre/vtv dung CDN
+  rieng static.mediacdn.vn, kenh14cdn.com, sohanews.sohacdn.com). Rieng Lao Dong (laodong.vn)
+  khong tim duoc file logo/icon nao khả dung - GIU nguyen dang chu, khong bia/ve logo gia.
+  Convert ve PNG bang sips, luu tai wp-content/uploads/press-logos/, doi cau truc option
+  `press_partners` thanh "ten bao | ten file logo" de sua duoc tu WP Admin.
