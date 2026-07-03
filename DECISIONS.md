@@ -50,3 +50,30 @@
   sua 12 bai con lai co link `/dich-vu-backlink/` cu sang pillar that
   `/dich-vu/dich-vu-backlink/`, verify khong con bai publish nao link chet toi bai da draft.
   Con 23 bai publish + 2 page dich vu moi + cac trang he thong.
+
+## 2026-07-03 - Doi chieu 6 file tu khoa that, viet 4 bai P0
+- Doi chieu 18.555 tu khoa (dedup tu 6 file backlink/pr/pr-bao/mua-textlink/guest-post/
+  booking-bao) voi 23 bai dang publish. Loc rieng file "pr" (14.350 tu khoa, da so nhieu:
+  Canada PR, Adobe Premiere Pro, tissot PR100...) xuong 1.716 tu lien quan that bang
+  regex whitelist bao chi/dang bai. Tong 6.071 tu khoa dung duoc.
+- Phat hien: cum Mua Textlink chi co 6 tu khoa nhung tu chinh "mua textlink" 2.900
+  volume/thang, KD 17 - tot nhung 0 bai ho tro. Cum Booking bao & PR: 1.981 tu khoa lien
+  quan, 0 bai. Cum Guest Post: 333 tu khoa, 1/6 nhom chu de co bai. Cum Backlink: du noi
+  dung (23 bai) nhung 2 diem hong (ngach BDS chua co bai; ~89 bai cu link sai URL da fix
+  truoc do o muc audit).
+- Xuat catalog dang Artifact HTML cho Hieu duyet, Hieu chon "viet ngay 4 bai P0".
+- Da viet + dang 4 bai qua CONTENT-WRITER agent (song song) + WP-CLI:
+  1. mua-textlink-la-gi (ID 1258, cat backlink-offpage)
+  2. dich-vu-backlink-gia-bao-nhieu (ID 1259, cat backlink-offpage, thay the goc do
+     "backlink" cu dang la dinh nghia bang goc do mua hang/gia)
+  3. booking-bao-la-gi (ID 1260, cat MOI "booking-bao-pr" da tao term_id 24)
+  4. bao-gia-dang-bai-pr-theo-dau-bao (ID 1261, cung cat booking-bao-pr, dung dung so
+     gia that tu CPT dgc_gia cho Kenh14/24h/CafeF/VnExpress, KHONG bia cho Dan Tri vi
+     chua co du lieu, khong khang dinh da hop tac voi bao nao - chi noi "ho tro booking").
+- LOI KY THUAT phat hien khi QA: theme khong co single.php, fallback index.php tu render
+  `<h1>the_title()</h1>` cho MOI single post trong khi noi dung Gutenberg cua content-writer
+  skill cung luon co H1 rieng -> trung 2 the H1 tren toan bo blog (tat ca ~27-96 bai).
+  Da tao `single.php` moi (bo H1-tu-title), nhung dieu nay lam LO ra 13 bai (12 bai cu +
+  post 545 textlink-khac-backlink-the-nao) dang KHONG co H1 rieng trong noi dung, chi dua
+  vao H1 tu dong cua theme -> da chen bo sung H1 (lay tu post_title) cho ca 13 bai qua
+  script PHP, verify lai toan bo 27 bai publish dung 1 H1/bai.
