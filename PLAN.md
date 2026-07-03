@@ -10,26 +10,22 @@ web/tên miền/hosting ở giai đoạn 2.
 - [x] M2 - Chốt design system + wireframe trang con
 - [x] M3 - Build theme WP trên Local (định hướng tên miền/hosting ban đầu)
 - [x] M3b - PIVOT sang 4 dịch vụ Textlink/Backlink/Guest Post/Booking báo PR - 2026-07-02
-- [ ] M4 - Xác nhận đầu báo thật + publish trang booking-bao-pr + nội dung chi tiết
-- [ ] M5 - QA responsive đầy đủ + deploy demo gửi khách
-
-## Sprint hiện tại (từ 2026-07-02)
-
-### Đã xong (pivot 2026-07-02)
-- [x] Tải + phân cụm 5 file CSV từ khoá, chốt sitemap silo 4 pillar
-- [x] Backup DB + theme `digicom-host` trước khi sửa (`_backups/2026-07-02/pivot-build/`)
-- [x] Build hub `/dich-vu/` + 4 pillar (mua-textlink, dich-vu-backlink, guest-post, booking-bao-pr)
-- [x] Ngách `/dich-vu/dich-vu-backlink/bat-dong-san/`
-- [x] 5 trang con booking theo đầu báo (VnExpress, Kenh14, Dân Trí, 24h, CafeF) - trạng thái DRAFT
-- [x] Ẩn/draft toàn bộ trang ten-mien/hosting/lap-trinh-website/ban-quyen-*/dich-vu-seo/automation cũ
-- [x] Rebuild menu chính (dropdown Dịch vụ), front-page.php, options.php, page-bang-gia.php
-- [x] QA: HTTP 200 tất cả URL sitemap, PHP lint sạch, desktop screenshot sạch, không lỗi console
+- [x] M3c - Đảo lại lần 2: bỏ hẳn tên miền/hosting (Hiếu đổi ý), phục hồi backlink-focus - 2026-07-02/03
+- [x] M4a - Audit internal link (attractor), draft 73 bài kiến thức SEO không liên quan,
+      giữ 23 bài cluster Backlink, sửa link chết - 2026-07-03
+- [x] M4b - Bảng giá đầy đủ 209 dòng (CPT `dgc_gia`) + tool tra cứu/ước tính trên `/bang-gia/` - 2026-07-03
+- [x] M4c - Đối chiếu 6 file từ khoá thật, viết + đăng 12 bài blog mới cho 4 dịch vụ
+      (4 P0 + 8 P1/P2), sửa lỗi trùng H1 toàn site - 2026-07-03
+- [ ] M5 - Xác nhận đầu báo thật + publish trang con booking-bao-pr + QA mobile thực tế + deploy demo
 
 ### Sắp làm (cần Hiếu quyết định/bổ sung)
 - [ ] Xác nhận danh sách đầu báo THẬT Digicom hợp tác -> publish (hoặc sửa) trang con booking-bao-pr
-- [ ] Bổ sung nội dung chi tiết 4 pillar (case study thật nếu có, không bịa số liệu)
-- [ ] QA mobile 390px thực tế (lần này chỉ QA desktop 1440px do giới hạn công cụ trong session)
-- [ ] Trang `/blog/` nuôi từ khoá informational (backlink-la-gi, guest-post-la-gi...)
+      (VnExpress, Kenh14, Dân Trí, 24h, CafeF đã dựng; Vietnamnet/Thanh Niên/Tuổi Trẻ/Zing/Soha/
+      Afamily/Eva.vn/Cafebiz/Webtretho/Báo Đầu Tư đã có giá sẵn trong CPT, chưa có trang riêng)
+- [ ] QA mobile 390px thực tế (lần này chỉ QA desktop do giới hạn công cụ trong session)
+- [ ] Duyệt lại 209 dòng giá trong WP Admin > Digicom > Bảng giá trước khi công khai chính thức
+- [ ] Gắn ảnh/thumbnail cho 12 bài blog mới (2026-07-03) - skill mặc định bỏ qua ảnh
+- [ ] Re-export static demo gh-pages với nội dung mới nhất (12 bài blog + bảng giá mới chưa lên demo)
 
 ### Backlog (giai đoạn 2 - sau khi 4 dịch vụ ổn định)
 - [ ] Mở lại Thiết kế website / Tên miền / Hosting / Bản quyền phần mềm (trang đang draft, giữ nguyên)
