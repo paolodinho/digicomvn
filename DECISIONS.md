@@ -77,3 +77,11 @@
   post 545 textlink-khac-backlink-the-nao) dang KHONG co H1 rieng trong noi dung, chi dua
   vao H1 tu dong cua theme -> da chen bo sung H1 (lay tu post_title) cho ca 13 bai qua
   script PHP, verify lai toan bo 27 bai publish dung 1 H1/bai.
+- Viet tiep 8 bai P1/P2 con lai trong danh muc (8 agent CONTENT-WRITER song song), dang len
+  WP qua WP-CLI (ID 1275-1282): dich-vu-guest-post-gia-bao-nhieu, backlink-bat-dong-san,
+  cach-viet-bai-pr-chuan-bao-chi, top-site-guest-post-uy-tin, mua-textlink-edu-gov,
+  chien-dich-pr-an-tuong-viet-nam (KHONG gan ten thuong hieu/case study cu the - viet theo
+  LOAI hinh chien dich vi khong xac minh duoc so lieu that, an toan hon cho content-professional),
+  quy-trinh-trien-khai-guest-post, so-sanh-booking-bao-pr-va-quang-cao-bao. Tong 35 bai dang
+  publish (23 cu + 12 moi dot nay). Verify het: HTTP 200 + dung 1 H1/bai, khong em dash.
+  File nguon luu tai `_content-p1/` va `_content-p2/` trong project (chua commit).
