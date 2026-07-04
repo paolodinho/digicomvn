@@ -132,3 +132,17 @@
   dat wordmark mau, cho Hieu gui logo khach that de thay.
 - Thu tu trien khai: pillar Dich vu Backlink lam mau -> port theme + seed wp-cli -> nhan
   sang 3 pillar con lai. Noi dung SEO giao bang script wp-cli seed chay tren Local.
+
+## 2026-07-04 (bo sung) - Design system landing + nguyen tac bien tau
+- Chot palette 3 mau: den (chu #14233B) + xanh duong brand #0048D8 (gom navy dam) + teal
+  #00AE9C CHI dung cho CTA. Bo cam, bo teal khoi trang tri. Nut CTA to + bong do teal.
+- Pillar Backlink = mau chuan (da duyet). Cac landing quan trong khac dung CHUNG design
+  system (header/footer, khoi khach hang + anh doi ngu, tuong logo khach, FAQ 2 cot, CTA band)
+  NHUNG moi trang bien tau hero + 1-2 section rieng theo dac thu dich vu - TRANH nhai giong het.
+- Bien tau tung pillar:
+  - Mua Textlink (giao dich nhanh): hero = mock "bang chon site" (DR/traffic/gia + checkbox);
+    them section so sanh textlink vs backlink; it section hon.
+  - Guest Post (content-led): hero = mock bai viet/editor; section "quy trinh viet bai" + grid
+    chu de/nganh; khoe mau bai.
+  - Booking bao & PR (press-led): hero = mock bai bao co logo bao; NHAN MANH bang gia theo tung
+    dau bao (114 long-tail "bao gia dang bai pr tren [bao]"), tuong logo bao noi bat, link trang con.
