@@ -10,6 +10,9 @@ get_header();
 <section class="sec">
 	<div class="wrap">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php if ( has_post_thumbnail() ) : ?>
+				<?php the_post_thumbnail( 'large', array( 'class' => 'single-post-thumb' ) ); ?>
+			<?php endif; ?>
 			<article class="page-content" style="max-width:820px;margin:0 auto 40px">
 				<?php the_content(); ?>
 			</article>
