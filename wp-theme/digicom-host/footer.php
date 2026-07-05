@@ -11,7 +11,7 @@
 					<div class="brand" style="color:#fff">Digicom<span class="dot" style="color:var(--action)">.</span></div>
 				<?php endif; ?>
 				<p>Chuyên Textlink, Backlink, Guest Post và Booking báo &amp; PR cho doanh nghiệp và agency SEO.</p>
-				<p style="font-size:13px;color:#8aa0b7">Công ty TNHH DVTT Digito Combat<br>MST: 0109816406</p>
+				<p style="font-size:13px;color:#8aa0b7">Công ty TNHH Dịch vụ Truyền thông Digito Combat<br>MST: 0109816406</p>
 			</div>
 			<div>
 				<h4>Dịch vụ</h4>
