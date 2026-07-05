@@ -10,13 +10,15 @@
 | Pháp nhân | Công ty TNHH Dịch vụ Truyền thông Digito Combat |
 | MST | 0109816406 |
 | Domain | https://digicomvn.com |
-| Địa chỉ | Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội |
+| Địa chỉ VP1 | Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội |
+| Địa chỉ VP2 | Tầng 3, Toà nhà Thăng Long A1 Thiên Lộc, Hà Nội (Kim Chung, Đông Anh cũ) |
 
 ## 2. Liên hệ
 
 | Kênh | Giá trị |
 |---|---|
 | Hotline | 0988 769 317 |
+| Hotline 2 | 0775 031 895 |
 | Phone tel: link | `tel:0988769317` |
 | Email | info@digicomvn.com |
 | Giờ làm việc | Thứ 2 - Thứ 6, 8:00 - 18:00 |

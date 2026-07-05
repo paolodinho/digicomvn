@@ -11,7 +11,7 @@
 					<div class="brand" style="color:#fff">Digicom<span class="dot" style="color:var(--action)">.</span></div>
 				<?php endif; ?>
 				<p>Chuyên Textlink, Backlink, Guest Post và Booking báo &amp; PR cho doanh nghiệp và agency SEO.</p>
-				<p style="font-size:13px;color:#8aa0b7">Công ty TNHH DVTT Digito Combat<br>MST: 0109816406</p>
+				<p style="font-size:13px;color:#8aa0b7">Công ty TNHH Dịch vụ Truyền thông Digito Combat<br>MST: 0109816406</p>
 			</div>
 			<div>
 				<h4>Dịch vụ</h4>
@@ -34,9 +34,10 @@
 			<div>
 				<h4>Liên hệ</h4>
 				<ul>
-					<li>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></strong></a></li>
+					<li>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></strong></a><?php if ( dgc( 'hotline2' ) ) : ?> &middot; <a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9]/', '', dgc( 'hotline2' ) ) ); ?>"><strong style="color:#fff"><?php echo esc_html( dgc( 'hotline2' ) ); ?></strong></a><?php endif; ?></li>
 					<li>Email: <a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>"><?php echo esc_html( dgc( 'email' ) ); ?></a></li>
-					<li><?php echo esc_html( dgc( 'address' ) ); ?></li>
+					<li>VP1: <?php echo esc_html( dgc( 'address' ) ); ?></li>
+					<?php if ( dgc( 'address2' ) ) : ?><li>VP2: <?php echo esc_html( dgc( 'address2' ) ); ?></li><?php endif; ?>
 					<li><?php echo esc_html( dgc( 'working_hours' ) ); ?></li>
 				</ul>
 			</div>

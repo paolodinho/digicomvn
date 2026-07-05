@@ -113,3 +113,42 @@
   (upload.wikimedia.org/wikipedia/commons/5/51/Báo_Lao_Động.png, 250x62, dang logo wordmark
   that, khong phai favicon) - da xem lai anh xac nhan dung logo "LAO DONG" chu do + sao vang.
   Gio du 16/16 dau bao co logo that.
+
+## 2026-07-04 - Redesign giao dien (chong AI-slop) + cau truc landing CVR
+- Hieu che giao dien cu "bi AI": section lap nhip, blob/grain gimmick, thieu yeu to con nguoi.
+  Tham chieu bo cuc + cach xu ly mau: thienkhoi.com (KHONG lay mau thien khoi).
+- Chot he mau theo LOGO GOC Digicom: xanh duong #0048D8 (chinh) + teal #00AE9C (nhan),
+  navy dam #0A2A66/#0B2350 cho section toi. Bo cam vermilion #E5482C cu.
+- Minh hoa: SVG flat tu ve theo mau brand (loa PR, the bao, mang link) - khong stock,
+  khong vuong ban quyen. Anh doi ngu that Hieu cung cap (4 anh, luu uploads/team/):
+  dung TIET CHE - chi 1 section "doi ngu" (collage), khong spam; anh nen mo opacity
+  ~10-16% phu mau brand khi can nen co nguoi ma khong ro mat.
+- Cau truc landing pillar chot (thu tu khoa hoc, CVR cao): 1) Hero + CTA + 3 cam ket
+  2) Logo khach (social proof som) 3) Khoi DICH VU noi cho toi (la gi -> loai -> tieu chi
+  -> quy trinh -> cam ket) 4) Gia minh bach 5) Case study du an 6) Kinh nghiem + doi ngu
+  (1 section duy nhat) 7) Testimonial 8) FAQ (xu ly phan doi) 9) CTA cuoi.
+- Case study: Hieu duyet dung so lieu MAU an danh theo nganh (San BDS Ha Noi, chuoi nha khoa,
+  noi that TMDT...) - KHONG gan ten thuong hieu that; sua duoc tu WP Admin. Logo khach:
+  dat wordmark mau, cho Hieu gui logo khach that de thay.
+- Thu tu trien khai: pillar Dich vu Backlink lam mau -> port theme + seed wp-cli -> nhan
+  sang 3 pillar con lai. Noi dung SEO giao bang script wp-cli seed chay tren Local.
+
+## 2026-07-04 (bo sung) - Design system landing + nguyen tac bien tau
+- Chot palette 3 mau: den (chu #14233B) + xanh duong brand #0048D8 (gom navy dam) + teal
+  #00AE9C CHI dung cho CTA. Bo cam, bo teal khoi trang tri. Nut CTA to + bong do teal.
+- Pillar Backlink = mau chuan (da duyet). Cac landing quan trong khac dung CHUNG design
+  system (header/footer, khoi khach hang + anh doi ngu, tuong logo khach, FAQ 2 cot, CTA band)
+  NHUNG moi trang bien tau hero + 1-2 section rieng theo dac thu dich vu - TRANH nhai giong het.
+- Bien tau tung pillar:
+  - Mua Textlink (giao dich nhanh): hero = mock "bang chon site" (DR/traffic/gia + checkbox);
+    them section so sanh textlink vs backlink; it section hon.
+  - Guest Post (content-led): hero = mock bai viet/editor; section "quy trinh viet bai" + grid
+    chu de/nganh; khoe mau bai.
+  - Booking bao & PR (press-led): hero = mock bai bao co logo bao; NHAN MANH bang gia theo tung
+    dau bao (114 long-tail "bao gia dang bai pr tren [bao]"), tuong logo bao noi bat, link trang con.
+
+## 2026-07-05 — Bỏ section Tin tức ở homepage
+Bài SEO để ở "Cẩm nang" → bỏ mục "Tin tức & sự kiện" (id=tin-tuc) trong front-page.php (theme digicom-host). Rule Hiếu.
+
+## 2026-07-05 — Bỏ trang hub /dich-vu/
+4 dịch vụ là con trực tiếp của Trang chủ (không qua trang hub trung gian). Trang /dich-vu/ chuyển thành redirect về `home#dich-vu`. Nav "Dịch vụ" (dropdown) trỏ tới section dịch vụ ở trang chủ; breadcrumb pillar bỏ cấp "Dịch vụ" (Trang chủ › [Dịch vụ con]). URL pillar giữ nguyên /dich-vu/<slug>/. Rule Hiếu.
