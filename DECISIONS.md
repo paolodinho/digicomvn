@@ -149,3 +149,6 @@
 
 ## 2026-07-05 — Bỏ section Tin tức ở homepage
 Bài SEO để ở "Cẩm nang" → bỏ mục "Tin tức & sự kiện" (id=tin-tuc) trong front-page.php (theme digicom-host). Rule Hiếu.
+
+## 2026-07-05 — Bỏ trang hub /dich-vu/
+4 dịch vụ là con trực tiếp của Trang chủ (không qua trang hub trung gian). Trang /dich-vu/ chuyển thành redirect về `home#dich-vu`. Nav "Dịch vụ" (dropdown) trỏ tới section dịch vụ ở trang chủ; breadcrumb pillar bỏ cấp "Dịch vụ" (Trang chủ › [Dịch vụ con]). URL pillar giữ nguyên /dich-vu/<slug>/. Rule Hiếu.
