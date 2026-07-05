@@ -18,6 +18,7 @@
 | Kênh | Giá trị |
 |---|---|
 | Hotline | 0988 769 317 |
+| Hotline 2 | 0775 031 895 |
 | Phone tel: link | `tel:0988769317` |
 | Email | info@digicomvn.com |
 | Giờ làm việc | Thứ 2 - Thứ 6, 8:00 - 18:00 |

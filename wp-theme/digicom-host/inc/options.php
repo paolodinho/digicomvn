@@ -9,6 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function dgc_defaults() {
 	return array(
 		'hotline'       => '0988 769 317',
+		'hotline2'      => '0775 031 895',
 		'email'         => 'info@digicomvn.com',
 		'address'       => 'Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội',
 		'address2'      => 'Tầng 3, Toà nhà Thăng Long A1 Thiên Lộc, Hà Nội (Kim Chung, Đông Anh cũ)',
