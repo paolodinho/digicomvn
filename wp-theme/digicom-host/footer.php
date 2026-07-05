@@ -36,7 +36,8 @@
 				<ul>
 					<li>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></strong></a></li>
 					<li>Email: <a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>"><?php echo esc_html( dgc( 'email' ) ); ?></a></li>
-					<li><?php echo esc_html( dgc( 'address' ) ); ?></li>
+					<li>VP1: <?php echo esc_html( dgc( 'address' ) ); ?></li>
+					<?php if ( dgc( 'address2' ) ) : ?><li>VP2: <?php echo esc_html( dgc( 'address2' ) ); ?></li><?php endif; ?>
 					<li><?php echo esc_html( dgc( 'working_hours' ) ); ?></li>
 				</ul>
 			</div>
