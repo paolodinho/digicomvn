@@ -3,16 +3,16 @@
    Design tokens chot truoc (anti-slop): navy + vermilion + teal, nen am.
    ========================================================================== */
 :root{
-  --ink:#16202C;            /* text chinh */
-  --ink-soft:#46586A;       /* text phu */
-  --navy:#0F2A43;           /* brand primary */
-  --navy-2:#143A5C;
-  --action:#E5482C;         /* CTA - vermilion, KHONG purple/indigo */
-  --action-2:#C73A20;       /* CTA hover */
-  --teal:#0E8C7F;           /* accent phu */
-  --surface:#F7F5F1;        /* nen am, chong AI-slop */
+  --ink:#14233B;            /* text chinh */
+  --ink-soft:#586A7E;       /* text phu */
+  --navy:#0B2350;           /* brand primary - blue-ink (dong bo landing) */
+  --navy-2:#0A2A66;
+  --action:#00AE9C;         /* CTA - teal (dong bo landing) */
+  --action-2:#008576;       /* CTA hover */
+  --teal:#0048D8;           /* accent - blue (dong bo landing) */
+  --surface:#F3F7FC;        /* nen sang */
   --surface-2:#FFFFFF;
-  --line:#E4DFD6;
+  --line:#E4E9F1;
   --line-2:#D8E0E8;
   --ok:#2E7D32;
 
@@ -37,7 +37,7 @@ body{
 }
 /* Grain texture nhe toan site - chong flat/AI-slop */
 body:before{
-  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.035;
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:0;
   mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
@@ -72,13 +72,14 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 /* ==========================================================================
    Topbar + Header
    ========================================================================== */
-.topbar{background:var(--navy);color:#cfdcea;font-size:13px}
+.topbar{display:none}
+.topbar-x{background:var(--navy);color:#cfdcea;font-size:13px}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:18px}
 .topbar a{color:#cfdcea}.topbar a:hover{color:#fff}
 .topbar .tb-right{display:flex;gap:16px;align-items:center}
 .topbar .sep{opacity:.4}
 
-.site-header{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.92);
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
   backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
 .site-header .wrap{display:flex;align-items:center;gap:26px;height:72px}
 .brand{font-family:var(--font-display);font-weight:700;font-size:24px;color:var(--navy);
@@ -91,7 +92,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .nav>ul{display:flex;gap:22px;margin:0;padding:0;list-style:none}
 .nav li{position:relative}
 .nav a{font-weight:500;font-size:15px;color:var(--ink);white-space:nowrap;padding:6px 0;display:block}
-.nav a:hover{color:var(--action)}
+.nav a:hover{color:var(--teal)}
 .nav .sub-menu{display:none;position:absolute;left:0;top:100%;min-width:200px;margin:0;padding:8px;list-style:none;
   background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 30px rgba(15,23,42,.12);z-index:60}
 .nav li:hover>.sub-menu,.nav li:focus-within>.sub-menu{display:block}
@@ -110,7 +111,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   linear-gradient(180deg,#fff 0%,var(--surface) 100%);
   overflow:hidden;border-bottom:1px solid var(--line)}
 .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(60px);z-index:0;pointer-events:none}
-.hero:before{width:340px;height:340px;background:rgba(229,72,44,.16);top:-120px;right:6%}
+.hero:before{width:340px;height:340px;background:rgba(0,72,216,.12);top:-120px;right:6%}
 .hero:after{width:260px;height:260px;background:rgba(14,140,127,.18);bottom:-90px;left:4%}
 .hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;text-align:center;padding:52px 0 58px}
 .hero h1{margin:0 auto .35em;max-width:18ch;line-height:1.02;letter-spacing:-.035em}
@@ -176,7 +177,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .host-card.feat{border:2px solid var(--action);box-shadow:var(--sh-high);transform:scale(1.02)}
 .host-card .tag-feat{position:absolute;top:-13px;left:50%;transform:translateX(-50%) rotate(-2deg);
   background:var(--action);color:#fff;font-family:var(--font-display);font-weight:600;font-size:12px;
-  padding:4px 14px;border-radius:20px;white-space:nowrap;box-shadow:0 4px 10px rgba(229,72,44,.35)}
+  padding:4px 14px;border-radius:20px;white-space:nowrap;box-shadow:0 4px 10px rgba(0,174,156,.32)}
 .host-card .pname{font-family:var(--font-display);font-weight:600;font-size:20px;color:var(--navy)}
 .host-card .pprice{font-size:26px;font-weight:700;color:var(--ink);margin:8px 0 2px;font-family:var(--font-display)}
 .host-card ul{list-style:none;padding:0;margin:18px 0;display:grid;gap:9px}
