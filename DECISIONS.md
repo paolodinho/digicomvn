@@ -146,3 +146,6 @@
     chu de/nganh; khoe mau bai.
   - Booking bao & PR (press-led): hero = mock bai bao co logo bao; NHAN MANH bang gia theo tung
     dau bao (114 long-tail "bao gia dang bai pr tren [bao]"), tuong logo bao noi bat, link trang con.
+
+## 2026-07-05 — Bỏ section Tin tức ở homepage
+Bài SEO để ở "Cẩm nang" → bỏ mục "Tin tức & sự kiện" (id=tin-tuc) trong front-page.php (theme digicom-host). Rule Hiếu.

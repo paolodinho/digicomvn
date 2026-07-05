@@ -234,42 +234,6 @@ $svc_meta = array(
 	</div>
 </section>
 
-<!-- 10. TIN TUC & SU KIEN -->
-<?php
-$news = new WP_Query( array(
-	'post_type'           => 'post',
-	'post_status'         => 'publish',
-	'posts_per_page'      => 3,
-	'ignore_sticky_posts' => 1,
-) );
-if ( $news->have_posts() ) : ?>
-<section class="sec" id="tin-tuc" style="background:#fff;border-top:1px solid var(--line)">
-	<div class="wrap">
-		<div class="news-head">
-			<div>
-				<span class="eyebrow">Tin tức &amp; sự kiện</span>
-				<h2>Tin mới từ Digicom</h2>
-			</div>
-			<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>">Xem tất cả</a>
-		</div>
-		<div class="news-grid">
-			<?php while ( $news->have_posts() ) : $news->the_post(); ?>
-				<article class="news">
-					<a class="news-thumb" href="<?php the_permalink(); ?>">
-						<?php if ( has_post_thumbnail() ) : the_post_thumbnail( 'medium_large' ); else : ?>
-							<span class="news-thumb-ph">Digicom</span>
-						<?php endif; ?>
-					</a>
-					<div class="news-body">
-						<time class="news-date"><?php echo esc_html( get_the_date( 'd/m/Y' ) ); ?></time>
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 22 ) ); ?></p>
-					</div>
-				</article>
-			<?php endwhile; ?>
-		</div>
-	</div>
-</section>
-<?php endif; wp_reset_postdata(); ?>
+<?php // Section "Tin tuc & su kien" da bo: bai SEO nam o Cam nang (rule Hieu 2026-07-05). ?>
 
 <?php get_footer(); ?>
