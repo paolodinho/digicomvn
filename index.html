@@ -154,7 +154,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 				</div>
 			</div>
 			<div class="hero-media">
-				<img src="wp-content/themes/digicom-host/assets/images/team-photo.jpg" alt="Đội ngũ Digicom" loading="eager" width="720" height="480">
+				<div class="img-ph">Ảnh đội ngũ Digicom đang cập nhật</div>
 			</div>
 		</div>
 	</div>
@@ -276,7 +276,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 				<p style="margin-top:16px"><a class="btn-text-link" href="ve-digicom/index.html" style="color:#fff">Tìm hiểu về Digicom &rarr;</a></p>
 			</div>
 			<div class="whoweare-media">
-				<img src="wp-content/themes/digicom-host/assets/images/team-photo.jpg" alt="Đội ngũ Digicom" loading="lazy" width="560" height="420">
+				<div class="img-ph img-ph-dark">Ảnh đội ngũ Digicom đang cập nhật</div>
 			</div>
 		</div>
 		<div class="center" style="margin-top:56px">
@@ -491,55 +491,71 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 	</div>
 </section>
 
-<!-- 07b. TESTIMONIALS -->
+<!-- 07b. TESTIMONIALS + CASE STUDY -->
 <section class="sec" id="danh-gia">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:38px">
+		<div class="center" style="margin-bottom:26px">
 			<span class="eyebrow">Khách hàng</span>
 			<h2>Khách hàng nói về Digicom</h2>
 		</div>
-		<div class="tm-carousel owl-carousel">
-							<figure class="tm">
-					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<blockquote>Link bàn giao đúng như báo giá, có báo cáo rõ ràng để đối chiếu.</blockquote>
-					<figcaption>
-						<span class="tm-avatar" aria-hidden="true">T</span>
-						<span>
-							<span class="tm-who">Trưởng phòng Marketing</span>
-							<span class="tm-svc">Dịch vụ Backlink</span>						</span>
-					</figcaption>
-				</figure>
-							<figure class="tm">
-					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<blockquote>Bài guest post lên đúng site đã chọn, nội dung tự nhiên không lộ quảng cáo.</blockquote>
-					<figcaption>
-						<span class="tm-avatar" aria-hidden="true">C</span>
-						<span>
-							<span class="tm-who">Chủ doanh nghiệp SME</span>
-							<span class="tm-svc">Guest Post</span>						</span>
-					</figcaption>
-				</figure>
-							<figure class="tm">
-					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<blockquote>Booking báo nhanh, hỗ trợ chọn chuyên mục phù hợp ngành hàng.</blockquote>
-					<figcaption>
-						<span class="tm-avatar" aria-hidden="true">Q</span>
-						<span>
-							<span class="tm-who">Quản lý truyền thông</span>
-							<span class="tm-svc">Booking báo &amp; PR</span>						</span>
-					</figcaption>
-				</figure>
-							<figure class="tm">
-					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<blockquote>Textlink đặt đúng vị trí, site có traffic thật chứ không phải site rác.</blockquote>
-					<figcaption>
-						<span class="tm-avatar" aria-hidden="true">S</span>
-						<span>
-							<span class="tm-who">SEO Specialist</span>
-							<span class="tm-svc">Mua Textlink</span>						</span>
-					</figcaption>
-				</figure>
-					</div>
+		<div class="cs-tabs">
+			<input type="radio" name="cs-tab" id="cs-tab-review" class="cs-tab-radio" checked>
+			<input type="radio" name="cs-tab" id="cs-tab-case" class="cs-tab-radio">
+			<div class="tab-bar center" style="justify-content:center">
+				<label for="cs-tab-review" class="tab-btn">Đánh giá khách hàng</label>
+				<label for="cs-tab-case" class="tab-btn">Case study</label>
+			</div>
+
+			<div class="cs-panel cs-panel-review">
+				<p class="muted center" style="font-size:12.5px;margin-bottom:18px">Nội dung ví dụ minh hoạ dạng phản hồi thường gặp, chưa phải trích dẫn xác thực từ khách hàng cụ thể.</p>
+				<div class="tm-carousel owl-carousel">
+											<figure class="tm">
+							<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+							<blockquote>Link bàn giao đúng như báo giá, có báo cáo rõ ràng để đối chiếu.</blockquote>
+							<figcaption>
+								<span class="tm-avatar" aria-hidden="true">A</span>
+								<span>
+									<span class="tm-who">Anh Đức - Trưởng phòng Marketing</span>
+									<span class="tm-svc">Dịch vụ Backlink</span>								</span>
+							</figcaption>
+						</figure>
+											<figure class="tm">
+							<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+							<blockquote>Bài guest post lên đúng site đã chọn, nội dung tự nhiên không lộ quảng cáo.</blockquote>
+							<figcaption>
+								<span class="tm-avatar" aria-hidden="true">C</span>
+								<span>
+									<span class="tm-who">Chị Lan - Chủ doanh nghiệp SME</span>
+									<span class="tm-svc">Guest Post</span>								</span>
+							</figcaption>
+						</figure>
+											<figure class="tm">
+							<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+							<blockquote>Booking báo nhanh, hỗ trợ chọn chuyên mục phù hợp ngành hàng.</blockquote>
+							<figcaption>
+								<span class="tm-avatar" aria-hidden="true">C</span>
+								<span>
+									<span class="tm-who">Chị Hoa - Quản lý truyền thông</span>
+									<span class="tm-svc">Booking báo &amp; PR</span>								</span>
+							</figcaption>
+						</figure>
+											<figure class="tm">
+							<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+							<blockquote>Textlink đặt đúng vị trí, site có traffic thật chứ không phải site rác.</blockquote>
+							<figcaption>
+								<span class="tm-avatar" aria-hidden="true">A</span>
+								<span>
+									<span class="tm-who">Anh Minh - SEO Specialist</span>
+									<span class="tm-svc">Mua Textlink</span>								</span>
+							</figcaption>
+						</figure>
+									</div>
+			</div>
+
+			<div class="cs-panel cs-panel-case">
+													<div class="center" style="padding:30px 0"><p class="muted">Case study đang được cập nhật, quay lại sau.</p></div>
+							</div>
+		</div>
 	</div>
 </section>
 
@@ -676,6 +692,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <a href="index.html#" class="to-top" aria-label="Lên đầu trang">
 	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </a>
+<div class="press-flash-layer" aria-hidden="true"></div>
 
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/digicom-host/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
