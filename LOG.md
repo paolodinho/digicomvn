@@ -263,3 +263,20 @@
   that cua may) - Hieu nen tu mo digicom.local kiem tra truc quan truoc khi ung y.
 - Con lai: thay anh placeholder GrowMark bang anh that (neu can dung them anh moi ngoai
   team-photo.jpg hien co); Hieu xac nhan mau xanh duong #4761FF co dung y muon khong.
+- Hieu phan hoi giao dien "kho cung" -> tang bo goc (--r-sm/md/lg 8/12/20 -> 12/18/28), doi 4
+  the promo tu mau phang sang gradient + nghieng nhe. Fix them 3 cho con sot mau vermilion cu
+  (#F0663F, #F0A15B, rgba(229,72,44)) gay va cham voi xanh duong moi trong cta-band, so thu tu
+  "Vi sao chon", vong tron trang tri hero - doi sang gradient xanh/xanh la dong bo.
+- Push code (commit 67e26b2) + build lai demo tinh (wget mirror, xoa 2 thu muc rac khoa-hoc/
+  author khong thuoc scope), force-push gh-pages (Hieu xac nhan mat du lieu khong sao vi day
+  la branch tu-dong-dung-lai). Demo: https://paolodinho.github.io/digicomvn/
+- Hieu yeu cau muc "Mang luoi bao chi" chay hieu ung (marquee) + them nhieu bao hon. Doi
+  press-grid tinh sang .press-marquee chay vo han (42s, dung khi hover, mask mo 2 dau, ho tro
+  prefers-reduced-motion). Them 5 dau bao THAT da co gia trong CPT dgc_gia nhung chua len logo
+  (Afamily, Eva, CafeBiz, Webtretho, Bao Dau Tu) - tai logo that tu CDN chinh thuc tung bao,
+  khong bia doi tac. Tong 21 dau bao.
+- Hieu gui screenshot mobile: trang "/dich-vu/" (hub) hien thi tho, khong co style (dung
+  page.php generic). Chuyen page 440 sang draft (khong xoa han, co backup JSON tai
+  _backups/2026-07-06/remove-dich-vu-hub/), doi menu item "Dich vu" tu post_type link sang
+  custom link "#" - gio chi la nut mo dropdown 4 dich vu con, khong con dan toi trang xau nua.
+- Push code (commit 36e2c1e). Con lai: re-export + push gh-pages de demo mobile phan anh dung.
