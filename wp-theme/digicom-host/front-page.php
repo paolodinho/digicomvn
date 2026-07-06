@@ -27,7 +27,7 @@ get_header();
 				</div>
 			</div>
 			<div class="hero-media">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-photo.jpg' ); ?>" alt="Đội ngũ Digicom" loading="eager" width="720" height="480">
+				<div class="img-ph">Ảnh đội ngũ Digicom đang cập nhật</div>
 			</div>
 		</div>
 	</div>
@@ -105,7 +105,7 @@ $svc_meta = array(
 				<p style="margin-top:16px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về Digicom &rarr;</a></p>
 			</div>
 			<div class="whoweare-media">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-photo.jpg' ); ?>" alt="Đội ngũ Digicom" loading="lazy" width="560" height="420">
+				<div class="img-ph img-ph-dark">Ảnh đội ngũ Digicom đang cập nhật</div>
 			</div>
 		</div>
 		<div class="center" style="margin-top:56px">
@@ -156,30 +156,62 @@ $svc_meta = array(
 	</div>
 </section>
 
-<!-- 07b. TESTIMONIALS -->
+<!-- 07b. TESTIMONIALS + CASE STUDY -->
 <section class="sec" id="danh-gia">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:38px">
+		<div class="center" style="margin-bottom:26px">
 			<span class="eyebrow">Khách hàng</span>
 			<h2>Khách hàng nói về Digicom</h2>
 		</div>
-		<div class="tm-carousel owl-carousel">
-			<?php foreach ( dgc_lines( 'testimonials' ) as $t ) :
-				$quote = $t[0] ?? ''; $who = $t[1] ?? ''; $svc = $t[2] ?? '';
-				if ( $quote === '' ) continue;
-				$initial = function_exists( 'mb_substr' ) ? mb_strtoupper( mb_substr( $who, 0, 1 ) ) : strtoupper( substr( $who, 0, 1 ) ); ?>
-				<figure class="tm">
-					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<blockquote><?php echo esc_html( $quote ); ?></blockquote>
-					<figcaption>
-						<span class="tm-avatar" aria-hidden="true"><?php echo esc_html( $initial ); ?></span>
-						<span>
-							<span class="tm-who"><?php echo esc_html( $who ); ?></span>
-							<?php if ( $svc ) : ?><span class="tm-svc"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
-						</span>
-					</figcaption>
-				</figure>
-			<?php endforeach; ?>
+		<div class="cs-tabs">
+			<input type="radio" name="cs-tab" id="cs-tab-review" class="cs-tab-radio" checked>
+			<input type="radio" name="cs-tab" id="cs-tab-case" class="cs-tab-radio">
+			<div class="tab-bar center" style="justify-content:center">
+				<label for="cs-tab-review" class="tab-btn">Đánh giá khách hàng</label>
+				<label for="cs-tab-case" class="tab-btn">Case study</label>
+			</div>
+
+			<div class="cs-panel cs-panel-review">
+				<p class="muted center" style="font-size:12.5px;margin-bottom:18px">Nội dung ví dụ minh hoạ dạng phản hồi thường gặp, chưa phải trích dẫn xác thực từ khách hàng cụ thể.</p>
+				<div class="tm-carousel owl-carousel">
+					<?php foreach ( dgc_lines( 'testimonials' ) as $t ) :
+						$quote = $t[0] ?? ''; $who = $t[1] ?? ''; $svc = $t[2] ?? '';
+						if ( $quote === '' ) continue;
+						$initial = function_exists( 'mb_substr' ) ? mb_strtoupper( mb_substr( $who, 0, 1 ) ) : strtoupper( substr( $who, 0, 1 ) ); ?>
+						<figure class="tm">
+							<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+							<blockquote><?php echo esc_html( $quote ); ?></blockquote>
+							<figcaption>
+								<span class="tm-avatar" aria-hidden="true"><?php echo esc_html( $initial ); ?></span>
+								<span>
+									<span class="tm-who"><?php echo esc_html( $who ); ?></span>
+									<?php if ( $svc ) : ?><span class="tm-svc"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
+								</span>
+							</figcaption>
+						</figure>
+					<?php endforeach; ?>
+				</div>
+			</div>
+
+			<div class="cs-panel cs-panel-case">
+				<?php $case_studies = array_filter( dgc_lines( 'case_studies' ), fn( $c ) => ! empty( $c[0] ) ); ?>
+				<?php if ( $case_studies ) : ?>
+					<div class="cs-grid">
+						<?php foreach ( $case_studies as $c ) : ?>
+							<div class="cs-card">
+								<h3><?php echo esc_html( $c[0] ?? '' ); ?></h3>
+								<p class="cs-result"><?php echo esc_html( $c[1] ?? '' ); ?></p>
+								<div class="cs-meta">
+									<?php if ( ! empty( $c[2] ) ) : ?><span class="cs-svc"><?php echo esc_html( $c[2] ); ?></span><?php endif; ?>
+									<?php if ( ! empty( $c[3] ) ) : ?><span class="cs-client"><?php echo esc_html( $c[3] ); ?></span><?php endif; ?>
+								</div>
+							</div>
+						<?php endforeach; ?>
+					</div>
+				<?php else : ?>
+					<div class="center" style="padding:30px 0"><p class="muted">Case study đang được cập nhật, quay lại sau.</p></div>
+				<?php endif; ?>
+			</div>
 		</div>
 	</div>
 </section>

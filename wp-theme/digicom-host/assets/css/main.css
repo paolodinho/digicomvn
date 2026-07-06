@@ -138,6 +138,11 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .hero-media{position:relative}
 .hero-media img{border-radius:var(--r-lg);box-shadow:var(--sh-high);transform:rotate(.6deg);width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
 .hero-media:before{content:"";position:absolute;inset:-16px -16px auto auto;width:190px;height:190px;background:rgba(14,140,127,.16);border-radius:50%;z-index:-1}
+.img-ph{width:100%;aspect-ratio:3/2;border-radius:var(--r-lg);box-shadow:var(--sh-high);transform:rotate(.6deg);
+  background:#F8F8F8;color:var(--ink-soft);display:flex;align-items:center;justify-content:center;
+  text-align:center;font-size:14.5px;padding:24px}
+.img-ph-dark{aspect-ratio:4/3;transform:rotate(-1deg);background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);
+  border:1px dashed rgba(255,255,255,.2);box-shadow:none}
 .hero-split .search-card{margin-top:46px}
 @media (max-width:991.98px){
   .hero-grid{grid-template-columns:1fr;gap:32px}
@@ -257,8 +262,6 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .whoweare-grid{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center}
 .whoweare-copy .lead{max-width:520px;margin-top:14px}
 .whoweare-media{position:relative}
-.whoweare-media img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-lg);
-  box-shadow:var(--sh-high);transform:rotate(-1deg)}
 @media(max-width:900px){
   .whoweare-grid{grid-template-columns:1fr;gap:28px}
   .whoweare-media{order:-1}
@@ -334,6 +337,22 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .tm-carousel .owl-item.center .tm-svc{color:#FFE6D2}
 .tm-carousel .owl-item.center .tm-stars{color:#FFD98A}
 .tm-carousel .owl-item.center .tm figcaption{border-top-color:rgba(255,255,255,.25)}
+
+/* Tabs Danh gia / Case study (CSS-only, khong phu thuoc JS - ăn cả bản static export) */
+.cs-tab-radio{position:absolute;opacity:0;pointer-events:none}
+.cs-panel{display:none}
+#cs-tab-review:checked ~ .cs-panel-review{display:block}
+#cs-tab-case:checked ~ .cs-panel-case{display:block}
+#cs-tab-review:checked ~ .tab-bar label[for="cs-tab-review"],
+#cs-tab-case:checked ~ .tab-bar label[for="cs-tab-case"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cs-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px}
+.cs-card h3{font-size:17px;margin:0 0 10px}
+.cs-result{color:var(--ink-soft);font-size:14.5px;line-height:1.6;margin:0 0 14px}
+.cs-meta{display:flex;gap:10px;flex-wrap:wrap;font-size:13px}
+.cs-svc{color:var(--action);font-weight:600}
+.cs-client{color:var(--ink-soft)}
+@media(max-width:768px){.cs-grid{grid-template-columns:1fr}}
 .tm-carousel .owl-item.center .tm-avatar{background:#fff;color:var(--action)}
 .tm-carousel .owl-dots{text-align:center;margin-top:26px}
 .tm-carousel .owl-dot span{width:9px;height:9px;margin:0 4px;background:var(--line-2);border-radius:50%;display:block}
@@ -346,6 +365,16 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 .to-top:hover{background:var(--action-2)}
 .to-top svg{width:20px;height:20px}
+
+/* Hieu ung den flash phong vien (Booking bao & PR) - toan site, nhe, thua thot */
+.press-flash-layer{position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden}
+.press-flash{position:absolute;border-radius:50%;transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(255,255,255,.95) 0%,rgba(255,255,255,.35) 45%,rgba(255,255,255,0) 75%);
+  animation:press-flash-pop .45s ease-out forwards}
+@keyframes press-flash-pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}
+  30%{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(1.15)}}
+@media(prefers-reduced-motion:reduce){.press-flash-layer{display:none}}
 
 /* ==========================================================================
    Tin tuc

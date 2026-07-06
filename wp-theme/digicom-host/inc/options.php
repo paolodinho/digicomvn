@@ -36,8 +36,13 @@ function dgc_defaults() {
 		// Dich vu theo nhom. Dong bat dau bang # = ten nhom; dong con lai: ten | mo ta
 		'services'      => "# Mua Textlink\nTextlink theo DR/Traffic | Chèn link trong bài có sẵn trên site đã chọn lọc theo chỉ số.\nTextlink theo ngành hàng | Ưu tiên site cùng lĩnh vực để tăng độ liên quan.\n# Dịch vụ Backlink\nBacklink chất lượng | Xây dựng hệ thống backlink tự nhiên, đa nguồn.\nBacklink theo ngách | Backlink chuyên biệt cho từng lĩnh vực, ví dụ bất động sản.\n# Guest Post\nGuest Post trọn gói | Viết bài và đăng trên site đúng chủ đề, có link dofollow.\nGuest Post theo site khách chọn | Đăng trên site do khách hàng chỉ định (nếu đủ điều kiện).\n# Booking báo & PR\nBooking đăng bài PR | Đặt lịch đăng bài PR trên báo điện tử theo yêu cầu.\nViết bài PR chuẩn báo chí | Viết bài đúng văn phong, tôn chỉ từng đầu báo.",
 
-		// Khach hang noi ve (noi dung | nguoi/vai tro | dich vu)
-		'testimonials'  => "Link bàn giao đúng như báo giá, có báo cáo rõ ràng để đối chiếu. | Trưởng phòng Marketing | Dịch vụ Backlink\nBài guest post lên đúng site đã chọn, nội dung tự nhiên không lộ quảng cáo. | Chủ doanh nghiệp SME | Guest Post\nBooking báo nhanh, hỗ trợ chọn chuyên mục phù hợp ngành hàng. | Quản lý truyền thông | Booking báo & PR\nTextlink đặt đúng vị trí, site có traffic thật chứ không phải site rác. | SEO Specialist | Mua Textlink",
+		// Khach hang noi ve (noi dung | nguoi/vai tro | dich vu). Ten chi la vi du minh hoa,
+		// CHUA phai khach hang that xac nhan - can thay bang ten/feedback that khi Hieu cung cap.
+		'testimonials'  => "Link bàn giao đúng như báo giá, có báo cáo rõ ràng để đối chiếu. | Anh Đức - Trưởng phòng Marketing | Dịch vụ Backlink\nBài guest post lên đúng site đã chọn, nội dung tự nhiên không lộ quảng cáo. | Chị Lan - Chủ doanh nghiệp SME | Guest Post\nBooking báo nhanh, hỗ trợ chọn chuyên mục phù hợp ngành hàng. | Chị Hoa - Quản lý truyền thông | Booking báo & PR\nTextlink đặt đúng vị trí, site có traffic thật chứ không phải site rác. | Anh Minh - SEO Specialist | Mua Textlink",
+
+		// Case study khach hang that (tieu de | ket qua/so lieu | dich vu | ten khach hang - tuy chon).
+		// RONG mac dinh - CHUA co du lieu that, KHONG bia so lieu. Hieu dien qua WP Admin khi co du lieu.
+		'case_studies'  => "",
 
 		// Dau bao Digicom co the dat bai/booking. Moi dong: ten bao | ten file logo trong /uploads/press-logos/ (rong = chua co logo).
 		// Nguon: bang gia CPT dgc_gia that. Logo tai that tu website tung bao 2026-07-03, bo sung 5 bao 2026-07-06.
@@ -130,6 +135,7 @@ function dgc_settings_page() {
 				<?php
 				dgc_field( 'services', 'Dich vu theo nhom', 'Dong bat dau bang # = ten nhom. Cac dong khac: ten dich vu | mo ta ngan.', 'textarea' );
 				dgc_field( 'testimonials', 'Khach hang noi ve Digicom', 'Moi dong: noi dung danh gia | nguoi/vai tro | dich vu', 'textarea' );
+				dgc_field( 'case_studies', 'Case study khach hang that', 'Moi dong: tieu de | ket qua/so lieu | dich vu | ten khach hang (tuy chon). Chi dien khi co du lieu that, KHONG bia.', 'textarea' );
 				?>
 			</table>
 
