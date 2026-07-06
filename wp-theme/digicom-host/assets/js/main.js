@@ -44,6 +44,59 @@
 		setTimeout(pop, 3000 + Math.random() * 3000);
 	})();
 
+	// But viet len web: chuot keo theo net muc mo dan (canvas), chu de ngoi but nha bao.
+	(function () {
+		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		if (!window.matchMedia || !window.matchMedia('(pointer: fine)').matches) return; // chi may tinh, khong dung tren touch
+
+		var canvas = document.createElement('canvas');
+		canvas.className = 'pen-ink-layer';
+		document.body.appendChild(canvas);
+		var ctx = canvas.getContext('2d');
+		var segments = [];
+		var lastX = null, lastY = null;
+		var MAX_AGE = 700; // ms truoc khi net muc mo het
+
+		function resize() {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+		}
+		resize();
+		window.addEventListener('resize', resize);
+
+		document.addEventListener('mousemove', function (e) {
+			if (lastX !== null) {
+				var dx = e.clientX - lastX, dy = e.clientY - lastY;
+				var dist = Math.sqrt(dx * dx + dy * dy);
+				if (dist > 1) {
+					segments.push({ x1: lastX, y1: lastY, x2: e.clientX, y2: e.clientY, t: performance.now(), speed: dist });
+					if (segments.length > 400) segments.shift();
+				}
+			}
+			lastX = e.clientX; lastY = e.clientY;
+		});
+
+		function draw() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			var now = performance.now();
+			segments = segments.filter(function (s) { return now - s.t < MAX_AGE; });
+			segments.forEach(function (s) {
+				var age = (now - s.t) / MAX_AGE;
+				var alpha = (1 - age) * 0.55;
+				var width = Math.max(0.6, 2.6 - age * 2 - Math.min(s.speed, 40) / 40);
+				ctx.beginPath();
+				ctx.moveTo(s.x1, s.y1);
+				ctx.lineTo(s.x2, s.y2);
+				ctx.strokeStyle = 'rgba(28,32,53,' + alpha.toFixed(3) + ')';
+				ctx.lineWidth = width;
+				ctx.lineCap = 'round';
+				ctx.stroke();
+			});
+			requestAnimationFrame(draw);
+		}
+		requestAnimationFrame(draw);
+	})();
+
 	// Back to top
 	var $toTop = document.querySelector('.to-top');
 	if ($toTop) {

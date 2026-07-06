@@ -378,6 +378,10 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   100%{opacity:0;transform:translate(-50%,-50%) scale(1.15)}}
 @media(prefers-reduced-motion:reduce){.press-flash-layer{display:none}}
 
+/* But viet len web: net muc mo dan theo chuyen dong chuot */
+.pen-ink-layer{position:fixed;inset:0;pointer-events:none;z-index:9998}
+@media(prefers-reduced-motion:reduce),(pointer:coarse){.pen-ink-layer{display:none}}
+
 /* ==========================================================================
    Tin tuc
    ========================================================================== */
