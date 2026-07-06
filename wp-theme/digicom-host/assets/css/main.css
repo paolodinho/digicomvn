@@ -254,6 +254,15 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .band-navy .wrap{position:relative;z-index:1}
 .band-navy h2{color:#fff}
 .band-navy .eyebrow{color:#7fd1c8}
+.whoweare-grid{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center}
+.whoweare-copy .lead{max-width:520px;margin-top:14px}
+.whoweare-media{position:relative}
+.whoweare-media img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-lg);
+  box-shadow:var(--sh-high);transform:rotate(-1deg)}
+@media(max-width:900px){
+  .whoweare-grid{grid-template-columns:1fr;gap:28px}
+  .whoweare-media{order:-1}
+}
 .reason-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:34px}
 .reason{border-left:2px solid rgba(255,255,255,.14);padding-left:16px}
 .reason .rnum{font-family:var(--font-display);font-weight:700;font-size:34px;
