@@ -379,3 +379,13 @@
   mau navy, khong anh huong click/UX, van giu cursor:pointer rieng cho link/button).
 - QA: php -l pass, curl xac nhan 118 dong tong + 11 nut loc voi so luong dung tung nhom.
 - Push code (commit ebaf373) + rebuild/push gh-pages (commit 111d374).
+
+## 2026-07-06 (8) - But viet len web (hieu ung net muc theo chuot)
+- Hieu muon con tro "but" thuc su viet duoc len web, khong chi la icon tinh.
+- Them canvas `.pen-ink-layer` phu toan man hinh (pointer-events:none, khong can tro click):
+  moi lan chuot di chuyen ve mot doan net muc mau navy, mo dan trong ~700ms roi bien mat -
+  tao cam giac but dang "ke" theo duong di chuot. Do rong net thay doi theo toc do ruoc chuot
+  (di cham net day hon, giong but that). Tu tat tren thiet bi cham (touch, khong co chuot
+  chinh xac) va khi trinh duyet bat prefers-reduced-motion.
+- QA: main.js syntax hop le (node -c), curl xac nhan file len dung, class pen-ink-layer co mat.
+- Push code (commit 92a1f69) + rebuild/push gh-pages (commit 4b66c0a).
