@@ -7,11 +7,29 @@ get_header();
 ?>
 
 <!-- 02. HERO -->
-<section class="hero" id="dich-vu">
-	<div class="wrap hero-inner">
-		<span class="eyebrow">Textlink &middot; Backlink &middot; Guest Post &middot; Booking báo &amp; PR</span>
-		<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
-		<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
+<section class="hero hero-split" id="dich-vu">
+	<div class="wrap">
+		<div class="hero-grid">
+			<div class="hero-copy">
+				<span class="eyebrow">Textlink &middot; Backlink &middot; Guest Post &middot; Booking báo &amp; PR</span>
+				<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
+				<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
+
+				<div class="hero-cta-row">
+					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận báo giá</a>
+					<a class="btn-text-link" href="#services">Xem dịch vụ &rarr;</a>
+				</div>
+
+				<div class="trust-row">
+					<div class="t"><b>Site</b> chọn lọc theo chỉ số</div>
+					<div class="t"><b>Báo giá</b> minh bạch</div>
+					<div class="t"><b>Hỗ trợ</b> tư vấn tận tình</div>
+				</div>
+			</div>
+			<div class="hero-media">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-photo.jpg' ); ?>" alt="Đội ngũ Digicom" loading="eager" width="720" height="480">
+			</div>
+		</div>
 
 		<div class="search-card">
 			<div class="tld-row" style="justify-content:center">
@@ -20,12 +38,6 @@ get_header();
 				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Guest Post</a>
 				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/booking-bao-pr/' ) ); ?>">Booking báo &amp; PR</a>
 			</div>
-		</div>
-
-		<div class="trust-row">
-			<div class="t"><b>Site</b> chọn lọc theo chỉ số</div>
-			<div class="t"><b>Báo giá</b> minh bạch</div>
-			<div class="t"><b>Hỗ trợ</b> tư vấn tận tình</div>
 		</div>
 	</div>
 </section>

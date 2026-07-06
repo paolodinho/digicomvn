@@ -221,3 +221,17 @@
 - Re-export static demo lan 3, gap lai đung loi CSS convert-link nhu lan truoc (wget khong
   convert link co query string ?ver=) - ap dung lai script Python fix da viet lan truoc.
   Push gh-pages thanh cong (commit 5921da2).
+
+## 2026-07-06 - Fix layout desktop rong/thieu lien ket + doi hero trang chu theo mau tham khao
+- gh-pages (link demo paolodinho.github.io/digicomvn) hoa ra la 1 ban Bootstrap "Studiova"
+  khac hoan toan code main/wp-theme - da bi day thang tu session khac truoc do, khong sync.
+  Da vá tam: them thanh menu ngang desktop (truoc chi co hamburger trong trai) cho 69 trang,
+  header luon nen trang xuyen suot, hero trang chu doi sang layout 2 cot (anh doi ngu that).
+- Site WordPress that (digicom.local, theme digicom-host) la nguon chuan - da doi hero
+  front-page.php sang layout 2 cot (chu trai/anh doi ngu phai) theo phong cach tham khao tu
+  template Next.js "logoipsum" (SaaS Starter, themewagon), giu nguyen mau brand navy/vermilion/
+  teal (khong doi sang xanh duong generic cua template). Anh dung lai team-photo.jpg (that,
+  cung nguon anh da dung o gh-pages). Trang dich vu/blog giu hero gon canh giua nhu cu, dung
+  chung main.css nen da dong bo mau/font/nut voi trang chu.
+- Luu y: file anh JPEG de bi hong neu dung `git show ... > file 2>&1 | tail` (redirect stderr
+  lam nhieu du lieu binary) - luon extract binary rieng, khong noi lenh redirect + pipe.
