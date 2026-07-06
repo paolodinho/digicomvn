@@ -411,7 +411,8 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .alert-ok{background:#e9f6ec;border:1px solid #b6dcbe;color:#1e6b2b}
 .contact-info{background:var(--navy);color:#cdd9e6;border-radius:var(--r-lg);padding:26px}
 .contact-info h3{color:#fff;margin-top:0}
-.contact-info .ci{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:14.5px}
+.contact-info .ci{display:flex;gap:16px;align-items:center;margin-bottom:22px;font-size:14.5px;line-height:1.5}
+.contact-info .ci:last-child{margin-bottom:0}
 .contact-info .ci-ico{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.12);
   display:flex;align-items:center;justify-content:center;color:#fff}
 .contact-info .ci-ico svg{width:17px;height:17px}

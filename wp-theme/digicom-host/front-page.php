@@ -30,15 +30,6 @@ get_header();
 				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-photo.jpg' ); ?>" alt="Đội ngũ Digicom" loading="eager" width="720" height="480">
 			</div>
 		</div>
-
-		<div class="search-card">
-			<div class="tld-row" style="justify-content:center">
-				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/mua-textlink/' ) ); ?>">Mua Textlink</a>
-				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/dich-vu-backlink/' ) ); ?>">Dịch vụ Backlink</a>
-				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Guest Post</a>
-				<a class="tld-chip" href="<?php echo esc_url( home_url( '/dich-vu/booking-bao-pr/' ) ); ?>">Booking báo &amp; PR</a>
-			</div>
-		</div>
 	</div>
 </section>
 
@@ -61,57 +52,6 @@ $promo_icons = array(
 					<div class="pd"><?php echo esc_html( $p[1] ?? '' ); ?></div>
 				</div>
 			<?php $pi++; endforeach; ?>
-		</div>
-	</div>
-</section>
-
-<!-- 04. BANG GIA DICH VU (rut gon) -->
-<section class="sec">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:36px">
-			<span class="eyebrow">Bảng giá dịch vụ</span>
-			<h2>4 dịch vụ off-page SEO chính</h2>
-			<p class="muted">Giá cụ thể theo yêu cầu, site/báo và khối lượng - liên hệ để nhận báo giá chi tiết.</p>
-		</div>
-		<div class="dom-grid">
-			<?php foreach ( dgc_lines( 'domain_tlds' ) as $d ) :
-				$name = $d[0] ?? ''; $price = $d[1] ?? ''; $badge = $d[2] ?? '';
-				if ( $name === '' ) continue; ?>
-				<div class="dom-card">
-					<div class="tld"><?php echo esc_html( $name ); ?></div>
-					<div class="badge"><?php echo esc_html( $badge ); ?></div>
-					<div class="price"><?php echo esc_html( $price ); ?></div>
-					<a class="btn btn-ghost btn-sm" href="#lien-he">Nhận báo giá</a>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
-
-<!-- 05. GOI DICH VU CHI TIET -->
-<section class="sec" id="goi-dich-vu" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:42px">
-			<span class="eyebrow">Chi tiết gói</span>
-			<h2>Digicom triển khai như thế nào</h2>
-			<p class="muted">Mỗi dịch vụ có quy trình chọn lọc site/báo và bàn giao riêng, đảm bảo minh bạch.</p>
-		</div>
-		<div class="host-grid">
-			<?php foreach ( dgc_lines( 'hosting_plans' ) as $h ) :
-				$name = $h[0] ?? ''; $price = $h[1] ?? ''; $feats = $h[2] ?? ''; $feat = ( ( $h[3] ?? '0' ) === '1' );
-				if ( $name === '' ) continue; ?>
-				<div class="host-card<?php echo $feat ? ' feat' : ''; ?>">
-					<?php if ( $feat ) : ?><span class="tag-feat">Được chọn nhiều nhất</span><?php endif; ?>
-					<div class="pname"><?php echo esc_html( $name ); ?></div>
-					<div class="pprice"><?php echo esc_html( $price ); ?></div>
-					<ul>
-						<?php foreach ( array_filter( array_map( 'trim', explode( ';', $feats ) ) ) as $f ) : ?>
-							<li><?php echo esc_html( $f ); ?></li>
-						<?php endforeach; ?>
-					</ul>
-					<a class="btn <?php echo $feat ? 'btn-primary' : 'btn-navy'; ?>" href="#lien-he">Nhận tư vấn</a>
-				</div>
-			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
@@ -154,10 +94,16 @@ $svc_meta = array(
 	</div>
 </section>
 
-<!-- 07. REASONS -->
+<!-- 07. REASONS + CHUNG TOI LA AI -->
 <section class="sec band-navy">
 	<div class="wrap">
 		<div class="center">
+			<span class="eyebrow">Chúng tôi là ai</span>
+			<h2>Digicom - thương hiệu off-page SEO của Digito Combat</h2>
+			<p class="lead" style="max-width:680px;margin:14px auto 0;color:rgba(255,255,255,.82)">Digicom là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat, tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử. Digicom chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
+			<p style="margin-top:16px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về Digicom &rarr;</a></p>
+		</div>
+		<div class="center" style="margin-top:48px">
 			<span class="eyebrow">Vì sao chọn Digicom</span>
 			<h2>Site chọn lọc, báo giá minh bạch</h2>
 		</div>
