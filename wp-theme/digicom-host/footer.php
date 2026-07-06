@@ -43,7 +43,7 @@
 		</div>
 		<div class="foot-bottom">
 			<span>&copy; <?php echo esc_html( date( 'Y' ) ); ?> Digicom - Digito Combat. All rights reserved.</span>
-			<span>Điều khoản &middot; Chính sách bảo mật</span>
+			<span><a href="<?php echo esc_url( home_url( '/dieu-khoan-su-dung/' ) ); ?>">Điều khoản</a> &middot; <a href="<?php echo esc_url( home_url( '/chinh-sach-bao-mat/' ) ); ?>">Chính sách bảo mật</a></span>
 		</div>
 	</div>
 </footer>

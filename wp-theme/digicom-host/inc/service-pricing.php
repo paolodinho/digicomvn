@@ -18,15 +18,23 @@ if ( ! empty( $nhom['outlet_keyword'] ) ) {
 
 if ( empty( $dgc_sp_items ) ) return;
 
-$dgc_sp_sum = 0; $dgc_sp_n = 0;
+// Dung trung vi (median), tranh bi keo lech boi vai goi gia cao dot bien (VD goi sidebar
+// backlink cao cap) so voi mat bang gia pho bien trong nhom.
+$dgc_sp_vals = array();
 foreach ( $dgc_sp_items as $it ) {
 	$v = dgc_gia_to_number( $it->meta['gia_km'] );
-	if ( $v > 0 ) { $dgc_sp_sum += $v; $dgc_sp_n++; }
+	if ( $v > 0 ) $dgc_sp_vals[] = $v;
 }
-$dgc_sp_avg = $dgc_sp_n ? round( $dgc_sp_sum / $dgc_sp_n ) : 0;
+$dgc_sp_n   = count( $dgc_sp_vals );
+$dgc_sp_avg = round( dgc_median( $dgc_sp_vals ) );
 
 $dgc_sp_show_all  = count( $dgc_sp_items ) <= 8;
 $dgc_sp_show_rows = $dgc_sp_show_all ? $dgc_sp_items : array_slice( $dgc_sp_items, 0, 8 );
+
+// Nhan don vi so luong: nhom Backlink ban theo GOI (khong phai tung link rieng le).
+$dgc_sp_qty_label = ( 'dich-vu-backlink' === $nhom['slug'] && empty( $nhom['outlet_keyword'] ) )
+	? 'Số lượng gói'
+	: 'Số lượng bài / link';
 ?>
 <section class="sec" style="background:var(--surface)">
 	<div class="wrap">
@@ -39,7 +47,7 @@ $dgc_sp_show_rows = $dgc_sp_show_all ? $dgc_sp_items : array_slice( $dgc_sp_item
 					<p class="muted" style="font-size:14.5px;margin-top:-6px">Nhập số lượng bài/link để xem chi phí tham khảo cho <?php echo esc_html( mb_strtolower( $svc_name ) ); ?>.</p>
 					<div class="calc-fields">
 						<label class="calc-field calc-field-num">
-							<span>Số lượng bài / link</span>
+							<span><?php echo esc_html( $dgc_sp_qty_label ); ?></span>
 							<input type="number" id="spCalcQty" min="1" value="1" inputmode="numeric">
 						</label>
 					</div>
@@ -88,8 +96,8 @@ $dgc_sp_show_rows = $dgc_sp_show_all ? $dgc_sp_items : array_slice( $dgc_sp_item
 						<td data-label="Vị trí"><?php echo esc_html( $m['vi_tri'] ); ?></td>
 						<?php endif; ?>
 						<td data-label="Giá" class="cell-price">
-							<span class="price-now"><?php echo esc_html( $gia_km ); ?></span>
-							<?php if ( $gia_goc && $gia_goc !== $gia_km ) : ?><span class="price-old"><?php echo esc_html( $gia_goc ); ?></span><?php endif; ?>
+							<span class="price-now"><?php echo esc_html( dgc_format_price( $gia_km ) ); ?></span>
+							<?php if ( $gia_goc && $gia_goc !== $gia_km ) : ?><span class="price-old"><?php echo esc_html( dgc_format_price( $gia_goc ) ); ?></span><?php endif; ?>
 						</td>
 						<td data-label="Ghi chú"><?php echo esc_html( $ghi_chu ); ?></td>
 						<td data-label=""><a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a></td>

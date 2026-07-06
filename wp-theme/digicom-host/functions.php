@@ -104,6 +104,18 @@ function dgc_tel() {
 	return preg_replace( '/[^0-9+]/', '', dgc( 'hotline', '0988769317' ) );
 }
 
+/** Icon SVG thuan (thay emoji &#xxxx; - render khac nhau tuy OS, nhin re tien). */
+function dgc_icon( $name ) {
+	$paths = array(
+		'phone' => 'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z',
+		'mail'  => 'M4 4h16v16H4zM4 4l8 8 8-8',
+		'pin'   => 'M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z',
+		'clock' => 'M12 8v4l3 3M12 3a9 9 0 1 0 .01 0z',
+	);
+	if ( empty( $paths[ $name ] ) ) return '';
+	return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="' . esc_attr( $paths[ $name ] ) . '"/></svg>';
+}
+
 /** URL logo dang dung (site logo). Tra '' neu chua co -> dung wordmark chu. */
 function dgc_logo_url() {
 	$id = (int) ( get_theme_mod( 'custom_logo' ) ?: get_option( 'site_logo' ) );

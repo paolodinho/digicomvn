@@ -22,14 +22,16 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 
 // dgc_gia_to_number() dung ban chung trong inc/cpt-gia.php (dung ca cho tpl-service.php).
 
+// Dung trung vi (median) thay vi trung binh cong: nhom "Dich vu Backlink" chi gom cac goi
+// sidebar cao cap (1.85tr - 52.75tr), trung binh cong bi keo lech qua cao so voi gia pho bien.
 $dgc_avg_price = array();
 foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
-	$sum = 0; $n = 0;
+	$vals = array();
 	foreach ( $items as $it ) {
 		$v = dgc_gia_to_number( $it->meta['gia_km'] );
-		if ( $v > 0 ) { $sum += $v; $n++; }
+		if ( $v > 0 ) $vals[] = $v;
 	}
-	$dgc_avg_price[ $slug ] = $n ? round( $sum / $n ) : 0;
+	$dgc_avg_price[ $slug ] = round( dgc_median( $vals ) );
 }
 ?>
 <div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Bảng giá</nav></div>
@@ -151,8 +153,8 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 							<td data-label="Vị trí"><?php echo esc_html( $m['vi_tri'] ); ?></td>
 							<?php endif; ?>
 							<td data-label="Giá" class="cell-price">
-								<span class="price-now"><?php echo esc_html( $gia_km ); ?></span>
-								<?php if ( $gia_goc && $gia_goc !== $gia_km ) : ?><span class="price-old"><?php echo esc_html( $gia_goc ); ?></span><?php endif; ?>
+								<span class="price-now"><?php echo esc_html( dgc_format_price( $gia_km ) ); ?></span>
+								<?php if ( $gia_goc && $gia_goc !== $gia_km ) : ?><span class="price-old"><?php echo esc_html( dgc_format_price( $gia_goc ) ); ?></span><?php endif; ?>
 							</td>
 							<td data-label="Ghi chú"><?php echo esc_html( $ghi_chu ); ?></td>
 							<td data-label=""><a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a></td>

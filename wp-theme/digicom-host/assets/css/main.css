@@ -412,6 +412,9 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .contact-info{background:var(--navy);color:#cdd9e6;border-radius:var(--r-lg);padding:26px}
 .contact-info h3{color:#fff;margin-top:0}
 .contact-info .ci{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:14.5px}
+.contact-info .ci-ico{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;color:#fff}
+.contact-info .ci-ico svg{width:17px;height:17px}
 .contact-info b{color:#fff}
 
 /* ==========================================================================
@@ -628,6 +631,16 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .blog-pagination .page-numbers:hover:not(.current){border-color:var(--action);color:var(--action)}
 
 .single-post-thumb{width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:var(--r-lg);margin:0 auto 30px;display:block;max-width:820px}
+
+/* Bai viet lien quan (cuoi bai) */
+.related-posts{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 24px}
+.related-posts h3{margin:0 0 14px;font-size:16px}
+.related-cat-link{font-size:13px;font-weight:500;color:var(--action);vertical-align:middle}
+.related-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
+.related-list a{font-size:14.5px;color:var(--ink);display:block;padding:4px 0}
+.related-list a:before{content:"›";color:var(--action);margin-right:6px}
+.related-list a:hover{color:var(--action)}
+@media(max-width:640px){.related-list{grid-template-columns:1fr}}
 
 @media(max-width:1024px){
   .blog-grid{grid-template-columns:repeat(2,1fr)}

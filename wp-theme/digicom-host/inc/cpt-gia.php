@@ -157,6 +157,26 @@ function dgc_gia_to_number( $s ) {
 	return (float) $raw;
 }
 
+/** Hien gia de doc: so thuan (VD "1700000") -> "1.700.000đ". Chuoi da co dinh dang san (VD "Tu 300.000đ/link", "Home: 1.500.000đ · CM:...") thi giu nguyen. */
+function dgc_format_price( $s ) {
+	$s = trim( (string) $s );
+	if ( $s === '' ) return '';
+	if ( preg_match( '/^[0-9]+$/', $s ) ) {
+		return number_format( (float) $s, 0, ',', '.' ) . 'đ';
+	}
+	return $s;
+}
+
+/** Trung vi (median) - it bi lech boi gia tri qua cao/thap so voi trung binh cong, phu hop khi 1 nhom co ca goi re va goi cao cap. */
+function dgc_median( $values ) {
+	$values = array_values( array_filter( $values, fn( $v ) => $v > 0 ) );
+	$n = count( $values );
+	if ( ! $n ) return 0;
+	sort( $values );
+	$mid = intdiv( $n, 2 );
+	return ( $n % 2 ) ? $values[ $mid ] : ( $values[ $mid - 1 ] + $values[ $mid ] ) / 2;
+}
+
 /**
  * Xac dinh nhom gia (dgc_nhom) tuong ung voi trang dich vu hien tai, di theo cay post_parent.
  * Neu la trang con truc tiep cua "booking-bao-pr" (tung dau bao), tra them tu khoa de loc rieng bao do.
