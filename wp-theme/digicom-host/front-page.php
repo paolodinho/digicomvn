@@ -181,18 +181,26 @@ $svc_meta = array(
 			<h2>Đầu báo Digicom hỗ trợ đặt bài, booking PR</h2>
 			<p class="muted" style="max-width:600px;margin:8px auto 0">Danh sách rút gọn, xem đầy đủ tại <a href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>" style="color:var(--action);font-weight:600">Bảng giá</a>.</p>
 		</div>
-		<div class="press-grid">
-			<?php foreach ( dgc_lines( 'press_partners' ) as $pp ) : if ( empty( $pp[0] ) ) continue;
-				$logo_file = trim( $pp[1] ?? '' );
-				$logo_url  = $logo_file ? content_url( 'uploads/press-logos/' . $logo_file ) : '';
+		<?php
+		$press_list = array_filter( dgc_lines( 'press_partners' ), fn( $pp ) => ! empty( $pp[0] ) );
+		$press_chip = function ( $pp ) {
+			$logo_file = trim( $pp[1] ?? '' );
+			$logo_url  = $logo_file ? content_url( 'uploads/press-logos/' . $logo_file ) : '';
 			?>
-				<div class="press-chip">
-					<?php if ( $logo_url ) : ?>
-						<img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( $pp[0] ); ?>" loading="lazy">
-					<?php endif; ?>
-					<span><?php echo esc_html( $pp[0] ); ?></span>
-				</div>
-			<?php endforeach; ?>
+			<div class="press-chip">
+				<?php if ( $logo_url ) : ?>
+					<img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( $pp[0] ); ?>" loading="lazy">
+				<?php endif; ?>
+				<span><?php echo esc_html( $pp[0] ); ?></span>
+			</div>
+			<?php
+		};
+		?>
+		<div class="press-marquee">
+			<div class="press-track">
+				<?php foreach ( $press_list as $pp ) : $press_chip( $pp ); endforeach; ?>
+				<?php foreach ( $press_list as $pp ) : $press_chip( $pp ); endforeach; ?>
+			</div>
 		</div>
 	</div>
 </section>
