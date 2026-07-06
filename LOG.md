@@ -389,3 +389,19 @@
   chinh xac) va khi trinh duyet bat prefers-reduced-motion.
 - QA: main.js syntax hop le (node -c), curl xac nhan file len dung, class pen-ink-layer co mat.
 - Push code (commit 92a1f69) + rebuild/push gh-pages (commit 4b66c0a).
+
+## 2026-07-06 (9) - Fix layout vo (row/col/card khong co CSS)
+- Hieu gui anh section "Link ra 4 pillar" cuoi trang /bang-gia/ - 2 khung chong len nhau,
+  khong co border/khoang cach, nut dinh sat chu. Nguyen nhan: class `.row`/`.col`/`.card`
+  dung trong markup nhung CHUA TUNG duoc dinh nghia CSS trong main.css - la loi co he thong,
+  khong chi rieng trang nay.
+- Kiem tra toan theme: cung pattern `.row`/`.col` (mot so cho them `.card`) con dung o
+  page-dat-bai.php, page-lien-he.php, page-ve-digicom.php, tpl-service.php, tpl-license.php -
+  tat ca deu bi anh huong (contact-info 2 cot, khung dich vu tren tpl-service...).
+- Fix tan goc: them CSS nen tang dung chung `.row{display:flex;flex-wrap:wrap}`,
+  `.col{flex:1 1 320px}`, `.card{...border,padding,shadow...}` vao main.css (thay vi va dau
+  sua doi tung trang). Rieng section pillar-links tren bang-gia doi sang markup/class rieng
+  `.pillar-links`/`.pillar-card`/`.pillar-actions` cho dep hon (thay vi dung lai .row/.col).
+- QA: php -l pass, curl xac nhan ca 3 trang (dat-bai, lien-he, ve-digicom) van 200, CSS moi
+  co mat.
+- Push code (commit f32d1ae) + rebuild/push gh-pages (commit a866e12).
