@@ -300,3 +300,18 @@
   full 30 dong backlink). Kiem tra truc quan tren mua-textlink: calculator hien 1.790.000d
   (dung bang gia trung binh PHP tinh), bang gia hien thi dung.
 - Push code (commit 8cf6fa0). Con lai: re-export + push gh-pages.
+
+## 2026-07-06 (4) - Don gon trang chu theo feedback Hieu
+- Hieu gui 4 anh + yeu cau: bo hero 4-chip quick-link (Mua Textlink/Backlink/Guest
+  Post/Booking bao PR), bo section "4 dich vu off-page SEO chinh" (dom-grid bang gia
+  rut gon), bo section "Digicom trien khai nhu the nao" (host-grid goi dich vu chi tiet),
+  fix contact-info box qua sat khoang cach, them section "Chung toi la ai" gop chung voi
+  "Vi sao chon Digicom".
+- Sua front-page.php: xoa 3 block tren; gop intro Chung toi la ai (lay noi dung tu
+  page-ve-digicom.php) vao dau section band-navy, giu nguyen reason-grid ben duoi, them
+  link "Tim hieu ve Digicom" -> /ve-digicom/. main.css: `.contact-info .ci` doi tu
+  `margin-bottom:8px` (sat) -> `16px gap + 22px margin-bottom` cho de tho hon.
+- QA: php -l pass, curl trang chu 200, xac nhan dom-grid/host-grid/search-card da het,
+  "Chung tôi là ai" xuat hien dung 1 lan.
+- Da push code (commit a5c407e) len main + re-export static + push gh-pages
+  (f89ab81) - link demo GitHub Pages da cap nhat.
