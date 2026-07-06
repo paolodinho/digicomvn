@@ -31,11 +31,13 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* Con tro ngoi but nha bao (chu de Booking bao & PR) - SVG inline, hotspot o dau ngoi */
 body{
   margin:0;background:var(--surface);color:var(--ink);
   font-family:var(--font-body);font-size:16px;line-height:1.6;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
   position:relative;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M22 2 L26 6 L10 22 L4 24 L6 18 Z' fill='rgb(28,32,53)' stroke='white' stroke-width='1.4'/%3E%3Cline x1='15' y1='9' x2='19' y2='13' stroke='white' stroke-width='1.1'/%3E%3C/svg%3E") 5 23, auto;
 }
 /* Grain texture nhe toan site - chong flat/AI-slop */
 body:before{
@@ -552,6 +554,20 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 
 .tab-panel{display:none}
 .tab-panel.active{display:block}
+
+.price-layout.has-filter{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start}
+.price-filter{position:sticky;top:90px;display:flex;flex-direction:column;gap:6px}
+.price-filter-title{font-family:var(--font-display);font-weight:700;font-size:13px;
+  text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:4px}
+.nganh-btn{text-align:left;font-family:var(--font-body);font-size:14px;color:var(--ink);
+  background:transparent;border:none;border-radius:var(--r-sm);padding:8px 10px;cursor:pointer;transition:.15s}
+.nganh-btn:hover{background:var(--surface)}
+.nganh-btn.active{background:var(--action);color:#fff;font-weight:600}
+@media(max-width:900px){
+  .price-layout.has-filter{grid-template-columns:1fr}
+  .price-filter{position:static;flex-direction:row;flex-wrap:wrap;gap:8px}
+  .nganh-btn{background:var(--surface);white-space:nowrap}
+}
 
 .tab-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
 .tab-search{flex:1 1 240px}

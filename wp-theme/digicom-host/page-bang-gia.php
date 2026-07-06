@@ -106,8 +106,27 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 
 		<?php $first = true; foreach ( $dgc_nhom_list as $slug => $label ) :
 			$items = $dgc_gia_theo_nhom[ $slug ];
+			$nganh_used = array();
+			foreach ( $items as $it ) { $n = $it->meta['nganh'] ?? ''; if ( $n !== '' ) $nganh_used[ $n ] = true; }
+			$has_nganh_filter = count( $nganh_used ) > 1;
+			$nganh_labels     = dgc_nganh_options();
 		?>
 		<div class="tab-panel<?php echo $first ? ' active' : ''; ?>" data-panel="<?php echo esc_attr( $slug ); ?>">
+			<div class="price-layout<?php echo $has_nganh_filter ? ' has-filter' : ''; ?>">
+			<?php if ( $has_nganh_filter ) : ?>
+			<aside class="price-filter">
+				<div class="price-filter-title">Lọc theo nhóm báo</div>
+				<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo count( $items ); ?>)</button>
+				<?php foreach ( $nganh_labels as $nslug => $nlabel ) :
+					if ( $nslug === '' || empty( $nganh_used[ $nslug ] ) ) continue;
+					$n_count = 0;
+					foreach ( $items as $it ) { if ( ( $it->meta['nganh'] ?? '' ) === $nslug ) $n_count++; }
+				?>
+				<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $nlabel ); ?> (<?php echo (int) $n_count; ?>)</button>
+				<?php endforeach; ?>
+			</aside>
+			<?php endif; ?>
+			<div class="price-main">
 			<div class="tab-toolbar">
 				<div class="tab-search">
 					<input type="text" class="tab-search-input" placeholder="Tìm theo tên báo/site..." aria-label="Tìm kiếm trong <?php echo esc_attr( $label ); ?>">
@@ -143,7 +162,7 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 						$ghi_chu   = trim( implode( ' - ', array_filter( array( $m['so_link'], $m['yeu_cau'] ) ) ) );
 						$row_link  = $m['url_bao'] ? $m['url_bao'] : '';
 					?>
-						<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>">
+						<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( $m['nganh'] ?? '' ); ?>">
 							<td data-label="Tên báo/site">
 								<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
 								<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
@@ -162,6 +181,8 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 					<?php endforeach; ?>
 					</tbody>
 				</table>
+			</div>
+			</div>
 			</div>
 		</div>
 		<?php $first = false; endforeach; ?>
@@ -213,20 +234,24 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 		});
 	});
 
-	/* ---- Search + sort per panel ---- */
+	/* ---- Search + sort + loc nganh per panel ---- */
 	tabPanels.forEach(function(panel){
-		var input   = panel.querySelector('.tab-search-input');
-		var rows    = Array.prototype.slice.call(panel.querySelectorAll('.price-table-cpt tbody tr[data-name]'));
-		var tbody   = panel.querySelector('.price-table-cpt tbody');
-		var shownEl = panel.querySelector('.tab-count-shown');
-		var totalEl = panel.querySelector('.tab-count-total');
-		var sortBtns= panel.querySelectorAll('.sort-btn');
+		var input     = panel.querySelector('.tab-search-input');
+		var rows      = Array.prototype.slice.call(panel.querySelectorAll('.price-table-cpt tbody tr[data-name]'));
+		var tbody     = panel.querySelector('.price-table-cpt tbody');
+		var shownEl   = panel.querySelector('.tab-count-shown');
+		var totalEl   = panel.querySelector('.tab-count-total');
+		var sortBtns  = panel.querySelectorAll('.sort-btn');
+		var nganhBtns = panel.querySelectorAll('.nganh-btn');
+		var curNganh  = '';
 
 		function applyFilter(){
 			var q = (input ? input.value : '').trim().toLowerCase();
 			var shown = 0;
 			rows.forEach(function(r){
-				var match = !q || r.getAttribute('data-name').indexOf(q) !== -1;
+				var matchQ = !q || r.getAttribute('data-name').indexOf(q) !== -1;
+				var matchN = !curNganh || r.getAttribute('data-nganh') === curNganh;
+				var match = matchQ && matchN;
 				r.style.display = match ? '' : 'none';
 				if (match) shown++;
 			});
@@ -241,6 +266,14 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 				t = setTimeout(applyFilter, 120);
 			});
 		}
+
+		nganhBtns.forEach(function(btn){
+			btn.addEventListener('click', function(){
+				curNganh = btn.getAttribute('data-nganh') || '';
+				nganhBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
+				applyFilter();
+			});
+		});
 
 		sortBtns.forEach(function(btn){
 			btn.addEventListener('click', function(){

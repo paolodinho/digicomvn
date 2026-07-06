@@ -62,6 +62,24 @@ add_action( 'add_meta_boxes', function () {
 	add_meta_box( 'dgc_gia_details', 'Chi tiet gia', 'dgc_gia_meta_box_html', 'dgc_gia', 'normal', 'high' );
 } );
 
+/* Nhom nganh de loc trong bang gia Booking bao & PR (co the dung chung cho nhom khac neu can). */
+function dgc_nganh_options() {
+	return array(
+		''              => '(Chưa phân loại)',
+		'bao-lon'       => 'Báo lớn (trung ương)',
+		'bao-tinh'      => 'Báo tỉnh - địa phương',
+		'truyen-hinh'   => 'Đài truyền hình - phát thanh',
+		'kinh-te'       => 'Kinh tế - Tài chính',
+		'bds-xd'        => 'Bất động sản - Xây dựng',
+		'y-te'          => 'Y tế - Sức khoẻ',
+		'giai-tri'      => 'Giải trí - Đời sống',
+		'cong-nghe-oto' => 'Công nghệ - Ô tô',
+		'an-ninh-pl'    => 'An ninh - Pháp luật',
+		'giao-duc'      => 'Giáo dục',
+		'the-thao'      => 'Thể thao',
+	);
+}
+
 function dgc_gia_meta_fields() {
 	return array(
 		'vi_tri'  => array( 'label' => 'Vi tri dang / loai goi', 'type' => 'text' ),
@@ -71,6 +89,7 @@ function dgc_gia_meta_fields() {
 		'yeu_cau' => array( 'label' => 'Yeu cau bai viet', 'type' => 'text' ),
 		'url_bao' => array( 'label' => 'Link toi site/bao (khong bat buoc)', 'type' => 'url' ),
 		'noi_bat' => array( 'label' => 'Danh dau "pho bien nhat"', 'type' => 'checkbox' ),
+		'nganh'   => array( 'label' => 'Nhom nganh (de loc trong bang gia)', 'type' => 'select', 'options' => dgc_nganh_options() ),
 	);
 }
 
@@ -82,6 +101,12 @@ function dgc_gia_meta_box_html( $post ) {
 		echo '<tr><th style="width:260px"><label for="' . esc_attr( $key ) . '">' . esc_html( $f['label'] ) . '</label></th><td>';
 		if ( $f['type'] === 'checkbox' ) {
 			echo '<input type="checkbox" id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '" value="1" ' . checked( $val, '1', false ) . '>';
+		} elseif ( $f['type'] === 'select' ) {
+			echo '<select id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '">';
+			foreach ( $f['options'] as $ov => $ol ) {
+				echo '<option value="' . esc_attr( $ov ) . '" ' . selected( $val, $ov, false ) . '>' . esc_html( $ol ) . '</option>';
+			}
+			echo '</select>';
 		} else {
 			echo '<input type="' . esc_attr( $f['type'] ) . '" id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '" value="' . esc_attr( $val ) . '" class="regular-text" style="width:480px">';
 		}
