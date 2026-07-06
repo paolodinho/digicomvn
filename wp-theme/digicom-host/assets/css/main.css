@@ -56,6 +56,13 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
 .sec{padding:62px 0}
 .sec-tight{padding:40px 0}
+
+/* Layout helper chung: .row (flex 2+ cot) + .col (cot co ban) + .card (khung trang) -
+   dung o nhieu trang (dat-bai, lien-he, ve-digicom, tpl-service, tpl-license). */
+.row{display:flex;flex-wrap:wrap}
+.col{flex:1 1 320px;min-width:0}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:26px;box-shadow:var(--sh-low)}
+.card h3{margin-top:0}
 .eyebrow{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.14em;
   font-size:12.5px;font-weight:600;color:var(--teal);margin-bottom:10px;display:block}
 .center{text-align:center}
@@ -291,6 +298,14 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .cta-band p{margin:0;opacity:.95}
 .cta-band .btn-ghost{background:#fff;color:var(--action);border-color:#fff}
 .cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Pillar links (vd cuoi trang Bang gia: link ra cac trang dich vu) */
+.pillar-links{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.pillar-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:26px;box-shadow:var(--sh-low)}
+.pillar-card h3{margin:0 0 8px;font-size:18px}
+.pillar-card .muted{font-size:14.5px;margin:0 0 18px}
+.pillar-actions{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:768px){.pillar-links{grid-template-columns:1fr}}
 
 /* ==========================================================================
    FAQ
