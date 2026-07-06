@@ -315,3 +315,19 @@
   "Chung tôi là ai" xuat hien dung 1 lan.
 - Da push code (commit a5c407e) len main + re-export static + push gh-pages
   (f89ab81) - link demo GitHub Pages da cap nhat.
+
+## 2026-07-06 (5) - Tong ket full session + verify da push het
+- Ra soat lai toan bo thay doi trong ngay: redesign GrowMark (M7), marquee logo bao +
+  5 dau bao moi + xoa hub /dich-vu/ (M8), bang gia + tool tinh chi phi tren tung trang
+  dich vu + doi mean->median (M9), Dieu khoan su dung + Chinh sach bao mat day du EEAT
+  + gan link footer (M10), republish 73 bai kien thuc SEO + don category trung lap +
+  category.php/single.php moi (M11), doi icon emoji sang SVG rieng (M12), don trang chu
+  theo feedback moi nhat (M13).
+- Kiem tra git status: toan bo thay doi code o tren da duoc auto-push hook gom vao commit
+  `4d5d7cb` (gia/icon/legal-link/category/related-posts) va commit `67e26b2`/`36e2c1e`/
+  `f63e3b5` (redesign + marquee) tu truoc - khong con gi pending o nhanh main.
+- Rebuild + push lai gh-pages (commit f89ab81) dam bao demo tinh phan anh dung: verify
+  curl 2 trang phap ly (/dieu-khoan-su-dung/, /chinh-sach-bao-mat/) tren
+  paolodinho.github.io/digicomvn deu tra 200.
+- Cap nhat PLAN.md: them milestone M8-M13 cho tung hang muc tren, ghi ro internal-link
+  audit (89 bai link ve URL cu) van dang cho o muc "Sap lam", chua sua.
