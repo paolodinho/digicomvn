@@ -54,13 +54,17 @@ web/tên miền/hosting ở giai đoạn 2.
       chọn của Hiếu, tránh vi phạm rule content-professional); dựng khung tab "Case study"
       (rỗng, chờ Hiếu gửi số liệu thật); thêm hiệu ứng đèn flash phóng viên toàn site (tắt khi
       trình duyệt bật prefers-reduced-motion) - 2026-07-06.
+- [x] M15 - Bảng giá Booking báo & PR (118 dòng) thêm sidebar lọc theo nhóm báo: Báo lớn (23),
+      Báo tỉnh (23), Đài truyền hình (8), Kinh tế - Tài chính (19), Giải trí - Đời sống (20),
+      Công nghệ - Ô tô (9), An ninh - Pháp luật (6), Bất động sản - Xây dựng (4), Y tế (2),
+      Giáo dục (2), Thể thao (2) - phân loại thủ công dựa trên bản chất thật của từng đầu báo
+      (không đoán/bịa), lưu vào postmeta `nganh` sửa được qua WP Admin. Thêm hiệu ứng con trỏ
+      chuột hình ngòi bút nhà báo toàn site (SVG inline, không ảnh hưởng UX) - 2026-07-06.
 
 ### Sắp làm
 - [ ] Internal-link audit (skill `/internal-link-audit`): phát hiện ~89 bài cũ đang link về URL
       cũ dạng blog (`/dich-vu-backlink/`, `/pr-bao-chi/`...) thay vì money page thật
       (`/dich-vu/[slug]/`) - CHƯA sửa, cần crawl Screaming Frog để xác nhận trước khi fix hàng loạt.
-- [ ] Redesign `/bang-gia/`: 118 dòng đang liệt kê phẳng khó theo dõi - Hiếu yêu cầu thêm bộ
-      lọc theo nhóm báo (báo lớn, báo tỉnh, truyền hình, ngành BĐS, ngành y tế...) - CHƯA làm.
 - [ ] Gửi ảnh đội ngũ Digicom THẬT để thay placeholder hero + "Chúng tôi là ai" (ảnh cũ dùng
       nhầm là ảnh stock có watermark công ty khác, đã gỡ 2026-07-06).
 - [ ] Xác nhận vị trí file logo khách hàng thật (Hiếu nói đã gửi nhưng chưa tìm thấy trong WP

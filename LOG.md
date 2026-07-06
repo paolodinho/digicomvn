@@ -358,3 +358,24 @@
   cs-tabs/press-flash-layer/Case study xuat hien dung tren trang chu, khong con "team-photo"
   hay "Integrity" nao trong HTML.
 - Push code (commit 6bd1260) + rebuild/push gh-pages (commit 3dea503).
+
+## 2026-07-06 (7) - Bo loc nhom bao tren bang gia + con tro ngoi but
+- Hieu phan anh bang gia Booking bao & PR (118 dong) liet ke phang kho theo doi, muon them
+  bo loc theo nhom bao (bao lon, bao tinh, truyen hinh, nganh BDS, nganh y te...).
+- Lay full 118 dong that qua wp-cli, phan loai THU CONG dua tren ban chat cong khai cua tung
+  dau bao (khong doan/bia): Bao lon trung uong (23 - Vnexpress, Dantri, Thanhnien, Tuoitre,
+  Nhandan, Laodong, Vietnamnet...), Bao tinh - dia phuong (23 - Baodanang, Baohatinh,
+  Baothanhhoa...), Dai truyen hinh - phat thanh (8 - VTV, VTC, VOV, Angiangtv...), Kinh te -
+  Tai chinh (19 - Cafef, Cafebiz, Vneconomy, Baodautu...), Giai tri - Doi song (20 - Kenh14,
+  Eva, Afamily, Webtretho...), Cong nghe - O to (9 - Genk, Techz, Autopro, Tinhte...), An ninh
+  - Phap luat (6 - Anninhthudo, Conganb, Congly...), Bat dong san - Xay dung (4 - Cafeland,
+  Baoxaydung...), Y te - Suc khoe (2 - Suckhoedoisong, Alobacsi), Giao duc (2), The thao (2).
+- Ky thuat: them field 'nganh' (dropdown) vao CPT dgc_gia (inc/cpt-gia.php,
+  dgc_nganh_options()) - sua duoc qua WP Admin cho tung dong; gan gia tri cho 118 dong qua
+  script wp eval-file (assign-nganh.php). page-bang-gia.php: them sidebar `.price-filter` voi
+  nut loc theo tung nhom (hien so luong), JS ket hop loc nganh + tim kiem + sap xep san co.
+  Sidebar chi hien khi 1 tab co >1 nhom nganh (hien tai chi Booking bao & PR).
+- Them hieu ung con tro chuot hinh ngoi but nha bao toan site (CSS cursor: url() SVG inline,
+  mau navy, khong anh huong click/UX, van giu cursor:pointer rieng cho link/button).
+- QA: php -l pass, curl xac nhan 118 dong tong + 11 nut loc voi so luong dung tung nhom.
+- Push code (commit ebaf373) + rebuild/push gh-pages (commit 111d374).
