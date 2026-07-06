@@ -331,3 +331,30 @@
   paolodinho.github.io/digicomvn deu tra 200.
 - Cap nhat PLAN.md: them milestone M8-M13 cho tung hang muc tren, ghi ro internal-link
   audit (89 bai link ve URL cu) van dang cho o muc "Sap lam", chua sua.
+
+## 2026-07-06 (6) - Them anh doi ngu, phat hien anh sai + fix, case study, hieu ung flash
+- Hieu gui anh "Chung toi la ai" tren live site -> phat hien anh team-photo.jpg dang dung
+  (them o luot truoc) CO WATERMARK "Integrity" + logo ngoi sao cua cong ty khac - day la anh
+  stock/placeholder GrowMark con sot lai, KHONG phai anh that cua Digicom (vi pham
+  ui-anti-slop). Go ngay khoi hero + section Chung toi la ai, thay bang placeholder trung
+  tinh "Anh doi ngu Digicom dang cap nhat" (class .img-ph/.img-ph-dark) cho toi khi co anh that.
+- Hieu yeu cau them ten nguoi/doi tac vao testimonial - dieu nay ngua voi rule
+  content-professional (khong bia ten nguoi lam su that). Da hoi lai va Hieu chon phuong an
+  "them ten dem + ghi ro minh hoa": testimonials gio co ten vi du (Anh Duc, Chi Lan, Chi Hoa,
+  Anh Minh) kem chu thich nho duoi tieu de "Noi dung vi du minh hoa... chua phai trich dan
+  xac thuc tu khach hang cu the".
+- Logo khach hang giua 2 section: tim trong WP media + Downloads khong thay file nao moi -
+  cau tra loi cua Hieu bi loi go ("hqua gui roi fmaf") khong ro vi tri that - CHUA lam section
+  nay, can Hieu chi ro file o dau.
+- Them khung tab "Danh gia khach hang / Case study" tren trang chu (CSS-only radio-tab, khong
+  can JS, an ca tren ban static export): option moi `case_studies` (rong mac dinh, KHONG bia
+  so lieu) - Hieu se gui du lieu that de dien qua WP Admin (muc 6. Dich vu & Danh gia khach
+  hang). Panel Case study hien "dang duoc cap nhat" khi con trong.
+- Them hieu ung den flash phong vien toan site (dung chu de Booking bao & PR): CSS keyframe
+  `press-flash-pop` + JS random vi tri/kich thuoc moi 4-8s, tat hoan toan neu trinh duyet bat
+  prefers-reduced-motion (chong kho chiu/nhay cam anh sang). Ap dung qua `.press-flash-layer`
+  trong footer.php nen chay tren MOI trang.
+- QA: php -l pass ca 3 file (front-page.php, footer.php, inc/options.php), curl xac nhan
+  cs-tabs/press-flash-layer/Case study xuat hien dung tren trang chu, khong con "team-photo"
+  hay "Integrity" nao trong HTML.
+- Push code (commit 6bd1260) + rebuild/push gh-pages (commit 3dea503).

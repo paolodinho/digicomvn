@@ -48,13 +48,25 @@ web/tên miền/hosting ở giai đoạn 2.
 - [x] M13 - Dọn trang chủ theo feedback: bỏ hero quick-link chips, bỏ 2 section liệt kê giá/gói
       trùng với `/bang-gia/`, gộp "Chúng tôi là ai" vào section "Vì sao chọn Digicom", fix
       khoảng cách contact-info box - 2026-07-06.
+- [x] M14 - Phát hiện + gỡ ảnh đội ngũ SAI (watermark "Integrity" của công ty khác, sót lại từ
+      placeholder GrowMark) khỏi hero + section "Chúng tôi là ai", thay bằng placeholder trung
+      tính chờ ảnh thật; thêm chú thích "ví dụ minh hoạ" cho tên trong testimonial (theo lựa
+      chọn của Hiếu, tránh vi phạm rule content-professional); dựng khung tab "Case study"
+      (rỗng, chờ Hiếu gửi số liệu thật); thêm hiệu ứng đèn flash phóng viên toàn site (tắt khi
+      trình duyệt bật prefers-reduced-motion) - 2026-07-06.
 
 ### Sắp làm
 - [ ] Internal-link audit (skill `/internal-link-audit`): phát hiện ~89 bài cũ đang link về URL
       cũ dạng blog (`/dich-vu-backlink/`, `/pr-bao-chi/`...) thay vì money page thật
       (`/dich-vu/[slug]/`) - CHƯA sửa, cần crawl Screaming Frog để xác nhận trước khi fix hàng loạt.
+- [ ] Redesign `/bang-gia/`: 118 dòng đang liệt kê phẳng khó theo dõi - Hiếu yêu cầu thêm bộ
+      lọc theo nhóm báo (báo lớn, báo tỉnh, truyền hình, ngành BĐS, ngành y tế...) - CHƯA làm.
+- [ ] Gửi ảnh đội ngũ Digicom THẬT để thay placeholder hero + "Chúng tôi là ai" (ảnh cũ dùng
+      nhầm là ảnh stock có watermark công ty khác, đã gỡ 2026-07-06).
+- [ ] Xác nhận vị trí file logo khách hàng thật (Hiếu nói đã gửi nhưng chưa tìm thấy trong WP
+      media/Downloads) để dựng section logo giữa phần "Đầu báo" và "Testimonial".
+- [ ] Gửi nội dung/số liệu case study thật để điền vào tab Case study (khung đã dựng sẵn, đang rỗng).
 - [ ] Hiếu tự mở digicom.local kiểm tra giao diện mới, xác nhận màu #4761FF ưng ý.
-- [ ] Nếu cần thêm ảnh mới ngoài team-photo.jpg hiện có, gửi ảnh thật để thay placeholder.
 Ngoài ra không còn việc gấp - 4 dịch vụ đã đủ nội dung, giá, demo. Tiếp theo tuỳ Hiếu quyết định
 khi nào chuyển sang giai đoạn 2 bên dưới.
 
