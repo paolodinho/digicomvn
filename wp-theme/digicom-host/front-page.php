@@ -43,15 +43,24 @@ get_header();
 </section>
 
 <!-- 03. PROMOS -->
+<?php
+$promo_icons = array(
+	'M20 6 9 17l-5-5',
+	'M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6z',
+	'M12 8v4l3 3M12 3a9 9 0 1 0 .01 0z',
+	'M3 12h4l3 8 4-16 3 8h4',
+);
+?>
 <section class="sec-tight">
 	<div class="wrap">
 		<div class="promos">
-			<?php foreach ( dgc_lines( 'promos' ) as $p ) : ?>
+			<?php $pi = 0; foreach ( dgc_lines( 'promos' ) as $p ) : ?>
 				<div class="promo">
+					<span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $promo_icons[ $pi % count( $promo_icons ) ] ); ?>"/></svg></span>
 					<div class="pt"><?php echo esc_html( $p[0] ?? '' ); ?></div>
 					<div class="pd"><?php echo esc_html( $p[1] ?? '' ); ?></div>
 				</div>
-			<?php endforeach; ?>
+			<?php $pi++; endforeach; ?>
 		</div>
 	</div>
 </section>
@@ -195,16 +204,20 @@ $svc_meta = array(
 			<span class="eyebrow">Khách hàng</span>
 			<h2>Khách hàng nói về Digicom</h2>
 		</div>
-		<div class="tm-grid">
+		<div class="tm-carousel owl-carousel">
 			<?php foreach ( dgc_lines( 'testimonials' ) as $t ) :
 				$quote = $t[0] ?? ''; $who = $t[1] ?? ''; $svc = $t[2] ?? '';
-				if ( $quote === '' ) continue; ?>
+				if ( $quote === '' ) continue;
+				$initial = function_exists( 'mb_substr' ) ? mb_strtoupper( mb_substr( $who, 0, 1 ) ) : strtoupper( substr( $who, 0, 1 ) ); ?>
 				<figure class="tm">
 					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
 					<blockquote><?php echo esc_html( $quote ); ?></blockquote>
 					<figcaption>
-						<span class="tm-who"><?php echo esc_html( $who ); ?></span>
-						<?php if ( $svc ) : ?><span class="tm-svc"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
+						<span class="tm-avatar" aria-hidden="true"><?php echo esc_html( $initial ); ?></span>
+						<span>
+							<span class="tm-who"><?php echo esc_html( $who ); ?></span>
+							<?php if ( $svc ) : ?><span class="tm-svc"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
+						</span>
 					</figcaption>
 				</figure>
 			<?php endforeach; ?>

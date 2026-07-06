@@ -27,8 +27,14 @@ web/tên miền/hosting ở giai đoạn 2.
       booking-bao-pr mồ côi (thêm link tới cả 15 trang con), gắn thumbnail cho 23 bài blog cũ
       còn lại (35/35 bài blog đều có ảnh thật) - 2026-07-03
 
+- [x] M7 - Redesign toàn bộ giao diện theme digicom-host theo template GrowMark (màu xanh dương
+      #4761FF, font Roboto+Montserrat, icon tròn, testimonial carousel, nút back-to-top) -
+      2026-07-06. Backup theme cũ trước khi sửa. Chưa chụp màn hình trình duyệt thật.
+
 ### Sắp làm
-Không còn việc gấp - 4 dịch vụ đã đủ nội dung, giá, ảnh, demo. Việc tiếp theo tuỳ Hiếu quyết định
+- [ ] Hiếu tự mở digicom.local kiểm tra giao diện mới, xác nhận màu #4761FF ưng ý.
+- [ ] Nếu cần thêm ảnh mới ngoài team-photo.jpg hiện có, gửi ảnh thật để thay placeholder.
+Ngoài ra không còn việc gấp - 4 dịch vụ đã đủ nội dung, giá, demo. Tiếp theo tuỳ Hiếu quyết định
 khi nào chuyển sang giai đoạn 2 bên dưới.
 
 ### Backlog (giai đoạn 2 - sau khi 4 dịch vụ ổn định)

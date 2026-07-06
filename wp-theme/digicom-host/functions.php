@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '0.1.0' );
+define( 'DGC_VER', '0.2.0' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -30,14 +30,19 @@ add_action( 'after_setup_theme', function () {
  * Assets
  * ------------------------------------------------------------------------- */
 add_action( 'wp_enqueue_scripts', function () {
-	// Google Fonts: Be Vietnam Pro (display - geometric giong logo, ho tro day du tieng Viet)
-	// + Inter (body). Poppins KHONG co subset vietnamese nen da bo.
+	// Redesign 2026-07-06 theo giao dien GrowMark: Roboto (display) + Montserrat (body),
+	// ca hai deu co subset vietnamese.
 	wp_enqueue_style(
 		'dgc-fonts',
-		'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap',
+		'https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Montserrat:wght@400;500;600&display=swap',
 		array(), null
 	);
-	wp_enqueue_style( 'dgc-main', get_template_directory_uri() . '/assets/css/main.css', array( 'dgc-fonts' ), DGC_VER );
+	wp_enqueue_style( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', array(), '2.3.4' );
+	wp_enqueue_style( 'owl-theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css', array( 'owl-carousel' ), '2.3.4' );
+	wp_enqueue_style( 'dgc-main', get_template_directory_uri() . '/assets/css/main.css', array( 'dgc-fonts', 'owl-theme' ), DGC_VER );
+
+	wp_enqueue_script( 'owl-carousel-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
+	wp_enqueue_script( 'dgc-main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'owl-carousel-js' ), DGC_VER, true );
 } );
 
 /* ---------------------------------------------------------------------------

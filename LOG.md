@@ -235,3 +235,31 @@
   chung main.css nen da dong bo mau/font/nut voi trang chu.
 - Luu y: file anh JPEG de bi hong neu dung `git show ... > file 2>&1 | tail` (redirect stderr
   lam nhieu du lieu binary) - luon extract binary rieng, khong noi lenh redirect + pipe.
+
+## 2026-07-06 (2) - Redesign toan site theo giao dien GrowMark (template HTML agency)
+- Hieu dua file GrowMark-1.0.0.zip (template Bootstrap "digital marketing agency"), yeu cau
+  sua giao dien digicom-host theo mau nay - AP DUNG TOAN BO SITE (Hieu chon qua AskUserQuestion),
+  anh trong template dung tam lam placeholder cho toi khi co anh that.
+- Backup theme truoc khi sua: `_backups/2026-07-06/redesign-growmark/digicom-host-pre-growmark.tar.gz`.
+- Doi design tokens trong main.css (giu nguyen ten bien, doi gia tri) theo palette GrowMark:
+  primary tu vermilion #E5482C -> xanh duong #4761FF (GHI DE quyet dinh truoc do ngay 2026-07-06
+  la giu vermilion - Hieu doi y hom nay theo template moi), dark tu #0F2A43 -> #1C2035, nen sang
+  #F7F5F1 -> #F1F3FA, font Be Vietnam Pro+Inter -> Roboto (display) + Montserrat (body), bo goc
+  va shadow tang nhe theo phong cach GrowMark. Giu --teal lam accent phu (KHONG doi sang pill
+  button 9999px de tuan thu rule chong AI-slop cua Hieu).
+- Icon vuong bo goc (.serv .ico, .svc-ico, .feat .ico) -> icon tron nhu GrowMark. Them hover
+  underline cho nav link, icon tron cho 4 the promo (SVG thuan tuy trang tri, khong bia du lieu).
+- Testimonial: chuyen tu grid tinh sang carousel that (Owl Carousel qua CDN) voi the giua duoc
+  highlight nen primary - dung diem nhan dac trung cua GrowMark. Them avatar hinh tron chu cai
+  dau ten khach hang (khong dung anh gia/stock vi khong co du lieu anh that).
+- Them nut "back to top" (fixed, tron, mau primary) + main.js moi (owl carousel init + scroll).
+- KHONG lam: (1) hero carousel nhieu slide fake - giu hero 2 cot anh doi ngu THAT san co (dung
+  1 slide manh thay vi bia noi dung slide 2 khong co du lieu); (2) muc "Doi ngu" dang GrowMark
+  (can ten that + anh that, chua co nen bo qua, khong bia nhan su); (3) khong copy anh stock
+  team/carousel cua GrowMark vao theme vi da co anh that va tranh vi pham rule anh nguoi that.
+- QA: curl kiem tra front-page + 1 trang dich vu (mua-textlink) + bang-gia, khong loi PHP;
+  xac nhan CSS/JS moi (main.css v0.2.0, main.js, Owl Carousel CDN) load 200 va bien --action
+  dung #4761FF. Chua chup screenshot trinh duyet that (moi truong khong dieu khien duoc Chrome
+  that cua may) - Hieu nen tu mo digicom.local kiem tra truc quan truoc khi ung y.
+- Con lai: thay anh placeholder GrowMark bang anh that (neu can dung them anh moi ngoai
+  team-photo.jpg hien co); Hieu xac nhan mau xanh duong #4761FF co dung y muon khong.
