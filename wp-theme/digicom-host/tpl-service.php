@@ -6,6 +6,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 $svc_name = get_the_title();
+$nhom     = dgc_current_nhom();
 ?>
 <div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Dịch vụ <span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
 
@@ -21,6 +22,8 @@ $svc_name = get_the_title();
 <?php if ( get_the_content() ) : ?>
 <section class="sec"><div class="wrap page-content"><?php the_content(); ?></div></section>
 <?php endif; ?>
+
+<?php if ( $nhom ) : include get_template_directory() . '/inc/service-pricing.php'; endif; ?>
 
 <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">

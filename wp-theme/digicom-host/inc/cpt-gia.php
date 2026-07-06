@@ -146,3 +146,46 @@ function dgc_get_gia( $nhom_slug ) {
 
 	return $items;
 }
+
+/** Tach so tu chuoi gia (VD "Home: 1.200.000đ" -> 1200000) de sort/tinh trung binh. Dung chung cho page-bang-gia.php + tpl-service.php. */
+function dgc_gia_to_number( $s ) {
+	if ( $s === '' ) return 0;
+	preg_match( '/[\d.,]+/', $s, $m );
+	if ( empty( $m[0] ) ) return 0;
+	$raw = str_replace( '.', '', $m[0] );
+	$raw = str_replace( ',', '.', $raw );
+	return (float) $raw;
+}
+
+/**
+ * Xac dinh nhom gia (dgc_nhom) tuong ung voi trang dich vu hien tai, di theo cay post_parent.
+ * Neu la trang con truc tiep cua "booking-bao-pr" (tung dau bao), tra them tu khoa de loc rieng bao do.
+ */
+function dgc_current_nhom( $post_id = 0 ) {
+	$post_id = $post_id ?: get_the_ID();
+	if ( ! $post_id ) return null;
+
+	$known = array(
+		'mua-textlink'     => 'Mua Textlink',
+		'dich-vu-backlink' => 'Dịch vụ Backlink',
+		'guest-post'       => 'Guest Post',
+		'booking-bao-pr'   => 'Booking báo & PR',
+	);
+
+	$slug = get_post_field( 'post_name', $post_id );
+	if ( isset( $known[ $slug ] ) ) {
+		return array( 'slug' => $slug, 'label' => $known[ $slug ], 'outlet_keyword' => '' );
+	}
+
+	$chain = array_merge( array( $post_id ), get_post_ancestors( $post_id ) );
+	foreach ( $chain as $i => $id ) {
+		$id_slug = get_post_field( 'post_name', $id );
+		if ( isset( $known[ $id_slug ] ) ) {
+			$direct_child = $chain[ max( 0, $i - 1 ) ];
+			$is_direct_outlet_child = ( $id_slug === 'booking-bao-pr' && (int) get_post_field( 'post_parent', $direct_child ) === (int) $id );
+			$keyword = $is_direct_outlet_child ? str_replace( '-', '', get_post_field( 'post_name', $direct_child ) ) : '';
+			return array( 'slug' => $id_slug, 'label' => $known[ $id_slug ], 'outlet_keyword' => $keyword );
+		}
+	}
+	return null;
+}

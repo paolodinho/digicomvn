@@ -20,16 +20,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 	$dgc_gia_theo_nhom[ $slug ] = dgc_get_gia( $slug );
 }
 
-/** Tach so tu chuoi gia (VD "Home: 1.200.000đ" -> 1200000) de sort/tinh trung binh. */
-function dgc_gia_to_number( $s ) {
-	if ( $s === '' ) return 0;
-	// Neu co nhieu so trong chuoi (nhu "Home: 1.200.000đ, Danh muc: 900.000đ"), lay so dau tien.
-	preg_match( '/[\d.,]+/', $s, $m );
-	if ( empty( $m[0] ) ) return 0;
-	$raw = str_replace( '.', '', $m[0] );
-	$raw = str_replace( ',', '.', $raw );
-	return (float) $raw;
-}
+// dgc_gia_to_number() dung ban chung trong inc/cpt-gia.php (dung ca cho tpl-service.php).
 
 $dgc_avg_price = array();
 foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
