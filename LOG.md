@@ -280,3 +280,23 @@
   _backups/2026-07-06/remove-dich-vu-hub/), doi menu item "Dich vu" tu post_type link sang
   custom link "#" - gio chi la nut mo dropdown 4 dich vu con, khong con dan toi trang xau nua.
 - Push code (commit 36e2c1e). Con lai: re-export + push gh-pages de demo mobile phan anh dung.
+
+## 2026-07-06 (3) - Bang gia + tool tinh chi phi rieng cho tung trang dich vu
+- Hieu yeu cau: du lieu /bang-gia/ da du -> day len tung trang dich vu cho "day dan", them
+  tool tinh gia de khach di tu nhu cau sang giai phap nhanh.
+- Them `dgc_current_nhom()` (inc/cpt-gia.php): xac dinh nhom gia dung theo cay post_parent
+  cua trang hien tai (4 pillar + BDS la con cua Backlink + 15 trang con la con truc tiep cua
+  Booking bao PR). Trang con outlet (VD Booking VnExpress) tu dong LOC rieng dong gia co ten
+  khop domain bao do (so khop khong dau, vd slug "dan-tri" -> "dantri" khop "Dantri.com.vn"),
+  khong khop duoc thi fallback hien full nhom.
+- Chuyen `dgc_gia_to_number()` tu page-bang-gia.php sang inc/cpt-gia.php (dung chung, tranh
+  loi redeclare) - page-bang-gia.php khong doi hanh vi.
+- File moi `inc/service-pricing.php`: render calculator (so luong x gia trung binh nhom/dau
+  bao, hieu ung dem so) + bang gia rut gon (toi da 8 dong, link "Xem day du tai Bang gia" neu
+  con nhieu hon) - include vao tpl-service.php ngay sau noi dung trang, TRUOC quy trinh/form,
+  de phan gia nam cao tren trang.
+- QA: test ca 4 trang pillar + 4 trang con outlet (vnexpress, dan-tri, webtretho, BDS) qua
+  curl - khong loi PHP, so dong loc dung (vnexpress 5 dong, dan-tri 2, webtretho 1, BDS fallback
+  full 30 dong backlink). Kiem tra truc quan tren mua-textlink: calculator hien 1.790.000d
+  (dung bang gia trung binh PHP tinh), bang gia hien thi dung.
+- Push code (commit 8cf6fa0). Con lai: re-export + push gh-pages.
