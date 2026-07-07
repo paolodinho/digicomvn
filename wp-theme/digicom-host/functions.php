@@ -34,7 +34,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	// ca hai deu co subset vietnamese.
 	wp_enqueue_style(
 		'dgc-fonts',
-		'https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Montserrat:wght@400;500;600&display=swap',
+		'https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Montserrat:wght@400;500;600&family=Lora:wght@600;700&display=swap',
 		array(), null
 	);
 	wp_enqueue_style( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', array(), '2.3.4' );

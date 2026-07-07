@@ -48,6 +48,9 @@
 	</div>
 </footer>
 
+<a href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', dgc( 'zalo' ) ) ); ?>" class="fab-zalo" target="_blank" rel="noopener" aria-label="Chat Zalo với Digicom">
+	<svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v13H8l-4 4V4z" fill="white"/><text x="12" y="14.5" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0068FF" font-family="Arial,sans-serif">Zalo</text></svg>
+</a>
 <a href="#" class="to-top" aria-label="Lên đầu trang">
 	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </a>

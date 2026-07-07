@@ -24,6 +24,7 @@ get_header();
 					<div class="t"><b>Site</b> chọn lọc theo chỉ số</div>
 					<div class="t"><b>Báo giá</b> minh bạch</div>
 					<div class="t"><b>Hỗ trợ</b> tư vấn tận tình</div>
+					<div class="t"><b>Xuất VAT</b> đầy đủ</div>
 				</div>
 			</div>
 			<div class="hero-media">

@@ -189,7 +189,11 @@ function dgc_format_price( $s ) {
 	if ( preg_match( '/^[0-9]+$/', $s ) ) {
 		return number_format( (float) $s, 0, ',', '.' ) . 'đ';
 	}
-	return $s;
+	// Chuoi ghep nhieu muc gia (VD "Home: 700000-900000-1100000đ · CM: ...") - chen dau
+	// phan cach hang nghin vao TUNG cum so >= 4 chu so, giu nguyen nhan/dau cach/don vi khac.
+	return preg_replace_callback( '/\d{4,}/', function ( $m ) {
+		return number_format( (float) $m[0], 0, ',', '.' );
+	}, $s );
 }
 
 /** Trung vi (median) - it bi lech boi gia tri qua cao/thap so voi trung binh cong, phu hop khi 1 nhom co ca goi re va goi cao cap. */
