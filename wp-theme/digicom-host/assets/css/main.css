@@ -389,6 +389,34 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .fab-zalo:hover{transform:translateY(-2px);box-shadow:var(--sh-high)}
 .fab-zalo svg{width:28px;height:28px}
 
+/* Bottom nav - mobile only */
+.bottom-nav{display:none}
+@media(max-width:768px){
+  body{padding-bottom:64px}
+  .bottom-nav{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;
+    background:#fff;border-top:1px solid var(--line);
+    box-shadow:0 -4px 16px rgba(0,0,0,.06);
+    padding-bottom:env(safe-area-inset-bottom,0)
+  }
+  .bn-item{
+    flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:3px;padding:8px 2px 7px;color:var(--ink-soft);text-decoration:none;
+    font-size:11px;line-height:1;white-space:nowrap
+  }
+  .bn-ico{width:22px;height:22px;display:flex}
+  .bn-ico svg{width:100%;height:100%}
+  .bn-item.active,.bn-item:active{color:var(--action)}
+  .bn-item.feat .bn-ico{
+    background:var(--action);color:#fff;border-radius:50%;width:34px;height:34px;
+    align-items:center;justify-content:center;margin-top:-14px;box-shadow:var(--sh-mid)
+  }
+  .bn-item.feat .bn-ico svg{width:18px;height:18px}
+  .bn-item.feat{color:var(--action);font-weight:600}
+  .to-top{bottom:78px}
+  .fab-zalo{bottom:136px}
+}
+
 /* Hieu ung den flash phong vien (Booking bao & PR) - toan site, nhe, thua thot */
 .press-flash-layer{position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden}
 .press-flash{position:absolute;border-radius:50%;transform:translate(-50%,-50%);

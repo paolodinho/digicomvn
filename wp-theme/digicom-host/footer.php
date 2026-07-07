@@ -56,6 +56,26 @@
 </a>
 <div class="press-flash-layer" aria-hidden="true"></div>
 
+<?php
+$dgc_bottom_nav = array(
+	array( 'icon' => 'home',   'label' => 'Trang chủ', 'url' => home_url( '/' ) ),
+	array( 'icon' => 'layers', 'label' => 'Dịch vụ',   'url' => home_url( '/dich-vu/' ) ),
+	array( 'icon' => 'tag',    'label' => 'Bảng giá',  'url' => home_url( '/bang-gia/' ) ),
+	array( 'icon' => 'phone',  'label' => 'Gọi ngay',  'url' => 'tel:' . dgc_tel() ),
+	array( 'icon' => 'edit',   'label' => 'Đặt bài',   'url' => home_url( '/dat-bai/' ), 'feat' => true ),
+);
+$dgc_cur_url = home_url( add_query_arg( array(), $GLOBALS['wp']->request ?? '' ) );
+?>
+<nav class="bottom-nav" aria-label="Menu di động">
+	<?php foreach ( $dgc_bottom_nav as $bn ) :
+		$is_active = ! empty( $bn['url'] ) && untrailingslashit( $bn['url'] ) === untrailingslashit( $dgc_cur_url ); ?>
+		<a class="bn-item<?php echo $is_active ? ' active' : ''; ?><?php echo ! empty( $bn['feat'] ) ? ' feat' : ''; ?>" href="<?php echo esc_url( $bn['url'] ); ?>">
+			<span class="bn-ico"><?php echo dgc_icon( $bn['icon'] ); ?></span>
+			<span class="bn-label"><?php echo esc_html( $bn['label'] ); ?></span>
+		</a>
+	<?php endforeach; ?>
+</nav>
+
 <?php wp_footer(); ?>
 </body>
 </html>

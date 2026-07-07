@@ -111,6 +111,10 @@ function dgc_icon( $name ) {
 		'mail'  => 'M4 4h16v16H4zM4 4l8 8 8-8',
 		'pin'   => 'M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z',
 		'clock' => 'M12 8v4l3 3M12 3a9 9 0 1 0 .01 0z',
+		'home'  => 'M3 11l9-8 9 8M5 10v10h14V10',
+		'layers' => 'M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 8l9 5 9-5',
+		'tag'   => 'M12 2H4v8l10 10 8-8L12 2zM7 7h.01',
+		'edit'  => 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z',
 	);
 	if ( empty( $paths[ $name ] ) ) return '';
 	return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="' . esc_attr( $paths[ $name ] ) . '"/></svg>';
