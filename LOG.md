@@ -423,3 +423,16 @@
 - QA: php -l pass, curl xac nhan gia da co dau cham, H1 blog dung font Lora, fab-zalo va
   "Xuat VAT" xuat hien tren trang chu.
 - Push code (commit e26e4e8) + rebuild/push gh-pages (commit 173c20c).
+
+## 2026-07-07 (11) - Bottom nav mobile
+- Them thanh menu duoi (bottom nav) chi hien tren mobile (<=768px): 5 muc Trang chu / Dich
+  vu / Bang gia / Goi ngay / Dat bai, muc "Dat bai" noi bat (icon tron mau primary, nhoi
+  len tren) lam CTA chinh. Active state tu dong theo URL trang dang xem.
+- Icon moi trong `dgc_icon()`: home, layers, tag, edit (SVG inline, dong bo voi phone/mail
+  co san).
+- Dieu chinh vi tri nut Zalo noi + nut "len dau trang" tren mobile de khong chong len bottom
+  nav (day len tren, cach nhau hop ly).
+- QA: php -l pass, kiem tra thuc te tren Chrome mobile viewport (390x844) - bottom nav hien
+  dung, active state dung trang chu, cuon xuong khong bi che noi dung, khong chong voi Zalo/
+  to-top.
+- Push code (commit 65ad23f) + rebuild/push gh-pages (commit a176681).
