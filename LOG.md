@@ -405,3 +405,21 @@
 - QA: php -l pass, curl xac nhan ca 3 trang (dat-bai, lien-he, ve-digicom) van 200, CSS moi
   co mat.
 - Push code (commit f32d1ae) + rebuild/push gh-pages (commit a866e12).
+
+## 2026-07-06 (10) - Fix gia ghep, ty le H1/H2 blog + font Lora, nut Zalo, VAT hero
+- Fix `dgc_format_price()`: chuoi gia ghep nhieu muc kieu "Home: 700000-900000-1100000đ ·
+  CM: ... · Fullsite: ..." (trang Mua Textlink + Bang gia) truoc do KHONG duoc chen dau phan
+  cach vi ham cu chi xu ly chuoi TOAN SO. Sua thanh: tim moi cum >=4 chu so trong chuoi va
+  chen dau cham hang nghin, giu nguyen nhan/dau gach/don vi khac -> "700.000-900.000-1.100.000đ".
+- Fix ty le tieu de bai viet blog: H1 truoc dung `clamp(30px,4.4vw,52px)` tinh theo BE RONG
+  MAN HINH trong khi khung doc chi rong 820px -> render qua to so voi H2 co dinh 26px. Doi
+  sang `.page-content h1{font-size:clamp(28px,7vw,40px)}` tinh theo khung doc, tang H2 len
+  28px cho can doi hon. Them font serif Lora rieng cho h1/h2 trong bai viet (giu Roboto/
+  Montserrat cho phan con lai site) - tao cam giac bao chi/editorial, hop dich vu Booking bao & PR.
+- Them nut Zalo noi (`.fab-zalo`, luon hien, khac nut "len dau trang" chi hien khi cuon) xep
+  ngay tren nut to-top goc duoi phai, link toi zalo.me/<so Zalo Digicom>.
+- Them dong "Xuat VAT day du" vao trust-row hero trang chu (canh "Site chon loc", "Bao gia
+  minh bach", "Ho tro tu van tan tinh").
+- QA: php -l pass, curl xac nhan gia da co dau cham, H1 blog dung font Lora, fab-zalo va
+  "Xuat VAT" xuat hien tren trang chu.
+- Push code (commit e26e4e8) + rebuild/push gh-pages (commit 173c20c).
