@@ -413,8 +413,8 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   }
   .bn-item.feat .bn-ico svg{width:18px;height:18px}
   .bn-item.feat{color:var(--action);font-weight:600}
-  .to-top{bottom:78px}
-  .fab-zalo{bottom:136px}
+  .to-top{bottom:108px}
+  .fab-zalo{bottom:166px}
 }
 
 /* Hieu ung den flash phong vien (Booking bao & PR) - toan site, nhe, thua thot */
