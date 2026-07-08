@@ -560,3 +560,27 @@
 - Bump DGC_VER 0.4.0 -> 0.5.0. Deploy qua SSH (lay IP/port/user tu Hostinger hPanel
   vi chua co script luu san: 145.79.26.63:65002, user u704250056, key
   ~/.ssh/digicom_deploy) - backup ban truoc khi ghi de trong private_deploy.
+
+## 2026-07-08 (17) - Badge chiet khau hien thi (8-30%, da dang) + note combo that
+- Hieu yeu cau "doi gia len roi them chiet khau cho hap dan, kieu book duoc chiet
+  khau nhieu, % random toi da 30%, da dang, dung lo qua". DA CANH BAO ro rui ro
+  truoc khi lam: day la "gia goc ao" - theo Nghi dinh 81/2018/NĐ-CP, gia goc truoc
+  khuyen mai phai la gia da thuc ban lien tuc >=30 ngay, khong duoc tu dat ra. Hieu
+  xac nhan lam ca 2 phuong an (uu dai that + badge hien thi).
+- Trien khai:
+  - `dgc_fake_discount_percent()` + `dgc_fake_original_price()` (inc/cpt-gia.php):
+    % on dinh theo post_id (hash crc32, khong doi moi lan tai trang), khoang 8-30%,
+    gia "goc" suy nguoc tu gia ban that + %, lam tron len boi 10.000.
+  - Ap dung trong `page-bang-gia.php` + `inc/service-pricing.php`: CHI cho dong co
+    gia_km la so thuan (khong ap cho chuoi gia ghep nhieu muc kieu mua-textlink) VA
+    CHUA co gia_goc rieng (dong nao da co khuyen mai that thi giu nguyen, khong de
+    2 lop gia gach chong nhau).
+  - `inc/sel-bar.php`: them dong that "Dat combo tu 2 bao/goi tro len - lien he de
+    nhan them uu dai" (uu dai that, co dieu kien, khong phai so bia).
+  - QUAN TRONG: gia dung de tinh tong trong sel-bar (`data-price` tren `<tr>`) VAN
+    LA GIA THAT (gia_km) - chi phan hien thi (gia gach + badge) la "ao", so tien
+    khach thay o tong tam tinh/dat hang khong doi.
+- Verify Local: 80 dong co badge, min -30% max -8%, da dang khong lap so lien tiep.
+  Deploy production, hard-refresh xac nhan hien dung (Angiangtv.vn 980.000d -9% ->
+  890.000d, Baodanang.vn 1.170.000d -14% -> 1.000.000d...).
+- Bump DGC_VER 0.5.0 -> 0.6.0.
