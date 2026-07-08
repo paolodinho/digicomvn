@@ -538,3 +538,25 @@
   yeu cau bao gia" -> sang /dat-bai/ voi URL mang dung 3 muc + tong, textarea "Noi
   dung" tu dien dung noi dung + tong tien (chua gom VAT). Khong loi console.
 - Bump DGC_VER 0.3.1 -> 0.4.0, deploy qua tar+scp+ssh nhu quy trinh truoc.
+
+## 2026-07-08 (16) - Them logo/favicon that cho tung dong bao trong bang gia
+- Hieu phan hoi: bang gia dang chi co checkbox + ten chu, "nhin nham chan" - can
+  logo nho cho tung dong bao de sinh dong, ro rang hon (kieu "di cho chon bao").
+- Giai phap: ham `dgc_row_logo_html()` moi trong `inc/cpt-gia.php` - lay favicon
+  THAT cua chinh site do qua Google s2 favicon service (`google.com/s2/favicons`),
+  uu tien domain tu field `url_bao`; phat hien duoc phan lon ten bao trong CPT
+  chinh la domain (vd "Angiangtv.vn", "Baodanang.vn") nen dung luon lam nguon domain
+  neu `url_bao` con trong (dang la 100% cac dong, vi field nay chua duoc dien).
+  Fallback: avatar chu cai dau ten bao, mau nen sinh tu ten (deterministic, khong
+  phai icon bia dat) cho truong hop ten khong giong domain.
+- Ap dung o ca 2 noi hien bang: `page-bang-gia.php` va `inc/service-pricing.php`
+  (dung chung cho 4 trang dich vu qua tpl-service.php) - chen `<?php echo
+  dgc_row_logo_html(...) ?>` ngay truoc ten bao trong `.row-check-wrap`.
+- CSS moi: `.row-logo` (28x28px, bo tron, vien nhe, nen trang) + `.row-logo-fallback`
+  (avatar chu, can giua).
+- Verify: Local + production (digicomvn.com/bang-gia/, /dich-vu/mua-textlink/) -
+  favicon that hien dung tung bao (hanoitimes.vn, phunuvagiadinh.vn, reatimes.vn,
+  Angiangtv.vn...), tick chon + tong tam tinh van hoat dong binh thuong.
+- Bump DGC_VER 0.4.0 -> 0.5.0. Deploy qua SSH (lay IP/port/user tu Hostinger hPanel
+  vi chua co script luu san: 145.79.26.63:65002, user u704250056, key
+  ~/.ssh/digicom_deploy) - backup ban truoc khi ghi de trong private_deploy.
