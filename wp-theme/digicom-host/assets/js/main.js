@@ -45,14 +45,16 @@
 	})();
 
 	// Watermark logo chim doc: dich chuyen cham hon trang khi cuon (parallax nhe).
+	// Ap len khoi ngoai (.brand-watermark) - anh/chu ben trong da co animation "bong benh"
+	// rieng (wm-float / wm-float-text), 2 transform khong dam vao nhau vi khac phan tu.
 	(function () {
 		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-		var span = document.querySelector('[data-brand-watermark] span');
-		if (!span) return;
+		var wm = document.querySelector('[data-brand-watermark]');
+		if (!wm) return;
 		var ticking = false;
 		function update() {
 			var y = window.scrollY || window.pageYOffset || 0;
-			span.style.transform = 'rotate(180deg) translateY(' + (y * -0.12) + 'px)';
+			wm.style.transform = 'translateY(' + (y * -0.12) + 'px)';
 			ticking = false;
 		}
 		window.addEventListener('scroll', function () {

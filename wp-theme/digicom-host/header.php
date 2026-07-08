@@ -9,7 +9,14 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<div class="brand-watermark" aria-hidden="true" data-brand-watermark><span>Digicom</span></div>
+<?php $dgc_wm_logo = dgc_logo_url(); ?>
+<div class="brand-watermark" aria-hidden="true" data-brand-watermark>
+	<?php if ( $dgc_wm_logo ) : ?>
+		<img src="<?php echo esc_url( $dgc_wm_logo ); ?>" alt="">
+	<?php else : ?>
+		<span>Digicom</span>
+	<?php endif; ?>
+</div>
 
 <div class="topbar">
 	<div class="wrap">

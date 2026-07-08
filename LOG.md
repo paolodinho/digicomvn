@@ -488,3 +488,23 @@
   ghi de: digicom-host-BEFORE-watermark-*.tar.gz trong private_deploy).
 - Verify: hien dung tren desktop >=1608px (khong de chu/card), an dung tren mobile
   (<1450px, khong dam vao bottom-nav), parallax chay dung (transform doi theo scrollY).
+
+## 2026-07-08 (14) - Sua watermark: dung logo that + chuyen dong bong benh
+- Hieu phan hoi 2 diem: (1) chu "Digicom" cach dieu KHONG PHAI logo that, (2) hieu
+  ung dang dung yen, can chuyen dong "hay ho" hon.
+- Fix (1): doi sang dung dung anh logo that dang dung o header/footer
+  (wp-content/uploads/2026/04/logo-digicom.png, qua ham co san dgc_logo_url()),
+  xoay 90 do de nam doc theo dai watermark, filter grayscale + opacity .16 de
+  giu chat "chim" trang tri, khong loe loet. Fallback text wordmark neu site
+  chua set custom logo.
+- Fix (2): them CSS keyframe "wm-float" - anh/chu tu bong benh len xuong (bien do
+  ~26px, chu ky 7s, ease-in-out, vo han) - doc lap voi hieu ung parallax cuon da co
+  truoc do (2 tang chuyen dong tren 2 phan tu khac nhau, khong dam nhau).
+  Tat ca chuyen dong tat khi prefers-reduced-motion.
+- Bug phat hien khi QA: dat sai thu tu transform (`rotate(90deg) translateY()`)
+  khien bien do "len xuong" thuc chat chay theo truc ngang do da xoay truc toa do
+  truoc - sua thanh `translateY() rotate(90deg)` (dich chuyen truoc, xoay sau) de
+  chuyen dong dung huong doc tren man hinh. Verify bang sampling toa do 242 frame/
+  4s, do dao dong dung ~25.5px khop bien do thiet ke 26px.
+- Bump DGC_VER 0.2.2 -> 0.3.1, deploy qua tar+scp+ssh nhu quy trinh truoc, co backup
+  ban truoc khi ghi de trong private_deploy tren server.

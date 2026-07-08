@@ -793,13 +793,29 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   position:fixed;top:0;right:1.5vw;height:100vh;
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;z-index:1;overflow:hidden;
+  will-change:transform;transition:transform .1s linear;
+}
+.brand-watermark img{
+  width:clamp(160px,20vw,320px);height:auto;
+  transform:rotate(90deg);
+  filter:grayscale(1);
+  opacity:.16;
+  animation:wm-float 7s ease-in-out infinite;
 }
 .brand-watermark span{
-  writing-mode:vertical-rl;transform:rotate(180deg) translateY(0);
+  writing-mode:vertical-rl;
   font-family:var(--font-display);font-weight:800;
   font-size:clamp(46px,8vw,132px);letter-spacing:.09em;
   color:var(--navy);opacity:.09;white-space:nowrap;
-  will-change:transform;transition:transform .1s linear;
+  animation:wm-float-text 7s ease-in-out infinite;
+}
+@keyframes wm-float{
+  0%,100%{transform:translateY(0) rotate(90deg) scale(1)}
+  50%{transform:translateY(-26px) rotate(90deg) scale(1.04)}
+}
+@keyframes wm-float-text{
+  0%,100%{transform:translateY(0) rotate(180deg) scale(1)}
+  50%{transform:translateY(-26px) rotate(180deg) scale(1.04)}
 }
 @media(max-width:1450px){.brand-watermark{display:none}}
-@media(prefers-reduced-motion:reduce){.brand-watermark span{transition:none}}
+@media(prefers-reduced-motion:reduce){.brand-watermark img,.brand-watermark span{animation:none}}
