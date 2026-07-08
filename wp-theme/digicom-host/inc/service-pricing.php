@@ -63,9 +63,20 @@ $dgc_sp_show_rows = $dgc_sp_show_all ? $dgc_sp_items : array_slice( $dgc_sp_item
 						<?php if ( 'mua-textlink' !== $nhom['slug'] ) : ?>
 						<td data-label="Vị trí"><?php echo esc_html( $m['vi_tri'] ); ?></td>
 						<?php endif; ?>
+						<?php
+						$has_real_old = ( $gia_goc && $gia_goc !== $gia_km );
+						$show_fake    = ! $has_real_old && preg_match( '/^[0-9]+$/', trim( $gia_km ) );
+						if ( $show_fake ) { $fake_pct = dgc_fake_discount_percent( $it->ID ); $fake_old = dgc_fake_original_price( $price_num, $fake_pct ); }
+						?>
 						<td data-label="Giá" class="cell-price">
+							<?php if ( $show_fake ) : ?>
+								<span class="price-old-line">
+									<span class="price-old"><?php echo esc_html( number_format( $fake_old, 0, ',', '.' ) . 'đ' ); ?></span>
+									<span class="price-discount-badge">-<?php echo (int) $fake_pct; ?>%</span>
+								</span>
+							<?php endif; ?>
 							<span class="price-now"><?php echo esc_html( dgc_format_price( $gia_km ) ); ?></span>
-							<?php if ( $gia_goc && $gia_goc !== $gia_km ) : ?><span class="price-old"><?php echo esc_html( dgc_format_price( $gia_goc ) ); ?></span><?php endif; ?>
+							<?php if ( $has_real_old ) : ?><span class="price-old"><?php echo esc_html( dgc_format_price( $gia_goc ) ); ?></span><?php endif; ?>
 						</td>
 						<td data-label="Ghi chú"><?php echo esc_html( $ghi_chu ); ?></td>
 						<td data-label=""><a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a></td>

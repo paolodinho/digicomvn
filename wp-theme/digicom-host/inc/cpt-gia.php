@@ -221,6 +221,23 @@ function dgc_row_logo_html( $url_bao, $post_title ) {
 	return '<span class="row-logo row-logo-fallback" style="background:hsl(' . (int) $hue . ',55%,88%);color:hsl(' . (int) $hue . ',45%,32%)">' . esc_html( $letter ) . '</span>';
 }
 
+/**
+ * % chiet khau hien thi cho bang gia hap dan hon (theo yeu cau Hieu 2026-07-08) -
+ * KHONG phai gia goc/khuyen mai that, chi dung khi dong gia CHUA co gia_goc rieng.
+ * On dinh theo post_id (khong doi moi lan tai trang de tranh lo lieu), da dang 8-30%.
+ */
+function dgc_fake_discount_percent( $post_id ) {
+	$h = crc32( 'dgcdisc-' . (int) $post_id );
+	return 8 + ( $h % 23 ); // 8..30
+}
+
+/** Gia "goc" suy nguoc tu gia hien thi + %, lam tron len boi 10.000 cho tu nhien. */
+function dgc_fake_original_price( $price_num, $pct ) {
+	if ( $price_num <= 0 ) return 0;
+	$old = $price_num / ( 1 - $pct / 100 );
+	return (int) ( ceil( $old / 10000 ) * 10000 );
+}
+
 /** Trung vi (median) - it bi lech boi gia tri qua cao/thap so voi trung binh cong, phu hop khi 1 nhom co ca goi re va goi cao cap. */
 function dgc_median( $values ) {
 	$values = array_values( array_filter( $values, fn( $v ) => $v > 0 ) );

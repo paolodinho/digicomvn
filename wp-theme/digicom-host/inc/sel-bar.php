@@ -22,3 +22,4 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<a class="btn btn-navy btn-sm sel-bar-cta" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu báo giá</a>
 	</div>
 </div>
+<p class="sel-bar-combo-note">Đặt combo từ 2 báo/gói trở lên - liên hệ để nhận thêm ưu đãi.</p>
