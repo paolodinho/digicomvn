@@ -111,6 +111,10 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .nav li:hover>.sub-menu,.nav li:focus-within>.sub-menu{display:block}
 .nav .sub-menu a{padding:8px 10px;border-radius:6px;white-space:nowrap}
 .nav .sub-menu a:hover{background:var(--surface)}
+.nav>ul>li>a[href*="/bang-gia"]{background:var(--action);color:#fff;padding:6px 16px;
+  border-radius:20px;font-weight:700}
+.nav>ul>li>a[href*="/bang-gia"]:after{display:none}
+.nav>ul>li>a[href*="/bang-gia"]:hover{color:#fff;background:var(--action-2)}
 .header-cta{margin-left:auto;display:flex;align-items:center;gap:12px}
 .header-cta .phone{font-family:var(--font-display);font-weight:700;color:var(--navy);white-space:nowrap}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
