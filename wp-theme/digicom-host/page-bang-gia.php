@@ -31,18 +31,6 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 	</div>
 </section>
 
-<!-- Bang gia rut gon 4 dich vu -->
-<section class="sec">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:26px"><span class="eyebrow">Tổng quan</span><h2>4 dịch vụ off-page SEO</h2></div>
-		<table class="price-table">
-			<thead><tr><th>Dịch vụ</th><th>Giá</th><th></th></tr></thead>
-			<tbody><?php foreach ( dgc_lines( 'domain_tlds' ) as $d ) { if ( empty( $d[0] ) ) continue;
-				echo '<tr><td class="tld">' . esc_html( $d[0] ) . '</td><td class="p">' . esc_html( $d[1] ?? '' ) . '</td><td><a class="btn btn-ghost btn-sm" href="' . esc_url( home_url( '/lien-he/' ) ) . '#lien-he">Nhận báo giá</a></td></tr>';
-			} ?></tbody>
-		</table>
-	</div>
-</section>
 
 <!-- Bang gia chi tiet theo tab + cong cu tick chon (ghim dau khu vuc nay) -->
 <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
