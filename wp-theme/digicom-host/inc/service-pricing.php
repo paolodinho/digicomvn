@@ -53,6 +53,7 @@ $dgc_sp_show_rows = $dgc_sp_show_all ? $dgc_sp_items : array_slice( $dgc_sp_item
 						<td data-label="Tên báo/site">
 							<label class="row-check-wrap">
 								<input type="checkbox" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $svc_name . ')' ); ?>">
+								<?php echo dgc_row_logo_html( $m['url_bao'], $it->post_title ); ?>
 								<span>
 									<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
 									<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>

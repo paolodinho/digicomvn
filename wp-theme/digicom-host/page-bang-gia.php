@@ -121,6 +121,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 							<td data-label="Tên báo/site">
 								<label class="row-check-wrap">
 									<input type="checkbox" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $label . ')' ); ?>">
+									<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>
 									<span>
 										<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
 										<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>

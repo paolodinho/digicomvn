@@ -196,6 +196,31 @@ function dgc_format_price( $s ) {
 	}, $s );
 }
 
+/**
+ * HTML logo nho cho 1 dong bao/site trong bang gia - dung favicon that cua chinh site do
+ * (qua Google s2 favicon service) de bang nhin sinh dong nhu "di cho chon bao" thay vi
+ * bang chu nham chan. Uu tien domain tu url_bao; da so ten bao (post_title) trong CPT
+ * chinh la domain (vd "Angiangtv.vn") nen dung luon lam fallback truoc khi phai ve avatar
+ * chu cai (chi khi ten khong giong domain, vd "VnExpress - Trang chu").
+ */
+function dgc_row_logo_html( $url_bao, $post_title ) {
+	$domain = '';
+	if ( $url_bao ) {
+		$host = wp_parse_url( $url_bao, PHP_URL_HOST );
+		if ( $host ) $domain = preg_replace( '/^www\./', '', $host );
+	}
+	if ( ! $domain && preg_match( '/^[a-z0-9-]+(\.[a-z0-9-]+)+$/i', trim( $post_title ) ) ) {
+		$domain = trim( $post_title );
+	}
+	if ( $domain ) {
+		$src = 'https://www.google.com/s2/favicons?domain=' . rawurlencode( $domain ) . '&sz=64';
+		return '<img class="row-logo" src="' . esc_url( $src ) . '" alt="" loading="lazy" width="28" height="28">';
+	}
+	$hue    = crc32( $post_title ) % 360;
+	$letter = mb_strtoupper( mb_substr( trim( $post_title ), 0, 1 ) );
+	return '<span class="row-logo row-logo-fallback" style="background:hsl(' . (int) $hue . ',55%,88%);color:hsl(' . (int) $hue . ',45%,32%)">' . esc_html( $letter ) . '</span>';
+}
+
 /** Trung vi (median) - it bi lech boi gia tri qua cao/thap so voi trung binh cong, phu hop khi 1 nhom co ca goi re va goi cao cap. */
 function dgc_median( $values ) {
 	$values = array_values( array_filter( $values, fn( $v ) => $v > 0 ) );

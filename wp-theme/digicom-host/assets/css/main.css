@@ -635,8 +635,12 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .sel-item-price{color:var(--ink-soft);white-space:nowrap}
 .sel-item-remove{background:none;border:none;color:#b91c1c;cursor:pointer;font-size:18px;line-height:1;padding:2px 4px}
 .sel-bar-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.row-check-wrap{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
-.row-check{width:17px;height:17px;flex:0 0 auto;margin-top:3px;accent-color:var(--action);cursor:pointer}
+.row-check-wrap{display:flex;align-items:center;gap:10px;cursor:pointer}
+.row-check{width:17px;height:17px;flex:0 0 auto;accent-color:var(--action);cursor:pointer}
+.row-logo{width:28px;height:28px;flex:0 0 auto;border-radius:8px;object-fit:contain;
+  background:#fff;border:1px solid var(--line-2);padding:3px}
+.row-logo-fallback{display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:13px;border:none}
 @media(max-width:640px){
   .sel-bar{position:static;padding:12px 14px}
   .sel-bar-total{font-size:19px}
