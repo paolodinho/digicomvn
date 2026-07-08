@@ -474,3 +474,17 @@
   (id 24) - 9/11 cum da co mo ta san tu truoc. Cap nhat qua `wp_update_term()` (chay
   truc tiep bang PHP CLI, khong qua REST/app-password) tren ca Local va production,
   khong dung du lieu bia (mo ta chi noi dung dich vu that cua Digicom).
+
+## 2026-07-08 (13) - Watermark logo "Digicom" chim doc + parallax
+- Them hieu ung: chu "Digicom" khong lo, xoay doc, mo (opacity .09), co dinh ben phai
+  moi trang, chay suot chieu cao man hinh; dich chuyen cham hon khi cuon (parallax,
+  scrollY * -0.12, tat khi prefers-reduced-motion). File: header.php, main.css, main.js.
+- Fix vong 1: dat z-index:-1 khien watermark bi an hoan toan sau nen opaque cua hau het
+  section (hero gradient, band navy...). Sua thanh z-index:1 (duong) + thu hep vung hien
+  thi vao le ngoai .wrap (--maxw 1180px) bang media query >1450px, tranh de len chu that.
+  Bump DGC_VER 0.2.0 -> 0.2.2 de cache-bust CSS.
+- Deploy: tar theme -> scp qua SSH key digicom-deploy-2026 -> private_deploy -> extract
+  de len domains/digicomvn.com/public_html/wp-content/themes (co backup ban truoc khi
+  ghi de: digicom-host-BEFORE-watermark-*.tar.gz trong private_deploy).
+- Verify: hien dung tren desktop >=1608px (khong de chu/card), an dung tren mobile
+  (<1450px, khong dam vao bottom-nav), parallax chay dung (transform doi theo scrollY).

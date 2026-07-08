@@ -44,6 +44,22 @@
 		setTimeout(pop, 3000 + Math.random() * 3000);
 	})();
 
+	// Watermark logo chim doc: dich chuyen cham hon trang khi cuon (parallax nhe).
+	(function () {
+		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		var span = document.querySelector('[data-brand-watermark] span');
+		if (!span) return;
+		var ticking = false;
+		function update() {
+			var y = window.scrollY || window.pageYOffset || 0;
+			span.style.transform = 'rotate(180deg) translateY(' + (y * -0.12) + 'px)';
+			ticking = false;
+		}
+		window.addEventListener('scroll', function () {
+			if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
+		}, { passive: true });
+	})();
+
 	// But viet len web: chuot keo theo net muc mo dan (canvas), chu de ngoi but nha bao.
 	(function () {
 		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

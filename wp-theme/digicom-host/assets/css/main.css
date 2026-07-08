@@ -785,3 +785,21 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 @media(max-width:640px){
   .topic-grid{grid-template-columns:1fr;gap:18px}
 }
+
+/* Watermark logo chim doc, xuyen suot trang - trang tri nen, khong chan noi dung.
+   Dat z-index duong (khong am) vi hau het section co nen rieng (opaque) se che mat
+   watermark neu de am; giu trong vung le ngoai .wrap (--maxw:1180px) de khong de chu. */
+.brand-watermark{
+  position:fixed;top:0;right:1.5vw;height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  pointer-events:none;z-index:1;overflow:hidden;
+}
+.brand-watermark span{
+  writing-mode:vertical-rl;transform:rotate(180deg) translateY(0);
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(46px,8vw,132px);letter-spacing:.09em;
+  color:var(--navy);opacity:.09;white-space:nowrap;
+  will-change:transform;transition:transform .1s linear;
+}
+@media(max-width:1450px){.brand-watermark{display:none}}
+@media(prefers-reduced-motion:reduce){.brand-watermark span{transition:none}}

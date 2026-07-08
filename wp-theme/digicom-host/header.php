@@ -9,6 +9,8 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+<div class="brand-watermark" aria-hidden="true" data-brand-watermark><span>Digicom</span></div>
+
 <div class="topbar">
 	<div class="wrap">
 		<div class="tb-left">Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong><?php echo esc_html( dgc( 'hotline', '0988 769 317' ) ); ?></strong></a> <span class="hide-sm">&middot; <?php echo esc_html( dgc( 'working_hours' ) ); ?></span></div>
