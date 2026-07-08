@@ -26,3 +26,4 @@ tokens.json
 
 # Static export (dung rieng cho gh-pages, khong can trong nhanh main)
 _static/
+*.wpress

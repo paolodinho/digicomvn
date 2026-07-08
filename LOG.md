@@ -436,3 +436,27 @@
   dung, active state dung trang chu, cuon xuong khong bi che noi dung, khong chong voi Zalo/
   to-top.
 - Push code (commit 65ad23f) + rebuild/push gh-pages (commit a176681).
+
+## 2026-07-08 (12) - Deploy len Hostinger, tro DNS Namecheap
+- Tao site WordPress moi tren Hostinger (goi Business co san), domain digicomvn.com da duoc
+  nhan dien va gan vao slot goi hosting.
+- Migrate toan bo du lieu tu Local sang: export DB kem search-replace domain (906 cho),
+  nen wp-content (theme digicom-host + uploads + plugin tutor/wordpress-importer), day qua
+  SSH (tao SSH key rieng "digicom-deploy-2026", khong dung lai key du an khac), import DB +
+  giai nen wp-content qua wp-cli tren server dich.
+- Fix: plugin Tutor LMS (khong con dung trong scope 4 dich vu hien tai) gay fatal error khi
+  kich hoat theme -> vo hieu hoa plugin nay tren production, khong anh huong site.
+- Kich hoat theme digicom-host, xac nhan lai qua trinh duyet: trang chu + trang dich vu deu
+  len dung, dung URL https://digicomvn.com.
+- Tro DNS tai Namecheap (Advanced DNS): sua A record @ tu IP cu 103.149.28.173 sang IP
+  Hostinger 145.79.26.63, them A record moi cho www cung IP. KHONG dong vao MX record (van
+  giu nguyen 3 MX toi Lark Suite - email cong ty khong bi anh huong). Verify bang dig: ca
+  hai deu tro dung IP moi trong vong vai phut.
+- Kich hoat "Lifetime SSL" cho digicomvn.com tren Hostinger - dang trong qua trinh cap phat
+  tu dong (co the mat vai phut den vai gio), chua can thao tac them.
+- Don dep: xoa file SQL/backup tam chua password hash khoi thu muc rieng ngoai public_html,
+  giu lai 1 ban backup goc cua site fresh-install de rollback neu can
+  (/home/u704250056/private_deploy/wpcontent-fresh-install-backup.tar.gz tren server).
+- Luu y ky thuat: moi thao tac dung credential (dat lai mat khau WP admin Local, tao tai
+  khoan FTP, tao SSH key moi) deu da xin phep Hieu truoc do co xay ra permission-denied tu
+  he thong an toan.
