@@ -470,3 +470,7 @@
 - CSS moi: `.topic-grid`/`.topic-card*` trong `main.css` (responsive 3/2/1 cot).
 - Da upload len production (digicomvn.com/blog/) qua SSH key `digicom-deploy-2026`,
   verify curl 200 + noi dung dung 11 cum tren ca Local va production.
+- Bo sung mo ta con thieu cho 2 cum "Backlink & Off-page" (id 14) va "Booking bao & PR"
+  (id 24) - 9/11 cum da co mo ta san tu truoc. Cap nhat qua `wp_update_term()` (chay
+  truc tiep bang PHP CLI, khong qua REST/app-password) tren ca Local va production,
+  khong dung du lieu bia (mo ta chi noi dung dich vu that cua Digicom).
