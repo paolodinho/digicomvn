@@ -508,3 +508,33 @@
   4s, do dao dong dung ~25.5px khop bien do thiet ke 26px.
 - Bump DGC_VER 0.2.2 -> 0.3.1, deploy qua tar+scp+ssh nhu quy trinh truoc, co backup
   ban truoc khi ghi de trong private_deploy tren server.
+
+## 2026-07-08 (15) - Cong cu tick chon bao/site/goi + tinh tong tam tinh (chua VAT)
+- Hieu yeu cau: tren TAT CA trang dich vu + bang gia, "cong cu" ghim dau tien, ben duoi
+  la tra cuu chi tiet theo tung bao; cong cu phai co tick chon bao/trang/goi textlink,
+  ben canh tinh ra tien (chua VAT) - thay cho calculator kieu "chon dich vu + so luong ->
+  gia trung binh" cu (khong con phan anh dung nhu cau thuc).
+- Thay doi:
+  - Tao `inc/sel-bar.php` - thanh cong cu dung chung (checkbox count + tong tien +
+    danh sach xo xuong co nut bo chon + nut "Gui yeu cau bao gia").
+  - `page-bang-gia.php`: xoa calc-box "Uoc tinh chi phi nhanh" (dropdown+so luong+gia
+    trung binh) + JS lien quan; chen sel-bar lam phan tu DAU TIEN trong khu vuc "Tra
+    cuu gia chi tiet" (truoc tab-bar) - sticky (position:sticky) xuyen suot ca 4 tab.
+  - `inc/service-pricing.php` (dung cho tung trang dich vu qua tpl-service.php): tuong
+    tu, bo calc-box rieng + JS, chen sel-bar truoc bang gia 1 nhom.
+  - Them checkbox `.row-check` vao o "Ten bao/site" cua moi dong bang (ca 2 noi), doc
+    gia tu attribute `data-price` co san tren `<tr>`.
+  - `main.js`: them 1 IIFE quet TOAN BO `.row-check` tren trang (khong phan biet tab/
+    bang nao) de tinh dem + tong tien - cho phep chon xuyen 4 tab tren /bang-gia/ va
+    van cong don dung 1 tong duy nhat.
+  - `inc/form-lead.php`: them script nho doc query `?selected=...&total=...` tu URL
+    (nut CTA cua sel-bar gan vao) de tu dien vao textarea "Noi dung" khi sang trang
+    /dat-bai/ - hoan tat luong "tick chon -> gui bao gia" khong can go lai tay.
+  - CSS: `.sel-bar` sticky top:84px (duoi header), tat sticky tren mobile <=640px de
+    tiet kiem khong gian man hinh nho; `.row-check-wrap` gop checkbox + ten vao chung
+    1 the <label> (khong them cot bang moi, tranh vo layout card tren mobile).
+- Verify tren Local + production (digicomvn.com): tick 2 bao khac tab (Booking PR +
+  Guest Post) -> tong 890.000 + 1.000.000 + 700.000 = 2.590.000d hien dung; bam "Gui
+  yeu cau bao gia" -> sang /dat-bai/ voi URL mang dung 3 muc + tong, textarea "Noi
+  dung" tu dien dung noi dung + tong tien (chua gom VAT). Khong loi console.
+- Bump DGC_VER 0.3.1 -> 0.4.0, deploy qua tar+scp+ssh nhu quy trinh truoc.

@@ -609,8 +609,41 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .tab-panel{display:none}
 .tab-panel.active{display:block}
 
+/* --- Cong cu tick chon bao/site/goi + tinh tong tien (chua VAT), ghim (sticky) dau trang --- */
+.sel-bar{position:sticky;top:84px;z-index:40;background:#fff;border:1.5px solid var(--line-2);
+  border-radius:var(--r-md);box-shadow:var(--sh-mid);padding:14px 20px;margin-bottom:24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sel-bar-info{display:flex;align-items:center;gap:18px;flex-wrap:wrap;position:relative}
+.sel-bar-count{font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink-soft)}
+.sel-bar-count b{color:var(--navy)}
+.sel-bar-total-wrap{display:flex;flex-direction:column;line-height:1.25}
+.sel-bar-total-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft)}
+.sel-bar-total{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--action)}
+.sel-bar-total .vnd{font-size:14px;font-weight:600;margin-left:2px}
+.sel-bar-vat-note{font-size:11.5px;color:var(--ink-soft)}
+.sel-bar-list-toggle{font-family:var(--font-display);font-weight:600;font-size:13px;color:var(--navy);
+  background:var(--surface);border:1.5px solid var(--line-2);border-radius:20px;padding:6px 14px;cursor:pointer}
+.sel-bar-list-toggle:disabled{opacity:.5;cursor:default}
+.sel-bar-list{display:none;position:absolute;top:100%;left:0;margin-top:10px;width:min(360px,90vw);
+  background:#fff;border:1.5px solid var(--line-2);border-radius:var(--r-md);box-shadow:var(--sh-high);
+  padding:8px;max-height:280px;overflow:auto;z-index:41}
+.sel-bar-list.open{display:block}
+.sel-item-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 8px;
+  font-size:13px;border-bottom:1px solid var(--line)}
+.sel-item-row:last-child{border-bottom:none}
+.sel-item-name{font-weight:600;color:var(--navy)}
+.sel-item-price{color:var(--ink-soft);white-space:nowrap}
+.sel-item-remove{background:none;border:none;color:#b91c1c;cursor:pointer;font-size:18px;line-height:1;padding:2px 4px}
+.sel-bar-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.row-check-wrap{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+.row-check{width:17px;height:17px;flex:0 0 auto;margin-top:3px;accent-color:var(--action);cursor:pointer}
+@media(max-width:640px){
+  .sel-bar{position:static;padding:12px 14px}
+  .sel-bar-total{font-size:19px}
+}
+
 .price-layout.has-filter{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start}
-.price-filter{position:sticky;top:90px;display:flex;flex-direction:column;gap:6px}
+.price-filter{position:sticky;top:170px;display:flex;flex-direction:column;gap:6px}
 .price-filter-title{font-family:var(--font-display);font-weight:700;font-size:13px;
   text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:4px}
 .nganh-btn{text-align:left;font-family:var(--font-body);font-size:14px;color:var(--ink);

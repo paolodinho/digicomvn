@@ -42,3 +42,16 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 		<p class="form-note">Hoặc gọi ngay <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:var(--action);font-weight:600"><?php echo esc_html( dgc( 'hotline' ) ); ?></a></p>
 	</form>
 </div>
+<script>
+(function(){
+	var params = new URLSearchParams(location.search);
+	var selected = params.get('selected');
+	var total    = params.get('total');
+	if (!selected) return;
+	var msg = document.getElementById('dgc_message');
+	if (msg && !msg.value) {
+		msg.value = 'Tôi quan tâm: ' + selected +
+			(total ? '. Tổng tạm tính: ' + Math.round(total).toLocaleString('vi-VN') + 'đ (chưa gồm VAT).' : '.');
+	}
+})();
+</script>

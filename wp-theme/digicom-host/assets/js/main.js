@@ -1,6 +1,100 @@
 (function ($) {
 	'use strict';
 
+	// Cong cu tick chon bao/site/goi (checkbox .row-check trong bang gia) + thanh tong
+	// tam tinh ghim dau trang (.sel-bar, xem inc/sel-bar.php). Dung chung cho trang
+	// Bang gia (nhieu tab, tinh tong CA cac tab) va tung trang dich vu (1 bang).
+	(function () {
+		var bar = document.querySelector('[data-sel-bar]');
+		if (!bar) return;
+
+		var countEl    = bar.querySelector('.sel-bar-count-num');
+		var totalEl    = bar.querySelector('.sel-bar-total-num');
+		var listToggle = bar.querySelector('.sel-bar-list-toggle');
+		var listEl     = bar.querySelector('.sel-bar-list');
+		var cta        = bar.querySelector('.sel-bar-cta');
+		var ctaBaseHref = cta ? cta.getAttribute('href') : '';
+
+		function formatVND(n) {
+			return Math.round(n).toLocaleString('vi-VN');
+		}
+
+		function collect() {
+			var picked = [];
+			document.querySelectorAll('.row-check').forEach(function (cb) {
+				if (!cb.checked) return;
+				var tr = cb.closest('tr');
+				var price = tr ? (parseFloat(tr.getAttribute('data-price')) || 0) : 0;
+				picked.push({ cb: cb, name: cb.getAttribute('data-label') || '', price: price });
+			});
+			return picked;
+		}
+
+		function renderList(picked) {
+			if (!listEl) return;
+			listEl.innerHTML = '';
+			picked.forEach(function (p) {
+				var row = document.createElement('div');
+				row.className = 'sel-item-row';
+				var nameSpan = document.createElement('span');
+				nameSpan.className = 'sel-item-name';
+				nameSpan.textContent = p.name;
+				var priceSpan = document.createElement('span');
+				priceSpan.className = 'sel-item-price';
+				priceSpan.textContent = formatVND(p.price) + 'đ';
+				var removeBtn = document.createElement('button');
+				removeBtn.type = 'button';
+				removeBtn.className = 'sel-item-remove';
+				removeBtn.setAttribute('aria-label', 'Bỏ chọn ' + p.name);
+				removeBtn.textContent = '×';
+				removeBtn.addEventListener('click', function () {
+					p.cb.checked = false;
+					update();
+				});
+				row.appendChild(nameSpan);
+				row.appendChild(priceSpan);
+				row.appendChild(removeBtn);
+				listEl.appendChild(row);
+			});
+		}
+
+		function update() {
+			var picked = collect();
+			var total = picked.reduce(function (s, p) { return s + p.price; }, 0);
+			if (countEl) countEl.textContent = picked.length;
+			if (totalEl) totalEl.textContent = formatVND(total);
+			if (listToggle) listToggle.disabled = picked.length === 0;
+			if (!picked.length && listEl) listEl.classList.remove('open');
+			renderList(picked);
+			if (cta) {
+				if (picked.length) {
+					var summary = picked.map(function (p) { return p.name; }).join(', ');
+					var sep = ctaBaseHref.indexOf('?') === -1 ? '?' : '&';
+					cta.setAttribute('href', ctaBaseHref + sep + 'selected=' + encodeURIComponent(summary) + '&total=' + Math.round(total));
+				} else {
+					cta.setAttribute('href', ctaBaseHref);
+				}
+			}
+		}
+
+		document.addEventListener('change', function (e) {
+			if (e.target && e.target.classList && e.target.classList.contains('row-check')) update();
+		});
+
+		if (listToggle) {
+			listToggle.addEventListener('click', function () {
+				listEl.classList.toggle('open');
+			});
+		}
+		document.addEventListener('click', function (e) {
+			if (listEl && listEl.classList.contains('open') && !bar.contains(e.target)) {
+				listEl.classList.remove('open');
+			}
+		});
+
+		update();
+	})();
+
 	// Testimonial carousel (GrowMark-style: item giua highlight)
 	$(function () {
 		var $tm = $('.tm-carousel');

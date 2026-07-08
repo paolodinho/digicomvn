@@ -14,25 +14,12 @@ $dgc_nhom_list = array(
 	'mua-textlink'     => 'Mua Textlink',
 );
 
-// Gom du lieu 1 lan, dung lai cho ca bang + tinh gia trung binh calculator.
+// Gom du lieu 1 lan, dung lai cho bang chi tiet + cong cu tick chon.
 $dgc_gia_theo_nhom = array();
 foreach ( $dgc_nhom_list as $slug => $label ) {
 	$dgc_gia_theo_nhom[ $slug ] = dgc_get_gia( $slug );
 }
-
 // dgc_gia_to_number() dung ban chung trong inc/cpt-gia.php (dung ca cho tpl-service.php).
-
-// Dung trung vi (median) thay vi trung binh cong: nhom "Dich vu Backlink" chi gom cac goi
-// sidebar cao cap (1.85tr - 52.75tr), trung binh cong bi keo lech qua cao so voi gia pho bien.
-$dgc_avg_price = array();
-foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
-	$vals = array();
-	foreach ( $items as $it ) {
-		$v = dgc_gia_to_number( $it->meta['gia_km'] );
-		if ( $v > 0 ) $vals[] = $v;
-	}
-	$dgc_avg_price[ $slug ] = round( dgc_median( $vals ) );
-}
 ?>
 <div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Bảng giá</nav></div>
 
@@ -57,46 +44,14 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 	</div>
 </section>
 
-<!-- Tool uoc tinh chi phi nhanh -->
-<section class="sec" style="background:var(--surface)">
-	<div class="wrap">
-		<div class="calc-box">
-			<div class="calc-decor" aria-hidden="true"></div>
-			<div class="calc-inner">
-				<div class="calc-form">
-					<span class="eyebrow">Công cụ</span>
-					<h2>Ước tính chi phí nhanh</h2>
-					<p class="muted" style="font-size:14.5px;margin-top:-6px">Chọn dịch vụ và số lượng để xem mức giá tham khảo trung bình.</p>
-					<div class="calc-fields">
-						<label class="calc-field">
-							<span>Dịch vụ</span>
-							<select id="calcService">
-								<?php foreach ( $dgc_nhom_list as $slug => $label ) : ?>
-								<option value="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $label ); ?></option>
-								<?php endforeach; ?>
-							</select>
-						</label>
-						<label class="calc-field calc-field-num">
-							<span>Số lượng bài / link</span>
-							<input type="number" id="calcQty" min="1" value="1" inputmode="numeric">
-						</label>
-					</div>
-					<a class="btn btn-navy" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận báo giá chi tiết</a>
-				</div>
-				<div class="calc-result">
-					<span class="calc-result-label">Chi phí ước tính</span>
-					<div class="calc-result-num"><span id="calcResult">0</span><span class="calc-vnd">đ</span></div>
-					<p class="calc-note">Đây là mức giá ước tính trung bình, giá thực tế theo từng site/báo cụ thể xem bảng bên dưới hoặc liên hệ để được báo giá chính xác.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Bang gia chi tiet theo tab -->
+<!-- Bang gia chi tiet theo tab + cong cu tick chon (ghim dau khu vuc nay) -->
 <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:22px"><span class="eyebrow">Chi tiết</span><h2>Tra cứu giá theo từng báo / site</h2></div>
+		<div class="center" style="margin-bottom:18px"><span class="eyebrow">Chi tiết</span><h2>Tra cứu giá theo từng báo / site</h2>
+			<p class="muted" style="font-size:14.5px">Tick chọn báo/site/gói bạn quan tâm ở bảng bên dưới - tổng chi phí tạm tính hiện ngay bên cạnh.</p>
+		</div>
+
+		<?php include get_template_directory() . '/inc/sel-bar.php'; ?>
 
 		<div class="tab-bar" role="tablist">
 			<?php $first = true; foreach ( $dgc_nhom_list as $slug => $label ) : ?>
@@ -164,8 +119,13 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 					?>
 						<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( $m['nganh'] ?? '' ); ?>">
 							<td data-label="Tên báo/site">
-								<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
-								<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
+								<label class="row-check-wrap">
+									<input type="checkbox" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $label . ')' ); ?>">
+									<span>
+										<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
+										<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
+									</span>
+								</label>
 								<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
 							</td>
 							<?php if ( 'mua-textlink' !== $slug ) : ?>
@@ -225,7 +185,6 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 <script>
 (function(){
 	'use strict';
-	var dgcAvgPrice = <?php echo wp_json_encode( $dgc_avg_price ); ?>;
 
 	/* ---- Tabs ---- */
 	var tabBtns   = document.querySelectorAll('.tab-btn');
@@ -294,45 +253,6 @@ foreach ( $dgc_gia_theo_nhom as $slug => $items ) {
 
 		applyFilter();
 	});
-
-	/* ---- Calculator voi count-up ---- */
-	var calcService = document.getElementById('calcService');
-	var calcQty     = document.getElementById('calcQty');
-	var calcResult  = document.getElementById('calcResult');
-
-	function formatVND(n){
-		return Math.round(n).toLocaleString('vi-VN');
-	}
-
-	function animateTo(target){
-		var start = 0;
-		var startTime = null;
-		var duration = 600;
-		function step(ts){
-			if (!startTime) startTime = ts;
-			var progress = Math.min((ts - startTime) / duration, 1);
-			var eased = 1 - Math.pow(1 - progress, 3);
-			var val = start + (target - start) * eased;
-			calcResult.textContent = formatVND(val);
-			if (progress < 1) {
-				requestAnimationFrame(step);
-			} else {
-				calcResult.textContent = formatVND(target);
-			}
-		}
-		requestAnimationFrame(step);
-	}
-
-	function recalc(){
-		if (!calcService || !calcQty || !calcResult) return;
-		var qty  = Math.max(1, parseInt(calcQty.value, 10) || 1);
-		var unit = dgcAvgPrice[calcService.value] || 0;
-		animateTo(qty * unit);
-	}
-
-	if (calcService) calcService.addEventListener('change', recalc);
-	if (calcQty) calcQty.addEventListener('input', recalc);
-	recalc();
 })();
 </script>
 
