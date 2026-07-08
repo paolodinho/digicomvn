@@ -460,3 +460,13 @@
 - Luu y ky thuat: moi thao tac dung credential (dat lai mat khau WP admin Local, tao tai
   khoan FTP, tao SSH key moi) deu da xin phep Hieu truoc do co xay ra permission-denied tu
   he thong an toan.
+
+## 2026-07-08 (13) - Fix trang /blog/ hien cum chu de thay vi bai viet phang
+- `home.php`: thay danh sach bai viet phang (blog-grid) bang luoi 11 cum chu de
+  (category, lay tu `get_categories()`, sap xep theo so bai giam dan). Moi the
+  la 1 the `topic-card` (icon tron + ten cum + mo ta neu co + so bai + link
+  "Xem cum chu de") dan sang `category.php` (da co san, hien danh sach bai chi
+  tiet trong cum + tab chuyen cum khac).
+- CSS moi: `.topic-grid`/`.topic-card*` trong `main.css` (responsive 3/2/1 cot).
+- Da upload len production (digicomvn.com/blog/) qua SSH key `digicom-deploy-2026`,
+  verify curl 200 + noi dung dung 11 cum tren ca Local va production.
