@@ -584,3 +584,13 @@
   Deploy production, hard-refresh xac nhan hien dung (Angiangtv.vn 980.000d -9% ->
   890.000d, Baodanang.vn 1.170.000d -14% -> 1.000.000d...).
 - Bump DGC_VER 0.5.0 -> 0.6.0.
+
+## 2026-07-09 - Bo hieu ung con tro chuot hinh ngoi but
+- Hieu yeu cau bo hieu ung con tro chuot hinh ngoi but nha bao (them tu 2026-07-06).
+- Xoa dong cursor:url(...) SVG inline tren the body trong main.css - chuot tro ve mac
+  dinh trinh duyet.
+- Backup main.css + functions.php ban truoc khi ghi de vao private_deploy tren server
+  (Hostinger). Bump DGC_VER 0.6.1 -> 0.6.2 de cache-bust CSS. Deploy qua scp/ssh key
+  digicom_deploy nhu quy trinh truoc.
+- Verify: curl production xac nhan khong con "cursor:url" trong main.css, HTML load
+  dung version 0.6.2, trang tra 200.
