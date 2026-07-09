@@ -624,3 +624,19 @@
 - Bump DGC_VER 0.6.2 -> 0.6.3. Backup 3 file goc vao private_deploy truoc khi ghi de,
   deploy qua scp/ssh key digicom_deploy. Verify: curl production khong con "pen-ink"
   trong ca JS lan CSS, HTML load dung version 0.6.3.
+
+## 2026-07-09 (4) - Fix browser cache HTML 7 ngay tren Hostinger
+- Hieu gui anh chup trang /dich-vu/mua-textlink/ van thay bang gia cu du server da
+  sua tu truoc (turn (2) cung ngay) - kiem tra xac nhan server DA tra ve dung noi
+  dung moi (curl khong thay price-table-cpt), nguyen nhan la browser cua Hieu dang
+  giu ban cache cu.
+- Root cause: `.htaccess` tren Hostinger co block mod_expires voi
+  `ExpiresDefault "access plus 1 weeks"` ap dung cho MOI loai file khong duoc khai
+  bao rieng - bao gom ca text/html (trang dong) - khien trinh duyet cache ca trang
+  HTML 7 ngay, moi lan deploy sau nay Hieu se khong thay thay doi ngay tru khi hard
+  refresh.
+- Fix: them dong `ExpiresByType text/html "access plus 0 seconds"` ngay sau
+  `ExpiresActive On` trong .htaccess (backup ban goc vao private_deploy truoc khi
+  sua). CSS/JS/anh van giu cache dai binh thuong (khong doi gi khac).
+- Verify: curl -I xac nhan HTML tra ve `cache-control: public, max-age=0`, CSS van
+  `max-age=2592000` nhu cu, trang chu + /bang-gia/ van 200.
