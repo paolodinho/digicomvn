@@ -655,3 +655,21 @@
   1 hang.
 - Bump DGC_VER 0.6.3 -> 0.6.4. Backup main.css + functions.php truoc khi ghi de,
   deploy qua scp/ssh. Verify: curl production co CSS moi, version dung 0.6.4.
+
+## 2026-07-09 (6) - Doi email nhan lead ve hieudx3107@gmail.com
+- Hieu yeu cau: khach gui form (dat bai/nhan bao gia) thi mail phai den
+  hieudx3107@gmail.com.
+- Kiem tra: form da co san co che gui mail (`dgc_handle_lead()` trong functions.php,
+  dung `wp_mail()` toi gia tri option `dgc_settings['email']` - sua duoc tu WP Admin,
+  KHONG hardcode trong code, dung rule wordpress-non-code-editable). Truoc do option
+  nay chua duoc luu qua Admin nen dung gia tri mac dinh info@digicomvn.com.
+- Da cap nhat option `dgc_settings['email']` = hieudx3107@gmail.com qua wp-cli tren
+  production (tuong duong voi vao WP Admin > Cai dat Digicom > sua o Email - Hieu co
+  the tu doi lai sau ma khong can dung code).
+- Test gui thu qua wp eval `wp_mail()` - ket qua tra ve true (WordPress da giao mail
+  cho server gui, khong dam bao 100% toi inbox vi site khong cai plugin SMTP, dung
+  ham mail() mac dinh cua PHP/hosting) - nhac Hieu kiem tra ca thu muc Spam.
+- Phat hien rieng (CHUA sua, chi bao): `admin_email` goc cua WordPress (dung cho
+  thong bao he thong nhu doi mat khau admin, khong phai email form) van la gia tri
+  rac tu luc migrate: "dev-email@wpengine.local" - can Hieu xac nhan email that de
+  doi (WP se gui link xac nhan toi email MOI, khong doi ho luc dang nhap duoc).
