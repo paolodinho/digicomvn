@@ -673,3 +673,9 @@
   thong bao he thong nhu doi mat khau admin, khong phai email form) van la gia tri
   rac tu luc migrate: "dev-email@wpengine.local" - can Hieu xac nhan email that de
   doi (WP se gui link xac nhan toi email MOI, khong doi ho luc dang nhap duoc).
+
+## 2026-07-09 (7) - Doi admin_email he thong WordPress
+- Hieu xac nhan dung chung 1 email: doi luon `admin_email` (thong bao he thong WP -
+  quen mat khau, canh bao core/plugin update...) tu gia rac "dev-email@wpengine.local"
+  sang hieudx3107@gmail.com qua wp-cli (`wp option update admin_email`). Xac nhan lai
+  gia tri da luu dung.
