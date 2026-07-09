@@ -640,3 +640,18 @@
   sua). CSS/JS/anh van giu cache dai binh thuong (khong doi gi khac).
 - Verify: curl -I xac nhan HTML tra ve `cache-control: public, max-age=0`, CSS van
   `max-age=2592000` nhu cu, trang chu + /bang-gia/ van 200.
+
+## 2026-07-09 (5) - Fix bang gia tran trang (nhom Mua Textlink)
+- Hieu gui anh /bang-gia/ - bang bi tran ngang, cot Ghi chu/nut Dat ngay bi day/cat,
+  watermark "Digicom" lo qua khe hong.
+- Root cause: dong Mua Textlink co gia ghep nhieu muc "Home: ...d - CM: ...d -
+  Fullsite: ...d" (~90 ky tu) nhung CSS `.price-table-cpt td.cell-price{white-space:
+  nowrap}` ep khong cho xuong dong -> o gia rong bat thuong, day bang rong hon khung
+  trang; `.price-table-wrap` khong co overflow-x:auto nen phan du bi body {overflow-x:
+  hidden} cat mat thay vi cuon ngang.
+- Fix trong main.css: `.price-table-wrap` them `overflow-x:auto` (an toan du phong
+  cho bang rong bat ky), `.cell-price` doi `white-space:nowrap` -> `normal` +
+  `max-width:280px` de gia ghep nhieu muc tu xuong dong gon trong o thay vi keo dai
+  1 hang.
+- Bump DGC_VER 0.6.3 -> 0.6.4. Backup main.css + functions.php truoc khi ghi de,
+  deploy qua scp/ssh. Verify: curl production co CSS moi, version dung 0.6.4.

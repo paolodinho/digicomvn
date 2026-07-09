@@ -672,8 +672,9 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .sort-btn.active{background:var(--action);color:#fff;border-color:var(--action)}
 .tab-count{font-size:13px;color:var(--ink-soft);margin:0 0 14px}
 
-.price-table-wrap{width:100%}
-.price-table-cpt td.cell-price{white-space:nowrap}
+.price-table-wrap{width:100%;overflow-x:auto}
+.price-table-cpt td.cell-price{white-space:normal;max-width:280px}
+.price-table-cpt td.cell-price .price-now{white-space:normal}
 .price-table-cpt .price-now{color:var(--action);font-weight:700;font-family:var(--font-display)}
 .price-table-cpt .price-old{display:block;color:var(--ink-soft);text-decoration:line-through;
   font-size:12.5px;margin-top:2px}
