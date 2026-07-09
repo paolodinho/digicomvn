@@ -614,3 +614,13 @@
   Deploy qua scp/ssh key digicom_deploy. Curl xac nhan production: ca 4 trang dich vu
   khong con "price-table-cpt", CTA tro dung `#<slug>`, trang con vnexpress co dung
   `#booking-bao-pr:vnexpress`.
+
+## 2026-07-09 (3) - Bo hieu ung net muc/but chi theo chuot
+- Hieu phan anh van con "cai chi" khi di chuot - do la hieu ung canvas `.pen-ink-layer`
+  (them 2026-07-06, "but viet len web") ve net muc mo dan theo duong di chuot, khac voi
+  icon con tro chuot da bo truoc do trong session nay.
+- Xoa toan bo IIFE ve net muc trong `assets/js/main.js` (canvas, mousemove listener,
+  requestAnimationFrame draw loop) va CSS `.pen-ink-layer` trong `assets/css/main.css`.
+- Bump DGC_VER 0.6.2 -> 0.6.3. Backup 3 file goc vao private_deploy truoc khi ghi de,
+  deploy qua scp/ssh key digicom_deploy. Verify: curl production khong con "pen-ink"
+  trong ca JS lan CSS, HTML load dung version 0.6.3.
