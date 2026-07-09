@@ -23,7 +23,15 @@ $nhom     = dgc_current_nhom();
 <section class="sec"><div class="wrap page-content"><?php the_content(); ?></div></section>
 <?php endif; ?>
 
-<?php if ( $nhom ) : include get_template_directory() . '/inc/service-pricing.php'; endif; ?>
+<?php if ( $nhom ) :
+	$dgc_bg_hash = $nhom['slug'] . ( ! empty( $nhom['outlet_keyword'] ) ? ':' . $nhom['outlet_keyword'] : '' );
+	$dgc_bg_url  = home_url( '/bang-gia/#' . $dgc_bg_hash );
+?>
+<section class="sec-tight"><div class="wrap"><div class="cta-band">
+	<div><h2>Xem bảng giá <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2><p>Giá chi tiết theo từng báo/site, tick chọn nhiều mục và tính tổng nhanh - tra cứu đầy đủ tại trang Bảng giá.</p></div>
+	<div class="cta-actions"><a class="btn btn-navy" href="<?php echo esc_url( $dgc_bg_url ); ?>">Xem bảng giá &rarr;</a></div>
+</div></div></section>
+<?php endif; ?>
 
 <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">

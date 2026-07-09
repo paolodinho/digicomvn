@@ -594,3 +594,23 @@
   digicom_deploy nhu quy trinh truoc.
 - Verify: curl production xac nhan khong con "cursor:url" trong main.css, HTML load
   dung version 0.6.2, trang tra 200.
+
+## 2026-07-09 (2) - Bo bang gia khoi 4 trang dich vu, don ve /bang-gia/
+- Hieu yeu cau: van giu 4 trang dich vu (Mua Textlink, Dich vu Backlink, Guest Post,
+  Booking bao & PR) de khong mat SEO target rieng tung cum tu khoa, nhung KHONG hien
+  bang gia chi tiet tren 4 trang do nua - toan bo gia don ve 1 noi duy nhat /bang-gia/.
+- `tpl-service.php`: bo include `inc/service-pricing.php` (bang gia + sel-bar day du),
+  thay bang 1 CTA band ngan "Xem bang gia [ten dich vu]" tro toi
+  `/bang-gia/#<nhom-slug>` (rieng trang con tung dau bao co outlet_keyword thi tro toi
+  `/bang-gia/#booking-bao-pr:<tu-khoa-bao>` de giu duoc trai nghiem loc dung bao do,
+  khong mat tinh nang cu).
+- `page-bang-gia.php`: them id="bang-gia-chi-tiet" cho section chua tab-bar; them JS
+  doc `location.hash` khi tai trang - neu khop 1 trong 4 tab (mua-textlink,
+  dich-vu-backlink, guest-post, booking-bao-pr) thi tu dong click tab do, neu co phan
+  ":tu-khoa" thi dien vao o tim kiem cua tab va trigger loc, cuoi cung cuon muot toi
+  khu vuc bang gia.
+- QA: `php -l` qua SSH staging tren server (khong co PHP CLI local) - pass ca 2 file;
+  JS parse qua node -e OK. Backup 2 file goc vao private_deploy truoc khi ghi de.
+  Deploy qua scp/ssh key digicom_deploy. Curl xac nhan production: ca 4 trang dich vu
+  khong con "price-table-cpt", CTA tro dung `#<slug>`, trang con vnexpress co dung
+  `#booking-bao-pr:vnexpress`.

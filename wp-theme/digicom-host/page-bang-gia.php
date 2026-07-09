@@ -33,7 +33,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 
 
 <!-- Bang gia chi tiet theo tab + cong cu tick chon (ghim dau khu vuc nay) -->
-<section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="sec" id="bang-gia-chi-tiet" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:18px"><span class="eyebrow">Chi tiết</span><h2>Tra cứu giá theo từng báo / site</h2>
 			<p class="muted" style="font-size:14.5px">Tick chọn báo/site/gói bạn quan tâm ở bảng bên dưới - tổng chi phí tạm tính hiện ngay bên cạnh.</p>
@@ -253,6 +253,29 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 
 		applyFilter();
 	});
+
+	/* ---- Kich hoat dung tab (+ tim kiem san) khi tu trang dich vu link toi #nhom hoac #nhom:tu-khoa ---- */
+	var rawHash = decodeURIComponent( ( location.hash || '' ).replace( '#', '' ) );
+	if ( rawHash ) {
+		var hashParts = rawHash.split( ':' );
+		var hashNhom  = hashParts[0];
+		var hashQuery = hashParts[1] || '';
+		var hashBtn = null, hashPanel = null;
+		tabBtns.forEach(function(b){ if (b.getAttribute('data-tab') === hashNhom) hashBtn = b; });
+		tabPanels.forEach(function(p){ if (p.getAttribute('data-panel') === hashNhom) hashPanel = p; });
+		if ( hashBtn ) {
+			hashBtn.click();
+			if ( hashQuery && hashPanel ) {
+				var hashInput = hashPanel.querySelector('.tab-search-input');
+				if ( hashInput ) {
+					hashInput.value = hashQuery;
+					hashInput.dispatchEvent(new Event('input'));
+				}
+			}
+			var anchorEl = document.getElementById('bang-gia-chi-tiet');
+			if ( anchorEl ) { setTimeout(function(){ anchorEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 30); }
+		}
+	}
 })();
 </script>
 
