@@ -417,8 +417,8 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   }
   .bn-item.feat .bn-ico svg{width:18px;height:18px}
   .bn-item.feat{color:var(--action);font-weight:600}
-  .to-top{bottom:calc(var(--bn-h) + 14px)}
-  .fab-zalo{bottom:calc(var(--bn-h) + 72px)}
+  .to-top{bottom:calc(var(--bn-h) + 22px)}
+  .fab-zalo{bottom:calc(var(--bn-h) + 80px)}
 }
 
 /* Hieu ung den flash phong vien (Booking bao & PR) - toan site, nhe, thua thot */

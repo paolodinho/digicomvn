@@ -156,6 +156,21 @@
 		}, { passive: true });
 	})();
 
+	// Do chieu cao THAT cua bottom-nav (thay vi doan cung trong CSS) de nut mui ten len +
+	// nut Zalo luon nam dung phia tren, khong bi de - chinh xac tren moi may/font/zoom.
+	(function () {
+		var bn = document.querySelector('.bottom-nav');
+		if (!bn) return;
+		function sync() {
+			if (getComputedStyle(bn).display === 'none') return;
+			document.documentElement.style.setProperty('--bn-h', bn.offsetHeight + 'px');
+		}
+		sync();
+		window.addEventListener('resize', sync);
+		window.addEventListener('orientationchange', sync);
+		if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
+	})();
+
 	// Back to top
 	var $toTop = document.querySelector('.to-top');
 	if ($toTop) {
