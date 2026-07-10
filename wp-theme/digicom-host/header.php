@@ -47,16 +47,22 @@
 		<div class="header-cta">
 			<a class="phone" href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 			<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt bài ngay</a>
-			<button class="burger" aria-label="Menu" onclick="document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
+			<button class="burger" aria-label="Menu" onclick="document.getElementById('mnav').classList.toggle('open');document.body.classList.toggle('mnav-open')"><span></span><span></span><span></span></button>
 		</div>
 	</div>
 </header>
 
 <div class="mnav" id="mnav">
-	<?php
-	if ( has_nav_menu( 'primary' ) ) {
-		wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'depth' => 0 ) );
-	}
-	?>
-	<ul class="cta-item"><li><a href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a></li></ul>
+	<div class="mnav-head">
+		<span>Menu</span>
+		<button class="mnav-close" aria-label="Đóng menu" onclick="document.getElementById('mnav').classList.remove('open');document.body.classList.remove('mnav-open')">&times;</button>
+	</div>
+	<div class="mnav-list">
+		<?php
+		if ( has_nav_menu( 'primary' ) ) {
+			wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'depth' => 0 ) );
+		}
+		?>
+	</div>
+	<a class="mnav-cta" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 </div>
