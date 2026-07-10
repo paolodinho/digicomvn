@@ -34,6 +34,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/tone-voice.md` | Van phong |
 | `.claude/rules/workflow.md` | Quy trinh lam viec |
 | `.claude/rules/do-dont.md` | Do/Dont |
+| `.claude/rules/deploy.md` | Deploy len live Hostinger (SSH, cache-busting DGC_VER) |
 
 ## 7. File quan trong
 `PLAN.md`, `LOG.md`, `DECISIONS.md`, `.claude/context/brand-info.md` (luu y: mo ta site
