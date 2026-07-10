@@ -10,6 +10,7 @@ function dgc_defaults() {
 	return array(
 		'hotline'       => '0988 769 317',
 		'email'         => 'sales@digicomvn.com',
+		'lead_email'    => 'hieudx3107@gmail.com',
 		'address'       => 'Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội',
 		'zalo'          => '2806292509481772964',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
@@ -92,7 +93,8 @@ function dgc_settings_page() {
 			<table class="form-table">
 				<?php
 				dgc_field( 'hotline', 'Hotline' );
-				dgc_field( 'email', 'Email' );
+				dgc_field( 'email', 'Email (hien thi cong khai tren site)' );
+				dgc_field( 'lead_email', 'Email nhan lead form (khong hien thi cong khai)' );
 				dgc_field( 'zalo', 'So Zalo' );
 				dgc_field( 'address', 'Dia chi' );
 				dgc_field( 'working_hours', 'Gio lam viec' );

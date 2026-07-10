@@ -163,7 +163,7 @@ function dgc_handle_lead() {
 		'post_content'=> $body,
 	) );
 
-	wp_mail( dgc( 'email', get_option( 'admin_email' ) ),
+	wp_mail( dgc( 'lead_email', get_option( 'admin_email' ) ),
 		'[Digicom] Yeu cau moi tu ' . $name,
 		$body );
 
