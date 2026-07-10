@@ -677,8 +677,12 @@ body.mnav-open{overflow:hidden}
 
 .price-layout.has-filter{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start}
 .price-filter{position:sticky;top:170px}
-.price-filter-title{font-family:var(--font-display);font-weight:700;font-size:13px;
+.price-filter-toggle{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:6px;
+  width:100%;cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:13px;
   text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:8px}
+.pft-selected{color:var(--action);font-weight:700;text-transform:none;letter-spacing:0}
+.pft-chevron{margin-left:auto;flex:0 0 auto;display:none;transition:transform .18s}
+.price-filter-toggle[aria-expanded="true"] .pft-chevron{transform:rotate(180deg)}
 .price-filter-row{display:flex;flex-direction:column;gap:6px}
 .nganh-btn{text-align:left;font-family:var(--font-body);font-size:14px;color:var(--ink);
   background:transparent;border:none;border-radius:var(--r-sm);padding:8px 10px;cursor:pointer;transition:.15s}
@@ -690,19 +694,13 @@ body.mnav-open{overflow:hidden}
   .price-filter-row{flex-direction:row;flex-wrap:wrap;gap:8px}
   .nganh-btn{background:var(--surface);white-space:nowrap}
 }
-/* Duoi 640px: lam gon 2 lop bo loc (tab dich vu + loc nhom bao) thanh 1 hang
-   cuon ngang - de vuot chon nhanh bang ngon cai, khong xuong dong choang cho.
-   Rieng tieu de "Loc theo nhom bao" nam NGOAI hang cuon (price-filter-row),
-   khong bi keo vao chung 1 dong voi nut. */
+/* Duoi 640px: bo loc nhieu nhom (12 nut, ten dai) thu gon mac dinh thanh 1 nut tieu de
+   + nhan dang chon, bam moi xoe het cac lua chon ra dang luoi (khong cuon ngang an bot
+   noi dung, khong xuong hang tran lan choang cho man hinh). */
 @media(max-width:640px){
-  .tab-bar,.price-filter-row{
-    flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
-    margin-left:-22px;margin-right:-22px;padding-left:22px;padding-right:22px;padding-bottom:4px;
-    scrollbar-width:none}
-  .tab-bar::-webkit-scrollbar,.price-filter-row::-webkit-scrollbar{display:none}
-  .tab-btn,.nganh-btn{flex:0 0 auto}
-  .nganh-btn{border:1.5px solid var(--line-2)}
-  .nganh-btn.active{border-color:var(--action)}
+  .pft-chevron{display:inline-flex}
+  .price-filter-row{display:none;flex-wrap:wrap;margin-top:2px}
+  .price-filter-row.open{display:flex}
 }
 
 .tab-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}

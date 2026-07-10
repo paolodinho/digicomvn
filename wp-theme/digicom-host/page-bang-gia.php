@@ -58,7 +58,10 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			<div class="price-layout<?php echo $has_nganh_filter ? ' has-filter' : ''; ?>">
 			<?php if ( $has_nganh_filter ) : ?>
 			<aside class="price-filter">
-				<div class="price-filter-title">Lọc theo nhóm báo</div>
+				<button type="button" class="price-filter-toggle" aria-expanded="false">
+					<span>Lọc theo nhóm báo:</span> <span class="pft-selected">Tất cả</span>
+					<svg class="pft-chevron" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+				</button>
 				<div class="price-filter-row">
 					<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo count( $items ); ?>)</button>
 					<?php foreach ( $nganh_labels as $nslug => $nlabel ) :
@@ -208,7 +211,17 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 		var totalEl   = panel.querySelector('.tab-count-total');
 		var sortBtns  = panel.querySelectorAll('.sort-btn');
 		var nganhBtns = panel.querySelectorAll('.nganh-btn');
+		var filterToggle   = panel.querySelector('.price-filter-toggle');
+		var filterRow      = panel.querySelector('.price-filter-row');
+		var filterSelected = panel.querySelector('.pft-selected');
 		var curNganh  = '';
+
+		if (filterToggle && filterRow) {
+			filterToggle.addEventListener('click', function(){
+				var open = filterRow.classList.toggle('open');
+				filterToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+			});
+		}
 
 		function applyFilter(){
 			var q = (input ? input.value : '').trim().toLowerCase();
@@ -237,6 +250,11 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 				curNganh = btn.getAttribute('data-nganh') || '';
 				nganhBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
 				applyFilter();
+				if (filterSelected) filterSelected.textContent = btn.textContent;
+				if (filterRow && filterRow.classList.contains('open')) {
+					filterRow.classList.remove('open');
+					if (filterToggle) filterToggle.setAttribute('aria-expanded', 'false');
+				}
 			});
 		});
 
