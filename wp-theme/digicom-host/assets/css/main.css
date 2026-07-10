@@ -394,7 +394,8 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 /* Bottom nav - mobile only */
 .bottom-nav{display:none}
 @media(max-width:768px){
-  body{padding-bottom:64px}
+  :root{--bn-h:calc(52px + env(safe-area-inset-bottom,0px))}
+  body{padding-bottom:var(--bn-h)}
   .bottom-nav{
     display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;
     background:#fff;border-top:1px solid var(--line);
@@ -415,8 +416,8 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   }
   .bn-item.feat .bn-ico svg{width:18px;height:18px}
   .bn-item.feat{color:var(--action);font-weight:600}
-  .to-top{bottom:108px}
-  .fab-zalo{bottom:166px}
+  .to-top{bottom:calc(var(--bn-h) + 14px)}
+  .fab-zalo{bottom:calc(var(--bn-h) + 72px)}
 }
 
 /* Hieu ung den flash phong vien (Booking bao & PR) - toan site, nhe, thua thot */

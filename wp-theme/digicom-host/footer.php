@@ -60,9 +60,8 @@
 $dgc_bottom_nav = array(
 	array( 'icon' => 'home',   'label' => 'Trang chủ', 'url' => home_url( '/' ) ),
 	array( 'icon' => 'layers', 'label' => 'Dịch vụ',   'url' => home_url( '/dich-vu/' ) ),
-	array( 'icon' => 'tag',    'label' => 'Bảng giá',  'url' => home_url( '/bang-gia/' ) ),
-	array( 'icon' => 'phone',  'label' => 'Gọi ngay',  'url' => 'tel:' . dgc_tel() ),
-	array( 'icon' => 'edit',   'label' => 'Đặt bài',   'url' => home_url( '/dat-bai/' ), 'feat' => true ),
+	array( 'icon' => 'tag',    'label' => 'Bảng giá',  'url' => home_url( '/bang-gia/' ), 'feat' => true ),
+	array( 'icon' => 'phone',  'label' => 'Gọi ngay',  'url' => 'tel:' . dgc_tel(), 'feat' => true ),
 );
 $dgc_cur_url = home_url( add_query_arg( array(), $GLOBALS['wp']->request ?? '' ) );
 ?>
