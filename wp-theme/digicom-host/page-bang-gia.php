@@ -101,12 +101,11 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 							<?php if ( 'mua-textlink' !== $slug ) : ?><th>Vị trí</th><?php endif; ?>
 							<th>Giá</th>
 							<th>Ghi chú</th>
-							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 					<?php if ( empty( $items ) ) : ?>
-						<tr><td colspan="5">Đang cập nhật dữ liệu.</td></tr>
+						<tr><td colspan="4">Đang cập nhật dữ liệu.</td></tr>
 					<?php endif; ?>
 					<?php foreach ( $items as $it ) :
 						$m         = $it->meta;
@@ -148,7 +147,6 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 								<?php if ( $has_real_old ) : ?><span class="price-old"><?php echo esc_html( dgc_format_price( $gia_goc ) ); ?></span><?php endif; ?>
 							</td>
 							<td data-label="Ghi chú"><?php echo esc_html( $ghi_chu ); ?></td>
-							<td data-label=""><a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a></td>
 						</tr>
 					<?php endforeach; ?>
 					</tbody>

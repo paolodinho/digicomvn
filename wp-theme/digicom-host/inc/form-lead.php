@@ -10,6 +10,11 @@ $dgc_form_service = $dgc_form_service ?? '';
 $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] ) ) : '';
 ?>
 <div class="form-card" id="lien-he">
+	<div class="order-summary" id="dgc-order-summary" hidden>
+		<div class="order-summary-title">Bạn đang yêu cầu báo giá cho</div>
+		<ul class="order-summary-list"></ul>
+		<div class="order-summary-total">Tổng tạm tính: <b></b> <span>(chưa gồm VAT)</span></div>
+	</div>
 	<h3 style="margin-top:0"><?php echo esc_html( $dgc_form_title ); ?></h3>
 	<?php if ( $sent === 'ok' ) : ?>
 		<div class="alert alert-ok">Đã nhận yêu cầu của bạn. Digicom sẽ liên hệ lại sớm nhất.</div>
@@ -52,6 +57,20 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 	if (msg && !msg.value) {
 		msg.value = 'Tôi quan tâm: ' + selected +
 			(total ? '. Tổng tạm tính: ' + Math.round(total).toLocaleString('vi-VN') + 'đ (chưa gồm VAT).' : '.');
+	}
+	var box = document.getElementById('dgc-order-summary');
+	if (box) {
+		var list = box.querySelector('.order-summary-list');
+		selected.split(',').forEach(function(name){
+			name = name.trim();
+			if (!name) return;
+			var li = document.createElement('li');
+			li.textContent = name;
+			list.appendChild(li);
+		});
+		if (total) box.querySelector('.order-summary-total b').textContent = Math.round(total).toLocaleString('vi-VN') + 'đ';
+		else box.querySelector('.order-summary-total').style.display = 'none';
+		box.hidden = false;
 	}
 })();
 </script>
