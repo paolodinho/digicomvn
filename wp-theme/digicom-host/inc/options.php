@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function dgc_defaults() {
 	return array(
 		'hotline'       => '0988 769 317',
-		'email'         => 'info@digicomvn.com',
+		'email'         => 'sales@digicomvn.com',
 		'address'       => 'Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội',
 		'zalo'          => '0988769317',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',

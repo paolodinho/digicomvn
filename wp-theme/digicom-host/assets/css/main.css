@@ -385,11 +385,12 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .to-top:hover{background:var(--action-2)}
 .to-top svg{width:20px;height:20px}
 
-.fab-zalo{position:fixed;right:22px;bottom:80px;width:46px;height:46px;border-radius:50%;background:#fff;
-  display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-mid);z-index:80;
-  border:1.5px solid var(--line);transition:.2s}
-.fab-zalo:hover{transform:translateY(-2px);box-shadow:var(--sh-high)}
-.fab-zalo svg{width:28px;height:28px}
+.fab-zalo{position:fixed;right:20px;bottom:82px;width:62px;height:62px;border-radius:50%;background:#fff;
+  display:flex;align-items:center;justify-content:center;z-index:81;
+  border:2px solid #0068FF;box-shadow:0 10px 26px rgba(0,104,255,.38),0 2px 8px rgba(28,32,53,.12);
+  transition:.2s}
+.fab-zalo:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 16px 34px rgba(0,104,255,.46),0 2px 8px rgba(28,32,53,.14)}
+.fab-zalo svg{width:38px;height:38px}
 
 /* Bottom nav - mobile only */
 .bottom-nav{display:none}
