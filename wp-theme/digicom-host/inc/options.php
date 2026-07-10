@@ -11,7 +11,7 @@ function dgc_defaults() {
 		'hotline'       => '0988 769 317',
 		'email'         => 'sales@digicomvn.com',
 		'address'       => 'Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội',
-		'zalo'          => '0988769317',
+		'zalo'          => '2806292509481772964',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
 
 		'hero_title'    => 'Backlink, Guest Post, Textlink và Booking báo PR uy tín',
