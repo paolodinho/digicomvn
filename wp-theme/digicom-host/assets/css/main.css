@@ -683,9 +683,19 @@ body.mnav-open{overflow:hidden}
 .row-logo-fallback{display:flex;align-items:center;justify-content:center;
   font-family:var(--font-display);font-weight:700;font-size:13px;border:none}
 .sel-bar-combo-note{font-size:12px;color:var(--ink-soft);margin:8px 2px 0}
+.sel-bar-hint{display:none;margin:0;font-size:13.5px;color:var(--ink-soft)}
+/* Duoi 640px: khi CHUA tick bao nao, thu gon thanh bar to noi dung "0 muc/0d" khong
+   can thiet - chi 1 dong goi y ngan. Khi tick >=1, tu dong xoe day du (JS them class
+   has-picks) de thay tong tien + nut gui yeu cau. */
 @media(max-width:640px){
   .sel-bar{position:static;padding:12px 14px}
   .sel-bar-total{font-size:19px}
+  .sel-bar-hint{display:block}
+  .sel-bar-info,.sel-bar-actions{display:none}
+  .sel-bar.has-picks .sel-bar-hint{display:none}
+  .sel-bar.has-picks .sel-bar-info,.sel-bar.has-picks .sel-bar-actions{display:flex}
+  .sel-bar-combo-note{display:none}
+  .sel-bar.has-picks + .sel-bar-combo-note{display:block}
 }
 
 .price-layout.has-filter{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start}

@@ -8,6 +8,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 <div class="sel-bar" data-sel-bar>
+	<p class="sel-bar-hint">Tick chọn báo/site bạn quan tâm ở bảng bên dưới để xem tổng chi phí và gửi yêu cầu báo giá.</p>
 	<div class="sel-bar-info">
 		<span class="sel-bar-count">Đã chọn: <b class="sel-bar-count-num">0</b> mục</span>
 		<div class="sel-bar-total-wrap">

@@ -61,6 +61,7 @@
 		function update() {
 			var picked = collect();
 			var total = picked.reduce(function (s, p) { return s + p.price; }, 0);
+			bar.classList.toggle('has-picks', picked.length > 0);
 			if (countEl) countEl.textContent = picked.length;
 			if (totalEl) totalEl.textContent = formatVND(total);
 			if (listToggle) listToggle.disabled = picked.length === 0;
