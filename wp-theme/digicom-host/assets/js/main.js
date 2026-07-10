@@ -62,6 +62,12 @@
 			var picked = collect();
 			var total = picked.reduce(function (s, p) { return s + p.price; }, 0);
 			bar.classList.toggle('has-picks', picked.length > 0);
+			document.body.classList.toggle('sel-bar-fixed', picked.length > 0);
+			if (picked.length) {
+				requestAnimationFrame(function () {
+					document.documentElement.style.setProperty('--selbar-h', bar.offsetHeight + 'px');
+				});
+			}
 			if (countEl) countEl.textContent = picked.length;
 			if (totalEl) totalEl.textContent = formatVND(total);
 			if (listToggle) listToggle.disabled = picked.length === 0;

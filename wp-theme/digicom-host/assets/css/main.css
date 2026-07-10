@@ -684,66 +684,53 @@ body.mnav-open{overflow:hidden}
   font-family:var(--font-display);font-weight:700;font-size:13px;border:none}
 .sel-bar-combo-note{font-size:12px;color:var(--ink-soft);margin:8px 2px 0}
 .sel-bar-hint{display:none;margin:0;font-size:13.5px;color:var(--ink-soft)}
-/* Duoi 640px: khi CHUA tick bao nao, thu gon thanh bar to noi dung "0 muc/0d" khong
-   can thiet - chi 1 dong goi y ngan. Khi tick >=1, tu dong xoe day du (JS them class
-   has-picks) de thay tong tien + nut gui yeu cau. */
+/* Duoi 640px: khi CHUA tick bao nao, thu gon thanh 1 dong goi y ngan (khong hien
+   "0 muc/0d" vo nghia). Khi tick >=1 (JS them class has-picks), bar GHIM CO DINH
+   phia tren bottom-nav, noi bat mau brand - giong thanh "gio hang" cua app that,
+   luon thay duoc trong luc cuon xem tiep bang gia. */
 @media(max-width:640px){
   .sel-bar{position:static;padding:12px 14px}
-  .sel-bar-total{font-size:19px}
   .sel-bar-hint{display:block}
   .sel-bar-info,.sel-bar-actions{display:none}
-  .sel-bar.has-picks .sel-bar-hint{display:none}
-  .sel-bar.has-picks .sel-bar-info,.sel-bar.has-picks .sel-bar-actions{display:flex}
   .sel-bar-combo-note{display:none}
   .sel-bar.has-picks + .sel-bar-combo-note{display:block}
+
+  .sel-bar.has-picks{
+    display:flex;flex-direction:column;align-items:stretch;gap:10px;
+    position:fixed;left:0;right:0;bottom:var(--bn-h,0px);z-index:92;
+    margin:0;padding:14px 16px;border-radius:16px 16px 0 0;
+    border:1.5px solid var(--action);border-bottom:0;
+    box-shadow:0 -10px 28px rgba(28,32,53,.18);
+    animation:selBarIn .2s ease}
+  .sel-bar.has-picks .sel-bar-hint{display:none}
+  .sel-bar.has-picks .sel-bar-info{display:flex;justify-content:space-between;align-items:center}
+  .sel-bar.has-picks .sel-bar-vat-note{display:none}
+  .sel-bar.has-picks .sel-bar-actions{display:flex}
+  .sel-bar.has-picks .sel-bar-cta{width:100%;justify-content:center}
+  .sel-bar-total{font-size:19px}
+  body.sel-bar-fixed{padding-bottom:calc(var(--bn-h, 0px) + var(--selbar-h, 0px))}
 }
+@keyframes selBarIn{from{transform:translateY(100%)}to{transform:translateY(0)}}
 
 .price-layout.has-filter{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start}
 .price-filter{position:sticky;top:170px}
-.price-filter-toggle{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:6px;
-  width:100%;cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:13px;
+.price-filter-title{font-family:var(--font-display);font-weight:700;font-size:13px;
   text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:8px}
-.pft-selected{color:var(--action);font-weight:700;text-transform:none;letter-spacing:0}
-.pft-chevron{margin-left:auto;flex:0 0 auto;display:none;transition:transform .18s}
-.price-filter-toggle[aria-expanded="true"] .pft-chevron{transform:rotate(180deg)}
 .price-filter-row{display:flex;flex-direction:column;gap:6px}
-.pf-sheet-head,.pf-sheet-chips{display:contents}
 .nganh-btn{text-align:left;font-family:var(--font-body);font-size:14px;color:var(--ink);
   background:transparent;border:none;border-radius:var(--r-sm);padding:8px 10px;cursor:pointer;transition:.15s}
 .nganh-btn:hover{background:var(--surface)}
 .nganh-btn.active{background:var(--action);color:#fff;font-weight:600}
+/* Duoi 900px: bo loc luon hien day du dang luoi chip bo tron - khong an/thu gon, xem
+   duoc het lua chon ngay tu dau (Hieu yeu cau "show het ra tu dau"). */
 @media(max-width:900px){
   .price-layout.has-filter{grid-template-columns:1fr}
-  .price-filter{position:static}
+  .price-filter{position:static;background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--r-md);padding:14px 16px;margin-bottom:18px}
   .price-filter-row{flex-direction:row;flex-wrap:wrap;gap:8px}
-  .nganh-btn{background:var(--surface);white-space:nowrap}
+  .nganh-btn{background:#fff;border:1.5px solid var(--line-2);border-radius:20px;padding:8px 14px;white-space:nowrap}
+  .nganh-btn.active{border-color:var(--action)}
 }
-/* Duoi 640px: bo loc nhieu nhom (12+ nut, ten dai) thu gon mac dinh thanh 1 nut tieu de,
-   bam moi mo BOTTOM SHEET truot len tu duoi (kieu app Shopee) thay vi xoe/cuon ngay tai
-   cho - de thao tac bang ngon cai, xem het lua chon ma khong choang man hinh chinh. */
-@media(max-width:640px){
-  .pft-chevron{display:inline-flex}
-  .price-filter-backdrop{display:none;position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:96}
-  .price-filter-backdrop.open{display:block;animation:pfFade .18s ease}
-  .price-filter-row{
-    display:none;position:fixed;left:0;right:0;bottom:0;z-index:97;flex-direction:column;
-    background:#fff;border-radius:18px 18px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.18);
-    max-height:75vh}
-  .price-filter-row.open{display:flex;animation:pfSheetIn .22s ease}
-  .pf-sheet-head{display:flex;align-items:center;justify-content:space-between;flex:0 0 auto;
-    padding:16px 18px;border-bottom:1px solid var(--line);
-    font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--navy)}
-  .pf-sheet-close{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line-2);
-    background:#fff;font-size:19px;line-height:1;display:flex;align-items:center;justify-content:center;
-    cursor:pointer;padding:0}
-  .pf-sheet-chips{display:flex;flex-wrap:wrap;gap:8px;overflow:auto;flex:1 1 auto;
-    padding:16px 18px calc(18px + env(safe-area-inset-bottom,0))}
-  .pf-sheet-chips .nganh-btn{background:var(--surface);border:1.5px solid var(--line-2);
-    border-radius:20px;padding:9px 15px;white-space:nowrap}
-  .pf-sheet-chips .nganh-btn.active{border-color:var(--action)}
-}
-@keyframes pfFade{from{opacity:0}to{opacity:1}}
-@keyframes pfSheetIn{from{transform:translateY(100%)}to{transform:translateY(0)}}
 
 .tab-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
 .tab-search{flex:1 1 240px}
