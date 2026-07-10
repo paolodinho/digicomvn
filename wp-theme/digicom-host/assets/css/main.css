@@ -584,10 +584,10 @@ body.mnav-open{overflow:hidden}
 .mnav .sub-menu li{border-bottom:0}
 .mnav .sub-menu a{padding:11px 2px;font-size:15px;font-weight:500;color:var(--ink-soft)}
 .mnav a:active{color:var(--action)}
-.mnav-cta{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:8px;
+.mnav a.mnav-cta{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:8px;
   margin:14px 22px 22px;padding:15px;border-radius:var(--r-sm);background:var(--action);
   color:#fff!important;font-family:var(--font-display);font-weight:700;font-size:16px;
-  box-shadow:var(--sh-mid)}
+  text-align:center;box-shadow:var(--sh-mid)}
 
 /* ==========================================================================
    Bang gia chi tiet (trang /bang-gia/) - tool uoc tinh + tab tra cuu
