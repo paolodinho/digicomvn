@@ -786,8 +786,11 @@ body.mnav-open{overflow:hidden}
     text-align:left;flex:0 0 auto}
   .price-table-cpt td:not([data-label]):empty{display:none}
   .tab-toolbar{flex-direction:column;align-items:stretch}
+  .tab-search{flex:none}
+  .tab-search-input{background:var(--surface);border-color:var(--line-2)}
   .tab-sort{justify-content:stretch}
-  .sort-btn{flex:1}
+  .sort-btn{flex:1;background:var(--surface)}
+  .sort-btn.active{background:var(--action);color:#fff;border-color:var(--action)}
   .calc-form,.calc-result{padding:26px 22px}
 }
 .mnav a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--font-display);font-weight:600;font-size:18px;color:var(--navy)}
