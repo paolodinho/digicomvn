@@ -59,14 +59,16 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			<?php if ( $has_nganh_filter ) : ?>
 			<aside class="price-filter">
 				<div class="price-filter-title">Lọc theo nhóm báo</div>
-				<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo count( $items ); ?>)</button>
-				<?php foreach ( $nganh_labels as $nslug => $nlabel ) :
-					if ( $nslug === '' || empty( $nganh_used[ $nslug ] ) ) continue;
-					$n_count = 0;
-					foreach ( $items as $it ) { if ( ( $it->meta['nganh'] ?? '' ) === $nslug ) $n_count++; }
-				?>
-				<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $nlabel ); ?> (<?php echo (int) $n_count; ?>)</button>
-				<?php endforeach; ?>
+				<div class="price-filter-row">
+					<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo count( $items ); ?>)</button>
+					<?php foreach ( $nganh_labels as $nslug => $nlabel ) :
+						if ( $nslug === '' || empty( $nganh_used[ $nslug ] ) ) continue;
+						$n_count = 0;
+						foreach ( $items as $it ) { if ( ( $it->meta['nganh'] ?? '' ) === $nslug ) $n_count++; }
+					?>
+					<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $nlabel ); ?> (<?php echo (int) $n_count; ?>)</button>
+					<?php endforeach; ?>
+				</div>
 			</aside>
 			<?php endif; ?>
 			<div class="price-main">
