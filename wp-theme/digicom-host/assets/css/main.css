@@ -684,6 +684,7 @@ body.mnav-open{overflow:hidden}
 .pft-chevron{margin-left:auto;flex:0 0 auto;display:none;transition:transform .18s}
 .price-filter-toggle[aria-expanded="true"] .pft-chevron{transform:rotate(180deg)}
 .price-filter-row{display:flex;flex-direction:column;gap:6px}
+.pf-sheet-head,.pf-sheet-chips{display:contents}
 .nganh-btn{text-align:left;font-family:var(--font-body);font-size:14px;color:var(--ink);
   background:transparent;border:none;border-radius:var(--r-sm);padding:8px 10px;cursor:pointer;transition:.15s}
 .nganh-btn:hover{background:var(--surface)}
@@ -694,14 +695,32 @@ body.mnav-open{overflow:hidden}
   .price-filter-row{flex-direction:row;flex-wrap:wrap;gap:8px}
   .nganh-btn{background:var(--surface);white-space:nowrap}
 }
-/* Duoi 640px: bo loc nhieu nhom (12 nut, ten dai) thu gon mac dinh thanh 1 nut tieu de
-   + nhan dang chon, bam moi xoe het cac lua chon ra dang luoi (khong cuon ngang an bot
-   noi dung, khong xuong hang tran lan choang cho man hinh). */
+/* Duoi 640px: bo loc nhieu nhom (12+ nut, ten dai) thu gon mac dinh thanh 1 nut tieu de,
+   bam moi mo BOTTOM SHEET truot len tu duoi (kieu app Shopee) thay vi xoe/cuon ngay tai
+   cho - de thao tac bang ngon cai, xem het lua chon ma khong choang man hinh chinh. */
 @media(max-width:640px){
   .pft-chevron{display:inline-flex}
-  .price-filter-row{display:none;flex-wrap:wrap;margin-top:2px}
-  .price-filter-row.open{display:flex}
+  .price-filter-backdrop{display:none;position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:96}
+  .price-filter-backdrop.open{display:block;animation:pfFade .18s ease}
+  .price-filter-row{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:97;flex-direction:column;
+    background:#fff;border-radius:18px 18px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.18);
+    max-height:75vh}
+  .price-filter-row.open{display:flex;animation:pfSheetIn .22s ease}
+  .pf-sheet-head{display:flex;align-items:center;justify-content:space-between;flex:0 0 auto;
+    padding:16px 18px;border-bottom:1px solid var(--line);
+    font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--navy)}
+  .pf-sheet-close{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line-2);
+    background:#fff;font-size:19px;line-height:1;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;padding:0}
+  .pf-sheet-chips{display:flex;flex-wrap:wrap;gap:8px;overflow:auto;flex:1 1 auto;
+    padding:16px 18px calc(18px + env(safe-area-inset-bottom,0))}
+  .pf-sheet-chips .nganh-btn{background:var(--surface);border:1.5px solid var(--line-2);
+    border-radius:20px;padding:9px 15px;white-space:nowrap}
+  .pf-sheet-chips .nganh-btn.active{border-color:var(--action)}
 }
+@keyframes pfFade{from{opacity:0}to{opacity:1}}
+@keyframes pfSheetIn{from{transform:translateY(100%)}to{transform:translateY(0)}}
 
 .tab-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
 .tab-search{flex:1 1 240px}

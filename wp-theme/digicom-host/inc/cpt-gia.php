@@ -80,6 +80,11 @@ function dgc_nganh_options() {
 	);
 }
 
+/** Tach chuoi nganh luu dang "bao-lon,kinh-te" thanh mang slug (tuong thich nguoc voi du lieu cu chi co 1 gia tri, khong dau phay). */
+function dgc_gia_nganh_tags( $meta_nganh ) {
+	return array_values( array_filter( array_map( 'trim', explode( ',', (string) $meta_nganh ) ), fn( $v ) => $v !== '' ) );
+}
+
 function dgc_gia_meta_fields() {
 	return array(
 		'vi_tri'  => array( 'label' => 'Vi tri dang / loai goi', 'type' => 'text' ),
@@ -89,7 +94,7 @@ function dgc_gia_meta_fields() {
 		'yeu_cau' => array( 'label' => 'Yeu cau bai viet', 'type' => 'text' ),
 		'url_bao' => array( 'label' => 'Link toi site/bao (khong bat buoc)', 'type' => 'url' ),
 		'noi_bat' => array( 'label' => 'Danh dau "pho bien nhat"', 'type' => 'checkbox' ),
-		'nganh'   => array( 'label' => 'Nhom nganh (de loc trong bang gia)', 'type' => 'select', 'options' => dgc_nganh_options() ),
+		'nganh'   => array( 'label' => 'Nhom nganh (de loc trong bang gia) - tich nhieu neu bao dang duoc nhieu nganh', 'type' => 'checkbox_group', 'options' => dgc_nganh_options() ),
 	);
 }
 
@@ -101,6 +106,13 @@ function dgc_gia_meta_box_html( $post ) {
 		echo '<tr><th style="width:260px"><label for="' . esc_attr( $key ) . '">' . esc_html( $f['label'] ) . '</label></th><td>';
 		if ( $f['type'] === 'checkbox' ) {
 			echo '<input type="checkbox" id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '" value="1" ' . checked( $val, '1', false ) . '>';
+		} elseif ( $f['type'] === 'checkbox_group' ) {
+			$selected = array_filter( array_map( 'trim', explode( ',', (string) $val ) ) );
+			foreach ( $f['options'] as $ov => $ol ) {
+				if ( $ov === '' ) continue; // "(Chua phan loai)" - khong tich gi la ngam dinh nhom nay
+				echo '<label style="display:inline-block;margin:0 16px 6px 0"><input type="checkbox" name="' . esc_attr( $key ) . '[]" value="' . esc_attr( $ov ) . '" ' . checked( in_array( $ov, $selected, true ), true, false ) . '> ' . esc_html( $ol ) . '</label>';
+			}
+			echo '<p class="description">Tich nhieu nganh neu bao dang duoc da linh vuc (vd bao lon nhu VnExpress) - se hien o moi bo loc da tich.</p>';
 		} elseif ( $f['type'] === 'select' ) {
 			echo '<select id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '">';
 			foreach ( $f['options'] as $ov => $ol ) {
@@ -123,6 +135,9 @@ add_action( 'save_post_dgc_gia', function ( $post_id ) {
 	foreach ( dgc_gia_meta_fields() as $key => $f ) {
 		if ( $f['type'] === 'checkbox' ) {
 			update_post_meta( $post_id, $key, isset( $_POST[ $key ] ) ? '1' : '' );
+		} elseif ( $f['type'] === 'checkbox_group' ) {
+			$vals = isset( $_POST[ $key ] ) && is_array( $_POST[ $key ] ) ? array_map( 'sanitize_text_field', wp_unslash( $_POST[ $key ] ) ) : array();
+			update_post_meta( $post_id, $key, implode( ',', $vals ) );
 		} elseif ( $f['type'] === 'url' ) {
 			update_post_meta( $post_id, $key, isset( $_POST[ $key ] ) ? esc_url_raw( wp_unslash( $_POST[ $key ] ) ) : '' );
 		} else {

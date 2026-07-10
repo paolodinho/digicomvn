@@ -50,7 +50,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 		<?php $first = true; foreach ( $dgc_nhom_list as $slug => $label ) :
 			$items = $dgc_gia_theo_nhom[ $slug ];
 			$nganh_used = array();
-			foreach ( $items as $it ) { $n = $it->meta['nganh'] ?? ''; if ( $n !== '' ) $nganh_used[ $n ] = true; }
+			foreach ( $items as $it ) { foreach ( dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ) as $n ) { $nganh_used[ $n ] = true; } }
 			$has_nganh_filter = count( $nganh_used ) > 1;
 			$nganh_labels     = dgc_nganh_options();
 		?>
@@ -63,15 +63,22 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 					<svg class="pft-chevron" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
 				</button>
 				<div class="price-filter-row">
-					<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo count( $items ); ?>)</button>
-					<?php foreach ( $nganh_labels as $nslug => $nlabel ) :
-						if ( $nslug === '' || empty( $nganh_used[ $nslug ] ) ) continue;
-						$n_count = 0;
-						foreach ( $items as $it ) { if ( ( $it->meta['nganh'] ?? '' ) === $nslug ) $n_count++; }
-					?>
-					<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $nlabel ); ?> (<?php echo (int) $n_count; ?>)</button>
-					<?php endforeach; ?>
+					<div class="pf-sheet-head">
+						<span>Lọc theo nhóm báo</span>
+						<button type="button" class="pf-sheet-close" aria-label="Đóng">&times;</button>
+					</div>
+					<div class="pf-sheet-chips">
+						<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo count( $items ); ?>)</button>
+						<?php foreach ( $nganh_labels as $nslug => $nlabel ) :
+							if ( $nslug === '' || empty( $nganh_used[ $nslug ] ) ) continue;
+							$n_count = 0;
+							foreach ( $items as $it ) { if ( in_array( $nslug, dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ), true ) ) $n_count++; }
+						?>
+						<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $nlabel ); ?> (<?php echo (int) $n_count; ?>)</button>
+						<?php endforeach; ?>
+					</div>
 				</div>
+				<div class="price-filter-backdrop"></div>
 			</aside>
 			<?php endif; ?>
 			<div class="price-main">
@@ -110,7 +117,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 						$ghi_chu   = trim( implode( ' - ', array_filter( array( $m['so_link'], $m['yeu_cau'] ) ) ) );
 						$row_link  = $m['url_bao'] ? $m['url_bao'] : '';
 					?>
-						<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( $m['nganh'] ?? '' ); ?>">
+						<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>">
 							<td data-label="Tên báo/site">
 								<label class="row-check-wrap">
 									<input type="checkbox" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $label . ')' ); ?>">
@@ -213,22 +220,28 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 		var nganhBtns = panel.querySelectorAll('.nganh-btn');
 		var filterToggle   = panel.querySelector('.price-filter-toggle');
 		var filterRow      = panel.querySelector('.price-filter-row');
+		var filterBackdrop = panel.querySelector('.price-filter-backdrop');
+		var filterClose    = panel.querySelector('.pf-sheet-close');
 		var filterSelected = panel.querySelector('.pft-selected');
 		var curNganh  = '';
 
-		if (filterToggle && filterRow) {
-			filterToggle.addEventListener('click', function(){
-				var open = filterRow.classList.toggle('open');
-				filterToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-			});
+		function openFilterSheet(open){
+			if (!filterRow) return;
+			filterRow.classList.toggle('open', open);
+			if (filterBackdrop) filterBackdrop.classList.toggle('open', open);
+			if (filterToggle) filterToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+			document.body.classList.toggle('mnav-open', open);
 		}
+		if (filterToggle) filterToggle.addEventListener('click', function(){ openFilterSheet(!filterRow.classList.contains('open')); });
+		if (filterClose) filterClose.addEventListener('click', function(){ openFilterSheet(false); });
+		if (filterBackdrop) filterBackdrop.addEventListener('click', function(){ openFilterSheet(false); });
 
 		function applyFilter(){
 			var q = (input ? input.value : '').trim().toLowerCase();
 			var shown = 0;
 			rows.forEach(function(r){
 				var matchQ = !q || r.getAttribute('data-name').indexOf(q) !== -1;
-				var matchN = !curNganh || r.getAttribute('data-nganh') === curNganh;
+				var matchN = !curNganh || (' ' + r.getAttribute('data-nganh') + ' ').indexOf(' ' + curNganh + ' ') !== -1;
 				var match = matchQ && matchN;
 				r.style.display = match ? '' : 'none';
 				if (match) shown++;
@@ -251,10 +264,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 				nganhBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
 				applyFilter();
 				if (filterSelected) filterSelected.textContent = btn.textContent;
-				if (filterRow && filterRow.classList.contains('open')) {
-					filterRow.classList.remove('open');
-					if (filterToggle) filterToggle.setAttribute('aria-expanded', 'false');
-				}
+				openFilterSheet(false);
 			});
 		});
 
