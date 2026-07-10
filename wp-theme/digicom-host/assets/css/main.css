@@ -378,18 +378,22 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .tm-carousel .owl-dot.active span{background:var(--action)}
 
 /* Back to top */
+/* translateZ(0) + will-change ep cac nut fixed nay vao rieng 1 GPU layer, tranh loi
+   WebKit/iOS Safari: nut fixed bi giat/de nhau tam thoi trong luc thanh dia chi
+   dang thu/hien (viewport chieu cao dang doi dong) khi ngon tay con luot. */
 .to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--action);
   color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-mid);z-index:80;
-  opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s}
-.to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+  opacity:0;pointer-events:none;transform:translateY(10px) translateZ(0);transition:.25s;
+  will-change:transform;-webkit-backface-visibility:hidden}
+.to-top.show{opacity:1;pointer-events:auto;transform:translateY(0) translateZ(0)}
 .to-top:hover{background:var(--action-2)}
 .to-top svg{width:20px;height:20px}
 
 .fab-zalo{position:fixed;right:20px;bottom:82px;width:62px;height:62px;border-radius:50%;background:#fff;
   display:flex;align-items:center;justify-content:center;z-index:81;
   border:2px solid #0068FF;box-shadow:0 10px 26px rgba(0,104,255,.38),0 2px 8px rgba(28,32,53,.12);
-  transition:.2s}
-.fab-zalo:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 16px 34px rgba(0,104,255,.46),0 2px 8px rgba(28,32,53,.14)}
+  transition:.2s;transform:translateZ(0);will-change:transform;-webkit-backface-visibility:hidden}
+.fab-zalo:hover{transform:translateY(-2px) scale(1.04) translateZ(0);box-shadow:0 16px 34px rgba(0,104,255,.46),0 2px 8px rgba(28,32,53,.14)}
 .fab-zalo svg{width:38px;height:38px}
 
 /* Bottom nav - mobile only */
@@ -399,6 +403,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   body{padding-bottom:var(--bn-h)}
   .bottom-nav{
     display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;
+    transform:translateZ(0);will-change:transform;-webkit-backface-visibility:hidden;
     background:#fff;border-top:1px solid var(--line);
     box-shadow:0 -4px 16px rgba(0,0,0,.06);
     padding-bottom:env(safe-area-inset-bottom,0)
