@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '0.7.7' );
+define( 'DGC_VER', '0.7.8' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -115,6 +115,8 @@ function dgc_icon( $name ) {
 		'layers' => 'M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 8l9 5 9-5',
 		'tag'   => 'M12 2H4v8l10 10 8-8L12 2zM7 7h.01',
 		'edit'  => 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z',
+		'facebook' => 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z',
+		'linkedin' => 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z',
 	);
 	if ( empty( $paths[ $name ] ) ) return '';
 	return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="' . esc_attr( $paths[ $name ] ) . '"/></svg>';
@@ -172,6 +174,82 @@ function dgc_handle_lead() {
 }
 add_action( 'admin_post_dgc_lead', 'dgc_handle_lead' );
 add_action( 'admin_post_nopriv_dgc_lead', 'dgc_handle_lead' );
+
+/* ---------------------------------------------------------------------------
+ * Trang tac gia: them Facebook/LinkedIn vao ho so user (WP Admin > Ho so),
+ * sua duoc khong can cham code (rule wordpress-non-code-editable).
+ * ------------------------------------------------------------------------- */
+add_action( 'show_user_profile', 'dgc_author_social_fields' );
+add_action( 'edit_user_profile', 'dgc_author_social_fields' );
+function dgc_author_social_fields( $user ) {
+	wp_enqueue_media();
+	$avatar_id  = (int) get_user_meta( $user->ID, 'dgc_avatar_id', true );
+	$avatar_url = $avatar_id ? wp_get_attachment_image_url( $avatar_id, 'thumbnail' ) : '';
+	?>
+	<h2>Trang tác giả (hiển thị ở /author/...)</h2>
+	<table class="form-table">
+		<tr>
+			<th><label for="dgc_avatar_id">Ảnh đại diện thật</label></th>
+			<td>
+				<img id="dgc-avatar-preview" src="<?php echo esc_url( $avatar_url ); ?>" style="max-width:96px;height:auto;border-radius:50%;display:<?php echo $avatar_url ? 'block' : 'none'; ?>;margin-bottom:8px" />
+				<input type="hidden" name="dgc_avatar_id" id="dgc_avatar_id" value="<?php echo esc_attr( $avatar_id ); ?>" />
+				<button type="button" class="button" id="dgc-avatar-pick">Chọn ảnh</button>
+				<button type="button" class="button" id="dgc-avatar-clear" style="display:<?php echo $avatar_url ? 'inline-block' : 'none'; ?>">Bỏ ảnh</button>
+				<p class="description">Dùng ảnh chân dung thật, không dùng ảnh mẫu/stock (rule chống AI-slop).</p>
+			</td>
+		</tr>
+		<tr>
+			<th><label for="dgc_facebook">Facebook</label></th>
+			<td><input type="url" name="dgc_facebook" id="dgc_facebook" value="<?php echo esc_attr( get_user_meta( $user->ID, 'dgc_facebook', true ) ); ?>" class="regular-text" placeholder="https://web.facebook.com/..." /></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_linkedin">LinkedIn</label></th>
+			<td><input type="url" name="dgc_linkedin" id="dgc_linkedin" value="<?php echo esc_attr( get_user_meta( $user->ID, 'dgc_linkedin', true ) ); ?>" class="regular-text" placeholder="https://www.linkedin.com/in/..." /></td>
+		</tr>
+	</table>
+	<script>
+	jQuery(function ($) {
+		var frame;
+		$('#dgc-avatar-pick').on('click', function (e) {
+			e.preventDefault();
+			if (frame) { frame.open(); return; }
+			frame = wp.media({ title: 'Chọn ảnh đại diện', multiple: false, library: { type: 'image' } });
+			frame.on('select', function () {
+				var att = frame.state().get('selection').first().toJSON();
+				$('#dgc_avatar_id').val(att.id);
+				$('#dgc-avatar-preview').attr('src', att.sizes && att.sizes.thumbnail ? att.sizes.thumbnail.url : att.url).show();
+				$('#dgc-avatar-clear').show();
+			});
+			frame.open();
+		});
+		$('#dgc-avatar-clear').on('click', function (e) {
+			e.preventDefault();
+			$('#dgc_avatar_id').val('');
+			$('#dgc-avatar-preview').hide();
+			$(this).hide();
+		});
+	});
+	</script>
+	<?php
+}
+add_action( 'personal_options_update', 'dgc_save_author_social_fields' );
+add_action( 'edit_user_profile_update', 'dgc_save_author_social_fields' );
+function dgc_save_author_social_fields( $user_id ) {
+	if ( ! current_user_can( 'edit_user', $user_id ) ) return;
+	if ( isset( $_POST['dgc_facebook'] ) ) update_user_meta( $user_id, 'dgc_facebook', esc_url_raw( wp_unslash( $_POST['dgc_facebook'] ) ) );
+	if ( isset( $_POST['dgc_linkedin'] ) ) update_user_meta( $user_id, 'dgc_linkedin', esc_url_raw( wp_unslash( $_POST['dgc_linkedin'] ) ) );
+	if ( isset( $_POST['dgc_avatar_id'] ) ) update_user_meta( $user_id, 'dgc_avatar_id', absint( $_POST['dgc_avatar_id'] ) );
+}
+
+/** Lay initial (chu cai dau) tu display_name de lam avatar mac dinh khi chua co anh that. */
+function dgc_author_initials( $name ) {
+	$parts = preg_split( '/\s+/', trim( (string) $name ) );
+	$parts = array_filter( $parts );
+	if ( ! $parts ) return '?';
+	$first = mb_substr( reset( $parts ), 0, 1 );
+	$last  = count( $parts ) > 1 ? mb_substr( end( $parts ), 0, 1 ) : '';
+	return mb_strtoupper( $first . $last );
+}
 
 /* Bo em dash o noi dung hien thi (rule global). */
 function dgc_no_dash( $s ) {

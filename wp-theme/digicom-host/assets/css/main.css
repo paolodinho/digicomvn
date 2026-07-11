@@ -935,3 +935,28 @@ body.mnav-open{overflow:hidden}
 }
 @media(max-width:1450px){.brand-watermark{display:none}}
 @media(prefers-reduced-motion:reduce){.brand-watermark img,.brand-watermark span{animation:none}}
+
+/* --- Trang tac gia (/author/...) + byline bai viet --- */
+.author-hero__row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.author-avatar{width:112px;height:112px;border-radius:50%;object-fit:cover;flex:0 0 auto;
+  border:3px solid #fff;box-shadow:var(--sh-mid)}
+.author-avatar--fallback{display:flex;align-items:center;justify-content:center;
+  background:var(--navy);color:#fff;font-family:var(--font-display);font-weight:700;
+  font-size:34px;letter-spacing:.02em}
+.author-social{display:flex;gap:14px;flex-wrap:wrap}
+.author-social a{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);
+  font-weight:600;font-size:13.5px;color:var(--navy);text-decoration:none}
+.author-social a svg{width:18px;height:18px}
+.author-social a:hover{color:var(--action)}
+.post-byline{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--ink-soft)}
+.post-byline a{color:var(--navy);font-weight:600;text-decoration:none}
+.post-byline a:hover{color:var(--action)}
+.post-byline__avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.post-byline__avatar--fallback{display:flex;align-items:center;justify-content:center;
+  background:var(--navy);color:#fff;font-family:var(--font-display);font-weight:700;
+  font-size:13px}
+@media(max-width:640px){
+  .author-hero__row{gap:16px}
+  .author-avatar{width:84px;height:84px}
+  .author-avatar--fallback{font-size:26px}
+}

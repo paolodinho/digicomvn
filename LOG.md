@@ -709,3 +709,23 @@
   bao-dau-tu) dang publish va co trong sitemap, nhung pivot-2026-07.md ghi la
   "DRAFT, cho Hieu xac nhan danh sach bao that hop tac truoc khi publish" - can
   Hieu xac nhan da hop tac that voi cac bao nay chua, neu chua thi nen draft lai.
+
+## 2026-07-11 (2) - Trang tac gia cho Hieu
+- Doi display_name user WP tu "Do Hieu" sang "Hieu Đo" (dung ten hien thi cong khai theo
+  yeu cau). Bio cu (mo ta "200 du an, Viettel/Vingroup/EVN, khach Uc/Nhat/My") la content
+  agency cu, khong xac minh duoc va sai pham vi dich vu hien tai - viet lai bio moi, khiem
+  ton, dung dich vu that (Textlink/Backlink/Guest Post/Booking bao PR).
+- Them field Facebook/LinkedIn + anh dai dien that vao trang Ho so WP Admin (User edit) -
+  sua duoc khong can code (rule wordpress-non-code-editable). Da luu:
+  FB https://web.facebook.com/paolodinho/, LinkedIn .../hieu-d-193b128a/.
+  CHUA co anh that (file "author_image" co san tren site la anh mau/demo, Hieu xac nhan
+  KHONG phai anh that - da hoi truoc khi dung, dung avatar chu cai "HD" tam thoi).
+- Tao template `author.php` (URL /author/do-hieu/): hero + avatar + bio + link MXH +
+  danh sach bai da viet + Person schema JSON-LD (E-E-A-T).
+- Them byline "Tac gia [ten] · ngay dang" vao dau moi bai blog (single.php).
+- Phat hien + fix loi rieng: 14/108 bai blog co post_author=0 (import thieu tac gia) ->
+  khong hien byline dung, trang tac gia se thieu bai. Da cap nhat ca 14 bai ve tac gia
+  Hieu Đo (ID 1) - backup ID cu truoc khi sua.
+- Deploy DGC_VER 0.7.8 len live, purge cache, verify byline + trang tac gia hien dung.
+- CON THIEU: anh chan dung that cua Hieu - khi co, vao WP Admin > Ho so > "Chon anh" de
+  thay avatar chu cai bang anh that.

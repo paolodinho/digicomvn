@@ -13,6 +13,21 @@ get_header();
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'large', array( 'class' => 'single-post-thumb' ) ); ?>
 			<?php endif; ?>
+
+			<?php
+			$dgc_author_id  = (int) get_the_author_meta( 'ID' );
+			$dgc_avatar_id  = get_user_meta( $dgc_author_id, 'dgc_avatar_id', true );
+			$dgc_avatar_url = $dgc_avatar_id ? wp_get_attachment_image_url( (int) $dgc_avatar_id, 'thumbnail' ) : '';
+			?>
+			<div class="post-byline" style="max-width:820px;margin:0 auto 24px">
+				<?php if ( $dgc_avatar_url ) : ?>
+					<img class="post-byline__avatar" src="<?php echo esc_url( $dgc_avatar_url ); ?>" alt="<?php the_author(); ?>" width="40" height="40">
+				<?php else : ?>
+					<span class="post-byline__avatar post-byline__avatar--fallback"><?php echo esc_html( dgc_author_initials( get_the_author() ) ); ?></span>
+				<?php endif; ?>
+				<span>Tác giả <a href="<?php echo esc_url( get_author_posts_url( $dgc_author_id ) ); ?>"><?php the_author(); ?></a> · <?php echo esc_html( get_the_date( 'd/m/Y' ) ); ?></span>
+			</div>
+
 			<article class="page-content" style="max-width:820px;margin:0 auto 40px">
 				<?php the_content(); ?>
 			</article>
