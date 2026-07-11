@@ -17,7 +17,7 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 	</div>
 	<h3 style="margin-top:0"><?php echo esc_html( $dgc_form_title ); ?></h3>
 	<?php if ( $sent === 'ok' ) : ?>
-		<div class="alert alert-ok">Đã nhận yêu cầu của bạn. Digicom sẽ liên hệ lại sớm nhất.</div>
+		<div class="alert alert-ok">Đã nhận yêu cầu của bạn. DigicomVN sẽ liên hệ lại sớm nhất.</div>
 	<?php elseif ( $sent === 'err' ) : ?>
 		<div class="alert" style="background:#fdecea;border:1px solid #f5c6c0;color:#a3271b">Vui lòng nhập họ tên và số điện thoại hoặc email.</div>
 	<?php endif; ?>

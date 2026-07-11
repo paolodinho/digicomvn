@@ -57,7 +57,7 @@ get_header();
 
 			<div class="wrap" style="max-width:820px;margin:0 auto 40px;padding:0">
 				<div class="cta-band">
-					<div><h2>Cần triển khai off-page SEO thực tế?</h2><p>Digicom hỗ trợ Textlink, Backlink, Guest Post và Booking báo &amp; PR theo đúng kiến thức trong bài này.</p></div>
+					<div><h2>Cần triển khai off-page SEO thực tế?</h2><p>DigicomVN hỗ trợ Textlink, Backlink, Guest Post và Booking báo &amp; PR theo đúng kiến thức trong bài này.</p></div>
 					<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a></div>
 				</div>
 			</div>

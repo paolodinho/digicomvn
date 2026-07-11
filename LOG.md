@@ -729,3 +729,60 @@
 - Deploy DGC_VER 0.7.8 len live, purge cache, verify byline + trang tac gia hien dung.
 - CON THIEU: anh chan dung that cua Hieu - khi co, vao WP Admin > Ho so > "Chon anh" de
   thay avatar chu cai bang anh that.
+
+## 2026-07-11 - Sua dinh vi noi dung 5 bai PR (bai-pr/2026/07/)
+- Hieu chi ra dinh vi sai: 5 bai PR truoc do mo ta Digicom "lam website + automation" -
+  KHONG dung voi dich-vu.md hien tai (giai doan 1 chi co Mua Textlink/Backlink/Guest
+  Post/Booking bao PR; website la giai doan 2, dang draft).
+- Viet lai toan bo 5 bai: trong tam dich vu truyen thong + booking bao chi, automation la
+  cach Digicom van hanh (khong phai dich vu ban rieng). Nhan manh ly do booking bao chi
+  quan trong trong thoi AI: la tin hieu giup thuong hieu duoc AI search (ChatGPT, Google AI
+  Overview, Perplexity) va Google nhan dien - cham nhe SEO/GEO.
+- Doi anh dai dien bai Angiang: tu nha may My (industrial-warehouse.jpg, sai boi canh) sang
+  anh khu cong nghiep that tai Viet Nam (industrial-park.jpg, nguon Wikimedia CC BY-SA,
+  khong dinh brand cu the).
+- Giu nguyen: sapo, tit phu (Heading2), doan van ngan (mobile-friendly), 1 link Digicom +
+  1 link ICD moi bai (rieng bai Angiang: 1 link Digicom + 1 link tac gia /author/do-hieu/,
+  khong con link ICD theo yeu cau truoc).
+- Da regenerate + validate + deploy ca 5 file .docx vao Downloads/PR-Digicom-5-bai/ va
+  bai-pr/2026/07/.
+- CON THIEU: file DKKD cho Baodanang.vn (Hieu chua gui).
+
+## 2026-07-11 (tiep) - Fix anh 5 bai PR + loi mat anh
+- Phat hien loi ky thuat: script merge lai bi ghi de rong mang "images" cho 4/5 bai (02-05)
+  khi regenerate lan truoc -> file .docx Hieu nhan thuc te KHONG CO anh nao o 4 bai do.
+  Day la nguyen nhan chinh cua feedback "anh van chua duoc".
+- Ngoai loi mat anh, ra soat lai toan bo pool anh cu (keyboard/callcenter/desktop-calc/
+  typing-analytics/ai-wordcloud) va phat hien deu la stock nuoc ngoai/lac hau: ban phim co
+  ky hieu £/€ (khong phai VN), callcenter kieu My thap nien 1990 voi man hinh CRT, wordcloud
+  clip-art, anh overlay bieu do gia tao - khong dat chat luong, bo toan bo.
+- Thay bang anh that, xac thuc tung dia phuong (nguon Wikimedia Commons, CC BY-SA/CC0):
+  Angiang -> khu cong nghiep VN + cho noi Can Tho; Danang -> skyline Da Nang (giu nguyen,
+  da dung tot); Tuyen Quang -> toan canh TP Tuyen Quang; Ha Tinh -> TP Ha Tinh; Dong Nai ->
+  khu cong nghiep VN + KCN Nhon Trach.
+- Giam so luong anh/bai (2 anh cho 01/02/05, 1 anh cho 03/04) de uu tien chat luong that
+  hon so luong anh stock gia tao - can hoi Hieu neu muon bo sung them anh cho du so luong
+  toi thieu tung dau bao yeu cau.
+- Da regenerate + validate + deploy lai ca 5 file vao Downloads/PR-Digicom-5-bai/ va
+  bai-pr/2026/07/.
+
+## 2026-07-11 (3) - Thong nhat thuong hieu DigicomVN
+- Hieu chot: thuong hieu goi tat "DigicomVN", ten day du van la "Cong ty TNHH Dich vu
+  Truyen thong Digito Combat" (khong doi).
+- Backup full DB (mysqldump, 7.3MB) truoc khi sua - luu
+  _backups/routines/2026-07-11/brand-digicomvn/dgc-pre-brand.sql.gz.
+- Chay `wp search-replace 'Digicom' 'DigicomVN'` tren wp_posts/wp_postmeta/wp_options/
+  wp_usermeta/wp_terms (dry-run truoc, xac nhan pham vi 331 cho thay the) - cap nhat
+  108 bai blog, 5 trang, tieu de site (blogname), bio tac gia, cac dong FAQ/gia tri
+  dgc_settings da luu tu truoc.
+- Sua 18 file theme (header, footer, front-page, page-*, single, author, category,
+  tpl-*, inc/options.php, inc/form-lead.php) - moi cho hien "Digicom" doc lap (logo
+  text, tieu de trang, CTA, schema tac gia...) doi thanh "DigicomVN". Khong dong den
+  "Digito Combat" (ten phap nhan), slug URL (/ve-digicom/...), prefix code dgc_/DGC_.
+- Deploy DGC_VER 0.7.9, php -l pass ca 18 file, purge cache, verify: <title>, H1 trang
+  Ve DigicomVN, footer copyright, menu, 1 bai blog mau - deu dung "DigicomVN".
+- PHAT HIEN RIENG (chua sua): file logo hinh (logo-digicom.png, dung o header + favicon)
+  la anh wordmark co san chu "Digicom" NUNG SAN TRONG ANH - sua text code khong doi
+  duoc phan nay. Can Hieu quyet dinh: (1) gui file logo moi co chu "DigicomVN", hoac
+  (2) Claude thu sua lai file anh hien co (font/mau tuong tu) - can xac nhan truoc khi
+  lam vi ANH LA ASSET THUONG HIEU (rule ui-anti-slop: dung logo that, hoi truoc khi sua).

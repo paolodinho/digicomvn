@@ -35,7 +35,7 @@ $nhom     = dgc_current_nhom();
 
 <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:34px"><span class="eyebrow">Quy trình</span><h2>Cách Digicom triển khai</h2></div>
+		<div class="center" style="margin-bottom:34px"><span class="eyebrow">Quy trình</span><h2>Cách DigicomVN triển khai</h2></div>
 		<div class="proc">
 			<div class="step"><h3>Khảo sát</h3><p>Tìm hiểu mục tiêu, hiện trạng và yêu cầu của bạn.</p></div>
 			<div class="step"><h3>Đề xuất &amp; báo giá</h3><p>Lên phương án, phạm vi công việc và báo giá minh bạch.</p></div>
@@ -51,7 +51,7 @@ $nhom     = dgc_current_nhom();
 			<div class="col">
 				<span class="eyebrow">Báo giá</span>
 				<h2>Nhận tư vấn &amp; báo giá <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2>
-				<p class="muted">Mỗi dự án có nhu cầu khác nhau. Để lại thông tin, Digicom sẽ tư vấn giải pháp và gửi báo giá phù hợp.</p>
+				<p class="muted">Mỗi dự án có nhu cầu khác nhau. Để lại thông tin, DigicomVN sẽ tư vấn giải pháp và gửi báo giá phù hợp.</p>
 				<ul class="page-content" style="font-size:15.5px"><li>Tư vấn miễn phí, không ràng buộc.</li><li>Báo giá rõ ràng theo phạm vi công việc.</li><li>Đội ngũ chuyên môn, có cam kết tiến độ.</li></ul>
 			</div>
 			<div class="col"><?php
@@ -65,7 +65,7 @@ $nhom     = dgc_current_nhom();
 </section>
 
 <section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Bắt đầu cùng Digicom</h2><p>Liên hệ ngay để được tư vấn giải pháp phù hợp doanh nghiệp của bạn.</p></div>
+	<div><h2>Bắt đầu cùng DigicomVN</h2><p>Liên hệ ngay để được tư vấn giải pháp phù hợp doanh nghiệp của bạn.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="#lien-he">Nhận báo giá</a></div>
 </div></div></section>
 

@@ -7,6 +7,7 @@
 | Trường | Nội dung |
 |---|---|
 | Thương hiệu | Digicom - Agency truyền thông số |
+| Tên gọi tắt thống nhất | **DigicomVN** (dùng trong mọi nội dung PR/bài viết/anchor text, thay vì "Digicom" đơn lẻ - chốt 2026-07-11) |
 | Pháp nhân | Công ty TNHH Dịch vụ Truyền thông Digito Combat |
 | MST | 0109816406 |
 | Domain | https://digicomvn.com |

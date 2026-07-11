@@ -14,7 +14,7 @@
 	<?php if ( $dgc_wm_logo ) : ?>
 		<img src="<?php echo esc_url( $dgc_wm_logo ); ?>" alt="">
 	<?php else : ?>
-		<span>Digicom</span>
+		<span>DigicomVN</span>
 	<?php endif; ?>
 </div>
 
@@ -31,7 +31,7 @@
 <header class="site-header">
 	<div class="wrap">
 		<?php if ( has_custom_logo() ) : the_custom_logo(); else : ?>
-			<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">Digicom<span class="dot">.</span></a>
+			<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">DigicomVN<span class="dot">.</span></a>
 		<?php endif; ?>
 
 		<nav class="nav">

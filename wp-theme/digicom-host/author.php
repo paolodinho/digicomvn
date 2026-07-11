@@ -21,8 +21,8 @@ $dgc_schema = array(
 	'@type'     => 'Person',
 	'name'      => $dgc_name,
 	'url'       => $dgc_url,
-	'jobTitle'  => 'Founder, Digicom',
-	'worksFor'  => array( '@type' => 'Organization', 'name' => 'Digicom', 'url' => home_url( '/' ) ),
+	'jobTitle'  => 'Founder, DigicomVN',
+	'worksFor'  => array( '@type' => 'Organization', 'name' => 'DigicomVN', 'url' => home_url( '/' ) ),
 );
 if ( $dgc_bio ) $dgc_schema['description'] = wp_strip_all_tags( $dgc_bio );
 if ( $dgc_avatar ) $dgc_schema['image'] = $dgc_avatar;
@@ -44,7 +44,7 @@ if ( $dgc_same_as ) $dgc_schema['sameAs'] = array_values( $dgc_same_as );
 			<div>
 				<span class="eyebrow">Tác giả</span>
 				<h1><?php echo esc_html( $dgc_name ); ?></h1>
-				<p class="lead" style="margin-bottom:14px">Founder Digicom - phụ trách nội dung &amp; chiến lược off-page SEO.</p>
+				<p class="lead" style="margin-bottom:14px">Founder DigicomVN - phụ trách nội dung &amp; chiến lược off-page SEO.</p>
 				<?php if ( $dgc_fb || $dgc_li ) : ?>
 				<div class="author-social">
 					<?php if ( $dgc_fb ) : ?><a href="<?php echo esc_url( $dgc_fb ); ?>" target="_blank" rel="noopener me" aria-label="Facebook cá nhân"><?php echo dgc_icon( 'facebook' ); ?><span>Facebook</span></a><?php endif; ?>
@@ -97,7 +97,7 @@ if ( $dgc_same_as ) $dgc_schema['sameAs'] = array_values( $dgc_same_as );
 </section>
 
 <section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Cần triển khai off-page SEO thực tế?</h2><p>Digicom hỗ trợ Textlink, Backlink, Guest Post và Booking báo &amp; PR cho doanh nghiệp của bạn.</p></div>
+	<div><h2>Cần triển khai off-page SEO thực tế?</h2><p>DigicomVN hỗ trợ Textlink, Backlink, Guest Post và Booking báo &amp; PR cho doanh nghiệp của bạn.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a></div>
 </div></div></section>
 

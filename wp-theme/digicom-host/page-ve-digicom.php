@@ -1,16 +1,16 @@
 <?php
 /**
- * Template trang Ve Digicom (slug "ve-digicom").
+ * Template trang Ve DigicomVN (slug "ve-digicom").
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 ?>
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Về Digicom</nav></div>
+<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Về DigicomVN</nav></div>
 
 <section class="page-hero">
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Về chúng tôi</span>
-		<h1>Digicom - đối tác off-page SEO của doanh nghiệp</h1>
+		<h1>DigicomVN - đối tác off-page SEO của doanh nghiệp</h1>
 		<p class="lead">Chuyên Textlink, Backlink, Guest Post và Booking báo &amp; PR - đồng hành cùng doanh nghiệp xây dựng hệ thống liên kết chất lượng và hiện diện trên báo chí.</p>
 	</div>
 </section>
@@ -18,8 +18,8 @@ get_header();
 <section class="sec">
 	<div class="wrap page-content">
 		<?php if ( get_the_content() ) : the_content(); else : ?>
-			<p>Digicom là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat. Chúng tôi tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử.</p>
-			<p>Digicom chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
+			<p>DigicomVN là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat. Chúng tôi tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử.</p>
+			<p>DigicomVN chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
 		<?php endif; ?>
 	</div>
 </section>
@@ -56,12 +56,12 @@ get_header();
 				</p>
 			</div>
 		</div>
-		<p class="form-note" style="margin-top:14px">Ảnh đội ngũ và văn phòng sẽ được bổ sung (cần ảnh thật từ Digicom).</p>
+		<p class="form-note" style="margin-top:14px">Ảnh đội ngũ và văn phòng sẽ được bổ sung (cần ảnh thật từ DigicomVN).</p>
 	</div>
 </section>
 
 <section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Hợp tác cùng Digicom</h2><p>Liên hệ để được tư vấn giải pháp số phù hợp doanh nghiệp của bạn.</p></div>
+	<div><h2>Hợp tác cùng DigicomVN</h2><p>Liên hệ để được tư vấn giải pháp số phù hợp doanh nghiệp của bạn.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Liên hệ</a></div>
 </div></div></section>
 

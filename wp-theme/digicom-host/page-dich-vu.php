@@ -38,8 +38,8 @@ $dgc_dich_vu_list = array(
 <section class="page-hero">
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Dịch vụ</span>
-		<h1><?php echo esc_html( get_the_title() ?: 'Dịch vụ off-page SEO của Digicom' ); ?></h1>
-		<p class="lead">Digicom tập trung 4 dịch vụ off-page SEO cốt lõi - chọn dịch vụ bên dưới để xem chi tiết, bảng giá và cách đặt.</p>
+		<h1><?php echo esc_html( get_the_title() ?: 'Dịch vụ off-page SEO của DigicomVN' ); ?></h1>
+		<p class="lead">DigicomVN tập trung 4 dịch vụ off-page SEO cốt lõi - chọn dịch vụ bên dưới để xem chi tiết, bảng giá và cách đặt.</p>
 	</div>
 </section>
 
@@ -60,7 +60,7 @@ $dgc_dich_vu_list = array(
 <section class="sec" style="background:var(--surface);border-top:1px solid var(--line)">
 	<div class="wrap center">
 		<h2>Chưa rõ nên chọn dịch vụ nào?</h2>
-		<p class="muted" style="max-width:520px;margin:0 auto 20px">Xem bảng giá chi tiết theo từng báo/site, hoặc gửi yêu cầu để Digicom tư vấn trực tiếp.</p>
+		<p class="muted" style="max-width:520px;margin:0 auto 20px">Xem bảng giá chi tiết theo từng báo/site, hoặc gửi yêu cầu để DigicomVN tư vấn trực tiếp.</p>
 		<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
 			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a>
 			<a class="btn btn-ghost" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu tư vấn</a>

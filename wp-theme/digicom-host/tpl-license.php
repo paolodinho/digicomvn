@@ -24,7 +24,7 @@ $name = get_the_title();
 
 <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Cam kết</span><h2>Vì sao mua bản quyền tại Digicom</h2></div>
+		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Cam kết</span><h2>Vì sao mua bản quyền tại DigicomVN</h2></div>
 		<div class="feat-row">
 			<div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z"/></svg></div><h3>Bản quyền chính hãng</h3><p>Key/license hợp lệ, kích hoạt trực tiếp từ nhà cung cấp.</p></div>
 			<div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 8v4l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div><h3>Kích hoạt nhanh</h3><p>Bàn giao và hỗ trợ kích hoạt ngay sau khi thanh toán.</p></div>

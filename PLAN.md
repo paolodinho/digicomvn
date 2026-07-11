@@ -78,6 +78,9 @@ web/tên miền/hosting ở giai đoạn 2.
       media/Downloads) để dựng section logo giữa phần "Đầu báo" và "Testimonial".
 - [ ] Gửi nội dung/số liệu case study thật để điền vào tab Case study (khung đã dựng sẵn, đang rỗng).
 - [ ] Hiếu tự mở digicom.local kiểm tra giao diện mới, xác nhận màu #4761FF ưng ý.
+- [ ] Hiếu gửi file logo mới có chữ "DigicomVN" (logo hiện tại - logo-digicom.png - nung
+      sẵn chữ "Digicom" trong ảnh, đã đổi hết text trên site sang DigicomVN nhưng riêng
+      file logo/favicon này cần ảnh mới mới thay được) - 2026-07-11.
 Ngoài ra không còn việc gấp - 4 dịch vụ đã đủ nội dung, giá, demo. Tiếp theo tuỳ Hiếu quyết định
 khi nào chuyển sang giai đoạn 2 bên dưới.
 

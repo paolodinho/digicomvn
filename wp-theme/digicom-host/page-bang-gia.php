@@ -26,7 +26,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 <section class="page-hero">
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Bảng giá</span>
-		<h1>Bảng giá dịch vụ Digicom</h1>
+		<h1>Bảng giá dịch vụ DigicomVN</h1>
 		<p class="lead">Tra cứu giá cụ thể theo từng báo, site và gói dịch vụ - Textlink, Backlink, Guest Post, Booking báo &amp; PR. Lọc, sắp xếp và ước tính chi phí ngay bên dưới.</p>
 	</div>
 </section>
@@ -177,7 +177,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 <?php endif; ?>
 
 <section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Cần báo giá chi tiết?</h2><p>Liên hệ Digicom để được tư vấn gói phù hợp và ưu đãi tốt nhất.</p></div>
+	<div><h2>Cần báo giá chi tiết?</h2><p>Liên hệ DigicomVN để được tư vấn gói phù hợp và ưu đãi tốt nhất.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Liên hệ</a></div>
 </div></div></section>
 

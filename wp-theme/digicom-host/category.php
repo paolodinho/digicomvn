@@ -2,7 +2,7 @@
 /**
  * Template danh sach bai viet theo Cum chu de (category archive).
  * Tai su dung blog-card grid tu home.php + thanh dieu huong sang cum khac (so do cum chu de)
- * + CTA dan ve dich vu off-page SEO cua Digicom.
+ * + CTA dan ve dich vu off-page SEO cua DigicomVN.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -73,7 +73,7 @@ $dgc_all_cats = get_categories( array( 'hide_empty' => true, 'orderby' => 'name'
 </section>
 
 <section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Cần triển khai off-page SEO thực tế?</h2><p>Digicom hỗ trợ Textlink, Backlink, Guest Post và Booking báo &amp; PR - áp dụng đúng kiến thức trên vào website của bạn.</p></div>
+	<div><h2>Cần triển khai off-page SEO thực tế?</h2><p>DigicomVN hỗ trợ Textlink, Backlink, Guest Post và Booking báo &amp; PR - áp dụng đúng kiến thức trên vào website của bạn.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a></div>
 </div></div></section>
 

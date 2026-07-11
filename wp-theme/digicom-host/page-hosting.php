@@ -58,7 +58,7 @@ get_header();
 			?>
 			</tbody>
 		</table>
-		<p class="form-note" style="text-align:center;margin-top:12px">Sửa thông số từng gói trong WP Admin &rarr; Digicom &rarr; Gói hosting.</p>
+		<p class="form-note" style="text-align:center;margin-top:12px">Sửa thông số từng gói trong WP Admin &rarr; DigicomVN &rarr; Gói hosting.</p>
 	</div>
 </section>
 
@@ -74,7 +74,7 @@ get_header();
 </section>
 
 <section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Chưa biết chọn gói nào?</h2><p>Để Digicom tư vấn miễn phí gói hosting phù hợp nhu cầu của bạn.</p></div>
+	<div><h2>Chưa biết chọn gói nào?</h2><p>Để DigicomVN tư vấn miễn phí gói hosting phù hợp nhu cầu của bạn.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Liên hệ</a></div>
 </div></div></section>
 

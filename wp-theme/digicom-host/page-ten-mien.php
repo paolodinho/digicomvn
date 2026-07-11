@@ -17,7 +17,7 @@ get_header();
 				<input type="text" placeholder="Nhập tên miền bạn muốn tìm..." aria-label="Tên miền">
 				<button type="submit">Kiểm tra</button>
 			</form>
-			<p class="muted" style="font-size:12.5px;margin:10px 2px 0">Đăng ký qua đối tác PA Việt Nam - Digicom hỗ trợ tư vấn và kỹ thuật.</p>
+			<p class="muted" style="font-size:12.5px;margin:10px 2px 0">Đăng ký qua đối tác PA Việt Nam - DigicomVN hỗ trợ tư vấn và kỹ thuật.</p>
 		</div>
 	</div>
 </section>
@@ -42,7 +42,7 @@ get_header();
 
 <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Vì sao chọn Digicom</span><h2>Đăng ký tên miền an tâm</h2></div>
+		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Vì sao chọn DigicomVN</span><h2>Đăng ký tên miền an tâm</h2></div>
 		<div class="feat-row">
 			<div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><h3>Chuyển về miễn phí</h3><p>Hỗ trợ chuyển tên miền từ nhà cung cấp khác, không gián đoạn.</p></div>
 			<div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 8v4l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div><h3>Kích hoạt tức thì</h3><p>Tên miền sẵn sàng ngay sau khi thanh toán.</p></div>
@@ -68,7 +68,7 @@ get_header();
 </section>
 
 <section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Cần tư vấn chọn tên miền?</h2><p>Digicom hỗ trợ chọn và đăng ký tên miền phù hợp thương hiệu của bạn.</p></div>
+	<div><h2>Cần tư vấn chọn tên miền?</h2><p>DigicomVN hỗ trợ chọn và đăng ký tên miền phù hợp thương hiệu của bạn.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Liên hệ</a></div>
 </div></div></section>
 

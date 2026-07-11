@@ -10,8 +10,8 @@ get_header();
 <section class="page-hero">
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Liên hệ</span>
-		<h1><?php echo esc_html( get_the_title() ?: 'Liên hệ Digicom' ); ?></h1>
-		<p class="lead">Để lại thông tin, đội ngũ Digicom sẽ liên hệ tư vấn và báo giá trong thời gian sớm nhất.</p>
+		<h1><?php echo esc_html( get_the_title() ?: 'Liên hệ DigicomVN' ); ?></h1>
+		<p class="lead">Để lại thông tin, đội ngũ DigicomVN sẽ liên hệ tư vấn và báo giá trong thời gian sớm nhất.</p>
 	</div>
 </section>
 

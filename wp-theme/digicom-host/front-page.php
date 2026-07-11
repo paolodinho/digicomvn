@@ -1,6 +1,6 @@
 <?php
 /**
- * Trang chu Digicom - dich vu Textlink, Backlink, Guest Post, Booking bao & PR.
+ * Trang chu DigicomVN - dich vu Textlink, Backlink, Guest Post, Booking bao & PR.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -28,7 +28,7 @@ get_header();
 				</div>
 			</div>
 			<div class="hero-media">
-				<div class="img-ph">Ảnh đội ngũ Digicom đang cập nhật</div>
+				<div class="img-ph">Ảnh đội ngũ DigicomVN đang cập nhật</div>
 			</div>
 		</div>
 	</div>
@@ -69,7 +69,7 @@ $svc_meta = array(
 <section class="sec" id="services" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:40px">
-			<span class="eyebrow">Dịch vụ của Digicom</span>
+			<span class="eyebrow">Dịch vụ của DigicomVN</span>
 			<h2>Off-page SEO trọn gói cho doanh nghiệp</h2>
 			<p class="muted">Từ mua textlink, backlink, guest post đến booking đăng bài PR trên báo điện tử.</p>
 		</div>
@@ -101,16 +101,16 @@ $svc_meta = array(
 		<div class="whoweare-grid">
 			<div class="whoweare-copy">
 				<span class="eyebrow">Chúng tôi là ai</span>
-				<h2>Digicom - thương hiệu off-page SEO của Digito Combat</h2>
-				<p class="lead" style="color:rgba(255,255,255,.82)">Digicom là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat, tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử. Digicom chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
-				<p style="margin-top:16px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về Digicom &rarr;</a></p>
+				<h2>DigicomVN - thương hiệu off-page SEO của Digito Combat</h2>
+				<p class="lead" style="color:rgba(255,255,255,.82)">DigicomVN là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat, tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử. DigicomVN chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
+				<p style="margin-top:16px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về DigicomVN &rarr;</a></p>
 			</div>
 			<div class="whoweare-media">
-				<div class="img-ph img-ph-dark">Ảnh đội ngũ Digicom đang cập nhật</div>
+				<div class="img-ph img-ph-dark">Ảnh đội ngũ DigicomVN đang cập nhật</div>
 			</div>
 		</div>
 		<div class="center" style="margin-top:56px">
-			<span class="eyebrow">Vì sao chọn Digicom</span>
+			<span class="eyebrow">Vì sao chọn DigicomVN</span>
 			<h2>Site chọn lọc, báo giá minh bạch</h2>
 		</div>
 		<div class="reason-grid">
@@ -130,7 +130,7 @@ $svc_meta = array(
 	<div class="wrap">
 		<div class="center" style="margin-bottom:22px">
 			<span class="eyebrow">Mạng lưới báo chí</span>
-			<h2>Đầu báo Digicom hỗ trợ đặt bài, booking PR</h2>
+			<h2>Đầu báo DigicomVN hỗ trợ đặt bài, booking PR</h2>
 			<p class="muted" style="max-width:600px;margin:8px auto 0">Danh sách rút gọn, xem đầy đủ tại <a href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>" style="color:var(--action);font-weight:600">Bảng giá</a>.</p>
 		</div>
 		<?php
@@ -162,7 +162,7 @@ $svc_meta = array(
 	<div class="wrap">
 		<div class="center" style="margin-bottom:26px">
 			<span class="eyebrow">Khách hàng</span>
-			<h2>Khách hàng nói về Digicom</h2>
+			<h2>Khách hàng nói về DigicomVN</h2>
 		</div>
 		<div class="cs-tabs">
 			<input type="radio" name="cs-tab" id="cs-tab-review" class="cs-tab-radio" checked>
@@ -223,7 +223,7 @@ $svc_meta = array(
 		<div class="cta-band">
 			<div>
 				<h2>Chưa biết chọn dịch vụ nào?</h2>
-				<p>Để đội ngũ Digicom tư vấn miễn phí gói Textlink, Backlink, Guest Post hoặc Booking báo PR phù hợp.</p>
+				<p>Để đội ngũ DigicomVN tư vấn miễn phí gói Textlink, Backlink, Guest Post hoặc Booking báo PR phù hợp.</p>
 			</div>
 			<div class="cta-actions">
 				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
@@ -265,7 +265,7 @@ if ( $news->have_posts() ) : ?>
 		<div class="news-head">
 			<div>
 				<span class="eyebrow">Tin tức &amp; sự kiện</span>
-				<h2>Tin mới từ Digicom</h2>
+				<h2>Tin mới từ DigicomVN</h2>
 			</div>
 			<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>">Xem tất cả</a>
 		</div>
@@ -274,7 +274,7 @@ if ( $news->have_posts() ) : ?>
 				<article class="news">
 					<a class="news-thumb" href="<?php the_permalink(); ?>">
 						<?php if ( has_post_thumbnail() ) : the_post_thumbnail( 'medium_large' ); else : ?>
-							<span class="news-thumb-ph">Digicom</span>
+							<span class="news-thumb-ph">DigicomVN</span>
 						<?php endif; ?>
 					</a>
 					<div class="news-body">

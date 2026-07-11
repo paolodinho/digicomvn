@@ -11,7 +11,7 @@ get_header();
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Đặt bài</span>
 		<h1><?php echo esc_html( get_the_title() ?: 'Đặt bài Textlink, Backlink, Guest Post, Booking PR' ); ?></h1>
-		<p class="lead">Cho Digicom biết bạn cần dịch vụ nào, Digicom sẽ tư vấn site/báo phù hợp và gửi báo giá chi tiết trong thời gian sớm nhất.</p>
+		<p class="lead">Cho DigicomVN biết bạn cần dịch vụ nào, DigicomVN sẽ tư vấn site/báo phù hợp và gửi báo giá chi tiết trong thời gian sớm nhất.</p>
 	</div>
 </section>
 

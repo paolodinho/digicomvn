@@ -1,11 +1,11 @@
 <?php
 /**
- * Digicom Host - theme functions
+ * DigicomVN Host - theme functions
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '0.7.8' );
+define( 'DGC_VER', '0.7.9' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -46,7 +46,7 @@ add_action( 'wp_enqueue_scripts', function () {
 } );
 
 /* ---------------------------------------------------------------------------
- * Editable content (WP Admin -> menu "Digicom")
+ * Editable content (WP Admin -> menu "DigicomVN")
  * Tat ca lien he + gia sua duoc tu Admin, khong cham PHP.
  * ------------------------------------------------------------------------- */
 require_once get_template_directory() . '/inc/options.php';
@@ -166,7 +166,7 @@ function dgc_handle_lead() {
 	) );
 
 	wp_mail( dgc( 'lead_email', get_option( 'admin_email' ) ),
-		'[Digicom] Yeu cau moi tu ' . $name,
+		'[DigicomVN] Yeu cau moi tu ' . $name,
 		$body );
 
 	wp_safe_redirect( add_query_arg( 'sent', $id ? 'ok' : 'err', remove_query_arg( 'sent', $ref ) . '#lien-he' ) );
