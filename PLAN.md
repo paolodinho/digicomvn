@@ -65,10 +65,10 @@ web/tên miền/hosting ở giai đoạn 2.
 - [ ] Hiếu tự submit sitemap `https://digicomvn.com/wp-sitemap.xml` lên Google Search Console
       (Sitemaps > Add a new sitemap) - Claude không có kết nối GSC trong phiên này nên không
       submit hộ được. Đã dọn xong 25 trang thừa (draft + 301) trước khi submit - 2026-07-11.
-- [ ] Xác nhận đầu báo THẬT đã hợp tác trong 15 trang con `/dich-vu/booking-bao-pr/[bao]/`
-      (vnexpress, kenh14, dan-tri, 24h, cafef, vietnamnet, thanh-nien, tuoi-tre, znews, soha,
-      afamily, eva, cafebiz, webtretho, bao-dau-tu) - hiện đang publish nhưng pivot-2026-07.md
-      ghi là DRAFT chờ xác nhận, có thể đã lệch so với quyết định gốc - 2026-07-11.
+- [x] Hiếu xác nhận 15 đầu báo trong `/dich-vu/booking-bao-pr/[bao]/` (vnexpress, kenh14,
+      dan-tri, 24h, cafef, vietnamnet, thanh-nien, tuoi-tre, znews, soha, afamily, eva,
+      cafebiz, webtretho, bao-dau-tu) là hợp tác THẬT - giữ nguyên publish, không cần draft
+      lại. Ghi chú này thay thế cảnh báo trong pivot-2026-07.md (M4 đã xong) - 2026-07-11.
 - [ ] Internal-link audit (skill `/internal-link-audit`): phát hiện ~89 bài cũ đang link về URL
       cũ dạng blog (`/dich-vu-backlink/`, `/pr-bao-chi/`...) thay vì money page thật
       (`/dich-vu/[slug]/`) - CHƯA sửa, cần crawl Screaming Frog để xác nhận trước khi fix hàng loạt.
