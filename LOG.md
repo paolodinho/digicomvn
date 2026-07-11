@@ -679,3 +679,33 @@
   quen mat khau, canh bao core/plugin update...) tu gia rac "dev-email@wpengine.local"
   sang hieudx3107@gmail.com qua wp-cli (`wp option update admin_email`). Xac nhan lai
   gia tri da luu dung.
+
+## 2026-07-11 - Don dep sitemap: xoa trang thua sau pivot, 301
+- Check wp-sitemap.xml live: phat hien 33 trang cu (agency/LMS/tu san pham cu -
+  portfolio, case-study, khoa-hoc x4, dashboard, student/instructor-registration,
+  pr-bao-chi, entity-branding, thiet-ke-website, cham-soc-website, viet-bai-seo,
+  google-maps-seo, chatbot-ai, ve-chung-toi, gioi-thieu trung voi ve-digicom,
+  chinh-sach-cookie/hoan-tien khong lien ket noi bo, dich-vu-seo, google-ads,
+  cart/checkout (khong cai WooCommerce, trang rong vo dung), + 8 trang giai doan 2
+  (ten-mien, hosting, lap-trinh-website, ban-quyen-*, google-workspace, office-365,
+  automation) van con publish dung le ra phai draft theo pivot-2026-07.md).
+  Doi chieu menu "Menu Digicom" (dang active, 10 item) - khong trang nao trong danh
+  sach tren duoc lien ket, xac nhan la mo coi.
+- Backup: pages-before.csv (trang thai cu) + .htaccess.bak ->
+  _backups/routines/2026-07-11/sitemap-cleanup/.
+- Set 25 trang ve draft (wp post update --post_status=draft), giu nguyen noi dung
+  (khong xoa vinh vien) - dung nguyen tac giong 8 trang giai doan 2 da lam truoc do.
+- Them 33 dong `Redirect 301` vao dau .htaccess (block "DGC 301 REDIRECTS") tro
+  moi URL cu ve trang hien hanh gan nhat (chu yeu /dich-vu/, /ve-digicom/, /blog/,
+  /lien-he/). Da curl verify 301 dung dich cho 8 URL mau.
+- Verify wp-sitemap-posts-page-1.xml con lai 28 URL, dung 100% pham vi pivot
+  (4 dich vu + con booking-bao-pr + bang-gia/blog/ve-digicom/lien-he/dat-bai/
+  chinh-sach-bao-mat/dieu-khoan-su-dung).
+- CHUA lam: submit sitemap len Google Search Console (khong co GSC API/MCP ket noi
+  trong phien nay - can Hieu tu vao GSC submit thu cong, xem PLAN.md).
+- CO VAN DE RIENG phat hien them (chua sua, ngoai scope hom nay): cac trang con
+  /dich-vu/booking-bao-pr/[bao]/ (vnexpress, kenh14, dan-tri, 24h, cafef,
+  vietnamnet, thanh-nien, tuoi-tre, znews, soha, afamily, eva, cafebiz, webtretho,
+  bao-dau-tu) dang publish va co trong sitemap, nhung pivot-2026-07.md ghi la
+  "DRAFT, cho Hieu xac nhan danh sach bao that hop tac truoc khi publish" - can
+  Hieu xac nhan da hop tac that voi cac bao nay chua, neu chua thi nen draft lai.
