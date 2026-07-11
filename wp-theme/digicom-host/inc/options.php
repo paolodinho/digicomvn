@@ -9,9 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function dgc_defaults() {
 	return array(
 		'hotline'       => '0988 769 317',
+		'hotline2'      => '0775 031 895',
 		'email'         => 'sales@digicomvn.com',
 		'lead_email'    => 'hieudx3107@gmail.com',
 		'address'       => 'Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội',
+		'address2'      => 'Toà nhà Thăng Long A1, Thiên Lộc, Hà Nội',
 		'zalo'          => '2806292509481772964',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
 
@@ -92,11 +94,13 @@ function dgc_settings_page() {
 			<h2>1. Lien he</h2>
 			<table class="form-table">
 				<?php
-				dgc_field( 'hotline', 'Hotline' );
+				dgc_field( 'hotline', 'Hotline 1' );
+				dgc_field( 'hotline2', 'Hotline 2', 'De trong neu chi dung 1 hotline.' );
 				dgc_field( 'email', 'Email (hien thi cong khai tren site)' );
 				dgc_field( 'lead_email', 'Email nhan lead form (khong hien thi cong khai)' );
 				dgc_field( 'zalo', 'So Zalo' );
-				dgc_field( 'address', 'Dia chi' );
+				dgc_field( 'address', 'Dia chi 1' );
+				dgc_field( 'address2', 'Dia chi 2', 'De trong neu chi co 1 van phong.' );
 				dgc_field( 'working_hours', 'Gio lam viec' );
 				?>
 			</table>

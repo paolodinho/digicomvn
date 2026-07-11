@@ -50,8 +50,9 @@ get_header();
 			<div class="col card">
 				<h3 style="margin-top:0">Liên hệ</h3>
 				<p class="muted" style="font-size:14.5px;line-height:1.8">
-					Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:var(--action);font-weight:600"><?php echo esc_html( dgc( 'hotline' ) ); ?></a><br>
+					Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:var(--action);font-weight:600"><?php echo esc_html( dgc( 'hotline' ) ); ?></a><?php if ( dgc( 'hotline2' ) ) : ?> · <a href="tel:<?php echo esc_attr( dgc_tel2() ); ?>" style="color:var(--action);font-weight:600"><?php echo esc_html( dgc( 'hotline2' ) ); ?></a><?php endif; ?><br>
 					Email: <?php echo esc_html( dgc( 'email' ) ); ?><br>
+					<?php if ( dgc( 'address2' ) ) : ?>Văn phòng 2: <?php echo esc_html( dgc( 'address2' ) ); ?><br><?php endif; ?>
 					Giờ làm việc: <?php echo esc_html( dgc( 'working_hours' ) ); ?>
 				</p>
 			</div>

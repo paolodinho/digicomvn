@@ -4,7 +4,7 @@
 	<div class="wrap">
 		<div class="foot-grid">
 			<div>
-				<?php $dgc_logo = dgc_logo_url(); ?>
+				<?php $dgc_logo = dgc_logo_url_light(); ?>
 				<?php if ( $dgc_logo ) : ?>
 					<img class="footer-logo" src="<?php echo esc_url( $dgc_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 				<?php else : ?>
@@ -34,9 +34,10 @@
 			<div>
 				<h4>Liên hệ</h4>
 				<ul>
-					<li>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></strong></a></li>
+					<li>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></strong></a><?php if ( dgc( 'hotline2' ) ) : ?> · <a href="tel:<?php echo esc_attr( dgc_tel2() ); ?>"><strong style="color:#fff"><?php echo esc_html( dgc( 'hotline2' ) ); ?></strong></a><?php endif; ?></li>
 					<li>Email: <a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>"><?php echo esc_html( dgc( 'email' ) ); ?></a></li>
 					<li><?php echo esc_html( dgc( 'address' ) ); ?></li>
+					<?php if ( dgc( 'address2' ) ) : ?><li><?php echo esc_html( dgc( 'address2' ) ); ?></li><?php endif; ?>
 					<li><?php echo esc_html( dgc( 'working_hours' ) ); ?></li>
 				</ul>
 			</div>

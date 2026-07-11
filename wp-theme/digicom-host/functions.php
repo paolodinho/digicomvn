@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '0.7.9' );
+define( 'DGC_VER', '0.8.1' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -104,6 +104,10 @@ function dgc_tel() {
 	return preg_replace( '/[^0-9+]/', '', dgc( 'hotline', '0988769317' ) );
 }
 
+function dgc_tel2() {
+	return preg_replace( '/[^0-9+]/', '', dgc( 'hotline2', '' ) );
+}
+
 /** Icon SVG thuan (thay emoji &#xxxx; - render khac nhau tuy OS, nhin re tien). */
 function dgc_icon( $name ) {
 	$paths = array(
@@ -126,6 +130,12 @@ function dgc_icon( $name ) {
 function dgc_logo_url() {
 	$id = (int) ( get_theme_mod( 'custom_logo' ) ?: get_option( 'site_logo' ) );
 	return $id ? (string) wp_get_attachment_image_url( $id, 'full' ) : '';
+}
+
+/** URL logo ban trang/am ban - dung cho nen toi (footer...). Fallback ve logo mau neu chua co. */
+function dgc_logo_url_light() {
+	$id = (int) get_option( 'dgc_logo_light_id' );
+	return $id ? (string) wp_get_attachment_image_url( $id, 'full' ) : dgc_logo_url();
 }
 
 /* ---------------------------------------------------------------------------

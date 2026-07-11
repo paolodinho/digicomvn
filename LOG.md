@@ -786,3 +786,27 @@
   duoc phan nay. Can Hieu quyet dinh: (1) gui file logo moi co chu "DigicomVN", hoac
   (2) Claude thu sua lai file anh hien co (font/mau tuong tu) - can xac nhan truoc khi
   lam vi ANH LA ASSET THUONG HIEU (rule ui-anti-slop: dung logo that, hoi truoc khi sua).
+
+## 2026-07-11 (4) - Logo DigicomVN chinh thuc + ban am ban
+- Hieu gui file logo moi (logodigicomVN.png) - crop bo vien trong suot thua, upload
+  lam custom_logo chinh thuc (thay ID 213 -> 1380). Ap dung tu dong ca header va
+  watermark chim vi ca 2 cung doc tu dgc_logo_url().
+- Hieu gui tiep ban "am ban" (logo_digicomvn_amban.png, chu trang) - dung cho nen toi.
+  Crop, upload (ID 1381), luu option `dgc_logo_light_id`, them helper
+  `dgc_logo_url_light()` trong functions.php. Doi footer.php dung ham nay thay vi
+  logo mau + CSS filter brightness(0) invert(1) (hack cu, kem chinh xac hon anh that).
+- Deploy DGC_VER 0.8.0, verify logo trang hien dung tren nen navy footer.
+
+## 2026-07-11 (5) - Them hotline 2 + van phong 2
+- Them field `hotline2` (0775 031 895) va `address2` (Toa nha Thang Long A1, Thien Loc,
+  Ha Noi) vao WP Admin > DigicomVN - sua duoc khong can code.
+- Hien ca 2 hotline (cach nhau dau ·, moi so 1 link tel: rieng) o: footer, trang Lien he,
+  trang Ve DigicomVN, trang Dat bai. Dia chi 2 hien them o footer + trang Ve DigicomVN
+  (o "Lien he", KHONG dung vao card "Thong tin phap nhan" vi do la dia chi dang ky
+  thue chinh thuc, giu nguyen rieng).
+- Cac nut CTA "Goi ngay" (button don, 1 tel: link) van giu hotline 1 lam so goi chinh -
+  khong nhet 2 so vao 1 nut de tranh vo giao dien/UX roi.
+- Topbar tren cung header KHONG them hotline 2 (rule menu-single-line: topbar da chat
+  cho email+zalo+gio lam, them so se vo dong tren mobile) - chi hien o cac trang/khu vuc
+  co du cho.
+- Deploy DGC_VER 0.8.1, verify hien dung tren footer/lien-he/ve-digicom.
