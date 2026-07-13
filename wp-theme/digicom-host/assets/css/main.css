@@ -119,56 +119,43 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .burger span{width:24px;height:2px;background:var(--navy);display:block}
 
 /* ==========================================================================
-   Hero + domain search
+   Hero (trang chu) - bo cuc A: cat cheo bat doi xung
    ========================================================================== */
-.hero{position:relative;background:
-  radial-gradient(110% 80% at 50% -20%, rgba(14,140,127,.10), transparent 60%),
-  linear-gradient(180deg,#fff 0%,var(--surface) 100%);
-  overflow:hidden;border-bottom:1px solid var(--line)}
-.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(70px);z-index:0;pointer-events:none;animation:hero-blob-float 9s ease-in-out infinite}
-.hero:before{width:380px;height:380px;background:rgba(71,97,255,.18);top:-130px;right:8%}
-.hero:after{width:300px;height:300px;background:rgba(14,140,127,.22);bottom:-100px;left:4%;animation-delay:-4.5s}
-@keyframes hero-blob-float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-22px) scale(1.06)}}
-@media(prefers-reduced-motion:reduce){.hero:before,.hero:after{animation:none}}
-.hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;text-align:center;padding:52px 0 58px}
-.hero h1{margin:0 auto .35em;max-width:18ch;line-height:1.02;letter-spacing:-.035em}
-.hero .lead{font-size:18px;color:var(--ink-soft);max-width:54ch;margin:0 auto 30px}
+.hero{position:relative;border-bottom:1px solid var(--line)}
 .hero .eyebrow:before{content:"";display:inline-block;width:20px;height:2px;border-radius:9px;background:var(--action);margin-right:8px;vertical-align:middle}
-.trust-row{display:flex;gap:28px;margin-top:24px;flex-wrap:wrap;justify-content:center}
-.trust-row .t{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--ink-soft)}
-.trust-row .t b{color:var(--navy);font-family:var(--font-display)}
-
-/* Hero 2 cot (trang chu): chu trai, anh doi ngu that ben phai - kieu SaaS clean */
-.hero-split{padding:58px 0 30px}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:1}
-.hero-copy .eyebrow{margin-bottom:16px}
-.hero-copy h1{margin:0 0 .35em;max-width:15ch;text-align:left;line-height:1.05;letter-spacing:-.03em}
-.hero-copy .lead{font-size:17.5px;color:var(--ink-soft);max-width:46ch;margin:0 0 28px;text-align:left}
-.hero-cta-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:30px}
 .btn-text-link{font-family:var(--font-display);font-weight:600;color:var(--navy);white-space:nowrap}
 .btn-text-link:hover{color:var(--action)}
-.hero-split .trust-row{justify-content:flex-start;margin-top:0}
-.hero-media{position:relative}
-.hero-media img{border-radius:var(--r-lg);box-shadow:var(--sh-high);transform:rotate(.6deg);width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;position:relative;z-index:1}
-.hero-media:before{content:"";position:absolute;inset:-16px -16px auto auto;width:190px;height:190px;background:rgba(14,140,127,.16);border-radius:50%;z-index:0;animation:hero-blob-float 8s ease-in-out infinite}
-.hero-media:after{content:"";position:absolute;inset:auto auto -28px -28px;width:170px;height:170px;background:rgba(71,97,255,.20);border-radius:50%;z-index:0;filter:blur(4px);animation:hero-blob-float 8s ease-in-out infinite;animation-delay:-3s}
-.hero-stat-badge{position:absolute;left:-22px;bottom:-26px;z-index:2;background:#fff;border-radius:var(--r-md);box-shadow:var(--sh-high);padding:14px 18px;display:flex;flex-direction:column;gap:2px;animation:hero-badge-float 6s ease-in-out infinite}
-.hero-stat-badge .hsb-num{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--navy);line-height:1}
-.hero-stat-badge .hsb-label{font-size:12px;color:var(--ink-soft);max-width:15ch;line-height:1.25}
-@keyframes hero-badge-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-@media(prefers-reduced-motion:reduce){.hero-media:before,.hero-media:after,.hero-stat-badge{animation:none}}
-@media(max-width:640px){.hero-stat-badge{left:14px;bottom:-18px;padding:10px 14px}.hero-stat-badge .hsb-num{font-size:18px}}
+
+.hero-diag-row{display:grid;grid-template-columns:1.2fr 1fr;min-height:560px;background:linear-gradient(180deg,#fff 0%,var(--surface) 100%)}
+.hero-diag-copy{display:flex;align-items:center}
+.hero-diag-copy-in{max-width:520px;padding:64px clamp(24px,4vw,48px) 64px max(22px,calc((100vw - var(--maxw))/2 + 22px))}
+.hero-diag-copy-in .eyebrow{margin-bottom:16px}
+.hero-diag-copy-in h1{margin:0 0 .35em;max-width:15ch;line-height:1.05;letter-spacing:-.03em}
+.hero-diag-copy-in .lead{font-size:17.5px;color:var(--ink-soft);max-width:46ch;margin:0 0 30px}
+.hero-cta-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+
+.hero-diag-media{position:relative;background:var(--navy);overflow:hidden;
+  clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)}
+.hero-diag-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.97}
+
+.hero-diag-strip{background:var(--navy)}
+.hero-diag-strip .wrap{display:flex;gap:clamp(18px,3.6vw,46px);flex-wrap:wrap;align-items:baseline;padding:16px 22px}
+.hero-diag-strip .s{font-size:13.5px;color:rgba(255,255,255,.72)}
+.hero-diag-strip .s b{font-family:var(--font-display);color:#fff;font-weight:700}
+.hero-diag-strip .s.stat b{font-size:19px;margin-right:6px}
+
+@media (max-width:991.98px){
+  .hero-diag-row{grid-template-columns:1fr;min-height:0}
+  .hero-diag-media{clip-path:none;aspect-ratio:16/9;order:-1}
+  .hero-diag-copy-in{max-width:none;padding:32px 22px 40px}
+  .hero-diag-copy-in h1{max-width:none}
+}
+
 .img-ph{width:100%;aspect-ratio:3/2;border-radius:var(--r-lg);box-shadow:var(--sh-high);transform:rotate(.6deg);
   background:#F8F8F8;color:var(--ink-soft);display:flex;align-items:center;justify-content:center;
   text-align:center;font-size:14.5px;padding:24px}
 .img-ph-dark{aspect-ratio:4/3;transform:rotate(-1deg);background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);
   border:1px dashed rgba(255,255,255,.2);box-shadow:none}
-.hero-split .search-card{margin-top:46px}
-@media (max-width:991.98px){
-  .hero-grid{grid-template-columns:1fr;gap:32px}
-  .hero-copy h1{max-width:none}
-  .hero-media{order:-1}
-}
 
 /* O tra cuu ten mien - tam diem trang chu */
 .search-card{position:relative;z-index:1;max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);

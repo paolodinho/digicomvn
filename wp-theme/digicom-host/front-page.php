@@ -6,44 +6,41 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 ?>
 
-<!-- 02. HERO -->
-<section class="hero hero-split" id="dich-vu">
-	<div class="wrap">
-		<div class="hero-grid">
-			<div class="hero-copy">
+<!-- 02. HERO (bo cuc A: cat cheo bat doi xung) -->
+<section class="hero hero-diag" id="dich-vu">
+	<div class="hero-diag-row">
+		<div class="hero-diag-copy">
+			<div class="hero-diag-copy-in">
 				<span class="eyebrow">Textlink &middot; Backlink &middot; Guest Post &middot; Booking báo &amp; PR</span>
 				<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 				<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
-
 				<div class="hero-cta-row">
 					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận báo giá</a>
 					<a class="btn-text-link" href="#services">Xem dịch vụ &rarr;</a>
 				</div>
-
-				<div class="trust-row">
-					<div class="t"><b>Site</b> chọn lọc theo chỉ số</div>
-					<div class="t"><b>Báo giá</b> minh bạch</div>
-					<div class="t"><b>Hỗ trợ</b> tư vấn tận tình</div>
-					<div class="t"><b>Xuất VAT</b> đầy đủ</div>
-				</div>
 			</div>
-			<div class="hero-media">
-				<img
-					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg' ); ?>"
-					srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-640.jpg' ); ?> 640w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-960.jpg' ); ?> 960w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg' ); ?> 1280w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1600.jpg' ); ?> 1600w"
-					sizes="(max-width: 991px) 100vw, 45vw"
-					width="1600" height="1067"
-					alt="Đội ngũ DigicomVN làm việc cùng nhau"
-					fetchpriority="high"
-				>
-				<?php $dgc_press_count = count( dgc_lines( 'press_partners' ) ); ?>
-				<?php if ( $dgc_press_count > 0 ) : ?>
-				<div class="hero-stat-badge">
-					<span class="hsb-num"><?php echo (int) $dgc_press_count; ?>+</span>
-					<span class="hsb-label">đầu báo &amp; site đối tác</span>
-				</div>
-				<?php endif; ?>
-			</div>
+		</div>
+		<div class="hero-diag-media">
+			<img
+				src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg' ); ?>"
+				srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-640.jpg' ); ?> 640w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-960.jpg' ); ?> 960w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg' ); ?> 1280w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1600.jpg' ); ?> 1600w"
+				sizes="(max-width: 767px) 100vw, 44vw"
+				width="1600" height="1067"
+				alt="Đội ngũ DigicomVN làm việc cùng nhau"
+				fetchpriority="high"
+			>
+		</div>
+	</div>
+	<div class="hero-diag-strip">
+		<div class="wrap">
+			<?php $dgc_press_count = count( dgc_lines( 'press_partners' ) ); ?>
+			<?php if ( $dgc_press_count > 0 ) : ?>
+			<div class="s stat"><b><?php echo (int) $dgc_press_count; ?>+</b>đầu báo &amp; site đối tác</div>
+			<?php endif; ?>
+			<div class="s"><b>Site</b> chọn lọc theo chỉ số</div>
+			<div class="s"><b>Báo giá</b> minh bạch</div>
+			<div class="s"><b>Hỗ trợ</b> tư vấn tận tình</div>
+			<div class="s"><b>Xuất VAT</b> đầy đủ</div>
 		</div>
 	</div>
 </section>

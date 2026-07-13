@@ -863,3 +863,16 @@
   - Deploy Hostinger: scp gop nhieu file bi loi am tham (khong bao loi nhung file
     khong thay doi tren server) - phai scp tung file rieng + verify lai bang
     grep/wc -l tren server moi chac chan.
+- Hieu van thay hero "bo cuc khong on" -> draft 4 phuong an bo cuc hero khac (Artifact
+  HTML, dung anh + mau brand that): A) cat cheo bat doi xung, B) nen toan canh, C) lop
+  chong + chip dich vu, D) hai khoi lien ke. Hieu chon A.
+  - Build lai hero that: .hero-diag-row (grid 1.2fr/1fr, khong bi gioi han boi .wrap ben
+    media - anh tran het canh phai man hinh), .hero-diag-media dung clip-path polygon
+    cat cheo, .hero-diag-strip la dai navy full-width thay cho trust-row + badge noi cu,
+    gom ca so dau bao that (21+) va 4 muc trust cu vao 1 dai.
+  - Don rac CSS chet: xoa toan bo .hero-split/.hero-grid/.hero-media/.hero-stat-badge/
+    .trust-row cu (chi front-page.php dung, khong noi nao khac tham chieu - da grep xac
+    nhan truoc khi xoa).
+  - Bump DGC_VER 0.8.2->0.8.3, backup 3 file truoc khi ghi de, deploy + verify tren
+    browser that o desktop/tablet/375px - dep, khong tran, chuyen sang layout stack +
+    an clip-path chéo o duoi 992px.
