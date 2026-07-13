@@ -36,6 +36,13 @@ get_header();
 					alt="Đội ngũ DigicomVN làm việc cùng nhau"
 					fetchpriority="high"
 				>
+				<?php $dgc_press_count = count( dgc_lines( 'press_partners' ) ); ?>
+				<?php if ( $dgc_press_count > 0 ) : ?>
+				<div class="hero-stat-badge">
+					<span class="hsb-num"><?php echo (int) $dgc_press_count; ?>+</span>
+					<span class="hsb-label">đầu báo &amp; site đối tác</span>
+				</div>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

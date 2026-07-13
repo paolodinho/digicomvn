@@ -852,3 +852,14 @@
   Backup front-page.php goc: _backups/routines/2026-07-13/front-page.php.bak-133700.
 - Verify browser thuc te desktop/tablet/mobile (1600/768/375px) tren digicomvn.com -
   ảnh net, khong tran, srcset dung (mobile tai ban 640px 66KB thay vi ban goc 1.3MB).
+- Feedback Hieu: hero "roi rac, chua sinh dong" -> sua:
+  - Blob nen (.hero:before/:after) phong to, tang do dam, them animation troi nhe
+    (hero-blob-float, co prefers-reduced-motion guard).
+  - Them blob thu 2 sau anh (.hero-media:after, mau indigo) noi voi blob teal cu.
+  - Them badge noi "21+ dau bao & site doi tac" de len goc trai-duoi anh, so lay
+    THAT tu dgc_lines('press_partners') (khong bia so - rule content-professional),
+    tu dong doi khi Hieu them/bot dau bao trong WP Admin.
+  - Bump DGC_VER 0.8.1->0.8.2 (co sua CSS, theo rule deploy.md) tranh cache cu.
+  - Deploy Hostinger: scp gop nhieu file bi loi am tham (khong bao loi nhung file
+    khong thay doi tren server) - phai scp tung file rieng + verify lai bang
+    grep/wc -l tren server moi chac chan.
