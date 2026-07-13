@@ -38,8 +38,9 @@ get_header();
 				$dgc_related = get_posts( array(
 					'category__in'   => $dgc_cat_ids,
 					'post__not_in'   => array( get_the_ID() ),
-					'posts_per_page' => 4,
-					'orderby'        => 'rand',
+					'posts_per_page' => -1,
+					'orderby'        => 'date',
+					'order'          => 'DESC',
 				) );
 				$dgc_main_cat = get_the_category()[0] ?? null;
 				if ( $dgc_related ) : ?>
