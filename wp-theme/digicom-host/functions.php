@@ -270,3 +270,20 @@ function dgc_no_dash( $s ) {
 foreach ( array( 'the_content', 'the_title', 'the_excerpt', 'single_post_title', 'widget_text', 'document_title' ) as $h ) {
 	add_filter( $h, 'dgc_no_dash', 20 );
 }
+
+/* ---------------------------------------------------------------------------
+ * 301 URL danh muc cu "/danh-muc/..." (category base tu theme/site cu, khong
+ * con dung) sang cau truc hien tai "/category/...". Khong co redirect nay,
+ * WP tu doan (redirect_guess_404_permalink) chuyen lung tung sang trang khong
+ * lien quan (vd /danh-muc/blog/ -> trang "Blog" tinh) hoac 404 thang o trang 2+,
+ * gay cam giac loi/gop noi dung nham.
+ * ------------------------------------------------------------------------- */
+add_action( 'template_redirect', function () {
+	$uri  = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+	$path = parse_url( $uri, PHP_URL_PATH );
+	if ( $path && strpos( $path, '/danh-muc/' ) === 0 ) {
+		$target = home_url( '/category/' . substr( $path, strlen( '/danh-muc/' ) ) );
+		wp_safe_redirect( $target, 301 );
+		exit;
+	}
+}, 5 );

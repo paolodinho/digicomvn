@@ -810,3 +810,45 @@
   cho email+zalo+gio lam, them so se vo dong tren mobile) - chi hien o cac trang/khu vuc
   co du cho.
 - Deploy DGC_VER 0.8.1, verify hien dung tren footer/lien-he/ve-digicom.
+
+## 2026-07-11 (6) - Fix URL danh-muc/* loi (redirect_guess gay lan noi dung)
+- Nguyen nhan: "/danh-muc/" la category base CU (theme/site truoc pivot), site hien
+  tai dung base "/category/" (xac nhan qua wp-sitemap-taxonomies-category-1.xml).
+  URL cu khong con hop le nen WordPress tu doan (redirect_guess_404_permalink):
+  trang 1 (/danh-muc/blog/) bi doan nham sang trang tinh "Blog" khong lien quan
+  (nhin nhu gop noi dung), con trang 2+ (/danh-muc/blog/page/2/) thi doan that bai,
+  tra ve 404 thang - hanh vi khong nhat quan gay cam giac loi.
+- Fix: them redirect 301 rieng trong functions.php, chuyen toan bo "/danh-muc/*"
+  sang "/category/*" tuong ung (giu nguyen slug + /page/N/), chay som (priority 5
+  tren template_redirect) de chan truoc khi WP kip tu doan.
+- Verify: /danh-muc/blog/ -> 301 -> /category/blog/ ; /danh-muc/blog/page/2/ -> 301
+  -> /category/blog/page/2/ (category "Blog" khong co bai nen 404 dung, khong con
+  loi trang khac); /danh-muc/seo-technical/ -> 301 -> /category/seo-technical/ (200).
+- Khong bump DGC_VER (chi sua PHP logic server-side, khong dung CSS/JS cache).
+
+## 2026-07-11 (7) - Audit toan bo 404/301, fix 2 bai blog that bi 404
+- Crawl 149 URL trong wp-sitemap.xml + link noi bo o cac trang chinh -> phat hien
+  2 URL tra 301 la /google-maps-seo/ va /viet-bai-seo/ (thay vi 200 nhu con lai).
+- Dieu tra sau: KHONG phai do .htaccess (da xoa 2 dong redirect trung o do nhung
+  van con 404) - root cause that su la 2 TRANG (page) DRAFT cu tu truoc pivot
+  ("Dich vu Google Maps toi uu" ID 428, "Dich Vu Viet Bai Chuan SEO" ID 289) dang
+  giu CHUNG slug voi 2 BAI BLOG THAT da publish (ID 361, ID 416). WordPress bi
+  nham lan khi phan giai URL /%postname%/ giua page va post trung slug -> tra 404
+  cho ca 2, du bai blog that su ton tai va publish binh thuong.
+- Fix: doi post_name cua 2 trang draft cu sang *-old-draft (khong con dung, giu lai
+  de rollback thay vi xoa - rule backup-before-edit), flush rewrite + cache.
+- Verify: ca 149 URL trong sitemap deu tra 200. /google-maps-seo/ va /viet-bai-seo/
+  hien dung noi dung bai blog that.
+- Quet them: khong con URL /danh-muc/* nao khac gay loi (da fix redirect truoc do
+  trong session), khong con collision page/post nao khac (kiem tra toan bo DB).
+
+## 2026-07-13
+- Chen anh minh hoa 3D illustration (doi ngu) vao hero banner trang chu, thay
+  placeholder "Anh doi ngu DigicomVN dang cap nhat" - front-page.php hero-media.
+- Resize 4 kich thuoc (640/960/1280/1600px) + srcset/sizes responsive, luu
+  wp-theme/digicom-host/assets/images/hero-team-*.jpg.
+- Deploy thang len live Hostinger (khong qua Local - site da air): scp file +
+  bug quyen file 700->644 (upload len bi sai quyen gay 403), purge cache LiteSpeed.
+  Backup front-page.php goc: _backups/routines/2026-07-13/front-page.php.bak-133700.
+- Verify browser thuc te desktop/tablet/mobile (1600/768/375px) tren digicomvn.com -
+  ảnh net, khong tran, srcset dung (mobile tai ban 640px 66KB thay vi ban goc 1.3MB).

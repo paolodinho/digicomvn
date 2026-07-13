@@ -28,7 +28,14 @@ get_header();
 				</div>
 			</div>
 			<div class="hero-media">
-				<div class="img-ph">Ảnh đội ngũ DigicomVN đang cập nhật</div>
+				<img
+					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg' ); ?>"
+					srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-640.jpg' ); ?> 640w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-960.jpg' ); ?> 960w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg' ); ?> 1280w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1600.jpg' ); ?> 1600w"
+					sizes="(max-width: 991px) 100vw, 45vw"
+					width="1600" height="1067"
+					alt="Đội ngũ DigicomVN làm việc cùng nhau"
+					fetchpriority="high"
+				>
 			</div>
 		</div>
 	</div>
