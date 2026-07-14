@@ -122,6 +122,24 @@ for goi, mota, gg, gkm in GOI_B:
         quy_cach="Dat tren 30-37 trang bao, tang 200 link free",
         ghi_chu="Goi B - 6 thang", nguon="Sheet DanaSEO - Texlink Bao", ngay_cap_nhat=TODAY)
 
+# ============ DanaSEO: Dich vu entity (social entity) ============
+ENTITY = [("Goi 1", "120 Social chat luong loc ky", 2_000_000),
+          ("Goi 2", "250 Social chat luong loc ky", 2_990_000),
+          ("Goi 3", "300 Social chat luong loc ky", 4_000_000)]
+for goi, mota, gia in ENTITY:
+    add(nha_cung_cap="DanaSEO", dich_vu="entity", dau_bao=f"Social entity - {goi}",
+        nhom="Social entity", vi_tri=mota, gia_ncc_goc=gia, gia_ban_digicom=gia,
+        quy_cach="Ban giao sau 3 ngay, file bao cao day du, ho tro nap index >85%, ho tro Schema",
+        ghi_chu="Combo Trangvang giam 10-100%; kem GG Map giam 5-15%",
+        nguon="Sheet DanaSEO - Dich vu entity", ngay_cap_nhat=TODAY)
+
+# ============ DanaSEO: Toplist (cho thue) ============
+add(nha_cung_cap="DanaSEO", dich_vu="toplist", dau_bao="Toplist local (HN/TPHCM/DN + 25 tinh)",
+    nhom="Cho thue toplist", vi_tri="Bai top - gia khoi diem", gia_ncc_goc=300_000,
+    gia_ban_digicom=300_000, quy_cach="Gia/thang",
+    ghi_chu="Tu 300k/thang, gia theo tung site + tung tu khoa - can hoi lai NCC",
+    nguon="Sheet DanaSEO - Toplist", ngay_cap_nhat=TODAY)
+
 # ============ Fame Media (vi tri premium trang chu) ============
 FAME_URL = "https://famemedia.vn/bao-online/"
 fame = [

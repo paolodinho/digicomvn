@@ -182,6 +182,9 @@ booking-pr,vneconomy.vn,PR bao lon (vi tri premium),Dac biet trang chu,85000000,
 booking-pr,vnexpress.net,PR bao lon (vi tri premium),"Top Story 5,6",150000000,,,Vi tri trang chu/noi bat - gia cao,1,2026-07-14
 booking-pr,vnreview.vn,PR bao lon (vi tri premium),Tin noi bat 1 - Trang chu,21000000,,,Vi tri trang chu/noi bat - gia cao,1,2026-07-14
 booking-pr,zing news,PR bao lon (vi tri premium),Top News 1 - Trang chu,230000000,,,Vi tri trang chu/noi bat - gia cao,1,2026-07-14
+entity,social entity - goi 1,Social entity,120 Social chat luong loc ky,2000000,,"Ban giao sau 3 ngay, file bao cao day du, ho tro nap index >85%, ho tro Schema",Combo Trangvang giam 10-100%; kem GG Map giam 5-15%,1,2026-07-14
+entity,social entity - goi 2,Social entity,250 Social chat luong loc ky,2990000,,"Ban giao sau 3 ngay, file bao cao day du, ho tro nap index >85%, ho tro Schema",Combo Trangvang giam 10-100%; kem GG Map giam 5-15%,1,2026-07-14
+entity,social entity - goi 3,Social entity,300 Social chat luong loc ky,4000000,,"Ban giao sau 3 ngay, file bao cao day du, ho tro nap index >85%, ho tro Schema",Combo Trangvang giam 10-100%; kem GG Map giam 5-15%,1,2026-07-14
 guest-post,angiangtoplist.com,Guest post,Bai dang tren site,1000000,,"1000 từ, 3-5 ảnh, 2 link nof","Ton tai theo domain, link cam ket toi thieu 2 nam",1,2026-07-14
 guest-post,arcencielhotel.com.vn,Guest post,Bai dang tren site,500000,,"1000 từ, 3-5 ảnh, 2 link nof","Ton tai theo domain, link cam ket toi thieu 2 nam",1,2026-07-14
 guest-post,bacninhtoplist.com,Guest post,Bai dang tren site,1000000,,"1000 từ, 3-5 ảnh, 2 link nof","Ton tai theo domain, link cam ket toi thieu 2 nam",1,2026-07-14
@@ -513,3 +516,4 @@ textlink,vnreview.vn,Textlink home,Link trang chu - 12 thang,4000000,1 link,12 t
 textlink,vnreview.vn,Textlink home,Link fullsite - 3 thang,4000000,1 link,3 thang,DR 65 | traffic 1.400.000/thang | CÔNG TY TNHH VIỆT NAM ĐÁNH GIÁ,1,2026-07-14
 textlink,vnreview.vn,Textlink home,Link fullsite - 6 thang,5000000,1 link,6 thang,DR 65 | traffic 1.400.000/thang | CÔNG TY TNHH VIỆT NAM ĐÁNH GIÁ,1,2026-07-14
 textlink,vnreview.vn,Textlink home,Link fullsite - 12 thang,6000000,1 link,12 thang,DR 65 | traffic 1.400.000/thang | CÔNG TY TNHH VIỆT NAM ĐÁNH GIÁ,1,2026-07-14
+toplist,toplist local (hn,Cho thue toplist,Bai top - gia khoi diem,300000,,Gia/thang,"Tu 300k/thang, gia theo tung site + tung tu khoa - can hoi lai NCC",1,2026-07-14
