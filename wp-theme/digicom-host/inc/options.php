@@ -30,8 +30,18 @@ function dgc_defaults() {
 		// ten goi | gia | dac diem cach nhau dau ; | noi bat(1/0)
 		'hosting_plans' => "Gói Textlink | Liên hệ báo giá | Đặt link trong bài có sẵn;Chọn theo DR/traffic site;Vị trí link tự nhiên;Bàn giao vị trí đăng | 0\nGói Backlink | Liên hệ báo giá | Backlink chất lượng, đa dạng nguồn;Anchor text tự nhiên;Theo dõi index;Báo cáo chi tiết | 1\nGói Guest Post | Liên hệ báo giá | Viết bài + đăng trên site đúng chủ đề;Link dofollow tự nhiên;Duyệt nội dung trước khi đăng;Bàn giao link bài | 0\nGói Booking báo & PR | Liên hệ báo giá | Đăng bài PR trên báo điện tử;Viết bài chuẩn theo tôn chỉ báo;Hỗ trợ chọn chuyên mục;Bàn giao link bài đã lên | 0",
 
-		// Ly do chon (tieu de | mo ta)
-		'reasons'       => "Nguồn site/báo chọn lọc | Ưu tiên site có traffic thật, báo uy tín, hạn chế site rác\nBáo giá minh bạch | Niêm yết theo từng dịch vụ, không phát sinh phí ẩn\nHỗ trợ tư vấn | Chọn đúng site/báo theo ngành hàng và ngân sách\nBàn giao rõ ràng | Báo cáo link/bài đã đăng, theo dõi index sau khi lên",
+		// Ly do chon (tieu de | mo ta) - hien o section "Tai sao chon DigicomVN"
+		'reasons'       => "Nền tảng SEO + AI | Chọn nguồn site/báo bằng dữ liệu chỉ số thật và AI, thay vì đi link theo cảm tính.\nTự động hóa quy trình | Theo dõi index, đo hiệu quả và báo cáo được tự động hóa để minh bạch và đúng tiến độ.\nĐược AI trích dẫn | Chuẩn hóa tín hiệu định danh (entity) để thương hiệu được AI và công cụ tìm kiếm nhận diện đúng.\nBáo giá minh bạch | Niêm yết theo từng dịch vụ, không phát sinh phí ẩn, xuất VAT đầy đủ.\nBooking báo thật | Chỉ đặt trên đầu báo, site có traffic và uy tín thật, hạn chế site rác.\nBàn giao rõ ràng | Báo cáo link/bài đã đăng kèm nguồn để đối chiếu sau khi hoàn thành.",
+
+		// Trich dan noi bat o section "Tai sao chon DigicomVN": noi dung | ten nguoi | vai tro
+		'why_quote'     => "Off-page SEO hiệu quả phải dựa trên dữ liệu và tự động hóa - AI giúp chọn đúng nguồn và đo đúng kết quả, thay vì đi link theo cảm tính. | Đỗ Xuân Hiếu | Giám đốc DigicomVN",
+
+		// Logo khach hang tin tuong: ten thuong hieu | ten file logo trong /uploads/client-logos/ (rong = hien chu tam).
+		// Ten la khach hang that (tu case study/testimonial). Logo Hieu bo sung sau.
+		'clients'       => "Bệnh viện Việt Pháp Hà Nội | \nPhòng khám Đa khoa Quốc tế H Plus | \nICD Việt Nam | \nBệnh viện Mắt Hà Nội 2 | \nMagenest | \nZora | \nDodanong.com | ",
+
+		// Bao chi noi ve DigicomVN: ten bao | link bai viet | ten file logo trong /uploads/press-mentions/ (rong = hien chu).
+		'press_mentions' => "Truyền hình An Giang | https://angiangtv.vn/tin-tuc-va-su-kien/digicomvn-ung-dung-ai-vao-dich-vu-truyen-thong-va-booking-bao-chi-giup-doanh-nghiep-tiet-kiem-chi-phi-van-hanh/ | \nBáo Đồng Nai | https://baodongnai.com.vn/doanh-nhan-doanh-nghiep/dich-vu/202607/quy-trinh-book-bao-chi-bai-ban-cach-digicomvn-dua-icd-viet-nam-tu-vang-bong-den-hien-dien-thuong-xuyen-tren-bao-chi-62102d3/ | ",
 
 		// FAQ (cau hoi | tra loi)
 		'faqs'          => "Textlink khác backlink như thế nào? | Textlink là link chèn vào bài viết đã có sẵn trên site khác; backlink là link trỏ về từ nhiều nguồn khác nhau (bài mới, site, diễn đàn...) theo chiến dịch tổng thể.\nGuest Post có được viết nội dung riêng không? | Có. DigicomVN viết bài theo đúng chủ đề site đăng, kèm link tự nhiên, gửi Hiếu duyệt trước khi đăng.\nBooking báo PR mất bao lâu để lên bài? | Tùy đầu báo, thường 2 đến 7 ngày làm việc sau khi nội dung được duyệt.\nThanh toán và bàn giao như thế nào? | Thanh toán theo báo giá đã thống nhất, bàn giao link/bài đã lên kèm báo cáo sau khi hoàn thành.",
@@ -128,11 +138,20 @@ function dgc_settings_page() {
 				?>
 			</table>
 
-			<h2>5. Ly do chon & FAQ</h2>
+			<h2>5. Tai sao chon DigicomVN & FAQ</h2>
 			<table class="form-table">
 				<?php
-				dgc_field( 'reasons', 'Ly do chon DigicomVN', 'Moi dong: tieu de | mo ta', 'textarea' );
+				dgc_field( 'reasons', 'Ly do chon DigicomVN (cards)', 'Moi dong: tieu de | mo ta. Hien o section "Tai sao chon DigicomVN".', 'textarea' );
+				dgc_field( 'why_quote', 'Trich dan noi bat', 'Mot dong: noi dung trich dan | ten nguoi | vai tro. De trong neu khong muon hien.', 'textarea' );
 				dgc_field( 'faqs', 'Cau hoi thuong gap', 'Moi dong: cau hoi | tra loi', 'textarea' );
+				?>
+			</table>
+
+			<h2>5b. Logo khach hang & Bao chi noi ve DigicomVN</h2>
+			<table class="form-table">
+				<?php
+				dgc_field( 'clients', 'Logo khach hang tin tuong', 'Moi dong: ten thuong hieu | ten file logo (dat trong wp-content/uploads/client-logos/, de trong = hien chu tam). Chi liet ke khach hang that.', 'textarea' );
+				dgc_field( 'press_mentions', 'Bao chi noi ve DigicomVN', 'Moi dong: ten bao | link bai viet | ten file logo (dat trong wp-content/uploads/press-mentions/, de trong = hien chu). Chi bai bao that.', 'textarea' );
 				?>
 			</table>
 

@@ -39,8 +39,10 @@ def slug(s):
     s = unicodedata.normalize("NFKD", s).encode("ascii","ignore").decode()
     return re.sub(r"[^a-zA-Z0-9]+","-",s).strip("-").lower()[:46]
 
-def render(pid, title):
+def render(pid, title, force=None):
     label, accent, key = classify(title)
+    if force:
+        label, accent, key = force
     svg = LIB.get(key, LIB["SEO"])
     boot = (f"<script>window.__T={json.dumps(title)};window.__L={json.dumps(label)};"
             f"window.__A={json.dumps(accent)};window.__LOGO={json.dumps(LOGO)};</script>")

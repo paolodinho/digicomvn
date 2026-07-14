@@ -11,7 +11,7 @@ get_header();
 	<div class="hero-diag-row">
 		<div class="hero-diag-copy">
 			<div class="hero-diag-copy-in">
-				<span class="eyebrow">Textlink &middot; Backlink &middot; Guest Post &middot; Booking báo &amp; PR</span>
+				<span class="eyebrow">SEO &middot; AI &middot; Automation</span>
 				<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 				<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 				<div class="hero-cta-row">
@@ -68,6 +68,32 @@ $promo_icons = array(
 	</div>
 </section>
 
+<!-- 03b. KHACH HANG / LOGO WALL -->
+<?php $dgc_clients = array_filter( dgc_lines( 'clients' ), fn( $c ) => ! empty( $c[0] ) ); ?>
+<?php if ( $dgc_clients ) : ?>
+<section class="sec-tight client-wall">
+	<div class="wrap">
+		<div class="center" style="margin-bottom:30px">
+			<span class="eyebrow">Khách hàng &amp; đối tác</span>
+			<h2>Thương hiệu đã tin tưởng DigicomVN</h2>
+		</div>
+		<div class="client-logos">
+			<?php foreach ( $dgc_clients as $c ) :
+				$c_name = $c[0]; $c_file = trim( $c[1] ?? '' );
+				$c_url  = $c_file ? content_url( 'uploads/client-logos/' . $c_file ) : ''; ?>
+				<div class="client-logo" title="<?php echo esc_attr( $c_name ); ?>">
+					<?php if ( $c_url ) : ?>
+						<img src="<?php echo esc_url( $c_url ); ?>" alt="<?php echo esc_attr( $c_name ); ?>" loading="lazy">
+					<?php else : ?>
+						<span class="client-ph"><?php echo esc_html( $c_name ); ?></span>
+					<?php endif; ?>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
 <!-- 06. DICH VU THEO NHOM -->
 <?php
 $svc_meta = array(
@@ -106,6 +132,52 @@ $svc_meta = array(
 	</div>
 </section>
 
+<!-- 06b. TAI SAO CHON DIGICOMVN -->
+<?php
+$why_items = dgc_lines( 'reasons' );
+$why_icons = array(
+	'M12 2a10 10 0 1 0 .01 0zM12 8v4l3 2',                        // process/clock
+	'M4 4h16v12H4zM4 20h16M9 9h6M9 13h4',                          // report/transparency
+	'M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z',                      // shield / SEO base
+	'M3 17l6-6 4 4 7-7M14 8h5v5',                                  // growth / KPI
+	'M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9-2.6.9-5.5-4-3.9 5.5-.8z', // star / AI cited
+	'M4 7h16M4 12h16M4 17h10',                                     // automation / list
+);
+?>
+<?php if ( $why_items ) : ?>
+<section class="sec why-sec" id="tai-sao" style="background:#fff;border-bottom:1px solid var(--line)">
+	<div class="wrap">
+		<div class="center" style="margin-bottom:40px">
+			<span class="eyebrow">Tại sao chọn DigicomVN</span>
+			<h2>Marketing dựa trên SEO, AI và Automation</h2>
+			<p class="muted" style="max-width:620px;margin:10px auto 0">Không chỉ đi link - DigicomVN kết hợp dữ liệu SEO, trí tuệ nhân tạo và quy trình tự động hóa để thương hiệu của bạn hiện diện bền vững và được tin cậy.</p>
+		</div>
+		<div class="why-layout">
+			<div class="why-cards">
+				<?php $wi = 0; foreach ( $why_items as $r ) :
+					$path = $why_icons[ $wi % count( $why_icons ) ]; $wi++; ?>
+					<div class="why-card">
+						<span class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $path ); ?>"/></svg></span>
+						<h3><?php echo esc_html( $r[0] ?? '' ); ?></h3>
+						<p><?php echo esc_html( $r[1] ?? '' ); ?></p>
+					</div>
+				<?php endforeach; ?>
+			</div>
+			<?php $wq = dgc_lines( 'why_quote' ); $wq = $wq[0] ?? array(); if ( ! empty( $wq[0] ) ) : ?>
+			<aside class="why-quote">
+				<div class="why-quote-mark">&ldquo;</div>
+				<blockquote><?php echo esc_html( $wq[0] ); ?></blockquote>
+				<div class="why-quote-by">
+					<?php if ( ! empty( $wq[1] ) ) : ?><span class="why-quote-name"><?php echo esc_html( $wq[1] ); ?></span><?php endif; ?>
+					<?php if ( ! empty( $wq[2] ) ) : ?><span class="why-quote-role"><?php echo esc_html( $wq[2] ); ?></span><?php endif; ?>
+				</div>
+			</aside>
+			<?php endif; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
 <!-- 07. REASONS + CHUNG TOI LA AI -->
 <section class="sec band-navy whoweare-band" style="--bgimg:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-digicom-1400.jpg' ); ?>')">
 	<div class="wrap">
@@ -116,19 +188,6 @@ $svc_meta = array(
 				<p class="lead">DigicomVN là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat, tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử. DigicomVN chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
 				<p style="margin-top:18px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về DigicomVN &rarr;</a></p>
 			</div>
-		</div>
-		<div class="center" style="margin-top:56px">
-			<span class="eyebrow">Vì sao chọn DigicomVN</span>
-			<h2>Site chọn lọc, báo giá minh bạch</h2>
-		</div>
-		<div class="reason-grid">
-			<?php $i = 1; foreach ( dgc_lines( 'reasons' ) as $r ) : ?>
-				<div class="reason">
-					<div class="rnum">0<?php echo $i++; ?></div>
-					<h3><?php echo esc_html( $r[0] ?? '' ); ?></h3>
-					<p><?php echo esc_html( $r[1] ?? '' ); ?></p>
-				</div>
-			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
@@ -156,11 +215,19 @@ $svc_meta = array(
 			<?php
 		};
 		?>
-		<div class="press-marquee">
-			<div class="press-track">
-				<?php foreach ( $press_list as $pp ) : $press_chip( $pp ); endforeach; ?>
-				<?php foreach ( $press_list as $pp ) : $press_chip( $pp ); endforeach; ?>
+		<div class="press-rows">
+			<?php
+			$dgc_press_rows = 5;
+			$dgc_per        = max( 1, (int) ceil( count( $press_list ) / $dgc_press_rows ) );
+			foreach ( array_chunk( $press_list, $dgc_per ) as $ri => $dgc_chunk ) :
+				$rev = ( $ri % 2 === 1 ) ? ' press-track--rev' : '';
+			?>
+			<div class="press-marquee">
+				<div class="press-track<?php echo $rev; ?>">
+					<?php for ( $k = 0; $k < 4; $k++ ) : foreach ( $dgc_chunk as $pp ) : $press_chip( $pp ); endforeach; endfor; ?>
+				</div>
 			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
@@ -172,63 +239,64 @@ $svc_meta = array(
 			<span class="eyebrow">Khách hàng</span>
 			<h2>Khách hàng nói về DigicomVN</h2>
 		</div>
-		<div class="cs-tabs">
-			<input type="radio" name="cs-tab" id="cs-tab-review" class="cs-tab-radio" checked>
-			<input type="radio" name="cs-tab" id="cs-tab-case" class="cs-tab-radio">
-			<div class="tab-bar center" style="justify-content:center">
-				<label for="cs-tab-review" class="tab-btn">Đánh giá khách hàng</label>
-				<label for="cs-tab-case" class="tab-btn">Case study</label>
-			</div>
+		<div class="tm-carousel owl-carousel">
+			<?php foreach ( dgc_lines( 'testimonials' ) as $t ) :
+				$quote = $t[0] ?? ''; $who = $t[1] ?? ''; $svc = $t[2] ?? ''; $photo = trim( $t[3] ?? '' );
+				if ( $quote === '' ) continue;
+				$who_clean = preg_replace( '/^(Ông|Bà|Anh|Chị|Cô|Chú|Mr|Ms|Mrs)\.?\s+/u', '', $who );
+				$initial = function_exists( 'mb_substr' ) ? mb_strtoupper( mb_substr( $who_clean, 0, 1 ) ) : strtoupper( substr( $who_clean, 0, 1 ) ); ?>
+				<figure class="tm">
+					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+					<blockquote><?php echo esc_html( $quote ); ?></blockquote>
+					<figcaption>
+						<span class="tm-avatar<?php echo $photo ? ' tm-avatar--img' : ''; ?>" aria-hidden="true"><?php
+							if ( $photo ) {
+								echo '<img src="' . esc_url( $photo ) . '" alt="' . esc_attr( $who ) . '" loading="lazy">';
+							} else {
+								echo esc_html( $initial );
+							} ?></span>
+						<span>
+							<span class="tm-who"><?php echo esc_html( $who ); ?></span>
+							<?php if ( $svc ) : ?><span class="tm-svc"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
+						</span>
+					</figcaption>
+				</figure>
+			<?php endforeach; ?>
+		</div>
 
-			<div class="cs-panel cs-panel-review">
-				<p class="muted center" style="font-size:12.5px;margin-bottom:18px">Nội dung ví dụ minh hoạ dạng phản hồi thường gặp, chưa phải trích dẫn xác thực từ khách hàng cụ thể.</p>
-				<div class="tm-carousel owl-carousel">
-					<?php foreach ( dgc_lines( 'testimonials' ) as $t ) :
-						$quote = $t[0] ?? ''; $who = $t[1] ?? ''; $svc = $t[2] ?? ''; $photo = trim( $t[3] ?? '' );
-						if ( $quote === '' ) continue;
-						$initial = function_exists( 'mb_substr' ) ? mb_strtoupper( mb_substr( $who, 0, 1 ) ) : strtoupper( substr( $who, 0, 1 ) ); ?>
-						<figure class="tm">
-							<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-							<blockquote><?php echo esc_html( $quote ); ?></blockquote>
-							<figcaption>
-								<span class="tm-avatar<?php echo $photo ? ' tm-avatar--img' : ''; ?>" aria-hidden="true"><?php
-									if ( $photo ) {
-										echo '<img src="' . esc_url( $photo ) . '" alt="' . esc_attr( $who ) . '" loading="lazy">';
-									} else {
-										echo esc_html( $initial );
-									} ?></span>
-								<span>
-									<span class="tm-who"><?php echo esc_html( $who ); ?></span>
-									<?php if ( $svc ) : ?><span class="tm-svc"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
-								</span>
-							</figcaption>
-						</figure>
-					<?php endforeach; ?>
-				</div>
-			</div>
-
-			<div class="cs-panel cs-panel-case">
-				<?php $case_studies = array_filter( dgc_lines( 'case_studies' ), fn( $c ) => ! empty( $c[0] ) ); ?>
-				<?php if ( $case_studies ) : ?>
-					<div class="cs-grid">
-						<?php foreach ( $case_studies as $c ) : ?>
-							<div class="cs-card">
-								<h3><?php echo esc_html( $c[0] ?? '' ); ?></h3>
-								<p class="cs-result"><?php echo esc_html( $c[1] ?? '' ); ?></p>
-								<div class="cs-meta">
-									<?php if ( ! empty( $c[2] ) ) : ?><span class="cs-svc"><?php echo esc_html( $c[2] ); ?></span><?php endif; ?>
-									<?php if ( ! empty( $c[3] ) ) : ?><span class="cs-client"><?php echo esc_html( $c[3] ); ?></span><?php endif; ?>
-								</div>
-							</div>
-						<?php endforeach; ?>
-					</div>
-				<?php else : ?>
-					<div class="center" style="padding:30px 0"><p class="muted">Case study đang được cập nhật, quay lại sau.</p></div>
-				<?php endif; ?>
-			</div>
+		<div class="center" style="margin-top:34px">
+			<a class="btn btn-navy" href="<?php echo esc_url( get_post_type_archive_link( 'dgc_case' ) ?: home_url( '/case-study/' ) ); ?>">Xem case study thực tế của DigicomVN &rarr;</a>
 		</div>
 	</div>
 </section>
+
+<!-- 07c. BAO CHI NOI VE DIGICOMVN -->
+<?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) && ! empty( $m[1] ) ); ?>
+<?php if ( $dgc_mentions ) : ?>
+<section class="sec press-mentions-sec" style="background:#fff;border-top:1px solid var(--line)">
+	<div class="wrap">
+		<div class="center" style="margin-bottom:30px">
+			<span class="eyebrow">Truyền thông</span>
+			<h2>Báo chí nói về DigicomVN</h2>
+			<p class="muted" style="max-width:600px;margin:8px auto 0">Cách DigicomVN ứng dụng AI và quy trình booking báo bài bản được các cơ quan báo chí ghi nhận.</p>
+		</div>
+		<div class="pm-grid">
+			<?php foreach ( $dgc_mentions as $m ) :
+				$m_name = $m[0]; $m_url = $m[1]; $m_file = trim( $m[2] ?? '' );
+				$m_logo = $m_file ? content_url( 'uploads/press-mentions/' . $m_file ) : ''; ?>
+				<a class="pm-item" href="<?php echo esc_url( $m_url ); ?>" target="_blank" rel="nofollow noopener" title="<?php echo esc_attr( $m_name ); ?>">
+					<?php if ( $m_logo ) : ?>
+						<img src="<?php echo esc_url( $m_logo ); ?>" alt="<?php echo esc_attr( $m_name ); ?>" loading="lazy">
+					<?php else : ?>
+						<span class="pm-name"><?php echo esc_html( $m_name ); ?></span>
+					<?php endif; ?>
+					<span class="pm-read">Đọc bài &#8599;</span>
+				</a>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
 
 <!-- 08. CTA BAND -->
 <section class="sec-tight">

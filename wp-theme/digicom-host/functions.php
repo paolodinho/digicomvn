@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '0.8.7' );
+define( 'DGC_VER', '0.9.3' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -51,6 +51,7 @@ add_action( 'wp_enqueue_scripts', function () {
  * ------------------------------------------------------------------------- */
 require_once get_template_directory() . '/inc/options.php';
 require_once get_template_directory() . '/inc/cpt-gia.php';
+require_once get_template_directory() . '/inc/case-study.php';
 
 /**
  * Helper doc 1 option.
@@ -97,6 +98,27 @@ function dgc_service_groups() {
 	}
 	if ( $cur ) $groups[] = $cur;
 	return $groups;
+}
+
+/** Nhan dien ten bao/nguon tu URL (dung cho case study). */
+function dgc_source_label( $url ) {
+	$host = strtolower( wp_parse_url( $url, PHP_URL_HOST ) ?: '' );
+	$host = preg_replace( '/^www\./', '', $host );
+	$map  = array(
+		'e.vnexpress.net'       => 'VnExpress (EN)',
+		'vnexpress.net'         => 'VnExpress',
+		'vietnamnet.vn'         => 'VietnamNet',
+		'suckhoedoisong.vn'     => 'Sức khỏe & Đời sống',
+		'hanoimoi.vn'           => 'Hànộimới',
+		'diendandoanhnghiep.vn' => 'Diễn đàn Doanh nghiệp',
+		'baophutho.vn'          => 'Báo Phú Thọ',
+		'youtube.com'           => 'YouTube',
+		'youtu.be'              => 'YouTube',
+		'hfh.com.vn'            => 'BV Việt Pháp',
+		'tuoitre.vn'            => 'Tuổi Trẻ',
+		'vienktxh.hanoi.gov.vn' => 'Viện KTXH Hà Nội',
+	);
+	return $map[ $host ] ?? $host;
 }
 
 /** tel: link sach tu hotline */

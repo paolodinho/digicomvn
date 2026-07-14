@@ -1,5 +1,21 @@
 # LOG - digicomvn.com
 
+## 2026-07-14
+- Định vị lại hero trang chủ: eyebrow "SEO · AI · Automation", H1 "Marketing tăng trưởng bằng SEO, AI
+  và Automation", mô tả mới (sửa được từ WP Admin mục Hero).
+- Thêm 3 section trang chủ (đều sửa từ WP Admin - menu DigicomVN):
+  - Logo khách hàng ("Thương hiệu đã tin tưởng DigicomVN") - option `clients`, seed 7 KH thật, logo bổ sung sau (uploads/client-logos/).
+  - "Tại sao chọn DigicomVN" - card style (option `reasons`, 6 lý do xoáy SEO+AI+automation) + khối trích dẫn Đỗ Xuân Hiếu (option `why_quote`). Đã bỏ mini reason-grid trùng trong band navy.
+  - "Báo chí nói về DigicomVN" - option `press_mentions`, 2 bài thật (Truyền hình An Giang, Báo Đồng Nai), logo bổ sung sau (uploads/press-mentions/).
+- DGC_VER 0.9.2 → 0.9.3. Deploy + update option + purge + verify (hero, 3 section, CSS đều OK).
+- Case study tách ra trang riêng: tạo CPT `dgc_case` (archive `/case-study/`, single `/case-study/<slug>/`),
+  file inc/case-study.php + archive-dgc_case.php + single-dgc_case.php. Sửa được từ WP Admin (menu Case study).
+- Tạo 5 bài case study độc lập (post 1610/1612/1614/1616/1618): BV Việt Pháp, H Plus, ICD VN, BV Mắt HN2,
+  Dodanong - mỗi bài có nội dung, meta (dịch vụ/khách hàng/nguồn báo), thumbnail illustration riêng.
+- Homepage: bỏ tab "Case study", section chỉ còn carousel đánh giá + nút "Xem case study thực tế" → /case-study/.
+- Fix: xoá dòng .htaccess cũ `Redirect 301 /case-study/ → /ve-digicom/` (chặn trang); đổi slug page draft 441.
+- DGC_VER 0.9.1 → 0.9.2. Deploy + purge + verify (archive 5 card, single có nguồn báo, nút homepage đúng).
+
 ## 2026-06-27
 - Scaffold du an, nap brand-info Digicom.
 - Wireframe trang chu: wireframes/home-wireframe.html
@@ -895,3 +911,22 @@
 
 ## 2026-07-14 (tiếp) - Đổi ảnh dịch vụ Textlink
 - Thay ảnh trong trang /dich-vu/mua-textlink/ (page 505): ảnh xích kim loại cũ -> illustration flat xanh (dichvu_textlink.png) khớp phong cách site. Attach mới 1601, ảnh cũ 1382 giữ lại.
+
+## 2026-07-14 (tiếp) - Favicon + section "Vì sao phải booking báo chí"
+- Tạo favicon từ ký hiệu molecule g (teal) của logo trên nền navy bo góc; upload + set WP site_icon (attachment 1603). Assets lưu ở theme assets/images/.
+- Thêm section "Vì sao phải booking báo chí" (4 lợi ích: uy tín/backlink/độc giả/thông điệp + CTA) ngay dưới phần Mạng lưới báo chí trên trang chủ.
+
+## 2026-07-14 (tiếp) - 4 review khách hàng thật + ảnh chân dung
+- Thêm 4 testimonial thật: Vũ Văn Luân (BV Việt Pháp/Booking PR), Lê Văn Thăng (ICD/Guest Post), Nguyễn Hoàng Vinh (Zora/Backlink) - có ảnh chân dung; Nguyễn Tuấn Hoàng (Magenest/Textlink) - avatar chữ.
+- Template: hỗ trợ ảnh avatar, bỏ dòng disclaimer "ví dụ minh hoạ", initial bỏ tiền tố Ông/Anh/Chị. Câu trích là bản nháp, sửa được ở WP Admin > DigicomVN > testimonials.
+
+## 2026-07-14 (tiếp) - Bỏ "Vì sao booking báo chí" + 3 case study thật
+- Gỡ section "Vì sao phải booking báo chí" khỏi trang chủ.
+- Tab Case study: thêm 3 case thật kèm link báo nguồn (chip theo tên báo): BV Việt Pháp (triển lãm tranh, VnExpress VI+EN), H Plus (ra mắt phòng khám), ICD Việt Nam (định danh thương hiệu cho AI). Card mở rộng: tag dịch vụ + mô tả + khách hàng + hàng link "Xuất hiện trên". Helper dgc_source_label() map domain->tên báo. Sửa được ở WP Admin > DigicomVN > case_studies (5 cột: tiêu đề | mô tả | dịch vụ | khách hàng | link1,link2,...).
+
+- Thêm case study 4: Bệnh viện Mắt Hà Nội 2 (thành thương hiệu số 1 mổ cận, xây chuyên mục riêng trên SKĐS). Grid case study đổi auto-fit để 4 thẻ nằm gọn 1 hàng.
+
+## 2026-07-14 (tiếp) - Case 5 + ảnh Hoàng + báo chí 5 hàng
+- Case study 5: Dodanong.com (website review số 1 ngách sức khỏe nam giới, 2020, tới khi Google đổi thuật toán). Nguồn: Tuổi Trẻ, Viện KTXH Hà Nội.
+- Thêm ảnh chân dung ông Nguyễn Tuấn Hoàng vào testimonial (Magenest).
+- Phần Mạng lưới báo chí: 1 hàng -> 5 hàng logo chạy đổi chiều xen kẽ; bổ sung 13 đầu báo quốc tế (Reuters, AP News, Forbes, Yahoo, CNBC, Nasdaq, MarketWatch, Business Insider, Digital Journal, Straits Times, Bangkok Post, Tech in Asia, e27) trộn với 21 báo VN. Logo lấy qua favicon service.
