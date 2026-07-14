@@ -16,25 +16,28 @@ get_header();
 <section class="sec">
 	<div class="wrap">
 		<?php if ( have_posts() ) : ?>
-		<div class="cs-grid">
+		<div class="blog-grid">
 			<?php while ( have_posts() ) : the_post();
 				$svc    = get_post_meta( get_the_ID(), '_dgc_svc', true );
 				$client = get_post_meta( get_the_ID(), '_dgc_client', true ); ?>
-				<a class="cs-card cs-card--link" href="<?php the_permalink(); ?>">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="cs-thumb"><?php the_post_thumbnail( 'medium_large' ); ?></div>
-					<?php endif; ?>
-					<div class="cs-card-body">
-						<?php if ( $svc ) : ?><span class="cs-tag"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
-						<h3><?php the_title(); ?></h3>
-						<p class="cs-result"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 26 ) ); ?></p>
-						<?php if ( $client ) : ?><div class="cs-client"><?php echo esc_html( $client ); ?></div><?php endif; ?>
-						<span class="cs-more">Xem chi tiết &rarr;</span>
+				<article class="blog-card">
+					<a href="<?php the_permalink(); ?>" class="blog-card__thumb">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail( 'medium_large' ); ?>
+						<?php else : ?>
+							<div class="blog-card__thumb-placeholder"></div>
+						<?php endif; ?>
+					</a>
+					<div class="blog-card__body">
+						<span class="blog-card__date"><?php echo esc_html( $svc ?: $client ); ?></span>
+						<h2 class="blog-card__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<p class="blog-card__excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 24 ) ); ?></p>
+						<a href="<?php the_permalink(); ?>" class="blog-card__more">Đọc tiếp &rarr;</a>
 					</div>
-				</a>
+				</article>
 			<?php endwhile; ?>
 		</div>
-		<?php the_posts_pagination( array( 'mid_size' => 1 ) ); ?>
+		<div class="blog-pagination"><?php echo paginate_links( array( 'prev_text' => '&larr; Trước', 'next_text' => 'Sau &rarr;' ) ); ?></div>
 		<?php else : ?>
 			<p class="muted center">Case study đang được cập nhật.</p>
 		<?php endif; ?>

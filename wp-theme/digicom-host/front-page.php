@@ -11,7 +11,7 @@ get_header();
 	<div class="hero-diag-row">
 		<div class="hero-diag-copy">
 			<div class="hero-diag-copy-in">
-				<span class="eyebrow">SEO &middot; AI &middot; Automation</span>
+				<span class="eyebrow">Textlink &middot; Backlink &middot; Guest Post &middot; Booking báo &amp; PR</span>
 				<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 				<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 				<div class="hero-cta-row">
@@ -68,31 +68,6 @@ $promo_icons = array(
 	</div>
 </section>
 
-<!-- 03b. KHACH HANG / LOGO WALL -->
-<?php $dgc_clients = array_filter( dgc_lines( 'clients' ), fn( $c ) => ! empty( $c[0] ) ); ?>
-<?php if ( $dgc_clients ) : ?>
-<section class="sec-tight client-wall">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:30px">
-			<span class="eyebrow">Khách hàng &amp; đối tác</span>
-			<h2>Thương hiệu đã tin tưởng DigicomVN</h2>
-		</div>
-		<div class="client-logos">
-			<?php foreach ( $dgc_clients as $c ) :
-				$c_name = $c[0]; $c_file = trim( $c[1] ?? '' );
-				$c_url  = $c_file ? content_url( 'uploads/client-logos/' . $c_file ) : ''; ?>
-				<div class="client-logo" title="<?php echo esc_attr( $c_name ); ?>">
-					<?php if ( $c_url ) : ?>
-						<img src="<?php echo esc_url( $c_url ); ?>" alt="<?php echo esc_attr( $c_name ); ?>" loading="lazy">
-					<?php else : ?>
-						<span class="client-ph"><?php echo esc_html( $c_name ); ?></span>
-					<?php endif; ?>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
-<?php endif; ?>
 
 <!-- 06. DICH VU THEO NHOM -->
 <?php
@@ -298,6 +273,32 @@ $why_icons = array(
 						<?php echo $m_inner; // phpcs:ignore ?>
 					</span>
 				<?php endif; ?>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<!-- 07d. KHACH HANG / LOGO WALL (ngay duoi Bao chi noi ve) -->
+<?php $dgc_clients = array_filter( dgc_lines( 'clients' ), fn( $c ) => ! empty( $c[0] ) ); ?>
+<?php if ( $dgc_clients ) : ?>
+<section class="sec-tight client-wall">
+	<div class="wrap">
+		<div class="center" style="margin-bottom:30px">
+			<span class="eyebrow">Khách hàng &amp; đối tác</span>
+			<h2>Thương hiệu đã tin tưởng DigicomVN</h2>
+		</div>
+		<div class="client-logos">
+			<?php foreach ( $dgc_clients as $c ) :
+				$c_name = $c[0]; $c_file = trim( $c[1] ?? '' );
+				$c_url  = $c_file ? content_url( 'uploads/client-logos/' . $c_file ) : ''; ?>
+				<div class="client-logo" title="<?php echo esc_attr( $c_name ); ?>">
+					<?php if ( $c_url ) : ?>
+						<img src="<?php echo esc_url( $c_url ); ?>" alt="<?php echo esc_attr( $c_name ); ?>" loading="lazy">
+					<?php else : ?>
+						<span class="client-ph"><?php echo esc_html( $c_name ); ?></span>
+					<?php endif; ?>
+				</div>
 			<?php endforeach; ?>
 		</div>
 	</div>

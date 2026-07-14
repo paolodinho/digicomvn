@@ -1,5 +1,25 @@
 # LOG - digicomvn.com
 
+## 2026-07-14 (cuối - logo khách hàng thật + chuyển vị trí)
+- Section "Thương hiệu đã tin tưởng DigicomVN" chuyển từ 03b (dưới hero) xuống 07d (NGAY DƯỚI
+  "Báo chí nói về DigicomVN") theo yêu cầu Hiếu.
+- Kéo LOGO THẬT cho 3 khách (tải từ web chính thức, verify hình): Bệnh viện Việt Pháp Hà Nội
+  (hfh.com.vn, vietphap.svg), ICD Việt Nam (icd.webp), Magenest (magenest.png). Upload
+  uploads/client-logos/ + cập nhật option `clients`.
+- 4 khách còn lại giữ chữ tạm (H Plus - clinichplus.com JS-render, Bệnh viện Mắt Hà Nội 2 -
+  domain không rõ, Zora, Dodanong - không lấy được logo sạch qua curl). Chờ Hiếu gửi file.
+- Deploy front-page.php + purge. Verify DOM + screenshot: 3 logo hiện đúng, thứ tự đúng.
+
+## 2026-07-14 (chiều muộn - rollback hero + fix testimonials + case study card)
+- ROLLBACK định vị hero về CŨ (Hiếu chưa mở rộng SEO/AI/automation vội): eyebrow "Textlink · Backlink ·
+  Guest Post · Booking báo & PR", H1 "Backlink, Guest Post, Textlink và Booking báo PR uy tín", sub off-page SEO.
+  (option hero_title/hero_sub reset về default cũ; front-page.php eyebrow revert).
+- Testimonials "vẫn chưa bằng nhau": ngoài owl-stage flex, ghim caption xuống ĐÁY (.tm flex column +
+  blockquote flex:1 + figcaption margin-top:auto). Verify DOM: 3 thẻ đều 340px, caption thẳng hàng. (ảnh xác nhận)
+- Case study archive (/case-study/) đổi sang ĐÚNG kiểu blog-card (blog-grid/blog-card như trang Blog):
+  thumbnail minh hoạ + badge + service label + title + excerpt + "Đọc tiếp". Bỏ cs-card cũ.
+- DGC_VER 0.9.4 → 0.9.5. Deploy 4 file + reset option hero + purge + verify (3 ảnh screenshot).
+
 ## 2026-07-14 (chiều - tinh chỉnh UI + case study)
 - Marquee đầu báo chạy chậm lại (~1.7x, animation-duration 58->100s...) cho đỡ mỏi mắt.
 - Testimonials owl: ép các thẻ CAO BẰNG NHAU (owl-stage flex + item stretch), hết lệch thẻ giữa.

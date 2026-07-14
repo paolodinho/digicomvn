@@ -345,10 +345,11 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
    ========================================================================== */
 .tm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .tm{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:24px 22px;margin:0;
-  box-shadow:var(--sh-low);transition:.2s}
+  box-shadow:var(--sh-low);transition:.2s;display:flex;flex-direction:column}
 .tm-stars{color:#F5A623;font-size:15px;letter-spacing:2px;margin-bottom:12px}
-.tm blockquote{margin:0 0 16px;font-size:15.5px;line-height:1.65;color:var(--ink)}
-.tm figcaption{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px}
+/* quote chiem phan con lai -> caption luon nam day, 3 the thang hang */
+.tm blockquote{margin:0 0 16px;font-size:15.5px;line-height:1.65;color:var(--ink);flex:1 1 auto}
+.tm figcaption{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px;margin-top:auto}
 .tm-avatar{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--action);color:#fff;overflow:hidden;
   display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:15px}
 .tm-avatar--img{background:var(--surface)}
