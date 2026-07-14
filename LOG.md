@@ -876,3 +876,6 @@
   - Bump DGC_VER 0.8.2->0.8.3, backup 3 file truoc khi ghi de, deploy + verify tren
     browser that o desktop/tablet/375px - dep, khong tran, chuyen sang layout stack +
     an clip-path chéo o duoi 992px.
+
+## 2026-07-13 (chieu)
+- Sua Google Doc 02-baodanang (1pdXU931Jt...) thanh bai gioi thieu cong ty DigicomVN: giu 2 link (DigicomVN -> digicomvn.com, ICD Viet Nam -> icdvietnam.com.vn), them muc Khach hang tieu bieu (Emmich, BV Viet Phap, BV Mat HN 2, Giong Moi, ITC Thai Binh, The News Leaders, Medlatec, BV Hong Ngoc, Tham my Thu Cuc, PK H Plus, Nghikigai). Backup ban goc: ~/Claude-Workspace/_backups/2026-07-13/digicom-gdoc-booking-danang-GOC.md
