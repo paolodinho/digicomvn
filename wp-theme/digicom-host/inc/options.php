@@ -20,9 +20,16 @@ function dgc_defaults() {
 		'hero_title'    => 'Backlink, Guest Post, Textlink và Booking báo PR uy tín',
 		'hero_sub'      => 'DigicomVN cung cấp trọn gói off-page SEO: mua textlink chất lượng, dịch vụ backlink an toàn, guest post đúng chủ đề và booking đăng bài PR trên các đầu báo lớn.',
 
+		// Dai so lieu duoi hero. Moi dong: con so | nhan mo ta. Sua tu WP Admin khi mang luoi thay doi.
+		'hero_stats'    => "500+ | đầu báo trong nước & quốc tế\n2.000+ | site guest post đa ngành\nBáo giá | minh bạch\nHỗ trợ | tư vấn tận tình\nXuất VAT | đầy đủ",
+
 		// dich vu | gia tu | nhan (tuy chon) - hien o hero + trang bang gia
 		// DEMO - gia minh hoa, can Hieu xac nhan gia that truoc khi cong khai chinh thuc
 		'domain_tlds'   => "Mua Textlink | Từ 300.000đ/link | Theo DR/traffic\nDịch vụ Backlink | Từ 500.000đ/backlink | Theo khối lượng\nGuest Post | Từ 800.000đ/bài | Theo site đăng\nBooking báo & PR | Từ 700.000đ/bài | Theo đầu báo",
+
+		// Chiet khau combo khi khach tick nhieu bao/site trong bang gia.
+		// Moi dong: <so muc toi thieu>|<% giam>. Bac cao nhat dat duoc se duoc ap dung.
+		'combo_discount' => "2|3\n4|5\n6|8\n10|12\n15|15",
 
 		// Khuyen mai noi bat (tieu de | mo ta ngan)
 		'promos'        => "Báo giá theo từng đầu báo | Minh bạch, không phí ẩn\nGói combo Backlink + Guest Post | Tiết kiệm hơn khi đặt cùng lúc\nTư vấn miễn phí | Chọn đúng site/báo theo ngành hàng\nCam kết đúng tiến độ | Báo cáo link/bài đã lên sau khi hoàn thành",
@@ -31,7 +38,7 @@ function dgc_defaults() {
 		'hosting_plans' => "Gói Textlink | Liên hệ báo giá | Đặt link trong bài có sẵn;Chọn theo DR/traffic site;Vị trí link tự nhiên;Bàn giao vị trí đăng | 0\nGói Backlink | Liên hệ báo giá | Backlink chất lượng, đa dạng nguồn;Anchor text tự nhiên;Theo dõi index;Báo cáo chi tiết | 1\nGói Guest Post | Liên hệ báo giá | Viết bài + đăng trên site đúng chủ đề;Link dofollow tự nhiên;Duyệt nội dung trước khi đăng;Bàn giao link bài | 0\nGói Booking báo & PR | Liên hệ báo giá | Đăng bài PR trên báo điện tử;Viết bài chuẩn theo tôn chỉ báo;Hỗ trợ chọn chuyên mục;Bàn giao link bài đã lên | 0",
 
 		// Ly do chon (tieu de | mo ta) - hien o section "Tai sao chon DigicomVN"
-		'reasons'       => "Nền tảng SEO + AI | Chọn nguồn site/báo bằng dữ liệu chỉ số thật và AI, thay vì đi link theo cảm tính.\nTự động hóa quy trình | Theo dõi index, đo hiệu quả và báo cáo được tự động hóa để minh bạch và đúng tiến độ.\nĐược AI trích dẫn | Chuẩn hóa tín hiệu định danh (entity) để thương hiệu được AI và công cụ tìm kiếm nhận diện đúng.\nBáo giá minh bạch | Niêm yết theo từng dịch vụ, không phát sinh phí ẩn, xuất VAT đầy đủ.\nBooking báo thật | Chỉ đặt trên đầu báo, site có traffic và uy tín thật, hạn chế site rác.\nBàn giao rõ ràng | Báo cáo link/bài đã đăng kèm nguồn để đối chiếu sau khi hoàn thành.",
+		'reasons'       => "Nguồn chọn lọc theo chỉ số thật | Chọn site và báo theo DR, traffic thật và đúng chủ đề, không đi link tràn lan.\nTextlink & backlink an toàn | Đặt link tự nhiên trong ngữ cảnh bài viết, hạn chế rủi ro thuật toán.\nGuest post đúng chủ đề | Bài viết chuẩn chủ đề, đăng trên site liên quan, link dofollow có giá trị.\nBooking báo thật | Chỉ đặt trên đầu báo, site có traffic và uy tín thật, hạn chế site rác.\nBáo giá minh bạch | Niêm yết theo từng dịch vụ, không phát sinh phí ẩn, xuất VAT đầy đủ.\nBàn giao rõ ràng | Báo cáo link/bài đã đăng kèm nguồn để đối chiếu sau khi hoàn thành.",
 
 		// Trich dan noi bat o section "Tai sao chon DigicomVN": noi dung | ten nguoi | vai tro
 		'why_quote'     => "Off-page SEO hiệu quả phải dựa trên dữ liệu và tự động hóa - AI giúp chọn đúng nguồn và đo đúng kết quả, thay vì đi link theo cảm tính. | Đỗ Xuân Hiếu | Giám đốc DigicomVN",
@@ -120,6 +127,7 @@ function dgc_settings_page() {
 				<?php
 				dgc_field( 'hero_title', 'Tieu de lon' );
 				dgc_field( 'hero_sub', 'Mo ta phu', '', 'textarea' );
+				dgc_field( 'hero_stats', 'Dai so lieu duoi hero', 'Moi dong: con so | nhan mo ta (vd: 500+ | dau bao trong nuoc va quoc te). Toi da 5 dong. Chi ghi so lieu THAT.', 'textarea' );
 				?>
 			</table>
 
@@ -128,6 +136,7 @@ function dgc_settings_page() {
 				<?php
 				dgc_field( 'domain_tlds', 'Bang gia rut gon', 'Moi dong: ten dich vu | gia tu | nhan. VD: Mua Textlink | Lien he bao gia | Theo DR/traffic', 'textarea' );
 				dgc_field( 'promos', 'O khuyen mai', 'Moi dong: tieu de | mo ta', 'textarea' );
+				dgc_field( 'combo_discount', 'Chiet khau combo (tick nhieu bao cang giam)', 'Moi dong: <so muc toi thieu>|<% giam>. VD "4|5" = tu 4 muc tro len giam 5%. Bac cao nhat dat duoc se ap dung. De trong = khong giam.', 'textarea' );
 				?>
 			</table>
 

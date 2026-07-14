@@ -8,10 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 
 $dgc_nhom_list = array(
-	'booking-bao-pr'   => 'Booking báo & PR',
-	'guest-post'       => 'Guest Post',
-	'dich-vu-backlink' => 'Dịch vụ Backlink',
-	'mua-textlink'     => 'Mua Textlink',
+	'booking-bao-pr'         => 'Booking báo & PR',
+	'guest-post'             => 'Guest Post',
+	'dich-vu-backlink'       => 'Dịch vụ Backlink',
+	'mua-textlink'           => 'Mua Textlink',
+	'backlink-social-entity' => 'Backlink Social Entity',
 );
 
 // Gom du lieu 1 lan, dung lai cho bang chi tiet + cong cu tick chon.
@@ -27,13 +28,13 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Bảng giá</span>
 		<h1>Bảng giá dịch vụ DigicomVN</h1>
-		<p class="lead">Tra cứu giá cụ thể theo từng báo, site và gói dịch vụ - Textlink, Backlink, Guest Post, Booking báo &amp; PR. Lọc, sắp xếp và ước tính chi phí ngay bên dưới.</p>
+		<p class="lead">Tra cứu giá cụ thể theo từng báo, site và gói dịch vụ - Textlink, Backlink, Guest Post, Booking báo &amp; PR, Backlink Social Entity. Lọc, sắp xếp và ước tính chi phí ngay bên dưới.</p>
 	</div>
 </section>
 
 
 <!-- Bang gia chi tiet theo tab + cong cu tick chon (ghim dau khu vuc nay) -->
-<section class="sec" id="bang-gia-chi-tiet" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="sec" id="bang-gia-chi-tiet" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:18px"><span class="eyebrow">Chi tiết</span><h2>Tra cứu giá theo từng báo / site</h2>
 		</div>
@@ -52,9 +53,14 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			foreach ( $items as $it ) { foreach ( dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ) as $n ) { $nganh_used[ $n ] = true; } }
 			$has_nganh_filter = count( $nganh_used ) > 1;
 			$nganh_labels     = dgc_nganh_options();
+			// Nhom Social Entity ban theo goi, khong theo dau bao -> doi nhan cot/o tim kiem.
+			$is_goi    = ( 'backlink-social-entity' === $slug );
+			$col_name  = $is_goi ? 'Tên gói' : 'Tên báo / site';
+			$col_pos   = $is_goi ? 'Quy mô gói' : 'Vị trí';
+			$ph_search = $is_goi ? 'Tìm theo tên gói...' : 'Tìm theo tên báo/site...';
 		?>
 		<div class="tab-panel<?php echo $first ? ' active' : ''; ?>" data-panel="<?php echo esc_attr( $slug ); ?>">
-			<div class="price-layout<?php echo $has_nganh_filter ? ' has-filter' : ''; ?>">
+			<div class="price-layout<?php echo $has_nganh_filter ? ' has-filter' : ''; ?>" data-price-panel data-limit="0">
 			<?php if ( $has_nganh_filter ) : ?>
 			<aside class="price-filter">
 				<div class="price-filter-title">Lọc theo nhóm báo</div>
@@ -73,7 +79,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			<div class="price-main">
 			<div class="tab-toolbar">
 				<div class="tab-search">
-					<input type="text" class="tab-search-input" placeholder="Tìm theo tên báo/site..." aria-label="Tìm kiếm trong <?php echo esc_attr( $label ); ?>">
+					<input type="text" class="tab-search-input" placeholder="<?php echo esc_attr( $ph_search ); ?>" aria-label="Tìm kiếm trong <?php echo esc_attr( $label ); ?>">
 				</div>
 				<div class="tab-sort">
 					<button type="button" class="sort-btn" data-dir="asc">Giá thấp → cao</button>
@@ -86,58 +92,23 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 				<table class="price-table price-table-cpt">
 					<thead>
 						<tr>
-							<th>Tên báo / site</th>
-							<?php if ( 'mua-textlink' !== $slug ) : ?><th>Vị trí</th><?php endif; ?>
-							<th>Giá</th>
-							<th>Ghi chú</th>
+							<th class="col-site"><?php echo esc_html( $col_name ); ?></th>
+							<th class="col-spec"><?php echo $is_goi ? 'Quy mô gói' : 'Quy cách đăng'; ?></th>
+							<th class="col-price">Giá</th>
+							<th class="col-action"></th>
 						</tr>
 					</thead>
 					<tbody>
 					<?php if ( empty( $items ) ) : ?>
 						<tr><td colspan="4">Đang cập nhật dữ liệu.</td></tr>
 					<?php endif; ?>
-					<?php foreach ( $items as $it ) :
-						$m         = $it->meta;
-						$gia_km    = $m['gia_km'];
-						$gia_goc   = $m['gia_goc'];
-						$price_num = dgc_gia_to_number( $gia_km );
-						$hot       = ( '1' === $m['noi_bat'] );
-						$ghi_chu   = trim( implode( ' - ', array_filter( array( $m['so_link'], $m['yeu_cau'] ) ) ) );
-						$row_link  = $m['url_bao'] ? $m['url_bao'] : '';
-					?>
-						<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>">
-							<td data-label="Tên báo/site">
-								<label class="row-check-wrap">
-									<input type="checkbox" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $label . ')' ); ?>">
-									<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>
-									<span>
-										<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
-										<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
-									</span>
-								</label>
-								<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
-							</td>
-							<?php if ( 'mua-textlink' !== $slug ) : ?>
-							<td data-label="Vị trí"><?php echo esc_html( $m['vi_tri'] ); ?></td>
-							<?php endif; ?>
-							<?php
-							$has_real_old = ( $gia_goc && $gia_goc !== $gia_km );
-							$show_fake    = ! $has_real_old && preg_match( '/^[0-9]+$/', trim( $gia_km ) );
-							if ( $show_fake ) { $fake_pct = dgc_fake_discount_percent( $it->ID ); $fake_old = dgc_fake_original_price( $price_num, $fake_pct ); }
-							?>
-							<td data-label="Giá" class="cell-price">
-								<?php if ( $show_fake ) : ?>
-									<span class="price-old-line">
-										<span class="price-old"><?php echo esc_html( number_format( $fake_old, 0, ',', '.' ) . 'đ' ); ?></span>
-										<span class="price-discount-badge">-<?php echo (int) $fake_pct; ?>%</span>
-									</span>
-								<?php endif; ?>
-								<span class="price-now"><?php echo esc_html( dgc_format_price( $gia_km ) ); ?></span>
-								<?php if ( $has_real_old ) : ?><span class="price-old"><?php echo esc_html( dgc_format_price( $gia_goc ) ); ?></span><?php endif; ?>
-							</td>
-							<td data-label="Ghi chú"><?php echo esc_html( $ghi_chu ); ?></td>
-						</tr>
-					<?php endforeach; ?>
+					<?php foreach ( $items as $it ) {
+						echo dgc_gia_row_html( $it, array(
+							'nhom_slug' => $slug,
+							'ctx'       => $label,
+							'col_name'  => $col_name,
+						) );
+					} ?>
 					</tbody>
 				</table>
 			</div>
@@ -196,62 +167,8 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 		});
 	});
 
-	/* ---- Search + sort + loc nganh per panel ---- */
-	tabPanels.forEach(function(panel){
-		var input     = panel.querySelector('.tab-search-input');
-		var rows      = Array.prototype.slice.call(panel.querySelectorAll('.price-table-cpt tbody tr[data-name]'));
-		var tbody     = panel.querySelector('.price-table-cpt tbody');
-		var shownEl   = panel.querySelector('.tab-count-shown');
-		var totalEl   = panel.querySelector('.tab-count-total');
-		var sortBtns  = panel.querySelectorAll('.sort-btn');
-		var nganhBtns = panel.querySelectorAll('.nganh-btn');
-		var curNganh  = '';
-
-		function applyFilter(){
-			var q = (input ? input.value : '').trim().toLowerCase();
-			var shown = 0;
-			rows.forEach(function(r){
-				var matchQ = !q || r.getAttribute('data-name').indexOf(q) !== -1;
-				var matchN = !curNganh || (' ' + r.getAttribute('data-nganh') + ' ').indexOf(' ' + curNganh + ' ') !== -1;
-				var match = matchQ && matchN;
-				r.style.display = match ? '' : 'none';
-				if (match) shown++;
-			});
-			if (shownEl) shownEl.textContent = shown;
-			if (totalEl) totalEl.textContent = rows.length;
-		}
-
-		if (input) {
-			var t;
-			input.addEventListener('input', function(){
-				clearTimeout(t);
-				t = setTimeout(applyFilter, 120);
-			});
-		}
-
-		nganhBtns.forEach(function(btn){
-			btn.addEventListener('click', function(){
-				curNganh = btn.getAttribute('data-nganh') || '';
-				nganhBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
-				applyFilter();
-			});
-		});
-
-		sortBtns.forEach(function(btn){
-			btn.addEventListener('click', function(){
-				var dir = btn.getAttribute('data-dir') === 'asc' ? 1 : -1;
-				sortBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
-				rows.sort(function(a, b){
-					var pa = parseFloat(a.getAttribute('data-price')) || 0;
-					var pb = parseFloat(b.getAttribute('data-price')) || 0;
-					return (pa - pb) * dir;
-				});
-				rows.forEach(function(r){ tbody.appendChild(r); });
-			});
-		});
-
-		applyFilter();
-	});
+	/* Tim kiem / sap xep / loc nganh: xu ly chung trong assets/js/main.js
+	   (bind theo [data-price-panel] - dung chung voi bang gia trong trang dich vu). */
 
 	/* ---- Kich hoat dung tab (+ tim kiem san) khi tu trang dich vu link toi #nhom hoac #nhom:tu-khoa ---- */
 	var rawHash = decodeURIComponent( ( location.hash || '' ).replace( '#', '' ) );

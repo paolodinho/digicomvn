@@ -24,7 +24,7 @@ get_header();
 	</div>
 </section>
 
-<section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Lĩnh vực</span><h2>Chúng tôi làm gì</h2></div>
 		<div class="feat-row">

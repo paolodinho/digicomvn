@@ -22,7 +22,7 @@ $name = get_the_title();
 <section class="sec"><div class="wrap page-content"><?php the_content(); ?></div></section>
 <?php endif; ?>
 
-<section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Cam kết</span><h2>Vì sao mua bản quyền tại DigicomVN</h2></div>
 		<div class="feat-row">

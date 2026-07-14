@@ -20,6 +20,7 @@
 					<li><a href="<?php echo esc_url( home_url( '/dich-vu/dich-vu-backlink/' ) ); ?>">Dịch vụ Backlink</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Guest Post</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/dich-vu/booking-bao-pr/' ) ); ?>">Booking báo &amp; PR</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/dich-vu/backlink-social-entity/' ) ); ?>">Backlink Social Entity</a></li>
 				</ul>
 			</div>
 			<div>

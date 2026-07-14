@@ -33,14 +33,16 @@ get_header();
 	</div>
 	<div class="hero-diag-strip">
 		<div class="wrap">
-			<?php $dgc_press_count = count( dgc_lines( 'press_partners' ) ); ?>
-			<?php if ( $dgc_press_count > 0 ) : ?>
-			<div class="s stat"><b><?php echo (int) $dgc_press_count; ?>+</b>đầu báo &amp; site đối tác</div>
-			<?php endif; ?>
-			<div class="s"><b>Site</b> chọn lọc theo chỉ số</div>
-			<div class="s"><b>Báo giá</b> minh bạch</div>
-			<div class="s"><b>Hỗ trợ</b> tư vấn tận tình</div>
-			<div class="s"><b>Xuất VAT</b> đầy đủ</div>
+			<?php
+			// Dai so lieu sua tu WP Admin > DigicomVN > Hero. Moi dong: con so | nhan.
+			$dgc_stats = array_filter( dgc_lines( 'hero_stats' ), fn( $st ) => ! empty( $st[0] ) );
+			foreach ( array_slice( $dgc_stats, 0, 5 ) as $st ) :
+				$st_num   = trim( $st[0] );
+				$st_label = trim( $st[1] ?? '' );
+				$is_num   = (bool) preg_match( '/\d/', $st_num );
+				?>
+				<div class="s<?php echo $is_num ? ' stat' : ''; ?>"><b><?php echo esc_html( $st_num ); ?></b><?php echo $st_label ? ' ' . esc_html( $st_label ) : ''; ?></div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
@@ -78,7 +80,7 @@ $svc_meta = array(
 	'Booking báo & PR'      => array( 'eyebrow' => 'Booking PR', 'path' => 'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
 );
 ?>
-<section class="sec" id="services" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="sec" id="services" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:40px">
 			<span class="eyebrow">Dịch vụ của DigicomVN</span>
@@ -120,12 +122,12 @@ $why_icons = array(
 );
 ?>
 <?php if ( $why_items ) : ?>
-<section class="sec why-sec" id="tai-sao" style="background:#fff;border-bottom:1px solid var(--line)">
+<section class="sec why-sec" id="tai-sao" style="background:var(--surface-2);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:40px">
 			<span class="eyebrow">Tại sao chọn DigicomVN</span>
-			<h2>Marketing dựa trên SEO, AI và Automation</h2>
-			<p class="muted" style="max-width:620px;margin:10px auto 0">Không chỉ đi link - DigicomVN kết hợp dữ liệu SEO, trí tuệ nhân tạo và quy trình tự động hóa để thương hiệu của bạn hiện diện bền vững và được tin cậy.</p>
+			<h2>Off-page SEO làm đúng, nguồn thật, minh bạch</h2>
+			<p class="muted" style="max-width:620px;margin:10px auto 0">Textlink, backlink, guest post và booking báo PR triển khai trên nguồn chọn lọc có uy tín thật - báo giá rõ ràng, bàn giao kèm bằng chứng để bạn kiểm chứng.</p>
 		</div>
 		<div class="why-cards">
 			<?php $wi = 0; foreach ( $why_items as $r ) :
@@ -236,7 +238,7 @@ $why_icons = array(
 <!-- 07c. BAO CHI NOI VE DIGICOMVN -->
 <?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) ); ?>
 <?php if ( $dgc_mentions ) : ?>
-<section class="sec press-mentions-sec" style="background:#fff;border-top:1px solid var(--line)">
+<section class="sec press-mentions-sec" style="background:var(--surface-2);border-top:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:30px">
 			<span class="eyebrow">Truyền thông</span>
@@ -276,18 +278,23 @@ $why_icons = array(
 			<span class="eyebrow">Khách hàng &amp; đối tác</span>
 			<h2>Thương hiệu đã tin tưởng DigicomVN</h2>
 		</div>
-		<div class="client-logos">
-			<?php foreach ( $dgc_clients as $c ) :
-				$c_name = $c[0]; $c_file = trim( $c[1] ?? '' );
-				$c_url  = $c_file ? content_url( 'uploads/client-logos/' . $c_file ) : ''; ?>
-				<div class="client-logo" title="<?php echo esc_attr( $c_name ); ?>">
-					<?php if ( $c_url ) : ?>
-						<img src="<?php echo esc_url( $c_url ); ?>" alt="<?php echo esc_attr( $c_name ); ?>" loading="lazy">
-					<?php else : ?>
-						<span class="client-ph"><?php echo esc_html( $c_name ); ?></span>
-					<?php endif; ?>
-				</div>
-			<?php endforeach; ?>
+		<?php
+		$client_chip = function ( $c ) {
+			$c_name = $c[0]; $c_file = trim( $c[1] ?? '' );
+			$c_url  = $c_file ? content_url( 'uploads/client-logos/' . $c_file ) : ''; ?>
+			<div class="client-logo" title="<?php echo esc_attr( $c_name ); ?>">
+				<?php if ( $c_url ) : ?>
+					<img src="<?php echo esc_url( $c_url ); ?>" alt="<?php echo esc_attr( $c_name ); ?>" loading="lazy">
+				<?php else : ?>
+					<span class="client-ph"><?php echo esc_html( $c_name ); ?></span>
+				<?php endif; ?>
+			</div>
+		<?php };
+		?>
+		<div class="client-marquee">
+			<div class="client-track">
+				<?php for ( $k = 0; $k < 2; $k++ ) : foreach ( $dgc_clients as $c ) : $client_chip( $c ); endforeach; endfor; ?>
+			</div>
 		</div>
 	</div>
 </section>
@@ -310,22 +317,42 @@ $why_icons = array(
 </section>
 
 <!-- 09. FAQ -->
+<?php $dgc_faqs = array_filter( dgc_lines( 'faqs' ), fn( $f ) => ! empty( $f[0] ) && ! empty( $f[1] ) ); ?>
+<?php if ( $dgc_faqs ) : ?>
 <section class="sec" id="faq">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:34px">
 			<span class="eyebrow">Hỗ trợ</span>
 			<h2>Câu hỏi thường gặp</h2>
+			<p class="muted" style="max-width:620px;margin:8px auto 0">Giải đáp về DigicomVN và bốn dịch vụ Textlink, Backlink, Guest Post, Booking báo &amp; PR. Chưa thấy câu trả lời bạn cần? Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?>.</p>
 		</div>
 		<div class="faq">
-			<?php foreach ( dgc_lines( 'faqs' ) as $f ) : ?>
+			<?php foreach ( $dgc_faqs as $f ) : ?>
 				<details>
-					<summary><?php echo esc_html( $f[0] ?? '' ); ?></summary>
-					<div class="a"><?php echo esc_html( $f[1] ?? '' ); ?></div>
+					<summary><?php echo esc_html( $f[0] ); ?></summary>
+					<div class="a"><?php echo esc_html( $f[1] ); ?></div>
 				</details>
 			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
+<?php
+// Schema FAQPage: giup Google va cac tro ly AI trich dan dung cau tra loi cua DigicomVN.
+$dgc_faq_ld = array(
+	'@context'   => 'https://schema.org',
+	'@type'      => 'FAQPage',
+	'mainEntity' => array_values( array_map(
+		fn( $f ) => array(
+			'@type'          => 'Question',
+			'name'           => wp_strip_all_tags( $f[0] ),
+			'acceptedAnswer' => array( '@type' => 'Answer', 'text' => wp_strip_all_tags( $f[1] ) ),
+		),
+		$dgc_faqs
+	) ),
+);
+?>
+<script type="application/ld+json"><?php echo wp_json_encode( $dgc_faq_ld, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ); ?></script>
+<?php endif; ?>
 
 <!-- 10. TIN TUC & SU KIEN -->
 <?php
@@ -336,7 +363,7 @@ $news = new WP_Query( array(
 	'ignore_sticky_posts' => 1,
 ) );
 if ( $news->have_posts() ) : ?>
-<section class="sec" id="tin-tuc" style="background:#fff;border-top:1px solid var(--line)">
+<section class="sec" id="tin-tuc" style="background:var(--surface-2);border-top:1px solid var(--line)">
 	<div class="wrap">
 		<div class="news-head">
 			<div>

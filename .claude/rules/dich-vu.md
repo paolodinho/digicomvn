@@ -4,12 +4,15 @@
 > Bản danh mục 4 nhóm cũ (hạ tầng/license/marketing/automation) đã chuyển sang giai đoạn 2,
 > các trang tương ứng đang draft - xem `.claude/rules/pivot-2026-07.md`.
 
-## 4 dịch vụ chính (giai đoạn 1)
+## 5 dịch vụ chính (giai đoạn 1)
 
 - **Mua Textlink** - `/dich-vu/mua-textlink/` - chèn link vào bài viết có sẵn, chọn site theo DR/traffic.
 - **Dịch vụ Backlink** - `/dich-vu/dich-vu-backlink/` - hệ thống backlink chất lượng, đa nguồn.
   - Ngách Bất động sản - `/dich-vu/dich-vu-backlink/bat-dong-san/`
 - **Guest Post** - `/dich-vu/guest-post/` - viết bài + đăng trên site đúng chủ đề, link dofollow.
+- **Backlink Social Entity** - `/dich-vu/backlink-social-entity/` - hệ thống hồ sơ social chuẩn NAP,
+  nội dung độc bản, làm thủ công; bán theo gói (50/100/200+GStack/300+GStack), giá = 120% giá tham chiếu
+  Solann Digital (backlink.solanndigital.com/dich-vu-social-entity), chốt 2026-07-14.
 - **Booking báo & PR** - `/dich-vu/booking-bao-pr/` - đặt lịch đăng bài PR trên báo điện tử.
   - Con theo từng đầu báo (DRAFT, chờ Hiếu xác nhận báo thật hợp tác trước khi publish):
     `/dich-vu/booking-bao-pr/vnexpress/`, `/kenh14/`, `/dan-tri/`, `/24h/`, `/cafef/`.

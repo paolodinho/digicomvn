@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '0.9.6' );
+define( 'DGC_VER', '1.0.7' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -141,6 +141,7 @@ function dgc_icon( $name ) {
 		'layers' => 'M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 8l9 5 9-5',
 		'tag'   => 'M12 2H4v8l10 10 8-8L12 2zM7 7h.01',
 		'edit'  => 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z',
+		'share' => 'M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4',
 		'facebook' => 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z',
 		'linkedin' => 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z',
 	);
@@ -319,3 +320,30 @@ add_action( 'template_redirect', function () {
 		exit;
 	}
 }, 5 );
+
+/**
+ * Nut chuyen che do ban ngay / ban dem.
+ * Lua chon luu trong localStorage; chua chon thi theo cai dat he dieu hanh (prefers-color-scheme).
+ */
+function dgc_theme_toggle() {
+	?>
+	<button class="theme-toggle" type="button" aria-label="Chuyển chế độ ban ngày / ban đêm" title="Chuyển chế độ sáng / tối" onclick="dgcToggleTheme(this)">
+		<svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+		<svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+	</button>
+	<?php
+}
+
+/** Script doi che do - in o footer, khong phu thuoc file js ngoai. */
+function dgc_theme_toggle_script() {
+	?>
+	<script>
+	function dgcToggleTheme(){
+		var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+		document.documentElement.setAttribute('data-theme', cur);
+		try { localStorage.setItem('dgc-theme', cur); } catch (e) {}
+	}
+	</script>
+	<?php
+}
+add_action( 'wp_footer', 'dgc_theme_toggle_script', 5 );

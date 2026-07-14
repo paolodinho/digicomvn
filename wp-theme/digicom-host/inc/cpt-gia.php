@@ -47,6 +47,7 @@ add_action( 'init', function () {
 		'guest-post'       => 'Guest Post',
 		'mua-textlink'     => 'Mua Textlink',
 		'dich-vu-backlink' => 'Dịch vụ Backlink',
+		'backlink-social-entity' => 'Backlink Social Entity',
 	);
 	foreach ( $terms as $slug => $name ) {
 		if ( ! term_exists( $slug, 'dgc_nhom' ) ) {
@@ -253,6 +254,113 @@ function dgc_fake_original_price( $price_num, $pct ) {
 	return (int) ( ceil( $old / 10000 ) * 10000 );
 }
 
+/**
+ * Bac chiet khau combo (tick cang nhieu bao cang giam) - sua o WP Admin, muc "Bang gia".
+ * Moi dong option `combo_discount`: <so muc toi thieu>|<% giam>. Tra ve mang [min, pct] sap xep tang dan.
+ */
+function dgc_combo_tiers() {
+	$raw   = (string) dgc( 'combo_discount' );
+	$tiers = array();
+	foreach ( preg_split( '/\r\n|\r|\n/', $raw ) as $line ) {
+		$parts = array_map( 'trim', explode( '|', $line ) );
+		if ( count( $parts ) < 2 ) continue;
+		$min = (int) $parts[0];
+		$pct = (float) str_replace( ',', '.', rtrim( $parts[1], '% ' ) );
+		if ( $min >= 2 && $pct > 0 ) $tiers[] = array( 'min' => $min, 'pct' => $pct );
+	}
+	usort( $tiers, fn( $a, $b ) => $a['min'] <=> $b['min'] );
+	return $tiers;
+}
+
+/** Cau mo ta bac chiet khau cho khach doc (VD "2 báo giảm 3% - 4 báo giảm 5%..."). */
+function dgc_combo_tiers_text() {
+	$parts = array();
+	foreach ( dgc_combo_tiers() as $t ) {
+		$parts[] = 'từ ' . $t['min'] . ' mục giảm ' . rtrim( rtrim( number_format( $t['pct'], 1, ',', '' ), '0' ), ',' ) . '%';
+	}
+	return $parts ? implode( ' - ', $parts ) : '';
+}
+
+/**
+ * Tach "quy cach dang" cua 1 dong gia thanh cac the chip ngan (so tu, so anh, so link...)
+ * de cot Quy cach doc duoc ngay thay vi 1 chuoi dai. Chi tach o " - " (khong tach dau phay,
+ * vi dau phay thuong nam trong 1 y: "duoi 1000 tu, duoi 3 anh").
+ */
+function dgc_gia_specs( $meta ) {
+	$out = array();
+	foreach ( array( $meta['so_link'] ?? '', $meta['yeu_cau'] ?? '' ) as $src ) {
+		foreach ( preg_split( '/\s+-\s+|\s*;\s*/u', (string) $src ) as $chunk ) {
+			$chunk = trim( $chunk, " \t\n\r\0\x0B-" );
+			if ( $chunk !== '' ) $out[] = $chunk;
+		}
+	}
+	return $out;
+}
+
+/**
+ * HTML 1 dong bang gia - dung CHUNG cho trang /bang-gia/ va bang gia trong tung trang dich vu,
+ * de 2 noi luon giong nhau (cot: Bao/site | Quy cach dang | Gia | Dat ngay).
+ * $args: nhom_slug, ctx (nhan hien trong danh sach da chon), col_name, col_pos.
+ */
+function dgc_gia_row_html( $it, $args ) {
+	$m         = $it->meta;
+	$slug      = $args['nhom_slug'];
+	$gia_km    = $m['gia_km'];
+	$gia_goc   = $m['gia_goc'];
+	$price_num = dgc_gia_to_number( $gia_km );
+	$hot       = ( '1' === $m['noi_bat'] );
+	$row_link  = $m['url_bao'] ? $m['url_bao'] : '';
+	$specs     = dgc_gia_specs( $m );
+	$vi_tri    = trim( (string) $m['vi_tri'] );
+	$show_pos  = ( 'mua-textlink' !== $slug && $vi_tri !== '' );
+
+	$has_real_old = ( $gia_goc && $gia_goc !== $gia_km );
+	$show_fake    = ! $has_real_old && preg_match( '/^[0-9]+$/', trim( $gia_km ) );
+	$fake_pct     = $show_fake ? dgc_fake_discount_percent( $it->ID ) : 0;
+	$fake_old     = $show_fake ? dgc_fake_original_price( $price_num, $fake_pct ) : 0;
+
+	$cb_id = 'pick-' . (int) $it->ID;
+
+	ob_start(); ?>
+	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>">
+		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
+			<label class="row-check-wrap">
+				<input type="checkbox" id="<?php echo esc_attr( $cb_id ); ?>" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $args['ctx'] . ')' ); ?>">
+				<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>
+				<span>
+					<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
+					<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
+					<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
+				</span>
+			</label>
+		</td>
+		<td data-label="Quy cách đăng" class="cell-spec">
+			<?php if ( $show_pos ) : ?><span class="spec-chip spec-chip-pos"><?php echo esc_html( $vi_tri ); ?></span><?php endif; ?>
+			<?php foreach ( $specs as $sp ) : ?><span class="spec-chip"><?php echo esc_html( $sp ); ?></span><?php endforeach; ?>
+			<?php if ( ! $show_pos && ! $specs ) : ?><span class="spec-empty">Liên hệ để nhận quy cách chi tiết</span><?php endif; ?>
+		</td>
+		<td data-label="Giá" class="cell-price">
+			<?php if ( $show_fake || $has_real_old ) : ?>
+				<span class="price-old-line">
+					<span class="price-old"><?php echo esc_html( $show_fake ? number_format( $fake_old, 0, ',', '.' ) . 'đ' : dgc_format_price( $gia_goc ) ); ?></span>
+					<?php if ( $show_fake ) : ?><span class="price-discount-badge">-<?php echo (int) $fake_pct; ?>%</span><?php endif; ?>
+				</span>
+			<?php endif; ?>
+			<span class="price-now"><?php echo esc_html( dgc_format_price( $gia_km ) ); ?></span>
+		</td>
+		<td data-label="" class="cell-action">
+			<a class="btn btn-navy btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a>
+			<?php /* Mobile: nut toggle chon thay cho checkbox nho + nut Dat ngay (CSS an o desktop). */ ?>
+			<label class="pick-btn" for="<?php echo esc_attr( $cb_id ); ?>">
+				<span class="pick-add">+ Chọn báo này</span>
+				<span class="pick-on">Đã chọn</span>
+			</label>
+		</td>
+	</tr>
+	<?php
+	return ob_get_clean();
+}
+
 /** Trung vi (median) - it bi lech boi gia tri qua cao/thap so voi trung binh cong, phu hop khi 1 nhom co ca goi re va goi cao cap. */
 function dgc_median( $values ) {
 	$values = array_values( array_filter( $values, fn( $v ) => $v > 0 ) );
@@ -276,6 +384,7 @@ function dgc_current_nhom( $post_id = 0 ) {
 		'dich-vu-backlink' => 'Dịch vụ Backlink',
 		'guest-post'       => 'Guest Post',
 		'booking-bao-pr'   => 'Booking báo & PR',
+		'backlink-social-entity' => 'Backlink Social Entity',
 	);
 
 	$slug = get_post_field( 'post_name', $post_id );

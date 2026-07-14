@@ -23,7 +23,7 @@ $dgc_all_cats = get_categories( array( 'hide_empty' => true, 'orderby' => 'name'
 </section>
 
 <?php if ( count( $dgc_all_cats ) > 1 ) : ?>
-<section class="sec-tight" style="background:#fff;border-bottom:1px solid var(--line)">
+<section class="sec-tight" style="background:var(--surface-2);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="tab-bar" role="tablist" aria-label="Các cụm chủ đề SEO">
 			<?php foreach ( $dgc_all_cats as $cat ) :

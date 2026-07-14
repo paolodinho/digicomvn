@@ -1,5 +1,43 @@
 # LOG - digicomvn.com
 
+## 2026-07-14 (bổ sung 5 - bảng giá 4 cột rõ ràng + chiết khấu combo)
+- Bảng giá bỏ cột "Vị trí"/"Ghi chú" lẫn lộn, còn 4 cột: **Báo/site | Quy cách đăng | Giá |
+  Đặt ngay**. Quy cách tách thành chip riêng (1000 từ / 5 ảnh / 2 link dofollow / vị trí đăng)
+  thay vì 1 chuỗi dài. Giá gom về 1 cột phải: giá gốc gạch + %, giá bán đậm.
+- Hàng bảng giá gom vào helper chung `dgc_gia_row_html()` (cpt-gia.php) - trang /bang-gia/ và
+  bảng trong trang dịch vụ dùng chung 1 markup, không lệch nhau.
+- **Chiết khấu combo bậc thang**: 2 mục -3%, 4 -5%, 6 -8%, 10 -12%, 15 -15% (bậc cao nhất đạt
+  được, không cộng dồn). Sửa bậc ở WP Admin > DigicomVN > "Chiet khau combo". Thanh chọn hiện
+  Tạm tính -> Ưu đãi combo -> Còn lại + gợi ý "chọn thêm N mục để giảm X%". Form Đặt bài nhận
+  đủ subtotal/discount/total qua URL.
+- CSS mobile: mỗi dòng thành card (tên báo trên cùng, chip quy cách, giá, nút full-width).
+- DGC_VER 1.0.2 → 1.0.4. Deploy + purge. Verify live: 1 mục 890.000đ (nudge giảm 3%), 2 mục
+  -56.700đ, 6 mục -8% = -503.200đ, 10 mục -12% = -1.330.800đ. Trang /bang-gia/ vẫn chạy đủ 5 tab.
+
+## 2026-07-14 (bổ sung 4 - bảng giá chi tiết trên MỌI trang dịch vụ)
+- Yêu cầu Hiếu: bỏ kiểu chỉ có bảng giá chung ở /bang-gia/; mỗi trang dịch vụ phải có bảng giá
+  chi tiết ngay trên trang.
+- `inc/service-pricing.php` viết lại thành bảng giá đầy đủ (trước chỉ hiện 8 dòng tĩnh, và chỉ
+  dùng cho Social Entity): ô tìm kiếm, sắp xếp giá tăng/giảm, lọc nhóm báo (12 nhóm), tick chọn
+  tính tổng tạm tính (sel-bar), nút "Xem thêm N mục" (mặc định hiện 10 dòng).
+- `tpl-service.php`: include bảng giá cho TẤT CẢ 5 nhóm dịch vụ (+ trang con từng đầu báo, tự lọc
+  đúng báo đó). Bỏ CTA band đẩy sang /bang-gia/; thêm nút "Xem bảng giá" ở hero.
+- JS tìm kiếm/sắp xếp/lọc chuyển từ inline trong `page-bang-gia.php` sang `assets/js/main.js`
+  (bind theo `[data-price-panel]`) - dùng chung 2 nơi, không lặp code.
+- DGC_VER 1.0.1 → 1.0.2. Deploy 6 file + php -l OK + purge cache. Verify live: mua-textlink 30
+  dòng, backlink 21, guest-post 40, booking-bao-pr 118 (hiện 10 + xem thêm), social-entity 4,
+  /booking-bao-pr/vnexpress/ đúng 5 dòng của VnExpress. Trang /bang-gia/ vẫn chạy nguyên (5 tab).
+
+## 2026-07-14 (bổ sung 3 - text off-page + logo màu)
+- Section "Tại sao chọn DigicomVN": bỏ định vị AI/Automation. H2 "Off-page SEO làm đúng, nguồn
+  thật, minh bạch"; 6 lý do mới bám 4 dịch vụ (nguồn chọn lọc, textlink/backlink an toàn, guest
+  post đúng chủ đề, booking báo thật, báo giá minh bạch, bàn giao rõ ràng). Sửa được WP Admin (reasons).
+- LOGO đúng màu: bỏ filter grayscale ở .pm-item img + .client-logo img (trước xám hết, giờ full màu).
+- Thay 2 file logo báo bị vỡ nét (vnexpress.png + cafef.png trước là favicon 16x16) bằng bản
+  hi-res thật (VnExpress 519x138 render từ SVG chính chủ, CafeF 169x42 từ cafefcdn). Backup bản cũ.
+- DGC_VER 0.9.6 → 0.9.7. Deploy + update reasons option + purge. Verify server serve bản mới đúng.
+  Lưu ý: ảnh cùng tên file -> browser cache bản cũ, cần hard-refresh mới thấy 2 logo mới.
+
 ## 2026-07-14 (bổ sung 2 - đổi bố cục "Tại sao chọn")
 - Section "Tại sao chọn DigicomVN": bỏ khối trích dẫn Đỗ Xuân Hiếu (aside .why-quote), đổi bố cục
   từ 7fr/4fr (6 thẻ + quote) sang LƯỚI 3 CỘT x 2 hàng đều (.why-cards repeat(3)). Responsive 3->2->1.
@@ -974,3 +1012,32 @@
 - Case study 5: Dodanong.com (website review số 1 ngách sức khỏe nam giới, 2020, tới khi Google đổi thuật toán). Nguồn: Tuổi Trẻ, Viện KTXH Hà Nội.
 - Thêm ảnh chân dung ông Nguyễn Tuấn Hoàng vào testimonial (Magenest).
 - Phần Mạng lưới báo chí: 1 hàng -> 5 hàng logo chạy đổi chiều xen kẽ; bổ sung 13 đầu báo quốc tế (Reuters, AP News, Forbes, Yahoo, CNBC, Nasdaq, MarketWatch, Business Insider, Digital Journal, Straits Times, Bangkok Post, Tech in Asia, e27) trộn với 21 báo VN. Logo lấy qua favicon service.
+
+## 2026-07-14 (tiếp) - Gắn 6 logo mới (5 khách hàng + 1 đài truyền hình)
+- Client wall: Thu Cúc (thucuc.webp), ITC Thái Bình (itc-thaibinh.webp), The New Leaders (thenewleaders.svg - đổi tên hiển thị từ "The Leaders Asia" cho khớp logo), Yamafuji Packing (yamafuji.jpg), Siêu thị Hải Minh (haiminh.png). Còn Dodanong.com chưa có logo (hiện chữ).
+- "Báo chí nói về DigicomVN": gắn logo Truyền hình An Giang (angiangtv.svg) - trước đây hiện chữ.
+- Logo nguồn chuẩn hoá tên, lưu repo tại wp-uploads/client-logos/ + wp-uploads/press-logos/; upload live, chmod 644 (scp để 600 -> 403).
+- Sync repo front-page.php theo bản live (live đã có marquee client wall, repo còn grid tĩnh -> deploy từ repo sẽ regress).
+- Backup: ~/Claude-Workspace/_backups/routines/2026-07-14/digicom-logos/
+
+## 2026-07-14 (tiếp) - Dịch vụ mới: Backlink Social Entity
+- Trang /dich-vu/backlink-social-entity/ (page 1621, tpl-service.php): social entity là gì, vì sao cần, USP, quy trình 7 bước, cam kết (index >85%, bảo hành 6 tháng), 5 FAQ.
+- 4 gói giá trong CPT dgc_gia (term mới `backlink-social-entity`, post 1622-1625), giá = 120% giá Solann Digital: 649.000 / 1.259.000 / 2.389.000 / 3.469.000đ.
+- Theme: cpt-gia.php (term + nhom), tpl-service.php (hiện bảng giá ngay trên trang, ẩn quy trình chung), service-pricing.php + page-bang-gia.php (nhãn cột "Tên gói"/"Quy mô gói" cho nhóm bán theo gói), page-dich-vu.php (card thứ 5, icon share), footer.php, menu chính. DGC_VER 0.9.9.
+- Backup file live trước khi ghi đè: ~/Claude-Workspace/_backups/routines/2026-07-14/digicom-social-entity/
+- Bổ sung logo Dodanong.com (từ `logo dodanong.png` sẵn có trong repo): crop sát nội dung + bo góc 12px, giữ nền tối (chữ trắng nên không tách nền được). Client wall giờ 15/15 khách hàng đều có logo thật, không còn ô hiện chữ.
+- Mục "Báo chí nói về DigicomVN": gắn logo Báo Đồng Nai (baodongnai.png, từ images.png) và thêm Báo Đà Nẵng (baodanang.png, từ ogimagedn.jpg) - cả 2 đã crop bỏ nền trắng thừa. Báo Đà Nẵng CHƯA có link bài, chỉ hiện logo; bổ sung link ở WP Admin > DigicomVN khi có.
+- Thay logo 4 đầu báo bằng logo chữ chính thức (trước là favicon 32-48px lấy qua favicon service, bé + mờ): Dân Trí (dantri-v2.png), Thanh Niên (thanhnien-v2.png), Tuổi Trẻ (tuoitre-v2.svg), VietNamNet (vietnamnet-v2.svg). Đã tách nền trong suốt + crop sát; đặt hậu tố -v2 để tránh cache tĩnh 7 ngày. Thay ở cả press_partners lẫn press_mentions.
+- Lưới "Báo chí nói về DigicomVN": đổi từ grid 5 cột cố định sang flex-wrap + justify-content:center -> hàng cuối lẻ (11 logo = 5+5+1) tự căn giữa thay vì dính mép trái. DGC_VER 0.9.9 -> 1.0.1.
+- Sync repo main.css + front-page.php theo bản live trước khi sửa (live đã có marquee client wall mà repo chưa có; deploy từ repo cũ sẽ regress). Backup 2 bản cũ trong _backups/routines/2026-07-14/digicom-logos/.
+- Thêm 3 khách hàng/đối tác: TrueMoney (truemoney.png), Nhựa Thành Công - Tha Co Plastic JSC (nhuathanhcong.png), 1Beauty (1beauty.png). Đã tách nền trong suốt + crop. Client wall: 18 logo, tất cả đều có logo thật.
+- Hero: dải số liệu chuyển từ tự-đếm (34+ theo danh sách press_partners) sang field `hero_stats` sửa được ở WP Admin > DigicomVN > Hero (mỗi dòng: con số | nhãn, tối đa 5 dòng). Hiện: 500+ đầu báo trong nước & quốc tế / 2.000+ site guest post đa ngành / Báo giá minh bạch / Hỗ trợ tư vấn tận tình / Xuất VAT đầy đủ.
+- Hero mô tả phụ: thêm định vị "mạng lưới guest post lớn bậc nhất Việt Nam cùng quan hệ booking báo trong nước và quốc tế". DGC_VER 1.0.2.
+
+## 2026-07-14 (tiếp) - Dark mode + FAQ 20 câu + menu mobile
+- **Chế độ ban ngày/ban đêm**: nút mặt trời/mặt trăng ở header (và trong menu mobile). Tự theo cài đặt hệ điều hành của khách lần đầu, sau đó nhớ lựa chọn (localStorage). Script đặt theme chạy trong <head> nên không nháy trắng khi tải trang.
+  - Refactor token: tách `--heading` (chữ tiêu đề) khỏi `--navy` (vốn dùng cả làm nền tối) - 47 chỗ; đổi 32 chỗ CSS + 12 chỗ inline PHP `background:#fff` -> `var(--surface-2)`.
+  - Chủ ý: ô logo báo/khách hàng GIỮ nền trắng ở dark (nhiều logo là chữ màu tối, đặt trên nền tối sẽ chìm).
+- **FAQ**: 4 -> 20 câu, phủ: pháp nhân/quy mô mạng lưới DigicomVN, Textlink, Backlink (+BĐS), Guest Post, Booking báo & PR (báo quốc tế, duyệt bài, link dofollow), giá/VAT/thanh toán/bàn giao, thời gian thấy hiệu quả. Thêm schema FAQPage (20 mục) để Google + trợ lý AI trích dẫn.
+- **Menu mobile**: kiểm tra thực tế bằng Playwright - burger + drawer 12 mục VẪN HOẠT ĐỘNG (không phải bug mất menu). Nguyên nhân Hiếu không thấy: nút 3 gạch mảnh, không viền, nép sát mép phải. Đã thêm viền tròn + nền để dễ nhận biết.
+- DGC_VER 1.0.2 -> 1.1.1. Backup: _backups/routines/2026-07-14/digicom-darkmode/

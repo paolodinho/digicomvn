@@ -113,3 +113,21 @@
   (upload.wikimedia.org/wikipedia/commons/5/51/Báo_Lao_Động.png, 250x62, dang logo wordmark
   that, khong phai favicon) - da xem lai anh xac nhan dung logo "LAO DONG" chu do + sao vang.
   Gio du 16/16 dau bao co logo that.
+
+## 2026-07-14 - Số liệu mạng lưới công bố trên hero
+- Chốt (Hiếu xác nhận): **500+ đầu báo** (trong nước + quốc tế), **2.000+ site guest post**.
+- Trước đó hero hiển thị "34+ đầu báo & site đối tác" - con số này chỉ là số dòng trong danh sách logo báo ở WP Admin, không phản ánh quy mô thật.
+- Định vị: "mạng lưới guest post lớn bậc nhất Việt Nam" (Hiếu chọn, thay vì "lớn nhất").
+- Lưu ý rủi ro: đây là claim không kiểm chứng được từ nguồn công khai. Nếu khách/đối thủ yêu cầu bằng chứng, cần sẵn danh sách site/đầu báo để dẫn.
+
+## 2026-07-14 - Chiết khấu combo bậc thang trong bảng giá
+- Chốt: khách tick càng nhiều báo/site trong bảng giá càng được giảm giá, áp tự động trên
+  tổng đơn. Bậc mặc định: 2 mục -3%, 4 mục -5%, 6 mục -8%, 10 mục -12%, 15 mục -15%
+  (bậc cao nhất đạt được sẽ áp dụng, không cộng dồn).
+- Bậc sửa được ở WP Admin > DigicomVN > mục "Chiet khau combo" (mỗi dòng: số mục|% giảm) -
+  không cần code. Để trống = tắt ưu đãi.
+- Thanh chọn hiện: Tạm tính -> Ưu đãi combo -> Còn lại, kèm gợi ý "chọn thêm N mục để giảm X%".
+  Số liệu này chuyển sang trang Đặt bài qua URL để form ghi đúng vào yêu cầu báo giá.
+- Lý do: tăng giá trị đơn trung bình, khách thấy ngay lợi ích khi đặt nhiều báo (trước đây chỉ
+  ghi chung chung "đặt từ 2 báo liên hệ nhận ưu đãi", không có con số).
+- Lưu ý: % giảm là cam kết công khai - khi sale báo giá thật phải áp đúng bậc này, tránh lệch.

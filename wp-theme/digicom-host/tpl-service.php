@@ -15,7 +15,11 @@ $nhom     = dgc_current_nhom();
 		<span class="eyebrow">Dịch vụ</span>
 		<h1><?php echo esc_html( $svc_name ); ?></h1>
 		<?php if ( has_excerpt() ) : ?><p class="lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
-		<div style="margin-top:22px"><a class="btn btn-primary" href="#lien-he">Nhận báo giá</a> <a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a></div>
+		<div style="margin-top:22px">
+			<?php if ( $nhom ) : ?><a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a> <?php endif; ?>
+			<a class="btn <?php echo $nhom ? 'btn-ghost' : 'btn-primary'; ?>" href="#lien-he">Nhận báo giá</a>
+			<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+		</div>
 	</div>
 </section>
 
@@ -23,17 +27,16 @@ $nhom     = dgc_current_nhom();
 <section class="sec"><div class="wrap page-content"><?php the_content(); ?></div></section>
 <?php endif; ?>
 
-<?php if ( $nhom ) :
-	$dgc_bg_hash = $nhom['slug'] . ( ! empty( $nhom['outlet_keyword'] ) ? ':' . $nhom['outlet_keyword'] : '' );
-	$dgc_bg_url  = home_url( '/bang-gia/#' . $dgc_bg_hash );
+<?php
+/* Bang gia chi tiet ngay tren trang dich vu (moi dich vu deu co - Hieu 2026-07-14). */
+if ( $nhom ) {
+	include get_template_directory() . '/inc/service-pricing.php';
+}
 ?>
-<section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Xem bảng giá <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2><p>Giá chi tiết theo từng báo/site, tick chọn nhiều mục và tính tổng nhanh - tra cứu đầy đủ tại trang Bảng giá.</p></div>
-	<div class="cta-actions"><a class="btn btn-navy" href="<?php echo esc_url( $dgc_bg_url ); ?>">Xem bảng giá &rarr;</a></div>
-</div></div></section>
-<?php endif; ?>
 
-<section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<?php /* Social Entity co quy trinh rieng 7 buoc trong noi dung trang -> khong lap quy trinh chung. */ ?>
+<?php if ( ! $nhom || 'backlink-social-entity' !== $nhom['slug'] ) : ?>
+<section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:34px"><span class="eyebrow">Quy trình</span><h2>Cách DigicomVN triển khai</h2></div>
 		<div class="proc">
@@ -44,6 +47,7 @@ $nhom     = dgc_current_nhom();
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 
 <section class="sec">
 	<div class="wrap">

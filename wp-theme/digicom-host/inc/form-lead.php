@@ -13,6 +13,7 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 	<div class="order-summary" id="dgc-order-summary" hidden>
 		<div class="order-summary-title">Bạn đang yêu cầu báo giá cho</div>
 		<ul class="order-summary-list"></ul>
+		<div class="order-summary-disc" hidden>Ưu đãi combo <b class="order-summary-disc-pct"></b>: <b class="order-summary-disc-num"></b></div>
 		<div class="order-summary-total">Tổng tạm tính: <b></b> <span>(chưa gồm VAT)</span></div>
 	</div>
 	<h3 style="margin-top:0"><?php echo esc_html( $dgc_form_title ); ?></h3>
@@ -49,14 +50,21 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 </div>
 <script>
 (function(){
-	var params = new URLSearchParams(location.search);
+	var params   = new URLSearchParams(location.search);
 	var selected = params.get('selected');
 	var total    = params.get('total');
+	var subtotal = params.get('subtotal');
+	var discount = parseFloat(params.get('discount') || 0) || 0;
+	var discPct  = parseFloat(params.get('discount_pct') || 0) || 0;
 	if (!selected) return;
+	function vnd(n){ return Math.round(n).toLocaleString('vi-VN') + 'đ'; }
+
 	var msg = document.getElementById('dgc_message');
 	if (msg && !msg.value) {
 		msg.value = 'Tôi quan tâm: ' + selected +
-			(total ? '. Tổng tạm tính: ' + Math.round(total).toLocaleString('vi-VN') + 'đ (chưa gồm VAT).' : '.');
+			(subtotal ? '. Tạm tính: ' + vnd(subtotal) : '') +
+			(discount ? '. Ưu đãi combo ' + discPct + '%: -' + vnd(discount) : '') +
+			(total ? '. Tổng sau ưu đãi: ' + vnd(total) + ' (chưa gồm VAT).' : '.');
 	}
 	var box = document.getElementById('dgc-order-summary');
 	if (box) {
@@ -68,7 +76,13 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 			li.textContent = name;
 			list.appendChild(li);
 		});
-		if (total) box.querySelector('.order-summary-total b').textContent = Math.round(total).toLocaleString('vi-VN') + 'đ';
+		if (discount > 0) {
+			var d = box.querySelector('.order-summary-disc');
+			d.querySelector('.order-summary-disc-pct').textContent = discPct + '%';
+			d.querySelector('.order-summary-disc-num').textContent = '-' + vnd(discount);
+			d.hidden = false;
+		}
+		if (total) box.querySelector('.order-summary-total b').textContent = vnd(total);
 		else box.querySelector('.order-summary-total').style.display = 'none';
 		box.hidden = false;
 	}

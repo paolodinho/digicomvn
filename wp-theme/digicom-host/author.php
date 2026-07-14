@@ -64,7 +64,7 @@ if ( $dgc_same_as ) $dgc_schema['sameAs'] = array_values( $dgc_same_as );
 </section>
 <?php endif; ?>
 
-<section class="sec" style="background:#fff;border-top:1px solid var(--line)">
+<section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Nội dung đã viết</span><h2>Bài viết của <?php echo esc_html( $dgc_name ); ?></h2></div>
 		<?php if ( have_posts() ) : ?>

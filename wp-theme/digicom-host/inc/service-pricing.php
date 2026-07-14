@@ -1,94 +1,129 @@
 <?php
 /**
- * Bang gia + tool uoc tinh chi phi rieng cho 1 trang dich vu (tpl-service.php).
- * Include file - can bien $nhom (tu dgc_current_nhom()) truoc khi require.
+ * Bang gia chi tiet nhung TRONG tung trang dich vu (tpl-service.php) - cung dang bang
+ * voi trang /bang-gia/: tim kiem, sap xep, loc nhom bao, tick chon tinh tong tam tinh.
+ * Include file - can bien $nhom (dgc_current_nhom()) va $svc_name truoc khi require.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 if ( empty( $nhom ) ) return;
 
 $dgc_sp_items = dgc_get_gia( $nhom['slug'] );
 
+// Trang con theo tung dau bao (vd /booking-bao-pr/vnexpress/) -> chi lay dong cua bao do.
+$dgc_sp_is_outlet = false;
 if ( ! empty( $nhom['outlet_keyword'] ) ) {
-	$kw = $nhom['outlet_keyword'];
+	$kw       = $nhom['outlet_keyword'];
 	$filtered = array_values( array_filter( $dgc_sp_items, function ( $it ) use ( $kw ) {
 		return stripos( str_replace( '-', '', $it->post_title ), $kw ) !== false;
 	} ) );
-	if ( $filtered ) $dgc_sp_items = $filtered;
+	if ( $filtered ) {
+		$dgc_sp_items     = $filtered;
+		$dgc_sp_is_outlet = true;
+	}
 }
 
 if ( empty( $dgc_sp_items ) ) return;
 
-$dgc_sp_show_all  = count( $dgc_sp_items ) <= 8;
-$dgc_sp_show_rows = $dgc_sp_show_all ? $dgc_sp_items : array_slice( $dgc_sp_items, 0, 8 );
+$dgc_sp_total = count( $dgc_sp_items );
+$dgc_sp_limit = 10; // Mac dinh hien 10 dong, con lai an sau nut "Xem them" (JS trong main.js).
+
+// Nhom "Backlink Social Entity" ban theo goi (khong theo dau bao/site) -> doi nhan cot cho dung.
+$dgc_sp_is_goi   = ( 'backlink-social-entity' === $nhom['slug'] );
+$dgc_sp_col_name = $dgc_sp_is_goi ? 'Tên gói' : 'Tên báo / site';
+$dgc_sp_col_pos  = $dgc_sp_is_goi ? 'Quy mô gói' : 'Vị trí';
+$dgc_sp_heading  = $dgc_sp_is_goi
+	? 'Bảng giá gói ' . mb_strtolower( $svc_name )
+	: 'Bảng giá ' . mb_strtolower( $svc_name ) . ' theo từng site/báo';
+$dgc_sp_sub      = $dgc_sp_is_goi
+	? 'Tick chọn gói bạn quan tâm - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.'
+	: 'Tìm theo tên, sắp xếp theo giá và tick chọn báo/site cần đặt - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.';
+$dgc_sp_ph       = $dgc_sp_is_goi ? 'Tìm theo tên gói...' : 'Tìm theo tên báo/site...';
+
+// Bo loc nhom nganh - chi hien khi du lieu co tu 2 nhom tro len (chu yeu Booking bao & PR).
+$dgc_sp_nganh_used = array();
+foreach ( $dgc_sp_items as $it ) {
+	foreach ( dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ) as $n ) { $dgc_sp_nganh_used[ $n ] = true; }
+}
+$dgc_sp_has_filter = ( ! $dgc_sp_is_outlet && count( $dgc_sp_nganh_used ) > 1 );
+$dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 ?>
-<section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="sec" id="bang-gia" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:18px">
 			<span class="eyebrow">Bảng giá</span>
-			<h2>Giá <?php echo esc_html( mb_strtolower( $svc_name ) ); ?> theo từng site/báo</h2>
-			<p class="muted" style="font-size:14.5px">Tick chọn báo/site/gói bạn quan tâm - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.</p>
+			<h2><?php echo esc_html( $dgc_sp_heading ); ?></h2>
+			<p class="muted" style="font-size:14.5px"><?php echo esc_html( $dgc_sp_sub ); ?></p>
 		</div>
 
 		<?php include get_template_directory() . '/inc/sel-bar.php'; ?>
-		<div class="price-table-wrap">
-			<table class="price-table price-table-cpt">
-				<thead>
-					<tr>
-						<th>Tên báo / site</th>
-						<?php if ( 'mua-textlink' !== $nhom['slug'] ) : ?><th>Vị trí</th><?php endif; ?>
-						<th>Giá</th>
-						<th>Ghi chú</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-				<?php foreach ( $dgc_sp_show_rows as $it ) :
-					$m         = $it->meta;
-					$gia_km    = $m['gia_km']; $gia_goc = $m['gia_goc'];
-					$price_num = dgc_gia_to_number( $gia_km );
-					$hot       = ( '1' === $m['noi_bat'] );
-					$ghi_chu   = trim( implode( ' - ', array_filter( array( $m['so_link'], $m['yeu_cau'] ) ) ) );
-				?>
-					<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>">
-						<td data-label="Tên báo/site">
-							<label class="row-check-wrap">
-								<input type="checkbox" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $svc_name . ')' ); ?>">
-								<?php echo dgc_row_logo_html( $m['url_bao'], $it->post_title ); ?>
-								<span>
-									<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
-									<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
-								</span>
-							</label>
-						</td>
-						<?php if ( 'mua-textlink' !== $nhom['slug'] ) : ?>
-						<td data-label="Vị trí"><?php echo esc_html( $m['vi_tri'] ); ?></td>
-						<?php endif; ?>
-						<?php
-						$has_real_old = ( $gia_goc && $gia_goc !== $gia_km );
-						$show_fake    = ! $has_real_old && preg_match( '/^[0-9]+$/', trim( $gia_km ) );
-						if ( $show_fake ) { $fake_pct = dgc_fake_discount_percent( $it->ID ); $fake_old = dgc_fake_original_price( $price_num, $fake_pct ); }
-						?>
-						<td data-label="Giá" class="cell-price">
-							<?php if ( $show_fake ) : ?>
-								<span class="price-old-line">
-									<span class="price-old"><?php echo esc_html( number_format( $fake_old, 0, ',', '.' ) . 'đ' ); ?></span>
-									<span class="price-discount-badge">-<?php echo (int) $fake_pct; ?>%</span>
-								</span>
-							<?php endif; ?>
-							<span class="price-now"><?php echo esc_html( dgc_format_price( $gia_km ) ); ?></span>
-							<?php if ( $has_real_old ) : ?><span class="price-old"><?php echo esc_html( dgc_format_price( $gia_goc ) ); ?></span><?php endif; ?>
-						</td>
-						<td data-label="Ghi chú"><?php echo esc_html( $ghi_chu ); ?></td>
-						<td data-label=""><a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a></td>
-					</tr>
-				<?php endforeach; ?>
-				</tbody>
-			</table>
+
+		<div class="price-layout<?php echo $dgc_sp_has_filter ? ' has-filter' : ''; ?>" data-price-panel data-limit="<?php echo esc_attr( $dgc_sp_limit ); ?>">
+			<?php if ( $dgc_sp_has_filter ) : ?>
+			<aside class="price-filter">
+				<div class="price-filter-title">Lọc theo nhóm báo</div>
+				<div class="price-filter-row">
+					<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo (int) $dgc_sp_total; ?>)</button>
+					<?php foreach ( dgc_nganh_options() as $nslug => $nlabel ) :
+						if ( '' === $nslug || empty( $dgc_sp_nganh_used[ $nslug ] ) ) continue;
+						$n_count = 0;
+						foreach ( $dgc_sp_items as $it ) {
+							if ( in_array( $nslug, dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ), true ) ) $n_count++;
+						}
+					?>
+					<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $nlabel ); ?> (<?php echo (int) $n_count; ?>)</button>
+					<?php endforeach; ?>
+				</div>
+			</aside>
+			<?php endif; ?>
+
+			<div class="price-main">
+				<?php if ( $dgc_sp_has_tools ) : ?>
+				<div class="tab-toolbar">
+					<div class="tab-search">
+						<input type="text" class="tab-search-input" placeholder="<?php echo esc_attr( $dgc_sp_ph ); ?>" aria-label="Tìm kiếm trong bảng giá <?php echo esc_attr( $svc_name ); ?>">
+					</div>
+					<div class="tab-sort">
+						<button type="button" class="sort-btn" data-dir="asc">Giá thấp → cao</button>
+						<button type="button" class="sort-btn" data-dir="desc">Giá cao → thấp</button>
+					</div>
+				</div>
+				<p class="tab-count"><span class="tab-count-shown"><?php echo (int) $dgc_sp_total; ?></span>/<span class="tab-count-total"><?php echo (int) $dgc_sp_total; ?></span> kết quả</p>
+				<?php endif; ?>
+
+				<div class="price-table-wrap">
+					<table class="price-table price-table-cpt">
+						<thead>
+							<tr>
+								<th class="col-site"><?php echo esc_html( $dgc_sp_col_name ); ?></th>
+								<th class="col-spec"><?php echo $dgc_sp_is_goi ? 'Quy mô gói' : 'Quy cách đăng'; ?></th>
+								<th class="col-price">Giá</th>
+								<th class="col-action"></th>
+							</tr>
+						</thead>
+						<tbody>
+						<?php foreach ( $dgc_sp_items as $it ) {
+							echo dgc_gia_row_html( $it, array(
+								'nhom_slug' => $nhom['slug'],
+								'ctx'       => $svc_name,
+								'col_name'  => $dgc_sp_col_name,
+							) );
+						} ?>
+						</tbody>
+					</table>
+				</div>
+
+				<?php if ( $dgc_sp_total > $dgc_sp_limit ) : ?>
+				<p class="center" style="margin-top:18px">
+					<button type="button" class="btn btn-ghost btn-sm price-more-btn">Xem thêm <?php echo (int) ( $dgc_sp_total - $dgc_sp_limit ); ?> mục</button>
+				</p>
+				<?php endif; ?>
+			</div>
 		</div>
-		<?php if ( ! $dgc_sp_show_all ) : ?>
-			<p class="center" style="margin-top:18px">
-				<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem đầy đủ <?php echo count( $dgc_sp_items ); ?> site/báo tại Bảng giá &rarr;</a>
-			</p>
+
+		<?php if ( ! $dgc_sp_is_goi ) : ?>
+		<p class="center" style="margin-top:16px;font-size:14px">
+			<a class="link-more" href="<?php echo esc_url( home_url( '/bang-gia/#' . $nhom['slug'] ) ); ?>">So sánh giá với các dịch vụ khác tại Bảng giá tổng hợp &rarr;</a>
+		</p>
 		<?php endif; ?>
 	</div>
 </section>

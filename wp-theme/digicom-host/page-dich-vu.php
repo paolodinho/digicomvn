@@ -31,6 +31,12 @@ $dgc_dich_vu_list = array(
 		'desc'  => 'Đặt lịch đăng bài PR trên các đầu báo điện tử, báo giá theo từng đầu báo.',
 		'url'   => home_url( '/dich-vu/booking-bao-pr/' ),
 	),
+	array(
+		'icon'  => 'share',
+		'title' => 'Backlink Social Entity',
+		'desc'  => 'Xây hệ thống hồ sơ mạng xã hội đồng nhất NAP, nội dung độc bản, cam kết tỉ lệ index.',
+		'url'   => home_url( '/dich-vu/backlink-social-entity/' ),
+	),
 );
 ?>
 <div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Dịch vụ</nav></div>
