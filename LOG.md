@@ -1,5 +1,18 @@
 # LOG - digicomvn.com
 
+## 2026-07-14 (chiều - tinh chỉnh UI + case study)
+- Marquee đầu báo chạy chậm lại (~1.7x, animation-duration 58->100s...) cho đỡ mỏi mắt.
+- Testimonials owl: ép các thẻ CAO BẰNG NHAU (owl-stage flex + item stretch), hết lệch thẻ giữa.
+- Blog category: `posts_per_page`=12 (pre_get_posts) -> lưới 3 cột luôn đủ hàng, hết "khuyết 2 thẻ".
+- "Báo chí nói về DigicomVN" -> LOGO WALL 10 báo: 2 bài thật (An Giang, Đồng Nai) có link "Đọc bài",
+  8 logo (VnExpress, Dân Trí, Tuổi Trẻ, Thanh Niên, VietNamNet, VTV, Kenh14, CafeF) chưa link -
+  chỉ hiện logo, Hiếu bổ sung link sau. Logo dùng chung kho uploads/press-logos/. Option `press_mentions`
+  đổi định dạng: tên | link (để trống được) | file logo. CSS .pm-grid repeat(5).
+- 5 bài case study (dgc_case): mở rộng từ 160-227 chữ -> ~1800-1965 chữ/bài, phân tích chuyên sâu
+  (bối cảnh/thách thức/triển khai/vì sao hiệu quả/kết quả/bài học). Giữ nguyên fact + nguồn báo thật,
+  KHÔNG bịa số liệu. Có disclaimer SEO ở 2 bài (Dodanong, ICD entity).
+- DGC_VER 0.9.3 → 0.9.4. Deploy 4 file theme + update option + update 5 post + purge + verify.
+
 ## 2026-07-14
 - Định vị lại hero trang chủ: eyebrow "SEO · AI · Automation", H1 "Marketing tăng trưởng bằng SEO, AI
   và Automation", mô tả mới (sửa được từ WP Admin mục Hero).

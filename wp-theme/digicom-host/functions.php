@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '0.9.3' );
+define( 'DGC_VER', '0.9.4' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -292,6 +292,16 @@ function dgc_no_dash( $s ) {
 foreach ( array( 'the_content', 'the_title', 'the_excerpt', 'single_post_title', 'widget_text', 'document_title' ) as $h ) {
 	add_filter( $h, 'dgc_no_dash', 20 );
 }
+
+/* ---------------------------------------------------------------------------
+ * So bai/trang cho category archive = 12 (chia het 3 cot desktop & 2 cot tablet)
+ * -> luoi blog luon du hang, khong con hang cuoi le 1 the ("khuyet 2 the").
+ * ------------------------------------------------------------------------- */
+add_action( 'pre_get_posts', function ( $q ) {
+	if ( ! is_admin() && $q->is_main_query() && $q->is_category() ) {
+		$q->set( 'posts_per_page', 12 );
+	}
+} );
 
 /* ---------------------------------------------------------------------------
  * 301 URL danh muc cu "/danh-muc/..." (category base tu theme/site cu, khong

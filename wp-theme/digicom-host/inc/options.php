@@ -40,8 +40,8 @@ function dgc_defaults() {
 		// Ten la khach hang that (tu case study/testimonial). Logo Hieu bo sung sau.
 		'clients'       => "Bệnh viện Việt Pháp Hà Nội | \nPhòng khám Đa khoa Quốc tế H Plus | \nICD Việt Nam | \nBệnh viện Mắt Hà Nội 2 | \nMagenest | \nZora | \nDodanong.com | ",
 
-		// Bao chi noi ve DigicomVN: ten bao | link bai viet | ten file logo trong /uploads/press-mentions/ (rong = hien chu).
-		'press_mentions' => "Truyền hình An Giang | https://angiangtv.vn/tin-tuc-va-su-kien/digicomvn-ung-dung-ai-vao-dich-vu-truyen-thong-va-booking-bao-chi-giup-doanh-nghiep-tiet-kiem-chi-phi-van-hanh/ | \nBáo Đồng Nai | https://baodongnai.com.vn/doanh-nhan-doanh-nghiep/dich-vu/202607/quy-trinh-book-bao-chi-bai-ban-cach-digicomvn-dua-icd-viet-nam-tu-vang-bong-den-hien-dien-thuong-xuyen-tren-bao-chi-62102d3/ | ",
+		// Bao chi noi ve DigicomVN: ten bao | link bai viet (co the de trong, bo sung sau) | ten file logo trong /uploads/press-logos/ (rong = hien chu).
+		'press_mentions' => "Truyền hình An Giang | https://angiangtv.vn/tin-tuc-va-su-kien/digicomvn-ung-dung-ai-vao-dich-vu-truyen-thong-va-booking-bao-chi-giup-doanh-nghiep-tiet-kiem-chi-phi-van-hanh/ | \nBáo Đồng Nai | https://baodongnai.com.vn/doanh-nhan-doanh-nghiep/dich-vu/202607/quy-trinh-book-bao-chi-bai-ban-cach-digicomvn-dua-icd-viet-nam-tu-vang-bong-den-hien-dien-thuong-xuyen-tren-bao-chi-62102d3/ | \nVnExpress |  | vnexpress.png\nDân Trí |  | dantri.png\nTuổi Trẻ |  | tuoitre.png\nThanh Niên |  | thanhnien.png\nVietNamNet |  | vietnamnet.png\nVTV |  | vtv.png\nKenh14 |  | kenh14.png\nCafeF |  | cafef.png",
 
 		// FAQ (cau hoi | tra loi)
 		'faqs'          => "Textlink khác backlink như thế nào? | Textlink là link chèn vào bài viết đã có sẵn trên site khác; backlink là link trỏ về từ nhiều nguồn khác nhau (bài mới, site, diễn đàn...) theo chiến dịch tổng thể.\nGuest Post có được viết nội dung riêng không? | Có. DigicomVN viết bài theo đúng chủ đề site đăng, kèm link tự nhiên, gửi Hiếu duyệt trước khi đăng.\nBooking báo PR mất bao lâu để lên bài? | Tùy đầu báo, thường 2 đến 7 ngày làm việc sau khi nội dung được duyệt.\nThanh toán và bàn giao như thế nào? | Thanh toán theo báo giá đã thống nhất, bàn giao link/bài đã lên kèm báo cáo sau khi hoàn thành.",
@@ -151,7 +151,7 @@ function dgc_settings_page() {
 			<table class="form-table">
 				<?php
 				dgc_field( 'clients', 'Logo khach hang tin tuong', 'Moi dong: ten thuong hieu | ten file logo (dat trong wp-content/uploads/client-logos/, de trong = hien chu tam). Chi liet ke khach hang that.', 'textarea' );
-				dgc_field( 'press_mentions', 'Bao chi noi ve DigicomVN', 'Moi dong: ten bao | link bai viet | ten file logo (dat trong wp-content/uploads/press-mentions/, de trong = hien chu). Chi bai bao that.', 'textarea' );
+				dgc_field( 'press_mentions', 'Bao chi noi ve DigicomVN', 'Moi dong: ten bao | link bai viet (de trong neu chua co link, bo sung sau) | ten file logo (dung chung kho wp-content/uploads/press-logos/, de trong = hien chu). Co link -> bam doc bai duoc; chua link -> chi hien logo. Chi liet ke bao that su co ghi nhan/dang bai ve DigicomVN.', 'textarea' );
 				?>
 			</table>
 

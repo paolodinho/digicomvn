@@ -271,7 +271,7 @@ $why_icons = array(
 </section>
 
 <!-- 07c. BAO CHI NOI VE DIGICOMVN -->
-<?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) && ! empty( $m[1] ) ); ?>
+<?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) ); ?>
 <?php if ( $dgc_mentions ) : ?>
 <section class="sec press-mentions-sec" style="background:#fff;border-top:1px solid var(--line)">
 	<div class="wrap">
@@ -282,16 +282,22 @@ $why_icons = array(
 		</div>
 		<div class="pm-grid">
 			<?php foreach ( $dgc_mentions as $m ) :
-				$m_name = $m[0]; $m_url = $m[1]; $m_file = trim( $m[2] ?? '' );
-				$m_logo = $m_file ? content_url( 'uploads/press-mentions/' . $m_file ) : ''; ?>
-				<a class="pm-item" href="<?php echo esc_url( $m_url ); ?>" target="_blank" rel="nofollow noopener" title="<?php echo esc_attr( $m_name ); ?>">
-					<?php if ( $m_logo ) : ?>
-						<img src="<?php echo esc_url( $m_logo ); ?>" alt="<?php echo esc_attr( $m_name ); ?>" loading="lazy">
-					<?php else : ?>
-						<span class="pm-name"><?php echo esc_html( $m_name ); ?></span>
-					<?php endif; ?>
-					<span class="pm-read">Đọc bài &#8599;</span>
-				</a>
+				// Dinh dang: Ten bao | URL bai (co the de trong) | file logo
+				$m_name = $m[0]; $m_url = trim( $m[1] ?? '' ); $m_file = trim( $m[2] ?? '' );
+				$m_logo = $m_file ? content_url( 'uploads/press-logos/' . $m_file ) : '';
+				$m_inner = $m_logo
+					? '<img src="' . esc_url( $m_logo ) . '" alt="' . esc_attr( $m_name ) . '" loading="lazy">'
+					: '<span class="pm-name">' . esc_html( $m_name ) . '</span>';
+				if ( $m_url ) : ?>
+					<a class="pm-item" href="<?php echo esc_url( $m_url ); ?>" target="_blank" rel="nofollow noopener" title="<?php echo esc_attr( $m_name ); ?>">
+						<?php echo $m_inner; // phpcs:ignore ?>
+						<span class="pm-read">Đọc bài &#8599;</span>
+					</a>
+				<?php else : ?>
+					<span class="pm-item pm-item--nolink" title="<?php echo esc_attr( $m_name ); ?>">
+						<?php echo $m_inner; // phpcs:ignore ?>
+					</span>
+				<?php endif; ?>
 			<?php endforeach; ?>
 		</div>
 	</div>
