@@ -879,3 +879,19 @@
 
 ## 2026-07-13 (chieu)
 - Sua Google Doc 02-baodanang (1pdXU931Jt...) thanh bai gioi thieu cong ty DigicomVN: giu 2 link (DigicomVN -> digicomvn.com, ICD Viet Nam -> icdvietnam.com.vn), them muc Khach hang tieu bieu (Emmich, BV Viet Phap, BV Mat HN 2, Giong Moi, ITC Thai Binh, The News Leaders, Medlatec, BV Hong Ngoc, Tham my Thu Cuc, PK H Plus, Nghikigai). Backup ban goc: ~/Claude-Workspace/_backups/2026-07-13/digicom-gdoc-booking-danang-GOC.md
+
+## 2026-07-14 - Hero fix + đổi phong cách section "Chúng tôi là ai"
+- Fix H1 hero vỡ 8 dòng/cắt chữ ở màn rộng (bỏ max-width:520 chèn padding, h1 18ch).
+- Section "Chúng tôi là ai": bỏ placeholder rỗng, dùng ảnh đội ngũ thật (lấy từ hero dichvusmsvn.com) + overlay navy + glow teal/blue theo style hero đó.
+- Deploy live, DGC_VER 0.8.5, purge cache.
+
+## 2026-07-14 (tiếp) - Template thumbnail blog + áp 108 bài
+- Dựng bộ 10 illustration SVG flat (đồng bộ phong cách hero) + template render Chrome headless -> PNG 1200x675, badge+illustration tự map theo tiêu đề, logo DigicomVN thật.
+- Render 108 bài, upload WP media + set featured image toàn bộ blog (0 lỗi). Pipeline lưu tại tools/blog-thumbnail/.
+- Backup _thumbnail_id cũ tại _backups/2026-07-14/digicom-blog-thumbs/ (rollback được).
+
+## 2026-07-14 (tiep) - Anh nen full section "Chung toi la ai"
+- Doi anh doi ngu tu khung card sang lam NEN FULL ca section (gom ca phan Vi sao chon / 01-04), overlay navy + glow teal/blue giu chu doc ro. DGC_VER 0.8.6.
+
+## 2026-07-14 (tiếp) - Đổi ảnh dịch vụ Textlink
+- Thay ảnh trong trang /dich-vu/mua-textlink/ (page 505): ảnh xích kim loại cũ -> illustration flat xanh (dichvu_textlink.png) khớp phong cách site. Attach mới 1601, ảnh cũ 1382 giữ lại.

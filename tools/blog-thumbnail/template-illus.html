@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--navy:#1C2035;--blue:#4761FF;--teal:#12B39C;}
+  html,body{width:1200px;height:675px;overflow:hidden}
+  .card{position:relative;width:1200px;height:675px;overflow:hidden;
+    font-family:'Roboto',system-ui,sans-serif;
+    background:linear-gradient(120deg,#ffffff 0%,#eff3ff 54%,#e4ecff 100%)}
+  .illus{position:absolute;right:34px;top:50%;transform:translateY(-50%);
+    width:600px;height:540px;z-index:2}
+  .illus svg{width:100%;height:100%;display:block}
+  .inner{position:absolute;inset:0;padding:66px 0 60px 76px;width:600px;
+    display:flex;flex-direction:column;justify-content:space-between;z-index:3}
+  .badge{align-self:flex-start;display:inline-flex;align-items:center;
+    font-weight:700;font-size:19px;letter-spacing:.15em;text-transform:uppercase;
+    color:#fff;padding:10px 21px;border-radius:999px;background:var(--accent);
+    box-shadow:0 10px 24px rgba(71,97,255,.24)}
+  .mid{display:flex;flex-direction:column;justify-content:center;flex:1;padding:22px 0}
+  .accent-bar{width:60px;height:6px;border-radius:6px;background:var(--accent);margin-bottom:24px}
+  h1{color:var(--navy);font-weight:900;line-height:1.12;letter-spacing:-.02em;
+    max-width:540px;font-size:60px;text-wrap:balance}
+  .brandrow{display:flex;align-items:center;gap:16px}
+  .brandrow img{height:46px;width:auto;display:block}
+  .url{color:#8791ad;font-weight:600;font-size:17px;padding-left:16px;border-left:2px solid #d3ddf5}
+</style></head>
+<body>
+  <div class="card" id="card" style="--accent:#4761FF">
+    <div class="illus" id="illus"><!--SVG--></div>
+    <div class="inner">
+      <span class="badge" id="badge">SEO</span>
+      <div class="mid"><div class="accent-bar"></div><h1 id="title">Tiêu đề mẫu</h1></div>
+      <div class="brandrow">
+        <img id="logo" alt="DigicomVN">
+        <span class="url">digicomvn.com</span>
+      </div>
+    </div>
+  </div>
+<script>
+  document.getElementById('title').textContent=window.__T||'Tiêu đề mẫu';
+  document.getElementById('badge').textContent=window.__L||'SEO';
+  document.getElementById('card').style.setProperty('--accent',window.__A||'#4761FF');
+  const h=document.getElementById('title'),box=document.querySelector('.mid');
+  function fit(){let fs=60;h.style.fontSize=fs+'px';
+    while((h.scrollHeight>box.clientHeight-30)&&fs>30){fs-=2;h.style.fontSize=fs+'px';}}
+  document.fonts.ready.then(fit); setTimeout(fit,300);
+</script>
+</body></html>

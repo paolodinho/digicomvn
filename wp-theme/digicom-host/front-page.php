@@ -107,17 +107,14 @@ $svc_meta = array(
 </section>
 
 <!-- 07. REASONS + CHUNG TOI LA AI -->
-<section class="sec band-navy">
+<section class="sec band-navy whoweare-band" style="--bgimg:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-digicom-1400.jpg' ); ?>')">
 	<div class="wrap">
-		<div class="whoweare-grid">
-			<div class="whoweare-copy">
+		<div class="whoweare-hero">
+			<div class="whoweare-hero-in">
 				<span class="eyebrow">Chúng tôi là ai</span>
 				<h2>DigicomVN - thương hiệu off-page SEO của Digito Combat</h2>
-				<p class="lead" style="color:rgba(255,255,255,.82)">DigicomVN là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat, tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử. DigicomVN chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
-				<p style="margin-top:16px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về DigicomVN &rarr;</a></p>
-			</div>
-			<div class="whoweare-media">
-				<div class="img-ph img-ph-dark">Ảnh đội ngũ DigicomVN đang cập nhật</div>
+				<p class="lead">DigicomVN là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat, tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử. DigicomVN chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
+				<p style="margin-top:18px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về DigicomVN &rarr;</a></p>
 			</div>
 		</div>
 		<div class="center" style="margin-top:56px">
@@ -187,14 +184,19 @@ $svc_meta = array(
 				<p class="muted center" style="font-size:12.5px;margin-bottom:18px">Nội dung ví dụ minh hoạ dạng phản hồi thường gặp, chưa phải trích dẫn xác thực từ khách hàng cụ thể.</p>
 				<div class="tm-carousel owl-carousel">
 					<?php foreach ( dgc_lines( 'testimonials' ) as $t ) :
-						$quote = $t[0] ?? ''; $who = $t[1] ?? ''; $svc = $t[2] ?? '';
+						$quote = $t[0] ?? ''; $who = $t[1] ?? ''; $svc = $t[2] ?? ''; $photo = trim( $t[3] ?? '' );
 						if ( $quote === '' ) continue;
 						$initial = function_exists( 'mb_substr' ) ? mb_strtoupper( mb_substr( $who, 0, 1 ) ) : strtoupper( substr( $who, 0, 1 ) ); ?>
 						<figure class="tm">
 							<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
 							<blockquote><?php echo esc_html( $quote ); ?></blockquote>
 							<figcaption>
-								<span class="tm-avatar" aria-hidden="true"><?php echo esc_html( $initial ); ?></span>
+								<span class="tm-avatar<?php echo $photo ? ' tm-avatar--img' : ''; ?>" aria-hidden="true"><?php
+									if ( $photo ) {
+										echo '<img src="' . esc_url( $photo ) . '" alt="' . esc_attr( $who ) . '" loading="lazy">';
+									} else {
+										echo esc_html( $initial );
+									} ?></span>
 								<span>
 									<span class="tm-who"><?php echo esc_html( $who ); ?></span>
 									<?php if ( $svc ) : ?><span class="tm-svc"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
