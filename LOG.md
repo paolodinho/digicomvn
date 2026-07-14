@@ -1,5 +1,10 @@
 # LOG - digicomvn.com
 
+## 2026-07-14 (bổ sung 2 - đổi bố cục "Tại sao chọn")
+- Section "Tại sao chọn DigicomVN": bỏ khối trích dẫn Đỗ Xuân Hiếu (aside .why-quote), đổi bố cục
+  từ 7fr/4fr (6 thẻ + quote) sang LƯỚI 3 CỘT x 2 hàng đều (.why-cards repeat(3)). Responsive 3->2->1.
+  Option why_quote + CSS .why-quote giữ nguyên (không dùng, để dành). DGC_VER 0.9.5->0.9.6.
+
 ## 2026-07-14 (bổ sung - menu Case study + nhãn địa chỉ VP)
 - Thêm "Case study" vào menu chính (WP nav "Menu DigicomVN", position 9 sau Blog) -> /case-study/.
   Verify menu vẫn 1 dòng desktop (7 item).

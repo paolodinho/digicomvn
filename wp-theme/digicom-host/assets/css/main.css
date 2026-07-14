@@ -1013,8 +1013,7 @@ body.mnav-open{overflow:hidden}
   .client-logo{min-height:78px;padding:12px}}
 
 /* ============ 06b. TAI SAO CHON DIGICOMVN ============ */
-.why-layout{display:grid;grid-template-columns:7fr 4fr;gap:28px;align-items:start}
-.why-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.why-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .why-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);
   padding:24px 22px;transition:box-shadow .2s ease,transform .2s ease}
 .why-card:hover{box-shadow:var(--sh-mid);transform:translateY(-3px);background:#fff}
@@ -1032,7 +1031,7 @@ body.mnav-open{overflow:hidden}
   padding-top:16px}
 .why-quote-name{font-family:var(--font-display);font-weight:700;font-size:16px;color:#fff}
 .why-quote-role{font-size:13.5px;color:#9fb0ff}
-@media(max-width:900px){.why-layout{grid-template-columns:1fr;gap:22px}}
+@media(max-width:900px){.why-cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.why-cards{grid-template-columns:1fr}}
 
 /* ============ 07c. BAO CHI NOI VE DIGICOMVN (logo wall) ============ */

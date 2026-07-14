@@ -127,27 +127,15 @@ $why_icons = array(
 			<h2>Marketing dựa trên SEO, AI và Automation</h2>
 			<p class="muted" style="max-width:620px;margin:10px auto 0">Không chỉ đi link - DigicomVN kết hợp dữ liệu SEO, trí tuệ nhân tạo và quy trình tự động hóa để thương hiệu của bạn hiện diện bền vững và được tin cậy.</p>
 		</div>
-		<div class="why-layout">
-			<div class="why-cards">
-				<?php $wi = 0; foreach ( $why_items as $r ) :
-					$path = $why_icons[ $wi % count( $why_icons ) ]; $wi++; ?>
-					<div class="why-card">
-						<span class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $path ); ?>"/></svg></span>
-						<h3><?php echo esc_html( $r[0] ?? '' ); ?></h3>
-						<p><?php echo esc_html( $r[1] ?? '' ); ?></p>
-					</div>
-				<?php endforeach; ?>
-			</div>
-			<?php $wq = dgc_lines( 'why_quote' ); $wq = $wq[0] ?? array(); if ( ! empty( $wq[0] ) ) : ?>
-			<aside class="why-quote">
-				<div class="why-quote-mark">&ldquo;</div>
-				<blockquote><?php echo esc_html( $wq[0] ); ?></blockquote>
-				<div class="why-quote-by">
-					<?php if ( ! empty( $wq[1] ) ) : ?><span class="why-quote-name"><?php echo esc_html( $wq[1] ); ?></span><?php endif; ?>
-					<?php if ( ! empty( $wq[2] ) ) : ?><span class="why-quote-role"><?php echo esc_html( $wq[2] ); ?></span><?php endif; ?>
+		<div class="why-cards">
+			<?php $wi = 0; foreach ( $why_items as $r ) :
+				$path = $why_icons[ $wi % count( $why_icons ) ]; $wi++; ?>
+				<div class="why-card">
+					<span class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $path ); ?>"/></svg></span>
+					<h3><?php echo esc_html( $r[0] ?? '' ); ?></h3>
+					<p><?php echo esc_html( $r[1] ?? '' ); ?></p>
 				</div>
-			</aside>
-			<?php endif; ?>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
