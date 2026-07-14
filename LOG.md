@@ -1041,3 +1041,103 @@
 - **FAQ**: 4 -> 20 câu, phủ: pháp nhân/quy mô mạng lưới DigicomVN, Textlink, Backlink (+BĐS), Guest Post, Booking báo & PR (báo quốc tế, duyệt bài, link dofollow), giá/VAT/thanh toán/bàn giao, thời gian thấy hiệu quả. Thêm schema FAQPage (20 mục) để Google + trợ lý AI trích dẫn.
 - **Menu mobile**: kiểm tra thực tế bằng Playwright - burger + drawer 12 mục VẪN HOẠT ĐỘNG (không phải bug mất menu). Nguyên nhân Hiếu không thấy: nút 3 gạch mảnh, không viền, nép sát mép phải. Đã thêm viền tròn + nền để dễ nhận biết.
 - DGC_VER 1.0.2 -> 1.1.1. Backup: _backups/routines/2026-07-14/digicom-darkmode/
+
+## 2026-07-14 (tiếp) - Đẩy bảng giá lên đầu trang dịch vụ
+- `tpl-service.php`: chuyển khối bảng giá (`inc/service-pricing.php`) lên NGAY DƯỚI hero, trước phần nội dung mô tả. Thứ tự mới: hero -> bảng giá -> nội dung -> quy trình -> form báo giá -> CTA. Áp cho cả 5 pillar + 15 trang con booking-bao-pr (dùng chung template).
+- Trang `/bang-gia/` vốn đã có bảng ngay sau hero -> giữ nguyên.
+- Chỉ sửa PHP (không đụng CSS/JS) -> không cần bump DGC_VER. Đã purge cache + verify curl 6 URL.
+- Backup bản live cũ: ~/Claude-Workspace/_backups/routines/2026-07-14/digicom-pricing-top/
+
+## 2026-07-14 (tiếp) - Hướng dẫn đặt hàng + thông số DR trong bảng giá
+- **Hướng dẫn đặt hàng** (`inc/order-guide.php`, dùng chung): 4 bước (Chọn mục cần đặt -> Gửi yêu cầu đặt bài -> Nhận báo giá & xác nhận -> Đăng bài & bàn giao) + khối "Chưa biết nên chọn báo hay gói nào?" với nút Gọi hotline + Nhắn Zalo (số lấy từ WP Admin > DigicomVN, không hardcode). Đặt NGAY DƯỚI bảng giá ở cả 5 trang pillar, 15 trang con booking-bao-pr và trang /bang-gia/.
+- Gỡ section "Quy trình - Cách DigicomVN triển khai" (4 bước chung chung) khỏi trang có bảng giá vì trùng lặp; chỉ còn hiện ở trang dịch vụ không có bảng giá.
+- **Thông số DR (Domain Rating - Ahrefs)**: thêm meta field `dr` vào CPT dgc_gia (sửa được ở WP Admin), chip DR hiện dưới tên báo/site trong mọi bảng giá (màu theo bậc: >=70 xanh dương, 40-69 xanh teal, <40 xám). Thêm nút sắp xếp "DR cao -> thấp" (main.js: sort-btn nhận data-key=price|dr).
+- Dữ liệu DR: lấy THẬT từ Ahrefs (public domain-rating API, 0 unit) cho 143 domain -> gán được 188/213 dòng giá. 25 dòng còn lại không có DR vì là gói dịch vụ (21 gói Backlink Sidebar + 4 gói Social Entity), không gắn với 1 domain cụ thể.
+- DGC_VER 1.0.7 -> 1.0.9. QA Playwright: không tràn ngang ở 1440px và 390px.
+- Backup: ~/Claude-Workspace/_backups/routines/2026-07-14/digicom-dr-orderguide/ (file live cũ + dump meta trước khi nạp + dr-ahrefs-2026-07-14.json)
+
+## 2026-07-14 (tiếp) - 4 fix UX theo phản hồi Hiếu
+1. **Cuộn vô hạn bảng giá dài**: main.js đổi cơ chế "Xem thêm" -> IntersectionObserver, cuộn tới cuối bảng tự nạp thêm 10 dòng (nút vẫn giữ làm fallback + mốc quan sát). Trang /bang-gia/ trước render thẳng 118 dòng -> giờ 12 dòng đầu, cuộn nạp dần. Đổi tìm kiếm/lọc -> reset về đầu danh sách.
+2. **Hero 3 nút mobile**: `.hero-actions` - desktop 1 hàng, mobile xếp dọc full-width (trước là 2 nút hàng 1 + 1 nút lẻ hàng 2 lệch giữa).
+3. **Textlink trình bày lại**: `dgc_gia_price_tiers()` tách chuỗi giá dài ("Home: 1500000-1800000-2500000đ · CM: ...") thành bảng vị trí × kỳ hạn (3-6-12 tháng); cột Giá chỉ hiện "Từ <rẻ nhất>". Mobile: bảng thành thẻ theo vị trí, mỗi kỳ hạn 1 dòng có nhãn. `dgc_gia_specs()` sửa chuỗi chỉ số nguồn lặp nhãn ("DA DA55" -> "DA 55"), format traffic có dấu phân cách, và BỎ "DR 57" của nhà cung cấp vì lệch với DR Ahrefs đang hiện ở chip (tránh 2 số DR đá nhau trên cùng 1 dòng).
+4. **Section "Tại sao chọn DigicomVN"**: đổi từ lưới card icon (giống hệt section Dịch vụ ngay trên) sang bố cục 2 cột - trái là tiêu đề + CTA (sticky), phải là danh sách 6 lý do đánh số 01-06 có gạch phân cách. Nền đổi sang --surface để tách khỏi section trên.
+- DGC_VER 1.0.9 -> 1.1.4. QA Playwright: overflow ngang = 0 ở 1440px và 390px; /bang-gia/ cuộn tới cuối nạp đủ 118/118 dòng.
+- Backup: ~/Claude-Workspace/_backups/routines/2026-07-14/digicom-ux-fixes/
+
+## 2026-07-14 (chiều tối) - Địa chỉ văn phòng giao dịch (NAP)
+- Chốt: Digicom có 2 địa chỉ - **Trụ sở ĐKKD** (Gamuda Garden, Hoàng Mai, chỉ dùng hợp đồng/hoá đơn/pháp nhân) và **Văn phòng giao dịch** (Tầng 3, tòa nhà Thăng Long A1, đường Tây Cao Tốc, thôn Bầu, xã Kim Chung, huyện Đông Anh, Hà Nội - dùng chung địa chỉ với ICD Việt Nam).
+- Theme digicom-host: `inc/options.php` sửa default `address2` (trước ghi sai "Toà nhà Thăng Long A1, Thiên Lộc, Hà Nội"), đổi nhãn field trong WP Admin thành "Tru so" / "Van phong giao dich". `footer.php` đổi nhãn "VP 1/VP 2" -> "Trụ sở/Văn phòng". `page-lien-he.php` + `page-ve-digicom.php` hiển thị rõ 2 nhãn.
+- Deploy live (4 file PHP), purge cache, verify curl /lien-he/ hiện đúng địa chỉ Đông Anh, hết chuỗi "Thiên Lộc".
+- `.claude/context/brand-info.md`: tách 2 dòng Trụ sở / Văn phòng giao dịch + ghi rõ chuỗi NAP chuẩn dùng cho GBP/citation/backlink.
+- Backup: ~/Claude-Workspace/_backups/routines/2026-07-14/dgc-address/
+- TODO: DB Local chưa cập nhật (Local site đang tắt) - live không ảnh hưởng vì dgc_settings live chưa lưu key address nên lấy default từ code.
+
+## 2026-07-14 (tiếp) - Mặc định DR cao→thấp + fix bảng giá bị cắt
+- **Mặc định sắp xếp DR cao -> thấp**: `dgc_get_gia()` usort theo DR giảm dần (tie: menu_order rồi giá tăng); nút "DR cao → thấp" có class `active` sẵn khi tải trang. Dòng không có DR (gói dịch vụ) xuống cuối.
+- **Fix 2 lỗi giao diện làm cắt nút "Đặt ngay"**:
+  1. `.brand-watermark` (logo chìm fixed bên phải) rộng cố định ~290px nên ở màn 1280-1440px nó lấn hẳn vào vùng nội dung, phủ mờ lên cột hành động. Sửa: watermark chỉ chiếm đúng dải lề ngoài `.wrap` (`width:calc((100vw - var(--maxw))/2 - 16px)`) và ẩn hẳn khi viewport <= 1560px (không còn lề).
+  2. Bảng giá rộng 925px trong khung 888px (tràn 37px, nút bị cắt) do `.spec-chip{white-space:nowrap}` với chip quy cách dài ("1 link no, thêm 1 link/600k, trên 300 từ tính phí 8.000đ/từ") kéo giãn bảng. Sửa: `.price-table-cpt{table-layout:fixed}` + chip cho phép xuống dòng.
+- DGC_VER 1.1.4 -> 1.1.6. QA: overflow bảng = 0 ở 1280/1440/1920 trên /bang-gia/, /mua-textlink/, /booking-bao-pr/; mobile 390px = 0.
+
+## 2026-07-14 (tiếp) - Tiết chế màu đen
+- 4 thẻ promo trang chủ: bỏ nền gradient navy/xanh/teal đậm -> nền sáng, viền nhẹ, chỉ icon mang màu brand (xanh dương / teal xen kẽ). Có bản dark mode riêng.
+- Nút "Đặt ngay" trong bảng giá (lặp 12+ lần mỗi bảng): navy đen -> xanh brand `--action`.
+- Giữ màu tối làm điểm nhấn hiếm: topbar, footer, band ảnh đội ngũ, hero trang dịch vụ, nút "Gửi yêu cầu báo giá".
+- Ghi rule mới: `.claude/rules/ui-mau-sac.md` (khi nào được/không được dùng nền tối).
+- DGC_VER 1.1.6 -> 1.1.7.
+
+## 2026-07-14 - Google Business Profile
+- Soan ho so GBP day du: `09-local-seo/google-business-profile.md` (ten, 4 danh muc, NAP van phong Dong Anh, mo ta 750 ky tu, 5 dich vu, kich ban video xac minh, post + Q&A dau tien).
+- Canh bao: trung dia chi toa nha voi ICD Viet Nam -> phai ghi ro tang/phong khac nhau.
+- Cho Hieu: chup anh ngoai that/noi that/doi ngu + tu dang ky tai business.google.com/create.
+
+## 2026-07-14 (tối) - Chia nhỏ bộ lọc nhóm báo (11 -> 25 nhóm)
+- `dgc_nganh_groups()` mới trong `inc/cpt-gia.php`: bộ lọc chia 5 khối - Loại hình báo (3) / Kinh doanh - Tài chính (4) / Nhà ở - Không gian sống (4: BĐS, Xây dựng - Vật liệu, Kiến trúc - Nội thất, Phong thuỷ - Tâm linh) / Tiêu dùng - Đời sống (6) / Ngành khác (8). Tách "BĐS - Xây dựng" và "Công nghệ - Ô tô" cũ thành các ngành riêng.
+- Meta box WP Admin: checkbox ngành nhóm theo 5 khối (trước là 1 dãy phẳng).
+- `page-bang-gia.php`: sidebar render theo khối, có tiêu đề phụ, bỏ qua khối không có báo. `main.css`: sidebar sticky tự cuộn (max-height 100vh-200px), nút nhỏ lại 13.5px. DGC_VER 1.1.7 -> 1.1.8.
+- Gán lại ngành cho 118/118 dòng booking báo trên live (script `nganh-map.php`): báo lớn/đài TH gán theo chuyên mục thật, báo chuyên ngành gán đúng ngành (baoxaydung/tapchixaydung = xây dựng + kiến trúc, cafeland = BĐS + phong thuỷ, tinhte = công nghệ...), 26 báo tỉnh dùng bộ ngành mặc định (kinh tế, doanh nghiệp, BĐS, xây dựng, y tế, giáo dục, du lịch, nông nghiệp).
+- Verify live: đủ 25 nút lọc, không lỗi PHP. Backup: ~/Claude-Workspace/_backups/routines/2026-07-14/dgc-nganh/
+- TODO Hiếu review: các gán ngành dựa trên chuyên mục thực tế của báo, cần soát lại các báo mình biết rõ chính sách nhận bài (vd phong thuỷ chỉ 13 báo, có thể còn thiếu/thừa).
+
+## 2026-07-14 (tiếp) - Fix thanh chọn (giỏ hàng) trên mobile
+- Khi tick nhiều mục, thanh nổi dưới đáy cao ~199px (che 1/4 màn), các con số tràn 2-3 hàng lộn xộn, tổng tiền + "Xem danh sách" bị cắt mép phải (info rộng 385px trong khung 362px).
+- Bố trí lại dạng lưới 2 cột cố định: trái = số mục + ưu đãi combo, phải = tổng còn lại (to) + link "Xem danh sách"; dưới là nút CTA full-width; cuối là 1 dòng gợi ý combo. Chặn tràn bằng box-sizing + minmax(0,1fr).
+- Câu gợi ý combo rút ngắn riêng cho mobile ("Thêm 4 mục → giảm 12% (~6.276.000đ)") để nằm gọn 1 dòng.
+- Kết quả: 163px (6 mục), 137px (20 mục), không tràn ngang ở 360px lẫn 390px.
+- DGC_VER 1.1.7 -> 1.2.0.
+
+## 2026-07-14 (tiếp) - Bỏ 4 card promo (AI-slop) -> dải giá trị liền
+- Hiếu chê bản card nền sáng vẫn xấu. Nguyên nhân gốc: đó đúng là mô-típ "4-column icon-top feature grid" bị cấm trong rule global `ui-anti-slop.md`.
+- Thay bằng MỘT dải liền (1 khung, 1 viền, bo góc lớn), chia 4 cột bằng vạch mảnh; icon nhỏ 22px inline (xanh dương / teal xen kẽ), bỏ nền tròn, bỏ box-shadow từng thẻ, bỏ vòng tròn trang trí, bỏ rotate lệch. Tiêu đề có min-height 2 dòng để dòng mô tả thẳng hàng giữa các cột.
+- Mobile: dải xếp dọc, phân tách bằng đường ngang (không thành 4 hộp rời).
+- DGC_VER 1.2.0 -> 1.2.2.
+
+## 2026-07-14 (tiếp) - Bỏ 2 dải đen ở đầu trang
+- Topbar (hotline/email trên cùng): navy đen -> nền sáng + viền dưới, chữ xám, hotline đậm màu heading.
+- Dải số liệu dưới hero (500+ đầu báo...): navy đen -> gradient xanh brand (--action -> --action-2 -> teal đậm), chữ trắng.
+- Còn lại dùng nền tối: hero trang dịch vụ, band ảnh đội ngũ, footer (chưa đổi - chờ Hiếu quyết).
+- DGC_VER 1.2.2 -> 1.2.3.
+
+## 2026-07-14 (tiếp) - Thanh chọn desktop nổi bật hơn
+- Thanh sticky trước nhìn như 1 dòng text trong hộp trắng viền nhạt. Nay: viền trái 5px màu brand, nền gradient nhẹ, bóng đổ sâu; khi đã chọn mục thì viền + quầng sáng xanh brand ("sống" lên).
+- Tổng còn lại: 26px, đậm, tách bằng vạch đứt. Ưu đãi combo: chip teal. CTA: xanh brand + mũi tên (bỏ khối đen theo rule ui-mau-sac). Lời nhắc combo: khối vàng nhạt có icon quà.
+- Fix: chip ưu đãi hiện "0%" khi chưa đủ bậc (class .sel-bar-line{display:flex} đè thuộc tính [hidden]); nút CTA rơi xuống hàng 2 lệch trái khi số liệu dài -> ghim margin-left:auto + ẩn ghi chú VAT trùng lặp, cả thanh gọn 1 hàng ở 1280px.
+- DGC_VER 1.2.3 -> 1.2.7. Mobile giữ nguyên bố cục đã fix (163px, không tràn).
+
+## 2026-07-14 (tiếp) - Fix "Xem danh sách" trên mobile
+- Popup danh sách báo đã chọn mở XUỐNG DƯỚI (top:100%) trong khi thanh chọn ghim đáy màn -> danh sách rơi ra ngoài viewport, chỉ thấy 1 dòng, phần còn lại bị bottom-nav che.
+- Sửa: mobile popup mở LÊN TRÊN thanh (bottom: calc(100% + 12px)), rộng full thanh, max-height 46vh, cuộn được, bóng đổ hướng lên. Tên dài cắt gọn 1 dòng, nút xoá to hơn.
+- Đồng thời gỡ `overflow:hidden` (thêm ở fix tràn ngang trước đó) vì nó cắt mất chính popup này; chặn tràn ngang đã lo bằng box-sizing + minmax(0,1fr).
+- CTA trong thanh ở mobile: đen -> xanh brand (đồng bộ desktop + rule ui-mau-sac).
+- DGC_VER 1.2.7 -> 1.3.0.
+
+## 2026-07-14 (tiếp) - Đánh dấu trường bắt buộc trên form
+- `inc/form-lead.php` (form dùng chung: /lien-he/, /dat-bai/, 5 trang dịch vụ): thêm dấu * đỏ vào Họ và tên, Số điện thoại, Email - khớp đúng logic kiểm tra ở server (tên bắt buộc + phải có ít nhất 1 trong 2 kênh liên hệ). Dịch vụ quan tâm và Nội dung không bắt buộc -> không có dấu *.
+- Thêm dòng chú thích "* Bắt buộc. Điện thoại và email: nhập ít nhất một..." và validate ngay tại chỗ (setCustomValidity) - trước đây bỏ trống cả 2 thì phải submit rồi bị đá về ?sent=err, mất nội dung đã nhập.
+- DGC_VER 1.3.0 -> 1.3.1.
+
+## 2026-07-14 - Kho bao gia booking bao & PR
+- Tao `10-bang-gia-booking/`: bang-gia-master.csv (183 dong, 3 NCC), tra-cuu.py, build_master.py, nguon.md, raw/.
+- Boc toan bo 10 tab sheet DanaSEO qua Chrome (Drive API chan file) -> 157 dong gia.
+- Quy tac gia chot: gia ban Digicom = GIA GOC niem yet cua NCC, moi ben nhu nhau, khong markup, chua VAT 8%.
+- Scheduled task `booking-price-daily` 8h05 sang moi ngay: cap nhat sheet + quet nguon moi + ghi CHANGELOG.

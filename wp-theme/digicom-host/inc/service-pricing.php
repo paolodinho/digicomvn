@@ -83,8 +83,9 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 						<input type="text" class="tab-search-input" placeholder="<?php echo esc_attr( $dgc_sp_ph ); ?>" aria-label="Tìm kiếm trong bảng giá <?php echo esc_attr( $svc_name ); ?>">
 					</div>
 					<div class="tab-sort">
-						<button type="button" class="sort-btn" data-dir="asc">Giá thấp → cao</button>
-						<button type="button" class="sort-btn" data-dir="desc">Giá cao → thấp</button>
+						<button type="button" class="sort-btn" data-key="price" data-dir="asc">Giá thấp → cao</button>
+						<button type="button" class="sort-btn" data-key="price" data-dir="desc">Giá cao → thấp</button>
+						<?php if ( ! $dgc_sp_is_goi ) : ?><button type="button" class="sort-btn active" data-key="dr" data-dir="desc">DR cao → thấp</button><?php endif; ?>
 					</div>
 				</div>
 				<p class="tab-count"><span class="tab-count-shown"><?php echo (int) $dgc_sp_total; ?></span>/<span class="tab-count-total"><?php echo (int) $dgc_sp_total; ?></span> kết quả</p>

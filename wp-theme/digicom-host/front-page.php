@@ -112,32 +112,33 @@ $svc_meta = array(
 <!-- 06b. TAI SAO CHON DIGICOMVN -->
 <?php
 $why_items = dgc_lines( 'reasons' );
-$why_icons = array(
-	'M12 2a10 10 0 1 0 .01 0zM12 8v4l3 2',                        // process/clock
-	'M4 4h16v12H4zM4 20h16M9 9h6M9 13h4',                          // report/transparency
-	'M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z',                      // shield / SEO base
-	'M3 17l6-6 4 4 7-7M14 8h5v5',                                  // growth / KPI
-	'M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9-2.6.9-5.5-4-3.9 5.5-.8z', // star / AI cited
-	'M4 7h16M4 12h16M4 17h10',                                     // automation / list
-);
 ?>
 <?php if ( $why_items ) : ?>
-<section class="sec why-sec" id="tai-sao" style="background:var(--surface-2);border-bottom:1px solid var(--line)">
+<?php /* Bo cuc 2 cot + danh sach danh so - CO Y khac han luoi card icon cua section Dich vu
+         ngay tren (Hieu 2026-07-14: "hai section giong nhau qua"). */ ?>
+<section class="sec why-sec" id="tai-sao" style="background:var(--surface);border-bottom:1px solid var(--line)">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:40px">
-			<span class="eyebrow">Tại sao chọn DigicomVN</span>
-			<h2>Off-page SEO làm đúng, nguồn thật, minh bạch</h2>
-			<p class="muted" style="max-width:620px;margin:10px auto 0">Textlink, backlink, guest post và booking báo PR triển khai trên nguồn chọn lọc có uy tín thật - báo giá rõ ràng, bàn giao kèm bằng chứng để bạn kiểm chứng.</p>
-		</div>
-		<div class="why-cards">
-			<?php $wi = 0; foreach ( $why_items as $r ) :
-				$path = $why_icons[ $wi % count( $why_icons ) ]; $wi++; ?>
-				<div class="why-card">
-					<span class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $path ); ?>"/></svg></span>
-					<h3><?php echo esc_html( $r[0] ?? '' ); ?></h3>
-					<p><?php echo esc_html( $r[1] ?? '' ); ?></p>
+		<div class="why-split">
+			<div class="why-intro">
+				<span class="eyebrow">Tại sao chọn DigicomVN</span>
+				<h2>Off-page SEO làm đúng, nguồn thật, minh bạch</h2>
+				<p class="muted">Textlink, backlink, guest post và booking báo PR triển khai trên nguồn chọn lọc có uy tín thật - báo giá rõ ràng, bàn giao kèm bằng chứng để bạn kiểm chứng.</p>
+				<div class="why-intro-actions">
+					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a>
+					<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 				</div>
-			<?php endforeach; ?>
+			</div>
+			<ol class="why-list">
+				<?php $wi = 0; foreach ( $why_items as $r ) : $wi++; ?>
+				<li class="why-item">
+					<span class="why-num"><?php echo esc_html( str_pad( $wi, 2, '0', STR_PAD_LEFT ) ); ?></span>
+					<div>
+						<h3><?php echo esc_html( $r[0] ?? '' ); ?></h3>
+						<p><?php echo esc_html( $r[1] ?? '' ); ?></p>
+					</div>
+				</li>
+				<?php endforeach; ?>
+			</ol>
 		</div>
 	</div>
 </section>

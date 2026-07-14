@@ -116,10 +116,15 @@
 			if (nudgeEl) {
 				var nt = picked.length ? nextTier(picked.length) : null;
 				if (nt) {
-					var need = nt.min - picked.length;
+					var need   = nt.min - picked.length;
+					var save   = formatVND(subtotal * nt.pct / 100);
+					// Mobile: cau ngan de nam gon 1 dong trong thanh (khong bi cat duoi).
+					var narrow = window.matchMedia('(max-width:640px)').matches;
 					nudgeEl.hidden = false;
-					nudgeEl.textContent = 'Chọn thêm ' + need + ' mục nữa để được giảm ' + pctText(nt.pct) +
-						' (tiết kiệm ~' + formatVND(subtotal * nt.pct / 100) + 'đ).';
+					nudgeEl.textContent = narrow
+						? 'Thêm ' + need + ' mục → giảm ' + pctText(nt.pct) + ' (~' + save + 'đ)'
+						: 'Chọn thêm ' + need + ' mục nữa để được giảm ' + pctText(nt.pct) +
+						  ' (tiết kiệm ~' + save + 'đ).';
 				} else {
 					nudgeEl.hidden = true;
 				}
@@ -249,8 +254,9 @@
 		var nganhBtns = panel.querySelectorAll('.nganh-btn');
 		var moreBtn   = panel.querySelector('.price-more-btn');
 		var limit     = parseInt(panel.getAttribute('data-limit') || '0', 10);
+		var STEP      = 10;              // moi lan cuon toi cuoi bang: nap them 10 dong
 		var curNganh  = '';
-		var expanded  = false;
+		var shownMax  = limit > 0 ? limit : Infinity;  // so dong dang hien (cuon vo han tang dan)
 		if (!rows.length) return;
 
 		function applyFilter() {
@@ -260,9 +266,8 @@
 				var okN = !curNganh || (' ' + r.getAttribute('data-nganh') + ' ').indexOf(' ' + curNganh + ' ') !== -1;
 				return okQ && okN;
 			});
-			// Chi thu gon khi dang xem mac dinh (khong tim kiem, khong loc, chua bam "xem them").
-			var collapse = limit > 0 && !expanded && !q && !curNganh && matched.length > limit;
-			var visible  = collapse ? matched.slice(0, limit) : matched;
+			var collapse = shownMax < matched.length;
+			var visible  = collapse ? matched.slice(0, shownMax) : matched;
 
 			rows.forEach(function (r) { r.style.display = 'none'; });
 			visible.forEach(function (r) { r.style.display = ''; });
@@ -271,15 +276,32 @@
 			if (totalEl) totalEl.textContent = rows.length;
 			if (moreBtn) {
 				moreBtn.style.display = collapse ? '' : 'none';
-				moreBtn.textContent = 'Xem thêm ' + (matched.length - limit) + ' mục';
+				moreBtn.textContent = 'Xem thêm ' + Math.min(STEP, matched.length - shownMax) + ' mục';
 			}
+			return collapse;
 		}
+
+		// Cuon vo han: nut "Xem thêm" vua la fallback (khong JS observer) vua la moc quan sat -
+		// vao tam nhin la tu nap them STEP dong, khong bat khach bam.
+		function loadMore() {
+			if (shownMax === Infinity) return;
+			shownMax += STEP;
+			applyFilter();
+		}
+		if (moreBtn && 'IntersectionObserver' in window) {
+			new IntersectionObserver(function (entries) {
+				entries.forEach(function (e) { if (e.isIntersecting) loadMore(); });
+			}, { rootMargin: '200px 0px' }).observe(moreBtn);
+		}
+
+		// Doi tu khoa / doi bo loc -> quay lai xem tu dau danh sach moi.
+		function resetShown() { shownMax = limit > 0 ? limit : Infinity; }
 
 		if (input) {
 			var t;
 			input.addEventListener('input', function () {
 				clearTimeout(t);
-				t = setTimeout(applyFilter, 120);
+				t = setTimeout(function () { resetShown(); applyFilter(); }, 120);
 			});
 		}
 
@@ -287,17 +309,20 @@
 			btn.addEventListener('click', function () {
 				curNganh = btn.getAttribute('data-nganh') || '';
 				nganhBtns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+				resetShown();
 				applyFilter();
 			});
 		});
 
 		sortBtns.forEach(function (btn) {
 			btn.addEventListener('click', function () {
+				// data-key="price" (mac dinh) hoac "dr" - dung chung 1 co che sap xep.
+				var key = btn.getAttribute('data-key') === 'dr' ? 'data-dr' : 'data-price';
 				var dir = btn.getAttribute('data-dir') === 'asc' ? 1 : -1;
 				sortBtns.forEach(function (b) { b.classList.toggle('active', b === btn); });
 				rows.sort(function (a, b) {
-					var pa = parseFloat(a.getAttribute('data-price')) || 0;
-					var pb = parseFloat(b.getAttribute('data-price')) || 0;
+					var pa = parseFloat(a.getAttribute(key)) || 0;
+					var pb = parseFloat(b.getAttribute(key)) || 0;
 					return (pa - pb) * dir;
 				});
 				rows.forEach(function (r) { tbody.appendChild(r); });
@@ -306,10 +331,7 @@
 		});
 
 		if (moreBtn) {
-			moreBtn.addEventListener('click', function () {
-				expanded = true;
-				applyFilter();
-			});
+			moreBtn.addEventListener('click', loadMore);
 		}
 
 		applyFilter();

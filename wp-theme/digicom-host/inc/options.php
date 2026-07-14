@@ -13,7 +13,7 @@ function dgc_defaults() {
 		'email'         => 'sales@digicomvn.com',
 		'lead_email'    => 'hieudx3107@gmail.com',
 		'address'       => 'Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội',
-		'address2'      => 'Toà nhà Thăng Long A1, Thiên Lộc, Hà Nội',
+		'address2'      => 'Tầng 3, tòa nhà Thăng Long A1, đường Tây Cao Tốc, thôn Bầu, xã Kim Chung, huyện Đông Anh, Hà Nội',
 		'zalo'          => '2806292509481772964',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
 
@@ -116,8 +116,8 @@ function dgc_settings_page() {
 				dgc_field( 'email', 'Email (hien thi cong khai tren site)' );
 				dgc_field( 'lead_email', 'Email nhan lead form (khong hien thi cong khai)' );
 				dgc_field( 'zalo', 'So Zalo' );
-				dgc_field( 'address', 'Dia chi 1' );
-				dgc_field( 'address2', 'Dia chi 2', 'De trong neu chi co 1 van phong.' );
+				dgc_field( 'address', 'Tru so (dia chi dang ky kinh doanh)' );
+				dgc_field( 'address2', 'Van phong giao dich', 'De trong neu chi co tru so.' );
 				dgc_field( 'working_hours', 'Gio lam viec' );
 				?>
 			</table>

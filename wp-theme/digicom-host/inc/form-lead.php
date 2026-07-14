@@ -25,14 +25,17 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 	<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 		<input type="hidden" name="action" value="dgc_lead">
 		<?php wp_nonce_field( 'dgc_lead', 'dgc_nonce' ); ?>
-		<label class="fl" for="dgc_name">Họ và tên</label>
-		<input type="text" id="dgc_name" name="dgc_name" required>
+		<?php /* Dau * = bat buoc, khop dung logic kiem tra o server (functions.php):
+		         ho ten bat buoc + PHAI co it nhat 1 trong 2 (dien thoai HOAC email). */ ?>
+		<label class="fl" for="dgc_name">Họ và tên <span class="req" aria-hidden="true">*</span></label>
+		<input type="text" id="dgc_name" name="dgc_name" required aria-required="true">
 		<div class="row2">
-			<div><label class="fl" for="dgc_phone">Số điện thoại</label>
-				<input type="tel" id="dgc_phone" name="dgc_phone"></div>
-			<div><label class="fl" for="dgc_email">Email</label>
-				<input type="email" id="dgc_email" name="dgc_email"></div>
+			<div><label class="fl" for="dgc_phone">Số điện thoại <span class="req" aria-hidden="true">*</span></label>
+				<input type="tel" id="dgc_phone" name="dgc_phone" data-contact-one></div>
+			<div><label class="fl" for="dgc_email">Email <span class="req" aria-hidden="true">*</span></label>
+				<input type="email" id="dgc_email" name="dgc_email" data-contact-one></div>
 		</div>
+		<p class="form-hint">* Bắt buộc. Điện thoại và email: nhập ít nhất một để DigicomVN liên hệ lại.</p>
 		<label class="fl" for="dgc_service">Dịch vụ quan tâm</label>
 		<select id="dgc_service" name="dgc_service">
 			<?php
@@ -49,6 +52,24 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 	</form>
 </div>
 <script>
+/* Bao loi ngay tai cho neu bo trong ca dien thoai lan email (thay vi de server tra ve ?sent=err
+   lam mat noi dung da nhap). */
+(function(){
+	var form = document.querySelector('#lien-he form');
+	if (!form) return;
+	var phone = form.querySelector('#dgc_phone');
+	var email = form.querySelector('#dgc_email');
+	if (!phone || !email) return;
+	function sync() {
+		var ok = phone.value.trim() !== '' || email.value.trim() !== '';
+		phone.setCustomValidity(ok ? '' : 'Nhập số điện thoại hoặc email để chúng tôi liên hệ lại.');
+		email.setCustomValidity('');
+	}
+	phone.addEventListener('input', sync);
+	email.addEventListener('input', sync);
+	form.addEventListener('submit', sync);
+	sync();
+})();
 (function(){
 	var params   = new URLSearchParams(location.search);
 	var selected = params.get('selected');

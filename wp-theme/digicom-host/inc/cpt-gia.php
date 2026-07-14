@@ -63,22 +63,58 @@ add_action( 'add_meta_boxes', function () {
 	add_meta_box( 'dgc_gia_details', 'Chi tiet gia', 'dgc_gia_meta_box_html', 'dgc_gia', 'normal', 'high' );
 } );
 
-/* Nhom nganh de loc trong bang gia Booking bao & PR (co the dung chung cho nhom khac neu can). */
-function dgc_nganh_options() {
+/**
+ * Nhom nganh de loc trong bang gia Booking bao & PR.
+ * Chia 2 khoi: "Loai hinh bao" (bao lon/tinh/truyen hinh) va "Linh vuc" (nganh noi dung).
+ * 1 dau bao co the thuoc nhieu nganh - vd Dan Tri = bao-lon + bat-dong-san + y-te...
+ */
+function dgc_nganh_groups() {
 	return array(
-		''              => '(Chưa phân loại)',
-		'bao-lon'       => 'Báo lớn (trung ương)',
-		'bao-tinh'      => 'Báo tỉnh - địa phương',
-		'truyen-hinh'   => 'Đài truyền hình - phát thanh',
-		'kinh-te'       => 'Kinh tế - Tài chính',
-		'bds-xd'        => 'Bất động sản - Xây dựng',
-		'y-te'          => 'Y tế - Sức khoẻ',
-		'giai-tri'      => 'Giải trí - Đời sống',
-		'cong-nghe-oto' => 'Công nghệ - Ô tô',
-		'an-ninh-pl'    => 'An ninh - Pháp luật',
-		'giao-duc'      => 'Giáo dục',
-		'the-thao'      => 'Thể thao',
+		'Loại hình báo' => array(
+			'bao-lon'     => 'Báo lớn (trung ương)',
+			'bao-tinh'    => 'Báo tỉnh - địa phương',
+			'truyen-hinh' => 'Đài truyền hình - phát thanh',
+		),
+		'Kinh doanh - Tài chính' => array(
+			'kinh-te'      => 'Kinh tế - Vĩ mô',
+			'tai-chinh'    => 'Tài chính - Ngân hàng - Chứng khoán',
+			'doanh-nghiep' => 'Doanh nghiệp - Thương hiệu',
+			'thi-truong'   => 'Thị trường - Tiêu dùng',
+		),
+		'Nhà ở - Không gian sống' => array(
+			'bat-dong-san' => 'Bất động sản',
+			'xay-dung'     => 'Xây dựng - Vật liệu',
+			'kien-truc'    => 'Kiến trúc - Nội thất',
+			'phong-thuy'   => 'Phong thuỷ - Tâm linh',
+		),
+		'Tiêu dùng - Đời sống' => array(
+			'lam-dep'    => 'Làm đẹp - Thẩm mỹ',
+			'thoi-trang' => 'Thời trang',
+			'me-va-be'   => 'Mẹ và bé',
+			'du-lich'    => 'Du lịch - Ẩm thực - Khách sạn',
+			'y-te'       => 'Y tế - Sức khoẻ',
+			'giai-tri'   => 'Giải trí - Đời sống',
+		),
+		'Ngành khác' => array(
+			'cong-nghe'   => 'Công nghệ - Viễn thông',
+			'oto-xe-may'  => 'Ô tô - Xe máy',
+			'game'        => 'Game - Giải trí số',
+			'nong-nghiep' => 'Nông nghiệp - Thực phẩm',
+			'logistics'   => 'Logistics - Vận tải',
+			'giao-duc'    => 'Giáo dục - Du học - Việc làm',
+			'an-ninh-pl'  => 'An ninh - Pháp luật',
+			'the-thao'    => 'Thể thao',
+		),
 	);
+}
+
+/** Mang phang slug => nhan (giu tuong thich voi code cu goi dgc_nganh_options()). */
+function dgc_nganh_options() {
+	$out = array( '' => '(Chưa phân loại)' );
+	foreach ( dgc_nganh_groups() as $group ) {
+		foreach ( $group as $slug => $label ) $out[ $slug ] = $label;
+	}
+	return $out;
 }
 
 /** Tach chuoi nganh luu dang "bao-lon,kinh-te" thanh mang slug (tuong thich nguoc voi du lieu cu chi co 1 gia tri, khong dau phay). */
@@ -89,6 +125,7 @@ function dgc_gia_nganh_tags( $meta_nganh ) {
 function dgc_gia_meta_fields() {
 	return array(
 		'vi_tri'  => array( 'label' => 'Vi tri dang / loai goi', 'type' => 'text' ),
+		'dr'      => array( 'label' => 'DR - Domain Rating (Ahrefs, 0-100). De trong neu khong ap dung (goi dich vu).', 'type' => 'text' ),
 		'gia_goc' => array( 'label' => 'Gia goc (de trong neu khong co)', 'type' => 'text' ),
 		'gia_km'  => array( 'label' => 'Gia ban / khuyen mai (bat buoc, gia hien thi chinh)', 'type' => 'text' ),
 		'so_link' => array( 'label' => 'So link / ghi chu ky thuat', 'type' => 'text' ),
@@ -109,9 +146,11 @@ function dgc_gia_meta_box_html( $post ) {
 			echo '<input type="checkbox" id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '" value="1" ' . checked( $val, '1', false ) . '>';
 		} elseif ( $f['type'] === 'checkbox_group' ) {
 			$selected = array_filter( array_map( 'trim', explode( ',', (string) $val ) ) );
-			foreach ( $f['options'] as $ov => $ol ) {
-				if ( $ov === '' ) continue; // "(Chua phan loai)" - khong tich gi la ngam dinh nhom nay
-				echo '<label style="display:inline-block;margin:0 16px 6px 0"><input type="checkbox" name="' . esc_attr( $key ) . '[]" value="' . esc_attr( $ov ) . '" ' . checked( in_array( $ov, $selected, true ), true, false ) . '> ' . esc_html( $ol ) . '</label>';
+			foreach ( dgc_nganh_groups() as $gname => $gopts ) {
+				echo '<p style="margin:10px 0 4px;font-weight:600">' . esc_html( $gname ) . '</p>';
+				foreach ( $gopts as $ov => $ol ) {
+					echo '<label style="display:inline-block;margin:0 16px 6px 0"><input type="checkbox" name="' . esc_attr( $key ) . '[]" value="' . esc_attr( $ov ) . '" ' . checked( in_array( $ov, $selected, true ), true, false ) . '> ' . esc_html( $ol ) . '</label>';
+				}
 			}
 			echo '<p class="description">Tich nhieu nganh neu bao dang duoc da linh vuc (vd bao lon nhu VnExpress) - se hien o moi bo loc da tich.</p>';
 		} elseif ( $f['type'] === 'select' ) {
@@ -176,7 +215,12 @@ function dgc_get_gia( $nhom_slug ) {
 		$items[] = $p;
 	}
 
+	/* Mac dinh xep DR cao -> thap (Hieu 2026-07-14): bao/site manh len dau, dong khong co DR
+	   (goi dich vu) xuong cuoi, cung DR thi gia thap truoc. */
 	usort( $items, function ( $a, $b ) {
+		$da = (int) ( $a->meta['dr'] ?? 0 );
+		$db = (int) ( $b->meta['dr'] ?? 0 );
+		if ( $da !== $db ) return $db <=> $da;
 		if ( (int) $a->menu_order !== (int) $b->menu_order ) {
 			return (int) $a->menu_order <=> (int) $b->menu_order;
 		}
@@ -238,6 +282,18 @@ function dgc_row_logo_html( $url_bao, $post_title ) {
 }
 
 /**
+ * Chip DR (Domain Rating - Ahrefs) cho 1 dong bang gia. Rong neu dong do khong co DR
+ * (goi dich vu, goi Social Entity...). Mau chip theo bac de quet mat nhanh:
+ * >=70 cao, 40-69 kha, <40 thap.
+ */
+function dgc_dr_chip_html( $dr ) {
+	$dr = (int) $dr;
+	if ( $dr <= 0 ) return '';
+	$cls = $dr >= 70 ? 'dr-high' : ( $dr >= 40 ? 'dr-mid' : 'dr-low' );
+	return '<span class="dr-chip ' . $cls . '" title="Domain Rating (Ahrefs) - độ mạnh tên miền, thang 0-100">DR ' . $dr . '</span>';
+}
+
+/**
  * % chiet khau hien thi cho bang gia hap dan hon (theo yeu cau Hieu 2026-07-08) -
  * KHONG phai gia goc/khuyen mai that, chi dung khi dong gia CHUA co gia_goc rieng.
  * On dinh theo post_id (khong doi moi lan tai trang de tranh lo lieu), da dang 8-30%.
@@ -289,12 +345,57 @@ function dgc_combo_tiers_text() {
 function dgc_gia_specs( $meta ) {
 	$out = array();
 	foreach ( array( $meta['so_link'] ?? '', $meta['yeu_cau'] ?? '' ) as $src ) {
-		foreach ( preg_split( '/\s+-\s+|\s*;\s*/u', (string) $src ) as $chunk ) {
+		foreach ( preg_split( '/\s+-\s+|\s*;\s*|\s*·\s*/u', (string) $src ) as $chunk ) {
 			$chunk = trim( $chunk, " \t\n\r\0\x0B-" );
-			if ( $chunk !== '' ) $out[] = $chunk;
+			if ( $chunk === '' ) continue;
+
+			// Du lieu nguon ghi lap nhan: "DA DA55", "PA PA51", "DR DR57" -> bo phan lap.
+			$chunk = preg_replace( '/^(DA|PA|DR|TF|CF)\s+\1\s*/i', '$1 ', $chunk );
+			// DR trong du lieu nha cung cap lech voi DR Ahrefs dang hien o chip -> bo, tranh 2 so DR da nhau.
+			if ( preg_match( '/^DR\s*\d+$/i', $chunk ) ) continue;
+			// "Traffic 365000/thang" -> "Traffic 365.000/thang" cho de doc.
+			$chunk = preg_replace_callback( '/\d{4,}/', fn( $mm ) => number_format( (float) $mm[0], 0, ',', '.' ), $chunk );
+
+			$out[] = $chunk;
 		}
 	}
 	return $out;
+}
+
+/**
+ * Tach chuoi gia nhieu muc kieu Textlink: "Home: 1500000-1800000-2500000đ · CM: ... · Fullsite: ..."
+ * thanh bang [ ['label'=>'Home', 'values'=>[1500000,1800000,2500000]], ... ].
+ * Tra ve mang rong neu khong phai dang nhieu muc (gia don) -> caller giu cach hien cu.
+ */
+function dgc_gia_price_tiers( $gia_km ) {
+	$gia_km = trim( (string) $gia_km );
+	if ( strpos( $gia_km, ':' ) === false ) return array();
+
+	$rows = array();
+	foreach ( preg_split( '/\s*·\s*/u', $gia_km ) as $part ) {
+		if ( ! preg_match( '/^\s*([^:]+):\s*(.+)$/u', $part, $mm ) ) continue;
+		$vals = array();
+		foreach ( preg_split( '/\s*-\s*/', $mm[2] ) as $v ) {
+			$n = dgc_gia_to_number( $v );
+			if ( $n > 0 ) $vals[] = $n;
+		}
+		if ( $vals ) $rows[] = array( 'label' => trim( $mm[1] ), 'values' => $vals );
+	}
+	return count( $rows ) >= 2 ? $rows : array();
+}
+
+/**
+ * Nhan cot ky han cho bang gia nhieu muc, doc tu truong "vi tri" (VD "... 3-6-12 tháng")
+ * -> ['3 tháng','6 tháng','12 tháng']. Khong doc duoc thi tra ve mang rong (an dong tieu de).
+ */
+function dgc_gia_tier_terms( $vi_tri, $n ) {
+	if ( preg_match( '/((?:\d+\s*-\s*)+\d+)\s*(tháng|năm)/ui', (string) $vi_tri, $mm ) ) {
+		$nums = array_map( 'trim', explode( '-', $mm[1] ) );
+		if ( count( $nums ) === $n ) {
+			return array_map( fn( $x ) => $x . ' ' . mb_strtolower( $mm[2] ), $nums );
+		}
+	}
+	return array();
 }
 
 /**
@@ -314,6 +415,15 @@ function dgc_gia_row_html( $it, $args ) {
 	$vi_tri    = trim( (string) $m['vi_tri'] );
 	$show_pos  = ( 'mua-textlink' !== $slug && $vi_tri !== '' );
 
+	/* Gia nhieu muc (Textlink: Home/CM/Fullsite x 3-6-12 thang) -> bang nho thay vi 1 chuoi dai
+	   vo vun ca cot Gia (Hieu 2026-07-14). Cot Gia chi hien "Tu <re nhat>". */
+	$tiers      = dgc_gia_price_tiers( $gia_km );
+	$tier_terms = $tiers ? dgc_gia_tier_terms( $vi_tri, count( $tiers[0]['values'] ) ) : array();
+	if ( $tiers ) {
+		$all_vals  = array_merge( ...array_column( $tiers, 'values' ) );
+		$price_num = min( $all_vals ); // sort/tinh tong theo muc re nhat
+	}
+
 	$has_real_old = ( $gia_goc && $gia_goc !== $gia_km );
 	$show_fake    = ! $has_real_old && preg_match( '/^[0-9]+$/', trim( $gia_km ) );
 	$fake_pct     = $show_fake ? dgc_fake_discount_percent( $it->ID ) : 0;
@@ -322,14 +432,14 @@ function dgc_gia_row_html( $it, $args ) {
 	$cb_id = 'pick-' . (int) $it->ID;
 
 	ob_start(); ?>
-	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>">
+	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>">
 		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
 			<label class="row-check-wrap">
 				<input type="checkbox" id="<?php echo esc_attr( $cb_id ); ?>" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $args['ctx'] . ')' ); ?>">
 				<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>
 				<span>
 					<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
-					<?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
+					<?php echo dgc_dr_chip_html( $m['dr'] ?? '' ); ?><?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
 					<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
 				</span>
 			</label>
@@ -337,19 +447,41 @@ function dgc_gia_row_html( $it, $args ) {
 		<td data-label="Quy cách đăng" class="cell-spec">
 			<?php if ( $show_pos ) : ?><span class="spec-chip spec-chip-pos"><?php echo esc_html( $vi_tri ); ?></span><?php endif; ?>
 			<?php foreach ( $specs as $sp ) : ?><span class="spec-chip"><?php echo esc_html( $sp ); ?></span><?php endforeach; ?>
-			<?php if ( ! $show_pos && ! $specs ) : ?><span class="spec-empty">Liên hệ để nhận quy cách chi tiết</span><?php endif; ?>
+			<?php if ( ! $show_pos && ! $specs && ! $tiers ) : ?><span class="spec-empty">Liên hệ để nhận quy cách chi tiết</span><?php endif; ?>
+
+			<?php if ( $tiers ) : ?>
+			<table class="tier-table">
+				<?php if ( $tier_terms ) : ?>
+				<thead><tr><th>Vị trí</th><?php foreach ( $tier_terms as $t ) : ?><th><?php echo esc_html( $t ); ?></th><?php endforeach; ?></tr></thead>
+				<?php endif; ?>
+				<tbody>
+				<?php foreach ( $tiers as $row ) : ?>
+					<tr>
+						<th><?php echo esc_html( $row['label'] ); ?></th>
+						<?php foreach ( $row['values'] as $vi => $v ) : ?><td data-term="<?php echo esc_attr( $tier_terms[ $vi ] ?? '' ); ?>"><?php echo esc_html( number_format( $v, 0, ',', '.' ) . 'đ' ); ?></td><?php endforeach; ?>
+					</tr>
+				<?php endforeach; ?>
+				</tbody>
+			</table>
+			<?php endif; ?>
 		</td>
 		<td data-label="Giá" class="cell-price">
-			<?php if ( $show_fake || $has_real_old ) : ?>
-				<span class="price-old-line">
-					<span class="price-old"><?php echo esc_html( $show_fake ? number_format( $fake_old, 0, ',', '.' ) . 'đ' : dgc_format_price( $gia_goc ) ); ?></span>
-					<?php if ( $show_fake ) : ?><span class="price-discount-badge">-<?php echo (int) $fake_pct; ?>%</span><?php endif; ?>
-				</span>
+			<?php if ( $tiers ) : ?>
+				<span class="price-from">Từ</span>
+				<span class="price-now"><?php echo esc_html( number_format( $price_num, 0, ',', '.' ) . 'đ' ); ?></span>
+				<?php if ( $tier_terms ) : ?><span class="price-note"><?php echo esc_html( $tier_terms[0] ); ?></span><?php endif; ?>
+			<?php else : ?>
+				<?php if ( $show_fake || $has_real_old ) : ?>
+					<span class="price-old-line">
+						<span class="price-old"><?php echo esc_html( $show_fake ? number_format( $fake_old, 0, ',', '.' ) . 'đ' : dgc_format_price( $gia_goc ) ); ?></span>
+						<?php if ( $show_fake ) : ?><span class="price-discount-badge">-<?php echo (int) $fake_pct; ?>%</span><?php endif; ?>
+					</span>
+				<?php endif; ?>
+				<span class="price-now"><?php echo esc_html( dgc_format_price( $gia_km ) ); ?></span>
 			<?php endif; ?>
-			<span class="price-now"><?php echo esc_html( dgc_format_price( $gia_km ) ); ?></span>
 		</td>
 		<td data-label="" class="cell-action">
-			<a class="btn btn-navy btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a>
+			<a class="btn btn-primary btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a>
 			<?php /* Mobile: nut toggle chon thay cho checkbox nho + nut Dat ngay (CSS an o desktop). */ ?>
 			<label class="pick-btn" for="<?php echo esc_attr( $cb_id ); ?>">
 				<span class="pick-add">+ Chọn báo này</span>

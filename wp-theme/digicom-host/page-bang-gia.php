@@ -52,7 +52,6 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			$nganh_used = array();
 			foreach ( $items as $it ) { foreach ( dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ) as $n ) { $nganh_used[ $n ] = true; } }
 			$has_nganh_filter = count( $nganh_used ) > 1;
-			$nganh_labels     = dgc_nganh_options();
 			// Nhom Social Entity ban theo goi, khong theo dau bao -> doi nhan cot/o tim kiem.
 			$is_goi    = ( 'backlink-social-entity' === $slug );
 			$col_name  = $is_goi ? 'Tên gói' : 'Tên báo / site';
@@ -60,20 +59,31 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			$ph_search = $is_goi ? 'Tìm theo tên gói...' : 'Tìm theo tên báo/site...';
 		?>
 		<div class="tab-panel<?php echo $first ? ' active' : ''; ?>" data-panel="<?php echo esc_attr( $slug ); ?>">
-			<div class="price-layout<?php echo $has_nganh_filter ? ' has-filter' : ''; ?>" data-price-panel data-limit="0">
+			<?php /* data-limit: hien 12 dong dau, cuon toi cuoi bang tu nap them (cuon vo han - main.js). */ ?>
+			<div class="price-layout<?php echo $has_nganh_filter ? ' has-filter' : ''; ?>" data-price-panel data-limit="12">
 			<?php if ( $has_nganh_filter ) : ?>
 			<aside class="price-filter">
 				<div class="price-filter-title">Lọc theo nhóm báo</div>
 				<div class="price-filter-row">
 					<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo count( $items ); ?>)</button>
-					<?php foreach ( $nganh_labels as $nslug => $nlabel ) :
-						if ( $nslug === '' || empty( $nganh_used[ $nslug ] ) ) continue;
-						$n_count = 0;
-						foreach ( $items as $it ) { if ( in_array( $nslug, dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ), true ) ) $n_count++; }
-					?>
-					<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $nlabel ); ?> (<?php echo (int) $n_count; ?>)</button>
-					<?php endforeach; ?>
 				</div>
+				<?php /* Chia theo khoi (Loai hinh bao / Kinh doanh / Nha o / Tieu dung / Khac) - bo qua khoi khong co bao nao. */ ?>
+				<?php foreach ( dgc_nganh_groups() as $gname => $gopts ) :
+					$g_slugs = array_filter( array_keys( $gopts ), fn( $s ) => ! empty( $nganh_used[ $s ] ) );
+					if ( ! $g_slugs ) continue;
+				?>
+				<div class="price-filter-group">
+					<div class="price-filter-sub"><?php echo esc_html( $gname ); ?></div>
+					<div class="price-filter-row">
+						<?php foreach ( $g_slugs as $nslug ) :
+							$n_count = 0;
+							foreach ( $items as $it ) { if ( in_array( $nslug, dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ), true ) ) $n_count++; }
+						?>
+						<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $gopts[ $nslug ] ); ?> (<?php echo (int) $n_count; ?>)</button>
+						<?php endforeach; ?>
+					</div>
+				</div>
+				<?php endforeach; ?>
 			</aside>
 			<?php endif; ?>
 			<div class="price-main">
@@ -82,8 +92,9 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 					<input type="text" class="tab-search-input" placeholder="<?php echo esc_attr( $ph_search ); ?>" aria-label="Tìm kiếm trong <?php echo esc_attr( $label ); ?>">
 				</div>
 				<div class="tab-sort">
-					<button type="button" class="sort-btn" data-dir="asc">Giá thấp → cao</button>
-					<button type="button" class="sort-btn" data-dir="desc">Giá cao → thấp</button>
+					<button type="button" class="sort-btn" data-key="price" data-dir="asc">Giá thấp → cao</button>
+					<button type="button" class="sort-btn" data-key="price" data-dir="desc">Giá cao → thấp</button>
+					<?php if ( ! $is_goi ) : ?><button type="button" class="sort-btn active" data-key="dr" data-dir="desc">DR cao → thấp</button><?php endif; ?>
 				</div>
 			</div>
 			<p class="tab-count"><span class="tab-count-shown"><?php echo count( $items ); ?></span>/<span class="tab-count-total"><?php echo count( $items ); ?></span> kết quả</p>
@@ -112,12 +123,20 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 					</tbody>
 				</table>
 			</div>
+
+			<?php if ( count( $items ) > 12 ) : ?>
+			<p class="center" style="margin-top:18px">
+				<button type="button" class="btn btn-ghost btn-sm price-more-btn">Xem thêm mục</button>
+			</p>
+			<?php endif; ?>
 			</div>
 			</div>
 		</div>
 		<?php $first = false; endforeach; ?>
 	</div>
 </section>
+
+<?php include get_template_directory() . '/inc/order-guide.php'; ?>
 
 <!-- Link ra 4 pillar -->
 <section class="sec">

@@ -11,7 +11,12 @@
 | Pháp nhân | Công ty TNHH Dịch vụ Truyền thông Digito Combat |
 | MST | 0109816406 |
 | Domain | https://digicomvn.com |
-| Địa chỉ | Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội |
+| Trụ sở (ĐKKD, dùng cho hợp đồng/hoá đơn) | Số 200, Đường 3.1, KĐT Gamuda Garden, P. Trần Phú, Q. Hoàng Mai, Hà Nội |
+| Văn phòng giao dịch (NAP dùng cho GBP/backlink/citation - chốt 2026-07-14) | Tầng 3, tòa nhà Thăng Long A1, đường Tây Cao Tốc, thôn Bầu, xã Kim Chung, huyện Đông Anh, Hà Nội |
+
+> NAP nhất quán: mọi listing local/citation/backlink dùng ĐÚNG chuỗi "Văn phòng giao dịch" ở trên,
+> không viết tắt, không đổi thứ tự. Văn phòng này dùng chung địa chỉ với ICD Việt Nam (cùng toà nhà).
+> Trụ sở Gamuda Garden chỉ dùng cho hợp đồng, hoá đơn, thông tin pháp nhân.
 
 ## 2. Liên hệ
 

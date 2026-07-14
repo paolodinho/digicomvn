@@ -15,27 +15,31 @@ $nhom     = dgc_current_nhom();
 		<span class="eyebrow">Dịch vụ</span>
 		<h1><?php echo esc_html( $svc_name ); ?></h1>
 		<?php if ( has_excerpt() ) : ?><p class="lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
-		<div style="margin-top:22px">
-			<?php if ( $nhom ) : ?><a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a> <?php endif; ?>
+		<div class="hero-actions">
+			<?php if ( $nhom ) : ?><a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a><?php endif; ?>
 			<a class="btn <?php echo $nhom ? 'btn-ghost' : 'btn-primary'; ?>" href="#lien-he">Nhận báo giá</a>
 			<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 		</div>
 	</div>
 </section>
 
+<?php
+/* Bang gia len NGAY DUOI hero, tren moi noi dung khac (Hieu 2026-07-14). */
+if ( $nhom ) {
+	include get_template_directory() . '/inc/service-pricing.php';
+	/* Ngay sau bang gia: 4 buoc dat hang + loi moi goi hotline/Zalo neu chua biet chon bao nao. */
+	$dgc_og_ctx = $svc_name;
+	include get_template_directory() . '/inc/order-guide.php';
+}
+?>
+
 <?php if ( get_the_content() ) : ?>
 <section class="sec"><div class="wrap page-content"><?php the_content(); ?></div></section>
 <?php endif; ?>
 
-<?php
-/* Bang gia chi tiet ngay tren trang dich vu (moi dich vu deu co - Hieu 2026-07-14). */
-if ( $nhom ) {
-	include get_template_directory() . '/inc/service-pricing.php';
-}
-?>
-
-<?php /* Social Entity co quy trinh rieng 7 buoc trong noi dung trang -> khong lap quy trinh chung. */ ?>
-<?php if ( ! $nhom || 'backlink-social-entity' !== $nhom['slug'] ) : ?>
+<?php /* Trang co bang gia da co "Huong dan dat hang" 4 buoc -> khong lap quy trinh chung nua.
+         Chi hien quy trinh chung cho trang dich vu KHONG co bang gia. */ ?>
+<?php if ( ! $nhom ) : ?>
 <section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:34px"><span class="eyebrow">Quy trình</span><h2>Cách DigicomVN triển khai</h2></div>

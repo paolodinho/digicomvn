@@ -27,7 +27,7 @@ get_header();
 					<h3>Thông tin liên hệ</h3>
 					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'phone' ); ?></span><div>Hotline<br><b><a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></a><?php if ( dgc( 'hotline2' ) ) : ?> · <a href="tel:<?php echo esc_attr( dgc_tel2() ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'hotline2' ) ); ?></a><?php endif; ?></b></div></div>
 					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'mail' ); ?></span><div>Email<br><b><a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'email' ) ); ?></a></b></div></div>
-					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'pin' ); ?></span><div>Địa chỉ<br><b><?php echo esc_html( dgc( 'address' ) ); ?></b><?php if ( dgc( 'address2' ) ) : ?><br><b><?php echo esc_html( dgc( 'address2' ) ); ?></b><?php endif; ?></div></div>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'pin' ); ?></span><div>Trụ sở<br><b><?php echo esc_html( dgc( 'address' ) ); ?></b><?php if ( dgc( 'address2' ) ) : ?><br><span style="opacity:.85">Văn phòng giao dịch</span><br><b><?php echo esc_html( dgc( 'address2' ) ); ?></b><?php endif; ?></div></div>
 					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'clock' ); ?></span><div>Giờ làm việc<br><b><?php echo esc_html( dgc( 'working_hours' ) ); ?></b></div></div>
 				</div>
 				<div class="box" style="height:220px;margin-top:16px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface-2);display:flex;align-items:center;justify-content:center;color:var(--ink-soft)">Bản đồ Google Map (nhúng sau)</div>
