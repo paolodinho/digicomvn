@@ -1,5 +1,11 @@
 # LOG - digicomvn.com
 
+## 2026-07-14 (bổ sung - menu Case study + nhãn địa chỉ VP)
+- Thêm "Case study" vào menu chính (WP nav "Menu DigicomVN", position 9 sau Blog) -> /case-study/.
+  Verify menu vẫn 1 dòng desktop (7 item).
+- Footer: 2 địa chỉ ghi rõ nhãn "VP 1:" / "VP 2:" (trước để trần, dễ tưởng 1 địa chỉ bị xuống dòng).
+- Deploy footer.php + add menu item + purge. Verify DOM.
+
 ## 2026-07-14 (cuối - logo khách hàng thật + chuyển vị trí)
 - Section "Thương hiệu đã tin tưởng DigicomVN" chuyển từ 03b (dưới hero) xuống 07d (NGAY DƯỚI
   "Báo chí nói về DigicomVN") theo yêu cầu Hiếu.
