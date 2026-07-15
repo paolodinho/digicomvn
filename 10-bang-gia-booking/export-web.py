@@ -5,7 +5,12 @@
 Quy tac (chot 2026-07-14):
 - Cung 1 dau bao + cung TANG SAN PHAM -> LAY GIA RE NHAT trong so cac NCC.
 - AN danh tinh nha cung cap. An gia mua vao. Khong lo link nguon NCC.
-- Gia hien thi = gia_ban_digicom, chua VAT 8%.
+- Gia hien thi = gia_ban_digicom co MARKUP, chua VAT 8%.
+
+MARKUP (Hieu 2026-07-15): moi NCC TRU DanaSEO -> gia web = gia von x 1,20.
+  DanaSEO giu nguyen gia cuoi (khong markup). Markup ap O CAP DONG, TRUOC khi chon
+  min giua cac NCC -> DanaSEO (khong markup) va ben khac (x1,20) canh tranh song phang,
+  van lay re nhat. Bao trum ca rule cu "truyen hinh +20%" (TV deu la NCC ngoai DanaSEO).
 
 Tang san pham (tu dong phan loai tu vi_tri/nhom, vi moi NCC goi ten mot kieu):
   trang-chu   : vi tri noi bat trang chu (Top 1, Top Story, dac biet, home...)  -> gia cao
@@ -71,6 +76,15 @@ def is_soft(r):
     return ("dai gia ncc" in g) or ('gia "tu"' in g) or ("gia mem" in g) or ("gia tu" in g) \
         or ("gia tu" in v) or ("khoi diem" in v) or ("khoang gia chung" in v)
 
+MARKUP = 1.20  # Hieu 2026-07-15: NCC ngoai DanaSEO -> gia web = gia von x 1,20.
+
+def web_gia(r):
+    """Gia hien thi len web tu 1 dong master: DanaSEO giu nguyen; NCC khac x 1,20 (lam tron nghin)."""
+    g = int(r["gia_ban_digicom"])
+    if fold(r["nha_cung_cap"]) != "danaseo":
+        g = int(round(g * MARKUP / 1000) * 1000)
+    return g
+
 with open(SRC) as f:
     all_rows = [r for r in csv.DictReader(f) if r["gia_ban_digicom"]]
 rows = [r for r in all_rows if not is_soft(r)]
@@ -96,14 +110,14 @@ for r in rows:
 
 web = []
 for key, g in groups.items():
-    best = min(g, key=lambda r: int(r["gia_ban_digicom"]))
-    gia_all = sorted(int(x["gia_ban_digicom"]) for x in g)
+    best = min(g, key=web_gia)
+    gia_all = sorted(web_gia(x) for x in g)
     web.append({
         "dich_vu": best["dich_vu"],
         "dau_bao": domain(best["dau_bao"]) or best["dau_bao"],
         "hang_muc": TIER_VN.get(key[2], key[2]),
         "vi_tri": best["vi_tri"],
-        "gia": int(best["gia_ban_digicom"]),
+        "gia": web_gia(best),
         "so_link": best["so_link"],
         "quy_cach": best["quy_cach"],
         "so_ncc": len(g),                              # noi bo

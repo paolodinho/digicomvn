@@ -7,14 +7,14 @@ Quy tac giu nguyen: gia = GIA CUOI re nhat trong so cac NCC CHAC CHAN cung san p
 (export-web.py da lo phan gop nhom + chot chan gia von + loai gia mem).
 
 Rieng:
-  - booking-truyen-hinh: gia web = gia NCC x 1,20 (Hieu 2026-07-15).
+  - MARKUP x1,20 cho moi NCC ngoai DanaSEO da ap SAN trong gia-web.csv (export-web.py),
+    gom ca booking-truyen-hinh -> o day KHONG nhan lai.
   - backlink-social-entity: KHONG dung toi (gia rieng theo rule 120% Solann).
 """
 import csv, json, re, unicodedata, os
 from collections import defaultdict
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-TV_MARKUP = 1.20
 BO_QUA_NHOM = {"backlink-social-entity"}
 
 def fold(s):
@@ -48,9 +48,9 @@ for r in csv.DictReader(open(os.path.join(BASE, "gia-web.csv"))):
     nhom = DV_2_NHOM.get(r["dich_vu"])
     if not nhom:
         continue
+    # gia-web.csv da co san MARKUP (NCC ngoai DanaSEO x1,20, gom ca truyen hinh) tu export-web.py
+    # -> KHONG nhan lai o day, tranh x1,44.
     g = int(r["gia"])
-    if nhom == "booking-truyen-hinh":
-        g = int(round(g * TV_MARKUP / 1000) * 1000)
     kho[(nhom, fold(r["dau_bao"]), fold(r["vi_tri"]))].append(g)
     # Khoa phai gom CA QUY CACH: cung vi tri "Nguoi Bi An" nhung TVC 10s/20s/30s la 3
     # san pham gia khac han nhau - thieu quy_cach se gop het ve gia TVC 10s.

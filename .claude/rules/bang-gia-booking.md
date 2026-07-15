@@ -69,6 +69,20 @@ Backup trước khi import: `~/Claude-Workspace/_backups/routines/<ngày>/bang-g
 
 `build_master.py` tự áp: `gia_ban_digicom = gia_ncc_km or gia_ncc_goc`.
 
+## MARKUP x1,20 cho NCC ngoài DanaSEO (chốt 2026-07-15 - GHI ĐÈ phần trên)
+
+**Giá web = giá vốn NCC × 1,20 cho MỌI nhà cung cấp TRỪ DanaSEO.** DanaSEO giữ nguyên giá
+cuối (không markup). Lý do: DanaSEO là nguồn gốc giá tốt nhất, các nguồn khác cộng biên 20%.
+
+- Markup áp ở `export-web.py` (`web_gia()`), **cấp DÒNG, TRƯỚC khi chọn min giữa các NCC**
+  -> DanaSEO (không markup) và bên khác (×1,20) vẫn cạnh tranh sòng phẳng, lấy rẻ nhất. Nên
+  đầu báo nào DanaSEO có bán thì giá không đổi; đầu báo chỉ có ở nguồn khác mới tăng 20%.
+- **Bao trùm rule cũ "truyền hình +20%"** (TV đều là NCC ngoài DanaSEO) -> đã BỎ block markup
+  TV riêng trong `cap-nhat-gia.py` để tránh nhân đôi (×1,44). Rule "Giá truyền hình +20%" ở
+  trên giờ chỉ là trường hợp riêng của rule tổng này.
+- **Social entity** (Solann Digital, non-DanaSEO) -> ×1,20 = đúng "120% Solann" đã chốt.
+- Làm tròn nghìn. Tác động lần đầu (2026-07-15): 576/1051 dòng web tăng 20%, 0 dòng giảm.
+
 ## Bộ lọc lĩnh vực (ngành)
 
 Field `nganh` (CSV slug, vd `tai-chinh,doanh-nghiep`) quyết định dòng có lọt bộ lọc lĩnh vực không.
