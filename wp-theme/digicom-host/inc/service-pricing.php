@@ -60,7 +60,6 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 			<p class="muted" style="font-size:14.5px"><?php echo esc_html( $dgc_sp_sub ); ?></p>
 		</div>
 
-		<?php include get_template_directory() . '/inc/price-note.php'; ?>
 		<?php include get_template_directory() . '/inc/sel-bar.php'; ?>
 
 		<div class="price-layout" data-price-panel data-limit="<?php echo esc_attr( $dgc_sp_limit ); ?>">
@@ -111,6 +110,9 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 					<button type="button" class="btn btn-ghost btn-sm price-more-btn">Xem thêm <?php echo (int) ( $dgc_sp_total - $dgc_sp_limit ); ?> mục</button>
 				</p>
 				<?php endif; ?>
+
+				<?php /* Ghi chu "gia tham khao" - cuoi bang, dong chu nho, khong CTA (Hieu 2026-07-15). */ ?>
+				<?php include get_template_directory() . '/inc/price-note.php'; ?>
 			</div>
 		</div>
 

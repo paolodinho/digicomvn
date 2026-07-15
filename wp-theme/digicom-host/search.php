@@ -55,7 +55,6 @@ $dgc_n_post = (int) $dgc_posts->found_posts;
 				<h2>Bảng giá <span class="srch-count"><?php echo (int) $dgc_n_gia; ?></span></h2>
 				<a class="btn-text-link" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá đầy đủ &rarr;</a>
 			</div>
-			<?php include get_template_directory() . '/inc/price-note.php'; ?>
 			<ul class="srch-gia">
 				<?php foreach ( array_slice( $dgc_gia_r, 0, 20 ) as $dgc_r ) : ?>
 				<li>
@@ -73,6 +72,7 @@ $dgc_n_post = (int) $dgc_posts->found_posts;
 			<?php if ( $dgc_n_gia > 20 ) : ?>
 			<p class="muted srch-more">Còn <?php echo (int) ( $dgc_n_gia - 20 ); ?> mục nữa - xem tại <a href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">bảng giá</a>.</p>
 			<?php endif; ?>
+			<?php include get_template_directory() . '/inc/price-note.php'; ?>
 		</div>
 		<?php endif; ?>
 

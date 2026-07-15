@@ -1251,3 +1251,10 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
 - **Rà soát hệ nút**: bỏ `btn-navy` khỏi nền sáng, thu về 3 lớp (chính/phụ/chip). Tab active
   đổi từ nền đen sang màu brand; 8 tab cuộn ngang 1 hàng trên mobile. Hero dịch vụ còn 2 nút.
 - Đổi "+ Chọn báo này / trang này" -> **"+ Chọn ngay"**.
+
+### 2026-07-15 (chiều) - Giá tham khảo gọn + Giới thiệu báo/trang (DGC_VER 1.5.2)
+- Bỏ thanh "giá tham khảo" nổi bật + CTA giữa bảng, thay bằng dòng chữ nhỏ cuối bảng (popup đã đủ kêu gọi).
+- Thêm dòng "Giới thiệu báo/trang này" mỗi dòng bảng giá (563 trang + 228 báo): sổ ra tổng quan/uy tín/ngành/SEO-GEO/ước tính tăng trưởng, sinh tự động từ DR+ngành+loại link.
+- Deploy 8 file, lint OK, purge cache, verify curl.
+- 2026-07-15: sel-bar desktop đổi sang nền xanh brand đặc + CTA trắng (tương phản hẳn) - DGC_VER 1.5.3.
+- 2026-07-15: intro báo/trang gọn lại (xếp dọc) + TV không ép SEO/GEO; nút menu Bảng giá bỏ tô nền, chỉ gạch chân - DGC_VER 1.5.4.

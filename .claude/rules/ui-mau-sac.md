@@ -58,3 +58,13 @@ Ngoại lệ: `btn-zalo` (xanh Zalo) chỉ cho hành động Zalo.
 
 Hero trang dịch vụ: **tối đa 2 nút** (1 chính + 1 phụ). Đã bỏ "Nhận báo giá" vì trùng mục đích
 với bảng giá (đã có nút gửi yêu cầu) và với nút Gọi.
+
+## Thanh chọn (sel-bar) - nền xanh brand đặc (chốt 2026-07-15)
+
+Thanh "giỏ hàng" tick chọn báo/site (`inc/sel-bar.php`) trên desktop dùng **nền xanh brand đặc**
+(`linear-gradient(135deg, --action → --action-2)`), chữ trắng, tổng "Còn lại" trắng lớn, **CTA đảo màu
+(nút TRẮNG chữ xanh)**. Lý do: nền cũ (gradient surface sáng) chìm hẳn trên section `--surface-2` xám -
+Hiếu yêu cầu "tương phản hẳn". Đây là điểm nhấn chuyển đổi DUY NHẤT mỗi khu bảng giá nên được phép
+dùng mảng màu đặc; **vẫn tuân rule tiết chế đen** (dùng xanh brand, KHÔNG dùng đen/navy). Dark mode
+giữ nguyên nền xanh (xanh đặc vẫn tương phản tốt trên section tối). Mọi màu chữ con override bằng
+`#fff`/`rgba(255,255,255,...)` trong block `@media(min-width:641px)` - mobile giữ bar sáng như cũ.

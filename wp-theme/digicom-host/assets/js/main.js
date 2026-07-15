@@ -580,3 +580,15 @@ document.addEventListener('click', function (e) {
 	btn.setAttribute('aria-expanded', mo ? 'true' : 'false');
 	btn.querySelector('.pkg-toggle-txt').textContent = mo ? 'Thu gọn' : 'Gói gồm những gì?';
 });
+
+/* Dong nho "Gioi thieu bao/trang nay" - so ra gioi thieu ngan trong dong bang gia (Hieu 2026-07-15). */
+document.addEventListener('click', function (e) {
+	var btn = e.target.closest ? e.target.closest('.intro-toggle') : null;
+	if (!btn) return;
+	var box = document.getElementById(btn.getAttribute('aria-controls'));
+	if (!box) return;
+	var mo = box.hidden;
+	box.hidden = !mo;
+	btn.setAttribute('aria-expanded', mo ? 'true' : 'false');
+	btn.classList.toggle('is-open', mo);
+});

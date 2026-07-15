@@ -42,7 +42,6 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 		<div class="center" style="margin-bottom:18px"><span class="eyebrow">Chi tiết</span><h2>Tra cứu giá theo từng báo / site</h2>
 		</div>
 
-		<?php include get_template_directory() . '/inc/price-note.php'; ?>
 		<?php include get_template_directory() . '/inc/sel-bar.php'; ?>
 
 		<div class="tab-bar" role="tablist">
@@ -117,6 +116,9 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			</div>
 		</div>
 		<?php $first = false; endforeach; ?>
+
+		<?php /* Ghi chu "gia tham khao" - dat cuoi bang, dong chu nho, khong CTA (Hieu 2026-07-15). */ ?>
+		<?php include get_template_directory() . '/inc/price-note.php'; ?>
 	</div>
 </section>
 

@@ -136,3 +136,35 @@ Nội dung: giá là **giá tham khảo, có thể thay đổi vào phút chót*
    chuyên mục thường 5tr. Hạ xuống = bán dưới giá vốn. Giữ nguyên, đối chiếu tay (đúng rule cũ).
 
 Script: `10-bang-gia-booking/cap-nhat-gia.py` (đã cài đủ 3 chốt trên).
+
+## Giá tham khảo + Giới thiệu báo/trang (SỬA 2026-07-15)
+
+- **Ghi chú "giá tham khảo" đổi thành DÒNG CHỮ NHỎ, đặt CUỐI bảng, KHÔNG CTA** (trước là
+  thanh nổi bật kèm nút Gọi/Zalo giữa bảng - Hiếu thấy dài dòng). `inc/price-note.php` giờ chỉ
+  render `<p class="price-foot-note">` (không nút). Include SAU bảng ở: `page-bang-gia.php`,
+  `inc/service-pricing.php`, `search.php`. Nội dung vẫn sửa ở WP Admin (option `price_note`).
+  Lời kêu gọi liên hệ đã đủ ở popup ưu đãi + nút Zalo nổi.
+- **Mỗi dòng bảng giá (báo/site lẻ, KHÔNG phải gói) có dòng nhỏ "Giới thiệu báo/trang này"**
+  bấm sổ ra 4 mục: Tổng quan (là gì + uy tín theo DR), Lĩnh vực phù hợp (từ tag ngành),
+  Hỗ trợ SEO/GEO (theo loại link dofollow/nofollow/none), Ước tính hiệu quả (% tăng trưởng).
+  Helper `dgc_gia_intro_rows()` trong `inc/cpt-gia.php` SINH TỰ ĐỘNG từ field thật (DR, nganh,
+  so_link/yeu_cau, nhóm) - KHÔNG bịa số tuyệt đối; con số tăng trưởng deterministic theo post_id,
+  luôn ghi "Ước tính... tuỳ ngành" (không cam kết). Toggle JS trong `main.js` (`.intro-toggle`).
+  Gói (entity/combo) KHÔNG có dòng này - đã có nút "Gói gồm những gì?".
+
+## Giới thiệu báo/trang - KHÔNG cứng nhắc, layout gọn (SỬA 2026-07-15)
+
+- **Nội dung mục thứ 3 thích ứng theo loại dịch vụ, KHÔNG ép mọi thứ về SEO/GEO** (Hiếu:
+  "truyền hình thì không cần cứ phải áp cho SEO/GEO, hiệu ứng khác về truyền thông cũng không sao").
+  Truyền hình -> nhãn "Hiệu quả truyền thông" (phủ sóng/branding/nhận diện); các nhóm còn lại
+  (có link) giữ nhãn "Hỗ trợ SEO / GEO" theo loại link. Mục "Ước tính hiệu quả" cũng đổi: TV nói
+  "nhận biết thương hiệu tăng %", còn lại nói "tìm kiếm thương hiệu + traffic giới thiệu tăng %".
+  Logic ở `dgc_gia_intro_rows()` biến `$is_tv`.
+- **Layout `intro-detail` xếp DỌC** (nhãn nhỏ in hoa màu brand ở trên, nội dung ở dưới, vạch ngăn
+  giữa các mục) - bỏ lưới 2 cột 120px cũ (gây vỡ chữ mỗi từ 1 dòng trên mobile, Hiếu chê xấu).
+
+## Nút menu "Bảng giá" - nổi bật nhẹ (2026-07-15)
+
+Menu "Bảng giá" KHÔNG tô nền đặc (trước là pill xanh, tranh nổi bật với "Đặt bài ngay" + các nút
+khác). Giờ: chữ màu brand + gạch chân luôn hiện (`:after right:0`), nền trong suốt - nhấn nhẹ, không
+tranh chú ý. CSS `.nav>ul>li>a[href*="/bang-gia"]`.

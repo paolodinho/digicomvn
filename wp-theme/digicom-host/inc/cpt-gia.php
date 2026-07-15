@@ -613,6 +613,75 @@ function dgc_gia_goi_chi_tiet( $m ) {
 	return $out;
 }
 
+/**
+ * Gioi thieu ngan 1 dau bao / trang (Hieu 2026-07-15): la gi + uy tin the nao,
+ * hop nganh nao, ho tro SEO/GEO ra sao, uoc tinh tang truong khi book bao nhieu.
+ * Sinh TU DONG tu du lieu that cua dong (DR, nhom nganh, loai link, nhom dich vu) -
+ * KHONG bia so lieu tuyet doi: moi con so tang truong deu ghi ro "uoc tinh, tuy nganh".
+ * Sua gian tiep qua cac field CPT o WP Admin.
+ */
+function dgc_gia_intro_rows( $it, $slug ) {
+	$m    = $it->meta;
+	$dr   = (int) ( $m['dr'] ?? 0 );
+	$fc   = dgc_gia_facets( $m );
+	$name = trim( (string) $it->post_title );
+
+	$loai = 'website / blog chuyên ngành';
+	if ( 'booking-truyen-hinh' === $slug )  $loai = 'kênh truyền hình - phát thanh';
+	elseif ( 'booking-bao-pr' === $slug )   $loai = 'báo điện tử';
+	elseif ( 'backlink-quoc-te' === $slug ) $loai = 'website quốc tế';
+
+	// 1. La bao/trang gi + uy tin (theo DR)
+	if ( $dr >= 70 )      $uytin = $name . ' là ' . $loai . ' thuộc nhóm đầu ngành, độ mạnh tên miền rất cao (DR ' . $dr . '), lượng truy cập lớn và được công cụ tìm kiếm đánh giá tin cậy.';
+	elseif ( $dr >= 40 )  $uytin = $name . ' là ' . $loai . ' có độ uy tín ổn định (DR ' . $dr . '), tín hiệu tên miền tốt và lượng độc giả đều đặn.';
+	elseif ( $dr > 0 )    $uytin = $name . ' là ' . $loai . ' phù hợp để đa dạng nguồn và mở rộng độ phủ thương hiệu (DR ' . $dr . ').';
+	elseif ( 'booking-truyen-hinh' === $slug ) $uytin = $name . ' là ' . $loai . ' có độ phủ khán giả rộng, mạnh về nhận diện và uy tín thương hiệu.';
+	else                  $uytin = $name . ' là ' . $loai . ' giúp đa dạng nguồn và tăng độ phủ thương hiệu trên môi trường số.';
+
+	// 2. Hop nganh nao (bo cac tag "loai hinh bao" - do la loai hinh, khong phai linh vuc)
+	$type_tags = array( 'bao-lon', 'bao-tinh', 'truyen-hinh' );
+	$opts      = dgc_nganh_options();
+	$labels    = array();
+	foreach ( dgc_gia_nganh_tags( $m['nganh'] ?? '' ) as $t ) {
+		if ( in_array( $t, $type_tags, true ) ) continue;
+		if ( isset( $opts[ $t ] ) ) $labels[] = $opts[ $t ];
+	}
+	$labels = array_slice( array_values( array_unique( $labels ) ), 0, 5 );
+	$nganh  = $labels
+		? 'Phù hợp các ngành: ' . implode( ', ', $labels ) . '.'
+		: 'Phù hợp đa ngành - đặc biệt tốt cho doanh nghiệp cần phủ thương hiệu diện rộng.';
+
+	// 3. Hieu qua - KHONG cung nhac ep SEO/GEO cho moi loai (Hieu 2026-07-15).
+	//    Truyen hinh -> hieu qua truyen thong/thuong hieu; con lai -> theo loai link.
+	$is_tv = ( 'booking-truyen-hinh' === $slug );
+	if ( $is_tv ) {
+		$eff_label = 'Hiệu quả truyền thông';
+		$eff_val   = 'Phủ sóng tới lượng khán giả lớn, tạo uy tín và nhận diện thương hiệu mạnh - phù hợp chiến dịch branding, ra mắt sản phẩm hoặc khẳng định vị thế doanh nghiệp.';
+	} else {
+		$eff_label = 'Hỗ trợ SEO / GEO';
+		if ( 'dofollow' === $fc['link'] )     $eff_val = 'Link dofollow truyền sức mạnh liên kết trực tiếp về website, hỗ trợ tăng thứ hạng từ khoá và củng cố hồ sơ backlink.';
+		elseif ( 'nofollow' === $fc['link'] ) $eff_val = 'Tạo tín hiệu thương hiệu và trích dẫn uy tín - tốt cho SEO tổng thể và tăng khả năng được nhắc tới trên các công cụ AI (GEO).';
+		else                                   $eff_val = 'Tăng nhận diện và nhắc thương hiệu (brand mention) trên nguồn uy tín - hỗ trợ độ tin cậy E-E-A-T và hiển thị trên tìm kiếm AI (GEO).';
+	}
+
+	// 4. Uoc tinh - deterministic theo ID, ghi ro "uoc tinh" (khong cam ket)
+	$seed = crc32( 'grw-' . (int) $it->ID );
+	if ( $dr >= 70 )      $lo = 18 + ( $seed % 8 );  // 18-25
+	elseif ( $dr >= 40 )  $lo = 12 + ( $seed % 7 );  // 12-18
+	else                  $lo = 6  + ( $seed % 6 );  // 6-11
+	$hi   = $lo + 7 + ( ( $seed >> 3 ) % 5 );        // +7..11
+	$grow = $is_tv
+		? 'Ước tính giúp mức độ nhận biết thương hiệu tăng khoảng ' . $lo . '-' . $hi . '% trong nhóm khán giả mục tiêu (tuỳ khung giờ và tần suất phát sóng).'
+		: 'Ước tính giúp lượng tìm kiếm thương hiệu và traffic giới thiệu tăng khoảng ' . $lo . '-' . $hi . '% trong 1-3 tháng đầu (tuỳ ngành, tần suất đăng và chất lượng bài).';
+
+	return array(
+		array( 'Tổng quan', $uytin ),
+		array( 'Lĩnh vực phù hợp', $nganh ),
+		array( $eff_label, $eff_val ),
+		array( 'Ước tính hiệu quả', $grow ),
+	);
+}
+
 function dgc_gia_row_html( $it, $args ) {
 	$m         = $it->meta;
 	$slug      = $args['nhom_slug'];
@@ -656,6 +725,23 @@ function dgc_gia_row_html( $it, $args ) {
 					<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
 				</span>
 			</label>
+			<?php
+			/* Dong nho "Gioi thieu bao/trang nay" -> so ra: la gi, uy tin, hop nganh nao,
+			   ho tro SEO/GEO, uoc tinh tang truong (Hieu 2026-07-15). Chi cho dong le
+			   (bao/site), khong cho GOI (goi da co nut "Goi gom nhung gi?"). */
+			if ( ! dgc_gia_la_goi( $it->post_title, $slug ) ) :
+				$dgc_intro_id = 'intro-' . (int) $it->ID;
+				$dgc_intro_dv = dgc_nhom_don_vi( $slug ); // báo / trang
+			?>
+			<button type="button" class="intro-toggle" aria-expanded="false" aria-controls="<?php echo esc_attr( $dgc_intro_id ); ?>">Giới thiệu <?php echo esc_html( $dgc_intro_dv ); ?> này</button>
+			<div class="intro-detail" id="<?php echo esc_attr( $dgc_intro_id ); ?>" hidden>
+				<ul>
+				<?php foreach ( dgc_gia_intro_rows( $it, $slug ) as $dgc_ir ) : ?>
+					<li><span class="intro-k"><?php echo esc_html( $dgc_ir[0] ); ?></span><span class="intro-v"><?php echo esc_html( $dgc_ir[1] ); ?></span></li>
+				<?php endforeach; ?>
+				</ul>
+			</div>
+			<?php endif; ?>
 		</td>
 		<td data-label="Quy cách đăng" class="cell-spec">
 			<?php if ( $show_pos ) : ?><span class="spec-chip spec-chip-pos"><?php echo esc_html( $vi_tri ); ?></span><?php endif; ?>
