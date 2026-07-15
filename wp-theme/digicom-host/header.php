@@ -14,6 +14,8 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php /* Ribbon uu dai tren cung (thay pill noi bi lot - Hieu 2026-07-15). */ ?>
+<?php include get_template_directory() . '/inc/promo-bar.php'; ?>
 
 <?php $dgc_wm_logo = dgc_logo_url(); ?>
 <div class="brand-watermark" aria-hidden="true" data-brand-watermark>

@@ -168,3 +168,16 @@ Script: `10-bang-gia-booking/cap-nhat-gia.py` (đã cài đủ 3 chốt trên).
 Menu "Bảng giá" KHÔNG tô nền đặc (trước là pill xanh, tranh nổi bật với "Đặt bài ngay" + các nút
 khác). Giờ: chữ màu brand + gạch chân luôn hiện (`:after right:0`), nền trong suốt - nhấn nhẹ, không
 tranh chú ý. CSS `.nav>ul>li>a[href*="/bang-gia"]`.
+
+## Trang dịch vụ + routine tuần (2026-07-15)
+
+- Đã tạo trang dịch vụ **Toplist** `/dich-vu/dich-vu-toplist/` (page id 2113, template tpl-service.php).
+  8 trang dịch vụ hiện có: mua-textlink, dich-vu-backlink, guest-post, booking-bao-pr, dich-vu-toplist,
+  backlink-social-entity, backlink-quoc-te, booking-truyen-hinh. Đều list ở hub `/dich-vu/` (page-dich-vu.php)
+  và lưới `.svc-links` trang chủ (front-page.php).
+- **Routine hàng tuần** `digicom-gia-doi-tac-tuan` (thứ Hai 10h, ~/.claude/scheduled-tasks/): quét rộng
+  giá + đối tác 6 nhóm, dựng master, export ẩn NCC, ĐẨY LÊN LIVE (import-wp merge), điền goi_sites khi
+  NCC công bố list. Khác `booking-price-daily` (daily, chỉ cập nhật master không đẩy web).
+- **goi_sites (list site trong gói)**: cơ chế render list khi field có dữ liệu (dgc_gia_goi_sites).
+  Solann/NCC KHÔNG công bố list site công khai -> chờ Hiếu gửi list hoặc routine tự quét bên nào công bố.
+  KHÔNG bịa tên site/DR.

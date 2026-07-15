@@ -42,3 +42,21 @@
 Bảng giá chi tiết từng đầu báo hầu như KHÔNG công khai - các bên chỉ gửi file qua sale (giống cách DanaSEO gửi Google Sheet). Cách nhanh nhất để có thêm dữ liệu:
 1. Xin file/sheet báo giá từ 2-3 bên nữa (Fame Media, Brandcom, ECP...) -> paste link vào đây, tôi bóc tự động như đã làm với DanaSEO.
 2. Ảnh chụp bảng giá cũng được - tôi đọc ảnh trực tiếp.
+
+## SEODO - Google Sheet 8 tab (2026-07-15, Hiếu gửi)
+Sheet: https://docs.google.com/spreadsheets/d/1cwAIIWvpMVTPbs9sV_hRk_6WJRi1n2K7xIljLrMVDRA/
+Lấy qua gviz CSV (PUBLIC, không cần login): `gviz/tq?tqx=out:csv&gid=<gid>`.
+
+| gid | Nội dung | Trạng thái |
+|---|---|---|
+| 899451809 | 15 site TOPLIST đăng bài (golook, ohay, travelist, toplistdanang/hanoi/cantho/saigon, inhat...) 1tr, 2 link dof, 1000 từ 3-5 ảnh | ĐÃ import live 2026-07-15 (dich-vu-toplist) |
+| 1903168453 | 35 "Bài PR" theo site (pasgo.vn 4tr...) | CHƯA tích hợp - routine xử lý |
+| 490006843 | Bảng giá TOPLIST hệ thống theo ngành + TOP 1-4 vị trí (72 dòng) | CHƯA - phức tạp, cần map vị trí Top 1-4 |
+| 544390579 | Google Maps care packages (Brando) | BỎ QUA - không thuộc 6 nhóm |
+| 570329285 | Textlink báo sidebar gói V1-V5 (Brando) | CHƯA - routine (mua-textlink gói) |
+| 600512532 | Booking báo PR full (246 dòng, dantri + DR + combo) | CHƯA - routine, đối chiếu tay giá vốn |
+| 604318967 | Guest post websites (DR/AS/Traffic, 45 dòng) | CHƯA - routine (guest-post) |
+| 71216803 | Báo tỉnh (41 dòng, Baothainguyen...) | CHƯA - routine (booking-bao-pr báo tỉnh) |
+
+Đã thêm 15 site toplist vào raw/ncc-khac.csv (section "SEODO toplist"). Các tab CHƯA: routine tuần
+tích hợp, ÁP đầy đủ chốt chặn giá vốn + phân tầng vị trí (rule bang-gia-booking.md).

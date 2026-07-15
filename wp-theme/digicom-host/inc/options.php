@@ -83,6 +83,15 @@ function dgc_defaults() {
 		// Dau bao DigicomVN co the dat bai/booking. Moi dong: ten bao | ten file logo trong /uploads/press-logos/ (rong = chua co logo).
 		// Nguon: bang gia CPT dgc_gia that. Logo tai that tu website tung bao 2026-07-03, bo sung 5 bao 2026-07-06.
 		'press_partners' => "VnExpress | vnexpress.png\nDân Trí | dantri.png\nTuổi Trẻ | tuoitre.png\nThanh Niên | thanhnien.png\nVietNamNet | vietnamnet.png\nLao Động | laodong.png\nTiền Phong | tienphong.png\nVOV | vov.png\nVTV | vtv.png\nNhân Dân | nhandan.png\nKenh14 | kenh14.png\n24h | tw24h.png\nCafeF | cafef.png\nZing News | znews.png\nSoha | soha.png\nNgười Đưa Tin | nguoiduatin.png\nAfamily | afamily.png\nEva | eva.png\nCafeBiz | cafebiz.png\nWebtretho | webtretho.png\nBáo Đầu Tư | baodautu.png",
+
+		// Chat AI tu van (DeepSeek). Key nen dat trong wp-config: define('DGC_DEEPSEEK_KEY','sk-...');
+		// Neu de trong constant thi doc field ai_key duoi day. Bat ai_chat_on = 1 va co key -> hien chat.
+		'ai_chat_on'    => '0',
+		'ai_key'        => '',
+		'ai_model'      => 'deepseek-chat',
+		'ai_intro'      => '',
+		'ai_suggestions' => '',
+		'ai_kb'         => '',
 	);
 }
 
@@ -199,6 +208,19 @@ function dgc_settings_page() {
 			<table class="form-table">
 				<?php
 				dgc_field( 'press_partners', 'Danh sach dau bao', 'Moi dong: ten bao | ten file logo (dat trong wp-content/uploads/press-logos/, de trong neu chua co logo). Chi liet ke bao DigicomVN that su dat/booking bai duoc, khong bia.', 'textarea' );
+				?>
+			</table>
+
+			<h2>8. Chat AI tu van (DeepSeek)</h2>
+			<p class="description" style="max-width:760px">Hop chat AI hien o TRANG CHU (ngay duoi ribbon). Con AI hieu dich vu + bang gia Digicom, tu van chon dich vu. <strong>Bao mat:</strong> nen dat key trong <code>wp-config.php</code>: <code>define('DGC_DEEPSEEK_KEY','sk-...');</code> - an toan hon dan vao o duoi (o duoi luu trong CSDL). Lay key tai <code>platform.deepseek.com</code>. Bat <em>Bat chat AI</em> = <code>1</code> va co key -> chat hien len.</p>
+			<table class="form-table">
+				<?php
+				dgc_field( 'ai_chat_on', 'Bat chat AI (1 = bat, 0 = tat)', 'Dat 1 de bat. Chi hien khi da co key (constant hoac o duoi).' );
+				dgc_field( 'ai_key', 'DeepSeek API key (neu khong dat trong wp-config)', 'De TRONG neu da define DGC_DEEPSEEK_KEY trong wp-config (khuyen nghi). Luu y: dien o day = key luu trong CSDL.' );
+				dgc_field( 'ai_model', 'Model DeepSeek', 'Mac dinh deepseek-chat (V3, re). Co the dung deepseek-reasoner neu can suy luan sau (dat hon).' );
+				dgc_field( 'ai_intro', 'Cau chao mo dau', 'De trong = dung cau chao mac dinh. VD: Xin chao! Toi la tro ly Digicom, ban can textlink hay booking bao?', 'textarea' );
+				dgc_field( 'ai_suggestions', 'Cau hoi goi y (nut bam nhanh)', 'Cach nhau dau | . VD: Nen chon dich vu nao de len top? | Booking bao PR gia bao nhieu? | Tu van backlink cho shop.' );
+				dgc_field( 'ai_kb', 'Kien thuc bo sung cho AI', 'Thong tin them ban muon AI biet (chinh sach, uu the, quy trinh...). AI se dung khi tra loi. KHONG ghi thong tin bi mat/gia von.', 'textarea' );
 				?>
 			</table>
 

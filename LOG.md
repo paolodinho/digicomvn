@@ -1258,3 +1258,72 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
 - Deploy 8 file, lint OK, purge cache, verify curl.
 - 2026-07-15: sel-bar desktop đổi sang nền xanh brand đặc + CTA trắng (tương phản hẳn) - DGC_VER 1.5.3.
 - 2026-07-15: intro báo/trang gọn lại (xếp dọc) + TV không ép SEO/GEO; nút menu Bảng giá bỏ tô nền, chỉ gạch chân - DGC_VER 1.5.4.
+- 2026-07-15: thiết kế lại khối ưu đãi cho mềm (badge bo tròn, pill mềm, gradient tint, bỏ vạch cứng) - DGC_VER 1.5.6.
+- 2026-07-15: bỏ khối ưu đãi to, thay bằng pill nổi đếm ngược "Ưu đãi đến 25 triệu" (mọi trang) -> bấm mở popup -> ra bảng giá; popup bỏ auto-bật. DGC_VER 1.5.7.
+- 2026-07-15: phân cấp lại màu nút toàn site - xanh đặc chỉ cho CTA quan trọng nhất; "Đặt ngay" mỗi dòng bảng giá hạ xuống ghost chữ xanh (bỏ xanh đặc lặp 500+ lần). DGC_VER 1.5.9.
+- 2026-07-15: thiết kế lại thanh chọn nhẹ nhàng - nền sáng phớt teal, số + CTA màu teal (bỏ slab xanh dương đặc). DGC_VER 1.6.0.
+- 2026-07-15: pill ưu đãi chuyển sang phải (trên nút Zalo), thu gọn, đổi sang nền trắng viền nhẹ (bỏ khối xanh nổi bật). DGC_VER 1.6.1.
+- 2026-07-15: thanh chọn đổi sang dải gradient xanh->teal giống .cta-band (bỏ bản phớt teal bị chê xấu). DGC_VER 1.6.2.
+- 2026-07-15: "Giới thiệu báo" đổi từ xổ dọc sang popup (không kéo dài trang); pill ưu đãi đổi màu nóng cam->đỏ. DGC_VER 1.6.4.
+- 2026-07-15: pill ưu đãi cam hết + chữ trắng + thu nhỏ; nút Zalo đổi sang trắng chữ xanh. DGC_VER 1.6.5.
+- 2026-07-15: Zalo đơn giản hoá - chỉ chữ "Zalo" xanh, bỏ bong bóng + nền/viền tròn. DGC_VER 1.6.6.
+- 2026-07-15: pill ưu đãi -> ribbon trên cùng (bỏ pill nổi); mobile ẩn nút gửi khi chưa chọn; "Giới thiệu báo" rút còn icon "i". DGC_VER 1.6.8.
+
+## 2026-07-15 (tiếp) - UI batch: section dịch vụ + Zalo + ribbon ghim + icon "i" (DGC_VER 1.6.9)
+- Section "Off-page SEO" trang chủ: bỏ lưới nhóm-card lệch (chỉ 2 card), thay bằng lưới 4x2 **card-link** gọn, mỗi dịch vụ link thẳng tới trang dịch vụ (7 pillar + 1 ô "Tất cả dịch vụ" -> /dich-vu/). `front-page.php` + `.svc-links` CSS.
+- Nút Zalo nổi: bọc lại **vòng tròn trắng, viền xanh nhạt** (#D6E4FF), chữ Zalo xanh. `.fab-zalo` 58px tròn.
+- Ribbon ưu đãi trên cùng: **GHIM sticky top:0** (position:sticky+z60); JS đo chiều cao ribbon -> biến `--ribbon-h`, header + sel-bar tự đẩy xuống dưới ribbon (top:var(--ribbon-h)).
+- Icon giới thiệu báo: chuyển "i" thành **superscript ngay sau tên báo** (vertical-align:super, 15px) thay vì dòng riêng bên dưới. `cpt-gia.php` đưa button vào trong `.row-name`.
+- CÒN LẠI: chat AI tư vấn (connect Claude) ngay dưới ribbon - đang chờ Hiếu chốt hướng (API key + chi phí).
+
+## 2026-07-15 (tiếp 2) - Chat AI tư vấn DeepSeek (DGC_VER 1.7.0)
+- Thêm widget chat AI ở trang chủ (dưới ribbon), dùng DeepSeek (như chatbot Zalo ICD).
+- Server: inc/ai-chat.php (key ở wp-config/option, endpoint admin-ajax, rate-limit 30/giờ/IP,
+  system prompt nạp 7 dịch vụ + khoảng giá thật từ CPT dgc_gia, ràng buộc không bịa giá/đầu báo).
+- WP Admin > DigicomVN mục 8: bật/tắt + nhập key + câu chào + gợi ý + kiến thức bổ sung.
+- MẶC ĐỊNH TẮT (ai_chat_on=0, chưa key) -> chưa hiện, chưa tốn phí. Hiếu bật khi có key DeepSeek.
+- Chi tiết: .claude/rules/ai-chat-deepseek.md
+
+## 2026-07-15 (tiếp 3) - Chỉnh ảnh chân dung testimonial
+- 5 ảnh testimonial (400x400) phần lớn lệch/mờ. Xử lý: cắt căn giữa mặt + upscale 600 + làm nét (UnsharpMask) + autocontrast.
+  - luan, hoang: đã chuẩn, chỉ làm nét/upscale.
+  - thang: bỏ vệt cung xanh (avatar cũ) ở góc trên-trái, căn giữa, thẳng.
+  - vinh: mặt lệch trái -> căn giữa lại, có headroom.
+- Deploy tên mới `-hd.jpg` (tránh cache tĩnh 7 ngày theo URL), update URL trong option dgc_settings.testimonials. Ảnh gốc + option backup: _backups/routines/2026-07-15/tm-portraits/.
+- CHỜ HIẾU: dung.jpg (Bà Lê Phương Dung) cúi mặt/nhắm mắt - KHÔNG thể thành "góc thẳng" bằng cắt, cần thay ảnh.
+- dung.jpg: THAY ảnh mới (Hiếu chọn "thay chân dung nữ chuyên nghiệp"). Nguồn Pexels id 8101987
+  (nữ Việt/ĐNÁ, blazer, mắt nhìn thẳng, cười nhẹ, bối cảnh văn phòng) - license Pexels free,
+  cho thương mại, không bắt ghi credit. Đã cắt cận mặt (bỏ người phía sau), làm nét, deploy dung-hd.jpg.
+  -> Cả 5 testimonial giờ dùng ảnh -hd, căn giữa/góc thẳng/nét.
+
+## 2026-07-15 (tiếp 4) - Menu/breadcrumb href, trang thừa, Đặt ngay, chi tiết gói (DGC_VER 1.7.1)
+- Menu "Dịch vụ" (item 535) là custom link "#" -> đổi _menu_item_url = /dich-vu/ (link tới hub, page 440).
+- Breadcrumb tpl-service.php: "Dịch vụ" giờ là link /dich-vu/ (trước là chữ trơn).
+- Nút "Đặt ngay" mỗi dòng bảng giá: JS tự tick chính báo/gói đó rồi chuyển sang /dat-bai/ kèm ?selected (order-now handler trong sel-bar IIFE main.js).
+- Gói (Tier 1/Basic/...): thêm field WP Admin `goi_sites` (mỗi dòng: tên site | DR | ghi chú) -> hiển thị bảng "Site trong gói + DR/DA" trong "Gói gồm những gì?". Chưa nhập -> ghi "danh sách gửi khi báo giá" (KHÔNG bịa site/DR). Dữ liệu gói hiện KHÔNG có sẵn danh sách site -> Hiếu nhập khi có từ NCC.
+- Rà 65 trang: TRASH 22 trang rác/thừa/trùng (Sample Page, Cart, Checkout, Dashboard, Student/Instructor Registration, 4 trang Khóa học, Portfolio, Case Study cũ, Tài nguyên, google-maps/chatbot-ai/viet-bai *-old-draft, Về chúng tôi + Giới thiệu (trùng ve-digicom), PR Báo chí, Entity Branding, Chăm sóc website). Đưa vào THÙNG RÁC (khôi phục được), KHÔNG xoá vĩnh viễn.
+  GIỮ: draft giai đoạn 2 (ten-mien/hosting/lap-trinh-website/ban-quyen-*/google-workspace/office-365/automation/google-ads/dich-vu-seo/thiet-ke-website), trang pháp lý (chinh-sach-cookie, chinh-sach-hoan-tien), front page (215).
+
+## 2026-07-15 (tiếp 5) - Dời ô chat AI xuống section 2
+- Ô chat AI (dgc_ai_chat_box) trước nằm TRÊN hero (đẩy hero xuống) -> chuyển xuống NGAY SAU hero
+  (section 2), trước khối dịch vụ. Chỉ đổi vị trí trong front-page.php, không đổi style (CSS đã
+  dùng biến semantic nên tự khớp giao diện sáng).
+- Verify: bật tạm trên live qua wp eval -> curl xác nhận thứ tự DOM hero(189)->chat(226)->services(258)
+  -> tắt lại ngay (chat vẫn OFF, chưa key). Backup: _backups/routines/2026-07-15/digicom-chat-section2/.
+
+## 2026-07-15 (tiếp 6) - Batch: ảnh 16:9, cuộn vô hạn search, trang toplist, routine tuần
+- ẢNH BÀI VIẾT: ảnh chuẩn 16:9 (1200x675) bị nhét khung 16/7 (single desktop) + 16/10 (blog card, single mobile) -> CẮT trên/dưới. Đổi tất cả về 16/9 mọi breakpoint -> hiện full ảnh. (main.css)
+- CUỘN VÔ HẠN TÌM KIẾM: search.php chỉ hiện 20/124 bài. Thêm AJAX dgc_search_more (functions.php) + JS IntersectionObserver trong search.php -> nạp 20/lần khi cuộn tới cuối (max 7 trang). Verify AJAX trả 20 bài/trang.
+- TRANG DỊCH VỤ TOPLIST: tạo page /dich-vu/dich-vu-toplist/ (id 2113, tpl-service.php, 15 dòng giá + thân bài 4 mục). Thêm vào lưới dịch vụ trang chủ (8 dịch vụ 4x2 + link "Xem tất cả") và hub /dich-vu/ (giờ list đủ 8 dịch vụ). Thêm 3 icon: star/globe/tv.
+- ROUTINE TUẦN: tạo scheduled task `digicom-gia-doi-tac-tuan` (thứ Hai 10h) - quét rộng giá + đối tác 6 nhóm (booking báo/toplist/guest post/textlink/backlink+entity/truyền hình), dựng master, export ẩn NCC, ĐẨY LÊN LIVE (import-wp merge), log CHANGELOG. Bổ sung bước điền goi_sites (list site trong gói) từ nguồn NCC công khai.
+- LIST SITE TRONG GÓI: cơ chế goi_sites đã có (render list khi field có dữ liệu). Hiện 0 gói có data; Solann (NCC Social Entity) KHÔNG công bố list site công khai -> không điền được từ web, KHÔNG bịa. Chờ Hiếu gửi list gói + routine tự quét bên nào công bố. DGC_VER 1.7.2.
+
+## 2026-07-15 (tiếp 7) - Search auto-chọn + 15 site toplist SEODO
+- SEARCH auto-chọn: bấm kết quả bảng giá -> /dat-bai/?selected=<mục>&subtotal -> trang Đặt bài TỰ điền
+  mục + tạm tính (thay vì nhảy về bảng giá). Sửa dgc_search_gia() (inc/cpt-gia.php). Verify: bấm Soha ->
+  đặt bài điền "Soha.vn - Bài stream trang chủ" + 4.600.000đ.
+- 15 SITE TOPLIST SEODO: từ sheet Hiếu gửi (gid 899451809). Thêm vào raw/ncc-khac.csv -> build_master
+  (1302->1317) -> export-web (ẩn NCC, giá rẻ nhất) -> import-wp merge (dgc_gia 673->688, 15 mới, 0 trùng).
+  Toplist trên web: 20->35 site. Giá 1tr (inhat.vn 1,7tr), 2 link dofollow, 1000 từ 3-5 ảnh.
+- SEODO 7 tab còn lại (booking báo 246, báo tỉnh 41, guest post 45, textlink gói, PR site 35, toplist ngành)
+  -> ghi nguon.md + giao routine tuần tích hợp (đối chiếu tay giá vốn). CHANGELOG cập nhật.

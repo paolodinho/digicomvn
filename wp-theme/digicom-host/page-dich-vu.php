@@ -32,10 +32,28 @@ $dgc_dich_vu_list = array(
 		'url'   => home_url( '/dich-vu/booking-bao-pr/' ),
 	),
 	array(
+		'icon'  => 'star',
+		'title' => 'Dịch vụ Toplist',
+		'desc'  => 'Đưa thương hiệu vào bài xếp hạng "Top uy tín" trên trang đúng lĩnh vực, chạm khách đang so sánh.',
+		'url'   => home_url( '/dich-vu/dich-vu-toplist/' ),
+	),
+	array(
 		'icon'  => 'share',
 		'title' => 'Backlink Social Entity',
 		'desc'  => 'Xây hệ thống hồ sơ mạng xã hội đồng nhất NAP, nội dung độc bản, cam kết tỉ lệ index.',
 		'url'   => home_url( '/dich-vu/backlink-social-entity/' ),
+	),
+	array(
+		'icon'  => 'globe',
+		'title' => 'Backlink quốc tế',
+		'desc'  => 'Guest post, niche edit và đăng PR báo quốc tế theo tầng DR/DA, phân phối thông cáo.',
+		'url'   => home_url( '/dich-vu/backlink-quoc-te/' ),
+	),
+	array(
+		'icon'  => 'tv',
+		'title' => 'Booking truyền hình',
+		'desc'  => 'TVC, phóng sự doanh nghiệp và talkshow trên VTV, HTV - trọn gói từ kịch bản đến phát sóng.',
+		'url'   => home_url( '/dich-vu/booking-truyen-hinh/' ),
 	),
 );
 ?>
@@ -45,7 +63,7 @@ $dgc_dich_vu_list = array(
 	<div class="wrap" style="max-width:820px">
 		<span class="eyebrow">Dịch vụ</span>
 		<h1><?php echo esc_html( get_the_title() ?: 'Dịch vụ off-page SEO của DigicomVN' ); ?></h1>
-		<p class="lead">DigicomVN tập trung 4 dịch vụ off-page SEO cốt lõi - chọn dịch vụ bên dưới để xem chi tiết, bảng giá và cách đặt.</p>
+		<p class="lead">DigicomVN cung cấp trọn bộ dịch vụ off-page SEO và truyền thông - chọn dịch vụ bên dưới để xem chi tiết, bảng giá và cách đặt.</p>
 	</div>
 </section>
 

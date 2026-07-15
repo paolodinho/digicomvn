@@ -40,7 +40,7 @@ Cùng một gốc: **màu viết cứng trong PHP/CSS không có bản override 
 |---|---|---|
 | Thẻ đầu báo `.press-chip` | Dark ép `background:#fff` nhưng chữ vẫn lấy `--heading` (sáng) -> chữ trắng trên nền trắng | Ép luôn `color:#1C2035` trong block dark |
 | Khối bảng giá trang dịch vụ | `style="background:#fff"` inline trong `inc/service-pricing.php` | Đổi sang `var(--surface-2)` |
-| Nút Zalo nổi `.fab-zalo` | Nền lấy `var(--surface-2)` -> ở dark thành nền tối, bong bóng trắng của logo nổi lổm chổm | Ép nền `#0068FF` (xanh Zalo) ở cả 2 chế độ |
+| Nút Zalo nổi `.fab-zalo` | (2026-07-15) Hiếu đổi: TRẮNG hết, bong bóng viền xanh + chữ Zalo xanh | Nền `#fff` + viền `#D6E4FF` cả 2 chế độ; SVG bong bóng `stroke #0068FF fill none`, text `#0068FF` |
 
 **Quy tắc bổ sung:** KHÔNG viết `style="grid-template-columns:..."` inline - style inline đè cả media query, mobile vẫn giữ nhiều cột và chữ bị bóp còn 2 từ/dòng (đã dính ở `page-cam-on.php`). Dùng class + breakpoint.
 
@@ -59,12 +59,36 @@ Ngoại lệ: `btn-zalo` (xanh Zalo) chỉ cho hành động Zalo.
 Hero trang dịch vụ: **tối đa 2 nút** (1 chính + 1 phụ). Đã bỏ "Nhận báo giá" vì trùng mục đích
 với bảng giá (đã có nút gửi yêu cầu) và với nút Gọi.
 
-## Thanh chọn (sel-bar) - nền xanh brand đặc (chốt 2026-07-15)
+## Thanh chọn (sel-bar) - nhẹ nhàng, nền sáng phớt TEAL (chốt 2026-07-15, ghi đè bản slab xanh)
 
-Thanh "giỏ hàng" tick chọn báo/site (`inc/sel-bar.php`) trên desktop dùng **nền xanh brand đặc**
-(`linear-gradient(135deg, --action → --action-2)`), chữ trắng, tổng "Còn lại" trắng lớn, **CTA đảo màu
-(nút TRẮNG chữ xanh)**. Lý do: nền cũ (gradient surface sáng) chìm hẳn trên section `--surface-2` xám -
-Hiếu yêu cầu "tương phản hẳn". Đây là điểm nhấn chuyển đổi DUY NHẤT mỗi khu bảng giá nên được phép
-dùng mảng màu đặc; **vẫn tuân rule tiết chế đen** (dùng xanh brand, KHÔNG dùng đen/navy). Dark mode
-giữ nguyên nền xanh (xanh đặc vẫn tương phản tốt trên section tối). Mọi màu chữ con override bằng
-`#fff`/`rgba(255,255,255,...)` trong block `@media(min-width:641px)` - mobile giữ bar sáng như cũ.
+Bản slab xanh dương đặc (chữ trắng) bị Hiếu chê nặng + "xanh da trời lấn át". Thiết kế lại NHẸ NHÀNG:
+- **Nền sáng phớt teal** (`linear-gradient(180deg,#F1FAF8,--surface-2)`), viền teal mảnh
+  (`rgba(14,140,127,.22)`), bóng mềm, bo 16px. Chọn 1 mục -> quầng teal nhẹ (`has-picks`).
+- Chữ/nhãn dùng `--ink`/`--ink-soft`/`--heading` (đọc trên nền sáng). Số **"Còn lại" màu TEAL** to.
+- **CTA "Gửi yêu cầu báo giá" = nút TEAL đặc** - nút DUY NHẤT tô màu trong thanh -> điểm nhấn.
+  "Chọn lại"/"Xem danh sách" = ghost trung tính nhẹ.
+- Màu chọn: **teal** (`--teal #0E8C7F`, hover `#0B746A`) - khác hẳn biển xanh dương của site, thanh thoát.
+- Dark mode: panel tối nhẹ (`#1B2733`) + viền teal, số/nút teal sáng (`#5FCBBE`).
+- Mobile (base + `@media max-width:640`): số tổng + CTA cũng teal cho đồng bộ (`.sel-bar-total` base,
+  `.sel-bar-cta` mobile). Lưu ý: nhiều rule `.sel-bar-cta`/`.sel-bar-total` rải theo breakpoint -
+  đổi màu phải quét hết (grep `sel-bar-cta{`/`sel-bar-total{`).
+
+## Phân cấp màu nút - xanh đặc chỉ cho CTA quan trọng nhất (chốt 2026-07-15)
+
+Hiếu: "xanh da trời dùng nhiều quá, chẳng có điểm nhấn". Nguyên tắc phân cấp:
+
+- **Xanh brand ĐẶC (`btn-primary` / band xanh) = CHỈ dành cho CTA quan trọng nhất**, mỗi màn 1-2 cái:
+  "Đặt bài ngay" (header), "Gửi yêu cầu báo giá" (sel-bar), "Nhận báo giá" (hero), nút gửi form,
+  nút CTA trong popup ưu đãi, pill ưu đãi nổi. Đây là các nút phải bật lên.
+- **Mọi nút còn lại = cấp PHỤ, ngang nhau**: dùng **ghost** (nền sáng + viền + chữ). Gồm: "Gọi",
+  "Xem thêm", "Chọn lại", "Xem site", nút pillar, và đặc biệt **"Đặt ngay" mỗi dòng bảng giá**
+  (trước tô xanh đặc lặp 12+ lần/bảng -> giờ ghost chữ xanh, `.price-table-cpt .order-now`).
+- Vì "Đặt ngay" lặp rất nhiều, để nó xanh đặc là thủ phạm chính làm mất điểm nhấn. Hạ xuống ghost
+  chữ xanh -> vẫn rõ là nút hành động nhưng nhường sự nổi bật cho sel-bar (điểm chốt chính).
+
+**Khi thêm nút mới:** tự hỏi "đây có phải hành động QUAN TRỌNG NHẤT của màn này không?" Nếu không -> ghost.
+Không mặc định `btn-primary`.
+
+## Nút Zalo - đơn giản chỉ chữ (2026-07-15, chốt)
+`.fab-zalo` cuối cùng: **chỉ chữ "Zalo" màu xanh #0068FF**, KHÔNG bong bóng, KHÔNG nền/viền/bóng tròn
+(nền `none`, border 0, box-shadow none). SVG chỉ còn `<text>Zalo</text>`. Đây là bản Hiếu chốt.

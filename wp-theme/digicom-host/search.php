@@ -81,21 +81,60 @@ $dgc_n_post = (int) $dgc_posts->found_posts;
 			<div class="srch-group-head">
 				<h2>Bài viết <span class="srch-count"><?php echo (int) $dgc_n_post; ?></span></h2>
 			</div>
-			<ul class="srch-posts">
-				<?php while ( $dgc_posts->have_posts() ) : $dgc_posts->the_post(); ?>
-				<li>
-					<a href="<?php the_permalink(); ?>">
-						<h3><?php the_title(); ?></h3>
-						<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 28 ) ); ?></p>
-						<span class="srch-post-date"><?php echo esc_html( get_the_date( 'd/m/Y' ) ); ?></span>
-					</a>
-				</li>
-				<?php endwhile; wp_reset_postdata(); ?>
+			<?php /* Cuon vo han: hien 20 dau, cuon toi cuoi tu nap tiep (Hieu 2026-07-15). */ ?>
+			<ul class="srch-posts" data-search-more data-q="<?php echo esc_attr( $dgc_q ); ?>" data-paged="1" data-max="<?php echo (int) $dgc_posts->max_num_pages; ?>">
+				<?php while ( $dgc_posts->have_posts() ) : $dgc_posts->the_post(); echo dgc_search_post_li(); endwhile; wp_reset_postdata(); ?>
 			</ul>
+			<?php if ( (int) $dgc_posts->max_num_pages > 1 ) : ?>
+			<p class="center" style="margin-top:20px">
+				<button type="button" class="btn btn-ghost btn-sm srch-more-btn">Xem thêm bài viết</button>
+			</p>
+			<?php endif; ?>
 		</div>
 		<?php endif; ?>
 
 	</div>
 </section>
+
+<script>
+(function(){
+	'use strict';
+	var ul = document.querySelector('[data-search-more]');
+	if (!ul) return;
+	var btn   = document.querySelector('.srch-more-btn');
+	var ajax  = '<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>';
+	var paged = parseInt(ul.getAttribute('data-paged'), 10) || 1;
+	var max   = parseInt(ul.getAttribute('data-max'), 10) || 1;
+	var busy  = false;
+
+	function load(){
+		if (busy || paged >= max) return;
+		busy = true;
+		if (btn) btn.textContent = 'Đang tải...';
+		var url = ajax + '?action=dgc_search_more&q=' + encodeURIComponent(ul.getAttribute('data-q')) + '&paged=' + (paged + 1);
+		fetch(url).then(function(r){ return r.json(); }).then(function(res){
+			if (res && res.success && res.data && res.data.html) {
+				ul.insertAdjacentHTML('beforeend', res.data.html);
+				paged++;
+				ul.setAttribute('data-paged', paged);
+			}
+			busy = false;
+			if (paged >= max) { if (btn) btn.remove(); }
+			else if (btn) btn.textContent = 'Xem thêm bài viết';
+		}).catch(function(){
+			busy = false;
+			if (btn) btn.textContent = 'Xem thêm bài viết';
+		});
+	}
+
+	if (btn) btn.addEventListener('click', load);
+	// Tu nap khi nut vao tam nhin (cuon vo han), nut van la fallback neu khong co observer.
+	if (btn && 'IntersectionObserver' in window) {
+		new IntersectionObserver(function(entries){
+			entries.forEach(function(e){ if (e.isIntersecting) load(); });
+		}, { rootMargin: '250px 0px' }).observe(btn);
+	}
+})();
+</script>
 
 <?php get_footer(); ?>

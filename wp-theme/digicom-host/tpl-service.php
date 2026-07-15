@@ -8,7 +8,7 @@ get_header();
 $svc_name = get_the_title();
 $nhom     = dgc_current_nhom();
 ?>
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Dịch vụ <span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
+<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <a href="<?php echo esc_url( home_url( '/dich-vu/' ) ); ?>">Dịch vụ</a> <span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
 
 <section class="page-hero">
 	<div class="wrap" style="max-width:840px">

@@ -1,6 +1,84 @@
 (function ($) {
 	'use strict';
 
+	// Chat AI tu van (DeepSeek) - goi admin-ajax dgc_ai_chat, key o server (Hieu 2026-07-15).
+	(function () {
+		var box = document.querySelector('[data-ai-chat]');
+		if (!box || typeof window.DGC_AI === 'undefined') return;
+		var log   = box.querySelector('[data-ai-log]');
+		var form  = box.querySelector('[data-ai-form]');
+		var input = box.querySelector('[data-ai-input]');
+		var suggBox = box.querySelector('[data-ai-sugg]');
+		var history = [];
+		var busy = false;
+
+		function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+		function addMsg(role, text) {
+			var el = document.createElement('div');
+			el.className = 'ai-msg ' + (role === 'user' ? 'ai-user' : 'ai-bot');
+			el.innerHTML = esc(text).replace(/\n/g, '<br>');
+			log.appendChild(el);
+			log.scrollTop = log.scrollHeight;
+			return el;
+		}
+		function typing() {
+			var el = document.createElement('div');
+			el.className = 'ai-msg ai-bot ai-typing';
+			el.innerHTML = '<span></span><span></span><span></span>';
+			log.appendChild(el);
+			log.scrollTop = log.scrollHeight;
+			return el;
+		}
+		function send(text) {
+			text = (text || '').trim();
+			if (!text || busy) return;
+			busy = true;
+			if (suggBox) suggBox.style.display = 'none';
+			addMsg('user', text);
+			history.push({ role: 'user', content: text });
+			input.value = '';
+			var t = typing();
+			$.ajax({
+				url: window.DGC_AI.url, method: 'POST', dataType: 'json',
+				data: { action: 'dgc_ai_chat', nonce: window.DGC_AI.nonce, messages: JSON.stringify(history) }
+			}).done(function (res) {
+				t.remove();
+				if (res && res.success && res.data && res.data.reply) {
+					addMsg('bot', res.data.reply);
+					history.push({ role: 'assistant', content: res.data.reply });
+				} else {
+					addMsg('bot', (res && res.data && res.data.msg) ? res.data.msg : 'Xin loi, co su co. Vui long lien he hotline.');
+				}
+			}).fail(function (xhr) {
+				t.remove();
+				var m = 'Ket noi gap su co. Vui long lien he hotline.';
+				try { var j = xhr.responseJSON; if (j && j.data && j.data.msg) m = j.data.msg; } catch (e) {}
+				addMsg('bot', m);
+			}).always(function () { busy = false; input.focus(); });
+		}
+		form.addEventListener('submit', function (e) { e.preventDefault(); send(input.value); });
+		if (suggBox) {
+			suggBox.addEventListener('click', function (e) {
+				var b = e.target.closest('.ai-sugg-btn');
+				if (b) send(b.textContent);
+			});
+		}
+	})();
+
+	// Ribbon uu dai GHIM sticky top:0 -> day header (va sel-bar) xuong duoi bang bien
+	// --ribbon-h = chieu cao that cua ribbon (doi theo viewport/wrap dong). (Hieu 2026-07-15)
+	(function () {
+		var bar = document.querySelector('.promo-bar');
+		var root = document.documentElement;
+		function sync() {
+			root.style.setProperty('--ribbon-h', bar ? bar.offsetHeight + 'px' : '0px');
+		}
+		if (!bar) { root.style.setProperty('--ribbon-h', '0px'); return; }
+		sync();
+		window.addEventListener('resize', sync);
+		window.addEventListener('load', sync);
+	})();
+
 	// Cong cu tick chon bao/site/goi (checkbox .row-check trong bang gia) + thanh tong
 	// tam tinh ghim dau trang (.sel-bar, xem inc/sel-bar.php). Dung chung cho trang
 	// Bang gia (nhieu tab, tinh tong CA cac tab) va tung trang dich vu (1 bang).
@@ -153,6 +231,17 @@
 
 		document.addEventListener('change', function (e) {
 			if (e.target && e.target.classList && e.target.classList.contains('row-check')) update();
+		});
+
+		// "Dat ngay" tren 1 dong -> tu tick chinh bao/goi do roi sang trang gui yeu cau (Hieu 2026-07-15).
+		document.addEventListener('click', function (e) {
+			var btn = e.target.closest ? e.target.closest('.order-now') : null;
+			if (!btn) return;
+			e.preventDefault();
+			var tr = btn.closest('tr');
+			var cb = tr ? tr.querySelector('.row-check') : null;
+			if (cb && !cb.checked) { cb.checked = true; update(); }
+			window.location.href = (cta && cta.getAttribute('href')) || btn.getAttribute('href') || '/dat-bai/';
 		});
 
 		// "Chon lai": bo tick toan bo, dua thanh tong ve 0
@@ -496,24 +585,22 @@
 })(jQuery);
 
 /* ==========================================================================
-   Popup uu dai -> dan ve trang bang gia (Hieu 2026-07-14).
-   Chi hien 1 lan/phien; mo sau 7s hoac khi cuon qua 35% trang - lay moc nao den truoc.
+   Popup uu dai: MO khi bam pill noi (.promo-fab / [data-pop-open]) tren moi trang;
+   tu popup bam "Xem bang gia" -> trang bang gia (Hieu 2026-07-15).
+   Bo tu dong bat sau 7s/cuon 35% - gio nguoi dung chu dong bam pill, gon gang hon.
    ========================================================================== */
 (function () {
 	var pop = document.getElementById('promoPop');
 	if (!pop) return;
 
-	var KEY = 'dgcPromoPop';
-	try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
-
-	var opened = false, timer = null;
+	var opened = false;
 
 	function close() {
 		pop.hidden = true;
 		pop.setAttribute('aria-hidden', 'true');
 		document.body.style.overflow = '';
-		try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
 		document.removeEventListener('keydown', onKey);
+		opened = false;
 	}
 
 	function onKey(e) { if (e.key === 'Escape') close(); }
@@ -521,8 +608,6 @@
 	function open() {
 		if (opened) return;
 		opened = true;
-		if (timer) clearTimeout(timer);
-		window.removeEventListener('scroll', onScroll);
 		pop.hidden = false;
 		pop.setAttribute('aria-hidden', 'false');
 		document.body.style.overflow = 'hidden';
@@ -532,20 +617,12 @@
 		if (card) { card.setAttribute('tabindex', '-1'); card.focus({ preventScroll: true }); }
 	}
 
-	function onScroll() {
-		var h = document.documentElement.scrollHeight - window.innerHeight;
-		if (h > 0 && window.scrollY / h > 0.35) open();
-	}
-
-	timer = setTimeout(open, 7000);
-	window.addEventListener('scroll', onScroll, { passive: true });
-
+	document.querySelectorAll('[data-pop-open]').forEach(function (el) {
+		el.addEventListener('click', open);
+	});
 	pop.querySelectorAll('[data-pop-close]').forEach(function (el) {
 		el.addEventListener('click', close);
 	});
-	/* Bam nut CTA (sang trang bang gia) cung ghi nhan da xem -> khong bat lai o trang sau. */
-	var go = pop.querySelector('.promo-pop-actions .btn');
-	if (go) go.addEventListener('click', function () { try { sessionStorage.setItem(KEY, '1'); } catch (e) {} });
 })();
 
 /* Thanh tim kiem tren header: bam kinh lup -> mo/dong o nhap, tu focus con tro. */
@@ -581,14 +658,47 @@ document.addEventListener('click', function (e) {
 	btn.querySelector('.pkg-toggle-txt').textContent = mo ? 'Thu gọn' : 'Gói gồm những gì?';
 });
 
-/* Dong nho "Gioi thieu bao/trang nay" - so ra gioi thieu ngan trong dong bang gia (Hieu 2026-07-15). */
-document.addEventListener('click', function (e) {
-	var btn = e.target.closest ? e.target.closest('.intro-toggle') : null;
-	if (!btn) return;
-	var box = document.getElementById(btn.getAttribute('aria-controls'));
-	if (!box) return;
-	var mo = box.hidden;
-	box.hidden = !mo;
-	btn.setAttribute('aria-expanded', mo ? 'true' : 'false');
-	btn.classList.toggle('is-open', mo);
-});
+/* "Gioi thieu bao/trang nay" -> mo POPUP thay vi xo doc (Hieu 2026-07-15: xo doc lam trang dai,
+   kho theo doi). Noi dung lay tu .intro-detail (van render an) cua dong do, do vao 1 modal chung. */
+(function () {
+	var modal = null;
+	function build() {
+		modal = document.createElement('div');
+		modal.className = 'intro-pop';
+		modal.hidden = true;
+		modal.innerHTML =
+			'<div class="intro-pop-mask" data-intro-close></div>' +
+			'<div class="intro-pop-card" role="dialog" aria-modal="true" tabindex="-1">' +
+			'<button type="button" class="intro-pop-x" data-intro-close aria-label="Đóng">&times;</button>' +
+			'<h3 class="intro-pop-title"></h3><div class="intro-pop-body"></div></div>';
+		document.body.appendChild(modal);
+		modal.querySelectorAll('[data-intro-close]').forEach(function (el) {
+			el.addEventListener('click', close);
+		});
+	}
+	function close() {
+		if (!modal) return;
+		modal.hidden = true;
+		document.body.style.overflow = '';
+	}
+	function onKey(e) { if (e.key === 'Escape') close(); }
+	function open(title, html) {
+		if (!modal) build();
+		modal.querySelector('.intro-pop-title').textContent = title;
+		modal.querySelector('.intro-pop-body').innerHTML = html;
+		modal.hidden = false;
+		document.body.style.overflow = 'hidden';
+		var card = modal.querySelector('.intro-pop-card');
+		if (card) card.focus({ preventScroll: true });
+	}
+	document.addEventListener('keydown', onKey);
+	document.addEventListener('click', function (e) {
+		var btn = e.target.closest ? e.target.closest('.intro-toggle') : null;
+		if (!btn) return;
+		e.preventDefault();
+		var box  = document.getElementById(btn.getAttribute('aria-controls'));
+		var row  = btn.closest('tr');
+		var name = row ? row.querySelector('.row-name') : null;
+		open(name ? name.textContent : 'Giới thiệu', box ? box.innerHTML : '');
+	});
+})();

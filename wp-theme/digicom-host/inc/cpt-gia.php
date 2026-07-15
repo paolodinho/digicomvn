@@ -133,6 +133,7 @@ function dgc_gia_meta_fields() {
 		'gia_km'  => array( 'label' => 'Gia ban / khuyen mai (bat buoc, gia hien thi chinh)', 'type' => 'text' ),
 		'so_link' => array( 'label' => 'So link / ghi chu ky thuat', 'type' => 'text' ),
 		'yeu_cau' => array( 'label' => 'Yeu cau bai viet', 'type' => 'text' ),
+		'goi_sites' => array( 'label' => 'Site trong goi + chi so (CHI dung cho GOI). Moi dong: ten site | DR/DA | ghi chu (2 cot sau khong bat buoc). VD: baomoi.com | 72 | tin tong hop. De trong = hien "danh sach gui khi bao gia".', 'type' => 'textarea' ),
 		'url_bao' => array( 'label' => 'Link toi site/bao (khong bat buoc)', 'type' => 'url' ),
 		'noi_bat' => array( 'label' => 'Danh dau "pho bien nhat"', 'type' => 'checkbox' ),
 		'nganh'   => array( 'label' => 'Nhom nganh (de loc trong bang gia) - tich nhieu neu bao dang duoc nhieu nganh', 'type' => 'checkbox_group', 'options' => dgc_nganh_options() ),
@@ -147,6 +148,8 @@ function dgc_gia_meta_box_html( $post ) {
 		echo '<tr><th style="width:260px"><label for="' . esc_attr( $key ) . '">' . esc_html( $f['label'] ) . '</label></th><td>';
 		if ( $f['type'] === 'checkbox' ) {
 			echo '<input type="checkbox" id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '" value="1" ' . checked( $val, '1', false ) . '>';
+		} elseif ( $f['type'] === 'textarea' ) {
+			echo '<textarea id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '" rows="6" class="large-text code" style="width:480px">' . esc_textarea( $val ) . '</textarea>';
 		} elseif ( $f['type'] === 'checkbox_group' ) {
 			$selected = array_filter( array_map( 'trim', explode( ',', (string) $val ) ) );
 			foreach ( dgc_nganh_groups() as $gname => $gopts ) {
@@ -183,6 +186,8 @@ add_action( 'save_post_dgc_gia', function ( $post_id ) {
 			update_post_meta( $post_id, $key, implode( ',', $vals ) );
 		} elseif ( $f['type'] === 'url' ) {
 			update_post_meta( $post_id, $key, isset( $_POST[ $key ] ) ? esc_url_raw( wp_unslash( $_POST[ $key ] ) ) : '' );
+		} elseif ( $f['type'] === 'textarea' ) {
+			update_post_meta( $post_id, $key, isset( $_POST[ $key ] ) ? sanitize_textarea_field( wp_unslash( $_POST[ $key ] ) ) : '' );
 		} else {
 			update_post_meta( $post_id, $key, isset( $_POST[ $key ] ) ? sanitize_text_field( wp_unslash( $_POST[ $key ] ) ) : '' );
 		}
@@ -564,12 +569,25 @@ function dgc_search_gia( $q ) {
 				|| ( $qFold && false !== strpos( $st['name'], $qFold ) );
 			if ( ! $hit ) continue;
 
+			// Bam ket qua tim kiem -> AUTO CHON dong do va sang thang trang gui yeu cau (/dat-bai/),
+			// khong nhay ve bang gia (Hieu 2026-07-15). Nhan "selected" khop format order-now.
+			$price_num = dgc_gia_to_number( $it->meta['gia_km'] ?? '' );
+			$sel_label = $it->post_title . ( $vi_tri !== '' ? ' - ' . $vi_tri : '' ) . ' (' . $label . ')';
+			$dat_url   = add_query_arg(
+				array_filter( array(
+					'selected' => $sel_label,
+					'subtotal' => $price_num > 0 ? (int) $price_num : null,
+					'total'    => $price_num > 0 ? (int) $price_num : null,
+				) ),
+				home_url( '/dat-bai/' )
+			);
+
 			$out[] = array(
 				'title'      => $it->post_title,
 				'vi_tri'     => $vi_tri,
 				'gia'        => dgc_format_price( $it->meta['gia_km'] ?? '' ),
 				'nhom_label' => $label,
-				'url'        => home_url( '/bang-gia/#' . $slug ),
+				'url'        => $dat_url,
 			);
 		}
 	}
@@ -611,6 +629,25 @@ function dgc_gia_goi_chi_tiet( $m ) {
 	}
 	if ( ! empty( $m['dr'] ) ) $out[] = array( 'Chỉ số site', 'DR ' . $m['dr'] );
 	return $out;
+}
+
+/**
+ * Danh sach site trong goi (Hieu 2026-07-15): moi dong "ten site | DR | ghi chu".
+ * Chi hien khi admin nhap that (field goi_sites) - KHONG bia site/DR.
+ * Tra ve mang [ ['name'=>.., 'dr'=>.., 'note'=>..], ... ].
+ */
+function dgc_gia_goi_sites( $m ) {
+	$raw = trim( (string) ( $m['goi_sites'] ?? '' ) );
+	if ( '' === $raw ) return array();
+	$rows = array();
+	foreach ( preg_split( '/\r\n|\r|\n/', $raw ) as $line ) {
+		$line = trim( $line );
+		if ( '' === $line ) continue;
+		$p = array_map( 'trim', explode( '|', $line ) );
+		if ( '' === ( $p[0] ?? '' ) ) continue;
+		$rows[] = array( 'name' => $p[0], 'dr' => $p[1] ?? '', 'note' => $p[2] ?? '' );
+	}
+	return $rows;
 }
 
 /**
@@ -716,24 +753,23 @@ function dgc_gia_row_html( $it, $args ) {
 	ob_start(); ?>
 	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
 		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
+			<?php
+			/* Icon "i" gioi thieu bao/trang - dat NGAY SAU ten (superscript, kieu dau mu)
+			   thay vi dong rieng ben duoi (Hieu 2026-07-15). Chi cho dong le (bao/site). */
+			$dgc_show_intro = ! dgc_gia_la_goi( $it->post_title, $slug );
+			$dgc_intro_id   = 'intro-' . (int) $it->ID;
+			$dgc_intro_dv   = dgc_nhom_don_vi( $slug );
+			?>
 			<label class="row-check-wrap">
 				<input type="checkbox" id="<?php echo esc_attr( $cb_id ); ?>" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $args['ctx'] . ')' ); ?>">
 				<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>
 				<span>
-					<span class="row-name"><?php echo esc_html( $it->post_title ); ?></span>
+					<span class="row-name"><?php echo esc_html( $it->post_title ); ?><?php if ( $dgc_show_intro ) : ?><button type="button" class="intro-toggle" aria-controls="<?php echo esc_attr( $dgc_intro_id ); ?>" aria-label="Giới thiệu <?php echo esc_attr( $dgc_intro_dv ); ?> này" title="Giới thiệu <?php echo esc_attr( $dgc_intro_dv ); ?> này"></button><?php endif; ?></span>
 					<?php echo dgc_dr_chip_html( $m['dr'] ?? '' ); ?><?php if ( $hot ) : ?><span class="badge-hot">Phổ biến</span><?php endif; ?>
 					<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
 				</span>
 			</label>
-			<?php
-			/* Dong nho "Gioi thieu bao/trang nay" -> so ra: la gi, uy tin, hop nganh nao,
-			   ho tro SEO/GEO, uoc tinh tang truong (Hieu 2026-07-15). Chi cho dong le
-			   (bao/site), khong cho GOI (goi da co nut "Goi gom nhung gi?"). */
-			if ( ! dgc_gia_la_goi( $it->post_title, $slug ) ) :
-				$dgc_intro_id = 'intro-' . (int) $it->ID;
-				$dgc_intro_dv = dgc_nhom_don_vi( $slug ); // báo / trang
-			?>
-			<button type="button" class="intro-toggle" aria-expanded="false" aria-controls="<?php echo esc_attr( $dgc_intro_id ); ?>">Giới thiệu <?php echo esc_html( $dgc_intro_dv ); ?> này</button>
+			<?php if ( $dgc_show_intro ) : ?>
 			<div class="intro-detail" id="<?php echo esc_attr( $dgc_intro_id ); ?>" hidden>
 				<ul>
 				<?php foreach ( dgc_gia_intro_rows( $it, $slug ) as $dgc_ir ) : ?>
@@ -764,6 +800,17 @@ function dgc_gia_row_html( $it, $args ) {
 					<li><span class="pkg-k"><?php echo esc_html( $dgc_ct[0] ); ?></span><span class="pkg-v"><?php echo esc_html( $dgc_ct[1] ); ?></span></li>
 					<?php endforeach; ?>
 				</ul>
+				<?php $dgc_goi_sites = dgc_gia_goi_sites( $m ); /* Site+DR trong goi (Hieu 2026-07-15): chi hien khi admin nhap that, khong bia. */ ?>
+				<?php if ( $dgc_goi_sites ) : ?>
+				<div class="pkg-sites">
+					<div class="pkg-sites-head"><span>Site trong gói</span><span>DR/DA</span></div>
+					<?php foreach ( $dgc_goi_sites as $dgc_ps ) : ?>
+					<div class="pkg-site-row"><span class="pkg-site-name"><?php echo esc_html( $dgc_ps['name'] ); ?><?php if ( $dgc_ps['note'] !== '' ) : ?> <em class="pkg-site-note"><?php echo esc_html( $dgc_ps['note'] ); ?></em><?php endif; ?></span><span class="pkg-site-dr"><?php echo $dgc_ps['dr'] !== '' ? esc_html( $dgc_ps['dr'] ) : '-'; ?></span></div>
+					<?php endforeach; ?>
+				</div>
+				<?php else : ?>
+				<p class="pkg-note">Danh sách site cụ thể trong gói và chỉ số DR/DA từng site được gửi kèm khi báo giá.</p>
+				<?php endif; ?>
 				<p class="pkg-note">Giá tham khảo. Cần đúng cấu hình gói cho ngành của bạn - gọi <?php echo esc_html( dgc( 'hotline' ) ); ?> hoặc nhắn Zalo.</p>
 			</div>
 			<?php endif; ?>
@@ -800,7 +847,7 @@ function dgc_gia_row_html( $it, $args ) {
 			<?php endif; ?>
 		</td>
 		<td data-label="" class="cell-action">
-			<a class="btn btn-primary btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a>
+			<a class="btn btn-ghost btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a>
 			<?php /* Mobile: nut toggle chon thay cho checkbox nho + nut Dat ngay (CSS an o desktop). */ ?>
 			<label class="pick-btn" for="<?php echo esc_attr( $cb_id ); ?>">
 				<span class="pick-add">+ Chọn ngay</span>

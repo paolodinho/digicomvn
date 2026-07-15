@@ -1,14 +1,6 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
-<?php
-/* Uu dai hien tren cac trang (Hieu 2026-07-14). Trang chu goi khoi nay o giua noi dung
-   (front-page.php); cac trang con lai (blog, ve-digicom, lien-he...) bo sung ngay tren footer.
-   promo-band.php tu bo qua neu da render (co $GLOBALS['dgc_promo_done']).
-   BO khoi uu dai tren MOI trang dich vu (Hieu 2026-07-15). */
-if ( ! dgc_is_service_page() ) {
-	include get_template_directory() . '/inc/promo-band.php';
-}
-?>
+<?php /* Khoi uu dai to DA BO (Hieu 2026-07-15) - thay bang pill noi (promo-fab.php) o cuoi footer. */ ?>
 
 <footer class="site-footer">
 	<div class="wrap">
@@ -63,13 +55,14 @@ if ( ! dgc_is_service_page() ) {
 <a href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', dgc( 'zalo' ) ) ); ?>" class="fab-zalo" target="_blank" rel="noopener" aria-label="Chat Zalo với DigicomVN">
 	<?php /* Bong bong bo tron + chu Zalo can giua (ban cu la hop goc vuong, chu Arial dan vao
 	         -> trong nhu anh dan sai, Hieu bao 2026-07-14). */ ?>
-	<svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-		<path d="M8 6h24a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H17l-8 6.5V28H8a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4z" fill="#fff"/>
-		<text x="20" y="22.6" text-anchor="middle" font-size="12.6" font-weight="700" fill="#0068FF"
-			font-family="Montserrat,Helvetica,Arial,sans-serif" letter-spacing="-.3">Zalo</text>
+	<?php /* Don gian: chi chu "Zalo" xanh, khong bong bong, khong vong tron (Hieu 2026-07-15). */ ?>
+	<svg viewBox="0 0 44 22" fill="none" aria-hidden="true">
+		<text x="22" y="17" text-anchor="middle" font-size="17" font-weight="700" fill="#0068FF"
+			font-family="Montserrat,Helvetica,Arial,sans-serif" letter-spacing="-.4">Zalo</text>
 	</svg>
 </a>
 <?php include get_template_directory() . '/inc/promo-popup.php'; ?>
+<?php /* pill noi (promo-fab) DA BO - thay bang ribbon tren cung (inc/promo-bar.php trong header). */ ?>
 <a href="#" class="to-top" aria-label="Lên đầu trang">
 	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </a>

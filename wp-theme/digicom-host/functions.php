@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '1.5.5' );
+define( 'DGC_VER', '1.7.2' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -43,6 +43,14 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	wp_enqueue_script( 'owl-carousel-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
 	wp_enqueue_script( 'dgc-main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'owl-carousel-js' ), DGC_VER, true );
+
+	// Chat AI (DeepSeek) - cung cap ajaxurl + nonce cho JS (key van o server, khong lo).
+	if ( function_exists( 'dgc_ai_enabled' ) && dgc_ai_enabled() ) {
+		wp_localize_script( 'dgc-main-js', 'DGC_AI', array(
+			'url'   => admin_url( 'admin-ajax.php' ),
+			'nonce' => wp_create_nonce( 'dgc_ai' ),
+		) );
+	}
 } );
 
 /* ---------------------------------------------------------------------------
@@ -52,6 +60,7 @@ add_action( 'wp_enqueue_scripts', function () {
 require_once get_template_directory() . '/inc/options.php';
 require_once get_template_directory() . '/inc/cpt-gia.php';
 require_once get_template_directory() . '/inc/case-study.php';
+require_once get_template_directory() . '/inc/ai-chat.php';
 
 /**
  * Helper doc 1 option.
@@ -157,6 +166,9 @@ function dgc_icon( $name ) {
 		'tag'   => 'M12 2H4v8l10 10 8-8L12 2zM7 7h.01',
 		'edit'  => 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z',
 		'share' => 'M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4',
+		'star'  => 'M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6-5.2-4.4 6.8-.5z',
+		'globe' => 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z',
+		'tv'    => 'M3 7h18v12H3zM8 3l4 4 4-4',
 		'facebook' => 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z',
 		'linkedin' => 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z',
 	);
@@ -229,6 +241,41 @@ function dgc_handle_lead() {
 	wp_safe_redirect( add_query_arg( 'sent', $id ? 'ok' : 'err', remove_query_arg( 'sent', $ref ) . '#lien-he' ) );
 	exit;
 }
+
+/* ---------------------------------------------------------------------------
+ * Tim kiem: cuon vo han cho nhom "Bai viet" (Hieu 2026-07-15: 124 bai nhung chi hien 20).
+ * Render 1 <li> dung CHUNG cho search.php + AJAX load them.
+ * ------------------------------------------------------------------------- */
+function dgc_search_post_li() {
+	ob_start(); ?>
+	<li>
+		<a href="<?php the_permalink(); ?>">
+			<h3><?php the_title(); ?></h3>
+			<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 28 ) ); ?></p>
+			<span class="srch-post-date"><?php echo esc_html( get_the_date( 'd/m/Y' ) ); ?></span>
+		</a>
+	</li>
+	<?php return ob_get_clean();
+}
+
+/* AJAX: tra ve trang tiep theo cua ket qua bai viet (append vao danh sach). */
+function dgc_search_more() {
+	$q     = isset( $_GET['q'] ) ? sanitize_text_field( wp_unslash( $_GET['q'] ) ) : '';
+	$paged = max( 2, (int) ( $_GET['paged'] ?? 2 ) );
+	$query = new WP_Query( array(
+		'post_type'      => array( 'post', 'page' ),
+		's'              => $q,
+		'posts_per_page' => 20,
+		'paged'          => $paged,
+		'post_status'    => 'publish',
+	) );
+	$html = '';
+	while ( $query->have_posts() ) { $query->the_post(); $html .= dgc_search_post_li(); }
+	wp_reset_postdata();
+	wp_send_json_success( array( 'html' => $html, 'max' => (int) $query->max_num_pages ) );
+}
+add_action( 'wp_ajax_dgc_search_more', 'dgc_search_more' );
+add_action( 'wp_ajax_nopriv_dgc_search_more', 'dgc_search_more' );
 
 /** URL trang cam on - rong neu page chua ton tai (khi do form giu cach bao cu tai cho). */
 function dgc_thankyou_url() {
