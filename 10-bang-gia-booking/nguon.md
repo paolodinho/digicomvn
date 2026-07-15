@@ -10,6 +10,20 @@
 | **Fame Media** | https://famemedia.vn/bao-online/ | 23 | WebFetch. Bảng vị trí premium trang chủ (giá 15-230tr), khác phân khúc DanaSEO. Ngân sách tối thiểu 50tr/tháng. |
 | **SEOViP** | https://seovip.vn/dich-vu-book-bao-pr/ | 3 | WebFetch. Chỉ có giá khởi điểm theo nhóm (báo lớn từ 2tr, báo Đảng từ 1tr, báo rẻ từ 700k). Chưa có bảng từng đầu báo. |
 
+### Bổ sung 2026-07-14 (7 mũi quét)
+
+| Bên | Dòng | Ghi chú |
+|---|---|---|
+| **Admicro (VCCorp)** | 40 | RATE CARD CHÍNH THỨC (PDF). `https://in.admicro.vn/uploads/bien-tap-thong-tin-847/<bao>_admicro_prs_<thang>.pdf`. Còn 14 file chưa bóc: genk, gamek, autopro, vtv, skds, giadinhnet, phunuvietnam, 2sao, infonet, vietnambiz, vietnammoi... |
+| **SEOViP** | 77 | Sheet `1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4` - 24 tab, có giá niêm yết + giá CK + số link + quy cách. Chi tiết nhất. |
+| **DPS.MEDIA** | 194 | Sheet `1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8` - báo lớn/tỉnh/dofollow + 90 site guest post VN + 81 site global. |
+| **Guestpost.vn** | 50 | Sheet `1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4` - textlink báo theo từng site, 3/6/12 tháng. |
+| Fame Media | 63 | + trang ZNews riêng (famemedia.vn/new-zings). |
+| Brando, SEODO, Xuyên Việt, BookBaoPR, QuangbaThuonghieu, Hapo, MicCreative, Web Media | 51 | Theo từng đầu báo. |
+| Entity: Solann, SEOTOP, SEOTORO, BuffSEO, HapoDigital, Khoahocseotop, dichvuentity.vn, Tùng Phát, Vutruso | 34 | Solann rẻ nhất mọi mức - đúng mốc rule 120% Solann. |
+| Textlink lẻ: SGC.vn, Nguyễn Lê Điệp, DesignerVN, Web Thực Chiến, Seotoro | 15 | Seotoro: dofollow trong bài Dân trí = 5tr/link/tháng (mốc trần). |
+| guestpost.com.vn, bookbaopr.vn, DPS global | 114 | Guest post theo site. |
+
 ## CHƯA LẤY ĐƯỢC - giá để dạng ảnh / bảng ẩn / yêu cầu liên hệ
 
 | Bên | URL | Vướng gì |

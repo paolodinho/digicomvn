@@ -13,6 +13,9 @@ $dgc_nhom_list = array(
 	'dich-vu-backlink'       => 'Dịch vụ Backlink',
 	'mua-textlink'           => 'Mua Textlink',
 	'backlink-social-entity' => 'Backlink Social Entity',
+	'dich-vu-toplist'        => 'Dịch vụ Toplist',
+	'backlink-quoc-te'       => 'Backlink quốc tế',
+	'booking-truyen-hinh'    => 'Booking truyền hình',
 );
 
 // Gom du lieu 1 lan, dung lai cho bang chi tiet + cong cu tick chon.
@@ -39,6 +42,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 		<div class="center" style="margin-bottom:18px"><span class="eyebrow">Chi tiết</span><h2>Tra cứu giá theo từng báo / site</h2>
 		</div>
 
+		<?php include get_template_directory() . '/inc/price-note.php'; ?>
 		<?php include get_template_directory() . '/inc/sel-bar.php'; ?>
 
 		<div class="tab-bar" role="tablist">
@@ -60,33 +64,13 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 		?>
 		<div class="tab-panel<?php echo $first ? ' active' : ''; ?>" data-panel="<?php echo esc_attr( $slug ); ?>">
 			<?php /* data-limit: hien 12 dong dau, cuon toi cuoi bang tu nap them (cuon vo han - main.js). */ ?>
-			<div class="price-layout<?php echo $has_nganh_filter ? ' has-filter' : ''; ?>" data-price-panel data-limit="12">
-			<?php if ( $has_nganh_filter ) : ?>
-			<aside class="price-filter">
-				<div class="price-filter-title">Lọc theo nhóm báo</div>
-				<div class="price-filter-row">
-					<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo count( $items ); ?>)</button>
-				</div>
-				<?php /* Chia theo khoi (Loai hinh bao / Kinh doanh / Nha o / Tieu dung / Khac) - bo qua khoi khong co bao nao. */ ?>
-				<?php foreach ( dgc_nganh_groups() as $gname => $gopts ) :
-					$g_slugs = array_filter( array_keys( $gopts ), fn( $s ) => ! empty( $nganh_used[ $s ] ) );
-					if ( ! $g_slugs ) continue;
-				?>
-				<div class="price-filter-group">
-					<div class="price-filter-sub"><?php echo esc_html( $gname ); ?></div>
-					<div class="price-filter-row">
-						<?php foreach ( $g_slugs as $nslug ) :
-							$n_count = 0;
-							foreach ( $items as $it ) { if ( in_array( $nslug, dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ), true ) ) $n_count++; }
-						?>
-						<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $gopts[ $nslug ] ); ?> (<?php echo (int) $n_count; ?>)</button>
-						<?php endforeach; ?>
-					</div>
-				</div>
-				<?php endforeach; ?>
-			</aside>
-			<?php endif; ?>
+			<div class="price-layout" data-price-panel data-limit="12">
 			<div class="price-main">
+			<?php
+			$pf_items      = $items;
+			$pf_show_nganh = $has_nganh_filter;
+			include get_template_directory() . '/inc/price-filter.php';
+			?>
 			<div class="tab-toolbar">
 				<div class="tab-search">
 					<input type="text" class="tab-search-input" placeholder="<?php echo esc_attr( $ph_search ); ?>" aria-label="Tìm kiếm trong <?php echo esc_attr( $label ); ?>">
@@ -146,7 +130,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 				<h3>Mua Textlink &amp; Dịch vụ Backlink</h3>
 				<p class="muted">Chèn link vào bài có sẵn hoặc xây hệ thống backlink chất lượng, theo dõi index, có báo cáo.</p>
 				<div class="pillar-actions">
-					<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/mua-textlink/' ) ); ?>">Xem Textlink</a>
+					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/mua-textlink/' ) ); ?>">Xem Textlink</a>
 					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/dich-vu-backlink/' ) ); ?>">Xem Backlink</a>
 				</div>
 			</div>
@@ -154,7 +138,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 				<h3>Guest Post &amp; Booking báo PR</h3>
 				<p class="muted">Viết bài đăng trên site đúng chủ đề, hoặc booking đăng bài PR trên báo điện tử theo yêu cầu.</p>
 				<div class="pillar-actions">
-					<a class="btn btn-navy btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Xem Guest Post</a>
+					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Xem Guest Post</a>
 					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/booking-bao-pr/' ) ); ?>">Xem Booking PR</a>
 				</div>
 			</div>

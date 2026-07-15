@@ -56,7 +56,7 @@ $dgc_og_steps = array(
 				<p>Mỗi ngành, mỗi mục tiêu (đẩy top từ khoá, xây thương hiệu, xử lý truyền thông) cần bộ báo và bộ site khác nhau. Gọi hotline hoặc nhắn Zalo, DigicomVN tư vấn miễn phí danh sách phù hợp với ngân sách của bạn.</p>
 			</div>
 			<div class="order-help-actions">
-				<a class="btn btn-navy" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 				<a class="btn btn-zalo" href="https://zalo.me/<?php echo esc_attr( $dgc_og_zalo ); ?>" target="_blank" rel="noopener">Nhắn Zalo</a>
 			</div>
 		</div>

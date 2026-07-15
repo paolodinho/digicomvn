@@ -18,3 +18,43 @@ cho các khối nội dung lặp lại. Mảng đen lớn/lặp nhiều làm tra
 ## Khi thêm section mới
 Mặc định nền sáng (`--surface` / `--surface-2`), phân tách section bằng viền + đổi nền sáng,
 không bằng khối đen. Muốn nhấn mạnh -> dùng màu brand, không dùng đen.
+
+## Chế độ ban đêm (dark) - lỗi hay gặp (2026-07-14)
+
+**Không hardcode màu trong component.** Mọi `background:#fff` / `color:var(--navy)` viết cứng sẽ vỡ ở dark mode:
+chữ sáng trên nền trắng, hoặc chữ tối trên nền tối - khách không đọc nổi.
+
+Đã dính 2 lỗi ở bảng giá (đã sửa):
+- `.price-table-cpt tr` (card mobile) đặt `background:#fff` -> ở dark nền vẫn trắng nhưng chữ sáng.
+- `.pick-btn` ("+ Chọn báo này") đặt `color:var(--navy)` -> ở dark `--navy` là màu TỐI -> chữ tối trên nền tối.
+
+**Quy tắc:** dùng biến semantic (`--surface`, `--surface-2`, `--heading`, `--ink`) thay vì màu cứng.
+Nếu buộc dùng màu cứng -> BẮT BUỘC viết kèm block `[data-theme="dark"]` override.
+**QA bắt buộc:** mỗi lần thêm component mới, bật dark mode + xem ở mobile (390px) trước khi báo xong.
+
+## Lỗi dark mode đã gặp (2026-07-14, đợt 2)
+
+Cùng một gốc: **màu viết cứng trong PHP/CSS không có bản override cho `[data-theme="dark"]`**.
+
+| Chỗ | Lỗi | Cách sửa |
+|---|---|---|
+| Thẻ đầu báo `.press-chip` | Dark ép `background:#fff` nhưng chữ vẫn lấy `--heading` (sáng) -> chữ trắng trên nền trắng | Ép luôn `color:#1C2035` trong block dark |
+| Khối bảng giá trang dịch vụ | `style="background:#fff"` inline trong `inc/service-pricing.php` | Đổi sang `var(--surface-2)` |
+| Nút Zalo nổi `.fab-zalo` | Nền lấy `var(--surface-2)` -> ở dark thành nền tối, bong bóng trắng của logo nổi lổm chổm | Ép nền `#0068FF` (xanh Zalo) ở cả 2 chế độ |
+
+**Quy tắc bổ sung:** KHÔNG viết `style="grid-template-columns:..."` inline - style inline đè cả media query, mobile vẫn giữ nhiều cột và chữ bị bóp còn 2 từ/dòng (đã dính ở `page-cam-on.php`). Dùng class + breakpoint.
+
+## Hệ nút - chỉ 3 lớp (chốt 2026-07-15, Hiếu: "nhiều loại nút quá")
+
+| Lớp | Class | Dùng cho |
+|---|---|---|
+| Chính | `btn btn-primary` (nền `--action` xanh brand) | Hành động chính, **tối đa 1 cái mỗi màn** |
+| Phụ | `btn btn-ghost` (nền sáng + viền) | Gọi, Chọn lại, Xem thêm, dẫn hướng |
+| Chip chọn | `.tab-btn` / `.sort-btn` - active = nền `--action` | Tab nhóm, sắp xếp, lọc |
+
+**`btn-navy` (nền đen) CHỈ được dùng trong `.cta-band`** (band màu, là điểm nhấn hiếm).
+Tuyệt đối không dùng làm nút chính trên nền sáng - vừa rối hệ nút, vừa trái rule "tiết chế màu đen".
+Ngoại lệ: `btn-zalo` (xanh Zalo) chỉ cho hành động Zalo.
+
+Hero trang dịch vụ: **tối đa 2 nút** (1 chính + 1 phụ). Đã bỏ "Nhận báo giá" vì trùng mục đích
+với bảng giá (đã có nút gửi yêu cầu) và với nút Gọi.

@@ -29,25 +29,30 @@ $dgc_sp_limit = 10; // Mac dinh hien 10 dong, con lai an sau nut "Xem them" (JS 
 
 // Nhom "Backlink Social Entity" ban theo goi (khong theo dau bao/site) -> doi nhan cot cho dung.
 $dgc_sp_is_goi   = ( 'backlink-social-entity' === $nhom['slug'] );
-$dgc_sp_col_name = $dgc_sp_is_goi ? 'Tên gói' : 'Tên báo / site';
+/* Booking bao & PR goi la "bao"; cac dich vu con lai goi la "trang" (Hieu 2026-07-14). */
+$dgc_sp_dv       = dgc_nhom_don_vi( $nhom['slug'] );
+$dgc_sp_col_name = $dgc_sp_is_goi ? 'Tên gói' : ( 'báo' === $dgc_sp_dv ? 'Tên báo' : 'Tên trang' );
 $dgc_sp_col_pos  = $dgc_sp_is_goi ? 'Quy mô gói' : 'Vị trí';
 $dgc_sp_heading  = $dgc_sp_is_goi
 	? 'Bảng giá gói ' . mb_strtolower( $svc_name )
-	: 'Bảng giá ' . mb_strtolower( $svc_name ) . ' theo từng site/báo';
+	: 'Bảng giá ' . mb_strtolower( $svc_name ) . ' theo từng ' . $dgc_sp_dv;
 $dgc_sp_sub      = $dgc_sp_is_goi
 	? 'Tick chọn gói bạn quan tâm - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.'
-	: 'Tìm theo tên, sắp xếp theo giá và tick chọn báo/site cần đặt - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.';
-$dgc_sp_ph       = $dgc_sp_is_goi ? 'Tìm theo tên gói...' : 'Tìm theo tên báo/site...';
+	: 'Tìm theo tên, sắp xếp theo giá và tick chọn ' . $dgc_sp_dv . ' cần đặt - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.';
+$dgc_sp_ph       = $dgc_sp_is_goi ? 'Tìm theo tên gói...' : 'Tìm theo tên ' . $dgc_sp_dv . '...';
 
 // Bo loc nhom nganh - chi hien khi du lieu co tu 2 nhom tro len (chu yeu Booking bao & PR).
 $dgc_sp_nganh_used = array();
 foreach ( $dgc_sp_items as $it ) {
 	foreach ( dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ) as $n ) { $dgc_sp_nganh_used[ $n ] = true; }
 }
-$dgc_sp_has_filter = ( ! $dgc_sp_is_outlet && count( $dgc_sp_nganh_used ) > 1 );
+$dgc_sp_has_nganh  = ( ! $dgc_sp_is_outlet && count( $dgc_sp_nganh_used ) > 1 );
+// Trang tung dau bao (vd /booking-bao-pr/vnexpress/) van cho loc quy cach - nhieu vi tri dang
+// cua cung 1 bao khac nhau ve loai link / so anh / so tu.
+$dgc_sp_has_filter = ( $dgc_sp_has_nganh || dgc_has_facet_filter( $dgc_sp_items ) );
 $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 ?>
-<section class="sec" id="bang-gia" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="sec" id="bang-gia" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:18px">
 			<span class="eyebrow">Bảng giá</span>
@@ -55,28 +60,16 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 			<p class="muted" style="font-size:14.5px"><?php echo esc_html( $dgc_sp_sub ); ?></p>
 		</div>
 
+		<?php include get_template_directory() . '/inc/price-note.php'; ?>
 		<?php include get_template_directory() . '/inc/sel-bar.php'; ?>
 
-		<div class="price-layout<?php echo $dgc_sp_has_filter ? ' has-filter' : ''; ?>" data-price-panel data-limit="<?php echo esc_attr( $dgc_sp_limit ); ?>">
-			<?php if ( $dgc_sp_has_filter ) : ?>
-			<aside class="price-filter">
-				<div class="price-filter-title">Lọc theo nhóm báo</div>
-				<div class="price-filter-row">
-					<button type="button" class="nganh-btn active" data-nganh="">Tất cả (<?php echo (int) $dgc_sp_total; ?>)</button>
-					<?php foreach ( dgc_nganh_options() as $nslug => $nlabel ) :
-						if ( '' === $nslug || empty( $dgc_sp_nganh_used[ $nslug ] ) ) continue;
-						$n_count = 0;
-						foreach ( $dgc_sp_items as $it ) {
-							if ( in_array( $nslug, dgc_gia_nganh_tags( $it->meta['nganh'] ?? '' ), true ) ) $n_count++;
-						}
-					?>
-					<button type="button" class="nganh-btn" data-nganh="<?php echo esc_attr( $nslug ); ?>"><?php echo esc_html( $nlabel ); ?> (<?php echo (int) $n_count; ?>)</button>
-					<?php endforeach; ?>
-				</div>
-			</aside>
-			<?php endif; ?>
-
+		<div class="price-layout" data-price-panel data-limit="<?php echo esc_attr( $dgc_sp_limit ); ?>">
 			<div class="price-main">
+				<?php
+				$pf_items      = $dgc_sp_items;
+				$pf_show_nganh = $dgc_sp_has_nganh;
+				include get_template_directory() . '/inc/price-filter.php';
+				?>
 				<?php if ( $dgc_sp_has_tools ) : ?>
 				<div class="tab-toolbar">
 					<div class="tab-search">

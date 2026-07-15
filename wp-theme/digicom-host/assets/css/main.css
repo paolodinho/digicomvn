@@ -192,6 +192,89 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .promo .pt{font-family:var(--font-display);font-weight:700;font-size:16.5px;line-height:1.35;
   color:var(--heading);margin-bottom:5px;letter-spacing:-.01em}
 .promo .pd{font-size:13.5px;color:var(--ink-soft);line-height:1.55}
+/* Dau muc khoi uu dai: tieu de ben trai, "con N suat" + dem nguoc ben phai (khan hiem + han chot). */
+.promo-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;
+  flex-wrap:wrap;margin-bottom:16px}
+.promo-head h2{margin:0}
+.promo-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px}
+.promo-slots,.promo-count{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+  padding:7px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface-2);
+  color:var(--ink-soft)}
+.promo-slots b,.promo-count b{color:var(--heading);font-weight:700}
+.promo-slots{border-color:#f2c9a8;background:#fff6ee;color:#8a4b12}
+.promo-slots b{color:#b8500f}
+[data-theme="dark"] .promo-slots{border-color:#6b4520;background:#2a1c10;color:#f0b884}
+[data-theme="dark"] .promo-slots b{color:#ffb870}
+/* Nhan uu dai trong tung o (VD "Mien phi tron goi") - dat duoi mo ta, khong doi layout o. */
+.promo-tag{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--action);
+  border:1px solid var(--action);border-radius:4px;padding:3px 7px;line-height:1.3}
+.promo:nth-child(even) .promo-tag{color:var(--teal);border-color:var(--teal)}
+.promo-foot{margin:0;font-size:13px;color:var(--ink-soft);flex:1;min-width:min(100%,320px)}
+@media(max-width:640px){.promo-head{align-items:flex-start}.promo-meta{font-size:12.5px}}
+
+/* Khoi uu dai NOI BAT hon + hien tren moi trang (Hieu 2026-07-14).
+   Khong dung nen den (rule ui-mau-sac) -> dung nen am + vien mau brand + vach mau tren dai the. */
+/* Nen NOI BAT mau brand (Hieu 2026-07-14) - khong dung den (rule ui-mau-sac), dung sac xanh
+   thuong hieu pha nhat + vien dam hon de khoi uu dai bat han khoi cac section trang xung quanh. */
+.promo-sec{background:linear-gradient(180deg,#EDF0FF 0%,#F5F1EA 100%);
+  border-top:2px solid var(--action);border-bottom:1px solid var(--line-2)}
+[data-theme="dark"] .promo-sec{background:linear-gradient(180deg,#1A2040 0%,#171B30 100%);
+  border-top-color:var(--action);border-bottom-color:var(--line-2)}
+.promo-sec .promos{border-color:var(--action);box-shadow:0 10px 30px rgba(71,97,255,.10);position:relative}
+.promo-sec .promos::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--action),var(--teal))}
+.eyebrow-hot{position:relative;padding-left:16px}
+.eyebrow-hot::before{content:"";position:absolute;left:0;top:50%;width:8px;height:8px;margin-top:-4px;
+  border-radius:50%;background:var(--action);box-shadow:0 0 0 0 rgba(71,97,255,.55);animation:promoPulse 2s infinite}
+@keyframes promoPulse{70%{box-shadow:0 0 0 8px rgba(71,97,255,0)}100%{box-shadow:0 0 0 0 rgba(71,97,255,0)}}
+.promo-foot-row{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  flex-wrap:wrap;margin-top:14px}
+/* Nut co theo noi dung, KHONG keo full-width roi de chu dinh trai (Hieu 2026-07-14). */
+.promo-cta{white-space:nowrap;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center}
+@media(max-width:640px){
+  .promo-foot-row{justify-content:center}
+  .promo-cta{width:auto;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.eyebrow-hot::before{animation:none}}
+
+/* ==========================================================================
+   Popup uu dai -> dan ve trang bang gia
+   ========================================================================== */
+.promo-pop{position:fixed;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;padding:20px}
+.promo-pop[hidden]{display:none}
+.promo-pop-mask{position:absolute;inset:0;background:rgba(16,20,40,.62);animation:popFade .25s ease}
+.promo-pop-card{position:relative;width:100%;max-width:460px;background:var(--surface-2);
+  border:1px solid var(--line);border-top:4px solid var(--action);border-radius:var(--r-lg);
+  padding:30px 30px 26px;box-shadow:0 30px 70px rgba(16,20,40,.35);animation:popIn .28s cubic-bezier(.2,.8,.3,1)}
+@keyframes popFade{from{opacity:0}to{opacity:1}}
+@keyframes popIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.promo-pop-x{position:absolute;top:10px;right:12px;width:34px;height:34px;border:0;background:transparent;
+  color:var(--ink-soft);font-size:26px;line-height:1;cursor:pointer;border-radius:8px}
+.promo-pop-x:hover{background:var(--surface);color:var(--heading)}
+.promo-pop-title{font-family:var(--font-display);font-size:23px;line-height:1.25;letter-spacing:-.02em;
+  color:var(--heading);margin:0;padding-right:30px}
+.promo-pop-sub{font-size:13.5px;color:var(--ink-soft);margin:6px 0 18px}
+.promo-pop-list{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:12px}
+.promo-pop-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.promo-pop-list li b{color:var(--heading);font-weight:700}
+.promo-pop-list svg{width:16px;height:16px;flex-shrink:0;margin-top:3px;color:var(--teal)}
+.promo-pop-meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12.5px;
+  padding-top:16px;border-top:1px solid var(--line);margin-bottom:18px}
+/* Nut chinh KHONG chiem het be ngang (truoc day flex:1 + auto-focus -> vong sang xanh
+   bao quanh nut, trong nhu loi giao dien - Hieu 2026-07-14). */
+.promo-pop-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.promo-pop-actions .btn{white-space:nowrap}
+.promo-pop-later{border:0;background:transparent;color:var(--ink-soft);font-size:13.5px;cursor:pointer;
+  padding:8px 2px}
+.promo-pop-later:hover{color:var(--heading);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:480px){
+  .promo-pop-card{padding:26px 20px 22px}
+  .promo-pop-title{font-size:20px}
+  .promo-pop-actions .btn{flex:1;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.promo-pop-card,.promo-pop-mask{animation:none}}
+
 [data-theme="dark"] .promos{background:var(--surface-2);border-color:var(--line-2)}
 [data-theme="dark"] .promo{border-left-color:var(--line-2)}
 [data-theme="dark"] .promo:first-child{border-left:0}
@@ -431,7 +514,9 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .to-top:hover{background:var(--action-2)}
 .to-top svg{width:20px;height:20px}
 
-.fab-zalo{position:fixed;right:20px;bottom:82px;width:62px;height:62px;border-radius:50%;background:var(--surface-2);
+/* Nen XANH ZALO co dinh o ca 2 che do. Truoc day nen lay var(--surface-2) -> o dark thanh
+   nen toi, bong bong trang cua logo noi lom com nhu anh dan sai (loi Hieu bao 2026-07-14). */
+.fab-zalo{position:fixed;right:20px;bottom:82px;width:62px;height:62px;border-radius:50%;background:#0068FF;
   display:flex;align-items:center;justify-content:center;z-index:81;
   border:2px solid #0068FF;box-shadow:0 10px 26px rgba(0,104,255,.38),0 2px 8px rgba(28,32,53,.12);
   transition:.2s;transform:translateZ(0);will-change:transform;-webkit-backface-visibility:hidden}
@@ -526,6 +611,8 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .feat p{font-size:13.5px;color:var(--ink-soft);margin:0}
 
 .proc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.proc-3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:860px){.proc-3{grid-template-columns:1fr}}
 .step{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:20px;position:relative}
 .step:before{counter-increment:s;content:"0" counter(s);font-family:var(--font-display);font-weight:700;
   font-size:24px;color:var(--action)}
@@ -685,8 +772,18 @@ body.mnav-open{overflow:hidden}
 .tab-btn{font-family:var(--font-display);font-weight:600;font-size:14.5px;color:var(--ink-soft);
   background:var(--surface-2);border:1.5px solid var(--line-2);border-radius:var(--r-sm);padding:10px 18px;
   cursor:pointer;transition:.15s;white-space:nowrap}
-.tab-btn:hover{border-color:var(--heading)}
-.tab-btn.active{background:var(--navy);color:#fff;border-color:var(--heading)}
+.tab-btn:hover{border-color:var(--action);color:var(--action)}
+/* Active = mau BRAND, khong dung nen den (rule ui-mau-sac: navy chi la diem nhan hiem,
+   khong dung cho phan tu lap lai). Dong bo voi .sort-btn.active -> chi con 1 kieu "chip dang chon". */
+.tab-btn.active{background:var(--action);color:#fff;border-color:var(--action)}
+.tab-btn.active:hover{color:#fff}
+/* 8 nhom dich vu -> tren mobile vo thanh 4 hang, chiem ca man hinh. Cho cuon ngang 1 hang. */
+@media(max-width:760px){
+  .tab-bar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;margin-left:-4px;padding:2px 4px 8px}
+  .tab-bar::-webkit-scrollbar{display:none}
+  .tab-btn{flex:0 0 auto;font-size:13.5px;padding:9px 15px}
+}
 
 .tab-panel{display:none}
 .tab-panel.active{display:block}
@@ -753,36 +850,36 @@ body.mnav-open{overflow:hidden}
 }
 @keyframes selBarIn{from{transform:translateY(100%)}to{transform:translateY(0)}}
 
-.price-layout.has-filter{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start}
-/* Grid item mac dinh min-width:auto -> noi dung dai (chip loc cuon ngang, bang gia) lam
-   no ca khung ra ngoai man hinh. Ep min-width:0 de moi khoi tu cuon trong pham vi cua no. */
 .price-layout>*{min-width:0}
 .price-table-wrap{max-width:100%}
-/* Bo loc nhieu nganh (25 nut) -> sidebar sticky tu cuon trong pham vi cua no, khong keo dai trang. */
-.price-filter{position:sticky;top:170px;max-height:calc(100vh - 200px);overflow-y:auto;
-  scrollbar-width:thin;padding-right:4px}
-.price-filter-title{font-family:var(--font-display);font-weight:700;font-size:13px;
-  text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:8px}
-.price-filter-row{display:flex;flex-direction:column;gap:4px}
-.price-filter-group{margin-top:14px}
-.price-filter-sub{font-family:var(--font-display);font-size:11.5px;font-weight:600;
-  text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);opacity:.75;
-  padding:0 10px 6px;border-top:1px solid var(--line);padding-top:10px}
-.nganh-btn{text-align:left;font-family:var(--font-body);font-size:13.5px;line-height:1.35;color:var(--ink);
-  background:transparent;border:none;border-radius:var(--r-sm);padding:7px 10px;cursor:pointer;transition:.15s}
-.nganh-btn:hover{background:var(--surface)}
-.nganh-btn.active{background:var(--action);color:#fff;font-weight:600}
-/* Duoi 900px: bo loc luon hien day du dang luoi chip bo tron - khong an/thu gon, xem
-   duoc het lua chon ngay tu dau (Hieu yeu cau "show het ra tu dau"). */
-@media(max-width:900px){
-  .price-layout.has-filter{grid-template-columns:1fr}
-  .price-filter{position:static;max-height:none;overflow:visible;background:var(--surface);border:1px solid var(--line);
-    border-radius:var(--r-md);padding:14px 16px;margin-bottom:18px}
-  .price-filter-row{flex-direction:row;flex-wrap:wrap;gap:8px}
-  .price-filter-group{margin-top:12px}
-  .price-filter-sub{padding:10px 0 6px}
-  .nganh-btn{background:var(--surface-2);border:1.5px solid var(--line-2);border-radius:20px;padding:8px 14px;white-space:nowrap}
-  .nganh-btn.active{border-color:var(--action)}
+
+/* Thanh loc NGANG (Hieu 2026-07-14: gon hon cot loc doc cu). 4 dropdown + chip dang loc,
+   bang gia dung tron be ngang. Dung <select> that -> mobile bat picker he dieu hanh, khong
+   phai keo danh sach 25 nut. */
+.filter-bar{display:flex;align-items:flex-end;flex-wrap:wrap;gap:10px 12px;margin-bottom:14px;
+  padding:12px 14px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md)}
+.filter-sel{display:flex;flex-direction:column;gap:4px;min-width:0}
+.filter-sel-lb{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--ink-soft)}
+.filter-sel select{font-family:var(--font-body);font-size:13.5px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--line-2);border-radius:var(--r-sm);padding:8px 30px 8px 11px;cursor:pointer;
+  max-width:220px;appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 8px center;background-size:14px}
+.filter-sel select:focus{outline:2px solid var(--action);outline-offset:1px}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+.filter-chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;
+  color:#fff;background:var(--action);border:0;border-radius:999px;padding:6px 10px;cursor:pointer}
+.filter-chip span{font-size:14px;line-height:1;opacity:.8}
+.filter-chip:hover span{opacity:1}
+.filter-clear{font-size:12.5px;color:var(--ink-soft);background:none;border:0;
+  text-decoration:underline;cursor:pointer;padding:6px 2px}
+.price-empty-row td{padding:22px 14px;text-align:center;color:var(--ink-soft);font-size:14px}
+@media(max-width:640px){
+  .filter-bar{gap:10px}
+  .filter-sel{flex:1 1 calc(50% - 6px)}
+  .filter-sel select{max-width:100%;width:100%}
+  .filter-chips{margin-left:0;width:100%}
 }
 
 .tab-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
@@ -878,13 +975,6 @@ body.mnav-open{overflow:hidden}
   tr:has(.row-check:checked) .pick-btn{background:var(--action);border-color:var(--action);color:#fff}
   tr:has(.row-check:checked) .pick-add{display:none}
   tr:has(.row-check:checked) .pick-on{display:inline}
-
-  /* Bo loc nhom bao: 1 hang chip cuon ngang thay vi luoi chiem nua man hinh */
-  .price-filter{background:transparent;border:0;padding:0;margin-bottom:14px}
-  .price-filter-title{margin-bottom:8px}
-  .price-filter-row{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;
-    margin:0 -20px;padding-left:20px;padding-right:20px}
-  .price-filter-row::-webkit-scrollbar{display:none}
 
   /* Thanh tong (gio hang) goi gon: so muc + tong con lai + % uu dai */
   .sel-bar.has-picks .sel-bar-sub{display:none}
@@ -1212,6 +1302,9 @@ body.mnav-open{overflow:hidden}
 [data-theme="dark"] .client-logo,
 [data-theme="dark"] .pm-item,
 [data-theme="dark"] .press-chip{background:#fff;border-color:#2C3354}
+/* The nay bi ep nen TRANG o dark (de logo bao khong lem) -> chu PHAI doi ve mau toi,
+   neu khong se la chu sang tren nen trang (loi Hieu bao 2026-07-14). */
+[data-theme="dark"] .press-chip{color:#1C2035}
 [data-theme="dark"] .pm-name{color:#1C2035}
 /* Nut trang tren band mau: giu trang that */
 [data-theme="dark"] .cta-band .btn-ghost{background:#fff;color:var(--action-2);border-color:#fff}
@@ -1507,3 +1600,161 @@ body.mnav-open{overflow:hidden}
 /* Dau * truong bat buoc trong form lien he / bao gia */
 .form-card .fl .req{color:#D14343;font-weight:700;margin-left:2px}
 .form-card .form-hint{margin:-4px 0 14px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+
+
+/* ==========================================================================
+   BANG GIA - CHE DO BAN DEM (fix 2026-07-14)
+   Loi: card mobile (.price-table-cpt tr) va nut .pick-btn dat mau CUNG (#fff / var(--navy))
+   -> o dark mode chu sang tren nen trang, chu toi tren nen toi => khong doc noi.
+   ========================================================================== */
+[data-theme="dark"] .price-table-cpt tr{
+  background:var(--surface-2);
+  border-color:var(--line-2);
+  box-shadow:0 1px 2px rgba(0,0,0,.35);
+}
+[data-theme="dark"] .price-table-cpt tr.hot{
+  background:#241B12;                 /* nen am, van noi bat nhung khong choi mat */
+  border-color:var(--action);
+}
+[data-theme="dark"] .pick-btn{
+  background:var(--surface);
+  color:var(--heading);               /* truoc dung var(--navy) = mau toi -> tang hinh o dark */
+  border-color:var(--line-2);
+}
+[data-theme="dark"] .pick-btn:hover{border-color:var(--action);color:var(--action-2)}
+[data-theme="dark"] tr:has(.row-check:checked) .pick-btn{background:var(--action);border-color:var(--action);color:#fff}
+/* Badge giam gia: nen kem sang + chu cam dam -> giu duoc do tuong phan tren card toi */
+[data-theme="dark"] .price-discount-badge{background:#3A2417;color:#FFAE7A}
+[data-theme="dark"] .price-old{color:var(--ink-soft)}
+
+/* Nut "Chon lai" trong thanh tong */
+.sel-bar-reset{white-space:nowrap}
+.sel-bar-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(max-width:640px){
+  .sel-bar-actions{width:100%}
+  .sel-bar-reset,.sel-bar-cta{flex:1;text-align:center}
+}
+
+/* ==========================================================================
+   Tim kiem toan trang (Hieu 2026-07-14)
+   Nut kinh lup o header -> mo thanh nhap; trang ket qua tach "Bang gia" / "Bai viet".
+   ========================================================================== */
+.hdr-search-btn{width:38px;height:38px;flex:0 0 38px;border-radius:50%;border:1px solid var(--line-2);
+  background:transparent;color:var(--heading);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:.18s}
+.hdr-search-btn:hover{border-color:var(--action);color:var(--action)}
+.hdr-search-btn svg{width:18px;height:18px}
+.hdr-search{border-top:1px solid var(--line);background:var(--surface-2);padding:14px 0}
+.hdr-search[hidden]{display:none}
+.srch-form{display:flex;align-items:center;gap:10px}
+.srch-form input[type=search]{flex:1;min-width:0;height:44px;padding:0 16px;font-size:15px;
+  border:1px solid var(--line-2);border-radius:var(--r-sm);background:var(--surface);color:var(--ink)}
+.srch-form input[type=search]:focus{outline:none;border-color:var(--action)}
+.srch-form .btn{white-space:nowrap}
+.srch-close{width:40px;height:40px;flex:0 0 40px;border:0;background:transparent;color:var(--ink-soft);
+  font-size:26px;line-height:1;cursor:pointer;border-radius:8px}
+.srch-close:hover{background:var(--surface);color:var(--heading)}
+.mnav-search{padding:0 20px 14px}
+.srch-form-lg{margin-top:20px}
+.srch-form-lg input[type=search]{height:50px;background:var(--surface-2)}
+
+.srch-group{margin-bottom:44px}
+.srch-group:last-child{margin-bottom:0}
+.srch-group-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding-bottom:12px;margin-bottom:18px;border-bottom:2px solid var(--line)}
+.srch-group-head h2{margin:0;font-size:22px;display:flex;align-items:center;gap:10px}
+.srch-count{font-family:var(--font-body);font-size:12.5px;font-weight:700;color:#fff;background:var(--action);
+  border-radius:999px;padding:2px 9px;line-height:1.6}
+.srch-gia,.srch-posts{list-style:none;margin:0;padding:0}
+.srch-gia li{border-bottom:1px solid var(--line)}
+.srch-gia a{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 4px;text-decoration:none}
+.srch-gia a:hover{background:var(--surface)}
+.srch-gia-name{font-family:var(--font-display);font-weight:700;font-size:15.5px;color:var(--heading);flex:1;min-width:180px}
+.srch-gia-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.srch-tag{font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--action);
+  border:1px solid var(--action);border-radius:4px;padding:2px 7px;white-space:nowrap}
+.srch-gia-pos{font-size:13px;color:var(--ink-soft)}
+.srch-gia-price{font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--heading);
+  margin-left:auto;white-space:nowrap}
+.srch-posts li{border-bottom:1px solid var(--line)}
+.srch-posts a{display:block;padding:18px 4px;text-decoration:none}
+.srch-posts a:hover{background:var(--surface)}
+.srch-posts h3{margin:0 0 6px;font-size:18px;color:var(--heading)}
+.srch-posts p{margin:0 0 6px;font-size:14px;color:var(--ink-soft);line-height:1.6}
+.srch-post-date{font-size:12.5px;color:var(--ink-soft)}
+.srch-more{margin-top:14px;font-size:13.5px}
+.srch-empty{text-align:center;padding:30px 0 10px}
+.srch-empty h2{margin:0 0 8px}
+@media(max-width:640px){
+  .srch-gia a{align-items:flex-start;flex-direction:column;gap:8px}
+  .srch-gia-price{margin-left:0}
+  .srch-group-head h2{font-size:19px}
+}
+
+/* Uu dai quy ra TIEN - con so noi bat dat tren dai 4 o uu dai (Hieu 2026-07-14). */
+.promo-saving{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  background:var(--surface-2);border:1px solid var(--line);border-left:4px solid var(--action);
+  border-radius:var(--r-sm);padding:14px 18px;margin-bottom:14px}
+.promo-saving-lab{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.promo-saving-num{font-family:var(--font-display);font-weight:700;font-size:27px;line-height:1.1;
+  letter-spacing:-.02em;color:var(--action)}
+.promo-saving-unit{font-size:15px;font-weight:600;color:var(--ink-soft);margin-left:2px}
+.promo-saving-note{font-size:13px;color:var(--ink-soft);flex:1;min-width:min(100%,260px)}
+.promo-pop-saving{color:var(--action);font-weight:700}
+@media(max-width:640px){.promo-saving-num{font-size:23px}}
+
+/* Mobile: an nut kinh lup o header - hang header da chat (logo bi bop con 53px, Hieu 2026-07-14).
+   Tren mobile khach tim bang o tim kiem trong menu (.mnav-search) thay the. */
+@media(max-width:900px){
+  .hdr-search-btn{display:none}
+}
+
+/* Dem nguoc chay tung giay -> so co chieu rong co dinh, khong giat chu khi giay doi. */
+.promo-count-val{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+
+/* Nut trong thanh chon: KHONG keo dai het be ngang roi de chu dinh ben trai (Hieu 2026-07-14).
+   Nut co theo noi dung, ca cum can giua. */
+@media(max-width:640px){
+  .sel-bar-actions,
+  .sel-bar.has-picks .sel-bar-actions{width:100%;justify-content:center}
+  .sel-bar-reset,
+  .sel-bar-cta,
+  .sel-bar.has-picks .sel-bar-cta{flex:0 0 auto;width:auto;justify-content:center;text-align:center}
+}
+.sel-bar-cta,.sel-bar-reset{display:inline-flex;align-items:center;justify-content:center}
+
+/* ==========================================================================
+   Ghi chu gia tham khao (Hieu 2026-07-15) - hien o MOI noi co gia.
+   ========================================================================== */
+.price-note{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:#FFF8EF;border:1px solid #F2D3AC;border-left:4px solid #E08A2B;
+  border-radius:var(--r-sm);padding:14px 18px;margin-bottom:16px}
+.price-note-ico{flex:0 0 auto;color:#C56D12;display:flex}
+.price-note-ico svg{width:20px;height:20px}
+.price-note p{margin:0;flex:1;min-width:min(100%,300px);font-size:13.5px;line-height:1.55;color:#7A4A12}
+.price-note-cta{display:flex;gap:8px;flex-wrap:wrap;flex-shrink:0}
+[data-theme="dark"] .price-note{background:#2A1D10;border-color:#6B4520;border-left-color:#E08A2B}
+[data-theme="dark"] .price-note p{color:#F0C193}
+[data-theme="dark"] .price-note-ico{color:#FFAE7A}
+@media(max-width:640px){.price-note-cta{width:100%}.price-note-cta .btn{flex:1;text-align:center}}
+
+/* ==========================================================================
+   Nut so ra "Goi gom nhung gi" (Hieu 2026-07-15)
+   ========================================================================== */
+.pkg-toggle{display:inline-flex;align-items:center;gap:6px;margin-top:8px;
+  background:transparent;border:1px solid var(--line-2);border-radius:999px;
+  padding:5px 12px;font-size:12.5px;font-weight:600;color:var(--action);cursor:pointer;
+  font-family:var(--font-body);transition:.16s}
+.pkg-toggle:hover{border-color:var(--action);background:var(--surface)}
+.pkg-caret{width:14px;height:14px;transition:transform .2s}
+.pkg-toggle[aria-expanded="true"] .pkg-caret{transform:rotate(180deg)}
+.pkg-detail{margin-top:10px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:12px 14px}
+.pkg-detail[hidden]{display:none}
+.pkg-detail ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.pkg-detail li{display:flex;gap:10px;align-items:baseline;font-size:13px;line-height:1.5}
+.pkg-k{flex:0 0 118px;color:var(--ink-soft);font-weight:600}
+.pkg-v{color:var(--heading);flex:1}
+.pkg-note{margin:10px 0 0;padding-top:9px;border-top:1px dashed var(--line-2);
+  font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+@media(max-width:640px){.pkg-k{flex-basis:100%}.pkg-detail li{flex-direction:column;gap:2px}}

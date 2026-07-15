@@ -1141,3 +1141,113 @@
 - Boc toan bo 10 tab sheet DanaSEO qua Chrome (Drive API chan file) -> 157 dong gia.
 - Quy tac gia chot: gia ban Digicom = GIA GOC niem yet cua NCC, moi ben nhu nhau, khong markup, chua VAT 8%.
 - Scheduled task `booking-price-daily` 8h05 sang moi ngay: cap nhat sheet + quet nguon moi + ghi CHANGELOG.
+
+## 2026-07-14 (bo sung) - Quet 7 mui, kho gia len 1.046 dong
+- 34 NCC. Co RATE CARD CHINH THUC Admicro (VCCorp) + VTC News = gia goc tu toa bao.
+- Sheet cong khai boc duoc: SEOViP (77), DPS.MEDIA (194), Guestpost.vn (50).
+- export-web.py: gom theo TANG san pham (trang chu / chuyen muc / bao tinh / dofollow) -> 113 muc co nhieu ben, tu chon RE NHAT.
+- Phat hien: Dan tri chinh chu ghi ro link NOFOLLOW; he VCCorp chi 1 link/bai.
+
+## 2026-07-14 (bo sung 2) - Bo loc quy cach bai tren bang gia
+- Them bo loc: Loai link (dofollow/nofollow/khong chen link), So anh (tu 3 / tu 5), Do dai (tu 1.000 tu).
+- Suy TU DONG tu 2 truong `so_link` + `yeu_cau` cua tung dong gia (`dgc_gia_facets()` trong inc/cpt-gia.php)
+  -> admin sua chu trong WP Admin, bo loc tu cap nhat, khong phai nhap them field.
+- Quy uoc than trong: "duoi 1000 tu" -> 999 (khong lot bo loc >=1000 tu, tranh hua qua); "3-5 anh" -> 5.
+- File moi `inc/price-filter.php` (cot loc dung chung cho /bang-gia/ + bang gia trong trang dich vu).
+- Nhom nao khong co du lieu -> tu an bo loc (vd Textlink). Deploy live, DGC_VER 1.3.2.
+
+## 2026-07-14 (bo sung 3) - Uu dai khan hiem, trang cam on, mac dinh sang
+- Khoi uu dai moi (`inc/promo-band.php`, trang chu + moi trang dich vu): ghi ro "Viet bai chuan SEO
+  mien phi" + "Tu van va chon bao mien phi"; them KHAN HIEM (con N suat) + HAN CHOT (dem nguoc ngay/gio).
+  Options moi: promo_title, promo_deadline (trong = het thang hien tai), promo_slots (dat 10).
+- Form gui thanh cong -> chuyen sang trang `/cam-on/` (noindex, 3 buoc tiep theo, nut goi/Zalo).
+  Template page-cam-on.php + tu tao page. Loi van bao tai cho o form.
+- Mac dinh giao dien SANG: header.php khong doc prefers-color-scheme nua, chi nho lua chon khach tu bam.
+- Deploy live, DGC_VER 1.4.0. Rule moi: `.claude/rules/uu-dai-cta.md`.
+
+## 2026-07-14 (bo sung 4) - Gon bo loc bang gia
+- Bo cot loc doc (25+9 nut, cuon doc) -> THANH LOC NGANG: 4 dropdown (Nhom bao / Loai link /
+  So anh / Do dai) + chip dieu kien dang bat (bam x de bo) + nut "Xoa bo loc".
+- Bang gia rong them ~248px (888 -> 1136px o 1280). Mobile 390px: 2 dropdown/hang, khong tran ngang.
+- Deploy live, DGC_VER 1.4.1. Backup: _backups/routines/2026-07-14/digicom-loc-gon/.
+
+## 2026-07-14 (import live) - Bang gia len 525 dong
+- Import 312 dau bao/site MOI + cap nhat gia 79 dong len digicomvn.com (tu 213 -> 525 ban ghi).
+- Rule moi: CHOT CHAN GIA VON - khong ban duoi gia von; loai gia "mem" (gia tu.../dai gia) khoi dinh gia.
+- Truoc do live ban dung = gia KM DanaSEO (lai 0d). Nay chuyen sang gia goc niem yet -> 79 dong tang gia, tao bien lai.
+- Backup: ~/Claude-Workspace/_backups/routines/2026-07-14/bang-gia-import/dgc_gia_full.json (213 ban ghi goc).
+
+## 2026-07-14 (toplist + QA) - Bang gia hoan chinh 540 dong
+- Them dich vu TOPLIST: quet 8 NCC (DanaSEO, Newtop, ATP Media, iToplist, SETUPOTA, Toplist Viet, BT Marketing, BookBaoPR) -> 26 dong kho, 15 dong len web.
+- Tao nhom `dich-vu-toplist` (khai trong page-bang-gia.php + inc/cpt-gia.php), deploy theme DGC_VER 1.4.2.
+- Sua 284 ban ghi tieng Viet KHONG DAU -> co dau (fix-dau.php). Text hien thi cho khach phai dung chinh ta.
+- LIVE: 540 ban ghi gia, 6 nhom dich vu, trang /bang-gia/ render du.
+
+## 2026-07-14 (sua) - Tra gia ve dung gia DanaSEO dang ban
+- LOI: da hieu "lay bang gia DanaSEO" thanh GIA GOC niem yet -> 179 dong bi doi gia, Digicom dat hon chinh DanaSEO.
+- SUA: khoi phuc 179 dong ve dung gia cu (gia KM = gia DanaSEO ban that). Verify: VnExpress 11.8tr, CafeF 10.4tr, Kenh14 6.1tr.
+- LOI 2: script sua dau lam hong chu ("Kinh doanh" -> "Kinh doảnh") do luat thay "anh"->"ảnh" an vao giua tu. Da fix 2 truong.
+- RULE MOI: khong de script tu so gia giua cac NCC - de so nham san pham khac quy cach. Doi chieu tay.
+
+## 2026-07-14 (hoan thien) - Gia cuoi + loc nganh + dark mode
+- GIA CUOI: moi NCC lay dung gia ho thuc ban (DanaSEO = gia KM, SEOViP = gia CK). Sua 20 dong con lay gia goc.
+- Gan NGANH cho 248 dong (guest post + bao) -> bo loc linh vuc hoat dong. 174 goi dich vu khong gan (dung).
+- Sua 142 truong tieng Viet khong dau (ca post_title). Con 0 chuoi khong dau.
+- Them nut "Chon lai" trong thanh tong (hien khi da tick, bam -> bo tick het).
+- FIX DARK MODE: card mobile bi background:#fff cung + nut .pick-btn dung color:var(--navy) -> chu tang hinh.
+  Da them block [data-theme="dark"] override. Tuong phan nut: 16.29:1 (chuan WCAG >= 4.5). DGC_VER 1.4.3.
+
+## 2026-07-14 (tối) - Quét NCC mở rộng + tìm kiếm toàn trang + sửa dark mode
+
+**Kho bảng giá:** 40 -> **87 NCC**, 1.071 -> **1.302 dòng**.
+- VN mới: MOMD, WIFIM, SEO Center, Vua Web Digi, Backlink.com.vn, Tenmienngon, BICTweb,
+  Trần Tiến Duy, WINNET, IT Sài Gòn, Seo Tips Trick, Giao Diện Giá Tốt, Đánh Giá Thương Hiệu,
+  Top10Riviu, HCMtoplist, Quảng Ninh Có Gì, Cotrang.
+- **Quốc tế (mới, dịch vụ `backlink-quocte`, 109 dòng):** FATJOE, Searcharoo, Loganix, Rhino Rank,
+  Editorial.Link, uSERP, OutreachZ, Stellar SEO, LinkBuilder.io, Rankifyer + phân phối PR
+  (PR Newswire, Business Wire, GlobeNewswire, EIN Presswire, PRWeb, eReleases, Newswire.com,
+  PRUnderground, ACCESS Newswire, 24-7PressRelease, Issuewire, openPR, PRLog, MediaBoost,
+  King Newswire, Baden Bower). Quy đổi USD x26.000, EUR x28.000.
+- **Booking truyền hình (mới, `booking-tv`, 36 dòng):** MediaLabs, Fame Media (VTV/HTV), AE Digi,
+  VSM Group, TVAd rate card. Chưa có giá số công khai cho: chạy chữ, THVL, VTC, đài tỉnh (chỉ ảnh/PDF).
+
+**Web (DGC_VER 1.4.7):**
+- Tìm kiếm bảng giá: "Báo Thanh Niên" = "thanh niên" = "thanhnien.vn" (khoá nén, bỏ dấu/tên miền/tiền tố "báo").
+- Tìm kiếm toàn trang mới (`search.php`): tách kết quả **Bảng giá** / **Bài viết**.
+- Ưu đãi: hiện trên MỌI trang, có số tiền "tiết kiệm tối đa 25 triệu/đơn" (tính từ giá thật), popup dẫn về bảng giá.
+- Nút "Nhận báo giá" (trang chủ) -> `/bang-gia/`.
+- Đơn vị bán: booking = "báo", còn lại = "trang".
+- Sửa dark mode: thẻ đầu báo (chữ trắng/nền trắng), khối bảng giá trang dịch vụ (nền #fff cứng), nút Zalo.
+- Sửa 3 bước trang cảm ơn bị bóp 3 cột trên mobile (style inline đè media query).
+- Bỏ thuật ngữ "bài chuẩn SEO" toàn site -> "viết bài PR".
+
+### Bổ sung cùng phiên - mở 2 nhóm dịch vụ mới lên web (DGC_VER 1.5.0)
+
+- **Bảng giá live: 540 -> 673 dòng, 6 -> 8 tab.** Thêm `backlink-quoc-te` (100 dòng) và
+  `booking-truyen-hinh` (33 dòng). Backup trước import: `~/Claude-Workspace/_backups/routines/2026-07-14/bang-gia-import/dgc_gia_truoc_2nhom.json` (540 bản ghi).
+- Siết `KEY_CHI_TIET` trong `export-web.py`: 2 nhóm mới gộp theo `nhom + vi_tri + quy_cach`,
+  tránh bán TVC VTV1 (105tr) bằng giá phóng sự (40tr).
+- `is_soft()` chặt hơn: loại cả "gia mem"/"gia tu" trong ghi_chu (1 dòng gói bản tin VTV đã lọt lưới).
+- Phục hồi dấu tiếng Việt cho toàn bộ 133 dòng mới (dữ liệu bóc về là ASCII).
+- Xoá "khong ap dung" ở field so_link của 33 dòng truyền hình (truyền hình không có link).
+
+**UI:** đếm ngược chạy tới **phút:giây**, nhảy từng giây (cả khối ưu đãi lẫn popup);
+khối ưu đãi có **nền màu brand nổi bật** (gradient xanh nhạt, viền trên đậm - sáng lẫn tối);
+nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
+
+### 2026-07-15 - 2 trang dịch vụ mới + rà soát toàn site (DGC_VER 1.5.1)
+
+- **Trang dịch vụ mới**: `/dich-vu/backlink-quoc-te/` và `/dich-vu/booking-truyen-hinh/`
+  (nội dung thật, nêu rõ hạn chế: PR quốc tế phần lớn nofollow; truyền hình KHÔNG tạo backlink).
+- **Rà soát toàn site**: thêm vào menu (con của "Dịch vụ"), hub `/dich-vu/`, section dịch vụ
+  trang chủ (có icon riêng), `dgc_current_nhom()` (để trang dịch vụ render được bảng giá).
+- **Logo**: gán `url_bao` cho 33 dòng truyền hình -> VTV/HTV kéo được logo thật (trước rơi về chữ cái).
+- **Giá truyền hình +20%** (33 dòng).
+- **Rà lại TOÀN BỘ giá** theo kho mới nhất: 520/544 dòng đã đúng giá mới; sửa 3 dòng
+  (Angiangtv 890k->1,1tr và baohungyen 1,2tr->2,1tr đang **bán dưới giá vốn**; baotayninh hạ còn 1,45tr).
+  Giữ 21 dòng tầng cao cấp (hạ xuống = bán dưới giá vốn). Chặn 30 dòng textlink bảng bậc thang.
+- **Ghi chú "giá tham khảo"** (`inc/price-note.php`) ở mọi nơi có giá + nút Gọi/Zalo.
+- **Nút sổ "Gói gồm những gì?"** cho mọi dòng gói (220 nút ở bảng giá tổng hợp).
+- **Rà soát hệ nút**: bỏ `btn-navy` khỏi nền sáng, thu về 3 lớp (chính/phụ/chip). Tab active
+  đổi từ nền đen sang màu brand; 8 tab cuộn ngang 1 hàng trên mobile. Hero dịch vụ còn 2 nút.
+- Đổi "+ Chọn báo này / trang này" -> **"+ Chọn ngay"**.

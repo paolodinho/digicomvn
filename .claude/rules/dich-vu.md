@@ -17,6 +17,12 @@
   - Con theo từng đầu báo (DRAFT, chờ Hiếu xác nhận báo thật hợp tác trước khi publish):
     `/dich-vu/booking-bao-pr/vnexpress/`, `/kenh14/`, `/dan-tri/`, `/24h/`, `/cafef/`.
 
+- **Backlink quốc tế** - `dich-vu/backlink-quoc-te/` - guest post / niche edit / link insertion trên
+  site quốc tế (theo tầng DR/DA) + đăng bài PR báo quốc tế (Forbes, Business Insider, Yahoo Finance,
+  MarketWatch...) + phân phối thông cáo (PR Newswire, EIN Presswire, PRWeb...). Mở 2026-07-14.
+- **Booking truyền hình** - `dich-vu/booking-truyen-hinh/` - TVC (10/15/20/30 giây), phóng sự doanh
+  nghiệp, tự giới thiệu, talkshow trên VTV1/VTV3/HTV7/HTV9. Mở 2026-07-14.
+
 ## Giai đoạn 2 (sau khi 4 dịch vụ trên ổn định)
 
 Thiết kế website, Tên miền, Hosting, Bản quyền phần mềm, SEO/GEO tổng thể, Google Ads,

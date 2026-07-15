@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '1.3.1' );
+define( 'DGC_VER', '1.5.1' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -59,6 +59,21 @@ require_once get_template_directory() . '/inc/case-study.php';
 function dgc( $key, $default = '' ) {
 	$o = wp_parse_args( get_option( 'dgc_settings', array() ), dgc_defaults() );
 	return isset( $o[ $key ] ) && $o[ $key ] !== '' ? $o[ $key ] : $default;
+}
+
+/**
+ * Han chot dot uu dai (timestamp, gio VN). Doc option 'promo_deadline' (yyyy-mm-dd);
+ * de TRONG -> tu lay 23:59 ngay cuoi thang hien tai, nen uu dai khong bao gio hien "da het han"
+ * neu Hieu quen cap nhat. Han da qua -> tra ve 0 (an dong dem nguoc, khong hien so am).
+ */
+function dgc_promo_deadline_ts() {
+	$raw = trim( (string) dgc( 'promo_deadline' ) );
+	$now = current_time( 'timestamp' );
+	if ( $raw === '' ) {
+		return strtotime( wp_date( 'Y-m-t', $now ) . ' 23:59:59' );
+	}
+	$ts = strtotime( $raw . ' 23:59:59' );
+	return ( $ts && $ts > $now ) ? $ts : 0;
 }
 
 /**
@@ -202,9 +217,41 @@ function dgc_handle_lead() {
 		'[DigicomVN] Yeu cau moi tu ' . $name,
 		$body );
 
+	// Gui thanh cong -> trang cam on rieng (/cam-on/), khong quay lai form nua: khach biet chac
+	// da gui xong, va do la moc de do chuyen doi (Analytics/Ads). Loi -> ve lai form nhu cu.
+	if ( $id ) {
+		$ty = dgc_thankyou_url();
+		if ( $ty ) {
+			wp_safe_redirect( $svc ? add_query_arg( 'dv', rawurlencode( $svc ), $ty ) : $ty );
+			exit;
+		}
+	}
 	wp_safe_redirect( add_query_arg( 'sent', $id ? 'ok' : 'err', remove_query_arg( 'sent', $ref ) . '#lien-he' ) );
 	exit;
 }
+
+/** URL trang cam on - rong neu page chua ton tai (khi do form giu cach bao cu tai cho). */
+function dgc_thankyou_url() {
+	$p = get_page_by_path( 'cam-on' );
+	return ( $p && 'publish' === $p->post_status ) ? get_permalink( $p ) : '';
+}
+
+/* Tao san trang "Cam on" (slug cam-on) neu chua co - template page-cam-on.php tu nhan theo slug. */
+add_action( 'init', function () {
+	if ( get_page_by_path( 'cam-on' ) ) return;
+	wp_insert_post( array(
+		'post_type'    => 'page',
+		'post_status'  => 'publish',
+		'post_title'   => 'Cảm ơn',
+		'post_name'    => 'cam-on',
+		'post_content' => '',
+	) );
+}, 30 );
+
+/* Trang cam on la trang ket qua, khong co gia tri tim kiem -> noindex. */
+add_action( 'wp_head', function () {
+	if ( is_page( 'cam-on' ) ) echo '<meta name="robots" content="noindex,follow">' . "\n";
+}, 1 );
 add_action( 'admin_post_dgc_lead', 'dgc_handle_lead' );
 add_action( 'admin_post_nopriv_dgc_lead', 'dgc_handle_lead' );
 
@@ -323,7 +370,8 @@ add_action( 'template_redirect', function () {
 
 /**
  * Nut chuyen che do ban ngay / ban dem.
- * Lua chon luu trong localStorage; chua chon thi theo cai dat he dieu hanh (prefers-color-scheme).
+ * Mac dinh site la giao dien SANG (header.php). Khach bam nut moi doi sang toi, lua chon luu
+ * trong localStorage cho lan sau.
  */
 function dgc_theme_toggle() {
 	?>

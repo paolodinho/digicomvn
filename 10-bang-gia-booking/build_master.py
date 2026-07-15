@@ -16,6 +16,12 @@ TODAY = datetime.date.today().isoformat()
 COLS = ["nha_cung_cap","dich_vu","dau_bao","nhom","vi_tri","gia_ncc_goc","gia_ncc_km",
         "gia_ban_digicom","so_link","quy_cach","ghi_chu","nguon","ngay_cap_nhat"]
 
+# Quy tac gia (chot 2026-07-14, sau phan hoi cua Hieu):
+# gia_ban_digicom = GIA CUOI cua NCC = gia ho THUC BAN.
+#   - Co gia khuyen mai/chiet khau -> lay gia do (gia_ncc_km).
+#   - Chi co 1 gia -> lay gia do (gia_ncc_goc).
+# KHONG lay gia goc niem yet (gia gach ngang) - se dat hon chinh NCC.
+
 def num(s):
     if not s: return ""
     s = re.sub(r"[^\d]", "", str(s).strip())
@@ -23,6 +29,8 @@ def num(s):
 
 rows = []
 def add(**kw):
+    """gia_ban_digicom luon = GIA CUOI: uu tien gia_ncc_km (gia KM/CK), khong co thi lay gia_ncc_goc."""
+    kw["gia_ban_digicom"] = kw.get("gia_ncc_km") or kw.get("gia_ncc_goc") or ""
     rows.append([kw.get(c, "") for c in COLS])
 
 # ============ DanaSEO: PR bao lon ============
@@ -48,7 +56,7 @@ with open(os.path.join(RAW, "Bao-tinh.csv")) as f:
         if not gia or not bao or "KHÁCH HÀNG" in bao: continue
         add(nha_cung_cap="DanaSEO", dich_vu="booking-pr", dau_bao=bao,
             nhom="Bao tinh / bao dang", vi_tri="Muc phu hop", gia_ncc_goc=gia,
-            gia_ban_digicom=gia, quy_cach=r[3].strip(),
+            quy_cach=r[3].strip(),
             nguon="Sheet DanaSEO - Bao tinh", ngay_cap_nhat=TODAY)
 
 # ============ DanaSEO: Bao link dofollow ============
@@ -62,7 +70,7 @@ with open(os.path.join(RAW, "Link-dof.csv")) as f:
         dr = r[5].strip() if len(r) > 5 else ""
         add(nha_cung_cap="DanaSEO", dich_vu="booking-pr", dau_bao=bao,
             nhom="Bao link dofollow", vi_tri=(r[12].strip() if len(r) > 12 else ""),
-            gia_ncc_goc=gia, gia_ban_digicom=gia, so_link=r[3].strip(),
+            gia_ncc_goc=gia, so_link=r[3].strip(),
             quy_cach=r[4].strip(), ghi_chu=("DR " + dr) if dr else "",
             nguon="Sheet DanaSEO - Link dof", ngay_cap_nhat=TODAY)
 
@@ -74,7 +82,7 @@ with open(os.path.join(RAW, "Guest-Post.csv")) as f:
         if not gia or not site: continue
         add(nha_cung_cap="DanaSEO", dich_vu="guest-post", dau_bao=site,
             nhom="Guest post", vi_tri="Bai dang tren site",
-            gia_ncc_goc=gia, gia_ban_digicom=gia, quy_cach=r[3].strip(),
+            gia_ncc_goc=gia, quy_cach=r[3].strip(),
             ghi_chu="Ton tai theo domain, link cam ket toi thieu 2 nam",
             nguon="Sheet DanaSEO - Guest Post", ngay_cap_nhat=TODAY)
 
@@ -94,7 +102,7 @@ with open(os.path.join(RAW, "Textlink-home.csv")) as f:
             for i, g in enumerate(gias[:3]):
                 add(nha_cung_cap="DanaSEO", dich_vu="textlink", dau_bao=site,
                     nhom="Textlink home", vi_tri=f"{loai} - {DURS[i]}",
-                    gia_ncc_goc=g, gia_ban_digicom=g, so_link="1 link",
+                    gia_ncc_goc=g, so_link="1 link",
                     quy_cach=DURS[i],
                     ghi_chu=f"DR {dr} | traffic {traffic}/thang | {r[2].strip()}",
                     nguon="Sheet DanaSEO - Textlink home", ngay_cap_nhat=TODAY)
@@ -112,13 +120,13 @@ GOI_B = [("B1","1000 link sidebar",3_300_000,2_700_000),("B2","1500 link sidebar
 for goi, mota, gg, gkm in GOI_A:
     add(nha_cung_cap="DanaSEO", dich_vu="textlink", dau_bao=f"Goi {goi} - textlink bao sidebar",
         nhom="Textlink bao (goi)", vi_tri="Sidebar bai viet - 3 thang",
-        gia_ncc_goc=gg, gia_ncc_km=gkm, gia_ban_digicom=gg, so_link=mota,
+        gia_ncc_goc=gg, gia_ncc_km=gkm, so_link=mota,
         quy_cach="Dat tren 30-37 trang bao, tang 200 link free",
         ghi_chu="Goi A - 3 thang", nguon="Sheet DanaSEO - Texlink Bao", ngay_cap_nhat=TODAY)
 for goi, mota, gg, gkm in GOI_B:
     add(nha_cung_cap="DanaSEO", dich_vu="textlink", dau_bao=f"Goi {goi} - textlink bao sidebar",
         nhom="Textlink bao (goi)", vi_tri="Sidebar bai viet - 6 thang",
-        gia_ncc_goc=gg, gia_ncc_km=gkm, gia_ban_digicom=gg, so_link=mota,
+        gia_ncc_goc=gg, gia_ncc_km=gkm, so_link=mota,
         quy_cach="Dat tren 30-37 trang bao, tang 200 link free",
         ghi_chu="Goi B - 6 thang", nguon="Sheet DanaSEO - Texlink Bao", ngay_cap_nhat=TODAY)
 
@@ -128,8 +136,7 @@ ENTITY = [("Goi 1", "120 Social chat luong loc ky", 2_000_000),
           ("Goi 3", "300 Social chat luong loc ky", 4_000_000)]
 for goi, mota, gia in ENTITY:
     add(nha_cung_cap="DanaSEO", dich_vu="entity", dau_bao=f"Social entity - {goi}",
-        nhom="Social entity", vi_tri=mota, gia_ncc_goc=gia, gia_ban_digicom=gia,
-        quy_cach="Ban giao sau 3 ngay, file bao cao day du, ho tro nap index >85%, ho tro Schema",
+        nhom="Social entity", vi_tri=mota, gia_ncc_goc=gia, quy_cach="Ban giao sau 3 ngay, file bao cao day du, ho tro nap index >85%, ho tro Schema",
         ghi_chu="Combo Trangvang giam 10-100%; kem GG Map giam 5-15%",
         nguon="Sheet DanaSEO - Dich vu entity", ngay_cap_nhat=TODAY)
 
@@ -140,55 +147,30 @@ add(nha_cung_cap="DanaSEO", dich_vu="toplist", dau_bao="Toplist local (HN/TPHCM/
     ghi_chu="Tu 300k/thang, gia theo tung site + tung tu khoa - can hoi lai NCC",
     nguon="Sheet DanaSEO - Toplist", ngay_cap_nhat=TODAY)
 
-# ============ Fame Media (vi tri premium trang chu) ============
-FAME_URL = "https://famemedia.vn/bao-online/"
-fame = [
-    ("Zing News / znews.vn","Top News 1 - Trang chu",230_000_000),
-    ("VnExpress.net","Top Story 5,6",150_000_000),
-    ("Laodong.vn","Cum tin Under Cover",100_000_000),
-    ("Vietnamnet.vn","Tieu diem Home 2-3, Top 1",85_000_000),
-    ("Vneconomy.vn","Dac biet trang chu",85_000_000),
-    ("Vietnambiz.vn","Bai dac biet - Home",80_000_000),
-    ("CafeF.vn","Loai 1 Home - Noi bat 3",70_000_000),
-    ("Dantri.com.vn","Trang chu - Link Top 1",70_000_000),
-    ("Eva.vn","Dac biet - Home",60_000_000),
-    ("Ngoisao.net","Top Story - Tin 2",50_000_000),
-    ("Kenh14.vn","Dac biet - Trang chu",45_000_000),
-    ("Tuoitre.vn","Hien thi Trang chu 4",40_000_000),
-    ("Cafeland.vn","Dac biet trang chu 2",36_000_000),
-    ("Techrum.vn","Tin noi bat - Trang chu",35_000_000),
-    ("Otofun.net","PR1 - Tin noi bat Trang chu",30_000_000),
-    ("Ngoisao.vn","Trang chu - Loai 1",30_000_000),
-    ("Suckhoedoisong.vn","Trang chu Top 1",22_000_000),
-    ("Vnreview.vn","Tin noi bat 1 - Trang chu",21_000_000),
-    ("Phunuvietnam.vn","Bai loai 1 - Tin hot - TC",20_000_000),
-    ("Batdongsan.com.vn","Bai Hot 1 - Trang chu",18_000_000),
-    ("Autopro.com.vn","Trang chu loai 1",18_000_000),
-    ("Afamily.vn","Trang chu dac biet",15_000_000),
-]
-for bao, vt, gia in fame:
-    add(nha_cung_cap="Fame Media", dich_vu="booking-pr", dau_bao=bao,
-        nhom="PR bao lon (vi tri premium)", vi_tri=vt, gia_ncc_goc=gia,
-        gia_ban_digicom=gia, ghi_chu="Vi tri trang chu/noi bat - gia cao",
-        nguon=FAME_URL, ngay_cap_nhat=TODAY)
-add(nha_cung_cap="Fame Media", dich_vu="booking-pr", dau_bao="Bao cac tinh",
-    nhom="Bao tinh / bao dang", vi_tri="Muc phu hop", gia_ncc_goc=1_280_000,
-    gia_ban_digicom=1_280_000, so_link="Link dofollow",
-    ghi_chu="Dai gia 1.280.000 - 2.750.000", nguon=FAME_URL, ngay_cap_nhat=TODAY)
-
-# ============ SEOViP (gia khoi diem theo nhom) ============
-SEOVIP_URL = "https://seovip.vn/dich-vu-book-bao-pr/"
-seovip = [
-    ("booking-pr","Nhom bao lon (24h, VnExpress, Eva, CafeF, Kenh14, Dan Tri, Vietnamnet, Tuoi Tre...)","PR bao lon",2_000_000),
-    ("booking-pr","Nhom bao Dang/tinh (baodanang, baoquangnam, baothanhhoa...)","Bao tinh / bao dang",1_000_000),
-    ("booking-pr","Nhom bao gia re (thuonghieutieudung.vn, bizfinance.vn...)","Bao link dofollow",700_000),
-    ("guest-post","GP tong hop (du lich, giao duc, cong nghe, BDS, suc khoe, thoi trang, logistics)","Guest post",200_000),
-]
-for dv, bao, nhom, gia in seovip:
-    add(nha_cung_cap="SEOViP", dich_vu=dv, dau_bao=bao, nhom=nhom,
-        vi_tri="Gia khoi diem", gia_ncc_goc=gia, gia_ban_digicom=gia,
-        ghi_chu="Gia khoi diem, chua co bang chi tiet tung dau bao",
-        nguon=SEOVIP_URL, ngay_cap_nhat=TODAY)
+# ============ Cac NCC khac (nap tu raw/ncc-khac.csv, phan cach |) ============
+# Cot: nha_cung_cap|dich_vu|dau_bao|nhom|vi_tri|gia_vnd|so_link|quy_cach|ghi_chu|nguon_url
+# gia_vnd co the la dai "6000000-7500000" hoac "tu 9000000" -> lay MUC THAP NHAT.
+EXTRA = os.path.join(RAW, "ncc-khac.csv")
+if os.path.exists(EXTRA):
+    with open(EXTRA) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"): continue
+            p = [x.strip() for x in line.split("|")]
+            if len(p) < 10: continue
+            ncc, dv, bao, nhom, vt, gia_raw, slink, qc, ghi, url = p[:10]
+            gias = [num(x) for x in re.split(r"[-–]", gia_raw) if num(x)]
+            if not gias: continue
+            gia = min(gias)
+            # Neu ghi chu co "Gia CK cua NCC: <so>" -> do la GIA CUOI cua ben do
+            m_ck = re.search(r"Gia CK cua NCC:\s*([\d.,]+)", ghi)
+            gia_km = num(m_ck.group(1)) if m_ck else ""
+            if len(gias) > 1:
+                dai = " - ".join(f"{g:,}".replace(",", ".") for g in gias)
+                ghi = (ghi + " | " if ghi else "") + f"Dai gia NCC: {dai} d (lay muc thap nhat)"
+            add(nha_cung_cap=ncc, dich_vu=dv, dau_bao=bao, nhom=nhom, vi_tri=vt,
+                gia_ncc_goc=gia, gia_ncc_km=gia_km, so_link=slink, quy_cach=qc,
+                ghi_chu=ghi, nguon=url, ngay_cap_nhat=TODAY)
 
 out = os.path.join(BASE, "bang-gia-master.csv")
 with open(out, "w", newline="") as f:

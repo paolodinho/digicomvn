@@ -34,7 +34,8 @@ $dgc_tiers_text = dgc_combo_tiers_text();
 		<div class="sel-bar-list"></div>
 	</div>
 	<div class="sel-bar-actions">
-		<a class="btn btn-navy btn-sm sel-bar-cta" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu báo giá</a>
+		<button type="button" class="btn btn-ghost btn-sm sel-bar-reset" hidden>Chọn lại</button>
+		<a class="btn btn-primary btn-sm sel-bar-cta" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu báo giá</a>
 	</div>
 	<?php if ( $dgc_tiers ) : ?><p class="sel-bar-nudge" hidden></p><?php endif; ?>
 </div>

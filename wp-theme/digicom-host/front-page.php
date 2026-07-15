@@ -15,7 +15,7 @@ get_header();
 				<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 				<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 				<div class="hero-cta-row">
-					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận báo giá</a>
+					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Nhận báo giá</a>
 					<a class="btn-text-link" href="#services">Xem dịch vụ &rarr;</a>
 				</div>
 			</div>
@@ -47,28 +47,8 @@ get_header();
 	</div>
 </section>
 
-<!-- 03. PROMOS -->
-<?php
-$promo_icons = array(
-	'M20 6 9 17l-5-5',
-	'M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6z',
-	'M12 8v4l3 3M12 3a9 9 0 1 0 .01 0z',
-	'M3 12h4l3 8 4-16 3 8h4',
-);
-?>
-<section class="sec-tight">
-	<div class="wrap">
-		<div class="promos">
-			<?php $pi = 0; foreach ( dgc_lines( 'promos' ) as $p ) : ?>
-				<div class="promo">
-					<span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $promo_icons[ $pi % count( $promo_icons ) ] ); ?>"/></svg></span>
-					<div class="pt"><?php echo esc_html( $p[0] ?? '' ); ?></div>
-					<div class="pd"><?php echo esc_html( $p[1] ?? '' ); ?></div>
-				</div>
-			<?php $pi++; endforeach; ?>
-		</div>
-	</div>
-</section>
+<!-- 03. UU DAI (khan hiem + han chot) -->
+<?php include get_template_directory() . '/inc/promo-band.php'; ?>
 
 
 <!-- 06. DICH VU THEO NHOM -->
@@ -78,6 +58,9 @@ $svc_meta = array(
 	'Dịch vụ Backlink'      => array( 'eyebrow' => 'Backlink', 'path' => 'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
 	'Guest Post'            => array( 'eyebrow' => 'Guest Post', 'path' => 'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5' ),
 	'Booking báo & PR'      => array( 'eyebrow' => 'Booking PR', 'path' => 'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
+	// Qua cau - backlink quoc te; man hinh TV - booking truyen hinh (them 2026-07-15).
+	'Backlink quốc tế'      => array( 'eyebrow' => 'Quốc tế', 'path' => 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z' ),
+	'Booking truyền hình'   => array( 'eyebrow' => 'Truyền hình', 'path' => 'M3 7h18v12H3zM8 3l4 4 4-4' ),
 );
 ?>
 <section class="sec" id="services" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
@@ -231,7 +214,7 @@ $why_items = dgc_lines( 'reasons' );
 		</div>
 
 		<div class="center" style="margin-top:34px">
-			<a class="btn btn-navy" href="<?php echo esc_url( get_post_type_archive_link( 'dgc_case' ) ?: home_url( '/case-study/' ) ); ?>">Xem case study thực tế của DigicomVN &rarr;</a>
+			<a class="btn btn-ghost" href="<?php echo esc_url( get_post_type_archive_link( 'dgc_case' ) ?: home_url( '/case-study/' ) ); ?>">Xem case study thực tế của DigicomVN &rarr;</a>
 		</div>
 	</div>
 </section>
@@ -311,7 +294,7 @@ $why_items = dgc_lines( 'reasons' );
 			</div>
 			<div class="cta-actions">
 				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-				<a class="btn btn-navy" href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', dgc( 'zalo' ) ) ); ?>">Chat Zalo</a>
+				<a class="btn btn-zalo" href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', dgc( 'zalo' ) ) ); ?>">Chat Zalo</a>
 			</div>
 		</div>
 	</div>

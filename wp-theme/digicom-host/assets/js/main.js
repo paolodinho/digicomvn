@@ -18,6 +18,7 @@
 		var listToggle = bar.querySelector('.sel-bar-list-toggle');
 		var listEl     = bar.querySelector('.sel-bar-list');
 		var cta        = bar.querySelector('.sel-bar-cta');
+		var resetBtn   = bar.querySelector('.sel-bar-reset');
 		var ctaBaseHref = cta ? cta.getAttribute('href') : '';
 
 		// Bac chiet khau combo: [{min: so muc, pct: % giam}] - cau hinh o WP Admin (dgc_combo_tiers).
@@ -130,6 +131,9 @@
 				}
 			}
 
+			// Nut "Chon lai" chi hien khi dang co muc duoc chon
+			if (resetBtn) resetBtn.hidden = picked.length === 0;
+
 			if (listToggle) listToggle.disabled = picked.length === 0;
 			if (!picked.length && listEl) listEl.classList.remove('open');
 			renderList(picked);
@@ -150,6 +154,15 @@
 		document.addEventListener('change', function (e) {
 			if (e.target && e.target.classList && e.target.classList.contains('row-check')) update();
 		});
+
+		// "Chon lai": bo tick toan bo, dua thanh tong ve 0
+		if (resetBtn) {
+			resetBtn.addEventListener('click', function () {
+				document.querySelectorAll('.row-check:checked').forEach(function (cb) { cb.checked = false; });
+				update();
+				bar.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+			});
+		}
 
 		if (listToggle) {
 			listToggle.addEventListener('click', function () {
@@ -251,26 +264,75 @@
 		var shownEl   = panel.querySelector('.tab-count-shown');
 		var totalEl   = panel.querySelector('.tab-count-total');
 		var sortBtns  = panel.querySelectorAll('.sort-btn');
-		var nganhBtns = panel.querySelectorAll('.nganh-btn');
+		var nganhSel  = panel.querySelector('.filter-nganh');
+		var facetSels = panel.querySelectorAll('.filter-facet');
+		var chipsBox  = panel.querySelector('.filter-chips');
+		var clearBtn  = panel.querySelector('.filter-clear');
 		var moreBtn   = panel.querySelector('.price-more-btn');
 		var limit     = parseInt(panel.getAttribute('data-limit') || '0', 10);
 		var STEP      = 10;              // moi lan cuon toi cuoi bang: nap them 10 dong
 		var curNganh  = '';
+		// Bo loc quy cach bai: { link: {val:'dofollow'}, anh: {val:5, mode:'min'}, ... } - ket hop AND.
+		var curFacets = {};
 		var shownMax  = limit > 0 ? limit : Infinity;  // so dong dang hien (cuon vo han tang dan)
 		if (!rows.length) return;
 
+		function okFacets(r) {
+			for (var key in curFacets) {
+				var f = curFacets[key];
+				var raw = r.getAttribute('data-' + key) || '';
+				if (f.mode === 'min') {
+					if ((parseFloat(raw) || 0) < parseFloat(f.val)) return false;
+				} else if (raw !== f.val) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		/* "Báo Thanh Niên" / "thanh niên" / "thanhnien.vn" phai ra CUNG ket qua (Hieu 2026-07-14):
+		   nen truy van ve dang khong dau, khong khoang trang, bo duoi ten mien, bo tien to "bao"
+		   - dung cach PHP nen data-key (xem dgc_gia_search_terms trong inc/cpt-gia.php). */
+		function nenKhoa(s) {
+			return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\u0111/g, 'd')
+				.toLowerCase()
+				.replace(/\.(com\.vn|com|vn|net|org|info|edu\.vn|gov\.vn|asia|tv)\b/g, ' ')
+				.replace(/[^a-z0-9]+/g, '')
+				.replace(/^bao/, '');
+		}
+
 		function applyFilter() {
-			var q = (input ? input.value : '').trim().toLowerCase();
+			var qRaw = (input ? input.value : '').trim().toLowerCase();
+			var q    = qRaw;
+			var qKey = nenKhoa(qRaw);
 			var matched = rows.filter(function (r) {
-				var okQ = !q || r.getAttribute('data-name').indexOf(q) !== -1;
+				var okQ = !q
+					|| r.getAttribute('data-name').indexOf(q) !== -1
+					|| (qKey && (r.getAttribute('data-key') || '').indexOf(qKey) !== -1);
 				var okN = !curNganh || (' ' + r.getAttribute('data-nganh') + ' ').indexOf(' ' + curNganh + ' ') !== -1;
-				return okQ && okN;
+				return okQ && okN && okFacets(r);
 			});
 			var collapse = shownMax < matched.length;
 			var visible  = collapse ? matched.slice(0, shownMax) : matched;
 
 			rows.forEach(function (r) { r.style.display = 'none'; });
 			visible.forEach(function (r) { r.style.display = ''; });
+
+			// Khong con dong nao khop -> bao ro thay vi de bang trong.
+			if (tbody) {
+				var emptyRow = tbody.querySelector('.price-empty-row');
+				if (!matched.length) {
+					if (!emptyRow) {
+						emptyRow = document.createElement('tr');
+						emptyRow.className = 'price-empty-row';
+						emptyRow.innerHTML = '<td colspan="4">Không có mục nào khớp bộ lọc. Bỏ bớt điều kiện hoặc liên hệ để được báo giá theo yêu cầu riêng.</td>';
+						tbody.appendChild(emptyRow);
+					}
+					emptyRow.style.display = '';
+				} else if (emptyRow) {
+					emptyRow.style.display = 'none';
+				}
+			}
 
 			if (shownEl) shownEl.textContent = visible.length;
 			if (totalEl) totalEl.textContent = rows.length;
@@ -305,14 +367,71 @@
 			});
 		}
 
-		nganhBtns.forEach(function (btn) {
-			btn.addEventListener('click', function () {
-				curNganh = btn.getAttribute('data-nganh') || '';
-				nganhBtns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+		// Thanh loc ngang: 1 dropdown cho nhom bao + 1 dropdown moi nhom quy cach, AND voi nhau.
+		// Dieu kien dang bat hien thanh chip co nut x de bo nhanh tung cai.
+		function selLabel(sel) {
+			var o = sel.options[sel.selectedIndex];
+			return o ? o.textContent.replace(/\s*\(\d+\)\s*$/, '') : '';
+		}
+
+		function syncChips() {
+			if (!chipsBox) return;
+			var active = [];
+			if (nganhSel && nganhSel.value) active.push({ sel: nganhSel, text: selLabel(nganhSel) });
+			facetSels.forEach(function (s) { if (s.value) active.push({ sel: s, text: selLabel(s) }); });
+
+			chipsBox.innerHTML = '';
+			active.forEach(function (a) {
+				var chip = document.createElement('button');
+				chip.type = 'button';
+				chip.className = 'filter-chip';
+				chip.innerHTML = a.text + '<span aria-hidden="true">×</span>';
+				chip.setAttribute('aria-label', 'Bỏ lọc ' + a.text);
+				chip.addEventListener('click', function () {
+					a.sel.value = '';
+					a.sel.dispatchEvent(new Event('change'));
+				});
+				chipsBox.appendChild(chip);
+			});
+			chipsBox.hidden = !active.length;
+			if (clearBtn) clearBtn.hidden = active.length < 2;
+		}
+
+		if (nganhSel) {
+			nganhSel.addEventListener('change', function () {
+				curNganh = nganhSel.value || '';
 				resetShown();
 				applyFilter();
+				syncChips();
+			});
+		}
+
+		facetSels.forEach(function (sel) {
+			sel.addEventListener('change', function () {
+				var key = sel.getAttribute('data-facet');
+				var opt = sel.options[sel.selectedIndex];
+				if (!sel.value) {
+					delete curFacets[key];
+				} else {
+					curFacets[key] = { val: sel.value, mode: opt.getAttribute('data-mode') || 'eq' };
+				}
+				resetShown();
+				applyFilter();
+				syncChips();
 			});
 		});
+
+		if (clearBtn) {
+			clearBtn.addEventListener('click', function () {
+				if (nganhSel) nganhSel.value = '';
+				facetSels.forEach(function (s) { s.value = ''; });
+				curNganh = '';
+				curFacets = {};
+				resetShown();
+				applyFilter();
+				syncChips();
+			});
+		}
 
 		sortBtns.forEach(function (btn) {
 			btn.addEventListener('click', function () {
@@ -337,6 +456,31 @@
 		applyFilter();
 	});
 
+	// Dem nguoc han chot uu dai ([data-promo-end] = timestamp giay).
+	// Chay toi PHUT:GIAY, nhay tung giay (Hieu 2026-07-14) - moc "N ngay X gio" khong tao suc ep.
+	//   Con >= 1 ngay: "17 ngày 07:23:45"   |   Trong ngay cuoi: "07:23:45"
+	// Het han: an ca dong (khong bao gio hien so am).
+	document.querySelectorAll('.promo-count[data-promo-end]').forEach(function (el) {
+		var end = parseInt(el.getAttribute('data-promo-end'), 10) * 1000;
+		var val = el.querySelector('.promo-count-val');
+		if (!end || !val) return;
+
+		function hai(n) { return n < 10 ? '0' + n : '' + n; }
+
+		function tick() {
+			var left = end - Date.now();
+			if (left <= 0) { el.style.display = 'none'; return; }
+			var d = Math.floor(left / 86400000);
+			var h = Math.floor(left / 3600000) % 24;
+			var m = Math.floor(left / 60000) % 60;
+			var s = Math.floor(left / 1000) % 60;
+			var dongho = hai(h) + ':' + hai(m) + ':' + hai(s);
+			val.textContent = d >= 1 ? (d + ' ngày ' + dongho) : dongho;
+		}
+		tick();
+		setInterval(tick, 1000);
+	});
+
 	// Back to top
 	var $toTop = document.querySelector('.to-top');
 	if ($toTop) {
@@ -350,3 +494,89 @@
 		});
 	}
 })(jQuery);
+
+/* ==========================================================================
+   Popup uu dai -> dan ve trang bang gia (Hieu 2026-07-14).
+   Chi hien 1 lan/phien; mo sau 7s hoac khi cuon qua 35% trang - lay moc nao den truoc.
+   ========================================================================== */
+(function () {
+	var pop = document.getElementById('promoPop');
+	if (!pop) return;
+
+	var KEY = 'dgcPromoPop';
+	try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
+
+	var opened = false, timer = null;
+
+	function close() {
+		pop.hidden = true;
+		pop.setAttribute('aria-hidden', 'true');
+		document.body.style.overflow = '';
+		try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+		document.removeEventListener('keydown', onKey);
+	}
+
+	function onKey(e) { if (e.key === 'Escape') close(); }
+
+	function open() {
+		if (opened) return;
+		opened = true;
+		if (timer) clearTimeout(timer);
+		window.removeEventListener('scroll', onScroll);
+		pop.hidden = false;
+		pop.setAttribute('aria-hidden', 'false');
+		document.body.style.overflow = 'hidden';
+		document.addEventListener('keydown', onKey);
+		/* Focus vao THE, khong focus vao nut - focus ring quanh nut CTA trong nhu loi giao dien. */
+		var card = pop.querySelector('.promo-pop-card');
+		if (card) { card.setAttribute('tabindex', '-1'); card.focus({ preventScroll: true }); }
+	}
+
+	function onScroll() {
+		var h = document.documentElement.scrollHeight - window.innerHeight;
+		if (h > 0 && window.scrollY / h > 0.35) open();
+	}
+
+	timer = setTimeout(open, 7000);
+	window.addEventListener('scroll', onScroll, { passive: true });
+
+	pop.querySelectorAll('[data-pop-close]').forEach(function (el) {
+		el.addEventListener('click', close);
+	});
+	/* Bam nut CTA (sang trang bang gia) cung ghi nhan da xem -> khong bat lai o trang sau. */
+	var go = pop.querySelector('.promo-pop-actions .btn');
+	if (go) go.addEventListener('click', function () { try { sessionStorage.setItem(KEY, '1'); } catch (e) {} });
+})();
+
+/* Thanh tim kiem tren header: bam kinh lup -> mo/dong o nhap, tu focus con tro. */
+(function () {
+	var box = document.getElementById('hdrSearch');
+	if (!box) return;
+	var input   = box.querySelector('[data-search-input]');
+	var toggles = document.querySelectorAll('[data-search-toggle]');
+	var btn     = document.querySelector('.hdr-search-btn');
+
+	function toggle() {
+		var open = box.hidden;
+		box.hidden = !open;
+		if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+		if (open && input) input.focus();
+	}
+
+	toggles.forEach(function (t) { t.addEventListener('click', toggle); });
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape' && !box.hidden) toggle();
+	});
+})();
+
+/* Nut "Gói gồm những gì?" - so ra chi tiet goi ngay trong dong bang gia (Hieu 2026-07-15). */
+document.addEventListener('click', function (e) {
+	var btn = e.target.closest ? e.target.closest('.pkg-toggle') : null;
+	if (!btn) return;
+	var box = document.getElementById(btn.getAttribute('aria-controls'));
+	if (!box) return;
+	var mo = box.hidden;
+	box.hidden = !mo;
+	btn.setAttribute('aria-expanded', mo ? 'true' : 'false');
+	btn.querySelector('.pkg-toggle-txt').textContent = mo ? 'Thu gọn' : 'Gói gồm những gì?';
+});

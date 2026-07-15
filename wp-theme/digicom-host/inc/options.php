@@ -31,8 +31,24 @@ function dgc_defaults() {
 		// Moi dong: <so muc toi thieu>|<% giam>. Bac cao nhat dat duoc se duoc ap dung.
 		'combo_discount' => "2|3\n4|5\n6|8\n10|12\n15|15",
 
-		// Khuyen mai noi bat (tieu de | mo ta ngan)
-		'promos'        => "Báo giá theo từng đầu báo | Minh bạch, không phí ẩn\nGói combo Backlink + Guest Post | Tiết kiệm hơn khi đặt cùng lúc\nTư vấn miễn phí | Chọn đúng site/báo theo ngành hàng\nCam kết đúng tiến độ | Báo cáo link/bài đã lên sau khi hoàn thành",
+		// Uu dai noi bat (tieu de | mo ta ngan | nhan uu dai). Nhan la cot thu 3, de trong duoc.
+		'promos'        => "Viết bài PR miễn phí | Đặt từ 3 đầu báo trở lên, DigicomVN viết bài, bạn chỉ cần duyệt nội dung | Miễn phí trọn gói\nTư vấn và chọn báo miễn phí | Chuyên viên lên danh sách báo/site theo ngành hàng và ngân sách của bạn | Miễn phí, không ràng buộc\nƯu đãi combo nhiều đầu báo | Đặt càng nhiều mục trong một đơn, chiết khấu càng cao | Áp dụng tự động\nBáo giá minh bạch, không phí ẩn | Niêm yết theo từng đầu báo, xuất VAT đầy đủ | Cam kết bằng hợp đồng",
+
+		// Khan hiem + gioi han thoi gian cho o uu dai (nguyen tac kich thich chuyen doi).
+		// Han chot: de trong = tu lay het thang hien tai (luon con hieu luc, khong bao gio "qua han").
+		'promo_title'    => 'Ưu đãi đang áp dụng',
+		'promo_deadline' => '',
+		'promo_slots'    => '10',
+
+		// Quy uu dai ra TIEN (Hieu 2026-07-14) - con so phai co that, tinh duoc tu bang gia:
+		// don 15 dau bao lon (gia trung binh dang ban ~8,2tr/bai) = ~123tr -> chiet khau combo bac
+		// cao nhat 15% = ~18,4tr, cong 15 bai viet mien phi (~500k/bai) = ~7,5tr -> ~25tr.
+		// Doi bac chiet khau hoac bang gia -> sua lai con so nay o WP Admin, khong sua PHP.
+		// Ghi chu gia - hien o MOI noi co gia (bang gia, trang dich vu, bang gia rut gon trang chu).
+		'price_note'        => 'Giá trên là giá tham khảo, có thể thay đổi vào phút chót theo bảng giá của toà soạn/nhà đài. Gọi hotline hoặc nhắn Zalo để nhận báo giá nhanh và chính xác nhất.',
+
+		'promo_saving'      => '25 triệu',
+		'promo_saving_note' => 'Đơn 15 đầu báo lớn: giảm 15% theo bậc combo + miễn phí viết 15 bài.',
 
 		// ten goi | gia | dac diem cach nhau dau ; | noi bat(1/0)
 		'hosting_plans' => "Gói Textlink | Liên hệ báo giá | Đặt link trong bài có sẵn;Chọn theo DR/traffic site;Vị trí link tự nhiên;Bàn giao vị trí đăng | 0\nGói Backlink | Liên hệ báo giá | Backlink chất lượng, đa dạng nguồn;Anchor text tự nhiên;Theo dõi index;Báo cáo chi tiết | 1\nGói Guest Post | Liên hệ báo giá | Viết bài + đăng trên site đúng chủ đề;Link dofollow tự nhiên;Duyệt nội dung trước khi đăng;Bàn giao link bài | 0\nGói Booking báo & PR | Liên hệ báo giá | Đăng bài PR trên báo điện tử;Viết bài chuẩn theo tôn chỉ báo;Hỗ trợ chọn chuyên mục;Bàn giao link bài đã lên | 0",
@@ -135,7 +151,13 @@ function dgc_settings_page() {
 			<table class="form-table">
 				<?php
 				dgc_field( 'domain_tlds', 'Bang gia rut gon', 'Moi dong: ten dich vu | gia tu | nhan. VD: Mua Textlink | Lien he bao gia | Theo DR/traffic', 'textarea' );
-				dgc_field( 'promos', 'O khuyen mai', 'Moi dong: tieu de | mo ta', 'textarea' );
+				dgc_field( 'promos', 'O uu dai', 'Moi dong: tieu de | mo ta | nhan uu dai (cot 3 co the de trong). VD: Viet bai PR mien phi | Dat tu 3 dau bao tro len | Mien phi tron goi', 'textarea' );
+				dgc_field( 'promo_title', 'Tieu de khoi uu dai', 'VD: Uu dai thang 7' );
+				dgc_field( 'promo_deadline', 'Han chot uu dai (yyyy-mm-dd)', 'De TRONG = tu dong lay het thang hien tai (uu dai luon con hieu luc). Dien ngay cu the neu chay dot khuyen mai co han rieng.' );
+				dgc_field( 'promo_slots', 'So suat con lai trong dot', 'So suat uu dai con lai - tao cam giac khan hiem. De TRONG hoac 0 = khong hien dong nay. Chi ghi con so THAT dinh nhan.' );
+				dgc_field( 'price_note', 'Ghi chu gia (hien o MOI noi co gia)', 'Bat buoc: noi ro gia la GIA THAM KHAO, co the doi vao phut chot, moi khach goi/nhan Zalo de chot gia. De TRONG = an ghi chu (khong khuyen khich).', 'textarea' );
+				dgc_field( 'promo_saving', 'Uu dai quy ra tien (so tien tiet kiem toi da)', 'VD "25 trieu". Hien noi bat trong khoi uu dai + popup. De TRONG = an dong nay. Con so phai tinh duoc tu bang gia + bac chiet khau, KHONG ghi bua.' );
+				dgc_field( 'promo_saving_note', 'Giai thich con so tren', 'VD: Don 15 dau bao lon: giam 15% theo bac combo + mien phi viet 15 bai.' );
 				dgc_field( 'combo_discount', 'Chiet khau combo (tick nhieu bao cang giam)', 'Moi dong: <so muc toi thieu>|<% giam>. VD "4|5" = tu 4 muc tro len giam 5%. Bac cao nhat dat duoc se ap dung. De trong = khong giam.', 'textarea' );
 				?>
 			</table>

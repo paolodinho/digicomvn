@@ -37,6 +37,15 @@ python3 tra-cuu.py --duoi 3000000        # các đầu báo dưới 3 triệu
 
 Hoặc hỏi thẳng Claude trong session dự án digicom: "bài VnExpress hiện các bên nào" - Claude đọc file này trả lời.
 
+## Quy mô kho (2026-07-14)
+
+**1.046 dòng giá / 34 nhà cung cấp / 5 dịch vụ**: booking-pr 493, textlink 352, guest-post 166, entity 34, toplist 1.
+
+Nguồn đáng giá nhất:
+- **Admicro (VCCorp)** - rate card CHÍNH THỨC từ tòa báo (Kenh14, CafeF, CafeBiz, Soha, Afamily, Dân trí, Thanh Niên, Tuổi Trẻ, VietnamNet, VnEconomy, NLĐ). Đây là giá gốc, không phải agency bán lại.
+- **VTC News** - rate card chính chủ.
+- **SEOViP, DPS.MEDIA, DanaSEO, Guestpost.vn** - Google Sheet công khai, chi tiết từng đầu báo.
+
 ## Cập nhật hàng ngày
 
 Scheduled task `booking-price-daily` (chạy 8h sáng): quét lại các nguồn trong `nguon.md`, thêm dòng giá mới, ghi biến động vào `CHANGELOG.md`. Sheet DanaSEO chỉ đọc được qua Chrome đã đăng nhập Google (Drive API chặn file này).

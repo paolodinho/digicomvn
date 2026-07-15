@@ -15,15 +15,25 @@ $nhom     = dgc_current_nhom();
 		<span class="eyebrow">Dịch vụ</span>
 		<h1><?php echo esc_html( $svc_name ); ?></h1>
 		<?php if ( has_excerpt() ) : ?><p class="lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
+		<?php /* Toi da 2 nut: 1 chinh + 1 phu (Hieu 2026-07-15 "nhieu loai nut qua").
+		         Bo "Nhan bao gia" - trung muc dich voi bang gia (co san nut gui yeu cau) va voi nut Goi. */ ?>
 		<div class="hero-actions">
-			<?php if ( $nhom ) : ?><a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a><?php endif; ?>
-			<a class="btn <?php echo $nhom ? 'btn-ghost' : 'btn-primary'; ?>" href="#lien-he">Nhận báo giá</a>
-			<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+			<?php if ( $nhom ) : ?>
+				<a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a>
+				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+			<?php else : ?>
+				<a class="btn btn-primary" href="#lien-he">Nhận báo giá</a>
+				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
 
 <?php
+/* Uu dai (viet bai mien phi, tu van mien phi...) dat ngay tren bang gia - khach thay dieu kien
+   uu dai truoc khi doc gia (Hieu 2026-07-14). */
+include get_template_directory() . '/inc/promo-band.php';
+
 /* Bang gia len NGAY DUOI hero, tren moi noi dung khac (Hieu 2026-07-14). */
 if ( $nhom ) {
 	include get_template_directory() . '/inc/service-pricing.php';

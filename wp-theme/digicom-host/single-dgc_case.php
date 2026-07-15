@@ -38,7 +38,7 @@ while ( have_posts() ) : the_post();
 		</div>
 		<?php endif; ?>
 
-		<p style="margin-top:32px"><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Nhận tư vấn cho dự án của bạn &rarr;</a> <a class="btn btn-ghost" href="<?php echo esc_url( get_post_type_archive_link( 'dgc_case' ) ); ?>">Xem case study khác</a></p>
+		<p style="margin-top:32px"><a class="btn btn-primary" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Nhận tư vấn cho dự án của bạn &rarr;</a> <a class="btn btn-ghost" href="<?php echo esc_url( get_post_type_archive_link( 'dgc_case' ) ); ?>">Xem case study khác</a></p>
 	</div>
 </section>
 

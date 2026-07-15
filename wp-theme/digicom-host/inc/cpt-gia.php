@@ -48,6 +48,9 @@ add_action( 'init', function () {
 		'mua-textlink'     => 'Mua Textlink',
 		'dich-vu-backlink' => 'Dịch vụ Backlink',
 		'backlink-social-entity' => 'Backlink Social Entity',
+		'dich-vu-toplist'  => 'Dịch vụ Toplist',
+		'backlink-quoc-te' => 'Backlink quốc tế',
+		'booking-truyen-hinh' => 'Booking truyền hình',
 	);
 	foreach ( $terms as $slug => $name ) {
 		if ( ! term_exists( $slug, 'dgc_nhom' ) ) {
@@ -362,6 +365,95 @@ function dgc_gia_specs( $meta ) {
 	return $out;
 }
 
+/* ---------------------------------------------------------------------------
+ * 3b. Facet quy cach bai (loai link / so anh / so tu) - suy TU DONG tu 2 truong
+ *     "so_link" + "yeu_cau" cua tung dong gia, khong bat admin nhap them.
+ *     Admin sua chu trong 2 truong do -> bo loc tu cap nhat theo.
+ * ------------------------------------------------------------------------- */
+
+/**
+ * Doc mot chi so ("ảnh", "từ") tu chuoi quy cach.
+ * Quy uoc THAN TRONG: "dưới 1000 từ" -> 999 (khong dat nguong 1000, tranh hua qua),
+ * "3-5 ảnh" -> 5 (moc cao nhat duoc phep), "3 ảnh" -> 3.
+ */
+function dgc_spec_num( $s, $unit ) {
+	if ( preg_match( '/(?:dưới|duoi|<)\s*(\d+)\s*' . $unit . '/u', $s, $m ) ) return max( 0, (int) $m[1] - 1 );
+	if ( preg_match( '/(\d+)\s*-\s*(\d+)\s*' . $unit . '/u', $s, $m ) ) return (int) $m[2];
+	if ( preg_match( '/(\d+)\s*' . $unit . '/u', $s, $m ) ) return (int) $m[1];
+	return 0;
+}
+
+/** Tra ve ['link' => 'dofollow|nofollow|none|', 'anh' => int, 'tu' => int] cho 1 dong gia. */
+function dgc_gia_facets( $meta ) {
+	$s = mb_strtolower( trim( ( $meta['so_link'] ?? '' ) . ' | ' . ( $meta['yeu_cau'] ?? '' ) ) );
+
+	$link = '';
+	if ( preg_match( '/không chèn link|ko chèn link|khong chen link/u', $s ) ) {
+		$link = 'none';
+	} elseif ( preg_match( '/\bdof|do\s?follow|link\s+do\b/u', $s ) ) {
+		$link = 'dofollow';
+	} elseif ( preg_match( '/\bnof|no\s?follow|link\s+no\b/u', $s ) ) {
+		$link = 'nofollow';
+	}
+
+	return array(
+		'link' => $link,
+		'anh'  => dgc_spec_num( $s, 'ảnh' ),
+		// (?!\s*kho) de "giới hạn 50 từ khoá" (goi backlink sidebar) khong bi hieu thanh bai 50 tu.
+		'tu'   => dgc_spec_num( $s, 'từ(?!\s*kho)' ),
+	);
+}
+
+/**
+ * Dinh nghia cac nhom bo loc quy cach. Moi lua chon co:
+ *  - key   : ten facet tren dong (data-link / data-anh / data-tu)
+ *  - val   : gia tri so sanh
+ *  - mode  : 'eq' (bang chuoi) hoac 'min' (>= so)
+ * Nhom/lua chon nao khong co dong nao khop se tu an (xem dgc_facet_render).
+ */
+function dgc_facet_groups() {
+	return array(
+		'Loại link' => array(
+			array( 'key' => 'link', 'mode' => 'eq',  'val' => 'dofollow', 'label' => 'Link dofollow' ),
+			array( 'key' => 'link', 'mode' => 'eq',  'val' => 'nofollow', 'label' => 'Link nofollow' ),
+			array( 'key' => 'link', 'mode' => 'eq',  'val' => 'none',     'label' => 'Không chèn link' ),
+		),
+		'Số ảnh trong bài' => array(
+			array( 'key' => 'anh', 'mode' => 'min', 'val' => 3, 'label' => 'Từ 3 ảnh' ),
+			array( 'key' => 'anh', 'mode' => 'min', 'val' => 5, 'label' => 'Từ 5 ảnh' ),
+		),
+		'Độ dài bài' => array(
+			array( 'key' => 'tu', 'mode' => 'min', 'val' => 1000, 'label' => 'Từ 1.000 từ' ),
+		),
+	);
+}
+
+/** Dem so dong khop 1 lua chon facet. */
+function dgc_facet_count( $items, $opt ) {
+	$n = 0;
+	foreach ( $items as $it ) {
+		$f = dgc_gia_facets( $it->meta );
+		if ( 'min' === $opt['mode'] ) {
+			if ( (int) $f[ $opt['key'] ] >= (int) $opt['val'] ) $n++;
+		} elseif ( $f[ $opt['key'] ] === $opt['val'] ) {
+			$n++;
+		}
+	}
+	return $n;
+}
+
+/** Co du lieu de hien bo loc quy cach khong (it nhat 1 lua chon co dong, va khong phai ca bang deu khop). */
+function dgc_has_facet_filter( $items ) {
+	$total = count( $items );
+	foreach ( dgc_facet_groups() as $opts ) {
+		foreach ( $opts as $opt ) {
+			$n = dgc_facet_count( $items, $opt );
+			if ( $n > 0 && $n < $total ) return true;
+		}
+	}
+	return false;
+}
+
 /**
  * Tach chuoi gia nhieu muc kieu Textlink: "Home: 1500000-1800000-2500000đ · CM: ... · Fullsite: ..."
  * thanh bang [ ['label'=>'Home', 'values'=>[1500000,1800000,2500000]], ... ].
@@ -403,6 +495,124 @@ function dgc_gia_tier_terms( $vi_tri, $n ) {
  * de 2 noi luon giong nhau (cot: Bao/site | Quy cach dang | Gia | Dat ngay).
  * $args: nhom_slug, ctx (nhan hien trong danh sach da chon), col_name, col_pos.
  */
+/**
+ * Chuoi tim kiem cho 1 dong bang gia (Hieu 2026-07-14).
+ * Muc tieu: "Báo Thanh Niên" / "thanh niên" / "thanhnien" / "thanhnien.vn" deu ra CUNG ket qua.
+ *
+ * Tra ve mang 2 phan:
+ *   'name' - dang co dau + dang bo dau, cach nhau bang khoang trang (tim theo tu).
+ *   'key'  - dang NEN: bo dau, bo moi ky tu khong phai chu/so (ke ca dau cach va ".vn"),
+ *            bo tien to "bao" -> "baothanhnien"/"thanh nien"/"thanhnien.vn" deu nen ve "thanhnien".
+ */
+function dgc_gia_search_terms( $title, $vi_tri = '' ) {
+	$raw  = trim( $title . ' ' . $vi_tri );
+	$acc  = mb_strtolower( $raw, 'UTF-8' );
+	$fold = mb_strtolower( remove_accents( $raw ), 'UTF-8' );
+
+	/* Dang nen: bo duoi ten mien (.vn/.com/.net...) truoc, roi bo het ky tu khong phai chu/so. */
+	$key = preg_replace( '/\.(com\.vn|com|vn|net|org|info|edu\.vn|gov\.vn|asia|tv)\b/', ' ', $fold );
+	$key = preg_replace( '/[^a-z0-9]+/', '', $key );
+	$key = preg_replace( '/^bao/', '', $key ); // "baothanhnien" -> "thanhnien"
+
+	return array(
+		'name' => trim( $acc . ' ' . $fold ),
+		'key'  => $key,
+	);
+}
+
+/**
+ * Nen 1 chuoi truy van ve dang khoa (dung quy tac voi dgc_gia_search_terms()['key']).
+ */
+function dgc_search_key( $s ) {
+	$s = mb_strtolower( remove_accents( (string) $s ), 'UTF-8' );
+	$s = preg_replace( '/\.(com\.vn|com|vn|net|org|info|edu\.vn|gov\.vn|asia|tv)\b/', ' ', $s );
+	$s = preg_replace( '/[^a-z0-9]+/', '', $s );
+	return preg_replace( '/^bao/', '', $s );
+}
+
+/**
+ * Tim trong BANG GIA (CPT dgc_gia) theo tu khoa - phuc vu trang tim kiem toan site.
+ * Khop ca dang co dau, khong dau va dang ten mien ("Báo Thanh Niên" = "thanhnien.vn").
+ * Tra ve mang phang: title, vi_tri, gia, nhom_label, url (tro toi tab tuong ung o /bang-gia/).
+ */
+function dgc_search_gia( $q ) {
+	$q = trim( (string) $q );
+	if ( '' === $q ) return array();
+
+	$qKey  = dgc_search_key( $q );
+	$qFold = mb_strtolower( remove_accents( $q ), 'UTF-8' );
+	if ( '' === $qKey && '' === $qFold ) return array();
+
+	$nhom_labels = array(
+		'booking-bao-pr'         => 'Booking báo & PR',
+		'guest-post'             => 'Guest Post',
+		'dich-vu-backlink'       => 'Dịch vụ Backlink',
+		'mua-textlink'           => 'Mua Textlink',
+		'backlink-social-entity' => 'Backlink Social Entity',
+		'dich-vu-toplist'        => 'Dịch vụ Toplist',
+		'backlink-quoc-te'       => 'Backlink quốc tế',
+		'booking-truyen-hinh'    => 'Booking truyền hình',
+	);
+
+	$out = array();
+	foreach ( $nhom_labels as $slug => $label ) {
+		foreach ( dgc_get_gia( $slug ) as $it ) {
+			$vi_tri = trim( (string) ( $it->meta['vi_tri'] ?? '' ) );
+			$st     = dgc_gia_search_terms( $it->post_title, $vi_tri );
+
+			$hit = ( $qKey && '' !== $st['key'] && false !== strpos( $st['key'], $qKey ) )
+				|| ( $qFold && false !== strpos( $st['name'], $qFold ) );
+			if ( ! $hit ) continue;
+
+			$out[] = array(
+				'title'      => $it->post_title,
+				'vi_tri'     => $vi_tri,
+				'gia'        => dgc_format_price( $it->meta['gia_km'] ?? '' ),
+				'nhom_label' => $label,
+				'url'        => home_url( '/bang-gia/#' . $slug ),
+			);
+		}
+	}
+	return $out;
+}
+
+/**
+ * Danh tu goi don vi ban theo nhom dich vu (Hieu 2026-07-14):
+ * chi nhom booking bao & PR moi goi la "bao"; cac nhom con lai (guest post, textlink,
+ * backlink, entity, toplist) goi la "trang" - vi do la website/blog, khong phai toa soan.
+ */
+function dgc_nhom_don_vi( $slug ) {
+	return ( 'booking-bao-pr' === $slug ) ? 'báo' : 'trang';
+}
+
+/**
+ * Dong nay co phai 1 GOI dich vu khong (khac voi 1 dau bao/site le)?
+ * Goi = ban theo combo (nhieu link/bai/social), khach can biet "goi gom nhung gi" truoc khi chot.
+ */
+function dgc_gia_la_goi( $title, $slug ) {
+	if ( 'backlink-social-entity' === $slug ) return true;
+	$t = mb_strtolower( remove_accents( trim( (string) $title ) ), 'UTF-8' );
+	return (bool) preg_match( '/^(goi|combo|he thong|bo )/', $t );
+}
+
+/**
+ * Cac gach dau dong "goi gom gi" - dung lai chinh cac field da co (khong bat Hieu nhap them).
+ */
+function dgc_gia_goi_chi_tiet( $m ) {
+	$out = array();
+	$map = array(
+		'vi_tri'  => 'Quy mô gói',
+		'so_link' => 'Số link / hạng mục',
+		'yeu_cau' => 'Quy cách nội dung',
+	);
+	foreach ( $map as $key => $label ) {
+		$v = trim( (string) ( $m[ $key ] ?? '' ) );
+		if ( '' !== $v ) $out[] = array( $label, $v );
+	}
+	if ( ! empty( $m['dr'] ) ) $out[] = array( 'Chỉ số site', 'DR ' . $m['dr'] );
+	return $out;
+}
+
 function dgc_gia_row_html( $it, $args ) {
 	$m         = $it->meta;
 	$slug      = $args['nhom_slug'];
@@ -430,9 +640,12 @@ function dgc_gia_row_html( $it, $args ) {
 	$fake_old     = $show_fake ? dgc_fake_original_price( $price_num, $fake_pct ) : 0;
 
 	$cb_id = 'pick-' . (int) $it->ID;
+	$fc    = dgc_gia_facets( $m );
+
+	$st = dgc_gia_search_terms( $it->post_title, $vi_tri );
 
 	ob_start(); ?>
-	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( mb_strtolower( $it->post_title ) ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>">
+	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
 		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
 			<label class="row-check-wrap">
 				<input type="checkbox" id="<?php echo esc_attr( $cb_id ); ?>" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $args['ctx'] . ')' ); ?>">
@@ -448,6 +661,26 @@ function dgc_gia_row_html( $it, $args ) {
 			<?php if ( $show_pos ) : ?><span class="spec-chip spec-chip-pos"><?php echo esc_html( $vi_tri ); ?></span><?php endif; ?>
 			<?php foreach ( $specs as $sp ) : ?><span class="spec-chip"><?php echo esc_html( $sp ); ?></span><?php endforeach; ?>
 			<?php if ( ! $show_pos && ! $specs && ! $tiers ) : ?><span class="spec-empty">Liên hệ để nhận quy cách chi tiết</span><?php endif; ?>
+
+			<?php
+			/* Dong la GOI -> nut so ra "goi gom nhung gi" (Hieu 2026-07-15).
+			   Khach khong phai doan combo bao gom bao nhieu link/bai truoc khi tick chon. */
+			$dgc_goi_ct = dgc_gia_la_goi( $it->post_title, $slug ) ? dgc_gia_goi_chi_tiet( $m ) : array();
+			?>
+			<?php if ( $dgc_goi_ct ) : $dgc_goi_id = 'goi-' . (int) $it->ID; ?>
+			<button type="button" class="pkg-toggle" aria-expanded="false" aria-controls="<?php echo esc_attr( $dgc_goi_id ); ?>">
+				<span class="pkg-toggle-txt">Gói gồm những gì?</span>
+				<svg class="pkg-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+			</button>
+			<div class="pkg-detail" id="<?php echo esc_attr( $dgc_goi_id ); ?>" hidden>
+				<ul>
+					<?php foreach ( $dgc_goi_ct as $dgc_ct ) : ?>
+					<li><span class="pkg-k"><?php echo esc_html( $dgc_ct[0] ); ?></span><span class="pkg-v"><?php echo esc_html( $dgc_ct[1] ); ?></span></li>
+					<?php endforeach; ?>
+				</ul>
+				<p class="pkg-note">Giá tham khảo. Cần đúng cấu hình gói cho ngành của bạn - gọi <?php echo esc_html( dgc( 'hotline' ) ); ?> hoặc nhắn Zalo.</p>
+			</div>
+			<?php endif; ?>
 
 			<?php if ( $tiers ) : ?>
 			<table class="tier-table">
@@ -484,7 +717,7 @@ function dgc_gia_row_html( $it, $args ) {
 			<a class="btn btn-primary btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a>
 			<?php /* Mobile: nut toggle chon thay cho checkbox nho + nut Dat ngay (CSS an o desktop). */ ?>
 			<label class="pick-btn" for="<?php echo esc_attr( $cb_id ); ?>">
-				<span class="pick-add">+ Chọn báo này</span>
+				<span class="pick-add">+ Chọn ngay</span>
 				<span class="pick-on">Đã chọn</span>
 			</label>
 		</td>
@@ -517,6 +750,9 @@ function dgc_current_nhom( $post_id = 0 ) {
 		'guest-post'       => 'Guest Post',
 		'booking-bao-pr'   => 'Booking báo & PR',
 		'backlink-social-entity' => 'Backlink Social Entity',
+		'dich-vu-toplist'  => 'Dịch vụ Toplist',
+		'backlink-quoc-te' => 'Backlink quốc tế',
+		'booking-truyen-hinh' => 'Booking truyền hình',
 	);
 
 	$slug = get_post_field( 'post_name', $post_id );

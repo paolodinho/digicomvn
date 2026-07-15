@@ -1,5 +1,12 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
+<?php
+/* Uu dai hien tren MOI trang (Hieu 2026-07-14). Trang chu + trang dich vu da goi khoi nay o giua
+   noi dung; cac trang con lai (blog, ve-digicom, lien-he...) duoc bo sung ngay tren footer.
+   promo-band.php tu bo qua neu da render (co $GLOBALS['dgc_promo_done']). */
+include get_template_directory() . '/inc/promo-band.php';
+?>
+
 <footer class="site-footer">
 	<div class="wrap">
 		<div class="foot-grid">
@@ -51,8 +58,15 @@
 </footer>
 
 <a href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', dgc( 'zalo' ) ) ); ?>" class="fab-zalo" target="_blank" rel="noopener" aria-label="Chat Zalo với DigicomVN">
-	<svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v13H8l-4 4V4z" fill="white"/><text x="12" y="14.5" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0068FF" font-family="Arial,sans-serif">Zalo</text></svg>
+	<?php /* Bong bong bo tron + chu Zalo can giua (ban cu la hop goc vuong, chu Arial dan vao
+	         -> trong nhu anh dan sai, Hieu bao 2026-07-14). */ ?>
+	<svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+		<path d="M8 6h24a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H17l-8 6.5V28H8a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4z" fill="#fff"/>
+		<text x="20" y="22.6" text-anchor="middle" font-size="12.6" font-weight="700" fill="#0068FF"
+			font-family="Montserrat,Helvetica,Arial,sans-serif" letter-spacing="-.3">Zalo</text>
+	</svg>
 </a>
+<?php include get_template_directory() . '/inc/promo-popup.php'; ?>
 <a href="#" class="to-top" aria-label="Lên đầu trang">
 	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </a>

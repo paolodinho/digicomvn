@@ -1,0 +1,867 @@
+# Bang gia cac NCC khac (ngoai sheet DanaSEO). Phan cach: |
+# Cot: nha_cung_cap|dich_vu|dau_bao|nhom|vi_tri|gia_vnd|so_link|quy_cach|ghi_chu|nguon_url
+# gia_vnd: neu la dai gia "6000000-7500000" -> script lay MUC THAP NHAT lam gia ban, ghi dai vao ghi_chu.
+# Dong bat dau bang # la comment.
+
+# ===== Fame Media (famemedia.vn/bao-online, cap nhat 14/07/2026) =====
+Fame Media|booking-pr|znews.vn|PR bao lon (vi tri premium)|Top News 1 - Trang chu|230000000|||Vi tri trang chu dat nhat|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vnexpress.net|PR bao lon (vi tri premium)|Top Story 5,6|150000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vnexpress.net|PR bao lon (vi tri premium)|Trang chu Top 2 Kinh doanh|60000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|laodong.vn|PR bao lon (vi tri premium)|Cum tin Under Cover|100000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vietnamnet.vn|PR bao lon (vi tri premium)|Tieu diem Home 2-3, Top 1|85000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vneconomy.vn|PR bao lon (vi tri premium)|Dac biet trang chu|85000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vietnambiz.vn|PR bao lon (vi tri premium)|Bai dac biet - Home|80000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|cafef.vn|PR bao lon (vi tri premium)|Loai 1 Home - Noi bat 3|70000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|dantri.com.vn|PR bao lon (vi tri premium)|Trang chu - Link Top 1|70000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|autodaily.vn|PR bao lon (vi tri premium)|Review sau ban hang 12h|70000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|eva.vn|PR bao lon (vi tri premium)|Dac biet - Home|60000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|ngoisao.net|PR bao lon (vi tri premium)|Top Story - Tin 2|50000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|kenh14.vn|PR bao lon (vi tri premium)|Dac biet - Trang chu|45000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|tuoitre.vn|PR bao lon (vi tri premium)|Hien thi Trang chu 4|40000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|cafeland.vn|PR bao lon (vi tri premium)|Dac biet trang chu 2|36000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|techrum.vn|PR bao lon (vi tri premium)|Tin noi bat - Trang chu|35000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|otofun.net|PR bao lon (vi tri premium)|PR1 - Tin noi bat Trang chu|30000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|ngoisao.vn|PR bao lon (vi tri premium)|Trang chu - Loai 1|30000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|24h.com.vn|PR bao lon (vi tri premium)|Trang chu VIP 9|30000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vietstock.vn|PR bao lon (vi tri premium)|Trang chu noi bat 1|30000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|suckhoedoisong.vn|PR bao lon (vi tri premium)|Trang chu Top 1|22000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vnreview.vn|PR bao lon (vi tri premium)|Tin noi bat 1 - Trang chu|21000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|phunuvietnam.vn|PR bao lon (vi tri premium)|Bai loai 1 - Tin hot - TC|20000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|gamek.vn|PR bao lon (vi tri premium)|Loai 1 dac biet|20000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|plo.vn|PR bao lon (vi tri premium)|PR Tieu diem Trang chu|20000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|phapluatnet.vn|PR bao lon (vi tri premium)|Tin PR Top 1 Trang chu|20000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|batdongsan.com.vn|PR bao lon (vi tri premium)|Bai Hot 1 - Trang chu|18000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|autopro.com.vn|PR bao lon (vi tri premium)|Trang chu loai 1|18000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|afamily.vn|PR bao lon (vi tri premium)|Trang chu dac biet|15000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|phunumoi.net|PR bao lon (vi tri premium)|Noi bat trang chu 2-9|15000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baophapluat.vn|PR bao lon (vi tri premium)|PR Top 4 tin moi 24h|15000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|cafebiz.vn|PR bao lon (vi tri premium)|Loai 1 Home - Noi bat 3|12000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|saostar.vn|PR bao lon (vi tri premium)|Hien thi trang chu 1|12000000|||Vi tri trang chu|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vietstock.vn|Bao link dofollow|Bai PR|2450000|dofollow||Nhom bao gia re|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vietbao.vn|Bao link dofollow|Bai PR|2200000|dofollow||Nhom bao gia re|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baocantho.com.vn|Bao tinh / bao dang|Bai PR|2000000|dofollow|||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baohatinh.vn|Bao tinh / bao dang|Bai PR|1950000|dofollow|||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baodongnai.com.vn|Bao tinh / bao dang|Bai PR|1750000|dofollow|||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baoninhbinh.org.vn|Bao tinh / bao dang|Bai PR|1700000|dofollow|||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baodanang.vn|Bao tinh / bao dang|Bai PR|1500000|dofollow|||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|nongthonvaphattrien.vn|Bao link dofollow|Bai PR|850000|||Nhom bao gia re|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|kinhtevadautu.vn|Bao link dofollow|Bai PR|850000|||Nhom bao gia re|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|phapluatkinhdoanh.vn|Bao link dofollow|Bai PR|850000|||Nhom bao gia re|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|phapluatgiadinh.vn|Bao link dofollow|Bai PR|850000|||Nhom bao gia re|https://famemedia.vn/bao-online/
+
+# ===== BookBaoPR (bookbaopr.vn) - gia "tu", co CK 10-35% =====
+BookBaoPR|booking-pr|zing.vn|PR bao lon|Bai PR (gia tu)|15000000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|vnexpress.net|PR bao lon|Bai PR (gia tu)|13200000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|dantri.com.vn|PR bao lon|Bai PR (gia tu)|10200000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|tuoitre.vn|PR bao lon|Bai PR (gia tu)|7360000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|kenh14.vn|PR bao lon|Bai PR (gia tu)|7200000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|vietnamnet.vn|PR bao lon|Bai PR (gia tu)|6000000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|vtv.vn|PR bao lon|Bai PR (gia tu)|4600000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|yan.vn|PR bao lon|Bai PR (gia tu)|3960000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|vtc.vn|PR bao lon|Bai PR (gia tu)|3900000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|24h.com.vn|PR bao lon|Bai PR (gia tu)|3400000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+BookBaoPR|booking-pr|tienphong.vn|PR bao lon|Bai PR (gia tu)|2760000|1-2 link tuy bao|1000 tu + 5 anh|Gia "tu", CK 10-35%|https://bookbaopr.vn/
+
+# ===== Brando Agency (brando.vn) - quy cach link ro rang =====
+Brando Agency|booking-pr|tienphong.vn|PR bao lon|Goi Chuyen muc|6000000-7500000|1 nofollow (.vn)|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-tien-phong/
+Brando Agency|booking-pr|tienphong.vn|PR bao lon|Top 2,3,4 trang chu (the thao/giao duc/suc khoe)|7500000-9500000|1 nofollow (.vn)|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-tien-phong/
+Brando Agency|booking-pr|tienphong.vn|PR bao lon|Top 2,3,4 trang chu (xa hoi/kinh te/dia oc/xe)|9500000-11500000|1 nofollow (.vn)|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-tien-phong/
+Brando Agency|booking-pr|tienphong.vn|PR bao lon|Top 1 trang chu|11500000-13000000|1 nofollow (.vn)|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-tien-phong/
+Brando Agency|booking-pr|baodautu.vn|PR bao lon|Bai PR / Advertorial|14000000-16000000|toi da 2 nofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-dau-tu-viet-nam/
+Brando Agency|booking-pr|tuoitrexahoi.vn|Bao link dofollow|Bai PR tieu chuan|800000-1200000|2 dofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-tuoi-tre-xa-hoi/
+Brando Agency|booking-pr|tuoitrexahoi.vn|Bao link dofollow|Bai PR vi tri uu tien / chuyen muc noi bat|1200000-1500000|2 dofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-tuoi-tre-xa-hoi/
+Brando Agency|booking-pr|baobinhduong.vn|Bao tinh / bao dang|Bai PR / Advertorial|5200000-5600000|toi da 2 dofollow|toi da 1200 tu, 5 anh||https://brando.vn/bang-gia-quang-cao-bao-binh-duong/
+
+# ===== Xuyen Viet Media (xuyenvietmedia.com) - chuyen sau Tuoi Tre =====
+Xuyen Viet Media|booking-pr|tuoitre.vn|PR bao lon|eMagazine / Longform|35000000-50000000|1|dinh dang tran vien||https://xuyenvietmedia.com/blogs/bang-gia-dang-bao-tuoi-tre-online/
+Xuyen Viet Media|booking-pr|tuoitre.vn|PR bao lon|Infographic|20000000-30000000|1|do hoa||https://xuyenvietmedia.com/blogs/bang-gia-dang-bao-tuoi-tre-online/
+Xuyen Viet Media|booking-pr|tuoitre.vn|PR bao lon|Box doanh nghiep trang chu (hien thi 2-4h)|18000000-25000000|1|1000 chu, 5 anh (vuot +10-20%)||https://xuyenvietmedia.com/blogs/bang-gia-dang-bao-tuoi-tre-online/
+Xuyen Viet Media|booking-pr|tuoitre.vn|PR bao lon|Chuyen muc Kinh te / Thi truong (top 2h)|12000000-15000000|1|1000 chu, 5 anh||https://xuyenvietmedia.com/blogs/bang-gia-dang-bao-tuoi-tre-online/
+Xuyen Viet Media|booking-pr|tuoitre.vn|PR bao lon|Chuyen muc Giao duc / Y te|11000000-15000000|1|1000 chu, 5 anh||https://xuyenvietmedia.com/blogs/bang-gia-dang-bao-tuoi-tre-online/
+Xuyen Viet Media|booking-pr|tuoitre.vn|PR bao lon|Chuyen muc Cong nghe / Nhip song so|10000000-14000000|1|1000 chu, 5 anh||https://xuyenvietmedia.com/blogs/bang-gia-dang-bao-tuoi-tre-online/
+Xuyen Viet Media|booking-pr|tuoitre.vn|PR bao lon|Chuyen muc Giai tri / Van hoa|9000000-13000000|1|1000 chu, 5 anh||https://xuyenvietmedia.com/blogs/bang-gia-dang-bao-tuoi-tre-online/
+
+# ===== QuangbaThuonghieu (quangbathuonghieu.vn) - CafeF, doc tu text (bang goc la anh) =====
+QuangbaThuonghieu|booking-pr|cafef.vn|PR bao lon|Bai chuyen muc Nhom 1|10000000|1 link|toi da 1000 tu, 5 anh|Chua gom CK + 10% VAT. Chua xac minh (bang goc dang anh)|https://quangbathuonghieu.vn/bao-gia-quang-cao/bao-gia-bai-pr-tren-cafef-moi-nhat.html
+QuangbaThuonghieu|booking-pr|cafef.vn|PR bao lon|Bai chuyen muc Nhom 2|8000000|1 link|toi da 1000 tu, 5 anh|Chua gom CK + 10% VAT. Chua xac minh (bang goc dang anh)|https://quangbathuonghieu.vn/bao-gia-quang-cao/bao-gia-bai-pr-tren-cafef-moi-nhat.html
+QuangbaThuonghieu|booking-pr|cafef.vn|PR bao lon|Tin Doanh nghiep|6000000|1 link|toi da 1000 tu, 5 anh|Chua gom CK + 10% VAT. Chua xac minh (bang goc dang anh)|https://quangbathuonghieu.vn/bao-gia-quang-cao/bao-gia-bai-pr-tren-cafef-moi-nhat.html
+
+# ===== SEOViP (seovip.vn) - gia khoi diem theo nhom =====
+
+# ===== Admicro (VCCorp) - RATE CARD CHINH THUC TU TOA BAO (khong phai agency ban lai) =====
+Admicro (VCCorp)|booking-pr|kenh14.vn|Rate card chinh thuc|Bai TOP 1 - MIX (PC+Mobile, noi bat so 1 trang chu 2h)|90000000|1 link (them 300k/link, toi da 3)|Toi da 1500 tu + 10 anh|Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/kenh14_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|kenh14.vn|Rate card chinh thuc|Bai TOP 1 - PC|60000000|1 link|1500 tu + 10 anh|Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/kenh14_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|kenh14.vn|Rate card chinh thuc|Bai dac biet HOME PC (noi bat so 4 trang chu 2h)|30000000|1 link||Chua VAT, kem goi Viewplus 5tr|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/kenh14_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|kenh14.vn|Rate card chinh thuc|Bai loai 1 - Noi bat muc PC (Nhom 1)|20000000|1 link||Chua VAT. Nhom 2: 18.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/kenh14_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|kenh14.vn|Rate card chinh thuc|Bai loai 2 - Home PC Stream 2|12000000|1 link||Chua VAT. Ban chi chuyen muc 2h: 8.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/kenh14_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|kenh14.vn|Rate card chinh thuc|Bai loai 3 - Stream 3 PC|8000000|1 link||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/kenh14_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|kenh14.vn|Rate card chinh thuc|Bai loai 4 - box Xem An Choi|7000000|1 link||Chua VAT. Ban re nhat 4.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/kenh14_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|cafef.vn|Rate card chinh thuc|Bai Top 1 - PC + Mobile + App|145000000|1 link (them 500k/link, toi da 3)|1500 tu + 5 anh|Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/cafef_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|cafef.vn|Rate card chinh thuc|Bai Top 1 - chi PC (hoac Mobile / App)|75000000|1 link||Chua VAT. Ban chuyen muc 2h: 26.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/cafef_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|cafef.vn|Rate card chinh thuc|Bai loai 1 - Trang chu PC|55000000|1 link||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/cafef_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|cafef.vn|Rate card chinh thuc|Bai loai 2 - Noi bat muc PC|32000000|1 link||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/cafef_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|cafef.vn|Rate card chinh thuc|Bai loai 3 - Stream 2 PC|18000000|1 link||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/cafef_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|dantri.com.vn|Rate card chinh thuc|Trang chu - Link 1 cot A (dat nhat)|240000000|3 link NOFOLLOW (1tr/3 link, toi da 5)|Hien thi 2h|Chua VAT. LINK NOFOLLOW - chinh chu xac nhan|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/dantri_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|dantri.com.vn|Rate card chinh thuc|Chuyen muc Nhom 1 (KD, Thoi su, Suc khoe, CN, Doi song) - Link 1|60000000|3 link nofollow|Hien thi 2h|Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/dantri_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|dantri.com.vn|Rate card chinh thuc|Chuyen muc Nhom 1 - Link 7, 8, 9|20000000|3 link nofollow|Hien thi 2h|Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/dantri_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|dantri.com.vn|Rate card chinh thuc|Chuyen muc Nhom 2 - Link 6,7,8,9 (re nhat)|15000000|3 link nofollow|Hien thi 2h|Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/dantri_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|vietnamnet.vn|Rate card chinh thuc|Tieu diem 1 trang chu + Top 1 chuyen muc 2h|210000000|||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/vietnamnet_admicro_prs_may2026.pdf
+Admicro (VCCorp)|booking-pr|vietnamnet.vn|Rate card chinh thuc|Muc Kinh doanh - Top 1 chuyen muc|40000000|||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/vietnamnet_admicro_prs_may2026.pdf
+Admicro (VCCorp)|booking-pr|vietnamnet.vn|Rate card chinh thuc|Muc Kinh doanh - Top 9 tro xuong|12000000|||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/vietnamnet_admicro_prs_may2026.pdf
+Admicro (VCCorp)|booking-pr|vietnamnet.vn|Rate card chinh thuc|Tieu muc - Top 6 tro xuong (re nhat)|6000000|||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/vietnamnet_admicro_prs_may2026.pdf
+Admicro (VCCorp)|booking-pr|tuoitre.vn|Rate card chinh thuc|Trang chu - Noi bat 2 + top 5 Tin moi chuyen muc 1h|60000000||<=1000 chu + 5 anh|Chua VAT. Megastory 65.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/tuoitre_admicro_prs_feb2026.pdf
+Admicro (VCCorp)|booking-pr|tuoitre.vn|Rate card chinh thuc|Trang chuyen muc Nhom 1 (Thoi su, KD, CN, Nha dat)|30000000||<=1000 chu + 5 anh|Chua VAT. Megastory 35.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/tuoitre_admicro_prs_feb2026.pdf
+Admicro (VCCorp)|booking-pr|tuoitre.vn|Rate card chinh thuc|Trang chuyen muc Nhom 3 (trang cap 2, Viec lam, TT Cuoi)|15000000|||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/tuoitre_admicro_prs_feb2026.pdf
+Admicro (VCCorp)|booking-pr|tuoitre.vn|Rate card chinh thuc|Chuyen muc Can biet - chi trang chuyen muc (re nhat)|7000000|||Chua VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/tuoitre_admicro_prs_feb2026.pdf
+Admicro (VCCorp)|booking-pr|thanhnien.vn|Rate card chinh thuc|PR - Noi bat 2 trang chu 1h + Top 1 chuyen muc 2h|95000000|2 hyperlink|Toi da 1000 chu + 5 hinh|DA gom VAT 8%|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/thanhnien_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|thanhnien.vn|Rate card chinh thuc|PR - Bai dang chuyen muc (khong len trang chu)|25000000|2 hyperlink|Toi da 1000 chu + 5 hinh|DA gom VAT 8%. eMagazine 32.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/thanhnien_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|thanhnien.vn|Rate card chinh thuc|PR - Bai dang chuyen muc con|15000000|2 hyperlink||DA gom VAT 8%|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/thanhnien_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|thanhnien.vn|Rate card chinh thuc|Tin chuyen muc (300 chu + 1 hinh)|8000000|1 hyperlink|300 chu, vuot +8.000d/chu|DA gom VAT 8%. Chuyen muc con 6tr; trang chu Ban can biet 4tr|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/thanhnien_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|soha.vn|Rate card chinh thuc|Bai noi bat so 1 TRANG CHU|35000000|1 link (them 300k/link, toi da 3)||Chua VAT. Ban chuyen muc 22.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/soha_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|soha.vn|Rate card chinh thuc|Bai loai 1 (noi bat muc)|20000000|1 link||Chua VAT. Ban chuyen muc 12.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/soha_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|soha.vn|Rate card chinh thuc|Bai thu 6 Stream 3 trang chu|5000000|1 link||Chua VAT. Ban chuyen muc 2.500.000 (re nhat)|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/soha_admicro_prs_apr2025.pdf
+Admicro (VCCorp)|booking-pr|afamily.vn|Rate card chinh thuc|Bai TOP 1|30000000|1 link (them 500k/link)|1500 tu + 10 anh|Chua VAT. Ban chuyen muc 11.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/afamily_admicro_prs_apr2026.pdf
+Admicro (VCCorp)|booking-pr|afamily.vn|Rate card chinh thuc|Bai loai 1|18000000|1 link||Chua VAT. Ban chuyen muc 6.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/afamily_admicro_prs_apr2026.pdf
+Admicro (VCCorp)|booking-pr|afamily.vn|Rate card chinh thuc|Bai trong CHUYEN MUC (troi theo thoi gian)|4000000|1 link||Chua VAT (re nhat)|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/afamily_admicro_prs_apr2026.pdf
+Admicro (VCCorp)|booking-pr|cafebiz.vn|Rate card chinh thuc|Bai Top 1|30000000|1 link|1500 tu + 5 anh|Chua VAT. Ban chuyen muc 11.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/cafebiz_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|cafebiz.vn|Rate card chinh thuc|Bai loai 1 - Trang chu|15000000|1 link||Chua VAT. Ban chuyen muc 5.000.000|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/cafebiz_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|cafebiz.vn|Rate card chinh thuc|Bai loai 4 - hien thi trong chuyen muc|5000000|1 link||Chua VAT (re nhat)|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/cafebiz_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|nld.com.vn|Rate card chinh thuc|Bai PR (toi da 800 chu + 2 anh) PC + Mobile|8800000|1 link|800 chu + 2 anh|Chua gom 10% VAT + phi viet bai. Emagazine +10tr|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/nld_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|nld.com.vn|Rate card chinh thuc|Tin (toi da 400 chu + 1 anh) PC + Mobile|4400000|1 link|400 chu + 1 anh|Chua gom 10% VAT|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/nld_admicro_prs_jan2026.pdf
+Admicro (VCCorp)|booking-pr|vneconomy.vn|Rate card chinh thuc|Goi cao nhat (VE1/Top)|85000000|||Chua VAT. Dai gia 5tr-60tr tuy vi tri|https://in.admicro.vn/uploads/bien-tap-thong-tin-847/vneconomy_admicro_prs_jan2026.pdf
+
+# ===== VTC News - RATE CARD CHINH CHU =====
+VTC News (chinh chu)|booking-pr|vtcnews.vn|Rate card chinh thuc|Bai PR trung tam trang chu|80000000||||https://vtcnews.vn/html-baogia/chuyentrang-baogia/index.htm
+VTC News (chinh chu)|booking-pr|vtcnews.vn|Rate card chinh thuc|Bai PR muc noi bat|30000000||||https://vtcnews.vn/html-baogia/chuyentrang-baogia/index.htm
+VTC News (chinh chu)|booking-pr|vtcnews.vn|Rate card chinh thuc|Top Story 3-5|20000000||||https://vtcnews.vn/html-baogia/chuyentrang-baogia/index.htm
+VTC News (chinh chu)|booking-pr|vtcnews.vn|Rate card chinh thuc|Top chuyen muc|10000000||||https://vtcnews.vn/html-baogia/chuyentrang-baogia/index.htm
+VTC News (chinh chu)|booking-pr|vtcnews.vn|Rate card chinh thuc|Chuyen muc vi tri 2-3|7000000||||https://vtcnews.vn/html-baogia/chuyentrang-baogia/index.htm
+VTC News (chinh chu)|booking-pr|vtcnews.vn|Rate card chinh thuc|Trang 1 chuyen muc (re nhat)|5000000||||https://vtcnews.vn/html-baogia/chuyentrang-baogia/index.htm
+
+# ===== Brando Agency - them tu mui 3 =====
+Brando Agency|booking-pr|vnexpress.net|PR bao lon|Thong tin doanh nghiep (Top 1-4 trang chu)|15000000-20000000|toi da 2 link nofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-vnexpress/
+Brando Agency|booking-pr|vnexpress.net|PR bao lon|Tieu muc giao duc, khoa hoc|12000000-15000000|toi da 2 link nofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-vnexpress/
+Brando Agency|booking-pr|vnexpress.net|PR bao lon|Tieu muc du lich, so hoa, y kien, xe|10000000-12000000|toi da 2 link nofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-vnexpress/
+Brando Agency|booking-pr|dantri.com.vn|PR bao lon|Bai PR (khoang gia chung)|13000000-43000000|1 link nofollow +500k; goi 3 link +1tr|1000 tu, 5 anh||https://brando.vn/bang-gia-quang-cao-bao-dan-tri/
+Brando Agency|booking-pr|cafef.vn|PR bao lon|Hien thi chuyen muc|6000000|1 link nofollow|toi da 1000 tu, 5 anh|Gia "tu"|https://brando.vn/bang-gia-quang-cao-bao-cafef/
+Brando Agency|booking-pr|cafef.vn|PR bao lon|Press Release|7000000|1 link nofollow|toi da 1000 tu, 5 anh|Gia "tu"|https://brando.vn/bang-gia-quang-cao-bao-cafef/
+Brando Agency|booking-pr|cafef.vn|PR bao lon|Chuyen muc Kinh doanh|9000000|1 link nofollow|toi da 1000 tu, 5 anh|Gia "tu"|https://brando.vn/bang-gia-quang-cao-bao-cafef/
+Brando Agency|booking-pr|afamily.vn|PR bao lon|Bai trong chuyen muc phu hop|5000000-9700000|1 link nofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-afamily/
+Brando Agency|booking-pr|afamily.vn|PR bao lon|TOP 1 chuyen muc tren trang chu|9000000-16000000|1 link nofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-afamily/
+Brando Agency|booking-pr|eva.vn|PR bao lon|Bai PR chuan (chuyen muc)|5000000|toi da 2 link nofollow|toi da 1000 tu, 3 anh, dang vinh vien||https://brando.vn/bang-gia-quang-cao-bao-eva/
+Brando Agency|booking-pr|eva.vn|PR bao lon|Bai noi bat / vi tri cao cap|5500000-6500000|toi da 2 link nofollow|toi da 1000 tu, 3 anh||https://brando.vn/bang-gia-quang-cao-bao-eva/
+
+# ===== SEODO =====
+SEODO|booking-pr|24h.com.vn|PR bao lon|Bai PR (khoang gia chung)|4000000-15000000|toi da 3 link nofollow|tren 1000 tu, 5+ anh||https://seodo.vn/bang-gia-quang-cao-bao-24h/
+SEODO|booking-pr|cafef.vn|PR bao lon|Bai PR (khoang gia chung)|5100000-11000000||||https://seodo.vn/bang-gia-quang-cao-bao-cafef/
+SEODO|booking-pr|vietnamnet.vn|PR bao lon|Tieu muc|5313600||||https://seodo.vn/bang-gia-quang-cao-bao-vietnamnet/
+SEODO|booking-pr|vietnamnet.vn|PR bao lon|Top 1 chuyen muc trang chu|30996000||1000+ tu, 5+ anh||https://seodo.vn/bang-gia-quang-cao-bao-vietnamnet/
+SEODO|booking-pr|vietnamnet.vn|PR bao lon|Top 5-8 chuyen muc trang chu|17712000||||https://seodo.vn/bang-gia-quang-cao-bao-vietnamnet/
+SEODO|booking-pr|thanhnien.vn|PR bao lon|Bai PR (khoang gia chung)|5400000-5832000|1 link|300 tu, 1 anh||https://seodo.vn/bang-gia-quang-cao-bao-thanh-nien/
+SEODO|booking-pr|soha.vn|PR bao lon|Trang chu streaming 3|4350000-4600000|toi da 1 link|1000+ tu, 5+ anh||https://seodo.vn/bang-gia-quang-cao-bao-soha/
+SEODO|booking-pr|soha.vn|PR bao lon|Top 1 chuyen muc|13050000-14000000|toi da 1 link|1000+ tu, 5+ anh||https://seodo.vn/bang-gia-quang-cao-bao-soha/
+
+# ===== Hapo Digital / Mic Creative / Web Media =====
+Hapo Digital|booking-pr|vnexpress.net|PR bao lon|Bai PR (tuy danh muc)|10000000-22000000||duoi 1000 tu|Chua VAT 8%|https://hapodigital.com/bao-gia-dang-bai-viet-pr-tren-bao-vnexpress/
+Mic Creative|booking-pr|vnexpress.net|PR bao lon|Bai text tu chuan bi|15000000-50000000||toi da 1 trang A4||https://miccreative.vn/bao-gia-bai-pr-vnexpress/
+Mic Creative|booking-pr|vnexpress.net|PR bao lon|Bai anh (photo story)|20000000-45000000||10-12 anh||https://miccreative.vn/bao-gia-bai-pr-vnexpress/
+Web Media|booking-pr|vnexpress.net|PR bao lon|Bai viet PR (gia khoi diem)|10000000||||https://webmedia.com.vn/vnexpress-net/
+
+# ===== Fame Media - ZNews chi tiet =====
+Fame Media|booking-pr|znews.vn|PR bao lon (vi tri premium)|Top News 2|160000000||||https://famemedia.vn/new-zings/
+Fame Media|booking-pr|znews.vn|PR bao lon (vi tri premium)|Magazine 1|60000000||||https://famemedia.vn/new-zings/
+Fame Media|booking-pr|znews.vn|PR bao lon|Chuyen muc nhom 1|16000000||||https://famemedia.vn/new-zings/
+Fame Media|booking-pr|znews.vn|PR bao lon|Thong tin doanh nghiep|12000000||||https://famemedia.vn/new-zings/
+Fame Media|booking-pr|znews.vn|PR bao lon|Chuyen muc nhom 2 (re nhat)|8000000||||https://famemedia.vn/new-zings/
+Fame Media|booking-pr|24h.com.vn|PR bao lon|PR giua muc|14000000||||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|dantri.com.vn|PR bao lon|Tieu muc|12000000||||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|tuoitre.vn|PR bao lon|Tieu muc|8000000||||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|thanhnien.vn|PR bao lon|PR can biet|4000000||300 tu + 1 anh||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|vtv.vn|PR bao lon|Loai 6 Chuyen muc|5000000||||https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baoquangnam.vn|Bao tinh / bao dang|Bai PR link dofollow|1280000|1 link dofollow||Traffic 183.973|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baotayninh.vn|Bao tinh / bao dang|Bai PR link dofollow|1450000|1 link dofollow||Traffic 344.200|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|baolongan.vn|Bao tinh / bao dang|Bai PR link dofollow|2000000|1 link dofollow||Traffic 165.304|https://famemedia.vn/bao-online/
+Fame Media|booking-pr|bienphong.com.vn|Bao link dofollow|Bai PR link dofollow|2200000|1 link dofollow||Traffic 165.000|https://famemedia.vn/bao-online/
+
+# ===== ENTITY / SOCIAL ENTITY =====
+Solann Digital|entity|Social entity - 50 Socials VIP|Social entity|50 profile|539000||Ban giao 7 ngay|Noi dung doc ban, NAP dong bo, index >85%, lam tay 100%, BH 6 thang|https://backlink.solanndigital.com/dich-vu-social-entity
+Solann Digital|entity|Social entity - 100 Socials VIP|Social entity|100 profile|1049000||Ban giao 7-10 ngay|Noi dung doc ban, NAP dong bo|https://backlink.solanndigital.com/dich-vu-social-entity
+Solann Digital|entity|Social entity - 200 Socials + 15 GStack|Social entity|200 profile + Google Stacking|1990000||Ban giao 7-14 ngay|Co 15 GStack|https://backlink.solanndigital.com/dich-vu-social-entity
+Solann Digital|entity|Social entity - 300 Socials + 15 GStack|Social entity|300 profile + Google Stacking|2890000||Ban giao 10-14 ngay|Co 15 GStack|https://backlink.solanndigital.com/dich-vu-social-entity
+Fame Media|entity|Social entity - B150|Social entity|50 link + Google Stack (9 link)|800000||Ban giao 2 ngay|Social + Blog 2.0, index 80-90%|https://famemedia.vn/dich-vu-backlink-entity/
+Fame Media|entity|Social entity - B200|Social entity|200 link + Google Stack (9 link)|1500000||Ban giao 3 ngay||https://famemedia.vn/dich-vu-backlink-entity/
+Fame Media|entity|Social entity - B300|Social entity|300 link + Google Stack (9 link)|2500000||Ban giao 5 ngay||https://famemedia.vn/dich-vu-backlink-entity/
+SEOTOP|entity|Social entity - Goi 1|Social entity|100 social|900000||Ban giao 3 ngay|Gia goc 1.000.000. Schema, BH 60 ngay, index >80%|https://seotop.vn/dich-vu-entity/
+SEOTOP|entity|Social entity - Goi 2|Social entity|200 social|1700000||Ban giao 4 ngay|Gia goc 2.000.000|https://seotop.vn/dich-vu-entity/
+SEOTOP|entity|Social entity - Goi 3|Social entity|300 social|2400000||Ban giao 4 ngay|Gia goc 3.000.000|https://seotop.vn/dich-vu-entity/
+SEOTOP|entity|Social entity - Goi 5|Social entity|500 social|3900000||Ban giao 6 ngay|Gia goc 5.000.000|https://seotop.vn/dich-vu-entity/
+SEOTORO|entity|Social entity - 50|Social entity|50 social|700000||Ban giao 1 ngay|Index >95%, ban giao tai khoan|https://seotoro.vn/dich-vu/dich-vu-entity
+SEOTORO|entity|Social entity - 100|Social entity|100 social|1200000||Ban giao 3 ngay|Index >95%|https://seotoro.vn/dich-vu/dich-vu-entity
+SEOTORO|entity|Social entity - 200|Social entity|200 social|2400000||Ban giao 5 ngay||https://seotoro.vn/dich-vu/dich-vu-entity
+SEOTORO|entity|Social entity - 300|Social entity|300 social|3400000||Ban giao 7 ngay|Schema 3 tang|https://seotoro.vn/dich-vu/dich-vu-entity
+HapoDigital|entity|Social entity - Basic|Social entity|50 social|699000||Ban giao 2 ngay|Index nhanh, ho tro schema|https://hapodigital.com/dich-vu-backlink/
+HapoDigital|entity|Social entity - Golden|Social entity|200 social|2490000||Ban giao 3 ngay||https://hapodigital.com/dich-vu-backlink/
+HapoDigital|entity|Social entity - Diamond|Social entity|300 social|3990000||Ban giao 5 ngay|Tang 1 bai PR bao lon|https://hapodigital.com/dich-vu-backlink/
+BuffSEO|entity|Social entity - Starter|Social entity|120+ social|2200000||Ban giao 7-14 ngay|Stacking, index >85%, schema|https://buffseo.com/dich-vu-entity.html
+BuffSEO|entity|Social entity - Pro|Social entity|250+ social|3290000||Ban giao 7-14 ngay|+2 guest post|https://buffseo.com/dich-vu-entity.html
+BuffSEO|entity|Social entity - Elite|Social entity|300+ social|4500000||Ban giao 7-14 ngay|+1 bai PR + Google Cloud Stacking|https://buffseo.com/dich-vu-entity.html
+Khoahocseotop|entity|Social entity - 50|Social entity|50 social|1000000||Ban giao 1-2 tuan|Cam ket index 100%|https://khoahocseotop.com/dich-vu-entity/
+Khoahocseotop|entity|Social entity - 100|Social entity|100 social|1500000||Ban giao 1-2 tuan|Index 100%|https://khoahocseotop.com/dich-vu-entity/
+Khoahocseotop|entity|Social entity - 200|Social entity|200 social|2000000||Ban giao 1-2 tuan|Index 100%|https://khoahocseotop.com/dich-vu-entity/
+Khoahocseotop|entity|Social entity - 300|Social entity|300 social|2500000||Ban giao 1-2 tuan|Index 85-90%|https://khoahocseotop.com/dich-vu-entity/
+dichvuentity.vn|entity|Social entity - Basic 1|Social entity|100 social|700000||Ban giao 2 ngay|Gia goc 1.000.000. Cam ket index 80%|https://dichvuentity.vn/
+dichvuentity.vn|entity|Social entity - Basic 2|Social entity|300 social|2000000||Ban giao 3-5 ngay|Gia goc 3.500.000|https://dichvuentity.vn/
+dichvuentity.vn|entity|Google Stacking GTV|Social entity|500+ link (4 vong stacking)|2000000|||Gia goc 2.500.000. Stacking thuan|https://dichvuentity.vn/
+Tung Phat|entity|Social entity - Basic|Social entity|100 social|1000000||Ban giao 3 ngay|Khai bao schema, lam tay 100%|https://tungphat.com/dich-vu-seo-entity/
+Tung Phat|entity|Social entity - Diamond|Social entity|300 social|5499000||Ban giao 5 ngay|+1 bai PR + guest post, Google Stacking|https://tungphat.com/dich-vu-seo-entity/
+Vutruso|entity|Full Google Entity + Domain Authority Stacking|Social entity|300 profile|2900000||Backlink vinh vien|Social + Schema + Maps|https://vutruso.com/dich-vu-domain-authority-stacking/
+
+# ===== GUEST POST - DPS.MEDIA (Google Sheet cong khai, ban 8/3/2026) =====
+DPS.MEDIA|guest-post|moddroid.io|Guest post|Bai dang tren site|2000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|infofinance.vn|Guest post|Bai dang tren site|2000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|naototnhat.com|Guest post|Bai dang tren site|2000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|apkdownload.com|Guest post|Bai dang tren site|2000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|giaonhan247.com|Guest post|Bai dang tren site|2400000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|nganhang24h.vn|Guest post|Bai dang tren site|1800000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|nganhangaz.com|Guest post|Bai dang tren site|1600000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|ifintech.vn|Guest post|Bai dang tren site|1400000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|top10timkiem.vn|Guest post|Bai dang tren site|1400000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|disantrangan.vn|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|homegift.vn|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|topreview.vn|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|hagona.com|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|truongthinh.info|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|truongtin.top|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|anhsang.edu.vn|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|congdongdanhgia.com|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|motaikhoannganhang.com|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|dangkyinternetbanking.com|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|appfinance.vn|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|vpnchecked.com|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|giavangnhanh.com|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|congtythienlong.com|Guest post|Bai dang tren site|1300000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|genmec.vn|Guest post|Bai dang tren site|1200000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|congngheaz.com|Guest post|Bai dang tren site|1200000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|kienthucphanmem.com|Guest post|Bai dang tren site|1200000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|ecci.com.vn|Guest post|Bai dang tren site|1200000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|taichinh24h.com.vn|Guest post|Bai dang tren site|1200000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|xaydunghtd.com|Guest post|Bai dang tren site|1160000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|dinhreview.com|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|xaydung.edu.vn|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|camngot.vn|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|hoacanhquangvy.com|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|busvietnam.net|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|vuivuicongnghe.com|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|cachkiemtienol.com|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|gianongsan.org|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|giaonhan247.vn|Guest post|Bai dang tren site|1100000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|goctomo.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|dacocach.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|suamaytinhpci.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|pinxedapdien.com.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|24hexpress.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|uyenuong.net|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|namhocsg.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|minhchautattoo.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|enetviet.edu.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|cuanhuanamwindows.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|mamnonabc.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|hiephoixedien.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|manayi.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|chocanh.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|hieugoogle.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|toptonghop.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|cacanhnho.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|topvantai.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|bestnhat.com|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|techphone.vn|Guest post|Bai dang tren site|1000000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|trambetongtuoi.com|Guest post|Bai dang tren site|930000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|top10hcm.vn|Guest post|Bai dang tren site|900000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|vietnamobile.info|Guest post|Bai dang tren site|900000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|niemtinbaohiem.net|Guest post|Bai dang tren site|900000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|reviewmypham.org|Guest post|Bai dang tren site|900000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|teamvietdev.com|Guest post|Bai dang tren site|900000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|giathep24h.com|Guest post|Bai dang tren site|840000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|gocxanhmuot.com|Guest post|Bai dang tren site|840000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|megatop.vn|Guest post|Bai dang tren site|800000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|megateen.vn|Guest post|Bai dang tren site|800000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|tindichvu.com|Guest post|Bai dang tren site|800000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|fpttelecom24h.org|Guest post|Bai dang tren site|800000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|trungtincamera.com|Guest post|Bai dang tren site|800000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|muaiphone.com|Guest post|Bai dang tren site|800000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|xedapnhapkhau.vn|Guest post|Bai dang tren site|800000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|dailythepxaydung.com|Guest post|Bai dang tren site|750000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|megacar.com.vn|Guest post|Bai dang tren site|700000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|megafin.vn|Guest post|Bai dang tren site|700000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|dienthoaiandroid.com|Guest post|Bai dang tren site|700000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|tech76.vn|Guest post|Bai dang tren site|700000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|carephone.com.vn|Guest post|Bai dang tren site|600000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|meodienthoai.net|Guest post|Bai dang tren site|600000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|hongcongnghe.com|Guest post|Bai dang tren site|600000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|didongnews.com|Guest post|Bai dang tren site|600000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|nhanxetdienthoai.com|Guest post|Bai dang tren site|600000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|duclinhmobile.vn|Guest post|Bai dang tren site|600000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|techphonevn.com|Guest post|Bai dang tren site|600000|||Sheet ghi ro: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+
+# ===== GUEST POST - guestpost.com.vn (marketplace, dong gia 350k) =====
+guestpost.com.vn|guest-post|dentist.com.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA21/PA36/traffic 379.255. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|taixe.com.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA21/PA17/traffic 105.435. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|doctor.com.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA59/PA62/traffic 406.174. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|chuyengia.com.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA70/PA58/traffic 399.554. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|mentor.com.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA31/PA28/traffic 104.958. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|connguoi.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA61/PA55/traffic 267.025. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|nhantuonghoc.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA46/PA48/traffic 250.416. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|cuocsong.com.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA36/PA47/traffic 165.539. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|vietnamta.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA68/PA64/traffic 218.360. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|lyhocdongphuong.org.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA57/PA41/traffic 368.450. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|history.com.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA28/PA59/traffic 361.600. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+guestpost.com.vn|guest-post|nghethuat.com.vn|Guest post|Bai dang tren site|350000|1-2 link dofollow|Giu vinh vien|DA40/PA35/traffic 232.575. Goi thang: 2.5tr/9 bai, 40tr/150 bai|https://guestpost.com.vn/danh-sach/
+
+# ===== GUEST POST - bookbaopr.vn =====
+bookbaopr.vn|guest-post|danangaz.com|Guest post|Bai dang tren site|1550000|||Traffic 51.810/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|inhat.vn/hcm|Guest post|Bai dang tren site|1550000|||Traffic 317.977/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|sum.vn|Guest post|Bai dang tren site|1100000|||Traffic 42.591/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|ifintech.vn|Guest post|Bai dang tren site|950000|||Traffic 181.665/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|disantrangan.vn|Guest post|Bai dang tren site|850000|||Traffic 68.726/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|techmienphi.com|Guest post|Bai dang tren site|850000|||Traffic 803.313/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|genmec.vn|Guest post|Bai dang tren site|800000|||Traffic 11.039/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|alosoft.vn|Guest post|Bai dang tren site|700000|||Traffic 12.241/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|anhsang.edu.vn|Guest post|Bai dang tren site|600000|||Traffic 26.791/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|vietnamtop10.net|Guest post|Bai dang tren site|550000|||Traffic 37.522/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+bookbaopr.vn|guest-post|oto.danang.vn|Guest post|Bai dang tren site|450000|||Traffic 192.431/thang. CK toi 35%|https://bookbaopr.vn/dich-vu-guest-post/
+
+# ===== GUEST POST - global (DPS.MEDIA, site nuoc ngoai) =====
+DPS.MEDIA|guest-post|networkustad.com|Guest post global|Bai dang tren site nuoc ngoai|4420000|||Nhom Guestpost Global (81 site, 1.56tr - 4.42tr)|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|metapress.com|Guest post global|Bai dang tren site nuoc ngoai|3900000|||Nhom Guestpost Global (81 site, 1.56tr - 4.42tr)|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|urbanmatter.com|Guest post global|Bai dang tren site nuoc ngoai|3900000|||Nhom Guestpost Global (81 site, 1.56tr - 4.42tr)|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|techbullion.com|Guest post global|Bai dang tren site nuoc ngoai|2600000|||Nhom Guestpost Global (81 site, 1.56tr - 4.42tr)|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|ipsnews.net|Guest post global|Bai dang tren site nuoc ngoai|2600000|||Nhom Guestpost Global (81 site, 1.56tr - 4.42tr)|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+DPS.MEDIA|guest-post|filmdaily.co|Guest post global|Bai dang tren site nuoc ngoai|1560000|||Nhom Guestpost Global (81 site, 1.56tr - 4.42tr)|https://docs.google.com/spreadsheets/d/1h54Rv4GzK6mJhXAKtpOmuRiSpsY_UbtlYtpwkSVbPEU/edit
+
+# ===== TEXTLINK - ban le theo site =====
+SGC.vn|textlink|raovat.net|Textlink home (site thuong)|Footer all page - theo thang|450000|1 link|Gia/thang|Chua VAT 10%. CK 3 thang 10%, 6 thang 15%, 12 thang 20%|https://sgc.vn/bang-gia-textlink/
+SGC.vn|textlink|webraovat.com|Textlink home (site thuong)|Footer all page, PR 7/10 - theo thang|1000000|1 link|Gia/thang|Chua VAT 10%. CK 3 thang 10%, 6 thang 15%, 12 thang 20%|https://sgc.vn/bang-gia-textlink/
+SGC.vn|textlink|thegioisuckhoe.com|Textlink home (site thuong)|Footer, PR 5/10 - theo thang|450000|1 link|Gia/thang|Chua VAT 10%. CK 3 thang 10%, 6 thang 15%, 12 thang 20%|https://sgc.vn/bang-gia-textlink/
+SGC.vn|textlink|sgc.vn|Textlink home (site thuong)|Footer, PR 5/10 - theo thang|450000|1 link|Gia/thang|Chua VAT 10%. CK 3 thang 10%, 6 thang 15%, 12 thang 20%|https://sgc.vn/bang-gia-textlink/
+SGC.vn|textlink|monchay.com|Textlink home (site thuong)|Footer - theo thang|450000|1 link|Gia/thang|Chua VAT 10%. CK 3 thang 10%, 6 thang 15%, 12 thang 20%|https://sgc.vn/bang-gia-textlink/
+SGC.vn|textlink|cuocsongso.com|Textlink home (site thuong)|Footer, PR 3/10 - theo thang|350000|1 link|Gia/thang|Chua VAT 10%. CK 3 thang 10%, 6 thang 15%, 12 thang 20%|https://sgc.vn/bang-gia-textlink/
+SGC.vn|textlink|ceohcm.com|Textlink home (site thuong)|Footer, PR 3/10 - theo thang|300000|1 link|Gia/thang|Chua VAT 10%. CK 3 thang 10%, 6 thang 15%, 12 thang 20%|https://sgc.vn/bang-gia-textlink/
+SGC.vn|textlink|muabanthuenha.com|Textlink home (site thuong)|Footer, PR 3/10 - theo thang|300000|1 link|Gia/thang|Chua VAT 10%. CK 3 thang 10%, 6 thang 15%, 12 thang 20%|https://sgc.vn/bang-gia-textlink/
+Nguyen Le Diep|textlink|nguyenlediep.com|Textlink bai (site thuong)|Trong bai viet - theo thang|80000|1 link|Gia/thang||https://nguyenlediep.com/khac/textlink
+Nguyen Le Diep|textlink|nguyenlediep.com|Textlink home (site thuong)|Footer - theo thang|250000|1 link|Gia/thang||https://nguyenlediep.com/khac/textlink
+Nguyen Le Diep|textlink|nguyenlediep.com|Textlink home (site thuong)|Top menu - theo thang|500000|1 link|Gia/thang||https://nguyenlediep.com/khac/textlink
+DesignerVN|textlink|designerviet.com|Textlink home (site thuong)|Textlink - toi thieu 2 thang|1200000|1 link nofollow|Gia/thang|Doi sang dofollow: +500.000/thang|https://designerviet.com/pages/textlink/
+Web Thuc Chien|textlink|42 site gov/edu (Quang Nam, Dak Nong...)|Textlink home (gov/edu)|Footer/sidebar all-page - theo thang|800000|1 link|Gia/thang|Dong gia 42 site gov.vn/edu.vn. Nhieu site dat link AN|https://docs.google.com/spreadsheets/d/1e751xVOQlNSpLbM4lLoSzZA3en-KJPIPd0ajvIOB5Uw
+Seotoro|textlink|dantri.com.vn|Textlink bai (bao lon)|Chen link out vao bai PR - dofollow|5000000|1 link dofollow|Gia/thang|MOC TRAN thi truong cho dat link bao lon|https://docs.google.com/spreadsheets/d/1OIOokTsuUOv6vRvMQWj_a7ky__pD8JAvOe-qZneZEl8
+Seotoro|textlink|dantri.com.vn|Textlink bai (bao lon)|Chen link out vao bai PR - nofollow|500000|1 link nofollow|Vinh vien theo bai|Hoac 1.000.000/3 link|https://docs.google.com/spreadsheets/d/1OIOokTsuUOv6vRvMQWj_a7ky__pD8JAvOe-qZneZEl8
+
+# ===== TEXTLINK - goi (N link sidebar tren 20-37 bao) =====
+Guestpost.vn|textlink|Goi 1.000 link / 20-27 bao|Textlink bao (goi)|3 thang|2000000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://guestpost.vn/mua-textlink/
+Guestpost.vn|textlink|Goi 5.000 link / 20-27 bao|Textlink bao (goi)|3 thang|8800000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://guestpost.vn/mua-textlink/
+Headle|textlink|Goi V1 Starter 1.000 link / 20-27 bao|Textlink bao (goi)|3 thang|2200000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://headle.net/dich-vu-textlink-bao/
+Headle|textlink|Goi V5 Enterprise 5.000 link / 20-27 bao|Textlink bao (goi)|3 thang|18200000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://headle.net/dich-vu-textlink-bao/
+BEHA|textlink|Goi 1.300 link bao tinh|Textlink bao (goi)|3 thang|1600000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://beha.vn/dich-vu-backlink-bao-tinh
+BEHA|textlink|Goi 13.000 link bao tinh|Textlink bao (goi)|3 thang|14000000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://beha.vn/dich-vu-backlink-bao-tinh
+Tung Phat|textlink|Goi TL-1|Textlink bao (goi)|theo goi|2000000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://tungphat.com/mua-textlink-bao/
+Tung Phat|textlink|Goi TL-8|Textlink bao (goi)|theo goi|31000000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://tungphat.com/mua-textlink-bao/
+SEEU|textlink|Goi 30 bao chinh thong|Textlink bao (goi)|BH 1 nam|2500000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://seeu.vn/dich-vu-textlink-bao/
+Fame Media|textlink|Goi S31 backlink bao|Textlink bao (goi)|theo goi|1500000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://famemedia.vn/backlink-bao/
+Fame Media|textlink|Goi S125 backlink bao|Textlink bao (goi)|theo goi|53600000|||Goi sidebar tren nhieu bao, khong ban le theo tung bao|https://famemedia.vn/backlink-bao/
+
+# ===== SEOViP - sheet chi tiet (gia niem yet + gia CK, so link, quy cach) =====
+SEOViP|booking-pr|vnexpress.net|PR bao lon|Chuyen muc Doanh nghiep|30000000|2 link|Bai 1000 tu + 3 anh. Phi edit 2.5tr neu huy|Gia CK cua NCC: 28350000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vnexpress.net|PR bao lon|Muc tieu dung|18000000|2 link|Khong ban them link|Gia CK cua NCC: 17000000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vnexpress.net|PR bao lon|Thong tin doanh nghiep (ton tai 2 nam)|15000000|||Gia CK cua NCC: 14400000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vnexpress.net|PR bao lon|Tieu muc|12000000|||Gia CK cua NCC: 11340000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|dantri.com.vn|PR bao lon|Chuyen muc phu hop|20000000|700k/link, chi nhan .vn|1000 tu, 3 anh, thumb 700x467|Gia CK cua NCC: 17280000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|dantri.com.vn|PR bao lon|Tieu muc phu hop|15000000|||Gia CK cua NCC: 12960000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|tuoitre.vn|PR bao lon|Trang chuyen muc|22000000|khong chen link||Gia CK cua NCC: 21330000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|tuoitre.vn|PR bao lon|PR can biet|9000000|khong chen link|800 chu, 3 anh|Gia CK cua NCC: 8320000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|thanhnien.vn|PR bao lon|Tieu muc phu hop|17000000|2 link|800 tu, 3 anh|Gia CK cua NCC: 16200000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|thanhnien.vn|PR bao lon|Muc can biet|4500000|1 link|300 chu + 1 anh, anchor 3 tu|Gia CK cua NCC: 4320000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|znews.vn|PR bao lon|Tieu muc phu hop|16000000|2 link|Them link 1.300.000|Gia CK cua NCC: 15120000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|znews.vn|PR bao lon|Muc phu hop|12000000|||Gia CK cua NCC: 11340000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|kenh14.vn|PR bao lon|Bai thu 6 stream1 trang chu|20000000|||Gia CK cua NCC: 19440000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|kenh14.vn|PR bao lon|Chuyen muc phu hop|9000000|1 link|1000 tu, 5 anh, anchor 2/3 cuoi bai|Gia CK cua NCC: 8640000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|24h.com.vn|PR bao lon|Box tin tuc thi truong - trang chu (PR loai 1)|9000000|3 link|Ghim dau 1 ngay +15tr|Gia CK cua NCC: 8500000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|24h.com.vn|PR bao lon|Box tin tuc thi truong - chuyen muc (PR loai 2)|6000000|3 link|1000 tu, 5 anh|Gia CK cua NCC: 5670000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|cafef.vn|PR bao lon|Chuyen muc phu hop|13000000|1 link||Gia CK cua NCC: 12960000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|cafef.vn|PR bao lon|Thong tin doanh nghiep|9000000|1 link||Gia CK cua NCC: 8640000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|cafef.vn|PR bao lon|Bai trang chu 1 ngay|8500000|||Gia CK cua NCC: 8100000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|cafebiz.vn|PR bao lon|Bai loai 2 trang chu|10000000|1 link||Gia CK cua NCC: 9720000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|cafebiz.vn|PR bao lon|Bai trong chuyen muc|6000000|1 link|1000 tu, 3 anh, thumb 600x375|Gia CK cua NCC: 5400000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|soha.vn|PR bao lon|Bai tren trang chu|11000000|||Gia CK cua NCC: 10800000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|soha.vn|PR bao lon|Chuyen muc phu hop|6000000|1 link|1000 tu, 3 anh|Gia CK cua NCC: 5400000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|afamily.vn|PR bao lon|Bai thu 5 stream trang chu|11000000|||Gia CK cua NCC: 10800000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|afamily.vn|PR bao lon|Bai trong chuyen muc|3500000|1 link||Gia CK cua NCC: 3240000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|eva.vn|PR bao lon|Tieu muc phu hop|5000000|2 link|Khong nhan PR ca nhan|Gia CK cua NCC: 4520000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|webtretho.com|PR bao lon|Muc phu hop|8500000|2 link||Gia CK cua NCC: 8300000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baodautu.vn|PR bao lon|TT doanh nghiep|5000000|Them link 2.800.000||Gia CK cua NCC: 4725000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vietnamnet.vn|PR bao lon|Top 1 tieu muc|10000000|Phi gan link 7tr/link, link ton tai 3 thang||Gia CK cua NCC: 9850000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vietnamnet.vn|PR bao lon|Top 6 tieu muc|6000000|||Gia CK cua NCC: 5900000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|laodong.vn|PR bao lon|Thong tin doanh nghiep|7500000|4tr/link|600 tu, 3 anh|Gia CK cua NCC: 7100000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|tienphong.vn|PR bao lon|Chuyen muc phu hop|6000000|1 link chi nhan .vn||Gia CK cua NCC: 5430000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vtv.vn|PR bao lon|Tieu muc phu hop|7000000|4tr/link|Sapo <170 ky tu|Gia CK cua NCC: 6560000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vtcnews.vn|PR bao lon|Muc phu hop|6000000|1 link||Gia CK cua NCC: 3980000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vov.vn|PR bao lon|Chuyen muc|11000000|||Gia CK cua NCC: 10120000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vov.vn|PR bao lon|Tieu muc|6500000|Khong chen link|Bai ton tai 9 thang|Gia CK cua NCC: 6080000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vneconomy.vn|PR bao lon|Muc phu hop|12000000|Khong chen link||Gia CK cua NCC: 11340000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|congthuong.vn|PR bao lon|Muc phu hop|11000000|4tr/link||Gia CK cua NCC: 10800000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|dep.com.vn|PR bao lon|Muc phu hop|13000000|1.300.000/link||Gia CK cua NCC: 12150000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|cafeland.vn|PR bao lon|Muc phu hop|14000000|1 link|800 tu, 2 anh|Gia CK cua NCC: 13600000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|wiki.batdongsan.com.vn|PR bao lon|Muc phu hop|6500000|2 link||Gia CK cua NCC: 6480000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|genk.vn|PR bao lon|Top 1 trang chu|25000000|||Gia CK cua NCC: . Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|genk.vn|PR bao lon|Chuyen muc phu hop|4500000|1 link||Gia CK cua NCC: 4270000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|gamek.vn|PR bao lon|Muc phu hop|6500000|1 link|1000 tu, 5 anh|Gia CK cua NCC: 6480000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|ngoisao.vnexpress.net|PR bao lon|Chuyen muc phu hop|7000000|2 link||Gia CK cua NCC: 6700000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|plo.vn|PR bao lon|Muc phu hop|4000000|2 link|800 tu, 2 anh, tieu de 13 tu|Gia CK cua NCC: 3900000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baoquocte.vn|PR bao lon|Muc phu hop|3000000|1.300.000/link||Gia CK cua NCC: 2300000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|anninhthudo.vn|PR bao lon|Muc phu hop|5000000|2 link||Gia CK cua NCC: 4725000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|suckhoedoisong.vn|PR bao lon|Muc phu hop|5000000|1 link||Gia CK cua NCC: 4860000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|bienphong.com.vn|PR bao lon|Muc phu hop|2000000|2 link dofollow||Gia CK cua NCC: 1600000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|vietbao.vn|PR bao lon|Muc can biet|3000000|2 link||Gia CK cua NCC: 2700000. Chua VAT 8%. Phi san xuat bai 300k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+
+# ===== SEOViP - bao tinh =====
+SEOViP|booking-pr|baokhanhhoa.vn|Bao tinh / bao dang|Muc phu hop|4950000|2 link dofollow|1000 tu, 3 anh|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baodaklak.vn|Bao tinh / bao dang|Muc phu hop|5900000|1 link do, them 700k/link||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baolaocai.vn|Bao tinh / bao dang|Muc phu hop|4600000|2 link nofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|nghean24h.vn|Bao tinh / bao dang|Muc phu hop|3650000|2 link dofollow|800 tu, 3 anh|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|hanoimoi.com.vn|Bao tinh / bao dang|Muc phu hop|3400000|Khong gan link|1000 tu, 5 anh, yeu cau GPKD|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baonghean.vn|Bao tinh / bao dang|Muc phu hop|2700000|2 link nofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baodongthap.vn|Bao tinh / bao dang|Muc phu hop|2500000|2 link, them 400k|<500 tu (3.400.000 neu <800 tu)|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|truyenhinhnghean.vn|Bao tinh / bao dang|Muc phu hop|2000000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baolangson.vn|Bao tinh / bao dang|Muc phu hop|1800000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baocaobang.vn|Bao tinh / bao dang|Muc phu hop|1800000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baothainguyen.vn|Bao tinh / bao dang|Muc phu hop|1750000|2 link dofollow|1000 tu, 3 anh, GPKD|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baocantho.com.vn|Bao tinh / bao dang|Muc phu hop|1750000|2 link do, them 300k||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baotayninh.vn|Bao tinh / bao dang|Muc phu hop|1750000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baoquangninh.vn|Bao tinh / bao dang|Muc phu hop|1600000|2 link dofollow|GPKD|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baothanhhoa.vn|Bao tinh / bao dang|Muc phu hop|1600000|2 link dofollow|Chi gan link .vn|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baophutho.vn|Bao tinh / bao dang|Muc phu hop|1550000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baoangiang.com.vn|Bao tinh / bao dang|Muc phu hop|1500000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baodongnai.com.vn|Bao tinh / bao dang|Muc phu hop|1500000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baocamau.vn|Bao tinh / bao dang|Muc phu hop|1500000|2 link||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baovinhlong.com.vn|Bao tinh / bao dang|Muc phu hop|1500000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|huengaynay.vn|Bao tinh / bao dang|Muc phu hop|1500000|2 link dofollow|Link ton tai 1 nam|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baohatinh.vn|Bao tinh / bao dang|Muc phu hop|1300000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baodienbienphu.vn|Bao tinh / bao dang|Muc phu hop|1200000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baotuyenquang.com.vn|Bao tinh / bao dang|Muc phu hop|1150000|2 link do, them 300k||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|baodanang.vn|Bao tinh / bao dang|Muc phu hop|1100000|2 link dofollow|Duyet 7-10 ngay|Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+SEOViP|booking-pr|angiangtv.vn|Bao tinh / bao dang|Muc phu hop|1100000|2 link dofollow||Chua VAT 8%. Phi san xuat bai 150k|https://docs.google.com/spreadsheets/d/1nnNiOqhXnBm7rEX1uEh89wFqZkbYmhYVtCfFJdphDy4
+
+# ===== DPS.MEDIA - bao PR nofollow (sheet cong khai 15/2/2026) =====
+DPS.MEDIA|booking-pr|vtcnews.vn|PR bao lon|Bai PR nofollow|112500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vnexpress.net|PR bao lon|Bai PR nofollow|96750000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|cafef.vn|PR bao lon|Bai PR nofollow|93000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|znews.vn|PR bao lon|Bai PR nofollow|73500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|dantri.com.vn|PR bao lon|Bai PR nofollow|72000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|laodong.vn|PR bao lon|Bai PR nofollow|69750000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vneconomy.vn|PR bao lon|Bai PR nofollow|54000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|tuoitre.vn|PR bao lon|Bai PR nofollow|52500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vietnamnet.vn|PR bao lon|Bai PR nofollow|51000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|thanhnien.vn|PR bao lon|Bai PR nofollow|45900000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|ngoisao.vn|PR bao lon|Bai PR nofollow|37500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|batdongsan.com.vn|PR bao lon|Bai PR nofollow|33750000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baophapluat.vn|PR bao lon|Bai PR nofollow|31500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|yan.vn|PR bao lon|Bai PR nofollow|31500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|eva.vn|PR bao lon|Bai PR nofollow|30000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|gamek.vn|PR bao lon|Bai PR nofollow|27000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|cafeland.vn|PR bao lon|Bai PR nofollow|24750000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|24h.com.vn|PR bao lon|Bai PR nofollow|24000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|webtretho.com|PR bao lon|Bai PR nofollow|24000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|tienphong.vn|PR bao lon|Bai PR nofollow|22500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baodautu.vn|PR bao lon|Bai PR nofollow|21000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|soha.vn|PR bao lon|Bai PR nofollow|20250000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|afamily.vn|PR bao lon|Bai PR nofollow|20250000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|diendandoanhnghiep.vn|PR bao lon|Bai PR nofollow|19300000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|doanhnhansaigon.vn|PR bao lon|Bai PR nofollow|18200000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|yeah1.com|PR bao lon|Bai PR nofollow|18000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|thitruong.nld.com.vn|PR bao lon|Bai PR nofollow|18000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|tinhte.vn|PR bao lon|Bai PR nofollow|16800000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|kenh14.vn|PR bao lon|Bai PR nofollow|16500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|cafebiz.vn|PR bao lon|Bai PR nofollow|16500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|genk.vn|PR bao lon|Bai PR nofollow|16500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|doisongphapluat.com|PR bao lon|Bai PR nofollow|16400000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vtv.vn|PR bao lon|Bai PR nofollow|16200000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vietnamnews.vn|PR bao lon|Bai PR nofollow|15800000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|nhadautu.vn|PR bao lon|Bai PR nofollow|14200000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|autopro.com.vn|PR bao lon|Bai PR nofollow|14000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|phunutoday.vn|PR bao lon|Bai PR nofollow|10200000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|phunuonline.com.vn|PR bao lon|Bai PR nofollow|9700000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vov.vn|PR bao lon|Bai PR nofollow|9200000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|thethao247.vn|PR bao lon|Bai PR nofollow|8700000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|congly.vn|PR bao lon|Bai PR nofollow|8500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|phunuvietnam.vn|PR bao lon|Bai PR nofollow|7600000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|saostar.vn|PR bao lon|Bai PR nofollow|7200000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vietnammoi.vn|PR bao lon|Bai PR nofollow|7000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|suckhoedoisong.vn|PR bao lon|Bai PR nofollow|5600000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vietnambiz.vn|PR bao lon|Bai PR nofollow|5500000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|alobacsi.com|PR bao lon|Bai PR nofollow|5000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|techz.vn|PR bao lon|Bai PR nofollow|5000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|nguoiduatin.vn|PR bao lon|Bai PR nofollow|5000000|nofollow||Sheet ghi: gia tham khao, phu thuoc chinh sach toa soan|https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+
+# ===== DPS.MEDIA - bao PR dofollow =====
+DPS.MEDIA|booking-pr|plo.vn|Bao link dofollow|Bai PR dofollow|5500000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vnmedia.vn|Bao link dofollow|Bai PR dofollow|5000000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|megafun.vn|Bao link dofollow|Bai PR dofollow|4700000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|xahoi.com.vn|Bao link dofollow|Bai PR dofollow|4000000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vietstock.vn|Bao link dofollow|Bai PR dofollow|4000000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|thethaovanhoa.vn|Bao link dofollow|Bai PR dofollow|3900000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vietbao.vn|Bao link dofollow|Bai PR dofollow|3800000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|bienphong.com.vn|Bao link dofollow|Bai PR dofollow|3600000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|phunuvagiadinh.vn|Bao link dofollow|Bai PR dofollow|3600000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|suckhoeviet.org.vn|Bao link dofollow|Bai PR dofollow|3600000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|giadinhvaphapluat.vn|Bao link dofollow|Bai PR dofollow|3000000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|phapluatvacuocsong.vn|Bao link dofollow|Bai PR dofollow|3000000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|xaluannews.com|Bao link dofollow|Bai PR dofollow|2900000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|lamchame.vn|Bao link dofollow|Bai PR dofollow|2700000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|hanghoathuonghieu.vn|Bao link dofollow|Bai PR dofollow|2700000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|tuoitrexahoi.vn|Bao link dofollow|Bai PR dofollow|2400000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|nongthonvaphattrien.vn|Bao link dofollow|Bai PR dofollow|2200000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|tieudungtiepthi.vn|Bao link dofollow|Bai PR dofollow|2200000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|nhipsongdothi.info|Bao link dofollow|Bai PR dofollow|1800000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|songdep.com.vn|Bao link dofollow|Bai PR dofollow|1700000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|kinhtevadautu.vn|Bao link dofollow|Bai PR dofollow|1700000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|datnuoc.com.vn|Bao link dofollow|Bai PR dofollow|1500000|dofollow|||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|ngoisao.net.vn|Bao link dofollow|Bai PR gia re|1700000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|suckhoevacongdong.com|Bao link dofollow|Bai PR gia re|1600000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|vanhoathoidai.vn|Bao link dofollow|Bai PR gia re|1600000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|khoahoccuocsong.com|Bao link dofollow|Bai PR gia re|1500000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|thuonghieuvacuocsong.vn|Bao link dofollow|Bai PR gia re|1500000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|propr.vn|Bao link dofollow|Bai PR gia re|1500000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|doisongvaphattrien.vn|Bao link dofollow|Bai PR gia re|1400000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+
+# ===== DPS.MEDIA - bao tinh =====
+DPS.MEDIA|booking-pr|baobinhdinh.vn|Bao tinh / bao dang|Bai PR|3200000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baolamdong.vn|Bao tinh / bao dang|Bai PR|3000000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baoninhbinh.org.vn|Bao tinh / bao dang|Bai PR|2900000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baothanhhoa.vn|Bao tinh / bao dang|Bai PR|2800000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baoquangninh.vn|Bao tinh / bao dang|Bai PR|2800000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baoquangbinh.vn|Bao tinh / bao dang|Bai PR|2600000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baocantho.com.vn|Bao tinh / bao dang|Bai PR|2600000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baolongan.vn|Bao tinh / bao dang|Bai PR|2500000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baocamau.vn|Bao tinh / bao dang|Bai PR|2500000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baoangiang.com.vn|Bao tinh / bao dang|Bai PR|2400000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baodongnai.com.vn|Bao tinh / bao dang|Bai PR|2400000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baobackan.vn|Bao tinh / bao dang|Bai PR|2400000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|huengaynay.vn|Bao tinh / bao dang|Bai PR|2400000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baodienbienphu.com.vn|Bao tinh / bao dang|Bai PR|2200000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baohungyen.vn|Bao tinh / bao dang|Bai PR|2100000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baophutho.vn|Bao tinh / bao dang|Bai PR|2000000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baotuyenquang.com.vn|Bao tinh / bao dang|Bai PR|2000000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baotayninh.vn|Bao tinh / bao dang|Bai PR|1900000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baohatinh.vn|Bao tinh / bao dang|Bai PR|1900000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baoquangngai.vn|Bao tinh / bao dang|Bai PR|1700000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baothainguyen.vn|Bao tinh / bao dang|Bai PR|1600000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baodanang.vn|Bao tinh / bao dang|Bai PR|1580000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baohagiang.vn|Bao tinh / bao dang|Bai PR|1400000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baothaibinh.com.vn|Bao tinh / bao dang|Bai PR|1360000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+DPS.MEDIA|booking-pr|baoquangnam.vn|Bao tinh / bao dang|Bai PR|1300000||||https://docs.google.com/spreadsheets/d/1BS00ZmGiGUZdNil4obhn7rqdHDRsqi32PksWpChmle8
+
+# ===== Guestpost.vn - textlink bao theo tung site (3/6/12 thang) =====
+Guestpost.vn|textlink|doanhnghiephoinhap.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|1000000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|doanhnghiephoinhap.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|1500000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|doanhnghiephoinhap.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|2000000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baothainguyen.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|1000000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baothainguyen.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|1500000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baothainguyen.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|2000000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|huengaynay.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|1000000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|huengaynay.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|1500000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|huengaynay.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|2000000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baotuyenquang.com.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|1000000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baotuyenquang.com.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|1500000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baotuyenquang.com.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|2000000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baolangson.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|1000000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baolangson.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|1500000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baolangson.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|2000000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baolaocai.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|1000000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baolaocai.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|1500000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baolaocai.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|2000000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baogialai.com.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|1000000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baogialai.com.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|1500000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baogialai.com.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|2000000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baocamau.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|1000000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baocamau.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|1500000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|baocamau.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|2000000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thitruongtaichinh.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|430000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thitruongtaichinh.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|570000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thitruongtaichinh.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|715000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|tieudung.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|430000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|tieudung.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|570000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|tieudung.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|715000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|giaothonghanoi.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|430000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|giaothonghanoi.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|570000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|giaothonghanoi.kinhtedothi.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|715000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|hanoitimes.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|430000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|hanoitimes.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|570000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|hanoitimes.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|715000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|reatimes.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|430000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|reatimes.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|570000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|reatimes.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|715000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thanhnienviet.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|430000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thanhnienviet.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|570000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thanhnienviet.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|715000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|phunuvagiadinh.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|430000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|phunuvagiadinh.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|570000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|phunuvagiadinh.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|715000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thieunien.vn|Textlink home (bao)|Trang chu/chuyen muc - 3 thang|430000|1 link|Gia tron goi 3 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thieunien.vn|Textlink home (bao)|Trang chu/chuyen muc - 6 thang|570000|1 link|Gia tron goi 6 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+Guestpost.vn|textlink|thieunien.vn|Textlink home (bao)|Trang chu/chuyen muc - 12 thang|715000|1 link|Gia tron goi 12 thang||https://docs.google.com/spreadsheets/d/1MzjTwv811rzgZYnLdzXF7j7_QcQCr3qfrYDy-p-8ks4
+
+# ===== TOPLIST - thue vi tri / dang bai =====
+DanaSEO|toplist|Goi Dia phuong - 1 site toplist|Toplist - thue vi tri|Top 1-3 (1 site local)|299000||Gia/thang||https://danaseo.net/dich-vu-toplist
+DanaSEO|toplist|Goi Toan quoc - 5 site toplist|Toplist - thue vi tri|Top 1-3 (5 website)|999000||Gia/thang||https://danaseo.net/dich-vu-toplist
+DanaSEO|toplist|Goi Cao cap - 15 site toplist|Toplist - thue vi tri|Top 1-3 (15 website + banner)|3900000||Gia/thang||https://danaseo.net/dich-vu-toplist
+DanaSEO|toplist|Toplist HN & HCM (nganh suc khoe)|Toplist - thue vi tri|Top 1 - theo thang|500000|1 link|Gia/thang|6 thang 2.850.000 - 1 nam 5.500.000|https://danaseo.net/dich-vu-toplist
+DanaSEO|toplist|Toplist HN & HCM (nganh suc khoe)|Toplist - thue vi tri|Top 3 - theo thang|410000|1 link|Gia/thang|6 thang 2.300.000 - 1 nam 4.500.000|https://danaseo.net/dich-vu-toplist
+DanaSEO|toplist|Toplist HN & HCM (nganh khac)|Toplist - thue vi tri|Top 1 - theo thang|300000|1 link|Gia/thang|6 thang 1.650.000 - 1 nam 3.200.000|https://danaseo.net/dich-vu-toplist
+DanaSEO|toplist|Toplist HN & HCM (nganh khac)|Toplist - thue vi tri|Top 3 - theo thang|250000|1 link|Gia/thang|6 thang 1.400.000 - 1 nam 2.700.000|https://danaseo.net/dich-vu-toplist
+DanaSEO|toplist|Toplist tinh / quan huyen|Toplist - thue vi tri|Top 1-3 - theo thang|145000|1 link|Gia/thang|Dai 145.000 - 360.000 tuy vi tri + chu de|https://danaseo.net/dich-vu-toplist
+Newtop.vn|toplist|He thong site toplist Newtop|Toplist - thue vi tri|Top 1 - theo nam|1000000||Gia/nam|Yeu cau bai dang top 10 Google|https://newtop.vn/dich-vu-toplist/
+Newtop.vn|toplist|He thong site toplist Newtop|Toplist - thue vi tri|Top 3 - theo nam|800000||Gia/nam||https://newtop.vn/dich-vu-toplist/
+Newtop.vn|toplist|He thong site toplist Newtop|Toplist - thue vi tri|Top 5 - theo nam|600000||Gia/nam||https://newtop.vn/dich-vu-toplist/
+Newtop.vn|toplist|He thong site toplist Newtop|Toplist - thue vi tri|Top 7-10 - theo nam|400000||Gia/nam||https://newtop.vn/dich-vu-toplist/
+ATP Media|toplist|Combo 5 site toplist|Toplist - thue vi tri|Top 1-3 (12 thang)|1800000|nofollow|Gia/nam|Mang 50+ site, sua bai free|https://atpsoftware.vn/dich-vu-toplist/
+ATP Media|toplist|Combo 8 site toplist|Toplist - thue vi tri|Top 1-3 (12 thang)|2500000|nofollow|Gia/nam||https://atpsoftware.vn/dich-vu-toplist/
+ATP Media|toplist|Combo 15 site toplist|Toplist - thue vi tri|Top 1-3 (12 thang)|4000000|nofollow|Gia/nam||https://atpsoftware.vn/dich-vu-toplist/
+iToplist|toplist|itoplist.vn|Toplist - thue vi tri|Top 1 - theo nam|3500000|2 link dofollow|250 tu, 2 anh|6 thang 1.700.000. Toi thieu 6 thang|https://itoplist.vn/bang-gia-guest-post-toplist/
+iToplist|toplist|itoplist.vn|Toplist - thue vi tri|Top 2 - theo nam|3000000|1 link dofollow|200 tu, 1 anh|6 thang 1.400.000|https://itoplist.vn/bang-gia-guest-post-toplist/
+iToplist|toplist|itoplist.vn|Toplist - thue vi tri|Top 3 - theo nam|2500000|1 link dofollow|200 tu, 1 anh|6 thang 1.100.000|https://itoplist.vn/bang-gia-guest-post-toplist/
+iToplist|toplist|itoplist.vn|Toplist - dang bai|Chen vao bai toplist co san|2000000|2 link dofollow|Vinh vien|Toi da 2 don vi/bai|https://itoplist.vn/bang-gia-guest-post-toplist/
+iToplist|toplist|itoplist.vn|Toplist - dang bai|Bai moi (khach gui content)|800000|2 link dofollow|<1000 tu + 5 anh, vinh vien||https://itoplist.vn/bang-gia-guest-post-toplist/
+SETUPOTA|toplist|Site toplist doi tac|Toplist - thue vi tri|Top 1 - theo nam|4500000|2 link dofollow|250 tu, 2 anh|6 thang 2.400.000|https://setupota.vn/book-bao-pr-toplist/
+SETUPOTA|toplist|Site toplist doi tac|Toplist - thue vi tri|Top 3 - theo nam|2400000|1 link dofollow|200 tu, 1 anh||https://setupota.vn/book-bao-pr-toplist/
+Toplist Viet|toplist|toplistviet.org|Toplist - dang bai|Bai moi (nganh thuong)|200000||Vinh vien|My pham, giao duc, du lich, cong nghe|https://toplistviet.org/dich-vu-guest-post-backlink-tren-toplistviet-bang-gia-quang-cao.html
+BT Marketing|toplist|Website authority cao|Toplist - dang bai|Top 1-2 (goi Nang cao)|1500000||1 bai toplist PR|Dai gia 1.500.000 - 3.000.000|https://btmkt.vn/dich-vu-toplist-pr/
+BT Marketing|toplist|Blog/website traffic trung binh|Toplist - dang bai|Top 3-5 (goi Co ban)|700000||1 bai toplist PR|Dai gia 700.000 - 1.200.000|https://btmkt.vn/dich-vu-toplist-pr/
+MOMD|guest-post|Guest post Tier 3 (blog nganh, DR 30-60, traffic 50K+)|Guest post|Bai trong chuyen muc|800000|1 link dofollow|800-1000 tu|index 3-7 ngay; da gom VAT|https://momd.vn/dich-vu-seo/guest-post
+MOMD|guest-post|Guest post Tier 2 (bao chuyen nganh, DR 60-80, traffic 500K+)|Guest post|Bai trong chuyen muc|1500000|1-2 link dofollow|1000-1500 tu - co anh|index 24-72h|https://momd.vn/dich-vu-seo/guest-post
+MOMD|guest-post|Guest post Tier 1 (bao quoc gia, DR 80+, traffic 5M+)|Guest post|Bai trong chuyen muc|3000000|2 link dofollow|1200-1800 tu|index 6-24h; duyet bien tap|https://momd.vn/dich-vu-seo/guest-post
+WIFIM JSC|guest-post|324 site guest post da nganh (dong gia)|Guest post|Bai trong chuyen muc|800000|1 link|khong ro|dong gia moi site; xuat VAT|https://wifim.vn/dich-vu-guest-post/
+SEO Center|guest-post|Site DA/DR tu 30 tro len|Guest post|Bai trong chuyen muc|800000|1 link|toi uu anchor text|goi 10 bai 8000000; giu link toi thieu 12 thang|https://seocenter.vn/dich-vu/backlink/
+SEO Center|booking-pr|dantri.com.vn|PR bao lon|Bai PR chuyen muc|5000000|2 link dofollow|khong ro|goi 3 bai 15000000; giu link toi thieu 12 thang|https://seocenter.vn/dich-vu/backlink/
+SEO Center|booking-pr|24h.com.vn|PR bao lon|Bai PR chuyen muc|5000000|2 link dofollow|khong ro|goi 3 bai 15000000|https://seocenter.vn/dich-vu/backlink/
+SEO Center|booking-pr|cafef.vn|PR bao lon|Bai PR chuyen muc|5000000|2 link dofollow|khong ro|goi 3 bai 15000000|https://seocenter.vn/dich-vu/backlink/
+Vua Web Digi|guest-post|Goi Startup 2 bai (site DR/UR cao)|Guest post|Bai trong chuyen muc|149500|1-2 link dofollow|khong ro|goi 2 bai 299000; luu 3 thang|https://vuawebdigi.com/dich-vu-marketing-online-tron-goi/dich-vu-guest-post/
+Vua Web Digi|guest-post|Goi Standard 3 bai|Guest post|Bai trong chuyen muc|199667|1-2 link dofollow|khong ro|goi 3 bai 599000; luu 6 thang|https://vuawebdigi.com/dich-vu-marketing-online-tron-goi/dich-vu-guest-post/
+Vua Web Digi|guest-post|Goi VIP 5 bai|Guest post|Bai trong chuyen muc|199800|1-2 link dofollow|khong ro|goi 5 bai 999000; luu 12 thang|https://vuawebdigi.com/dich-vu-marketing-online-tron-goi/dich-vu-guest-post/
+Vua Web Digi|guest-post|Goi Super VIP 5 bai|Guest post|Bai trong chuyen muc|599800|1-2 link dofollow|khong ro|goi 5 bai 2999000; link vinh vien|https://vuawebdigi.com/dich-vu-marketing-online-tron-goi/dich-vu-guest-post/
+Vua Web Digi|guest-post|Goi Super Sieu VIP 10 bai|Guest post|Bai trong chuyen muc|499900|1-2 link dofollow|khong ro|goi 10 bai 4999000; link vinh vien|https://vuawebdigi.com/dich-vu-marketing-online-tron-goi/dich-vu-guest-post/
+Backlink.com.vn|guest-post|He thong site guest post (goi 20 bai)|Guest post|Bai trong chuyen muc|100000|2 link dofollow|800-1000 tu unique - 2-3 anh|cam ket index 100%; bao hanh 2 nam|https://backlink.com.vn/guest-post-service
+Backlink.com.vn|guest-post|He thong site guest post (goi 50 bai)|Guest post|Bai trong chuyen muc|90000|2 link dofollow|800-1000 tu unique - 2-3 anh|bao hanh 2 nam|https://backlink.com.vn/guest-post-service
+Backlink.com.vn|guest-post|He thong site guest post (goi 100 bai)|Guest post|Bai trong chuyen muc|80000|2 link dofollow|800-1000 tu unique - 2-3 anh|bao hanh 2 nam|https://backlink.com.vn/guest-post-service
+Tenmienngon|guest-post|He thong site guest post (khach tu gui content)|Guest post|Bai trong chuyen muc|50000|2 link dofollow|khach tu gui bai|bao hanh hoan tien 15 thang|https://www.tenmienngon.com/p/guest-post-va-backlink.html
+Tenmienngon|guest-post|He thong site guest post (content spin)|Guest post|Bai trong chuyen muc|120000|2 link dofollow|content spin|bao hanh hoan tien 15 thang|https://www.tenmienngon.com/p/guest-post-va-backlink.html
+Tenmienngon|guest-post|He thong site guest post (content unique 90%)|Guest post|Bai trong chuyen muc|200000|2 link dofollow|content unique 90%|bao hanh hoan tien 15 thang|https://www.tenmienngon.com/p/guest-post-va-backlink.html
+BICTweb|guest-post|He thong site guest post da nganh|Guest post|Bai trong chuyen muc|300000|2 link dofollow|1000+ tu - unique tren 90%|gia mem: gia tu; luu 12 thang|https://bictweb.vn/dich-vu-mua-ban-guest-post-backlink-chat-luong-gia-re/
+Tran Tien Duy|textlink|Goi D1 Standard - 1.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|2000000|1000 link|Gioi han 35 tu khoa|Thoi han 3 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D1 Pro - 1.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|3300000|1000 link|Gioi han 35 tu khoa|Thoi han 6 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D1 Premium - 1.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|4800000|1000 link|Gioi han 35 tu khoa|Thoi han 12 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D2 Standard - 3.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|5600000|3000 link|Gioi han 50 tu khoa|Thoi han 3 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D2 Pro - 3.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|9000000|3000 link|Gioi han 50 tu khoa|Thoi han 6 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D2 Premium - 3.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|14000000|3000 link|Gioi han 50 tu khoa|Thoi han 12 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D3 Standard - 5.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|8800000|5000 link|Gioi han 80 tu khoa|Thoi han 3 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D3 Pro - 5.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|14800000|5000 link|Gioi han 80 tu khoa|Thoi han 6 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D3 Premium - 5.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|22000000|5000 link|Gioi han 80 tu khoa|Thoi han 12 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D4 Standard - 10.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|16800000|10000 link|Gioi han 100 tu khoa|Thoi han 3 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D4 Pro - 10.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|26800000|10000 link|Gioi han 100 tu khoa|Thoi han 6 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D4 Premium - 10.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|43800000|10000 link|Gioi han 100 tu khoa|Thoi han 12 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D5 Starter - 15.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|24000000|15000 link|Gioi han 120 tu khoa|Thoi han 3 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D5 Pro - 15.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|40000000|15000 link|Gioi han 120 tu khoa|Thoi han 6 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+Tran Tien Duy|textlink|Goi D5 Premium - 15.000 link|Textlink bai|Sidebar bai viet - 20-27 dau bao|62800000|15000 link|Gioi han 120 tu khoa|Thoi han 12 thang|https://trantienduy.com/bao-gia-mua-textlink-bao/
+WINNET|textlink|Textlink bao - trang chu (22 dau bao)|Textlink home|Sidebar trang chu|1500000|1 link|DA/PA 35-59 - DR 35-75|Thoi han 3 thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|Textlink bao - trang chu (22 dau bao)|Textlink home|Sidebar trang chu|2600000|1 link|DA/PA 35-59 - DR 35-75|Thoi han 6 thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|Textlink bao - trang chu (22 dau bao)|Textlink home|Sidebar trang chu|3800000|1 link|DA/PA 35-59 - DR 35-75|Thoi han 12 thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|Textlink bao - chuyen muc (22 dau bao)|Textlink bai|Sidebar chuyen muc|1000000|1 link|DA/PA 35-59 - DR 35-75|Thoi han 3 thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|Textlink bao - chuyen muc (22 dau bao)|Textlink bai|Sidebar chuyen muc|1800000|1 link|DA/PA 35-59 - DR 35-75|Thoi han 6 thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|Textlink bao - chuyen muc (22 dau bao)|Textlink bai|Sidebar chuyen muc|2600000|1 link|DA/PA 35-59 - DR 35-75|Thoi han 12 thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|winnet.com.vn|Textlink home|Footer all page|300000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|inantrangbom.com|Textlink home|Footer all page|200000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|thietkewebsitebienhoa.net|Textlink home|Footer all page|200000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|dongnai24h.com|Textlink home|Footer all page|100000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|vieclamdongnai.com.vn|Textlink home|Footer all page|100000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|vieclamdalat.com.vn|Textlink home|Footer all page|100000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|vieclamdanang.info.vn|Textlink home|Footer all page|100000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|vieclamcantho.info.vn|Textlink home|Footer all page|100000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|sangnhuongonline.com|Textlink home|Footer all page|100000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|sangquanonline.com|Textlink home|Footer all page|100000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+WINNET|textlink|sangquancaphe.vn|Textlink home|Footer all page|100000|1 link|Textlink footer toan site|Gia theo thang|https://winnet.com.vn/textlink-la-gi-dich-vu-dat-mua-textlink-bao-chi-chat-luong-gia-tot/
+IT Sai Gon|entity|Goi 50 Social Entity|Social entity|Goi 50 social|650000|50 social|Loc chat - stacking - index tren 90%|Ban giao tai khoan; 1 ngay|https://itsaigon.vn/bang-gia-backlink-entity-moi-nhat
+IT Sai Gon|entity|Goi 100 Social Entity|Social entity|Goi 100 social|1150000|100 social|Loc chat - stacking - index tren 90%|Ban giao tai khoan; 3 ngay|https://itsaigon.vn/bang-gia-backlink-entity-moi-nhat
+IT Sai Gon|entity|Goi 200 Social Entity|Social entity|Goi 200 social|2350000|200 social|Loc chat - stacking - index 90-95%|Ban giao tai khoan|https://itsaigon.vn/bang-gia-backlink-entity-moi-nhat
+Vua Web Digi|entity|Goi 50 Social Profile|Social entity|Goi 50 social|1000000|50 social|Stacking - index 100% co bao cao|Ban giao tai khoan|https://vuawebdigi.com/dich-vu-entity/
+Vua Web Digi|entity|Goi 100 Social Profile|Social entity|Goi 100 social|1500000|100 social|Stacking - index 100% co bao cao|Ban giao tai khoan|https://vuawebdigi.com/dich-vu-entity/
+Vua Web Digi|entity|Goi 200 Social Profile|Social entity|Goi 200 social|2000000|200 social|Stacking - index 100% co bao cao|Ban giao tai khoan|https://vuawebdigi.com/dich-vu-entity/
+Seo Tips Trick|entity|Goi 50 profile Social Entity|Social entity|Goi 50 social|800000|50 social|Co bao cao|Nguon seotukhoa.webflow.io|https://seotukhoa.webflow.io/dich-vu-entity
+Seo Tips Trick|entity|Goi 100 profile Social Entity|Social entity|Goi 100 social|1300000|100 social|Index 85-90% co bao cao|Nguon seotukhoa.webflow.io|https://seotukhoa.webflow.io/dich-vu-entity
+Seo Tips Trick|entity|Goi 150 profile Social Entity|Social entity|Goi 150 social|2000000|150 social|Co bao cao|Nguon seotukhoa.webflow.io|https://seotukhoa.webflow.io/dich-vu-entity
+Giao Dien Gia Tot|entity|Goi Khoi Dau - 50 Social Entity|Social entity|Goi 50 social|1500000|50 social|Backlink DA 40-60 - index 85%+ - bao cao Excel|Trien khai 5-7 ngay|https://giaodiengiatot.com/dich-vu-backlink-entity/
+Giao Dien Gia Tot|entity|Goi Tiet Kiem - 100 Social Entity|Social entity|Goi 100 social|2500000|100 social|Backlink DA 50-70 - index 88%+|Trien khai 7-10 ngay|https://giaodiengiatot.com/dich-vu-backlink-entity/
+Giao Dien Gia Tot|entity|Goi Nang Cao - 200 Social Entity|Social entity|Goi 200 social|4000000|200 social|Backlink DA 60-80 - index 90%+|Trien khai 10-14 ngay|https://giaodiengiatot.com/dich-vu-backlink-entity/
+Giao Dien Gia Tot|entity|Goi Cao Cap - 300 Social Entity|Social entity|Goi 300 social|6000000|300 social|Backlink DA 70-90+ - index 95%+|Trien khai 14-21 ngay|https://giaodiengiatot.com/dich-vu-backlink-entity/
+Giao Dien Gia Tot|entity|Goi CEO Co Ban (entity ca nhan)|Social entity|Goi CEO Co Ban|1200000|khong neu|Entity thuong hieu ca nhan/CEO|Khong neu so luong social|https://giaodiengiatot.com/dich-vu-backlink-entity/
+Giao Dien Gia Tot|entity|Goi CEO Pho Bien (entity ca nhan)|Social entity|Goi CEO Pho Bien|2000000|khong neu|Entity thuong hieu ca nhan/CEO|Khong neu so luong social|https://giaodiengiatot.com/dich-vu-backlink-entity/
+Giao Dien Gia Tot|entity|Goi CEO Cao Cap (entity ca nhan)|Social entity|Goi CEO Cao Cap|3500000|khong neu|Backlink DA 70+ - schema Person + Author - index 95%+|Trien khai 14-21 ngay|https://giaodiengiatot.com/dich-vu-backlink-entity/
+Danh Gia Thuong Hieu|toplist|danhgiathuonghieu.vn|Toplist - thue vi tri|Top 1 (1 nam)|3200000|1 link|Thue vi tri Top 1 trong bai toplist|Chua VAT|https://danhgiathuonghieu.vn/bang-gia-toplist/
+Danh Gia Thuong Hieu|toplist|danhgiathuonghieu.vn|Toplist - thue vi tri|Top 2 (1 nam)|2500000|1 link|Thue vi tri Top 2 trong bai toplist|Chua VAT|https://danhgiathuonghieu.vn/bang-gia-toplist/
+Danh Gia Thuong Hieu|toplist|danhgiathuonghieu.vn|Toplist - thue vi tri|Top 3 (1 nam)|1800000|1 link|Thue vi tri Top 3 trong bai toplist|Chua VAT|https://danhgiathuonghieu.vn/bang-gia-toplist/
+Top10Riviu|toplist|top10riviu.com|Toplist - thue vi tri|Top 1 (12 thang)|3500000|2 link dofollow|250 tu - 2 anh|Gia 6 thang: 1700000|https://top10riviu.com/bang-gia-guest-post-toplist/
+Top10Riviu|toplist|top10riviu.com|Toplist - thue vi tri|Top 2 (12 thang)|3000000|1 link dofollow|200 tu - 1 anh|Gia 6 thang: 1400000|https://top10riviu.com/bang-gia-guest-post-toplist/
+Top10Riviu|toplist|top10riviu.com|Toplist - thue vi tri|Top 3 (12 thang)|2500000|1 link dofollow|200 tu - 1 anh|Gia 6 thang: 1100000|https://top10riviu.com/bang-gia-guest-post-toplist/
+Top10Riviu|toplist|top10riviu.com|Toplist - dang bai|Chen vao bai toplist co san|2000000|2 link dofollow|Chen thuong hieu vao bai toplist da co|Link vinh vien theo site|https://top10riviu.com/bang-gia-guest-post-toplist/
+Top10Riviu|toplist|top10riviu.com|Toplist - dang bai|Bai moi theo tu khoa|1000000|2 link dofollow|Viet moi content theo tu khoa|Vinh vien theo site|https://top10riviu.com/bang-gia-guest-post-toplist/
+Top10Riviu|toplist|top10riviu.com|Toplist - dang bai|Bai khach tu gui|800000|2 link dofollow|Duoi 1000 tu - tu 5 anh|Vinh vien theo site|https://top10riviu.com/bang-gia-guest-post-toplist/
+HCMtoplist|toplist|hcmtoplist.com|Toplist - thue vi tri|Top 1 (12 thang)|4500000|2 link nofollow|250 tu - 2 anh|Gia 6 thang: 2400000|https://www.hcmtoplist.com/bang-gia-guest-post-pr-toplist-banner-tren-hcmtoplist-com
+HCMtoplist|toplist|hcmtoplist.com|Toplist - thue vi tri|Top 2 (12 thang)|3500000|1 link nofollow|200 tu - 1 anh|Gia 6 thang: 1800000|https://www.hcmtoplist.com/bang-gia-guest-post-pr-toplist-banner-tren-hcmtoplist-com
+HCMtoplist|toplist|hcmtoplist.com|Toplist - thue vi tri|Top 3 (12 thang)|2400000|1 link nofollow|200 tu - 1 anh|Khong ap dung goi 6 thang|https://www.hcmtoplist.com/bang-gia-guest-post-pr-toplist-banner-tren-hcmtoplist-com
+HCMtoplist|toplist|hcmtoplist.com|Toplist - dang bai|Chen vao bai viet co san|2000000|2 link nofollow|Ton tai 1 nam|Khong ap dung bai toplist|https://www.hcmtoplist.com/bang-gia-guest-post-pr-toplist-banner-tren-hcmtoplist-com
+HCMtoplist|toplist|hcmtoplist.com|Toplist - dang bai|Bai moi theo tu khoa|1000000|2 link nofollow|Viet moi content - 1 nam|Gia tron goi|https://www.hcmtoplist.com/bang-gia-guest-post-pr-toplist-banner-tren-hcmtoplist-com
+HCMtoplist|toplist|hcmtoplist.com|Toplist - dang bai|Bai khach tu gui|800000|2 link nofollow|Tren 1000 tu - tu 5 anh - 1 nam|Gia tron goi|https://www.hcmtoplist.com/bang-gia-guest-post-pr-toplist-banner-tren-hcmtoplist-com
+Quang Ninh Co Gi|toplist|quangninhcogi.vn|Toplist - thue vi tri|Top 1 (1 nam)|6000000|1 link|Gioi thieu - Google Maps - khung review|Gia thang 600000; 6 thang 3200000|http://quangninhcogi.vn/bang-gia-quang-cao
+Quang Ninh Co Gi|toplist|quangninhcogi.vn|Toplist - thue vi tri|Top 2-3 (1 nam)|4500000|1 link|Gioi thieu - Google Maps - khung review|Gia thang 400000; 6 thang 2300000|http://quangninhcogi.vn/bang-gia-quang-cao
+Cotrang.org|toplist|cotrang.org|Toplist - thue vi tri|Top 1 (1 nam)|6000000|1 link|Toplist quang cao doanh nghiep|Gia thang 500000; 6 thang 3000000|https://www.cotrang.org/tin-tuc/dich-vu-dang-ky-toplist-de-quang-cao-doanh-nghiep-len-website-n127.html
+FATJOE|backlink-quocte|Guest post DR 10+|Guest post quoc te|DR 10+|2158000|1 link dofollow|Blogger outreach - permanent|usd 83|https://fatjoe.com/blogger-outreach-service/
+FATJOE|backlink-quocte|Guest post DR 20+|Guest post quoc te|DR 20+|2730000|1 link dofollow|Blogger outreach - permanent|usd 105|https://fatjoe.com/blogger-outreach-service/
+FATJOE|backlink-quocte|Guest post DR 30+|Guest post quoc te|DR 30+|3900000|1 link dofollow|Blogger outreach - permanent|usd 150|https://fatjoe.com/blogger-outreach-service/
+FATJOE|backlink-quocte|Guest post DR 40+|Guest post quoc te|DR 40+|5720000|1 link dofollow|Blogger outreach - permanent|usd 220|https://fatjoe.com/blogger-outreach-service/
+FATJOE|backlink-quocte|Guest post DR 50+|Guest post quoc te|DR 50+|9828000|1 link dofollow|Blogger outreach - permanent|usd 378|https://fatjoe.com/blogger-outreach-service/
+FATJOE|backlink-quocte|Guest post DR 60+|Guest post quoc te|DR 60+|13728000|1 link dofollow|Blogger outreach - permanent|usd 528|https://fatjoe.com/blogger-outreach-service/
+FATJOE|backlink-quocte|Niche edit DR 10+|Link insertion / Niche edit|DR 10+|2106000|1 link dofollow|Chen link vao bai co san|usd 81|https://fatjoe.com/niche-edits/
+FATJOE|backlink-quocte|Niche edit DR 20+|Link insertion / Niche edit|DR 20+|2600000|1 link dofollow|Chen link vao bai co san|usd 100|https://fatjoe.com/niche-edits/
+FATJOE|backlink-quocte|Niche edit DR 30+|Link insertion / Niche edit|DR 30+|3640000|1 link dofollow|Chen link vao bai co san|usd 140|https://fatjoe.com/niche-edits/
+FATJOE|backlink-quocte|Niche edit DR 40+|Link insertion / Niche edit|DR 40+|5200000|1 link dofollow|Chen link vao bai co san|usd 200|https://fatjoe.com/niche-edits/
+FATJOE|backlink-quocte|Niche edit DR 50+|Link insertion / Niche edit|DR 50+|9100000|1 link dofollow|Chen link vao bai co san|usd 350|https://fatjoe.com/niche-edits/
+Searcharoo|backlink-quocte|Guest post DR 10+|Guest post quoc te|DR 10+|2340000|1 link dofollow|500+ tu - do-follow|usd 90; giao trong 4 tuan|https://searcharoo.com/guest-post-service/
+Searcharoo|backlink-quocte|Guest post DR 20+|Guest post quoc te|DR 20+|2730000|1 link dofollow|500+ tu - do-follow|usd 105|https://searcharoo.com/guest-post-service/
+Searcharoo|backlink-quocte|Guest post DR 30+|Guest post quoc te|DR 30+|5720000|1 link dofollow|500+ tu - do-follow|usd 220|https://searcharoo.com/guest-post-service/
+Searcharoo|backlink-quocte|Guest post DR 45+|Guest post quoc te|DR 45+|7150000|1 link dofollow|500+ tu - do-follow|usd 275|https://searcharoo.com/guest-post-service/
+Searcharoo|backlink-quocte|Guest post DR 60+|Guest post quoc te|DR 60+|9880000|1 link dofollow|500+ tu - do-follow|usd 380|https://searcharoo.com/guest-post-service/
+Searcharoo|backlink-quocte|Goi niche edit 5 link|Link insertion / Niche edit|DR 30-60+|27820000|5 link dofollow|3x DR30+ - 1x DR45+ - 1x DR60+|usd 1070; live trong 4 tuan|https://searcharoo.com/
+Searcharoo|backlink-quocte|Goi niche edit 8 link|Link insertion / Niche edit|DR 30-60+|44980000|8 link dofollow|4x DR30+ - 3x DR45+ - 1x DR60+|usd 1730|https://searcharoo.com/
+Searcharoo|backlink-quocte|Goi niche edit 14 link|Link insertion / Niche edit|DR 30-60+|86320000|14 link dofollow|7x DR30+ - 4x DR45+ - 3x DR60+|usd 3320|https://searcharoo.com/
+Loganix|backlink-quocte|Guest post Essential DR 30+|Guest post quoc te|DR 30+ traffic 100-500|5200000|1 link dofollow|Bao dam thay the neu bi go|usd 200; turnaround 3 tuan|https://loganix.com/product/guest-post-service/
+Loganix|backlink-quocte|Guest post Authority DR 40+|Guest post quoc te|DR 40+ traffic 1k+|10400000|1 link dofollow|Site traffic 1000+/thang|usd 400; turnaround 3 tuan|https://loganix.com/product/guest-post-service/
+Rhino Rank|backlink-quocte|Curated link (niche edit)|Link insertion / Niche edit|Gia khoi diem|1560000|1 link dofollow|Chen link in-content vao bai co san|usd 60; gia mem: gia tu|https://rhinorank.io/pricing/
+Rhino Rank|backlink-quocte|Guest post|Guest post quoc te|Gia khoi diem|1950000|1 link dofollow|750+ tu - bai moc moi|usd 75; gia mem: gia tu|https://rhinorank.io/pricing/
+Rhino Rank|backlink-quocte|Listicle placement|Link insertion / Niche edit|Trang buyer-intent|3510000|1 link dofollow|Chen vao bai roundup / best-of|usd 135; gia mem: gia tu|https://rhinorank.io/pricing/
+Editorial.Link|backlink-quocte|Editorial link le|Link insertion / Niche edit|DR 50-90 traffic 5k+|9750000|1 link dofollow|Link bien tap vinh vien|usd 375|https://editorial.link/pricing/
+Editorial.Link|backlink-quocte|Goi Startup 5 link|Link insertion / Niche edit|DR 50-90 traffic 5k+|45500000|5 link dofollow|350 usd/link|usd 1750|https://editorial.link/pricing/
+Editorial.Link|backlink-quocte|Goi Growth 20 link|Link insertion / Niche edit|DR 50-90 traffic 5k+|156000000|20 link dofollow|300 usd/link|usd 6000|https://editorial.link/pricing/
+uSERP|backlink-quocte|Link DR 60+|Guest post quoc te|DR 60+|15600000|1 link dofollow|Link bien tap site DR 60+|usd 600-900/link; cam ket toi thieu 6 thang|https://userp.io/pricing/
+uSERP|backlink-quocte|Link DR 20-59|Guest post quoc te|DR 20-59|6500000|1 link dofollow|Link bien tap site DR 20-59|usd 250-375/link|https://userp.io/pricing/
+uSERP|backlink-quocte|Goi Spark 7 link/thang|Guest post quoc te|DR 20-60+|77974000|7 link dofollow|3x DR60+ va 4x DR20-59 moi thang|usd 2999/thang|https://userp.io/pricing/
+OutreachZ|backlink-quocte|Goi Starter 5 link|Guest post quoc te|DA 20-40+|18200000|5 link dofollow|2x DA20+ - 2x DA30+ - 1x DA40+ - kem viet bai|usd 700|https://outreachz.com/pricing/
+OutreachZ|backlink-quocte|Goi Performance 12 link|Guest post quoc te|DA 30-50+|52000000|12 link dofollow|5x DA30+ - 5x DA40+ - 2x DA50+|usd 2000|https://outreachz.com/pricing/
+OutreachZ|backlink-quocte|Goi Growth 18 link|Guest post quoc te|DA 30-50+|78000000|18 link dofollow|6x DA30+ - 8x DA40+ - 4x DA50+|usd 3000|https://outreachz.com/pricing/
+OutreachZ|backlink-quocte|Goi Pro 30 link|Guest post quoc te|DA 30-50+|130000000|30 link dofollow|15x DA30+ - 10x DA40+ - 5x DA50+|usd 5000|https://outreachz.com/pricing/
+Stellar SEO|backlink-quocte|Guest post / blogger outreach|Guest post quoc te|DR cao - traffic that|7722000|1 link dofollow|Guest post bien tap thu cong|usd 297-600/link|https://www.stellarseo.com/link-building-pricing/
+Stellar SEO|backlink-quocte|Niche edit|Link insertion / Niche edit|DR trung binh|5850000|1 link dofollow|Chen link vao bai co san|usd 225/link|https://www.stellarseo.com/link-building-pricing/
+LinkBuilder.io|backlink-quocte|Goi Startup 8 link/thang|Guest post quoc te|DR 50-90|77974000|8 link dofollow|Managed - 8 link/thang|usd 2999/thang|https://linkbuilder.io/pricing/
+LinkBuilder.io|backlink-quocte|Goi Pro 16 link/thang|Guest post quoc te|DR 50-90|155974000|16 link dofollow|Managed - 16+ link/thang|usd 5999/thang|https://linkbuilder.io/pricing/
+Rankifyer|backlink-quocte|Guest post DA 30+|Guest post quoc te|DA 30+|988000|1 link dofollow|Guest post site DA 30+|usd 38|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|Guest post DA 50+|Guest post quoc te|DA 50+|1508000|1 link dofollow|Guest post site DA 50+|usd 58|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|Guest post DA 70+|Guest post quoc te|DA 70+|2548000|1 link dofollow|Guest post site DA 70+|usd 98|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|Guest post DA 80+|Guest post quoc te|DA 80+|3510000|1 link dofollow|Guest post site DA 80+|usd 135|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|Goi 10 guest post theo nganh|Guest post quoc te|DA 30-70|11674000|10 link dofollow|10 bai theo nganh|usd 449|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|Goi 60 guest post|Guest post quoc te|DA 30-70|33280000|60 link dofollow|60 bai - DA 30 den DA 70|usd 1280|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|forbes.com|PR bao quoc te|DA 90+|202410000|1 link dofollow|Guest post Forbes - do-follow|usd 7785|https://rankifyer.com/product/buy-forbes-guest-post-dofollow-backlink-da-90/
+Rankifyer|backlink-quocte|entrepreneur.com|PR bao quoc te|DA 90|109200000|1 link dofollow|Guest post Entrepreneur - do-follow|usd 4200|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|nytimes.com|PR bao quoc te|DA 90|100074000|1 link dofollow|Guest post New York Times|usd 3849|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|bloomberg.com|PR bao quoc te|DA 90|65000000|1 link dofollow|Bai PR Bloomberg|usd 2500|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|usatoday.com|PR bao quoc te|DA 90|62400000|1 link dofollow|Bai PR USA Today|usd 2400|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|wsj.com|PR bao quoc te|DA 90|62400000|1 link dofollow|Bai PR Wall Street Journal|usd 2400|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|bbc.com|PR bao quoc te|DA 90|62400000|1 link dofollow|Bai PR BBC News|usd 2400|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|cnbc.com|PR bao quoc te|DA 90|62400000|1 link dofollow|Bai PR CNBC|usd 2400|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|msn.com|PR bao quoc te|DA 90|23400000|1 link dofollow|Bai PR MSN|usd 900|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|businessinsider.com|PR bao quoc te|DA 94|19474000|1 link dofollow|Guest post Business Insider|usd 749|https://rankifyer.com/product/buy-business-insider-dofollow-backlink-guest-post-da90/
+Rankifyer|backlink-quocte|cnet.com|PR bao quoc te|DA 90|21840000|1 link dofollow|Guest post CNET|usd 840|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|news.yahoo.com|PR bao quoc te|DA 90|15340000|1 link dofollow|Bai PR Yahoo News|usd 590|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|benzinga.com|PR bao quoc te|DA 80|11700000|1 link dofollow|Bai PR Benzinga (tai chinh)|usd 450|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|apnews.com|PR bao quoc te|DA 90|8840000|1 link dofollow|Bai PR AP News|usd 340|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|marketwatch.com|PR bao quoc te|DA 90|6474000|1 link dofollow|Bai PR MarketWatch|usd 249|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|digitaljournal.com|PR bao quoc te|DA 80+|3874000|1 link dofollow|Bai PR Digital Journal|usd 149|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|streetinsider.com|PR bao quoc te|DA 80|3380000|1 link dofollow|Bai PR Street Insider|usd 130|https://rankifyer.com/shop/
+Rankifyer|backlink-quocte|zerohedge.com|PR bao quoc te|DA 80|1820000|1 link dofollow|Bai dang ZeroHedge|usd 70|https://rankifyer.com/shop/
+PR Newswire (Cision)|backlink-quocte|Goi Local|PR bao quoc te|Phan phoi 1 bang/khu vuc My|9100000|1 thong cao|Phi thanh vien 195 usd/nam tinh rieng|usd 350|https://www.prnewswire.com/
+PR Newswire (Cision)|backlink-quocte|Goi National|PR bao quoc te|Phan phoi toan quoc My|20930000|1 thong cao|Mang luoi quoc gia + AP|usd 805|https://www.prnewswire.com/
+PR Newswire (Cision)|backlink-quocte|Goi Global Premier|PR bao quoc te|Phan phoi toan cau|226200000|1 thong cao|Mang luoi toan cau|usd 8700|https://www.prnewswire.com/
+Business Wire|backlink-quocte|Goi Local|PR bao quoc te|Phan phoi dia phuong My|12350000|1 thong cao|Khoang 400 tu; phi vuot 195 usd/100 tu|usd 475; gia mem: gia tu|https://www.businesswire.com/
+Business Wire|backlink-quocte|Goi National|PR bao quoc te|Phan phoi toan quoc My|26000000|1 thong cao|1 thong cao|usd 1000; gia mem: gia tu|https://www.businesswire.com/
+Business Wire|backlink-quocte|Goi International|PR bao quoc te|Phan phoi quoc te|39000000|1 thong cao|1 thong cao|usd 1500; gia mem: gia tu|https://www.businesswire.com/
+GlobeNewswire|backlink-quocte|Goi Basic US/Canada|PR bao quoc te|Phan phoi My - Canada|9100000|1 thong cao|Khong phi thanh vien|usd 350|https://www.globenewswire.com/
+GlobeNewswire|backlink-quocte|Goi North America|PR bao quoc te|Phan phoi Bac My|23400000|1 thong cao|1 thong cao|usd 900-1200; dai gia NCC|https://www.globenewswire.com/
+EIN Presswire|backlink-quocte|1 thong cao le|PR bao quoc te|Distribution 550+ site|3874000|1 thong cao|Da phuong tien - newsroom - SEO metadata|usd 149|https://www.einpresswire.com/pricing
+EIN Presswire|backlink-quocte|Goi 5 thong cao|PR bao quoc te|Distribution 550+ site|10374000|5 thong cao|~79,8 usd/bai|usd 399|https://www.einpresswire.com/pricing
+EIN Presswire|backlink-quocte|Goi 20 thong cao|PR bao quoc te|Distribution 550+ site|25974000|20 thong cao|~49,95 usd/bai|usd 999|https://www.einpresswire.com/pricing
+PRWeb (Cision)|backlink-quocte|Goi Basic|PR bao quoc te|Google/Yahoo/Bing + hosting PRWeb|2860000|1 thong cao|1 thong cao|usd 110|https://www.prweb.com/pricing/
+PRWeb (Cision)|backlink-quocte|Goi Standard|PR bao quoc te|Syndication hang tram site doi tac|5980000|1 thong cao|1 thong cao|usd 230|https://www.prweb.com/pricing/
+PRWeb (Cision)|backlink-quocte|Goi Advanced|PR bao quoc te|Distribution mo rong + media|8840000|1 thong cao|1 thong cao|usd 340|https://www.prweb.com/pricing/
+PRWeb (Cision)|backlink-quocte|Goi Premium|PR bao quoc te|Feed nganh + blogger network|11830000|1 thong cao|1 thong cao|usd 455|https://www.prweb.com/pricing/
+eReleases|backlink-quocte|Goi Buzz Builder|PR bao quoc te|Phan phoi qua PR Newswire + AP|10374000|1 thong cao|400 tu - 1 danh sach nganh - bien tap bai|usd 399|https://www.ereleases.com/pricing/
+eReleases|backlink-quocte|Goi Newsmaker|PR bao quoc te|Phan phoi qua PR Newswire + AP|12974000|1 thong cao|500 tu - 2 danh sach nganh|usd 499|https://www.ereleases.com/pricing/
+eReleases|backlink-quocte|Goi PR Pro|PR bao quoc te|Phan phoi qua PR Newswire + AP|18174000|1 thong cao|600 tu - 3 danh sach nganh|usd 699|https://www.ereleases.com/pricing/
+Newswire.com|backlink-quocte|Goi Starter|PR bao quoc te|Distribution co ban|10374000|1 thong cao|Khong gioi han so tu|usd 399|https://www.newswire.com/
+Newswire.com|backlink-quocte|Goi Basic|PR bao quoc te|Distribution mo rong + bao cao|17134000|1 thong cao|1 thong cao|usd 659|https://www.newswire.com/
+Newswire.com|backlink-quocte|Goi Feature|PR bao quoc te|Distribution cao cap + Earned Media report|25090000|1 thong cao|1 thong cao|usd 965|https://www.newswire.com/
+PRUnderground|backlink-quocte|Goi Basic|PR bao quoc te|Distribution 200+ site - Google News|1950000|1 thong cao|Tra theo bai|usd 74,99|https://www.prunderground.com/press-release-packages/
+PRUnderground|backlink-quocte|Goi Gold (thue bao thang)|PR bao quoc te|3 thong cao/thang|3380000|3 thong cao|3 bai/thang|usd 129,99/thang|https://www.prunderground.com/press-release-packages/
+PRUnderground|backlink-quocte|Goi Premium (thue bao thang)|PR bao quoc te|6 thong cao/thang|5460000|6 thong cao|6 bai/thang|usd 209,99/thang|https://www.prunderground.com/press-release-packages/
+PRUnderground|backlink-quocte|Goi US National (MAX)|PR bao quoc te|PR Newswire + Yahoo Finance + MarketWatch|10920000|1 thong cao|Bao lon My|usd 419,99|https://www.prunderground.com/press-release-packages/
+ACCESS Newswire|backlink-quocte|Goi Online|PR bao quoc te|Distribution online-only|4550000|1 thong cao|1 thong cao|usd 175|https://www.accessnewswire.com/
+ACCESS Newswire|backlink-quocte|Goi Budget|PR bao quoc te|Bao lon - dai TV - newsroom|10790000|1 thong cao|1 thong cao|usd 415|https://www.accessnewswire.com/
+ACCESS Newswire|backlink-quocte|Goi National|PR bao quoc te|Toan quoc My + AP|20150000|1 thong cao|1 thong cao|usd 775|https://www.accessnewswire.com/
+ACCESS Newswire|backlink-quocte|Goi Premium|PR bao quoc te|Business Insider - AP Mobile - circuit chuyen nganh|28470000|1 thong cao|1 thong cao|usd 1095|https://www.accessnewswire.com/
+24-7PressRelease|backlink-quocte|Goi SimplePost|PR bao quoc te|Chi dang tren site 24-7|754000|1 thong cao|Khong phan phoi them|usd 29|https://www.24-7pressrelease.com/pricing
+24-7PressRelease|backlink-quocte|Goi Visibility Boost|PR bao quoc te|Distribution online khu vuc|1274000|1 thong cao|1 thong cao|usd 49|https://www.24-7pressrelease.com/pricing
+24-7PressRelease|backlink-quocte|Goi PR Network Plus|PR bao quoc te|Distribution online mo rong|2314000|1 thong cao|1 thong cao|usd 89|https://www.24-7pressrelease.com/pricing
+24-7PressRelease|backlink-quocte|Goi Integrated Media Pro|PR bao quoc te|Distribution digital + truyen thong|3614000|1 thong cao|1 thong cao|usd 139|https://www.24-7pressrelease.com/pricing
+24-7PressRelease|backlink-quocte|Goi Integrated Media Pro+|PR bao quoc te|Distribution My + Canada|5174000|1 thong cao|1 thong cao|usd 199|https://www.24-7pressrelease.com/pricing
+24-7PressRelease|backlink-quocte|Goi Mass Media Visibility|PR bao quoc te|PR Newswire national + digital mo rong|12454000|1 thong cao|1 thong cao|usd 479|https://www.24-7pressrelease.com/pricing
+Issuewire|backlink-quocte|Goi Tier 1|PR bao quoc te|Distribution 145+ site|546000|1 thong cao|Ho tro logo/anh/video|usd 21|https://www.issuewire.com/signup/pricing
+Issuewire|backlink-quocte|Goi Tier 2|PR bao quoc te|Distribution 195+ site (USA TV & Radio)|1170000|1 thong cao|1 thong cao|usd 45|https://www.issuewire.com/signup/pricing
+openPR|backlink-quocte|1 credit|PR bao quoc te|Dang 1 thong cao tren openPR|1372000|1 thong cao|Chua VAT|eur 49|https://service.open-pr.com/
+openPR|backlink-quocte|Goi 10 credits|PR bao quoc te|10 thong cao|4732000|10 thong cao|Chua VAT|eur 169|https://service.open-pr.com/
+openPR|backlink-quocte|Goi 30 credits|PR bao quoc te|30 thong cao|5572000|30 thong cao|Chua VAT|eur 199|https://service.open-pr.com/
+openPR|backlink-quocte|Goi 100 credits|PR bao quoc te|100 thong cao|9772000|100 thong cao|Chua VAT|eur 349|https://service.open-pr.com/
+PRLog|backlink-quocte|Goi Basic|PR bao quoc te|Distribution co ban|754000|1 thong cao|1 thong cao|usd 29; PRLog co ban free|https://www.prlog.org/press-release-comparison.html
+PRLog|backlink-quocte|Goi Premium|PR bao quoc te|Distribution mo rong|1274000|1 thong cao|1 thong cao|usd 49|https://www.prlog.org/press-release-comparison.html
+PRLog|backlink-quocte|Goi Premium2|PR bao quoc te|Distribution cao nhat|2574000|1 thong cao|Mua 10 bai con 43,90 usd/bai|usd 99|https://www.prlog.org/press-release-comparison.html
+MediaBoost|backlink-quocte|Goi guaranteed placement 500+ outlet|PR bao quoc te|Yahoo Finance - Business Insider - MarketWatch|10114000|1 thong cao|Cam ket dang - bao cao PDF kem link live - len trong 48h|usd 389; gia mem: gia tu|https://www.mediaboost.press/
+King Newswire|backlink-quocte|Goi Yahoo Finance + 500 outlet|PR bao quoc te|Yahoo Finance - AP News - MarketWatch - Benzinga|10400000|1 thong cao|Cam ket dang - live trong 24-72h|usd 400|https://kingnewswire.com/
+Baden Bower|backlink-quocte|Goi guaranteed Forbes/Entrepreneur/Business Insider|PR bao quoc te|Placement bien tap Tier-1 (theo thang)|39000000|1 thong cao|Cam ket dang hoac hoan tien - live 72h|usd 1500/thang; gia mem: gia tu|https://www.badenbower.com/
+MediaLabs|booking-tv|vtv1|Phong su doanh nghiep|Ban tin Thoi su / Doanh nghiep va Thuong hieu|40000000|khong ap dung|Phong su - ban tin 30s-120s|Tron goi gom ekip ghi hinh + phat song; chua VAT 8%; quay tai TP.HCM|https://medialabs.asia/listing/goi-booking-dua-tin-phong-su-tren-ban-tin-truyen-hinh-vtv-htv-vtc
+MediaLabs|booking-tv|vtv3|Phong su doanh nghiep|Ban tin / chuyen muc doanh nghiep|30000000|khong ap dung|Phong su - ban tin 30s-120s|Tron goi gom ekip ghi hinh + phat song; chua VAT 8%|https://medialabs.asia/listing/goi-booking-dua-tin-phong-su-tren-ban-tin-truyen-hinh-vtv-htv-vtc
+MediaLabs|booking-tv|htv9|Phong su doanh nghiep|Ban tin / chuyen muc doanh nghiep|14000000|khong ap dung|Phong su - ban tin 30s-120s|Tron goi gom ekip ghi hinh + phat song; chua VAT 8%|https://medialabs.asia/listing/goi-booking-dua-tin-phong-su-tren-ban-tin-truyen-hinh-vtv-htv-vtc
+Fame Media|booking-tv|vtv1|TVC quang cao|Sau Ban tin Chao buoi sang ~6h20|24024000|khong ap dung|TVC 15 giay|Gia niem yet nha dai; chua VAT; chua tru chiet khau|https://famemedia.vn/gia-quang-cao-khung-gio-vang-vtv/
+Fame Media|booking-tv|vtv1|TVC quang cao|Sau Ban tin Chao buoi sang ~6h20|40040000|khong ap dung|TVC 30 giay|Gia niem yet nha dai; chua VAT|https://famemedia.vn/gia-quang-cao-khung-gio-vang-vtv/
+Fame Media|booking-tv|vtv1|TVC quang cao|Khung gio vang ~19h55 truoc Thoi su 20h|63030000|khong ap dung|TVC 15 giay|Khung dat nhat cua VTV1; chua VAT|https://famemedia.vn/gia-quang-cao-khung-gio-vang-vtv/
+Fame Media|booking-tv|vtv1|TVC quang cao|Khung gio vang ~19h55 truoc Thoi su 20h|105050000|khong ap dung|TVC 30 giay|Khung dat nhat cua VTV1; chua VAT|https://famemedia.vn/gia-quang-cao-khung-gio-vang-vtv/
+Fame Media|booking-tv|vtv3|TVC quang cao|Ca phe Sang 6h30-7h15|12012000|khong ap dung|TVC 15 giay|Muc thap nhat khung sang VTV3; chua VAT|https://famemedia.vn/gia-quang-cao-khung-gio-vang-vtv/
+Fame Media|booking-tv|vtv3|TVC quang cao|Ca phe Sang 6h30-7h15|20020000|khong ap dung|TVC 30 giay|Chua VAT; chua tru chiet khau|https://famemedia.vn/gia-quang-cao-khung-gio-vang-vtv/
+Fame Media|booking-tv|vtv1|TVC quang cao|Khung gio vang 17h-21h|49140000|khong ap dung|TVC 30 giay|dai gia NCC: 49140000-81900000 tuy chuong trinh; chua VAT|https://famemedia.vn/quang-cao-vtv/
+Fame Media|booking-tv|vtv3|TVC quang cao|Ai la trieu phu - ngoai chuong trinh|81900000|khong ap dung|TVC 30 giay|Gia niem yet; chua VAT|https://famemedia.vn/quang-cao-vtv/
+Fame Media|booking-tv|vtv3|TVC quang cao|Ai la trieu phu - trong chuong trinh|91000000|khong ap dung|TVC 30 giay|Gia niem yet; chua VAT|https://famemedia.vn/quang-cao-vtv/
+Fame Media|booking-tv|vtv3|TVC quang cao|Phim truyen gio vang|73000000|khong ap dung|TVC 30 giay|dai gia NCC: 73000000-110000000 tuy khung phim; chua VAT|https://famemedia.vn/quang-cao-vtv/
+Fame Media|booking-tv|htv9|Ban tin / tin ngan|Thoi su trua 11h30 - muc Tu gioi thieu|12000000|khong ap dung|Tu gioi thieu 60 giay|Gia niem yet HTV; chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv9|Ban tin / tin ngan|Thoi su trua 11h30 - muc Tu gioi thieu|21000000|khong ap dung|Tu gioi thieu 90 giay|Gia niem yet HTV; chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv9|Ban tin / tin ngan|Chuong trinh 12h00 - muc Tu gioi thieu|27000000|khong ap dung|Tu gioi thieu 60 giay|Gia niem yet HTV; chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv9|Ban tin / tin ngan|Thoi su toi 20h - muc Tu gioi thieu|33000000|khong ap dung|Tu gioi thieu 60 giay|Khung dat nhat muc tu gioi thieu HTV9; chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv9|Phong su doanh nghiep|Nhip song doanh nghiep (thu Tu) 16h00|19500000|khong ap dung|Phong su / tu gioi thieu 120 giay|Chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv9|Phong su doanh nghiep|Nhip song doanh nghiep (thu Tu) 16h00|24000000|khong ap dung|Phong su / tu gioi thieu 180 giay|Chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv7|Phong su doanh nghiep|Nhip song tre (thu Bay) 9h45|19500000|khong ap dung|Phong su / tu gioi thieu 120 giay|Chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv7|Phong su doanh nghiep|Nhip song tre (thu Bay) 9h45|24000000|khong ap dung|Phong su / tu gioi thieu 180 giay|Chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv7|Ban tin / tin ngan|Chuong trinh 12h00 - muc Tu gioi thieu|27000000|khong ap dung|Tu gioi thieu 60 giay|Chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv7|Ban tin / tin ngan|Chuong trinh 18h00 - muc Tu gioi thieu|27000000|khong ap dung|Tu gioi thieu 60 giay|Chua VAT|https://famemedia.vn/quang-cao-htv/
+Fame Media|booking-tv|htv7|Talkshow / phong van|Talk Show (thu Bay) 9h45|35000000|khong ap dung|Talkshow 7-8 phut|Gia niem yet; chua VAT|https://famemedia.vn/quang-cao-htv/
+AE Digi|booking-tv|htv7|TVC quang cao|Trong gio phat song Nguoi Bi An|200000000|khong ap dung|TVC 30 giay|Gia niem yet dau mua; chua VAT|https://aedigi.com/truyen-thong/tvc-quang-cao/bang-gia-tvc-quang-cao-tren-htv7-nguoi-bi-an-la-bao-nhieu/
+AE Digi|booking-tv|htv7|TVC quang cao|Truoc gio phat song Nguoi Bi An|190000000|khong ap dung|TVC 30 giay|Chua VAT|https://aedigi.com/truyen-thong/tvc-quang-cao/bang-gia-tvc-quang-cao-tren-htv7-nguoi-bi-an-la-bao-nhieu/
+AE Digi|booking-tv|htv7|TVC quang cao|Trong gio phat song Nguoi Bi An|150000000|khong ap dung|TVC 20 giay|Chua VAT|https://aedigi.com/truyen-thong/tvc-quang-cao/bang-gia-tvc-quang-cao-tren-htv7-nguoi-bi-an-la-bao-nhieu/
+AE Digi|booking-tv|htv7|TVC quang cao|Trong gio phat song Nguoi Bi An|100000000|khong ap dung|TVC 10 giay|Chua VAT|https://aedigi.com/truyen-thong/tvc-quang-cao/bang-gia-tvc-quang-cao-tren-htv7-nguoi-bi-an-la-bao-nhieu/
+VSM Group|booking-tv|vtv1|TVC quang cao|Phim truyen VN 20h (T2-T6)|81900000|khong ap dung|TVC 30 giay|Gia niem yet nha dai; chua VAT|https://quangcaotruyenhinh.com/dich-vu/booking-truyen-hinh
+VSM Group|booking-tv|vtv1|TVC quang cao|Khung sang 6h00-7h00|13700000|khong ap dung|TVC 30 giay|Gia niem yet; chua VAT|https://quangcaotruyenhinh.com/dich-vu/booking-truyen-hinh
+VSM Group|booking-tv|vtv3|TVC quang cao|Truoc gameshow gio vang|127300000|khong ap dung|TVC 30 giay|Gia niem yet; chua VAT|https://quangcaotruyenhinh.com/dich-vu/booking-truyen-hinh
+VSM Group|booking-tv|vtv3|TVC quang cao|Khung ban ngay|27300000|khong ap dung|TVC 30 giay|Gia niem yet; chua VAT|https://quangcaotruyenhinh.com/dich-vu/booking-truyen-hinh
+TVAd (rate card)|booking-tv|vtv|TVC quang cao|Chung ket World Cup 2026|2250000000|khong ap dung|TVC 30 giay|Rate card TVAd su kien dac biet; tham chieu tran gia thi truong|https://vietnambiz.vn/quang-cao-30-giay-o-chung-ket-world-cup-tren-vtv-doanh-nghiep-phai-chi-toi-225-ty-dong-202676105836891.htm
+TVAd (rate card)|booking-tv|vtv|TVC quang cao|Chung ket World Cup 2026|1120000000|khong ap dung|TVC 10 giay|Rate card TVAd su kien dac biet|https://vietnambiz.vn/quang-cao-30-giay-o-chung-ket-world-cup-tren-vtv-doanh-nghiep-phai-chi-toi-225-ty-dong-202676105836891.htm
+TVAd (rate card)|booking-tv|vtv3|TVC quang cao|Fanzone World Cup|130000000|khong ap dung|TVC 30 giay|Rate card TVAd|https://vietnambiz.vn/quang-cao-30-giay-o-chung-ket-world-cup-tren-vtv-doanh-nghiep-phai-chi-toi-225-ty-dong-202676105836891.htm
+Nhat Phat Media|booking-tv|Goi ban tin VTV|Goi tong hop|Tron goi 1 tin/ban tin (kich ban - quay - dung - phat song)|10000000|khong ap dung|Tin ngan tron goi|gia mem: gia tu; trang goc khong fetch duoc - can xac minh truoc khi bao khach|https://bookingtruyenhinh.com/quang-cao-vtv1/
