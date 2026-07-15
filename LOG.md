@@ -1327,3 +1327,12 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
   Toplist trên web: 20->35 site. Giá 1tr (inhat.vn 1,7tr), 2 link dofollow, 1000 từ 3-5 ảnh.
 - SEODO 7 tab còn lại (booking báo 246, báo tỉnh 41, guest post 45, textlink gói, PR site 35, toplist ngành)
   -> ghi nguon.md + giao routine tuần tích hợp (đối chiếu tay giá vốn). CHANGELOG cập nhật.
+
+## 2026-07-15 (tiếp 8) - Ghép 55 outlet booking báo/báo tỉnh SEODO
+- Parse 2 tab sạch nhất của SEODO (booking báo 246 + báo tỉnh 41): lấy THÀNH TIỀN (giá thấp nhất
+  trong đơn giá/thành tiền/thanh toán VAT). Chỉ thêm 55 outlet CHƯA có trên live (an toàn tuyệt đối,
+  0 trùng, không refresh giá cũ -> không thể bán dưới giá vốn). booking-bao-pr 228->283, dgc_gia ->743.
+- Sửa lỗi regex cắt cụt domain đa cấp (.gov.vn/.org.vn). "Cùng site 2 dịch vụ" (baogialai textlink+booking)
+  KHÔNG phải trùng - giữ.
+- 5 tab lộn xộn còn lại (guest post flags TRUE/FALSE, pasgo toplist ma trận, textlink gói V1-V5,
+  toplist ngành TOP1-5) -> giao routine (parse cẩn thận, đối chiếu tay), đã ghi nguon.md.

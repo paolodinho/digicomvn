@@ -26,7 +26,7 @@ $dgc_tiers_text = dgc_combo_tiers_text();
 		</div>
 
 		<div class="sel-bar-total-wrap">
-			<span class="sel-bar-total-label">Còn lại</span>
+			<span class="sel-bar-total-label">Tổng cộng</span>
 			<span class="sel-bar-total"><span class="sel-bar-total-num">0</span><span class="vnd">đ</span></span>
 		</div>
 		<span class="sel-bar-vat-note">(chưa gồm VAT)</span>
