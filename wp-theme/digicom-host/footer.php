@@ -1,10 +1,13 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
 <?php
-/* Uu dai hien tren MOI trang (Hieu 2026-07-14). Trang chu + trang dich vu da goi khoi nay o giua
-   noi dung; cac trang con lai (blog, ve-digicom, lien-he...) duoc bo sung ngay tren footer.
-   promo-band.php tu bo qua neu da render (co $GLOBALS['dgc_promo_done']). */
-include get_template_directory() . '/inc/promo-band.php';
+/* Uu dai hien tren cac trang (Hieu 2026-07-14). Trang chu goi khoi nay o giua noi dung
+   (front-page.php); cac trang con lai (blog, ve-digicom, lien-he...) bo sung ngay tren footer.
+   promo-band.php tu bo qua neu da render (co $GLOBALS['dgc_promo_done']).
+   BO khoi uu dai tren MOI trang dich vu (Hieu 2026-07-15). */
+if ( ! dgc_is_service_page() ) {
+	include get_template_directory() . '/inc/promo-band.php';
+}
 ?>
 
 <footer class="site-footer">

@@ -30,9 +30,10 @@ $nhom     = dgc_current_nhom();
 </section>
 
 <?php
-/* Uu dai (viet bai mien phi, tu van mien phi...) dat ngay tren bang gia - khach thay dieu kien
-   uu dai truoc khi doc gia (Hieu 2026-07-14). */
-include get_template_directory() . '/inc/promo-band.php';
+/* Khoi uu dai (promo-band) DA BO khoi trang dich vu (Hieu 2026-07-15).
+   Bat guard som de footer.php cung KHONG render lai o cuoi trang. Trang chu van hien qua
+   front-page.php; popup uu dai + nut Zalo van con. */
+$GLOBALS['dgc_promo_done'] = true;
 
 /* Bang gia len NGAY DUOI hero, tren moi noi dung khac (Hieu 2026-07-14). */
 if ( $nhom ) {
