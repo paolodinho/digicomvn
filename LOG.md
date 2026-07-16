@@ -1406,3 +1406,9 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
   DR đọc live từ CPT (cache 1h), bar chart 15 báo sắp theo DR, báo hiện tại highlight teal + badge,
   hover + animation khi cuộn tới, bấm hàng -> sang bài báo đó. Vị trí: sau mục "có gì đáng giá",
   trước bảng giá. DGC_VER 1.7.8. Verify render trên /book-bao-eva/.
+- Thêm 2 widget interactive cho bài blog (inc/widgets-blog.php, DGC_VER 1.7.9):
+  [dgc_budget_calc] máy tính ngân sách (giá p25-p75 THẬT từ CPT, chọn dịch vụ/DR/số lượng, CTA
+  bảng giá + đặt bài) -> 21 bài cluster backlink/booking; [dgc_offpage_quiz] quiz 6 câu chấm điểm
+  off-page + gợi ý dịch vụ -> 74 bài cluster SEO kiến thức. Vị trí trước H2 thứ 3 (nghỉ mắt).
+  13 bài không có H2 dạng Gutenberg chuẩn -> bỏ qua. Test JS live: calc đổi giá theo slider,
+  quiz ra kết quả 4/6 đúng.

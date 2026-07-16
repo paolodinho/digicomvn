@@ -766,3 +766,66 @@ document.addEventListener('click', function (e) {
 	}, { threshold: 0.35 });
 	charts.forEach(function (c) { io.observe(c); });
 })();
+
+/* May tinh ngan sach off-page (inc/widgets-blog.php) - gia that tu CPT, format VND. */
+(function () {
+	document.querySelectorAll('[data-bcalc]').forEach(function (el) {
+		var stats;
+		try { stats = JSON.parse(el.getAttribute('data-stats')); } catch (e) { return; }
+		var svc = el.querySelector('.bcalc-svc'), dr = el.querySelector('.bcalc-dr'),
+			qty = el.querySelector('.bcalc-qty'), qtyVal = el.querySelector('.bcalc-qty-val'),
+			num = el.querySelector('.bcalc-result-num');
+		function fmt(v) {
+			if (v >= 1e9) return (v / 1e9).toFixed(1).replace('.', ',') + ' tỷ';
+			if (v >= 1e6) return Math.round(v / 1e5) / 10 + ' triệu';
+			return Math.round(v / 1e3) + 'k';
+		}
+		function calc() {
+			var g = stats[svc.value]; if (!g) return;
+			var s = g.stat[dr.value] || g.stat.all;
+			// muc DR khong co du data -> fallback "tat ca" va bao ro
+			var fallback = !g.stat[dr.value];
+			var n = parseInt(qty.value, 10) || 1;
+			qtyVal.textContent = n;
+			num.textContent = fmt(s.p25 * n) + ' - ' + fmt(s.p75 * n) + ' đ' + (fallback ? ' (mức DR này chưa đủ dữ liệu, tính theo tất cả)' : '');
+		}
+		[svc, dr].forEach(function (c) { c.addEventListener('change', calc); });
+		qty.addEventListener('input', calc);
+		calc();
+	});
+})();
+
+/* Quiz suc khoe off-page: 6 cau Co/Chua -> cham diem + goi y viec lam truoc tien. */
+(function () {
+	document.querySelectorAll('[data-oquiz]').forEach(function (el) {
+		var qs = el.querySelectorAll('.oquiz-q'), res = el.querySelector('.oquiz-result'),
+			urls;
+		try { urls = JSON.parse(res.getAttribute('data-urls')); } catch (e) { return; }
+		var answers = {};
+		function show() {
+			if (Object.keys(answers).length < qs.length) return;
+			var score = 0;
+			for (var k in answers) score += answers[k];
+			var html;
+			if (score >= 5) {
+				html = '<b>' + score + '/6 - Nền tảng off-page tốt.</b> Bước hợp lý tiếp theo là nâng chất nguồn: thêm bài trên báo DR cao qua <a href="' + urls.booking + '">booking báo & PR</a> hoặc <a href="' + urls.textlink + '">textlink</a> trên site mạnh đúng ngành.';
+			} else if (score >= 3) {
+				html = '<b>' + score + '/6 - Đã có nền, còn khoảng trống.</b> Ưu tiên lấp phần đang thiếu: <a href="' + urls.guest + '">guest post</a> đúng chủ đề để đa dạng nguồn, kèm 1-2 bài PR trên báo để có trích dẫn uy tín. Tham khảo <a href="' + urls.banggia + '">bảng giá</a> để ước tính ngân sách.';
+			} else {
+				html = '<b>' + score + '/6 - Mới ở điểm xuất phát.</b> Bắt đầu từ móng: dựng <a href="' + urls.entity + '">hồ sơ social entity chuẩn NAP</a> trước, rồi thêm <a href="' + urls.guest + '">guest post</a> và 1 bài PR đầu tiên trên báo phù hợp ngân sách.';
+			}
+			res.innerHTML = html;
+			res.hidden = false;
+		}
+		qs.forEach(function (q) {
+			q.querySelectorAll('button').forEach(function (b) {
+				b.addEventListener('click', function () {
+					answers[q.getAttribute('data-q')] = parseInt(b.getAttribute('data-v'), 10);
+					q.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); });
+					b.classList.add('on');
+					show();
+				});
+			});
+		});
+	});
+})();

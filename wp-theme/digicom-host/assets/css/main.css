@@ -1991,3 +1991,47 @@ body.mnav-open{overflow:hidden}
   .dr-row-name{flex-basis:88px;font-size:12.5px}
   .dr-row-val{flex-basis:44px;font-size:12px}
 }
+
+/* --- Widget blog: may tinh ngan sach + quiz off-page (inc/widgets-blog.php, 2026-07-16) --- */
+.bcalc,.oquiz{margin:34px 0;padding:22px 24px;background:var(--surface-2);
+  border:1px solid var(--line);border-radius:14px}
+.bcalc-title,.oquiz-title{font-family:var(--font-display);font-weight:700;font-size:17px;
+  color:var(--heading);margin:0 0 4px}
+.bcalc-sub,.oquiz-sub{font-size:13px;color:var(--ink-soft);margin:0 0 16px}
+.bcalc-controls{display:flex;flex-wrap:wrap;gap:14px 18px;margin-bottom:16px}
+.bcalc-field{display:flex;flex-direction:column;gap:5px;flex:1 1 180px;min-width:0}
+.bcalc-field>span{font-size:11.5px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--ink-soft)}
+.bcalc-field select{font-family:var(--font-body);font-size:13.5px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--line-2);border-radius:8px;padding:8px 10px}
+.bcalc-field-qty{flex:1 1 100%}
+.bcalc-qty{width:100%;accent-color:var(--action)}
+.bcalc-result{display:flex;flex-direction:column;gap:3px;padding:14px 16px;margin-bottom:14px;
+  background:var(--surface);border:1px solid var(--line-2);border-radius:10px}
+.bcalc-result-label{font-size:11.5px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--ink-soft)}
+.bcalc-result-num{font-family:var(--font-display);font-weight:700;font-size:22px;
+  color:var(--action);font-variant-numeric:tabular-nums}
+.bcalc-result-note{font-size:12px;color:var(--ink-soft)}
+.bcalc-cta{display:flex;gap:10px;flex-wrap:wrap}
+.oquiz-q{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:9px 0;border-top:1px solid var(--line)}
+.oquiz-q:first-child{border-top:0}
+.oquiz-q-text{font-size:14px;color:var(--ink)}
+.oquiz-q-btns{display:flex;gap:6px;flex:0 0 auto}
+.oquiz-q-btns button{font-family:var(--font-body);font-size:12.5px;font-weight:600;
+  color:var(--ink-soft);background:var(--surface);border:1px solid var(--line-2);
+  border-radius:999px;padding:5px 14px;cursor:pointer;transition:all .15s}
+.oquiz-q-btns button:hover{border-color:var(--action);color:var(--action)}
+.oquiz-q-btns .oquiz-yes.on{background:var(--teal,#0E8C7F);border-color:var(--teal,#0E8C7F);color:#fff}
+.oquiz-q-btns .oquiz-no.on{background:var(--ink-soft);border-color:var(--ink-soft);color:#fff}
+.oquiz-result{margin-top:14px;padding:14px 16px;font-size:14px;line-height:1.6;color:var(--ink);
+  background:var(--surface);border:1px solid rgba(14,140,127,.35);border-radius:10px}
+.oquiz-result a{color:var(--action);font-weight:600}
+[data-theme="dark"] .bcalc,[data-theme="dark"] .oquiz{background:#1B2330}
+[data-theme="dark"] .bcalc-result,[data-theme="dark"] .oquiz-result,
+[data-theme="dark"] .bcalc-field select,[data-theme="dark"] .oquiz-q-btns button{background:#141B26}
+@media(max-width:640px){
+  .bcalc,.oquiz{padding:16px 14px}
+  .oquiz-q{flex-direction:column;align-items:flex-start;gap:8px}
+}
