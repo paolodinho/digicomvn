@@ -1957,3 +1957,37 @@ body.mnav-open{overflow:hidden}
 .svc-sheet-list li:first-child{border-top:0}
 .svc-sheet-list a{display:block;padding:15px 12px;font-weight:600;color:var(--heading);font-size:15.5px}
 .svc-sheet-list a:active{color:var(--action)}
+
+/* --- Bieu do so sanh DR trong bai book-bao (inc/dr-chart.php, 2026-07-16) --- */
+.dr-chart{margin:34px 0;padding:20px 22px 14px;background:var(--surface-2);
+  border:1px solid var(--line);border-radius:14px}
+.dr-chart-title{font-family:var(--font-display);font-weight:700;font-size:16.5px;
+  color:var(--heading);margin:0 0 14px}
+.dr-chart-rows{display:flex;flex-direction:column}
+.dr-row{display:flex;align-items:center;gap:10px;padding:7px 6px;border-radius:8px;
+  text-decoration:none;color:var(--ink);transition:background .15s}
+.dr-row:hover{background:rgba(71,97,255,.07)}
+.dr-row-name{flex:0 0 108px;font-size:13.5px;font-weight:600;color:var(--heading);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dr-row-badge{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--teal,#0E8C7F);
+  border-radius:999px;padding:2px 7px;vertical-align:1px}
+.dr-row-track{flex:1 1 auto;height:12px;background:var(--line);border-radius:999px;overflow:hidden}
+.dr-row-bar{display:block;height:100%;width:0;border-radius:999px;
+  background:linear-gradient(90deg,#7C93F5,var(--action,#4761FF));
+  transition:width .8s cubic-bezier(.2,.7,.3,1)}
+.dr-row.is-current .dr-row-bar{background:linear-gradient(90deg,#2FB39F,var(--teal,#0E8C7F))}
+.dr-row.is-current .dr-row-name{color:var(--teal,#0E8C7F)}
+.dr-chart.in-view .dr-row-bar{width:var(--dr-w)}
+.dr-row-val{flex:0 0 52px;text-align:right;font-size:12.5px;font-weight:700;
+  color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.dr-row.is-current .dr-row-val{color:var(--teal,#0E8C7F)}
+.dr-chart-note{font-size:12px;color:var(--ink-soft);margin:12px 2px 0}
+[data-theme="dark"] .dr-chart{background:#1B2330}
+[data-theme="dark"] .dr-row:hover{background:rgba(124,147,245,.12)}
+[data-theme="dark"] .dr-row-track{background:rgba(255,255,255,.12)}
+@media(max-width:640px){
+  .dr-chart{padding:16px 14px 12px}
+  .dr-row-name{flex-basis:88px;font-size:12.5px}
+  .dr-row-val{flex-basis:44px;font-size:12px}
+}

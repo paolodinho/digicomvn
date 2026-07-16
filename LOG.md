@@ -1402,3 +1402,7 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
 - (Hiếu quyết cùng ngày) 4 nhóm media TẠM ẨN: truyền hình + loa phường + phát thanh + màn LED.
   226 dòng giá + 4 trang pillar -> draft; gỡ menu/trang chủ/tab bảng giá. Dữ liệu lưu
   10-bang-gia-booking/qc-media-cho-mo/. Verify: 4 URL 404, bảng giá + home sạch.
+- Thêm biểu đồ interactive so sánh DR vào 15 bài book-bao: shortcode [dgc_dr_chart] (inc/dr-chart.php),
+  DR đọc live từ CPT (cache 1h), bar chart 15 báo sắp theo DR, báo hiện tại highlight teal + badge,
+  hover + animation khi cuộn tới, bấm hàng -> sang bài báo đó. Vị trí: sau mục "có gì đáng giá",
+  trước bảng giá. DGC_VER 1.7.8. Verify render trên /book-bao-eva/.

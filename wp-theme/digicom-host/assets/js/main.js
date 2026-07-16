@@ -750,3 +750,19 @@ document.addEventListener('click', function (e) {
 	});
 	document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) setOpen(false); });
 })();
+
+/* Bieu do DR trong bai book-bao: chay animation thanh khi cuon toi (nghi mat + interactive). */
+(function () {
+	var charts = document.querySelectorAll('[data-dr-chart]');
+	if (!charts.length) return;
+	if (!('IntersectionObserver' in window)) {
+		charts.forEach(function (c) { c.classList.add('in-view'); });
+		return;
+	}
+	var io = new IntersectionObserver(function (entries) {
+		entries.forEach(function (e) {
+			if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+		});
+	}, { threshold: 0.35 });
+	charts.forEach(function (c) { io.observe(c); });
+})();
