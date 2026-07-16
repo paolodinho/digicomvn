@@ -3,7 +3,7 @@
 > Nhân bản + adapt từ hệ writing-rules của dự án ICD (2026-07-16), bỏ phần ICD-only
 > (WooCommerce/product specs/hide-price/Xilin). Áp cho MỌI bài viết của digicomvn:
 > bài blog on-site, trang dịch vụ, VÀ bài PR đăng báo ngoài.
-> Kế thừa: `tone-voice.md`, `dich-vu.md`, `uu-dai-cta.md`, `content-mirror-pavietnam.md`, `do-dont.md`.
+> Kế thừa: `tone-voice.md`, `dich-vu.md`, `uu-dai-cta.md`, `content-mirror-pavietnam.md`, `do-dont.md`, `seo-patent-process.md`.
 
 ## 0. HAI LOẠI BÀI — XÁC ĐỊNH TRƯỚC KHI VIẾT
 
@@ -77,9 +77,29 @@ Bài B KHÔNG có FAQ schema (không kiểm soát được HTML báo), KHÔNG nh
 - **Đa dạng câu dẫn quanh anchor** giữa các báo — không dùng chung 1 câu boilerplate.
 - Hotline `tel:0988797?` → dùng **`0988 769 317`**; Email `info@digicomvn.com`.
 
-## 5. Information Gain — RIÊNG TỪNG URL
+## 5. RESEARCH TRƯỚC KHI VIẾT — TOP 15 SERP (bắt buộc)
 
-Viết riêng cho primary keyword của URL đó, không copy template. Workflow: lấy keyword → search top 5 SERP → list facts đối thủ đã có → tìm gap → viết block trả lời gap (kiến thức mới, số liệu cụ thể). Đạt ≥3/6: dữ liệu/khoảng giá thật, bảng so sánh, decision framework/checklist, edge case đối thủ không nói, ví dụ thực tế, mốc cập nhật.
+Trước khi viết 1 chữ, research primary keyword để bài **tốt hơn + đủ hơn** top đang xếp hạng:
+
+1. **Lấy top 15 kết quả xếp hạng cao nhất** trên Google cho primary keyword (WebSearch; bổ trợ Ahrefs/Semrush SERP overview + related/PAA nếu có).
+2. Với mỗi kết quả, ghi: **họ cover gì** (heading, bảng, số liệu, FAQ) và **họ THIẾU gì**.
+3. Tổng hợp: (a) union mọi sub-topic top 15 đã phủ → bài mình phải phủ ĐỦ; (b) knowledge gap không ai trả lời tốt → đây là **information gain** của mình.
+4. Lấy long-tail/H2 từ autocomplete + "People also ask".
+5. Xác định **≥3 yếu tố độc quyền** chỉ digicomvn viết được (khoảng giá thật, bảng so sánh dịch vụ, checklist chọn nguồn, edge case ngành BĐS/tài chính…).
+
+**Ngưỡng đạt:** bài phải phủ đủ mọi sub-topic quan trọng của top 15 + có phần đối thủ không có. KHÔNG đăng nếu mỏng hơn top 3.
+
+### Information Gain — RIÊNG TỪNG URL
+Viết riêng cho primary keyword của URL đó, không copy template. Đạt ≥3/6: dữ liệu/khoảng giá thật, bảng so sánh, decision framework/checklist, edge case đối thủ không nói, ví dụ thực tế, mốc cập nhật. Verify: paste block sang URL khác cùng cụm mà vẫn đúng → SAI, phải unique.
+
+## 5b. NGUYÊN LÝ PATENT GOOGLE (áp khi viết + cài link)
+
+Đọc `seo-patent-process.md`. Tối thiểu áp 4 nguyên lý sau (đã verify quote từ patent thật):
+- **Ngữ cảnh quanh anchor phải đa dạng** giữa các bài/báo cùng trỏ về digicomvn — không lặp câu dẫn boilerplate *(US8577893B1)*.
+- **Đặt link trong body chính**, không cuối bài/sidebar — vị trí ảnh hưởng xác suất click thật *(US8117209B1)*.
+- **Phân đoạn trực quan sạch** bằng khoảng trắng/heading, không dồn đặc, không ẩn text *(US7676745B2)*.
+- **Backlink coi trọng phân phối chất lượng nguồn** (bucket DR), không chỉ đếm số lượng — phản ánh vào cách tư vấn khách trong bài *(US9002832B1)*.
+- Không tuyên bố 3 loại nguồn (patent / leak / heuristic) đều là "bằng sáng chế Google" khi viết cho khách.
 
 ## 6. TONE & THUẬT NGỮ (theo tone-voice.md + rule Hiếu)
 
