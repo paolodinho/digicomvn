@@ -1385,3 +1385,9 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
 - Them "Dich vu Toplist" (2113) vao menu primary (truoc thieu, chi 7/8) -> dong bo 8 dich vu ca 3 mat.
 - Deploy live + purge. Browser test that (375px + desktop): desktop no-nav+xo submenu OK;
   bottom sheet mo/dong (X/overlay) 8 link OK; drawer accordion an->mo->an OK. Backup theme trong tar 135425.
+
+## 2026-07-16 (tiếp) - Chuyển 15 trang con booking báo thành bài blog
+- Đăng 15 bài `/book-bao-<bao>/` (post 2189, 2192-2205), category booking-bao-pr, mỗi bài nhúng bảng giá động `[dgc_bang_gia]` (giá tự cập nhật theo CPT dgc_gia).
+- 15 trang con cũ `/booking-bao-pr/<bao>/` (508-512, 1300-1309) -> draft; handler 404 tự 301 về bài mới. Verify: 15/15 bài 200, 15/15 URL cũ 301 đúng đích, bảng giá render.
+- search-replace 53 link nội bộ cũ -> URL bài mới (giữ nguyên pillar /booking-bao-pr/).
+- Lưu ý: /dich-vu-backlink/bat-dong-san/ KHÔNG chuyển (Hiếu thu hẹp scope chỉ các bài báo giá booking lẻ).

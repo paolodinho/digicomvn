@@ -141,3 +141,4 @@ Skill content-writer SKIP ảnh/thumbnail - không tìm ảnh, không tạo plac
 - KHÔNG bịa số liệu / case study / URL. Mọi số liệu có nguồn + năm inline.
 - KHÔNG dùng sáo ngữ: "giá cạnh tranh", "cam kết top 1", "tốt nhất thị trường", "giải pháp toàn diện", "không thể thiếu", "đóng vai trò quan trọng".
 - Title: không (—), không ALL CAPS, keyword ở 3-4 từ đầu, khác H1.
+- Thứ tự đầu bài (rule Hiếu 2026-07-16): **H1 -> SAPO -> Tóm tắt nhanh -> mở bài** (KHÔNG đặt khối tóm tắt trước H1).

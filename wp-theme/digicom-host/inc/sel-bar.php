@@ -11,7 +11,6 @@ $dgc_tiers      = dgc_combo_tiers();
 $dgc_tiers_text = dgc_combo_tiers_text();
 ?>
 <div class="sel-bar" data-sel-bar data-tiers="<?php echo esc_attr( wp_json_encode( $dgc_tiers ) ); ?>">
-	<p class="sel-bar-hint">Tick chọn báo/site để xem tổng chi phí &amp; gửi yêu cầu báo giá.</p>
 	<div class="sel-bar-info">
 		<span class="sel-bar-count">Đã chọn: <b class="sel-bar-count-num">0</b> mục</span>
 

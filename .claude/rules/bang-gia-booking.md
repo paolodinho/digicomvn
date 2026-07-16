@@ -195,3 +195,14 @@ tranh chú ý. CSS `.nav>ul>li>a[href*="/bang-gia"]`.
 - **goi_sites (list site trong gói)**: cơ chế render list khi field có dữ liệu (dgc_gia_goi_sites).
   Solann/NCC KHÔNG công bố list site công khai -> chờ Hiếu gửi list hoặc routine tự quét bên nào công bố.
   KHÔNG bịa tên site/DR.
+
+## Gói không công bố đăng ở đâu -> KHÔNG đưa lên web (rule Hiếu 2026-07-16)
+
+Dòng giá dạng **Gói/Combo/Social Entity** mà không show được đăng báo nào, đăng ở đâu
+(`goi_sites` rỗng) -> KHÔNG hiển thị trên site.
+- Đã draft 110 dòng CPT dgc_gia ngày 2026-07-16 (list ID backup: `~/backups/goi-hidden-20260716.txt`
+  trên host). Nhóm dich-vu-backlink + backlink-social-entity tạm 0 dòng -> trang dịch vụ không render bảng giá.
+- `export-web.py` có filter `is_goi_an_danh()` - gói không có goi_sites bị loại khỏi gia-web.csv,
+  routine tuần không đẩy lại lên web. Khi NCC công bố list site (điền goi_sites) -> dòng tự xuất lại,
+  đồng thời publish lại post tương ứng.
+- Lưu ý so khớp: LIKE không dấu khiến "ngoisao.net" dính "%gói%" -> phải dùng LIKE BINARY "Gói%".

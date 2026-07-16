@@ -90,6 +90,18 @@ with open(SRC) as f:
 rows = [r for r in all_rows if not is_soft(r)]
 print(f"Bo qua {len(all_rows) - len(rows)} dong gia mem (gia tu / dai gia) - khong dung de dinh gia web.\n")
 
+def is_goi_an_danh(r):
+    """Goi/combo KHONG cong bo dang bao nao, dang o dau -> KHONG dua len web (Hieu 2026-07-16).
+    Khi NCC cong bo list site (dien goi_sites) thi dong do duoc xuat lai."""
+    d = fold(r["dau_bao"])
+    if not (d.startswith("goi") or d.startswith("combo") or d.startswith("social entity")):
+        return False
+    return not r.get("goi_sites", "").strip()
+
+n0 = len(rows)
+rows = [r for r in rows if not is_goi_an_danh(r)]
+print(f"Bo qua {n0 - len(rows)} dong goi/combo khong co danh sach site cong khai (rule 2026-07-16).\n")
+
 # Khoa gom nhom: dich vu + domain + tang.
 # CHI gop 2 dong khi CHAC CHAN cung san pham. Cac dich vu duoi day co nhieu san pham RAT khac
 # nhau tren cung 1 "dau bao" -> phai dua them vi_tri/nhom/quy_cach vao khoa, neu khong se gop

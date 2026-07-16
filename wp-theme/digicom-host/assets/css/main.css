@@ -903,14 +903,13 @@ body.mnav-open{overflow:hidden}
 .row-logo-fallback{display:flex;align-items:center;justify-content:center;
   font-family:var(--font-display);font-weight:700;font-size:13px;border:none}
 .sel-bar-combo-note{font-size:12px;color:var(--ink-soft);margin:8px 2px 0}
-.sel-bar-hint{display:none;margin:0;font-size:13.5px;color:var(--ink-soft)}
-/* Duoi 640px: khi CHUA tick bao nao, thu gon thanh 1 dong goi y ngan (khong hien
-   "0 muc/0d" vo nghia). Khi tick >=1 (JS them class has-picks), bar GHIM CO DINH
+/* Duoi 640px: khi CHUA tick bao nao, AN han sel-bar (bo dong goi y "Tick chon..." -
+   Hieu 2026-07-16). Khi tick >=1 (JS them class has-picks), bar GHIM CO DINH
    phia tren bottom-nav, noi bat mau brand - giong thanh "gio hang" cua app that,
    luon thay duoc trong luc cuon xem tiep bang gia. */
 @media(max-width:640px){
   .sel-bar{position:static;padding:12px 14px}
-  .sel-bar-hint{display:block}
+  .sel-bar:not(.has-picks){display:none}
   .sel-bar-info,.sel-bar-actions{display:none}
   .sel-bar-combo-note{display:none}
   .sel-bar.has-picks + .sel-bar-combo-note{display:block}
@@ -922,7 +921,6 @@ body.mnav-open{overflow:hidden}
     border:1.5px solid var(--action);border-bottom:0;
     box-shadow:0 -10px 28px rgba(28,32,53,.18);
     animation:selBarIn .2s ease}
-  .sel-bar.has-picks .sel-bar-hint{display:none}
   /* Mobile: chua chon muc nao -> KHONG hien nut gui (vo nghia khi 0 muc, Hieu 2026-07-15). */
   .sel-bar:not(.has-picks) .sel-bar-actions{display:none}
   .sel-bar.has-picks .sel-bar-info{display:flex;justify-content:space-between;align-items:center}
@@ -941,7 +939,9 @@ body.mnav-open{overflow:hidden}
    bang gia dung tron be ngang. Dung <select> that -> mobile bat picker he dieu hanh, khong
    phai keo danh sach 25 nut. */
 .filter-bar{display:flex;align-items:flex-end;flex-wrap:wrap;gap:10px 12px;margin-bottom:14px;
-  padding:12px 14px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md)}
+  padding:12px 14px;background:linear-gradient(180deg,#EDF2FF,#F6F8FF);
+  border:1px solid rgba(71,97,255,.20);border-radius:var(--r-md)}
+[data-theme="dark"] .filter-bar{background:#1B2330;border-color:rgba(130,150,255,.28)}
 .filter-sel{display:flex;flex-direction:column;gap:4px;min-width:0}
 .filter-sel-lb{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;
   letter-spacing:.05em;color:var(--ink-soft)}
