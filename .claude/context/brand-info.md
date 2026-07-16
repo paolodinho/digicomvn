@@ -38,14 +38,24 @@
 
 ## 4. Sản phẩm / Dịch vụ + URL
 
-| # | Dịch vụ | URL / slug | Trạng thái |
-|---|---|---|---|
-| 1 | Mua Textlink | `/dich-vu/mua-textlink/` | URL thật (pivot 2026-07-02) |
-| 2 | Dịch vụ Backlink | `/dich-vu/dich-vu-backlink/` | URL thật (ngách BĐS: `/dich-vu/dich-vu-backlink/bat-dong-san/`) |
-| 3 | Guest Post | `/dich-vu/guest-post/` | URL thật |
-| 4 | Booking báo & PR | `/dich-vu/booking-bao-pr/` | URL thật (con theo đầu báo đang draft) |
+> **FLATTEN 2026-07-16 (Hiếu quyết):** BỎ hub `/dich-vu/`, 8 pillar chuyển LÊN GỐC.
+> URL cũ `/dich-vu/...` đã 301 về URL mới (handler trong theme functions.php).
 
-Hub dịch vụ: `/dich-vu/`. Bảng giá: `/bang-gia/` (209 dòng giá thật theo CPT `dgc_gia`).
+| # | Dịch vụ | URL / slug (MỚI, ở gốc) |
+|---|---|---|
+| 1 | Mua Textlink | `/mua-textlink/` |
+| 2 | Dịch vụ Backlink | `/dich-vu-backlink/` (ngách BĐS: `/dich-vu-backlink/bat-dong-san/`) |
+| 3 | Guest Post | `/guest-post/` |
+| 4 | Booking báo & PR | `/booking-bao-pr/` (pillar) |
+| 5 | Dịch vụ Toplist | `/dich-vu-toplist/` |
+| 6 | Backlink Social Entity | `/backlink-social-entity/` |
+| 7 | Backlink quốc tế | `/backlink-quoc-te/` |
+| 8 | Booking truyền hình | `/booking-truyen-hinh/` |
+
+KHÔNG còn hub `/dich-vu/` (301 về trang chủ). Trang con đầu báo `/booking-bao-pr/<bao>/`
+đã chuyển thành BÀI BLOG `/book-bao-<bao>/` (15 bài, 301 tự động, 2026-07-16) - bài nhúng
+bảng giá động qua shortcode `[dgc_bang_gia bao="..." domain="..."]`.
+Bảng giá: `/bang-gia/` (giá thật theo CPT `dgc_gia`).
 Đặt bài: `/dat-bai/`. Về Digicom: `/ve-digicom/`. Liên hệ: `/lien-he/`.
 
 **QUAN TRỌNG - URL cũ đã đổi cấu trúc (pivot 2026-07-02):** Toàn bộ URL dịch vụ cũ dạng
@@ -97,8 +107,10 @@ Dịch vụ Backlink/Guest Post/Booking báo & PR). Chỉ 2 bài mới (`textlin
 (URL phẳng, hiện là bài blog cũ post ID 227 - không phải trang dịch vụ tiền thật) thay vì
 `/dich-vu/dich-vu-backlink/` (page pillar thật, ID 268). Xem mục 4.
 
-Quy tắc: bài đề cập service chưa có page → link đúng `/dich-vu/[slug]/` theo mục 4 + `/lien-he/`.
-Không bịa URL, không dùng lại URL phẳng cũ.
+Quy tắc (CẬP NHẬT 2026-07-16 sau flatten): link money page dùng URL GỐC theo bảng mục 4
+(vd `/booking-bao-pr/`, `/mua-textlink/`). KHÔNG dùng `/dich-vu/...` nữa (đã 301).
+Lưu ý slug `/dich-vu-backlink/`: sau flatten đây CHÍNH LÀ page pillar (bài blog cũ trùng slug
+đã bị thay thế vị trí - kiểm tra post ID khi sửa). Không bịa URL.
 
 ## 8. WordPress / Publish
 

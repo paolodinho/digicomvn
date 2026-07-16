@@ -442,7 +442,22 @@ add_action( 'template_redirect', function () {
 	if ( ! is_404() ) return;
 	$uri  = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
 	$path = parse_url( $uri, PHP_URL_PATH );
-	if ( ! $path || strpos( $path, '/dich-vu/' ) !== 0 && $path !== '/dich-vu' ) return;
+	if ( ! $path ) return;
+
+	/* Trang con dau bao cu /booking-bao-pr/<bao>/ -> bai blog "book-bao-<bao>" (chuyen doi
+	   2026-07-16: bao gia booking le tung bao chuyen thanh bai blog + shortcode bang gia).
+	   Chi fire khi trang cu da draft (404). Khong co bai -> ve pillar. */
+	if ( preg_match( '#^/booking-bao-pr/([a-z0-9-]+)/?$#', $path, $m ) ) {
+		$dgc_bb_post = get_page_by_path( 'book-bao-' . $m[1], OBJECT, 'post' );
+		if ( $dgc_bb_post && 'publish' === $dgc_bb_post->post_status ) {
+			wp_safe_redirect( get_permalink( $dgc_bb_post ), 301 );
+		} else {
+			wp_safe_redirect( home_url( '/booking-bao-pr/' ), 301 );
+		}
+		exit;
+	}
+
+	if ( strpos( $path, '/dich-vu/' ) !== 0 && $path !== '/dich-vu' ) return;
 
 	$rest = trim( substr( $path, strlen( '/dich-vu' ) ), '/' ); // '' cho chinh /dich-vu/
 	if ( $rest !== '' && get_page_by_path( $rest ) ) {

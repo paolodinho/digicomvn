@@ -917,3 +917,28 @@ function dgc_current_nhom( $post_id = 0 ) {
 	}
 	return null;
 }
+
+/**
+ * Shortcode nhung bang gia dong vao bai blog: [dgc_bang_gia bao="VnExpress" domain="vnexpress.net"]
+ * - domain: loc EXACT ten mien (nhieu domain cach nhau dau phay) - khuyen dung.
+ * - bao:    ten hien thi trong heading ("Bảng giá booking VnExpress").
+ * - nhom:   slug dgc_nhom, mac dinh booking-bao-pr.
+ * Gia doc truc tiep tu CPT dgc_gia -> routine cap nhat gia hang ngay thi bai blog tu tuoi theo.
+ */
+add_shortcode( 'dgc_bang_gia', function ( $atts ) {
+	$a = shortcode_atts( array( 'bao' => '', 'domain' => '', 'nhom' => 'booking-bao-pr' ), $atts, 'dgc_bang_gia' );
+	if ( '' === $a['domain'] && '' === $a['bao'] ) return '';
+
+	$nhom = array(
+		'slug'           => sanitize_title( $a['nhom'] ),
+		'label'          => 'Booking báo & PR',
+		// fallback keyword neu khong truyen domain (giu tuong thich logic cu)
+		'outlet_keyword' => $a['domain'] ? '' : str_replace( '-', '', sanitize_title( $a['bao'] ) ),
+	);
+	$svc_name        = $a['bao'] ? 'booking ' . $a['bao'] : 'booking bài PR';
+	$dgc_sp_domains  = $a['domain'] ? array_filter( array_map( 'trim', explode( ',', $a['domain'] ) ) ) : array();
+
+	ob_start();
+	include get_template_directory() . '/inc/service-pricing.php';
+	return ob_get_clean();
+} );

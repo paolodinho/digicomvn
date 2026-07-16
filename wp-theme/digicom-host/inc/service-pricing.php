@@ -22,6 +22,19 @@ if ( ! empty( $nhom['outlet_keyword'] ) ) {
 	}
 }
 
+// Loc EXACT domain (shortcode [dgc_bang_gia] trong bai blog) - chinh xac hon keyword,
+// tranh over-match kieu "24h" trung ca bongda24h.vn / nghean24h.vn.
+if ( ! empty( $dgc_sp_domains ) ) {
+	$dgc_sp_doms = array_map( 'strtolower', array_map( 'trim', (array) $dgc_sp_domains ) );
+	$filtered    = array_values( array_filter( $dgc_sp_items, function ( $it ) use ( $dgc_sp_doms ) {
+		return in_array( strtolower( trim( $it->post_title ) ), $dgc_sp_doms, true );
+	} ) );
+	if ( $filtered ) {
+		$dgc_sp_items     = $filtered;
+		$dgc_sp_is_outlet = true;
+	}
+}
+
 if ( empty( $dgc_sp_items ) ) return;
 
 $dgc_sp_total = count( $dgc_sp_items );
@@ -35,7 +48,9 @@ $dgc_sp_col_name = $dgc_sp_is_goi ? 'Tên gói' : ( 'báo' === $dgc_sp_dv ? 'Tê
 $dgc_sp_col_pos  = $dgc_sp_is_goi ? 'Quy mô gói' : 'Vị trí';
 $dgc_sp_heading  = $dgc_sp_is_goi
 	? 'Bảng giá gói ' . mb_strtolower( $svc_name )
-	: 'Bảng giá ' . mb_strtolower( $svc_name ) . ' theo từng ' . $dgc_sp_dv;
+	: ( $dgc_sp_is_outlet
+		? 'Bảng giá ' . mb_strtolower( $svc_name ) // 1 dau bao cu the -> khong ghi "theo tung bao"
+		: 'Bảng giá ' . mb_strtolower( $svc_name ) . ' theo từng ' . $dgc_sp_dv );
 $dgc_sp_sub      = $dgc_sp_is_goi
 	? 'Tick chọn gói bạn quan tâm - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.'
 	: 'Tìm theo tên, sắp xếp theo giá và tick chọn ' . $dgc_sp_dv . ' cần đặt - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.';
