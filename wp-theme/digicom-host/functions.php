@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '1.7.2' );
+define( 'DGC_VER', '1.7.4' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -152,6 +152,21 @@ function dgc_tel() {
 
 function dgc_tel2() {
 	return preg_replace( '/[^0-9+]/', '', dgc( 'hotline2', '' ) );
+}
+
+/** 8 trang dich vu pillar (label | path o goc). Dung cho bottom-sheet "Dich vu" mobile.
+ *  Slug co dinh theo sitemap (flatten 2026-07-16). */
+function dgc_service_links() {
+	return array(
+		array( 'Mua Textlink',           '/mua-textlink/' ),
+		array( 'Dịch vụ Backlink',       '/dich-vu-backlink/' ),
+		array( 'Guest Post',             '/guest-post/' ),
+		array( 'Booking báo & PR',       '/booking-bao-pr/' ),
+		array( 'Dịch vụ Toplist',        '/dich-vu-toplist/' ),
+		array( 'Backlink Social Entity', '/backlink-social-entity/' ),
+		array( 'Backlink quốc tế',       '/backlink-quoc-te/' ),
+		array( 'Booking truyền hình',    '/booking-truyen-hinh/' ),
+	);
 }
 
 /** Icon SVG thuan (thay emoji &#xxxx; - render khac nhau tuy OS, nhin re tien). */
@@ -413,6 +428,29 @@ add_action( 'template_redirect', function () {
 		wp_safe_redirect( $target, 301 );
 		exit;
 	}
+}, 5 );
+
+/* ---------------------------------------------------------------------------
+ * 301 cau truc CU "/dich-vu/<pillar>/..." -> cau truc MOI o goc "/<pillar>/..."
+ * (Hieu 2026-07-16: bo trang hub /dich-vu/, dua 8 pillar len goc).
+ * CHI fire khi is_404() -> tu tuan tu: truoc khi doi post_parent (trang cu con song)
+ * KHONG 404 nen KHONG redirect; sau khi doi parent, URL cu 404 -> redirect sang URL moi.
+ * => Deploy code truoc hay sau buoc doi DB deu an toan, khong tao vong lap.
+ * Mot handler generic phu het: 8 pillar + 15 trang con dau bao + bat-dong-san + hub.
+ * ------------------------------------------------------------------------- */
+add_action( 'template_redirect', function () {
+	if ( ! is_404() ) return;
+	$uri  = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+	$path = parse_url( $uri, PHP_URL_PATH );
+	if ( ! $path || strpos( $path, '/dich-vu/' ) !== 0 && $path !== '/dich-vu' ) return;
+
+	$rest = trim( substr( $path, strlen( '/dich-vu' ) ), '/' ); // '' cho chinh /dich-vu/
+	if ( $rest !== '' && get_page_by_path( $rest ) ) {
+		wp_safe_redirect( home_url( '/' . $rest . '/' ), 301 ); // pillar/con da chuyen len goc
+	} else {
+		wp_safe_redirect( home_url( '/' ), 301 ); // hub cu -> trang chu (da liet ke dich vu)
+	}
+	exit;
 }, 5 );
 
 /**

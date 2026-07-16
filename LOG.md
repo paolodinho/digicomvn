@@ -1336,3 +1336,52 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
   KHÔNG phải trùng - giữ.
 - 5 tab lộn xộn còn lại (guest post flags TRUE/FALSE, pasgo toplist ma trận, textlink gói V1-V5,
   toplist ngành TOP1-5) -> giao routine (parse cẩn thận, đối chiếu tay), đã ghi nguon.md.
+
+## 2026-07-16 - Cau truc trang dich vu tối ưu (quét 15 site top "booking báo")
+- Quét SERP google.vn cụm "booking báo chí": 15 site (kmedia, tinhhoamedia, itify, zafago,
+  hunteragency, bookbaopr, seovip, chobao, songkim, peakagency, ecpmedia + 2 blog + 2 listicle).
+  Fetch cấu trúc 6 trang dịch vụ mạnh nhất -> rút pattern chung.
+- Phát hiện: nhiều block "thiếu" (đầu báo, vì sao chọn, testimonials, FAQ) ĐÃ có data+render ở
+  front-page nhưng chưa cắm vào trang dịch vụ (tpl-service). Chỉ "... là gì" là thực sự thiếu.
+- Tách 4 partial dùng chung 1 nguồn: inc/blk-reasons.php, blk-press-partners.php,
+  blk-testimonials.php, blk-faq.php (front-page + tpl-service cùng include).
+- Thêm block "... là gì": inc/svc-intro.php + option svc_intros (WP Admin muc 2), keyed theo slug.
+  Default san cho booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink. Bat intent + GEO.
+- tpl-service thứ tự mới: hero -> "là gì" -> bảng giá+quy trình -> content -> đầu báo -> vì sao
+  chọn -> testimonials -> FAQ -> form -> CTA. CSS .svc-intro (dark-mode ready). DGC_VER 1.7.2->1.7.3.
+- Lint PHP sạch 9 file. Local đang tắt (502) -> chưa QA trực quan. Backup:
+  _backups/routines/2026-07-16/digicom-service-structure/ (tpl-service, front-page, options gốc).
+
+## 2026-07-16 (2) - FLATTEN cau truc: bo hub /dich-vu/, pillar len goc
+- Hieu quyet bo trang hub /dich-vu/, dua 8 pillar len goc (/booking-bao-pr/...). Phan bo link tu trang chu.
+- CODE THEME (xong, lint sach): 301 handler generic trong functions.php (fire khi is_404, strip
+  /dich-vu/ -> URL moi; hub -> trang chu; tu tuan tu, khong vong lap). Sua het link cung 8 pillar
+  ve goc (front-page, footer, header, page-bang-gia, ai-chat, breadcrumb tpl-service). Bo nut/hub
+  card thua. dgc_is_service_page() bo phu thuoc trang hub -> dua dgc_current_nhom. page-dich-vu.php dead.
+- DB (CHUA chay - can WP): script _migration/2026-07-16-flatten-dichvu/migrate.sh
+  (backup DB -> reparent 8 pillar post_parent=0 -> hub draft -> flush rewrite). Local dang tat (502).
+- Backup theme goc: _backups/routines/2026-07-16/digicom-service-structure/.
+- CON LAI: chay migrate.sh tren Local (verify) roi deploy live, HOAC chay thang live qua SSH (co backup).
+  Kiem menu WP (go item 'Dich vu' tro hub neu la custom link).
+
+## 2026-07-16 (3) - DA THUC THI FLATTEN TREN LIVE (digicomvn.com) - XONG
+- Backup live: ~/backups/flatten-20260716-135425/ (db-before.sql 9.8M mysqldump + theme-before.tar.gz 1.1M).
+  Luu y: wp db export HONG tren host (EXIT 255) -> dung mysqldump truc tiep (ghi vao deploy.md).
+- Deploy 15 file theme (10 sua + 5 partial moi) + main.css, DGC_VER 1.7.3. Remote php -l sach.
+- DB: reparent 8 pillar (505,268,506,475,2113,1621,2106,2107) post_parent=0; hub 440 -> draft; rewrite flush.
+- Menu primary (term 11): sua 3 item custom (535 Dich vu->/#services, 2108 backlink-quoc-te, 2109 booking-truyen-hinh);
+  item post_type tu cap nhat URL.
+- search-replace noi dung: 8 prefix pillar /dich-vu/<slug>/ -> /<slug>/ (tong 120 thay the) - sua link con 15 bao hardcode.
+- Purge wp cache + litespeed. VERIFY curl: URL moi 200; URL cu (pillar/con bao/bat-dong-san/hub) 301 dung dich;
+  0 link /dich-vu/ noi bo con sot; sitemap da doi URL moi. HOAN TAT.
+
+## 2026-07-16 (4) - "Dich vu" thanh nut TRAI RA (khong dieu huong) - live, verified
+- Desktop nav + drawer mobile: item cha "Dich vu" (menu-item-has-children) -> click preventDefault
+  + toggle .dgc-open, KHONG chuyen trang. Drawer accordion (submenu an mac dinh, caret xoay).
+- Bottom-nav mobile: "Dich vu" doi tu <a> sang <button data-svc-sheet> -> mo BOTTOM SHEET liet ke
+  8 dich vu (helper dgc_service_links). Dong bang X / overlay / ESC.
+- Files: functions.php (helper + DGC_VER 1.7.4), footer.php (button + sheet markup),
+  main.js (2 IIFE: menu toggle + sheet), main.css (desktop .dgc-open, drawer accordion+caret, .svc-sheet*).
+- Them "Dich vu Toplist" (2113) vao menu primary (truoc thieu, chi 7/8) -> dong bo 8 dich vu ca 3 mat.
+- Deploy live + purge. Browser test that (375px + desktop): desktop no-nav+xo submenu OK;
+  bottom sheet mo/dong (X/overlay) 8 link OK; drawer accordion an->mo->an OK. Backup theme trong tar 135425.

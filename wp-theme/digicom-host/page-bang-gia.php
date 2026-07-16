@@ -132,16 +132,16 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 				<h3>Mua Textlink &amp; Dịch vụ Backlink</h3>
 				<p class="muted">Chèn link vào bài có sẵn hoặc xây hệ thống backlink chất lượng, theo dõi index, có báo cáo.</p>
 				<div class="pillar-actions">
-					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/mua-textlink/' ) ); ?>">Xem Textlink</a>
-					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/dich-vu-backlink/' ) ); ?>">Xem Backlink</a>
+					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/mua-textlink/' ) ); ?>">Xem Textlink</a>
+					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu-backlink/' ) ); ?>">Xem Backlink</a>
 				</div>
 			</div>
 			<div class="pillar-card">
 				<h3>Guest Post &amp; Booking báo PR</h3>
 				<p class="muted">Viết bài đăng trên site đúng chủ đề, hoặc booking đăng bài PR trên báo điện tử theo yêu cầu.</p>
 				<div class="pillar-actions">
-					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Xem Guest Post</a>
-					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dich-vu/booking-bao-pr/' ) ); ?>">Xem Booking PR</a>
+					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/guest-post/' ) ); ?>">Xem Guest Post</a>
+					<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>">Xem Booking PR</a>
 				</div>
 			</div>
 		</div>

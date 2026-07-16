@@ -702,3 +702,51 @@ document.addEventListener('click', function (e) {
 		open(name ? name.textContent : 'Giới thiệu', box ? box.innerHTML : '');
 	});
 })();
+
+/* "Dich vu" (item co submenu) = nut TRAI RA, khong dieu huong.
+   Desktop nav + drawer mobile: bam item cha -> toggle mo submenu, chan chuyen trang. */
+(function () {
+	function isParentLink(a) {
+		return a && a.parentElement && a.parentElement.classList.contains('menu-item-has-children')
+			&& (a.closest('.nav') || a.closest('.mnav-list'));
+	}
+	document.addEventListener('click', function (e) {
+		var a = e.target.closest ? e.target.closest('a') : null;
+		if (isParentLink(a)) {
+			e.preventDefault();
+			var li = a.parentElement;
+			var wasOpen = li.classList.contains('dgc-open');
+			// desktop: dong cac menu cha khac cho gon
+			if (a.closest('.nav')) {
+				li.parentElement.querySelectorAll('.menu-item-has-children.dgc-open').forEach(function (o) {
+					if (o !== li) o.classList.remove('dgc-open');
+				});
+			}
+			li.classList.toggle('dgc-open', !wasOpen);
+			return;
+		}
+		// bam ra ngoai -> dong dropdown desktop dang mo
+		document.querySelectorAll('.nav .menu-item-has-children.dgc-open').forEach(function (o) {
+			if (!o.contains(e.target)) o.classList.remove('dgc-open');
+		});
+	});
+})();
+
+/* Bottom sheet "Dich vu" (mobile) - mo/dong tu nut bottom-nav. */
+(function () {
+	var sheet = document.getElementById('svcSheet');
+	if (!sheet) return;
+	var ov = document.querySelector('.svc-sheet-ov');
+	function setOpen(on) {
+		sheet.hidden = !on;
+		if (ov) ov.hidden = !on;
+		document.body.style.overflow = on ? 'hidden' : '';
+		var btn = document.querySelector('[data-svc-sheet]');
+		if (btn) btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+	}
+	document.addEventListener('click', function (e) {
+		if (e.target.closest && e.target.closest('[data-svc-sheet]')) { e.preventDefault(); setOpen(sheet.hidden); return; }
+		if (e.target.closest && e.target.closest('[data-svc-sheet-close]')) { setOpen(false); }
+	});
+	document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) setOpen(false); });
+})();

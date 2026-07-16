@@ -114,7 +114,8 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .nav>ul>li>a:hover:after{right:0}
 .nav .sub-menu{display:none;position:absolute;left:0;top:100%;min-width:200px;margin:0;padding:8px;list-style:none;
   background:var(--surface-2);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 30px rgba(15,23,42,.12);z-index:60}
-.nav li:hover>.sub-menu,.nav li:focus-within>.sub-menu{display:block}
+.nav li:hover>.sub-menu,.nav li:focus-within>.sub-menu,.nav li.dgc-open>.sub-menu{display:block}
+.nav .menu-item-has-children>a{cursor:pointer}
 .nav .sub-menu a{padding:8px 10px;border-radius:6px;white-space:nowrap}
 .nav .sub-menu a:hover{background:var(--surface)}
 /* Bang gia: noi bat NHE - chu brand + gach chan luon hien, KHONG to nen (Hieu 2026-07-15:
@@ -660,6 +661,12 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   linear-gradient(180deg,#fff,var(--surface));border-bottom:1px solid var(--line);padding:44px 0 50px;text-align:center}
 .page-hero h1{max-width:20ch;margin:0 auto .3em}
 .page-hero .lead{font-size:17px;color:var(--ink-soft);max-width:60ch;margin:0 auto}
+/* Khoi dinh nghia dich vu ("... la gi") duoi hero */
+.svc-intro-sec .wrap{max-width:860px}
+.svc-intro{background:var(--surface-2);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:var(--r-md);padding:24px 28px;box-shadow:var(--sh-low)}
+.svc-intro h2{font-size:22px;margin:6px 0 10px}
+.svc-intro p{font-size:16.5px;line-height:1.75;color:var(--ink);margin:0;text-wrap:pretty}
 .breadcrumb{font-size:13px;color:var(--ink-soft);padding:13px 0}
 .breadcrumb a:hover{color:var(--action)}
 .breadcrumb .sep{margin:0 7px;opacity:.5}
@@ -796,7 +803,12 @@ body.mnav-open{overflow:hidden}
 .mnav-list>ul>li{border-bottom:1px solid var(--line)}
 .mnav a{display:block;padding:15px 2px;font-family:var(--font-display);font-weight:600;
   font-size:17px;color:var(--heading)}
-.mnav .sub-menu{padding:0 0 6px 16px;margin:0 0 4px 2px;border-left:2px solid var(--line-2)}
+.mnav .sub-menu{display:none;padding:0 0 6px 16px;margin:0 0 4px 2px;border-left:2px solid var(--line-2)}
+.mnav-list li.dgc-open>.sub-menu{display:block}
+.mnav-list .menu-item-has-children>a{position:relative}
+.mnav-list .menu-item-has-children>a::after{content:"";position:absolute;right:6px;top:26px;width:9px;height:9px;
+  border-right:2px solid var(--ink-soft);border-bottom:2px solid var(--ink-soft);transform:rotate(45deg);transition:transform .2s}
+.mnav-list li.dgc-open>a::after{transform:rotate(225deg)}
 .mnav .sub-menu li{border-bottom:0}
 .mnav .sub-menu a{padding:11px 2px;font-size:15px;font-weight:500;color:var(--ink-soft)}
 .mnav a:active{color:var(--action)}
@@ -1929,3 +1941,19 @@ body.mnav-open{overflow:hidden}
   .ai-msg{max-width:88%;font-size:13.5px}
   .ai-chat-log{max-height:260px}
 }
+
+/* Bottom sheet "Dich vu" (mo tu nut bottom-nav mobile). An mac dinh qua [hidden]. */
+.svc-sheet-ov{position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:95}
+.svc-sheet{position:fixed;left:0;right:0;bottom:0;z-index:96;background:var(--surface-2);
+  border-radius:16px 16px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.18);
+  max-height:72vh;overflow:auto;padding:0 0 calc(var(--bn-h,60px) + 8px);animation:svcSheetUp .22s ease}
+@keyframes svcSheetUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.svc-sheet-head{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;
+  background:var(--surface-2);padding:16px 20px 10px;border-bottom:1px solid var(--line);
+  font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--heading)}
+.svc-sheet-x{background:none;border:0;font-size:26px;line-height:1;color:var(--ink-soft);cursor:pointer;padding:0 4px}
+.svc-sheet-list{list-style:none;margin:0;padding:0 12px}
+.svc-sheet-list li{border-top:1px solid var(--line)}
+.svc-sheet-list li:first-child{border-top:0}
+.svc-sheet-list a{display:block;padding:15px 12px;font-weight:600;color:var(--heading);font-size:15.5px}
+.svc-sheet-list a:active{color:var(--action)}

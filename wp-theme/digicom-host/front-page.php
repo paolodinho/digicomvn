@@ -58,14 +58,14 @@ get_header();
 /* Danh sach pillar dich vu theo sitemap da chot (pivot-2026-07). Slug co dinh -> link truc tiep.
    8 dich vu = luoi 4x2 can doi; link "Tat ca dich vu" chuyen thanh dong chu duoi luoi. */
 $dgc_services = array(
-	array( 'Mua Textlink',           '/dich-vu/mua-textlink/',           'Chèn link vào bài có sẵn, chọn site theo DR &amp; traffic.',        'M13.5 6.5L17 3a4 4 0 1 1 5.5 5.5L19 12M10.5 17.5L7 21a4 4 0 1 1-5.5-5.5L5 12M8 16l8-8' ),
-	array( 'Dịch vụ Backlink',       '/dich-vu/dich-vu-backlink/',       'Hệ thống backlink chất lượng, đa nguồn, an toàn.',                  'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
-	array( 'Guest Post',             '/dich-vu/guest-post/',             'Viết bài &amp; đăng trên site đúng chủ đề, link dofollow.',          'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5' ),
-	array( 'Booking báo &amp; PR',   '/dich-vu/booking-bao-pr/',         'Đặt bài PR trên báo điện tử uy tín, theo từng đầu báo.',            'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
-	array( 'Dịch vụ Toplist',        '/dich-vu/dich-vu-toplist/',        'Đưa thương hiệu vào bài xếp hạng "Top uy tín" đúng lĩnh vực.',       'M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6-5.2-4.4 6.8-.5z' ),
-	array( 'Backlink Social Entity', '/dich-vu/backlink-social-entity/', 'Hồ sơ social chuẩn NAP, nội dung độc bản, làm thủ công.',           'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0' ),
-	array( 'Backlink quốc tế',       '/dich-vu/backlink-quoc-te/',       'Guest post, niche edit &amp; PR báo quốc tế theo tầng DR/DA.',       'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z' ),
-	array( 'Booking truyền hình',    '/dich-vu/booking-truyen-hinh/',    'TVC, phóng sự &amp; talkshow trên VTV, HTV.',                       'M3 7h18v12H3zM8 3l4 4 4-4' ),
+	array( 'Mua Textlink',           '/mua-textlink/',           'Chèn link vào bài có sẵn, chọn site theo DR &amp; traffic.',        'M13.5 6.5L17 3a4 4 0 1 1 5.5 5.5L19 12M10.5 17.5L7 21a4 4 0 1 1-5.5-5.5L5 12M8 16l8-8' ),
+	array( 'Dịch vụ Backlink',       '/dich-vu-backlink/',       'Hệ thống backlink chất lượng, đa nguồn, an toàn.',                  'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
+	array( 'Guest Post',             '/guest-post/',             'Viết bài &amp; đăng trên site đúng chủ đề, link dofollow.',          'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5' ),
+	array( 'Booking báo &amp; PR',   '/booking-bao-pr/',         'Đặt bài PR trên báo điện tử uy tín, theo từng đầu báo.',            'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
+	array( 'Dịch vụ Toplist',        '/dich-vu-toplist/',        'Đưa thương hiệu vào bài xếp hạng "Top uy tín" đúng lĩnh vực.',       'M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6-5.2-4.4 6.8-.5z' ),
+	array( 'Backlink Social Entity', '/backlink-social-entity/', 'Hồ sơ social chuẩn NAP, nội dung độc bản, làm thủ công.',           'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0' ),
+	array( 'Backlink quốc tế',       '/backlink-quoc-te/',       'Guest post, niche edit &amp; PR báo quốc tế theo tầng DR/DA.',       'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z' ),
+	array( 'Booking truyền hình',    '/booking-truyen-hinh/',    'TVC, phóng sự &amp; talkshow trên VTV, HTV.',                       'M3 7h18v12H3zM8 3l4 4 4-4' ),
 );
 ?>
 <section class="sec" id="services" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
@@ -76,53 +76,20 @@ $dgc_services = array(
 			<p class="muted">Từ mua textlink, backlink, guest post đến booking đăng bài PR trên báo điện tử.</p>
 		</div>
 		<div class="svc-links">
-			<?php foreach ( $dgc_services as $s ) : $dgc_hub = ( '/dich-vu/' === $s[1] ); ?>
-				<a class="svc-link<?php echo $dgc_hub ? ' svc-link-hub' : ''; ?>" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
+			<?php foreach ( $dgc_services as $s ) : ?>
+				<a class="svc-link" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
 					<span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $s[3] ); ?>"/></svg></span>
 					<h3><?php echo esc_html( html_entity_decode( $s[0], ENT_QUOTES ) ); ?></h3>
 					<p><?php echo wp_kses_post( $s[2] ); ?></p>
-					<span class="svc-more"><?php echo $dgc_hub ? 'Xem tất cả' : 'Xem chi tiết'; ?> &rarr;</span>
+					<span class="svc-more">Xem chi tiết &rarr;</span>
 				</a>
 			<?php endforeach; ?>
 		</div>
-		<p class="center" style="margin-top:26px"><a class="btn btn-ghost" href="<?php echo esc_url( home_url( '/dich-vu/' ) ); ?>">Xem tất cả dịch vụ &rarr;</a></p>
 	</div>
 </section>
 
-<!-- 06b. TAI SAO CHON DIGICOMVN -->
-<?php
-$why_items = dgc_lines( 'reasons' );
-?>
-<?php if ( $why_items ) : ?>
-<?php /* Bo cuc 2 cot + danh sach danh so - CO Y khac han luoi card icon cua section Dich vu
-         ngay tren (Hieu 2026-07-14: "hai section giong nhau qua"). */ ?>
-<section class="sec why-sec" id="tai-sao" style="background:var(--surface);border-bottom:1px solid var(--line)">
-	<div class="wrap">
-		<div class="why-split">
-			<div class="why-intro">
-				<span class="eyebrow">Tại sao chọn DigicomVN</span>
-				<h2>Off-page SEO làm đúng, nguồn thật, minh bạch</h2>
-				<p class="muted">Textlink, backlink, guest post và booking báo PR triển khai trên nguồn chọn lọc có uy tín thật - báo giá rõ ràng, bàn giao kèm bằng chứng để bạn kiểm chứng.</p>
-				<div class="why-intro-actions">
-					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a>
-					<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-				</div>
-			</div>
-			<ol class="why-list">
-				<?php $wi = 0; foreach ( $why_items as $r ) : $wi++; ?>
-				<li class="why-item">
-					<span class="why-num"><?php echo esc_html( str_pad( $wi, 2, '0', STR_PAD_LEFT ) ); ?></span>
-					<div>
-						<h3><?php echo esc_html( $r[0] ?? '' ); ?></h3>
-						<p><?php echo esc_html( $r[1] ?? '' ); ?></p>
-					</div>
-				</li>
-				<?php endforeach; ?>
-			</ol>
-		</div>
-	</div>
-</section>
-<?php endif; ?>
+<!-- 06b. TAI SAO CHON DIGICOMVN (partial dung chung voi trang dich vu) -->
+<?php include get_template_directory() . '/inc/blk-reasons.php'; ?>
 
 <!-- 07. REASONS + CHUNG TOI LA AI -->
 <section class="sec band-navy whoweare-band" style="--bgimg:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-digicom-1400.jpg' ); ?>')">
@@ -138,83 +105,11 @@ $why_items = dgc_lines( 'reasons' );
 	</div>
 </section>
 
-<!-- 07a. DAU BAO CO THE DAT BAI -->
-<section class="sec press-strip">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:22px">
-			<span class="eyebrow">Mạng lưới báo chí</span>
-			<h2>Đầu báo DigicomVN hỗ trợ đặt bài, booking PR</h2>
-			<p class="muted" style="max-width:600px;margin:8px auto 0">Danh sách rút gọn, xem đầy đủ tại <a href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>" style="color:var(--action);font-weight:600">Bảng giá</a>.</p>
-		</div>
-		<?php
-		$press_list = array_filter( dgc_lines( 'press_partners' ), fn( $pp ) => ! empty( $pp[0] ) );
-		$press_chip = function ( $pp ) {
-			$logo_file = trim( $pp[1] ?? '' );
-			$logo_url  = $logo_file ? content_url( 'uploads/press-logos/' . $logo_file ) : '';
-			?>
-			<div class="press-chip">
-				<?php if ( $logo_url ) : ?>
-					<img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( $pp[0] ); ?>" loading="lazy">
-				<?php endif; ?>
-				<span><?php echo esc_html( $pp[0] ); ?></span>
-			</div>
-			<?php
-		};
-		?>
-		<div class="press-rows">
-			<?php
-			$dgc_press_rows = 5;
-			$dgc_per        = max( 1, (int) ceil( count( $press_list ) / $dgc_press_rows ) );
-			foreach ( array_chunk( $press_list, $dgc_per ) as $ri => $dgc_chunk ) :
-				$rev = ( $ri % 2 === 1 ) ? ' press-track--rev' : '';
-			?>
-			<div class="press-marquee">
-				<div class="press-track<?php echo $rev; ?>">
-					<?php for ( $k = 0; $k < 4; $k++ ) : foreach ( $dgc_chunk as $pp ) : $press_chip( $pp ); endforeach; endfor; ?>
-				</div>
-			</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
+<!-- 07a. DAU BAO CO THE DAT BAI (partial dung chung) -->
+<?php include get_template_directory() . '/inc/blk-press-partners.php'; ?>
 
-<!-- 07b. TESTIMONIALS + CASE STUDY -->
-<section class="sec" id="danh-gia">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:26px">
-			<span class="eyebrow">Khách hàng</span>
-			<h2>Khách hàng nói về DigicomVN</h2>
-		</div>
-		<div class="tm-carousel owl-carousel">
-			<?php foreach ( dgc_lines( 'testimonials' ) as $t ) :
-				$quote = $t[0] ?? ''; $who = $t[1] ?? ''; $svc = $t[2] ?? ''; $photo = trim( $t[3] ?? '' );
-				if ( $quote === '' ) continue;
-				$who_clean = preg_replace( '/^(Ông|Bà|Anh|Chị|Cô|Chú|Mr|Ms|Mrs)\.?\s+/u', '', $who );
-				$initial = function_exists( 'mb_substr' ) ? mb_strtoupper( mb_substr( $who_clean, 0, 1 ) ) : strtoupper( substr( $who_clean, 0, 1 ) ); ?>
-				<figure class="tm">
-					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<blockquote><?php echo esc_html( $quote ); ?></blockquote>
-					<figcaption>
-						<span class="tm-avatar<?php echo $photo ? ' tm-avatar--img' : ''; ?>" aria-hidden="true"><?php
-							if ( $photo ) {
-								echo '<img src="' . esc_url( $photo ) . '" alt="' . esc_attr( $who ) . '" loading="lazy">';
-							} else {
-								echo esc_html( $initial );
-							} ?></span>
-						<span>
-							<span class="tm-who"><?php echo esc_html( $who ); ?></span>
-							<?php if ( $svc ) : ?><span class="tm-svc"><?php echo esc_html( $svc ); ?></span><?php endif; ?>
-						</span>
-					</figcaption>
-				</figure>
-			<?php endforeach; ?>
-		</div>
-
-		<div class="center" style="margin-top:34px">
-			<a class="btn btn-ghost" href="<?php echo esc_url( get_post_type_archive_link( 'dgc_case' ) ?: home_url( '/case-study/' ) ); ?>">Xem case study thực tế của DigicomVN &rarr;</a>
-		</div>
-	</div>
-</section>
+<!-- 07b. TESTIMONIALS + CASE STUDY (partial dung chung) -->
+<?php include get_template_directory() . '/inc/blk-testimonials.php'; ?>
 
 <!-- 07c. BAO CHI NOI VE DIGICOMVN -->
 <?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) ); ?>
@@ -297,43 +192,8 @@ $why_items = dgc_lines( 'reasons' );
 	</div>
 </section>
 
-<!-- 09. FAQ -->
-<?php $dgc_faqs = array_filter( dgc_lines( 'faqs' ), fn( $f ) => ! empty( $f[0] ) && ! empty( $f[1] ) ); ?>
-<?php if ( $dgc_faqs ) : ?>
-<section class="sec" id="faq">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:34px">
-			<span class="eyebrow">Hỗ trợ</span>
-			<h2>Câu hỏi thường gặp</h2>
-			<p class="muted" style="max-width:620px;margin:8px auto 0">Giải đáp về DigicomVN và bốn dịch vụ Textlink, Backlink, Guest Post, Booking báo &amp; PR. Chưa thấy câu trả lời bạn cần? Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?>.</p>
-		</div>
-		<div class="faq">
-			<?php foreach ( $dgc_faqs as $f ) : ?>
-				<details>
-					<summary><?php echo esc_html( $f[0] ); ?></summary>
-					<div class="a"><?php echo esc_html( $f[1] ); ?></div>
-				</details>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
-<?php
-// Schema FAQPage: giup Google va cac tro ly AI trich dan dung cau tra loi cua DigicomVN.
-$dgc_faq_ld = array(
-	'@context'   => 'https://schema.org',
-	'@type'      => 'FAQPage',
-	'mainEntity' => array_values( array_map(
-		fn( $f ) => array(
-			'@type'          => 'Question',
-			'name'           => wp_strip_all_tags( $f[0] ),
-			'acceptedAnswer' => array( '@type' => 'Answer', 'text' => wp_strip_all_tags( $f[1] ) ),
-		),
-		$dgc_faqs
-	) ),
-);
-?>
-<script type="application/ld+json"><?php echo wp_json_encode( $dgc_faq_ld, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ); ?></script>
-<?php endif; ?>
+<!-- 09. FAQ (partial dung chung + schema FAQPage) -->
+<?php include get_template_directory() . '/inc/blk-faq.php'; ?>
 
 <!-- 10. TIN TUC & SU KIEN -->
 <?php

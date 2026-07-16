@@ -874,17 +874,15 @@ function dgc_median( $values ) {
  * Neu la trang con truc tiep cua "booking-bao-pr" (tung dau bao), tra them tu khoa de loc rieng bao do.
  */
 /**
- * Trang hien tai co thuoc nhanh /dich-vu/ khong (hub, 4 pillar, cac trang con, 2 nhom moi)?
+ * Trang hien tai co phai trang dich vu khong (8 pillar o goc + moi trang con)?
  * Dung de BO khoi uu dai (promo-band) tren moi trang dich vu (Hieu 2026-07-15) - bat ke
  * trang do dung template nao (tpl-service hay default).
  */
 function dgc_is_service_page() {
 	if ( ! is_page() ) return false;
-	$id  = (int) get_the_ID();
-	$hub = get_page_by_path( 'dich-vu' );
-	if ( ! $hub ) return false;
-	if ( $id === (int) $hub->ID ) return true;
-	return in_array( (int) $hub->ID, array_map( 'intval', get_post_ancestors( $id ) ), true );
+	// Sau khi bo hub /dich-vu/ (2026-07-16): trang dich vu = trang co nhom gia tuong ung
+	// (8 pillar o goc + moi trang con di theo cay post_parent). dgc_current_nhom() da phu het.
+	return dgc_current_nhom() !== null;
 }
 
 function dgc_current_nhom( $post_id = 0 ) {

@@ -1,0 +1,1 @@
+DB=$($WP config get DB_NAME); U=$($WP config get DB_USER); P=$($WP config get DB_PASSWORD); H=$($WP config get DB_HOST); mysqldump --no-tablespaces -h"$H" -u"$U" -p"$P" "$DB" > "backup-truoc-flatten-$(date +%Y%m%d-%H%M%S).sql"  

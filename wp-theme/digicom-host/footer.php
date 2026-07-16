@@ -18,11 +18,11 @@
 			<div>
 				<h4>Dịch vụ</h4>
 				<ul>
-					<li><a href="<?php echo esc_url( home_url( '/dich-vu/mua-textlink/' ) ); ?>">Mua Textlink</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/dich-vu/dich-vu-backlink/' ) ); ?>">Dịch vụ Backlink</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/dich-vu/guest-post/' ) ); ?>">Guest Post</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/dich-vu/booking-bao-pr/' ) ); ?>">Booking báo &amp; PR</a></li>
-						<li><a href="<?php echo esc_url( home_url( '/dich-vu/backlink-social-entity/' ) ); ?>">Backlink Social Entity</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/mua-textlink/' ) ); ?>">Mua Textlink</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/dich-vu-backlink/' ) ); ?>">Dịch vụ Backlink</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/guest-post/' ) ); ?>">Guest Post</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>">Booking báo &amp; PR</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/backlink-social-entity/' ) ); ?>">Backlink Social Entity</a></li>
 				</ul>
 			</div>
 			<div>
@@ -71,7 +71,7 @@
 <?php
 $dgc_bottom_nav = array(
 	array( 'icon' => 'home',   'label' => 'Trang chủ', 'url' => home_url( '/' ) ),
-	array( 'icon' => 'layers', 'label' => 'Dịch vụ',   'url' => home_url( '/dich-vu/' ) ),
+	array( 'icon' => 'layers', 'label' => 'Dịch vụ',   'sheet' => true ), // bam -> mo bottom sheet, khong dieu huong
 	array( 'icon' => 'tag',    'label' => 'Bảng giá',  'url' => home_url( '/bang-gia/' ), 'feat' => true ),
 	array( 'icon' => 'phone',  'label' => 'Gọi ngay',  'url' => 'tel:' . dgc_tel(), 'feat' => true ),
 );
@@ -79,13 +79,34 @@ $dgc_cur_url = home_url( add_query_arg( array(), $GLOBALS['wp']->request ?? '' )
 ?>
 <nav class="bottom-nav" aria-label="Menu di động">
 	<?php foreach ( $dgc_bottom_nav as $bn ) :
-		$is_active = ! empty( $bn['url'] ) && untrailingslashit( $bn['url'] ) === untrailingslashit( $dgc_cur_url ); ?>
-		<a class="bn-item<?php echo $is_active ? ' active' : ''; ?><?php echo ! empty( $bn['feat'] ) ? ' feat' : ''; ?>" href="<?php echo esc_url( $bn['url'] ); ?>">
-			<span class="bn-ico"><?php echo dgc_icon( $bn['icon'] ); ?></span>
-			<span class="bn-label"><?php echo esc_html( $bn['label'] ); ?></span>
-		</a>
+		if ( ! empty( $bn['sheet'] ) ) : ?>
+			<button type="button" class="bn-item" data-svc-sheet aria-expanded="false" aria-controls="svcSheet">
+				<span class="bn-ico"><?php echo dgc_icon( $bn['icon'] ); ?></span>
+				<span class="bn-label"><?php echo esc_html( $bn['label'] ); ?></span>
+			</button>
+		<?php else :
+			$is_active = ! empty( $bn['url'] ) && untrailingslashit( $bn['url'] ) === untrailingslashit( $dgc_cur_url ); ?>
+			<a class="bn-item<?php echo $is_active ? ' active' : ''; ?><?php echo ! empty( $bn['feat'] ) ? ' feat' : ''; ?>" href="<?php echo esc_url( $bn['url'] ); ?>">
+				<span class="bn-ico"><?php echo dgc_icon( $bn['icon'] ); ?></span>
+				<span class="bn-label"><?php echo esc_html( $bn['label'] ); ?></span>
+			</a>
+		<?php endif; ?>
 	<?php endforeach; ?>
 </nav>
+
+<?php /* Bottom sheet "Dich vu" - bam nut Dich vu o bottom-nav mo ra 8 dich vu (khong dieu huong truc tiep). */ ?>
+<div class="svc-sheet-ov" data-svc-sheet-close hidden></div>
+<div class="svc-sheet" id="svcSheet" role="dialog" aria-label="Dịch vụ" aria-modal="true" hidden>
+	<div class="svc-sheet-head">
+		<span>Dịch vụ</span>
+		<button type="button" class="svc-sheet-x" data-svc-sheet-close aria-label="Đóng">&times;</button>
+	</div>
+	<ul class="svc-sheet-list">
+		<?php foreach ( dgc_service_links() as $sl ) : ?>
+			<li><a href="<?php echo esc_url( home_url( $sl[1] ) ); ?>"><?php echo esc_html( $sl[0] ); ?></a></li>
+		<?php endforeach; ?>
+	</ul>
+</div>
 
 <?php wp_footer(); ?>
 </body>

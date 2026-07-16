@@ -8,7 +8,7 @@ get_header();
 $svc_name = get_the_title();
 $nhom     = dgc_current_nhom();
 ?>
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <a href="<?php echo esc_url( home_url( '/dich-vu/' ) ); ?>">Dịch vụ</a> <span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
+<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
 
 <section class="page-hero">
 	<div class="wrap" style="max-width:840px">
@@ -30,6 +30,10 @@ $nhom     = dgc_current_nhom();
 </section>
 
 <?php
+/* Khoi dinh nghia dich vu ("... la gi") ngay duoi hero - bat intent thong tin + GEO.
+   Chi render neu option svc_intros co dong khop slug hien tai (sua o WP Admin). */
+include get_template_directory() . '/inc/svc-intro.php';
+
 /* Khoi uu dai (promo-band) DA BO khoi trang dich vu (Hieu 2026-07-15).
    Bat guard som de footer.php cung KHONG render lai o cuoi trang. Trang chu van hien qua
    front-page.php; popup uu dai + nut Zalo van con. */
@@ -63,6 +67,13 @@ if ( $nhom ) {
 	</div>
 </section>
 <?php endif; ?>
+
+<?php
+/* KHONG cắm cac block dung chung trang chu (vi sao chon / dau bao / testimonials / FAQ) vao day
+   nua (Hieu 2026-07-16): 8 trang dich vu lap y het nhau -> trung lap/boilerplate, loang do doc nhat.
+   Trang dich vu chi giu noi dung RIENG: hero + "... la gi" + bang gia + noi dung bai + form.
+   Cac block dung chung van song o trang chu (front-page.php). */
+?>
 
 <section class="sec">
 	<div class="wrap">

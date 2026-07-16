@@ -21,6 +21,15 @@
 5. Verify bang curl (khong phai chi tin browser): `curl -s "https://digicomvn.com/wp-content/themes/digicom-host/assets/css/main.css?ver=<X>" | grep <dau-hieu-vua-sua>`
 6. Ghi 1 dong vao manifest backup ngay do (xem rule global `routine-backup.md`).
 
+## Backup DB live - `wp db export` HONG tren host nay (dung mysqldump)
+`wp db export` tren Hostinger nay fail EXIT 255 (thieu quyen PROCESS/tablespaces, khong in loi).
+Dung mysqldump truc tiep qua creds tu wp config:
+```
+DB=$(wp config get DB_NAME --allow-root); U=$(wp config get DB_USER --allow-root)
+P=$(wp config get DB_PASSWORD --allow-root); H=$(wp config get DB_HOST --allow-root)
+mysqldump --no-tablespaces -h"$H" -u"$U" -p"$P" "$DB" > ~/backups/<ngay>/db.sql
+```
+
 ## Database live (dgc_settings)
 - Field `email` (hien thi cong khai) va `lead_email` (nhan lead form) la 2 field TACH RIENG -
   xem `wp option get dgc_settings --format=json --allow-root`. KHONG gop chung 2 muc dich nay lai.

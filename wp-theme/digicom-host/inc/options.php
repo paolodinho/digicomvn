@@ -23,6 +23,12 @@ function dgc_defaults() {
 		// Dai so lieu duoi hero. Moi dong: con so | nhan mo ta. Sua tu WP Admin khi mang luoi thay doi.
 		'hero_stats'    => "500+ | đầu báo trong nước & quốc tế\n2.000+ | site guest post đa ngành\nBáo giá | minh bạch\nHỗ trợ | tư vấn tận tình\nXuất VAT | đầy đủ",
 
+		// Dinh nghia dich vu ("... la gi") - hien ngay duoi hero tung trang dich vu, bat intent
+		// thong tin + giup Google/AI trich dan (GEO). Moi dong: slug | Tieu de | Doan dinh nghia.
+		// Slug phai khop slug trang dich vu (booking-bao-pr, guest-post, mua-textlink...).
+		// De trong 1 slug = trang do khong hien khoi nay.
+		'svc_intros'    => "booking-bao-pr | Booking báo chí là gì? | Booking báo chí (đặt bài PR trên báo) là hình thức doanh nghiệp đăng bài viết truyền thông về thương hiệu, sản phẩm hoặc dịch vụ của mình trên các báo điện tử, tạp chí chính thống. Bài viết xuất bản dưới dạng nội dung PR, mang lại độ tin cậy nhờ uy tín sẵn có của chính tờ báo đăng tải. Đây là kênh giúp tăng nhận diện thương hiệu, củng cố niềm tin với khách hàng và hỗ trợ thương hiệu hiển thị tốt hơn trên kết quả tìm kiếm.\nguest-post | Guest Post là gì? | Guest Post là hình thức đăng bài viết có chèn link trỏ về website của bạn trên một website khác cùng chủ đề. Bài được biên tập đúng lĩnh vực, đặt link dofollow tự nhiên trong ngữ cảnh nội dung, giúp tăng độ liên quan và giá trị liên kết cho trang đích.\nmua-textlink | Mua Textlink là gì? | Textlink là đường link văn bản được chèn vào một bài viết đã xuất bản trên website khác, trỏ về trang của bạn. Việc mua textlink giúp trang đích nhận thêm liên kết từ nguồn có chỉ số tốt, chọn theo DR và lưu lượng truy cập thật để bảo đảm an toàn và hiệu quả.\ndich-vu-backlink | Dịch vụ Backlink là gì? | Backlink là các liên kết từ những website khác trỏ về trang của bạn - một trong những tín hiệu xếp hạng quan trọng của công cụ tìm kiếm. Dịch vụ backlink xây dựng hệ thống liên kết đa nguồn, anchor text tự nhiên và có theo dõi index, nhằm tăng độ uy tín tên miền một cách an toàn.",
+
 		// dich vu | gia tu | nhan (tuy chon) - hien o hero + trang bang gia
 		// DEMO - gia minh hoa, can Hieu xac nhan gia that truoc khi cong khai chinh thuc
 		'domain_tlds'   => "Mua Textlink | Từ 300.000đ/link | Theo DR/traffic\nDịch vụ Backlink | Từ 500.000đ/backlink | Theo khối lượng\nGuest Post | Từ 800.000đ/bài | Theo site đăng\nBooking báo & PR | Từ 700.000đ/bài | Theo đầu báo",
@@ -153,6 +159,7 @@ function dgc_settings_page() {
 				dgc_field( 'hero_title', 'Tieu de lon' );
 				dgc_field( 'hero_sub', 'Mo ta phu', '', 'textarea' );
 				dgc_field( 'hero_stats', 'Dai so lieu duoi hero', 'Moi dong: con so | nhan mo ta (vd: 500+ | dau bao trong nuoc va quoc te). Toi da 5 dong. Chi ghi so lieu THAT.', 'textarea' );
+				dgc_field( 'svc_intros', 'Dinh nghia dich vu ("... la gi") - hien duoi hero tung trang dich vu', 'Moi dong: slug | Tieu de | Doan dinh nghia (2-4 cau). Slug khop trang dich vu: booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink... De trong 1 slug = trang do khong hien khoi nay. Giup bat intent "... la gi" + AI/Google trich dan.', 'textarea' );
 				?>
 			</table>
 
