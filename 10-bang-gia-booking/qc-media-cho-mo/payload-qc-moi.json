@@ -1,0 +1,1742 @@
+{
+ "new": [
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Bắc (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 180000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Bắc (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 360000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Bắc (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 540000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 90 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Trung (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 150000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Trung (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 300000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Trung (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 450000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 90 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Nam (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 120000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Nam (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 240000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Miền Nam (toàn miền)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 360000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 90 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Tây Nguyên (toàn vùng)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 120000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Tây Nguyên (toàn vùng)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 240000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - Tây Nguyên (toàn vùng)",
+   "vi_tri": "phát 2-3 lần/ngày theo lịch đài",
+   "gia": 360000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 90 giây - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Loa phát thanh quận/huyện - mức giá chung toàn quốc",
+   "vi_tri": "phát 1-3 lần/ngày tuỳ lịch từng đài",
+   "gia": 360000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot tính trên 60 giây (dưới 60s tính như 60s, trên 60s nhân tỷ lệ) - giá/ngày"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Đài Tiếng nói Việt Nam (VOV) - phát tại Hà Nội",
+   "vi_tri": "Spot radio trên sóng đài tỉnh",
+   "gia": 1800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Đài PT-TH Hà Nội",
+   "vi_tri": "Spot radio trên sóng đài tỉnh",
+   "gia": 1200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Đài Tiếng nói Việt Nam (VOV) - phát tại Đà Nẵng",
+   "vi_tri": "Spot radio trên sóng đài tỉnh",
+   "gia": 1440000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Đài PT-TH Đà Nẵng",
+   "vi_tri": "Spot radio trên sóng đài tỉnh",
+   "gia": 960000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Đài Tiếng nói Việt Nam (VOV) - phát tại TP.HCM",
+   "vi_tri": "Spot radio trên sóng đài tỉnh",
+   "gia": 1800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Đài TH TP.HCM",
+   "vi_tri": "Spot radio trên sóng đài tỉnh",
+   "gia": 1200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-loa-phuong",
+   "title": "Đài Tiếng nói Việt Nam (VOV) - phát tại Cần Thơ",
+   "vi_tri": "Spot radio trên sóng đài tỉnh",
+   "gia": 1440000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Đài PT-TH Cần Thơ",
+   "vi_tri": "Spot radio trên sóng đài tỉnh",
+   "gia": 960000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trong chương trình Mùa vàng (5h20-5h50)",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trước Thời sự sáng (5h50-5h59)",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Sau Thời sự sáng (6h28-6h30)",
+   "gia": 7200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Thời sự và chương trình xen kẽ 7h00-9h00",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trước/trong/sau các chương trình 9h00-16h00",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Thời sự và chương trình xen kẽ 16h00-19h00",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trước/sau các chương trình 19h00-23h10",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV2 / VOV4 / VOV5",
+   "vi_tri": "Trong khung giờ chuyên quảng cáo",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV2 / VOV4 / VOV5",
+   "vi_tri": "Cuối chương trình phát thanh chuyên đề",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV (các kênh)",
+   "vi_tri": "Thông tin tranh chấp, khởi kiện",
+   "gia": 2400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "tối đa 300 từ, 1 lần phát - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV (các kênh)",
+   "vi_tri": "Nhắn tìm người thân",
+   "gia": 600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "tối đa 200 từ, 1 lần phát - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông (HN / TP.HCM / Mekong FM)",
+   "vi_tri": "Giờ cao điểm (6h15-9h15, 10h30-12h00, 16h30-19h45)",
+   "gia": 12960000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây; min 30s max 60s - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông (HN / TP.HCM / Mekong FM)",
+   "vi_tri": "Ngoài giờ cao điểm",
+   "gia": 8400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Joy FM 98.9 (Đài Hà Nội)",
+   "vi_tri": "Giờ cao điểm (7h-9h, 10h30-12h, 17h-19h, FM Sức khỏe 15h-16h30)",
+   "gia": 9600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "voice 60 giây; min 30s max 60s - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Joy FM 98.9 (Đài Hà Nội)",
+   "vi_tri": "Ngoài giờ cao điểm",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "voice 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông",
+   "vi_tri": "Giờ cao điểm (6h30-9h00, 10h30-12h00, 16h30-19h00)",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông",
+   "vi_tri": "Ngoài giờ cao điểm",
+   "gia": 3864000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông",
+   "vi_tri": "Giờ cao điểm",
+   "gia": 9000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 45 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông",
+   "vi_tri": "Ngoài giờ cao điểm",
+   "gia": 5796000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 45 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông",
+   "vi_tri": "Giờ cao điểm",
+   "gia": 12000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông",
+   "vi_tri": "Ngoài giờ cao điểm",
+   "gia": 7728000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông Hà Nội",
+   "vi_tri": "Giờ cao điểm",
+   "gia": 2160000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "radio spot 15 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông Hà Nội",
+   "vi_tri": "Giờ thường",
+   "gia": 1200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "radio spot 15 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông Hà Nội",
+   "vi_tri": "Giờ cao điểm",
+   "gia": 3840000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "radio spot 30 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông Hà Nội",
+   "vi_tri": "Giờ thường",
+   "gia": 2160000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "radio spot 30 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông Hà Nội",
+   "vi_tri": "Live mention (MC đọc trực tiếp) giờ cao điểm",
+   "gia": 3000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "15-20 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông Hà Nội",
+   "vi_tri": "Live mention giờ thường",
+   "gia": 1800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "15-20 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông TP.HCM",
+   "vi_tri": "Ngoài giờ cao điểm",
+   "gia": 4200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV Giao thông TP.HCM",
+   "vi_tri": "Ngoài giờ cao điểm",
+   "gia": 8400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Mekong FM 90 (VOV ĐBSCL)",
+   "vi_tri": "Giờ cao điểm (6h30-8h30, 16h30-19h00)",
+   "gia": 9000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Mekong FM 90 (VOV ĐBSCL)",
+   "vi_tri": "Ngoài giờ cao điểm",
+   "gia": 5796000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9",
+   "vi_tri": "Chương trình Làn sóng xanh",
+   "gia": 8400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9",
+   "vi_tri": "Quà tặng âm nhạc",
+   "gia": 8400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9",
+   "vi_tri": "Sài Gòn buổi sáng",
+   "gia": 8400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9",
+   "vi_tri": "Sài Gòn buổi chiều / Sài Gòn buổi trưa",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9",
+   "vi_tri": "Bản tin",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH AM 610",
+   "vi_tri": "Giọng ca cải lương hàng tuần",
+   "gia": 8400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH AM 610",
+   "vi_tri": "Chương trình Nông thôn",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9 + AM 610",
+   "vi_tri": "Báo giờ",
+   "gia": 8400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9 + AM 610",
+   "vi_tri": "Các chương trình ca nhạc trực tiếp",
+   "gia": 8400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9 + AM 610",
+   "vi_tri": "Chương trình tư vấn",
+   "gia": 7800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9 + AM 610",
+   "vi_tri": "Các chương trình ca nhạc",
+   "gia": 7200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9 + AM 610",
+   "vi_tri": "Trước và sau Xổ số kiến thiết",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9 + AM 610",
+   "vi_tri": "Ca nhạc cải lương",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 99.9 + AM 610",
+   "vi_tri": "Các chương trình còn lại",
+   "gia": 4200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH (3 kênh)",
+   "vi_tri": "Trước và sau Thời sự 5h30",
+   "gia": 16800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "tối đa 30 giây - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH (3 kênh)",
+   "vi_tri": "Chương trình Thông tin - Quảng cáo",
+   "gia": 4200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH (3 kênh)",
+   "vi_tri": "Tự giới thiệu - Tuyển dụng (trong CT Thông tin - Quảng cáo)",
+   "gia": 720000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH (các kênh)",
+   "vi_tri": "Thông báo (mất giấy tờ, nhắn tin tìm người thân)",
+   "gia": 360000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": " - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 95.6 (Giao thông đô thị)",
+   "vi_tri": "08h00-09h00 và 14h30-15h00",
+   "gia": 7440000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 95.6 (Giao thông đô thị)",
+   "vi_tri": "05h30-08h00, 10h30-12h00, 16h30-19h00",
+   "gia": 7080000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 95.6 (Giao thông đô thị)",
+   "vi_tri": "Các khung giờ còn lại",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH FM 95.6 (Giao thông đô thị)",
+   "vi_tri": "Tự giới thiệu - Tuyển dụng, khung giờ còn lại",
+   "gia": 792000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH (dàn dựng)",
+   "vi_tri": "Sản xuất nội dung quảng cáo - đọc 1 giọng",
+   "gia": 1800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "1 nội dung, tối đa 2 phút, kèm CD gốc - giá/nội dung"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH (dàn dựng)",
+   "vi_tri": "Sản xuất nội dung quảng cáo - đọc 2 giọng",
+   "gia": 3600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "1 nội dung - giá/nội dung"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH (dàn dựng)",
+   "vi_tri": "Sản xuất nội dung quảng cáo - diễn 2-3 vai",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "1 nội dung - giá/nội dung"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOH (dàn dựng)",
+   "vi_tri": "Sản xuất nội dung quảng cáo - diễn 4-5 vai",
+   "gia": 7200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "1 nội dung - giá/nội dung"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Phát thanh Huế (TRT, FM 93.0)",
+   "vi_tri": "05h30-06h00 Thời sự",
+   "gia": 1800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Phát thanh Huế (TRT, FM 93.0)",
+   "vi_tri": "05h30-06h00 Thời sự",
+   "gia": 3000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Phát thanh Huế (TRT, FM 93.0)",
+   "vi_tri": "11h00-12h00 Thời sự, ca nhạc",
+   "gia": 1800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Phát thanh Huế (TRT, FM 93.0)",
+   "vi_tri": "11h00-12h00 Thời sự, ca nhạc",
+   "gia": 3000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Phát thanh Huế (TRT, FM 93.0)",
+   "vi_tri": "17h00-18h00 Ca nhạc",
+   "gia": 1800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 30 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Phát thanh Huế (TRT, FM 93.0)",
+   "vi_tri": "17h00-18h00 Ca nhạc",
+   "gia": 3000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "Phát thanh Huế (TRT, FM 93.0)",
+   "vi_tri": "Đọc thông báo trên sóng phát thanh",
+   "gia": 360000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "dưới 100 âm đọc - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trong chương trình Mùa vàng (5h20-5h55)",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trước Thời sự sáng (5h55-5h59)",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Sau Thời sự sáng (6h20-6h30)",
+   "gia": 6600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trong Thời sự đồng hành sáng (7h00-9h00)",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trước/trong/sau các chương trình (9h00-16h00)",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Thời sự đồng hành chiều (16h00-18h00)",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV1",
+   "vi_tri": "Trước/sau các chương trình (18h00-23h00)",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV2 / VOV4 / VOV5",
+   "vi_tri": "Trong khung giờ chuyên quảng cáo",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV2 / VOV4 / VOV5",
+   "vi_tri": "Cuối chương trình phát thanh chuyên đề",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV3",
+   "vi_tri": "Khung 6h-10h, 12h-13h, 17h-21h",
+   "gia": 14400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV3",
+   "vi_tri": "Khung 17h-22h Thứ 7, Chủ nhật",
+   "gia": 14400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV3",
+   "vi_tri": "Khung giờ còn lại - trong khung giờ chuyên quảng cáo",
+   "gia": 4800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV3",
+   "vi_tri": "Khung giờ còn lại - cuối chương trình chuyên đề",
+   "gia": 6000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "spot 60 giây, đồng/phút - giá/phút"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV (5 kênh)",
+   "vi_tri": "Thông tin tranh chấp, khởi kiện",
+   "gia": 1200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "tối đa 60 giây/lần, giờ thấp điểm, 1 lần phát - giá/lần phát"
+  },
+  {
+   "nhom": "quang-cao-phat-thanh",
+   "title": "VOV (5 kênh)",
+   "vi_tri": "Tin nhắn tòa án",
+   "gia": 1800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "3 lần phát - giá/gói 3 lần phát"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Vincom Phạm Ngọc Thạch, Hà Nội",
+   "vi_tri": "mặt ngoài toà nhà Vincom Phạm Ngọc Thạch",
+   "gia": 316800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "294 m2 - TVC 30s - 120 spot/ngày - tối thiểu 1 tháng - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Vincom Trần Duy Hưng, Hà Nội",
+   "vi_tri": "mặt ngoài toà nhà Vincom Trần Duy Hưng",
+   "gia": 316800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - tối thiểu 1 tháng - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED nút giao Thái Hà - Chùa Bộc, Hà Nội",
+   "vi_tri": "màn LED toà nhà nút giao Thái Hà - Chùa Bộc",
+   "gia": 432000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "90 m2 (20m x 6.3m) - TVC 15s - 240 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Vincom Metropolis (ngoài trời), Hà Nội",
+   "vi_tri": "mặt ngoài toà Vincom Metropolis Liễu Giai",
+   "gia": 316800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED bãi đỗ xe sân bay Nội Bài, Hà Nội",
+   "vi_tri": "bãi đỗ xe sân bay Nội Bài",
+   "gia": 172800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "79.95 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED toà nhà 43 Nguyễn Chí Thanh, Hà Nội",
+   "vi_tri": "màn LED toà nhà 43 Nguyễn Chí Thanh",
+   "gia": 230400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED toà nhà Centerpoint, Lê Văn Lương - Hoàng Đạo Thuý, Hà Nội",
+   "vi_tri": "mặt ngoài toà Centerpoint",
+   "gia": 86400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Tràng Tiền Plaza, Hà Nội",
+   "vi_tri": "mặt ngoài TTTM Tràng Tiền Plaza (Hàng Bài - Hồ Gươm)",
+   "gia": 806400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "96 m2 - TVC 15s - 240 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED nút giao Lê Đức Thọ - Hàm Nghi, Hà Nội",
+   "vi_tri": "màn LED nút giao Lê Đức Thọ - Hàm Nghi (Mỹ Đình)",
+   "gia": 230400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã tư Hàng Bài - Lý Thường Kiệt, Hà Nội",
+   "vi_tri": "màn LED toà nhà ngã tư Hàng Bài - Lý Thường Kiệt",
+   "gia": 288000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "40 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã tư Bà Triệu - Trần Nhân Tông, Hà Nội",
+   "vi_tri": "màn LED ngã tư Bà Triệu - Trần Nhân Tông",
+   "gia": 259200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã 7 Ô Chợ Dừa (22 Đông Các), Hà Nội",
+   "vi_tri": "màn chính ngã 7 Ô Chợ Dừa",
+   "gia": 432000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "190 m2 (26.9m x 8.3m) - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã 7 Ô Chợ Dừa (màn chữ Z), Hà Nội",
+   "vi_tri": "màn chữ Z ngã 7 Ô Chợ Dừa",
+   "gia": 384000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "19m x 10m - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã tư Kim Liên (Xã Đàn - Giải Phóng), Hà Nội",
+   "vi_tri": "màn LED hầm Kim Liên",
+   "gia": 187200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "10m x 5m - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED nút giao Quán Thánh - Hàng Bún, Hà Nội",
+   "vi_tri": "màn LED nút giao Quán Thánh - Hàng Bún",
+   "gia": 259200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED nút giao Hai Bà Trưng - Phan Chu Trinh, Hà Nội",
+   "vi_tri": "màn LED nút giao Hai Bà Trưng - Phan Chu Trinh",
+   "gia": 259200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã tư Lê Văn Lương - Hoàng Đạo Thuý, Hà Nội",
+   "vi_tri": "màn LED ngã tư Lê Văn Lương - Hoàng Đạo Thuý",
+   "gia": 259200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED toà nhà 216 Trần Duy Hưng, Hà Nội",
+   "vi_tri": "màn LED toà nhà 216 Trần Duy Hưng",
+   "gia": 158400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Hệ thống 11 màn LED đường Thanh Niên, Hà Nội",
+   "vi_tri": "11 màn dọc đường Thanh Niên",
+   "gia": 273600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 11 màn - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Hệ thống 10 màn LED Hồ Thiền Quang, Hà Nội",
+   "vi_tri": "10 màn quanh Hồ Thiền Quang",
+   "gia": 273600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 10 màn - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Hệ thống 4 màn LED phố Tây Sơn, Hà Nội",
+   "vi_tri": "4 màn phố Tây Sơn",
+   "gia": 273600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 4 màn - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED TTTM Artemis (Lê Trọng Tấn), Hà Nội",
+   "vi_tri": "mặt ngoài TTTM Artemis",
+   "gia": 230400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED trạm trung chuyển Cầu Giấy, Hà Nội",
+   "vi_tri": "trạm trung chuyển xe buýt Cầu Giấy",
+   "gia": 172800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Cầu Trắng Hà Đông (Trần Phú - Phùng Hưng), Hà Nội",
+   "vi_tri": "màn LED Cầu Trắng Hà Đông",
+   "gia": 158400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 3D 4A Phạm Ngọc Thạch, Q1, TPHCM",
+   "vi_tri": "màn LED 3D toà nhà 4A Phạm Ngọc Thạch",
+   "gia": 460800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "101.37 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED số 2 Nguyễn Trãi - vòng xoay ngã 6 Phù Đổng, Q1, TPHCM",
+   "vi_tri": "màn LED toà nhà số 2 Nguyễn Trãi",
+   "gia": 259200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "98 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngoài trời Vincom Đồng Khởi, Q1, TPHCM",
+   "vi_tri": "mặt ngoài Vincom Đồng Khởi",
+   "gia": 158400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "330.75 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 113 Nguyễn Huệ (phố đi bộ), Q1, TPHCM",
+   "vi_tri": "màn LED toà nhà 113 Nguyễn Huệ",
+   "gia": 360000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "40 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã tư Võ Thị Sáu - Pasteur, Q3, TPHCM",
+   "vi_tri": "màn LED ngã tư Võ Thị Sáu - Pasteur",
+   "gia": 187200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 54-56 Nguyễn Văn Trỗi, Phú Nhuận, TPHCM",
+   "vi_tri": "màn LED toà nhà 54-56 Nguyễn Văn Trỗi (trục sân bay)",
+   "gia": 230400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 180 Nguyễn Thị Minh Khai, Q3, TPHCM",
+   "vi_tri": "màn LED toà nhà 180 Nguyễn Thị Minh Khai",
+   "gia": 172800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã tư Trần Hưng Đạo - Nguyễn Biểu, Q5, TPHCM",
+   "vi_tri": "màn LED ngã tư Trần Hưng Đạo - Nguyễn Biểu",
+   "gia": 187200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã tư Lý Chính Thắng - Nam Kỳ Khởi Nghĩa, Q3, TPHCM",
+   "vi_tri": "màn LED ngã tư Lý Chính Thắng - NKKN",
+   "gia": 244800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 78A Nguyễn Văn Trỗi, Phú Nhuận, TPHCM",
+   "vi_tri": "màn LED toà nhà 78A Nguyễn Văn Trỗi",
+   "gia": 216000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 68B Nguyễn Văn Trỗi, Phú Nhuận, TPHCM",
+   "vi_tri": "màn LED toà nhà 68B Nguyễn Văn Trỗi",
+   "gia": 158400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Lotte Mart Q7, TPHCM",
+   "vi_tri": "mặt ngoài Lotte Mart Quận 7",
+   "gia": 179400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 122 Lê Lợi - chợ Bến Thành, Q1, TPHCM",
+   "vi_tri": "màn LED toà nhà 122 Lê Lợi",
+   "gia": 172800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 14 Lê Lai - vòng xoay chợ Bến Thành, Q1, TPHCM",
+   "vi_tri": "màn LED toà nhà 14 Lê Lai",
+   "gia": 144000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED A&B Saigon Tower, 76 Lê Lai, Q1, TPHCM",
+   "vi_tri": "mặt ngoài toà A&B Tower",
+   "gia": 273600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "280.8 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 223 Nguyễn Tri Phương, Q5, TPHCM",
+   "vi_tri": "màn LED toà nhà 223 Nguyễn Tri Phương",
+   "gia": 172800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 34 Nguyễn Thị Nghĩa - vòng xoay Phù Đổng, Q1, TPHCM",
+   "vi_tri": "màn LED toà nhà 34 Nguyễn Thị Nghĩa",
+   "gia": 244800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 677 Điện Biên Phủ - vòng xoay Lý Thái Tổ, Q3, TPHCM",
+   "vi_tri": "màn LED toà nhà 677 Điện Biên Phủ",
+   "gia": 230400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 190 Pasteur, Q3, TPHCM",
+   "vi_tri": "màn LED toà nhà 190 Pasteur",
+   "gia": 151800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 120 Cách Mạng Tháng 8, Q3, TPHCM",
+   "vi_tri": "màn LED toà nhà 120 CMT8",
+   "gia": 115200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED chân cầu Sài Gòn, TP Thủ Đức (Q2 cũ), TPHCM",
+   "vi_tri": "màn LED chân cầu Sài Gòn",
+   "gia": 230400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 125B CMT8 (CMT8 - Nguyễn Thị Minh Khai), Q3, TPHCM",
+   "vi_tri": "màn LED toà nhà 125B CMT8",
+   "gia": 216000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 217 Nam Kỳ Khởi Nghĩa, Q3, TPHCM",
+   "vi_tri": "màn LED toà nhà 217 NKKN",
+   "gia": 86400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Hệ thống 17 màn LED đường Trường Sơn (sân bay TSN), Tân Bình, TPHCM",
+   "vi_tri": "17 màn dọc đường Trường Sơn",
+   "gia": 460800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 17 màn 6.3m x 17m - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Chợ Cồn, Đà Nẵng",
+   "vi_tri": "màn LED khu Chợ Cồn",
+   "gia": 144000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED nút giao Lê Duẩn - Ông Ích Khiêm, Đà Nẵng",
+   "vi_tri": "màn LED nút giao Lê Duẩn - Ông Ích Khiêm",
+   "gia": 187200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED nút giao Cầu Rồng - Nguyễn Văn Linh, Đà Nẵng",
+   "vi_tri": "màn LED đầu Cầu Rồng",
+   "gia": 244800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "98 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 180 Triệu Nữ Vương - vòng xoay ngã 6, Đà Nẵng",
+   "vi_tri": "màn LED toà nhà 180 Triệu Nữ Vương",
+   "gia": 158400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 115 Nguyễn Văn Linh - vòng xoay ngã 6, Đà Nẵng",
+   "vi_tri": "màn LED toà nhà 115 Nguyễn Văn Linh",
+   "gia": 288000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "72 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Hệ thống 6 màn LED Hải Phòng",
+   "vi_tri": "6 màn LED nội thành Hải Phòng",
+   "gia": 345600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 6 màn - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED công viên Nguyễn Văn Cừ, Bắc Ninh",
+   "vi_tri": "màn LED công viên Nguyễn Văn Cừ",
+   "gia": 100800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Từ Sơn, Bắc Ninh",
+   "vi_tri": "màn LED khu Từ Sơn",
+   "gia": 72000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED quảng trường Lam Sơn, Thanh Hoá",
+   "vi_tri": "màn LED quảng trường Lam Sơn",
+   "gia": 86400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Quảng trường 2/4, Nha Trang",
+   "vi_tri": "màn LED Quảng trường 2/4",
+   "gia": 115200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED vòng xoay Hùng Vương, Huế",
+   "vi_tri": "màn LED vòng xoay Hùng Vương",
+   "gia": 82800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Hồ Xuân Hương, Đà Lạt",
+   "vi_tri": "màn LED khu Hồ Xuân Hương",
+   "gia": 144000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "49.6 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED khu Hoà Bình, Đà Lạt",
+   "vi_tri": "màn LED khu Hoà Bình",
+   "gia": 144000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED vòng xoay CMT8, Bình Dương",
+   "vi_tri": "màn LED vòng xoay CMT8 (ngã 6)",
+   "gia": 100800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "70.4 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Vincom Hùng Vương, Cần Thơ",
+   "vi_tri": "mặt ngoài Vincom Hùng Vương",
+   "gia": 158400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "142.5 m2 - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED nút giao IC3, Cần Thơ",
+   "vi_tri": "màn LED nút giao IC3",
+   "gia": 86400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED công viên Lưu Hữu Phước, Cần Thơ",
+   "vi_tri": "màn LED công viên Lưu Hữu Phước",
+   "gia": 100800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã ba mũi tàu KCN Trà Nóc, Cần Thơ",
+   "vi_tri": "màn LED ngã ba KCN Trà Nóc",
+   "gia": 86400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED quảng trường Quy Nhơn, Bình Định",
+   "vi_tri": "màn LED quảng trường Quy Nhơn",
+   "gia": 259200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Hệ thống 58 màn LED đường Nguyễn Huệ, Vĩnh Long",
+   "vi_tri": "58 màn đường Nguyễn Huệ",
+   "gia": 222720000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 58 màn - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED ngã ba Vườn Mít, Biên Hoà, Đồng Nai",
+   "vi_tri": "màn LED ngã ba Vườn Mít",
+   "gia": 100800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED vòng xoay Biên Hùng, Biên Hoà, Đồng Nai",
+   "vi_tri": "màn LED vòng xoay Biên Hùng",
+   "gia": 96600000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED vòng xoay Hoa Lư, Pleiku, Gia Lai",
+   "vi_tri": "màn LED vòng xoay Hoa Lư",
+   "gia": 144000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED trong nhà Vincom Metropolis, Hà Nội",
+   "vi_tri": "màn LED trong TTTM Vincom Metropolis",
+   "gia": 288000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED trong nhà Vincom Mega Mall Times City, Hà Nội",
+   "vi_tri": "màn LED trong TTTM Times City",
+   "gia": 244800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED trong nhà Vincom Mega Mall Royal City (6 màn), Hà Nội",
+   "vi_tri": "6 màn LED trong TTTM Royal City",
+   "gia": 144000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 6 màn - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED trong nhà Vincom Đồng Khởi (2 màn), Q1, TPHCM",
+   "vi_tri": "2 màn LED trong TTTM Vincom Đồng Khởi",
+   "gia": 446400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 2 màn - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED trong nhà SC VivoCity (2 màn), Q7, TPHCM",
+   "vi_tri": "2 màn LED trong TTTM SC VivoCity",
+   "gia": 259200000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 2 màn - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED sân trượt băng Vincom Landmark 81, TPHCM",
+   "vi_tri": "màn LED khu sân trượt băng Landmark 81",
+   "gia": 288000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 3 bến xe Giáp Bát + Mỹ Đình + Gia Lâm, Hà Nội",
+   "vi_tri": "màn LED trong 3 bến xe",
+   "gia": 230400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "combo 3 bến - TVC 30s - 120 spot/ngày - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Frame LCD thang máy toàn quốc (hạng A/B/C/D)",
+   "vi_tri": "màn Frame trong cabin thang máy toà văn phòng/chung cư",
+   "gia": 1987000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 5s - 360 spot/ngày - giá 1 frame/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Frame LCD thang máy toàn quốc (hạng A/B/C/D)",
+   "vi_tri": "màn Frame trong cabin thang máy",
+   "gia": 2484000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 10s - 360 spot/ngày - giá 1 frame/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Frame LCD thang máy toàn quốc (hạng A/B/C/D)",
+   "vi_tri": "màn Frame trong cabin thang máy",
+   "gia": 2981000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 15s - 360 spot/ngày - giá 1 frame/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LCD sảnh chờ thang máy toàn quốc (hạng A/B/C/D)",
+   "vi_tri": "màn LCD sảnh chờ thang máy",
+   "gia": 446000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 5s - 72 spot/ngày - giá 1 LCD/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LCD sảnh chờ thang máy toàn quốc (hạng A/B/C/D)",
+   "vi_tri": "màn LCD sảnh chờ thang máy",
+   "gia": 745000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 10s - 72 spot/ngày - giá 1 LCD/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LCD sảnh chờ thang máy toàn quốc (hạng A/B/C/D)",
+   "vi_tri": "màn LCD sảnh chờ thang máy",
+   "gia": 1044000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 15s - 72 spot/ngày - giá 1 LCD/tuần (TVC 30s tính gấp đôi) - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "Dán decal cửa thang máy / standee toà nhà",
+   "vi_tri": "cửa thang máy hoặc sảnh thang máy",
+   "gia": 24000000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "1 thang máy/tháng - tối thiểu 3 tháng - giá/thang-may/thang"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "DP trong cabin thang máy - miền Bắc",
+   "vi_tri": "màn hình trong cabin thang máy các toà nhà miền Bắc",
+   "gia": 2196000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 10s - 360 lần/ngày - giá lẻ 1 màn/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "DP trong cabin thang máy - miền Trung",
+   "vi_tri": "màn hình trong cabin thang máy các toà nhà miền Trung",
+   "gia": 1932000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 10s - 360 lần/ngày - giá lẻ 1 màn/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "DP trong cabin thang máy - miền Nam",
+   "vi_tri": "màn hình trong cabin thang máy các toà nhà miền Nam",
+   "gia": 2196000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 10s - 360 lần/ngày - giá lẻ 1 màn/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "DP (digital poster) thang máy - miền Bắc",
+   "vi_tri": "màn DP cabin thang máy các toà nhà miền Bắc",
+   "gia": 1860000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 10s - 360 lần/ngày - 1 màn/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "DP (digital poster) thang máy - miền Trung",
+   "vi_tri": "màn DP cabin thang máy các toà nhà miền Trung",
+   "gia": 1416000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 10s - 360 lần/ngày - 1 màn/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "DP (digital poster) thang máy - miền Nam",
+   "vi_tri": "màn DP cabin thang máy các toà nhà miền Nam",
+   "gia": 1860000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "TVC 10s - 360 lần/ngày - 1 màn/tuần - giá/man/tuan"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED 3D 4A Phạm Ngọc Thạch, Q1, TPHCM (Phoenix)",
+   "vi_tri": "màn LED 3D toà nhà 4A Phạm Ngọc Thạch",
+   "gia": 460800000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "101.37 m2 - giá/tháng"
+  },
+  {
+   "nhom": "quang-cao-man-led",
+   "title": "LED Tràng Tiền Plaza, Hà Nội (Phoenix)",
+   "vi_tri": "mặt ngoài Tràng Tiền Plaza",
+   "gia": 806400000,
+   "gia_goc": null,
+   "so_link": "",
+   "yeu_cau": "96 m2 - giá/tháng"
+  }
+ ],
+ "updates": []
+}

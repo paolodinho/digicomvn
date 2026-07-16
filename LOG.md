@@ -1391,3 +1391,14 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
 - 15 trang con cũ `/booking-bao-pr/<bao>/` (508-512, 1300-1309) -> draft; handler 404 tự 301 về bài mới. Verify: 15/15 bài 200, 15/15 URL cũ 301 đúng đích, bảng giá render.
 - search-replace 53 link nội bộ cũ -> URL bài mới (giữ nguyên pillar /booking-bao-pr/).
 - Lưu ý: /dich-vu-backlink/bat-dong-san/ KHÔNG chuyển (Hiếu thu hẹp scope chỉ các bài báo giá booking lẻ).
+
+## 2026-07-16 (tiếp) - Mở 3 dịch vụ mới: QC loa phường / phát thanh / màn LED
+- 3 agent quét Google (>=50 kết quả/từ khoá) -> 219 dòng giá thô; lọc "giá từ" + combo ẩn danh,
+  phục hồi dấu (299 chuỗi), markup x1,20 -> import 193 dòng (loa phường 18, phát thanh 82, màn LED 93).
+- Theme: khai 3 nhóm ở cpt-gia/page-bang-gia/front-page/functions (11 dịch vụ), intro media như TV.
+- Tạo 3 trang pillar (2439-2441, tpl-service.php) + menu + lưới trang chủ. Verify: 3 trang 200
+  có bảng giá, tab bảng giá 20/95/84 dòng render.
+- Ẩn 147 dòng không rõ nơi đăng (110 gói + 37 chung chung) theo rule mới; filter export-web.py.
+- (Hiếu quyết cùng ngày) 4 nhóm media TẠM ẨN: truyền hình + loa phường + phát thanh + màn LED.
+  226 dòng giá + 4 trang pillar -> draft; gỡ menu/trang chủ/tab bảng giá. Dữ liệu lưu
+  10-bang-gia-booking/qc-media-cho-mo/. Verify: 4 URL 404, bảng giá + home sạch.

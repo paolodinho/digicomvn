@@ -65,10 +65,9 @@ $dgc_services = array(
 	array( 'Dịch vụ Toplist',        '/dich-vu-toplist/',        'Đưa thương hiệu vào bài xếp hạng "Top uy tín" đúng lĩnh vực.',       'M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6-5.2-4.4 6.8-.5z' ),
 	array( 'Backlink Social Entity', '/backlink-social-entity/', 'Hồ sơ social chuẩn NAP, nội dung độc bản, làm thủ công.',           'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0' ),
 	array( 'Backlink quốc tế',       '/backlink-quoc-te/',       'Guest post, niche edit &amp; PR báo quốc tế theo tầng DR/DA.',       'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z' ),
-	array( 'Booking truyền hình',    '/booking-truyen-hinh/',    'TVC, phóng sự &amp; talkshow trên VTV, HTV.',                       'M3 7h18v12H3zM8 3l4 4 4-4' ),
-	array( 'Quảng cáo loa phường',   '/quang-cao-loa-phuong/',   'Phát thông báo trên loa truyền thanh xã phường theo khu vực.',      'M3 10v4h4l6 5V5l-6 5H3zM16 9a5 5 0 0 1 0 6' ),
-	array( 'Quảng cáo phát thanh',   '/quang-cao-phat-thanh/',   'Spot radio trên VOV, VOH &amp; đài tỉnh theo khung giờ.',            'M4 11a8 8 0 0 1 16 0v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM8 20v-6M16 20v-6' ),
-	array( 'Quảng cáo màn LED',      '/quang-cao-man-led/',      'Màn hình LED toà nhà &amp; LCD thang máy theo vị trí.',              'M3 5h18v11H3zM9 21h6M12 16v5' ),
+	/* 4 nhom media TAM AN (Hieu 2026-07-16: luu du lieu, chua dua len trang - mo lai sau):
+	   Booking truyen hinh /booking-truyen-hinh/, QC loa phuong /quang-cao-loa-phuong/,
+	   QC phat thanh /quang-cao-phat-thanh/, QC man LED /quang-cao-man-led/. */
 );
 ?>
 <section class="sec" id="services" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">

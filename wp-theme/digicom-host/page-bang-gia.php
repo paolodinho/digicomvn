@@ -15,10 +15,9 @@ $dgc_nhom_list = array(
 	'backlink-social-entity' => 'Backlink Social Entity',
 	'dich-vu-toplist'        => 'Dịch vụ Toplist',
 	'backlink-quoc-te'       => 'Backlink quốc tế',
-	'booking-truyen-hinh'    => 'Booking truyền hình',
-	'quang-cao-loa-phuong'   => 'QC loa phường',
-	'quang-cao-phat-thanh'   => 'QC phát thanh',
-	'quang-cao-man-led'      => 'QC màn LED',
+	/* 4 nhom media tam an (Hieu 2026-07-16), du lieu draft cho mo lai:
+	   'booking-truyen-hinh' => 'Booking truyền hình', 'quang-cao-loa-phuong' => 'QC loa phường',
+	   'quang-cao-phat-thanh' => 'QC phát thanh', 'quang-cao-man-led' => 'QC màn LED', */
 );
 
 // Gom du lieu 1 lan, dung lai cho bang chi tiet + cong cu tick chon.

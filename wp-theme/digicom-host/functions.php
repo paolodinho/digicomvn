@@ -165,10 +165,8 @@ function dgc_service_links() {
 		array( 'Dịch vụ Toplist',        '/dich-vu-toplist/' ),
 		array( 'Backlink Social Entity', '/backlink-social-entity/' ),
 		array( 'Backlink quốc tế',       '/backlink-quoc-te/' ),
-		array( 'Booking truyền hình',    '/booking-truyen-hinh/' ),
-		array( 'Quảng cáo loa phường',   '/quang-cao-loa-phuong/' ),
-		array( 'Quảng cáo phát thanh',   '/quang-cao-phat-thanh/' ),
-		array( 'Quảng cáo màn LED',      '/quang-cao-man-led/' ),
+		/* 4 nhom media tam an (Hieu 2026-07-16): booking-truyen-hinh, quang-cao-loa-phuong,
+		   quang-cao-phat-thanh, quang-cao-man-led - du lieu gia da luu (draft), mo lai sau. */
 	);
 }
 

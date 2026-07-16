@@ -126,6 +126,23 @@ kênh rồi lấy giá rẻ nhất = bán TVC bằng giá phóng sự. Tương t
 **Chính tả:** dữ liệu bóc về là ASCII không dấu -> `payload-2-nhom-moi.py` có từ điển phục hồi dấu.
 Sau import phải quét lại, không để chuỗi mất dấu lọt lên web.
 
+## 3 nhóm mới 2026-07-16: QC loa phường + QC phát thanh + QC màn LED
+
+Taxonomy `dgc_nhom`: **`quang-cao-loa-phuong`** (18), **`quang-cao-phat-thanh`** (82),
+**`quang-cao-man-led`** (93). Slug đã khai ở page-bang-gia.php, cpt-gia.php ($terms + nhom_labels
++ dgc_current_nhom), don_vi: khu vực/kênh/vị trí. Nhóm media (không link) dùng nhánh intro như TV.
+- Nguồn: quét Google 2026-07-16 (3 agent, >=50 kết quả/từ khoá). Data gốc + payload:
+  scratchpad session `qc-moi/` (loa-phuong.json, phat-thanh.json, man-led.json). NCC chính:
+  Brandcom, TVC24, Tindi (loa/radio); bảng gốc VOV + VOH; Unique OOH, Trimai (LED/thang máy).
+- Giá web = giá NCC x 1,20 (đúng rule markup NCC ngoài DanaSEO), làm tròn nghìn. Loại "giá từ"
+  (14 dòng) + combo màn không list toà (12 dòng - rule không rõ nơi đăng).
+- Loa phường: dòng cấp "quận/huyện theo miền" GIỮ (bản chất dịch vụ - khách chỉ định quận/phường
+  khi đặt, đơn giá theo ngày/khu vực). Nếu Hiếu muốn siết như rule toplist thì draft sau.
+- Đơn giá kèm đơn vị trong yeu_cau ("giá/ngày", "giá/lần phát", "giá/tháng", "màn/tuần") -
+  KHÔNG so giá chéo đơn vị.
+- Trang pillar: page 2439/2440/2441 (tpl-service.php), đã vào menu + lưới trang chủ (11 dịch vụ).
+- Routine tuần `digicom-gia-doi-tac-tuan` CHƯA quét 3 nhóm này - muốn tự cập nhật thì mở rộng routine.
+
 ## Giá truyền hình: +20% (chốt 2026-07-15)
 
 `booking-truyen-hinh`: giá web = **giá NCC x 1,20** (mọi kênh). Lý do: truyền hình cần ê-kíp,
