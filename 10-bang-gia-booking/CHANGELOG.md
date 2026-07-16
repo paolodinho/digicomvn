@@ -3,6 +3,15 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-16
+- DanaSEO | 24h.com.vn | PR loại 1 (2h trang chủ): DanaSEO TÁCH thành 2 tầng theo chuyên mục.
+  - Nhóm KD/Thị trường tiêu dùng/Thời trang Hitech/CNTT/Ô tô/Xe máy/Sức khỏe/Đẹp: giữ giá cũ (gốc 9.000.000, KM 7.300.000).
+  - Nhóm Thể thao/Giải trí/Bạn trẻ cuộc sống/Ăn - Chơi/Giáo dục: THÊM MỚI (gốc 7.000.000, KM 5.200.000) - rẻ hơn tầng trên.
+  - 2 dòng "PR loại 2" đổi nhãn cho rõ chuyên mục (giá GIỮ NGUYÊN: gốc 6tr/5tr, KM 4,5tr/3,8tr).
+- DanaSEO | Thethaovanhoa.vn (báo tỉnh): quy cách đổi 1 link dof -> 2 link dof (giá GIỮ NGUYÊN 2.000.000).
+- Master: 1373 -> 1374 dòng (+1: tầng trang chủ 24h nhóm giải trí).
+- Nguồn chưa mở được vẫn nguyên: ECP Media (chỉ có PDF rate card VnExpress, không parse được), PR Báo Chí (chỉ dải giá + yêu cầu liên hệ), Brands Vietnam. Không thêm dòng chi tiết nào.
+
 ## 2026-07-15
 - Không biến động. (DanaSEO 3 tab PR báo lớn / Báo tỉnh / Link dofollow giữ nguyên; ECP Media, PR Báo Chí, Brands Vietnam vẫn chỉ công bố dải giá / yêu cầu liên hệ, không thêm được dòng chi tiết.)
 
