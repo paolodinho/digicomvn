@@ -1,0 +1,28 @@
+---
+description: Viết bài SEO/GEO chuẩn digicomvn (blog on-site hoặc PR đăng báo) theo writing-rules
+---
+
+Viết bài tối ưu SEO/GEO cho digicomvn.com. Bám CHÍNH XÁC `.claude/rules/writing-rules.md` + `tone-voice.md` + `dich-vu.md`. KHÔNG scope creep.
+
+Tham số (nếu user không nêu → hỏi 1 lần bằng 2-3 phương án, không hỏi mở):
+- **Primary keyword** (bắt buộc)
+- **Loại bài**: A (on-site blog/trang dịch vụ) hay B (PR đăng báo ngoài)
+- **Dịch vụ liên quan** để cài internal link (textlink/backlink/guest post/booking báo PR/toplist/social entity/quốc tế/truyền hình)
+
+## Bước
+
+1. **Xác định loại bài (A/B)** — chốt trước vì quyết định tone + cách cài link (writing-rules mục 0).
+2. **Research SERP**: search top 5 kết quả của primary keyword. List facts đối thủ có → tìm knowledge gap (info gain, writing-rules mục 5). Có thể dùng WebSearch/Ahrefs/Semrush nếu cần dữ liệu.
+3. **Lấy khoảng giá/chỉ số THẬT** nếu bài cần: từ `/bang-gia/` hoặc CPT `dgc_gia`. KHÔNG bịa số (writing-rules mục 7).
+4. **Viết** đúng cấu trúc theo loại bài (writing-rules mục 2):
+   - Bài A: H1(WP)/intro answer-first/body/info gain/internal link box/FAQ+FAQPage schema/CTA/nguồn.
+   - Bài B: tiêu đề báo chí/sapo/thân bài khách quan/1-2 anchor tự nhiên về digicomvn/kết/box liên hệ.
+5. **Cài internal link** ngay khi viết (writing-rules mục 4). Bài B: 1-2 anchor, đổi anchor mỗi báo nếu rải nhiều.
+6. **Self-QA** theo checklist writing-rules mục 9 + `quality-bar.md`. Sửa tới khi PASS.
+7. **Gọi qa-reviewer** (Agent tool, subagent_type `qa-reviewer`) nếu bài quan trọng.
+8. **Bàn giao**: xuất bài + note (anchor đã dùng, mật độ keyword, chỗ nào cần Hiếu điền số thật). Đăng on-site qua WP Admin, KHÔNG chạm PHP.
+
+## Tuyệt đối
+- KHÔNG bịa đầu báo hợp tác / case study / số liệu / tên khách hàng.
+- KHÔNG dùng cụm "bài chuẩn SEO". KHÔNG emoji trong heading/CTA.
+- KHÔNG nhồi keyword. Mọi link phải 200.
