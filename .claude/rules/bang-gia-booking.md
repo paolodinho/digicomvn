@@ -196,13 +196,16 @@ tranh chú ý. CSS `.nav>ul>li>a[href*="/bang-gia"]`.
   Solann/NCC KHÔNG công bố list site công khai -> chờ Hiếu gửi list hoặc routine tự quét bên nào công bố.
   KHÔNG bịa tên site/DR.
 
-## Gói không công bố đăng ở đâu -> KHÔNG đưa lên web (rule Hiếu 2026-07-16)
+## Không rõ nơi đăng -> KHÔNG đưa lên web (rule Hiếu 2026-07-16)
 
-Dòng giá dạng **Gói/Combo/Social Entity** mà không show được đăng báo nào, đăng ở đâu
-(`goi_sites` rỗng) -> KHÔNG hiển thị trên site.
-- Đã draft 110 dòng CPT dgc_gia ngày 2026-07-16 (list ID backup: `~/backups/goi-hidden-20260716.txt`
+Dòng giá KHÔNG show được đăng báo nào, đăng ở đâu -> KHÔNG hiển thị trên site. Gồm 2 dạng:
+1. **Gói/Combo/Social Entity** không có danh sách site (`goi_sites` rỗng).
+2. **Dòng chung chung không có domain cụ thể**: "Guest post DR 30+", "Niche edit", "Toplist
+   tỉnh / quận huyện", "1 credit", "42 site gov", "Website authority cao"...
+- Ngoại lệ: booking-truyen-hinh (kênh VTV1/HTV7 là nơi đăng cụ thể dù không có dấu chấm).
+- Đã draft 110 + 37 = 147 dòng CPT dgc_gia ngày 2026-07-16 (list ID: `~/backups/goi-hidden-20260716.txt`
   trên host). Nhóm dich-vu-backlink + backlink-social-entity tạm 0 dòng -> trang dịch vụ không render bảng giá.
-- `export-web.py` có filter `is_goi_an_danh()` - gói không có goi_sites bị loại khỏi gia-web.csv,
-  routine tuần không đẩy lại lên web. Khi NCC công bố list site (điền goi_sites) -> dòng tự xuất lại,
-  đồng thời publish lại post tương ứng.
+- `export-web.py` filter `is_khong_ro_noi_dang()` - loại khỏi gia-web.csv, routine tuần không đẩy
+  lại lên web. Khi NCC công bố list site (điền goi_sites) -> dòng tự xuất lại + publish lại post.
 - Lưu ý so khớp: LIKE không dấu khiến "ngoisao.net" dính "%gói%" -> phải dùng LIKE BINARY "Gói%".
+  "thanhnienviet" là báo thật (đã đổi title thành thanhnienviet.vn) - đừng ẩn nhầm.
