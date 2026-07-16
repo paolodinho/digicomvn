@@ -51,6 +51,9 @@ add_action( 'init', function () {
 		'dich-vu-toplist'  => 'Dịch vụ Toplist',
 		'backlink-quoc-te' => 'Backlink quốc tế',
 		'booking-truyen-hinh' => 'Booking truyền hình',
+		'quang-cao-loa-phuong' => 'Quảng cáo loa phường',
+		'quang-cao-phat-thanh' => 'Quảng cáo phát thanh',
+		'quang-cao-man-led' => 'Quảng cáo màn LED',
 	);
 	foreach ( $terms as $slug => $name ) {
 		if ( ! term_exists( $slug, 'dgc_nhom' ) ) {
@@ -557,6 +560,9 @@ function dgc_search_gia( $q ) {
 		'dich-vu-toplist'        => 'Dịch vụ Toplist',
 		'backlink-quoc-te'       => 'Backlink quốc tế',
 		'booking-truyen-hinh'    => 'Booking truyền hình',
+		'quang-cao-loa-phuong'   => 'Quảng cáo loa phường',
+		'quang-cao-phat-thanh'   => 'Quảng cáo phát thanh',
+		'quang-cao-man-led'      => 'Quảng cáo màn LED',
 	);
 
 	$out = array();
@@ -600,7 +606,11 @@ function dgc_search_gia( $q ) {
  * backlink, entity, toplist) goi la "trang" - vi do la website/blog, khong phai toa soan.
  */
 function dgc_nhom_don_vi( $slug ) {
-	return ( 'booking-bao-pr' === $slug ) ? 'báo' : 'trang';
+	if ( 'booking-bao-pr' === $slug ) return 'báo';
+	if ( 'quang-cao-phat-thanh' === $slug ) return 'kênh';
+	if ( 'quang-cao-loa-phuong' === $slug ) return 'khu vực';
+	if ( 'quang-cao-man-led' === $slug ) return 'vị trí';
+	return 'trang';
 }
 
 /**
@@ -667,12 +677,18 @@ function dgc_gia_intro_rows( $it, $slug ) {
 	if ( 'booking-truyen-hinh' === $slug )  $loai = 'kênh truyền hình - phát thanh';
 	elseif ( 'booking-bao-pr' === $slug )   $loai = 'báo điện tử';
 	elseif ( 'backlink-quoc-te' === $slug ) $loai = 'website quốc tế';
+	elseif ( 'quang-cao-phat-thanh' === $slug ) $loai = 'kênh phát thanh';
+	elseif ( 'quang-cao-loa-phuong' === $slug ) $loai = 'hệ thống loa truyền thanh khu vực';
+	elseif ( 'quang-cao-man-led' === $slug )    $loai = 'vị trí màn hình LED/LCD';
 
 	// 1. La bao/trang gi + uy tin (theo DR)
 	if ( $dr >= 70 )      $uytin = $name . ' là ' . $loai . ' thuộc nhóm đầu ngành, độ mạnh tên miền rất cao (DR ' . $dr . '), lượng truy cập lớn và được công cụ tìm kiếm đánh giá tin cậy.';
 	elseif ( $dr >= 40 )  $uytin = $name . ' là ' . $loai . ' có độ uy tín ổn định (DR ' . $dr . '), tín hiệu tên miền tốt và lượng độc giả đều đặn.';
 	elseif ( $dr > 0 )    $uytin = $name . ' là ' . $loai . ' phù hợp để đa dạng nguồn và mở rộng độ phủ thương hiệu (DR ' . $dr . ').';
 	elseif ( 'booking-truyen-hinh' === $slug ) $uytin = $name . ' là ' . $loai . ' có độ phủ khán giả rộng, mạnh về nhận diện và uy tín thương hiệu.';
+	elseif ( 'quang-cao-phat-thanh' === $slug ) $uytin = $name . ' là ' . $loai . ' tiếp cận thính giả đều đặn theo khung giờ, phù hợp nhắc tên thương hiệu tần suất cao.';
+	elseif ( 'quang-cao-loa-phuong' === $slug ) $uytin = $name . ' là ' . $loai . ' tiếp cận trực tiếp cư dân địa bàn, hiệu quả cho thông báo khai trương, khuyến mãi, tuyển dụng tại khu vực.';
+	elseif ( 'quang-cao-man-led' === $slug )    $uytin = $name . ' là ' . $loai . ' có lượng người qua lại lớn, tạo nhận diện thương hiệu lặp lại hằng ngày tại điểm đặt.';
 	else                  $uytin = $name . ' là ' . $loai . ' giúp đa dạng nguồn và tăng độ phủ thương hiệu trên môi trường số.';
 
 	// 2. Hop nganh nao (bo cac tag "loai hinh bao" - do la loai hinh, khong phai linh vuc)
@@ -690,7 +706,7 @@ function dgc_gia_intro_rows( $it, $slug ) {
 
 	// 3. Hieu qua - KHONG cung nhac ep SEO/GEO cho moi loai (Hieu 2026-07-15).
 	//    Truyen hinh -> hieu qua truyen thong/thuong hieu; con lai -> theo loai link.
-	$is_tv = ( 'booking-truyen-hinh' === $slug );
+	$is_tv = in_array( $slug, array( 'booking-truyen-hinh', 'quang-cao-loa-phuong', 'quang-cao-phat-thanh', 'quang-cao-man-led' ), true );
 	if ( $is_tv ) {
 		$eff_label = 'Hiệu quả truyền thông';
 		$eff_val   = 'Phủ sóng tới lượng khán giả lớn, tạo uy tín và nhận diện thương hiệu mạnh - phù hợp chiến dịch branding, ra mắt sản phẩm hoặc khẳng định vị thế doanh nghiệp.';
@@ -898,6 +914,9 @@ function dgc_current_nhom( $post_id = 0 ) {
 		'dich-vu-toplist'  => 'Dịch vụ Toplist',
 		'backlink-quoc-te' => 'Backlink quốc tế',
 		'booking-truyen-hinh' => 'Booking truyền hình',
+		'quang-cao-loa-phuong' => 'Quảng cáo loa phường',
+		'quang-cao-phat-thanh' => 'Quảng cáo phát thanh',
+		'quang-cao-man-led' => 'Quảng cáo màn LED',
 	);
 
 	$slug = get_post_field( 'post_name', $post_id );

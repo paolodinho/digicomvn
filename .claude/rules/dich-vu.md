@@ -22,6 +22,13 @@
   MarketWatch...) + phân phối thông cáo (PR Newswire, EIN Presswire, PRWeb...). Mở 2026-07-14.
 - **Booking truyền hình** - `dich-vu/booking-truyen-hinh/` - TVC (10/15/20/30 giây), phóng sự doanh
   nghiệp, tự giới thiệu, talkshow trên VTV1/VTV3/HTV7/HTV9. Mở 2026-07-14.
+- **Quảng cáo loa phường** - `/quang-cao-loa-phuong/` - phát thông báo/spot trên hệ thống loa
+  truyền thanh xã phường theo khu vực. Mở 2026-07-16 (Hiếu yêu cầu, quét giá Google >=50 kết quả/từ khoá).
+- **Quảng cáo phát thanh** - `/quang-cao-phat-thanh/` - spot radio trên VOV/VOH/đài tỉnh theo
+  kênh + khung giờ. Mở 2026-07-16.
+- **Quảng cáo màn LED toà nhà** - `/quang-cao-man-led/` - LED ngoài trời toà nhà + LCD/frame
+  thang máy theo vị trí toà nhà cụ thể. Mở 2026-07-16.
+  (3 nhóm mới tuân rule "không rõ nơi đăng/phát -> không đưa lên web"; giá = giá NCC x 1,20.)
 
 ## Giai đoạn 2 (sau khi 4 dịch vụ trên ổn định)
 

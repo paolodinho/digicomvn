@@ -16,6 +16,9 @@ $dgc_nhom_list = array(
 	'dich-vu-toplist'        => 'Dịch vụ Toplist',
 	'backlink-quoc-te'       => 'Backlink quốc tế',
 	'booking-truyen-hinh'    => 'Booking truyền hình',
+	'quang-cao-loa-phuong'   => 'QC loa phường',
+	'quang-cao-phat-thanh'   => 'QC phát thanh',
+	'quang-cao-man-led'      => 'QC màn LED',
 );
 
 // Gom du lieu 1 lan, dung lai cho bang chi tiet + cong cu tick chon.

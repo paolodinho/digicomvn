@@ -166,6 +166,9 @@ function dgc_service_links() {
 		array( 'Backlink Social Entity', '/backlink-social-entity/' ),
 		array( 'Backlink quốc tế',       '/backlink-quoc-te/' ),
 		array( 'Booking truyền hình',    '/booking-truyen-hinh/' ),
+		array( 'Quảng cáo loa phường',   '/quang-cao-loa-phuong/' ),
+		array( 'Quảng cáo phát thanh',   '/quang-cao-phat-thanh/' ),
+		array( 'Quảng cáo màn LED',      '/quang-cao-man-led/' ),
 	);
 }
 
