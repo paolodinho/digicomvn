@@ -939,8 +939,8 @@ body.mnav-open{overflow:hidden}
    bang gia dung tron be ngang. Dung <select> that -> mobile bat picker he dieu hanh, khong
    phai keo danh sach 25 nut. */
 .filter-bar{display:flex;align-items:flex-end;flex-wrap:wrap;gap:10px 12px;margin-bottom:14px;
-  padding:12px 14px;background:linear-gradient(180deg,#EDF2FF,#F6F8FF);
-  border:1px solid rgba(71,97,255,.20);border-radius:var(--r-md)}
+  padding:12px 14px;background:linear-gradient(180deg,#DFE8FF,#EDF2FF);
+  border:1px solid rgba(71,97,255,.32);border-radius:var(--r-md)}
 [data-theme="dark"] .filter-bar{background:#1B2330;border-color:rgba(130,150,255,.28)}
 .filter-sel{display:flex;flex-direction:column;gap:4px;min-width:0}
 .filter-sel-lb{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;
