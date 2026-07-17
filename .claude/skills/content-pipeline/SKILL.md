@@ -212,6 +212,20 @@ Mỗi bài đăng mới/sửa lớn xong -> submit index ngay:
 - Append LOG.md: `| <ngày> | Content pipeline | <slug> đăng/refresh, category X, widget Y |`.
 - Báo Hiếu 3-5 dòng: URL bài, category, widget đã chèn, link nội bộ đã đặt.
 
+## BẢNG KIỂM CHỨNG MỖI LẦN CHẠY (rule Hiếu 2026-07-17 - để Hiếu audit được)
+
+Mỗi lần chạy pipeline (bất kỳ chế độ nào), TRƯỚC khi báo xong phải ghi
+`content/run-<YYYY-MM-DD>.md` (append nếu chạy nhiều lần/ngày): bảng từng bước đã chạy,
+mỗi bước 1 dòng: `bước | làm/bỏ qua (lý do) | bằng chứng`. Bằng chứng phải KIỂM được:
+- Quét SERP/allintitle: số liệu + ngày đo.
+- Sitemap check: URL bài trùng tìm thấy (hoặc "không có").
+- Backup: đường dẫn file backup + dòng manifest.
+- Đăng/sửa: post ID + URL + kết quả curl (200, title đúng).
+- Widget: tên shortcode + số phần tử render đếm được trên HTML live.
+- GSC: URL đã submit + trạng thái ("Đã yêu cầu lập chỉ mục" / chờ quota).
+- Internal link: link nào chèn ở đâu, anchor gì.
+Báo cáo chat cuối chỉ tóm tắt; bảng đầy đủ nằm trong file run để Hiếu mở kiểm bất kỳ lúc nào.
+
 ## RANH GIỚI
 
 - KHÔNG đụng CPT `dgc_gia` / giá (routine giá riêng quản).
