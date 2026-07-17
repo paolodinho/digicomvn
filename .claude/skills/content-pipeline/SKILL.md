@@ -203,6 +203,11 @@ Mỗi bài đăng mới/sửa lớn xong -> submit index ngay:
    ghi lại các URL chưa submit vào plan để hôm sau submit tiếp; sitemap vẫn là kênh chính).
 4. Ghi kết quả (đã submit / chờ quota) vào báo cáo cuối.
 
+> **RankMath KHÔNG active** trên digicomvn.com - `<title>` do theme (core title-tag) dựng
+> từ `post_title`. Đổi SEO title mà GIỮ label menu/H1: thêm ID vào `dgc_seo_title_map()`
+> trong `functions.php` (đã có cho money page 475). Ghi `rank_math_*` meta = vô tác dụng.
+> Chống ăn thịt: money page giữ head-term thương mại, bài blog dùng modifier ("cách chọn"/"là gì").
+
 ## BƯỚC 8 - VERIFY + LOG (bắt buộc trước khi báo xong)
 
 - `curl -s https://digicomvn.com/<slug>/` : 200, có H1, widget render (tìm class widget),

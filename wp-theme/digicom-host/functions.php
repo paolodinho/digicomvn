@@ -407,6 +407,28 @@ foreach ( array( 'the_content', 'the_title', 'the_excerpt', 'single_post_title',
 }
 
 /* ---------------------------------------------------------------------------
+ * SEO title theo tung page/post (RankMath chua bat) - dat <title> khac label menu.
+ * Map: post_id => tieu de <title> mong muon (khong doi post_title/label menu).
+ * Vi du money page 475 giu label "Booking bao & PR" nhung <title> nham head-term
+ * thuong mai "Agency Booking Bao Chi" (khop intent SERP thuong mai).
+ * ------------------------------------------------------------------------- */
+function dgc_seo_title_map() {
+	return array(
+		475 => 'Agency Booking Báo Chí Uy Tín - Bảng Giá 2026',
+	);
+}
+add_filter( 'document_title_parts', function ( $parts ) {
+	if ( is_singular() ) {
+		$map = dgc_seo_title_map();
+		$id  = get_queried_object_id();
+		if ( ! empty( $map[ $id ] ) ) {
+			$parts['title'] = $map[ $id ];
+		}
+	}
+	return $parts;
+}, 5 );
+
+/* ---------------------------------------------------------------------------
  * So bai/trang cho category archive = 12 (chia het 3 cot desktop & 2 cot tablet)
  * -> luoi blog luon du hang, khong con hang cuoi le 1 the ("khuyet 2 the").
  * ------------------------------------------------------------------------- */
