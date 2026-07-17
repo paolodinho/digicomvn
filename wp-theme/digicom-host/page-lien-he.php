@@ -34,7 +34,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 				<div class="contact-map">
-					<iframe src="https://www.google.com/maps?q=DigicomVN%2C%20S%E1%BB%91%20nh%C3%A0%20200%2C%20%C4%90%C6%B0%E1%BB%9Dng%203.1%2C%20Khu%20%C4%91%C3%B4%20th%E1%BB%8B%20Gamuda%20Garden%2C%20Ho%C3%A0ng%20Mai%2C%20H%C3%A0%20N%E1%BB%99i&output=embed" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ trụ sở DigicomVN"></iframe>
+					<iframe src="https://www.google.com/maps?cid=2252645296724540673&output=embed" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ trụ sở DigicomVN"></iframe>
 				</div>
 			</div>
 		</div>
