@@ -28,19 +28,19 @@ $press_chip = function ( $pp ) {
 			<h2>Đầu báo DigicomVN hỗ trợ đặt bài, booking PR</h2>
 			<p class="muted" style="max-width:600px;margin:8px auto 0">Danh sách rút gọn, xem đầy đủ tại <a href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>" style="color:var(--action);font-weight:600">Bảng giá</a>.</p>
 		</div>
-		<div class="press-rows">
-			<?php
-			$dgc_press_rows = 5;
-			$dgc_per        = max( 1, (int) ceil( count( $press_list ) / $dgc_press_rows ) );
-			foreach ( array_chunk( $press_list, $dgc_per ) as $ri => $dgc_chunk ) :
-				$rev = ( $ri % 2 === 1 ) ? ' press-track--rev' : '';
-			?>
-			<div class="press-marquee">
-				<div class="press-track<?php echo $rev; ?>">
-					<?php for ( $k = 0; $k < 4; $k++ ) : foreach ( $dgc_chunk as $pp ) : $press_chip( $pp ); endforeach; endfor; ?>
-				</div>
+	</div>
+	<div class="press-rows press-rows--full">
+		<?php
+		$dgc_press_rows = 5;
+		$dgc_per        = max( 1, (int) ceil( count( $press_list ) / $dgc_press_rows ) );
+		foreach ( array_chunk( $press_list, $dgc_per ) as $ri => $dgc_chunk ) :
+			$rev = ( $ri % 2 === 1 ) ? ' press-track--rev' : '';
+		?>
+		<div class="press-marquee">
+			<div class="press-track<?php echo $rev; ?>">
+				<?php for ( $k = 0; $k < 4; $k++ ) : foreach ( $dgc_chunk as $pp ) : $press_chip( $pp ); endforeach; endfor; ?>
 			</div>
-			<?php endforeach; ?>
 		</div>
+		<?php endforeach; ?>
 	</div>
 </section>
