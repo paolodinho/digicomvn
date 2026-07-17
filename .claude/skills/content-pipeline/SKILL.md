@@ -1,19 +1,89 @@
 ---
 name: content-pipeline
 description: >
-  Quy trình content TỰ ĐỘNG end-to-end cho digicomvn.com: nhận topic/keyword ->
-  check trùng cụm + volume -> research SERP -> viết bài -> chèn widget tương tác ->
-  thumbnail -> đăng LIVE qua SSH -> internal link -> verify -> log.
-  Trigger: "viết bài <topic>", "chạy pipeline content", "đăng bài về <chủ đề>".
+  Quy trình content + internal link TỰ ĐỘNG cho digicomvn.com. 2 chế độ:
+  (A) BỘ TỪ KHOÁ: quét SERP từng keyword -> suy intent + loại bài -> gom cluster ->
+  kế hoạch nội dung topic cluster -> viết loạt bài -> tự đi internal link pillar/cluster
+  theo intent + hành trình khách. (B) BÀI ĐƠN: topic -> bài live (8 bước).
+  Trigger: đưa file/bộ keyword, "viết bài <topic>", "chạy pipeline content".
 ---
 
-# Digicom Content Pipeline - từ topic tới bài live
-
-Mọi bước dưới đây chạy TỰ ĐỘNG một mạch, chỉ dừng ở CHECKPOINT duy nhất (bước 1)
-khi topic chưa được Hiếu duyệt trước.
+# Digicom Content Pipeline - keyword -> topic cluster -> bài live -> internal link
 
 Config nguồn sự thật: `.claude/context/brand-info.md` (đọc TRƯỚC, không hardcode).
 Quy tắc viết: skill global `content-writer` + rule `content-professional`, `typography-dash`.
+Tham khảo khung generic: `~/Claude-Workspace/_shared/skills/seo-content-pipeline/SKILL.md`.
+
+---
+
+# CHẾ ĐỘ A - BỘ TỪ KHOÁ (quy trình chính)
+
+Input: file/danh sách keyword từ Hiếu (csv/xlsx/paste). Output cuối: kế hoạch nội dung
+đã duyệt + loạt bài live + internal link nối cluster-pillar tự động.
+
+## A1. QUÉT SERP TỪNG KEYWORD (không đoán intent theo chữ)
+
+Với TỪNG keyword: WebSearch/Google, đọc 10 kết quả đầu (bỏ ads, bỏ digicomvn.com), ghi vào
+bảng làm việc `content/keyword-serp-<ngày>.csv`:
+- **Intent thật** theo SERP: informational / commercial / transactional / local / mixed
+  (căn cứ trang đang top là blog, trang dịch vụ, bảng giá, danh mục hay tool).
+- **Loại bài Google đang cho lên top**: hướng dẫn A-Z, listicle, so sánh, bảng giá,
+  case study, tool/calculator, trang dịch vụ.
+- **Cách tiếp cận đối thủ**: section chính, độ dài, có bảng/số liệu/FAQ/video không.
+- **Gap**: đối thủ thiếu gì (số liệu VN, ví dụ thật, dữ liệu giá sống, công cụ tương tác).
+- SERP features: AI Overview / Featured Snippet / PAA (lấy PAA làm FAQ sau này).
+Keyword nào SERP toàn trang dịch vụ/bảng giá -> đích là MONEY PAGE hiện có, KHÔNG viết blog
+cạnh tranh với chính mình.
+
+## A2. GOM CLUSTER + KẾ HOẠCH NỘI DUNG (checkpoint duyệt)
+
+1. Gom keyword cùng intent + cùng SERP overlap (top 10 trùng >=3 URL = cùng bài) thành cluster.
+   1 bài = 1 intent riêng, không tách 1 intent thành nhiều bài (rule publish-volume-warning).
+2. Xếp hierarchy: **Pillar** (head term, tổng quát) - **Cluster** (modifier cụ thể) -
+   **Supporting** (khái niệm/quy trình phụ). Map vào pillar THẬT đang có (brand-info mục 7)
+   trước khi đề xuất pillar mới.
+3. Với từng bài trong plan, chốt sẵn: tiêu đề (<=58 ký tự), search intent, loại bài,
+   angle khác biệt + info gain cụ thể để hơn đối thủ, widget dự kiến, URL slug,
+   category (1/11 chuyên mục), đích money page sẽ link tới.
+4. Vẽ **sơ đồ internal link theo hành trình khách**:
+   `Supporting (học) -> Cluster (cân nhắc) -> Pillar (tổng quan) -> Money page (mua)/-> /bang-gia/`
+   - Cluster -> Pillar: 1 link/bài, anchor informational.
+   - Pillar -> từng Cluster: anchor chủ đề cụ thể.
+   - Cluster <-> Cluster liên quan: 2-3 link, không cross-cluster sai ngữ nghĩa.
+   - Bài commercial -> money page bằng anchor thương mại; bài informational KHÔNG nhét
+     anchor bán hàng cứng, dẫn qua pillar trước.
+5. Xuất `content/plan-<cụm>-<ngày>.md`: bảng plan + sơ đồ link + volume/cảnh báo.
+   **DỪNG chờ Hiếu duyệt plan** (checkpoint duy nhất của chế độ A). Duyệt xong các bước
+   sau chạy tự động hết.
+
+## A3. VIẾT + ĐĂNG LOẠT BÀI
+
+Chạy từng bài theo plan bằng các bước 2-6 của chế độ B bên dưới (research lại SERP chi tiết
+khi viết, thứ tự H1 -> SAPO -> Tóm tắt, widget, thumbnail, đăng SSH). Tối đa 3 bài/lần chạy,
+đăng dần theo ưu tiên trong plan (pillar/bài volume cao trước).
+
+## A4. INTERNAL LINK TỰ ĐỘNG (điểm khác biệt của pipeline này)
+
+Sau khi các bài của cluster đã live:
+1. Dựng link graph THẬT: quét post_content các bài liên quan trên live (wp-cli),
+   liệt kê link hiện có giữa các bài.
+2. So với sơ đồ ở A2 -> danh sách link THIẾU và link SAI ĐÍCH (vd trỏ `/dich-vu/...` cũ,
+   trỏ bài blog trùng slug thay vì page pillar - xem cảnh báo brand-info mục 7).
+3. Tự chèn link thiếu vào bài cũ + bài mới: anchor là cụm từ CÓ SẴN trong câu (không nhét),
+   mỗi URL 1 lần/bài, tối đa 5 internal link/bài, >=1 money page với bài commercial.
+   Backup content.raw TỪNG bài trước khi sửa (routine-backup) + manifest.
+4. Verify: mỗi link mới curl 200 đúng đích; cập nhật link graph vào
+   `content/linkgraph-<cụm>-<ngày>.md` để lần sau đối chiếu.
+
+## A5. BÁO CÁO
+Tổng kết: số keyword quét, số cluster, bài đã đăng (URL), link đã chèn (từ đâu -> đâu,
+anchor gì), link sai đã sửa, phần còn chờ (bài chưa viết theo plan). Append LOG.md 1 dòng.
+
+---
+
+# CHẾ ĐỘ B - BÀI ĐƠN (topic -> bài live)
+
+Chạy tự động một mạch, chỉ dừng ở CHECKPOINT bước 1 khi topic chưa được Hiếu duyệt.
 
 ## BƯỚC 1 - NHẬN TOPIC + GATE (checkpoint duy nhất)
 
