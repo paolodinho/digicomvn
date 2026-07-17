@@ -1,8 +1,33 @@
-# Kế hoạch nội dung + internal link: cụm BOOKING BÁO (2026-07-17)
+# Kế hoạch nội dung + internal link: cụm BOOKING BÁO (2026-07-17, bản 2)
 
 > Chế độ A của content-pipeline. Nguồn: bộ ~140 keyword Hiếu đưa 2026-07-17,
-> lọc còn ~45 từ thật, quét SERP 14 keyword đại diện (10 kết quả đầu/keyword).
+> lọc còn ~45 từ thật, quét SERP 17 keyword đại diện (10 kết quả đầu/keyword).
+> BẢN 2: bổ sung quét sitemap (MỚI vs SỬA), URL lý tưởng, allintitle (rule Hiếu 2026-07-17).
 > Trạng thái: CHỜ HIẾU DUYỆT (checkpoint A2).
+
+## 0. Quét sitemap + allintitle (bổ sung bản 2)
+
+**Bài cụm booking báo ĐÃ CÓ trên site** (ngoài 15 bài book-bao-*):
+| URL | Title hiện tại | Phủ keyword |
+|---|---|---|
+| `/booking-bao-la-gi/` | Booking Báo Chí Là Gì? Quy Trình Đặt Bài PR Trên Báo Điện Tử | booking báo (chí) là gì, booking báo điện tử |
+| `/bao-gia-dang-bai-pr-theo-dau-bao/` | Báo Giá Đăng Bài PR Theo Từng Đầu Báo | báo giá/chi phí booking báo (một phần) |
+| `/so-sanh-booking-bao-pr-va-quang-cao-bao/` | So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống | so sánh (intent phụ) |
+| `/cach-viet-bai-pr-chuan-bao-chi/` | Cách Viết Bài PR Chuẩn Báo Chí | viết bài PR (intent phụ) |
+
+=> **P1 và C2 đổi từ MỚI thành SỬA** (tránh ăn thịt từ khoá - rule A2c).
+
+**Allintitle (Google, 2026-07-17)** - càng thấp càng dễ top:
+| Cụm trong title | Allintitle | Đánh giá |
+|---|---|---|
+| agency booking báo chí | **108** | DỄ nhất nhóm - ưu tiên 1 |
+| bảng giá booking báo chí | **127** | dễ - ưu tiên 2 |
+| giá booking báo | 181 | trung bình |
+| booking báo là gì | 199 | trung bình - biến thể dễ hơn "booking báo chí là gì" (292) |
+| chi phí booking báo chí | 221 | trung bình |
+| dịch vụ booking báo chí | 276 | khó hơn - dành cho money page |
+| booking báo chí là gì | 292 | khó nhất nhóm là-gì |
+| booking báo quốc tế / nhân dân / cách chọn agency / điện tử / pr booking là gì | (chưa đo xong - hệ thống nghẽn, sẽ bổ sung) | ước tính thấp vì ngách hẹp |
 
 ## 1. Kết quả quét SERP (tóm tắt theo nhóm)
 
@@ -29,15 +54,21 @@
 3. Không bên nào có công cụ tương tác (so sánh DR các báo, ước tính chi phí) -> Digicom có sẵn `[dgc_dr_chart]`, `[dgc_budget_calc]`.
 4. Listicle "top agency" toàn tự xếp mình #1, thiếu bộ TIÊU CHÍ chọn khách quan.
 
-## 3. Kế hoạch bài viết (5 bài MỚI + refresh 15 bài có sẵn)
+## 3. Kế hoạch bài viết (2 SỬA + 3 MỚI + refresh 15 bài book-bao-*)
 
-| # | Bài | Keyword phủ | Loại/intent | Tiêu đề dự kiến (<=58 kt) | Angle + info gain | Widget | Category | Link tới |
-|---|---|---|---|---|---|---|---|---|
-| P1 | **Booking báo chí là gì?** (blog pillar cụm) | booking báo, booking báo là gì, booking báo chí (là gì), booking báo điện tử, pr booking là gì, booking viết báo | Informational, hướng dẫn A-Z | "Booking Báo Chí Là Gì? Hình Thức, Chi Phí, Quy Trình 2026" | Đủ 4 hình thức + quy trình 5 bước THẬT của Digicom + khoảng giá sống theo nhóm báo (không số bịa) | dgc_offpage_quiz | booking-bao-pr | -> `/booking-bao-pr/`, `/bang-gia/` |
-| C2 | **Chi phí booking báo chí 2026** | giá/báo giá/bảng giá/chi phí booking báo (chí), giá booking các báo, booking báo giá rẻ | Commercial-info | "Chi Phí Booking Báo Chí 2026: Bảng Giá Theo Nhóm Báo" | Phân tầng giá theo nhóm báo (dải giá thật từ bảng giá live) + 6 yếu tố quyết định giá + cách tiết kiệm (combo, tự viết bài) | dgc_budget_calc | booking-bao-pr | -> `/bang-gia/`, P1, `/booking-bao-pr/` |
-| C3 | **Cách chọn agency booking báo chí** | agency booking báo (chí), dịch vụ booking báo (chí), dịch vụ book báo, booking báo online | Commercial-info | "Chọn Agency Booking Báo Chí: 7 Tiêu Chí Tránh Mất Tiền" | Bộ tiêu chí khách quan (chiết khấu, hoá đơn, cam kết link, thời gian đăng) thay vì listicle tự khen; checklist hỏi agency trước khi ký | - | booking-bao-pr | -> `/booking-bao-pr/`, P1, C2 |
-| C4 | **Booking báo quốc tế** | booking báo quốc tế, booking báo nước ngoài | Commercial-info | "Booking Báo Quốc Tế: Cách Hoạt Động, Giá, Lưu Ý 2026" | Phân biệt booking vs press release; tầng giá theo nhóm (Forbes/BI vs niche); cảnh báo scam thường gặp | - | booking-bao-pr | -> `/backlink-quoc-te/`, P1 |
-| C5 | **Booking báo Nhân Dân** | booking báo nhân dân, booking báo chính phủ | Commercial ngách B2G | "Booking Báo Nhân Dân: Giá, Quy Cách, Lưu ý 2026" | Đặc thù: không link ngoài, max 1.000 từ/2 ảnh, phù hợp B2B/B2G; đối chiếu bảng giá sống | dgc_dr_chart (nếu có data DR) | booking-bao-pr | -> P1, `/bang-gia/`, `/booking-bao-pr/` |
+| # | MỚI/SỬA | Bài | URL (lý tưởng hoặc hiện có) | Keyword phủ | Allintitle | Tiêu đề dự kiến (<=58 kt) | Angle + info gain | Widget | Link tới |
+|---|---|---|---|---|---|---|---|---|---|
+| P1 | **SỬA** | Booking báo là gì (blog pillar cụm) | `/booking-bao-la-gi/` (giữ URL) | booking báo (là gì), booking báo chí là gì, booking báo điện tử, pr booking là gì, booking viết báo | 199 (biến thể "booking báo là gì" dễ hơn 292 của "booking báo chí là gì") | Đổi title thành "Booking Báo Là Gì? Hình Thức, Chi Phí, Quy Trình 2026" (kw allintitle thấp lên đầu) | Giữ 100% + bổ sung: 4 hình thức, khoảng giá sống theo nhóm báo, FAQ từ PAA | dgc_offpage_quiz | -> `/booking-bao-pr/`, `/bang-gia/` |
+| C2 | **SỬA** | Chi phí booking báo theo đầu báo | `/bao-gia-dang-bai-pr-theo-dau-bao/` (giữ URL) | chi phí booking báo (chí), giá booking báo, giá booking các báo, booking báo giá rẻ | 181-221 | Mở rộng title: "Giá Booking Báo 2026: Báo Giá PR Theo Từng Đầu Báo" | Giữ 100% + bổ sung: 6 yếu tố quyết định giá, phân tầng nhóm báo, cách tiết kiệm | dgc_budget_calc | -> `/bang-gia/`, P1, `/booking-bao-pr/` |
+| C3 | **MỚI** | Cách chọn agency booking báo chí | `/agency-booking-bao-chi/` | agency booking báo (chí), dịch vụ book báo, booking báo online | **108 - DỄ NHẤT, viết đầu tiên** | "Agency Booking Báo Chí: 7 Tiêu Chí Chọn Đúng 2026" | Bộ tiêu chí khách quan (chiết khấu, hoá đơn, cam kết link, thời gian đăng) + checklist hỏi trước khi ký | - | -> `/booking-bao-pr/`, P1, C2 |
+| C4 | **MỚI** | Booking báo quốc tế | `/booking-bao-quoc-te/` | booking báo quốc tế, booking báo nước ngoài | (đo bổ sung - ngách hẹp, ước thấp) | "Booking Báo Quốc Tế: Cách Hoạt Động, Giá, Lưu Ý" | Booking vs press release; tầng giá theo nhóm; cảnh báo scam | - | -> `/backlink-quoc-te/`, P1 |
+| C5 | **MỚI** | Booking báo Nhân Dân | `/book-bao-nhan-dan/` (khớp series book-bao-*) | booking báo nhân dân, booking báo chính phủ | (đo bổ sung - ngách hẹp, ước thấp) | "Booking Báo Nhân Dân: Giá, Quy Cách, Lưu Ý 2026" | Đặc thù: KHÔNG link ngoài, max 1.000 từ/2 ảnh, góc B2B/B2G | dgc_dr_chart (nếu có DR) | -> P1, `/bang-gia/`, `/booking-bao-pr/` |
+
+**Chống ăn thịt từ khoá (A2c)**: "dịch vụ booking báo chí" (276) KHÔNG đặt vào title bài blog
+nào - keyword thương mại này thuộc money page `/booking-bao-pr/`. C3 nhắm "agency booking báo
+chí" góc "cách chọn" (informational) nên không đua với money page. P1 và C2 sửa trên bài cũ,
+không sinh URL trùng intent. 2 bài phụ có sẵn (`/so-sanh-booking-bao-pr-va-quang-cao-bao/`,
+`/cach-viet-bai-pr-chuan-bao-chi/`) giữ nguyên vai supporting, chỉ nhận thêm internal link.
 | R1-R15 | **Refresh 15 bài book-bao-*** (vnexpress, thanh niên, tuổi trẻ, dân trí, 24h, kenh14, cafef, cafebiz, znews, soha, afamily, eva, webtretho, báo đầu tư, vietnamnet) | giá booking báo [tên báo], booking báo [tên báo], báo giá booking [tên báo] | Commercial per-outlet | giữ title hiện có, tinh chỉnh theo SERP | Bổ sung (KHÔNG cắt): bảng quy cách chuẩn (số từ/ảnh/link), ngành phù hợp, quy trình duyệt bài của báo đó - phần đối thủ per-outlet có mà bài mình thiếu | đã có dr_chart + bảng giá | booking-bao-pr | mỗi bài -> P1 (mới) + giữ link hiện có |
 
 **Không viết**: nhóm KOL/KOC/fanpage/tiktok/ca sĩ (ngoài dịch vụ), từ nhiễu app Booking.com.
@@ -66,10 +97,11 @@ Quy tắc: <=5 internal link/bài, >=1 money page với bài commercial; bài in
 dẫn money page bằng anchor tự nhiên trong phần "quy trình/dịch vụ", không nhét anchor bán hàng
 dày đặc. URL money dùng dạng GỐC (`/booking-bao-pr/`, KHÔNG `/dich-vu/...`).
 
-## 5. Thứ tự thực thi (sau khi duyệt)
+## 5. Thứ tự thực thi (sau khi duyệt - sắp theo allintitle thấp trước)
 
-1. Đợt 1: P1 + C2 (2 bài lõi, kéo trọng lượng cụm).
-2. Đợt 2: C3 + C4 + C5.
+1. Đợt 1: **C3 MỚI** (allintitle 108, dễ top nhất) + **SỬA P1** (pillar cụm, đổi title theo
+   biến thể 199).
+2. Đợt 2: **SỬA C2** + C4 + C5 (đo allintitle bổ sung trước khi chốt title 2 bài này).
 3. Đợt 3: refresh R1-R15 (batch 5 bài/lần) + chạy A4 internal link tự động toàn cụm
    (quét link graph live, chèn link thiếu, sửa link sai đích, backup từng bài).
 

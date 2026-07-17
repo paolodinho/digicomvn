@@ -35,10 +35,24 @@ bảng làm việc `content/keyword-serp-<ngày>.csv`:
 Keyword nào SERP toàn trang dịch vụ/bảng giá -> đích là MONEY PAGE hiện có, KHÔNG viết blog
 cạnh tranh với chính mình.
 
+## A1b. QUÉT SITEMAP + ALLINTITLE (bắt buộc trước khi lập plan - rule Hiếu 2026-07-17)
+
+1. **Quét bài đã có**: đọc sitemap live (`wp-sitemap.xml` + `wp post list` qua SSH) lọc mọi
+   URL/bài thuộc cụm keyword. Keyword nào đã có bài phủ đúng intent -> plan ghi
+   **SỬA TRÊN BÀI ĐÓ** (giữ URL, bổ sung), TUYỆT ĐỐI không tạo bài mới trùng.
+2. **Check allintitle** từng keyword mục tiêu (Google `allintitle:"<keyword>"`, lấy số kết quả):
+   - Allintitle THẤP (vd <10-30) = ít bài chứa đúng cụm trong title -> DỄ TOP -> ưu tiên viết trước.
+   - Dùng allintitle để ĐẶT TÍT: chọn biến thể cụm có allintitle thấp nhất mà vẫn đúng
+     intent + volume, đưa nguyên cụm đó vào đầu title.
+   - Ghi số allintitle vào bảng plan làm cột ưu tiên.
+
 ## A2. GOM CLUSTER + KẾ HOẠCH NỘI DUNG (checkpoint duyệt)
 
 1. Gom keyword cùng intent + cùng SERP overlap (top 10 trùng >=3 URL = cùng bài) thành cluster.
    1 bài = 1 intent riêng, không tách 1 intent thành nhiều bài (rule publish-volume-warning).
+1b. Plan phân loại rõ từng dòng: **MỚI** (chưa có bài phủ) vs **SỬA** (đã có bài - ghi URL
+   bài hiện có). Mỗi dòng MỚI gen sẵn **URL lý tưởng** (slug ngắn, chứa keyword chính,
+   flat `/[slug]/`, không dấu, khớp cấu trúc cụm).
 2. Xếp hierarchy: **Pillar** (head term, tổng quát) - **Cluster** (modifier cụ thể) -
    **Supporting** (khái niệm/quy trình phụ). Map vào pillar THẬT đang có (brand-info mục 7)
    trước khi đề xuất pillar mới.
@@ -55,6 +69,27 @@ cạnh tranh với chính mình.
 5. Xuất `content/plan-<cụm>-<ngày>.md`: bảng plan + sơ đồ link + volume/cảnh báo.
    **DỪNG chờ Hiếu duyệt plan** (checkpoint duy nhất của chế độ A). Duyệt xong các bước
    sau chạy tự động hết.
+
+## A2c. CHỐNG ĂN THỊT TỪ KHOÁ - keyword cannibalization (rule Hiếu 2026-07-17)
+
+Áp cho CẢ lúc lập plan lẫn lúc viết từng bài (chế độ A và B):
+
+1. **1 primary keyword = 1 URL duy nhất trên toàn site.** Trước khi viết, search
+   `site:digicomvn.com "<keyword>"` + quét title/H1 bài đã có: nếu đã có trang tối ưu cho
+   keyword đó -> SỬA trang đó, không viết bài thứ hai.
+2. **Phân vai blog vs money page**: keyword thương mại (dịch vụ, giá, agency...) thuộc về
+   money page/bảng giá; bài blog KHÔNG đặt keyword thương mại đó vào title/H1 - blog nhắm
+   biến thể informational ("là gì", "chi phí ... phụ thuộc gì", "cách chọn"). Tránh blog và
+   trang dịch vụ cùng đua 1 từ.
+3. **Title/H1 các bài trong cùng cluster không lặp cùng một cụm tối ưu.** Mỗi bài dùng biến
+   thể riêng đã chia trong plan (căn allintitle). Keyword phụ cùng intent gộp làm semantic
+   trong thân bài, không bao giờ tách thành bài mới.
+4. **Anchor internal link phân vai**: anchor đúng primary keyword của trang ĐÍCH (anchor
+   thương mại -> money page, anchor informational -> bài blog tương ứng) - không dùng anchor
+   là primary keyword của bài A để trỏ về bài B, Google sẽ lẫn vai.
+5. **Khi phát hiện 2 bài cũ đang ăn thịt nhau** (cùng phủ 1 intent): đề xuất vào plan hành
+   động GỘP (bài yếu 301/redirect nội dung về bài mạnh) hoặc ĐỔI HƯỚNG bài yếu sang intent
+   khác - cần Hiếu duyệt, không tự gộp/xoá.
 
 ## A3. VIẾT + ĐĂNG LOẠT BÀI
 
