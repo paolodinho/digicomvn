@@ -93,6 +93,39 @@ add_shortcode( 'dgc_budget_calc', function () {
 	return ob_get_clean();
 } );
 
+/**
+ * 3. [dgc_agency_check] - checklist cham diem agency booking bao chi (7 tieu chi).
+ * Nguoi doc tick tung tieu chi ma agency dang xem xet dap ung -> ra diem + loi khuyen.
+ */
+add_shortcode( 'dgc_agency_check', function () {
+	$items = array(
+		'Có bảng giá công khai theo từng đầu báo, ghi rõ VAT',
+		'Quy cách bài (số từ, ảnh, link dofollow/nofollow) ghi bằng văn bản',
+		'Ký hợp đồng và xuất hoá đơn VAT đầy đủ',
+		'Cam kết thời gian đăng + phương án khi báo từ chối bài',
+		'Có đội ngũ hỗ trợ viết/biên tập bài chuẩn báo chí',
+		'Gửi báo cáo link bài sau đăng, đúng chuyên mục cam kết',
+		'Cho xem bài mẫu thật đã đăng trên đúng báo bạn cần',
+	);
+	ob_start(); ?>
+<div class="acheck" data-acheck>
+	<p class="acheck-title">Chấm điểm agency bạn đang cân nhắc</p>
+	<p class="acheck-sub">Tick những tiêu chí agency đó đáp ứng được - kết quả hiện ngay bên dưới.</p>
+	<div class="acheck-list">
+	<?php foreach ( $items as $i => $it ) : ?>
+		<label class="acheck-item"><input type="checkbox" data-v="1"><span><?php echo esc_html( $it ); ?></span></label>
+	<?php endforeach; ?>
+	</div>
+	<div class="acheck-result" aria-live="polite"
+		data-urls="<?php echo esc_attr( wp_json_encode( array(
+			'booking' => home_url( '/booking-bao-pr/' ),
+			'banggia' => home_url( '/bang-gia/' ),
+		) ) ); ?>"></div>
+</div>
+<?php
+	return ob_get_clean();
+} );
+
 add_shortcode( 'dgc_offpage_quiz', function () {
 	ob_start(); ?>
 <div class="oquiz" data-oquiz>

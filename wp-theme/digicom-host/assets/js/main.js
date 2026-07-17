@@ -829,3 +829,26 @@ document.addEventListener('click', function (e) {
 		});
 	});
 })();
+
+/* Agency check: checklist 7 tieu chi cham diem agency booking bao. */
+(function () {
+	document.querySelectorAll('[data-acheck]').forEach(function (box) {
+		var res = box.querySelector('.acheck-result'), urls = {};
+		try { urls = JSON.parse(res.getAttribute('data-urls') || '{}'); } catch (e) {}
+		function render() {
+			var inputs = box.querySelectorAll('.acheck-item input'), n = 0;
+			inputs.forEach(function (c) { if (c.checked) n++; });
+			if (n === 0) { res.innerHTML = ''; return; }
+			var head = '<b>' + n + '/' + inputs.length + ' tiêu chí</b> - ', html;
+			if (n <= 3) {
+				html = head + 'rủi ro cao. Thiếu quá nhiều điều kiện tối thiểu, nên tìm đơn vị khác trước khi chuyển tiền.';
+			} else if (n <= 5) {
+				html = head + 'tạm ổn nhưng cần làm rõ các mục chưa tick (đặc biệt hợp đồng, hoá đơn, quy cách bài) trước khi ký.';
+			} else {
+				html = head + 'đáng tin cậy theo bộ tiêu chí cơ bản. Bước tiếp theo: so giá theo cùng quy cách bài trên <a href="' + (urls.banggia || '#') + '">bảng giá tham chiếu</a>.';
+			}
+			res.innerHTML = html;
+		}
+		box.querySelectorAll('.acheck-item input').forEach(function (c) { c.addEventListener('change', render); });
+	});
+})();

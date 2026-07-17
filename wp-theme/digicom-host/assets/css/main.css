@@ -2035,3 +2035,19 @@ body.mnav-open{overflow:hidden}
   .bcalc,.oquiz{padding:16px 14px}
   .oquiz-q{flex-direction:column;align-items:flex-start;gap:8px}
 }
+
+/* Agency check - checklist cham diem agency */
+.acheck{border:1px solid var(--line-2,#E4E8EF);border-radius:14px;padding:22px 20px;margin:28px 0;background:var(--surface-2,#fff)}
+.acheck-title{font-weight:700;font-size:17px;color:var(--heading,#1C2035);margin:0 0 4px}
+.acheck-sub{font-size:13.5px;color:var(--ink-soft,#5A6472);margin:0 0 14px}
+.acheck-list{display:flex;flex-direction:column;gap:8px}
+.acheck-item{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink,#2A3240);cursor:pointer;padding:9px 12px;border:1px solid var(--line-2,#E4E8EF);border-radius:9px;background:var(--surface,#FAFBFC)}
+.acheck-item input{margin-top:3px;accent-color:#0E8C7F}
+.acheck-item:has(input:checked){border-color:rgba(14,140,127,.45);background:#F1FAF8}
+.acheck-result{margin-top:14px;font-size:14.5px;color:var(--ink,#2A3240);line-height:1.55}
+.acheck-result b{color:#0E8C7F}
+.acheck-result a{color:var(--action,#2456E6)}
+[data-theme="dark"] .acheck{background:#1B2330}
+[data-theme="dark"] .acheck-item{background:#141B26;color:#C9D2DE}
+[data-theme="dark"] .acheck-item:has(input:checked){background:#12261F}
+@media(max-width:640px){.acheck{padding:16px 14px}}

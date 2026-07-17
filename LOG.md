@@ -1412,3 +1412,4 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
   off-page + gợi ý dịch vụ -> 74 bài cluster SEO kiến thức. Vị trí trước H2 thứ 3 (nghỉ mắt).
   13 bài không có H2 dạng Gutenberg chuẩn -> bỏ qua. Test JS live: calc đổi giá theo slider,
   quiz ra kết quả 4/6 đúng.
+| 2026-07-17 | Content pipeline đợt 1 (cụm booking báo) | Đăng mới /agency-booking-bao-chi/ (post 2569 + thumb 2570, allintitle 108); sửa /booking-bao-la-gi/ (1260): title theo biến thể allintitle 199, thêm section 4 hình thức + quiz widget + link bài mới. Plan bản 2 đã duyệt. |
