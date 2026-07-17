@@ -1196,6 +1196,14 @@ body.mnav-open{overflow:hidden}
 .related-list a:before{content:"›";color:var(--action);margin-right:6px}
 .related-list a:hover{color:var(--action)}
 @media(max-width:640px){.related-list{grid-template-columns:1fr}}
+.related-more{margin-top:10px}
+.related-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--action);padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface-2);user-select:none;transition:background .15s}
+.related-more>summary::-webkit-details-marker{display:none}
+.related-more>summary:after{content:"▾";font-size:12px}
+.related-more[open]>summary:after{content:"▴"}
+.related-more>summary:hover{background:var(--surface)}
+.related-more .related-list{margin-top:14px}
+[data-theme="dark"] .related-more>summary{background:#1B2330;border-color:var(--line-2,#2A3340);color:#8FB0FF}
 
 @media(max-width:1024px){
   .blog-grid{grid-template-columns:repeat(2,1fr)}

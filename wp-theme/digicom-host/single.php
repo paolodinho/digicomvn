@@ -43,13 +43,24 @@ get_header();
 				) );
 				$dgc_main_cat = get_the_category()[0] ?? null;
 				if ( $dgc_related ) : ?>
+				<?php $dgc_rel_show = 6; $dgc_rel_first = array_slice( $dgc_related, 0, $dgc_rel_show ); $dgc_rel_rest = array_slice( $dgc_related, $dgc_rel_show ); ?>
 				<div class="related-posts" style="max-width:820px;margin:0 auto 30px">
 					<h3>Bài viết liên quan<?php if ( $dgc_main_cat ) : ?> <a class="related-cat-link" href="<?php echo esc_url( get_category_link( $dgc_main_cat ) ); ?>">trong <?php echo esc_html( $dgc_main_cat->name ); ?></a><?php endif; ?></h3>
 					<ul class="related-list">
-						<?php foreach ( $dgc_related as $rp ) : ?>
+						<?php foreach ( $dgc_rel_first as $rp ) : ?>
 							<li><a href="<?php echo esc_url( get_permalink( $rp ) ); ?>"><?php echo esc_html( get_the_title( $rp ) ); ?></a></li>
 						<?php endforeach; ?>
 					</ul>
+					<?php if ( $dgc_rel_rest ) : ?>
+					<details class="related-more">
+						<summary>Xem thêm <?php echo count( $dgc_rel_rest ); ?> bài trong chuyên mục</summary>
+						<ul class="related-list">
+							<?php foreach ( $dgc_rel_rest as $rp ) : ?>
+								<li><a href="<?php echo esc_url( get_permalink( $rp ) ); ?>"><?php echo esc_html( get_the_title( $rp ) ); ?></a></li>
+							<?php endforeach; ?>
+						</ul>
+					</details>
+					<?php endif; ?>
 				</div>
 				<?php endif;
 			endif;
