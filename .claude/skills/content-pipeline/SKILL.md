@@ -217,6 +217,19 @@ Mỗi bài đăng mới/sửa lớn xong -> submit index ngay:
 - Append LOG.md: `| <ngày> | Content pipeline | <slug> đăng/refresh, category X, widget Y |`.
 - Báo Hiếu 3-5 dòng: URL bài, category, widget đã chèn, link nội bộ đã đặt.
 
+## SỔ CÁI CỤM - theo dõi tiến độ dài hạn (rule Hiếu 2026-07-17)
+
+Mỗi cụm chủ đề có 1 file `content/cluster-<slug>.md` là "sổ cái": bảng mọi bài dự kiến +
+trạng thái ✅/⏳ + URL + ngày. Bắt buộc:
+- **Mỗi khi viết/sửa xong 1 bài** -> cập nhật dòng đó thành ✅ + ngày, và trong báo cáo chat
+  ĐIỂM LẠI: "cụm này đã xong bài A, B; còn thiếu C, D, R1-R15".
+- **Khởi động phiên/tiếp tục cụm dở** -> đọc sổ cái trước, báo ngay còn bài nào chưa viết.
+- **Chuyển sang cụm MỚI** -> TỔNG KẾT cụm cũ trước (đã xong bao nhiêu/tổng, còn treo gì),
+  rồi mới mở `content/cluster-<slug-mới>.md`.
+- Sổ cái sinh từ file plan của cụm; plan là kế hoạch, sổ cái là trạng thái sống.
+- **Báo cáo LUÔN kèm LINK LIVE bấm được** (https://digicomvn.com/<slug>/) cho mọi bài
+  vừa viết/sửa, để Hiếu bấm kiểm ngay - không chỉ liệt kê tên bài (rule Hiếu 2026-07-17).
+
 ## BẢNG KIỂM CHỨNG MỖI LẦN CHẠY (rule Hiếu 2026-07-17 - để Hiếu audit được)
 
 Mỗi lần chạy pipeline (bất kỳ chế độ nào), TRƯỚC khi báo xong phải ghi

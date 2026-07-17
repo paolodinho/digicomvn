@@ -39,8 +39,7 @@ get_header();
 					'category__in'   => $dgc_cat_ids,
 					'post__not_in'   => array( get_the_ID() ),
 					'posts_per_page' => -1,
-					'orderby'        => 'date',
-					'order'          => 'DESC',
+					'orderby'        => array( 'menu_order' => 'ASC', 'ID' => 'ASC' ),
 				) );
 				$dgc_main_cat = get_the_category()[0] ?? null;
 				if ( $dgc_related ) : ?>

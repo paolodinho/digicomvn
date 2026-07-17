@@ -2055,3 +2055,46 @@ body.mnav-open{overflow:hidden}
 [data-theme="dark"] .acheck-item{background:#141B26;color:#C9D2DE}
 [data-theme="dark"] .acheck-item:has(input:checked){background:#12261F}
 @media(max-width:640px){.acheck{padding:16px 14px}}
+
+/* SAPO (cau dan dau bai) - in dam nhe (2026-07-17) */
+.page-content p[style*="1.1em"]{font-weight:600}
+
+/* Tom tat nhanh - trinh bay dang trich dan (quote) */
+.page-content .summary{
+  background:var(--surface-2);
+  border-left:4px solid var(--action);
+  border-radius:0 10px 10px 0;
+  padding:15px 20px;
+  margin:22px 0;
+}
+.page-content .summary>p:first-child{margin-top:0}
+.page-content .summary strong{color:var(--action)}
+.page-content .summary ul{margin:6px 0 0;padding-left:18px}
+.page-content .summary li{margin:5px 0}
+[data-theme="dark"] .page-content .summary{background:#1B2330;border-left-color:#5B8CFF}
+[data-theme="dark"] .page-content .summary strong{color:#8FB0FF}
+
+/* Bai it anh - tang phan tach section cho de doc (2026-07-17) */
+.page-content p{margin:0 0 16px}
+.page-content h2{border-bottom:1px solid var(--line);padding-bottom:9px}
+.page-content h3{position:relative;padding-left:14px;color:var(--heading)}
+.page-content h3:before{content:"";position:absolute;left:0;top:.2em;bottom:.2em;width:4px;border-radius:2px;background:var(--action)}
+.page-content li{margin:6px 0}
+.page-content ul li::marker,.page-content ol li::marker{color:var(--action)}
+.page-content h2+p,.page-content h3+p{margin-top:0}
+[data-theme="dark"] .page-content h2{border-bottom-color:var(--line-2,#2A3340)}
+
+/* Link trong than bai - noi bat, de nhan ra la link (2026-07-17) */
+.page-content p a,.page-content li a{
+  color:var(--action,#2456E6);
+  font-weight:600;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:2px;
+  text-decoration-color:rgba(36,86,230,.4);
+}
+.page-content p a:hover,.page-content li a:hover{
+  text-decoration-thickness:2px;
+  text-decoration-color:currentColor;
+}
+[data-theme="dark"] .page-content p a,[data-theme="dark"] .page-content li a{color:#8FB0FF;text-decoration-color:rgba(143,176,255,.45)}
