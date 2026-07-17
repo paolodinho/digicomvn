@@ -41,6 +41,7 @@ danh sach dau bao that, M5 QA + demo).
 ## 7. File quan trong
 `PLAN.md`, `LOG.md`, `DECISIONS.md`, `.claude/context/brand-info.md` (luu y: mo ta site
 agency cu, can doi chieu khi dung).
+Quy trinh content tu dong: `.claude/skills/content-pipeline/SKILL.md` (topic -> bai live).
 
 ## 8. Quy trinh chuan
 1. Doc PLAN.md -> task tiep theo
