@@ -29,6 +29,9 @@ get_header();
 					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'mail' ); ?></span><div>Email<br><b><a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'email' ) ); ?></a></b></div></div>
 					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'pin' ); ?></span><div>Trụ sở<br><b><?php echo esc_html( dgc( 'address' ) ); ?></b><?php if ( dgc( 'address2' ) ) : ?><br><span style="opacity:.85">Văn phòng giao dịch</span><br><b><?php echo esc_html( dgc( 'address2' ) ); ?></b><?php endif; ?></div></div>
 					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'clock' ); ?></span><div>Giờ làm việc<br><b><?php echo esc_html( dgc( 'working_hours' ) ); ?></b></div></div>
+					<?php if ( dgc( 'facebook' ) ) : ?>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'facebook' ); ?></span><div>Fanpage<br><b><a href="<?php echo esc_url( dgc( 'facebook' ) ); ?>" target="_blank" rel="noopener" style="color:#fff">Facebook DigicomVN</a></b></div></div>
+					<?php endif; ?>
 				</div>
 				<div class="contact-map">
 					<iframe src="https://www.google.com/maps?q=DigicomVN%2C%20S%E1%BB%91%20nh%C3%A0%20200%2C%20%C4%90%C6%B0%E1%BB%9Dng%203.1%2C%20Khu%20%C4%91%C3%B4%20th%E1%BB%8B%20Gamuda%20Garden%2C%20Ho%C3%A0ng%20Mai%2C%20H%C3%A0%20N%E1%BB%99i&output=embed" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ trụ sở DigicomVN"></iframe>
