@@ -3,6 +3,13 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-17
+- Không biến động giá. DanaSEO chỉ đổi tên hiển thị: thanhnienviet -> thanhnienviet.vn
+  (tab Link dof, giá giữ nguyên 2.000.000, DR 61) - khớp title đã sửa trên web trước đó.
+- Quét lại 5 nguồn chưa có (ECP Media, PR Báo Chí, Brands Vietnam, Brandcom, Vietquangcao):
+  vẫn chỉ PDF/ảnh/dải giá + yêu cầu liên hệ, không thêm được dòng chi tiết nào.
+- Master: 1374 dòng, 91 nhà cung cấp.
+
 ## 2026-07-16
 - DanaSEO | 24h.com.vn | PR loại 1 (2h trang chủ): DanaSEO TÁCH thành 2 tầng theo chuyên mục.
   - Nhóm KD/Thị trường tiêu dùng/Thời trang Hitech/CNTT/Ô tô/Xe máy/Sức khỏe/Đẹp: giữ giá cũ (gốc 9.000.000, KM 7.300.000).
