@@ -1,5 +1,20 @@
 # LOG - digicomvn.com
 
+## 2026-07-18 (bảng giá lên đầu cụm "book báo X" + nhớ báo đã chọn)
+- **Nạp bảng giá Media Việt Nam** (417 dòng, 6 tab sheet) vào `10-bang-gia-booking/`, đối chiếu
+  tay với live tránh trùng lặp, đẩy 37 dòng mới + sửa giá qua `import-wp.php`. Sau đó Hiếu chốt
+  Media Việt Nam KHÔNG markup (như DanaSEO) - cập nhật `export-web.py`, hạ lại 46 dòng đã lỡ
+  cộng 20%. Tiện thể phát hiện + sửa 68 đầu báo khác đang thiếu markup từ trước (lỗi cũ).
+- **15 bài "book báo X"** (Cafebiz, CafeF, Kenh14...): chuyển khối bảng giá sống `[dgc_bang_gia]`
+  lên NGAY SAU H1 (trước đây nằm giữa bài, sau đoạn mở đầu + tóm tắt). Riêng bài **Nhân Dân**
+  (2577) đang dùng bảng `<table>` tĩnh với giá bịa "6,6-9tr" - đã thay bằng shortcode
+  `[dgc_bang_gia]` thật (giá đúng 6,2tr) + xoá mọi câu nhắc giá cũ sai.
+- **Tính năng mới**: khách tick chọn báo (VD VNExpress) mà chưa gửi yêu cầu báo giá -> lưu vào
+  localStorage trình duyệt, lần sau quay lại bất kỳ trang bảng giá nào vẫn tự tick lại đúng báo
+  đó. Sửa `assets/js/main.js`, DGC_VER 1.8.5 → 1.8.6.
+- Backup đầy đủ trước mỗi bước (DB live x3, nội dung 16 bài, main.js gốc) tại
+  `~/Claude-Workspace/_backups/routines/2026-07-18/`.
+
 ## 2026-07-14 (bổ sung 5 - bảng giá 4 cột rõ ràng + chiết khấu combo)
 - Bảng giá bỏ cột "Vị trí"/"Ghi chú" lẫn lộn, còn 4 cột: **Báo/site | Quy cách đăng | Giá |
   Đặt ngay**. Quy cách tách thành chip riêng (1000 từ / 5 ảnh / 2 link dofollow / vị trí đăng)
