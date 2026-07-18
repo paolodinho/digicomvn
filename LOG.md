@@ -1,5 +1,18 @@
 # LOG - digicomvn.com
 
+## 2026-07-18/19 - Đăng live cụm "thông cáo báo chí" (Pillar + 2 Cluster) qua SSH
+Tiep noi doi viet chieu 2026-07-18 (session cloud khong co SSH). Session nay checkout nhanh
+`claude/bo-tu-thong-cao-bao-chi-p797a3` (PR #3), dang 3 bai qua `wp post create` SSH Hostinger:
+`/thong-cao-bao-chi-la-gi/` (post 3848, Pillar), `/cach-viet-thong-cao-bao-chi-chuan/` (post 3849),
+`/mau-thong-cao-bao-chi/` (post 3850) - ca 3 category `booking-bao-pr`, thumbnail render + set
+featured image (`tools/blog-thumbnail/`), widget `[dgc_offpage_quiz]` verify render dung (6 cau
+hoi), 0 dash loi. Cache stale lan dau lam bai 1 khong hien thumbnail -> `wp cache flush` +
+`wp litespeed-purge all` fix ngay. Chen link 2 chieu tu bai cu `/cach-viet-bai-pr-chuan-bao-chi/`
+(post 1277, backup content.raw truoc khi sua) tro ve bai Pillar moi. Verify toan bo internal link
+noi bo (200), submit GSC URL Inspection ca 3 URL (property URL-prefix, tai khoan hieudx3107).
+Con lai: bai 4 "xu ly khung hoang" (dot sau dung batch limit), A4 internal link tu dong toan cum.
+Chi tiet: `content/run-2026-07-18.md`, `content/cluster-thong-cao-bao-chi.md`.
+
 ## 2026-07-18 (bảng giá lên đầu cụm "book báo X" + nhớ báo đã chọn)
 - **Nạp bảng giá Media Việt Nam** (417 dòng, 6 tab sheet) vào `10-bang-gia-booking/`, đối chiếu
   tay với live tránh trùng lặp, đẩy 37 dòng mới + sửa giá qua `import-wp.php`. Sau đó Hiếu chốt
