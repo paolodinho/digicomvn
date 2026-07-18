@@ -1,5 +1,26 @@
 # LOG - digicomvn.com
 
+## 2026-07-19 (2) - Research lại sâu bài 1-3 cụm "thông cáo báo chí" ("3 bài trước cũng thế")
+Hieu phan hoi tiep: 3 bai dau (Pillar + 2 Cluster) cung viet truoc khi research du sau, giong
+loi cua bai 4. Chay lai deep-research (WebFetch full noi dung top SERP that) cho ca 3 keyword
+chinh song song. Sua ca 3 bai va dang lai qua SSH:
+- **Bai 1** (post 3848): them cach goi ten 6 phan PR chuan (headline/dateline/lead/body/quote/
+  boilerplate), them H2 "Loi thuong gap" (5 loi), them trich Dieu 38 Luat Bao chi 2016 (so
+  103/2016/QH13) da verify noi dung that qua nguon truoc khi dung. ~700 -> ~1.840 tu.
+- **Bai 2** (post 3849): them khung SOLAADS (7 yeu to, Frank Jefkins - da verify la nguoi that
+  + noi dung dung), doi cau truc "3 phan" thanh "6 phan" co ten rieng khop bai 1, them chuan do
+  dai tieu de 8-12 tu. KHONG them nhieu mau theo tinh huong (tranh cannibalize voi bai 3, dung
+  rule A2c). ~950 -> ~1.780 tu.
+- **Bai 3** (post 3850): them 4 mau moi (bo nhiem nhan su, goi von/dau tu, CSR/cong dong, giai
+  thuong/chung nhan) -> du 9/9 tinh huong nhu top. KHONG bia case thuong hieu that (Samsung/FIFA
+  nhu doi thu) - vi pham rule do-dont.md. ~700 -> ~2.036 tu.
+- **Bug phat hien khi sua**: bai 1 va bai 3 bi MAT link toi bai 4 khi dang lai lan dau sang nay
+  - link do truoc chi chen vao ban backup rieng, chua luu vao file nguon trong content/. Da phat
+  hien qua QA + sua kip thoi, khong de lau tren live.
+- Purge cache, verify curl toan bo (H1/thumbnail/link/dash) ca 4 bai, **re-submit GSC** ca 4 URL
+  (3 bai da duoc Google index tu truoc, bam "Yeu cau lap chi muc" de crawl lai noi dung moi).
+Chi tiet: `content/cluster-thong-cao-bao-chi.md`.
+
 ## 2026-07-19 - Bài 4/4 cụm "thông cáo báo chí" + sửa sau phản hồi Hiếu "chưa research"
 Viet + dang bai 4 "Thong cao bao chi xu ly khung hoang" (post ID 3869, category booking-bao-pr,
 widget `[dgc_agency_check]`). Hieu phan hoi ngay sau khi len live lan dau (2362 tu): "Chac chan
@@ -1494,3 +1515,4 @@ content/cach-viet-thong-cao-bao-chi-chuan.html, content/mau-thong-cao-bao-chi.ht
 CHUA DANG LIVE: session cloud nay khong co ssh/scp, khong co key ~/.ssh/id_ed25519 cua Hieu
 (theo deploy.md chi co tren may Hieu) -> Hieu chon phuong an xuat file HTML, tu dang thu cong.
 Chi tiet: content/run-2026-07-18.md, content/cluster-thong-cao-bao-chi.md.
+| 2026-07-19 | Vitri-images batch 8 | +12 domain (congthuong.vn, cafeland.vn, hanoimoi.vn, anninhthudo.vn, baodongnai.com.vn, baodanang.vn, home.vn, congly.vn, giaoducthoidai.vn, baolaocai.vn, baodongthap.vn, truyenhinhnghean.vn). Nut .vitri-toggle 147->159. Ledger: done 113/775, issue 22, con lai 640. |

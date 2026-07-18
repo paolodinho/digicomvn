@@ -49,3 +49,41 @@ rõ minh hoạ) - không phải chỗ cần đầu tư thêm.
 `[dgc_offpage_quiz]` - bài 1, 2, 3 (đúng gợi ý mục 5 plan, đặt sau 2-3 H2 đầu).
 `[dgc_agency_check]` - bài 4 (checklist chấm điểm agency, phù hợp intent gần commercial hơn
 khi doanh nghiệp cần thuê ngoài xử lý khủng hoảng gấp).
+
+## Đợt research lại sâu bài 1-3 (2026-07-19, sau phản hồi "3 bài trước cũng thế, thua đối thủ")
+
+Hiếu chỉ ra bài 4 không phải trường hợp cá biệt - cả 3 bài đầu cũng viết trước khi research đủ
+sâu (chỉ WebSearch snippet, không WebFetch full nội dung top). Chạy lại đúng quy trình cho cả 3:
+
+- **Bài 1 (Pillar)**: research xác nhận vietnix.vn (~2.900 từ) hơn hẳn draft cũ (~700 từ) -
+  thiếu khái niệm "boilerplate", thiếu mục lỗi thường gặp, 0 trích luật trong khi 2/3 đối thủ
+  (luatvietnam, careerlink) đều trích Điều 38 Luật Báo chí 2016. Đã sửa: thêm cách gọi tên 6
+  phần chuẩn PR (headline/dateline/lead/body/quote/boilerplate), thêm H2 "Lỗi thường gặp" (5
+  lỗi), thêm trích dẫn Điều 38 Luật Báo chí 2016 (số 103/2016/QH13) - đã verify nội dung thật
+  qua nguồn (Điều 38 = "Cung cấp thông tin cho báo chí", không trực tiếp về TCBC nhưng có liên
+  quan, diễn đạt đúng mức độ liên quan, không thổi phồng). ~700 -> ~1.840 từ.
+- **Bài 2 ("Cách viết")**: research xác nhận tanca.io (~2.300 từ) và miccreative.vn (~2.800 từ)
+  đều có khung thứ 2 (SOLAADS của Frank Jefkins) + cấu trúc 6 phần đặt tên chuẩn, draft cũ chỉ
+  có 5W1H + cấu trúc 3 phần chung chung. Đã sửa: thêm khung SOLAADS (7 yếu tố, đã verify qua
+  nguồn - Subject/Organisation/Location/Advantages/Applications/Details/Source, tác giả Frank
+  Jefkins xác nhận là người thật, cựu Trưởng phòng PR Rentokil), đổi cấu trúc "3 phần" thành "6
+  phần" có tên riêng (khớp cách gọi ở bài 1), thêm chuẩn độ dài tiêu đề 8-12 từ. KHÔNG thêm
+  nhiều mẫu theo tình huống dù đối thủ có - tránh cannibalize với bài 3 (đã có sẵn, đúng rule
+  A2c chống ăn thịt từ khoá). ~950 -> ~1.780 từ.
+- **Bài 3 ("Mẫu")**: research xác nhận miccreative.vn phủ 9 tình huống, draft cũ chỉ có 5. File
+  .docx tải về (luatvietnam có) KHÔNG phải điều kiện cứng để rank - miccreative dài/sâu nhất
+  nhưng không có file, chỉ hướng dẫn tự dùng Canva/Google Docs. Đã sửa: thêm 4 mẫu mới (bổ
+  nhiệm nhân sự cấp cao, công bố vòng gọi vốn/đầu tư, hoạt động CSR/cộng đồng, nhận giải
+  thưởng/chứng nhận) - đủ 9/9 tình huống, thêm 1 đoạn hướng dẫn dùng Canva/Google Docs để tự
+  trình bày (thành thật, không claim có file tải sẵn - đúng rule đã ghi trong META bài này).
+  KHÔNG thêm case thương hiệu thật (Samsung/FIFA/Vinamilk như miccreative) - vi phạm rule
+  do-dont.md "không nhắc tên công ty/đối thủ trong bài". ~700 -> ~2.036 từ.
+- **Gap phát hiện thêm khi sửa**: cả bài 1 và bài 3 bị MẤT link tới bài 4 khi đăng lại lần đầu
+  ở đợt 2026-07-19 sáng - lý do: link đó trước đó chỉ được chèn vào 1 bản backup riêng
+  (`~/Claude-Workspace/_backups/...`), không lưu lại vào file nguồn trong `content/`, nên lần
+  đăng lại từ file nguồn đã ghi đè mất link. Đã phát hiện qua QA link ngay sau khi đăng và sửa
+  lại kịp thời (chưa để lâu trên live). Bài học: MỌI edit chèn link phải áp trực tiếp vào file
+  nguồn trong `content/`, không sửa riêng bản backup rồi quên đồng bộ ngược.
+- Cả 3 bài đã purge cache, verify curl (H1/thumbnail/internal link 200/0 dash lỗi), và **re-submit
+  GSC URL Inspection** (Google đã index từ lần đăng trước, lần này bấm "Yêu cầu lập chỉ mục" để
+  yêu cầu crawl lại nội dung mới).
