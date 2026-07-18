@@ -3,6 +3,24 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-18 (routine tuần digicom-gia-doi-tac-tuan - đã đẩy LIVE)
+- Quét 6 tab SEODO chưa tích hợp (gviz CSV công khai): booking PR (gid 600512532), báo tỉnh
+  (71216803), guest post (604318967), bài PR (1903168453), textlink gói (570329285), toplist
+  ngành (490006843).
+- Đối chiếu tay với 936 post live: **6 outlet booking-bao-pr MỚI** (chưa có trên live), giá =
+  THÀNH TIỀN sau CK của SEODO, markup x1.20 (SEODO không phải DanaSEO):
+  giadinhonline.vn (5.040.000), suckhoe.vtv.vn (4.800.000), giadinh.suckhoedoisong.vn
+  (3.120.000, 1 nofollow), svvn.tienphong.vn (3.120.000), hoahoctro.tienphong.vn (3.120.000),
+  pasgo.vn (4.320.000, 1 nofollow, cam kết TOP10). Gán ngành y-te cho 2 dòng sức khỏe.
+- Đã ĐẨY LIVE (import-wp merge, 0 trùng): dgc_gia publish 564 -> 570. Purge cache LiteSpeed.
+  Verify curl /bang-gia/: cả 6 hiện, chính tả có dấu chuẩn.
+- 14 file Admicro PDF "chưa bóc" trong nguon.md: đã tải 5 (genk/gamek/autopro/vtv/skds) - tất cả
+  domain ĐÃ có trên live rồi (không thêm outlet mới). Báo tỉnh/guest-post/toplist tab: 0 outlet
+  mới (đã có / generic không domain / không cột giá).
+- KHÔNG đẩy 417 dòng Media Việt Nam (guest-post) - đang chờ Hiếu duyệt (xem block dưới), tránh
+  mass-publish chưa verify (rule publish-volume-warning).
+- Master: 1790 -> 1796 dòng. `gia-web.csv`: 912 dòng (gồm cả backlog Media VN chưa lên live).
+
 ## 2026-07-18 (nạp thêm NCC mới)
 - Thêm nhà cung cấp mới **Media Việt Nam** (Google Sheet Hiếu gửi, 6 tab: Báo tỉnh, GOV,
   Báo Lớn - PR, Textlink Sidebar (gói), Textlink Trang Chủ (theo site), Guest-post Du lịch).

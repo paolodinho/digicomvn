@@ -73,3 +73,27 @@ Lấy qua gviz CSV (PUBLIC, không cần login): `gviz/tq?tqx=out:csv&gid=<gid>`
 
 Đã thêm 15 site toplist vào raw/ncc-khac.csv (section "SEODO toplist"). Các tab CHƯA: routine tuần
 tích hợp, ÁP đầy đủ chốt chặn giá vốn + phân tầng vị trí (rule bang-gia-booking.md).
+
+### Cập nhật 2026-07-18 (routine tuần) - 6 tab SEODO đã xử lý xong
+- **600512532** (booking PR 194 outlet có domain+giá): đối chiếu live -> chỉ **5 outlet mới**
+  (giadinhonline.vn, suckhoe.vtv.vn, svvn.tienphong.vn, hoahoctro.tienphong.vn,
+  giadinh.suckhoedoisong.vn) - còn lại đã có trên live. ĐÃ đẩy live.
+- **1903168453** (bài PR): 1 outlet có domain thật = **pasgo.vn** (3.6tr net, 1 nofollow). ĐÃ đẩy.
+- **71216803** (báo tỉnh 39 outlet): 0 mới (tất cả đã có trên live).
+- **604318967** (guest post): KHÔNG có cột giá - chỉ ma trận TRUE/FALSE năng lực từng site. Bỏ.
+- **570329285** (textlink gói Brando V1-V5): gói không list site cụ thể -> loại theo rule
+  "không rõ nơi đăng". Không đưa web.
+- **490006843** (toplist theo ngành TOP 1-4): generic theo ngành/vị trí, không domain cụ thể ->
+  loại theo rule. Không đưa web.
+
+### Admicro PDF - 5/14 file đã bóc (2026-07-18)
+Tải + parse: genk (apr2025), gamek (apr2025), autopro (jan2026), vtv (jan2026), skds (jan2026).
+Tất cả 5 domain (genk.vn/gamek.vn/autopro.com.vn/vtv.vn/suckhoedoisong.vn) ĐÃ có trên live -> 0
+outlet mới. Còn giadinhnet/phunuvietnam/2sao/infonet/vietnambiz/vietnammoi: URL không phân giải
+với các tháng thử (jan/feb/mar/apr/may/jun 2026 + apr2025) - CẦN Hiếu xác nhận tháng rate card đúng.
+
+### BACKLOG chờ Hiếu duyệt đẩy live
+- **Media Việt Nam - 417 dòng** (chủ yếu guest-post du lịch) trong raw/ncc-khac.csv: session
+  khác đã nạp 2026-07-18, ghi rõ "chưa import, chờ Hiếu xác nhận". Routine tuần KHÔNG tự đẩy
+  (rule publish-volume-warning: mass-publish >5 dòng/cụm phải verify + xác nhận trước). Cần Hiếu
+  duyệt để đẩy đợt guest-post này lên live.
