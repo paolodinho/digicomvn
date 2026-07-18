@@ -3,6 +3,13 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-18
+- Không biến động. DanaSEO 3 tab (PR báo lớn / Báo tỉnh / Link dof) đã fetch mới qua Chrome:
+  dữ liệu trùng khớp bản hôm qua (master khác nhau đúng cột ngày cập nhật, 0 dòng giá đổi/thêm/gỡ).
+- Quét lại nguồn chưa có (ECP Media, PR Báo Chí, Brandcom, Vietquangcao, Brands Vietnam):
+  vẫn chỉ PDF rate card / dải giá / yêu cầu liên hệ - không thêm được dòng chi tiết nào.
+- Master: 1373 dòng, 88 nhà cung cấp.
+
 ## 2026-07-17
 - Không biến động giá. DanaSEO chỉ đổi tên hiển thị: thanhnienviet -> thanhnienviet.vn
   (tab Link dof, giá giữ nguyên 2.000.000, DR 61) - khớp title đã sửa trên web trước đó.

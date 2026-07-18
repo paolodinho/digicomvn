@@ -1421,3 +1421,4 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
 - 2026-07-17: Audit + vá internal link cụm booking báo. Phát hiện pillar P1 mất link xuống bài con (do bước dọn box thủ công xoá nhầm hub). Vá bằng 1 đoạn biên tập trong P1 trỏ C2/C3/C4/C5. Cụm giờ khép kín 2 chiều: con<->pillar, mọi bài->money page, box tự động dẫn cả cụm.
 - 2026-07-17: Box "Bài viết liên quan" gọn lại - hiện 6 bài + <details> "Xem thêm N bài" (native, no JS), tránh liệt kê cả 22 bài. Link trong thân bài đã có màu brand + gạch chân (1.8.3). DGC_VER 1.8.4.
 - 2026-07-17: Sửa 15 bài book-bao khuyết tác giả (post_author=0 -> user 1 Hiếu Đỗ). Byline + author-box giờ hiển thị đúng. Toàn site 0 bài author=0.
+- 2026-07-17: Submit GSC 2 bai moi: /booking-bao-quoc-te/ + /book-bao-nhan-dan/ (deu "Da yeu cau lap chi muc"). Resubmit sitemap wp-sitemap.xml (17/7). P1/C2/C3 da submit phien truoc. Cum booking bao: 5 bai chinh deu da vao GSC.
