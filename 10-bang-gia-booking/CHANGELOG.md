@@ -3,6 +3,16 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-18 (fix thiếu markup 20% - Hiếu duyệt riêng)
+- Backup DB live lần 2: `~/backups/2026-07-18/db-before-markup-fix.sql`.
+- 68 đầu báo/gói đang bán THIẾU mức markup x1.20 (lỗi cũ, phát hiện khi rà giá Media VN, không
+  liên quan trực tiếp) - đã kiểm tra cả 68 dòng đúng tỷ lệ 1.19-1.21x (không dòng bất thường)
+  trước khi ghi. Vd: elle.vn 36tr->43,2tr, vietnamfinance.vn 16tr->19,2tr, brandsvietnam.com,
+  otosaigon.com, advertisingvietnam.com, sggp.org.vn, cand.com.vn, reatimes.vn, vir.com.vn...
+  + 14 site toplist (golook/ohay/travelist/toplistdanang...) 1tr->1,2tr.
+- Dry-run khớp (68 cập nhật, 0 tạo mới) trước khi ghi thật. Đã ghi qua import-wp.php, purge
+  cache, verify curl /bang-gia/ elle.vn = 43.200.000. dgc_gia publish vẫn 607 (chỉ đổi giá).
+
 ## 2026-07-18 (Media Việt Nam - đã đẩy LIVE, Hiếu duyệt)
 - Backup DB live trước khi ghi: `~/backups/2026-07-18/db-before-mediavn-import.sql` (host).
 - Đối chiếu tay 417 dòng Media Việt Nam với 570 post live hiện có (không tin máy chọn giá rẻ
