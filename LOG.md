@@ -1,5 +1,18 @@
 # LOG - digicomvn.com
 
+## 2026-07-18/19 - Đăng live cụm "thông cáo báo chí" (Pillar + 2 Cluster) qua SSH
+Tiep noi doi viet chieu 2026-07-18 (session cloud khong co SSH). Session nay checkout nhanh
+`claude/bo-tu-thong-cao-bao-chi-p797a3` (PR #3), dang 3 bai qua `wp post create` SSH Hostinger:
+`/thong-cao-bao-chi-la-gi/` (post 3848, Pillar), `/cach-viet-thong-cao-bao-chi-chuan/` (post 3849),
+`/mau-thong-cao-bao-chi/` (post 3850) - ca 3 category `booking-bao-pr`, thumbnail render + set
+featured image (`tools/blog-thumbnail/`), widget `[dgc_offpage_quiz]` verify render dung (6 cau
+hoi), 0 dash loi. Cache stale lan dau lam bai 1 khong hien thumbnail -> `wp cache flush` +
+`wp litespeed-purge all` fix ngay. Chen link 2 chieu tu bai cu `/cach-viet-bai-pr-chuan-bao-chi/`
+(post 1277, backup content.raw truoc khi sua) tro ve bai Pillar moi. Verify toan bo internal link
+noi bo (200), submit GSC URL Inspection ca 3 URL (property URL-prefix, tai khoan hieudx3107).
+Con lai: bai 4 "xu ly khung hoang" (dot sau dung batch limit), A4 internal link tu dong toan cum.
+Chi tiet: `content/run-2026-07-18.md`, `content/cluster-thong-cao-bao-chi.md`.
+
 ## 2026-07-18 (bảng giá lên đầu cụm "book báo X" + nhớ báo đã chọn)
 - **Nạp bảng giá Media Việt Nam** (417 dòng, 6 tab sheet) vào `10-bang-gia-booking/`, đối chiếu
   tay với live tránh trùng lặp, đẩy 37 dòng mới + sửa giá qua `import-wp.php`. Sau đó Hiếu chốt
@@ -1457,3 +1470,12 @@ deu khong markup); Toplist + Backlink quoc te giu ngoai le dung moi NCC (Hieu ch
 3 ben tren khong co du lieu 2 nhom nay. Dong bo live dgc_gia: draft 375 dong khong con thuoc 3 NCC,
 tao moi 943, sua gia 7. Backup + payload day du:
 ~/Claude-Workspace/_backups/routines/2026-07-18/famemedia-pricing/.
+
+## 2026-07-18 - Content pipeline: cụm "thông cáo báo chí" (đợt 1, 3/4 bài)
+Hieu duyet plan chieu 2026-07-18 (content/plan-thong-cao-bao-chi-2026-07-18.md) qua cau
+"viet bai luon di". Viet xong 3/4 bai (Pillar + 2 Cluster), bai 4 (khung hoang) de dot sau
+theo dung gioi han batch. File: content/thong-cao-bao-chi-la-gi.html,
+content/cach-viet-thong-cao-bao-chi-chuan.html, content/mau-thong-cao-bao-chi.html.
+CHUA DANG LIVE: session cloud nay khong co ssh/scp, khong co key ~/.ssh/id_ed25519 cua Hieu
+(theo deploy.md chi co tren may Hieu) -> Hieu chon phuong an xuat file HTML, tu dang thu cong.
+Chi tiet: content/run-2026-07-18.md, content/cluster-thong-cao-bao-chi.md.
