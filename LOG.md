@@ -1457,3 +1457,12 @@ deu khong markup); Toplist + Backlink quoc te giu ngoai le dung moi NCC (Hieu ch
 3 ben tren khong co du lieu 2 nhom nay. Dong bo live dgc_gia: draft 375 dong khong con thuoc 3 NCC,
 tao moi 943, sua gia 7. Backup + payload day du:
 ~/Claude-Workspace/_backups/routines/2026-07-18/famemedia-pricing/.
+
+## 2026-07-18 - Content pipeline: cụm "thông cáo báo chí" (đợt 1, 3/4 bài)
+Hieu duyet plan chieu 2026-07-18 (content/plan-thong-cao-bao-chi-2026-07-18.md) qua cau
+"viet bai luon di". Viet xong 3/4 bai (Pillar + 2 Cluster), bai 4 (khung hoang) de dot sau
+theo dung gioi han batch. File: content/thong-cao-bao-chi-la-gi.html,
+content/cach-viet-thong-cao-bao-chi-chuan.html, content/mau-thong-cao-bao-chi.html.
+CHUA DANG LIVE: session cloud nay khong co ssh/scp, khong co key ~/.ssh/id_ed25519 cua Hieu
+(theo deploy.md chi co tren may Hieu) -> Hieu chon phuong an xuat file HTML, tu dang thu cong.
+Chi tiet: content/run-2026-07-18.md, content/cluster-thong-cao-bao-chi.md.
