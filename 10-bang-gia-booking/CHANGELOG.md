@@ -3,6 +3,16 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-18 (nạp thêm NCC mới)
+- Thêm nhà cung cấp mới **Media Việt Nam** (Google Sheet Hiếu gửi, 6 tab: Báo tỉnh, GOV,
+  Báo Lớn - PR, Textlink Sidebar (gói), Textlink Trang Chủ (theo site), Guest-post Du lịch).
+  417 dòng giá vào `raw/ncc-khac.csv` (section riêng, cuối file).
+- Giá gốc lấy cột "chưa VAT" của Media Việt Nam; tab Textlink Trang Chủ ghi "đã gồm VAT"
+  nên đã quy đổi ngược (/1.08, làm tròn nghìn) để đồng nhất schema (gia_ban_digicom = chưa VAT).
+- Master: 1373 -> 1790 dòng (89 nhà cung cấp). `gia-web.csv`: 906 dòng lên web (đã cạnh tranh
+  giá rẻ nhất với NCC khác theo đúng rule, markup x1.20 áp cho Media Việt Nam vì không phải DanaSEO).
+- CHƯA import lên WP live - đang chờ Hiếu xác nhận đẩy lên.
+
 ## 2026-07-18
 - Không biến động. DanaSEO 3 tab (PR báo lớn / Báo tỉnh / Link dof) đã fetch mới qua Chrome:
   dữ liệu trùng khớp bản hôm qua (master khác nhau đúng cột ngày cập nhật, 0 dòng giá đổi/thêm/gỡ).
