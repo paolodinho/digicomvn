@@ -1,5 +1,20 @@
 # LOG - digicomvn.com
 
+## 2026-07-19 - Bài 4/4 cụm "thông cáo báo chí" + sửa sau phản hồi Hiếu "chưa research"
+Viet + dang bai 4 "Thong cao bao chi xu ly khung hoang" (post ID 3869, category booking-bao-pr,
+widget `[dgc_agency_check]`). Hieu phan hoi ngay sau khi len live lan dau (2362 tu): "Chac chan
+viet chua research, thua cac bai top rat nhieu". Chay lai research SAU (WebFetch full noi dung
+top 5-6 URL that thay vi chi doc snippet WebSearch) -> xac nhan Hieu DUNG: draft chi co 1 mau
+(top co 3-5 mau theo tung tinh huong), 0 trich dan luat (top - giaychungnhan/luatvietnam/
+accgroup - deu trich van ban luat cu the), 0 file tai ve. Sua bai: 1 mau -> 3 mau rieng (xin
+loi/thu hoi SP, dinh chinh, su co ky thuat), them H2 "Co so phap ly" voi 3 can cu DA VERIFY qua
+nguon that (Luat Bao chi 2016 so 103/2016/QH13, Luat Bao ve quyen loi nguoi tieu dung 2023 so
+19/2023/QH15, Nghi dinh 13/2023/ND-CP bao ve du lieu ca nhan - moc 72 gio bao Bo Cong an), them
+1 FAQ. KHONG bia file .docx tai ve hay case study cong ty that (dung rule content-professional
+da co san). Tu ~2360 tu len ~3200 tu, dang lai + purge cache, verify lai toan bo (H1/thumbnail/
+widget/link/3 ma luat) tren live. Chen link 2 chieu tu bai 1/2/3 ve bai 4 (backup content.raw
+3 bai truoc khi sua). Submit GSC bai 4. Cum da xong DU 4/4 bai. Chi tiet: `content/run-2026-07-19.md`.
+
 ## 2026-07-18/19 - Đăng live cụm "thông cáo báo chí" (Pillar + 2 Cluster) qua SSH
 Tiep noi doi viet chieu 2026-07-18 (session cloud khong co SSH). Session nay checkout nhanh
 `claude/bo-tu-thong-cao-bao-chi-p797a3` (PR #3), dang 3 bai qua `wp post create` SSH Hostinger:
