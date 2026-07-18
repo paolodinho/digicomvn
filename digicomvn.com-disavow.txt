@@ -30,4 +30,3 @@ domain:quero.party
 domain:ready.pro
 domain:screenshots.wiki
 domain:shortenurls.eu
-domain:thenewleaders.asia
