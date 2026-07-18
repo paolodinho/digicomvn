@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '1.8.4' );
+define( 'DGC_VER', '1.8.5' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -170,6 +170,17 @@ function dgc_service_links() {
 		/* 4 nhom media tam an (Hieu 2026-07-16): booking-truyen-hinh, quang-cao-loa-phuong,
 		   quang-cao-phat-thanh, quang-cao-man-led - du lieu gia da luu (draft), mo lai sau. */
 	);
+}
+
+/** Category archive -> money page tuong ung (label | URL). Chi cum co dich vu moi tra ve. */
+function dgc_cat_money_link( $cat ) {
+	if ( ! $cat || empty( $cat->slug ) ) return null;
+	$map = array(
+		'booking-bao-pr'  => array( 'Xem dịch vụ Booking báo & PR và nhận báo giá', '/booking-bao-pr/' ),
+		'backlink-offpage' => array( 'Xem dịch vụ Backlink & Off-page', '/dich-vu-backlink/' ),
+	);
+	if ( empty( $map[ $cat->slug ] ) ) return null;
+	return array( $map[ $cat->slug ][0], home_url( $map[ $cat->slug ][1] ) );
 }
 
 /** Icon SVG thuan (thay emoji &#xxxx; - render khac nhau tuy OS, nhin re tien). */

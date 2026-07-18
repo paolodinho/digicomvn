@@ -19,6 +19,9 @@ $dgc_all_cats = get_categories( array( 'hide_empty' => true, 'orderby' => 'name'
 		<?php if ( $dgc_cur_cat && $dgc_cur_cat->description ) : ?>
 			<p class="lead"><?php echo esc_html( $dgc_cur_cat->description ); ?></p>
 		<?php endif; ?>
+		<?php $dgc_cat_money = dgc_cat_money_link( $dgc_cur_cat ); if ( $dgc_cat_money ) : ?>
+			<p class="cat-money-link"><a href="<?php echo esc_url( $dgc_cat_money[1] ); ?>"><?php echo esc_html( $dgc_cat_money[0] ); ?> &rarr;</a></p>
+		<?php endif; ?>
 	</div>
 </section>
 

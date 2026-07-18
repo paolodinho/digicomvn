@@ -75,6 +75,13 @@ if ( $nhom ) {
    Cac block dung chung van song o trang chu (front-page.php). */
 ?>
 
+<?php
+/* FAQ RIENG cho dich vu nay (option svc_faqs, khop slug hien tai) - dat truoc form bao gia
+   de giai dap ban khoan roi moi moi de lai thong tin. Co schema FAQPage. Trang khong co
+   dong svc_faqs khop slug -> khong render (khong boilerplate). */
+include get_template_directory() . '/inc/svc-faq.php';
+?>
+
 <section class="sec">
 	<div class="wrap">
 		<div class="row" style="gap:30px;align-items:flex-start">

@@ -36,7 +36,7 @@
 
 ## Việc hệ thống còn lại của cụm
 - ✅ A4 (2026-07-17): 15 book-bao -> link P1 pillar; P1 -> hub cụm (C2,C3,C4 + book-bao vnexpress/dân trí/cafef); backup từng bài trong _backups/2026-07-17/content-pipeline/.
-- ⏳ Thumbnail C3: ảnh ghi "7 Tiêu Chí" chưa khớp title "Top" (optional).
+- ✅ Thumbnail C3 (2026-07-18): regen khớp title "Top Agency..." (media 2680, xoá cũ 2570).
 
 ## Money page đích của cụm (KHÔNG viết blog cạnh tranh)
 - /booking-bao-pr/ - "dịch vụ/agency booking báo chí" (đã tối ưu title head-term)

@@ -1204,6 +1204,9 @@ body.mnav-open{overflow:hidden}
 .related-more>summary:hover{background:var(--surface)}
 .related-more .related-list{margin-top:14px}
 [data-theme="dark"] .related-more>summary{background:#1B2330;border-color:var(--line-2,#2A3340);color:#8FB0FF}
+.cat-money-link{margin-top:14px}
+.cat-money-link a{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--action);padding:9px 18px;border:1px solid var(--action);border-radius:999px;text-decoration:none;transition:background .15s,color .15s}
+.cat-money-link a:hover{background:var(--action);color:#fff}
 
 @media(max-width:1024px){
   .blog-grid{grid-template-columns:repeat(2,1fr)}

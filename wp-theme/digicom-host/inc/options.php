@@ -162,6 +162,7 @@ function dgc_settings_page() {
 				dgc_field( 'hero_sub', 'Mo ta phu', '', 'textarea' );
 				dgc_field( 'hero_stats', 'Dai so lieu duoi hero', 'Moi dong: con so | nhan mo ta (vd: 500+ | dau bao trong nuoc va quoc te). Toi da 5 dong. Chi ghi so lieu THAT.', 'textarea' );
 				dgc_field( 'svc_intros', 'Dinh nghia dich vu ("... la gi") - hien duoi hero tung trang dich vu', 'Moi dong: slug | Tieu de | Doan dinh nghia (2-4 cau). Slug khop trang dich vu: booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink... De trong 1 slug = trang do khong hien khoi nay. Giup bat intent "... la gi" + AI/Google trich dan.', 'textarea' );
+				dgc_field( 'svc_faqs', 'FAQ rieng tung trang dich vu (truoc form bao gia)', 'Moi dong: slug | Cau hoi | Cau tra loi. MOT slug co the co NHIEU dong = nhieu cau hoi cho trang do. Slug: booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink... De trong 1 slug = trang do khong hien FAQ. Sinh schema FAQPage giup Google/AI trich dan.', 'textarea' );
 				?>
 			</table>
 
