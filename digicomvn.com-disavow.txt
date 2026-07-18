@@ -1,0 +1,33 @@
+# Disavow list - digicomvn.com
+# Tao ngay 2026-07-18 tu digicomvn.com-backlinks_refdomains.csv (30 referring domains)
+# Tieu chi loai: domain rac/spam network dung chung IP 195.20.19.178 (Moldova),
+# ten domain auto-gen (shortener/blogspam/SEO-tool-clone), ascore rat thap, khong lien quan nganh.
+# GIU LAI (khong disavow): baodongnai.com.vn (bao dien tu that, ascore 52),
+# icdvietnam.com.vn (website khac cua chinh Hieu).
+domain:atomizelink.icu
+domain:bazerdaily.com
+domain:blogsphere.top
+domain:cindylaup.com
+domain:dailymusings.top
+domain:digitalseotool.com
+domain:drjack.world
+domain:jake.eu
+domain:optimizeflow.top
+domain:urls-shortener.eu
+domain:websites.freemyip.com
+domain:backlinks-checker.com
+domain:backlinksplace.site
+domain:buzzshrink.website
+domain:bye.fyi
+domain:creativeposts.top
+domain:daechul.co.com
+domain:domaindexer.com
+domain:fiverr-seo-for-business-growth.site
+domain:ggmap.us.com
+domain:goooogla.com
+domain:hostprinter.com
+domain:quero.party
+domain:ready.pro
+domain:screenshots.wiki
+domain:shortenurls.eu
+domain:thenewleaders.asia
