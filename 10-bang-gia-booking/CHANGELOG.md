@@ -3,6 +3,20 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-18 (Hiếu chốt: Media Việt Nam KHÔNG markup, như DanaSEO)
+- Hiếu: "riêng giá từ DanaSEO và Media Việt Nam thì giữ; còn các bên khác cứ nhân 1,2".
+  Cập nhật `export-web.py` (`KHONG_MARKUP = {"danaseo","media viet nam"}`) + rule
+  `bang-gia-booking.md`. Export lại `gia-web.csv`.
+- Backup DB lần 3: `~/backups/2026-07-18/db-before-mediavn-unmarkup.sql`.
+- Đối chiếu lại (đã refresh live-now.json cho khớp state mới nhất, tránh so với bản cũ):
+  **46 dòng hạ giá về đúng giá gốc Media VN/DanaSEO** (không markup nữa) - toàn bộ đã kiểm tra
+  hợp lý trước khi ghi. Gồm: Cafebiz.vn, Laodong.vn, huengaynay.vn, vietnamtourism.gov.vn,
+  nhahangbachkim.com.vn, 4 site textlink (baodongthap.vn/phunumoi.net.vn/kinhtemoitruong.vn/
+  doanhnghiepkinhtexanh.vn, mỗi site nhiều mức giá), + vài đầu báo khác (24h.com.vn, kenh14.vn,
+  Vietnamnet.vn, Techz.vn, tuoitre.vn) nơi giá Media VN không-markup giờ thắng thầu rẻ nhất.
+- Dry-run khớp trước khi ghi thật. Đã ghi qua import-wp.php, purge cache, verify curl /bang-gia/.
+  dgc_gia publish vẫn 607 (chỉ đổi giá, không thêm/xoá).
+
 ## 2026-07-18 (fix thiếu markup 20% - Hiếu duyệt riêng)
 - Backup DB live lần 2: `~/backups/2026-07-18/db-before-markup-fix.sql`.
 - 68 đầu báo/gói đang bán THIẾU mức markup x1.20 (lỗi cũ, phát hiện khi rà giá Media VN, không

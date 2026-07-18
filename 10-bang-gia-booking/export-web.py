@@ -77,11 +77,13 @@ def is_soft(r):
         or ("gia tu" in v) or ("khoi diem" in v) or ("khoang gia chung" in v)
 
 MARKUP = 1.20  # Hieu 2026-07-15: NCC ngoai DanaSEO -> gia web = gia von x 1,20.
+# Hieu 2026-07-18: Media Viet Nam cung GIU NGUYEN gia (khong markup), nhu DanaSEO.
+KHONG_MARKUP = {"danaseo", "media viet nam"}
 
 def web_gia(r):
-    """Gia hien thi len web tu 1 dong master: DanaSEO giu nguyen; NCC khac x 1,20 (lam tron nghin)."""
+    """Gia hien thi len web tu 1 dong master: DanaSEO + Media Viet Nam giu nguyen; NCC khac x 1,20 (lam tron nghin)."""
     g = int(r["gia_ban_digicom"])
-    if fold(r["nha_cung_cap"]) != "danaseo":
+    if fold(r["nha_cung_cap"]) not in KHONG_MARKUP:
         g = int(round(g * MARKUP / 1000) * 1000)
     return g
 

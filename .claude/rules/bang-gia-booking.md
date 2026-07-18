@@ -71,17 +71,24 @@ Backup trước khi import: `~/Claude-Workspace/_backups/routines/<ngày>/bang-g
 
 ## MARKUP x1,20 cho NCC ngoài DanaSEO (chốt 2026-07-15 - GHI ĐÈ phần trên)
 
-**Giá web = giá vốn NCC × 1,20 cho MỌI nhà cung cấp TRỪ DanaSEO.** DanaSEO giữ nguyên giá
-cuối (không markup). Lý do: DanaSEO là nguồn gốc giá tốt nhất, các nguồn khác cộng biên 20%.
+**Giá web = giá vốn NCC × 1,20 cho MỌI nhà cung cấp TRỪ DanaSEO và Media Việt Nam.** Cả 2 bên
+này giữ nguyên giá cuối (không markup) - danh sách ngoại lệ mở rộng 2026-07-18 (Hiếu: "riêng
+giá từ DanaSEO và Media Việt Nam thì giữ; còn các bên khác cứ nhân 1,2"). Lý do: đây là 2 nguồn
+gốc giá tốt nhất/đáng tin nhất, các nguồn khác cộng biên 20%.
 
-- Markup áp ở `export-web.py` (`web_gia()`), **cấp DÒNG, TRƯỚC khi chọn min giữa các NCC**
-  -> DanaSEO (không markup) và bên khác (×1,20) vẫn cạnh tranh sòng phẳng, lấy rẻ nhất. Nên
-  đầu báo nào DanaSEO có bán thì giá không đổi; đầu báo chỉ có ở nguồn khác mới tăng 20%.
+- Markup áp ở `export-web.py` (`web_gia()`, set `KHONG_MARKUP = {"danaseo", "media viet nam"}`
+  sau khi qua `fold()`), **cấp DÒNG, TRƯỚC khi chọn min giữa các NCC** -> 2 bên không markup và
+  bên khác (×1,20) vẫn cạnh tranh sòng phẳng, lấy rẻ nhất. Đầu báo nào DanaSEO/Media Việt Nam có
+  bán thì giá không đổi; đầu báo chỉ có ở nguồn khác mới tăng 20%.
 - **Bao trùm rule cũ "truyền hình +20%"** (TV đều là NCC ngoài DanaSEO) -> đã BỎ block markup
   TV riêng trong `cap-nhat-gia.py` để tránh nhân đôi (×1,44). Rule "Giá truyền hình +20%" ở
   trên giờ chỉ là trường hợp riêng của rule tổng này.
 - **Social entity** (Solann Digital, non-DanaSEO) -> ×1,20 = đúng "120% Solann" đã chốt.
 - Làm tròn nghìn. Tác động lần đầu (2026-07-15): 576/1051 dòng web tăng 20%, 0 dòng giảm.
+- Tác động mở rộng ngoại lệ Media Việt Nam (2026-07-18): các dòng Media VN đã lỡ lên live có
+  markup (guest-post nhahangbachkim.com.vn, 4 site textlink baodongthap.vn/phunumoi.net.vn/
+  kinhtemoitruong.vn/doanhnghiepkinhtexanh.vn, + 5 dòng sửa giá hôm 2026-07-18) cần hạ lại về
+  giá gốc không markup - xử lý bằng `cap-nhat-gia.py` sau khi export lại `gia-web.csv`.
 
 ## Bộ lọc lĩnh vực (ngành)
 
