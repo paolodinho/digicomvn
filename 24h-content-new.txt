@@ -1,0 +1,181 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo 24h: chi phí đăng bài PR theo chuyên mục và vị trí trang chủ</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo 24h theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất. Giá chưa gồm VAT và là giá tham khảo - vị trí cụ thể có thể điều chỉnh tại thời điểm đặt, bạn nên đối chiếu lại khi chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="24h" domain="24h.com.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Điểm dễ gây nhầm lẫn nhất ở 24h là cùng "bài PR loại 2" nhưng có 2 mức giá. Khác biệt nằm ở <strong>chuyên mục được duyệt đăng</strong>: nhóm Thị trường tiêu dùng - Kinh doanh (viết tắt TTTD, KD trong bảng) giá cao hơn các chuyên mục còn lại, vì độc giả tại đây có sẵn ý định mua sắm. Nếu sản phẩm của bạn thuộc mảng khác - du lịch, làm đẹp, ô tô xe máy, thể thao - đặt đúng chuyên mục chuyên ngành vừa rẻ hơn vừa tiếp cận đúng nhóm quan tâm, không nhất thiết dồn vào mục Kinh doanh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2780,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/24h-vt-tttdkd.png" alt="Minh hoạ vị trí Thị trường tiêu dùng Kinh doanh 24h.com.vn cho bài PR" class="wp-image-2780"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Kinh doanh 24h.com.vn, chụp thực tế 18/07/2026. Bài PR loại 2 (TTTD, KD): 4.500.000đ - PR loại 2 mục còn lại: 3.700.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Vị trí cao nhất là <strong>PR loại 1</strong>, gắn với sự xuất hiện trên trang chủ (2 giờ theo mô tả vị trí trong bảng giá). Đây là lựa chọn cho chiến dịch cần cú hích tức thời - ra mắt sản phẩm, khuyến mãi lớn, sự kiện - tận dụng lưu lượng truy cập trực tiếp rất lớn của trang chủ 24h. Trước khi quyết định, bạn có thể so sánh chi phí giữa nhiều đầu báo khác trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2781,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/24h-vt-trangchu.png" alt="Minh hoạ vị trí PR loại 1 trang chủ 24h.com.vn cho bài PR" class="wp-image-2781"/><figcaption class="wp-element-caption">Toàn cảnh trang chủ 24h.com.vn, chụp thực tế 18/07/2026. PR loại 1 (2h trang chủ): 7.300.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo 24h là hình thức đặt đăng bài PR trên 24h.com.vn - trang tin điện tử tổng hợp lâu năm với lượng đọc đại chúng lớn. Chi phí mỗi bài phụ thuộc vị trí: bài PR loại 2 tại các chuyên mục thường dễ tiếp cận nhất, nhóm chuyên mục Thị trường tiêu dùng - Kinh doanh nhỉnh hơn một bậc, còn PR loại 1 gắn với trang chủ cao nhất. Bài viết này cung cấp bảng giá cập nhật trực tiếp, quy cách bài và cách chọn chuyên mục đúng ngành hàng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo 24h</strong> chia theo 3 nhóm vị trí: bài PR loại 2 ở chuyên mục thường, loại 2 ở nhóm chuyên mục Thị trường tiêu dùng - Kinh doanh, và PR loại 1 xuất hiện trên trang chủ - bảng giá cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách chung mọi vị trí: bài PR dưới 1.000 từ, dưới 5 ảnh, được gắn 3 link dạng nofollow.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>24h là trang tin tổng hợp đa chuyên mục với lượng đọc đại chúng lớn - dữ liệu Ahrefs ghi nhận <strong>DR 83</strong>, phù hợp ngành hàng tiêu dùng phổ thông.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn chuyên mục đúng ngành hàng, viết bài đúng quy cách, theo dõi duyệt và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Trong hơn 10 năm triển khai PR báo chí và SEO, tôi thấy 24h là đầu báo hay bị đánh giá cảm tính nhất: nhiều doanh nghiệp bỏ qua vì nghĩ đây chỉ là trang tin thể thao - giải trí, số khác lại book theo thói quen mà không cân nhắc chuyên mục. Cả hai đều bỏ phí đặc điểm đáng tiền nhất của báo này: độc giả rất rộng, trải từ thể thao, giải trí đến đời sống, thị trường tiêu dùng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Với ngành hàng tiêu dùng phổ thông - thực phẩm, gia dụng, làm đẹp, du lịch, xe cộ - một bài PR đặt đúng chuyên mục trên 24h thường tiếp cận đúng người mua với chi phí thấp hơn đáng kể so với nhóm báo chính luận. Phần dưới đây giúp bạn định giá và chọn vị trí trước khi đặt bài.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">24h có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>24h.com.vn là trang tin tức tổng hợp hoạt động lâu năm, nổi bật ở các mảng nội dung đại chúng: thể thao (đặc biệt là bóng đá), giải trí, đời sống, thị trường tiêu dùng, ô tô - xe máy, du lịch, làm đẹp. Ở góc độ đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền 24h.com.vn đạt <strong>DR 83</strong> - thuộc nhóm chỉ số uy tín tên miền cao trong các website tiếng Việt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Giá trị của 24h với một bài PR nằm ở 3 điểm. Thứ nhất là <strong>độ phủ đại chúng</strong>: độc giả không gói trong một tầng lớp hẹp, nên bài PR về sản phẩm tiêu dùng hàng ngày dễ chạm đúng người mua thật thay vì chỉ "đẹp hồ sơ". Thứ hai là <strong>hệ chuyên mục rộng</strong>: từ bất động sản, y tế, công nghệ đến phong thuỷ, thời trang đều có chỗ đặt bài. Thứ ba là <strong>tín hiệu thương hiệu trên tìm kiếm</strong>: bài đăng trên tên miền DR 83 thường xếp hạng tốt khi khách hàng tìm tên doanh nghiệp, đồng thời tăng cơ hội được các công cụ AI như Google AI Overview trích dẫn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="24h.com.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên báo 24h</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Mọi vị trí trên 24h dùng chung một quy cách theo báo giá hiện tại: <strong>bài PR dưới 1.000 từ, dưới 5 ảnh, được gắn 3 link</strong> dạng nofollow. So với mặt bằng chung của nhóm báo lớn, đây là quy cách khá "rộng tay": nhiều đầu báo cùng hạng chỉ cho tối đa 2-3 ảnh và 2 link, nên với bài cần trình bày sản phẩm bằng hình ảnh - đồ gia dụng, thời trang, xe, địa điểm du lịch - 24h là lợi thế đáng kể.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cần nói thẳng về 3 link nofollow: chúng không truyền sức mạnh SEO trực tiếp như link dofollow. Giá trị của link trong bài PR trên 24h nằm ở lượng truy cập giới thiệu từ độc giả đại chúng, tín hiệu thương hiệu và độ tin cậy của thực thể doanh nghiệp trong mắt công cụ tìm kiếm. Nếu mục tiêu của bạn thuần tuý là backlink dofollow đẩy thứ hạng, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> hoặc textlink sẽ tối ưu chi phí hơn; còn bài PR trên 24h nên được tính như khoản đầu tư độ phủ và uy tín.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo 24h qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking 24h gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn vị trí:</strong> xác định ngành hàng và mục tiêu để chọn giữa chuyên mục thường, nhóm Thị trường tiêu dùng - Kinh doanh, hay PR loại 1 trang chủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài PR đúng quy cách (dưới 1.000 từ, dưới 5 ảnh) và đúng văn phong chuyên mục, gửi bạn duyệt trước.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ toà soạn, điều chỉnh nội dung nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm gợi ý tận dụng bài (khối "Báo chí nói về chúng tôi" trên website, trích dẫn trong quảng cáo...).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>24h là báo hướng độc giả đại chúng, nên tiêu chí duyệt bài thiên về tính đời sống và mức độ dễ đọc. Bài viết như thông cáo báo chí khô cứng, dày đặc tên công ty và số liệu nội bộ thường bị yêu cầu biên tập lại. Cách tiếp cận hiệu quả hơn là kể qua tình huống người dùng gặp hàng ngày - chọn mua sản phẩm, so sánh giá, kinh nghiệm sử dụng - rồi đưa thương hiệu vào như lời giải, đúng chất một bài đọc trên trang tin tiêu dùng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Các lỗi khiến bài bị trả về nhiều nhất: cam kết tuyệt đối kiểu "rẻ nhất", "hiệu quả 100%" không kèm căn cứ; sản phẩm nhóm y tế, làm đẹp, tài chính thiếu giấy phép và tài liệu chứng minh; so sánh trực tiếp hạ thấp đối thủ; ảnh chất lượng thấp hoặc chèn quá nhiều logo. Chuẩn bị sẵn giấy phép kinh doanh, giấy công bố sản phẩm (nếu thuộc ngành có điều kiện) và bộ ảnh thật rõ nét - tận dụng hạn mức 5 ảnh - sẽ rút ngắn đáng kể vòng duyệt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo 24h</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên 24h là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tuỳ vị trí đăng. Bài PR loại 2 ở các chuyên mục thường có giá dễ tiếp cận nhất, nhóm chuyên mục Thị trường tiêu dùng - Kinh doanh cao hơn một bậc, và PR loại 1 gắn trang chủ có giá cao nhất. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; mức giá cuối cùng được xác nhận tại thời điểm đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Vì sao cùng là bài PR loại 2 mà có 2 mức giá?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Vì khác chuyên mục. Nhóm Thị trường tiêu dùng - Kinh doanh có giá cao hơn do độc giả tại đây mang ý định mua sắm rõ và nhu cầu đặt bài lớn; các chuyên mục còn lại (du lịch, thể thao, làm đẹp, công nghệ...) giá thấp hơn. Quy cách bài giữa hai mức hoàn toàn giống nhau.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR trên 24h được gắn 3 link dạng nofollow - nhiều hơn mức 2 link phổ biến ở các báo cùng hạng. Giá trị chính là truy cập giới thiệu, độ phủ thương hiệu và tín hiệu thực thể với công cụ tìm kiếm. Cần link dofollow thuần SEO, bạn nên kết hợp thêm guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt, tuỳ chuyên mục và lịch biên tập. Bài đúng quy cách ngay từ đầu (dưới 1.000 từ, dưới 5 ảnh, không cam kết tuyệt đối, đủ giấy tờ với ngành có điều kiện) sẽ đi nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có xuất hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo 24h</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>24h có độ phủ bình dân lớn về tiêu dùng, thể thao và giải trí - phù hợp sản phẩm tiêu dùng nhanh, thương mại điện tử, dịch vụ đại chúng. Nếu chưa chắc 24h có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo 24h là lựa chọn hợp lý khi bạn bán hàng cho số đông: hệ chuyên mục rộng giúp hầu hết ngành hàng tiêu dùng tìm được chỗ đứng đúng độc giả, quy cách 5 ảnh - 3 link thoáng hơn mặt bằng chung, và chi phí chuyên mục nằm trong tầm với của doanh nghiệp SME. Nếu bạn chưa chắc nên đặt chuyên mục nào hay có nên lên trang chủ, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu ngành hàng của bạn với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

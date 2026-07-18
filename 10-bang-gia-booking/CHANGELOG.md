@@ -113,3 +113,16 @@
   Giá = THÀNH TIỀN (sau CK) của SEODO. Chỉ thêm outlet CHƯA có trên live (0 trùng, không đụng giá cũ).
   booking-bao-pr trên web: 228 -> 283 site. dgc_gia: 688 -> 743.
 - Lỗi regex domain đa cấp (.gov.vn/.org.vn bị cắt thành .vn/.org) đã sửa: sggp.org.vn, vietnamtourism.gov.vn đúng.
+
+## 2026-07-18 (batch 2) - Bo sung Fame Media, gioi han web chi 3 NCC
+- Nap Fame Media tu Google Sheet moi (gid nhieu tab: Bao PR 369 dong, Bao Tinh Link Dofollow 46,
+  Backlink Entity 3, Guestpost VN 396, Guestpost Global 100, Textlink goi RelevantLink 15) = 929
+  dong moi. Xoa 3 block Fame Media cu (loi thoi, tu 14/07) de tranh trung/xung dot du lieu.
+- export-web.py: them "fame media" vao KHONG_MARKUP (cung DanaSEO, Media Viet Nam). Them
+  CHI_NCC = {danaseo, media viet nam, fame media} - CHI 3 ben nay len web, con lai luu trong
+  master nhung an khoi site. Ngoai le: Toplist + Backlink quoc te van dung MOI NCC (co markup)
+  vi 3 ben tren khong co du lieu 2 nhom nay - Hieu xac nhan qua AskUserQuestion.
+- Don du lieu ban: 2 dong "Khong nhan bai / Ngung nhan" (Vneconomy.vn qua Media Viet Nam,
+  baodanang.vn qua Fame Media) bi loai khoi web.
+- Dong bo live: draft 375 ban ghi dgc_gia khong con thuoc 3 NCC, tao moi 943 ban ghi, sua gia 7.
+  Backup day du tai ~/Claude-Workspace/_backups/routines/2026-07-18/famemedia-pricing/.

@@ -1,0 +1,181 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo Thanh Niên: chi phí từng vị trí đăng và cách chọn đúng gói theo ngân sách</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo Thanh Niên theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất từ toà soạn. Giá chưa gồm VAT và là giá tham khảo - vị trí cụ thể có thể điều chỉnh tại thời điểm đặt, bạn nên đối chiếu lại khi chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="Thanh Niên" domain="thanhnien.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Điều khiến nhiều người giật mình khi xem bảng giá Thanh Niên là khoảng cách giữa vị trí rẻ nhất và đắt nhất - vì chúng là hai sản phẩm khác hẳn nhau. <strong>"PR cần biết"</strong> là bài thông tin ngắn 300 từ, 1 ảnh, đăng trong khu vực dành riêng cho tin doanh nghiệp: hợp khi bạn cần một điểm hiện diện chính thống với ngân sách gọn (công bố khai trương, khuyến mại, xác nhận sự kiện), nhưng độ dài chỉ đủ nói một thông điệp duy nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2791,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/thanhnien-vt-canbiet.png" alt="Minh hoạ vị trí PR cần biết thanhnien.vn cho bài PR" class="wp-image-2791"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Bạn cần biết thanhnien.vn, chụp thực tế 18/07/2026. PR cần biết: 3.700.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Ngược lại, <strong>"Tiểu mục phù hợp"</strong> và <strong>"PR - Bài đăng chuyên mục"</strong> là bài đứng ngay trong tiểu mục hoặc chuyên mục nội dung, hiển thị như một tin bài thường trong luồng đọc tự nhiên của độc giả (bài chuyên mục không lên trang chủ). Bạn có tới 1.000 từ kèm nhiều ảnh, nhiều link hơn để kể trọn câu chuyện thương hiệu. Mức giá cao hơn nhiều lần là trả cho vị trí xuất hiện và không gian nội dung đó - phù hợp chiến dịch ra mắt sản phẩm hoặc xây hồ sơ uy tín cho ngành bất động sản, y tế, giáo dục. Bạn có thể so sánh chi phí giữa nhiều đầu báo khác trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> trước khi quyết định.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2792,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/thanhnien-vt-tieumuc.png" alt="Minh hoạ vị trí tiểu mục chuyên mục thanhnien.vn cho bài PR" class="wp-image-2792"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Đời sống thanhnien.vn, chụp thực tế 18/07/2026. Tiểu mục phù hợp: 15.500.000đ - PR bài đăng chuyên mục (không lên trang chủ): 30.000.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo Thanh Niên là dịch vụ đặt đăng bài PR trên thanhnien.vn - một trong những nhật báo chính thống có độ nhận diện cao nhất với độc giả Việt Nam. Chi phí phụ thuộc mạnh vào vị trí đăng: bài dạng "PR cần biết" có mức giá dễ tiếp cận, trong khi bài đứng trong tiểu mục hoặc chuyên mục nội dung cao hơn nhiều lần. Bài viết này giải thích rõ từng vị trí khác nhau ở điểm gì, kèm bảng giá cập nhật trực tiếp và quy trình lên bài.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo Thanh Niên</strong> chênh lệch rất lớn giữa các vị trí: bài "PR cần biết" có mức dễ tiếp cận nhất, bài đứng trong tiểu mục hoặc chuyên mục cao hơn nhiều lần - bảng giá chi tiết cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách theo vị trí: "PR cần biết" là bài 300 từ với 1 ảnh; bài tiểu mục và chuyên mục cho phép tới 1.000 từ, nhiều ảnh và nhiều link hơn.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận thanhnien.vn đạt <strong>DR 86</strong> - nhóm chỉ số uy tín tên miền cao nhất trong báo chí tiếng Việt.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn đúng vị trí theo ngân sách, viết bài đúng tôn chỉ báo và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Hơn 10 năm làm PR báo chí và SEO, tôi thấy Thanh Niên là đầu báo nhiều doanh nghiệp "mặc định phải có" trong hồ sơ truyền thông, nhưng cũng là đầu báo khiến khách bối rối nhất khi nhìn báo giá: cùng một tờ báo mà mức chi cho một bài có thể chênh nhau gần chục lần.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Sự chênh lệch đó không phải ngẫu nhiên - mỗi vị trí trên Thanh Niên là một sản phẩm khác nhau về hình thức xuất hiện, độ dài và cách độc giả tiếp nhận. Hiểu đúng trước khi đặt giúp bạn không trả thừa tiền cho nhu cầu đơn giản, và không đặt nhầm vị trí khi cần một bài đầy đủ sức nặng.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Thanh Niên có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thanh Niên thuộc nhóm nhật báo chính thống lớn của Việt Nam, với tệp độc giả đại chúng trưởng thành trải rộng từ thời sự, kinh tế đến giáo dục, sức khoẻ, du lịch và thể thao. Giá trị lớn nhất của cái tên này là <strong>độ tin cậy sẵn có</strong>: độc giả quen đọc Thanh Niên từ thời báo giấy, nên một bài viết trên thanhnien.vn được tiếp nhận với sự tin tưởng mà rất ít kênh truyền thông mua được. Về đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền thanhnien.vn đạt <strong>DR 86</strong> - thuộc nhóm chỉ số uy tín tên miền cao nhất trong các website tiếng Việt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tệp độc giả này khiến Thanh Niên đặc biệt hợp với các ngành cần niềm tin trước khi mua: bất động sản, y tế và giáo dục, tài chính, du lịch, ô tô xe máy - những quyết định mà người mua thường tra cứu trên báo chính thống trước khi xuống tiền. Các công cụ AI như ChatGPT hay Google AI Overview cũng ưu tiên trích nguồn báo lớn, nên sự hiện diện trên Thanh Niên tăng khả năng thương hiệu được nhắc tới trong câu trả lời AI.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="thanhnien.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên báo Thanh Niên</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy cách trên Thanh Niên tách theo vị trí. Bài <strong>"PR cần biết"</strong>: 300 từ, 1 ảnh, 1 link nofollow; thêm link có phụ phí, và phần vượt quá 300 từ tính phí theo từng từ - viết dài tay ở vị trí này sẽ đội chi phí nhanh. Bài <strong>tiểu mục</strong>: dưới 1.000 từ, dưới 3 ảnh, 2 link nofollow. Bài <strong>đăng chuyên mục</strong>: tối đa 1.000 chữ, tới 5 hình và 2 hyperlink - rộng rãi nhất về hình ảnh trong ba vị trí.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về link, cần nói thẳng: link trong bài PR trên Thanh Niên chủ yếu ở dạng <strong>nofollow</strong>. Giá trị bạn nhận về là truy cập giới thiệu, uy tín khi khách hàng tra cứu tên công ty và tín hiệu thực thể với Google - không phải truyền sức mạnh SEO trực tiếp. Nếu mục tiêu thuần tuý là backlink dofollow, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> hoặc textlink tối ưu chi phí hơn nhiều; hãy nhìn bài PR trên Thanh Niên như khoản đầu tư vào niềm tin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo Thanh Niên qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking Thanh Niên gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn vị trí:</strong> đối chiếu mục tiêu và ngân sách để chọn giữa "PR cần biết" (hiện diện gọn), tiểu mục hoặc bài chuyên mục (kể chuyện đầy đủ) - tránh trả thừa hoặc chọn thiếu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài đúng số từ, số ảnh của vị trí đã chọn - riêng bài "PR cần biết" được kiểm soát chặt 300 từ để không phát sinh phí vượt từ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ toà soạn, điều chỉnh nội dung nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm gợi ý tận dụng bài (mục "Báo chí nói về chúng tôi" trên website, trích dẫn trong hồ sơ năng lực, quảng cáo dẫn nguồn).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Là nhật báo chính thống, Thanh Niên duyệt nội dung theo chuẩn báo chí nghiêm túc. Những lỗi khiến bài bị trả về nhiều nhất: cam kết tuyệt đối kiểu "hiệu quả 100%" không kèm căn cứ; sản phẩm y tế, thực phẩm chức năng, tài chính thiếu giấy phép chứng minh; nội dung so sánh hạ thấp đối thủ; thông tin doanh nghiệp không khớp đăng ký kinh doanh. Với các ngành nhạy cảm về pháp lý - vốn lại là nhóm hợp với độc giả Thanh Niên nhất - hãy chuẩn bị sẵn hồ sơ giấy tờ ngay từ đầu để rút ngắn vòng duyệt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Riêng vị trí "PR cần biết", vì khung chỉ 300 từ, đừng cố nhồi nhiều thông điệp - chọn một thông tin đáng đưa tin nhất và viết trực diện như một mẩu tin. Với bài tiểu mục và chuyên mục, hãy viết theo hướng mang lại giá trị cho độc giả (câu chuyện, số liệu, góc nhìn) thay vì trang quảng cáo trá hình: toà soạn biên tập nhẹ tay hơn và bài giữ chân người đọc lâu hơn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo Thanh Niên</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên báo Thanh Niên là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tuỳ vị trí đăng. Bài "PR cần biết" (300 từ, 1 ảnh) có mức giá dễ tiếp cận nhất; bài trong tiểu mục và bài đăng chuyên mục cao hơn nhiều lần vì đứng trong luồng nội dung của báo với độ dài tới 1.000 từ. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; giá cuối cùng xác nhận tại thời điểm đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Bài "PR cần biết" khác gì bài đăng chuyên mục?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Khác cả về vị trí xuất hiện lẫn dung lượng. "PR cần biết" là tin ngắn 300 từ, 1 ảnh, đăng trong khu vực thông tin dành cho doanh nghiệp - hợp với thông báo gọn. Bài tiểu mục và bài chuyên mục đứng trong mục nội dung như một tin bài thường, cho phép tới 1.000 từ với nhiều ảnh hơn. Chênh lệch giá phản ánh đúng khác biệt sản phẩm này.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Link trong bài PR trên Thanh Niên chủ yếu ở dạng nofollow: bài "PR cần biết" gắn 1 link, bài tiểu mục gắn 2 link, đều có thể mua thêm link với phụ phí. Giá trị chính là truy cập giới thiệu và uy tín thương hiệu, không phải truyền sức mạnh SEO trực tiếp. Cần dofollow, bạn nên kết hợp guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng lên Thanh Niên?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt, tuỳ vị trí và lịch biên tập của toà soạn. Bài chuẩn quy cách ngay từ đầu (đúng số từ và số ảnh của vị trí, không cam kết tuyệt đối, đủ giấy tờ với ngành có điều kiện) sẽ đi nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có xuất hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo Thanh Niên</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thanh Niên có tệp độc giả trẻ tới trung niên trên cả nước, mạnh về giáo dục, việc làm và đời sống - phù hợp thương hiệu tiêu dùng, giáo dục, tuyển dụng. Nếu chưa chắc Thanh Niên có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo Thanh Niên đáng tiền nhất khi bạn chọn đúng vị trí cho đúng nhu cầu: cần điểm hiện diện chính thống gọn nhẹ thì "PR cần biết" là cửa vào chi phí thấp; cần bài kể chuyện thương hiệu trong luồng nội dung của một nhật báo DR 86 thì tiểu mục hoặc bài chuyên mục xứng đáng với khoản đầu tư. Nếu chưa chắc vị trí nào hợp với ngành hàng của mình, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu mục tiêu với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

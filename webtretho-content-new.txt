@@ -1,0 +1,181 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo Webtretho: chi phí đăng bài PR trên cộng đồng phụ nữ - mẹ và bé lớn hàng đầu</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo Webtretho theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất. Giá chưa gồm VAT và là giá tham khảo - bạn nên đối chiếu lại tại thời điểm chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="Webtretho" domain="webtretho.com"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Khác với các đầu báo lớn chia nhiều gói theo vị trí trang chủ hay chuyên mục, Webtretho hiện áp dụng một hình thức duy nhất: đăng bài vào <strong>mục phù hợp với ngành hàng</strong>. "Phù hợp" ở đây không phải cách nói chung chung - khi tiếp nhận đơn, DigicomVN sẽ đối chiếu sản phẩm của bạn với các khu vực nội dung đang hoạt động trên Webtretho (nuôi dạy con, sức khoẻ, làm đẹp, giáo dục, tiêu dùng gia đình...) và tư vấn mục cụ thể trước khi bạn xác nhận. Sản phẩm dinh dưỡng cho bé đứng trong khu vực nuôi con sẽ tiếp cận đúng người đọc hơn hẳn việc nằm lẫn ở mục tin tổng hợp.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2811,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/wtt-vt-phuhop.png" alt="Minh hoạ vị trí mục phù hợp Webtretho cho bài PR" class="wp-image-2811"/><figcaption class="wp-element-caption">Toàn cảnh trang chủ Webtretho, chụp thực tế 18/07/2026 - bài gắn nhãn Tài trợ trong mục Chăm con minh hoạ đúng vị trí đăng bài PR. Mục phù hợp: 5.000.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Mức chi phí này thuộc nhóm dễ tiếp cận so với mặt bằng các đầu báo lớn, nên nhiều thương hiệu dùng Webtretho làm điểm khởi đầu của chuỗi PR: đăng trước trên nền tảng cộng đồng để chạm đúng nhóm mua hàng, sau đó mới mở rộng sang báo tin tức để phủ nhận diện. Bạn có thể đối chiếu chi phí giữa các đầu báo trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> để tự cân đối ngân sách.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo Webtretho là hình thức đặt đăng bài PR trên Webtretho - cộng đồng trực tuyến dành cho phụ nữ và các gia đình có con nhỏ thuộc nhóm lâu đời và đông đảo nhất tại Việt Nam. Chi phí một bài PR ở mức doanh nghiệp vừa và nhỏ tiếp cận được, bài được đưa vào mục phù hợp với ngành hàng của bạn. Bài viết này cung cấp bảng giá cập nhật trực tiếp, quy cách bài và cách viết để hợp với không khí thảo luận của cộng đồng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo Webtretho</strong> áp dụng cho hình thức đăng bài PR vào mục phù hợp với ngành hàng - bảng giá cập nhật trực tiếp trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách chuẩn một bài PR trên Webtretho: dưới 1.000 từ, dưới 3 ảnh, được gắn 2 link dạng redirect.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Webtretho là cộng đồng trực tuyến lớn hướng tới phụ nữ và các gia đình có con nhỏ - dữ liệu Ahrefs ghi nhận <strong>DR 70</strong> cho tên miền webtretho.com.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn mục đăng theo ngành hàng (mẹ và bé, y tế, làm đẹp, giáo dục...), viết bài đúng giọng cộng đồng và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Hơn 10 năm làm PR và SEO, tôi thấy Webtretho là cái tên gần như mặc định khi thương hiệu mẹ và bé lên kế hoạch truyền thông. Khác với báo điện tử truyền thống, nơi độc giả đọc tin rồi rời đi, Webtretho lớn lên từ diễn đàn - người đọc ở đây quen với việc hỏi, kể chuyện và tham khảo kinh nghiệm của các mẹ khác trước khi mua bất cứ thứ gì cho con. Một bài PR đặt đúng ngữ cảnh đó không chỉ được đọc, mà còn được đối chiếu như một lời khuyên.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Đổi lại, chính đặc thù cộng đồng khiến cách viết bài cho Webtretho khác hẳn cách viết cho báo kinh tế hay báo tin tức. Bài giọng thông cáo báo chí cứng nhắc dễ lạc lõng giữa các chủ đề thảo luận. Phần dưới đây tổng hợp bảng giá, quy cách và những kinh nghiệm cụ thể để bài của bạn phát huy đúng thế mạnh của nền tảng này.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Webtretho có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Webtretho hướng tới độc giả nữ giới, đặc biệt là các bà mẹ đang nuôi con nhỏ - nhóm nắm quyền quyết định phần lớn chi tiêu gia đình, từ sữa, bỉm, thực phẩm đến khoá học và dịch vụ y tế. Về mặt đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền webtretho.com đạt <strong>DR 70</strong> - mức chỉ số uy tín tên miền cao trong nhóm nền tảng nội dung tiếng Việt hướng tới phụ nữ và gia đình.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Giá trị riêng của Webtretho nằm ở <strong>tính cộng đồng</strong>. Trên báo tin tức, bài PR là một chiều: thương hiệu nói, độc giả nghe. Trên Webtretho, nội dung sống trong môi trường mà người đọc chủ động tìm kinh nghiệm thực tế - "sữa này con nhà ai dùng chưa", "trường mầm non khu này thế nào". Một bài viết chạm đúng mối bận tâm đó có vòng đời tham khảo dài, vì các mẹ tìm lại chủ đề cũ khi gặp vấn đề tương tự. Với thương hiệu mẹ và bé, y tế, làm đẹp, giáo dục hay tiêu dùng gia đình, đây là điểm chạm sát hành vi mua hơn nhiều so với một lần hiển thị trên trang tin tổng hợp.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="webtretho.com"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên Webtretho</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn trên Webtretho theo báo giá hiện tại cần đáp ứng: <strong>dưới 1.000 từ, dưới 3 ảnh, được gắn 2 link dạng redirect</strong>. Dung lượng này vừa đủ cho một câu chuyện có mở - thân - kết, phù hợp thói quen đọc trên di động của nhóm độc giả chính.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cần nói thẳng về loại link để bạn không kỳ vọng sai: link redirect là link chuyển hướng qua hệ thống của nền tảng, <strong>không truyền sức mạnh SEO trực tiếp</strong> về website của bạn như link dofollow. Giá trị của bài trên Webtretho nằm ở chỗ khác: lượng truy cập từ người đọc đúng chân dung khách hàng, sự hiện diện thương hiệu trong không gian mà các mẹ trao đổi kinh nghiệm mua sắm, và tín hiệu nhắc tới thương hiệu (brand mention) khi công cụ tìm kiếm đánh giá độ phổ biến của doanh nghiệp. Nếu mục tiêu của bạn thuần tuý là backlink dofollow phục vụ SEO, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> hoặc textlink sẽ hiệu quả chi phí hơn - còn Webtretho nên được book vì đúng tệp độc giả.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo Webtretho qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking Webtretho gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn mục đăng:</strong> đối chiếu ngành hàng của bạn (mẹ và bé, y tế, làm đẹp, giáo dục, tiêu dùng...) với các khu vực nội dung trên Webtretho để chọn mục sát tệp độc giả nhất.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài theo giọng chia sẻ kinh nghiệm hợp với cộng đồng, gửi bạn duyệt trước khi gửi đăng.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ ban biên tập, điều chỉnh nội dung nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm gợi ý tận dụng bài (dẫn lại trên fanpage, đưa vào khối "Báo chí nói về chúng tôi" trên website...).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Với nền tảng hướng tới các bà mẹ, hai nhóm nội dung bị soi kỹ nhất là <strong>sức khoẻ và dinh dưỡng cho trẻ</strong>. Bài nhắc tới công dụng của sữa, thực phẩm chức năng, sản phẩm chăm sóc bé cần chuẩn bị sẵn giấy công bố sản phẩm và tài liệu chứng minh; các cam kết kiểu "an toàn tuyệt đối", "hiệu quả sau X ngày" không kèm căn cứ gần như chắc chắn bị trả về. Đây là điểm khác biệt so với book báo giải trí hay kinh tế - hồ sơ pháp lý sản phẩm nên được chuẩn bị trước cả khi viết bài.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về giọng viết, bài hoạt động tốt trên Webtretho thường đi từ một tình huống thật của người mẹ (con biếng ăn, da bé nổi mẩn, chọn trường cho con) rồi mới dẫn tới giải pháp, thay vì mở đầu bằng tên thương hiệu và danh sách tính năng. Người đọc ở đây rất nhạy với quảng cáo lộ liễu - bài càng giống một chia sẻ kinh nghiệm có dẫn chứng, càng được đọc trọn và tin. Kinh nghiệm của tôi: dành 2 phần 3 bài cho vấn đề và trải nghiệm, chỉ 1 phần 3 cho sản phẩm.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo Webtretho</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên Webtretho là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Webtretho áp dụng một hình thức đăng bài vào mục phù hợp với ngành hàng, mức giá thuộc nhóm dễ tiếp cận so với các đầu báo lớn. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; giá cuối cùng được xác nhận tại thời điểm đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Webtretho phù hợp với ngành hàng nào?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Phù hợp nhất với thương hiệu mẹ và bé, y tế - sức khoẻ, làm đẹp, giáo dục và tiêu dùng gia đình - những ngành mà người quyết định mua là phụ nữ và các bà mẹ. Ngành hàng nặng về B2B hoặc tài chính doanh nghiệp nên cân nhắc các đầu báo kinh tế thay vì nền tảng này.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn trên Webtretho được gắn 2 link dạng redirect - link chuyển hướng qua hệ thống của nền tảng, không truyền sức mạnh SEO trực tiếp như dofollow. Giá trị chính là truy cập từ đúng tệp độc giả và tín hiệu nhắc tới thương hiệu. Cần link dofollow, bạn nên kết hợp thêm guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt. Bài đúng quy cách (dưới 1.000 từ, dưới 3 ảnh), đủ giấy tờ với sản phẩm sức khoẻ - dinh dưỡng và không chứa cam kết tuyệt đối sẽ đi nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có xuất hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo Webtretho</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Webtretho là cộng đồng mẹ và bé, gia đình và nuôi con lớn nhất - phù hợp sản phẩm mẹ và bé, thực phẩm, sức khoẻ gia đình. Nếu chưa chắc Webtretho có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo Webtretho là lựa chọn hợp lý khi khách hàng của bạn là phụ nữ và các gia đình có con nhỏ: chi phí dễ tiếp cận, bài nằm trong môi trường cộng đồng nơi người đọc chủ động tìm kinh nghiệm trước khi mua, và nội dung có vòng đời tham khảo dài. Nếu bạn chưa chắc nên đặt Webtretho hay kết hợp thêm đầu báo nào cho chiến dịch, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu ngành hàng với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

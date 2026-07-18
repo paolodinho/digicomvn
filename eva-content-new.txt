@@ -1,0 +1,181 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo Eva: chi phí đăng bài PR trên Eva.vn và cách chọn vị trí phù hợp</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo Eva theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất từ toà soạn. Giá chưa gồm VAT và là giá tham khảo - vị trí cụ thể có thể điều chỉnh vào thời điểm đặt, bạn nên đối chiếu lại khi chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="Eva" domain="eva.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Hai vị trí trong bảng phục vụ hai mục tiêu rất khác nhau. <strong>Bài hot tiểu mục</strong> là lựa chọn phổ biến nhất: bài PR của bạn được đẩy lên vị trí nổi bật trong chuyên mục phù hợp (làm đẹp, mẹ và bé, sức khoẻ...), tiếp cận đúng người đang đọc đúng chủ đề, với mức chi phí mà một cửa hàng nhỏ cũng cân đối được. Tại thời điểm cập nhật, vị trí này còn đang có giá ưu đãi thấp hơn giá gốc niêm yết - đây là mức khởi điểm hợp lý cho thương hiệu lần đầu book báo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2783,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/eva-vt-tieumuc.png" alt="Minh hoạ vị trí bài hot tiểu mục eva.vn cho bài PR" class="wp-image-2783"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Đẹp eva.vn, chụp thực tế 18/07/2026. Bài hot tiểu mục: 3.700.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p><strong>Đặc biệt - Home</strong> là vị trí xuất hiện ngay trang chủ Eva.vn, chi phí cao hơn nhiều lần so với bài tiểu mục. Vị trí này dành cho chiến dịch cần độ phủ tức thời - ra mắt sản phẩm, khai trương chuỗi, sự kiện có ngày giờ cụ thể - chứ không dành cho nhu cầu hiện diện thông thường. Kinh nghiệm của tôi: đa số doanh nghiệp nên bắt đầu từ bài tiểu mục, đo phản ứng, rồi mới cân nhắc trang chủ khi có chiến dịch xứng tầm. Bạn cũng có thể so sánh Eva với các đầu báo khác trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> để chọn tổ hợp tối ưu theo ngân sách.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2784,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/eva-vt-trangchu.png" alt="Minh hoạ vị trí đặc biệt Home eva.vn cho bài PR" class="wp-image-2784"/><figcaption class="wp-element-caption">Toàn cảnh trang chủ eva.vn, chụp thực tế 18/07/2026. Đặc biệt - Home: 72.000.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo Eva là hình thức đặt đăng bài PR trên Eva.vn - trang tin điện tử hướng tới độc giả nữ giới với các mảng làm đẹp, thời trang, mẹ và bé, sức khoẻ và đời sống gia đình. Điểm đáng chú ý nhất trong bảng giá: vị trí bài hot tiểu mục có chi phí thuộc nhóm thấp nhất mà DigicomVN đang phân phối, trong khi tên miền vẫn đạt chỉ số uy tín cao. Bài viết cung cấp bảng giá cập nhật, quy cách bài và lưu ý duyệt bài dành riêng cho trang tin phụ nữ.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo Eva</strong> thuộc nhóm dễ tiếp cận nhất trong các trang tin lớn: vị trí bài hot tiểu mục có chi phí phù hợp cả với shop, spa và thương hiệu nhỏ - bảng giá cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách chuẩn một bài PR trên Eva.vn: dưới 1.000 từ, dưới 5 ảnh, được gắn tới 3 link dạng nofollow.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Độc giả Eva chủ yếu là <strong>phụ nữ quan tâm làm đẹp, thời trang, mẹ và bé, sức khoẻ, đời sống gia đình</strong> - đúng nhóm ra quyết định chi tiêu của nhiều ngành hàng tiêu dùng.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn vị trí, viết bài hợp văn phong báo, theo dõi duyệt và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Trong hơn 10 năm làm PR báo chí và SEO, tôi thường khuyên các thương hiệu lần đầu chi tiền cho báo chí bắt đầu từ những đầu báo như Eva. Lý do rất thực tế: ngân sách vài triệu đồng đã có một bài PR đứng trên trang tin lớn, đủ để doanh nghiệp thử phản ứng thị trường, có link báo gắn vào mục "Báo chí nói về chúng tôi" và học được cách làm việc với quy trình duyệt bài - trước khi rót ngân sách lớn hơn vào các vị trí đắt tiền.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tất nhiên, giá dễ tiếp cận không có nghĩa là đặt bừa. Eva có nhóm độc giả rất đặc thù, và một bài PR sai đối tượng thì rẻ mấy cũng là lãng phí. Phần dưới đây giúp bạn xác định Eva có đúng là kênh dành cho ngành hàng của mình không, trước khi nhìn vào con số.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Eva có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Eva.vn là trang tin chuyên về đời sống phụ nữ: làm đẹp, thời trang, mẹ và bé, sức khoẻ, phong thuỷ, du lịch và giải trí. Ở góc độ đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền eva.vn đạt <strong>DR 77</strong> - mức uy tín tên miền cao, trong khi chi phí đăng bài lại thấp hơn hẳn các báo cùng nhóm chỉ số. Tỷ lệ "uy tín trên chi phí" này chính là điểm khiến Eva xuất hiện dày đặc trong các kế hoạch PR của ngành hàng tiêu dùng nữ.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Giá trị cụ thể cho doanh nghiệp nằm ở sự khớp đối tượng. Nếu bạn bán mỹ phẩm, dịch vụ spa - thẩm mỹ, thời trang nữ, sản phẩm mẹ và bé, thực phẩm chức năng cho phụ nữ hay tour du lịch gia đình, độc giả Eva gần như trùng khít với chân dung khách hàng của bạn. Một bài PR trên Eva khi đó làm được hai việc cùng lúc: người đọc thấy bài ngay trong luồng nội dung họ vẫn đọc hằng ngày, và khách hàng tìm tên thương hiệu trên Google sẽ gặp một bài báo thay vì chỉ thấy trang bán hàng. Ngược lại, nếu sản phẩm của bạn là B2B công nghiệp hay tài chính doanh nghiệp, ngân sách nên dồn cho đầu báo kinh tế thì hợp lý hơn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="eva.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên báo Eva</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn trên Eva theo báo giá hiện tại cần đáp ứng: <strong>dưới 1.000 từ, dưới 5 ảnh, được gắn tới 3 link</strong> dạng nofollow. So với mặt bằng chung các báo lớn, quy cách này khá "dễ thở": cho phép nhiều ảnh hơn và nhiều link hơn phần lớn đầu báo cùng nhóm - phù hợp với đặc thù nội dung làm đẹp, thời trang vốn cần hình ảnh để thuyết phục người đọc.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về 3 link nofollow, cần hiểu đúng để không kỳ vọng sai: link nofollow không truyền sức mạnh SEO trực tiếp như link dofollow, giá trị của nó nằm ở lượng truy cập từ người đọc bài, tín hiệu thương hiệu và độ tin cậy khi Google cùng các công cụ AI đánh giá thực thể doanh nghiệp. Được gắn tới 3 link nghĩa là bạn có thể dẫn về cả trang chủ, trang sản phẩm và fanpage trong cùng một bài - tận dụng tối đa lượt đọc. Còn nếu mục tiêu thuần tuý là backlink dofollow cho SEO, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> sẽ đúng việc và tiết kiệm hơn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo Eva qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking Eva gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn vị trí:</strong> xác định ngành hàng của bạn hợp tiểu mục nào của Eva (làm đẹp, mẹ và bé, sức khoẻ, du lịch...) và nên chọn bài tiểu mục hay vị trí trang chủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài PR đúng quy cách và giọng điệu gần gũi của trang tin phụ nữ, gửi bạn duyệt trước.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ toà soạn, điều chỉnh nội dung nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm gợi ý tận dụng bài (gắn lên website, trích dẫn trong quảng cáo, đưa vào tin nhắn tư vấn khách).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Với trang tin phụ nữ như Eva, các lỗi khiến bài bị trả về nhiều nhất tập trung ở nhóm sản phẩm nhạy cảm với sức khoẻ và ngoại hình: mỹ phẩm, thực phẩm chức năng, dịch vụ thẩm mỹ cam kết hiệu quả tuyệt đối kiểu "trắng da sau 7 ngày", "giảm cân 100% không tái"; sản phẩm y tế, làm đẹp thiếu giấy công bố hoặc giấy phép quảng cáo; ảnh trước - sau can thiệp cơ thể quá đà. Chuẩn bị sẵn giấy tờ pháp lý cho sản phẩm và tránh mọi cam kết tuyệt đối là cách rút ngắn vòng duyệt nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về cách viết, bài chạy tốt trên Eva thường không mở đầu bằng thương hiệu mà bằng vấn đề người phụ nữ đang gặp: da xỉn màu sau sinh, chọn đồ cho con mùa nắng nóng, sắp xếp chuyến đi gia đình cuối tuần. Thương hiệu xuất hiện như lời giải ở nửa sau bài. Cấu trúc này vừa hợp văn phong toà soạn, vừa giữ người đọc ở lại lâu hơn - và với quota dưới 5 ảnh, hãy đầu tư ảnh thật của sản phẩm, không dùng ảnh minh hoạ chung chung.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo Eva</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên Eva.vn là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tuỳ vị trí đăng. Bài hot tiểu mục có mức giá thuộc nhóm dễ tiếp cận nhất trong các trang tin lớn mà DigicomVN phân phối, vị trí Đặc biệt - Home trên trang chủ cao hơn nhiều lần. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; giá cuối cùng được xác nhận tại thời điểm đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Book báo Eva phù hợp với ngành hàng nào?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Phù hợp nhất với ngành hàng có khách mua là nữ giới: mỹ phẩm - làm đẹp, thời trang, mẹ và bé, chăm sóc sức khoẻ, spa - thẩm mỹ, phong thuỷ, du lịch gia đình. Sản phẩm B2B công nghiệp hoặc tài chính doanh nghiệp nên ưu tiên đầu báo kinh tế thay vì Eva.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn trên Eva được gắn tới 3 link dạng nofollow - nhiều hơn phần lớn báo cùng nhóm. Giá trị chính là truy cập từ người đọc, uy tín thương hiệu và tín hiệu thực thể với công cụ tìm kiếm. Cần link dofollow cho SEO, bạn nên kết hợp thêm guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng trên Eva?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt, tuỳ tiểu mục và lịch biên tập. Bài đúng quy cách ngay từ đầu (dưới 1.000 từ, dưới 5 ảnh, không cam kết hiệu quả tuyệt đối, đủ giấy tờ sản phẩm) sẽ đi nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có xuất hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo Eva</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Eva tập trung phụ nữ với làm đẹp, thời trang và gia đình - phù hợp thời trang, mỹ phẩm, làm đẹp, sản phẩm dành cho nữ. Nếu chưa chắc Eva có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo Eva là một trong những cửa vào PR báo chí có chi phí thấp nhất cho thương hiệu hướng tới khách hàng nữ: tên miền DR 77, quy cách bài thoáng với 5 ảnh và 3 link, mức giá bài tiểu mục mà cả shop online, spa hay thương hiệu mới đều cân đối được. Nếu bạn chưa chắc Eva có đúng là kênh cho ngành hàng của mình, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu mục tiêu với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

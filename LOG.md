@@ -1439,3 +1439,21 @@ nút CTA co theo nội dung thay vì kéo full-width để chữ dính trái.
 - 2026-07-17: Submit GSC 2 bai moi: /booking-bao-quoc-te/ + /book-bao-nhan-dan/ (deu "Da yeu cau lap chi muc"). Resubmit sitemap wp-sitemap.xml (17/7). P1/C2/C3 da submit phien truoc. Cum booking bao: 5 bai chinh deu da vao GSC.
 - 2026-07-18: Regen thumbnail C3 (agency-booking-bao-chi) khớp title mới \"Top Agency...\" (media 2680, xoá cũ 2570). Cụm booking báo hoàn tất 100- 2026-07-18: Regen thumbnail C3 (agency-booking-bao-chi) khop title moi "Top Agency..." (media 2680, xoa cu 2570). Cum booking bao hoan tat, khong con viec treo.
 - 2026-07-18: Toi uu category /category/booking-bao-pr/: description 1 dong -> 2-3 cau giau keyword; them link money page (dgc_cat_money_link, category.php, DGC_VER 1.8.5). Do allintitle 5/15 bao (Google chan bot) -> content/allintitle-per-bao.md. Rule moi: bai intent gia -> day gia len dau bai (SKILL.md).
+
+## 2026-07-18 - Ảnh minh hoạ vị trí đăng bài cho 15 bài "book báo X"
+Hoàn tất toàn bộ 15 bài book-bao-X: chụp ảnh thật headless Chrome từng báo (trang chủ +
+chuyên mục liên quan), khoanh vùng vị trí tương ứng giá, chèn ảnh ngay sau đoạn văn nói về
+vị trí đó (không dồn 1 ảnh cuối bài), giá ghi trong caption (dễ sửa khi giá đổi). Bổ sung
+đường phân tách (wp:separator) giữa khối bảng giá/ảnh minh hoạ và phần bài viết theo phản hồi
+Hiếu. Danh sách: CafeBiz(2195) CafeF(2196) Kenh14(2199) VnExpress(2189) DânTrí(2197) 24h(2192)
+Eva(2198) aFamily(2193) TuổiTrẻ(2202) ThanhNiên(2201) VietNamNet(2203) Soha(2200)
+Webtretho(2204) Znews(2205) BáoĐầuTư(2194). Backup + manifest đầy đủ tại
+~/Claude-Workspace/_backups/routines/2026-07-18/vitri-minh-hoa/ và vitri-minh-hoa-separator/.
+
+## 2026-07-18 - Bo sung Fame Media vao bang gia, gioi han web con 3 NCC
+Them Fame Media (929 dong, tu Google Sheet moi) vao raw/ncc-khac.csv, xoa du lieu Fame Media cu
+loi thoi tranh trung. export-web.py gioi han CHI 3 NCC len web (DanaSEO/Media Viet Nam/Fame Media,
+deu khong markup); Toplist + Backlink quoc te giu ngoai le dung moi NCC (Hieu chon qua hoi dap) vi
+3 ben tren khong co du lieu 2 nhom nay. Dong bo live dgc_gia: draft 375 dong khong con thuoc 3 NCC,
+tao moi 943, sua gia 7. Backup + payload day du:
+~/Claude-Workspace/_backups/routines/2026-07-18/famemedia-pricing/.

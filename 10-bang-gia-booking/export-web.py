@@ -78,7 +78,17 @@ def is_soft(r):
 
 MARKUP = 1.20  # Hieu 2026-07-15: NCC ngoai DanaSEO -> gia web = gia von x 1,20.
 # Hieu 2026-07-18: Media Viet Nam cung GIU NGUYEN gia (khong markup), nhu DanaSEO.
-KHONG_MARKUP = {"danaseo", "media viet nam"}
+# Hieu 2026-07-18 (batch 2): Fame Media them vao nhom KHONG markup.
+KHONG_MARKUP = {"danaseo", "media viet nam", "fame media"}
+
+# Hieu 2026-07-18: TAM THOI CHI dung 3 NCC nay len web (danaseo, media viet nam, fame media).
+# Cac NCC khac VAN LUU trong bang-gia-master.csv (du lieu tham khao), nhung KHONG xuat ra
+# gia-web.csv / khong dua len site. Bo rong lai -> xoa/sua CHI_NCC ben duoi.
+CHI_NCC = {"danaseo", "media viet nam", "fame media"}
+# NGOAI LE (Hieu 2026-07-18): Toplist va Backlink quoc te KHONG co du lieu tu 3 NCC tren
+# -> se trong trang neu ap dung CHI_NCC. Giu nguyen hanh vi CU (moi NCC, co markup 1.2x)
+# CHI cho 2 dich_vu nay, de trang khong bi trong bang gia.
+DICH_VU_NGOAI_LE_CHI_NCC = {"toplist", "backlink-quocte"}
 
 def web_gia(r):
     """Gia hien thi len web tu 1 dong master: DanaSEO + Media Viet Nam giu nguyen; NCC khac x 1,20 (lam tron nghin)."""
@@ -89,6 +99,11 @@ def web_gia(r):
 
 with open(SRC) as f:
     all_rows = [r for r in csv.DictReader(f) if r["gia_ban_digicom"]]
+
+n_before_ncc = len(all_rows)
+all_rows = [r for r in all_rows if fold(r["nha_cung_cap"]) in CHI_NCC or r["dich_vu"] in DICH_VU_NGOAI_LE_CHI_NCC]
+print(f"Chi dung {len(all_rows)}/{n_before_ncc} dong tu 3 NCC {sorted(CHI_NCC)} (Toplist + Backlink quoc te ngoai le, giu moi NCC) - cac NCC khac luu trong master nhung khong len web (Hieu 2026-07-18).\n")
+
 rows = [r for r in all_rows if not is_soft(r)]
 print(f"Bo qua {len(all_rows) - len(rows)} dong gia mem (gia tu / dai gia) - khong dung de dinh gia web.\n")
 

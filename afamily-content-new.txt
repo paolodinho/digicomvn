@@ -1,0 +1,181 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo aFamily: chi phí đăng bài PR cho thương hiệu hướng tới phụ nữ và gia đình</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo aFamily theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất từ toà soạn. Giá chưa gồm VAT và là giá tham khảo - vị trí có thể điều chỉnh vào thời điểm đặt, bạn nên đối chiếu lại khi chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="aFamily" domain="afamily.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Hai vị trí trong bảng khác nhau về bản chất tiếp cận. <strong>Bài chuyên mục</strong> là lựa chọn tiêu chuẩn: bài nằm trong mục nội dung phù hợp (làm đẹp, mẹ và bé, sức khoẻ, tiêu dùng...), tiếp cận đúng người đọc quan tâm chủ đề đó và chi phí ở mức thương hiệu vừa và nhỏ tiếp cận được. <strong>Bài thứ 5 stream trang chủ</strong> đưa bài vào luồng tin ngay trên trang chủ aFamily - vị trí gần như mọi độc giả mở trang đều lướt qua, nên chi phí cao hơn nhiều lần so với chuyên mục.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2786,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/afamily-vt-chuyenmuc.png" alt="Minh hoạ vị trí chuyên mục Đẹp afamily.vn cho bài PR" class="wp-image-2786"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Đẹp afamily.vn, chụp thực tế 18/07/2026. Chuyên mục: 3.800.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Cách chọn thực dụng: cần độ phủ tức thời cho đợt ra mắt sản phẩm, minigame hay chương trình khuyến mại lớn thì vị trí stream trang chủ đáng tiền; còn mục tiêu là hiện diện dài hạn và làm đẹp kết quả tìm kiếm thương hiệu thì bài chuyên mục tối ưu ngân sách hơn - thậm chí cùng số tiền một bài trang chủ, bạn đăng được nhiều bài chuyên mục rải theo các chủ đề khác nhau. So sánh với các đầu báo khác trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> trước khi quyết định.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2787,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/afamily-vt-trangchu.png" alt="Minh hoạ vị trí bài thứ 5 stream trang chủ afamily.vn cho bài PR" class="wp-image-2787"/><figcaption class="wp-element-caption">Toàn cảnh trang chủ afamily.vn, chụp thực tế 18/07/2026. Bài thứ 5 stream trang chủ: 12.960.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo aFamily là hình thức đặt đăng bài PR trên aFamily.vn - trang tin dành cho phụ nữ với các mảng nội dung gia đình, làm đẹp, mẹ và bé, tiêu dùng, sức khoẻ. Chi phí mỗi bài phụ thuộc vị trí: bài đăng chuyên mục có mức giá dễ tiếp cận, còn vị trí bài thứ 5 trong luồng tin trang chủ cao hơn nhiều lần. Bài viết cung cấp bảng giá cập nhật trực tiếp, quy cách bài và lưu ý viết đúng giọng của báo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo aFamily</strong> chia 2 tầng: bài đăng chuyên mục có mức dễ tiếp cận, vị trí bài thứ 5 stream trang chủ cao hơn nhiều lần - bảng giá cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách chuẩn một bài PR trên aFamily: dưới 1.000 từ, dưới 3 ảnh, được gắn 1 link dạng nofollow.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>aFamily hướng tới độc giả <strong>nữ giới, gia đình, đời sống</strong> - phù hợp nhất với mỹ phẩm, mẹ và bé, gia dụng, thực phẩm, spa, thời trang.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn chuyên mục, viết bài đúng giọng đời sống của báo, theo dõi duyệt và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Trong hơn 10 năm làm PR báo chí và SEO, tôi để ý một quy luật: thương hiệu bán cho phụ nữ mà chỉ book báo tổng hợp thì ngân sách thường loãng, vì bài đứng giữa dòng tin thời sự vốn không phải bối cảnh mua sắm. aFamily giải quyết đúng điểm này - người đọc mở trang đã ở trong tâm thế quan tâm chuyện gia đình, làm đẹp, chăm con, nên một bài PR khéo léo về mỹ phẩm hay đồ gia dụng được tiếp nhận tự nhiên hơn hẳn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Đổi lại, viết bài cho aFamily đòi hỏi giọng văn đời sống thật sự, không phải thông cáo doanh nghiệp khô cứng. Đặt đúng vị trí và chuẩn bị nội dung hợp tông ngay từ đầu sẽ quyết định bài lên nhanh hay bị trả về sửa nhiều vòng. Phần dưới đây gom đủ thông tin để bạn quyết định.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">aFamily có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>aFamily định vị là trang tin cho phụ nữ hiện đại: gia đình, hôn nhân, nuôi dạy con, làm đẹp, thời trang, sức khoẻ và tiêu dùng gia đình. Đây chính là nhóm nắm quyền quyết định phần lớn chi tiêu hộ gia đình - từ thực phẩm, gia dụng cho tới dịch vụ giáo dục, y tế. Ở góc độ đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền afamily.vn đạt <strong>DR 77</strong> - thuộc nhóm chỉ số uy tín tên miền cao trong các trang tin tiếng Việt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Với thương hiệu ngành hàng nữ giới, giá trị của một bài trên aFamily nằm ở 3 điểm. Thứ nhất là <strong>đúng ngữ cảnh tiêu dùng</strong>: bài PR về serum, sữa bột hay nồi chiên không dầu đứng cạnh các bài làm đẹp, chăm con - độc giả đọc với tâm thế tham khảo mua sắm chứ không phải bị quảng cáo chen ngang. Thứ hai là <strong>hiệu ứng tìm kiếm thương hiệu</strong>: bài trên báo DR cao thường xếp hạng tốt khi khách hàng tìm tên sản phẩm, giúp lấp trang nhất kết quả tìm kiếm bằng nội dung mình kiểm soát. Thứ ba là <strong>chất liệu tái sử dụng</strong>: logo "aFamily đưa tin" trên landing page, fanpage hay tài liệu bán hàng tăng độ tin cho ngành hàng vốn nhạy cảm với review như mỹ phẩm, mẹ và bé.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="afamily.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên aFamily</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn đăng chuyên mục aFamily theo báo giá hiện tại cần đáp ứng: <strong>dưới 1.000 từ, dưới 3 ảnh, được gắn 1 link</strong> và link ở dạng nofollow. Giới hạn 3 ảnh chặt hơn một số báo giải trí khác, nên với ngành hàng thiên về hình ảnh như mỹ phẩm hay thời trang, bạn cần chọn lọc kỹ: ưu tiên 1 ảnh sản phẩm trong bối cảnh sử dụng thật, 1 ảnh cận chi tiết và 1 ảnh thương hiệu, thay vì dàn trải ảnh studio na ná nhau.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về link, cần nói thẳng một hiểu lầm: book aFamily không phải để "lấy backlink dofollow đẩy SEO". Link duy nhất trong bài là <strong>nofollow</strong> - giá trị của nó nằm ở lượng truy cập giới thiệu từ độc giả nữ đúng chân dung khách hàng, tín hiệu thương hiệu và độ tin cậy khi Google đánh giá thực thể doanh nghiệp. Nếu mục tiêu thuần tuý là link dofollow truyền sức mạnh SEO, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> hoặc textlink tối ưu chi phí hơn nhiều; PR trên aFamily nên được tính vào ngân sách xây uy tín thương hiệu.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo aFamily qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking aFamily gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn vị trí:</strong> dựa trên mục tiêu (ra mắt sản phẩm cần phủ nhanh hay hiện diện dài hạn) để chọn giữa bài chuyên mục và vị trí stream trang chủ, kèm gợi ý chuyên mục hợp ngành hàng.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài PR đúng quy cách và giọng đời sống của aFamily, gửi bạn duyệt trước.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ toà soạn, điều chỉnh nội dung nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm hướng dẫn tận dụng bài (gắn "Báo chí nói về chúng tôi" trên website, trích dẫn trong quảng cáo, chia sẻ vào cộng đồng mẹ bỉm...).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>aFamily là trang đời sống, nên rào cản duyệt bài nằm nhiều ở nhóm sản phẩm nhạy cảm với sức khoẻ phụ nữ và trẻ em. Từ kinh nghiệm triển khai, những lỗi khiến bài bị trả về nhiều nhất: mỹ phẩm, thực phẩm chức năng, sản phẩm mẹ và bé thiếu công bố sản phẩm hoặc giấy phép quảng cáo; cam kết công dụng tuyệt đối kiểu "trắng da sau 7 ngày", "hết hẳn"; dùng hình ảnh trẻ em không rõ nguồn; thông tin doanh nghiệp không khớp đăng ký kinh doanh. Chuẩn bị sẵn hồ sơ pháp lý cho nhóm sản phẩm này trước khi gửi bài sẽ rút ngắn đáng kể vòng duyệt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về văn phong, bài dễ lên nhất khi viết như một bài chia sẻ đời sống có chuyên gia hoặc trải nghiệm thật làm xương sống: câu chuyện một người mẹ chọn sữa, góc nhìn bác sĩ da liễu về thành phần, mẹo sắm gia dụng cuối năm... rồi mới dẫn về sản phẩm. Toà soạn biên tập nhẹ tay hơn với bài có chất liệu thật, và độc giả nữ - vốn rất nhạy với quảng cáo lộ liễu - cũng đón nhận thiện cảm hơn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo aFamily</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên aFamily là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tuỳ vị trí đăng. Bài chuyên mục có mức giá dễ tiếp cận nhất, vị trí bài thứ 5 stream trang chủ cao hơn nhiều lần. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; giá chính xác cuối cùng được xác nhận tại thời điểm đặt vì toà soạn có thể điều chỉnh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">aFamily phù hợp với ngành hàng nào?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Phù hợp nhất với thương hiệu có khách hàng chính là nữ giới: mỹ phẩm, làm đẹp, spa, thời trang, mẹ và bé, gia dụng, thực phẩm, sức khoẻ, du lịch gia đình. Ngành hàng thiên về tài chính, công nghiệp hay B2B thuần tuý nên cân nhắc báo kinh tế thay vì aFamily để tiếp cận đúng người ra quyết định.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn đăng chuyên mục aFamily được gắn 1 link dạng nofollow. Giá trị chính là truy cập giới thiệu từ độc giả nữ đúng chân dung khách hàng, uy tín thương hiệu và tín hiệu thực thể với công cụ tìm kiếm. Cần link dofollow, bạn nên kết hợp thêm guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt, tuỳ chuyên mục và lịch biên tập của toà soạn. Bài chuẩn quy cách ngay từ đầu (dưới 1.000 từ, dưới 3 ảnh, không cam kết công dụng tuyệt đối, đủ giấy tờ với nhóm sản phẩm sức khoẻ - mẹ bé) sẽ đi nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có xuất hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo aFamily</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>aFamily hướng tới phụ nữ và gia đình với làm đẹp, nuôi con và đời sống - phù hợp mỹ phẩm, mẹ và bé, sức khoẻ, gia dụng. Nếu chưa chắc aFamily có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo aFamily là lựa chọn hợp lý khi khách hàng của bạn là phụ nữ và quyết định mua nằm trong chi tiêu gia đình: chi phí bài chuyên mục ở mức thương hiệu vừa và nhỏ tiếp cận được, bối cảnh đọc đúng tâm thế tiêu dùng và bài viết trở thành chất liệu uy tín dùng lại nhiều lần. Nếu bạn chưa chắc nên chọn aFamily hay một trang nữ giới khác cho ngành hàng của mình, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu mục tiêu với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

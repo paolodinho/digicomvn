@@ -1,0 +1,181 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo VnExpress: chi phí đăng bài PR theo từng vị trí và quy trình lên bài</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo VnExpress theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất từ toà soạn. Giá chưa gồm VAT và là giá tham khảo - một số vị trí có thể thay đổi vào thời điểm đặt, bạn nên đối chiếu lại khi chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="VnExpress" domain="vnexpress.net"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Điểm khiến nhiều người bối rối nhất là sự khác nhau giữa các gói "Doanh nghiệp viết 1, 2, 3". Thực tế các gói này giống nhau về quy cách bài, khác nhau chủ yếu ở <strong>thời gian bài tồn tại trên báo</strong>: gói 1 giữ bài 6 tháng, gói 2 giữ 24 tháng, gói 3 giữ theo vòng đời tên miền của báo. Nếu mục tiêu là làm đẹp hồ sơ thương hiệu lâu dài (khách hàng tìm tên công ty vẫn thấy bài sau nhiều năm), gói tồn tại dài hạn đáng cân nhắc dù chi phí cao hơn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Với vị trí xuất hiện trên trang chủ (ví dụ khu vực Kinh doanh), chi phí cao hơn hẳn nhóm chuyên mục - phù hợp chiến dịch ra mắt sản phẩm hoặc sự kiện cần độ phủ tức thời trong 24 giờ, hơn là nhu cầu hiện diện dài hạn. Bạn có thể so sánh chi phí giữa nhiều đầu báo khác trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> trước khi quyết định.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2774,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/vnexpress-vt-trangchu.png" alt="Minh hoạ vị trí trang chủ Kinh doanh vnexpress.net cho bài PR" class="wp-image-2774"/><figcaption class="wp-element-caption">Toàn cảnh trang chủ vnexpress.net, chụp thực tế 18/07/2026. Trang chủ Top 2 Kinh doanh: 72.000.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2775,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/vnexpress-vt-chuyenmuc.png" alt="Minh hoạ vị trí chuyên mục Giáo dục vnexpress.net cho bài PR" class="wp-image-2775"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Giáo dục vnexpress.net, chụp thực tế 18/07/2026. Mục phù hợp (Giáo dục, số hoá...): 9.200.000đ - Doanh nghiệp viết 1/2/3 (tồn tại 6-24 tháng hoặc theo domain): 7.800.000đ - 15.300.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo VnExpress là hình thức đặt đăng bài PR trên VnExpress - một trong những báo điện tử tiếng Việt có lượng độc giả lớn nhất hiện nay. Chi phí mỗi bài phụ thuộc vị trí đăng: các vị trí dạng "Doanh nghiệp viết" có mức giá dễ tiếp cận nhất, trong khi vị trí xuất hiện trên trang chủ cao hơn nhiều lần. Bài viết này cung cấp bảng giá cập nhật trực tiếp, quy cách bài và những lưu ý để bài được duyệt nhanh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo VnExpress</strong> phụ thuộc vị trí đăng: bài chuyên mục doanh nghiệp thấp hơn nhiều lần so với vị trí trang chủ - bảng giá chi tiết cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách chuẩn một bài PR trên VnExpress: dưới 1.000 từ, dưới 3 ảnh, được gắn 2 link dạng nofollow.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Điểm ít người để ý: các gói khác nhau chủ yếu ở <strong>thời gian bài tồn tại</strong> (6 tháng, 24 tháng hoặc theo vòng đời tên miền).</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn vị trí, viết bài đúng tôn chỉ báo, theo dõi duyệt và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Trong hơn 10 năm làm PR báo chí và SEO, tôi nhận thấy VnExpress gần như luôn nằm trong danh sách rút gọn của doanh nghiệp khi cần một bài PR "nặng ký". Lý do không chỉ là lượng người đọc, mà còn là mức độ tin cậy: một bài viết xuất hiện trên VnExpress thường được khách hàng, đối tác và cả ngân hàng nhìn nhận như một tín hiệu xác thực về doanh nghiệp.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tuy nhiên, đây cũng là đầu báo có quy trình duyệt bài chặt và bảng giá phân hoá mạnh theo vị trí. Đặt sai vị trí, hoặc viết bài không đúng tôn chỉ, doanh nghiệp vừa chậm tiến độ vừa tốn chi phí sửa đổi. Phần dưới đây tổng hợp toàn bộ thông tin bạn cần trước khi quyết định.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">VnExpress có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>VnExpress hoạt động từ năm 2001 và là một trong những báo điện tử đầu tiên của Việt Nam. Ở góc độ truyền thông, thế mạnh của báo nằm ở độ phủ rộng khắp các nhóm độc giả thành thị - nhóm ra quyết định mua hàng chính của đa số ngành hàng. Ở góc độ đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền vnexpress.net đạt <strong>DR 90</strong> - thuộc nhóm chỉ số uy tín tên miền cao nhất trong các website tiếng Việt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Điều đó mang lại 3 giá trị cụ thể cho doanh nghiệp đặt bài. Thứ nhất là <strong>uy tín thương hiệu</strong>: bài PR đứng cạnh các tin bài chính thống, được độc giả tiếp nhận với mức tin cậy của tờ báo. Thứ hai là <strong>hiệu ứng tìm kiếm thương hiệu</strong>: bài trên VnExpress thường xếp hạng cao khi khách hàng tìm tên doanh nghiệp, giúp kiểm soát kết quả tìm kiếm trang đầu. Thứ ba là <strong>nguồn trích dẫn cho AI</strong>: các công cụ như ChatGPT hay Google AI Overview ưu tiên trích nguồn báo lớn, nên sự hiện diện trên VnExpress tăng khả năng thương hiệu được nhắc tới trong câu trả lời AI.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="vnexpress.net"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên VnExpress</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn trên VnExpress theo báo giá hiện tại cần đáp ứng: <strong>dưới 1.000 từ, dưới 3 ảnh, tối đa 2 link</strong> và link ở dạng nofollow. Bài do doanh nghiệp cung cấp nội dung nhưng toà soạn biên tập lại theo văn phong báo chí, vì vậy bản thảo càng sát tôn chỉ báo thì thời gian duyệt càng nhanh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Một hiểu lầm phổ biến: book VnExpress để "lấy backlink dofollow đẩy SEO". Link trong bài PR trên VnExpress là <strong>nofollow</strong> - giá trị chính của nó không nằm ở việc truyền sức mạnh SEO trực tiếp, mà ở lượng truy cập giới thiệu, tín hiệu thương hiệu và độ tin cậy khi Google đánh giá thực thể doanh nghiệp. Nếu mục tiêu của bạn thuần tuý là link dofollow, các hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> hoặc textlink sẽ tối ưu chi phí hơn; còn PR báo lớn nên được nhìn như khoản đầu tư uy tín.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo VnExpress qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking VnExpress gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn vị trí:</strong> dựa trên mục tiêu (branding dài hạn, ra mắt sản phẩm, hồ sơ uy tín) để chọn giữa nhóm chuyên mục và vị trí trang chủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài PR đúng quy cách và tôn chỉ của VnExpress, gửi bạn duyệt trước.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ toà soạn, điều chỉnh nội dung nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm hướng dẫn tận dụng bài (gắn "Báo chí nói về chúng tôi" trên website, chạy quảng cáo trích dẫn...).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Từ kinh nghiệm triển khai bài PR trên các báo lớn, những lỗi sau khiến bài bị trả về nhiều nhất: cam kết tuyệt đối kiểu "số 1 thị trường", "hiệu quả 100%" không kèm căn cứ; sản phẩm thuộc nhóm y tế, tài chính thiếu giấy tờ chứng minh; nội dung so sánh trực tiếp và hạ thấp đối thủ; thông tin doanh nghiệp không khớp đăng ký kinh doanh. Chuẩn bị sẵn giấy phép kinh doanh và tài liệu chứng minh cho các con số trong bài sẽ rút ngắn đáng kể vòng duyệt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ngoài ra, nên viết bài theo hướng cung cấp giá trị cho độc giả (câu chuyện, dữ liệu, giải pháp) thay vì một trang quảng cáo thuần tuý. Toà soạn biên tập nhẹ tay hơn với bài có chất liệu báo chí thật, và độc giả cũng ở lại đọc lâu hơn - đó mới là giá trị bạn trả tiền để nhận về.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo VnExpress</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên VnExpress là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tuỳ vị trí đăng. Nhóm vị trí "Doanh nghiệp viết" trong chuyên mục có mức giá dễ tiếp cận nhất, vị trí trang chủ cao hơn nhiều lần. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; giá chính xác cuối cùng được xác nhận tại thời điểm đặt vì toà soạn có thể điều chỉnh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Bài PR trên VnExpress tồn tại bao lâu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Theo gói bạn chọn: 6 tháng, 24 tháng hoặc tồn tại theo vòng đời tên miền của báo. Đây là điểm khác biệt chính giữa các gói "Doanh nghiệp viết 1, 2, 3" - quy cách bài giống nhau, thời gian giữ bài khác nhau. Doanh nghiệp làm hồ sơ uy tín dài hạn nên ưu tiên gói giữ bài lâu.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn trên VnExpress được gắn 2 link dạng nofollow. Giá trị chính là truy cập giới thiệu, uy tín thương hiệu và tín hiệu thực thể với công cụ tìm kiếm, không phải truyền sức mạnh SEO trực tiếp như link dofollow. Cần link dofollow, bạn nên kết hợp thêm guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt, tuỳ chuyên mục và lịch biên tập của toà soạn. Bài chuẩn quy cách ngay từ đầu (dưới 1.000 từ, dưới 3 ảnh, không cam kết tuyệt đối, đủ giấy tờ) sẽ đi nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có xuất hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo VnExpress</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>VnExpress phủ rộng nhóm độc giả thành thị ra quyết định mua sắm, mạnh nhất ở mảng kinh doanh, công nghệ và khởi nghiệp - phù hợp gần như mọi ngành cần uy tín và độ phủ lớn. Nếu chưa chắc VnExpress có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo VnExpress phù hợp nhất khi bạn cần uy tín thương hiệu và độ phủ ở nhóm độc giả rộng: chi phí nhóm chuyên mục ở mức doanh nghiệp SME tiếp cận được, quy cách rõ ràng và giá trị bài kéo dài theo gói tồn tại. Nếu bạn chưa chắc VnExpress có phải lựa chọn tối ưu cho ngành hàng của mình, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu mục tiêu với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

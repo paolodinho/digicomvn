@@ -1,0 +1,185 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo Znews: chi phí đăng bài PR trên znews.vn theo từng vị trí</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo Znews theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất từ toà soạn. Giá chưa gồm VAT và là giá tham khảo - một số vị trí có thể thay đổi vào thời điểm đặt, bạn nên đối chiếu lại khi chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="Znews" domain="znews.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Điểm cần hiểu rõ nhất trong bảng giá này là sự khác nhau giữa <strong>Tiểu mục</strong> và <strong>Magazine</strong>. Tiểu mục A và Tiểu mục B là bài PR dạng tin bài thông thường: bài nằm trong chuyên mục phù hợp ngành hàng, trình bày như một bài báo chuẩn, chênh lệch chủ yếu ở nhóm chuyên mục được xếp vào. Đây là lựa chọn hợp lý cho phần lớn nhu cầu.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2813,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/znews-vt-tieumuc.png" alt="Minh hoạ vị trí Tiểu mục A B znews.vn cho bài PR" class="wp-image-2813"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Đời sống znews.vn, chụp thực tế 18/07/2026. Tiểu mục A: 7.400.000đ - Tiểu mục B: 9.400.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Magazine 1 là câu chuyện khác hẳn, và mức giá cao hơn nhiều lần của nó nằm ở <strong>hình thức thể hiện</strong>. Magazine là định dạng bài long-form đặc trưng của Znews: trình bày dàn trang riêng như một ấn phẩm tạp chí số, ảnh lớn tràn màn hình, đồ hoạ và nhịp kể chuyện được thiết kế riêng cho từng bài. Doanh nghiệp chọn Magazine khi cần một "tác phẩm" kể câu chuyện thương hiệu - phỏng vấn nhà sáng lập, hành trình sản phẩm, chiến dịch lớn - thay vì một tin PR thông thường; với ngân sách có hạn, một bài Tiểu mục viết tốt vẫn giải quyết được mục tiêu hiện diện. Bạn có thể so sánh chi phí giữa nhiều đầu báo khác trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> trước khi quyết định.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2814,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/znews-vt-magazine.png" alt="Minh hoạ vị trí Magazine 1 znews.vn cho bài PR" class="wp-image-2814"/><figcaption class="wp-element-caption">Toàn cảnh trang chủ znews.vn, chụp thực tế 18/07/2026 - bài dạng dàn trang lớn tương tự định dạng Magazine. Magazine 1: 72.000.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo Znews là dịch vụ đặt đăng bài PR trên znews.vn - trang tin điện tử có tiền thân là Zing News, nổi bật với cách trình bày hiện đại và lượng độc giả trẻ thành thị lớn. Chi phí mỗi bài phụ thuộc hình thức thể hiện: bài PR dạng Tiểu mục có mức giá doanh nghiệp vừa và nhỏ tiếp cận được, trong khi định dạng Magazine trình bày cao cấp có chi phí cao hơn nhiều lần. Bài viết này cung cấp bảng giá cập nhật trực tiếp, quy cách bài và kinh nghiệm để bài được duyệt nhanh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo Znews</strong> chia hai nhóm rõ rệt: bài PR dạng Tiểu mục có mức giá dễ tiếp cận, còn định dạng Magazine cao hơn nhiều lần - bảng giá chi tiết cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách chuẩn một bài PR Tiểu mục trên Znews: dưới 1.000 từ, dưới 3 ảnh, được gắn 2 link dạng nofollow.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Znews (tiền thân là Zing News) đạt <strong>DR 78</strong> theo dữ liệu Ahrefs, mạnh ở nhóm độc giả trẻ thành thị - giải trí, công nghệ, đời sống.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn vị trí, viết bài đúng văn phong báo, theo dõi duyệt và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Hơn 10 năm làm PR báo chí và SEO, tôi thấy Znews là lựa chọn được nhắc đến đầu tiên khi khách hàng mô tả tệp mục tiêu bằng cụm từ "người trẻ ở thành phố". Từ thời còn mang tên Zing News, trang này đã xây được thói quen đọc trong nhóm độc giả trẻ - nhóm quyết định chi tiêu cho giải trí, công nghệ, thời trang, du lịch và các sản phẩm tiêu dùng mới.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Điểm khiến nhiều doanh nghiệp lúng túng khi xem báo giá Znews là khoảng cách rất lớn giữa các hạng mục. Khoảng cách đó không phải ngẫu nhiên - nó phản ánh hai hình thức thể hiện hoàn toàn khác nhau mà phần dưới đây sẽ phân tích kỹ.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Znews có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Znews hoạt động theo hướng một trang tin tổng hợp hiện đại, phủ các mảng thời sự, kinh tế, giải trí, công nghệ, thể thao và đời sống, với thế mạnh nhận diện rõ nhất ở nội dung giải trí - showbiz, xuất bản - sách và công nghệ. Ở góc độ đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền znews.vn đạt <strong>DR 78</strong> - thuộc nhóm chỉ số uy tín tên miền cao trong các trang tin tiếng Việt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Với doanh nghiệp đặt bài, giá trị của Znews nằm ở sự khớp giữa tệp độc giả và ngành hàng. Nếu sản phẩm nhắm tới người tiêu dùng trẻ thành thị - ứng dụng công nghệ, thiết bị điện tử, mỹ phẩm, thời trang, du lịch, giáo dục, phim ảnh và sự kiện giải trí - bài PR trên Znews tiếp cận đúng người đọc đang cập nhật tin ở đây mỗi ngày. Ngược lại, nếu tệp khách là nhà đầu tư tài chính chuyên sâu, các đầu báo kinh tế chuyên ngành có thể khớp hơn - nên đối chiếu tệp độc giả trước khi nhìn vào giá.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="znews.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên Znews</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR dạng Tiểu mục trên Znews theo báo giá hiện tại cần đáp ứng: <strong>dưới 1.000 từ, dưới 3 ảnh, được gắn 2 link</strong> và link ở dạng nofollow. Với độc giả trẻ quen đọc nhanh trên điện thoại, giới hạn dung lượng này thực ra là lợi thế: bài ngắn, ảnh chọn lọc, thông điệp một ý chính thường giữ chân người đọc tốt hơn bài dài dàn trải.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về link nofollow, cần nhìn đúng bản chất: bài PR trên Znews không truyền sức mạnh SEO trực tiếp như backlink dofollow, nhưng mang lại truy cập giới thiệu từ tệp độc giả trẻ, tín hiệu thương hiệu khi khách hàng tìm tên doanh nghiệp và độ tin cậy khi Google cùng các công cụ AI như ChatGPT, Google AI Overview đánh giá và trích dẫn thực thể. Nếu mục tiêu thuần tuý là link dofollow, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> tối ưu chi phí hơn; PR trên Znews nên được tính như khoản đầu tư nhận diện với người tiêu dùng trẻ.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo Znews qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking Znews gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn vị trí:</strong> xác định ngành hàng và mục tiêu để chọn giữa Tiểu mục A, Tiểu mục B hay định dạng Magazine cho chiến dịch lớn.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài PR đúng quy cách và văn phong trẻ trung của Znews, gửi bạn duyệt trước.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ toà soạn, điều chỉnh nội dung nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm gợi ý tận dụng bài (nhúng vào mục báo chí trên website, trích dẫn trong nội dung mạng xã hội...).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Znews duy trì chuẩn trình bày cao và văn phong gọn, hiện đại - bản thảo càng gần chuẩn đó, vòng duyệt càng ngắn. Những lỗi khiến bài bị trả về nhiều nhất: tít giật quá đà so với nội dung; câu văn kiểu thông cáo báo chí khô cứng, nhồi tên thương hiệu dày đặc; ảnh chất lượng thấp hoặc chèn logo to chiếm khung hình; cam kết tuyệt đối không kèm căn cứ; sản phẩm nhóm y tế, tài chính thiếu giấy tờ chứng minh. Chuẩn bị sẵn giấy phép kinh doanh và tài liệu cho các con số trong bài giúp rút ngắn đáng kể thời gian xử lý.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Một mẹo riêng cho Znews: viết cho người đọc trẻ lướt điện thoại. Mở bài vào thẳng vấn đề trong 2 câu đầu, mỗi đoạn một ý, ảnh có bối cảnh thật thay vì ảnh dựng studio. Bài mang chất liệu đời sống - trải nghiệm người dùng, xu hướng, con số thú vị - được biên tập nhẹ tay hơn một trang quảng cáo thuần tuý, và cũng là dạng bài độc giả Znews chịu đọc đến cuối.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo Znews</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên Znews là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tuỳ hình thức thể hiện. Bài PR dạng Tiểu mục có mức giá dễ tiếp cận với doanh nghiệp vừa và nhỏ, còn định dạng Magazine trình bày cao cấp cao hơn nhiều lần. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; giá cuối cùng được xác nhận tại thời điểm đặt vì toà soạn có thể điều chỉnh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Tiểu mục A và Tiểu mục B khác nhau thế nào?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Hai hạng mục cùng là bài PR dạng tin bài chuẩn, chênh lệch giá phản ánh nhóm chuyên mục bài được xếp vào. Khi đặt bài, DigicomVN đối chiếu ngành hàng của bạn với chuyên mục tương ứng để chọn hạng mục hợp lý nhất về chi phí.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Định dạng Magazine trên Znews là gì, khi nào nên chọn?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Magazine là bài long-form dàn trang riêng như ấn phẩm tạp chí số: ảnh lớn, đồ hoạ thiết kế theo từng bài, nhịp kể chuyện dài hơi. Nên chọn khi thương hiệu có câu chuyện đủ chất liệu - phỏng vấn nhà sáng lập, hành trình sản phẩm, chiến dịch thương hiệu lớn. Với nhu cầu hiện diện thông thường, bài Tiểu mục là phương án cân đối chi phí hơn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR dạng Tiểu mục trên Znews được gắn 2 link dạng nofollow. Giá trị chính là truy cập giới thiệu từ tệp độc giả trẻ, nhận diện thương hiệu và tín hiệu thực thể với công cụ tìm kiếm. Cần backlink dofollow, bạn nên kết hợp thêm guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng, có hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt, tuỳ chuyên mục và lịch biên tập. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking; giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo Znews</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Znews (Zing) hướng tới độc giả trẻ với công nghệ, giải trí và đời sống - phù hợp sản phẩm công nghệ, ứng dụng, thương hiệu tiêu dùng trẻ. Nếu chưa chắc Znews có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo Znews đáng giá nhất khi tệp khách của bạn là người tiêu dùng trẻ thành thị - đúng nhóm độc giả trung thành của trang tin này, với DR 78 làm điểm tựa uy tín và hai lớp lựa chọn rõ ràng giữa bài Tiểu mục tiết kiệm và Magazine cao cấp. Nếu bạn chưa chắc Znews có khớp ngành hàng của mình, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu mục tiêu với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

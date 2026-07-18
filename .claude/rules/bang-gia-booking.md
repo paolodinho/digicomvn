@@ -2,6 +2,29 @@
 
 > Kho dữ liệu: `10-bang-gia-booking/`. Đọc `README.md` trong đó trước khi sửa.
 
+## CHỈ 3 NCC LÊN WEB (chốt 2026-07-18, tạm thời)
+
+Hiếu: "ngoài danaseo, vietnam media, bổ sung thêm fame media -> tạm thời bỏ các bên khác,
+lưu dữ liệu thôi ko dùng. Giá để bằng ba bên này."
+
+- **`export-web.py`** có set `CHI_NCC = {"danaseo", "media viet nam", "fame media"}` - CHỈ 3 NCC
+  này được xuất ra `gia-web.csv` / lên web. Mọi NCC khác (SEODO, DPS.MEDIA, Guestpost.vn, SEOViP...)
+  **vẫn nằm trong `bang-gia-master.csv`** (dữ liệu tham khảo thị trường) nhưng KHÔNG xuất ra web.
+- Cả 3 NCC này đều **KHÔNG markup** (`KHONG_MARKUP` gồm cả 3) - giá web = giá gốc/giá KM của
+  chính NCC, không nhân 1,2 như các bên khác.
+- **Ngoại lệ: Toplist + Backlink quốc tế** (`DICH_VU_NGOAI_LE_CHI_NCC`) - 3 NCC trên không có dữ
+  liệu 2 nhóm này -> **giữ hành vi CŨ** (mọi NCC, có markup 1,2x) để 2 trang không bị trống bảng giá.
+  Hiếu đã xác nhận chọn phương án này khi được hỏi (thay vì để trống hoặc draft 2 trang).
+- Fame Media nạp từ Google Sheet (gid nhiều tab: Báo PR, Báo Tỉnh Link Dofollow, Backlink Entity,
+  Guestpost VN, Guestpost Global, Textlink gói RelevantLink) - xem `nguon.md` để có link đầy đủ.
+- **Đồng bộ live khi đổi CHI_NCC**: không chỉ update giá - phải **draft** các dòng `dgc_gia` published
+  không còn khớp NCC nào trong `CHI_NCC` (không phải xoá - draft để rollback được), và **tạo mới**
+  các dòng NCC/vị trí chưa từng có trên web. `import-wp.php` gốc CHỈ update+create, KHÔNG tự draft -
+  phải tự viết script riêng (`draft-ids.php` mẫu) để set `post_status=draft` cho danh sách ID không khớp.
+  Batch 2026-07-18: draft 375, tạo mới 943, sửa giá 7 (booking-bao-pr/guest-post/mua-textlink/booking-truyen-hinh).
+- Muốn mở rộng lại (thêm NCC khác vào diện hiển thị) -> sửa `CHI_NCC` trong `export-web.py`, chạy lại
+  `build_master.py` -> `gan-nganh.py` -> `export-web.py`, rồi đồng bộ live theo quy trình trên.
+
 ## Quy tắc giá (SỬA 2026-07-14 sau khi Hiếu phản hồi giá bị đội)
 
 - **Giá Digicom báo khách = GIÁ DanaSEO ĐANG BÁN THẬT** (cột `gia_ncc_km` - giá khuyến mãi), KHÔNG phải giá gốc niêm yết.

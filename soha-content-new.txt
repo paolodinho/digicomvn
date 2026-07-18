@@ -1,0 +1,185 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo Soha: chi phí đăng bài PR trên trang chủ và chuyên mục, kèm quy trình lên bài</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo Soha theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất. Giá chưa gồm VAT và là giá tham khảo - vị trí cụ thể có thể điều chỉnh vào thời điểm đặt, bạn nên đối chiếu lại khi chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="Soha" domain="soha.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Hai vị trí trong bảng phục vụ hai mục tiêu khác nhau. <strong>Bài stream trên trang chủ</strong> là bài chảy trực tiếp trong luồng tin chính của soha.vn - nơi phần lớn độc giả bắt đầu phiên đọc, nên bài tiếp cận được lượng người xem nhanh và rộng ngay trong những giờ đầu đăng tải. Đây là lựa chọn hợp lý khi bạn cần tạo độ phủ tức thời cho một sự kiện, chương trình khuyến mại hoặc sản phẩm mới ra mắt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2808,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/soha-vt-stream.png" alt="Minh hoạ vị trí stream trang chủ soha.vn cho bài PR" class="wp-image-2808"/><figcaption class="wp-element-caption">Toàn cảnh trang chủ soha.vn, chụp thực tế 18/07/2026. Bài stream trên trang chủ: 4.600.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p><strong>Bài đăng vào chuyên mục phù hợp</strong> thì ngược lại: bài nằm đúng ngăn nội dung theo ngành hàng của bạn, tiếp cận nhóm độc giả đang chủ động quan tâm chủ đề đó. Lưu lượng ban đầu không bùng nổ như vị trí stream, nhưng độc giả đúng tệp hơn và bài dễ được tìm thấy lại qua tìm kiếm. Điểm đáng chú ý ở Soha là chênh lệch giá giữa hai vị trí không quá lớn, nên nhiều chiến dịch chọn đặt cả hai để vừa có độ phủ vừa có độ sâu. Bạn có thể so sánh chi phí Soha với các đầu báo khác trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> trước khi quyết định.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2809,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/soha-vt-chuyenmuc.png" alt="Minh hoạ vị trí chuyên mục phù hợp soha.vn cho bài PR" class="wp-image-2809"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Đời sống soha.vn, chụp thực tế 18/07/2026. Chuyên mục phù hợp: 6.480.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo Soha là dịch vụ đặt đăng bài PR trên soha.vn - trang tin đời sống, giải trí và xã hội có lượng đọc lớn, nội dung thường được chia sẻ mạnh trên mạng xã hội. Chi phí một bài phụ thuộc vị trí bạn chọn: bài stream chạy trong luồng tin trang chủ hoặc bài đăng vào chuyên mục phù hợp với ngành hàng. Bài viết này cung cấp bảng giá cập nhật trực tiếp, quy cách bài và các lưu ý giúp bài được duyệt nhanh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo Soha</strong> chia theo 2 vị trí: bài stream trên trang chủ và bài đăng vào chuyên mục phù hợp - bảng giá chi tiết cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách bài PR trên Soha: khoảng 1.000 từ, 3-5 ảnh tuỳ vị trí, được gắn 1 link (vị trí stream trang chủ là link nofollow).</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Soha là trang tin đời sống - giải trí - xã hội có sức lan toả mạnh trên mạng xã hội, phù hợp ngành hàng tiêu dùng, giải trí và sức khoẻ đời sống.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn vị trí, viết bài đúng văn phong Soha, theo dõi duyệt và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Hơn 10 năm làm PR báo chí và SEO, tôi thấy Soha có một vị trí khá riêng trong danh sách book báo của doanh nghiệp: đây không phải nơi để làm hồ sơ tài chính trang trọng, nhưng lại là kênh cực kỳ hiệu quả khi cần một bài viết "được đọc thật". Nội dung trên Soha thiên về đời sống, giải trí, sức khoẻ và câu chuyện xã hội - đúng kiểu bài mà độc giả chủ động bấm vào và chia sẻ tiếp lên Facebook, thay vì chỉ lướt qua tiêu đề.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Đổi lại, để khai thác đúng sức mạnh đó, bài PR trên Soha phải viết theo văn phong đời sống chứ không phải thông cáo báo chí. Chọn sai vị trí hoặc mang nguyên một bài giới thiệu doanh nghiệp khô cứng lên đây, bạn sẽ vừa khó qua vòng duyệt vừa lãng phí đúng thứ mình trả tiền để mua: sự chú ý của độc giả đại chúng. Phần dưới tổng hợp mọi thông tin cần biết trước khi đặt bài.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Soha có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Soha là trang tin tổng hợp thiên về đời sống - giải trí - xã hội, với các tuyến nội dung trải rộng từ kinh tế, công nghệ, ô tô xe máy đến thể thao, làm đẹp và sức khoẻ. Ở góc độ đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền soha.vn đạt <strong>DR 77</strong> - mức uy tín tên miền cao trong nhóm trang tin tiếng Việt, đủ để bài đăng ở đây có trọng lượng khi Google đánh giá thực thể doanh nghiệp.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Giá trị nổi bật nhất của Soha nằm ở <strong>khả năng lan toả</strong>: nội dung của trang thường xuyên được chia sẻ lại trên mạng xã hội và các nhóm cộng đồng, nên một bài PR viết khéo có thể tiếp cận vượt xa lượng đọc trực tiếp trên trang. Điều này đặc biệt hợp với ngành hàng tiêu dùng, giải trí, làm đẹp và sức khoẻ đời sống - những lĩnh vực mà quyết định mua bắt đầu từ cảm xúc và câu chuyện, không phải từ bảng thông số. Với các thương hiệu B2B hoặc dịch vụ tài chính cần sự trang trọng, Soha vẫn dùng được cho tuyến bài nhân vật, văn hoá doanh nghiệp, nhưng thường nên kết hợp thêm một đầu báo kinh tế để cân hồ sơ.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="soha.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên Soha</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy cách theo báo giá hiện tại khác nhẹ giữa hai vị trí: bài chuyên mục nhận bài <strong>khoảng 1.000 từ với 3 ảnh, được gắn 1 link</strong>; bài stream trên trang chủ nhận bài <strong>dưới 1.000 từ, dưới 5 ảnh, gắn 1 link dạng nofollow</strong>. Số ảnh rộng rãi hơn ở vị trí stream là lợi thế đáng tận dụng, vì bài nhiều hình ảnh giữ chân độc giả đại chúng tốt hơn hẳn bài thuần chữ.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về giá trị SEO, cần nhìn cho đúng: link trong bài PR trên Soha (vị trí stream ghi rõ nofollow) không truyền sức mạnh SEO trực tiếp như link dofollow. Giá trị bạn nhận về là lượng truy cập giới thiệu, tín hiệu thương hiệu khi độc giả tìm kiếm tên doanh nghiệp, và độ tin cậy của thực thể trong mắt công cụ tìm kiếm lẫn các AI như ChatGPT hay Google AI Overview - vốn ưu tiên trích dẫn trang tin lớn. Nếu mục tiêu của bạn thuần tuý là backlink dofollow đẩy thứ hạng, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> hoặc textlink sẽ tối ưu chi phí hơn; PR trên Soha nên được tính như khoản đầu tư cho độ phủ và nhận diện.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo Soha qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking Soha gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn vị trí:</strong> dựa trên mục tiêu (độ phủ nhanh hay đúng tệp độc giả ngành) để chọn giữa bài stream trang chủ và bài chuyên mục phù hợp.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài PR theo văn phong đời sống của Soha, gửi bạn duyệt trước khi gửi toà soạn.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ ban biên tập, điều chỉnh nội dung nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm gợi ý tận dụng bài (chia sẻ lên fanpage, gắn mục "Báo chí nói về chúng tôi" trên website, chạy quảng cáo trích dẫn...).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Soha là trang tin hướng đến độc giả đại chúng, nên tiêu chí duyệt bài xoay quanh việc bài có "đọc được" như một bài báo đời sống hay không. Những lỗi khiến bài bị trả về nhiều nhất: viết như thông cáo báo chí, mở đầu bằng lịch sử công ty thay vì câu chuyện độc giả quan tâm; cam kết tuyệt đối kiểu "hiệu quả 100%", "số 1 thị trường" không kèm căn cứ; sản phẩm nhóm sức khoẻ, làm đẹp thiếu giấy tờ công bố hoặc kiểm nghiệm; nội dung so sánh và hạ thấp đối thủ trực tiếp.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cách viết dễ qua duyệt nhất trên Soha là bắt đầu từ một tình huống đời sống thật - một thói quen, một nỗi lo, một xu hướng đang được bàn tán - rồi mới dẫn về giải pháp của doanh nghiệp. Tiêu đề nên gợi tò mò theo kiểu báo đời sống thay vì nhồi tên thương hiệu lên đầu. Bài viết theo hướng này không chỉ duyệt nhanh hơn mà còn được chia sẻ nhiều hơn - và với Soha, lượt chia sẻ chính là phần lời của khoản đầu tư.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo Soha</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên Soha là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tuỳ vị trí đăng: bài stream trên trang chủ và bài chuyên mục phù hợp có hai mức giá riêng, chênh lệch không quá lớn. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; giá chính xác cuối cùng được xác nhận tại thời điểm đặt vì toà soạn có thể điều chỉnh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Bài stream trên trang chủ khác gì bài chuyên mục?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài stream chạy trong luồng tin chính của trang chủ soha.vn, tiếp cận lượng độc giả lớn và nhanh ngay khi đăng - hợp với chiến dịch cần độ phủ tức thời. Bài chuyên mục nằm đúng ngăn nội dung theo ngành hàng, độc giả đúng tệp hơn và bài dễ được tìm lại qua tìm kiếm. Quy cách cũng khác nhẹ: bài stream cho phép nhiều ảnh hơn (dưới 5 ảnh so với 3 ảnh).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Mỗi bài PR trên Soha được gắn 1 link; ở vị trí bài stream trang chủ, báo giá ghi rõ link dạng nofollow. Giá trị chính là truy cập giới thiệu, độ phủ thương hiệu và tín hiệu thực thể với công cụ tìm kiếm. Cần backlink dofollow, bạn nên kết hợp thêm guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng trên Soha?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt, tuỳ vị trí và lịch biên tập. Bài viết đúng văn phong đời sống, đủ giấy tờ với sản phẩm nhóm sức khoẻ - làm đẹp và không chứa cam kết tuyệt đối sẽ đi nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có xuất hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo Soha</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Soha là kênh tổng hợp độ phủ lớn về thời sự và giải trí - phù hợp chiến dịch cần lượng tiếp cận rộng, sản phẩm tiêu dùng đại chúng. Nếu chưa chắc Soha có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo Soha là lựa chọn đáng cân nhắc khi bạn cần bài PR tiếp cận độc giả đại chúng và lan toả trên mạng xã hội, đặc biệt với ngành hàng tiêu dùng, giải trí, làm đẹp và sức khoẻ đời sống. Chi phí hai vị trí đều ở mức doanh nghiệp SME tiếp cận được, quy cách rõ ràng và DR 77 đủ trọng lượng cho hồ sơ thương hiệu. Nếu bạn chưa chắc Soha có hợp ngành hàng của mình, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu mục tiêu với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

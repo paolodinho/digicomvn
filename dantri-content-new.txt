@@ -1,0 +1,181 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo Dân Trí: chi phí đăng bài PR trang chủ, tiểu mục và cách chọn vị trí đúng</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo Dân Trí theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN, cập nhật thường xuyên theo báo giá mới nhất từ toà soạn. Giá chưa gồm VAT và mang tính tham khảo - mức chính xác được xác nhận lại tại thời điểm bạn chốt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="Dân Trí" domain="dantri.com.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Điểm cần giải thích đầu tiên là cách chia <strong>tiểu mục nhóm 1 và tiểu mục nhóm 2</strong>. Toà soạn xếp các chuyên mục thành hai nhóm theo sức hút độc giả: nhóm 1 gồm chuyên mục có lượng đọc cao hơn nên giá nhỉnh hơn, nhóm 2 là các chuyên mục còn lại với giá mềm hơn. Quy cách bài hai nhóm giống hệt nhau - bạn không mua "bài tốt hơn", bạn mua vị trí nhiều người đọc hơn. Chuyên mục cụ thể thuộc nhóm nào được DigicomVN xác nhận với toà soạn khi tư vấn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2778,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/dantri-vt-tieumuc.png" alt="Minh hoạ vị trí tiểu mục dantri.com.vn cho bài PR" class="wp-image-2778"/><figcaption class="wp-element-caption">Toàn cảnh chuyên mục Kinh doanh dantri.com.vn, chụp thực tế 18/07/2026. Tiểu mục nhóm 1: 10.500.000đ - Tiểu mục nhóm 2: 9.200.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Khoảng cách lớn nhất trong bảng nằm ở vị trí <strong>Trang chủ - Link Top 1</strong>: tại thời điểm cập nhật, mức giá cao hơn bài tiểu mục khoảng tám lần. Đây là một sản phẩm khác hẳn: bài xuất hiện ở khu vực nổi bật nhất của trang chủ - nơi toàn bộ lượng truy cập của báo đi qua - phù hợp chiến dịch ra mắt sản phẩm, sự kiện lớn cần độ phủ tức thời. Doanh nghiệp cần hiện diện dài hạn với ngân sách hợp lý nên bắt đầu từ tiểu mục; muốn đối chiếu với các đầu báo khác, bạn có thể xem <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> trước khi quyết định.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2777,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/dantri-vt-trangchu.png" alt="Minh hoạ vị trí trang chủ Link Top 1 dantri.com.vn cho bài PR" class="wp-image-2777"/><figcaption class="wp-element-caption">Toàn cảnh trang chủ dantri.com.vn, chụp thực tế 18/07/2026. Trang chủ - Link Top 1: 84.000.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo Dân Trí là dịch vụ đặt đăng bài PR trên dantri.com.vn - báo điện tử chính thống có độ phủ rộng khắp các nhóm độc giả đại chúng tại Việt Nam. Chi phí phụ thuộc vị trí đăng: bài PR trong tiểu mục có mức giá dễ tiếp cận, còn vị trí Trang chủ - Link Top 1 cao hơn khoảng tám lần, dành cho chiến dịch cần độ phủ lớn. Bài viết cung cấp bảng giá cập nhật trực tiếp, quy cách bài và cách phân biệt tiểu mục nhóm 1 với nhóm 2.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Giá book báo Dân Trí</strong> chia hai nhóm rõ rệt: bài PR tiểu mục (nhóm 1 và nhóm 2) ở mức doanh nghiệp SME tiếp cận được, còn vị trí Trang chủ - Link Top 1 cao hơn khoảng tám lần - bảng giá cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách chuẩn một bài PR trên Dân Trí: dưới 1.000 từ, dưới 3 ảnh; link gắn trong bài mua bổ sung theo báo giá riêng (500.000 đồng/link, 3 link 1 triệu đồng).</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận dantri.com.vn đạt <strong>DR 85</strong> - thuộc nhóm tên miền uy tín cao nhất trong báo chí tiếng Việt.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>DigicomVN tư vấn chọn giữa tiểu mục nhóm 1 và nhóm 2, viết bài đúng tôn chỉ báo, theo dõi duyệt và bàn giao link sau khi đăng.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Hơn 10 năm tư vấn PR báo chí và SEO, tôi để ý một điều: khi doanh nghiệp cần một bài báo mà "khách hàng lẫn đối tác đều từng đọc tờ đó", Dân Trí gần như luôn được nhắc tới đầu tiên. Tệp độc giả đại chúng thuộc loại rộng nhất - từ nhân viên văn phòng, phụ huynh đến chủ doanh nghiệp - khiến bài PR trên Dân Trí không kén ngành hàng như báo chuyên về tài chính hay giải trí.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Bù lại, bảng giá của Dân Trí có cấu trúc riêng dễ gây nhầm lẫn: cùng là bài tiểu mục nhưng chia thành nhóm 1 và nhóm 2 với hai mức giá khác nhau, còn link trong bài lại tính phí bổ sung thay vì gộp sẵn. Hiểu đúng các khác biệt này trước khi đặt sẽ giúp bạn không trả thừa tiền cho thứ mình không cần.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Dân Trí có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thế mạnh lớn nhất của Dân Trí nằm ở tính đại chúng: báo phủ gần như đủ các mảng đời sống - kinh tế, bất động sản, y tế, giáo dục, du lịch, công nghệ, ô tô - xe máy, thể thao, làm đẹp. Về mặt đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền dantri.com.vn đạt <strong>DR 85</strong> - thuộc nhóm chỉ số uy tín tên miền cao nhất trong các website tiếng Việt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Với doanh nghiệp, điều này quy ra ba giá trị cụ thể. Một, <strong>độ tin cậy đại chúng</strong>: bài PR đứng trên nền một tờ báo chính thống mà độc giả mọi lứa tuổi đều biết, nên thông điệp được tiếp nhận ít hoài nghi hơn quảng cáo trả phí. Hai, <strong>kiểm soát kết quả tìm kiếm thương hiệu</strong>: bài trên Dân Trí thường xếp hạng cao khi khách gõ tên công ty, đẩy các kết quả không kiểm soát xuống dưới. Ba, <strong>tín hiệu cho AI</strong>: ChatGPT hay Google AI Overview ưu tiên trích nguồn báo lớn, nên hiện diện trên tên miền DR 85 làm tăng khả năng thương hiệu được nhắc đến trong câu trả lời của AI.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="dantri.com.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên báo Dân Trí</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Theo báo giá hiện tại, bài PR chuẩn trên Dân Trí cần đáp ứng: <strong>dưới 1.000 từ và dưới 3 ảnh</strong>. Bản thảo do doanh nghiệp cung cấp sẽ được toà soạn biên tập lại theo văn phong báo chí, nên bài càng sát chuẩn ngay từ đầu thì vòng duyệt càng ngắn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Điểm riêng của Dân Trí mà nhiều người đặt lần đầu không biết: <strong>link trong bài không gộp sẵn vào giá bài mà mua bổ sung</strong> - 500.000 đồng mỗi link, hoặc 1 triệu đồng cho gói 3 link. Cấu trúc này có lợi cho người mua: bài thuần branding không cần link thì không trả tiền link, bài phục vụ cả SEO thì chủ động chọn số link cần gắn. Thuộc tính link (dofollow hay nofollow) theo chính sách toà soạn từng thời điểm, được DigicomVN xác nhận khi báo giá; nếu mục tiêu thuần tuý là backlink dofollow, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> hoặc textlink tối ưu chi phí hơn nhiều so với PR báo lớn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo Dân Trí qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Mọi đơn booking Dân Trí tại DigicomVN đi qua 5 bước chuẩn, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn vị trí:</strong> xác định mục tiêu (hồ sơ uy tín, hỗ trợ bán hàng, độ phủ sự kiện) để chọn giữa tiểu mục nhóm 1, nhóm 2 hay vị trí trang chủ, kèm số link cần mua bổ sung.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá tại thời điểm đặt, ký hợp đồng, xuất hoá đơn VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn gửi bài sẵn hoặc DigicomVN viết bài PR đúng quy cách dưới 1.000 từ, dưới 3 ảnh và đúng tôn chỉ của Dân Trí, gửi bạn duyệt trước khi chuyển toà soạn.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi biên tập, điều chỉnh nội dung nếu toà soạn yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm gợi ý tận dụng bài (mục "Báo chí nói về chúng tôi" trên website, trích dẫn trong hồ sơ năng lực).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Vì Dân Trí là báo đại chúng phủ nhiều mảng đời sống, tiêu chí biên tập nghiêng về tính xác thực và lợi ích cho số đông người đọc. Các lỗi khiến bài bị trả về nhiều nhất: cam kết tuyệt đối không kèm căn cứ ("hiệu quả 100%", "rẻ nhất Việt Nam"); sản phẩm y tế, thực phẩm chức năng, tài chính thiếu giấy phép; nội dung so sánh hạ thấp đối thủ; thông tin pháp lý không khớp đăng ký kinh doanh. Chuẩn bị sẵn giấy phép kinh doanh cùng chứng từ cho mọi con số trong bài là cách rút ngắn vòng duyệt hiệu quả nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Về cách viết, bài đi nhanh trên Dân Trí thường kể được một câu chuyện mà độc giả phổ thông thấy liên quan đến mình: giải quyết một nỗi lo thường gặp, đưa dữ liệu dễ hiểu, có tình huống thật. Một trang giới thiệu công ty "đội lốt" tin bài sẽ khó qua biên tập hơn nhiều so với bài trả lời đúng câu hỏi người đọc đang có - và bài như vậy cũng giữ chân độc giả lâu hơn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo Dân Trí</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Đăng 1 bài PR trên Dân Trí hết bao nhiêu tiền?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tuỳ vị trí. Bài PR tiểu mục (nhóm 1 hoặc nhóm 2) có mức giá doanh nghiệp SME tiếp cận được; vị trí Trang chủ - Link Top 1 cao hơn khoảng tám lần. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN, cập nhật thường xuyên; mức cuối cùng xác nhận tại thời điểm đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Tiểu mục nhóm 1 và nhóm 2 khác nhau thế nào?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Khác ở chuyên mục đăng bài, không khác ở quy cách. Nhóm 1 gồm các chuyên mục có lượng đọc cao hơn nên giá nhỉnh hơn; nhóm 2 là các chuyên mục còn lại. Cả hai nhóm đều áp quy cách bài dưới 1.000 từ, dưới 3 ảnh. DigicomVN sẽ xác nhận chuyên mục bạn nhắm tới thuộc nhóm nào khi tư vấn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài PR trên Dân Trí tính phí ra sao?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Link mua bổ sung ngoài giá bài: 500.000 đồng mỗi link, hoặc 1 triệu đồng cho 3 link. Thuộc tính dofollow hay nofollow theo chính sách toà soạn tại thời điểm đăng và được xác nhận khi báo giá. Nếu bạn cần backlink dofollow là mục tiêu chính, guest post hoặc textlink là lựa chọn tối ưu chi phí hơn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài lên báo?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt, tuỳ chuyên mục và lịch biên tập. Bài đúng quy cách ngay từ đầu - dưới 1.000 từ, dưới 3 ảnh, không cam kết tuyệt đối, đủ giấy tờ chứng minh - sẽ đi nhanh nhất.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có hợp đồng và hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking Dân Trí. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo Dân Trí</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Dân Trí phủ rộng bình dân, mạnh về giáo dục, việc làm, nhân ái và bất động sản - phù hợp bất động sản, giáo dục, sản phẩm tiêu dùng đại chúng. Nếu chưa chắc Dân Trí có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo Dân Trí là lựa chọn hợp lý khi bạn cần uy tín trên một tờ báo đại chúng mà gần như mọi nhóm khách hàng đều biết: bài tiểu mục cho nhu cầu hiện diện thường xuyên với chi phí vừa phải, vị trí trang chủ cho chiến dịch cần độ phủ bùng nổ. Nếu chưa chắc Dân Trí có phải đầu báo phù hợp nhất với ngành hàng của mình, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu mục tiêu của bạn với hơn 200 đầu báo đang hợp tác và gửi phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+

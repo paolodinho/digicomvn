@@ -1,0 +1,181 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Báo giá book báo Đầu tư: chi phí đăng bài PR tại mục Thông tin doanh nghiệp và cách lên bài</h1>
+<!-- /wp:heading -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bảng giá book báo Đầu tư theo vị trí đăng</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bảng dưới đây lấy trực tiếp từ hệ thống giá của DigicomVN và được cập nhật thường xuyên theo báo giá mới nhất. Giá chưa gồm VAT và là giá tham khảo - mức chính xác được xác nhận tại thời điểm đặt lịch đăng.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_bang_gia bao="Báo Đầu Tư" domain="baodautu.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:paragraph -->
+<p>Vị trí "TT doanh nghiệp" trong bảng là viết tắt của <strong>Thông tin doanh nghiệp</strong> - khu vực Báo Đầu tư dành riêng cho tin bài do doanh nghiệp cung cấp: công bố dự án, kết quả kinh doanh, hợp tác chiến lược, ra mắt sản phẩm dịch vụ. Bài trong khu vực này được phân định với tin bài toà soạn tự sản xuất, nhưng vẫn nằm trong hệ thống chuyên mục và được Google lập chỉ mục bình thường - vẫn xuất hiện khi khách hàng, đối tác tìm tên doanh nghiệp của bạn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":2816,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://digicomvn.com/wp-content/uploads/2026/07/baodautu-vt-ttdn.png" alt="Minh hoạ vị trí Thông tin doanh nghiệp baodautu.vn cho bài PR" class="wp-image-2816"/><figcaption class="wp-element-caption">Toàn cảnh mục Thông tin doanh nghiệp baodautu.vn, chụp thực tế 18/07/2026. TT doanh nghiệp: 3.900.000đ (giá tham khảo tại thời điểm đăng bài, xem giá mới nhất trong bảng phía trên).</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>So với mặt bằng các báo kinh tế lớn, đây là mức chi phí thuộc nhóm dễ tiếp cận - lựa chọn hợp lý cho doanh nghiệp SME muốn có mặt trên báo kinh tế uy tín mà chưa đủ ngân sách cho vị trí trang chủ báo lớn. Lưu ý riêng của báo này: <strong>link gắn trong bài tính phí riêng theo từng link</strong>, không gộp sẵn trong giá bài như một số báo khác. Bạn có thể đối chiếu chi phí với các đầu báo kinh tế khác trong <a href="https://digicomvn.com/bang-gia/">bảng giá booking báo PR đầy đủ của DigicomVN</a> trước khi quyết định.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Book báo Đầu tư là hình thức đặt đăng bài PR trên baodautu.vn - tờ báo điện tử chuyên về kinh tế, đầu tư và hoạt động doanh nghiệp. Bài PR được bố trí tại khu vực "Thông tin doanh nghiệp" với mức giá thuộc nhóm dễ tiếp cận trong các báo kinh tế lớn; link gắn kèm tính phí riêng. Bài viết cung cấp bảng giá cập nhật trực tiếp, quy cách bài và lưu ý đặc thù khi làm PR trên báo kinh tế.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary">
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><strong>Book báo Đầu tư</strong> (baodautu.vn) hiện triển khai qua vị trí "Thông tin doanh nghiệp" - khu vực dành riêng cho tin bài do doanh nghiệp cung cấp, bảng giá cập nhật trong bài.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Quy cách chuẩn một bài PR trên Báo Đầu tư: dưới 1.000 từ, dưới 3 ảnh; link gắn thêm tính phí riêng theo từng link, dạng nofollow.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Tên miền baodautu.vn đạt <strong>DR 79</strong> theo dữ liệu Ahrefs mà DigicomVN theo dõi - thuộc nhóm báo kinh tế có chỉ số uy tín tên miền cao.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Phù hợp nhất với doanh nghiệp cần hồ sơ uy tín trước nhà đầu tư, ngân hàng và đối tác B2B - đặc biệt các ngành tài chính, bất động sản, xây dựng, logistics.</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:paragraph -->
+<p>Trong hơn 10 năm làm PR báo chí và SEO, tôi thấy Báo Đầu tư ít khi là cái tên đầu tiên doanh nghiệp nghĩ đến - nhưng thường là cái tên được giữ lại sau khi cân nhắc kỹ. Lý do: độc giả của báo không phải công chúng đại trà mà là giới đầu tư, lãnh đạo doanh nghiệp và ngân hàng. Với doanh nghiệp cần chứng minh năng lực trước đối tác góp vốn hoặc hồ sơ vay, một bài trên baodautu.vn có sức nặng khác hẳn bài trên báo giải trí dù lượng đọc thấp hơn nhiều lần.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Đổi lại, viết bài cho báo kinh tế đòi hỏi chất liệu khác: số liệu chặt, thông tin pháp lý khớp, giọng văn khách quan. Phần dưới đây tổng hợp bảng giá, quy cách và cách chuẩn bị nội dung để bài được duyệt thuận lợi.</p>
+<!-- /wp:paragraph -->
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Báo Đầu tư có gì đáng giá cho một bài PR?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Báo Đầu tư là tờ báo chuyên sâu về kinh tế - đầu tư - doanh nghiệp, với các mảng trọng tâm gồm tài chính, bất động sản, xây dựng, hạ tầng và logistics. Ở góc độ đo lường, dữ liệu Ahrefs mà DigicomVN theo dõi ghi nhận tên miền baodautu.vn đạt <strong>DR 79</strong> - mức chỉ số uy tín tên miền cao trong nhóm báo kinh tế tiếng Việt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Giá trị của một bài PR trên báo này nằm ở chất lượng tiếp cận thay vì số lượng. Thứ nhất là <strong>uy tín trước giới ra quyết định</strong>: nhà đầu tư, ngân hàng và phòng mua hàng của doanh nghiệp lớn là nhóm đọc báo kinh tế thường xuyên. Thứ hai là <strong>hồ sơ thẩm định</strong>: khi đối tác hoặc tổ chức tín dụng tìm tên doanh nghiệp của bạn, một bài trên baodautu.vn trong trang kết quả tìm kiếm là tín hiệu xác thực mạnh. Thứ ba là <strong>nguồn trích dẫn cho AI</strong>: ChatGPT hay Google AI Overview ưu tiên dẫn nguồn báo chuyên ngành uy tín khi trả lời câu hỏi kinh tế - doanh nghiệp, nên hiện diện trên baodautu.vn tăng khả năng thương hiệu được nhắc tới trong câu trả lời AI.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[dgc_dr_chart bao="baodautu.vn"]
+<!-- /wp:shortcode -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy cách bài PR trên Báo Đầu tư</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR chuẩn trên Báo Đầu tư theo báo giá hiện tại cần đáp ứng: <strong>dưới 1.000 từ, dưới 3 ảnh</strong>. Link không nằm sẵn trong giá bài - mỗi link gắn thêm tính phí riêng và ở dạng <strong>nofollow</strong>. Cách tính này minh bạch cho người đặt: làm branding thuần tuý có thể bỏ hẳn link để tối ưu chi phí, cần dẫn độc giả về website thì chủ động chọn số link.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cần nói thẳng về link nofollow: nó không truyền sức mạnh SEO trực tiếp như dofollow, nhưng với một bài trên báo kinh tế DR 79, giá trị nằm ở chỗ khác - truy cập giới thiệu từ độc giả chất lượng cao, tín hiệu thực thể khi Google đánh giá độ tin cậy doanh nghiệp, và bằng chứng truyền thông cho hồ sơ năng lực. Nếu mục tiêu thuần tuý là backlink dofollow, hình thức <a href="https://digicomvn.com/guest-post/">guest post trên site đúng chủ đề</a> hoặc textlink hợp lý hơn về chi phí; PR báo kinh tế nên được tính như khoản đầu tư uy tín trước đối tác và nhà đầu tư.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quy trình book báo Đầu tư qua DigicomVN</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quy trình chuẩn DigicomVN áp dụng cho mọi đơn booking Báo Đầu tư gồm 5 bước, thời gian lên bài thường 2-7 ngày làm việc sau khi nội dung được duyệt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item --><li><strong>Tư vấn định dạng bài:</strong> xác định mục tiêu (gọi vốn, hồ sơ vay, công bố dự án, ra mắt dịch vụ B2B) để chọn góc viết và quyết định có gắn link hay không.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Báo giá và xác nhận:</strong> chốt giá bài cùng phí link (nếu có) tại thời điểm đặt, ký hợp đồng, xuất VAT đầy đủ.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Chuẩn bị nội dung:</strong> bạn cung cấp bài sẵn hoặc DigicomVN viết bài PR đúng quy cách dưới 1.000 từ, dưới 3 ảnh theo văn phong báo kinh tế, gửi bạn duyệt trước.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Gửi duyệt và lên bài:</strong> theo dõi phản hồi từ toà soạn, điều chỉnh số liệu hoặc câu chữ nếu được yêu cầu.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Bàn giao:</strong> gửi link bài đã đăng để đối chiếu, kèm gợi ý tận dụng bài (đưa vào hồ sơ năng lực, mục "Báo chí nói về chúng tôi", tài liệu gửi nhà đầu tư...).</li><!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý nội dung để bài được duyệt nhanh</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Báo kinh tế duyệt số liệu chặt hơn hẳn báo tổng hợp - điểm nhiều doanh nghiệp không lường trước. Các con số về doanh thu, quy mô dự án, tổng mức đầu tư hay thị phần cần tài liệu chứng minh kèm theo: báo cáo tài chính, giấy phép dự án, văn bản hợp tác. Bài chứa cam kết kiểu "lợi nhuận chắc chắn", "sinh lời cam kết" - nhất là mảng bất động sản, tài chính - gần như chắc chắn bị trả về.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ngược lại, dạng bài đi nhanh nhất là bài có cấu trúc như một tin kinh tế thực thụ: sự kiện cụ thể (khởi công, ký kết, công bố kết quả), số liệu dẫn nguồn rõ, phát ngôn của lãnh đạo có chức danh đầy đủ. Với độc giả là giới đầu tư và đối tác B2B, chính dạng bài "khô" này lại tạo niềm tin - bài viết quá quảng cáo trên báo kinh tế phản tác dụng với đúng nhóm người bạn muốn thuyết phục.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp khi book báo Đầu tư</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Giá đăng 1 bài PR trên Báo Đầu tư là bao nhiêu?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bài PR đăng tại vị trí Thông tin doanh nghiệp của baodautu.vn có mức giá thuộc nhóm dễ tiếp cận trong các báo kinh tế lớn; link gắn thêm tính phí riêng theo từng link. Bảng giá trong bài lấy trực tiếp từ hệ thống của DigicomVN và cập nhật thường xuyên; mức chính xác cuối cùng được xác nhận tại thời điểm đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Vị trí "Thông tin doanh nghiệp" là gì, có khác bài báo thường không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Đây là khu vực Báo Đầu tư dành riêng cho tin bài do doanh nghiệp cung cấp nội dung, phân định với tin bài toà soạn tự sản xuất. Bài vẫn nằm trong hệ thống chuyên mục, được Google lập chỉ mục bình thường và xuất hiện khi người dùng tìm tên doanh nghiệp - đủ phục vụ mục tiêu hồ sơ uy tín và tìm kiếm thương hiệu.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Link trong bài là dofollow hay nofollow?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Link gắn trong bài PR trên Báo Đầu tư ở dạng nofollow và tính phí riêng theo từng link, không gộp trong giá bài. Giá trị chính là truy cập giới thiệu từ độc giả kinh tế và tín hiệu uy tín thực thể, không phải truyền sức mạnh SEO trực tiếp. Cần dofollow, bạn nên kết hợp guest post hoặc textlink.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Mất bao lâu để bài được đăng trên baodautu.vn?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Thông thường 2-7 ngày làm việc sau khi nội dung được duyệt. Bài chuẩn quy cách ngay từ đầu (dưới 1.000 từ, dưới 3 ảnh, số liệu có tài liệu chứng minh) sẽ đi nhanh nhất; bài mảng tài chính, bất động sản nên chuẩn bị sẵn giấy tờ pháp lý liên quan.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Có xuất hoá đơn VAT không?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Có. DigicomVN ký hợp đồng và xuất hoá đơn VAT đầy đủ cho mọi đơn booking. Giá niêm yết trong bảng là giá chưa gồm VAT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lĩnh vực phù hợp khi book báo Báo Đầu Tư</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Báo Đầu Tư chuyên đầu tư, tài chính, bất động sản và chính sách doanh nghiệp - phù hợp B2B, dự án đầu tư, bất động sản, tài chính. Nếu chưa chắc Báo Đầu Tư có khớp ngành hàng của mình, đọc trước <a href="/booking-bao-la-gi/">tổng quan booking báo và cách chọn đầu báo theo mục tiêu</a> để đối chiếu trước khi đặt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Kết luận</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Book báo Đầu tư là lựa chọn hợp lý khi đối tượng bạn cần thuyết phục là nhà đầu tư, ngân hàng và đối tác B2B thay vì công chúng đại trà: chi phí thuộc nhóm dễ tiếp cận trong các báo kinh tế, tên miền DR 79 đủ sức nặng cho hồ sơ thẩm định. Nếu bạn chưa chắc đây là kênh tối ưu cho mục tiêu của mình, đội ngũ <a href="https://digicomvn.com/booking-bao-pr/">dịch vụ booking báo &amp; PR của DigicomVN</a> sẽ đối chiếu nhu cầu với hơn 200 đầu báo đang hợp tác và đề xuất phương án kèm báo giá trong ngày. Gọi 0988 769 317 hoặc <a href="https://digicomvn.com/dat-bai/">gửi yêu cầu đặt bài</a> để bắt đầu.</p>
+<!-- /wp:paragraph -->
+
+
+
