@@ -3,6 +3,27 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-18 (Media Việt Nam - đã đẩy LIVE, Hiếu duyệt)
+- Backup DB live trước khi ghi: `~/backups/2026-07-18/db-before-mediavn-import.sql` (host).
+- Đối chiếu tay 417 dòng Media Việt Nam với 570 post live hiện có (không tin máy chọn giá rẻ
+  nhất tự động, vì nhiều đầu báo Media VN ghi title kèm ghi chú "(BÁO MỚI VỀ)", "- Không nhận
+  bài", "Tăng giá ngày..." làm domain không khớp tự động với bản sạch đã có trên live -> soát
+  tay từng dòng để không tạo trùng lặp):
+  - **5 dòng SỬA GIÁ** (đầu báo đã có, Media VN rẻ hơn): Cafebiz.vn Trang chủ 10,5tr->8,76tr,
+    Laodong.vn Thông tin doanh nghiệp 6tr->5,88tr, huengaynay.vn 1,8tr->1,56tr,
+    vietnamtourism.gov.vn 10tr->8,34tr, vietstock.vn 1,999tr->1,776tr.
+  - **10 dòng LOẠI** (Vneconomy "Không nhận bài", Afamily/Eva/24h/baonghean/Thethaovanhoa/
+    baocaobang/truyenhinhnghean/Baotayninh "BÁO MỚI VỀ"...): đều là đầu báo ĐÃ có trên live,
+    giá live hiện tại đã rẻ hơn hoặc bằng Media VN -> giữ nguyên, không đăng trùng.
+  - **37 dòng THẬT SỰ MỚI** đã tạo: 36 dòng textlink theo site (baodongthap.vn, phunumoi.net.vn,
+    kinhtemoitruong.vn, doanhnghiepkinhtexanh.vn - mỗi site 9 mức giá: 3 loại link x 3 thời hạn)
+    + 1 dòng guest-post nhahangbachkim.com.vn (720k/1 năm - khác domain .com đã có sẵn).
+- Đã ghi live qua `import-wp.php` (dry-run khớp trước khi ghi thật): dgc_gia publish 570 -> 607.
+  Purge cache LiteSpeed. Verify curl /bang-gia/: baodongthap.vn, nhahangbachkim, vietstock đều lên.
+- KHÔNG áp 68 dòng "tăng giá +20%" mà `cap-nhat-gia.py` phát hiện cùng lúc (elle.vn, vietnamfinance...) -
+  đây là lỗi thiếu markup CŨ từ trước (không liên quan Media VN), cần Hiếu xác nhận riêng trước khi
+  sửa hàng loạt giá đang bán (xem mục cảnh báo cuối phiên).
+
 ## 2026-07-18 (routine tuần digicom-gia-doi-tac-tuan - đã đẩy LIVE)
 - Quét 6 tab SEODO chưa tích hợp (gviz CSV công khai): booking PR (gid 600512532), báo tỉnh
   (71216803), guest post (604318967), bài PR (1903168453), textlink gói (570329285), toplist
