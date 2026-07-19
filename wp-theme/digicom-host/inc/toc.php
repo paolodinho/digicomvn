@@ -68,9 +68,20 @@ function dgc_toc_process( $content ) {
 	// Uu tien chen sau khoi "Tom tat noi dung chinh" (div class co "summary") neu bai co khoi nay,
 	// vi khoi nay luon dat truoc H2 dau tien. Khong co thi chen ngay sau H1 (fallback).
 	$insert_at = null;
-	if ( preg_match( '/<div\b[^>]*\bclass="[^"]*\bsummary\b[^"]*"[^>]*>.*?<\/div>/is', $content, $sm, PREG_OFFSET_CAPTURE ) ) {
-		$insert_at = $sm[0][1] + strlen( $sm[0][0] );
-	} elseif ( preg_match( '/<h1\b[^>]*>.*?<\/h1>/is', $content, $h1m, PREG_OFFSET_CAPTURE ) ) {
+	if ( preg_match( '/<div\b[^>]*\bclass="[^"]*\bsummary\b[^"]*"[^>]*>/i', $content, $sm, PREG_OFFSET_CAPTURE ) ) {
+		// Khoi summary co the co div long ben trong (vd wp-block-group__inner-container) - phai
+		// dem cap div de tim dung div dong NGOAI CUNG, khong dung ".*?<\/div>" (chi bat div con dau tien).
+		$pos   = $sm[0][1] + strlen( $sm[0][0] );
+		$depth = 1;
+		while ( $depth > 0 && preg_match( '/<div\b[^>]*>|<\/div>/i', $content, $tm, PREG_OFFSET_CAPTURE, $pos ) ) {
+			$pos = $tm[0][1] + strlen( $tm[0][0] );
+			$depth += ( stripos( $tm[0][0], '</div>' ) === 0 ) ? -1 : 1;
+		}
+		if ( 0 === $depth ) {
+			$insert_at = $pos;
+		}
+	}
+	if ( null === $insert_at && preg_match( '/<h1\b[^>]*>.*?<\/h1>/is', $content, $h1m, PREG_OFFSET_CAPTURE ) ) {
 		$insert_at = $h1m[0][1] + strlen( $h1m[0][0] );
 	}
 

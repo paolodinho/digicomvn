@@ -1529,3 +1529,17 @@ dinh moi truong hop - doi sang scroll listener + getBoundingClientRect() truc ti
 la da cuon qua het hop), don gian va chac chan hon. Da xoa dong `fab.classList.add('show')`
 thua trong nhanh else (fallback trinh duyet cu) vi logic moi khong con phu thuoc IO cho phan fab.
 Deploy DGC_VER 1.9.4 len live, verify qua curl (CSS/JS moi da co tren live, ver dung 1.9.4).
+| 2026-07-19 | Vitri-images audit + batch 13 | Xoa 77 anh gan sai vi tri (domain chi co gia Muc-phu-hop nhung bi dong khung trang chu). Them 6 domain qua Wayback Machine (brandsvietnam/advertisingvietnam/dep/batdongsan/nguoiquansat/tapchitoaan). 2 domain baocantho/baogialai van loi (Wayback treo lien tuc). Live: 90 domain co anh dung, 86 domain skip co ly do, 18 issue con lai. |
+
+## 2026-07-19 - Fix mục lục: chèn lọt vào TRONG khối tóm tắt (bug div lồng)
+Nguyen nhan that su cua loi "muc luc dinh voi tom tat, mau xanh keo dai ra khi mo": khoi tom tat
+Gutenberg thuc te la 2 lop div long nhau (`<div class="wp-block-group summary"><div
+class="wp-block-group__inner-container">...</div></div>`), nhung regex cu ".*?<\/div>" (non-greedy)
+chi bat toi div DONG DAU TIEN - la div con, khong phai div ngoai cung. Muc luc bi chen LOT VAO
+TRONG khoi tom tat (thanh con cua no) thay vi sau no -> border trai xanh cua tom tat bao quanh
+luon ca hop muc luc, tu keo dai khi mo rong. Sua dgc_toc_process(): thay bang thuat toan dem cap
+the div (depth balancing) de tim dung vi tri dong the div NGOAI CUNG. Test tren Local voi bai mo
+phong dung cau truc 2 lop div long, verify: 2 </div></div> dong het roi moi den <nav id="postToc">.
+Deploy DGC_VER 1.9.5 len live, verify lai qua curl tren bai that /thong-cao-bao-chi-xu-ly-khung-hoang/.
+| 2026-07-19 | Fix nut V mat toan bo | Phat hien nguyen nhan that: dgc_gia_row_html() trong inc/cpt-gia.php CHUA BAO GIO duoc noi voi vitri-images.php (thieu code render button + vitri-detail). Cache cu che giau loi nay, purge cache lam lo ra. Da them code wire vao cpt-gia.php (backup truoc khi sua), verify 128 nut V hien dung tren live, dong bo voi 90 domain co anh that. |
+| 2026-07-19 | TAT nut V toan site (kill-switch) | Hieu phat hien vtcnews.vn (va co the nhieu domain khac lam TRUOC phien nay) co caption tu mau thuan (ghi 'trang chu' nhung chot gia 'trang chuyen muc'). Da them kill-switch trong dgc_gia_vitri_domain_of() (inc/vitri-images.php) tra ve rong ngay lap tuc -> AN TOAN BO nut V + dong huong dan tren /bang-gia/ va moi trang dich vu. Verify: 0 vitri-toggle, 0 vitri-hint tren live. Se ra soat tung domain trong 90 domain (bao gom 84 domain cu + 6 domain moi lam) truoc khi bat lai.
