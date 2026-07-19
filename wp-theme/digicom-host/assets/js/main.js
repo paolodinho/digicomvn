@@ -99,6 +99,39 @@
 		var resetBtn   = bar.querySelector('.sel-bar-reset');
 		var ctaBaseHref = cta ? cta.getAttribute('href') : '';
 
+		// Nho bao da tick qua localStorage (Hieu 2026-07-18): khach tick VNE nhung chua gui
+		// yeu cau -> lan sau quay lai (trang nay hoac trang khac co cung bang gia) van thay
+		// tick san. Khoa theo tr[data-key] (on dinh, giong nhau moi noi bao do xuat hien).
+		var PICK_STORE_KEY = 'dgc_picked_bao';
+		function loadPickStore() {
+			try { return JSON.parse(localStorage.getItem(PICK_STORE_KEY) || '[]'); } catch (err) { return []; }
+		}
+		function savePickStore(keys) {
+			try { localStorage.setItem(PICK_STORE_KEY, JSON.stringify(keys)); } catch (err) { /* noop */ }
+		}
+		function persistPicks() {
+			var set = {};
+			loadPickStore().forEach(function (k) { set[k] = true; });
+			document.querySelectorAll('.row-check').forEach(function (cb) {
+				var tr = cb.closest('tr');
+				var key = tr ? tr.getAttribute('data-key') : '';
+				if (!key) return;
+				if (cb.checked) set[key] = true; else delete set[key];
+			});
+			savePickStore(Object.keys(set));
+		}
+		function restorePicks() {
+			var stored = loadPickStore();
+			if (!stored.length) return;
+			var set = {};
+			stored.forEach(function (k) { set[k] = true; });
+			document.querySelectorAll('.row-check').forEach(function (cb) {
+				var tr = cb.closest('tr');
+				var key = tr ? tr.getAttribute('data-key') : '';
+				if (key && set[key]) cb.checked = true;
+			});
+		}
+
 		// Bac chiet khau combo: [{min: so muc, pct: % giam}] - cau hinh o WP Admin (dgc_combo_tiers).
 		var tiers = [];
 		try { tiers = JSON.parse(bar.getAttribute('data-tiers') || '[]') || []; } catch (err) { tiers = []; }
@@ -167,6 +200,7 @@
 		}
 
 		function update() {
+			persistPicks();
 			var picked   = collect();
 			var subtotal = picked.reduce(function (s, p) { return s + p.price; }, 0);
 			var pct      = tierFor(picked.length);
@@ -264,6 +298,7 @@
 			}
 		});
 
+		restorePicks();
 		update();
 	})();
 
@@ -670,7 +705,8 @@ document.addEventListener('click', function (e) {
 			'<div class="intro-pop-mask" data-intro-close></div>' +
 			'<div class="intro-pop-card" role="dialog" aria-modal="true" tabindex="-1">' +
 			'<button type="button" class="intro-pop-x" data-intro-close aria-label="Đóng">&times;</button>' +
-			'<h3 class="intro-pop-title"></h3><div class="intro-pop-body"></div></div>';
+			'<h3 class="intro-pop-title"></h3><div class="intro-pop-body"></div>' +
+			'<div class="intro-pop-foot"><button type="button" class="btn btn-ghost btn-sm" data-intro-close>Đóng</button></div></div>';
 		document.body.appendChild(modal);
 		modal.querySelectorAll('[data-intro-close]').forEach(function (el) {
 			el.addEventListener('click', close);
@@ -698,8 +734,62 @@ document.addEventListener('click', function (e) {
 		e.preventDefault();
 		var box  = document.getElementById(btn.getAttribute('aria-controls'));
 		var row  = btn.closest('tr');
+		var title;
+		if (row) {
+			var name = row.querySelector('.row-name');
+			title = name ? name.textContent : 'Giới thiệu';
+		} else {
+			var label = btn.getAttribute('aria-label') || '';
+			title = label.replace(/^Giải thích thuật ngữ:\s*/, '') || 'Giải thích';
+		}
+		open(title, box ? box.innerHTML : '');
+	});
+})();
+
+/* Anh minh hoa VI TRI dang bai (Hieu 2026-07-18) -> mo POPUP anh, cung 1 kieu voi intro-pop
+   nhung modal rieng (.vitri-pop) vi noi dung la anh, khong phai list chu. Noi dung lay tu
+   .vitri-detail (render an) cua dong do. */
+(function () {
+	var modal = null;
+	function build() {
+		modal = document.createElement('div');
+		modal.className = 'vitri-pop';
+		modal.hidden = true;
+		modal.innerHTML =
+			'<div class="vitri-pop-mask" data-vitri-close></div>' +
+			'<div class="vitri-pop-card" role="dialog" aria-modal="true" tabindex="-1">' +
+			'<button type="button" class="vitri-pop-x" data-vitri-close aria-label="Đóng">&times;</button>' +
+			'<h3 class="vitri-pop-title">Ảnh minh hoạ vị trí đăng</h3><div class="vitri-pop-body"></div>' +
+			'<div class="vitri-pop-foot"><button type="button" class="btn btn-ghost btn-sm" data-vitri-close>Đóng</button></div></div>';
+		document.body.appendChild(modal);
+		modal.querySelectorAll('[data-vitri-close]').forEach(function (el) {
+			el.addEventListener('click', close);
+		});
+	}
+	function close() {
+		if (!modal) return;
+		modal.hidden = true;
+		document.body.style.overflow = '';
+	}
+	function onKey(e) { if (e.key === 'Escape') close(); }
+	function open(title, html) {
+		if (!modal) build();
+		modal.querySelector('.vitri-pop-title').textContent = title;
+		modal.querySelector('.vitri-pop-body').innerHTML = html;
+		modal.hidden = false;
+		document.body.style.overflow = 'hidden';
+		var card = modal.querySelector('.vitri-pop-card');
+		if (card) card.focus({ preventScroll: true });
+	}
+	document.addEventListener('keydown', onKey);
+	document.addEventListener('click', function (e) {
+		var btn = e.target.closest ? e.target.closest('.vitri-toggle') : null;
+		if (!btn) return;
+		e.preventDefault();
+		var box  = document.getElementById(btn.getAttribute('aria-controls'));
+		var row  = btn.closest('tr');
 		var name = row ? row.querySelector('.row-name') : null;
-		open(name ? name.textContent : 'Giới thiệu', box ? box.innerHTML : '');
+		open(name ? 'Vị trí đăng - ' + name.textContent : 'Ảnh minh hoạ vị trí đăng', box ? box.innerHTML : '');
 	});
 })();
 
@@ -876,13 +966,21 @@ document.addEventListener('click', function (e) {
 		a.addEventListener('click', closeSheet);
 	});
 
-	if ('IntersectionObserver' in window) {
-		new IntersectionObserver(function (entries) {
-			entries.forEach(function (e) {
-				fab.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0);
-			});
-		}, { threshold: 0 }).observe(inline);
+	// Nut noi: dung scroll listener truc tiep (khong qua IntersectionObserver) - chac chan hoat dong
+	// voi moi chieu cao hop TOC, kem ca truong hop hop dong lai (details khong con "open").
+	var ticking = false;
+	function updateFab() {
+		var r = inline.getBoundingClientRect();
+		fab.classList.toggle('show', r.bottom < 0);
+		ticking = false;
+	}
+	window.addEventListener('scroll', function () {
+		if (!ticking) { ticking = true; window.requestAnimationFrame(updateFab); }
+	}, { passive: true });
+	window.addEventListener('resize', updateFab);
+	updateFab();
 
+	if ('IntersectionObserver' in window) {
 		var links = document.querySelectorAll('[data-toc-link]');
 		var headings = [];
 		links.forEach(function (a) {

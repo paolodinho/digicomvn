@@ -42,7 +42,7 @@ tieudung.vn,tieudung.vn,booking-bao-pr,11400000,3444,done
 tinhte.vn,tinhte.vn,booking-bao-pr,10900000,1081,done
 apnews.com,apnews.com,backlink-quoc-te,10608000,2027,
 genk.vn,Genk.vn,booking-bao-pr,10100000,1040,done
-tcnhadep.com,tcnhadep.com,booking-bao-pr,10000000,3445,issue:ssl-cert-invalid
+tcnhadep.com,tcnhadep.com,booking-bao-pr,10000000,3445,issue:server-loi-cpanel-default-error-page-domain-hong
 phapluatnet.vn,phapluatnet.vn,booking-bao-pr,10000000,3446,issue:dns-not-found-domain-chet
 phapluatxahoi.vn,phapluatxahoi.vn,booking-bao-pr,10000000,3447,issue:domain-chet-timeout-redirect-kinhtedothi
 vietnamtourism.gov.vn,vietnamtourism.gov.vn,guest-post,10000000,1741,
@@ -170,7 +170,7 @@ thuonghieucongluan.com.vn,thuonghieucongluan.com.vn,mua-textlink,4444000,3511,do
 huengaynay.vn,huengaynay.vn,mua-textlink,4444000,3501,done
 doanhnghiephoinhap.vn,doanhnghiephoinhap.vn,mua-textlink,4444000,3499,done
 baogialai.com.vn,baogialai.com.vn,mua-textlink,4444000,3504,issue:timeout-retry-later
-baovanhoa.vn,baovanhoa.vn,mua-textlink,4444000,3512,issue:timeout-retry-later
+baovanhoa.vn,baovanhoa.vn,mua-textlink,4444000,3512,done
 batdongsan.com.vn,batdongsan.com.vn,booking-bao-pr,4400000,3473,issue:cloudflare-bot-block-khong-chup-duoc
 tienphong.vn,Tienphong.vn,booking-bao-pr,4400000,1032,done
 giadinh.suckhoedoisong.vn,giadinh.suckhoedoisong.vn,booking-bao-pr,4150000,3474,done
@@ -266,7 +266,7 @@ baodienbienphu.com.vn,baodienbienphu.com.vn,booking-bao-pr,1700000,3407,issue:ti
 hoinhap.vanhoavaphattrien.vn,hoinhap.vanhoavaphattrien.vn,booking-bao-pr,1700000,1668,done
 cafedautu.vn,cafedautu.vn,booking-bao-pr,1700000,1669,done
 bau.vn,bau.vn,booking-bao-pr,1700000,1671,issue:lazy-load-chua-tai-kip-can-chup-lai
-suckhoevacongdong.vn,suckhoevacongdong.vn,booking-bao-pr,1650000,3378,issue:ssl-cert-invalid
+suckhoevacongdong.vn,suckhoevacongdong.vn,booking-bao-pr,1650000,3378,issue:domain-parked-chua-dung-chua-mua-hosting-that
 giadinhvaphapluat.vn,giadinhvaphapluat.vn,booking-bao-pr,1650000,1674,done
 tuoitrexahoi.vn,tuoitrexahoi.vn,booking-bao-pr,1600000,3379,done
 nongthonvaphattrien.vn,nongthonvaphattrien.vn,booking-bao-pr,1600000,3380,done
@@ -321,7 +321,7 @@ hanoi.inhat.vn,hanoi.inhat.vn,dich-vu-toplist,1200000,2127,
 hcm.inhat.vn,hcm.inhat.vn,dich-vu-toplist,1200000,2128,
 baovinhlong.com.vn,baovinhlong.com.vn,booking-bao-pr,1160000,3422,done
 baodienbienphu.vn,baodienbienphu.vn,booking-bao-pr,1120000,3423,done
-angiangtv.vn,angiangtv.vn,booking-bao-pr,1120000,3424,issue:timeout-retry-later
+angiangtv.vn,angiangtv.vn,booking-bao-pr,1120000,3424,done
 baohungyen.vn,baohungyen.vn,booking-bao-pr,1120000,3425,done
 daklak24h.com.vn,daklak24h.com.vn,booking-bao-pr,1100000,1685,done
 kinhtethoidai.net,kinhtethoidai.net,booking-bao-pr,1100000,1686,done

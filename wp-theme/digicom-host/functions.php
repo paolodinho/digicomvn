@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '1.8.7' );
+define( 'DGC_VER', '1.9.3' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -59,10 +59,12 @@ add_action( 'wp_enqueue_scripts', function () {
  * ------------------------------------------------------------------------- */
 require_once get_template_directory() . '/inc/options.php';
 require_once get_template_directory() . '/inc/cpt-gia.php';
+require_once get_template_directory() . '/inc/vitri-images.php';
 require_once get_template_directory() . '/inc/dr-chart.php';
 require_once get_template_directory() . '/inc/widgets-blog.php';
 require_once get_template_directory() . '/inc/case-study.php';
 require_once get_template_directory() . '/inc/ai-chat.php';
+require_once get_template_directory() . '/inc/glossary.php';
 require_once get_template_directory() . '/inc/toc.php';
 
 /**

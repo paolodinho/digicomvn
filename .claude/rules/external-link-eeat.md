@@ -55,6 +55,12 @@ Không dùng icon "i" để né việc phải link - nếu có nguồn xác tín
    (vẫn theo `content-professional.md`).
 3. `aria-label` mô tả rõ ("Giải thích thuật ngữ: <tên>") cho a11y; `title` dự phòng.
 4. Nếu về sau thuật ngữ đó CÓ nguồn ngoài xác tín -> nâng cấp thành external link, không giữ mãi icon "i".
+5. **KHÔNG bao giờ chèn shortcode/link vào bên trong thẻ heading (`<h1>-<h6>`)** - site có tính năng
+   mục lục tự động (`inc/toc.php`) đọc text heading để làm id neo + link mục lục; chèn shortcode vào
+   đó làm garble id và lộ chữ thô ra mục lục (sự cố thực tế 2026-07-19, xem PLAN.md). Nếu thuật ngữ
+   chỉ xuất hiện trong heading ở lần nhắc đầu, bỏ qua bài đó hoặc chờ lần nhắc tiếp theo trong đoạn văn.
+6. Bài nào chủ đề CHÍNH là định nghĩa thuật ngữ đó (tiêu đề dạng "X Là Gì?") -> KHÔNG tự gắn icon "i"
+   giải thích X trong chính bài đó (trùng lặp, cả bài đã là định nghĩa).
 
 ## Áp dụng
 

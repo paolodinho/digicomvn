@@ -92,12 +92,23 @@ Backup trước khi import: `~/Claude-Workspace/_backups/routines/<ngày>/bang-g
 
 `build_master.py` tự áp: `gia_ban_digicom = gia_ncc_km or gia_ncc_goc`.
 
-## MARKUP x1,20 cho NCC ngoài DanaSEO (chốt 2026-07-15 - GHI ĐÈ phần trên)
+## MARKUP: 3 NCC chính x1,03, NCC khác x1,20 (chốt 2026-07-19 - GHI ĐÈ phần trên)
 
-**Giá web = giá vốn NCC × 1,20 cho MỌI nhà cung cấp TRỪ DanaSEO và Media Việt Nam.** Cả 2 bên
-này giữ nguyên giá cuối (không markup) - danh sách ngoại lệ mở rộng 2026-07-18 (Hiếu: "riêng
-giá từ DanaSEO và Media Việt Nam thì giữ; còn các bên khác cứ nhân 1,2"). Lý do: đây là 2 nguồn
-gốc giá tốt nhất/đáng tin nhất, các nguồn khác cộng biên 20%.
+**Giá web = giá vốn × 1,03 cho 3 NCC chính (DanaSEO, Media Việt Nam, Fame Media), × 1,20 cho
+mọi NCC khác.** Trước đó 3 NCC chính giữ nguyên giá gốc (không markup) - Hiếu đổi 2026-07-19:
+"nhân thêm 1.03 cho chắc" (có biên lợi nhuận tối thiểu, vẫn rẻ hơn hẳn NCC khác x1,20).
+Áp ở `export-web.py` (`MARKUP_CHINH = 1.03`, `MARKUP = 1.20`, set `KHONG_MARKUP` giữ tên cũ
+nhưng giờ nghĩa là "nhóm markup nhẹ", không phải "không markup").
+
+### Mã NCC nội bộ (chốt 2026-07-19)
+
+Field `ma_ncc` (WP Admin, CPT Bảng giá) gắn mã số cho từng dòng để Hiếu tra nhanh nhà cung cấp
+mà không cần mở từng post: **1 = DanaSEO, 2 = Media Việt Nam, 3 = Fame Media, 9 = Khác/tham
+khảo**. Field này **CHỈ hiện trong WP Admin** (meta box "Chi tiết giá" + cột riêng trong danh
+sách Bảng giá) - front-end/khách hàng KHÔNG BAO GIỜ thấy (vẫn giữ nguyên tắc ẩn danh tính NCC).
+`export-web.py` tự gán mã theo `nha_cung_cap` (`NCC_MA` dict) khi xuất `gia-web.csv`;
+`import-wp.php` ghi mã này vào meta khi tạo dòng mới. Dòng đã publish trước 2026-07-19 (từ NCC
+khác 3 bên trên, hoặc trước khi có field) chưa có mã - cần đồng bộ lại nếu muốn khớp đầy đủ.
 
 - Markup áp ở `export-web.py` (`web_gia()`, set `KHONG_MARKUP = {"danaseo", "media viet nam"}`
   sau khi qua `fold()`), **cấp DÒNG, TRƯỚC khi chọn min giữa các NCC** -> 2 bên không markup và

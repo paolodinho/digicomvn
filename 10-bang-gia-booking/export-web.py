@@ -76,10 +76,15 @@ def is_soft(r):
     return ("dai gia ncc" in g) or ('gia "tu"' in g) or ("gia mem" in g) or ("gia tu" in g) \
         or ("gia tu" in v) or ("khoi diem" in v) or ("khoang gia chung" in v)
 
-MARKUP = 1.20  # Hieu 2026-07-15: NCC ngoai DanaSEO -> gia web = gia von x 1,20.
-# Hieu 2026-07-18: Media Viet Nam cung GIU NGUYEN gia (khong markup), nhu DanaSEO.
-# Hieu 2026-07-18 (batch 2): Fame Media them vao nhom KHONG markup.
+MARKUP = 1.20  # Hieu 2026-07-15: NCC ngoai 3 ben duoi -> gia web = gia von x 1,20.
+# Hieu 2026-07-19: 3 NCC nguon chinh (DanaSEO, Media Viet Nam, Fame Media) markup NHE x1,03
+# (truoc la giu nguyen 1.0) - "de chac" co bien loi nhuan toi thieu, van re hon han NCC khac.
+MARKUP_CHINH = 1.03
 KHONG_MARKUP = {"danaseo", "media viet nam", "fame media"}
+
+# Ma NCC noi bo (Hieu 2026-07-19: "danh dau de do phai tra lai") - CHI hien trong WP Admin
+# (cot rieng + field an), KHONG BAO GIO dua ra front-end/public (van AN danh tinh NCC voi khach).
+NCC_MA = {"danaseo": "1", "media viet nam": "2", "fame media": "3"}
 
 # Hieu 2026-07-18: TAM THOI CHI dung 3 NCC nay len web (danaseo, media viet nam, fame media).
 # Cac NCC khac VAN LUU trong bang-gia-master.csv (du lieu tham khao), nhung KHONG xuat ra
@@ -91,11 +96,10 @@ CHI_NCC = {"danaseo", "media viet nam", "fame media"}
 DICH_VU_NGOAI_LE_CHI_NCC = {"toplist", "backlink-quocte"}
 
 def web_gia(r):
-    """Gia hien thi len web tu 1 dong master: DanaSEO + Media Viet Nam giu nguyen; NCC khac x 1,20 (lam tron nghin)."""
+    """Gia hien thi len web tu 1 dong master: 3 NCC chinh x 1,03; NCC khac x 1,20 (lam tron nghin)."""
     g = int(r["gia_ban_digicom"])
-    if fold(r["nha_cung_cap"]) not in KHONG_MARKUP:
-        g = int(round(g * MARKUP / 1000) * 1000)
-    return g
+    he_so = MARKUP_CHINH if fold(r["nha_cung_cap"]) in KHONG_MARKUP else MARKUP
+    return int(round(g * he_so / 1000) * 1000)
 
 with open(SRC) as f:
     all_rows = [r for r in csv.DictReader(f) if r["gia_ban_digicom"]]
@@ -159,6 +163,7 @@ for key, g in groups.items():
         "so_ncc": len(g),                              # noi bo
         "gia_cao_nhat_thi_truong": gia_all[-1],        # noi bo - de biet bien do
         "ngay_cap_nhat": best["ngay_cap_nhat"],
+        "ma_ncc": NCC_MA.get(fold(best["nha_cung_cap"]), ""),  # noi bo - AN danh, chi Hieu tra
     })
 
 web.sort(key=lambda r: (r["dich_vu"], r["hang_muc"], -r["gia"]))

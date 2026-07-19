@@ -21,7 +21,10 @@ if ( ! is_array( $data ) || ! isset( $data['updates'], $data['new'] ) ) WP_CLI::
 $n_up = 0;
 foreach ( $data['updates'] as $u ) {
 	if ( get_post_type( $u['id'] ) !== 'dgc_gia' ) continue;
-	if ( ! $dry ) update_post_meta( $u['id'], 'gia_km', (string) $u['gia'] );
+	if ( ! $dry ) {
+		if ( isset( $u['gia'] ) ) update_post_meta( $u['id'], 'gia_km', (string) $u['gia'] );
+		if ( ! empty( $u['ma_ncc'] ) ) update_post_meta( $u['id'], 'ma_ncc', (string) $u['ma_ncc'] );
+	}
 	$n_up++;
 }
 
@@ -40,6 +43,7 @@ foreach ( $data['new'] as $r ) {
 		update_post_meta( $id, 'gia_km', (string) $r['gia'] );
 		update_post_meta( $id, 'so_link', $r['so_link'] );
 		update_post_meta( $id, 'yeu_cau', $r['yeu_cau'] );
+		if ( ! empty( $r['ma_ncc'] ) ) update_post_meta( $id, 'ma_ncc', (string) $r['ma_ncc'] );
 	}
 	$n_new++;
 }

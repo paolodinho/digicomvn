@@ -1481,3 +1481,39 @@ highlight muc dang doc) hien khi cuon qua hop dau bai - dat goc TRAI de khong da
 to-top ben phai. Test tren Local (digicom.local/backlink/, bai 11 H2) qua curl: 47 id sinh dung,
 khong loi PHP, HTML render du postToc/tocFab/tocSheet. Deploy DGC_VER 1.8.6 (dev, CHUA len live -
 can deploy theo rules/deploy.md khi Hieu duyet giao dien qua browser that.
+
+## 2026-07-19 - Fix mục lục TOC: gỡ mục lục cứng trùng, đúng vị trí sau H1
+Phát hiện bài "Backlink là gì?" (ID 235) đã có sẵn 1 khối mục lục viết tay (comment
+`<!-- Table of Contents -->` + div) nằm sau đoạn mở bài -> bị trùng với mục lục tự động mới
+(2 mục lục cùng lúc, gây rối). Thêm bước strip khối cũ này trong `dgc_toc_process()` trước khi
+sinh mục lục mới - chỉ còn đúng 1 mục lục, đặt ngay sau H1. Verify qua curl: dòng "Table of
+Contents" đã biến mất, postToc vẫn đúng vị trí dòng 180 (ngay sau h1 dòng 179). Deploy DGC_VER 1.8.8.
+| 2026-07-19 | Vitri-images batch 12 (retry 35 domain loi) | Retry 25 domain (timeout/SSL/lazy-load) bang Chrome headless timeout dai + ignore-cert-errors: chi 2 thanh cong (baovanhoa.vn, angiangtv.vn) - da dang. 23 domain con lai la loi that (site chet/parked/chan bot), khong sua duoc bang headless CLI - can Browser tool that (dang tam thoi unavailable) hoac Hieu tu kiem tra thu cong. Ledger: done 161/775, issue 33 (35-2), con lai 581. |
+
+## 2026-07-19 - Fix mục lục TOC: chèn sau khối tóm tắt (nếu bài có), truoc H2 dau
+Hieu bao ban live co them khoi "Tom tat noi dung chinh" (div class="summary", content-writer
+sinh ra) nam sau doan mo bai - muc luc phai xep DUOI khoi nay, TRUOC H2 dau tien, khong phai
+ngay sau H1 nua. Sua dgc_toc_process(): uu tien tim div class chua "summary", chen TOC ngay sau
+no; khong co khoi summary (bai cu kieu "Backlink la gi") thi fallback nhu cu (ngay sau H1). Test
+tren Local bang bai tao tam co ca H1 + summary + 3 H2 - dung y muon roi xoa bai test. Deploy
+DGC_VER 1.9.2 (dev, CHUA len live).
+
+## 2026-07-19 - Deploy mục lục (TOC) lên LIVE digicomvn.com
+Phat hien project dir (wp-theme/digicom-host) da LECH so voi live: thieu 2 file
+inc/vitri-images.php + inc/glossary.php va phan CSS/JS lien quan (popup vi tri dang bai, nho
+tick bao qua localStorage) - neu ghi de nguyen functions.php/main.css/main.js tu project se XOA
+mat cac tinh nang nay tren live. Xu ly: tai file that tu live lam GOC, chi CHEN them phan TOC
+(1 dong require + block CSS/JS moi, khong dung file nao khac) roi moi day len, khong ghi de
+nguyen file. Backup ban goc live tai
+~/Claude-Workspace/_backups/routines/2026-07-19/digicom-toc-deploy/ (functions.php.orig,
+main.css.orig, main.js.orig). Da purge cache + verify qua curl tren 2 bai that: /backlink/
+(khong co tom tat -> TOC ngay sau H1) va /thong-cao-bao-chi-xu-ly-khung-hoang/ (co tom tat ->
+TOC dung sau khoi tom tat, truoc H2 dau). Deploy DGC_VER 1.9.3.
+LUU Y CHO SESSION SAU: inc/cpt-gia.php cung dang lech (gia/nhom cap nhat truc tiep tren live qua
+routine gia). inc/vitri-images.php, inc/glossary.php CHUA co trong project dir - nen dong bo
+nguoc ve project 1 lan de tranh lap lai rui ro ghi de nham lan sau.
+
+## 2026-07-19 - Đồng bộ ngược project = live (đóng phần lệch đã phát hiện ở trên)
+Đã copy functions.php/main.css/main.js (bản live sau khi thêm TOC) + 2 file thiếu
+inc/vitri-images.php, inc/glossary.php về project dir - project giờ khớp live (trừ
+inc/cpt-gia.php vẫn lệch do routine giá cập nhật thẳng trên live, biết trước, chấp nhận được).

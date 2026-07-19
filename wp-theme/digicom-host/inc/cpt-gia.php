@@ -69,6 +69,26 @@ add_action( 'add_meta_boxes', function () {
 	add_meta_box( 'dgc_gia_details', 'Chi tiet gia', 'dgc_gia_meta_box_html', 'dgc_gia', 'normal', 'high' );
 } );
 
+/* Cot "Mã NCC" trong danh sach Bang gia (WP Admin) - de Hieu tra nha cung cap ma khong can
+ * mo tung dong. Chi hien o admin, khong lien quan front-end. */
+add_filter( 'manage_dgc_gia_posts_columns', function ( $cols ) {
+	$new = array();
+	foreach ( $cols as $k => $v ) {
+		$new[ $k ] = $v;
+		if ( $k === 'title' ) $new['ma_ncc'] = 'Mã NCC';
+	}
+	return $new;
+} );
+add_action( 'manage_dgc_gia_posts_custom_column', function ( $col, $post_id ) {
+	if ( $col !== 'ma_ncc' ) return;
+	$ma = get_post_meta( $post_id, 'ma_ncc', true );
+	echo $ma ? '<strong>' . esc_html( $ma ) . '</strong>' : '<span style="color:#aaa">-</span>';
+}, 10, 2 );
+add_filter( 'manage_edit-dgc_gia_sortable_columns', function ( $cols ) {
+	$cols['ma_ncc'] = 'ma_ncc';
+	return $cols;
+} );
+
 /**
  * Nhom nganh de loc trong bang gia Booking bao & PR.
  * Chia 2 khoi: "Loai hinh bao" (bao lon/tinh/truyen hinh) va "Linh vuc" (nganh noi dung).
@@ -128,8 +148,22 @@ function dgc_gia_nganh_tags( $meta_nganh ) {
 	return array_values( array_filter( array_map( 'trim', explode( ',', (string) $meta_nganh ) ), fn( $v ) => $v !== '' ) );
 }
 
+/** Ma NCC noi bo (Hieu 2026-07-19: tra cuu nhanh nha cung cap dung sau ma, khong lo lieu ten
+ *  that ra cong khai). CHI hien trong WP Admin (meta box + cot danh sach) - front-end KHONG
+ *  bao gio render field nay (cac template chi doc dung key can dung, xem dgc_get_gia()). */
+function dgc_ncc_ma_options() {
+	return array(
+		''  => '(chưa gắn)',
+		'1' => '1 - DanaSEO',
+		'2' => '2 - Media Việt Nam',
+		'3' => '3 - Fame Media',
+		'9' => '9 - Khác / tham khảo',
+	);
+}
+
 function dgc_gia_meta_fields() {
 	return array(
+		'ma_ncc'  => array( 'label' => 'Mã NCC (NỘI BỘ - không hiện công khai)', 'type' => 'select', 'options' => dgc_ncc_ma_options() ),
 		'vi_tri'  => array( 'label' => 'Vi tri dang / loai goi', 'type' => 'text' ),
 		'dr'      => array( 'label' => 'DR - Domain Rating (Ahrefs, 0-100). De trong neu khong ap dung (goi dich vu).', 'type' => 'text' ),
 		'gia_goc' => array( 'label' => 'Gia goc (de trong neu khong co)', 'type' => 'text' ),

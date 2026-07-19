@@ -28,6 +28,9 @@ function dgc_toc_process( $content ) {
 		return $content;
 	}
 
+	// Xoa muc luc cu viet cung trong content (neu bai da co san TOC thu cong) - tranh trung 2 muc luc.
+	$content = preg_replace( '/<!--\s*Table of Contents\s*-->\s*<div\b[^>]*>.*?<\/div>\s*/is', '', $content, 1 );
+
 	$used  = array();
 	$items = array();
 
@@ -62,9 +65,17 @@ function dgc_toc_process( $content ) {
 
 	$toc_html = dgc_toc_render_inline( $items );
 
-	if ( preg_match( '/<h1\b[^>]*>.*?<\/h1>/is', $content, $h1m, PREG_OFFSET_CAPTURE ) ) {
+	// Uu tien chen sau khoi "Tom tat noi dung chinh" (div class co "summary") neu bai co khoi nay,
+	// vi khoi nay luon dat truoc H2 dau tien. Khong co thi chen ngay sau H1 (fallback).
+	$insert_at = null;
+	if ( preg_match( '/<div\b[^>]*\bclass="[^"]*\bsummary\b[^"]*"[^>]*>.*?<\/div>/is', $content, $sm, PREG_OFFSET_CAPTURE ) ) {
+		$insert_at = $sm[0][1] + strlen( $sm[0][0] );
+	} elseif ( preg_match( '/<h1\b[^>]*>.*?<\/h1>/is', $content, $h1m, PREG_OFFSET_CAPTURE ) ) {
 		$insert_at = $h1m[0][1] + strlen( $h1m[0][0] );
-		$content   = substr( $content, 0, $insert_at ) . $toc_html . substr( $content, $insert_at );
+	}
+
+	if ( null !== $insert_at ) {
+		$content = substr( $content, 0, $insert_at ) . $toc_html . substr( $content, $insert_at );
 	} else {
 		$content = $toc_html . $content;
 	}
