@@ -1000,7 +1000,5 @@ document.addEventListener('click', function (e) {
 			}, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
 			headings.forEach(function (h) { spy.observe(h); });
 		}
-	} else {
-		fab.classList.add('show');
 	}
 })();
