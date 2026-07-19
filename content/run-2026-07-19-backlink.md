@@ -13,16 +13,18 @@ Bảng kiểm chứng theo yêu cầu skill `content-pipeline` (mỗi bước 1 
 | Allintitle check | Bỏ qua một phần - công cụ WebSearch không trả số đếm allintitle thật (không phải Google Search trực tiếp, không hỗ trợ operator allintitle đúng nghĩa) | Đã thử `allintitle: <keyword>` 3 lần, tool trả về danh sách kết quả nhưng KHÔNG có tổng số - ghi nhận định tính trong cluster-backlink.md, không bịa con số |
 | Viết bài 3 - Có Nên Mua Backlink Không? | Làm | File `content/co-nen-mua-backlink-khong.html` - H1/SAPO/tóm tắt/3 H2 + FAQ + kết luận, widget `[dgc_offpage_quiz]`, 3 internal link (`/dich-vu-backlink/`, `/dich-vu-backlink-gia-bao-nhieu/`, `/bang-gia/`, `/dat-bai/`) |
 | Viết bài 4 - Mua Backlink Báo Là Gì? | Làm | File `content/mua-backlink-bao-la-gi.html` - bảng so sánh 2 dịch vụ, widget `[dgc_budget_calc]`, internal link tới CẢ `/dich-vu-backlink/` và `/booking-bao-pr/` |
-| Đăng lên WordPress (BƯỚC 6) | BỎ QUA - không có SSH | Cần session sau có quyền SSH Hostinger, xem checklist trong `content/cluster-backlink.md` mục "Giới hạn cần lưu ý cho session sau" |
-| Internal link 2 chiều (BƯỚC 7) | Chưa làm - phụ thuộc bước đăng | - |
-| Submit GSC (BƯỚC 7b) | Chưa làm - phụ thuộc bước đăng | - |
-| Bài 5 (P1 - Cách đặt backlink hiệu quả) | Chưa làm - tách việc nặng ra làm đợt sau theo yêu cầu Hiếu | Cập nhật `content/cluster-backlink.md` dòng 5 |
+| Đăng lên WordPress (BƯỚC 6) | LÀM - session này có SSH | post 1276 update thành công; post 4226 (co-nen-mua-backlink-khong) và 4228 (mua-backlink-bao-la-gi) create thành công, category 14 (Backlink & Off-page), thumbnail gắn (attachment 4227/4229), verify curl 200 + H1 đúng cho cả 3 URL |
+| Internal link 2 chiều (BƯỚC 7) | Làm | post 1276 → thêm link tới /co-nen-mua-backlink-khong/ và /mua-backlink-bao-la-gi/; post 1260 (booking-bao-la-gi) → thêm link tới /mua-backlink-bao-la-gi/ (anchor "mua backlink báo"); 2 bài mới tự link chéo nhau trong nội dung gốc. Backup content.raw từng bài trước khi sửa, manifest tại `~/Claude-Workspace/_backups/routines/2026-07-19/manifest.md` |
+| Submit GSC (BƯỚC 7b) | Làm 1/3, 2/3 CHƯA XONG (tool outage) | `backlink-bat-dong-san` đã "Yêu cầu lập chỉ mục" thành công (screenshot xác nhận). `co-nen-mua-backlink-khong` và `mua-backlink-bao-la-gi` CHƯA submit được - browser action tool (gõ/phím) bị gián đoạn liên tục (lỗi hạ tầng "claude-sonnet-5 temporarily unavailable" khi gọi computer action) suốt nhiều phút, đã thử lại >8 lần không thành công. Cần submit tay hoặc session sau retry |
+| Bài 5 (P1 - Cách đặt backlink hiệu quả) | DỪNG - phát hiện cannibalization | Post 232 (`back-link-hieu-qua`, "Cách Đi Backlink Hiệu Quả: 7 Kỹ Thuật Thực Chiến") đã phủ gần như chính xác cùng intent + cùng cụm từ khoá dự kiến cho bài 5, kể cả sub-heading "cho Website Mới". Theo rule A2c (chống ăn thịt từ khoá) - DỪNG không viết bài mới, ghi 3 phương án chờ Hiếu chọn trong `content/cluster-backlink.md` mục "Cảnh báo cannibalization" |
 
 ## Tóm tắt cho Hiếu
 
-- Đã audit xong mục 1 (khả năng cao OK, cần xác nhận 1 lệnh khi có SSH) và sửa xong mục 2
-  (file sẵn sàng, chờ đăng).
-- Đã research đầy đủ top 10 + viết xong 2 bài P0 (mục 3, 4), lưu file HTML sẵn sàng đăng.
-- Bài 5 (P1) để đợt sau.
-- Việc CÒN THIẾU duy nhất để hoàn tất đợt này: một session có SSH tới Hostinger để đăng
-  3 file lên WordPress + submit GSC - phiên hiện tại không có quyền này.
+- **Đã xong hoàn toàn**: audit title pillar (mục 1, xác nhận đúng), sửa bài backlink bất động
+  sản (mục 2), đăng 2 bài mới P0 (mục 3, 4) kèm thumbnail + widget, internal link 2 chiều đầy đủ.
+- **Dở dang 1 việc nhỏ**: submit GSC mới xong 1/3 URL do lỗi hạ tầng tạm thời của tool trình
+  duyệt (không phải lỗi từ phía Google/site) - 2 URL còn lại (`co-nen-mua-backlink-khong`,
+  `mua-backlink-bao-la-gi`) cần submit thủ công hoặc session sau retry. Sitemap vẫn là kênh
+  index chính nên không khẩn cấp.
+- **Bài 5 (P1) KHÔNG viết** - phát hiện trùng lặp với bài cũ đã có (post 232), cần Hiếu chọn
+  1 trong 3 phương án đã đề xuất trước khi làm tiếp (xem `content/cluster-backlink.md`).
