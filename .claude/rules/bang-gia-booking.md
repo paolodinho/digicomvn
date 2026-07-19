@@ -2,6 +2,33 @@
 
 > Kho dữ liệu: `10-bang-gia-booking/`. Đọc `README.md` trong đó trước khi sửa.
 
+## Lọc chất lượng domain (chốt 2026-07-19)
+
+Trước khi đưa 1 domain lên bảng giá, phải đạt tối thiểu:
+1. **Link không chết** - domain phải resolve DNS + trả HTTP OK (không tính 403/429 vì đó là
+   site lớn chặn bot, vẫn sống - phân biệt rõ 2 loại này, xem `check-link-status.py`).
+2. **Không phải trang demo/tạm dựng để nhận link** - chưa có cách tự động đáng tin, cần xem tay.
+3. **Traffic tối thiểu** - KHÔNG có nguồn miễn phí đo traffic thật chính xác (Ahrefs/Semrush MCP
+   đang kết nối đều báo "Insufficient plan"; SimilarWeb qua AI đọc trang tự mâu thuẫn, không tin
+   cậy). Proxy đang dùng: **Domain Rating (Ahrefs, API free, không qua AI nên không bị sai lệch)**
+   - domain DR<=5 (đặc biệt DR=0, chưa từng có backlink) là tín hiệu mạnh cho traffic gần 0.
+
+**Quy trình đã chạy 2026-07-19** (script trong `10-bang-gia-booking/`):
+- `check-link-status.py` - quét DNS+HTTP toàn bộ domain trong `gia-web.csv`, phân loại
+  OK / DEAD_DOMAIN (không resolve DNS, tin cậy cao) / LOI_KET_NOI / HTTP_LOI / BLOCKED (403/429,
+  vẫn sống). Kết quả: `report-link-status.csv`.
+- Tra Domain Rating qua Ahrefs free API cho toàn bộ domain OK (giao cho agent nền theo batch
+  ~100 domain/agent để không phình context chính). Kết quả: `report-dr-all.csv` (toàn bộ),
+  `report-dr-low.csv` (DR<=5, danh sách nghi vấn).
+- **Đã draft trên live**: 183 dòng (182 domain DEAD_DOMAIN) + 143 dòng (144 domain DR<=5, trùng
+  1 domain đã draft ở bước trước). Live còn 849/1175 dòng publish. Backup ID trước khi ghi tại
+  `~/Claude-Workspace/_backups/routines/2026-07-19/bang-gia-ncc-code/` (rollback: đọc JSON, set
+  lại `post_status=publish` cho các ID trong đó).
+- Domain DR 6-thấp còn lại CHƯA bị động tới - chỉ 2 tiêu chí (link chết + DR quá thấp) được áp
+  dụng, "trang demo sơ sài" và traffic chính xác vẫn cần Hiếu xem tay hoặc nâng gói Ahrefs/Semrush.
+- Muốn traffic thật chính xác: cần Hiếu tự nâng gói Ahrefs (Site Explorer) hoặc Semrush (MCP
+  access) - 2 gói đang kết nối không đủ quyền.
+
 ## CHỈ 3 NCC LÊN WEB (chốt 2026-07-18, tạm thời)
 
 Hiếu: "ngoài danaseo, vietnam media, bổ sung thêm fame media -> tạm thời bỏ các bên khác,
