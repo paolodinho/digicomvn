@@ -132,8 +132,22 @@ web/tên miền/hosting ở giai đoạn 2.
       này. Sửa href về URL sạch, purge cache, verify lại link hoạt động đúng. Backup:
       `~/Claude-Workspace/_backups/routines/2026-07-19/digicom-markdown-leak-fix/`. 2026-07-19.
 
-Ngoài ra không còn việc gấp - 4 dịch vụ đã đủ nội dung, giá, demo. Tiếp theo tuỳ Hiếu quyết định
-khi nào chuyển sang giai đoạn 2 bên dưới.
+- [x] Rà soát tiếp cụm Backlink & Off-page (23 bài cũ, đứng yên từ 2026-07-03): lập plan
+      `content/plan-backlink-2026-07-19.md`, audit title pillar `/dich-vu-backlink/` (khả năng
+      cao OK), sửa title/H1 bài "backlink bất động sản" (thiếu cụm "chất lượng" - volume cao
+      hơn), research top 10 + viết xong 2 bài P0 mới ("Có nên mua backlink không?", "Mua
+      backlink báo là gì?"). Sổ cái: `content/cluster-backlink.md`. 2026-07-19.
+- [ ] **CẦN SESSION CÓ SSH tới Hostinger** để hoàn tất đợt trên: đăng 2 bài mới +
+      cập nhật bài "backlink bất động sản" lên WordPress (file đã sẵn sàng trong
+      `content/co-nen-mua-backlink-khong.html`, `content/mua-backlink-bao-la-gi.html`,
+      `_content-p1/backlink-bat-dong-san.html`), xác nhận post_title page 268, chèn internal
+      link ngược, submit GSC. Phiên 2026-07-19 không có SSH/WebFetch tới live (curl/ssh không
+      hoạt động trong sandbox) nên chỉ chuẩn bị được tới đây.
+- [ ] Bài P1 "Cách đặt backlink hiệu quả cho website mới bắt đầu" - chưa viết, để đợt sau
+      (xem `content/cluster-backlink.md` dòng 5).
+
+Ngoài ra không còn việc gấp khác - 4 dịch vụ đã đủ nội dung, giá, demo. Tiếp theo tuỳ Hiếu
+quyết định khi nào chuyển sang giai đoạn 2 bên dưới.
 
 ### Backlog (giai đoạn 2 - sau khi 4 dịch vụ ổn định)
 - [ ] Mở lại Thiết kế website / Tên miền / Hosting / Bản quyền phần mềm (trang đang draft, giữ nguyên)
