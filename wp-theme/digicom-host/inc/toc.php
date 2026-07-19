@@ -60,7 +60,16 @@ function dgc_toc_process( $content ) {
 
 	$GLOBALS['dgc_toc_items'] = $items;
 
-	return dgc_toc_render_inline( $items ) . $content;
+	$toc_html = dgc_toc_render_inline( $items );
+
+	if ( preg_match( '/<h1\b[^>]*>.*?<\/h1>/is', $content, $h1m, PREG_OFFSET_CAPTURE ) ) {
+		$insert_at = $h1m[0][1] + strlen( $h1m[0][0] );
+		$content   = substr( $content, 0, $insert_at ) . $toc_html . substr( $content, $insert_at );
+	} else {
+		$content = $toc_html . $content;
+	}
+
+	return $content;
 }
 add_filter( 'the_content', 'dgc_toc_process', 9 );
 

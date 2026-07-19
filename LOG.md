@@ -1473,3 +1473,11 @@ tai ~/Claude-Workspace/_backups/routines/2026-07-18/reorder-form-cu/.
 | 2026-07-18 | Ảnh vị trí đăng - đợt 6 | Chụp + khoanh vùng + alt SEO cho 14 domain: suckhoeviet, xahoi.com.vn, vietnammoi, doanhnhanvn, tapchixaydung, golfviet, vnfinance, xaluan, techz, baoxaydung.vn, phunusuckhoe.giadinhonline, vietnambiz, thitruongbiz, thanhnienviet. Nút V: 117->132. Sổ cái: 88 done, 28 issue, 659 còn lại |
 | 2026-07-19 | Vitri-images batch 9 | +11 domain (baodaklak.vn, thethaovietnam.vn, baocamau.vn, baoangiang.com.vn, baotuyenquang.com.vn, nguoidothi.net.vn, huengaynay.vn, baolangson.vn, baothainguyen.vn, thuonghieucongluan.com.vn, doanhnghiephoinhap.vn). Nut .vitri-toggle 159->170. Ledger: done 124/775, issue 31, con lai 620. |
 | 2026-07-19 | Vitri-images batch 10 | +17 domain nhom booking-bao-pr/mua-textlink (baothuathienhue.vn, vanhoavaphattrien.vn, bienphong.com.vn, baotayninh.vn, vanhoavadoisong.vn, songdep.com.vn, khoahocvacuocsong.vn, vanhoathoidai.vn, vietnamhuongsac.vn, datnuoc.com.vn, truyenthongvaphattrien.vn, phapluatvacuocsong.vn, giadinhmoi.vn, baoquangninh.vn, baothanhhoa.vn, phunumoi.net.vn, reatimes.vn). Nut .vitri-toggle 170->187. Ledger: done 141/775, issue 34, con lai 600. |
+
+## 2026-07-19 - Muc luc (TOC) cho bai blog, follow khi cuon mobile
+Them `inc/toc.php`: tu quet H2/H3 trong bai (>=3 muc moi kich hoat), gan id (giu nguyen id neu
+bai da co san), render hop muc luc dong gap dau bai + nut noi "Muc luc" (bottom-sheet, scroll-spy
+highlight muc dang doc) hien khi cuon qua hop dau bai - dat goc TRAI de khong dam nut Zalo/promo/
+to-top ben phai. Test tren Local (digicom.local/backlink/, bai 11 H2) qua curl: 47 id sinh dung,
+khong loi PHP, HTML render du postToc/tocFab/tocSheet. Deploy DGC_VER 1.8.6 (dev, CHUA len live -
+can deploy theo rules/deploy.md khi Hieu duyet giao dien qua browser that.
