@@ -37,6 +37,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/deploy.md` | Deploy len live Hostinger (SSH, cache-busting DGC_VER) |
 | `.claude/rules/image-sourcing.md` | Quy trinh chon nguon anh minh hoa (Wikimedia/Openverse/Pexels) |
 | `.claude/rules/uu-dai-cta.md` | Uu dai (khan hiem + han chot), trang cam on, mac dinh giao dien sang |
+| `.claude/rules/external-link-eeat.md` | Link thuat ngu/luat quan trong ra nguon uy tin (E-E-A-T) |
 
 ## 7. File quan trong
 `PLAN.md`, `LOG.md`, `DECISIONS.md`, `.claude/context/brand-info.md` (luu y: mo ta site
