@@ -70,6 +70,18 @@ Bài cũ backlink-bat-dong-san        --2 link mới trỏ về--> Bài 3, Bài 
 - Không mở ngách mới ngoài bất động sản (dữ liệu từ khoá không cho thấy ngách thứ 2 nào
   có volume đáng kể).
 
+## 4b. Quy trình research bắt buộc cho 3 bài MỚI (rule global 2026-07-19)
+
+Theo rule mới (`~/.claude/CLAUDE.md` mục "SEO Content Research", áp mọi dự án): trước khi
+viết bài 3/4/5, phải search từng keyword chính trên Google, đọc kỹ **10 kết quả đầu**
+(không dừng ở top 3-5), xác định lại intent thật, ghi nhận domain + loại bài + gap của
+top 3-5 organic, chốt info gain cụ thể - rồi mới viết. Khi báo cáo bài viết xong, PHẢI nêu
+rõ 3 mục: (1) search intent kết luận gì + bằng chứng, (2) đối thủ đã đọc - domain nào, gap
+gì, (3) info gain đã áp dụng vào bài. Bước sơ bộ đã làm khi lập plan này (xem mục 0 - đối
+chiếu `site:digicomvn.com`) chưa thay thế được bước research đầy đủ top 10 - vẫn phải chạy
+lại đúng quy trình trên khi bắt tay viết từng bài, không dùng lại kết quả sơ bộ này làm báo
+cáo chính thức.
+
 ## 5. Checkpoint
 
 Chờ Hiếu duyệt plan này trước khi viết. Duyệt xong sẽ chạy tự động bước 2 (audit 2 SEO
