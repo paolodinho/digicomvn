@@ -1,0 +1,10 @@
+Kiem tra 776/789 domain hop le (loai bo ten khong phai domain thuc)...
+  150/776
+  300/776
+  450/776
+  600/776
+  750/776
+
+Tong hop: {'OK': 493, 'DEAD_DOMAIN': 182, 'LOI_KET_NOI': 83, 'BLOCKED': 5, 'HTTP_LOI': 13}
+
+-> Ghi report-link-status.csv. DEAD_DOMAIN la dang tin cay nhat (domain khong con ton tai).

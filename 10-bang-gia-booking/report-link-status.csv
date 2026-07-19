@@ -1,790 +1,777 @@
-domain,status,chi_tiet
-24h.com.vn,200,https://www.24h.com.vn/
-24hexpress.vn,ERR,"HTTPSConnectionPool(host='24hexpress.vn', port=443): Max retries exceeded with u"
-2sao.vn,200,https://2sao.vn/
-3dsmax.com.vn,200,https://3dsmax.com.vn/
-6streamsxy.com,ERR,"HTTPSConnectionPool(host='6streamsxy.com', port=443): Max retries exceeded with "
-78store.vn,ERR,"HTTPSConnectionPool(host='78store.vn', port=443): Max retries exceeded with url:"
-7starhd.la,ERR,"HTTPSConnectionPool(host='7starhd.la', port=443): Max retries exceeded with url:"
-Afamily.vn (Áp dụng giá từ 20/5/2026),ERR,Failed to parse: https://Afamily.vn (Áp dụng giá từ 20/5/2026)
-Baotayninh.vn (BÁO MỚI VỀ),ERR,Failed to parse: https://Baotayninh.vn (BÁO MỚI VỀ)
-Báo pháp luật Plo.vn,ERR,Failed to parse: https://Báo pháp luật Plo.vn
-Kênh 14.vn,ERR,Failed to parse: https://Kênh 14.vn
-Thethaovanhoa.vn (Mục bạn cần biết),ERR,Failed to parse: https://Thethaovanhoa.vn (Mục bạn cần biết)
-Vietstock.vn (BÁO MỚI VỀ),ERR,Failed to parse: https://Vietstock.vn (BÁO MỚI VỀ)
-actionenglish.vn,200,https://actionenglish.vn/
-adoreyou.vn,ERR,"HTTPSConnectionPool(host='adoreyou.vn', port=443): Max retries exceeded with url"
-advertisingvietnam.com,200,https://advertisingvietnam.com/
-afamily.vn,200,https://afamily.vn/
-agiare.vn,ERR,"HTTPSConnectionPool(host='agiare.vn', port=443): Max retries exceeded with url: "
-aktinmotion.com,200,https://aktinmotion.com/
-algopro.vn,ERR,"HTTPSConnectionPool(host='algopro.vn', port=443): Max retries exceeded with url:"
-alobacsi.com,200,https://alobacsi.com/
-alongtheboards.com,200,https://alongtheboards.com/
-ambalgvn.org.vn,ERR,"HTTPSConnectionPool(host='ambalgvn.org.vn', port=443): Max retries exceeded with"
-amthuc10phut.vn,200,https://amthuc10phut.vn/
-angiangtoplist.com,200,https://angiangtoplist.com/
-angiangtv.vn,200,https://angiangtv.vn/
-anhsang.edu.vn,ERR,"HTTPSConnectionPool(host='anhsang.edu.vn', port=443): Max retries exceeded with "
-animestore.vn,ERR,"HTTPSConnectionPool(host='animestore.vn', port=443): Max retries exceeded with u"
-anninhthudo.vn,200,https://anninhthudo.vn/
-aocuoimoc.vn,ERR,"HTTPSConnectionPool(host='aocuoimoc.vn', port=443): Max retries exceeded with ur"
-aothundepsg.com,ERR,"HTTPSConnectionPool(host='aothundepsg.com', port=443): Max retries exceeded with"
-aothungame.vn,ERR,"HTTPSConnectionPool(host='aothungame.vn', port=443): Max retries exceeded with u"
-apnews.com,200,https://apnews.com/
-appwe.vn,ERR,"HTTPSConnectionPool(host='appwe.vn', port=443): Max retries exceeded with url: /"
-aquila-style.com,200,https://aquila-style.com/
-arcencielhotel.com.vn,200,https://arcencielhotel.com.vn/
-atmganday.net,ERR,"HTTPSConnectionPool(host='atmganday.net', port=443): Max retries exceeded with u"
-atotalnews.com,200,https://atotalnews.com/
-autopro.com.vn,200,https://autopro.com.vn/
-avinowines.vn,ERR,"HTTPSConnectionPool(host='avinowines.vn', port=443): Max retries exceeded with u"
-bacninhtoplist.com,200,https://bacninhtoplist.com/
-banawa.com.vn,ERR,"HTTPSConnectionPool(host='banawa.com.vn', port=443): Max retries exceeded with u"
-banchungcumini.vn,200,https://banchungcumini.vn/
-banobagi.com.vn,ERR,"HTTPSConnectionPool(host='banobagi.com.vn', port=443): Max retries exceeded with"
-banptktcn-ninhbinh.vn,200,https://banptktcn-ninhbinh.vn/
-banvatlieuxaydung.net,200,https://banvatlieuxaydung.net/
-baoangiang.com.vn,200,https://baoangiang.com.vn/
-baobihoatrung.com.vn,200,https://baobihoatrung.com.vn/
-baocamau.vn,200,https://baocamau.vn/
-baocantho.com.vn,200,https://baocantho.com.vn/
-baocaobang.vn,200,https://baocaobang.vn/
-baocaobang.vn BÁO MỚI VỀ,ERR,Failed to parse: https://baocaobang.vn BÁO MỚI VỀ
-baodaklak.vn,200,https://baodaklak.vn/
-baodanang.vn,200,https://baodanang.vn/
-baodautu.vn,200,https://baodautu.vn/
-baodienbienphu.com.vn,ERR,"HTTPSConnectionPool(host='baodienbienphu.com.vn', port=443): Max retries exceede"
-baodienbienphu.vn,200,https://baodienbienphu.vn/
-baodongnai.com.vn,200,https://baodongnai.com.vn/
-baodongthap.vn,200,https://baodongthap.vn/
-baogialai.com.vn,200,https://baogialai.com.vn/
-baohatinh.vn,200,https://baohatinh.vn/
-baohungyen.vn,200,https://baohungyen.vn/
-baolamdong.vn,200,https://baolamdong.vn/
-baolangson.vn,200,https://baolangson.vn/
-baolaocai.vn,200,https://baolaocai.vn/
-baonghean.vn,200,https://baonghean.vn/
-baonghean.vn (BÁO MỚI VỀ),ERR,Failed to parse: https://baonghean.vn (BÁO MỚI VỀ)
-baophapluat.vn,200,https://baophapluat.vn/
-baophutho.vn,200,https://baophutho.vn/
-baoquangninh.vn,200,https://baoquangninh.vn/
-baoquocte.vn,200,https://baoquocte.vn/
-baotayninh.vn,200,https://baotayninh.vn/
-baothainguyen.vn,200,https://baothainguyen.vn/
-baothanhhoa.vn,200,https://baothanhhoa.vn/
-baothuathienhue.vn,200,https://huengaynay.vn/
-baotuyenquang.com.vn,200,https://baotuyenquang.com.vn/
-baovanhoa.vn,ERR,"HTTPSConnectionPool(host='baovanhoa.vn', port=443): Read timed out. (read timeou"
-baovexuongkhop.vn,ERR,"HTTPSConnectionPool(host='baovexuongkhop.vn', port=443): Max retries exceeded wi"
-baovinhlong.com.vn,200,https://baovinhlong.com.vn/
-baoxaydung.com.vn,200,https://baoxaydung.vn/
-baoxaydung.vn,200,https://baoxaydung.vn/
-barefootsworld.net,200,https://barefootsworld.net/
-bariavungtautourism.com.vn,200,https://bariavungtautourism.com.vn/
-basicact.com,ERR,"HTTPSConnectionPool(host='basicact.com', port=443): Max retries exceeded with ur"
-batdongsan.com.vn,403,https://batdongsan.com.vn/
-batdongsan49.vn,ERR,"HTTPSConnectionPool(host='batdongsan49.vn', port=443): Max retries exceeded with"
-batterydown.vn,ERR,"HTTPSConnectionPool(host='batterydown.vn', port=443): Max retries exceeded with "
-bau.vn,200,https://bau.vn/
-bbc.com,502,https://bbc.com/
-beginagainfilm.com,200,https://beginagainfilm.com/
-bentretoplist.com,200,https://bentretoplist.com/
-benzinga.com,200,https://www.benzinga.com/
-bepbungbu.vn,ERR,"HTTPSConnectionPool(host='bepbungbu.vn', port=443): Max retries exceeded with ur"
-besti.vn,ERR,"HTTPSConnectionPool(host='besti.vn', port=443): Max retries exceeded with url: /"
-betong.net.vn,200,https://betong.net.vn/
-betongtuoi.net.vn,ERR,"HTTPSConnectionPool(host='betongtuoi.net.vn', port=443): Max retries exceeded wi"
-bhfood.vn,ERR,"HTTPSConnectionPool(host='bhfood.vn', port=443): Max retries exceeded with url: "
-bienphong.com.vn,200,https://bienphong.com.vn/
-bietdienhotel.com.vn,200,https://bietdienhotel.com.vn/
-binhdinhtoplist.com,200,https://binhdinhtoplist.com/
-binhduongreview.vn,200,https://binhduongreview.vn/
-binhduongtoplist.com,200,https://www.binhduongtoplist.com/
-biochain.vn,ERR,"HTTPSConnectionPool(host='biochain.vn', port=443): Max retries exceeded with url"
-bkcare.vn,200,https://bkcare.vn/
-blog.swio.vn,ERR,"HTTPSConnectionPool(host='blog.swio.vn', port=443): Max retries exceeded with ur"
-bloomberg.com,403,https://www.bloomberg.com/
-bocxepmiennam.vn,404,https://bocxepmiennam.vn/
-bomotnanggialai.vn,200,https://bomotnanggialai.vn/
-bongdaplus.vn,200,https://bongdaplus.vn/
-bosch-hanoi.com.vn,404,https://bosch-hanoi.com.vn/
-brandsvietnam.com,200,https://www.brandsvietnam.com/
-brgrubytreegolf.vn,ERR,"HTTPSConnectionPool(host='brgrubytreegolf.vn', port=443): Max retries exceeded w"
-btlondonlive.com,200,https://www.btlondonlive.com/
-bunbothoda.com.vn,ERR,"HTTPSConnectionPool(host='bunbothoda.com.vn', port=443): Max retries exceeded wi"
-bunsongthan.vn,ERR,"HTTPSConnectionPool(host='bunsongthan.vn', port=443): Max retries exceeded with "
-businessinsider.com,200,https://www.businessinsider.com/
-bvtkontum.com.vn,ERR,"HTTPSConnectionPool(host='bvtkontum.com.vn', port=443): Max retries exceeded wit"
-cacanhnho.com,200,https://cacanhnho.com/
-cadasa.vn,ERR,"HTTPSConnectionPool(host='cadasa.vn', port=443): Max retries exceeded with url: "
-cafebiz.vn,200,https://cafebiz.vn/
-cafedautu.vn,200,https://cafedautu.vn/
-cafef.vn,200,https://cafef.vn/
-cafeganday.com,ERR,"HTTPSConnectionPool(host='cafeganday.com', port=443): Max retries exceeded with "
-cafeland.vn,200,https://cafeland.vn/
-californiabeat.org,200,https://www.californiabeat.org/
-camnangsuckhoeso.net,200,https://camnangsuckhoeso.net/
-cand.com.vn,200,https://cand.vn/
-casiostore.vn,200,https://casiostore.vn/
-caycongtrinh24h.vn,200,https://caycongtrinh24h.vn/
-caymotuthan.vn,ERR,"HTTPSConnectionPool(host='caymotuthan.vn', port=443): Max retries exceeded with "
-cayxangganday.net,ERR,"HTTPSConnectionPool(host='cayxangganday.net', port=443): Max retries exceeded wi"
-cbdgain.com,200,https://www.cbdgain.com/
-cdchaugiang.org.vn,ERR,"HTTPSConnectionPool(host='cdchaugiang.org.vn', port=443): Max retries exceeded w"
-cdctuyenquang.vn,ERR,"HTTPSConnectionPool(host='cdctuyenquang.vn', port=443): Max retries exceeded wit"
-chamsua.vn,ERR,"HTTPSConnectionPool(host='chamsua.vn', port=443): Max retries exceeded with url:"
-chichiemem.vn,ERR,"HTTPSConnectionPool(host='chichiemem.vn', port=443): Max retries exceeded with u"
-chickenla-e.vn,ERR,"HTTPSConnectionPool(host='chickenla-e.vn', port=443): Max retries exceeded with "
-chienthanky.vn,ERR,"HTTPSConnectionPool(host='chienthanky.vn', port=443): Max retries exceeded with "
-chocanh.vn,ERR,"HTTPSConnectionPool(host='chocanh.vn', port=443): Max retries exceeded with url:"
-chohaisanonline.vn,200,https://chohaisanonline.vn/
-chonongsankhanhhoa.vn,ERR,"HTTPSConnectionPool(host='chonongsankhanhhoa.vn', port=443): Max retries exceede"
-chonthuonghieu.com,200,https://chonthuonghieu.com/
-chuabaidinhninhbinh.vn,200,https://chuabaidinhninhbinh.vn/
-chungcuhungthinhlinhdam.com.vn,200,https://guestpost.vn/
-chungcumuongthanh.net.vn,200,https://guestpost.vn/
-chuthapdoquangninh.org.vn,ERR,"HTTPSConnectionPool(host='chuthapdoquangninh.org.vn', port=443): Max retries exc"
-ciicentral.com,200,https://ciicentral.com/
-cnbc.com,200,https://www.cnbc.com/world/?region=world
-cnet.com,200,https://www.cnet.com/
-cobid.org,200,https://cobid.org/
-cohousing.vn,ERR,"HTTPSConnectionPool(host='cohousing.vn', port=443): Max retries exceeded with ur"
-coldsoulsthemovie.com,200,https://coldsoulsthemovie.com/
-colkidsclub.vn,ERR,"HTTPSConnectionPool(host='colkidsclub.vn', port=443): Max retries exceeded with "
-comeaucomputing.com,200,https://www.comeaucomputing.com/
-comentarium.com,200,https://comentarium.com/
-congan.com.vn,200,https://congan.com.vn/
-congdoanvienchucvn.org.vn,ERR,"HTTPSConnectionPool(host='congdoanvienchucvn.org.vn', port=443): Max retries exc"
-congdonglamdep.vn,ERR,"HTTPSConnectionPool(host='congdonglamdep.vn', port=443): Max retries exceeded wi"
-congluan.vn,200,https://congluan.vn/
-congly.vn,200,https://congly.vn/
-congthuong.vn,200,https://congthuong.vn/
-conversestore.vn,ERR,"HTTPSConnectionPool(host='conversestore.vn', port=443): Max retries exceeded wit"
-cotrang.org,200,https://cotrang.org/
-countrygarden.vn,ERR,"HTTPSConnectionPool(host='countrygarden.vn', port=443): Max retries exceeded wit"
-cozabebe.vn,ERR,"HTTPSConnectionPool(host='cozabebe.vn', port=443): Max retries exceeded with url"
-cozyvietnamtravel.vn,200,https://cozyvietnamtravel.vn/
-crexport.vn,ERR,"HTTPSConnectionPool(host='crexport.vn', port=443): Max retries exceeded with url"
-crisisshelter.org,200,https://www.crisisshelter.org/
-cuanhuanamwindows.com,200,https://cuanhuanamwindows.com/
-cuoixastress.com,200,https://cuoixastress.com/
-customcat.vn,ERR,"HTTPSConnectionPool(host='customcat.vn', port=443): Max retries exceeded with ur"
-cuuhoxe.vn,ERR,"HTTPSConnectionPool(host='cuuhoxe.vn', port=443): Max retries exceeded with url:"
-cuuhoxemayhanoi.vn,ERR,"HTTPSConnectionPool(host='cuuhoxemayhanoi.vn', port=443): Max retries exceeded w"
-dacnguyen.vn,ERR,"HTTPSConnectionPool(host='dacnguyen.vn', port=443): Max retries exceeded with ur"
-daihocluathn.edu.vn,ERR,"HTTPSConnectionPool(host='daihocluathn.edu.vn', port=443): Max retries exceeded "
-dailymail4you.com,200,https://dailymail4you.com/
-daituongquan.vn,ERR,"HTTPSConnectionPool(host='daituongquan.vn', port=443): Max retries exceeded with"
-daklak24h.com.vn,ERR,"HTTPSConnectionPool(host='daklak24h.com.vn', port=443): Read timed out. (read ti"
-danangaz.com,200,https://danangaz.com/
-dangkiem5006v.com.vn,ERR,"HTTPSConnectionPool(host='dangkiem5006v.com.vn', port=443): Max retries exceeded"
-danhgiasao.com,200,https://danhgiasao.com/
-danhgiathuonghieu.vn,200,https://danhgiathuonghieu.vn/
-dantri.com.vn,200,https://dantri.com.vn/
-danviet.vn,200,https://danviet.vn/
-daotaoquoctedhxd.edu.vn,ERR,"HTTPSConnectionPool(host='daotaoquoctedhxd.edu.vn', port=443): Max retries excee"
-datnuoc.com.vn,ERR,"HTTPSConnectionPool(host='datnuoc.com.vn', port=443): Max retries exceeded with "
-dayhocchudong.com,ERR,"HTTPSConnectionPool(host='dayhocchudong.com', port=443): Max retries exceeded wi"
-dds.com.vn,200,https://dds.com.vn/
-dep.com.vn,200,https://dep.com.vn/
-dephonnua.com,ERR,"HTTPSConnectionPool(host='dephonnua.com', port=443): Max retries exceeded with u"
-diadiemthanhhoa.com,200,https://diadiemthanhhoa.com/
-dichbiensoxe.online,200,https://dichbiensoxe.online/
-dichvu3gmobifone.vn,ERR,"HTTPSConnectionPool(host='dichvu3gmobifone.vn', port=443): Max retries exceeded "
-dichvusonnha.vn,200,https://dichvusonnha.vn/
-diendandoanhnghiep.vn,200,https://diendandoanhnghiep.vn/
-dienlanhdh.com,200,https://dienlanhdh.com/
-digitalgamersdream.com,200,https://digitalgamersdream.com/
-digitaljournal.com,200,https://www.digitaljournal.com/
-digitby.com,200,https://digitby.com/
-dntbinhduong.org.vn,200,https://dntbinhduong.org.vn/
-doanhnghiephoinhap.vn,200,https://doanhnghiephoinhap.vn/
-doanhnghiepkinhtexanh.vn,200,https://doanhnghiepkinhtexanh.vn/
-doanhnghiepvn.vn,200,https://doanhnghiepvn.vn/
-doanhnhan.vn,200,https://doanhnhan.baophapluat.vn/
-doanhnhanonile.com.vn,ERR,"HTTPSConnectionPool(host='doanhnhanonile.com.vn', port=443): Max retries exceede"
-doanhnhanphuonghoang.vn,ERR,"HTTPSConnectionPool(host='doanhnhanphuonghoang.vn', port=443): Max retries excee"
-doanhnhanvn.vn,200,https://doanhnhanvn.vn/
-docsachvituonglai.vn,200,https://docsachvituonglai.vn/
-doisongphapluat.com.vn,200,https://doisongphapluat.com.vn/
-doisongvietnam.vn,200,https://doisongvietnam.vn/
-dongnaitoplist.com,200,https://dongnaitoplist.com/
-dongphucdaiphat.com,404,https://dongphucdaiphat.com/
-dongthaptoplist.com,200,https://dongthaptoplist.com/
-dotary.vn,ERR,"HTTPSConnectionPool(host='dotary.vn', port=443): Max retries exceeded with url: "
-doxeshchuyennghiep.vn,200,https://doxeshchuyennghiep.vn/
-dtec.edu.vn,200,https://www.dtec.edu.vn/
-duchenangngoaitroi.net,ERR,"HTTPSConnectionPool(host='duchenangngoaitroi.net', port=443): Max retries exceed"
-dulichbinhphuoc.vn,ERR,"HTTPSConnectionPool(host='dulichbinhphuoc.vn', port=443): Max retries exceeded w"
-dulichhatinh.com.vn,200,https://dulichhatinh.com.vn/
-dulichnhatban.net,200,https://dulichnhatban.net/
-dulichsontra.com,200,https://dulichsontra.com/
-duongbo.vn,ERR,"HTTPSConnectionPool(host='duongbo.vn', port=443): Max retries exceeded with url:"
-duonggiahotel.vn,200,https://duonggiahotel.vn/
-emagazinehub.com,200,https://emagazinehub.com/
-emdep.vn,200,https://emdep.vn/
-empiremovies.com,200,https://empiremovies.com/
-enetviet.edu.vn,ERR,"HTTPSConnectionPool(host='enetviet.edu.vn', port=443): Max retries exceeded with"
-entrepreneur.com,200,https://www.entrepreneur.com/
-eva.vn,200,https://eva.vn/
-everyvoicecenter.org,200,https://everyvoicecenter.org/
-expresslaundry.com.vn,ERR,"HTTPSConnectionPool(host='expresslaundry.com.vn', port=443): Max retries exceede"
-f0.phutho.vn,ERR,"HTTPSConnectionPool(host='f0.phutho.vn', port=443): Max retries exceeded with ur"
-faceart.vn,ERR,"HTTPSConnectionPool(host='faceart.vn', port=443): Max retries exceeded with url:"
-famemedia.vn,ERR,"HTTPSConnectionPool(host='famemedia.vn', port=443): Max retries exceeded with ur"
-familyflower.vn,ERR,"HTTPSConnectionPool(host='familyflower.vn', port=443): Max retries exceeded with"
-familyfruits.com.vn,ERR,"HTTPSConnectionPool(host='familyfruits.com.vn', port=443): Max retries exceeded "
-fastenglish.edu.vn,ERR,"HTTPSConnectionPool(host='fastenglish.edu.vn', port=443): Max retries exceeded w"
-fergusonaction.com,200,https://fergusonaction.com/
-feri.org,200,https://www.feri24.com/
-firedout.com,200,https://firedout.com/
-fishyfacts4u.com,200,https://fishyfacts4u.com/
-fixi.vn,ERR,"HTTPSConnectionPool(host='fixi.vn', port=443): Max retries exceeded with url: / "
-fjn.vn,200,https://fjn.vn/
-fkgoldstandard.com,ERR,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without"
-forbes.com,200,https://www.forbes.com/
-forbesrumor.com,ERR,"HTTPSConnectionPool(host='forbesrumor.com', port=443): Max retries exceeded with"
-formulasantander.com,200,https://www.formulasantander.com/
-foxnewbrand.com,ERR,"HTTPSConnectionPool(host='foxnewbrand.com', port=443): Max retries exceeded with"
-fpthcm.com.vn,200,https://www.fpthcm.com.vn/
-freshersnews.co.in,200,https://freshersnews.co.in/
-gachmenthanhtung.vn,200,https://gachmenthanhtung.vn/
-gamek.vn,200,https://gamek.vn/
-gart.vn,ERR,"HTTPSConnectionPool(host='gart.vn', port=443): Max retries exceeded with url: / "
-gayleesinshop.vn,ERR,"HTTPSConnectionPool(host='gayleesinshop.vn', port=443): Max retries exceeded wit"
-gayviet.vn,ERR,"HTTPSConnectionPool(host='gayviet.vn', port=443): Max retries exceeded with url:"
-gearbest.net,200,https://gearbest.net/
-gemstech.com.vn,ERR,"HTTPSConnectionPool(host='gemstech.com.vn', port=443): Max retries exceeded with"
-general-imaging.com,200,https://general-imaging.com/
-genk.vn,200,https://genk.vn/
-gforgames.com,200,https://www.gforgames.com/
-giadinh.suckhoedoisong.vn,200,https://giadinh.suckhoedoisong.vn/
-giadinhmoi.vn,200,https://giadinhmoi.vn/
-giadinhvaphapluat.vn,200,https://giadinhvaphapluat.vn/
-giaidap.com.vn,ERR,"HTTPSConnectionPool(host='giaidap.com.vn', port=443): Max retries exceeded with "
-giammomau.net.vn,ERR,"HTTPSConnectionPool(host='giammomau.net.vn', port=443): Max retries exceeded wit"
-giaoducthoidai.vn,200,https://giaoducthoidai.vn/
-giaoducthudo.giaoducthoidai.vn,200,https://giaoducthudo.giaoducthoidai.vn/
-giaxemoto.com.vn,ERR,"HTTPSConnectionPool(host='giaxemoto.com.vn', port=443): Max retries exceeded wit"
-gionghatvietnhi.com.vn,ERR,"HTTPSConnectionPool(host='gionghatvietnhi.com.vn', port=443): Max retries exceed"
-giovangthethao.vn,ERR,"HTTPSConnectionPool(host='giovangthethao.vn', port=443): Max retries exceeded wi"
-glutawhite.vn,ERR,"HTTPSConnectionPool(host='glutawhite.vn', port=443): Max retries exceeded with u"
-goldencentercity.vn,ERR,"HTTPSConnectionPool(host='goldencentercity.vn', port=443): Max retries exceeded "
-golfviet.vn,200,https://golfviet.vn/
-golist.vn,ERR,"HTTPSConnectionPool(host='golist.vn', port=443): Max retries exceeded with url: "
-golook.vn,200,https://golook.vn/
-grande.edu.vn,ERR,"HTTPSConnectionPool(host='grande.edu.vn', port=443): Max retries exceeded with u"
-greenbusinessonly.com,200,https://greenbusinessonly.com/
-greenedu.vn,ERR,"HTTPSConnectionPool(host='greenedu.vn', port=443): Max retries exceeded with url"
-guu.vn,ERR,"HTTPSConnectionPool(host='guu.vn', port=443): Max retries exceeded with url: / ("
-hachikopetshop.vn,ERR,"HTTPSConnectionPool(host='hachikopetshop.vn', port=443): Max retries exceeded wi"
-haiduongtoplist.com,200,https://haiduongtoplist.com/
-haiphongtoplist.com,200,https://haiphongtoplist.com/
-handymandecor.com,200,https://handymandecor.com/
-hanghoathuonghieu.vn,200,https://hanghoathuonghieu.vn/
-hanhcafe.vn,ERR,"HTTPSConnectionPool(host='hanhcafe.vn', port=443): Max retries exceeded with url"
-hanoi.inhat.vn,200,https://hanoi.inhat.vn/
-hanoimoi.vn,200,https://hanoimoi.vn/
-hanoiparagon.vn,ERR,"HTTPSConnectionPool(host='hanoiparagon.vn', port=443): Max retries exceeded with"
-hanoireview.vn,200,https://hanoireview.vn/
-hanoitimes.vn,ERR,"HTTPSConnectionPool(host='hanoitimes.vn', port=443): Max retries exceeded with u"
-hanoitoplist.com,200,https://www.hanoitoplist.com/
-hapodecor.vn,ERR,"HTTPSConnectionPool(host='hapodecor.vn', port=443): Max retries exceeded with ur"
-haquangtv.vn,ERR,"HTTPSConnectionPool(host='haquangtv.vn', port=443): Max retries exceeded with ur"
-hatinhtoplist.com,200,https://hatinhtoplist.com/
-hauthien.com,200,https://hauthien.com/
-hcm.inhat.vn,200,https://hcm.inhat.vn/
-hcmtoplist.com,200,https://www.hcmtoplist.com/
-hconnect.vn,ERR,"HTTPSConnectionPool(host='hconnect.vn', port=443): Max retries exceeded with url"
-hdgoffice.vn,ERR,"HTTPSConnectionPool(host='hdgoffice.vn', port=443): Max retries exceeded with ur"
-hellodanang.vn,200,https://hellodanang.vn/
-hiephoixedien.com,200,https://hiephoixedien.com/
-hieugoogle.vn,ERR,"HTTPSConnectionPool(host='hieugoogle.vn', port=443): Max retries exceeded with u"
-hilaw.vn,200,https://hilaw.vn/
-himlamresort.vn,ERR,"HTTPSConnectionPool(host='himlamresort.vn', port=443): Max retries exceeded with"
-hiroasiankitchen.com,200,https://hiroasiankitchen.com/
-hnsland.vn,200,https://guestpost.vn/
-hoadanang.com.vn,ERR,"HTTPSConnectionPool(host='hoadanang.com.vn', port=443): Max retries exceeded wit"
-hoala.vn,200,https://www.hoala.vn/
-hoangtrieu.vn,ERR,"HTTPSConnectionPool(host='hoangtrieu.vn', port=443): Max retries exceeded with u"
-hoangvietauto.vn,ERR,"HTTPSConnectionPool(host='hoangvietauto.vn', port=443): Max retries exceeded wit"
-hoaquaxanh.vn,ERR,"HTTPSConnectionPool(host='hoaquaxanh.vn', port=443): Max retries exceeded with u"
-hoatrangnguyen.com.vn,ERR,"HTTPSConnectionPool(host='hoatrangnguyen.com.vn', port=443): Max retries exceede"
-hocgiday.vn,200,https://hocgiday.vn/
-hocvientoc.net,ERR,"HTTPSConnectionPool(host='hocvientoc.net', port=443): Max retries exceeded with "
-hoinhap.vanhoavaphattrien.vn,200,https://hoinhap.vanhoavaphattrien.vn/
-hoiquanfreefire.com,ERR,"HTTPSConnectionPool(host='hoiquanfreefire.com', port=443): Max retries exceeded "
-hoivietnamduc.vn,ERR,"HTTPSConnectionPool(host='hoivietnamduc.vn', port=443): Max retries exceeded wit"
-home.vn,200,https://home.vn/
-homeproshop.vn,ERR,"HTTPSConnectionPool(host='homeproshop.vn', port=443): Max retries exceeded with "
-honghala.com,404,https://honghala.com/
-hongngu3.edu.vn,ERR,"HTTPSConnectionPool(host='hongngu3.edu.vn', port=443): Max retries exceeded with"
-hotelnikkohanoi.com.vn,200,https://hotelnikkohanoi.com.vn/
-howtosucceedbroadway.com,200,https://www.howtosucceedbroadway.com/
-hsdvn.com.vn,200,https://hsdvn.com.vn/
-hse.org.vn,200,https://www.hse.org.vn/
-huengaynay.vn,200,https://huengaynay.vn/
-huetoplist.vn,200,https://huetoplist.vn/
-hungyentoplist.com,200,https://hungyentoplist.com/
-huongnghiep.com.vn,200,https://huongnghiep.com.vn/
-huyendoannongson.vn,ERR,"HTTPSConnectionPool(host='huyendoannongson.vn', port=443): Max retries exceeded "
-hytcc.org.vn,ERR,"HTTPSConnectionPool(host='hytcc.org.vn', port=443): Max retries exceeded with ur"
-icccftu.vn,200,https://guestpost.vn/
-icydk.com,200,https://icydk.com/
-ilawjournals.com,200,https://www.ilawjournals.com/
-inail.vn,ERR,"HTTPSConnectionPool(host='inail.vn', port=443): Max retries exceeded with url: /"
-indeedken.com,200,https://indeedken.com/
-inhat.vn,200,https://inhat.vn/
-inmienbac.com.vn,ERR,"HTTPSConnectionPool(host='inmienbac.com.vn', port=443): Read timed out. (read ti"
-inoxsaophuongnam.com,200,https://inoxsaophuongnam.com/
-internetcapquang.net,ERR,"HTTPSConnectionPool(host='internetcapquang.net', port=443): Max retries exceeded"
-iqeye.com,200,https://iqeye.com/
-ironman.vn,ERR,"HTTPSConnectionPool(host='ironman.vn', port=443): Max retries exceeded with url:"
-itoplist.vn,200,https://itoplist.vn/
-ixprl.com,200,https://www.hugedomains.com/domain_profile.cfm?d=ixprl.com
-jaxtr.com,200,https://www.jaxtr.com/
-jimmeyerracing.com,200,https://www.jimmeyerracing.com/
-justicesnows.com,200,https://justicesnows.com/
-kaina.vn,ERR,"HTTPSConnectionPool(host='kaina.vn', port=443): Max retries exceeded with url: /"
-kame.vn,200,https://sky-office.co/
-kamiidphoto.vn,200,https://guestpost.vn/
-karaoke.info.vn,ERR,"HTTPSConnectionPool(host='karaoke.info.vn', port=443): Max retries exceeded with"
-kenh14.vn,200,https://kenh14.vn/
-kenhtuyensinh.vn,200,https://kenhtuyensinh.vn/
-kenkoshop.vn,ERR,"HTTPSConnectionPool(host='kenkoshop.vn', port=443): Max retries exceeded with ur"
-kevinlebeautygroup.com,200,https://kevinlebeautygroup.com/
-khafa.org.vn,ERR,"HTTPSConnectionPool(host='khafa.org.vn', port=443): Max retries exceeded with ur"
-khoahoccuocsong.com,200,https://khoahoccuocsong.com/
-khoahocvacuocsong.vn,ERR,"HTTPSConnectionPool(host='khoahocvacuocsong.vn', port=443): Max retries exceeded"
-khoancatbetonggiare.vn,200,https://khoancatbetonggiare.vn/
-khomaucnc.com.vn,200,https://khomaucnc.com.vn/
-khudothivinhomes.com.vn,ERR,"HTTPSConnectionPool(host='khudothivinhomes.com.vn', port=443): Max retries excee"
-khuvuichoitreem.com.vn,200,https://khuvuichoitreem.com.vn/
-kichcaudulichtphcm.vn,200,https://kichcaudulichtphcm.vn/
-kiddo.vn,ERR,"HTTPSConnectionPool(host='kiddo.vn', port=443): Max retries exceeded with url: /"
-kiemlamthuathienhue.org.vn,ERR,"HTTPSConnectionPool(host='kiemlamthuathienhue.org.vn', port=443): Max retries ex"
-kientrucmaigia.vn,200,https://kientrucmaigia.vn/
-kilu.vn,ERR,"HTTPSConnectionPool(host='kilu.vn', port=443): Max retries exceeded with url: / "
-kimbien.com.vn,200,https://kimbien.com.vn/
-kinhtemoitruong.vn,200,https://kinhtemoitruong.vn/
-kinhtethoidai.net,200,https://kinhtethoidai.net/
-kinhtevadautu.vn,200,https://kinhtevadautu.vn/
-kreweduoptic.com,200,https://kreweduoptic.com/
-kuttywebnews.com,200,https://kuttywebnews.com/
-kyty.vn,ERR,"HTTPSConnectionPool(host='kyty.vn', port=443): Max retries exceeded with url: / "
-ladipage.com.vn,200,https://ladipage.com.vn/
-ladygeek.com,200,https://ladygeek.com/
-lamchame.vn,ERR,"HTTPSConnectionPool(host='lamchame.vn', port=443): Max retries exceeded with url"
-lamdongtoplist.com,200,https://www.lamdongtoplist.com/
-lamhochieu.net,200,https://lamhochieu.net/
-lananhdalathotel.vn,ERR,"HTTPSConnectionPool(host='lananhdalathotel.vn', port=443): Max retries exceeded "
-laodong.vn,200,https://laodong.vn/
-latestnews2u.com,200,https://latestnews2u.com/
-leetureview.com,200,https://leetureview.com/
-leminhhoang.vn,ERR,"HTTPSConnectionPool(host='leminhhoang.vn', port=443): Max retries exceeded with "
-lifehacktimes.com,200,https://lifehacktimes.com/
-lifescience1.com,200,https://lifescience1.com/
-likesuccess.com,200,https://likesuccess.com/
-likevape.vn,ERR,"HTTPSConnectionPool(host='likevape.vn', port=443): Max retries exceeded with url"
-linhkienhanoi.com,ERR,"HTTPSConnectionPool(host='linhkienhanoi.com', port=443): Read timed out. (read t"
-lmhoptacxatthue.com.vn,ERR,"HTTPSConnectionPool(host='lmhoptacxatthue.com.vn', port=443): Max retries exceed"
-logicaldaily.com,200,https://logicaldaily.net/
-loke.vn,ERR,"HTTPSConnectionPool(host='loke.vn', port=443): Max retries exceeded with url: / "
-longthanhcentralpoint.vn,200,https://longthanhcentralpoint.vn/
-luatdainam.vn,ERR,"HTTPSConnectionPool(host='luatdainam.vn', port=443): Max retries exceeded with u"
-luatthanhthai.vn,200,https://luatthanhthai.vn/
-luxrender.net,200,https://www.luxrender.net/
-luxtoy.vn,ERR,"HTTPSConnectionPool(host='luxtoy.vn', port=443): Max retries exceeded with url: "
-machovibes.com,200,https://www.machovibes.com/
-magiamgia247.vn,ERR,"HTTPSConnectionPool(host='magiamgia247.vn', port=443): Max retries exceeded with"
-maiacademy.vn,ERR,"HTTPSConnectionPool(host='maiacademy.vn', port=443): Max retries exceeded with u"
-maiche.vn,200,https://maiche.vn/
-mallumv.info,ERR,"HTTPSConnectionPool(host='mallumv.info', port=443): Max retries exceeded with ur"
-mamcungviet.com.vn,200,https://mamcungviet.com.vn/
-mamnonabc.vn,ERR,"HTTPSConnectionPool(host='mamnonabc.vn', port=443): Max retries exceeded with ur"
-manayi.vn,ERR,"HTTPSConnectionPool(host='manayi.vn', port=443): Max retries exceeded with url: "
-manta.edu.vn,ERR,"HTTPSConnectionPool(host='manta.edu.vn', port=443): Max retries exceeded with ur"
-mantavya.com,200,https://mantavya.com/
-marina-club.com.vn,200,https://marina-club.com.vn/
-marketbusiness.info,200,https://marketbusiness.info/
-marketingbusinessplans.com,200,https://marketingbusinessplans.com/
-marketsharegroup.com,200,https://marketsharegroup.com/
-marketwatch.com,401,https://www.marketwatch.com/
-marry.vn,200,https://www.marry.vn/
-matbachhoa.vn,ERR,"HTTPSConnectionPool(host='matbachhoa.vn', port=443): Max retries exceeded with u"
-mcstore.vn,ERR,"HTTPSConnectionPool(host='mcstore.vn', port=443): Max retries exceeded with url:"
-megaacademy.edu.vn,200,https://megaacademy.edu.vn/
-megafun.vn,200,https://megafun.vn/
-megaincomestream.com,200,https://megaincomestream.com/
-memedaily.vn,ERR,"HTTPSConnectionPool(host='memedaily.vn', port=443): Max retries exceeded with ur"
-mende.vn,ERR,"HTTPSConnectionPool(host='mende.vn', port=443): Max retries exceeded with url: /"
-mercedess-benz.com.vn,ERR,"HTTPSConnectionPool(host='mercedess-benz.com.vn', port=443): Max retries exceede"
-minhchautattoo.vn,ERR,"HTTPSConnectionPool(host='minhchautattoo.vn', port=443): Max retries exceeded wi"
-mitsubishi-isamco.com.vn,200,https://mitsubishi-isamco.com.vn/
-mitsubishi-longbien.com.vn,ERR,"HTTPSConnectionPool(host='mitsubishi-longbien.com.vn', port=443): Max retries ex"
-mitsuphuongnguyen.vn,200,https://mitsuphuongnguyen.vn/
-mmagym.vn,ERR,"HTTPSConnectionPool(host='mmagym.vn', port=443): Max retries exceeded with url: "
-mof.com.vn,ERR,"HTTPSConnectionPool(host='mof.com.vn', port=443): Max retries exceeded with url:"
-monngondongian.com,ERR,"HTTPSConnectionPool(host='monngondongian.com', port=443): Max retries exceeded w"
-motorstore.vn,200,https://motorstore.vn/
-moviesverse.la,ERR,"HTTPSConnectionPool(host='moviesverse.la', port=443): Max retries exceeded with "
-mp3newswire.net,200,https://www.mp3newswire.net/
-mrfix.com.vn,200,https://mrfix.com.vn/
-mrsun.vn,ERR,"HTTPSConnectionPool(host='mrsun.vn', port=443): Max retries exceeded with url: /"
-msn.com,200,https://www.msn.com/vi-vn
-mtcup.com.vn,ERR,"HTTPSConnectionPool(host='mtcup.com.vn', port=443): Max retries exceeded with ur"
-muaphelieusg.com,200,https://muaphelieusg.com/
-muinetourism.vn,ERR,"HTTPSConnectionPool(host='muinetourism.vn', port=443): Max retries exceeded with"
-musicraiser.com,200,https://www.musicraiser.net/
-my7up.vn,ERR,"HTTPSConnectionPool(host='my7up.vn', port=443): Max retries exceeded with url: /"
-mymyshoes.vn,ERR,"HTTPSConnectionPool(host='mymyshoes.vn', port=443): Max retries exceeded with ur"
-naction.in,200,https://naction.in/
-namhocsg.com,200,https://namhocsg.com/
-namiso.vn,ERR,"HTTPSConnectionPool(host='namiso.vn', port=443): Max retries exceeded with url: "
-nano-ceramic.vn,200,https://nano-ceramic.vn/
-netup.vn,200,https://www.netup.vn/
-news.yahoo.com,200,https://www.yahoo.com/news/
-newsninjapro.com,200,https://newsninjapro.com/
-newsrivals.com,200,https://newsrivals.com/
-ngheantoplist.net,200,https://ngheantoplist.net/
-nghienlamdep.vn,ERR,"HTTPSConnectionPool(host='nghienlamdep.vn', port=443): Max retries exceeded with"
-nghienpickleball.com,ERR,"HTTPSConnectionPool(host='nghienpickleball.com', port=443): Max retries exceeded"
-ngoisao.net,200,https://ngoisao.vnexpress.net/
-ngoisao.vn,200,https://ngoisao.vn/
-ngoisao.vnexpress.net,200,https://ngoisao.vnexpress.net/
-nguoidothi.net.vn,200,https://nguoidothi.net.vn/
-nguoiduatin.vn,200,https://www.nguoiduatin.vn/
-nguoihanoi.vn,200,https://nguoihanoi.vn/
-nguoiquansat.vn,200,https://nguoiquansat.vn/
-nguyenhien.edu.vn,ERR,"HTTPSConnectionPool(host='nguyenhien.edu.vn', port=443): Max retries exceeded wi"
-nhahangbachkim.com,ERR,"HTTPSConnectionPool(host='nhahangbachkim.com', port=443): Max retries exceeded w"
-nhahangbachkim.com.vn,200,https://nhahangbachkim.com.vn/
-nhahangganday.vn,ERR,"HTTPSConnectionPool(host='nhahangganday.vn', port=443): Max retries exceeded wit"
-nhahangminhkhue.com,ERR,"HTTPSConnectionPool(host='nhahangminhkhue.com', port=443): Max retries exceeded "
-nhahangphuongnam.vn,ERR,"HTTPSConnectionPool(host='nhahangphuongnam.vn', port=443): Max retries exceeded "
-nhakhoadongnama.vn,200,https://nhakhoadongnama.vn/
-nhalocphat.vn,200,https://nhalocphat.vn/
-nhandan.vn,200,https://nhandan.vn/
-nhanghiganday.vn,200,https://nhanghiganday.vn/
-nhathuoctaman.net,200,https://nhathuoctaman.net/
-nhipcaudautu.vn,200,https://nhipcaudautu.vn/
-nhipsongdothi.vn,200,https://nhipsongdothi.vn/
-niengrangthammy.com.vn,ERR,"HTTPSConnectionPool(host='niengrangthammy.com.vn', port=443): Max retries exceed"
-ninhbinhtoplist.com,200,https://ninhbinhtoplist.com/
-ninhquynhcarvip.vn,ERR,"HTTPSConnectionPool(host='ninhquynhcarvip.vn', port=443): Max retries exceeded w"
-nld.com.vn Người lao động,ERR,Failed to parse: https://nld.com.vn Người lao động
-nongthonvaphattrien.vn,200,https://nongthonvaphattrien.vn/
-nytimes.com,200,https://www.nytimes.com/
-officeforrent.com.vn,200,https://officeforrent.com.vn/
-ohay.vn,200,https://ohay.vn/
-onehubsaigon.com.vn,ERR,"HTTPSConnectionPool(host='onehubsaigon.com.vn', port=443): Max retries exceeded "
-onesteak.vn,ERR,"HTTPSConnectionPool(host='onesteak.vn', port=443): Max retries exceeded with url"
-onggiacali.vn,200,https://onggiacali.vn/
-onghutcobang.vn,ERR,"HTTPSConnectionPool(host='onghutcobang.vn', port=443): Max retries exceeded with"
-opal-cityview.vn,ERR,"HTTPSConnectionPool(host='opal-cityview.vn', port=443): Max retries exceeded wit"
-oppostyle.vn,ERR,"HTTPSConnectionPool(host='oppostyle.vn', port=443): Max retries exceeded with ur"
-otothongphat.vn,ERR,"HTTPSConnectionPool(host='otothongphat.vn', port=443): Max retries exceeded with"
-overlookpress.com,ERR,"HTTPSConnectionPool(host='overlookpress.com', port=443): Max retries exceeded wi"
-parami.vn,ERR,"HTTPSConnectionPool(host='parami.vn', port=443): Max retries exceeded with url: "
-parkcityhanoi.vn,200,https://guestpost.vn/
-parkriversides.vn,ERR,"HTTPSConnectionPool(host='parkriversides.vn', port=443): Max retries exceeded wi"
-pensacolavoice.com,521,https://pensacolavoice.com/
-peonyhome.com.vn,200,https://peonyhome.com.vn/
-petrotimes.vn,200,https://petrotimes.vn/
-peugeot-binhduong.vn,ERR,"HTTPSConnectionPool(host='peugeot-binhduong.vn', port=443): Max retries exceeded"
-pgdtpnamdinh.edu.vn,ERR,"HTTPSConnectionPool(host='pgdtpnamdinh.edu.vn', port=443): Max retries exceeded "
-phapluat.suckhoedoisong.vn,200,https://phapluat.suckhoedoisong.vn/
-phapluatmoitruong.vn,ERR,"HTTPSConnectionPool(host='phapluatmoitruong.vn', port=443): Max retries exceeded"
-phapluatnet.vn,ERR,"HTTPSConnectionPool(host='phapluatnet.vn', port=443): Max retries exceeded with "
-phapluatvacuocsong.vn,200,https://phapluatvacuocsong.vn/
-phapluatxahoi.vn,ERR,"HTTPSConnectionPool(host='phapluatxahoi.kinhtedothi.vn', port=443): Max retries "
-phongthuytaitam.vn,ERR,"HTTPSConnectionPool(host='phongthuytaitam.vn', port=443): Max retries exceeded w"
-phongvuarc.com,200,https://phongvuarc.com/
-phukhoaanviet.com,ERR,"HTTPSConnectionPool(host='phukhoaanviet.com', port=443): Max retries exceeded wi"
-phunuhiendai.vn,200,https://phunuhiendai.vn/
-phunumoi.net,ERR,"HTTPSConnectionPool(host='phunumoi.net', port=443): Max retries exceeded with ur"
-phunumoi.net.vn,200,https://phunumoi.net.vn/
-phunusuckhoe.giadinhonline.vn,200,https://phunusuckhoe.giadinhonline.vn/
-phunutoday.vn,200,https://phunutoday.vn/
-phunuvagiadinh.vn,200,https://www.phunuvagiadinh.vn/
-phunuvietnam.vn,200,https://phunuvietnam.vn/
-phuot247.vn,200,https://phuot247.vn/
-phuthotoplist.com,200,https://phuthotoplist.com/
-pilotco3.com.vn,ERR,"HTTPSConnectionPool(host='pilotco3.com.vn', port=443): Max retries exceeded with"
-pinxedapdien.com.vn,ERR,"HTTPSConnectionPool(host='pinxedapdien.com.vn', port=443): Max retries exceeded "
-plo.vn,200,https://tuoitre.vn/plo.htm
-pmcaonline.org,200,https://pmcaonline.org/
-popularwrite.com,ERR,"HTTPSConnectionPool(host='popularwrite.com', port=443): Max retries exceeded wit"
-powersteam.vn,200,https://powersteam.vn/
-primaart.vn,ERR,"HTTPSConnectionPool(host='primaart.vn', port=443): Max retries exceeded with url"
-proreviewbuzz.com,200,https://proreviewbuzz.com/
-pud.edu.vn,ERR,"HTTPSConnectionPool(host='pud.edu.vn', port=443): Max retries exceeded with url:"
-pvhttnt.vn,ERR,"HTTPSConnectionPool(host='pvhttnt.vn', port=443): Max retries exceeded with url:"
-qta.org.vn,200,https://qta.org.vn/
-qtc.vn,200,https://qtc.vn/
-quangbinhtoplist.com,200,https://quangbinhtoplist.com/
-quangnamtoplist.com,200,https://quangnamtoplist.com/
-quangninhcogi.vn,200,https://quangninhcogi.vn/
-quangninhtoplist.com,200,https://quangninhtoplist.com/
-quannetganday.com,ERR,"HTTPSConnectionPool(host='quannetganday.com', port=443): Max retries exceeded wi"
-questekvietnam.vn,ERR,"HTTPSConnectionPool(host='questekvietnam.vn', port=443): Max retries exceeded wi"
-quynhonreview.vn,200,https://quynhonreview.vn/
-reatimes.vn,200,https://reatimes.vn/
-recerd.org.vn,200,https://recerd.org.vn/
-remnhuanganlanh.vn,200,https://remnhuanganlanh.vn/
-reportsherald.com,200,https://reportsherald.com/
-richannel.org,200,https://richannel.org/
-royalbuffet.vn,200,https://guestpost.vn/
-royaltea.com.vn,ERR,"HTTPSConnectionPool(host='royaltea.com.vn', port=443): Max retries exceeded with"
-sabudo.vn,200,https://sabudo.vn/
-sacdep.net.vn,ERR,"HTTPSConnectionPool(host='sacdep.net.vn', port=443): Max retries exceeded with u"
-sachvui.com.vn,ERR,"HTTPSConnectionPool(host='sachvui.com.vn', port=443): Max retries exceeded with "
-sacojet.vn,ERR,"HTTPSConnectionPool(host='sacojet.vn', port=443): Max retries exceeded with url:"
-saigonbanme.vn,ERR,"HTTPSConnectionPool(host='saigonbanme.vn', port=443): Max retries exceeded with "
-saigonreview.vn,200,https://saigonreview.vn/
-sanbongchaolua.com,200,https://guestpost.vn/
-sanbongdahca.com,200,https://guestpost.vn/
-sanbongdamhong2.com,200,https://guestpost.vn/
-sanbonglathanh.com,200,https://guestpost.vn/
-sankhaukichquocthao.vn,ERR,"HTTPSConnectionPool(host='sankhaukichquocthao.vn', port=443): Max retries exceed"
-sanvatphuongnam.vn,200,https://sanvatphuongnam.vn/
-sanvinest.vn,ERR,"HTTPSConnectionPool(host='sanvinest.vn', port=443): Max retries exceeded with ur"
-saostar.vn,200,https://www.saostar.vn/
-scholarlyoa.com,200,https://scholarlyo.com/
-seoulecohome.com.vn,ERR,"HTTPSConnectionPool(host='seoulecohome.com.vn', port=443): Max retries exceeded "
-serenavalleythanhlanh.vn,ERR,"HTTPSConnectionPool(host='serenavalleythanhlanh.vn', port=443): Max retries exce"
-sewow.vn,ERR,"HTTPSConnectionPool(host='sewow.vn', port=443): Max retries exceeded with url: /"
-shopcenaff.vn,ERR,"HTTPSConnectionPool(host='shopcenaff.vn', port=443): Max retries exceeded with u"
-shopchinhthuc.vn,ERR,"HTTPSConnectionPool(host='shopchinhthuc.vn', port=443): Max retries exceeded wit"
-shophagamingff.com,ERR,"HTTPSConnectionPool(host='shophagamingff.com', port=443): Max retries exceeded w"
-shoplove.vn,ERR,"HTTPSConnectionPool(host='shoplove.vn', port=443): Max retries exceeded with url"
-sigmabooks.vn,ERR,"HTTPSConnectionPool(host='sigmabooks.vn', port=443): Max retries exceeded with u"
-skinary.vn,ERR,"HTTPSConnectionPool(host='skinary.vn', port=443): Max retries exceeded with url:"
-slidez.vn,ERR,"HTTPSConnectionPool(host='slidez.vn', port=443): Max retries exceeded with url: "
-smokinjoesribranch.com,200,https://www.smokinjoesribranch.com/
-soha.vn,200,https://soha.vn/
-sohuutritue.net.vn,200,https://sohuutritue.net.vn/
-songdep.com.vn,200,https://songdep.com.vn/
-songsachfood.com,200,https://songsachfood.com/
-sotaykhoedep.vn,ERR,"HTTPSConnectionPool(host='sotaykhoedep.vn', port=443): Max retries exceeded with"
-soundhealthdoctor.com,ERR,"HTTPSConnectionPool(host='soundhealthdoctor.com', port=443): Read timed out. (re"
-spahub.vn,ERR,"HTTPSConnectionPool(host='spahub.vn', port=443): Max retries exceeded with url: "
-specstalk.com,500,https://specstalk.com/
-streetinsider.com,403,https://streetinsider.com/
-suadiennuoctainha.com.vn,200,https://suadiennuoctainha.com.vn/
-suadogotainha.com.vn,200,https://suadogotainha.com.vn/
-suavalitainha.com,ERR,"HTTPSConnectionPool(host='suavalitainha.com', port=443): Read timed out. (read t"
-suaxedapdientainha.net,ERR,"HTTPSConnectionPool(host='suaxedapdientainha.net', port=443): Max retries exceed"
-suaxedung.com,200,https://suaxedung.com/
-suaxeluudong.vn,200,https://suaxeluudong.vn/
-suaxemay24h.com,200,https://suaxemay24h.com/
-suaxemaytainha.com,200,https://suaxemaytainha.com/
-suckhoecongdongonline.vn,200,https://suckhoecongdongonline.vn/
-suckhoedoisong.vn,200,https://suckhoedoisong.vn/
-suckhoegiadinhvietnam.com,200,https://suckhoegiadinhvietnam.com/
-suckhoephapluat.nguoiduatin.vn,200,https://suckhoephapluat.nguoiduatin.vn/
-suckhoevacongdong.vn,200,http://www.suckhoevacongdong.vn
-suckhoeviet.org.vn,200,https://suckhoeviet.org.vn/
-suoiluong.com.vn,200,https://suoiluong.com.vn/
-suoinguontinhthuong.vn,ERR,"HTTPSConnectionPool(host='suoinguontinhthuong.vn', port=443): Max retries exceed"
-susuhero.vn,ERR,"HTTPSConnectionPool(host='susuhero.vn', port=443): Max retries exceeded with url"
-tainguyenvamoitruong.com.vn,200,https://tainguyenvamoitruong.com.vn/
-tamnhinrong.org,ERR,"HTTPSConnectionPool(host='tamnhinrong.org', port=443): Max retries exceeded with"
-tapchikientruc.com.vn,200,https://www.tapchikientruc.com.vn/
-tapchinghiencuuphathoc.vn,200,https://tapchinghiencuuphathoc.vn/
-tapchitoaan.vn,200,https://tapchitoaan.vn/
-tapchivietduc.vn,200,https://tapchivietduc.vn/
-tapchixaydung.vn,200,https://tapchixaydung.vn/
-tarzanspa.com.vn,ERR,"HTTPSConnectionPool(host='tarzanspa.com.vn', port=443): Max retries exceeded wit"
-tatwood.vn,ERR,"HTTPSConnectionPool(host='tatwood.vn', port=443): Max retries exceeded with url:"
-taxibinhan.vn,200,https://taxibinhan.vn/
-taxitayninh.com.vn,ERR,"HTTPSConnectionPool(host='taxitayninh.com.vn', port=443): Max retries exceeded w"
-taybaclaw.edu.vn,200,https://www.taybaclaw.edu.vn/
-tcnhadep.com,200,https://tcnhadep.com/
-techlogus.com,200,https://techlogus.com/
-technologyguiders.com,200,https://technologyguiders.com/
-techrum.vn,200,https://techrum.vn/
-techsfeed.com,200,https://techsfeed.com/
-techz.vn,200,https://www.techz.vn/
-thaibinhtoplist.com,200,https://www.thaibinhtoplist.com/
-thalongbinh.edu.vn,ERR,"HTTPSConnectionPool(host='thalongbinh.edu.vn', port=443): Max retries exceeded w"
-thamtutamviet.vn,ERR,"HTTPSConnectionPool(host='thamtutamviet.vn', port=443): Max retries exceeded wit"
-thangcanh.vn,ERR,"HTTPSConnectionPool(host='thangcanh.vn', port=443): Max retries exceeded with ur"
-thanhhamuongthanh.vn,ERR,"HTTPSConnectionPool(host='thanhhamuongthanh.vn', port=443): Max retries exceeded"
-thanhhoatoplist.com,200,https://thanhhoatoplist.com/
-thanhnien.vn,200,https://thanhnien.vn/
-thanhnienviet.vn,200,https://thanhnienviet.vn/
-thanhpho.danang.vn,200,https://thanhpho.danang.vn/
-thanhyenland.vn,ERR,"HTTPSConnectionPool(host='thanhyenland.vn', port=443): Max retries exceeded with"
-thebestbuyguide.com,200,https://thebestbuyguide.com/
-thegioimatkinh.com.vn,200,https://thegioimatkinh.com.vn/
-theisozone.com,200,https://theisozone.com/
-thesaigontimes.vn,200,https://tuoitre.vn/tto-saigontimes.htm
-thethao247.vn,200,https://thethao247.vn/
-thethaophunhuan.com.vn,ERR,"HTTPSConnectionPool(host='thethaophunhuan.com.vn', port=443): Max retries exceed"
-thethaophutho.vn,ERR,"HTTPSConnectionPool(host='thethaophutho.vn', port=443): Max retries exceeded wit"
-thethaovanhoa.vn,200,https://thethaovanhoa.vn/
-thethaovietnam.vn,200,https://thethaovietnam.vn/
-thevideoink.com,200,https://thevideoink.com/
-thewashingtonnote.com,200,https://thewashingtonote.com/
-thezenuniverse.org,200,https://thezenuniverse.org/
-thietkemyb.com.vn,ERR,"HTTPSConnectionPool(host='thietkemyb.com.vn', port=443): Max retries exceeded wi"
-thieunien.vn,200,https://thieunien.vn/
-thitruong.nld.com.vn,200,https://thitruong.nld.com.vn/nld-thi-truong.htm
-thitruongbiz.vn,200,https://thitruongbiz.vn/
-thitruongngaynay.vn,200,https://thitruongngaynay.vn/
-thketdoan.edu.vn,ERR,"HTTPSConnectionPool(host='thketdoan.edu.vn', port=443): Max retries exceeded wit"
-thodiadongthap.vn,ERR,"HTTPSConnectionPool(host='thodiadongthap.vn', port=443): Max retries exceeded wi"
-thoiviet.com.vn,ERR,"HTTPSConnectionPool(host='thoiviet.com.vn', port=443): Max retries exceeded with"
-thoxay.com.vn,ERR,"HTTPSConnectionPool(host='thoxay.com.vn', port=443): Max retries exceeded with u"
-thuanphat.edu.vn,200,https://thuanphat.edu.vn/
-thuantiengialai.com.vn,ERR,"HTTPSConnectionPool(host='thuantiengialai.com.vn', port=443): Max retries exceed"
-thucanh.vn,200,https://thucanh.vn/
-thuexemay.com.vn,200,https://thuexemay.com.vn/
-thuoc365.com.vn,ERR,"HTTPSConnectionPool(host='thuoc365.com.vn', port=443): Max retries exceeded with"
-thuonghieucongluan.com.vn,200,https://thuonghieucongluan.com.vn/
-thuonghieuphattrien.com,200,https://thuonghieuphattrien.com/
-thuonghieuvaphapluat.vn,200,https://thuonghieuvaphapluat.vn/
-thuongmaihanoi.edu.vn,ERR,"HTTPSConnectionPool(host='thuongmaihanoi.edu.vn', port=443): Max retries exceede"
-thutucxuatnhapkhau.net,200,https://thutucxuatnhapkhau.net/
-thuviendohoa.vn,200,https://thuviendohoa.vn/
-tiengiangtoplist.vn,200,https://tiengiangtoplist.vn/
-tienphatjsc.vn,200,https://tienphatjsc.vn/
-tienphong.vn,200,https://tienphong.vn/
-tieudung.vn,200,https://tieudung.vn/
-tieudungtiepthi.vn,500,https://tieudungtiepthi.vn/
-tiin.vn,200,https://tiin.vn/
-timbatdongsan.vn,200,https://timbatdongsan.vn/
-tinhocduykhang.com,200,https://tinhocduykhang.com/
-tinhte.vn,200,https://tinhte.vn/
-tinthethao.com.vn,200,https://yeuthethao.net.vn/
-toclayer.net,ERR,"HTTPSConnectionPool(host='toclayer.net', port=443): Max retries exceeded with ur"
-tocotocotanan.com,200,https://tocotocotanan.com/
-toluavietnam.net,ERR,"HTTPSConnectionPool(host='toluavietnam.net', port=443): Max retries exceeded wit"
-tonlaysangsata.com.vn,ERR,"HTTPSConnectionPool(host='tonlaysangsata.com.vn', port=443): Read timed out. (re"
-top10binhduong.com.vn,200,https://top10binhduong.com.vn/
-top10binhphuoc.vn,200,https://top10binhphuoc.vn/
-top10binhthuan.vn,200,https://top10binhthuan.vn/
-top10camau.vn,200,https://top10camau.vn/
-top10danang.com,200,https://top10danang.com/
-top10quangnam.vn,200,https://top10quangnam.vn/
-top10quangngai.vn,200,https://top10quangngai.vn/
-top10riviu.com,200,https://top10riviu.com/
-topaz.vn,200,https://topaz.vn/
-topbinhduong.com,200,https://topbinhduong.com/
-topblognews.com,200,https://topblognews.com/
-topcomvespa.vn,ERR,"HTTPSConnectionPool(host='topcomvespa.vn', port=443): Max retries exceeded with "
-topdongnai.com,200,https://topdongnai.com/
-tophaiphong.com,200,https://tophaiphong.com/
-toplistcantho.com,200,https://toplistcantho.com/
-toplistdanang.com,200,https://toplistdanang.com/
-toplisthanoi.com,200,https://toplisthanoi.com/
-toplistsaigon.com,200,https://toplistsaigon.com/
-toplistviet.org,200,https://toplistviet.org/
-topone.edu.vn,200,https://topone.edu.vn/
-toptonghop.com,200,https://toptonghop.com/
-tradadi.vn,ERR,"HTTPSConnectionPool(host='tradadi.vn', port=443): Max retries exceeded with url:"
-tramhuongangiabao.com.vn,ERR,"HTTPSConnectionPool(host='tramhuongangiabao.com.vn', port=443): Max retries exce"
-trangphucchothue.vn,200,https://trangphucchothue.vn/
-trangtrinoel.vn,ERR,"HTTPSConnectionPool(host='trangtrinoel.vn', port=443): Max retries exceeded with"
-travelist.vn,200,https://travelist.vn/
-trinhsongphuc.com,ERR,"HTTPSConnectionPool(host='trinhsongphuc.com', port=443): Max retries exceeded wi"
-trinhvantuyen.com,ERR,"HTTPSConnectionPool(host='trinhvantuyen.com', port=443): Max retries exceeded wi"
-truckslane.com,200,https://truckslane.com/
-truckszilla.com,200,https://truckszilla.com/
-trungtamtdtthanoi.com.vn,ERR,"HTTPSConnectionPool(host='trungtamtdtthanoi.com.vn', port=443): Max retries exce"
-trungtamytedian.com,200,https://trungtamytedian.com/
-trungtamytengabay.vn,ERR,"HTTPSConnectionPool(host='trungtamytengabay.vn', port=443): Max retries exceeded"
-truyenhinhnghean.vn,200,https://truyenhinhnghean.vn/
-truyenhinhnghean.vn (BÁO MỚI VỀ),ERR,Failed to parse: https://truyenhinhnghean.vn (BÁO MỚI VỀ)
-truyenthongvaphattrien.vn,200,https://truyenthongvaphattrien.vn/
-tsfu.vn,ERR,"HTTPSConnectionPool(host='tsfu.vn', port=443): Max retries exceeded with url: / "
-tthnsk-dongnai.com.vn,ERR,"HTTPSConnectionPool(host='tthnsk-dongnai.com.vn', port=443): Max retries exceede"
-tumbler.vn,ERR,"HTTPSConnectionPool(host='tumbler.vn', port=443): Max retries exceeded with url:"
-tunai4d.net,ERR,"HTTPSConnectionPool(host='tunai4d.net', port=443): Max retries exceeded with url"
-tuoitre.vn,200,https://tuoitre.vn/
-tuoitrebariavungtau.vn,ERR,"HTTPSConnectionPool(host='tuoitrebariavungtau.vn', port=443): Max retries exceed"
-tuoitrexahoi.vn,200,https://tuoitrexahoi.vn/
-tuongda.com.vn,200,https://tuongda.com.vn/
-tuvitrondoi.vn,ERR,"HTTPSConnectionPool(host='tuvitrondoi.vn', port=443): Max retries exceeded with "
-ubeauty.vn,200,https://ubeauty.vn/
-udicwestlake.com.vn,ERR,"HTTPSConnectionPool(host='udicwestlake.com.vn', port=443): Max retries exceeded "
-unikmart.com.vn,200,https://unikmart.com.vn/
-up.pens.com.vn,ERR,"HTTPSConnectionPool(host='up.pens.com.vn', port=443): Max retries exceeded with "
-usatoday.com,200,https://www.usatoday.com/
-uyenuong.net,200,https://uyenuong.net/
-vacpa.edu.vn,ERR,"HTTPSConnectionPool(host='vacpa.edu.vn', port=443): Max retries exceeded with ur"
-vangduymong.com,200,https://vangduymong.com/
-vangkimchung.net,200,https://vangkimchung.net/
-vanhoathoidai.vn,200,https://vanhoathoidai.vn/
-vanhoavadoisong.vn,200,https://vanhoavadoisong.vn/
-vanhoavaphattrien.vn,200,https://vanhoavaphattrien.vn/
-vaporizero.com,200,https://www.vaporizero.com/
-vatnuoi.vn,ERR,"HTTPSConnectionPool(host='vatnuoi.vn', port=443): Max retries exceeded with url:"
-venusmotorbike.vn,ERR,"HTTPSConnectionPool(host='venusmotorbike.vn', port=443): Max retries exceeded wi"
-vesinhdanang.net,ERR,"HTTPSConnectionPool(host='vesinhdanang.net', port=443): Max retries exceeded wit"
-vethan.vn,200,https://vethan.vn/
-vetranhtuongviet.vn,200,https://www.vetranhtuongviet.vn/
-vibehandmade.vn,ERR,"HTTPSConnectionPool(host='vibehandmade.vn', port=443): Max retries exceeded with"
-vienhoahocvatlieu.com.vn,ERR,"HTTPSConnectionPool(host='vienhoahocvatlieu.com.vn', port=443): Max retries exce"
-vienmoitruong5014.org.vn,ERR,"HTTPSConnectionPool(host='vienmoitruong5014.org.vn', port=443): Max retries exce"
-vietbao.vn,200,https://vietbao.vn/
-vietcetera.com,200,https://vietcetera.com/
-vietnam.travel,200,https://vietnam.travel/
-vietnambiz.vn,200,https://vietnambiz.vn/
-vietnamhuongsac.vn,200,https://vietnamhuongsac.vn/
-vietnammoi.vn,200,https://vietnammoi.vn/
-vietnamnet.vn,200,https://vietnamnet.vn/
-vietnamplus.vn,200,https://www.vietnamplus.vn/
-vietnamtop10.net,200,https://vietnamtop10.net/
-vietnamtourism.gov.vn,200,https://vietnamtourism.gov.vn/
-vietnamtuoidep.net,200,https://vietnamtuoidep.net/
-vietpost.com.vn,200,https://vietpost.com.vn/
-vietq.vn,200,https://vietq.vn/
-vietstock.vn,200,https://vietstock.vn/
-vinagiasu.vn,ERR,"HTTPSConnectionPool(host='vinagiasu.vn', port=443): Max retries exceeded with ur"
-vinfastgiatot.com.vn,200,https://vinfastgiatot.com.vn/
-vinhlongtoplist.com,200,https://vinhlongtoplist.com/
-vinhomescoloa.com.vn,200,https://guestpost.vn/
-vir.com.vn,200,https://vir.com.vn/
-vivuxuyenviet.net,200,https://vivuxuyenviet.net/
-vneconomy.vn,200,https://vneconomy.vn/
-vnexpress.net,200,https://vnexpress.net/
-vnfinance.vn,200,https://vnfinance.vn/
-vnmedia.vn,ERR,"HTTPSConnectionPool(host='vnmedia.vn', port=443): Max retries exceeded with url:"
-vnreview.vn,200,https://vnreview.vn/
-vov.vn,403,https://vov.vn/
-vsf.org.vn,ERR,"HTTPSConnectionPool(host='vsf.org.vn', port=443): Max retries exceeded with url:"
-vtcnews.vn,200,https://vtcnews.vn/
-vtv.vn,200,https://vtv.vn/
-vugiaphat.vn,ERR,"HTTPSConnectionPool(host='vugiaphat.vn', port=443): Max retries exceeded with ur"
-vuongquoctranh.com,200,https://www.vuongquoctranh.com/
-vuonlan.com.vn,ERR,"HTTPSConnectionPool(host='vuonlan.com.vn', port=443): Max retries exceeded with "
-warrantek.vn,200,https://warrantek.vn/
-webnewswires.com,200,https://webnewswires.com/
-webtretho.com,200,https://www.webtretho.vn/
-weddingstats.org,200,https://www.weddingstats.org/
-weirdworm.com,200,https://www.weirdworm.net/
-wetechmedia.com,200,https://wetechmedia.com/
-whatmouse.com,200,https://www.whatmouse.com/
-wiki.batdongsan.com.vn,200,https://wiki.batdongsan.com.vn/
-wikitechno.de,200,https://wikitechno.de/
-wikithammy.com,200,https://wikithammy.com/
-wsj.com,401,https://www.wsj.com/
-"www.24h.com.vn Bài PR loại 2 ( TTTD,KD)",ERR,"Failed to parse: https://www.24h.com.vn Bài PR loại 2 ( TTTD,KD)"
-www.24h.com.vn Bài PR loại 2 (Mục còn lại),ERR,Failed to parse: https://www.24h.com.vn Bài PR loại 2 (Mục còn lại)
-xahoi.com.vn,200,https://xahoi.com.vn/
-xaluannews.com,200,https://www.xaluannews.com/
-xaydung.edu.vn,ERR,"HTTPSConnectionPool(host='xaydung.edu.vn', port=443): Max retries exceeded with "
-xaynhadep.com.vn,200,https://xaynhadep.com.vn/
-xedienmanhphat.com,200,https://xedienmanhphat.com/
-ximangcantho.vn,ERR,"HTTPSConnectionPool(host='ximangcantho.vn', port=443): Max retries exceeded with"
-yan.vn,200,https://www.yan.vn/
-yeah1.com,200,https://yeah1.com/
-ykhoabacsaigon.vn,ERR,"HTTPSConnectionPool(host='ykhoabacsaigon.vn', port=443): Max retries exceeded wi"
-zeldabeauty.com,200,https://zeldabeauty.com/
-zerohedge.com,200,https://www.zerohedge.com:443
-zhongruan.edu.vn,ERR,"HTTPSConnectionPool(host='zhongruan.edu.vn', port=443): Max retries exceeded wit"
-znews.vn,200,https://znews.vn/
-znews.vn (Zing),ERR,"HTTPSConnectionPool(host='znews.vn%20(zing)', port=443): Max retries exceeded wi"
+domain,trang_thai,chi_tiet
+batdongsan.com.vn,BLOCKED,"HTTP 403 (co the chan bot, khong chac chet)"
+bloomberg.com,BLOCKED,"HTTP 403 (co the chan bot, khong chac chet)"
+streetinsider.com,BLOCKED,"HTTP 403 (co the chan bot, khong chac chet)"
+usatoday.com,BLOCKED,"HTTP 403 (co the chan bot, khong chac chet)"
+vov.vn,BLOCKED,"HTTP 403 (co the chan bot, khong chac chet)"
+24hexpress.vn,DEAD_DOMAIN,khong resolve DNS
+6streamsxy.com,DEAD_DOMAIN,khong resolve DNS
+7starhd.la,DEAD_DOMAIN,khong resolve DNS
+adoreyou.vn,DEAD_DOMAIN,khong resolve DNS
+ambalgvn.org.vn,DEAD_DOMAIN,khong resolve DNS
+anhsang.edu.vn,DEAD_DOMAIN,khong resolve DNS
+animestore.vn,DEAD_DOMAIN,khong resolve DNS
+aocuoimoc.vn,DEAD_DOMAIN,khong resolve DNS
+aothundepsg.com,DEAD_DOMAIN,khong resolve DNS
+aothungame.vn,DEAD_DOMAIN,khong resolve DNS
+atmganday.net,DEAD_DOMAIN,khong resolve DNS
+banobagi.com.vn,DEAD_DOMAIN,khong resolve DNS
+basicact.com,DEAD_DOMAIN,khong resolve DNS
+batdongsan49.vn,DEAD_DOMAIN,khong resolve DNS
+batterydown.vn,DEAD_DOMAIN,khong resolve DNS
+besti.vn,DEAD_DOMAIN,khong resolve DNS
+betongtuoi.net.vn,DEAD_DOMAIN,khong resolve DNS
+bhfood.vn,DEAD_DOMAIN,khong resolve DNS
+brgrubytreegolf.vn,DEAD_DOMAIN,khong resolve DNS
+bvtkontum.com.vn,DEAD_DOMAIN,khong resolve DNS
+cadasa.vn,DEAD_DOMAIN,khong resolve DNS
+cafeganday.com,DEAD_DOMAIN,khong resolve DNS
+caymotuthan.vn,DEAD_DOMAIN,khong resolve DNS
+cdchaugiang.org.vn,DEAD_DOMAIN,khong resolve DNS
+cdctuyenquang.vn,DEAD_DOMAIN,khong resolve DNS
+chichiemem.vn,DEAD_DOMAIN,khong resolve DNS
+chocanh.vn,DEAD_DOMAIN,khong resolve DNS
+chonongsankhanhhoa.vn,DEAD_DOMAIN,khong resolve DNS
+chuthapdoquangninh.org.vn,DEAD_DOMAIN,khong resolve DNS
+colkidsclub.vn,DEAD_DOMAIN,khong resolve DNS
+congdoanvienchucvn.org.vn,DEAD_DOMAIN,khong resolve DNS
+cozabebe.vn,DEAD_DOMAIN,khong resolve DNS
+customcat.vn,DEAD_DOMAIN,khong resolve DNS
+cuuhoxe.vn,DEAD_DOMAIN,khong resolve DNS
+cuuhoxemayhanoi.vn,DEAD_DOMAIN,khong resolve DNS
+dacnguyen.vn,DEAD_DOMAIN,khong resolve DNS
+daihocluathn.edu.vn,DEAD_DOMAIN,khong resolve DNS
+dangkiem5006v.com.vn,DEAD_DOMAIN,khong resolve DNS
+daotaoquoctedhxd.edu.vn,DEAD_DOMAIN,khong resolve DNS
+datnuoc.com.vn,DEAD_DOMAIN,khong resolve DNS
+dichvu3gmobifone.vn,DEAD_DOMAIN,khong resolve DNS
+doanhnhanonile.com.vn,DEAD_DOMAIN,khong resolve DNS
+doanhnhanphuonghoang.vn,DEAD_DOMAIN,khong resolve DNS
+dotary.vn,DEAD_DOMAIN,khong resolve DNS
+duchenangngoaitroi.net,DEAD_DOMAIN,khong resolve DNS
+duongbo.vn,DEAD_DOMAIN,khong resolve DNS
+enetviet.edu.vn,DEAD_DOMAIN,khong resolve DNS
+f0.phutho.vn,DEAD_DOMAIN,khong resolve DNS
+familyfruits.com.vn,DEAD_DOMAIN,khong resolve DNS
+fixi.vn,DEAD_DOMAIN,khong resolve DNS
+forbesrumor.com,DEAD_DOMAIN,khong resolve DNS
+foxnewbrand.com,DEAD_DOMAIN,khong resolve DNS
+gart.vn,DEAD_DOMAIN,khong resolve DNS
+gayleesinshop.vn,DEAD_DOMAIN,khong resolve DNS
+gayviet.vn,DEAD_DOMAIN,khong resolve DNS
+gemstech.com.vn,DEAD_DOMAIN,khong resolve DNS
+giaidap.com.vn,DEAD_DOMAIN,khong resolve DNS
+giaxemoto.com.vn,DEAD_DOMAIN,khong resolve DNS
+gionghatvietnhi.com.vn,DEAD_DOMAIN,khong resolve DNS
+giovangthethao.vn,DEAD_DOMAIN,khong resolve DNS
+glutawhite.vn,DEAD_DOMAIN,khong resolve DNS
+goldencentercity.vn,DEAD_DOMAIN,khong resolve DNS
+golist.vn,DEAD_DOMAIN,khong resolve DNS
+grande.edu.vn,DEAD_DOMAIN,khong resolve DNS
+greenedu.vn,DEAD_DOMAIN,khong resolve DNS
+hachikopetshop.vn,DEAD_DOMAIN,khong resolve DNS
+hanoiparagon.vn,DEAD_DOMAIN,khong resolve DNS
+haquangtv.vn,DEAD_DOMAIN,khong resolve DNS
+hconnect.vn,DEAD_DOMAIN,khong resolve DNS
+hdgoffice.vn,DEAD_DOMAIN,khong resolve DNS
+hieugoogle.vn,DEAD_DOMAIN,khong resolve DNS
+himlamresort.vn,DEAD_DOMAIN,khong resolve DNS
+hoangvietauto.vn,DEAD_DOMAIN,khong resolve DNS
+hoivietnamduc.vn,DEAD_DOMAIN,khong resolve DNS
+huyendoannongson.vn,DEAD_DOMAIN,khong resolve DNS
+hytcc.org.vn,DEAD_DOMAIN,khong resolve DNS
+inail.vn,DEAD_DOMAIN,khong resolve DNS
+ironman.vn,DEAD_DOMAIN,khong resolve DNS
+khafa.org.vn,DEAD_DOMAIN,khong resolve DNS
+khoahocvacuocsong.vn,DEAD_DOMAIN,khong resolve DNS
+khudothivinhomes.com.vn,DEAD_DOMAIN,khong resolve DNS
+kiemlamthuathienhue.org.vn,DEAD_DOMAIN,khong resolve DNS
+kilu.vn,DEAD_DOMAIN,khong resolve DNS
+leminhhoang.vn,DEAD_DOMAIN,khong resolve DNS
+likevape.vn,DEAD_DOMAIN,khong resolve DNS
+lmhoptacxatthue.com.vn,DEAD_DOMAIN,khong resolve DNS
+luatdainam.vn,DEAD_DOMAIN,khong resolve DNS
+luxtoy.vn,DEAD_DOMAIN,khong resolve DNS
+magiamgia247.vn,DEAD_DOMAIN,khong resolve DNS
+mallumv.info,DEAD_DOMAIN,khong resolve DNS
+mamnonabc.vn,DEAD_DOMAIN,khong resolve DNS
+manayi.vn,DEAD_DOMAIN,khong resolve DNS
+manta.edu.vn,DEAD_DOMAIN,khong resolve DNS
+mcstore.vn,DEAD_DOMAIN,khong resolve DNS
+memedaily.vn,DEAD_DOMAIN,khong resolve DNS
+mende.vn,DEAD_DOMAIN,khong resolve DNS
+mercedess-benz.com.vn,DEAD_DOMAIN,khong resolve DNS
+minhchautattoo.vn,DEAD_DOMAIN,khong resolve DNS
+mmagym.vn,DEAD_DOMAIN,khong resolve DNS
+mof.com.vn,DEAD_DOMAIN,khong resolve DNS
+moviesverse.la,DEAD_DOMAIN,khong resolve DNS
+mrsun.vn,DEAD_DOMAIN,khong resolve DNS
+my7up.vn,DEAD_DOMAIN,khong resolve DNS
+nguyenhien.edu.vn,DEAD_DOMAIN,khong resolve DNS
+nhahangbachkim.com,DEAD_DOMAIN,khong resolve DNS
+nhahangganday.vn,DEAD_DOMAIN,khong resolve DNS
+nhahangminhkhue.com,DEAD_DOMAIN,khong resolve DNS
+niengrangthammy.com.vn,DEAD_DOMAIN,khong resolve DNS
+onesteak.vn,DEAD_DOMAIN,khong resolve DNS
+onghutcobang.vn,DEAD_DOMAIN,khong resolve DNS
+opal-cityview.vn,DEAD_DOMAIN,khong resolve DNS
+oppostyle.vn,DEAD_DOMAIN,khong resolve DNS
+otothongphat.vn,DEAD_DOMAIN,khong resolve DNS
+parami.vn,DEAD_DOMAIN,khong resolve DNS
+parkriversides.vn,DEAD_DOMAIN,khong resolve DNS
+pgdtpnamdinh.edu.vn,DEAD_DOMAIN,khong resolve DNS
+phapluatmoitruong.vn,DEAD_DOMAIN,khong resolve DNS
+phapluatnet.vn,DEAD_DOMAIN,khong resolve DNS
+phukhoaanviet.com,DEAD_DOMAIN,khong resolve DNS
+phunumoi.net,DEAD_DOMAIN,khong resolve DNS
+pinxedapdien.com.vn,DEAD_DOMAIN,khong resolve DNS
+popularwrite.com,DEAD_DOMAIN,khong resolve DNS
+primaart.vn,DEAD_DOMAIN,khong resolve DNS
+pud.edu.vn,DEAD_DOMAIN,khong resolve DNS
+pvhttnt.vn,DEAD_DOMAIN,khong resolve DNS
+quannetganday.com,DEAD_DOMAIN,khong resolve DNS
+questekvietnam.vn,DEAD_DOMAIN,khong resolve DNS
+royaltea.com.vn,DEAD_DOMAIN,khong resolve DNS
+sacdep.net.vn,DEAD_DOMAIN,khong resolve DNS
+sachvui.com.vn,DEAD_DOMAIN,khong resolve DNS
+saigonbanme.vn,DEAD_DOMAIN,khong resolve DNS
+sankhaukichquocthao.vn,DEAD_DOMAIN,khong resolve DNS
+seoulecohome.com.vn,DEAD_DOMAIN,khong resolve DNS
+shopcenaff.vn,DEAD_DOMAIN,khong resolve DNS
+shopchinhthuc.vn,DEAD_DOMAIN,khong resolve DNS
+shophagamingff.com,DEAD_DOMAIN,khong resolve DNS
+shoplove.vn,DEAD_DOMAIN,khong resolve DNS
+sigmabooks.vn,DEAD_DOMAIN,khong resolve DNS
+suaxedapdientainha.net,DEAD_DOMAIN,khong resolve DNS
+suoinguontinhthuong.vn,DEAD_DOMAIN,khong resolve DNS
+tamnhinrong.org,DEAD_DOMAIN,khong resolve DNS
+tarzanspa.com.vn,DEAD_DOMAIN,khong resolve DNS
+tatwood.vn,DEAD_DOMAIN,khong resolve DNS
+thalongbinh.edu.vn,DEAD_DOMAIN,khong resolve DNS
+thamtutamviet.vn,DEAD_DOMAIN,khong resolve DNS
+thanhhamuongthanh.vn,DEAD_DOMAIN,khong resolve DNS
+thanhyenland.vn,DEAD_DOMAIN,khong resolve DNS
+thethaophunhuan.com.vn,DEAD_DOMAIN,khong resolve DNS
+thietkemyb.com.vn,DEAD_DOMAIN,khong resolve DNS
+thketdoan.edu.vn,DEAD_DOMAIN,khong resolve DNS
+thoiviet.com.vn,DEAD_DOMAIN,khong resolve DNS
+thoxay.com.vn,DEAD_DOMAIN,khong resolve DNS
+thuoc365.com.vn,DEAD_DOMAIN,khong resolve DNS
+thuongmaihanoi.edu.vn,DEAD_DOMAIN,khong resolve DNS
+toclayer.net,DEAD_DOMAIN,khong resolve DNS
+topcomvespa.vn,DEAD_DOMAIN,khong resolve DNS
+tradadi.vn,DEAD_DOMAIN,khong resolve DNS
+tramhuongangiabao.com.vn,DEAD_DOMAIN,khong resolve DNS
+trinhsongphuc.com,DEAD_DOMAIN,khong resolve DNS
+trungtamtdtthanoi.com.vn,DEAD_DOMAIN,khong resolve DNS
+trungtamytengabay.vn,DEAD_DOMAIN,khong resolve DNS
+tsfu.vn,DEAD_DOMAIN,khong resolve DNS
+tthnsk-dongnai.com.vn,DEAD_DOMAIN,khong resolve DNS
+tumbler.vn,DEAD_DOMAIN,khong resolve DNS
+tunai4d.net,DEAD_DOMAIN,khong resolve DNS
+tuoitrebariavungtau.vn,DEAD_DOMAIN,khong resolve DNS
+tuvitrondoi.vn,DEAD_DOMAIN,khong resolve DNS
+udicwestlake.com.vn,DEAD_DOMAIN,khong resolve DNS
+up.pens.com.vn,DEAD_DOMAIN,khong resolve DNS
+vacpa.edu.vn,DEAD_DOMAIN,khong resolve DNS
+venusmotorbike.vn,DEAD_DOMAIN,khong resolve DNS
+vesinhdanang.net,DEAD_DOMAIN,khong resolve DNS
+vienhoahocvatlieu.com.vn,DEAD_DOMAIN,khong resolve DNS
+vienmoitruong5014.org.vn,DEAD_DOMAIN,khong resolve DNS
+vinagiasu.vn,DEAD_DOMAIN,khong resolve DNS
+vsf.org.vn,DEAD_DOMAIN,khong resolve DNS
+vugiaphat.vn,DEAD_DOMAIN,khong resolve DNS
+vuonlan.com.vn,DEAD_DOMAIN,khong resolve DNS
+xaydung.edu.vn,DEAD_DOMAIN,khong resolve DNS
+ximangcantho.vn,DEAD_DOMAIN,khong resolve DNS
+ykhoabacsaigon.vn,DEAD_DOMAIN,khong resolve DNS
+zhongruan.edu.vn,DEAD_DOMAIN,khong resolve DNS
+bbc.com,HTTP_LOI,HTTP 502
+bocxepmiennam.vn,HTTP_LOI,HTTP 404
+bosch-hanoi.com.vn,HTTP_LOI,HTTP 404
+daklak24h.com.vn,HTTP_LOI,HTTP 500
+dongphucdaiphat.com,HTTP_LOI,HTTP 404
+fkgoldstandard.com,HTTP_LOI,HTTP 444
+honghala.com,HTTP_LOI,HTTP 404
+marketwatch.com,HTTP_LOI,HTTP 401
+pensacolavoice.com,HTTP_LOI,HTTP 521
+specstalk.com,HTTP_LOI,HTTP 500
+thitruong.nld.com.vn,HTTP_LOI,HTTP 502
+tieudungtiepthi.vn,HTTP_LOI,HTTP 500
+wsj.com,HTTP_LOI,HTTP 401
+78store.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+agiare.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+algopro.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+appwe.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+baovexuongkhop.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+bepbungbu.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+biochain.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+blog.swio.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+bunbothoda.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+bunsongthan.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+cayxangganday.net,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+chamsua.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+chienthanky.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+cohousing.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+congdonglamdep.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+conversestore.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+countrygarden.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+crexport.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+daituongquan.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+dayhocchudong.com,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+dephonnua.com,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+dulichbinhphuoc.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+expresslaundry.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+faceart.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+famemedia.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+familyflower.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+fastenglish.edu.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+giammomau.net.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+guu.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+hanhcafe.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+hanoitimes.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+hapodecor.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+hoadanang.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+hoaquaxanh.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+hoatrangnguyen.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+hocvientoc.net,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+homeproshop.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+hongngu3.edu.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+inmienbac.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+internetcapquang.net,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+kiddo.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+kyty.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+lamchame.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+lananhdalathotel.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+linhkienhanoi.com,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+loke.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+maiacademy.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+matbachhoa.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+mitsubishi-longbien.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+monngondongian.com,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+mtcup.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+muinetourism.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+mymyshoes.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+namiso.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+nghienlamdep.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+nghienpickleball.com,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+nhahangphuongnam.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+ninhquynhcarvip.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+onehubsaigon.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+peugeot-binhduong.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+phapluatxahoi.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+pilotco3.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+sacojet.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+sanvinest.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+serenavalleythanhlanh.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+sewow.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+skinary.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+sotaykhoedep.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+spahub.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+suavalitainha.com,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+susuhero.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+taxitayninh.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+thangcanh.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+thethaophutho.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+thodiadongthap.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+thuantiengialai.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+toluavietnam.net,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+tonlaysangsata.com.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+trangtrinoel.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+trinhvantuyen.com,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+vatnuoi.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+vibehandmade.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+vnmedia.vn,LOI_KET_NOI,timeout/loi ket noi ca https lan http
+24h.com.vn,OK,200
+2sao.vn,OK,200
+3dsmax.com.vn,OK,200
+actionenglish.vn,OK,200
+advertisingvietnam.com,OK,200
+afamily.vn,OK,200
+aktinmotion.com,OK,200
+alobacsi.com,OK,200
+alongtheboards.com,OK,200
+amthuc10phut.vn,OK,200
+angiangtoplist.com,OK,200
+angiangtv.vn,OK,200
+anninhthudo.vn,OK,200
+apnews.com,OK,200
+aquila-style.com,OK,200
+arcencielhotel.com.vn,OK,200
+atotalnews.com,OK,200
+autopro.com.vn,OK,200
+avinowines.vn,OK,200
+bacninhtoplist.com,OK,200
+banawa.com.vn,OK,200
+banchungcumini.vn,OK,200
+banptktcn-ninhbinh.vn,OK,200
+banvatlieuxaydung.net,OK,200
+baoangiang.com.vn,OK,200
+baobihoatrung.com.vn,OK,200
+baocamau.vn,OK,200
+baocantho.com.vn,OK,200
+baocaobang.vn,OK,200
+baodaklak.vn,OK,200
+baodanang.vn,OK,200
+baodautu.vn,OK,200
+baodienbienphu.com.vn,OK,200
+baodienbienphu.vn,OK,200
+baodongnai.com.vn,OK,200
+baodongthap.vn,OK,200
+baogialai.com.vn,OK,200
+baohatinh.vn,OK,200
+baohungyen.vn,OK,200
+baolamdong.vn,OK,200
+baolangson.vn,OK,200
+baolaocai.vn,OK,200
+baonghean.vn,OK,200
+baophapluat.vn,OK,200
+baophutho.vn,OK,200
+baoquangninh.vn,OK,200
+baoquocte.vn,OK,200
+baotayninh.vn,OK,200
+baothainguyen.vn,OK,200
+baothanhhoa.vn,OK,200
+baothuathienhue.vn,OK,200
+baotuyenquang.com.vn,OK,200
+baovanhoa.vn,OK,200
+baovinhlong.com.vn,OK,200
+baoxaydung.com.vn,OK,200
+baoxaydung.vn,OK,200
+barefootsworld.net,OK,200
+bariavungtautourism.com.vn,OK,200
+bau.vn,OK,200
+beginagainfilm.com,OK,200
+bentretoplist.com,OK,200
+benzinga.com,OK,200
+betong.net.vn,OK,200
+bienphong.com.vn,OK,200
+bietdienhotel.com.vn,OK,200
+binhdinhtoplist.com,OK,200
+binhduongreview.vn,OK,200
+binhduongtoplist.com,OK,200
+bkcare.vn,OK,200
+bomotnanggialai.vn,OK,200
+bongdaplus.vn,OK,200
+brandsvietnam.com,OK,200
+btlondonlive.com,OK,200
+businessinsider.com,OK,200
+cacanhnho.com,OK,200
+cafebiz.vn,OK,200
+cafedautu.vn,OK,200
+cafef.vn,OK,200
+cafeland.vn,OK,200
+californiabeat.org,OK,200
+camnangsuckhoeso.net,OK,200
+cand.com.vn,OK,200
+casiostore.vn,OK,200
+caycongtrinh24h.vn,OK,200
+cbdgain.com,OK,200
+chickenla-e.vn,OK,200
+chohaisanonline.vn,OK,200
+chonthuonghieu.com,OK,200
+chuabaidinhninhbinh.vn,OK,200
+chungcuhungthinhlinhdam.com.vn,OK,200
+chungcumuongthanh.net.vn,OK,200
+ciicentral.com,OK,200
+cnbc.com,OK,200
+cnet.com,OK,200
+cobid.org,OK,200
+coldsoulsthemovie.com,OK,200
+comeaucomputing.com,OK,200
+comentarium.com,OK,200
+congan.com.vn,OK,200
+congluan.vn,OK,200
+congly.vn,OK,200
+congthuong.vn,OK,200
+cotrang.org,OK,200
+cozyvietnamtravel.vn,OK,200
+crisisshelter.org,OK,200
+cuanhuanamwindows.com,OK,200
+cuoixastress.com,OK,200
+dailymail4you.com,OK,200
+danangaz.com,OK,200
+danhgiasao.com,OK,200
+danhgiathuonghieu.vn,OK,200
+dantri.com.vn,OK,200
+danviet.vn,OK,200
+dds.com.vn,OK,200
+dep.com.vn,OK,200
+diadiemthanhhoa.com,OK,200
+dichbiensoxe.online,OK,200
+dichvusonnha.vn,OK,200
+diendandoanhnghiep.vn,OK,200
+dienlanhdh.com,OK,200
+digitalgamersdream.com,OK,200
+digitaljournal.com,OK,200
+digitby.com,OK,200
+dntbinhduong.org.vn,OK,200
+doanhnghiephoinhap.vn,OK,200
+doanhnghiepkinhtexanh.vn,OK,200
+doanhnghiepvn.vn,OK,200
+doanhnhan.vn,OK,200
+doanhnhanvn.vn,OK,200
+docsachvituonglai.vn,OK,200
+doisongphapluat.com.vn,OK,200
+doisongvietnam.vn,OK,200
+dongnaitoplist.com,OK,200
+dongthaptoplist.com,OK,200
+doxeshchuyennghiep.vn,OK,200
+dtec.edu.vn,OK,200
+dulichhatinh.com.vn,OK,200
+dulichnhatban.net,OK,200
+dulichsontra.com,OK,200
+duonggiahotel.vn,OK,200
+emagazinehub.com,OK,200
+emdep.vn,OK,200
+empiremovies.com,OK,200
+entrepreneur.com,OK,200
+eva.vn,OK,200
+everyvoicecenter.org,OK,200
+fergusonaction.com,OK,200
+feri.org,OK,200
+firedout.com,OK,200
+fishyfacts4u.com,OK,200
+fjn.vn,OK,200
+forbes.com,OK,200
+formulasantander.com,OK,200
+fpthcm.com.vn,OK,200
+freshersnews.co.in,OK,200
+gachmenthanhtung.vn,OK,200
+gamek.vn,OK,200
+gearbest.net,OK,200
+general-imaging.com,OK,200
+genk.vn,OK,200
+gforgames.com,OK,200
+giadinh.suckhoedoisong.vn,OK,200
+giadinhmoi.vn,OK,200
+giadinhvaphapluat.vn,OK,200
+giaoducthoidai.vn,OK,200
+giaoducthudo.giaoducthoidai.vn,OK,200
+golfviet.vn,OK,200
+golook.vn,OK,200
+greenbusinessonly.com,OK,200
+haiduongtoplist.com,OK,200
+haiphongtoplist.com,OK,200
+handymandecor.com,OK,200
+hanghoathuonghieu.vn,OK,200
+hanoi.inhat.vn,OK,200
+hanoimoi.vn,OK,200
+hanoireview.vn,OK,200
+hanoitoplist.com,OK,200
+hatinhtoplist.com,OK,200
+hauthien.com,OK,200
+hcm.inhat.vn,OK,200
+hcmtoplist.com,OK,200
+hellodanang.vn,OK,200
+hiephoixedien.com,OK,200
+hilaw.vn,OK,200
+hiroasiankitchen.com,OK,200
+hnsland.vn,OK,200
+hoala.vn,OK,200
+hoangtrieu.vn,OK,200
+hocgiday.vn,OK,200
+hoinhap.vanhoavaphattrien.vn,OK,200
+hoiquanfreefire.com,OK,200
+home.vn,OK,200
+hotelnikkohanoi.com.vn,OK,200
+howtosucceedbroadway.com,OK,200
+hsdvn.com.vn,OK,200
+hse.org.vn,OK,200
+huengaynay.vn,OK,200
+huetoplist.vn,OK,200
+hungyentoplist.com,OK,200
+huongnghiep.com.vn,OK,200
+icccftu.vn,OK,200
+icydk.com,OK,200
+ilawjournals.com,OK,200
+indeedken.com,OK,200
+inhat.vn,OK,200
+inoxsaophuongnam.com,OK,200
+iqeye.com,OK,200
+itoplist.vn,OK,200
+ixprl.com,OK,200
+jaxtr.com,OK,200
+jimmeyerracing.com,OK,200
+justicesnows.com,OK,200
+kaina.vn,OK,200
+kame.vn,OK,200
+kamiidphoto.vn,OK,200
+karaoke.info.vn,OK,200
+kenh14.vn,OK,200
+kenhtuyensinh.vn,OK,200
+kenkoshop.vn,OK,200
+kevinlebeautygroup.com,OK,200
+khoahoccuocsong.com,OK,200
+khoancatbetonggiare.vn,OK,200
+khomaucnc.com.vn,OK,200
+khuvuichoitreem.com.vn,OK,200
+kichcaudulichtphcm.vn,OK,200
+kientrucmaigia.vn,OK,200
+kimbien.com.vn,OK,200
+kinhtemoitruong.vn,OK,200
+kinhtethoidai.net,OK,200
+kinhtevadautu.vn,OK,200
+kreweduoptic.com,OK,200
+kuttywebnews.com,OK,200
+ladipage.com.vn,OK,200
+ladygeek.com,OK,200
+lamdongtoplist.com,OK,200
+lamhochieu.net,OK,200
+laodong.vn,OK,200
+latestnews2u.com,OK,200
+leetureview.com,OK,200
+lifehacktimes.com,OK,200
+lifescience1.com,OK,200
+likesuccess.com,OK,200
+logicaldaily.com,OK,200
+longthanhcentralpoint.vn,OK,200
+luatthanhthai.vn,OK,200
+luxrender.net,OK,200
+machovibes.com,OK,200
+maiche.vn,OK,200
+mamcungviet.com.vn,OK,200
+mantavya.com,OK,200
+marina-club.com.vn,OK,200
+marketbusiness.info,OK,200
+marketingbusinessplans.com,OK,200
+marketsharegroup.com,OK,200
+marry.vn,OK,200
+megaacademy.edu.vn,OK,200
+megafun.vn,OK,200
+megaincomestream.com,OK,200
+mitsubishi-isamco.com.vn,OK,200
+mitsuphuongnguyen.vn,OK,200
+motorstore.vn,OK,200
+mp3newswire.net,OK,200
+mrfix.com.vn,OK,200
+msn.com,OK,200
+muaphelieusg.com,OK,200
+musicraiser.com,OK,200
+naction.in,OK,200
+namhocsg.com,OK,200
+nano-ceramic.vn,OK,200
+netup.vn,OK,200
+news.yahoo.com,OK,200
+newsninjapro.com,OK,200
+newsrivals.com,OK,200
+ngheantoplist.net,OK,200
+ngoisao.net,OK,200
+ngoisao.vn,OK,200
+ngoisao.vnexpress.net,OK,200
+nguoidothi.net.vn,OK,200
+nguoiduatin.vn,OK,200
+nguoihanoi.vn,OK,200
+nguoiquansat.vn,OK,200
+nhahangbachkim.com.vn,OK,200
+nhakhoadongnama.vn,OK,200
+nhalocphat.vn,OK,200
+nhandan.vn,OK,200
+nhanghiganday.vn,OK,200
+nhathuoctaman.net,OK,200
+nhipcaudautu.vn,OK,200
+nhipsongdothi.vn,OK,200
+ninhbinhtoplist.com,OK,200
+nongthonvaphattrien.vn,OK,200
+nytimes.com,OK,200
+officeforrent.com.vn,OK,200
+ohay.vn,OK,200
+onggiacali.vn,OK,200
+overlookpress.com,OK,200
+parkcityhanoi.vn,OK,200
+peonyhome.com.vn,OK,200
+petrotimes.vn,OK,200
+phapluat.suckhoedoisong.vn,OK,200
+phapluatvacuocsong.vn,OK,200
+phongthuytaitam.vn,OK,200
+phongvuarc.com,OK,200
+phunuhiendai.vn,OK,200
+phunumoi.net.vn,OK,200
+phunusuckhoe.giadinhonline.vn,OK,200
+phunutoday.vn,OK,200
+phunuvagiadinh.vn,OK,200
+phunuvietnam.vn,OK,200
+phuot247.vn,OK,200
+phuthotoplist.com,OK,200
+plo.vn,OK,200
+pmcaonline.org,OK,200
+powersteam.vn,OK,200
+proreviewbuzz.com,OK,200
+qta.org.vn,OK,200
+qtc.vn,OK,200
+quangbinhtoplist.com,OK,200
+quangnamtoplist.com,OK,200
+quangninhcogi.vn,OK,200
+quangninhtoplist.com,OK,200
+quynhonreview.vn,OK,200
+reatimes.vn,OK,200
+recerd.org.vn,OK,200
+remnhuanganlanh.vn,OK,200
+reportsherald.com,OK,200
+richannel.org,OK,200
+royalbuffet.vn,OK,200
+sabudo.vn,OK,200
+saigonreview.vn,OK,200
+sanbongchaolua.com,OK,200
+sanbongdahca.com,OK,200
+sanbongdamhong2.com,OK,200
+sanbonglathanh.com,OK,200
+sanvatphuongnam.vn,OK,200
+saostar.vn,OK,200
+scholarlyoa.com,OK,200
+slidez.vn,OK,200
+smokinjoesribranch.com,OK,200
+soha.vn,OK,200
+sohuutritue.net.vn,OK,200
+songdep.com.vn,OK,200
+songsachfood.com,OK,200
+soundhealthdoctor.com,OK,200
+suadiennuoctainha.com.vn,OK,200
+suadogotainha.com.vn,OK,200
+suaxedung.com,OK,200
+suaxeluudong.vn,OK,200
+suaxemay24h.com,OK,200
+suaxemaytainha.com,OK,200
+suckhoecongdongonline.vn,OK,200
+suckhoedoisong.vn,OK,200
+suckhoegiadinhvietnam.com,OK,200
+suckhoephapluat.nguoiduatin.vn,OK,200
+suckhoevacongdong.vn,OK,200
+suckhoeviet.org.vn,OK,200
+suoiluong.com.vn,OK,200
+tainguyenvamoitruong.com.vn,OK,200
+tapchikientruc.com.vn,OK,200
+tapchinghiencuuphathoc.vn,OK,200
+tapchitoaan.vn,OK,200
+tapchivietduc.vn,OK,200
+tapchixaydung.vn,OK,200
+taxibinhan.vn,OK,200
+taybaclaw.edu.vn,OK,200
+tcnhadep.com,OK,200
+techlogus.com,OK,200
+technologyguiders.com,OK,200
+techrum.vn,OK,200
+techsfeed.com,OK,200
+techz.vn,OK,200
+thaibinhtoplist.com,OK,200
+thanhhoatoplist.com,OK,200
+thanhnien.vn,OK,200
+thanhnienviet.vn,OK,200
+thanhpho.danang.vn,OK,200
+thebestbuyguide.com,OK,200
+thegioimatkinh.com.vn,OK,200
+theisozone.com,OK,200
+thesaigontimes.vn,OK,200
+thethao247.vn,OK,200
+thethaovanhoa.vn,OK,200
+thethaovietnam.vn,OK,200
+thevideoink.com,OK,200
+thewashingtonnote.com,OK,200
+thezenuniverse.org,OK,200
+thieunien.vn,OK,200
+thitruongbiz.vn,OK,200
+thitruongngaynay.vn,OK,200
+thuanphat.edu.vn,OK,200
+thucanh.vn,OK,200
+thuexemay.com.vn,OK,200
+thuonghieucongluan.com.vn,OK,200
+thuonghieuphattrien.com,OK,200
+thuonghieuvaphapluat.vn,OK,200
+thutucxuatnhapkhau.net,OK,200
+thuviendohoa.vn,OK,200
+tiengiangtoplist.vn,OK,200
+tienphatjsc.vn,OK,200
+tienphong.vn,OK,200
+tieudung.vn,OK,200
+tiin.vn,OK,200
+timbatdongsan.vn,OK,200
+tinhocduykhang.com,OK,200
+tinhte.vn,OK,200
+tinthethao.com.vn,OK,200
+tocotocotanan.com,OK,200
+top10binhduong.com.vn,OK,200
+top10binhphuoc.vn,OK,200
+top10binhthuan.vn,OK,200
+top10camau.vn,OK,200
+top10danang.com,OK,200
+top10quangnam.vn,OK,200
+top10quangngai.vn,OK,200
+top10riviu.com,OK,200
+topaz.vn,OK,200
+topbinhduong.com,OK,200
+topblognews.com,OK,200
+topdongnai.com,OK,200
+tophaiphong.com,OK,200
+toplistcantho.com,OK,200
+toplistdanang.com,OK,200
+toplisthanoi.com,OK,200
+toplistsaigon.com,OK,200
+toplistviet.org,OK,200
+topone.edu.vn,OK,200
+toptonghop.com,OK,200
+trangphucchothue.vn,OK,200
+travelist.vn,OK,200
+truckslane.com,OK,200
+truckszilla.com,OK,200
+trungtamytedian.com,OK,200
+truyenhinhnghean.vn,OK,200
+truyenthongvaphattrien.vn,OK,200
+tuoitre.vn,OK,200
+tuoitrexahoi.vn,OK,200
+tuongda.com.vn,OK,200
+ubeauty.vn,OK,200
+unikmart.com.vn,OK,200
+uyenuong.net,OK,200
+vangduymong.com,OK,200
+vangkimchung.net,OK,200
+vanhoathoidai.vn,OK,200
+vanhoavadoisong.vn,OK,200
+vanhoavaphattrien.vn,OK,200
+vaporizero.com,OK,200
+vethan.vn,OK,200
+vetranhtuongviet.vn,OK,200
+vietbao.vn,OK,200
+vietcetera.com,OK,200
+vietnam.travel,OK,200
+vietnambiz.vn,OK,200
+vietnamhuongsac.vn,OK,200
+vietnammoi.vn,OK,200
+vietnamnet.vn,OK,200
+vietnamplus.vn,OK,200
+vietnamtop10.net,OK,200
+vietnamtourism.gov.vn,OK,200
+vietnamtuoidep.net,OK,200
+vietpost.com.vn,OK,200
+vietq.vn,OK,200
+vietstock.vn,OK,200
+vinfastgiatot.com.vn,OK,200
+vinhlongtoplist.com,OK,200
+vinhomescoloa.com.vn,OK,200
+vir.com.vn,OK,200
+vivuxuyenviet.net,OK,200
+vneconomy.vn,OK,200
+vnexpress.net,OK,200
+vnfinance.vn,OK,200
+vnreview.vn,OK,200
+vtcnews.vn,OK,200
+vtv.vn,OK,200
+vuongquoctranh.com,OK,200
+warrantek.vn,OK,200
+webnewswires.com,OK,200
+webtretho.com,OK,200
+weddingstats.org,OK,200
+weirdworm.com,OK,200
+wetechmedia.com,OK,200
+whatmouse.com,OK,200
+wiki.batdongsan.com.vn,OK,200
+wikitechno.de,OK,200
+wikithammy.com,OK,200
+xahoi.com.vn,OK,200
+xaluannews.com,OK,200
+xaynhadep.com.vn,OK,200
+xedienmanhphat.com,OK,200
+yan.vn,OK,200
+yeah1.com,OK,200
+zeldabeauty.com,OK,200
+zerohedge.com,OK,200
+znews.vn,OK,200

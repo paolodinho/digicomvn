@@ -1517,3 +1517,15 @@ nguoc ve project 1 lan de tranh lap lai rui ro ghi de nham lan sau.
 Đã copy functions.php/main.css/main.js (bản live sau khi thêm TOC) + 2 file thiếu
 inc/vitri-images.php, inc/glossary.php về project dir - project giờ khớp live (trừ
 inc/cpt-gia.php vẫn lệch do routine giá cập nhật thẳng trên live, biết trước, chấp nhận được).
+
+## 2026-07-19 - Fix mục lục: tách khối rõ ràng khỏi tóm tắt + sửa nút nổi khi cuộn
+Hieu bao 2 loi: (1) hop muc luc dinh lien voi khoi "Tom tat noi dung chinh" phia tren, nhin nhu
+1 khoi; (2) cuon xuong nut "Muc luc" noi theo khong xuat hien. Nguyen nhan (1): link trong muc
+luc bi rule global ".page-content li a" (gach chan, xanh dam) de len vi specificity cao hon,
+lam muc luc nhin giong doan van thuong thay vi 1 widget rieng - da tang specificity rule link
+muc luc + them vien trai mau teal + margin-top 28px + shadow nhe de tach biet ro voi tom tat
+(border trai xanh action). Nguyen nhan (2): logic dua tren IntersectionObserver co the khong on
+dinh moi truong hop - doi sang scroll listener + getBoundingClientRect() truc tiep (r.bottom<0
+la da cuon qua het hop), don gian va chac chan hon. Da xoa dong `fab.classList.add('show')`
+thua trong nhanh else (fallback trinh duyet cu) vi logic moi khong con phu thuoc IO cho phan fab.
+Deploy DGC_VER 1.9.4 len live, verify qua curl (CSS/JS moi da co tren live, ver dung 1.9.4).
