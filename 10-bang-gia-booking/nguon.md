@@ -26,6 +26,11 @@
 
 ## CHƯA LẤY ĐƯỢC - giá để dạng ảnh / bảng ẩn / yêu cầu liên hệ
 
+> Quét lại 2026-07-19: ECP Media (chỉ link PDF Rate Card), PR Báo Chí (PDF + đòi liên hệ hotline),
+> Brands Vietnam (chỉ quy trình + email liên hệ), Brandcom (ảnh), Vietquangcao (shortcode `[table id=5]`
+> không render) - TẤT CẢ vẫn KHÔNG công bố giá từng đầu báo. Không có dữ liệu mới.
+
+
 | Bên | URL | Vướng gì |
 |---|---|---|
 | Brandcom | https://brandcom.vn/ (có trang riêng từng báo: vnexpress, dantri, kenh14, zing) | Bảng giá nhúng dưới dạng ẢNH -> WebFetch không đọc được text. Cần OCR hoặc xin file. |

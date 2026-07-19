@@ -3,6 +3,12 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-19
+- Không biến động. DanaSEO (3 tab: PR báo lớn, Báo tỉnh, Link dof) không đổi so với 2026-07-18.
+- Không thu được nguồn mới: ECP Media (PDF), PR Báo Chí (PDF/liên hệ), Brands Vietnam (liên hệ),
+  Brandcom (ảnh), Vietquangcao (shortcode ẩn) vẫn không công bố giá từng đầu báo.
+- Master: 2659 dòng / 84 NCC / 7 dịch vụ (không đổi).
+
 ## 2026-07-18 (Hiếu chốt: Media Việt Nam KHÔNG markup, như DanaSEO)
 - Hiếu: "riêng giá từ DanaSEO và Media Việt Nam thì giữ; còn các bên khác cứ nhân 1,2".
   Cập nhật `export-web.py` (`KHONG_MARKUP = {"danaseo","media viet nam"}`) + rule
