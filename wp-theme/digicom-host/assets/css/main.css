@@ -2109,3 +2109,42 @@ body.mnav-open{overflow:hidden}
   text-decoration-color:currentColor;
 }
 [data-theme="dark"] .page-content p a,[data-theme="dark"] .page-content li a{color:#8FB0FF;text-decoration-color:rgba(143,176,255,.45)}
+
+/* Muc luc bai viet (TOC) - hop dau bai + nut noi theo khi cuon (2026-07-19) */
+.page-content h2,.page-content h3{scroll-margin-top:calc(72px + var(--ribbon-h,0px) + 16px)}
+
+.post-toc{max-width:820px;margin:0 auto 28px;background:var(--surface-2);border:1px solid var(--line-2);border-radius:14px;overflow:hidden}
+.post-toc details{padding:0}
+.post-toc__head{list-style:none;display:flex;align-items:center;gap:9px;padding:14px 18px;font-weight:700;color:var(--heading);cursor:pointer;user-select:none}
+.post-toc__head::-webkit-details-marker{display:none}
+.post-toc__head:after{content:"";margin-left:auto;width:9px;height:9px;border-right:2px solid var(--ink-soft);border-bottom:2px solid var(--ink-soft);transform:rotate(45deg);transition:transform .18s}
+.post-toc details[open] .post-toc__head:after{transform:rotate(-135deg)}
+.post-toc__icon{display:inline-flex;color:var(--teal)}
+.post-toc__list{list-style:none;margin:0;padding:2px 18px 16px;display:flex;flex-direction:column;gap:2px}
+.post-toc__item a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink-soft);text-decoration:none;font-size:14.5px;line-height:1.4;transition:background .15s,color .15s}
+.post-toc__item--h3 a{padding-left:24px;font-size:13.5px}
+.post-toc__item a:hover{background:var(--surface);color:var(--heading)}
+.post-toc__item a.is-active{background:rgba(14,140,127,.1);color:var(--teal);font-weight:600}
+
+.toc-fab{position:fixed;left:18px;bottom:82px;z-index:81;display:inline-flex;align-items:center;gap:7px;
+  background:var(--surface-2);border:1.5px solid var(--line-2);color:var(--heading);border-radius:999px;
+  padding:9px 15px 9px 12px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(15,23,42,.14);
+  cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s}
+.toc-fab.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.toc-fab svg{color:var(--teal);flex:none}
+
+.toc-sheet-ov{position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:95;opacity:0;pointer-events:none;transition:opacity .2s}
+.toc-sheet{position:fixed;left:0;right:0;bottom:0;z-index:96;background:var(--surface-2);border-radius:18px 18px 0 0;
+  max-height:70vh;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .25s ease;
+  box-shadow:0 -8px 30px rgba(15,23,42,.2)}
+.toc-sheet-ov.is-open{opacity:1;pointer-events:auto}
+.toc-sheet.is-open{transform:translateY(0)}
+.toc-sheet__head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;font-weight:700;color:var(--heading);border-bottom:1px solid var(--line)}
+.toc-sheet__close{background:none;border:0;font-size:22px;line-height:1;color:var(--ink-soft);cursor:pointer;padding:4px}
+.toc-sheet__list{list-style:none;margin:0;padding:8px 12px 20px;overflow-y:auto}
+
+@media(max-width:768px){
+  .toc-fab{bottom:calc(var(--bn-h,0px) + 22px)}
+}
+[data-theme="dark"] .toc-fab{box-shadow:0 6px 18px rgba(0,0,0,.4)}
+[data-theme="dark"] .toc-sheet{box-shadow:0 -8px 30px rgba(0,0,0,.5)}

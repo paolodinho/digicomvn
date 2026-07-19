@@ -63,6 +63,7 @@ require_once get_template_directory() . '/inc/dr-chart.php';
 require_once get_template_directory() . '/inc/widgets-blog.php';
 require_once get_template_directory() . '/inc/case-study.php';
 require_once get_template_directory() . '/inc/ai-chat.php';
+require_once get_template_directory() . '/inc/toc.php';
 
 /**
  * Helper doc 1 option.

@@ -852,3 +852,57 @@ document.addEventListener('click', function (e) {
 		box.querySelectorAll('.acheck-item input').forEach(function (c) { c.addEventListener('change', render); });
 	});
 })();
+
+/* Muc luc bai viet (TOC): nut noi theo khi cuon qua hop muc luc dau bai + scroll-spy. */
+(function () {
+	var inline = document.getElementById('postToc');
+	var fab = document.getElementById('tocFab');
+	if (!inline || !fab) return;
+	var sheet = document.getElementById('tocSheet'), ov = document.getElementById('tocSheetOv'),
+		closeBtn = document.getElementById('tocSheetClose');
+
+	function openSheet() {
+		sheet.classList.add('is-open'); ov.classList.add('is-open');
+		fab.setAttribute('aria-expanded', 'true');
+	}
+	function closeSheet() {
+		sheet.classList.remove('is-open'); ov.classList.remove('is-open');
+		fab.setAttribute('aria-expanded', 'false');
+	}
+	fab.addEventListener('click', openSheet);
+	closeBtn.addEventListener('click', closeSheet);
+	ov.addEventListener('click', closeSheet);
+	sheet.querySelectorAll('[data-toc-link]').forEach(function (a) {
+		a.addEventListener('click', closeSheet);
+	});
+
+	if ('IntersectionObserver' in window) {
+		new IntersectionObserver(function (entries) {
+			entries.forEach(function (e) {
+				fab.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0);
+			});
+		}, { threshold: 0 }).observe(inline);
+
+		var links = document.querySelectorAll('[data-toc-link]');
+		var headings = [];
+		links.forEach(function (a) {
+			var id = a.getAttribute('data-toc-id'), h = document.getElementById(id);
+			if (h) headings.push(h);
+		});
+		function setActive(id) {
+			links.forEach(function (a) {
+				a.classList.toggle('is-active', a.getAttribute('data-toc-id') === id);
+			});
+		}
+		if (headings.length) {
+			var spy = new IntersectionObserver(function (entries) {
+				entries.forEach(function (e) {
+					if (e.isIntersecting) setActive(e.target.id);
+				});
+			}, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+			headings.forEach(function (h) { spy.observe(h); });
+		}
+	} else {
+		fab.classList.add('show');
+	}
+})();
