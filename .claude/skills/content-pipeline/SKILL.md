@@ -136,9 +136,12 @@ WebSearch keyword chính -> đọc kỹ **top 10** (không dừng ở top 3-5, b
 - Search intent thật (dựa trên loại trang đang top, không đoán theo chữ).
 - Với top 3-5 organic: domain, loại bài, section/H2 chính, độ dài ước tính, điểm mạnh, GAP.
 - SERP features, 3-5 câu PAA làm FAQ.
+- **Check allintitle** (`allintitle:"<keyword>"`, rule Hiếu 2026-07-17 + rule global): nếu
+  có nhiều biến thể cụm cùng ý/cùng volume, ưu tiên biến thể allintitle THẤP hơn cho
+  title/H1 - dễ top hơn. Áp dụng cả bài đơn lẻ (chế độ B), không chỉ khi lập plan cụm (A1b).
 - Chốt info gain cụ thể - bài Digicom sẽ hơn top 10 hiện tại ở điểm nào.
 - **Đưa vào báo cáo cuối cùng ở BƯỚC 8** (không được bỏ qua): search intent + đối thủ đã
-  đọc (domain nào) + gap tìm được + info gain đã áp dụng vào bài.
+  đọc (domain nào) + gap tìm được + allintitle đã check + info gain đã áp dụng vào bài.
 
 ## BƯỚC 3 - VIẾT BÀI (theo skill content-writer + đặc thù Digicom)
 
@@ -224,10 +227,11 @@ Mỗi bài đăng mới/sửa lớn xong -> submit index ngay:
 - Kiểm tra thứ tự H1 -> SAPO -> Tóm tắt đúng rule.
 - Purge cache nếu có sửa theme/CSS (bình thường KHÔNG cần - chỉ sửa content).
 - Append LOG.md: `| <ngày> | Content pipeline | <slug> đăng/refresh, category X, widget Y |`.
-- **Báo cáo research (bắt buộc, rule global `~/.claude/CLAUDE.md`)** - 3 mục rõ ràng, không
+- **Báo cáo research (bắt buộc, rule global `~/.claude/CLAUDE.md`)** - 4 mục rõ ràng, không
   chung chung: (1) Search intent - kết luận gì, bằng chứng nào; (2) Đối thủ - đã đọc bao
-  nhiêu/10, domain nào, gap gì; (3) Info gain - đã áp dụng gì vào bài để hơn top 10. Nếu vì
-  lý do kỹ thuật không search được -> nói rõ đã bỏ qua bước này, không im lặng.
+  nhiêu/10, domain nào, gap gì; (3) Allintitle - số kết quả đã check, có ưu tiên biến thể
+  nào không; (4) Info gain - đã áp dụng gì vào bài để hơn top 10. Nếu vì lý do kỹ thuật
+  không search được -> nói rõ đã bỏ qua bước này, không im lặng.
 - Báo Hiếu: URL bài, category, widget đã chèn, link nội bộ đã đặt + báo cáo research ở trên.
 
 ## SỔ CÁI CỤM - theo dõi tiến độ dài hạn (rule Hiếu 2026-07-17)
