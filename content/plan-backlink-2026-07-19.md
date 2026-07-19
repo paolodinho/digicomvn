@@ -21,8 +21,8 @@
 
 | # | Loại | Việc | Từ khoá chính (volume/KD) | Lý do |
 |---|---|---|---|---|
-| 1 | SỬA | Kiểm tra SEO `<title>` trang pillar `/dich-vu/dich-vu-backlink/` có chứa đúng cụm "dịch vụ backlink" | dịch vụ backlink (3.600, KD41) | Từ khoá volume lớn nhất cụm, đúng vai money page - không viết blog cạnh tranh (rule A2c #2), chỉ audit tiêu đề |
-| 2 | SỬA | Tối ưu lại title/H1 bài `backlink-bat-dong-san` theo cụm "backlink chất lượng bất động sản" | backlink chất lượng bất động sản (320) + backlink bất động sản chất lượng (210) | Google search xác nhận digicomvn.com CHƯA xuất hiện ở 2 cụm này dù đã có bài đúng chủ đề - khả năng lệch title/H1 |
+| 1 | SỬA | Kiểm tra SEO `<title>` trang pillar `/dich-vu-backlink/` có chứa đúng cụm "dịch vụ backlink" | dịch vụ backlink (3.600, KD41) | Từ khoá volume lớn nhất cụm, đúng vai money page - không viết blog cạnh tranh (rule A2c #2), chỉ audit tiêu đề |
+| 2 | SỬA | Tối ưu lại title/H1 BÀI BLOG "backlink bất động sản" (đăng 2026-07-03, ID 1275-1282, KHÔNG phải trang dịch vụ ngách `/dich-vu-backlink/bat-dong-san/`) theo cụm "backlink chất lượng bất động sản" | backlink chất lượng bất động sản (320) + backlink bất động sản chất lượng (210) | Google search xác nhận digicomvn.com CHƯA xuất hiện ở 2 cụm này dù đã có bài đúng chủ đề - khả năng lệch title/H1. Cần session có SSH để tra đúng slug/URL thật của bài này trước khi sửa |
 | 3 | MỚI P0 | "Có Nên Mua Backlink Không? Rủi Ro Và Cách Chọn NCC Uy Tín" | có nên mua backlink, mua backlink uy tín, mua backlink là gì, mua backlink chất lượng (~30-50/kw) | Bài trust/gỡ nghi ngại trước khi mua - hỗ trợ chuyển đổi trực tiếp, chưa có bài nào trên site |
 | 4 | MỚI P0 | "Mua Backlink Báo Là Gì? Khác Gì Booking Báo & PR?" | mua backlink báo (110), backlink báo (210), bán/cho thuê backlink báo (~10-30) | Bắc cầu 2 dịch vụ (Backlink + Booking báo PR), khách hay nhầm 2 khái niệm - internal link 2 chiều tới cả 2 money page |
 | 5 | MỚI P1 | "Cách Đặt Backlink Hiệu Quả Cho Website Mới Bắt Đầu" | cách đặt backlink hiệu quả, cách đi backlink, hướng dẫn đặt backlink (~20-30/kw, cộng dồn ~150) | Bài howto supporting, dẫn hành trình học -> cân nhắc -> pillar/guest-post |
@@ -37,7 +37,8 @@
   nguồn, không PBN).
 - Slug: `/co-nen-mua-backlink-khong/` - Category: Backlink & Off-page.
 - Widget: `[dgc_offpage_quiz]` (kiến thức nền, "nên làm gì trước khi mua").
-- Money page đích: `/dich-vu/dich-vu-backlink/` (anchor thương mại "dịch vụ backlink uy tín").
+- Money page đích: `/dich-vu-backlink/` (URL flat theo sitemap chốt 2026-07-16, KHÔNG còn
+  prefix `/dich-vu/` - anchor thương mại "dịch vụ backlink uy tín").
 
 ### Bài 4 - Mua Backlink Báo Là Gì?
 - Intent: informational-commercial, vai trò bắc cầu.
@@ -46,7 +47,8 @@
   làm rõ so sánh này.
 - Slug: `/mua-backlink-bao-la-gi/` - Category: Backlink & Off-page.
 - Widget: `[dgc_budget_calc]` (đụng tới chi phí).
-- Money page đích: CẢ `/dich-vu/dich-vu-backlink/` VÀ `/dich-vu/booking-bao-pr/` (2 anchor riêng).
+- Money page đích: CẢ `/dich-vu-backlink/` VÀ `/booking-bao-pr/` (URL flat 2026-07-16,
+  2 anchor riêng).
 
 ### Bài 5 - Cách Đặt Backlink Hiệu Quả
 - Intent: informational, supporting/học.
