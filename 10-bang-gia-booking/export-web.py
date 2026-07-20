@@ -121,6 +121,17 @@ NCC_DOMAIN = {
 }
 
 
+# Dau bao NCC da bao DUNG ban -> khong bao gio dua len web, ke ca khi dot quet sau
+# vo tinh nap lai. Hieu chot 2026-07-20: "go".
+DA_DUNG_BAN = {
+    "quangninh.gov.vn",           # Media Viet Nam tab GOV danh dau "(Dung)"
+    "kinhtedothi.vn",             # Media Viet Nam tab textlink sidebar danh dau "(Dung)"
+    "thitruongtaichinh.kinhtedothi.vn",
+    "tieudung.kinhtedothi.vn",
+    "giaothonghanoi.kinhtedothi.vn",
+}
+
+
 def is_khong_ro_noi_dang(r):
     """Dong KHONG show duoc dang bao nao / dang o dau -> KHONG dua len web (Hieu 2026-07-16).
     Gom: (1) goi/combo/social entity khong co goi_sites; (2) dong chung chung khong co domain
@@ -128,6 +139,8 @@ def is_khong_ro_noi_dang(r):
     Ngoai le: booking-tv (kenh VTV1/HTV7... la noi dang cu the du khong co dau cham).
     Khi NCC cong bo list site (dien goi_sites) thi dong do duoc xuat lai."""
     d = fold(r["dau_bao"])
+    if d.split("/")[0].strip() in DA_DUNG_BAN:
+        return True
     # Domain cua chinh NCC -> KHONG BAO GIO len web, du co goi_sites: lo Digicom lay hang
     # o dau (rule "an danh tinh nha cung cap"). Phat hien 2026-07-20: 3 dong entity
     # "Famemedia.vn / Goi B150-B300" lot qua bo loc cu vi dau_bao co dau cham.

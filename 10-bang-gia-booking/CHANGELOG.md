@@ -72,7 +72,12 @@
       đã bổ sung vào master (2.715 -> 2.716 dòng). KHÔNG lên web vì cùng tầng chuyên mục vnexpress
       đã có dòng rẻ hơn (8.034.000) thắng giá.
     - 2 dòng nguồn đánh dấu "(Dừng)": quangninh.gov.vn, kinhtedothi.vn (tab textlink sidebar) -
-      cần Hiếu xác nhận có gỡ khỏi bảng bán không.
+      **Hiếu chốt: GỠ.** Kiểm tra live: cả 2 tên miền CHƯA từng lên bảng bán (0 post dgc_gia
+    nào mang title quangninh.gov.vn hoặc kinhtedothi.vn); 3 subdomain kinhtedothi
+    (thitruongtaichinh/tieudung/giaothonghanoi, post 1931-1933, nguồn Guestpost.vn) đã ở
+    trạng thái draft sẵn từ trước -> **không có dòng nào phải gỡ**. Đã thêm set `DA_DUNG_BAN`
+    (5 tên miền) trong `export-web.py` chặn vĩnh viễn, phòng đợt quét sau nạp lại. Verify
+    gia-web.csv = 0 dòng.
   - **Fame Media: KHÔNG rà được - site đang DOWN.** famemedia.vn từ chối kết nối (`ECONNREFUSED :443`,
     HTTP 000), thử cả HTTP/80 và `www.`, cả curl lẫn WebFetch, kiểm lại 2 lần cách nhau ~20 phút đều
     hỏng. Đây là 1 trong 3 NCC được lên web (948 dòng master) -> cần rà lại khi site sống.

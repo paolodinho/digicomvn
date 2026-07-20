@@ -159,7 +159,10 @@ bangxephang.com.vn, brands.vn, xehay.com.vn, topuni.vn, topdichvu.vn.
 - **Media Việt Nam**: 6/6 tab lấy được qua gviz CSV, **0 dòng đổi giá**, không có tab mới. Bổ sung 1
   dòng sót: Vnexpress.net mục "Công Nghệ" 9.880.000 chưa VAT (tab gid=1090550234). Lưu ý tab PR báo
   lớn có 13 dòng **để trống ô giá** ("báo lớn hay thay đổi, liên hệ sale") - muốn có giá phải hỏi sale.
-  2 dòng đánh dấu "(Dừng)": quangninh.gov.vn, kinhtedothi.vn (textlink sidebar) - chờ Hiếu xác nhận gỡ.
+  2 dòng đánh dấu "(Dừng)": quangninh.gov.vn, kinhtedothi.vn (textlink sidebar) - **Hiếu chốt 2026-07-20: GỠ**.
+  Kiểm tra live: cả 2 CHƯA từng lên bảng bán (0 post dgc_gia), 3 subdomain kinhtedothi (thitruongtaichinh/
+  tieudung/giaothonghanoi) đã ở trạng thái draft sẵn -> không phải gỡ gì. Đã thêm set `DA_DUNG_BAN`
+  trong `export-web.py` chặn vĩnh viễn 5 tên miền này, phòng đợt quét sau nạp lại.
 - **Fame Media: SITE DOWN** (2026-07-20). famemedia.vn trả `ECONNREFUSED :443` / HTTP 000 với mọi cách
   (curl, WebFetch, HTTP/80, www.), kiểm 2 lần cách nhau 20 phút. 948 dòng Fame Media trong master
   CHƯA rà được lần này. Các URL bảng giá khác tìm được qua search nhưng chưa đọc được nội dung:
