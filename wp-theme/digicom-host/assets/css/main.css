@@ -5,8 +5,8 @@
    sua lai moi noi dung var(--navy) - chi doi GIA TRI.
    ========================================================================== */
 :root{
-  --ink:#1C2035;            /* text chinh - dark GrowMark */
-  --ink-soft:#474D5E;       /* text phu - dam len tu #555 (2026-07-20) cho de doc */
+  --ink:#14182B;            /* text chinh - dam them tu #1C2035 (2026-07-20) */
+  --ink-soft:#333A4D;       /* text phu - dam len #555 -> #474D5E -> #333A4D (2026-07-20) */
   --navy:#1C2035;           /* dark GrowMark, thay brand-navy cu */
   --navy-2:#262B45;
   --action:#4761FF;         /* primary xanh duong GrowMark, KHONG purple/indigo */
@@ -42,7 +42,7 @@ body{
 }
 /* Grain texture nhe toan site - chong flat/AI-slop */
 body:before{
-  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.02;
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.012;
   mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
@@ -1380,7 +1380,7 @@ body.mnav-open{overflow:hidden}
    ========================================================================== */
 [data-theme="dark"]{
   --ink:#E3E7F4;
-  --ink-soft:#9AA3BE;
+  --ink-soft:#BAC3DB;   /* dark: sang len tu #9AA3BE cho de doc */
   --heading:#F2F4FC;
   --surface:#12162A;        /* nen trang */
   --surface-2:#1B2038;      /* nen card */
