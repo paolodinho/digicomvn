@@ -140,11 +140,11 @@ tunai4d.net,tunai4d.net,guest-post,5275000,2882,
 wiki.batdongsan.com.vn,wiki.batdongsan.com.vn,booking-bao-pr,5200000,1638,skip:muc-phu-hop-khong-co-vi-tri-cu-the-da-xoa-anh-sai
 guu.vn,guu.vn,booking-bao-pr,5000000,3466,issue:timeout-retry-later
 webtretho.com,Webtretho.com,booking-bao-pr,5000000,1078,skip:muc-phu-hop-khong-co-vi-tri-cu-the-da-xoa-anh-sai
-laodong.vn,Laodong.vn,booking-bao-pr,4900000,1069,done
+laodong.vn,Laodong.vn,booking-bao-pr,4900000,1069,skip:anh-sai-loai-vi-tri-khong-chup-lai-duoc-chuyen-muc-that
 phunutoday.vn,phunutoday.vn,booking-bao-pr,4895000,3467,done
 diendandoanhnghiep.vn,diendandoanhnghiep.vn,booking-bao-pr,4800000,3468,done
 cafeland.vn,Cafeland.vn,booking-bao-pr,4800000,1030,done
-thethaovanhoa.vn,thethaovanhoa.vn,booking-bao-pr,4750000,3469,done
+thethaovanhoa.vn,thethaovanhoa.vn,booking-bao-pr,4750000,3469,skip:anh-sai-loai-vi-tri-khong-chup-lai-duoc-chuyen-muc-that
 thesaigontimes.vn,thesaigontimes.vn,booking-bao-pr,4650000,1646,done
 cbdgain.com,cbdgain.com,guest-post,4650000,2883,
 digitaljournal.com,digitaljournal.com,backlink-quoc-te,4649000,2045,
@@ -191,8 +191,8 @@ plo.vn,plo.vn,booking-bao-pr,3250000,1642,skip:muc-phu-hop-khong-co-vi-tri-cu-th
 saostar.vn,Saostar.vn,booking-bao-pr,3200000,1053,skip:muc-phu-hop-khong-co-vi-tri-cu-the-da-xoa-anh-sai
 kenhtuyensinh.vn,kenhtuyensinh.vn,booking-bao-pr,3150000,3348,done
 doanhnghiepvn.vn,doanhnghiepvn.vn,booking-bao-pr,3150000,1648,done
-kinhtemoitruong.vn,kinhtemoitruong.vn,booking-bao-pr,3000000,3394,done
-danviet.vn,danviet.vn,booking-bao-pr,2980000,3352,done
+kinhtemoitruong.vn,kinhtemoitruong.vn,booking-bao-pr,3000000,3394,skip:anh-sai-loai-vi-tri-khong-chup-lai-duoc-chuyen-muc-that
+danviet.vn,danviet.vn,booking-bao-pr,2980000,3352,skip:anh-sai-loai-vi-tri-khong-chup-lai-duoc-chuyen-muc-that
 vnmedia.vn,vnmedia.vn,booking-bao-pr,2900000,3369,skip:muc-phu-hop-khong-co-vi-tri-cu-the
 megafun.vn,megafun.vn,booking-bao-pr,2850000,3370,issue:domain-doi-chu-noi-dung-tieng-anh-demo-khong-lien-quan
 baoquocte.vn,Baoquocte.vn,booking-bao-pr,2800000,1076,skip:muc-phu-hop-khong-co-vi-tri-cu-the-da-xoa-anh-sai
@@ -253,7 +253,7 @@ thitruongbiz.vn,thitruongbiz.vn,booking-bao-pr,2100000,1662,skip:muc-phu-hop-kho
 bienphong.com.vn,bienphong.com.vn,booking-bao-pr,2050000,3376,skip:muc-phu-hop-khong-co-vi-tri-cu-the-da-xoa-anh-sai
 inhat.vn,inhat.vn,dich-vu-toplist,2040000,2114,
 xaluannews.com,xaluannews.com,booking-bao-pr,2000000,3377,skip:muc-phu-hop-khong-co-vi-tri-cu-the-da-xoa-anh-sai
-thanhnienviet.vn,thanhnienviet.vn,booking-bao-pr,2000000,1663,done
+thanhnienviet.vn,thanhnienviet.vn,booking-bao-pr,2000000,1663,skip:anh-sai-loai-vi-tri-khong-chup-lai-duoc-chuyen-muc-that
 alobacsi.com,Alobacsi.com,booking-bao-pr,2000000,1057,skip:muc-phu-hop-khong-co-vi-tri-cu-the
 techz.vn,techz.vn,booking-bao-pr,1980000,3365,skip:muc-phu-hop-khong-co-vi-tri-cu-the-da-xoa-anh-sai
 baoxaydung.vn,baoxaydung.vn,booking-bao-pr,1900000,3402,skip:muc-phu-hop-khong-co-vi-tri-cu-the-da-xoa-anh-sai

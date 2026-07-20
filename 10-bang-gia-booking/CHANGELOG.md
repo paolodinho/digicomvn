@@ -3,6 +3,19 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-20
+- Giá đổi: không có. DanaSEO (3 tab: PR báo lớn, Báo tỉnh, Link dof) trùng hash byte-for-byte
+  với bản 2026-07-19; toàn bộ 2.659 dòng master cũ giữ nguyên giá.
+- Thêm mới: **ECP Media - 20 dòng** (24h.com.vn, PR Desktop, 5 nhóm chuyên mục x 4 vị trí
+  Đầu CM / Giữa CM / Loại 1 / Loại 2, giá 3.000.000 - 20.000.000, chưa gồm 10% VAT).
+  Đây là nguồn MỚI so với 2026-07-19 - trang `bang-gia-dang-bai-pr-tren-bao-24h-com-vn.html`
+  công bố giá dạng text (các trang ECP khác vẫn chỉ có PDF/ảnh).
+- Gỡ bỏ: không có.
+- Vẫn không lấy được: PR Báo Chí (chỉ khoảng giá chung + hotline), Brands Vietnam (chỉ điều
+  khoản, báo giá qua email), Brandcom (bảng giá nhúng dạng ảnh), Vietquangcao (shortcode
+  `[table id=5]` không render).
+- Master: 2.679 dòng / 85 NCC / 7 dịch vụ (+20 dòng, +1 NCC).
+
 ## 2026-07-19
 - Không biến động. DanaSEO (3 tab: PR báo lớn, Báo tỉnh, Link dof) không đổi so với 2026-07-18.
 - Không thu được nguồn mới: ECP Media (PDF), PR Báo Chí (PDF/liên hệ), Brands Vietnam (liên hệ),

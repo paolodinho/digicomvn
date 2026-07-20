@@ -8,6 +8,7 @@
 |---|---|---|---|
 | **DanaSEO** | [Google Sheet](https://docs.google.com/spreadsheets/d/1-g7qY-e2d6c555zVSOqKuVCm0e-Restes2ikSX7az9E/edit) - 10 tab | 157 | Chrome đã đăng nhập Google -> fetch `gviz/tq?tqx=out:csv&sheet=<tên tab>`. Drive API/curl KHÔNG lấy được (file bị chặn generative-AI + không public). |
 | **Fame Media** | https://famemedia.vn/bao-online/ | 23 | WebFetch. Bảng vị trí premium trang chủ (giá 15-230tr), khác phân khúc DanaSEO. Ngân sách tối thiểu 50tr/tháng. |
+| **ECP Media** | https://ecpmedia.vn/bang-gia-dang-bai-pr-tren-bao-24h-com-vn.html | 20 | WebFetch (nạp 2026-07-20). CHỈ trang 24h.com.vn có giá dạng text: 5 nhóm chuyên mục x 4 vị trí (Đầu CM / Giữa CM / Loại 1 / Loại 2), 3-20tr, chưa gồm **10% VAT**. Các trang ECP khác (VnExpress, VietnamNet, VnEconomy, BaoMoi...) vẫn chỉ có link PDF -> chưa bóc được. |
 | **SEOViP** | https://seovip.vn/dich-vu-book-bao-pr/ | 3 | WebFetch. Chỉ có giá khởi điểm theo nhóm (báo lớn từ 2tr, báo Đảng từ 1tr, báo rẻ từ 700k). Chưa có bảng từng đầu báo. |
 
 ### Bổ sung 2026-07-14 (7 mũi quét)
@@ -26,9 +27,11 @@
 
 ## CHƯA LẤY ĐƯỢC - giá để dạng ảnh / bảng ẩn / yêu cầu liên hệ
 
-> Quét lại 2026-07-19: ECP Media (chỉ link PDF Rate Card), PR Báo Chí (PDF + đòi liên hệ hotline),
-> Brands Vietnam (chỉ quy trình + email liên hệ), Brandcom (ảnh), Vietquangcao (shortcode `[table id=5]`
-> không render) - TẤT CẢ vẫn KHÔNG công bố giá từng đầu báo. Không có dữ liệu mới.
+> Quét lại 2026-07-20: **ECP Media đã CHUYỂN sang mục "ĐÃ CÓ"** (trang 24h.com.vn có giá text,
+> 20 dòng). 4 bên còn lại vẫn KHÔNG công bố giá từng đầu báo: PR Báo Chí (chỉ khoảng giá chung
+> 10-50tr + hotline), Brands Vietnam (chỉ điều khoản VAT/deadline, báo giá qua email media@brvn.net),
+> Brandcom (bảng giá nhúng dạng ảnh ở cả 3 trang Dân Trí/Kênh14/Zing), Vietquangcao (shortcode
+> `[table id=5]` không render).
 
 
 | Bên | URL | Vướng gì |
@@ -38,9 +41,9 @@
 | MicCreative | https://miccreative.vn/bao-gia-bai-pr-vnexpress/ | Chỉ có dải giá (VnExpress 15-50tr), không chi tiết từng mục. |
 | Đất Việt Media | datvietbrand.com | Domain không phân giải (chết/đổi tên). |
 | Dr POS / opp.vn | https://opp.vn/bang-gia-booking-cac-bao/ | 404. |
-| ECP Media | https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-vnexpress.html | Chưa quét. |
-| PR Báo Chí | https://prbaochi.com/category/bao-gia-pr/ | Chưa quét. |
-| Brands Vietnam | https://help.brandsvietnam.com/vi/article/bao-gia-dang-bai-pr-7i6lbx/ | Chưa quét. |
+| ECP Media | https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-vnexpress.html | ĐÃ CHUYỂN lên mục "ĐÃ CÓ" (2026-07-20) - trang 24h có giá text; riêng trang VnExpress vẫn chỉ là PDF Rate Card 2023. |
+| PR Báo Chí | https://prbaochi.com/category/bao-gia-pr/ | Quét 2026-07-20: chỉ nêu khoảng giá chung (10-50tr báo lớn / 1-3tr báo nhỏ), không gắn đầu báo cụ thể; đòi liên hệ hotline. |
+| Brands Vietnam | https://help.brandsvietnam.com/vi/article/bao-gia-dang-bai-pr-7i6lbx/ | Quét 2026-07-20: trang chỉ có điều khoản (VAT, deadline, huỷ bài); báo giá gửi riêng qua email media@brvn.net. |
 
 ## Cần Hiếu hỗ trợ để mở rộng kho
 
