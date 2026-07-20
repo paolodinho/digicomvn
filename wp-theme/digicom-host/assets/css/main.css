@@ -1303,10 +1303,67 @@ body.mnav-open{overflow:hidden}
 .post-byline__avatar--fallback{display:flex;align-items:center;justify-content:center;
   background:var(--navy);color:#fff;font-family:var(--font-display);font-weight:700;
   font-size:13px}
+/* So lieu thuc te duoi ho so tac gia */
+.author-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.author-stat{flex:1 1 150px;background:var(--surface-2);border:1px solid var(--line);
+  border-radius:14px;padding:14px 18px}
+.author-stat strong{display:block;font-family:var(--font-display);font-weight:700;
+  font-size:26px;line-height:1.1;color:var(--teal)}
+.author-stat span{display:block;margin-top:3px;font-size:13px;color:var(--ink-soft)}
+
+/* Mang chuyen mon */
+.author-expertise{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.author-exp-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:18px 20px}
+.author-exp-card h3{font-size:17px;margin:0 0 6px}
+.author-exp-card h3 a{color:var(--heading);text-decoration:none}
+.author-exp-card h3 a:hover{color:var(--action)}
+.author-exp-card p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.6}
+
+/* Ket qua tieu bieu */
+.author-wins{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.author-win{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;
+  padding:18px 20px}
+.author-win strong{display:block;font-family:var(--font-display);font-weight:700;font-size:28px;
+  line-height:1.1;color:var(--action)}
+.author-win span{display:block;margin-top:6px;font-size:14px;color:var(--ink-soft);line-height:1.6}
+
+/* Chung chi & dao tao */
+.author-creds{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.author-creds li{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;
+  padding:12px 16px}
+.author-creds strong{display:block;font-size:14.5px;color:var(--heading)}
+.author-creds span{display:block;margin-top:2px;font-size:13px;color:var(--ink-soft)}
+
+/* Hanh trinh / cot moc */
+.author-timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line-2)}
+.author-timeline li{position:relative;padding:0 0 20px 24px}
+.author-timeline li:last-child{padding-bottom:0}
+.author-timeline li:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;
+  border-radius:50%;background:var(--teal);border:2px solid var(--surface)}
+.author-timeline__year{display:block;font-family:var(--font-display);font-weight:700;
+  font-size:14px;color:var(--teal);letter-spacing:.04em}
+.author-timeline__text{display:block;margin-top:2px;color:var(--ink);line-height:1.65}
+
+/* Chip cum chu de - dan sang trang chuyen muc thay vi liet ke lai bai */
+.author-topics{margin-top:32px;text-align:center}
+.author-topics__label{font-size:14px;color:var(--ink-soft);margin:0 0 12px}
+.author-topics__list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.author-topic-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;
+  border-radius:999px;background:var(--surface);border:1px solid var(--line);
+  font-size:13.5px;font-weight:600;color:var(--heading);text-decoration:none}
+.author-topic-chip em{font-style:normal;font-size:12px;color:var(--ink-soft)}
+.author-topic-chip:hover{border-color:var(--teal);color:var(--teal)}
+.author-topic-chip--all{background:var(--teal);border-color:var(--teal);color:#fff}
+.author-topic-chip--all:hover{color:#fff;opacity:.9}
+
 @media(max-width:640px){
   .author-hero__row{gap:16px}
   .author-avatar{width:84px;height:84px}
   .author-avatar--fallback{font-size:26px}
+  .author-stat{flex:1 1 100%;padding:12px 16px}
+  .author-stat strong{font-size:22px}
 }
 
 /* ============ 03b. CLIENT LOGO WALL ============ */

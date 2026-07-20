@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '1.9.7' );
+define( 'DGC_VER', '1.9.9' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -358,6 +358,50 @@ function dgc_author_social_fields( $user ) {
 			</td>
 		</tr>
 		<tr>
+			<th><label for="dgc_role_title">Chức danh</label></th>
+			<td><input type="text" name="dgc_role_title" id="dgc_role_title" value="<?php echo esc_attr( get_user_meta( $user->ID, 'dgc_role_title', true ) ); ?>" class="regular-text" placeholder="Founder DigicomVN" />
+			<p class="description">Hiện dưới tên ở đầu trang tác giả.</p></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_tagline">Câu định vị</label></th>
+			<td><input type="text" name="dgc_tagline" id="dgc_tagline" value="<?php echo esc_attr( get_user_meta( $user->ID, 'dgc_tagline', true ) ); ?>" class="large-text" placeholder="Ví dụ: Chuyên xây dựng liên kết và truyền thông báo chí cho doanh nghiệp Việt." /></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_year_start">Năm bắt đầu nghề</label></th>
+			<td><input type="number" name="dgc_year_start" id="dgc_year_start" value="<?php echo esc_attr( get_user_meta( $user->ID, 'dgc_year_start', true ) ); ?>" class="small-text" placeholder="2018" />
+			<p class="description">Dùng để tự tính số năm kinh nghiệm. Để trống thì ẩn ô này, không hiện số bịa.</p></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_bio_long">Tiểu sử đầy đủ</label></th>
+			<td><textarea name="dgc_bio_long" id="dgc_bio_long" rows="7" class="large-text"><?php echo esc_textarea( get_user_meta( $user->ID, 'dgc_bio_long', true ) ); ?></textarea>
+			<p class="description">Mỗi dòng trống = 1 đoạn mới. Đây là phần kể chuyện dài, khác với ô "Tiểu sử" ngắn của WordPress ở trên.</p></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_expertise">Mảng chuyên môn</label></th>
+			<td><textarea name="dgc_expertise" id="dgc_expertise" rows="5" class="large-text" placeholder="Booking báo &amp; PR|Làm việc trực tiếp với đầu báo, kiểm soát chất lượng bài đăng."><?php echo esc_textarea( get_user_meta( $user->ID, 'dgc_expertise', true ) ); ?></textarea>
+			<p class="description">Mỗi dòng 1 mảng, cú pháp: <code>Tên mảng|Mô tả ngắn</code>. Để trống thì tự lấy theo cụm chủ đề đã viết nhiều nhất.</p></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_milestones">Cột mốc / hành trình</label></th>
+			<td><textarea name="dgc_milestones" id="dgc_milestones" rows="6" class="large-text" placeholder="2021|Thành lập Công ty TNHH Dịch vụ Truyền thông Digito Combat."><?php echo esc_textarea( get_user_meta( $user->ID, 'dgc_milestones', true ) ); ?></textarea>
+			<p class="description">Mỗi dòng 1 mốc, cú pháp: <code>Năm|Nội dung</code>. Chỉ ghi mốc có thật. Để trống thì ẩn cả mục này.</p></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_achievements">Kết quả tiêu biểu</label></th>
+			<td><textarea name="dgc_achievements" id="dgc_achievements" rows="6" class="large-text" placeholder="150%|Tăng trưởng doanh số cho ICD Việt Nam trong 6 tháng đầu 2026."><?php echo esc_textarea( get_user_meta( $user->ID, 'dgc_achievements', true ) ); ?></textarea>
+			<p class="description">Mỗi dòng 1 kết quả, cú pháp: <code>Con số|Diễn giải</code>. Chỉ ghi số liệu có thật, kiểm chứng được.</p></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_credentials">Chứng chỉ &amp; đào tạo</label></th>
+			<td><textarea name="dgc_credentials" id="dgc_credentials" rows="6" class="large-text" placeholder="Google Ads Certification|Google, 2022"><?php echo esc_textarea( get_user_meta( $user->ID, 'dgc_credentials', true ) ); ?></textarea>
+			<p class="description">Mỗi dòng 1 chứng chỉ, cú pháp: <code>Tên|Đơn vị cấp, năm</code>.</p></td>
+		</tr>
+		<tr>
+			<th><label for="dgc_featured_posts">Bài viết tiêu biểu</label></th>
+			<td><input type="text" name="dgc_featured_posts" id="dgc_featured_posts" value="<?php echo esc_attr( get_user_meta( $user->ID, 'dgc_featured_posts', true ) ); ?>" class="large-text" placeholder="223, 221, kiem-tra-backlink" />
+			<p class="description">ID hoặc slug bài, cách nhau dấu phẩy (tối đa 6). Để trống thì tự chọn bài mới nhất của mỗi cụm chủ đề.</p></td>
+		</tr>
+		<tr>
 			<th><label for="dgc_facebook">Facebook</label></th>
 			<td><input type="url" name="dgc_facebook" id="dgc_facebook" value="<?php echo esc_attr( get_user_meta( $user->ID, 'dgc_facebook', true ) ); ?>" class="regular-text" placeholder="https://web.facebook.com/..." /></td>
 		</tr>
@@ -398,6 +442,26 @@ function dgc_save_author_social_fields( $user_id ) {
 	if ( isset( $_POST['dgc_facebook'] ) ) update_user_meta( $user_id, 'dgc_facebook', esc_url_raw( wp_unslash( $_POST['dgc_facebook'] ) ) );
 	if ( isset( $_POST['dgc_linkedin'] ) ) update_user_meta( $user_id, 'dgc_linkedin', esc_url_raw( wp_unslash( $_POST['dgc_linkedin'] ) ) );
 	if ( isset( $_POST['dgc_avatar_id'] ) ) update_user_meta( $user_id, 'dgc_avatar_id', absint( $_POST['dgc_avatar_id'] ) );
+
+	foreach ( array( 'dgc_role_title', 'dgc_tagline', 'dgc_featured_posts' ) as $f ) {
+		if ( isset( $_POST[ $f ] ) ) update_user_meta( $user_id, $f, sanitize_text_field( wp_unslash( $_POST[ $f ] ) ) );
+	}
+	foreach ( array( 'dgc_bio_long', 'dgc_expertise', 'dgc_milestones', 'dgc_achievements', 'dgc_credentials' ) as $f ) {
+		if ( isset( $_POST[ $f ] ) ) update_user_meta( $user_id, $f, sanitize_textarea_field( wp_unslash( $_POST[ $f ] ) ) );
+	}
+	if ( isset( $_POST['dgc_year_start'] ) ) update_user_meta( $user_id, 'dgc_year_start', absint( $_POST['dgc_year_start'] ) );
+}
+
+/** Tach textarea "A|B" thanh mang cap [ [A,B], ... ]. Bo dong trong. */
+function dgc_author_pairs( $raw ) {
+	$out = array();
+	foreach ( preg_split( '/\r\n|\r|\n/', (string) $raw ) as $line ) {
+		$line = trim( $line );
+		if ( '' === $line ) continue;
+		$p     = array_map( 'trim', explode( '|', $line, 2 ) );
+		$out[] = array( $p[0], isset( $p[1] ) ? $p[1] : '' );
+	}
+	return $out;
 }
 
 /** Lay initial (chu cai dau) tu display_name de lam avatar mac dinh khi chua co anh that. */
@@ -467,6 +531,78 @@ add_action( 'template_redirect', function () {
 		wp_safe_redirect( $target, 301 );
 		exit;
 	}
+}, 5 );
+
+/* ---------------------------------------------------------------------------
+ * Trang tinh KHONG phan trang nhung bi goi kem /page/N/ -> 301 ve ban goc.
+ * WP van tra 200 va render Y HET noi dung trang 1 (chi khac the <title>) o
+ * /blog/page/2/, /ve-digicom/page/2/... => trung lap noi dung vo han. Chi
+ * redirect khi bai/trang that su khong co ngat trang (<!--nextpage-->).
+ * ------------------------------------------------------------------------- */
+add_action( 'template_redirect', function () {
+	/* Luu tru theo NGAY/THANG/NAM (/2026/, /2026/07/, /2026/07/20/): WordPress tu
+	   sinh cho moi site, khong ai chu dong tao. Noi dung = liet ke lai chinh cac
+	   bai da co o /blog/ va trang chuyen muc, chi khac cach sap xep -> trung lap
+	   thuan tuy, khong mang gia tri thuong hieu. Dan thang ve /blog/. */
+	if ( is_date() ) {
+		wp_safe_redirect( get_permalink( (int) get_option( 'page_for_posts' ) ), 301 );
+		exit;
+	}
+
+	/* Trang tac gia gio la landing gioi thieu (chi hien bai tieu bieu), khong
+	   phan trang -> /author/x/page/N/ se trung noi dung trang 1. */
+	if ( is_author() && is_paged() ) {
+		wp_safe_redirect( get_author_posts_url( (int) get_queried_object_id() ), 301 );
+		exit;
+	}
+
+	/* /blog/ (page_for_posts) dung home.php = hub cum chu de, KHONG co vong lap
+	   bai nen khong phan trang -> moi /blog/page/N/ deu trung trang 1. */
+	if ( is_home() && ! is_front_page() && is_paged() ) {
+		wp_safe_redirect( get_permalink( (int) get_option( 'page_for_posts' ) ), 301 );
+		exit;
+	}
+	if ( ! is_singular() ) return;
+	$paged = max( (int) get_query_var( 'page' ), (int) get_query_var( 'paged' ) );
+	if ( $paged < 2 ) return;
+	$post = get_queried_object();
+	if ( ! $post || false !== strpos( $post->post_content, '<!--nextpage-->' ) ) return;
+	wp_safe_redirect( get_permalink( $post ), 301 );
+	exit;
+}, 5 );
+
+/* ---------------------------------------------------------------------------
+ * Chuyen muc / the RONG (0 bai) -> 301 sang trang co noi dung. Khong de URL
+ * /category/<slug>/ tra ve 200 voi trang trong (thin content, Google coi la
+ * trang rong). Phu ca 2 truong hop: term con ton tai nhung 0 bai, va term da
+ * bi xoa (404). Chuyen muc co bai -> khong dong toi.
+ * ------------------------------------------------------------------------- */
+add_action( 'template_redirect', function () {
+	$uri  = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+	$path = parse_url( $uri, PHP_URL_PATH );
+	if ( ! $path || ! preg_match( '#^/(?:category|tag)/([a-z0-9-]+)/?#', $path, $m ) ) return;
+
+	$empty = is_404();
+	if ( ! $empty && ( is_category() || is_tag() ) ) {
+		global $wp_query;
+		$empty = empty( $wp_query->found_posts );
+	}
+	if ( ! $empty ) return;
+
+	/* Trang /page/N/ vuot qua so trang that (WP tra 404) -> ve chinh chuyen muc
+	   do, KHONG do vao /blog/ (chuyen muc van con noi dung o trang 1). */
+	$term = get_term_by( 'slug', $m[1], strpos( $path, '/tag/' ) === 0 ? 'post_tag' : 'category' );
+	if ( $term && ! is_wp_error( $term ) && $term->count > 0 ) {
+		wp_safe_redirect( get_term_link( $term ), 301 );
+		exit;
+	}
+
+	$map = array(
+		'back-link' => '/dich-vu-backlink/',
+		'backlink'  => '/dich-vu-backlink/',
+	);
+	wp_safe_redirect( home_url( isset( $map[ $m[1] ] ) ? $map[ $m[1] ] : '/blog/' ), 301 );
+	exit;
 }, 5 );
 
 /* ---------------------------------------------------------------------------
