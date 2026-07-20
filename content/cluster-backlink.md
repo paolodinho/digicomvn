@@ -25,7 +25,7 @@ trước khi trình duyệt. #8 chờ quyết định phạm vi.
 | backlink-bat-dong-san (1276) | Thêm widget `[dgc_offpage_quiz]` | ✅ xong, verify live |
 | dich-vu-backlink-tong-quan (227) | Thêm khối Tóm tắt | ✅ xong, verify live |
 | backlink (235) | Thêm khối Tóm tắt | ✅ xong, verify live |
-| trao-doi-backlink (222) | Thêm internal link (bảng giá + dịch vụ backlink), 2 ảnh minh hoạ Storyset, xoá box "Cụm bài viết" cũ | ✅ xong, verify live (1/13) |
+| trao-doi-backlink (222) | Internal link + 2 ảnh Storyset + xoá box cũ (đợt 1); bổ sung 3 sơ đồ (so sánh mô hình 1 vs 2, lưới 5 tiêu chí thẩm định, 4 bước quy trình) để đạt chuẩn `content-diagram-explain.md` (đợt 2) | ✅ xong, verify live (1/13) |
 | phan-mem-di-back-link (223) | Thêm 2 sơ đồ trực quan (quy trình 4 bước bot, mô hình kim tự tháp 3 tầng) thay vì ảnh minh hoạ trang trí - vì đây là 2 đoạn phức tạp nhất bài; thêm internal link (bảng giá + dịch vụ backlink); xoá box "Cụm bài viết" cũ | ✅ xong, verify live (2/13) |
 
 **Cách tiếp cận hình ảnh/sơ đồ (chốt 2026-07-20):** ưu tiên xác định đoạn văn khó hiểu/nhiều bước/nhiều lựa chọn trong bài → dựng sơ đồ/bảng tóm tắt HTML (không SVG) minh hoạ đúng đoạn đó. Ảnh minh hoạ Storyset chỉ dùng khi bài không có đoạn nào đủ phức tạp để cần sơ đồ (như bài 222).
