@@ -3,7 +3,89 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
-## 2026-07-20
+## 2026-07-20 (routine tuần digicom-gia-doi-tac-tuan - đã đẩy LIVE)
+
+**Kho master: 2.679 -> 2.715 dòng (+36) / 90 NCC / 7 dịch vụ.**
+
+- **Admicro (VCCorp) +36 dòng, 5 rate card PDF mới bóc** (40 -> 76 dòng): giadinhnet.suckhoedoisong.vn
+  (may2025, 6 vị trí 3-20tr), infonet.vietnamnet.vn (jul2024, 6 vị trí 4-20tr), 2sao.vn (jul2024,
+  8 vị trí 2,5-10tr), vietnambiz.vn (apr2024, 8 vị trí 3-80tr), vietnammoi.vn (apr2024, 8 vị trí
+  3-50tr). Mỗi báo phát hành rate card theo tháng RIÊNG - không dùng chung jan2026/apr2025, phải
+  dò từng tháng. Admicro không thuộc 3 NCC lên web -> dữ liệu tham chiếu thị trường, không ra site.
+  - Chưa lấy được: **phunuvietnam** (đã thử ~35 URL `phunuvietnam_`/`pnvn_` x 12 tháng x 2023-2026,
+    đều 404). Cần Hiếu lấy link PDF thật từ admicro.vn/baogia (trang render JS).
+  - Tìm thêm 14 URL rate card SỐNG chưa bóc: cafef/nld/cafebiz/dantri/thanhnien/vietnamnet/
+    vnenconomy jan2026 (bản mới nhất), kenh14/soha/afamily apr2025.
+  - Lưu ý: vietnambiz + vietnammoi là bản apr2024, infonet + 2sao bản jul2024 - đã cũ 1-2 năm.
+
+- **ĐẨY LÊN LIVE: dgc_gia publish 849 -> 855.** Bảng giá /bang-gia/ 965 -> 971 dòng.
+  - **6 đầu mục MỚI**: booking-bao-pr 2 (24h.com.vn "Bài PR loại 2 - Mục còn lại" 3.811.000;
+    alobacsi.com "Bài loại 7 trang chuyên mục" 2.060.000), dich-vu-toplist 4 (cotrang.org Top 1
+    7.200.000; quangninhcogi.vn Top 2-3 5.400.000; danhgiathuonghieu.vn Top 3 2.160.000;
+    hcmtoplist.com bài khách tự gửi 960.000).
+  - **6 dòng SỬA GIÁ** (đối chiếu tay từng dòng, đều là vị trí "Mục phù hợp" cùng tầng sản phẩm
+    giữa 3 NCC chính): vietstock.vn 2.626.000->2.059.000, vietbao.vn 2.369.000->1.772.000,
+    bienphong.com.vn 2.112.000->1.442.000, thethaovanhoa.vn 2.493.000->2.060.000,
+    tuoitrexahoi.vn 1.648.000->1.236.000, lamchame.vn 1.442.000->1.854.000 (TĂNG).
+  - Dry-run khớp (6 cập nhật / 6 tạo mới) trước khi ghi thật. Purge LiteSpeed. Verify curl.
+
+- **KHÔNG áp 13 thay đổi giá khác - đối chiếu tay phát hiện sai sản phẩm** (đúng 3 cạm bẫy rule):
+  - **6 dòng truyền hình: bẫy TVC 15 giây vs 30 giây** (cạm bẫy #2 - cùng vị trí khác quy cách).
+    vtv1 khung giờ vàng 19h55 live 108.202.000 (TVC 30s) vs export 64.921.000 (TVC 15s);
+    vtv1 6h20 41.241.000 (30s) vs 24.745.000 (15s); vtv3 Cà phê Sáng 20.621.000 (30s) vs
+    12.372.000 (15s); htv9 Nhịp sống doanh nghiệp + htv7 Nhịp sống trẻ 24.720.000 vs 20.085.000
+    (2 mức phóng sự khác nhau); htv9 Thời sự trưa 21.630.000 (tự giới thiệu 90 giây) vs
+    12.360.000 (60 giây). Áp xuống = bán TVC 30 giây bằng giá 15 giây, dưới giá vốn.
+  - **1 dòng diendandoanhnghiep.vn** 3.090.000 -> 2.781.000: giá rẻ hơn là của bài **700 từ**
+    (DanaSEO), giá đang bán là bài **1000 từ** (Media Việt Nam) - khác quy cách, giữ nguyên.
+  - **2 dòng toplist DR<=5** (rule lọc chất lượng 2026-07-19): itoplist.vn (DR 0,1),
+    top10riviu.com (DR 4,8) - có trong gia-web.csv nhưng KHÔNG đẩy lên live.
+
+- **SỬA LỖI RÒ TÊN NHÀ CUNG CẤP trong `export-web.py`** (phát hiện khi đối chiếu live):
+  3 dòng entity `Famemedia.vn / Gói B150-B200-B300` lọt qua bộ lọc `is_khong_ro_noi_dang()` vì
+  `dau_bao` có dấu chấm nên bị coi là domain hợp lệ. Nếu đẩy lên web thì bảng giá Digicom sẽ hiện
+  thẳng tên miền nhà cung cấp - vi phạm rule "ẩn danh tính NCC", đồng thời là gói không có list
+  site. Đã thêm set `NCC_DOMAIN` (25 tên miền NCC) chặn tuyệt đối + chặn cả trường hợp chữ
+  "Gói"/"Combo" nằm ở `vi_tri` thay vì `dau_bao`. gia-web.csv 1.167 -> 1.164 dòng, entity về 0.
+  Verify: grep tên 11 NCC trên gia-web.csv và trên HTML /bang-gia/ live = 0 kết quả.
+
+- **goi_sites: vẫn để TRỐNG cho toàn bộ gói** (quét 9 NCC entity: Solann Digital, Tùng Phát,
+  SEOTOP, SEOTORO, BuffSEO, dichvuentity.vn, Vutruso, KingNCT, Khoahocseotop). **Không bên nào
+  công bố danh sách nền tảng trong gói** - chỉ nói chung chung "300 social DA/DR > 50". Xác định
+  được NCC gốc của 4 gói Digicom đang bán là **Solann Digital** (cấu trúc gói trùng khớp: 50 /
+  100 / 200+15 GStack / 300+15 GStack, giá gốc 539k / 1.049k / 1,99tr / 2,89tr) nhưng Solann
+  cũng không công bố list. Danh sách 300+ nền tảng CÓ công khai trên blog chia sẻ miễn phí
+  (HapoDigital, Headle, Mai Trung Kiên) nhưng đó là list của bên khác, KHÔNG phải cam kết của
+  Solann -> dán vào trang bán là bịa gián tiếp, KHÔNG dùng. 4 gói entity giữ nguyên trạng thái
+  draft. Cách duy nhất mở khoá: xin thẳng list từ Solann.
+
+- **Rà lại 2 nguồn chính**:
+  - **Media Việt Nam (6/6 tab Google Sheet): 0 dòng đổi giá** - đối chiếu số học toàn bộ 30 báo tỉnh,
+    31 PR báo lớn, 31 site x 9 mốc textlink trang chủ, 30 gói sidebar, 13 guest-post du lịch, 2 GOV -
+    100% khớp master. Không có tab mới ngoài 6 gid đã biết.
+    - Quét thô báo "25 site mới" nhưng **kiểm chứng tay lại: 5 dòng báo tỉnh (baodanang.vn,
+      baothainguyen.vn, nghean24h.vn, nguoihanoi.vn, baodaklak.vn) ĐÃ CÓ sẵn cả trong master lẫn
+      trên live** - báo nhầm do so khớp thiếu. Không đẩy, tránh tạo dòng trùng.
+    - 13/25 dòng còn lại **để trống ô giá trong sheet** (tab PR báo lớn ghi "báo lớn hay thay đổi,
+      liên hệ sale") -> không có số thật, không đưa vào kho.
+    - Thật sự sót 1 dòng: **Vnexpress.net mục "Công Nghệ" 9.880.000 chưa VAT** (2 link nofollow) -
+      đã bổ sung vào master (2.715 -> 2.716 dòng). KHÔNG lên web vì cùng tầng chuyên mục vnexpress
+      đã có dòng rẻ hơn (8.034.000) thắng giá.
+    - 2 dòng nguồn đánh dấu "(Dừng)": quangninh.gov.vn, kinhtedothi.vn (tab textlink sidebar) -
+      cần Hiếu xác nhận có gỡ khỏi bảng bán không.
+  - **Fame Media: KHÔNG rà được - site đang DOWN.** famemedia.vn từ chối kết nối (`ECONNREFUSED :443`,
+    HTTP 000), thử cả HTTP/80 và `www.`, cả curl lẫn WebFetch, kiểm lại 2 lần cách nhau ~20 phút đều
+    hỏng. Đây là 1 trong 3 NCC được lên web (948 dòng master) -> cần rà lại khi site sống.
+
+- **Toplist - quét thêm đối tác**: ATP Software (combo 5/8/15 site, 1,8-4tr, nofollow, 12 tháng -
+  đã có trong master dưới tên ATP Media), Brando (chỉ "từ 3tr/năm" - giá mềm), BookBaoPR (11 site
+  có domain nhưng cột giá đều "từ 1.000.000đ" -> giá mềm, loại), SetupOTA + DanaSEO + Newtop
+  (giá cứng nhưng không nêu site nào -> rule "không rõ nơi đăng", không lên web). Domain mới ghi
+  nhận nhưng chưa mua được giá cứng: toplist.vn, top10tphcm.com, topaz.vn, bangxephang.com.vn,
+  brands.vn, xehay.com.vn, topuni.vn, topdichvu.vn. Không lấy được giá: btmkt.vn (404),
+  toplistvietnam.vn + top1review.vn (chỉ hotline), atpholdings.vn (lỗi SSL).
+
+## 2026-07-20 (booking-price-daily)
 - Giá đổi: không có. DanaSEO (3 tab: PR báo lớn, Báo tỉnh, Link dof) trùng hash byte-for-byte
   với bản 2026-07-19; toàn bộ 2.659 dòng master cũ giữ nguyên giá.
 - Thêm mới: **ECP Media - 20 dòng** (24h.com.vn, PR Desktop, 5 nhóm chuyên mục x 4 vị trí

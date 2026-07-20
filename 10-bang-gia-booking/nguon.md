@@ -105,3 +105,63 @@ với các tháng thử (jan/feb/mar/apr/may/jun 2026 + apr2025) - CẦN Hiếu 
   khác đã nạp 2026-07-18, ghi rõ "chưa import, chờ Hiếu xác nhận". Routine tuần KHÔNG tự đẩy
   (rule publish-volume-warning: mass-publish >5 dòng/cụm phải verify + xác nhận trước). Cần Hiếu
   duyệt để đẩy đợt guest-post này lên live.
+
+## Cập nhật 2026-07-20 (routine tuần)
+
+### Admicro - 10/14 file rate card đã bóc (+5 file tuần này)
+Đã bóc: genk, gamek, autopro, vtv, skds (2026-07-18) + **giadinhnet (may2025), infonet (jul2024),
+2sao (jul2024), vietnambiz (apr2024), vietnammoi (apr2024)** (2026-07-20, +36 dòng).
+**Mỗi báo có tháng phát hành RIÊNG** - không dùng chung 1 tháng, phải dò `<bao>_admicro_prs_<thang><nam>.pdf`.
+
+| Trạng thái | Đầu báo |
+|---|---|
+| CHƯA bóc, URL SỐNG (bản mới nhất jan2026) | cafef, nld, cafebiz, dantri, thanhnien, vietnamnet, vnenconomy |
+| CHƯA bóc, URL sống (apr2025) | kenh14, soha, afamily |
+| KHÔNG tìm được URL | **phunuvietnam** - đã thử ~35 URL (`phunuvietnam_`/`pnvn_` x 12 tháng x 2023-2026), tất cả 404 |
+
+**Cần Hiếu hỗ trợ**: mở admicro.vn/baogia bằng trình duyệt (trang render JS, WebFetch không đọc
+được link thật) -> copy URL PDF của phunuvietnam. Hoặc xin thẳng sale Admicro (PRSolution@admicro.vn).
+Lưu ý: vietnambiz/vietnammoi bản apr2024, infonet/2sao bản jul2024 - cũ 1-2 năm, giá 2026 có thể đã tăng.
+
+### Social Entity - KHÔNG bên nào công bố list nền tảng (quét 9 NCC, 2026-07-20)
+Solann Digital, Tùng Phát, SEOTOP, SEOTORO, BuffSEO, dichvuentity.vn, Vutruso, KingNCT (403),
+Khoahocseotop (từ chối kết nối) - tất cả chỉ mô tả chung ("300 social DA/DR > 50"), không liệt kê site.
+
+**Xác định được NCC gốc của 4 gói Digicom đang bán = Solann Digital** (cấu trúc gói trùng khớp
+chính xác): https://backlink.solanndigital.com/dich-vu-social-entity - 50 Socials VIP 539.000 /
+100 Socials VIP 1.049.000 / 200+15 GStack 1.990.000 / 300+15 GStack 2.890.000. Solann chỉ mô tả
+quy trình ("lọc 2.500 domain còn ~330 trang traffic >10k"), KHÔNG công bố list.
+
+List 300+ nền tảng CÓ công khai trên blog chia sẻ miễn phí (hapodigital.com/danh-sach-300-mang-xa-hoi-chat-luong,
+headle.net/list-social-entity, maitrungkien.com/danh-sach-300-social-entity) nhưng **KHÔNG dùng được**:
+đó là list của bên khác, không phải cam kết của Solann với gói Digicom đang bán -> dán vào là bịa gián tiếp.
+
+**Cần Hiếu hỗ trợ**: xin thẳng Solann danh sách nền tảng trong gói. Đây là cách DUY NHẤT có list
+đúng. Nếu xin được -> điền `goi_sites`, 4 gói entity tự publish lại (hiện đang draft).
+
+### Toplist - quét thêm 2026-07-20
+| Bên | URL | Kết quả |
+|---|---|---|
+| ATP Software | https://atpsoftware.vn/dich-vu-toplist/ | Combo 5/8/15 site 1,8-4tr, nofollow, 12 tháng (đã có trong master dưới tên "ATP Media") |
+| BookBaoPR | https://bookbaopr.vn/dich-vu-toplist-review/ | 11 site có domain (toplist.vn, top10tphcm.com, topaz.vn, danangaz.com, tophaiphong.com...) nhưng giá đều "từ 1.000.000đ" -> GIÁ MỀM, loại |
+| SetupOTA | https://setupota.vn/book-bao-pr-toplist/ | Giá cứng + dofollow (hiếm) nhưng không nêu site -> "không rõ nơi đăng" |
+| DanaSEO | https://danaseo.net/dich-vu-toplist | Bảng đầy đủ nhất (5 vị trí x 3 thời hạn x 4 nhóm khu vực) nhưng chỉ theo khu vực/ngành, KHÔNG domain -> không lên web |
+| Newtop.vn | https://newtop.vn/dich-vu-toplist/ | Giá mới 8 bậc Top1-Top10 (350k-1tr/năm), không domain |
+| Brando | https://brando.vn/dich-vu-toplist/ | "từ 3.000.000đ/năm" -> giá mềm |
+| btmkt.vn | - | URL 404 |
+| toplistvietnam.vn, top1review.vn | - | Có bán vị trí nhưng chỉ hotline, không công bố giá |
+| atpholdings.vn | - | Lỗi SSL |
+
+Domain toplist mới ghi nhận (chưa có giá cứng): toplist.vn, top10tphcm.com, topaz.vn,
+bangxephang.com.vn, brands.vn, xehay.com.vn, topuni.vn, topdichvu.vn.
+
+### Rà lại 2 nguồn chính 2026-07-20
+- **Media Việt Nam**: 6/6 tab lấy được qua gviz CSV, **0 dòng đổi giá**, không có tab mới. Bổ sung 1
+  dòng sót: Vnexpress.net mục "Công Nghệ" 9.880.000 chưa VAT (tab gid=1090550234). Lưu ý tab PR báo
+  lớn có 13 dòng **để trống ô giá** ("báo lớn hay thay đổi, liên hệ sale") - muốn có giá phải hỏi sale.
+  2 dòng đánh dấu "(Dừng)": quangninh.gov.vn, kinhtedothi.vn (textlink sidebar) - chờ Hiếu xác nhận gỡ.
+- **Fame Media: SITE DOWN** (2026-07-20). famemedia.vn trả `ECONNREFUSED :443` / HTTP 000 với mọi cách
+  (curl, WebFetch, HTTP/80, www.), kiểm 2 lần cách nhau 20 phút. 948 dòng Fame Media trong master
+  CHƯA rà được lần này. Các URL bảng giá khác tìm được qua search nhưng chưa đọc được nội dung:
+  /quang-cao-vtv/, /backlink-bao/, /gia-quang-cao-khung-gio-vang-vtv/, /quang-cao-tren-truyen-hinh/,
+  /tin-260/. **Cần rà lại khi site sống** - đây là 1 trong 3 NCC được lên web.

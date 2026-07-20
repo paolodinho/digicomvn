@@ -1,0 +1,84 @@
+{
+ "updates": [
+  {
+   "id": 3372,
+   "gia": 2059000
+  },
+  {
+   "id": 3374,
+   "gia": 1772000
+  },
+  {
+   "id": 3376,
+   "gia": 1442000
+  },
+  {
+   "id": 3373,
+   "gia": 2060000
+  },
+  {
+   "id": 3379,
+   "gia": 1236000
+  },
+  {
+   "id": 3368,
+   "gia": 1854000
+  }
+ ],
+ "new": [
+  {
+   "nhom": "booking-bao-pr",
+   "title": "24h.com.vn",
+   "vi_tri": "Bài PR loại 2 (Mục còn lại)",
+   "gia": 3811000,
+   "so_link": "",
+   "yeu_cau": "Tối đa 1000 chữ 5 ảnh 3 link NO - CÓ ĐKKD",
+   "ma_ncc": "2"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "alobacsi.com",
+   "vi_tri": "Bài loại 7 trang chuyên mục",
+   "gia": 2060000,
+   "so_link": "1 link no",
+   "yeu_cau": "Bài PR dưới 800 từ, dưới 3 ảnh",
+   "ma_ncc": "1"
+  },
+  {
+   "nhom": "dich-vu-toplist",
+   "title": "cotrang.org",
+   "vi_tri": "Top 1 (1 năm)",
+   "gia": 7200000,
+   "so_link": "1 link",
+   "yeu_cau": "Toplist quảng cáo doanh nghiệp",
+   "ma_ncc": "9"
+  },
+  {
+   "nhom": "dich-vu-toplist",
+   "title": "quangninhcogi.vn",
+   "vi_tri": "Top 2-3 (1 năm)",
+   "gia": 5400000,
+   "so_link": "1 link",
+   "yeu_cau": "Giới thiệu - Google Maps - khung review",
+   "ma_ncc": "9"
+  },
+  {
+   "nhom": "dich-vu-toplist",
+   "title": "danhgiathuonghieu.vn",
+   "vi_tri": "Top 3 (1 năm)",
+   "gia": 2160000,
+   "so_link": "1 link",
+   "yeu_cau": "Thuê vị trí Top 3 trong bài toplist",
+   "ma_ncc": "9"
+  },
+  {
+   "nhom": "dich-vu-toplist",
+   "title": "hcmtoplist.com",
+   "vi_tri": "Bài khách tự gửi",
+   "gia": 960000,
+   "so_link": "2 link nofollow",
+   "yeu_cau": "Trên 1000 từ - từ 5 ảnh - 1 năm",
+   "ma_ncc": "9"
+  }
+ ]
+}

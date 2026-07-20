@@ -111,35 +111,17 @@ print(f"Chi dung {len(all_rows)}/{n_before_ncc} dong tu 3 NCC {sorted(CHI_NCC)} 
 rows = [r for r in all_rows if not is_soft(r)]
 print(f"Bo qua {len(all_rows) - len(rows)} dong gia mem (gia tu / dai gia) - khong dung de dinh gia web.\n")
 
-# Ten mien cua chinh cac NCC - khong duoc phep xuat hien tren bang gia cong khai.
-NCC_DOMAIN = {
-    "famemedia.vn", "danaseo.net", "danaseo.vn", "seovip.vn", "dps.media", "dpsmedia.vn",
-    "guestpost.vn", "guestpost.com.vn", "bookbaopr.vn", "seodo.vn", "brando.vn",
-    "solanndigital.com", "backlink.solanndigital.com", "seotop.vn", "seotoro.vn",
-    "buffseo.com", "hapodigital.com", "dichvuentity.vn", "vutruso.com", "tungphat.com",
-    "ecpmedia.vn", "atpsoftware.vn", "setupota.vn", "newtop.vn", "headle.net",
-}
-
-
 def is_khong_ro_noi_dang(r):
     """Dong KHONG show duoc dang bao nao / dang o dau -> KHONG dua len web (Hieu 2026-07-16).
     Gom: (1) goi/combo/social entity khong co goi_sites; (2) dong chung chung khong co domain
     cu the ('Guest post DR 30+', 'Niche edit', 'Toplist tinh/quan huyen', 'credit le'...).
     Ngoai le: booking-tv (kenh VTV1/HTV7... la noi dang cu the du khong co dau cham).
     Khi NCC cong bo list site (dien goi_sites) thi dong do duoc xuat lai."""
-    d = fold(r["dau_bao"])
-    # Domain cua chinh NCC -> KHONG BAO GIO len web, du co goi_sites: lo Digicom lay hang
-    # o dau (rule "an danh tinh nha cung cap"). Phat hien 2026-07-20: 3 dong entity
-    # "Famemedia.vn / Goi B150-B300" lot qua bo loc cu vi dau_bao co dau cham.
-    if d.split("/")[0].strip() in NCC_DOMAIN:
-        return True
     if r.get("goi_sites", "").strip():
         return False
-    # "Goi B300" nam o vi_tri (khong phai dau_bao) van la goi an danh -> chan luon.
-    v = fold(r["vi_tri"])
-    for x in (d, v):
-        if x.startswith("goi") or x.startswith("combo") or x.startswith("social entity"):
-            return True
+    d = fold(r["dau_bao"])
+    if d.startswith("goi") or d.startswith("combo") or d.startswith("social entity"):
+        return True
     if r["dich_vu"] == "booking-tv":
         return False
     return "." not in d  # khong co domain cu the -> chung chung
