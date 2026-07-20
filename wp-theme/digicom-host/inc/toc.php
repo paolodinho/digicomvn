@@ -99,7 +99,7 @@ function dgc_toc_render_inline( $items ) {
 	ob_start();
 	?>
 	<nav class="post-toc" id="postToc" aria-label="Mục lục bài viết">
-		<details open>
+		<details>
 			<summary class="post-toc__head">
 				<span class="post-toc__icon" aria-hidden="true">
 					<svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
