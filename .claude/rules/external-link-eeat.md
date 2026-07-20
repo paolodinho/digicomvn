@@ -71,6 +71,25 @@ không có element nào bị đánh dấu `hidden` nữa nên không bị extens
 6. Bài nào chủ đề CHÍNH là định nghĩa thuật ngữ đó (tiêu đề dạng "X Là Gì?") -> KHÔNG tự gắn icon "i"
    giải thích X trong chính bài đó (trùng lặp, cả bài đã là định nghĩa).
 
+## Trích số liệu/nhân vật nổi tiếng - bắt buộc nguồn + nofollow (chốt 2026-07-20)
+
+> Case gốc: bài `kiem-tra-backlink` nhắc "John Mueller", "Marie Haynes", "Brian Dean" kèm số liệu
+> cụ thể (65%, 70%...) nhưng KHÔNG có link nguồn - Hiếu: "mọi kiến giải cần thông số, số liệu,
+> trích nguồn, nhân vật nổi tiếng" -> không kiểm chứng được, đọc như bịa.
+
+**Nguyên tắc:** Mọi câu văn nêu SỐ LIỆU CỤ THỂ (%, thống kê) hoặc TRÍCH LỜI/QUAN ĐIỂM một nhân vật
+có tên thật (chuyên gia SEO, đại diện Google...) PHẢI có:
+1. Nguồn thật kiểm chứng được - không bịa số liệu, không gán phát ngôn không xác thực (theo `content-professional.md`).
+2. External link gắn ngay tại tên nhân vật hoặc câu trích dẫn, trỏ THẲNG tới bài viết/phát ngôn gốc
+   (không trỏ trang chủ chung chung, không đoán URL - phải tìm được nguồn thật).
+3. `rel="nofollow noopener" target="_blank"` - KHÁC với link luật/định nghĩa gốc ở trên (dofollow):
+   đây là trích dẫn cá nhân/bên thứ ba, Digicom không "bảo chứng" toàn bộ nội dung trang đó.
+4. Không tìm được nguồn thật cho câu đã lỡ viết (bài cũ) -> BỎ tên/số liệu đó hoặc viết lại chung
+   chung không gán nguồn cụ thể - KHÔNG giữ nguyên kiểu "chuyên gia X từng nói..." mà không có link.
+
+Áp dụng hồi tố: rà lại các bài cũ có nhắc tên chuyên gia/số liệu chưa link (vd `kiem-tra-backlink`
+đang có Marie Haynes/Brian Dean/John Mueller/Ahrefs/Semrush chưa link) khi xử lý internal-link.
+
 ## Áp dụng
 
 Mọi bài viết/trang dịch vụ digicomvn.com có nhắc luật, quy định, khái niệm chuyên ngành (báo chí,
