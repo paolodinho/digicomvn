@@ -9,7 +9,7 @@ Nguồn: `content/plan-backlink-2026-07-19.md`. 23 bài cũ (2026-07-03) không 
 | 2 | Sửa title/H1 bài "backlink bất động sản" (kw "backlink chất lượng bất động sản") | ✅ ĐÃ ĐĂNG - post ID 1276, title/H1/link nội bộ đã cập nhật, verify curl 200 | https://digicomvn.com/backlink-bat-dong-san/ | 2026-07-19 |
 | 3 | Mới: Có Nên Mua Backlink Không? | ✅ ĐÃ ĐĂNG - post ID 4226, category Backlink & Off-page, widget `[dgc_offpage_quiz]` render OK, thumbnail gắn (attachment 4227) | https://digicomvn.com/co-nen-mua-backlink-khong/ | 2026-07-19 |
 | 4 | Mới: Mua Backlink Báo Là Gì? Khác Gì Booking Báo & PR? | ✅ ĐÃ ĐĂNG - post ID 4228, category Backlink & Off-page, widget `[dgc_budget_calc]` render OK (class `bcalc`), thumbnail gắn (attachment 4229) | https://digicomvn.com/mua-backlink-bao-la-gi/ | 2026-07-19 |
-| 5 | Mới: Cách Đặt Backlink Hiệu Quả Cho Website Mới Bắt Đầu (P1) | ⛔ DỪNG - phát hiện cannibalization, xem mục "Cảnh báo" dưới, CHỜ Hiếu duyệt hướng xử lý | - | - |
+| 5 | Mới: Cách Đặt Backlink Hiệu Quả Cho Website Mới Bắt Đầu (P1) | ✅ ĐÃ XỬ LÝ theo phương án 2 (refresh, xem mục "Cảnh báo" dưới) - bổ sung mục 3.8 "Lộ trình theo giai đoạn tuổi domain" vào post 232, không viết bài mới | https://digicomvn.com/back-link-hieu-qua/ | 2026-07-20 |
 
 ## ⚠️ Cảnh báo cannibalization - bài P1 KHÔNG viết như plan gốc (2026-07-19)
 
@@ -39,6 +39,13 @@ viết thêm bài mới trùng". Vì vậy đã DỪNG không viết bài 5 theo
    backlink hiệu quả" ở đầu, để tránh 2 bài đua cùng 1 cụm.
 
 Khuyến nghị: phương án 2 (REFRESH) - tận dụng bài 232 đã có traffic/index, tránh pha loãng.
+
+**Đã xử lý (2026-07-20)**: chọn phương án 2. Bổ sung mục "3.8. Lộ trình đi backlink theo giai
+đoạn tuổi domain (áp dụng riêng cho website mới)" vào post 232 - đúng góc info gain "lộ trình
+0-3-6-12 tháng" dự kiến ban đầu cho bài P1, có 2 internal link mới (`/guest-post/`,
+`/dich-vu-backlink/`). Backup content.raw trước khi sửa
+(`~/Claude-Workspace/_backups/routines/2026-07-19/content-pipeline/232-back-link-hieu-qua.raw.html`),
+verify curl 200 + 2 link render đúng, submit GSC yêu cầu lập chỉ mục lại.
 
 ## Internal link 2 chiều đã chèn (2026-07-19)
 

@@ -15,16 +15,14 @@ Bảng kiểm chứng theo yêu cầu skill `content-pipeline` (mỗi bước 1 
 | Viết bài 4 - Mua Backlink Báo Là Gì? | Làm | File `content/mua-backlink-bao-la-gi.html` - bảng so sánh 2 dịch vụ, widget `[dgc_budget_calc]`, internal link tới CẢ `/dich-vu-backlink/` và `/booking-bao-pr/` |
 | Đăng lên WordPress (BƯỚC 6) | LÀM - session này có SSH | post 1276 update thành công; post 4226 (co-nen-mua-backlink-khong) và 4228 (mua-backlink-bao-la-gi) create thành công, category 14 (Backlink & Off-page), thumbnail gắn (attachment 4227/4229), verify curl 200 + H1 đúng cho cả 3 URL |
 | Internal link 2 chiều (BƯỚC 7) | Làm | post 1276 → thêm link tới /co-nen-mua-backlink-khong/ và /mua-backlink-bao-la-gi/; post 1260 (booking-bao-la-gi) → thêm link tới /mua-backlink-bao-la-gi/ (anchor "mua backlink báo"); 2 bài mới tự link chéo nhau trong nội dung gốc. Backup content.raw từng bài trước khi sửa, manifest tại `~/Claude-Workspace/_backups/routines/2026-07-19/manifest.md` |
-| Submit GSC (BƯỚC 7b) | Làm 1/3, 2/3 CHƯA XONG (tool outage) | `backlink-bat-dong-san` đã "Yêu cầu lập chỉ mục" thành công (screenshot xác nhận). `co-nen-mua-backlink-khong` và `mua-backlink-bao-la-gi` CHƯA submit được - browser action tool (gõ/phím) bị gián đoạn liên tục (lỗi hạ tầng "claude-sonnet-5 temporarily unavailable" khi gọi computer action) suốt nhiều phút, đã thử lại >8 lần không thành công. Cần submit tay hoặc session sau retry |
+| Submit GSC (BƯỚC 7b) | Làm - 3/3 xong (2 URL cuối hoàn tất ở lượt làm việc tiếp theo sau khi tool trình duyệt hồi phục khỏi lỗi hạ tầng tạm thời) | Cả 3 URL (`backlink-bat-dong-san`, `co-nen-mua-backlink-khong`, `mua-backlink-bao-la-gi`) đều "Đã yêu cầu lập chỉ mục" - xác nhận qua screenshot GSC |
 | Bài 5 (P1 - Cách đặt backlink hiệu quả) | DỪNG - phát hiện cannibalization | Post 232 (`back-link-hieu-qua`, "Cách Đi Backlink Hiệu Quả: 7 Kỹ Thuật Thực Chiến") đã phủ gần như chính xác cùng intent + cùng cụm từ khoá dự kiến cho bài 5, kể cả sub-heading "cho Website Mới". Theo rule A2c (chống ăn thịt từ khoá) - DỪNG không viết bài mới, ghi 3 phương án chờ Hiếu chọn trong `content/cluster-backlink.md` mục "Cảnh báo cannibalization" |
 
 ## Tóm tắt cho Hiếu
 
 - **Đã xong hoàn toàn**: audit title pillar (mục 1, xác nhận đúng), sửa bài backlink bất động
   sản (mục 2), đăng 2 bài mới P0 (mục 3, 4) kèm thumbnail + widget, internal link 2 chiều đầy đủ.
-- **Dở dang 1 việc nhỏ**: submit GSC mới xong 1/3 URL do lỗi hạ tầng tạm thời của tool trình
-  duyệt (không phải lỗi từ phía Google/site) - 2 URL còn lại (`co-nen-mua-backlink-khong`,
-  `mua-backlink-bao-la-gi`) cần submit thủ công hoặc session sau retry. Sitemap vẫn là kênh
-  index chính nên không khẩn cấp.
+- **Submit GSC xong 3/3 URL** (hoàn tất sau khi tool trình duyệt hồi phục khỏi lỗi hạ tầng
+  tạm thời gặp phải giữa chừng).
 - **Bài 5 (P1) KHÔNG viết** - phát hiện trùng lặp với bài cũ đã có (post 232), cần Hiếu chọn
   1 trong 3 phương án đã đề xuất trước khi làm tiếp (xem `content/cluster-backlink.md`).
