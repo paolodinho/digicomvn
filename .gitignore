@@ -27,3 +27,6 @@ tokens.json
 # Static export (dung rieng cho gh-pages, khong can trong nhanh main)
 _static/
 *.wpress
+
+# Token Apps Script tao bao gia - KHONG commit
+tools/bao-gia/config.json
