@@ -6,7 +6,7 @@
    ========================================================================== */
 :root{
   --ink:#1C2035;            /* text chinh - dark GrowMark */
-  --ink-soft:#555555;       /* text phu - secondary GrowMark */
+  --ink-soft:#474D5E;       /* text phu - dam len tu #555 (2026-07-20) cho de doc */
   --navy:#1C2035;           /* dark GrowMark, thay brand-navy cu */
   --navy-2:#262B45;
   --action:#4761FF;         /* primary xanh duong GrowMark, KHONG purple/indigo */
@@ -20,7 +20,9 @@
   --heading:#1C2035;      /* chu tieu de - tach khoi --navy (vốn còn dùng làm nền tối) */
 
   --font-display:'Roboto', system-ui, sans-serif;
-  --font-body:'Montserrat', system-ui, sans-serif;
+  /* Body doi tu Montserrat -> Be Vietnam Pro (2026-07-20): x-height cao hon,
+     chu hep hon, dau tieng Viet ve rieng -> doc do met mat hon han. */
+  --font-body:'Be Vietnam Pro', system-ui, sans-serif;
 
   --r-sm:12px; --r-md:18px; --r-lg:28px;
   --sh-low:0 2px 8px rgba(28,32,53,.06);
@@ -34,13 +36,13 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--surface);color:var(--ink);
-  font-family:var(--font-body);font-size:16px;line-height:1.6;
+  font-family:var(--font-body);font-size:17px;line-height:1.72;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
   position:relative;
 }
 /* Grain texture nhe toan site - chong flat/AI-slop */
 body:before{
-  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.035;
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.02;
   mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
