@@ -40,6 +40,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/external-link-eeat.md` | Link thuat ngu/luat quan trong ra nguon uy tin (E-E-A-T) |
 | `.claude/rules/content-diagram-explain.md` | Toi thieu 3 so do HTML giai thich doan phuc tap moi bai |
 | `.claude/rules/audit-intent-truoc.md` | **Research SERP xac dinh intent TRUOC khi sua bai cu** |
+| `.claude/rules/khong-ban-gov-edu.md` | **TUYET DOI khong ban/nhac ban backlink .gov.vn .edu.vn (phap ly)** |
 | `.claude/rules/trang-tac-gia.md` | Trang tac gia /author/ - landing E-E-A-T, khong trung /blog/ |
 
 ## 7. File quan trong

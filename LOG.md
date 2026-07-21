@@ -1567,3 +1567,107 @@ Deploy DGC_VER 1.9.5 len live, verify lai qua curl tren bai that /thong-cao-bao-
 - Verify: 165/165 URL trong wp-sitemap trả 200, không còn trang mỏng.
 - Trang tác giả `/author/do-hieu/` viết lại thành landing E-E-A-T (hồ sơ, số liệu tự đếm, mảng chuyên môn, cột mốc, 6 bài tiêu biểu, chip cụm chủ đề, schema Person) thay cho danh sách bài trùng `/blog/`. Thêm 7 field hồ sơ trong WP Admin. Rule mới: `.claude/rules/trang-tac-gia.md`.
 - Lưu trữ theo ngày tháng (`/2026/`, `/2026/07/`) 301 về `/blog/` - WP tự sinh, nội dung trùng lặp thuần tuý.
+- Trích hồ sơ VietnamWorks của Hiếu lên trang tác giả: tiểu sử dài (báo chí TTXVN 2008-2017 -> Alpha Books -> Thu Cúc -> BV Mắt HN2 -> BV Việt Pháp -> lập DigicomVN), 8 cột mốc, 6 kết quả có số liệu, 6 chứng chỉ. Thêm 2 field WP Admin: `dgc_achievements`, `dgc_credentials` + schema hasCredential.
+- Audit toàn site (crawl 778 URL): 0 trang trống/mỏng/404/trùng tiêu đề. Sửa 2 lỗi: URL viết hoa trả 200 (nay 301 về chữ thường), 141 feed RSS mở index (nay X-Robots-Tag noindex).
+- Thay hết dấu gạch dài — – thành - trong DB (18 lượt sửa ở 5 bài + 1 alt ảnh). Nguyên nhân lọt: mục lục tự động `inc/toc.php` đọc heading từ raw content, không qua filter `dgc_no_dash` của `the_content`.
+
+## 2026-07-20 (chiều/tối) - Rà intent cụm backlink + viết lại bài 225
+
+**Phát hiện gốc (Hiếu chỉ ra):** đang sửa hình thức bài cũ (sơ đồ, internal link) mà KHÔNG
+kiểm tra bài có đúng dạng SERP đang xếp hạng không. Bài `dien-dan-di-backlink` là ví dụ:
+intent rõ ràng là DANH SÁCH diễn đàn (10/10 top là listicle 100-200+ forum kèm DA/PA) nhưng
+bài chỉ có 25 dòng không chỉ số, nhiều dòng không phải forum hoặc đã chết.
+
+**Đã làm:**
+1. **Viết lại toàn bộ bài 225** `/dien-dan-di-backlink/` -> "Danh Sách 43 Diễn Đàn Đi Backlink
+   Còn Sống, Đã Đo DR Thật (7/2026)". Quy trình lọc 3 lớp trên 73 ứng viên: DNS (loại 5),
+   HTTP (loại 7), Domain Rating qua Ahrefs free API (loại 5 domain DR<=5). Giữ 43 diễn đàn
+   chia 8 nhóm ngành. Info gain: công bố luôn 17 domain bị loại kèm lý do + loại 8 tên miền
+   mạnh nhưng không phải forum (laodong.vn, genk.vn, chotot.com...). Phát hiện đối thủ chép
+   DA của nhau và mâu thuẫn (tinhte.vn ghi 82/77/65+ ở 3 bài, DR thật 79).
+   Dữ liệu: `tools/forum-audit/` (check.py, dr.csv, status.csv, build.py).
+2. **CSS bảng dữ liệu `.dgc-data-table`** thêm vào `assets/css/main.css` - responsive 4 mức
+   (desktop bảng đầy đủ / <=820px thu gọn / <=700px ẩn cột phụ / <=560px thành thẻ dọc theo
+   data-label). DGC_VER 1.9.9 -> 2.0.3. Sửa 2 lỗi: badge DR nền sáng + chữ trắng không đọc
+   được (đổi thang màu đảo ngược cho bậc thấp), và bỏ cách ẩn thead bằng `left:-9999px`
+   (kỹ thuật hidden-text đã từng gây sự cố) sang `display:none`.
+3. **Ảnh đại diện mới bài 225** (ảnh cũ ghi title cũ) - sinh bằng `tools/blog-thumbnail`,
+   attachment 4284 thay 1590.
+4. **Bài 230** `/backlink-social/`: SERP intent là THƯƠNG MẠI (8/10 top là trang dịch vụ) ->
+   giữ bài làm informational bổ trợ, thêm 3 sơ đồ (phân biệt social vs entity, quy trình 3
+   bước, 5 nguyên tắc) + khối CTA "Tự làm hay thuê?" dẫn sang `/backlink-social-entity/`,
+   xoá box "Cụm bài viết" cũ.
+
+**Rule mới:** `.claude/rules/audit-intent-truoc.md` - research SERP xác định intent TRƯỚC khi
+sửa bài cũ; lệch dạng thì DỪNG và báo, không sửa vặt rồi báo xong. Kèm cách khai thác info
+gain cho bài dạng danh sách (verify link sống, đo chỉ số thật, công bố phần bị loại).
+Bổ sung mục "Bảng dữ liệu `.dgc-data-table`" vào `content-diagram-explain.md`.
+
+**CẦN HIẾU QUYẾT - cannibalization cụm "social entity":** 3 trang cùng nhắm 1 cụm, trong đó
+`/dich-vu-entity/` (post 226) thực chất là trang dịch vụ THỨ HAI (có báo giá, cam kết, FAQ)
+cạnh tranh trực tiếp với trang dịch vụ chính `/backlink-social-entity/`. Chưa xử lý vì là
+hành động khó đảo ngược. 3 phương án + khuyến nghị ghi trong `content/cluster-backlink.md`.
+
+**Đã làm tiếp:** bài 233 `/back-link-gov/` VIẾT LẠI - xem chi tiết trong `content/cluster-backlink.md`.
+bài hiện thiếu hẳn phần danh sách. Đang thu thập + verify dữ liệu.
+
+**Bổ sung cùng ngày (đợt "làm tất"):**
+- **Bài 233 `/back-link-gov/` VIẾT LẠI + đổi title + ảnh mới.** Gỡ 2 lỗi nghiêm trọng: placeholder
+  `[Tên_Thương_Hiệu_Của_Bạn]` chưa điền (2 chỗ) và phần CHÀO BÁN dịch vụ backlink .gov.vn (claim
+  "mạng lưới hợp tác hơn 50 cổng thông tin từ cấp Sở đến cấp Bộ", "gói PR trên trang Chính phủ",
+  "cam kết Trust > 70") - vừa không verify được, vừa trùng hành vi đang bị khởi tố. Hướng mới:
+  bài bóc trần dựa trên kiểm tra thật 55 tên miền (13/20 gov.vn đã chết), cảnh báo pháp lý có
+  dẫn 4 nguồn chính thống đã verify HTTP 200, 3 sơ đồ, khối tuyên bố "Digicom KHÔNG bán backlink gov".
+- **Ảnh đại diện mới** cho 225 (attachment 4284 thay 1590) và 233 (4287 thay 1597) - ảnh cũ ghi
+  title cũ, không khớp nội dung sau khi viết lại.
+
+**Còn tồn:** cannibalization cụm "social entity" (post 226 vs trang dịch vụ) - chờ Hiếu chọn
+phương án. Chưa research intent: 227, 231, 234, 235.
+
+## 2026-07-20 (tối) - GỠ TOÀN BỘ nội dung bán backlink .gov.vn / .edu.vn
+
+Hiếu chốt sau khi phát hiện bài 233 đang chào bán dịch vụ này: gỡ hết mọi nơi, bảng giá có thì
+gỡ, bài viết phải nói rõ đây là hành vi vi phạm pháp luật.
+
+**Rà toàn site, phát hiện và xử lý:**
+1. **Bảng giá (CPT `dgc_gia`) ĐANG BÁN THẬT** - 9 dòng publish, gồm 3 dòng `vietnamtourism.gov.vn`
+   (website Cục Du lịch Quốc gia, giá 7,1-10,3 triệu, một dòng ghi rõ vị trí "tùy thuộc vào tổng
+   cục") + 6 trường/trung tâm `.edu.vn` (taybaclaw, hongngu3, fastenglish, dtec, megaacademy,
+   topone). Đã draft hết, backup ID + giá trước khi draft.
+2. **`export-web.py` chưa có filter** -> routine tuần sẽ tự đẩy lại lên. Đã thêm `is_gov_edu()`,
+   chặn 27 dòng. Lỗi gặp khi làm: dùng `.split("/")[0]` khiến `"https://vietnamtourism.gov.vn/..."`
+   bị cắt còn `"https:"` và lọt bộ lọc - phải quét trên toàn chuỗi, đã sửa và verify `gia-web.csv`
+   còn 0 dòng gov/edu.
+3. **Bài 1279 `/mua-textlink-edu-gov/`** - mục "DigicomVN có bán textlink EDU/GOV không?" trước
+   trả lời nước đôi ("nhận tư vấn theo từng trường hợp... trước khi triển khai") -> đổi thành từ
+   chối dứt khoát, giải thích 2 con đường duy nhất tạo ra loại link này đều vi phạm pháp luật.
+4. **Bài 234 `/back-link-chat-luong/`** - mục "Quyền lực vô cực từ Website Chính phủ" gọi link từ
+   cổng thông tin sở/ngành là "kim bài miễn tử" -> viết lại, nêu rõ đuôi tên miền không phải yếu
+   tố xếp hạng và việc trả tiền đặt link ở đó là vi phạm pháp luật.
+5. **Bài 233 `/back-link-gov/`** - đổi tiêu đề mục cảnh báo thành "Mua bán backlink .gov.vn,
+   .edu.vn là hành vi vi phạm pháp luật", thêm đoạn nói thẳng cơ quan nhà nước không có cơ chế
+   bán quảng cáo, thêm khối "Người mua có an toàn không?" nêu 3 lớp hậu quả (mất tiền không đòi
+   được / vi phạm chính sách Google / nguy cơ liên đới khi truy vết dòng tiền).
+
+**Rule mới:** `.claude/rules/khong-ban-gov-edu.md` - rule cứng, không ngoại lệ, kèm chốt chặn kỹ
+thuật đã cài và cảnh báo lỗi `.split("/")` để không lặp lại.
+
+**Verify:** bảng giá + 4 trang dịch vụ đều 0 dòng gov/edu; không còn bài nào chứa nội dung chào
+bán; 3 bài đã nêu rõ "vi phạm pháp luật". False positive cần biết: `kreweduoptic.com` chứa chuỗi
+"edu" nhưng là domain .com bình thường, không thuộc diện này.
+
+## 2026-07-20 (tối, tiếp) - GỘP cụm "social entity" 3 trang thành 1
+
+Hiếu chốt phương án gộp. Trang đích: `/backlink-social-entity/` (page 1621, template tpl-service).
+
+1. **Gộp nội dung** - chuyển phần giá trị KHÔNG trùng từ post 226 và 230 vào trang đích
+   (6.062 -> 12.253 ký tự): phân biệt social vs entity + sơ đồ, dấu hiệu gói entity kém, 5 nguyên
+   tắc + lưới, entity cho cá nhân (Person Schema/sameAs), 3 câu FAQ mới. Bỏ phần trùng
+   (10 bước của 226 trùng quy trình 7 bước sẵn có; báo giá riêng vì template đã có bảng giá).
+2. **301 redirect** - thêm mảng `$dgc_gop` vào handler `is_404()` trong functions.php
+   (DGC_VER 2.0.4). Verify: cả 2 URL cũ trả 301 đúng đích, trang đích 200.
+3. **Draft post 226 + 230** (không xoá, rollback được).
+4. **Dọn internal link** 5 bài (228, 231, 232, 234, 235): đổi URL + gộp link trùng đích nằm cạnh
+   nhau. Verify 0 bài publish còn trỏ URL cũ (không có redirect chain), sitemap sạch.
+
+Backup: `~/Claude-Workspace/_backups/routines/2026-07-20/gop-social-entity/`

@@ -132,6 +132,28 @@ DA_DUNG_BAN = {
 }
 
 
+def is_gov_edu(r):
+    """Domain co quan nha nuoc (.gov.vn) / truong hoc (.edu.vn) -> KHONG BAO GIO len web
+    (Hieu chot 2026-07-20).
+
+    Ly do: dat link quang cao tra tien tren cong thong tin dien tu cua co quan nha nuoc /
+    truong hoc la HANH VI VI PHAM PHAP LUAT, khong phai nghiep vu SEO. Thang 8/2024 mot Pho
+    Chanh Van phong UBND tinh Quang Tri da bi bat tam giam vi chen link quang cao vao cac
+    ten mien .gov.vn/.edu.vn de thu tien (2019-2024) - xem bai /back-link-gov/ tren site.
+    Truoc khi chot rule nay, bang gia dang publish 9 dong loai nay, trong do co
+    vietnamtourism.gov.vn (Cuc Du lich Quoc gia) gia 7,1-10,3 trieu - da draft het.
+
+    KHONG go rule nay ke ca khi NCC chao hang lai. Neu can mo lai phai co y kien Hieu bang van ban."""
+    # KHONG split("/") trong o day: dau_bao co the la "https://vietnamtourism.gov.vn/ Tong cuc
+    # du lich" -> split se cat con "https:" va lot bo loc (da dinh loi nay 2026-07-20).
+    # Quet tren TOAN CHUOI, cong them vi_tri/quy_cach de bat cac dong mo ta kieu "42 site gov".
+    hay = " ".join(fold(r.get(k, "")) for k in ("dau_bao", "vi_tri", "quy_cach"))
+    return (".gov.vn" in hay or ".edu.vn" in hay
+            or ".gov/" in hay or ".edu/" in hay
+            or hay.rstrip("/ ").endswith(".gov") or hay.rstrip("/ ").endswith(".edu")
+            or "site gov" in hay or "site edu" in hay)
+
+
 def is_khong_ro_noi_dang(r):
     """Dong KHONG show duoc dang bao nao / dang o dau -> KHONG dua len web (Hieu 2026-07-16).
     Gom: (1) goi/combo/social entity khong co goi_sites; (2) dong chung chung khong co domain
@@ -156,6 +178,11 @@ def is_khong_ro_noi_dang(r):
     if r["dich_vu"] == "booking-tv":
         return False
     return "." not in d  # khong co domain cu the -> chung chung
+
+n_gov = len(rows)
+rows = [r for r in rows if not is_gov_edu(r)]
+if n_gov - len(rows):
+    print(f"Loai {n_gov - len(rows)} dong .gov.vn/.edu.vn (co quan nha nuoc / truong hoc) - rule 2026-07-20, KHONG duoc go.\n")
 
 n0 = len(rows)
 rows = [r for r in rows if not is_khong_ro_noi_dang(r)]

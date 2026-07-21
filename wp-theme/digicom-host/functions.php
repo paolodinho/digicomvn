@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '1.9.9' );
+define( 'DGC_VER', '2.0.4' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -540,6 +540,17 @@ add_action( 'template_redirect', function () {
  * redirect khi bai/trang that su khong co ngat trang (<!--nextpage-->).
  * ------------------------------------------------------------------------- */
 add_action( 'template_redirect', function () {
+	/* URL viet HOA (/MUA-TEXTLINK/) van tra 200 vi WordPress khop slug khong phan
+	   biet hoa thuong -> moi bien the hoa/thuong la 1 URL rieng cung noi dung.
+	   Canonical da tro dung nhung 301 ve ban chu thuong cho dut diem. */
+	$uri  = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+	$path = parse_url( $uri, PHP_URL_PATH );
+	if ( $path && preg_match( '/[A-Z]/', $path ) && strpos( $path, '/wp-' ) !== 0 ) {
+		$q = parse_url( $uri, PHP_URL_QUERY );
+		wp_safe_redirect( home_url( strtolower( $path ) . ( $q ? '?' . $q : '' ) ), 301 );
+		exit;
+	}
+
 	/* Luu tru theo NGAY/THANG/NAM (/2026/, /2026/07/, /2026/07/20/): WordPress tu
 	   sinh cho moi site, khong ai chu dong tao. Noi dung = liet ke lai chinh cac
 	   bai da co o /blog/ va trang chuyen muc, chi khac cach sap xep -> trung lap
@@ -570,6 +581,17 @@ add_action( 'template_redirect', function () {
 	wp_safe_redirect( get_permalink( $post ), 301 );
 	exit;
 }, 5 );
+
+/* ---------------------------------------------------------------------------
+ * RSS feed (/feed/ + moi bai co 1 feed rieng, ~140 URL) -> gui header noindex.
+ * Feed la ban sao noi dung bai duoi dang XML, khong co gia tri tim kiem. Khong
+ * chan bang robots.txt (van de cac cong cu doc feed hop le), chi khong cho index.
+ * ------------------------------------------------------------------------- */
+add_action( 'template_redirect', function () {
+	if ( is_feed() && ! headers_sent() ) {
+		header( 'X-Robots-Tag: noindex, follow', true );
+	}
+}, 1 );
 
 /* ---------------------------------------------------------------------------
  * Chuyen muc / the RONG (0 bai) -> 301 sang trang co noi dung. Khong de URL
@@ -618,6 +640,24 @@ add_action( 'template_redirect', function () {
 	$uri  = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
 	$path = parse_url( $uri, PHP_URL_PATH );
 	if ( ! $path ) return;
+
+	/* Bai da GOP vao trang khac -> 301 ve trang dich (Hieu chot 2026-07-20).
+	   Cum "social entity" truoc co 3 trang cung nham 1 intent thuong mai:
+	     /dich-vu-entity/   (post 226) - bai blog nhung co bao gia + cam ket = trang dich vu thu 2
+	     /backlink-social/  (post 230) - bai blog informational
+	     /backlink-social-entity/ (page 1621) - trang dich vu chinh thuc trong sitemap
+	   Da gop noi dung gia tri cua 226 + 230 vao 1621 roi draft 2 post kia.
+	   Handler nay chi fire khi URL cu 404 -> deploy truoc hay sau buoc draft deu an toan.
+	   Them bai gop moi: chi can them 1 dong vao mang duoi. */
+	$dgc_gop = array(
+		'/dich-vu-entity/'  => '/backlink-social-entity/',
+		'/backlink-social/' => '/backlink-social-entity/',
+	);
+	$dgc_p = untrailingslashit( $path ) . '/';
+	if ( isset( $dgc_gop[ $dgc_p ] ) ) {
+		wp_safe_redirect( home_url( $dgc_gop[ $dgc_p ] ), 301 );
+		exit;
+	}
 
 	/* Trang con dau bao cu /booking-bao-pr/<bao>/ -> bai blog "book-bao-<bao>" (chuyen doi
 	   2026-07-16: bao gia booking le tung bao chuyen thanh bai blog + shortcode bang gia).

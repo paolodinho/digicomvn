@@ -3,6 +3,14 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-21 (routine ngày booking-price-daily)
+
+Không biến động. DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua Chrome, nội dung y
+hệt hôm qua (0 dòng đổi giá, 0 thêm/gỡ). Master giữ 2.716 dòng / 89 NCC / 7 dịch vụ.
+Nguồn mới: không thu được. Fame Media vẫn DOWN (HTTP 000, cả curl lẫn kiểm kết nối - ngày thứ 2
+liên tiếp; 948 dòng Fame Media chưa rà lại được). ECP/PR Báo Chí/Brandcom/Vietquangcao/Brands
+Vietnam vẫn như ghi nhận 2026-07-20 (không công bố giá từng đầu báo).
+
 ## 2026-07-20 (routine tuần digicom-gia-doi-tac-tuan - đã đẩy LIVE)
 
 **Kho master: 2.679 -> 2.715 dòng (+36) / 90 NCC / 7 dịch vụ.**

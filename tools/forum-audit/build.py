@@ -90,10 +90,11 @@ LOAI_DR = [
 ]
 
 def dr_badge(v):
-    if v >= 60: return "#0E8C7F"
-    if v >= 40: return "#2563EB"
-    if v >= 25: return "#64748B"
-    return "#94A3B8"
+    # Tra ve (background, color) - dam bao tuong phan >=4.5:1 voi chu
+    if v >= 60: return ("#0E8C7F", "#fff")
+    if v >= 40: return ("#2563EB", "#fff")
+    if v >= 25: return ("#5B6675", "#fff")
+    return ("#E2E8F0", "#3F4A5A")
 
 out = []
 tong = sum(len(x[1]) for x in NHOM)
@@ -147,12 +148,13 @@ out.append('<p>Xếp theo DR giảm dần trong từng nhóm. Cột "Độ khó"
 for ten_nhom, ds in NHOM:
     ds_sorted = sorted(ds, key=lambda x: -dr.get(x[0], 0))
     out.append(f'<h3>{ten_nhom}</h3>')
-    out.append('<figure class="wp-block-table"><table><thead>')
-    out.append('<tr><th>Diễn đàn</th><th>DR</th><th>Chủ đề</th><th>Độ khó</th></tr>')
+    out.append('<figure class="wp-block-table dgc-data-table"><table><thead>')
+    out.append('<tr><th>Diễn đàn</th><th class="col-dr">DR</th><th>Chủ đề</th><th>Độ khó</th></tr>')
     out.append('</thead><tbody>')
     for d, chu_de, kho in ds_sorted:
         v = dr.get(d, 0)
-        out.append(f'<tr><td>{d}</td><td><span style="display:inline-block;min-width:34px;text-align:center;background:{dr_badge(v)};color:#fff;border-radius:4px;padding:2px 6px;font-weight:700;font-size:12.5px;">{v}</span></td><td>{chu_de}</td><td>{kho}</td></tr>')
+        bg, fg = dr_badge(v)
+        out.append(f'<tr><td data-label="Diễn đàn">{d}</td><td class="col-dr" data-label="DR"><span class="dr-badge" style="background:{bg};color:{fg}">{v}</span></td><td data-label="Chủ đề">{chu_de}</td><td class="col-kho" data-label="Độ khó">{kho}</td></tr>')
     out.append('</tbody></table></figure>')
 
 out.append('[dgc_offpage_quiz]\n')
@@ -162,16 +164,16 @@ out.append('<h2>17 diễn đàn nên gạch khỏi danh sách của bạn</h2>')
 out.append('<p>Phần này gần như không danh sách nào công bố, vì nó cho thấy dữ liệu của họ đã cũ. Chúng tôi để lại nguyên nhân cụ thể để bạn tự kiểm chứng.</p>')
 
 out.append('<h3>12 diễn đàn không còn truy cập được</h3>')
-out.append('<figure class="wp-block-table"><table><thead><tr><th>Tên miền</th><th>Tình trạng khi kiểm tra ngày 20/07/2026</th></tr></thead><tbody>')
+out.append('<figure class="wp-block-table dgc-data-table"><table><thead><tr><th>Tên miền</th><th>Tình trạng khi kiểm tra ngày 20/07/2026</th></tr></thead><tbody>')
 for d, ly_do in LOAI_CHET:
-    out.append(f'<tr><td>{d}</td><td>{ly_do}</td></tr>')
+    out.append(f'<tr><td data-label="Tên miền">{d}</td><td data-label="Tình trạng">{ly_do}</td></tr>')
 out.append('</tbody></table></figure>')
 
 out.append('<h3>5 diễn đàn còn sống nhưng chỉ số gần bằng 0</h3>')
 out.append('<p>Những trang này vẫn mở được, nên chúng dễ lọt vào các danh sách chép tay. Nhưng DR gần 0 nghĩa là gần như không có website nào trỏ về chúng - liên kết bạn đặt ở đây sẽ không truyền được sức mạnh nào đáng kể.</p>')
-out.append('<figure class="wp-block-table"><table><thead><tr><th>Tên miền</th><th>DR đo được</th></tr></thead><tbody>')
+out.append('<figure class="wp-block-table dgc-data-table"><table><thead><tr><th>Tên miền</th><th class="col-dr">DR đo được</th></tr></thead><tbody>')
 for d, v in LOAI_DR:
-    out.append(f'<tr><td>{d}</td><td><span style="display:inline-block;min-width:34px;text-align:center;background:#DC2626;color:#fff;border-radius:4px;padding:2px 6px;font-weight:700;font-size:12.5px;">{v}</span></td></tr>')
+    out.append(f'<tr><td data-label="Tên miền">{d}</td><td class="col-dr" data-label="DR"><span class="dr-badge" style="background:#DC2626;color:#fff">{v}</span></td></tr>')
 out.append('</tbody></table></figure>')
 
 out.append('<p>Chúng tôi cũng bỏ khỏi danh sách một số tên miền mạnh nhưng <strong>không phải diễn đàn</strong> và không cho người ngoài đăng bài, dù nhiều bài viết khác vẫn xếp chúng vào: laodong.vn, suckhoedoisong.vn, genk.vn, vnreview.vn, quantrimang.com, meta.vn, batdongsan.com.vn, chotot.com. Đưa chúng vào chỉ khiến bạn mất thời gian tìm chỗ đăng bài không tồn tại.</p>')

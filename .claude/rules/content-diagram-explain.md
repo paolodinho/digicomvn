@@ -32,6 +32,28 @@ Nếu bài không đủ 3 đoạn phức tạp thật sự - báo cho Hiếu, KH
 - **Đặt NGAY SAU đoạn text/danh sách gốc liên quan** - giữ nguyên text gốc, sơ đồ chỉ
   bổ sung, không thay thế (giống nguyên tắc `content-infographics.md` global).
 
+## Bảng dữ liệu trong bài - dùng class `.dgc-data-table` (2026-07-20)
+
+Mọi bảng dữ liệu trong bài viết (danh sách site, so sánh, bảng chỉ số) PHẢI dùng:
+`<figure class="wp-block-table dgc-data-table">` + `data-label="<tên cột>"` trên MỌI `<td>`.
+
+CSS đã có sẵn trong `assets/css/main.css` (cuối file), tự động responsive 4 mức:
+- Desktop: bảng đầy đủ, zebra + hover, bo góc.
+- <=820px: thu gọn padding + cỡ chữ.
+- <=700px: ẩn cột phụ (`.col-kho`) để không bóp chữ.
+- <=560px: mỗi dòng thành 1 thẻ dọc, nhãn cột lấy từ `data-label`. KHÔNG cuộn ngang.
+
+Quy tắc bắt buộc khi làm bảng có chỉ số (DR, DA, giá...):
+- Nhãn số đặt trong `<span class="dr-badge" style="background:X;color:Y">` - PHẢI khai cả
+  `color`, không để mặc định (badge nền sáng + chữ trắng = không đọc được, đã dính lỗi này).
+- Thang màu đã kiểm tương phản >=4.5:1: `>=60` nền `#0E8C7F` chữ trắng, `>=40` nền `#2563EB`
+  chữ trắng, `>=25` nền `#5B6675` chữ trắng, `<25` nền `#E2E8F0` chữ `#3F4A5A` (đảo ngược).
+- Cột chỉ số thêm `class="col-dr"`, cột phụ ẩn ở tablet thêm `class="col-kho"`.
+- KHÔNG ẩn `<thead>` bằng `position:absolute;left:-9999px` (bị coi là hidden text) - CSS hiện
+  dùng `display:none`, giữ nguyên.
+- Sửa CSS này -> BẮT BUỘC bump `DGC_VER` trong `functions.php` rồi deploy cả 2 file
+  (xem `deploy.md`), nếu không browser vẫn serve CSS cũ.
+
 ## QA bắt buộc
 
 - Verify dung lượng trang sau khi thêm (curl -s | wc -c) - không được tăng bất thường.
