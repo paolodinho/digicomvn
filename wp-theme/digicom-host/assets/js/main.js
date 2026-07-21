@@ -732,17 +732,17 @@ document.addEventListener('click', function (e) {
 		var btn = e.target.closest ? e.target.closest('.intro-toggle') : null;
 		if (!btn) return;
 		e.preventDefault();
+		var glossDef = btn.getAttribute('data-gloss-def');
+		if (glossDef !== null) {
+			var label = btn.getAttribute('aria-label') || '';
+			var title = label.replace(/^Giải thích thuật ngữ:\s*/, '') || 'Giải thích';
+			open(title, glossDef);
+			return;
+		}
 		var box  = document.getElementById(btn.getAttribute('aria-controls'));
 		var row  = btn.closest('tr');
-		var title;
-		if (row) {
-			var name = row.querySelector('.row-name');
-			title = name ? name.textContent : 'Giới thiệu';
-		} else {
-			var label = btn.getAttribute('aria-label') || '';
-			title = label.replace(/^Giải thích thuật ngữ:\s*/, '') || 'Giải thích';
-		}
-		open(title, box ? box.innerHTML : '');
+		var title2 = row && row.querySelector('.row-name') ? row.querySelector('.row-name').textContent : 'Giới thiệu';
+		open(title2, box ? box.innerHTML : '');
 	});
 })();
 
