@@ -47,6 +47,7 @@ danh sach dau bao that, M5 QA + demo).
 `PLAN.md`, `LOG.md`, `DECISIONS.md`, `.claude/context/brand-info.md` (luu y: mo ta site
 agency cu, can doi chieu khi dung).
 Quy trinh content tu dong: `.claude/skills/content-pipeline/SKILL.md` (topic -> bai live).
+Anh dang chup man hinh (dashboard/bao cao): `.claude/skills/visual-screenshot/SKILL.md`.
 
 ## 8. Quy trinh chuan
 1. Doc PLAN.md -> task tiep theo

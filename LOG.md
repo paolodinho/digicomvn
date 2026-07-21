@@ -1,5 +1,10 @@
 # LOG - digicomvn.com
 
+## 2026-07-21 (viết bài #1 Batch 1 cụm Backlink - Anchor Text)
+- **Bài 1/3 Batch 1 Backlink**: viết + đăng bài "Tỷ Lệ Anchor Text Chuẩn Khi Mua Backlink/Guest Post Là Bao Nhiêu?"
+  (post 4297, URL /ty-le-anchor-text-chuan/). Widget [dgc_offpage_quiz]. Thumbnail generator. Internal link từ bài
+  231 (backlink-dofollow-va-nofollow) trỏ sang. Còn 2 bài Batch 1 chưa viết (#2 PBN, #3 Backlink Profile).
+
 ## 2026-07-18 (bảng giá lên đầu cụm "book báo X" + nhớ báo đã chọn)
 - **Nạp bảng giá Media Việt Nam** (417 dòng, 6 tab sheet) vào `10-bang-gia-booking/`, đối chiếu
   tay với live tránh trùng lặp, đẩy 37 dòng mới + sửa giá qua `import-wp.php`. Sau đó Hiếu chốt
@@ -1671,3 +1676,46 @@ Hiếu chốt phương án gộp. Trang đích: `/backlink-social-entity/` (page
    nhau. Verify 0 bài publish còn trỏ URL cũ (không có redirect chain), sitemap sạch.
 
 Backup: `~/Claude-Workspace/_backups/routines/2026-07-20/gop-social-entity/`
+
+## 2026-07-21: Anchor text article - Mở rộng lên 11 loại + 10 visual elements
+
+### Đã làm
+- **Bảng anchor text**: mở rộng từ 5 → 11 loại (thêm Image Anchor, Brand+Keyword, LSI/Related, Long-tail, Synonym, No Anchor Trick)
+- **2 ảnh thật**: Storyset SVG (media 4315) + Ahrefs screenshot (media 4310, fixed URL từ ahrefs-site → tmp-ahrefs)
+- **8 HTML illustration blocks**: bảng 11 loại, ratio chart, 2-card Vai Trò, 3 signs cards, Penguin flow, LSI block, Audit process 3-bước, Summary
+- **Sửa URL ảnh hỏng**: ahrefs-site.png → tmp-ahrefs.png
+- **Cập nhật cluster tracker**: Bài 1 ✅
+
+### URL
+https://digicomvn.com/ty-le-anchor-text-chuan/
+
+### Next
+- Bài #2 Batch 1: PBN vs backlink báo (chờ viết)
+
+### Cập nhật 2026-07-21 (tiếp): Research top 7 SERP + bổ sung ảnh
+
+**Research top 7:** Đã phân tích 7 đối thủ top Google cho "anchor text là gì".
+Kết quả: GTV SEO (12 loại, 15 ảnh), Vietnix (12 loại, 12 ảnh), SEODO (10+ loại, 15 ảnh),
+TungPhat (10 loại, 8 ảnh), V4SEO (6 loại, 5 ảnh), AZSolu (5 loại, 6 ảnh), Guestpost (1 ảnh).
+Bài Digicom hiện: **11 loại + 6 ảnh + 8 HTML visual blocks = 14 visual elements**.
+
+**Bổ sung:** Thêm 4 ảnh Storyset mới (search-engines, analysis, programming, data-report).
+Media IDs: 4319, 4320, 4321, 4322.
+Deploy thành công - verify 6 ảnh trên live.
+
+### Cập nhật 2026-07-21 (tiếp): Sửa ảnh Ahrefs lỗi + tạo skill visual-screenshot
+
+**Sự cố:** Bài anchor text (post 4297) có ảnh `tmp-ahrefs.png` chỉ là trang landing form Ahrefs
+(chưa bấm check, nửa trang trắng, chữ lỗi) nhưng caption ghi "dữ liệu thật của DigicomVN" - vừa vô
+nghĩa vừa sai sự thật.
+
+**Xử lý:** Thử check thật digicomvn.com trên Ahrefs free checker -> vướng Cloudflare bot-check
+(không được vượt) + render lỗi + dữ liệu site mới toàn link spam (không minh hoạ được tỷ lệ chuẩn).
+-> Dựng **bảng phân tích anchor text tự làm** (dashboard HTML, badge "MẪU MINH HOẠ", domain generic
+`websitecuaban.vn`, số ví dụ khớp tỷ lệ trong bài 65/20/10/5). Render Chrome headless 2x -> webp 80KB.
+Media 4332, thay khối ảnh (id/src/alt/caption trung thực). Verify live: old png biến mất, webp 200.
+
+**Skill mới `.claude/skills/visual-screenshot/`** (Hiếu: "web cần nhiều ảnh dạng chụp màn hình, tạo
+skill"): SKILL.md 8 bước + `render.sh` (Chrome->resize 1600->webp q88) + `templates/dashboard-report.html`.
+Nguyên tắc trung thực: không giả UI tool bên thứ 3, số ví dụ phải gắn nhãn. Đã smoke-test render OK.
+Cập nhật CLAUDE.md mục 7 + `image-sourcing.md` (phân biệt 2 loại ảnh). Backup: manifest 2026-07-21.

@@ -6,7 +6,7 @@ File này chỉ theo dõi các bài GAP mới xác định 2026-07-20.
 
 | # | Bài | Trạng thái | URL | Ngày |
 |---|---|---|---|---|
-| 1 | Tỷ Lệ Anchor Text Chuẩn Khi Mua Backlink/Guest Post Là Bao Nhiêu? | ⏳ chưa viết | - | - |
+| 1 | Anchor Text Là Gì? Các Loại Và Tỷ Lệ Chuẩn Cho SEO 2026 | ✅ đã đăng (4297, viết lại theo đúng intent) | /ty-le-anchor-text-chuan/ | 2026-07-21 |
 | 2 | Vì Sao Backlink Báo Và Guest Post An Toàn Hơn PBN? | ⏳ chưa viết | - | - |
 | 3 | Cách Xây Dựng Hồ Sơ Backlink (Backlink Profile) Lành Mạnh | ⏳ chưa viết | - | - |
 | 4 | Backlink Xấu (Toxic Backlink) Là Gì? Dấu Hiệu Và Cách Xử Lý | ⏳ chờ research SERP | - | - |

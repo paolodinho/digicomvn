@@ -3,6 +3,17 @@
 > Rule Hiếu: xoay giữa các nguồn free, chọn ảnh tốt nhất cho từng trường hợp -
 > không mặc định 1 nguồn, không dùng đại cho đủ số lượng.
 
+## 2 LOẠI ẢNH KHÁC NHAU - đừng nhầm (bổ sung 2026-07-21)
+
+- **Ảnh minh hoạ khái niệm/chủ đề** (trang trí, tăng thẩm mỹ): dùng Storyset/Wikimedia... theo
+  toàn bộ rule bên dưới.
+- **Ảnh dạng CHỤP MÀN HÌNH** (dashboard, bảng phân tích, kết quả kiểm tra công cụ, so sánh số
+  liệu, trước/sau): KHÔNG lấy từ stock. Dựng bằng skill `.claude/skills/visual-screenshot/`
+  (HTML Digicom -> Chrome headless -> webp). Site cần NHIỀU loại này (Hiếu 2026-07-21).
+  Bắt buộc trung thực: không giả UI tool bên thứ ba làm "dữ liệu thật"; số ví dụ phải gắn nhãn
+  "MẪU MINH HOẠ" (xem SKILL.md). Sự cố gốc: bài anchor text từng để ảnh chụp Ahrefs form trống
+  caption "dữ liệu thật DigicomVN" -> đã thay bằng bảng phân tích tự dựng.
+
 ## Phong cách ảnh minh hoạ (rule 2026-07-13 - GHI ĐÈ mục "icon 3D generic" ở checklist)
 
 Áp dụng cho **trang dịch vụ (4 pillar + hub) và toàn bộ bài blog**: ảnh minh hoạ chủ đề

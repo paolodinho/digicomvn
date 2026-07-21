@@ -1002,3 +1002,24 @@ document.addEventListener('click', function (e) {
 		}
 	}
 })();
+
+/* Parallax section "Chung toi la ai" */
+(function () {
+	var el = document.querySelector('.whoweare-band');
+	if (!el) return;
+	if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+	var AMP = 46, ticking = false;
+	function update() {
+		ticking = false;
+		var r = el.getBoundingClientRect();
+		var vh = window.innerHeight || document.documentElement.clientHeight;
+		if (r.bottom < 0 || r.top > vh) return;
+		var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+		if (prog > 1) prog = 1; else if (prog < -1) prog = -1;
+		el.style.setProperty('--par', (prog * AMP).toFixed(1) + 'px');
+	}
+	function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+	window.addEventListener('scroll', onScroll, { passive: true });
+	window.addEventListener('resize', onScroll, { passive: true });
+	update();
+})();
