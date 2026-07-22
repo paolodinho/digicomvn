@@ -8,7 +8,7 @@
 
 // ==== SUA 2 DONG NAY ====
 var TOKEN     = 'doi-chuoi-nay-thanh-mat-khau-rieng-cua-ban';
-var FOLDER_ID = ''; // ID thu muc Drive muon luu bao gia. De trong = luu o My Drive.
+var FOLDER_ID = '1bfsrfmfed9bTPq2iuEyo9qBrRI1Fdenx'; // Thu muc Drive goc luu bao gia.
 // ========================
 
 function doPost(e) {
