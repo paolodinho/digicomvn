@@ -65,6 +65,15 @@ DICH_VU_TEN = {
     "backlink-quocte": "Backlink quốc tế",
 }
 
+# Nguoi tao / phu trach bao gia (PIC) -> so dien thoai lien he.
+# File Sheet se duoc xep vao thu muc Drive theo ten PIC (khong dau).
+PIC = {
+    "thang":  ("Lê Văn Thắng",       "0983 797 186"),
+    "huyen":  ("Đỗ Thị Thanh Huyền", "0979 305 186"),
+    "trang":  ("Đỗ Thị Thu Trang",   "0905 859 186"),
+}
+PIC_MAC_DINH = "thang"
+
 
 def ten_mien(dau_bao: str) -> str:
     """Tach ten mien tu o 'dau_bao' (co the kem nhan: 'Kênh 14.vn', 'Baotayninh.vn (BÁO MỚI VỀ)')."""
@@ -171,6 +180,10 @@ def main():
     p.add_argument("--gia-max", type=int, default=0)
     p.add_argument("--ngan-sach", type=int, default=0, help="Tran tong ngan sach (VND)")
     p.add_argument("--khach", default="", help="Ten khach hang / cong ty")
+    p.add_argument("--pic", choices=list(PIC), default=PIC_MAC_DINH,
+                   help="Nguoi tao bao gia: thang / huyen / trang")
+    p.add_argument("--loai", default="",
+                   help="Loai san pham -> ten thu muc Drive. Bo trong = lay ten dich vu")
     p.add_argument("--hieu-luc", type=int, default=7, help="So ngay bao gia con hieu luc")
     p.add_argument("--xem-truoc", action="store_true")
     p.add_argument("--liet-ke-nganh", action="store_true")
@@ -194,6 +207,9 @@ def main():
     tong = sum(int(r["gia"]) for r in chon)
 
     if a.xem_truoc:
+        pt, ps = PIC[a.pic]
+        loai_xt = a.loai.strip() or DICH_VU_TEN.get(a.dich_vu, "truyền thông")
+        print(f'PIC: {pt} - {ps}   |   Thư mục Drive: {pt} / {loai_xt}\n')
         for i, r in enumerate(chon):
             print(f'{i+1:>3}. {ten_hien_thi(r["dau_bao"])[:32]:<34} '
                   f'{sach(r["vi_tri"])[:26]:<28} {int(r["gia"]):>12,}')
@@ -202,14 +218,19 @@ def main():
 
     c = cfg()
     ten_dv = DICH_VU_TEN.get(a.dich_vu, "truyền thông")
+    pic_ten, pic_sdt = PIC[a.pic]
+    loai = a.loai.strip() or ten_dv          # ten thu muc Drive tang 2
     hom_nay = date.today()
+    lien_he = f'{c["dong_lien_he"]} · Phụ trách: {pic_ten} - {pic_sdt}'
     payload = {
         "token": c["token"],
         "ten_file": f'Bao gia {ten_dv}{" - " + a.khach if a.khach else ""} {hom_nay:%d.%m.%Y}',
         "tieu_de": f'BÁO GIÁ {ten_dv.upper()}' + (f' - {a.khach.upper()}' if a.khach else ""),
         "dong_hieu_luc": f'Ngày lập: {hom_nay:%d/%m/%Y} · Báo giá có hiệu lực đến hết '
                          f'{hom_nay + timedelta(days=a.hieu_luc):%d/%m/%Y}',
-        "brand": {"cong_ty": c["cong_ty"], "dong_lien_he": c["dong_lien_he"]},
+        "brand": {"cong_ty": c["cong_ty"], "dong_lien_he": lien_he},
+        "pic": pic_ten,    # ten thu muc Drive tang 1 (nguoi tao)
+        "loai": loai,      # ten thu muc Drive tang 2 (loai san pham)
         "cols": cols,
         "rows": data,
         "widths": [45, 230, 210, 320, 150, 120],

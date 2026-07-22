@@ -19,7 +19,16 @@ function doPost(e) {
     var ss    = SpreadsheetApp.create(d.ten_file || 'Bao gia Digicom');
     var sheet = ss.getSheets()[0].setName('Bao gia');
     var file  = DriveApp.getFileById(ss.getId());
-    if (FOLDER_ID) DriveApp.getFolderById(FOLDER_ID).addFile(file);
+
+    // ---- Xep vao thu muc Drive theo cay: <goc>/<PIC>/<loai san pham> ----
+    var root   = FOLDER_ID ? DriveApp.getFolderById(FOLDER_ID) : DriveApp.getRootFolder();
+    var folder = root;
+    if (d.pic)  folder = ensureFolder(folder, String(d.pic));
+    if (d.loai) folder = ensureFolder(folder, String(d.loai));
+    if (folder.getId() !== DriveApp.getRootFolder().getId()) {
+      folder.addFile(file);
+      DriveApp.getRootFolder().removeFile(file); // go khoi My Drive goc (create() mac dinh de o day)
+    }
     file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
 
     var brand = d.brand || {};
@@ -94,6 +103,11 @@ function doPost(e) {
   } catch (err) {
     return out({ ok: false, error: String(err) });
   }
+}
+
+function ensureFolder(parent, name) {
+  var it = parent.getFoldersByName(name);
+  return it.hasNext() ? it.next() : parent.createFolder(name);
 }
 
 function colLetter(n) {

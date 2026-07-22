@@ -24,8 +24,8 @@ Sau bước này không cần đụng lại script nữa, chỉ chạy lệnh.
 # Xem trước trong terminal, không tạo sheet
 python3 tao-bao-gia.py --nganh suc-khoe --dich-vu booking-pr --so-luong 15 --xem-truoc
 
-# Tạo sheet thật, trả về link
-python3 tao-bao-gia.py --nganh suc-khoe --dich-vu booking-pr --so-luong 15 --khach "Chị Lan"
+# Tạo sheet thật, trả về link (chị Huyền tạo, lưu vào thư mục của chị Huyền)
+python3 tao-bao-gia.py --nganh suc-khoe --dich-vu booking-pr --so-luong 15 --khach "Chị Lan" --pic huyen
 
 # Theo ngân sách: nhồi tối đa số đầu báo trong 50 triệu
 python3 tao-bao-gia.py --nganh bat-dong-san --ngan-sach 50000000
@@ -42,7 +42,18 @@ python3 tao-bao-gia.py --liet-ke-nganh
 | `--gia-min` / `--gia-max` | Chặn khoảng giá mỗi đầu báo |
 | `--ngan-sach` | Trần tổng đơn. Có tham số này thì bỏ qua `--so-luong` |
 | `--khach` | Tên khách, in vào tiêu đề + tên file |
+| `--pic` | Người tạo: `thang` (mặc định) / `huyen` / `trang`. Tên + SĐT PIC in vào dòng liên hệ báo giá |
+| `--loai` | Loại sản phẩm = tên thư mục Drive tầng 2. Bỏ trống = lấy tên dịch vụ (vd "Booking báo & PR") |
 | `--hieu-luc` | Số ngày báo giá còn hiệu lực (mặc định 7) |
+
+## File lưu ở đâu trên Drive
+
+Sheet tạo xong tự nằm trong cây thư mục: **`<thư mục gốc>/<Tên PIC>/<Loại sản phẩm>/`**.
+Ví dụ `--pic huyen --dich-vu guest-post` → `.../Đỗ Thị Thanh Huyền/Guest Post/Bao gia ...`.
+Thư mục con chưa có thì tự tạo.
+
+Muốn đổi/chọn thư mục gốc: dán ID thư mục Drive vào `FOLDER_ID` trong `apps-script.gs`
+(lấy từ URL thư mục: `drive.google.com/drive/folders/ID_Ở_ĐÂY`). Để trống = lưu ở My Drive.
 
 ## Cách lọc ngành
 
