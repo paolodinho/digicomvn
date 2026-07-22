@@ -8,7 +8,7 @@
 
 // ==== SUA 2 DONG NAY ====
 var TOKEN     = 'doi-chuoi-nay-thanh-mat-khau-rieng-cua-ban';
-var FOLDER_ID = '1bfsrfmfed9bTPq2iuEyo9qBrRI1Fdenx'; // Thu muc Drive goc luu bao gia.
+var FOLDER_ID = ''; // ID thu muc Drive muon luu bao gia. De trong = luu o My Drive.
 // ========================
 
 function doPost(e) {
@@ -19,16 +19,7 @@ function doPost(e) {
     var ss    = SpreadsheetApp.create(d.ten_file || 'Bao gia Digicom');
     var sheet = ss.getSheets()[0].setName('Bao gia');
     var file  = DriveApp.getFileById(ss.getId());
-
-    // ---- Xep vao thu muc Drive theo cay: <goc>/<PIC>/<loai san pham> ----
-    var root   = FOLDER_ID ? DriveApp.getFolderById(FOLDER_ID) : DriveApp.getRootFolder();
-    var folder = root;
-    if (d.pic)  folder = ensureFolder(folder, String(d.pic));
-    if (d.loai) folder = ensureFolder(folder, String(d.loai));
-    if (folder.getId() !== DriveApp.getRootFolder().getId()) {
-      folder.addFile(file);
-      DriveApp.getRootFolder().removeFile(file); // go khoi My Drive goc (create() mac dinh de o day)
-    }
+    if (FOLDER_ID) DriveApp.getFolderById(FOLDER_ID).addFile(file);
     file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
 
     var brand = d.brand || {};
@@ -103,11 +94,6 @@ function doPost(e) {
   } catch (err) {
     return out({ ok: false, error: String(err) });
   }
-}
-
-function ensureFolder(parent, name) {
-  var it = parent.getFoldersByName(name);
-  return it.hasNext() ? it.next() : parent.createFolder(name);
 }
 
 function colLetter(n) {
