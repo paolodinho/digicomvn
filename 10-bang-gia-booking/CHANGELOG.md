@@ -3,6 +3,20 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-22 (routine ngày booking-price-daily)
+
+DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua Chrome. Master: 2.716 -> 2.719 dòng
+(+3), 90 NCC, 7 dịch vụ. 0 dòng đổi giá, 0 gỡ.
+- Thêm mới (đều DanaSEO tab Link dof, bài 1000 từ 3 ảnh 2 link dofollow):
+  - tuyensinhhuongnghiep.vn - 1.650.000 (chưa VAT)
+  - nghean24h.vn - 2.500.000 (chưa VAT)
+  - suckhoeviet.org.vn - 2.500.000 (chưa VAT)
+  (Không dòng nào thuộc .gov.vn/.edu.vn.)
+Nguồn mới: không thu được. Fame Media vẫn DOWN (HTTP 000 - ngày thứ 3 liên tiếp; 948 dòng chưa rà
+lại được). Vietquangcao (shortcode `[table id=5]` không render), PR Báo Chí (chỉ dải 10-50tr +
+hotline) như ghi nhận cũ. ECP Media (24h.com.vn), Brandcom (bảng ảnh), Brands Vietnam (báo giá qua
+email) không đổi.
+
 ## 2026-07-21 (routine ngày booking-price-daily)
 
 Không biến động. DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua Chrome, nội dung y

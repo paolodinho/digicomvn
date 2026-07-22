@@ -166,9 +166,24 @@
 				if (!cb.checked) return;
 				var tr = cb.closest('tr');
 				var price = tr ? (parseFloat(tr.getAttribute('data-price')) || 0) : 0;
-				picked.push({ cb: cb, name: cb.getAttribute('data-label') || '', price: price });
+				// mkgain = so tien giam toi da cho phep tren dong nay (khong an vao gia von)
+				var mkgain = tr ? (parseFloat(tr.getAttribute('data-mkgain')) || 0) : 0;
+				picked.push({ cb: cb, name: cb.getAttribute('data-label') || '', price: price, mkgain: mkgain });
 			});
 			return picked;
+		}
+
+		// Chiet khau combo CO SAN VON: moi dong giam toi da = mkgain (phan markup),
+		// khong bao gio ban duoi gia von. Tra ve tong so tien giam da lam tron.
+		function comboDiscount(picked, pct) {
+			if (pct <= 0) return 0;
+			var d = 0;
+			picked.forEach(function (p) {
+				var line = p.price * pct / 100;
+				if (p.mkgain > 0 && line > p.mkgain) line = p.mkgain;
+				d += line;
+			});
+			return Math.round(d);
 		}
 
 		function renderList(picked) {
@@ -204,7 +219,8 @@
 			var picked   = collect();
 			var subtotal = picked.reduce(function (s, p) { return s + p.price; }, 0);
 			var pct      = tierFor(picked.length);
-			var discount = Math.round(subtotal * pct / 100);
+			var discount = comboDiscount(picked, pct);           // co san von, khong ban duoi von
+			var effPct   = subtotal > 0 ? discount / subtotal * 100 : 0; // % thuc te sau khi cap
 			var total    = subtotal - discount;
 
 			bar.classList.toggle('has-picks', picked.length > 0);
@@ -220,8 +236,8 @@
 			if (totalEl) totalEl.textContent = formatVND(total);
 
 			if (discBox) {
-				discBox.hidden = !(pct > 0 && picked.length);
-				if (discPctEl) discPctEl.textContent = pctText(pct);
+				discBox.hidden = !(discount > 0 && picked.length);
+				if (discPctEl) discPctEl.textContent = pctText(effPct);
 				if (discNumEl) discNumEl.textContent = '-' + formatVND(discount) + 'đ';
 			}
 
@@ -230,7 +246,7 @@
 				var nt = picked.length ? nextTier(picked.length) : null;
 				if (nt) {
 					var need   = nt.min - picked.length;
-					var save   = formatVND(subtotal * nt.pct / 100);
+					var save   = formatVND(comboDiscount(picked, nt.pct));
 					// Mobile: cau ngan de nam gon 1 dong trong thanh (khong bi cat duoi).
 					var narrow = window.matchMedia('(max-width:640px)').matches;
 					nudgeEl.hidden = false;
@@ -256,7 +272,7 @@
 					var sep = ctaBaseHref.indexOf('?') === -1 ? '?' : '&';
 					cta.setAttribute('href', ctaBaseHref + sep + 'selected=' + encodeURIComponent(summary) +
 						'&subtotal=' + Math.round(subtotal) + '&discount=' + Math.round(discount) +
-						'&discount_pct=' + pct + '&total=' + Math.round(total));
+						'&discount_pct=' + (Math.round(effPct * 10) / 10) + '&total=' + Math.round(total));
 				} else {
 					cta.setAttribute('href', ctaBaseHref);
 				}

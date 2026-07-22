@@ -131,3 +131,10 @@
 - Lý do: tăng giá trị đơn trung bình, khách thấy ngay lợi ích khi đặt nhiều báo (trước đây chỉ
   ghi chung chung "đặt từ 2 báo liên hệ nhận ưu đãi", không có con số).
 - Lưu ý: % giảm là cam kết công khai - khi sale báo giá thật phải áp đúng bậc này, tránh lệch.
+
+## 2026-07-21 - Chiết khấu combo: cài sàn giá vốn thay vì ladder tới 15%
+**Quyết định:** Bỏ ladder combo 3/5/8/12/15%, thay bằng sàn giá vốn từng dòng + ladder thật tối đa ~3%.
+**Lý do:** 92% dòng markup 1,03 (biên 2,9%) - combo cũ bán dưới vốn (bậc 15 mục lỗ ~12,5% vốn).
+Toán học: combo tối đa X% không lỗ ⟺ markup ≥ 1/(1-X); markup 1,03 chỉ cho combo an toàn ~2,9%.
+Hiếu chọn giữ lợi thế "giá rẻ nhất" (không nâng markup) → combo thành tượng trưng nhưng không bao
+giờ lỗ, và không quảng cáo 15% sai sự thật. Chi tiết cơ chế: .claude/rules/bang-gia-booking.md.

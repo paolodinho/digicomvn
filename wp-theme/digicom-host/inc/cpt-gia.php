@@ -373,6 +373,22 @@ function dgc_combo_tiers() {
 	return $tiers;
 }
 
+/**
+ * Markup (he so nhan gia von) cua 1 dong theo ma NCC noi bo - dung de tinh SAN gia von
+ * cho chiet khau combo, dam bao KHONG BAO GIO ban duoi gia von (Hieu 2026-07-21, huong 3).
+ * 9 = NCC khac x1,20; 1/2/3 (3 NCC chinh) va trong/khac = 1,03 (mong nhat -> san an toan nhat).
+ * Dong bo voi 10-bang-gia-booking/export-web.py (MARKUP_CHINH=1.03, MARKUP=1.20).
+ */
+function dgc_line_markup( $ma_ncc ) {
+	return ( '9' === trim( (string) $ma_ncc ) ) ? 1.20 : 1.03;
+}
+/** So tien giam TOI DA cho phep tren 1 dong (= phan markup, khong an vao von). */
+function dgc_line_mkgain( $price_num, $ma_ncc ) {
+	$mk = dgc_line_markup( $ma_ncc );
+	if ( $mk <= 1 || $price_num <= 0 ) return 0;
+	return (int) round( $price_num * ( $mk - 1 ) / $mk );
+}
+
 /** Cau mo ta bac chiet khau cho khach doc (VD "2 báo giảm 3% - 4 báo giảm 5%..."). */
 function dgc_combo_tiers_text() {
 	$parts = array();
@@ -797,11 +813,12 @@ function dgc_gia_row_html( $it, $args ) {
 
 	$cb_id = 'pick-' . (int) $it->ID;
 	$fc    = dgc_gia_facets( $m );
+	$mkgain = dgc_line_mkgain( $price_num, $m['ma_ncc'] ?? '' ); // san von cho chiet khau combo
 
 	$st = dgc_gia_search_terms( $it->post_title, $vi_tri );
 
 	ob_start(); ?>
-	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
+	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-mkgain="<?php echo (int) $mkgain; ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
 		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
 			<?php
 			/* Icon "i" gioi thieu bao/trang - dat NGAY SAU ten (superscript, kieu dau mu)

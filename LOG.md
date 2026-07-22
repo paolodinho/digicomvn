@@ -1719,3 +1719,9 @@ Media 4332, thay khối ảnh (id/src/alt/caption trung thực). Verify live: ol
 skill"): SKILL.md 8 bước + `render.sh` (Chrome->resize 1600->webp q88) + `templates/dashboard-report.html`.
 Nguyên tắc trung thực: không giả UI tool bên thứ 3, số ví dụ phải gắn nhãn. Đã smoke-test render OK.
 Cập nhật CLAUDE.md mục 7 + `image-sourcing.md` (phân biệt 2 loại ảnh). Backup: manifest 2026-07-21.
+
+## 2026-07-21 - Parallax section "Chúng tôi là ai" + Sàn giá vốn cho chiết khấu combo
+- Section "Chúng tôi là ai" trang chủ: thêm parallax ảnh nền (JS translate, không dùng fixed/lỗi iOS). DGC_VER 2.0.5.
+- Phát hiện chính sách combo (3/5/8/12/15% trên tổng đơn) bán DƯỚI giá vốn: 92% dòng markup chỉ 1,03 (biên 2,9%).
+- Hướng 3 (Hiếu chọn): cài SÀN giá vốn từng dòng (data-mkgain + comboDiscount cap trong main.js), hạ ladder về 2|1/4|2/8|3 (~3%), promo_saving 25tr→11tr. Deploy live (cpt-gia.php, options.php, main.js, functions.php + DB dgc_settings). DGC_VER 2.0.6. Verify curl OK, floor đúng toán (mkgain = đúng phần markup).
+- Chi tiết: .claude/rules/bang-gia-booking.md mục "SÀN GIÁ VỐN cho chiết khấu combo".

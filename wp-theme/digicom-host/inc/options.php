@@ -36,7 +36,11 @@ function dgc_defaults() {
 
 		// Chiet khau combo khi khach tick nhieu bao/site trong bang gia.
 		// Moi dong: <so muc toi thieu>|<% giam>. Bac cao nhat dat duoc se duoc ap dung.
-		'combo_discount' => "2|3\n4|5\n6|8\n10|12\n15|15",
+		// Hieu 2026-07-21 (huong 3): markup 92% dong chi 1,03 (bien ~2,9%) -> co SAN gia von
+		// trong main.js (data-mkgain), chiet khau moi dong khong an vao von. Ladder ha ve muc
+		// THAT giao duoc (toi da ~3%), khong quang cao 15% khong bao gio dat. Muon combo sau hon
+		// phai nang markup (export-web.py) - xem .claude/rules/bang-gia-booking.md.
+		'combo_discount' => "2|1\n4|2\n8|3",
 
 		// Uu dai noi bat (tieu de | mo ta ngan | nhan uu dai). Nhan la cot thu 3, de trong duoc.
 		'promos'        => "Viết bài PR miễn phí | Đặt từ 3 đầu báo trở lên, DigicomVN viết bài, bạn chỉ cần duyệt nội dung | Miễn phí trọn gói\nTư vấn và chọn báo miễn phí | Chuyên viên lên danh sách báo/site theo ngành hàng và ngân sách của bạn | Miễn phí, không ràng buộc\nƯu đãi combo nhiều đầu báo | Đặt càng nhiều mục trong một đơn, chiết khấu càng cao | Áp dụng tự động\nBáo giá minh bạch, không phí ẩn | Niêm yết theo từng đầu báo, xuất VAT đầy đủ | Cam kết bằng hợp đồng",
@@ -47,15 +51,16 @@ function dgc_defaults() {
 		'promo_deadline' => '',
 		'promo_slots'    => '10',
 
-		// Quy uu dai ra TIEN (Hieu 2026-07-14) - con so phai co that, tinh duoc tu bang gia:
-		// don 15 dau bao lon (gia trung binh dang ban ~8,2tr/bai) = ~123tr -> chiet khau combo bac
-		// cao nhat 15% = ~18,4tr, cong 15 bai viet mien phi (~500k/bai) = ~7,5tr -> ~25tr.
+		// Quy uu dai ra TIEN (Hieu 2026-07-14, cap nhat 2026-07-21) - con so phai co that:
+		// don 15 dau bao lon ~123tr. Combo co san von toi da ~2,9% = ~3,6tr, cong 15 bai viet
+		// mien phi (~500k/bai) = ~7,5tr -> ~11tr. (Truoc day ghi 25tr theo combo 15% - da bo vi
+		// markup 1,03 khong du cho combo 15%, xem huong 3 / combo_discount ben tren.)
 		// Doi bac chiet khau hoac bang gia -> sua lai con so nay o WP Admin, khong sua PHP.
 		// Ghi chu gia - hien o MOI noi co gia (bang gia, trang dich vu, bang gia rut gon trang chu).
 		'price_note'        => 'Giá trên là giá tham khảo, có thể thay đổi vào phút chót theo bảng giá của toà soạn/nhà đài. Gọi hotline hoặc nhắn Zalo để nhận báo giá nhanh và chính xác nhất.',
 
-		'promo_saving'      => '25 triệu',
-		'promo_saving_note' => 'Đơn 15 đầu báo lớn: giảm 15% theo bậc combo + miễn phí viết 15 bài.',
+		'promo_saving'      => '11 triệu',
+		'promo_saving_note' => 'Đơn 15 đầu báo lớn: miễn phí viết 15 bài (~7,5 triệu) + chiết khấu combo trên tổng đơn.',
 
 		// ten goi | gia | dac diem cach nhau dau ; | noi bat(1/0)
 		'hosting_plans' => "Gói Textlink | Liên hệ báo giá | Đặt link trong bài có sẵn;Chọn theo DR/traffic site;Vị trí link tự nhiên;Bàn giao vị trí đăng | 0\nGói Backlink | Liên hệ báo giá | Backlink chất lượng, đa dạng nguồn;Anchor text tự nhiên;Theo dõi index;Báo cáo chi tiết | 1\nGói Guest Post | Liên hệ báo giá | Viết bài + đăng trên site đúng chủ đề;Link dofollow tự nhiên;Duyệt nội dung trước khi đăng;Bàn giao link bài | 0\nGói Booking báo & PR | Liên hệ báo giá | Đăng bài PR trên báo điện tử;Viết bài chuẩn theo tôn chỉ báo;Hỗ trợ chọn chuyên mục;Bàn giao link bài đã lên | 0",
