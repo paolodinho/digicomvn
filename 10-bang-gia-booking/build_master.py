@@ -147,11 +147,13 @@ add(nha_cung_cap="DanaSEO", dich_vu="toplist", dau_bao="Toplist local (HN/TPHCM/
     ghi_chu="Tu 300k/thang, gia theo tung site + tung tu khoa - can hoi lai NCC",
     nguon="Sheet DanaSEO - Toplist", ngay_cap_nhat=TODAY)
 
-# ============ Cac NCC khac (nap tu raw/ncc-khac.csv, phan cach |) ============
+# ============ Cac NCC khac (nap tu raw/ncc-khac.csv + Rise-Media.csv, phan cach |) ============
 # Cot: nha_cung_cap|dich_vu|dau_bao|nhom|vi_tri|gia_vnd|so_link|quy_cach|ghi_chu|nguon_url
 # gia_vnd co the la dai "6000000-7500000" hoac "tu 9000000" -> lay MUC THAP NHAT.
-EXTRA = os.path.join(RAW, "ncc-khac.csv")
-if os.path.exists(EXTRA):
+# Rise-Media.csv: gia_vnd DA nhan san 1.1 (theo yeu cau Hieu 2026-07-24) khi parse tu sheet goc,
+# vi vay gia_ban_digicom = gia_vnd (khong nhan them lan nua).
+for EXTRA in (os.path.join(RAW, "ncc-khac.csv"), os.path.join(RAW, "Rise-Media.csv")):
+  if os.path.exists(EXTRA):
     with open(EXTRA) as f:
         for line in f:
             line = line.strip()

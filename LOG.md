@@ -1725,3 +1725,16 @@ Cập nhật CLAUDE.md mục 7 + `image-sourcing.md` (phân biệt 2 loại ản
 - Phát hiện chính sách combo (3/5/8/12/15% trên tổng đơn) bán DƯỚI giá vốn: 92% dòng markup chỉ 1,03 (biên 2,9%).
 - Hướng 3 (Hiếu chọn): cài SÀN giá vốn từng dòng (data-mkgain + comboDiscount cap trong main.js), hạ ladder về 2|1/4|2/8|3 (~3%), promo_saving 25tr→11tr. Deploy live (cpt-gia.php, options.php, main.js, functions.php + DB dgc_settings). DGC_VER 2.0.6. Verify curl OK, floor đúng toán (mkgain = đúng phần markup).
 - Chi tiết: .claude/rules/bang-gia-booking.md mục "SÀN GIÁ VỐN cho chiết khấu combo".
+
+## 2026-07-24 - Nạp bảng giá Rise Media (Pinnexa Rise Media)
+- Nguồn: Google Sheet công khai Hiếu gửi (gid=1867970395), 196 đầu báo, 279 dòng giá.
+- Giá web = THÀNH TIỀN (đã chiết khấu) x 1.1 (đúng yêu cầu Hiếu) - bake sẵn vào `gia_ban_digicom`.
+- Script mới: `10-bang-gia-booking/parse-rise-media.py` (sheet -> `raw/Rise-Media.csv` pipe-format).
+  `build_master.py` đọc thêm nguồn này -> master 2.719 -> 2.998 dòng, thêm NCC "Rise Media".
+- **CHƯA lên web**: rule "CHỈ 3 NCC LÊN WEB" (DanaSEO/Media Việt Nam/Fame Media) trong
+  `export-web.py` (`CHI_NCC`) tự động loại Rise Media - hiện chỉ là dữ liệu tham khảo trong
+  `bang-gia-master.csv`. Đã chạy lại `export-web.py` để verify: `gia-web.csv` 0 dòng Rise Media,
+  2 dòng DanaSEO tồn đọng từ batch 2026-07-22 được đồng bộ nốt (không phải do Rise Media).
+- Phát hiện 1 dòng "Giaoduc.edu.vn" trong bảng giá Rise Media (.edu.vn) - đã tự động bị chặn bởi
+  `is_gov_edu()` + `CHI_NCC`, không lên web (đúng rule `khong-ban-gov-edu.md`).
+- Chi tiết nguồn: `10-bang-gia-booking/nguon.md` mục "Rise Media".

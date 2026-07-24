@@ -168,3 +168,22 @@ bangxephang.com.vn, brands.vn, xehay.com.vn, topuni.vn, topdichvu.vn.
   CHƯA rà được lần này. Các URL bảng giá khác tìm được qua search nhưng chưa đọc được nội dung:
   /quang-cao-vtv/, /backlink-bao/, /gia-quang-cao-khung-gio-vang-vtv/, /quang-cao-tren-truyen-hinh/,
   /tin-260/. **Cần rà lại khi site sống** - đây là 1 trong 3 NCC được lên web.
+
+## Rise Media (Pinnexa Rise Media) - Google Sheet 1 tab (2026-07-24, Hiếu gửi)
+
+Sheet: https://docs.google.com/spreadsheets/d/1uOvzvsZ-3clQR0bCPtr2JoCPJ3RyuTGF/edit?gid=1867970395
+(public "chỉ xem", lấy qua `gviz/tq?tqx=out:csv&gid=1867970395`, không cần login).
+
+- 196 đầu báo, 279 dòng giá (vị trí/tiểu mục), cột NIÊM YẾT + CHIẾT KHẤU + THÀNH TIỀN (giá sau CK).
+- **Giá web = THÀNH TIỀN (đã chiết khấu) x 1.1** - theo yêu cầu Hiếu 2026-07-24 (khác quy tắc "giá cuối
+  không markup" mặc định của `bang-gia-master.csv` - markup 1.1 đã bake sẵn vào `gia_ban_digicom` ở
+  bước nạp, KHÔNG áp thêm markup NCC-khác (x1.20) của `export-web.py` nữa lên NCC này).
+- Giá CHƯA gồm VAT 8% (ghi rõ trong sheet gốc).
+- Script nạp: `parse-rise-media.py` (đọc `rise-media-raw.csv` -> ghi `raw/Rise-Media.csv` dạng pipe)
+  -> `build_master.py` (đọc `raw/Rise-Media.csv` cùng nhánh với `ncc-khac.csv`).
+- **CHƯA lên web**: `export-web.py` có `CHI_NCC = {danaseo, media viet nam, fame media}` (rule
+  "CHỈ 3 NCC LÊN WEB" trong `bang-gia-booking.md`) - Rise Media hiện chỉ lưu trong
+  `bang-gia-master.csv` làm dữ liệu tham khảo, KHÔNG xuất ra `gia-web.csv`/site. Muốn đẩy lên web
+  phải thêm `"rise media"` vào `CHI_NCC` (và cân nhắc `NCC_MA`) rồi chạy lại export + import-wp.
+- 13 dòng bị loại khi nạp (không có giá THÀNH TIỀN cụ thể - vd Elleman, Banner Vnexpress): giữ trong
+  `rise-media-raw.csv` gốc, không đưa vào master.
