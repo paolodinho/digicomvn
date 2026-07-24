@@ -45,3 +45,21 @@
 
 ## KHÔNG viết (ngoài scope)
 Nhóm KOL/KOC/fanpage/tiktok/ca sĩ; từ nhiễu app Booking.com/Agoda.
+
+## Audit gap vs đối thủ (2026-07-24, quét SERP mới + fetch trực tiếp)
+
+Đối thủ đã fetch full: tindimedia.vn/booking-bao-chi-la-gi (P1), brandcom.vn/bang-gia-dang-bai-pr-tren-vnexpress
+(R1 VnExpress), brando.vn/bang-gia-quang-cao-bao-nhan-dan (C5 Nhân Dân). Đối thủ đã thấy qua SERP nhưng
+CHƯA fetch full: kmedia.vn, nhattinmarketing.com, sukienvietsky.com, oriagency.vn (fetch lỗi rỗng - cần
+thử lại), accesstrade.vn, miccreative.vn, butvangcorp.com, famemedia.vn, seovip.vn, uptopz.com, prglobal.vn.
+
+| Bài | Gap thật so với đối thủ top | Đề xuất bổ sung |
+|---|---|---|
+| P1 booking-bao-la-gi | **Cập nhật sau khi fetch đủ 4/5 kết quả hiển thị của Google cho "booking báo là gì" (tindimedia, kmedia, nhattinmarketing + đã thấy sukienvietsky qua SERP, careerviet không liên quan)**: kmedia.vn (đăng 22/07/2026, RẤT MỚI) có cấu trúc sâu hơn hẳn ta - 13 mục lớn vs 9 mục của ta. Thiếu thật: (1) "Booking báo chí có phải là quảng cáo không?", (2) so sánh với 4 hình thức khác (bài báo tự nhiên/thông cáo báo chí/quảng cáo Facebook/đăng Fanpage), (3) "Những GIỚI HẠN cần hiểu trước khi booking" (4 giới hạn - xây lòng tin bằng cách thừa nhận nhược điểm), (4) "**Khi nào CHƯA NÊN booking báo chí**" (ta chỉ có "khi nào NÊN" - thiếu hẳn góc nhìn ngược lại, đây là khác biệt hoá mạnh vì đối thủ khác ít ai dám nói "đừng mua"), (5) "Cách lựa chọn đầu báo phù hợp" (4 tiêu chí), (6) "Cách đo hiệu quả booking báo chí" (3 nhóm chỉ số: xuất bản/nhận diện/hỗ trợ bán hàng), (7) Checklist chuẩn bị trước khi booking (14 mục). tindimedia.vn thêm: vai trò SEO/backlink tách mục riêng, phân loại theo LOẠI BÁO (tổng hợp/chuyên ngành/địa phương). nhattinmarketing.com (bài từ 2024, cấu trúc mỏng hơn ta) KHÔNG phải mối đe doạ. | Bổ sung tối thiểu 2 mục có giá trị khác biệt hoá cao nhất trước: "Khi nào CHƯA NÊN booking báo" (differentiator, ít đối thủ dám viết) + "Giới hạn cần hiểu" - đây là content xây trust, đúng hướng E-E-A-T. Các mục còn lại bổ sung dần, giữ nguyên phần đã có |
+| C3 agency-booking-bao-chi | SERP hiện bị listicle "Top 5 Agency" (accesstrade, oriagency, miccreative) thống trị - bài ta chọn góc "7 tiêu chí chọn agency" (buyer's guide, không xếp hạng agency cụ thể) là intent KHÁC với đối thủ đang top | Cần quyết định: giữ góc buyer's guide (khác biệt hoá, tránh PR đối thủ) hay đổi format gần listicle hơn - đây là lựa chọn chiến lược, không tự đổi |
+| C2/R1 (giá theo đầu báo, mẫu VnExpress) | Nội dung ta SÂU HƠN brandcom.vn (brandcom chỉ 1 bảng ảnh scan + specs, không có bảng so sánh 4 báo/6 yếu tố/widget). Nhưng: WebSearch cho thấy giá VnExpress ngoài thị trường có mức cao hơn (10,5-60tr, PR 10-22tr) - bảng giá ta (7,8-15,3tr) chỉ phủ nhóm "Doanh nghiệp viết", CHƯA có mức cao cấp hơn (banner/trang chủ đặc biệt) | Kiểm tra lại bảng giá CPT dgc_gia có thiếu tier cao cấp VnExpress không (không tự thêm số nếu chưa có nguồn giá thật) |
+| C5 book-bao-nhan-dan | brando.vn sâu hơn: traffic breakdown theo nguồn (Direct/Social/Search/Referral, số liệu SimilarWeb), profile độc giả (nghề nghiệp/độ tuổi/thu nhập/vùng), 7 quy định chi tiết (không nhắc cơ quan Đảng, không so sánh đối thủ, hồ sơ pháp lý cụ thể). Giá 8-9tr KHỚP với ta | Bổ sung profile độc giả + traffic breakdown (cần nguồn SimilarWeb/tương đương, không bịa số) + mở rộng quy định biên tập |
+| R2-R15 (14 bài per-outlet còn lại) | CHƯA fetch competitor riêng từng báo trong đợt audit này - chỉ mẫu R1 VnExpress đã kiểm | Cần audit riêng nếu muốn xác nhận, ưu tiên theo traffic/giá trị thương mại |
+
+**Việc chưa viết (loại khỏi scope, không phải bỏ sót):** gov (.gov.vn - rủi ro pháp lý, xem khong-ban-gov-edu.md),
+địa chỉ đối thủ (không phải content gap thật), booking KOL/KOC (ngoài danh mục dịch vụ Digicom).

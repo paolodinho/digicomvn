@@ -1,5 +1,16 @@
 # DECISIONS - digicomvn.com
 
+## 2026-07-24 - Mo rong pham vi hop tac Booking bao & PR
+- Hieu xac nhan Digicom hop tac voi TAT CA bao dien tu tai Viet Nam, khong chi gioi han
+  15 dau bao da publish trang con (vnexpress, kenh14, dan-tri, 24h, cafef, vietnamnet,
+  thanh-nien, tuoi-tre, znews, soha, afamily, eva, cafebiz, webtretho, bao-dau-tu).
+- Ly do phat sinh: research tu khoa "booking bao" phat hien 3 tu khoa rieng cho Lao Dong,
+  Nhan Dan, Tien Phong - ban dau flag "chua xac nhan hop tac" theo rule content-professional,
+  Hieu xac nhan la co hop tac that, ap dung chung cho toan thi truong.
+- Tac dong: duoc phep tao trang con /dich-vu/booking-bao-pr/[bao]/ cho bat ky dau bao VN nao
+  (khong can hoi lai tung bao) - xem chi tiet `.claude/rules/pivot-2026-07.md`. Ngoai le van
+  giu: KHONG ap dung cho .gov.vn (rule khong-ban-gov-edu.md).
+
 ## 2026-06-27
 - KHONG xoa site agency cu: build theme MOI `digicom-host` tren cung WP install,
   activate de len; theme cu `digicom-theme` + DB backup giu lai de rollback.

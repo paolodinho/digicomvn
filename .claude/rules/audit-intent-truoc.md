@@ -60,6 +60,10 @@ không phải 3-5 dòng ví dụ minh hoạ.
    và nói rõ vì sao loại.
 
 ## Liên quan
+- `do-dont.md` mục "Research SERP + dựng dàn bài TRƯỚC khi viết" (2026-07-24) - quy trình đầy đủ:
+  top 10 (không phải top 7), đọc Google Suggested/PAA, dựng dàn bài trả lời trực diện trước khi
+  viết. Rule này (audit-intent-truoc.md) tập trung riêng cho việc XÁC ĐỊNH DẠNG khi audit bài cũ;
+  áp dụng cùng lúc với quy trình dàn bài ở do-dont.md.
 - `seo-content-report.md` (global) - 4 mục bắt buộc trong báo cáo: intent, research SERP,
   allintitle, info gain. Rule này là bước THỰC THI để có dữ liệu điền vào báo cáo đó.
 - `content-diagram-explain.md` - sơ đồ giải thích, áp SAU khi đã xác nhận đúng intent.
