@@ -168,6 +168,8 @@ bangxephang.com.vn, brands.vn, xehay.com.vn, topuni.vn, topdichvu.vn.
   CHƯA rà được lần này. Các URL bảng giá khác tìm được qua search nhưng chưa đọc được nội dung:
   /quang-cao-vtv/, /backlink-bao/, /gia-quang-cao-khung-gio-vang-vtv/, /quang-cao-tren-truyen-hinh/,
   /tin-260/. **Cần rà lại khi site sống** - đây là 1 trong 3 NCC được lên web.
+  - **2026-07-25: famemedia.vn ĐÃ SỐNG LẠI** (bao-online/ trả bảng giá bình thường). 948 dòng Fame
+    Media cần rà lại đầy đủ ở routine tuần (routine ngày chỉ tập trung DanaSEO).
 
 ## Rise Media (Pinnexa Rise Media) - Google Sheet 1 tab (2026-07-24, Hiếu gửi)
 
@@ -181,9 +183,21 @@ Sheet: https://docs.google.com/spreadsheets/d/1uOvzvsZ-3clQR0bCPtr2JoCPJ3RyuTGF/
 - Giá CHƯA gồm VAT 8% (ghi rõ trong sheet gốc).
 - Script nạp: `parse-rise-media.py` (đọc `rise-media-raw.csv` -> ghi `raw/Rise-Media.csv` dạng pipe)
   -> `build_master.py` (đọc `raw/Rise-Media.csv` cùng nhánh với `ncc-khac.csv`).
-- **CHƯA lên web**: `export-web.py` có `CHI_NCC = {danaseo, media viet nam, fame media}` (rule
-  "CHỈ 3 NCC LÊN WEB" trong `bang-gia-booking.md`) - Rise Media hiện chỉ lưu trong
-  `bang-gia-master.csv` làm dữ liệu tham khảo, KHÔNG xuất ra `gia-web.csv`/site. Muốn đẩy lên web
-  phải thêm `"rise media"` vào `CHI_NCC` (và cân nhắc `NCC_MA`) rồi chạy lại export + import-wp.
+- **ĐÃ lên web (2026-07-24, Hiếu: "đưa rise lên")**: thêm `"rise media"` vào `CHI_NCC` +
+  `NCC_MA` (mã nội bộ = 4) trong `export-web.py`. Vì giá master đã nhân sẵn x1,1, thêm set
+  `KHONG_MARKUP_DA_TINH = {"rise media"}` để `web_gia()` KHÔNG nhân markup NCC-khác (x1,20) đè
+  lên nữa (tránh x1,32).
+  - Trong 279 dòng Rise Media, chỉ **58 dòng** thắng giá rẻ nhất trong nhóm gộp theo
+    (đầu báo + vị trí) → lên `gia-web.csv`; phần còn lại vẫn ở master làm tham khảo (NCC khác/
+    DanaSEO/Fame Media đang rẻ hơn ở các đầu báo đó).
+  - Payload đẩy live: `payload-rise-media.json` (đối chiếu `live-now.json` mới fetch 846 dòng
+    trước khi tính, không dùng bản cũ 607 dòng đã stale từ 2026-07-18) → **3 dòng cập nhật giá**
+    (Rise rẻ hơn giá đang publish) + **48 dòng tạo mới** (đầu báo/vị trí chưa từng có trên web).
+    7 dòng còn lại giá Rise bằng/cao hơn live hiện tại → giữ nguyên, không ghi đè.
+  - Live dgc_gia: 846 → 894 dòng publish. Đã purge cache, verify `bizlive.vn` (1 site mới) hiện
+    trên `/booking-bao-pr/`.
+  - Domain `Giaoduc.edu.vn` trong sheet gốc: đã bị `is_gov_edu()` chặn tự động, không lọt lên web
+    (đúng rule `khong-ban-gov-edu.md`).
+  - Backup snapshot live trước khi ghi: `~/Claude-Workspace/_backups/routines/2026-07-24/bang-gia-rise-media-import/`.
 - 13 dòng bị loại khi nạp (không có giá THÀNH TIỀN cụ thể - vd Elleman, Banner Vnexpress): giữ trong
   `rise-media-raw.csv` gốc, không đưa vào master.

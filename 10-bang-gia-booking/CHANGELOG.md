@@ -3,6 +3,23 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-25 (routine ngày booking-price-daily)
+
+DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua Chrome. Master: 3.259 -> 3.261 dòng
+(+2), 90 NCC, 7 dịch vụ. PR báo lớn KHÔNG đổi (hash trùng); Báo tỉnh + Link dof có thay đổi.
+- Thêm mới (DanaSEO - Báo tỉnh, chưa VAT):
+  - baoquangtri.vn (mới về) - 1.800.000 (1000 từ, 5 ảnh, 2 link dof + ĐKKD)
+  - vietnam.vn (~140 triệu traffic/tháng) - 2.500.000 (1000 từ, 3 ảnh, 2 link; bài + link tồn tại 5 năm)
+- Giá đổi (quy cách/phụ phí, giá bài giữ nguyên):
+  - baodaklak.vn (Báo tỉnh): quy cách 1000 từ -> 800 từ (giá giữ 4.500.000).
+  - thuonghieucongluan.com.vn (Link dof): phí mua thêm link 550.000 -> 400.000 (giá bài giữ 2.300.000).
+  (Không dòng nào thuộc .gov.vn/.edu.vn.)
+Nguồn mới: không thu thêm được bảng giá chi tiết. Fame Media ĐÃ ONLINE trở lại (sau 3 ngày down) -
+famemedia.vn/bao-online/ hiển thị bảng giá bình thường; 948 dòng Fame Media nên rà lại đầy đủ ở
+routine tuần. ECP Media (24h.com.vn) không đổi. Vietquangcao (shortcode `[table id=5]` vẫn không
+render), PR Báo Chí (chỉ dải 10-50tr + hotline), Brandcom (bảng ảnh), Brands Vietnam (báo giá qua
+email) - không đổi như ghi nhận cũ.
+
 ## 2026-07-22 (routine ngày booking-price-daily)
 
 DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua Chrome. Master: 2.716 -> 2.719 dòng

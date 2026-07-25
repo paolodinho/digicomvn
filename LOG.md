@@ -1738,3 +1738,37 @@ Cập nhật CLAUDE.md mục 7 + `image-sourcing.md` (phân biệt 2 loại ản
 - Phát hiện 1 dòng "Giaoduc.edu.vn" trong bảng giá Rise Media (.edu.vn) - đã tự động bị chặn bởi
   `is_gov_edu()` + `CHI_NCC`, không lên web (đúng rule `khong-ban-gov-edu.md`).
 - Chi tiết nguồn: `10-bang-gia-booking/nguon.md` mục "Rise Media".
+
+## 2026-07-24 (tiếp) - Đưa Rise Media lên web live
+- `export-web.py`: thêm "rise media" vào `CHI_NCC` + `NCC_MA` (mã 4), thêm `KHONG_MARKUP_DA_TINH`
+  để không markup chồng lên giá đã x1.1 sẵn.
+- Fetch fresh `live-now.json` (846 dòng, bản cũ 607 dòng đã cũ từ 18/7) trước khi tính payload.
+- Đẩy lên live qua `import-wp.php`: 3 dòng cập nhật giá (Rise rẻ hơn) + 48 dòng tạo mới. Live
+  dgc_gia 846 -> 894 dòng publish. Đã purge cache, verify bizlive.vn hiện trên /booking-bao-pr/.
+- Backup snapshot trước khi ghi: `~/Claude-Workspace/_backups/routines/2026-07-24/bang-gia-rise-media-import/`.
+- Chi tiết: `10-bang-gia-booking/nguon.md` mục "Rise Media".
+
+## 2026-07-24 (tiếp 2) - Phát hiện sheet Rise Media có 5 tab, không phải 1
+Hiếu hỏi "đã check hết các sheet chưa" -> rà lại, phát hiện file "BÁO GIÁ AGENCY.xlsx" có 5 tab:
+BÁO LỚN CHÍNH THỐNG 2026 (đã làm), BÁO TỈNH, BÁO SEO/báo nhỏ, BANNER, SITE GIÁ RẺ.
+- Đã bóc thêm 3 tab: Báo tỉnh (44 dòng), Báo nhỏ/SEO (171 dòng, 3 bảng xếp ngang), Site giá rẻ
+  (75 dòng) -> Rise Media 279 -> 540 dòng trong bang-gia-master.csv.
+- BỎ QUA tab BANNER (giá quảng cáo banner - khác loại sản phẩm với PR bài viết, Digicom hiện
+  chưa có dịch vụ này).
+- Export lại: Rise Media thắng giá rẻ nhất ở 284 dòng/540 (từ 58). Tính payload round 2: 6 update
+  + 219 new + 59 giữ nguyên - CHƯA đẩy lên live, đang chờ Hiếu vì tab "Báo nhỏ/SEO" có nhiều domain
+  dạng mạng lưới PBN (tên miền theo khuôn "xxx-va-yyy.info/.com/.net", DNS sống nhưng chưa rõ chất
+  lượng/traffic thật) - cần quyết định lọc trước khi lên web (xem `bang-gia-booking.md` mục lọc
+  chất lượng domain).
+- 2 domain .edu.vn thêm (sige.edu.vn, giaoduc.edu.vn lặp lại) - đã bị is_gov_edu() chặn tự động.
+
+## 2026-07-24 (tiếp 3) - Đẩy nốt 219 dòng Rise Media (Báo tỉnh + Báo nhỏ/SEO + Site giá rẻ) lên live
+Hiếu chọn phương án 1: đẩy hết, kể cả nhóm Báo nhỏ/SEO (domain dạng PBN-naming, chưa lọc DR).
+- import-wp.php payload-rise-media-round2.json: 6 cập nhật giá + 219 tạo mới. Live dgc_gia
+  894 -> 1.113 dòng publish. Purge cache, verify Baotayninh.vn (Báo tỉnh) + kinhtevadautu.info
+  (Báo nhỏ/SEO) hiện trên /booking-bao-pr/.
+- Rise Media tổng cộng: 540 dòng trong master, 284 dòng đang hiện trên web (mã NCC 4).
+- Lưu ý để theo dõi: nhóm "Báo nhỏ/SEO" (171 site) CHƯA qua bước lọc DR/link sống theo quy trình
+  `bang-gia-booking.md` (check-link-status.py / Ahrefs DR) như các đợt lọc domain trước - nếu về
+  sau muốn rà lại chất lượng, chạy 2 script đó cho riêng nhóm nhom="Bao nho / SEO", nha_cung_cap=
+  "Rise Media" trong bang-gia-master.csv.

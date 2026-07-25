@@ -82,23 +82,36 @@ MARKUP = 1.20  # Hieu 2026-07-15: NCC ngoai 3 ben duoi -> gia web = gia von x 1,
 MARKUP_CHINH = 1.03
 KHONG_MARKUP = {"danaseo", "media viet nam", "fame media"}
 
+# Rise Media (them 2026-07-24, Hieu): gia_ban_digicom trong master DA nhan san x1,1 luc nap
+# (xem parse-rise-media.py) -> KHONG duoc nhan them markup nao o day nua, tru khong se thanh
+# x1,1 x 1,20 = x1,32. web_gia() ben duoi xu ly rieng NCC nay he_so = 1.0.
+KHONG_MARKUP_DA_TINH = {"rise media"}
+
 # Ma NCC noi bo (Hieu 2026-07-19: "danh dau de do phai tra lai") - CHI hien trong WP Admin
 # (cot rieng + field an), KHONG BAO GIO dua ra front-end/public (van AN danh tinh NCC voi khach).
-NCC_MA = {"danaseo": "1", "media viet nam": "2", "fame media": "3"}
+NCC_MA = {"danaseo": "1", "media viet nam": "2", "fame media": "3", "rise media": "4"}
 
 # Hieu 2026-07-18: TAM THOI CHI dung 3 NCC nay len web (danaseo, media viet nam, fame media).
 # Cac NCC khac VAN LUU trong bang-gia-master.csv (du lieu tham khao), nhung KHONG xuat ra
 # gia-web.csv / khong dua len site. Bo rong lai -> xoa/sua CHI_NCC ben duoi.
-CHI_NCC = {"danaseo", "media viet nam", "fame media"}
+# Rise Media them 2026-07-24 (Hieu: "dua rise len").
+CHI_NCC = {"danaseo", "media viet nam", "fame media", "rise media"}
 # NGOAI LE (Hieu 2026-07-18): Toplist va Backlink quoc te KHONG co du lieu tu 3 NCC tren
 # -> se trong trang neu ap dung CHI_NCC. Giu nguyen hanh vi CU (moi NCC, co markup 1.2x)
 # CHI cho 2 dich_vu nay, de trang khong bi trong bang gia.
 DICH_VU_NGOAI_LE_CHI_NCC = {"toplist", "backlink-quocte"}
 
 def web_gia(r):
-    """Gia hien thi len web tu 1 dong master: 3 NCC chinh x 1,03; NCC khac x 1,20 (lam tron nghin)."""
+    """Gia hien thi len web tu 1 dong master: 3 NCC chinh x 1,03; NCC khac x 1,20 (lam tron nghin).
+    Rise Media: gia master da nhan san x1,1 -> he_so = 1.0 (khong nhan them)."""
     g = int(r["gia_ban_digicom"])
-    he_so = MARKUP_CHINH if fold(r["nha_cung_cap"]) in KHONG_MARKUP else MARKUP
+    ncc = fold(r["nha_cung_cap"])
+    if ncc in KHONG_MARKUP_DA_TINH:
+        he_so = 1.0
+    elif ncc in KHONG_MARKUP:
+        he_so = MARKUP_CHINH
+    else:
+        he_so = MARKUP
     return int(round(g * he_so / 1000) * 1000)
 
 with open(SRC) as f:

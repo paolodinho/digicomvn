@@ -1,0 +1,453 @@
+{
+ "updates": [
+  {
+   "id": 1066,
+   "gia": 5313000,
+   "ma_ncc": "4"
+  },
+  {
+   "id": 1656,
+   "gia": 1980000,
+   "ma_ncc": "4"
+  },
+  {
+   "id": 1684,
+   "gia": 1155000,
+   "ma_ncc": "4"
+  }
+ ],
+ "new": [
+  {
+   "nhom": "booking-bao-pr",
+   "title": "bizlive.vn",
+   "vi_tri": "Nhịp cầu doanh nghiệp",
+   "gia": 8800000,
+   "so_link": "",
+   "yeu_cau": "Nhịp cầu doanh nghiệp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "dep.com.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 6600000,
+   "so_link": "0 free link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "CafeF.vn (Giá mới 2026)",
+   "vi_tri": "Bài loại 9 -Thông cáo báo chí",
+   "gia": 5148000,
+   "so_link": "1 link",
+   "yeu_cau": "Bài loại 9 -Thông cáo báo chí",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "Autopro.com.vn (Giá mới 2026)",
+   "vi_tri": "Bài loại 4 chuyên mục",
+   "gia": 5148000,
+   "so_link": "1 link",
+   "yeu_cau": "Bài loại 4 chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "ngoisao.net",
+   "vi_tri": "Mục phù hợp",
+   "gia": 5082000,
+   "so_link": "2 link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "baovanhoa.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 5082000,
+   "so_link": "1 link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "congthuong.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 5060000,
+   "so_link": "0 link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "vir.com.vn",
+   "vi_tri": "Bài chuyên mục",
+   "gia": 4851000,
+   "so_link": "",
+   "yeu_cau": "Bài chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "baotintuc.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 4620000,
+   "so_link": "0 free",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "bongda.com.vn",
+   "vi_tri": "Chuyên mục",
+   "gia": 4510000,
+   "so_link": "",
+   "yeu_cau": "Chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "cungcau.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 4510000,
+   "so_link": "1 link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "sgtiepthi.vn",
+   "vi_tri": "thông tin DN",
+   "gia": 4400000,
+   "so_link": "2 link",
+   "yeu_cau": "thông tin DN",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "CafeBiz.vn (Giá mới 2026)",
+   "vi_tri": "Loại 4 Chuyên mục",
+   "gia": 4290000,
+   "so_link": "1 link",
+   "yeu_cau": "Loại 4 Chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "24h.com.vn",
+   "vi_tri": "PR loại 2 nhóm 2 (giáo dục, giải trí, thời trang đời sống, xe….)",
+   "gia": 3685000,
+   "so_link": "3 link, pr cá nhân 1 link",
+   "yeu_cau": "PR loại 2 nhóm 2 (giáo dục, giải trí, thời trang đời sống, xe….)",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "tcdulichtphcm.vn",
+   "vi_tri": "Chuyên mục",
+   "gia": 3608000,
+   "so_link": "",
+   "yeu_cau": "Chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "Tinnhanhchungkhoan.vn (Giá mới 2026)",
+   "vi_tri": "Loại 6 - Thông báo - Bố cáo",
+   "gia": 3520000,
+   "so_link": "",
+   "yeu_cau": "Loại 6 - Thông báo - Bố cáo",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "bongda24h.vn",
+   "vi_tri": "Chuyên mục",
+   "gia": 3465000,
+   "so_link": "1 link",
+   "yeu_cau": "Chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "Baodautu.vn (Giá mới 2026)",
+   "vi_tri": "TT doanh nghiệp",
+   "gia": 3410000,
+   "so_link": "không chèn link",
+   "yeu_cau": "TT doanh nghiệp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "Plo.vn - Pháp luật TpHCM",
+   "vi_tri": "Tiểu mục",
+   "gia": 3300000,
+   "so_link": "2 link",
+   "yeu_cau": "Tiểu mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "otoxemay.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 3300000,
+   "so_link": "",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "vietgiaitri.com",
+   "vi_tri": "Mục phù hợp",
+   "gia": 2706000,
+   "so_link": "0 link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "baodansinh.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 2706000,
+   "so_link": "2 link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "ngoisao.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 2508000,
+   "so_link": "2 link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "giadinh.suckhoedoisong",
+   "vi_tri": "Hiển thị trong chuyên mục",
+   "gia": 2475000,
+   "so_link": "1 link",
+   "yeu_cau": "Hiển thị trong chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "thethaovanhoa.vn",
+   "vi_tri": "pr doanh nghiêp",
+   "gia": 2442000,
+   "so_link": "1 link",
+   "yeu_cau": "pr doanh nghiêp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "bestie.vn",
+   "vi_tri": "Tiểu mục",
+   "gia": 2442000,
+   "so_link": "0 free link",
+   "yeu_cau": "Tiểu mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "hoahoctro.tienphong.vn",
+   "vi_tri": "Chuyên mục",
+   "gia": 2376000,
+   "so_link": "1 link",
+   "yeu_cau": "Chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "tinmoi.vn",
+   "vi_tri": "Tiểu mục",
+   "gia": 2200000,
+   "so_link": "1 link",
+   "yeu_cau": "Tiểu mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "xahoi.com.vn",
+   "vi_tri": "Chuyên mục",
+   "gia": 2090000,
+   "so_link": "2 link",
+   "yeu_cau": "Chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "bau.vn",
+   "vi_tri": "Lấy link",
+   "gia": 1540000,
+   "so_link": "2 link",
+   "yeu_cau": "Lấy link",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "giadinhvaphapluat.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 1540000,
+   "so_link": "2 link",
+   "yeu_cau": "Mục phù hợp",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "vietnamplus.vn",
+   "vi_tri": "Trang chủ",
+   "gia": 18920000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "brandsvietnam.com",
+   "vi_tri": "Trang chủ",
+   "gia": 16830000,
+   "so_link": "1 link",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "CafeF.vn (Giá mới 2026)",
+   "vi_tri": "Bài loại 5 nổi bật chuyên mục",
+   "gia": 12870000,
+   "so_link": "",
+   "yeu_cau": "Bài loại 5 nổi bật chuyên mục",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "bestie.vn",
+   "vi_tri": "Trang chủ",
+   "gia": 12210000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "doanhnhanplus.vn",
+   "vi_tri": "Trang chủ",
+   "gia": 12144000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "giaoduc.net",
+   "vi_tri": "Trang chuyên mục tương ứng",
+   "gia": 10450000,
+   "so_link": "1 link",
+   "yeu_cau": "Trang chuyên mục tương ứng",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "dep.com.vn",
+   "vi_tri": "Trang chủ",
+   "gia": 9900000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "bongda.com.vn",
+   "vi_tri": "Trang chủ",
+   "gia": 9020000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "Autopro.com.vn (Giá mới 2026)",
+   "vi_tri": "Bài loại 3 trang chủ",
+   "gia": 8580000,
+   "so_link": "",
+   "yeu_cau": "Bài loại 3 trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "genk.vn",
+   "vi_tri": "Trang chủ stream 2",
+   "gia": 6864000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ stream 2",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "CafeBiz.vn (Giá mới 2026)",
+   "vi_tri": "Trang chủ loại 3",
+   "gia": 6864000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ loại 3",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "doanhnhanvn.vn",
+   "vi_tri": "Trang chủ loại 1",
+   "gia": 6688000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ loại 1",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "ngoisao.vn",
+   "vi_tri": "Trang chủ",
+   "gia": 6270000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "bongda24h.vn",
+   "vi_tri": "Trang chủ",
+   "gia": 5445000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "giadinh.suckhoedoisong",
+   "vi_tri": "Trang chủ",
+   "gia": 4950000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "hoahoctro.tienphong.vn",
+   "vi_tri": "Trang chủ Tiêu điểm top 2 xuống",
+   "gia": 3960000,
+   "so_link": "",
+   "yeu_cau": "Trang chủ Tiêu điểm top 2 xuống",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "Tinnhanhchungkhoan.vn (Giá mới 2026)",
+   "vi_tri": "Loại 5 - Bài hiển thị trang chủ, mục chuyển động doanh nghiệp",
+   "gia": 3520000,
+   "so_link": "",
+   "yeu_cau": "Loại 5 - Bài hiển thị trang chủ, mục chuyển động doanh nghiệp",
+   "ma_ncc": "4"
+  }
+ ]
+}
