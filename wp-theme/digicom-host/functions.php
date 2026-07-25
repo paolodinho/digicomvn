@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '2.0.6' );
+define( 'DGC_VER', '2.0.8' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -66,6 +66,7 @@ require_once get_template_directory() . '/inc/case-study.php';
 require_once get_template_directory() . '/inc/ai-chat.php';
 require_once get_template_directory() . '/inc/glossary.php';
 require_once get_template_directory() . '/inc/toc.php';
+require_once get_template_directory() . '/inc/post-sidebars.php';
 
 /**
  * Helper doc 1 option.

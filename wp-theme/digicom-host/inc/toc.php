@@ -119,6 +119,31 @@ function dgc_toc_render_inline( $items ) {
 	return ob_get_clean();
 }
 
+/**
+ * Ban render cho cot phai (desktop >=1240px) - luon mo san, khong boc trong <details>.
+ * Dung lai cung class .post-toc__list/.post-toc__item de an theo CSS + scroll-spy da co.
+ */
+function dgc_toc_render_sidebar( $items ) {
+	if ( empty( $items ) ) return;
+	?>
+	<div class="post-side-right">
+		<div class="post-toc-side__head">
+			<span class="post-toc__icon" aria-hidden="true">
+				<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+			</span>
+			Mục lục
+		</div>
+		<ol class="post-toc__list post-toc-side__list">
+			<?php foreach ( $items as $it ) : ?>
+				<li class="post-toc__item post-toc__item--h<?php echo (int) $it['level']; ?>">
+					<a href="#<?php echo esc_attr( $it['id'] ); ?>" data-toc-link data-toc-id="<?php echo esc_attr( $it['id'] ); ?>"><?php echo esc_html( $it['label'] ); ?></a>
+				</li>
+			<?php endforeach; ?>
+		</ol>
+	</div>
+	<?php
+}
+
 function dgc_toc_render_float() {
 	$items = $GLOBALS['dgc_toc_items'];
 	if ( empty( $items ) ) return;

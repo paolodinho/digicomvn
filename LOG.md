@@ -1772,3 +1772,79 @@ Hiếu chọn phương án 1: đẩy hết, kể cả nhóm Báo nhỏ/SEO (doma
   `bang-gia-booking.md` (check-link-status.py / Ahrefs DR) như các đợt lọc domain trước - nếu về
   sau muốn rà lại chất lượng, chạy 2 script đó cho riêng nhóm nhom="Bao nho / SEO", nha_cung_cap=
   "Rise Media" trong bang-gia-master.csv.
+
+### Cập nhật 2026-07-25: Bổ sung nội dung P1 booking-bao-la-gi theo gap sheet
+- Sheet "Tu khoa Book bao - phan nhom 2026-07-24": bổ sung gap cho 8 đầu báo còn thiếu (R5, R8-R14:
+  24h, Znews, Soha, Afamily, Eva, Cafebiz, Webtretho, Báo Đầu Tư) - 16 dòng mới, research SERP thật
+  qua 8 agent song song. Cập nhật dòng Tiền Phong (R16) sau khi Hiếu xác nhận hợp tác thật - giá gốc
+  đã có sẵn trong bang-gia-master.csv (DanaSEO 4,4tr chuyên mục), chưa có trang landing.
+- Post 1260 (booking-bao-la-gi, P1): bổ sung 5 mục H2 mới theo gap đã research từ kmedia.vn (9 -> 14
+  H2, vượt 13 H2 của kmedia): "Phân biệt với hình thức truyền thông khác" (bảng so sánh 4 hình thức),
+  "Giới hạn cần hiểu trước khi booking", "Khi nào chưa nên booking báo chí" (ưu tiên theo yêu cầu),
+  "Cách đo hiệu quả" (3 nhóm chỉ số), "Checklist chuẩn bị" (15 mục) + 2 câu FAQ mới. 3 sơ đồ HTML
+  (nên/chưa nên, 3 card chỉ số, checklist grid) theo content-diagram-explain.md. Backup:
+  ~/Claude-Workspace/_backups/routines/2026-07-25/booking-bao-la-gi/1260-before.html.
+
+### Cập nhật 2026-07-25 (tiếp): Fix bảng vỡ + bổ sung 5 ảnh Storyset cho post 1260
+- Fix bảng "Phân biệt booking báo chí" tràn ngang: `.dgc-data-table td:first-child{white-space:nowrap}`
+  ép cột đầu dài không xuống dòng -> thêm `style="white-space:normal"` + rút gọn 2 nhãn dài.
+  Verify bằng ảnh chụp thật desktop + mobile 375px (mobile tự chuyển card dọc, đúng thiết kế).
+- Phát hiện bài thiếu hoàn toàn ảnh minh hoạ (0 wp:image) - trái rule image-sourcing.md. Tự dựng
+  pipeline tải Storyset: headless Chrome screenshot trang illustration -> PIL auto-detect bbox nội
+  dung + xoá nền trắng thành trong suốt + crop loại bỏ nút điều hướng -> webp ~15-76KB. 5 ảnh:
+  news/rafiki (Booking báo chí là gì), methodology-comparison/amico (Phân biệt hình thức), yes-or-no/rafiki
+  (Khi nào nên/chưa nên), growth-analytics/rafiki (Cách đo hiệu quả), checklist/rafiki (Checklist).
+  Media ID 4604-4608. Credit Storyset trong figcaption theo đúng giấy phép free.
+  Backup: ~/Claude-Workspace/_backups/routines/2026-07-25/booking-bao-la-gi/ (v2,v3,v4 before-states).
+
+### Cập nhật 2026-07-25 (tiếp 2): Lấp gap cụm "2. Giá / chi phí chung" - post 1261
+- **Search intent:** transactional/commercial - 4/4 keyword ("book báo bao nhiêu tiền", "chi
+  phí book báo", "bảng giá book báo", "book bài báo") có SERP bị chiếm bởi trang bảng giá
+  (seovip.vn, miccreative.vn, chobao.vn, hapodigital.com, bookbaopr.vn), không phải bài blog.
+  Đích đúng là post 1261 (đã có, dạng bảng giá) - SỬA, không viết bài mới.
+- **Research SERP:** WebSearch 4 keyword + WebFetch chi tiết 3 đối thủ (seovip.vn, chobao.vn,
+  miccreative.vn) - đọc cấu trúc heading, bảng giá, FAQ.
+- **Allintitle:** không đo trực tiếp (Google chặn), dùng heuristic độ dài cụm - các keyword
+  đều dài 3-5 từ (long-tail), khả năng allintitle thấp, ưu tiên viết trước - đúng
+  `feedback_allintitle-heuristic.md`.
+- **Info gain:** bổ sung khung giá phân khúc dùng DATA THẬT từ CPT `dgc_gia` (503 dòng nhóm
+  booking-bao-pr đang publish, min 440.000đ - median 1.760.000đ - max 44.032.000đ, đo qua
+  `wp eval` SSH 04:26 UTC 25/07) - đối thủ chỉ nêu range thị trường chung chung, không có hệ
+  thống giá thật để tổng hợp trung vị. Đây là gap đối thủ không lấp được.
+- Bổ sung: (1) H2 "Book báo bao nhiêu tiền: khung giá theo phân khúc" ngay sau summary box
+  + bar chart HTML 4 mức giá; (2) H2 "Phân biệt phí đăng bài (booking) và phí viết bài PR"
+  + sơ đồ 2 khối (không bịa số phí viết - chưa có data, chỉ ghi "báo riêng theo yêu cầu");
+  (3) fix 11/15 link `/book-bao-*/` trong mục "Chi tiết báo giá" đang ghi sai "đang cập nhật"
+  dù các trang đó đã refresh xong từ 2026-07-17 (xác nhận HTTP 200 cả 15 link); (4) 2 FAQ mới
+  ("Book báo bao nhiêu tiền trung bình một bài?", "Chi phí book bài báo có bao gồm phí viết
+  nội dung không?"). Giữ nguyên toàn bộ nội dung cũ, chỉ thêm.
+- Backup: `~/Claude-Workspace/_backups/routines/2026-07-25/bao-gia-dang-bai-pr-theo-dau-bao/1261-before.html`.
+  Verify: HTTP 200, 1 H1, 0 em dash, 15/15 link book-bao-* sống. Bảng kiểm chứng đầy đủ:
+  `content/run-2026-07-25.md`. Cập nhật sổ cái: `content/cluster-booking-bao.md`.
+
+### 2026-07-25 (tiếp): Layout bài blog 3 cột kiểu SEONGON (trái: sơ đồ cụm, phải: mục lục)
+- Theo yêu cầu Hiếu: chuyển giao diện bài viết sang dạng SEONGON - cột trái là sơ đồ nội dung
+  cả cụm (link tới trang dịch vụ), cột phải là mục lục. Chỉ áp dụng ở desktop >=1240px; mobile/
+  tablet giữ nguyên 1 cột + mục lục dropdown/nút nổi như cũ (không đổi UX mobile đã ổn định).
+- File mới `inc/post-sidebars.php`: `dgc_render_cluster_sidebar()` render accordion toàn bộ
+  11 category (dùng làm "cụm"), cụm chứa bài đang đọc tự mở + highlight bài hiện tại (không phải
+  link, tránh tự trỏ về chính nó), mỗi cụm có nút CTA sang trang dịch vụ tương ứng
+  (`dgc_cat_service_links()`: booking-bao-pr -> /booking-bao-pr/, backlink-offpage -> 3 nút
+  Mua Textlink/Dịch vụ Backlink/Guest Post; 9 category còn lại không match dịch vụ cụ thể ->
+  fallback /bang-gia/, theo xác nhận của Hiếu).
+- `inc/toc.php` thêm `dgc_toc_render_sidebar()` - bản mục lục luôn mở (không phải dropdown) cho
+  cột phải, dùng lại class/data-attribute cũ (`post-toc__item`, `data-toc-link`) nên scroll-spy
+  JS có sẵn tự hoạt động, không cần sửa main.js.
+- `single.php` viết lại: buffer `the_content()` trước (để có `$GLOBALS['dgc_toc_items']`) rồi mới
+  dựng layout 3 cột `.post-layout` (grid 236px/820px/260px, sticky 2 sidebar, top offset khớp
+  `.sel-bar`). Dưới 1240px CSS ẩn 2 sidebar, ẩn luôn `.post-toc`/`.toc-fab` ở >=1240px để không
+  trùng 2 mục lục.
+- Bug phát hiện + fix khi test: tên category trong `<summary>` ban đầu là link kèm
+  `stopPropagation` -> bấm mở accordion vô tình bấm trúng link, chặn cả toggle. Đã bỏ link
+  (chỉ còn text, click toggle accordion bình thường), điều hướng đã có sẵn qua từng bài + nút
+  dịch vụ bên trong.
+- Verify: `php -l` 4 file OK, curl HTTP 200, dark mode 2 sidebar đọc được, chuyển bài trong cụm ->
+  sidebar/mục lục tự cập nhật đúng theo bài mới, DOM check đủ 13 nút dịch vụ (3+1+9 fallback) cho
+  11 category. Bump `DGC_VER` 2.0.6 -> 2.0.8.
+- Backup theme trước sửa: `~/Claude-Workspace/_backups/routines/2026-07-25/post-sidebar-layout/`
+  (bản local + bản live-before qua SSH).
