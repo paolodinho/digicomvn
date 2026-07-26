@@ -3,6 +3,15 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-26 (routine ngày booking-price-daily)
+
+DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua Chrome. Master: 3.261 dòng, không đổi
+số dòng, 90 NCC, 7 dịch vụ. Không biến động.
+Nguồn mới: không thu thêm được. Quét lại 5 bên chưa có bảng giá chi tiết qua WebFetch (ECP Media
+trang VnExpress, Vietquangcao, PR Báo Chí, Brands Vietnam, Brandcom - kể cả 2 URL mới tìm được
+qua search là "Tin Mới" và "An ninh Thủ đô") - vẫn như cũ: đều chỉ có khoảng giá chung/ảnh
+placeholder rỗng/PDF, không có bảng text theo từng đầu báo. Không đổi trạng thái nguồn nào.
+
 ## 2026-07-25 (routine ngày booking-price-daily)
 
 DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua Chrome. Master: 3.259 -> 3.261 dòng

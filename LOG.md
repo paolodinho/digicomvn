@@ -1848,3 +1848,16 @@ Hiếu chọn phương án 1: đẩy hết, kể cả nhóm Báo nhỏ/SEO (doma
   11 category. Bump `DGC_VER` 2.0.6 -> 2.0.8.
 - Backup theme trước sửa: `~/Claude-Workspace/_backups/routines/2026-07-25/post-sidebar-layout/`
   (bản local + bản live-before qua SSH).
+
+### 2026-07-25 (tiếp): Bổ sung 3 ảnh Storyset còn thiếu cho post 1261 (giá booking báo)
+- Phát hiện post 1261 (bài giá vừa mở rộng nội dung sáng nay) có **0 ảnh minh hoạ trong thân bài**
+  (chỉ có logo + featured thumbnail) - trái `image-sourcing.md`, cùng lỗi mà post 1260 từng mắc
+  trước khi được vá cùng ngày.
+- Lấy 3 ảnh Storyset khớp đúng 3 mục H2 chính: `pricing-plans/rafiki` (Khung giá theo phân khúc),
+  `price/amico` (Vì sao giá chênh lệch), `select/rafiki` (Cách chọn đầu báo phù hợp ngân sách).
+  Trích SVG gốc qua trình duyệt, rasterize bằng `qlmanage` (QuickLook macOS), crop bbox nội dung +
+  resize 640px bằng PIL, nén webp (10-19KB/ảnh) bằng cwebp - đúng pipeline đã dùng cho post 1260.
+- Upload qua `wp media import` (media ID 4611-4613), chèn ngay sau từng H2 tương ứng (đúng vị trí
+  post 1260 dùng), credit Storyset trong figcaption. Backup nội dung gốc:
+  `~/Claude-Workspace/_backups/routines/2026-07-25/bao-gia-dang-bai-pr-theo-dau-bao/1261-before-images.html`.
+- Verify: curl HTTP 200, cả 3 ảnh webp load đúng src/alt, purge cache xong.

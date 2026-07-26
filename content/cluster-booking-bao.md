@@ -11,7 +11,7 @@
 |---|---|---|---|---|---|---|
 | P1 | Booking báo là gì (pillar cụm) | /booking-bao-la-gi/ | SỬA | ✅ Xong | 2026-07-17 | post 1260, đổi title, +4 hình thức, widget quiz |
 | C3 | Top agency booking báo chí | /agency-booking-bao-chi/ | MỚI | ✅ Xong | 2026-07-17 | post 2569, dạng listicle Top agency, widget acheck |
-| C2 | Giá booking báo theo đầu báo | /bao-gia-dang-bai-pr-theo-dau-bao/ | SỬA | ✅ Xong | 2026-07-25 | post 1261, +khung giá toàn hệ thống (500+ vị trí), +phân biệt phí đăng/phí viết, +2 FAQ, fix link 15 book-bao stale |
+| C2 | Giá booking báo theo đầu báo | /bao-gia-dang-bai-pr-theo-dau-bao/ | SỬA | ✅ Xong | 2026-07-25 | post 1261, +khung giá toàn hệ thống (500+ vị trí), +phân biệt phí đăng/phí viết, +2 FAQ, fix link 15 book-bao stale, +3 ảnh Storyset (pricing-plans/rafiki, price/amico, select/rafiki) - bài trước đó có 0 ảnh minh hoạ trong thân bài, trái rule image-sourcing.md |
 | C4 | Booking báo quốc tế | /booking-bao-quoc-te/ | MỚI | ✅ Xong | 2026-07-17 | post 2576, allintitle 329, widget budget_calc, thumb, ->/backlink-quoc-te/ |
 | C5 | Booking báo Nhân Dân | /book-bao-nhan-dan/ | MỚI | ✅ Xong | 2026-07-17 | post 2577, allintitle 261, khung giá thị trường (không bịa giá Digicom), bảng quy cách, thumb |
 | R1 | Booking báo VnExpress | /book-bao-vnexpress/ | REFRESH | ✅ Xong | 2026-07-17 | +bảng quy cách, ngành phù hợp | +lĩnh vực phù hợp +link P1
