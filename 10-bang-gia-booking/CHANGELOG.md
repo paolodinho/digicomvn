@@ -3,6 +3,16 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-27 (routine ngày booking-price-daily)
+
+Không biến động. DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua gviz CSV (curl trực
+tiếp, byte-for-byte giống hôm qua) - dữ liệu không đổi. Master: 3.261 dòng, 90 NCC, 7 dịch vụ.
+0 dòng thêm/gỡ/đổi giá so với backup hôm qua.
+Nguồn mới: quét lại 5 bên chưa có bảng giá chi tiết (ECP Media trang VnExpress, PR Báo Chí, Brands
+Vietnam, Brandcom, Vietquangcao) qua WebFetch/WebSearch - vẫn như cũ: chỉ có khoảng giá chung, PDF,
+hoặc shortcode/ảnh không render. Thử thêm link Brandcom "Báo giá PR Tiền Phong" tìm qua search -
+404. Không đổi trạng thái nguồn nào.
+
 ## 2026-07-26 (routine ngày booking-price-daily)
 
 DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua Chrome. Master: 3.261 dòng, không đổi

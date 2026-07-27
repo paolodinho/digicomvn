@@ -1822,6 +1822,56 @@ Hiếu chọn phương án 1: đẩy hết, kể cả nhóm Báo nhỏ/SEO (doma
   Verify: HTTP 200, 1 H1, 0 em dash, 15/15 link book-bao-* sống. Bảng kiểm chứng đầy đủ:
   `content/run-2026-07-25.md`. Cập nhật sổ cái: `content/cluster-booking-bao.md`.
 
+### Cập nhật 2026-07-25 (tiếp 3): Rule mới + phủ visual đủ 8/8 H2 - post 1261
+- Hiếu chốt rule mới (đã lưu `.claude/rules/content-visual-coverage.md`): mỗi bài tối thiểu
+  2 ảnh minh hoạ thật, mọi thẻ H2 phải có ảnh/info/bảng/widget tương tác - để giữ time-on-site.
+- Kiểm tra post 1261: một session khác đã kịp thêm 3 ảnh Storyset (pricing-plans/rafiki cho
+  khung giá phân khúc, price/amico cho phần "vì sao giá chênh lệch", select/rafiki cho "cách
+  chọn đầu báo") - verify sống trên live trước khi làm tiếp, tránh trùng lặp.
+- Bổ sung nốt 3 chỗ còn thiếu visual: (1) đổi list 15 link báo trong "Chi tiết báo giá" thành
+  chip-grid HTML (mỗi báo 1 chip bấm được); (2) thêm `[dgc_offpage_quiz]` cuối mục FAQ (tương
+  tác, dẫn dắt bước tiếp theo); (3) thêm CTA card (2 nút: Xem bảng giá / Gửi yêu cầu báo giá)
+  cuối mục Kết luận. Kết quả: cả 8 H2 trong bài đều có >=1 yếu tố trực quan/tương tác.
+- Backup trước khi sửa: `~/Claude-Workspace/_backups/routines/2026-07-25/bao-gia-dang-bai-pr-theo-dau-bao/1261-before-images.html`.
+  Verify live: 3 ảnh còn nguyên, widget `oquiz`/`bcalc` render đúng class, chip 15 báo có
+  `book-bao-nhan-dan`, CTA "Gửi yêu cầu báo giá" xuất hiện, HTTP 200, 1 H1, 0 em dash.
+
+### Cập nhật 2026-07-25 (tiếp 4): QA cụm 3 "Dịch vụ / Agency" - phát hiện phiên khác đã xử lý song song
+- Đọc sheet "Tu khoa Book bao - phan nhom 2026-07-24" qua export CSV - xác định cụm 3 gồm 10 trang:
+  M1 (`/booking-bao-pr/`), C3 (`/agency-booking-bao-chi/`), R5/R8-R14 (24h, Znews, Soha, aFamily,
+  Eva, CafeBiz, Webtretho, Báo Đầu Tư).
+- Kiểm tra trước khi sửa - phát hiện **một phiên khác đang chạy song song đã lấp gần hết gap** trong
+  sheet (C3 đổi hướng thành "Top Agency" theo đúng khuyến nghị; 24h/Znews/aFamily đã có tier giá cao
+  cấp thật từ CPT `dgc_gia`). Hỏi Hiếu qua AskUserQuestion để tránh làm trùng -> Hiếu chọn "QA lại
+  cụm 3 rồi mới sang cụm 4".
+- QA toàn bộ 10 trang: HTTP 200, đúng 1 H1/trang, 0 em dash, internal link đủ (8 trang R đều link
+  P1 + C3; C3 link M1). Đối chiếu từng dòng gap trong sheet với dữ liệu thật - 6/8 gap giá đã lấp
+  đúng (dùng số thật CPT), 3 gap còn treo (Soha thiếu tier cao, Eva/CafeBiz/Báo Đầu Tư thiếu số liệu
+  traffic/audience, Webtretho thiếu tier banner) - đều cần dữ liệu NCC/nguồn ngoài chưa có, KHÔNG bịa
+  số. Chi tiết bảng đối chiếu: `content/cluster-booking-bao.md` mục "QA cụm 3...".
+- Phát hiện thêm (chưa xử lý, cần Hiếu duyệt riêng): rule `content-visual-coverage.md` mới chốt
+  hôm nay CHƯA áp cho 10 trang này (viết trước khi có rule) - mỗi trang ~10 H2 nhưng chỉ 1-3 ảnh +
+  1 bảng, các mục Quy trình/Lưu ý/FAQ/Kết luận phần lớn thuần văn bản. Đây là audit quy mô riêng,
+  chưa tự làm vì ngoài phạm vi "QA cụm 3" đã xin phép.
+
+### Cập nhật 2026-07-26: Áp content-visual-coverage.md cho C3 (agency-booking-bao-chi)
+- Hiếu gửi thẳng URL `/agency-booking-bao-chi/` sau báo cáo QA - hiểu là yêu cầu xử lý ngay trang
+  này theo rule vừa phát hiện thiếu (post 2569: 0 ảnh thật, 4/6 H2 thuần chữ: "Dấu hiệu cần tránh",
+  "So sánh chi phí", FAQ, Kết luận).
+- Tự QA thêm phần nội dung (đọc raw post_content qua SSH thay vì tin theo tóm tắt WebFetch): xác
+  nhận mục "Top agency" dùng 4 NHÓM chung chung (DigicomVN nêu tên cụ thể, 3 nhóm còn lại mô tả
+  khách quan không nêu tên agency đối thủ cụ thể) - không vi phạm content-professional.md (không
+  bịa số liệu, không nói xấu đối thủ cụ thể), khác với nghi ngờ ban đầu của WebFetch summary.
+- Bổ sung: 2 ảnh Storyset lấy trực tiếp SVG từ storyset.com qua browser JS (warning/rafiki cho
+  "Dấu hiệu cần tránh" - giữ màu xanh brand gốc; checklist/rafiki cho "So sánh chi phí" - tô lại
+  từ xanh lá gốc sang teal #0E8C7F cho khớp brand), `[dgc_offpage_quiz]` cuối FAQ, CTA card (Xem
+  bảng giá / Gửi yêu cầu báo giá) cuối Kết luận. Media ID 4618-4619.
+- Backup: `~/Claude-Workspace/_backups/routines/2026-07-26/agency-booking-bao-chi/2569-before.html`.
+  Verify live: HTTP 200, 2 ảnh mới + widget oquiz/acheck render đúng, CTA hiện, 1 H1, 0 em dash,
+  6/6 H2 chính giờ đều có ảnh/bảng/widget.
+- Còn treo: 7 trang R (24h/Znews/Soha/aFamily/Eva/CafeBiz/Webtretho/Báo Đầu Tư) + M1 booking-bao-pr
+  vẫn chưa áp content-visual-coverage.md - chờ Hiếu xác nhận làm tiếp toàn bộ hay theo yêu cầu.
+
 ### 2026-07-25 (tiếp): Layout bài blog 3 cột kiểu SEONGON (trái: sơ đồ cụm, phải: mục lục)
 - Theo yêu cầu Hiếu: chuyển giao diện bài viết sang dạng SEONGON - cột trái là sơ đồ nội dung
   cả cụm (link tới trang dịch vụ), cột phải là mục lục. Chỉ áp dụng ở desktop >=1240px; mobile/

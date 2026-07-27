@@ -30,6 +30,7 @@ danh sach dau bao that, M5 QA + demo).
 |---|---|
 | `.claude/rules/pivot-2026-07.md` | Chi tiet pivot: theme, trang cu, sitemap, backup |
 | `.claude/rules/dich-vu.md` | Danh muc dich vu chinh thuc |
+| `.claude/rules/content-visual-coverage.md` | Moi bai >=2 anh, moi H2 co visual/interactive |
 | `.claude/rules/quality-bar.md` | Tieu chi "xong" chi tiet |
 | `.claude/rules/tone-voice.md` | Van phong |
 | `.claude/rules/workflow.md` | Quy trinh lam viec |
