@@ -2,6 +2,8 @@
 # QA meta SEO toan site: moi URL phai co meta description (50-320 ky tu),
 # du og:title/url/image/type/description, twitter:card, va DUNG 1 canonical tro dung chinh no.
 # Chay: python3 tools/meta-qa.py
+# Luu y: chay TOI DA 3 luong song song. Chay 6 luong (hoac chay song song 2 script)
+# lam host qua tai -> HTTP 500 rai rac, bao loi GIA. Da dinh 2026-07-27.
 import re,urllib.request,concurrent.futures as cf
 UA={'User-Agent':'Mozilla/5.0 (meta-qa)'}
 def get(u): return urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=45).read().decode('utf-8','ignore')
@@ -25,7 +27,7 @@ def chk(u):
     if h.count('property="og:title"')>1: e.append('og:title lap')
     return u,e
 bad=0
-with cf.ThreadPoolExecutor(6) as ex:
+with cf.ThreadPoolExecutor(3) as ex:
     for u,e in ex.map(chk,urls):
         if e: bad+=1; print('LOI ',u); [print('      -',x) for x in e]
 print(f'\n=== {len(urls)} URL | {bad} URL thieu/sai meta ===')

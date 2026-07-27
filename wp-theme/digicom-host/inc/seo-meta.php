@@ -180,7 +180,24 @@ function dgc_seo_head() {
 }
 
 /* ===========================================================================
- * 3. Tieu de <title> rieng tung bai - sua o WP Admin thay vi hardcode trong code
+ * 3. Sitemap: khong liet ke trang da danh dau noindex
+ * ========================================================================= */
+
+/**
+ * Trang "Cam on" la trang ket qua sau khi gui form, da noindex. De no trong sitemap la
+ * tin hieu mau thuan (moi Google vao index mot trang minh vua bao dung index).
+ */
+add_filter( 'wp_sitemaps_posts_query_args', function ( $args, $post_type ) {
+	if ( 'page' !== $post_type ) return $args;
+	$p = get_page_by_path( 'cam-on' );
+	if ( $p ) {
+		$args['post__not_in'] = array_merge( isset( $args['post__not_in'] ) ? (array) $args['post__not_in'] : array(), array( $p->ID ) );
+	}
+	return $args;
+}, 10, 2 );
+
+/* ===========================================================================
+ * 4. Tieu de <title> rieng tung bai - sua o WP Admin thay vi hardcode trong code
  * ========================================================================= */
 
 add_filter( 'document_title_parts', function ( $parts ) {

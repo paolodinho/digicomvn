@@ -716,9 +716,20 @@ function dgc_sch_page_type() {
 
 /** Anh dai dien cua trang (featured image) -> primaryImageOfPage. */
 function dgc_sch_primary_image() {
-	if ( is_singular() && has_post_thumbnail() ) {
+	if ( ! is_singular() ) return null;
+
+	if ( has_post_thumbnail() ) {
 		$u = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 		if ( $u ) return dgc_sch_image( $u, '', get_the_title() );
+	}
+
+	// Nhieu bai khong dat anh dai dien nhung co anh minh hoa that trong than bai.
+	// Lay anh do (bo hau to kich thuoc de tra ra ban goc co width/height) thay vi
+	// de Article thieu 'image' - thuoc tinh Google can de hien rich result.
+	$html = (string) get_post_field( 'post_content', get_the_ID() );
+	if ( preg_match( '/<img[^>]+src=["\']([^"\']+)["\']/i', $html, $m ) ) {
+		$full = preg_replace( '/-\d+x\d+(\.[a-z]{3,4})$/i', '$1', $m[1] );
+		return dgc_sch_image( attachment_url_to_postid( $full ) ? $full : $m[1], '', get_the_title() );
 	}
 	return null;
 }

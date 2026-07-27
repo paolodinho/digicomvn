@@ -3,6 +3,8 @@
 # du Organization/WebSite/*Page, Article du author+publisher+date+image, BreadcrumbList
 # lien tuc, Service co provider + Offer hop le, FAQPage co Question/answer, khong truong rong.
 # Chay: python3 tools/schema-qa.py
+# Luu y: chay TOI DA 3 luong song song. Chay 6 luong (hoac chay song song 2 script)
+# lam host qua tai -> HTTP 500 rai rac, bao loi GIA. Da dinh 2026-07-27.
 import re,json,urllib.request,concurrent.futures as cf
 UA={'User-Agent':'Mozilla/5.0 (schema-qa)'}
 def get(u):
@@ -65,7 +67,7 @@ def check(u):
                 if q.get('@type')!='Question' or not q.get('acceptedAnswer',{}).get('text'): errs.append('Question thieu answer')
     return u,errs,warns
 bad=0;warn=0
-with cf.ThreadPoolExecutor(6) as ex:
+with cf.ThreadPoolExecutor(3) as ex:
     for u,e,w in ex.map(check,urls):
         if e: bad+=1; print('LOI  ',u); [print('       -',x) for x in sorted(set(e))]
         if w: warn+=1; [print('CANH BAO',u,'-',x) for x in sorted(set(w))]

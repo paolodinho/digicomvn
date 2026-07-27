@@ -55,7 +55,7 @@
 ## QA bắt buộc sau mỗi lần sửa schema
 
 1. `php -l inc/schema.php` (lint trên host, máy Hiếu không có PHP).
-2. Quét toàn site: `tools/schema-qa.py` - kiểm mỗi URL đúng 1 khối JSON-LD, JSON parse được,
+2. Quét toàn site: `tools/schema-qa.py` (**tối đa 3 luồng - chạy 6 luồng hoặc 2 script song song làm host quá tải, sinh HTTP 500 rải rác và báo lỗi giả**) - kiểm mỗi URL đúng 1 khối JSON-LD, JSON parse được,
    đủ thuộc tính bắt buộc, không có trường rỗng.
 3. Kiểm định độc lập bằng `validator.schema.org` (script `tools/schema-validate.py`) cho tối
    thiểu 6 loại trang: chủ, dịch vụ, bài viết, blog, tác giả, bảng giá. **Mục tiêu: 0 lỗi, 0 cảnh báo.**
