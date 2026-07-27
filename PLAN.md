@@ -178,9 +178,12 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
 ### Schema toàn site (2026-07-27) - ĐÃ XONG
 - [x] Dựng `inc/schema.php` - 1 khối @graph/trang, 0 lỗi trên validator.schema.org (169 URL).
 - [x] Gỡ 108 khối JSON-LD nhúng trong 58 bài, chuyển 197 câu FAQ sang meta có ô sửa ở WP Admin.
-- [ ] **Việc còn lại (ngoài phạm vi schema, phát hiện khi làm):** site KHÔNG có meta description,
-      KHÔNG có og:/twitter: tag nào trên bất kỳ trang nào (không có SEO plugin, theme cũng không
-      tự sinh). Ảnh hưởng trực tiếp CTR và cách bài hiện khi share Facebook/Zalo. Đề xuất: thêm
-      module `inc/seo-meta.php` cùng kiểu schema.php (tự sinh description từ excerpt, og:image từ
-      featured image) thay vì cài Rank Math.
+- [x] Offer giá thật theo từng đầu báo (18 bài), OfferCatalog hạng mục phổ biến, fix @id trùng
+      giữa trang phân trang và trang 1.
+- [x] `inc/seo-meta.php`: meta description + Open Graph + Twitter Card + canonical trang lưu trữ +
+      ô "SEO & Schema" sửa tiêu đề/mô tả từng bài trong WP Admin. QA 171 URL = 0 lỗi.
+- [ ] **Cần Hiếu làm:** thiết kế 1 ảnh chia sẻ 1200x630 của DigicomVN rồi điền vào WP Admin >
+      DigicomVN > mục 0 > "Anh chia se mac dinh". Hiện đang fallback về logo (1278x363) nên khi
+      share Facebook/Zalo bị viền trên dưới. (KHÔNG dùng `ogimagedn.jpg` ở thư mục gốc - đó là
+      logo Báo Đà Nẵng, không phải của Digicom.)
 - [ ] Bật Review/AggregateRating khi có đánh giá khách hàng thật (tên + nội dung khách viết).

@@ -1,5 +1,72 @@
 # LOG - digicomvn.com
 
+## 2026-07-27 (tiếp - bài P1 cụm PR tổng quát: /pr-la-gi/)
+- Đăng live `/pr-la-gi/` (post ID 4722, category booking-bao-pr) - bài P1 cụm content mới
+  "PR tổng quát" (`content/cluster-pr-tongquat.md`), từ khoá chính "pr là gì" (~8.100-12.080
+  volume tuỳ nguồn, từ khoá đơn lẻ lớn nhất từng phát hiện trong dự án).
+- Research: WebSearch "pr là gì" + "quan hệ công chúng là gì", WebFetch 4 bài top thật
+  (gobranding.com.vn, mona.media, sapo.vn, saokim.com.vn) - xác nhận 4/4 là bài định nghĩa/blog
+  informational (khớp dạng bài đã viết), lấy cấu trúc heading + độ dài (1.000-4.000 từ) + góc
+  earned/owned/paid media (saokim có, số khác không). Info gain: gắn PR với dịch vụ booking
+  đăng bài PR trên báo điện tử của DigicomVN (đối thủ agency marketing thuần không có).
+- Nội dung 9 H2 (~3.000 từ), có box phân biệt rõ với `/bai-pr-la-gi/` (bài đó = định dạng 1 bài
+  viết, bài này = khái niệm cả ngành PR). 3 sơ đồ HTML bắt buộc (lịch sử PR: Ivy Lee 1906/Edward
+  Bernays 1919-1923/PRSA 1947/PR digital-AI; Earned-Owned-Paid Media; các kênh làm PR) + 1 bảng
+  `.dgc-data-table` so sánh PR/Marketing/Quảng cáo + widget `[dgc_offpage_quiz]` + 2 ảnh Storyset
+  (friendly-handshake, journalist - tải SVG gốc, recolor accent tím #BA68C8 sang teal brand
+  #0E8C7F, xuất webp). External link E-E-A-T: PRSA (prsa.org/about/all-about-pr, định nghĩa gốc)
+  + Wikipedia tiếng Việt + Wikipedia Ivy Lee, đều dofollow/noopener (nguồn định nghĩa/lịch sử,
+  không phải trích cá nhân thứ 3).
+- Internal link 2 chiều: từ bài mới trỏ `/bai-pr-la-gi/`, `/cach-viet-bai-pr-chuan-bao-chi/`,
+  `/booking-bao-pr/` (money page), `/agency-booking-bao-chi/`; sửa ngược 2 bài cũ (post 4670
+  `bai-pr-la-gi`, post 1277 `cach-viet-bai-pr-chuan-bao-chi`) thêm 1 link trỏ về `/pr-la-gi/`
+  mỗi bài - backup content.raw trước khi sửa tại
+  `~/Claude-Workspace/_backups/routines/2026-07-27/pr-la-gi-inbound/`, ghi manifest.
+- Thumbnail render qua `tools/blog-thumbnail/render-illus.py`, set featured image (attachment
+  4723). Submit Google Search Console qua trình duyệt (property URL-prefix digicomvn.com) -
+  "Đã yêu cầu lập chỉ mục" thành công.
+- Verify curl: HTTP 200, đúng 1 H1, 0 ký tự em/en dash, widget quiz render (class `oquiz-*`),
+  2 ảnh Storyset hiện, bảng `.dgc-data-table` hiện đủ data-label, 2 link inbound sống.
+- Cập nhật `content/cluster-pr-tongquat.md` (P1 Xong). Meta description 142 ký tự lưu vào
+  post_excerpt - LƯU Ý: theme digicom-host hiện KHÔNG output thẻ `<meta name="description">`
+  hay OG tags ở bất kỳ trang nào (kiểm tra header.php/functions.php, RankMath không active) -
+  đây là gap kỹ thuật có sẵn của site, ngoài phạm vi task này, cần Hiếu quyết định có bổ sung không.
+
+## 2026-07-27 (tiếp - bài P2 cụm PR tổng quát: /cac-loai-hinh-pr/)
+- Đăng live `/cac-loai-hinh-pr/` (post ID 4728, category booking-bao-pr) - bài P2 cụm content
+  "PR tổng quát" (`content/cluster-pr-tongquat.md`), từ khoá chính "các loại hình pr" + phụ
+  "pr nội bộ/đối ngoại/cộng đồng/online/khủng hoảng/dark pr/inbound pr" (~520-620 volume gộp).
+- Research: WebSearch "các loại hình pr" + "pr nội bộ đối ngoại cộng đồng online crisis" +
+  "dark pr inbound pr", WebFetch bài top (sieutocmarketing.com, ybox.vn bị chặn 403) - xác nhận
+  đối thủ liệt kê 5-7 loại hình dạng blog định nghĩa (khớp dạng đã viết). Đọc trước 3 trang nội
+  bộ digicomvn.com (`/bai-pr-la-gi/`, `/thong-cao-bao-chi-xu-ly-khung-hoang/`,
+  `/agency-booking-bao-chi/`) để xác nhận góc phân loại theo đối tượng/kênh không trùng các bài
+  đó (bài PR = định dạng bài viết, thông cáo khủng hoảng = hướng dẫn viết, agency booking = chọn
+  agency). Info gain: gộp Dark PR + Inbound PR (2 khái niệm hiện đại chưa thấy site nào làm rõ
+  trong 1 bài phân loại) làm mục phụ trong PR khủng hoảng/PR online.
+- Nội dung 9 H2 (~1.700 từ): 1 sơ đồ card-grid 5 màu tổng hợp đầu bài, 2 card-grid phụ (PR nội
+  bộ, PR cộng đồng), 1 chip-grid kênh online, 1 bảng `.dgc-data-table` "chọn loại hình PR theo
+  mục tiêu", 1 callout cảnh báo Dark PR (không phải loại hình chính thống, không hướng dẫn cách
+  làm - chỉ cảnh báo rủi ro pháp lý), widget `[dgc_offpage_quiz]`, 2 ảnh Storyset rafiki
+  (happy-announcement cho PR đối ngoại, business-crisis cho PR khủng hoảng - tải trực tiếp bằng
+  browser tool qua nút Download PNG/blob, convert SVG->PNG->webp bằng rsvg-convert vì Freepik/
+  Storyset không có endpoint tải trực tiếp qua curl).
+- Internal link (5, đúng giới hạn): `/pr-la-gi/` (mở bài, pillar cùng cụm - đã live lúc viết bài
+  này), `/booking-bao-pr/` (money page, mục PR đối ngoại), `/agency-booking-bao-chi/` (mục PR đối
+  ngoại), `/thong-cao-bao-chi-xu-ly-khung-hoang/` (mục PR khủng hoảng), `/cach-viet-bai-pr-chuan-
+  bao-chi/` (kết luận). Link ngược: thêm 1 câu + link vào bài 3869
+  (`thong-cao-bao-chi-xu-ly-khung-hoang`) trỏ về `/cac-loai-hinh-pr/` - backup content.raw tại
+  `~/Claude-Workspace/_backups/routines/2026-07-27/cac-loai-hinh-pr-inbound/`, ghi manifest.
+- Thumbnail render qua `tools/blog-thumbnail/render-illus.py`, set featured image (attachment
+  4729). Submit Google Search Console qua trình duyệt (tab đã đăng nhập sẵn từ phiên P1, property
+  URL-prefix digicomvn.com/) - "Đã yêu cầu lập chỉ mục" thành công.
+- Verify curl: HTTP 200, đúng 1 H1, 0 ký tự em/en dash, widget quiz render (class `oquiz` x35),
+  0 rò rỉ shortcode dạng text thô, 2 ảnh Storyset hiện, bảng `.dgc-data-table` hiện đủ data-label,
+  6/6 internal link đích trả 200, link ngược từ bài 3869 xác nhận sống trên live.
+- Cập nhật `content/cluster-pr-tongquat.md` (2/4 bài xong). Xác nhận lại gap kỹ thuật đã ghi ở
+  bài P1: theme digicom-host không output `<meta name="description">`/OG description ở bất kỳ
+  trang nào (không riêng bài này) - ngoài phạm vi task, cần Hiếu quyết định có bổ sung không.
+
 ## 2026-07-27 (tiếp - bài mới T1/R16 Booking báo Tiền Phong)
 - Đăng live `/book-bao-tien-phong/` (post ID 4720, category booking-bao-pr), theo đúng mẫu chuẩn
   R1 VnExpress/C6 Lao Động. Bảng giá 3 tier thật: 4.532.000đ (DanaSEO, đã có sẵn live) +
@@ -2490,3 +2557,54 @@ Script QA lưu tại `tools/schema-qa.py` + `tools/schema-validate.py`.
 
 **KHÔNG làm (có chủ ý):** không emit Review/AggregateRating vì testimonial hiện là nội dung mẫu,
 chưa phải đánh giá thật có danh tính - emit sẽ là dữ liệu sai sự thật và vi phạm policy Google.
+
+## 2026-07-27 - Bài P3 cụm PR tổng quát: Case Study Chiến Dịch PR
+
+Dang bai moi `/case-study-chien-dich-pr/` (post ID 4732, category booking-bao-pr) - bai P3/4
+trong cum PR tong quat. 7 case that co nguon (Coca-Cola, Pepsi, Grab, Heineken, Viettel,
+Vinamilk, Dove), khong bia so lieu, moi case co external link nofollow noopener dan nguon
+rieng (Advertising Vietnam, MarketingAI, Heineken VN, Bao Chinh phu, Brands Vietnam, PR Week).
+11 H2, 2 anh Storyset, 1 bang data-table + 2 card-grid, quiz widget giua bai. Internal link
+5: /pr-la-gi/, /cac-loai-hinh-pr/, /chien-dich-pr-an-tuong-viet-nam/, /booking-bao-pr/, /dat-bai/.
+Da them link nguoc tu bai 1280 (chien-dich-pr-an-tuong-viet-nam) tro ve bai moi, backup tai
+`~/Claude-Workspace/_backups/routines/2026-07-27/case-study-chien-dich-pr-inbound/`.
+Verify: HTTP 200, 1 H1, 0 em dash, shortcode render dung, 2 anh Storyset load, 7 link nofollow.
+GSC: KHONG submit duoc - trinh duyet chua dang nhap Google, khong tu nhap mat khau.
+Cap nhat `content/cluster-pr-tongquat.md` len 3/4 bai.
+
+## 2026-07-27 (tiếp): đẩy schema lên 100% + bổ sung meta/OG toàn site
+
+**Phần schema (nâng cấp tiếp):**
+- **Offer giá thật theo từng đầu báo**: 18 bài có bảng giá nhúng (`[dgc_bang_gia]`) giờ sinh node
+  `Service` + `Offer` với ĐÚNG giá của đầu báo đó (vd /book-bao-vnexpress/ = 8.034.000đ), lọc theo
+  cùng logic với bảng hiển thị nên schema luôn khớp nội dung nhìn thấy. Đây là thứ trả lời trực
+  tiếp truy vấn "book báo X giá bao nhiêu" trên Google/AI thay vì chỉ có khoảng giá chung.
+- Trang dịch vụ pillar: thêm `hasOfferCatalog` gồm các hạng mục đánh dấu "phổ biến nhất"
+  (12 dòng ở booking-bao-pr), `termsOfService` trỏ /dieu-khoan-su-dung/, `potentialAction`
+  (OrderAction) trỏ /dat-bai/.
+- **Lỗi thật đã sửa:** trang phân trang `/category/x/page/2/` trước đây dùng CHUNG `@id` và `url`
+  với trang 1 nhưng danh sách bài khác hẳn - 2 trang cùng khai là một thực thể với nội dung mâu
+  thuẫn. Thêm `dgc_sch_url_paged()` xử lý phân trang cho webpage/breadcrumb/itemlist.
+- Bài có bảng giá riêng: `Article.about` trỏ về dịch vụ CỤ THỂ trên chính trang đó thay vì
+  dịch vụ chung của cụm.
+
+**Phần meta/OG (mới, `inc/seo-meta.php`):** site không có SEO plugin nên trước đó **không có
+meta description, không có og:/twitter: tag nào, trang lưu trữ không có canonical**.
+- Tự sinh: meta description, đủ bộ og: (locale/type/site_name/title/url/description/image+w/h/alt),
+  article:published_time / modified_time / section, twitter card, canonical cho trang lưu trữ,
+  noindex cho trang tìm kiếm + 404.
+- Ô "SEO & Schema" trong WP Admin: tiêu đề SEO + mô tả SEO riêng từng bài. Bỏ map `dgc_seo_title_map`
+  hardcode trong functions.php (post 475 đã chuyển sang meta) - giờ chỉ còn MỘT nơi quyết định `<title>`.
+- Option mới: `meta_desc_home`, `og_image` (nhận ID ảnh hoặc URL).
+- 3 trang chạy bằng template PHP (bang-gia, lien-he, ve-digicom) có `post_content` rỗng nên không
+  tự sinh được mô tả -> đã điền `dgc_seo_desc` theo đúng đoạn lead hiển thị trên trang.
+
+**Cạm bẫy đã dính + sửa:** trang chủ là page tĩnh nên `is_singular()` cũng đúng -> phải xét
+`is_front_page()` trước, nếu không mô tả trang chủ rỗng; URL ảnh dạng resize `-1024x671` làm mất
+`og:image:width/height` -> bỏ hậu tố kích thước trước khi tra.
+
+**KHÔNG dùng `ogimagedn.jpg`** ở thư mục gốc làm ảnh OG: kiểm tra ra đó là **logo Báo Đà Nẵng**
+(ảnh tư liệu), dùng sẽ là mạo nhận thương hiệu báo khác.
+
+**QA:** schema 171 URL = 0 lỗi/0 cảnh báo; meta 171 URL = 0 lỗi. Script: `tools/schema-qa.py`,
+`tools/meta-qa.py`, `tools/schema-validate.py`.

@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
-# QA schema toan site digicomvn.com: quet moi URL trong sitemap, kiem tra
-# - dung 1 khoi JSON-LD/trang, JSON parse duoc, co @graph
-# - co Organization + WebSite + node *Page
-# - Article du author/publisher/date/image/mainEntityOfPage, headline <= 110 ky tu
-# - BreadcrumbList position lien tuc, ListItem du name/item
-# - Service co provider, lowPrice <= highPrice; FAQPage co Question + answer
-# - khong co thuoc tinh rong
+# QA schema toan site digicomvn.com (quet sitemap): 1 khoi JSON-LD/trang, JSON hop le,
+# du Organization/WebSite/*Page, Article du author+publisher+date+image, BreadcrumbList
+# lien tuc, Service co provider + Offer hop le, FAQPage co Question/answer, khong truong rong.
 # Chay: python3 tools/schema-qa.py
 import re,json,urllib.request,concurrent.futures as cf
 UA={'User-Agent':'Mozilla/5.0 (schema-qa)'}
@@ -55,8 +51,12 @@ def check(u):
             if not it.get('name') or not it.get('item'): errs.append('ListItem thieu name/item')
     for s in types.get('Service',[]):
         if 'provider' not in s: errs.append('Service thieu provider')
-        o=s.get('offers')
-        if o and float(o.get('lowPrice',0))>float(o.get('highPrice',0)): errs.append('lowPrice > highPrice')
+        o=s.get('offers'); o=o if isinstance(o,list) else ([o] if o else [])
+        for x in o:
+            if x.get('@type')=='AggregateOffer':
+                if float(x.get('lowPrice',0))>float(x.get('highPrice',0)): errs.append('lowPrice > highPrice')
+            elif x.get('@type')=='Offer':
+                if not x.get('price') or not x.get('priceCurrency'): errs.append('Offer thieu price/priceCurrency')
     for f in types.get('FAQPage',[]):
         me=f.get('mainEntity')
         if not me: errs.append('FAQPage thieu mainEntity')

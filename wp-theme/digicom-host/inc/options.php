@@ -98,6 +98,8 @@ function dgc_defaults() {
 
 		// Chat AI tu van (DeepSeek). Key nen dat trong wp-config: define('DGC_DEEPSEEK_KEY','sk-...');
 		// Neu de trong constant thi doc field ai_key duoi day. Bat ai_chat_on = 1 va co key -> hien chat.
+		'og_image'      => '',
+		'meta_desc_home' => '',
 		'ai_chat_on'    => '0',
 		'ai_key'        => '',
 		'ai_model'      => 'deepseek-chat',
@@ -144,6 +146,14 @@ function dgc_settings_page() {
 		<p>Sua thong tin lien he, gia va goi dich vu (Textlink, Backlink, Guest Post, Booking bao PR) o day. Khong can dong vao code.</p>
 		<form method="post" action="options.php">
 			<?php settings_fields( 'dgc_group' ); ?>
+
+			<h2>0. SEO & chia se (meta description, Open Graph)</h2>
+			<table class="form-table">
+				<?php
+				dgc_field( 'meta_desc_home', 'Mo ta SEO trang chu', 'Doan hien duoi tieu de tren Google + khi share Facebook/Zalo cho TRANG CHU. Nen ~150 ky tu. De trong = tu lay "Mo ta phu" o muc Hero.', 'textarea' );
+				dgc_field( 'og_image', 'Anh chia se mac dinh (og:image)', 'ID anh trong Thu vien hoac URL day du. Dung khi bai/trang khong co anh dai dien. De trong = dung logo site. Nen anh 1200x630.' );
+				?>
+			</table>
 
 			<h2>1. Lien he</h2>
 			<table class="form-table">

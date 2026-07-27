@@ -57,6 +57,21 @@ function dgc_sch_url() {
 	return home_url( '/' );
 }
 
+/**
+ * URL cua trang hien tai CO tinh phan trang.
+ * Bat buoc: /category/x/page/2/ la mot trang KHAC voi /category/x/ (danh sach bai khac han).
+ * Neu dung chung @id thi 2 trang cung khai la mot thuc the nhung noi dung mau thuan nhau.
+ */
+function dgc_sch_url_paged() {
+	$u     = dgc_sch_url();
+	$paged = (int) get_query_var( 'paged' );
+	if ( ! is_singular() && $paged > 1 ) {
+		$l = get_pagenum_link( $paged );
+		if ( $l ) return $l;
+	}
+	return $u;
+}
+
 /** So dien thoai dang E.164 (+84...) - dinh dang Google khuyen dung. */
 function dgc_sch_phone( $raw ) {
 	$d = preg_replace( '/[^0-9]/', '', (string) $raw );
@@ -193,6 +208,117 @@ function dgc_sch_agg_offer( $nhom_slug ) {
 	);
 	set_transient( $key, $node, 12 * HOUR_IN_SECONDS );
 	return $node;
+}
+
+/** dgc_get_gia() nhung nho ket qua trong 1 request (tranh query lai khi vua dung o head vua o body). */
+function dgc_sch_gia( $nhom_slug ) {
+	static $memo = array();
+	if ( ! isset( $memo[ $nhom_slug ] ) ) {
+		$memo[ $nhom_slug ] = function_exists( 'dgc_get_gia' ) ? dgc_get_gia( $nhom_slug ) : array();
+	}
+	return $memo[ $nhom_slug ];
+}
+
+/**
+ * 1 dong bang gia -> node Offer (gia don) hoac AggregateOffer (dong co bang bac thang gia).
+ * Chi dung cho dong CO hien tren chinh trang do (policy: schema phai khop noi dung nhin thay).
+ */
+function dgc_sch_offer_node( $row, $page_url, $nhom_label ) {
+	$m      = isset( $row->meta ) ? $row->meta : array();
+	$prices = dgc_sch_prices_from( $m['gia_km'] ?? '' );
+	if ( ! $prices ) return null;
+
+	$ten   = dgc_sch_txt( $row->post_title );
+	$vitri = dgc_sch_txt( $m['vi_tri'] ?? '' );
+	$node  = array(
+		'@type'         => 'Offer',
+		'name'          => $vitri ? $ten . ' - ' . $vitri : $ten,
+		'priceCurrency' => 'VND',
+		'availability'  => 'https://schema.org/InStock',
+		'url'           => $page_url,
+		'category'      => $nhom_label,
+		'description'   => dgc_sch_txt( trim( ( $m['yeu_cau'] ?? '' ) . ' ' . ( $m['so_link'] ?? '' ) ), 300 ),
+		'seller'        => array( '@id' => dgc_sch_id( 'organization' ) ),
+		'itemOffered'   => array(
+			'@type'       => 'Service',
+			'name'        => $nhom_label . ' - ' . $ten,
+			'serviceType' => $nhom_label,
+			'provider'    => array( '@id' => dgc_sch_id( 'organization' ) ),
+		),
+	);
+
+	if ( count( $prices ) === 1 ) {
+		$node['price'] = (string) (int) $prices[0];
+	} else {
+		// Dong co nhieu muc (vd textlink theo 3/6/12 thang) -> khong the ep ve 1 con so.
+		$node['@type']      = 'AggregateOffer';
+		$node['lowPrice']   = (string) (int) min( $prices );
+		$node['highPrice']  = (string) (int) max( $prices );
+		$node['offerCount'] = count( $prices );
+	}
+	return dgc_sch_prune( $node );
+}
+
+/**
+ * Bai viet co nhung bang gia 1 dau bao ([dgc_bang_gia bao="..." domain="..."]) -> emit
+ * Service + Offer GIA THAT cua chinh dau bao do. Day la thu tra loi truc tiep truy van
+ * kieu "book bao VnExpress gia bao nhieu" tren Google/AI, thay vi chi co khoang gia chung.
+ * Loc dong theo DUNG logic cua inc/service-pricing.php de schema khop bang hien tren trang.
+ */
+function dgc_sch_outlet_service() {
+	if ( ! is_singular( 'post' ) ) return null;
+
+	$content = (string) get_post_field( 'post_content', get_the_ID() );
+	if ( strpos( $content, '[dgc_bang_gia' ) === false ) return null;
+	if ( ! preg_match( '/\[dgc_bang_gia([^\]]*)\]/', $content, $mm ) ) return null;
+
+	$atts    = shortcode_parse_atts( $mm[1] );
+	$bao     = isset( $atts['bao'] ) ? trim( (string) $atts['bao'] ) : '';
+	$domains = array_filter( array_map( 'trim', explode( ',', isset( $atts['domain'] ) ? (string) $atts['domain'] : '' ) ) );
+	$slug    = sanitize_title( isset( $atts['nhom'] ) ? $atts['nhom'] : 'booking-bao-pr' );
+	if ( '' === $bao && ! $domains ) return null;
+
+	$rows = dgc_sch_gia( $slug );
+	if ( $domains ) {
+		$d    = array_map( 'strtolower', $domains );
+		$rows = array_values( array_filter( $rows, function ( $it ) use ( $d ) {
+			return in_array( strtolower( trim( $it->post_title ) ), $d, true );
+		} ) );
+	} else {
+		$kw   = str_replace( '-', '', sanitize_title( $bao ) );
+		$rows = array_values( array_filter( $rows, function ( $it ) use ( $kw ) {
+			return stripos( str_replace( '-', '', $it->post_title ), $kw ) !== false;
+		} ) );
+	}
+	if ( ! $rows ) return null;
+
+	$label  = function_exists( 'dgc_current_nhom' ) ? 'Booking báo & PR' : 'Booking báo & PR';
+	$url    = dgc_sch_url();
+	$offers = array();
+	foreach ( $rows as $r ) {
+		$o = dgc_sch_offer_node( $r, $url, $label );
+		if ( $o ) $offers[] = $o;
+	}
+	if ( ! $offers ) return null;
+
+	return dgc_sch_prune( array(
+		'@type'            => 'Service',
+		'@id'              => $url . '#service',
+		'name'             => $bao ? 'Đăng bài PR trên ' . $bao : dgc_sch_txt( get_the_title() ),
+		'serviceType'      => $label,
+		'url'              => $url,
+		'provider'         => array( '@id' => dgc_sch_id( 'organization' ) ),
+		'areaServed'       => array( '@type' => 'Country', 'name' => 'Việt Nam' ),
+		'offers'           => count( $offers ) === 1 ? $offers[0] : $offers,
+		'mainEntityOfPage' => array( '@id' => $url . '#webpage' ),
+		'termsOfService'   => dgc_sch_terms_url(),
+	) );
+}
+
+/** URL trang dieu khoan (neu co that) - dung cho Service.termsOfService. */
+function dgc_sch_terms_url() {
+	$p = get_page_by_path( 'dieu-khoan-su-dung' );
+	return ( $p && 'publish' === $p->post_status ) ? get_permalink( $p ) : '';
 }
 
 /** Xoa cache khoang gia khi sua/them/xoa 1 dong bang gia. */
@@ -566,7 +692,7 @@ function dgc_sch_breadcrumb() {
 	}
 	return array(
 		'@type'           => 'BreadcrumbList',
-		'@id'             => dgc_sch_url() . '#breadcrumb',
+		'@id'             => dgc_sch_url_paged() . '#breadcrumb',
 		'itemListElement' => $list,
 	);
 }
@@ -633,7 +759,7 @@ function dgc_sch_item_list() {
 	}
 	return array(
 		'@type'           => 'ItemList',
-		'@id'             => dgc_sch_url() . '#itemlist',
+		'@id'             => dgc_sch_url_paged() . '#itemlist',
 		'numberOfItems'   => count( $list ),
 		'itemListOrder'   => 'https://schema.org/ItemListOrderAscending',
 		'itemListElement' => $list,
@@ -667,11 +793,41 @@ function dgc_sch_service() {
 		'areaServed'  => array( '@type' => 'Country', 'name' => 'Việt Nam' ),
 		'category'    => 'SEO off-page',
 		'mainEntityOfPage' => array( '@id' => $url . '#webpage' ),
+		'termsOfService'   => dgc_sch_terms_url(),
+		// Buoc tiep theo ro rang cho ca nguoi dung lan tac tu AI: dat bai o dau.
+		'potentialAction'  => array(
+			'@type'  => 'OrderAction',
+			'name'   => 'Đặt bài',
+			'target' => array(
+				'@type'       => 'EntryPoint',
+				'urlTemplate' => home_url( '/dat-bai/' ),
+				'inLanguage'  => 'vi-VN',
+			),
+		),
 	);
 
 	if ( $is_pillar ) {
 		$agg = dgc_sch_agg_offer( $nhom['slug'] );
 		if ( $agg ) $node['offers'] = $agg;
+
+		// Cac hang muc danh dau "pho bien nhat" - deu HIEN trong bang gia cua chinh trang nay,
+		// nen dua gia cu the vao schema la hop le va tra loi truy van gia truc tiep hon
+		// khoang gia tong. Chan 20 dong de khong phinh JSON.
+		$feat = array();
+		foreach ( dgc_sch_gia( $nhom['slug'] ) as $r ) {
+			if ( empty( $r->meta['noi_bat'] ) ) continue;
+			$o = dgc_sch_offer_node( $r, $url, $nhom['label'] );
+			if ( $o ) $feat[] = $o;
+			if ( count( $feat ) >= 20 ) break;
+		}
+		if ( $feat ) {
+			$node['hasOfferCatalog'] = array(
+				'@type'           => 'OfferCatalog',
+				'@id'             => $url . '#offercatalog',
+				'name'            => 'Hạng mục phổ biến - ' . dgc_sch_txt( get_the_title() ),
+				'itemListElement' => $feat,
+			);
+		}
 	} else {
 		$node['isRelatedTo'] = array( '@id' => home_url( '/' . $nhom['slug'] . '/' ) . '#service' );
 	}
@@ -751,7 +907,7 @@ function dgc_sch_article() {
  * ========================================================================= */
 
 function dgc_sch_graph() {
-	$url   = dgc_sch_url();
+	$url   = dgc_sch_url_paged();
 	$graph = array();
 
 	$graph[] = dgc_sch_organization();
@@ -807,6 +963,7 @@ function dgc_sch_graph() {
 	}
 
 	$service = dgc_sch_service();
+	if ( ! $service ) $service = dgc_sch_outlet_service(); // bai co bang gia 1 dau bao
 	if ( $service ) {
 		$graph[]       = $service;
 		$page['about'] = array( '@id' => $service['@id'] );
@@ -815,6 +972,11 @@ function dgc_sch_graph() {
 
 	$article = dgc_sch_article();
 	if ( $article ) {
+		// Bai co bang gia rieng cua 1 dau bao -> tro 'about' ve dich vu CU THE tren chinh
+		// trang nay, thay vi dich vu chung cua cum (chinh xac hon cho Google/AI).
+		if ( $service && $service['@id'] === $url . '#service' ) {
+			$article['about'] = array( '@id' => $service['@id'] );
+		}
 		$graph[] = $article;
 		if ( ! $main ) $main[] = array( '@id' => $article['@id'] );
 	}
@@ -870,12 +1032,15 @@ function dgc_sch_graph() {
 
 add_action( 'add_meta_boxes', function () {
 	foreach ( array( 'post', 'page', 'dgc_case' ) as $pt ) {
-		add_meta_box( 'dgc_faqs_box', 'FAQ cho schema (Câu hỏi thường gặp)', 'dgc_faqs_box_html', $pt, 'normal', 'default' );
+		add_meta_box( 'dgc_faqs_box', 'SEO & Schema', 'dgc_faqs_box_html', $pt, 'normal', 'default' );
 	}
 } );
 
 function dgc_faqs_box_html( $post ) {
 	wp_nonce_field( 'dgc_faqs_save', 'dgc_faqs_nonce' );
+	// Tieu de SEO + mo ta SEO (inc/seo-meta.php cam vao day de chi co MOT o duy nhat).
+	do_action( 'dgc_seo_box_fields', $post );
+	echo '<p><strong>FAQ cho schema (Câu hỏi thường gặp)</strong></p>';
 	$lines = array();
 	foreach ( dgc_post_faq_items( $post->ID ) as $f ) {
 		$lines[] = $f[0] . ' | ' . $f[1];
@@ -902,6 +1067,8 @@ add_action( 'save_post', function ( $post_id ) {
 	}
 	if ( $out ) update_post_meta( $post_id, 'dgc_faqs', $out );
 	else delete_post_meta( $post_id, 'dgc_faqs' );
+
+	do_action( 'dgc_seo_box_save', $post_id );
 } );
 
 /** Xuat 1 khoi JSON-LD duy nhat trong <head>. */
