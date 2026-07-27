@@ -27,6 +27,7 @@ function dgc_dr_chart_outlets() {
 		'cafebiz.vn'      => array( 'CafeBiz', 'book-bao-cafebiz' ),
 		'webtretho.com'   => array( 'Webtretho', 'book-bao-webtretho' ),
 		'baodautu.vn'     => array( 'Báo Đầu Tư', 'book-bao-bao-dau-tu' ),
+		'laodong.vn'      => array( 'Báo Lao Động', 'book-bao-lao-dong' ),
 	);
 }
 

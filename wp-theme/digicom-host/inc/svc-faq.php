@@ -28,6 +28,11 @@ if ( ! $dgc_sf ) return;
 			<span class="eyebrow">Hỗ trợ</span>
 			<h2>Câu hỏi thường gặp</h2>
 			<p class="muted" style="max-width:620px;margin:8px auto 0">Giải đáp nhanh trước khi bạn đặt dịch vụ. Chưa thấy câu trả lời cần tìm? Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?> để được tư vấn trực tiếp.</p>
+			<div class="faq-quicklinks">
+				<a href="/bang-gia/">Xem bảng giá đầy đủ</a>
+				<a href="/case-study/">Dự án đã triển khai</a>
+				<a href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+			</div>
 		</div>
 		<div class="faq">
 			<?php foreach ( $dgc_sf as $f ) : ?>

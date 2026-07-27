@@ -318,3 +318,34 @@ có cách nào khác.
 Đồng bộ markup: nếu đổi `MARKUP_CHINH`/`MARKUP` trong export-web.py thì phải sửa `dgc_line_markup()`
 trong cpt-gia.php (2 nơi hardcode hằng số 1,03/1,20). Muốn combo hấp dẫn hơn → nâng markup (hướng 2),
 KHÔNG nới ladder mà không nâng markup (sẽ lỗ hoặc bị floor cắt vô hình = quảng cáo sai).
+
+## 2 CẠM BẪY MỚI của routine tuần (chốt 2026-07-27, đã dính cả 2)
+
+### 1. `fix-dau.php` làm hỏng chữ ĐÃ CÓ DẤU nếu chuỗi lưu dạng TỔ HỢP (NFD)
+
+Tiếng Việt có 2 cách lưu: **dựng sẵn** (`ủ` = 1 ký tự) và **tổ hợp** (`ủ` = `u` + dấu hỏi rời).
+Bộ lọc "bỏ qua dòng đã có dấu" cũ CHỈ bắt ký tự dựng sẵn -> chuỗi tổ hợp lọt qua, `strtr` khớp
+phần ASCII (`chu` trong `chủ`) và thay bằng `chủ`, để lại dấu mồ côi -> **`Trang chủ̉`**.
+Đã hỏng vi_tri + yeu_cau của 8 post (4366..4379), phải khôi phục từ snapshot backup.
+
+**Chốt chặn đã cài:** `fix-dau.php` bỏ qua MỌI giá trị chứa ký tự ngoài ASCII
+(`preg_match('/[^\x00-\x7F]/', $v)`) - đã có dấu ở bất kỳ dạng nào thì không đụng tới.
+**Bài học chung:** đừng bao giờ dùng `str_replace`/`strtr` map "không dấu -> có dấu" trên dữ liệu
+hỗn hợp mà không chuẩn hoá Unicode trước; và LUÔN chạy `dry` + soi mẫu output trước khi ghi thật.
+
+### 2. Routine HỒI SINH các dòng đã bị draft có chủ đích
+
+Bộ lọc chất lượng 2026-07-19 đã draft 326 dòng (link chết / DR<=5) và 2026-07-20 draft 9 dòng
+gov/edu. Nhưng NCC vẫn rao bán các domain đó -> vòng export -> import kế tiếp thấy "chưa có trên
+web" và **tạo lại bản ghi MỚI ở trạng thái publish**, xoá sạch công dọn dẹp.
+
+**Quy tắc bắt buộc khi sinh payload `new`:** đối chiếu với live ở trạng thái **any** (không phải
+chỉ publish). Nếu đầu báo/site đó CHỈ tồn tại dưới dạng draft -> **KHÔNG tạo mới**, ghi vào báo
+cáo để Hiếu duyệt tay. Tuần 2026-07-27 đã chặn 12 dòng theo quy tắc này.
+
+### 3. Nhớ kiểm chất lượng domain MỚI trước khi publish
+Domain lần đầu xuất hiện phải qua tối thiểu **DNS + HTTP** (mục "Lọc chất lượng domain" ở trên)
+trước khi lên web. 2026-07-27 phát hiện `vietnamfdi.com.vn` (Fame rao 850.000) không phân giải DNS
+-> đã chặn vĩnh viễn qua `DA_DUNG_BAN`.
+**Đồng thời sửa lỗi `DA_DUNG_BAN`**: cũ so khớp `d.split("/")[0]` nên `dau_bao` dạng URL đầy đủ
+bị cắt còn `"https:"` và lọt bộ lọc. Giờ so khớp chuỗi con trên toàn chuỗi (giống `is_gov_edu()`).

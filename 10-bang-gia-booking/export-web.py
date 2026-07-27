@@ -142,6 +142,9 @@ DA_DUNG_BAN = {
     "thitruongtaichinh.kinhtedothi.vn",
     "tieudung.kinhtedothi.vn",
     "giaothonghanoi.kinhtedothi.vn",
+    # 2026-07-27 (routine tuan): Fame Media rao ban nhung ten mien KHONG phan giai DNS
+    # (kiem 2 resolver, ke ca 8.8.8.8) -> DEAD_DOMAIN theo bo loc chat luong 2026-07-19.
+    "vietnamfdi.com.vn",
 }
 
 
@@ -174,7 +177,10 @@ def is_khong_ro_noi_dang(r):
     Ngoai le: booking-tv (kenh VTV1/HTV7... la noi dang cu the du khong co dau cham).
     Khi NCC cong bo list site (dien goi_sites) thi dong do duoc xuat lai."""
     d = fold(r["dau_bao"])
-    if d.split("/")[0].strip() in DA_DUNG_BAN:
+    # LUU Y: dau_bao co the o dang URL day du ("https://vietnamfdi.com.vn/") -> d.split("/")[0]
+    # se ra "https:" va LOT bo loc (dung loi da dinh voi .gov.vn 2026-07-20). Vi vay kiem tra
+    # DA_DUNG_BAN theo CHUOI CON tren toan chuoi, khong dua vao split.
+    if any(x in d for x in DA_DUNG_BAN):
         return True
     # Domain cua chinh NCC -> KHONG BAO GIO len web, du co goi_sites: lo Digicom lay hang
     # o dau (rule "an danh tinh nha cung cap"). Phat hien 2026-07-20: 3 dong entity

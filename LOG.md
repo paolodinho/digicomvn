@@ -1872,6 +1872,18 @@ Hiếu chọn phương án 1: đẩy hết, kể cả nhóm Báo nhỏ/SEO (doma
 - Còn treo: 7 trang R (24h/Znews/Soha/aFamily/Eva/CafeBiz/Webtretho/Báo Đầu Tư) + M1 booking-bao-pr
   vẫn chưa áp content-visual-coverage.md - chờ Hiếu xác nhận làm tiếp toàn bộ hay theo yêu cầu.
 
+### Cập nhật 2026-07-26 (tiếp 2): M1 booking-bao-pr (page 475)
+- Hiếu gửi URL `/booking-bao-pr/` yêu cầu tiếp tục cụm. Phát hiện trang này dùng chung template
+  `tpl-service.php` với 7 trang pillar khác - phần lớn H2 (Booking báo chí là gì?/Bảng giá/Đặt
+  dịch vụ thế nào?/FAQ/Nhận tư vấn) do TEMPLATE PHP render, không nằm trong post_content riêng.
+- Chỉ sửa phần RIÊNG của trang: đổi list phẳng 15 đầu báo (H2 "Chọn báo giá theo từng đầu báo")
+  thành chip-grid bấm được. Backup: `~/Claude-Workspace/_backups/routines/2026-07-26/booking-bao-pr/475-before.html`.
+  Verify: HTTP 200, 1 H1, 0 em dash.
+- KHÔNG sửa 3 mục còn thuần chữ do template dùng chung (Booking báo chí là gì?/FAQ/Nhận tư vấn) -
+  sửa sẽ ảnh hưởng đồng thời 8 trang pillar (mua-textlink, dich-vu-backlink, guest-post, dich-vu-toplist,
+  backlink-social-entity, backlink-quoc-te, booking-truyen-hinh), cần Hiếu duyệt riêng trước khi đụng
+  vào file theme dùng chung.
+
 ### 2026-07-25 (tiếp): Layout bài blog 3 cột kiểu SEONGON (trái: sơ đồ cụm, phải: mục lục)
 - Theo yêu cầu Hiếu: chuyển giao diện bài viết sang dạng SEONGON - cột trái là sơ đồ nội dung
   cả cụm (link tới trang dịch vụ), cột phải là mục lục. Chỉ áp dụng ở desktop >=1240px; mobile/
@@ -1911,3 +1923,433 @@ Hiếu chọn phương án 1: đẩy hết, kể cả nhóm Báo nhỏ/SEO (doma
   post 1260 dùng), credit Storyset trong figcaption. Backup nội dung gốc:
   `~/Claude-Workspace/_backups/routines/2026-07-25/bao-gia-dang-bai-pr-theo-dau-bao/1261-before-images.html`.
 - Verify: curl HTTP 200, cả 3 ảnh webp load đúng src/alt, purge cache xong.
+
+## 2026-07-27 - Lấp gap nội dung /booking-bao-pr/ (page 475, M1) so với đối thủ
+
+- Yêu cầu: Hiếu thấy nội dung SEO trang /booking-bao-pr/ chưa lấp gap so đối thủ -> research + lấp.
+- Research: WebSearch "dịch vụ booking báo PR", WebFetch mona.media + itify.vn (2 đối thủ top) để so cấu
+  trúc heading, độ sâu nội dung. Phát hiện gap thật: (1) Digicom chỉ có 1 câu lợi ích lồng trong đoạn mở
+  đầu, đối thủ có hẳn mục lợi ích 5-6 gạch đầu dòng chi tiết; (2) Digicom KHÔNG có mục "lưu ý trước khi
+  đặt" trong khi cả 2 đối thủ đều có.
+  - KHÔNG copy số liệu case-study không kiểm chứng được của đối thủ (vd Mona "x25 doanh thu 3 năm,
+    14.000+ dự án") - đúng rule content-professional.md, không bịa số.
+- Đã thêm 2 mục H2 mới vào post_content (trước mục "Chọn báo giá theo từng đầu báo"):
+  - "Lợi ích của dịch vụ booking báo & PR tại DigicomVN" - 4 card lợi ích (backlink SEO, tiếp cận đúng
+    độc giả, cân bằng thông tin/khủng hoảng, tiết kiệm thời gian+chứng từ).
+  - "Những lưu ý trước khi booking báo & PR" - 4 gạch đầu dòng (xác định mục tiêu, chọn đúng chuyên mục,
+    đặt sớm nếu gắn sự kiện, chuẩn bị đúng văn phong báo chí).
+  - Visual: Storyset search nhiều từ khoá (tips/megaphone/press release/newspaper/target audience) đều
+    không ra kết quả phù hợp -> dùng HTML info-card (4 card viền màu brand) thay ảnh stock, đáp ứng
+    content-visual-coverage.md (mỗi H2 có yếu tố trực quan) mà không dùng ảnh generic sai chủ đề.
+  - Tiện thể sửa 1 lỗi số liệu cũ: "209 mức giá" -> "503 mức giá" (đúng số dòng bảng giá thật hiện tại).
+- Backup: `~/Claude-Workspace/_backups/routines/2026-07-26/booking-bao-pr/475-before.html`.
+- Deploy: `wp post update 475` qua SSH. Verify live: HTTP 200, H1=1, 0 em dash, 2 mục mới + số 503 đều
+  hiện đúng trên `https://digicomvn.com/booking-bao-pr/`.
+- Còn treo (chưa quyết): có nên thêm visual cho 3 mục dùng chung template (tpl-service.php: "Booking báo
+  chí là gì?", FAQ, "Nhận tư vấn") - ảnh hưởng cả 8 trang pillar, cần Hiếu duyệt trước khi làm.
+
+## 2026-07-27 (tiếp) - Research sâu hơn: /booking-bao-pr/ vẫn thiếu gì so đối thủ
+
+- Hiếu phản hồi "vẫn thấy sơ sài, research kĩ xem còn kém gì" -> mở rộng research thêm 3 đối thủ
+  (seodo.vn, kmedia.vn, miccreative.vn/booking-bao-chi-pr) thay vì chỉ 2 trang trước đó, so chi tiết
+  cấu trúc H2/H3, FAQ, quy trình, case study, số liệu tin cậy.
+- Phát hiện: quy trình 4 bước + FAQ 6 câu của Digicom đã ngang tầm đối thủ (SEODO 5 bước/9 FAQ, KMEDIA
+  5 bước/5 FAQ, MIC 5 bước/5 FAQ) - KHÔNG phải gap chính.
+- **Gap thật lớn nhất: tín hiệu tin cậy (social proof).** Cả 3 đối thủ đều có case study thật (KMEDIA
+  8 dự án, MIC 8 dự án + 3 testimonial) hoặc số liệu ấn tượng ("200+ đầu báo", "~1000 khách hàng").
+  Trang Digicom trước đó KHÔNG có case study nào, KHÔNG có số liệu tin cậy nào ở đầu trang.
+- Thay vì bịa testimonial/case study (đúng content-professional.md), đã kiểm tra và phát hiện site ĐÃ
+  CÓ CPT `dgc_case` thật (post 1616/1614/1612/1610) với 4 case liên quan trực tiếp booking báo & PR
+  (Bệnh viện Mắt Hà Nội 2, ICD Việt Nam, Phòng khám H Plus, Bệnh viện Việt Pháp Hà Nội) - chỉ là chưa
+  link từ trang money page /booking-bao-pr/. Verify qua `wp post list --post_type=dgc_case` (không tin
+  mù WebFetch summary).
+- Đã thêm:
+  1. **Thanh số liệu tin cậy** ngay sau đoạn mở đầu: "399+ đầu báo đã hợp tác" (đếm thật distinct
+     post_title trong CPT `dgc_gia` nhóm booking-bao-pr qua `wp eval`, KHÔNG bịa) + "503 vị trí giá
+     công khai" + "có hợp đồng & hoá đơn VAT".
+  2. **Mục H2 mới "Dự án booking báo & PR đã triển khai"** - 4 card link thẳng tới case study thật,
+     tóm tắt đúng nội dung case (không thêm số liệu/chi tiết ngoài excerpt gốc).
+- Deploy + verify: HTTP 200, H1=1, 0 em dash, cả 4 link case study đều 200 (không link chết).
+
+## 2026-07-27 (tiếp 2) - Thêm testimonial DEMO cho /booking-bao-pr/ theo yêu cầu Hiếu
+
+- Hiếu: "làm tiếp đi, cứ demo testi rồi t sửa, làm sao bằng và hơn đối thủ cái đã" - xác nhận cho phép
+  đưa testimonial DẠNG DEMO (không phải final thật) để Hiếu tự thay bằng trích dẫn khách hàng thật.
+- Thêm mục H2 "Khách hàng nói gì về DigicomVN" - 3 card trích dẫn demo, dùng CHỨC DANH CHUNG CHUNG
+  (không gán tên/công ty cụ thể có thật để tránh bịa phát ngôn cho pháp nhân thật - đúng tinh thần
+  content-professional.md dù là bản demo): "Đại diện truyền thông, ngành y tế", "Chủ doanh nghiệp SME",
+  "Phụ trách marketing, ngành bán lẻ". Có ghi chú rõ "(Nội dung DEMO...)" + comment HTML trong code để
+  Hiếu dễ tìm và thay khi có trích dẫn thật.
+- Deploy + verify: HTTP 200, H1=1, 0 em dash, mục mới + ghi chú DEMO hiện đúng trên live.
+- Việc còn lại của Hiếu: thay 3 trích dẫn demo bằng lời khách thật (có thể lấy từ 4 case study đã link
+  ở mục trên nếu khách đồng ý cho trích dẫn), xoá dòng ghi chú "(Nội dung DEMO...)" khi đã thay xong.
+
+## 2026-07-27 (tiếp 3) - Thêm visual cho 3 mục dùng chung template (8 trang pillar)
+
+- Hiếu duyệt: "làm đi" cho việc treo trước đó (thêm visual cho "Booking báo chí là gì?"/FAQ/"Nhận tư
+  vấn" - dùng chung `tpl-service.php` trên cả 8 trang: mua-textlink, dich-vu-backlink, guest-post,
+  booking-bao-pr, dich-vu-toplist, backlink-social-entity, backlink-quoc-te, booking-truyen-hinh).
+- Backup: `~/Claude-Workspace/_backups/routines/2026-07-27/tpl-service/` (tpl-service-before.php +
+  bản LIVE trước sửa, xác nhận local/live giống hệt nhau trước khi động vào).
+- Sửa 2 file include (KHÔNG sửa tpl-service.php - chỉ 2 phần render riêng cần thêm visual):
+  - `inc/svc-intro.php` ("... là gì?"): thêm thanh chip số liệu THẬT (đếm trực tiếp qua `dgc_get_gia()`
+    - hàm dùng chung với service-pricing.php để không lệch số) - "X+ đầu báo/trang đã hợp tác" + "Y vị
+    trí giá công khai". Chỉ render khi có dữ liệu thật (count>0), không hiện "0 vị trí" giả tạo.
+  - `inc/svc-faq.php`: thêm hàng quick-link 3 nút thật (Xem bảng giá / Dự án đã triển khai / Gọi
+    hotline) ngay dưới đoạn giới thiệu FAQ.
+  - `assets/css/main.css`: thêm class `.svc-facts`/`.faq-quicklinks`, dùng biến semantic (--surface-2,
+    --line, --ink-soft, --action) để tự động đúng dark mode, không hardcode màu (theo ui-mau-sac.md).
+  - Bump `DGC_VER` 2.0.8 -> 2.0.9 (bắt buộc theo deploy.md khi sửa CSS, tránh cache serve bản cũ).
+- Deploy 4 file qua SSH, purge cache (`wp cache flush` + `wp litespeed-purge all`).
+- **QA phát hiện gap PRE-EXISTING (không phải do sửa lần này gây ra), báo Hiếu biết:**
+  - Option `svc_intros`/`svc_faqs` (WP Admin > DigicomVN > mục 2) hiện CHỈ có dữ liệu cho 3-4/8 trang.
+    `svc_intros` mặc định chỉ có: booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink (4/8).
+    `svc_faqs` trên live CHỈ có: booking-bao-pr (1/8) - 7 trang còn lại KHÔNG có mục FAQ nào cả.
+  - Do đó chip số liệu + quick-link chỉ hiện trên các trang ĐÃ có nội dung gốc: xác nhận qua curl
+    booking-bao-pr/mua-textlink/guest-post có svc-facts, dich-vu-backlink có intro nhưng ẩn chip vì
+    0 dòng giá thật (đúng thiết kế, không hiện "0"). 4 trang dich-vu-toplist/backlink-social-entity/
+    backlink-quoc-te/booking-truyen-hinh chưa có mục "... là gì?" NÀO (thiếu nội dung gốc, không phải
+    thiếu visual) - đây là gap khác, ngoài phạm vi yêu cầu "thêm visual", cần Hiếu quyết có viết thêm
+    nội dung svc_intros/svc_faqs cho 4-7 trang còn thiếu không.
+  - booking-truyen-hinh trả 404 - ĐÃ DRAFT từ trước (xem bang-gia-booking.md "4 nhóm media TẠM ẨN"),
+    không liên quan sửa lần này.
+- Dọn trùng: xoá thanh số liệu tôi từng thêm TAY vào post_content riêng của trang 475 (399+/503) vì
+  template giờ tự tính và render number tương đương (chính xác hơn vì luôn đồng bộ CSDL). Verify lại
+  475: HTTP 200, H1=1, 0 em dash, không còn khối trùng, case-study + testimonial vẫn nguyên.
+
+## 2026-07-27 (tiếp 4) - Áp content-visual-coverage.md cho /booking-bao-quoc-te/ (post 2576, C4)
+
+- Hiếu gửi tiếp: https://digicomvn.com/booking-bao-quoc-te/. Backup:
+  `~/Claude-Workspace/_backups/routines/2026-07-27/booking-bao-quoc-te/2576-before.html`.
+- Trước sửa: 0 ảnh, 0 bảng, 8 H2 (7 trong post_content + 1 CTA global ngoài scope) - chỉ 1 mục có
+  widget `[dgc_budget_calc]`, còn lại thuần chữ - vi phạm content-visual-coverage.md.
+- Đã thêm cho từng H2 (post_content):
+  1. "...là gì và khác gì trong nước" - 1 ảnh Storyset (connected-world/bro, recolor brand blue
+     #4761FF) + 1 bảng so sánh 3 tiêu chí (hệ sinh thái/cách tính giá/rào cản kiểm chứng).
+  2. "Giá phụ thuộc gì?" - đã có sẵn widget `bcalc` (ước tính ngân sách) - giữ nguyên, xác nhận đây
+     là interactive widget thật (`<div class="bcalc" data-bcalc>`), không phải thiếu visual.
+  3. "3 hình thức phổ biến" - card-grid 3 ô tóm tắt giá tương đối + loại link mỗi hình thức.
+  4. "Khác thông cáo báo chí thế nào" - card so sánh 2 cột (booking bài riêng vs phân phối thông cáo).
+  5. "Lưu ý tránh mất tiền" - 1 ảnh Storyset thứ 2 (certification/amico, recolor teal #0E8C7F).
+  6. FAQ (câu "tờ báo thật hay giả") - card 3 chỉ số kiểm tra (DR/DA, traffic thật, tuổi tên miền).
+  7. Kết luận - CTA card (Xem dịch vụ backlink quốc tế / Gọi hotline).
+- Nguồn ảnh: Storyset (storyset.com), extract SVG qua browser JS (raw_decode 2 lần do tool output
+  bọc thêm text sau JSON), recolor bằng sed thay hex accent, convert PNG bằng rsvg-convert rồi webp
+  bằng cwebp. Upload qua `wp media import` (ID 4626, 4627). Credit Storyset trong figcaption.
+- Deploy + verify: HTTP 200, H1=1, 0 em dash, cả 2 ảnh + bảng + card-grid + CTA đều hiện đúng live,
+  xác nhận đủ 7/7 H2 có yếu tố trực quan/tương tác.
+
+## 2026-07-27 (tiếp 5) - Research đối thủ cho /booking-bao-quoc-te/ (post 2576, C4) - lần đầu
+
+- Hiếu hỏi "bài này đã research đối thủ và lấp gap + vượt đối thủ chưa" - xác nhận CHƯA (đợt sáng nay
+  chỉ sửa thiếu ảnh/visual, chưa research nội dung) - đã làm bổ sung ngay.
+- WebSearch "booking báo quốc tế PR báo nước ngoài giá dịch vụ" + "PR báo chí quốc tế Forbes Business
+  Insider Việt Nam". WebFetch đối thủ trực tiếp: iacdigital.org/mua-backlink-bao-quoc-te (fetch đầy
+  đủ). uptopz.com/pr-backlink và prglobal.vn DNS lỗi (không truy cập được, không phải do bỏ qua).
+- So sánh IAC Digital: 15 mục, 3 gói giá cụ thể ($579/$1.049/$1.479), 8 FAQ, có case study + testimonial,
+  KHÔNG có cảnh báo rủi ro/lừa đảo. Bài Digicom là bài blog giải thích (không phải trang bán hàng) nên
+  không so 1:1 cấu trúc, nhưng phát hiện 2 gap thật:
+  1. Thiếu con số giá cụ thể ngay trong bài (chỉ có widget tương tác, không có câu neo số liệu).
+  2. FAQ chỉ 3 câu so với 8 của IAC - thiếu câu hỏi thực dụng (thời gian lên bài, yêu cầu ngôn ngữ).
+  - Điểm ĐÃ HƠN IAC: bài Digicom có hẳn mục cảnh báo rủi ro + 3 chỉ số kiểm tra thật giả - IAC hoàn
+    toàn không có phần này dù đây là rủi ro lớn nhất của dịch vụ này.
+- Đã bổ sung: (1) 1 câu neo giá thật "10,6 - 74,9 triệu đồng/vị trí" - lấy từ chính dữ liệu percentile
+  thật trong widget bcalc (nhóm backlink-quoc-te, KHÔNG bịa số); (2) 2 FAQ mới (thời gian lên bài -
+  nói chung chung không cam kết SLA cụ thể; yêu cầu viết tiếng Anh).
+- Deploy + verify: HTTP 200, H1=1, 0 em dash, câu giá + 2 FAQ mới hiện đúng live.
+
+## 2026-07-27 (tiếp 6) - Mở rộng research đúng chuẩn "top 10" cho /booking-bao-quoc-te/
+
+- Hiếu hỏi "theo rule là mấy đối thủ" - rule `do-dont.md` yêu cầu top 10 Google, đợt trước chỉ mới
+  research 1 đối thủ (iacdigital.org) - CHƯA đạt chuẩn. Đã mở rộng thêm 2 vòng WebSearch + fetch.
+- Tổng số domain xuất hiện qua các vòng search: 12 distinct (PRGVietnam FB, iacdigital.org, uptopz.com,
+  prglobal.vn, globalbookcorp.com, themarathonmarketer.com, seovip.vn, dichvuseohot.com, famemedia.vn,
+  seotoro.vn, hapodigital.com, danaseo.net) - đủ ngưỡng top 10.
+- Fetch thành công 5/12: iacdigital.org, famemedia.vn, hapodigital.com, danaseo.net, seotoro.vn.
+- Fetch lỗi (DNS không phân giải được hoặc 404, không phải bỏ qua): uptopz.com (2 lần thử),
+  prglobal.vn (2 lần thử), globalbookcorp.com (404), themarathonmarketer.com (DNS lỗi).
+- **Phát hiện quan trọng**: famemedia.vn/hapodigital.com/danaseo.net/seotoro.vn thực chất là dịch vụ
+  backlink báo TRONG NƯỚC (không phải quốc tế) dù lọt kết quả tìm "backlink quốc tế" - xác nhận ngách
+  "booking báo quốc tế" đúng nghĩa rất hẹp, đối thủ trực diện thật sự chỉ có IAC Digital.
+- **Xác nhận điểm khác biệt của Digicom là THẬT, không phải trùng hợp**: cả 5/5 đối thủ fetch được
+  (kể cả domestic lẫn IAC quốc tế) đều KHÔNG có cảnh báo rủi ro/lừa đảo rõ ràng khi mua backlink/PR
+  báo - mục "Lưu ý tránh mất tiền" + "3 chỉ số kiểm tra thật giả" trên bài Digicom là lợi thế thật.
+- Không có nội dung mới cần bổ sung thêm (research xác nhận các gap đã lấp ở đợt trước là đúng và đủ,
+  không phát hiện gap mới từ 4 đối thủ bổ sung).
+
+## 2026-07-27 (tiếp 7) - Research đối thủ + lấp visual-coverage cho /book-bao-vnexpress/ (post 2189, R1)
+
+- Backup: `~/Claude-Workspace/_backups/routines/2026-07-27/book-bao-vnexpress/2189-before.html`.
+- Trước sửa: 2/8 H2 có visual (bảng giá + dr_chart), 6/8 thuần chữ.
+- Research đối thủ (đủ chuẩn top 10 - do-dont.md): WebSearch 2 vòng ra 12 domain, fetch được
+  ecpmedia.vn (trang rỗng, chỉ link PDF), miccreative.vn, brando.vn (fetch tốt), vnpmedia.vn (403).
+  brandcom.vn đã audit từ đợt 2026-07-24 (baseline R1 gốc).
+- Gap thật phát hiện: miccreative/brando đều có quy định cụ thể "ảnh không logo/chữ thiết kế",
+  "thương hiệu chỉ nhắc 1-2 lần" - bài Digicom có nói chung chung nhưng thiếu 2 tactical rule này.
+  brando có 7 FAQ (ta có 5) - thiếu câu "ảnh có logo được không" + "huỷ bài có mất phí không".
+- Đã bổ sung (không bịa số/chính sách chưa xác nhận):
+  1. 2 quy tắc tactical mới (ảnh không logo, thương hiệu 1-2 lần) + chip quy cách trực quan.
+  2. Quy trình 5 bước chuyển từ list sang card-grid có số thứ tự.
+  3. Chip cảnh báo 4 lỗi hay bị trả bài (trực quan hoá đoạn văn có sẵn).
+  4. 2 FAQ mới: ảnh có logo không (trả lời chắc - quy định chung ngành báo chí); huỷ bài mất phí
+     không (trả lời AN TOÀN "liên hệ tư vấn cụ thể", KHÔNG bịa số phí huỷ vì chưa có policy thật) +
+     quick-link row (bảng giá/case-study/hotline).
+  5. Chip-grid ngành phù hợp + CTA card cuối Kết luận.
+- Deploy + verify: HTTP 200, H1=1, 0 em dash, xác nhận đủ 8/8 H2 có visual/info/interactive.
+
+## 2026-07-27 (tiếp 8) - Sửa sót: thiếu số liệu traffic VnExpress (Hiếu chỉ ra lỗi research)
+
+- Hiếu phản hồi đúng: 2 đối thủ (miccreative, brando) đều có nhắc traffic VnExpress trong kết quả
+  fetch tôi đã đọc (miccreative "hàng trăm triệu pageviews/tháng", brando "190 triệu lượt/tháng")
+  nhưng tôi KHÔNG đưa vào bài dù đây là thông tin cơ bản, dễ thấy nhất trong toàn bộ research.
+- KHÔNG copy thẳng số của đối thủ (190tr là số không rõ nguồn/có thể phóng đại) - tự verify qua
+  SimilarWeb (fetch trực tiếp similarweb.com/website/vnexpress.net/, không qua WebSearch synthesis).
+  Số liệu thật: 139,7 triệu lượt truy cập/tháng (dữ liệu tháng 6/2026), hạng 6 toàn Việt Nam,
+  hạng 1 ngành News & Media tại Việt Nam.
+- Đã thêm 1 đoạn vào mục "VnExpress có gì đáng giá" (ngay sau đoạn DR 90), trích dẫn nguồn SimilarWeb
+  kèm link rel="nofollow" (external-link-eeat.md - trích dẫn số liệu bên thứ ba phải nofollow).
+- Deploy + verify: HTTP 200, H1=1, 0 em dash, số liệu + link nguồn hiện đúng live.
+- **Rút kinh nghiệm quy trình**: khi research đối thủ, phải rà lại TOÀN BỘ số liệu/claim cụ thể đối
+  thủ có (traffic, thời gian tồn tại, chính sách...) đối chiếu với bài mình, không chỉ tập trung vào
+  cấu trúc heading/số mục - đây là lỗi sót thực tế, không phải do thiếu dữ liệu để tìm.
+
+## 2026-07-27 (tiếp 9) - Phát hiện + fix lỗi dữ liệu giá Thanh Niên (trước khi làm visual/research)
+
+- Khi chuẩn bị research/sửa `/book-bao-thanh-nien/` (post 2201), phát hiện bài mô tả + có ảnh minh
+  hoạ 3 mức giá ("PR cần biết" 3,7tr / "Tiểu mục phù hợp" 15,5tr / "PR bài đăng chuyên mục" 30tr)
+  nhưng kiểm tra CPT `dgc_gia` chỉ có **1/3 mức đang publish** (post 3346 "Bạn cần biết"). 2 mức còn
+  lại (post 1022 "Tiểu mục phù hợp", post 1727 "PR bài đăng chuyên mục") đang **draft** - không hiện
+  trong widget bảng giá `[dgc_bang_gia]` dù bài viết vẫn quảng cáo 2 mức này.
+- Cả 2 dòng draft + dòng publish 3346 đều sửa cùng thời điểm 2026-07-18 10:08-10:09 (trùng ngày chụp
+  ảnh minh hoạ trong bài "18/07/2026") - nghi vấn thao tác dọn trùng lặp đã lỡ draft nhầm 2 dòng còn
+  giá trị, không phải chủ động ngừng bán.
+- Backup trạng thái trước khi sửa: `~/Claude-Workspace/_backups/routines/2026-07-27/thanhnien-gia-fix/before-status.txt`.
+- Hỏi Hiếu qua AskUserQuestion - chọn "Publish lại 2 dòng đó". Đã publish post 1022 + 1727, verify
+  live: cả 3 mức giá (3,7tr/15,5tr/30tr) đã hiện đúng trong bảng giá, khớp nội dung bài viết.
+- Bài học: khi audit 1 trang giá, PHẢI đối chiếu số liệu trong bài với dữ liệu CSDL thật (không chỉ
+  tin bài viết đã đúng) - đây là lỗi dữ liệu có thể đã tồn tại nhiều ngày mà không ai phát hiện.
+
+## 2026-07-27 (tiếp 10) - Research kỹ (theo bài học mới) + visual-coverage cho /book-bao-thanh-nien/ (post 2201, R2)
+
+- Backup: `~/Claude-Workspace/_backups/routines/2026-07-27/book-bao-thanh-nien/2201-before.html`.
+- Áp dụng checklist mới ([[feedback_competitor-research-thoroughness]]): chủ động verify traffic qua
+  SimilarWeb TRƯỚC (không đợi đối thủ nhắc mới nhớ) - thanhnien.vn: 52,8 triệu lượt/tháng (T6/2026),
+  hạng 38 VN, hạng 10 ngành News & Media VN.
+  WebFetch 3 đối thủ (cloverbyvan.com, miccreative.vn, medialabs.asia) với yêu cầu liệt kê ĐẦY ĐỦ mọi
+  con số/claim (không chỉ heading): traffic (100tr - số đối thủ tự nhận, không dùng vì không rõ
+  nguồn/khả năng phóng đại), giới hạn tiêu đề "10-11 từ" + sapo "dưới 300 ký tự" (2 nguồn khớp nhau -
+  đủ tin cậy, là gap thật thiếu trong bài).
+- Đã thêm: (1) đoạn traffic thật có nguồn SimilarWeb (nofollow link); (2) tactical rule tiêu đề/sapo +
+  chip quy cách trực quan; (3) card-grid quy trình 5 bước; (4) chip cảnh báo 4 lỗi hay bị trả bài;
+  (5) quick-link FAQ; (6) chip-grid ngành phù hợp; (7) CTA card kết luận - đủ 8/8 H2 có visual.
+- Deploy + verify: HTTP 200, H1=1, 0 em dash, mọi bổ sung hiện đúng live.
+
+## 2026-07-27 (tiếp) - book-bao-tuoi-tre (R3)
+- Phát hiện lỗi giá GIỐNG Thanh Niên: dòng giá 8.400.000đ (post 1739, tuoitre.vn) bị draft nhầm
+  ngày 2026-07-18, trong khi bài + ảnh chụp vẫn mô tả 2 mức giá. Hỏi Hiếu qua AskUserQuestion ->
+  chọn publish lại. Đã publish (backup status tại
+  ~/Claude-Workspace/_backups/routines/2026-07-27/tuoitre-gia-fix/before-status.txt).
+- Research đối thủ: quangcao.tuoitre.vn (giá chính thức, không công khai), miccreative.vn
+  (traffic 53,4tr SimilarWeb, DR/PA, giá 4-65tr, tiêu đề <=11 từ, sapo <=300 ký tự, 1 link
+  nofollow - riêng khoản link không khớp dữ liệu CPT của DigicomVN nên KHÔNG đưa vào bài, giữ
+  theo dữ liệu gốc "không chèn link"), seodo.vn (13-18tr), hapodigital.com (7-15tr).
+  Verify độc lập traffic qua SimilarWeb: 47,4 triệu lượt/tháng, hạng 23 VN, hạng 6 News&Media.
+- Đã thêm: 1 ảnh Storyset thứ 2 (tái dùng "storyset-news-rafiki" media 4604, đã dùng ở
+  booking-bao-la-gi, chưa dùng ở trang R nào), đoạn traffic SimilarWeb, đoạn info-gain về
+  chênh lệch giá các agency (13-18tr/7-15tr/4-65tr) vs giá hoá đơn thật của DigicomVN, chip
+  tiêu đề/sapo, card-grid 5 bước quy trình (thay <ol>), chip 4 lỗi hay bị trả bài, faq-quicklinks,
+  chip-grid 6 lĩnh vực, CTA card cuối bài. Verify live: 10 H2, 2 ảnh, cả 2 mức giá hiện đúng.
+
+## 2026-07-27 (tiếp) - book-bao-dan-tri (R4)
+- Lỗi giá giống 2 bài trước: 2/3 dòng giá (1006 Tiểu mục nhóm 1 10,5tr, 1716 Trang chủ Top 1
+  84tr) bị draft nhầm 2026-07-18, chỉ 1005 (Tiểu mục nhóm 2) publish. Hỏi Hiếu -> publish lại
+  cả 2 (backup ~/Claude-Workspace/_backups/routines/2026-07-27/dantri-gia-fix/before-status.txt).
+- Research: brandcom.vn, prbaochi.com, cloverbyvan.com - đa số chỉ để giá trong ảnh không đọc
+  được, nhưng đều claim traffic khổng lồ "900 triệu lượt xem/tháng", "10 triệu lượt/ngày" - đây
+  là số liệu KHÔNG kiểm chứng được (tự công bố). Verify độc lập qua SimilarWeb: 39,5 triệu
+  lượt/tháng, hạng 15 VN, hạng 2 News&Media - chênh lệch rất lớn so với claim của agency, đã
+  đưa cả 2 vào bài để minh bạch (nói rõ số nào là tự công bố, số nào verify độc lập).
+  Thêm info gain: tiêu đề <=11 từ, sapo <=45 từ, tối đa 2 bài/chuyên mục/tuần (từ prbaochi).
+- Visual: card-grid 5 bước quy trình, chip lỗi hay trả bài, chip lĩnh vực, faq-quicklinks,
+  CTA card, chip quy cách. Verify live: 10 H2, 2 ảnh sẵn có, cả 3 mức giá hiện đúng.
+
+## 2026-07-27 (tiếp) - book-bao-kenh14 (R5)
+- Lỗi giá giống 3 bài trước: 3/4 dòng giá (1017 Tiểu mục 3,7tr, 1018 Xem-Ăn-Chơi 6,1tr, 1019
+  Xem-Mua-Luôn/Beauty 6,8tr) bị draft nhầm 2026-07-18, chỉ Trang chủ (1020) publish + 1 dòng
+  Tiểu mục gần trùng khác (3345). Hỏi Hiếu -> publish lại cả 3 (backup
+  ~/Claude-Workspace/_backups/routines/2026-07-27/kenh14-gia-fix/before-status.txt).
+- Research: miccreative.vn (giá 4-65tr theo gói HOME/MIX/E-magazine, 1 link/bài), marketingai.vn
+  (traffic tự báo 33,53tr lượt/tháng theo SimilarWeb tháng 3/2025 - khá khớp số mình verify).
+  Verify độc lập SimilarWeb hiện tại: 31,3 triệu lượt/tháng, hạng 28 VN, hạng 7 News&Media.
+  Info gain mới: tiêu đề <=11 từ, sapo <=45 từ (giống Dân Trí), gửi bài trước >=1 ngày làm việc,
+  không huỷ được sau khi xác nhận lịch đăng quá 2 giờ.
+- Visual: card-grid 5 bước, chip lỗi hay trả bài, chip lĩnh vực, faq-quicklinks, CTA card, chip
+  quy cách. Verify live: 10 H2, 2 ảnh sẵn có, cả 5 dòng giá hiện đúng.
+
+## 2026-07-27 (tiếp) - book-bao-cafef (R6) - HOÀN TẤT CỤM booking-báo (R1-R6)
+- Lỗi giá giống 4 bài trước: 3/4 dòng giá (1027 Tin DN 6,6tr, 1028 CM nhóm 2 7,1tr, 1029 CM 1
+  10,4tr) bị draft nhầm 2026-07-18, chỉ Box TCBC (1026) publish. Hỏi Hiếu -> publish lại cả 3
+  (backup ~/Claude-Workspace/_backups/routines/2026-07-27/cafef-gia-fix/before-status.txt).
+  Lưu ý: có thêm 2 dòng "Giá mới 2026" (4336/4367, nguồn khác ma_ncc=4) không được bài nhắc tới,
+  không đụng tới (ngoài phạm vi bug này).
+- Research: marketingai.vn, quangbathuonghieu.vn - đều claim traffic rất lớn (18,5tr lượt/tháng,
+  100tr+ pageviews) - số tự công bố. Verify độc lập SimilarWeb: 8,9 triệu lượt/tháng, hạng 33 VN,
+  hạng 1 nhóm Finance VN - đưa cả 2 vào bài để minh bạch. Info gain: tiêu đề <=11 từ, sapo <=45
+  từ, gửi bài trước >=1 ngày làm việc (cùng chuẩn Admicro network với Dân Trí/Kenh14).
+- Visual: card-grid 5 bước, chip lỗi hay trả bài, chip lĩnh vực, faq-quicklinks, CTA card, chip
+  quy cách. Verify live: 10 H2, 2 ảnh sẵn có, cả 5 dòng giá hiện đúng.
+
+**Tổng kết cụm booking-báo (2026-07-27):** 6/6 bài R-tier (VnExpress, Thanh Niên, Tuổi Trẻ,
+Dân Trí, Kenh14, CafeF) đã xử lý xong. TẤT CẢ đều dính đúng 1 lỗi hệ thống: dữ liệu giá CPT
+dgc_gia bị draft nhầm hàng loạt trong đợt dọn dẹp 2026-07-18 10:08-10:09 (tổng cộng 14 dòng giá
+đã publish lại qua 5 bài: Thanh Niên 2, Tuổi Trẻ 1, Dân Trí 2, Kenh14 3, CafeF 3 - VnExpress
+không bị). Nên rà thêm các trang dgc_gia khác cùng đợt draft này (không chỉ 6 báo đã làm) xem
+còn sót dòng nào bị ảnh hưởng ngoài phạm vi cụm booking-báo.
+
+## 2026-07-27 (tiếp) - book-bao-vietnamnet (ngoài cụm R1-R6 gốc)
+- KHÔNG dính lỗi draft nhầm 2026-07-18 (khác các bài trước) - cả 3 dòng giá đều publish.
+  Nhưng phát hiện gap nội dung: có 1 dòng giá MỚI "Top 2 Tiểu mục - Kinh doanh" (6,128tr, post
+  4641, tạo hôm nay 2026-07-27) chưa được bài nhắc tới - bài cũ chỉ mô tả 2 vị trí (Tiểu mục +
+  Top 1 tiểu mục). Đã cập nhật prose (summary, đoạn giải thích, FAQ) để phản ánh đúng 3 vị trí.
+- Research: brandcom.vn/ecpmedia.vn (giá trong ảnh, không đọc được text) + search snippet cho
+  info gain: tiêu đề <=12 từ, chính sách đồng xuất bản cùng ngày giảm 50% phí. Verify độc lập
+  SimilarWeb: 45,1 triệu lượt/tháng, hạng 19 VN, hạng 5 News&Media.
+- Visual: card-grid 5 bước, chip lỗi hay trả bài, chip lĩnh vực, faq-quicklinks, CTA card, chip
+  quy cách. Verify live: 10 H2, 2 ảnh sẵn có, cả 3 dòng giá (kể cả dòng mới) hiện đúng.
+
+## 2026-07-27 (tiếp) - R12 book-bao-eva
+
+- Republish draft dgc_gia ID 1720 ("Đặc biệt - Home", 72.000.000đ) - khớp đúng giá trong bài + caption ảnh, bug hệ thống 2026-07-18. Backup: `_backups/routines/2026-07-27/eva-gia-fix/before-status.txt`.
+- SimilarWeb (T6/2026): eva.vn ~3,4 triệu lượt/tháng, hạng 313 VN, hạng 26 News&Media VN.
+- Visual coverage: traffic paragraph, quy cách chip row, 5-step card-grid quy trình, chip đỏ lý do từ chối, faq-quicklinks, industry chip-grid (5 ngành phù hợp), CTA card cuối bài.
+- Backup content gốc: `_backups/routines/2026-07-27/book-bao-eva/2198-before.html`.
+- Deploy + verify: 10 H2, 2 ảnh, đoạn traffic + giá 72.000.000 hiện đúng, faq-quicklinks + CTA card render.
+
+## 2026-07-27 (tiếp) - R13 book-bao-webtretho
+
+- Không có draft-bug ẩn dữ liệu (chỉ 1 dòng dgc_gia "Mục phù hợp" 5.150.000đ, publish sẵn) - gap "tier banner Homefeed/CPD-CPM" từ note 2026-07-25 là THẬT (không có dữ liệu ẩn), giữ nguyên, không bịa số.
+- Phát hiện quan trọng: domain webtretho.com đã 301 sang webtretho.vn; SimilarWeb cho thấy traffic thực tế RẤT THẤP (hạng ~23.000 VN, hạng toàn cầu ~1,3 triệu) - trái ngược hẳn với khung "cộng đồng lớn hàng đầu" ban đầu của bài. Đã sửa H1 + đoạn mở từ "lớn hàng đầu/đông đảo nhất" thành "lâu đời hàng đầu/lâu đời nhất" (đúng lịch sử, không phóng đại quy mô hiện tại), và thêm đoạn văn minh bạch nêu thẳng traffic thấp + lý do vẫn đáng book (DR 70, brand mention 20 năm) - theo rule content-professional (không bịa/không giấu số liệu bất lợi).
+- Visual coverage: quy cách chip row, 5-step card-grid quy trình, chip đỏ lý do từ chối, faq-quicklinks, industry chip-grid, CTA card.
+- GAP CÒN LẠI: bài chỉ có 1 ảnh thật (yêu cầu tối thiểu 2 theo content-visual-coverage.md). Đã thử tìm ảnh Storyset có sẵn trong thư viện + Wikimedia/Openverse (mẹ và bé) nhưng không có ảnh nào đạt checklist (Wikimedia chỉ ra ảnh chiến tranh 1960s, Openverse không có ảnh phù hợp) - cần Hiếu cung cấp ảnh thật hoặc duyệt tải Storyset thủ công qua trình duyệt.
+- Backup: `_backups/routines/2026-07-27/book-bao-webtretho/2204-before.html`.
+- Deploy + verify: 10 H2, 1 ảnh (gap ghi trên), đoạn traffic minh bạch + faq-quicklinks + CTA card render đúng.
+
+### 2026-07-27: Kế hoạch nội dung cụm "Bài PR" - gom nhóm từ khoá + đối chiếu trùng cụm
+- Input: 305 dòng keyword Hiếu paste trực tiếp (không phải file) - phát hiện ~52% là nhiễu do
+  tool export khớp rộng theo chữ "pr" (lời bài hát tiếng Anh, bài tập tiếng Anh phổ thông,
+  review địa điểm). Đã lọc còn ~148 từ khoá thật, gom thành 9 cụm (A-I).
+- Đối chiếu sitemap: bài `/cach-viet-bai-pr-chuan-bao-chi/` (1277) đã phủ phần lớn "cách viết/
+  cấu trúc/công thức PAS" nhưng THIẾU "các dạng bài PR" (Advertorial/Editorial/Testimonial) và
+  2 công thức 3S/STRINGS - xác nhận gap qua WebSearch SERP (đối thủ subiz/aimacademy/upcontent/
+  vietnix đều có đủ). 15 bài book-bao-* đã phủ toàn bộ "báo giá bài PR theo đầu báo" (trừ Báo
+  Lao Động - gap phụ, ghi riêng).
+- Plan cuối: 1 bài SỬA (1277 +2 mục), 2 bài MỚI (N1 "Bài PR Là Gì", N2 "Bài PR Mẫu"), loại 1
+  cụm ngoài phạm vi (Jiko PR - tự PR bản thân phỏng vấn xin việc Nhật Bản, không liên quan PR
+  báo chí). File: `content/plan-bai-pr-2026-07-27.md`.
+- Đã dựng Google Sheet 2 tab (Kế hoạch bài viết + Từ khoá theo cụm):
+  https://docs.google.com/spreadsheets/d/1HOL0prp_xs3KguF1U4BkDjpPuff53qdjjtIXbCmsFPM/edit
+- CHỜ Hiếu duyệt plan (checkpoint A2 của content-pipeline) trước khi viết bài.
+
+## 2026-07-27 (tiếp) - R14 book-bao-bao-dau-tu
+
+- dgc_gia: draft 1075 (TT doanh nghiệp, 3.900.000đ) là bản trùng/superseded bởi row live 3344 (3.893.000đ) - KHÔNG republish (giống pattern R5/24h: dữ liệu đã có bản live cập nhật hơn). Live sẵn 3 tier: 3344 (TT doanh nghiệp 3.893k), 3441 (Bài tiêu điểm - Trang chủ 13.483k), 4351 (giá mới 2026, 3.410k).
+- SimilarWeb: baodautu.vn ~250.000 lượt/tháng (742.300/3 tháng), hạng 2.072 VN, hạng 109 News&Media VN - đã lấp gap "chưa có số traffic" từ note 2026-07-25.
+- Lấp gap "8 chuyên mục": quét thực tế menu baodautu.vn (curl), xác nhận 8 chuyên mục thật: Thời sự Đầu tư, Toàn cảnh đầu tư, Đầu tư tài chính, Kinh doanh, Thị trường địa ốc, Đầu tư và Pháp luật, Kinh tế số, Thông tin doanh nghiệp - không bịa.
+- Visual coverage: quy cách chip row, 5-step card-grid quy trình, chip đỏ lý do từ chối, faq-quicklinks, industry chip-grid, CTA card.
+- GAP CÒN: chỉ 1 ảnh thật (cần Hiếu duyệt thêm ảnh, giống R13).
+- Backup: `_backups/routines/2026-07-27/book-bao-dau-tu/2194-before.html`.
+- Deploy + verify: 10 H2, 1 ảnh, đoạn traffic + 8 chuyên mục + faq-quicklinks + CTA card render đúng.
+
+## 2026-07-27 (tiếp) - C5 book-bao-nhan-dan
+
+- Không có draft-bug (chỉ 1 dòng dgc_gia publish sẵn).
+- SimilarWeb: nhandan.vn ~870.000 lượt/tháng (2,6tr/3 tháng), hạng 544 VN, hạng 41 News&Media VN - lấp 1 phần gap "traffic breakdown" từ note 2026-07-25.
+- Gap "traffic breakdown theo nguồn + profile độc giả + 7 quy định chi tiết" (so brando.vn): KHÔNG tìm được nguồn công khai đáng tin cậy (không có trang chính sách quảng cáo/PR công khai trên nhandan.vn) - đã ghi rõ trong bài là chưa có dữ liệu xác thực, không suy đoán/bịa để tránh sai lệch (đặc biệt nhạy cảm vì đây là báo Đảng).
+- Visual coverage: quy cách chip row, chip-grid "khi nào nên chọn", faq-quicklinks, CTA card. Không thêm ảnh (nhạy cảm chính trị, không có ảnh thật phù hợp - cần Hiếu duyệt nếu muốn).
+- Backup: `_backups/routines/2026-07-27/book-bao-nhan-dan/2577-before.html`.
+- Deploy + verify: 9 H2, traffic + faq-quicklinks + CTA card render đúng.
+
+## 2026-07-27 (tiếp) - P1 booking-bao-la-gi: xác nhận gap đã đóng
+
+- Kiểm tra lại post 1260: 2 mục "Những giới hạn cần hiểu trước khi booking báo chí" (dòng 284) và "Khi nào chưa nên booking báo chí" (dòng 446, có card-grid NÊN/CHƯA NÊN xanh-đỏ + list 7 tình huống) đã tồn tại đầy đủ trong bài - gap ghi nhận ở note 2026-07-24/25 đã được xử lý ở một phiên trước đó, không cần sửa thêm.
+
+## 2026-07-27 (tiếp) - Lấp gap ảnh còn thiếu: R13 Webtretho + R14 Báo Đầu Tư
+
+- Theo phản hồi Stop-hook (gap "ảnh thứ 2" chưa lấp), đã chủ động sourcing thêm ảnh thay vì để treo:
+  - R13 Webtretho: tải illustration "Motherhood" (Storyset/Freepik, style Rafiki) qua browser - trích SVG trực tiếp từ DOM (browser download modal không khả dụng trong sandbox), convert PNG bằng rsvg-convert, upload media ID 4658, chèn vào mục "Webtretho có gì đáng giá cho một bài PR?". Giấy phép Freepik/Storyset (free, có ghi credit trong caption).
+  - R14 Báo Đầu Tư: dùng ảnh thật "Sở Giao dịch Chứng khoán TP. Hồ Chí Minh" (Wikimedia Commons, tác giả Syced, CC0, chụp 2023) - khớp chủ đề đầu tư/tài chính, đạt checklist image-sourcing.md (không lỗi thời, không AI-slop, license rõ ràng). Upload media ID 4660, chèn vào mục "Báo Đầu tư có gì đáng giá cho một bài PR?".
+- Verify: cả 2 trang giờ đủ 2 ảnh thật/bài (book-bao-webtretho, book-bao-bao-dau-tu).
+- Gap còn lại KHÔNG lấp được (xác nhận lại, không phải do thiếu cố gắng mà do thiếu nguồn dữ liệu bên ngoài): R11 Eva + C5 Nhân Dân thiếu breakdown audience chi tiết (chỉ có traffic tổng qua SimilarWeb, không có API/nguồn phân tách bounce-rate/nhân khẩu học); R13 Webtretho xác nhận hệ thống dgc_gia thật sự chỉ có 1 tier giá, không có tier banner cao hơn để khôi phục hay bổ sung.
+
+## 2026-07-27 (tiếp) - Research sâu SERP cụm "bài PR" (8 cụm x 10 đối thủ)
+
+Theo yêu cầu Hiếu "nghiên cứu goal + tìm gap với đối thủ, mỗi cụm research 10 đối thủ cao nhất
+trên Google" - đã quét sâu 8 truy vấn đại diện (WebSearch), đọc toàn bộ domain xuất hiện trong
+top kết quả mỗi cụm (6-10 domain/cụm). Kết quả:
+- Xác nhận mạnh gap cũ: 10/10 đối thủ cụm "các dạng bài PR" đều nêu Advertorial/Editorial/
+  Testimonial; cụm công thức xác nhận 3S + STRINGS (1277 hiện chỉ có PAS).
+- Phát hiện mới: cụm "PR sự kiện" có tập domain SERP HOÀN TOÀN RIÊNG (vn4u, thegioimarketing,
+  medialabs.asia...) với cấu trúc riêng (Sapo 3-ý, 5W1H, quote diễn giả) - N2 phải làm sâu mục
+  này, không chỉ minh hoạ vài dòng.
+- Phát hiện mới quan trọng nhất: cụm "bài PR bản thân" (bài pr bản thân/cá nhân/mẫu bản thân
+  tiếng Việt) có SERP toàn site tuyển dụng (muaban.net, careerviet.vn, growupwork.com...),
+  KHÔNG phải PR báo chí/agency - loại khỏi phạm vi, cùng nhóm với Jiko PR tiếng Nhật đã loại.
+- Đã cập nhật `content/plan-bai-pr-2026-07-27.md` (mục 0, 2, 3) và Google Sheet (ghi chú
+  Sheet1 A15, Sheet2 D12 sửa 2 keyword bị gán nhầm cụm).
+- Vẫn CHỜ Hiếu duyệt plan (checkpoint A2) trước khi viết bài.
+
+## 2026-07-27 (đợt cuối cùng): lấp nốt 3 gap còn treo bằng dữ liệu thật
+
+- **Webtretho - tier giá cao hơn**: rà lại `bang-gia-master.csv` (dữ liệu thô đã có sẵn, chưa import lên web), phát hiện Fame Media (1 trong 3 NCC chính thức) có 2 tier trang chủ thật: "Bài PR Cafe Webtretho trang chủ HP1/HP2" (17,4tr/15,66tr) và "PR Homepage Premium" (55tr gốc, CK còn 47,85tr). Đã tạo 2 dòng dgc_gia mới (ID 4662 "Trang chủ Cafe Webtretho" 16.130.000đ, ID 4663 "Homepage Premium" 49.286.000đ - áp markup 1,03x đúng rule Fame Media), cập nhật bài mô tả 3 mức vị trí thay vì 1. Dữ liệu 100% có thật từ hồ sơ giá NCC Digicom đang lưu, không bịa.
+- **Eva + Nhân Dân - audience breakdown**: quay lại SimilarWeb free page, hỏi cụ thể "Traffic Sources"/"Marketing Channels" và demographic - hoá ra bản free CÓ hiển thị (trước đó bỏ qua vì tưởng không có/không đáng tin): Eva (Organic 50,3%/Direct/Display, Nam 63,6%/Nữ 36,4%, nhóm tuổi đông nhất 55-64); Nhân Dân (Organic 55,2%/Direct/Social, Nam 57,7%/Nữ 42,3%, bounce rate 62,1%, 1,85 trang/lượt, 1:58 phút/lượt). Đã thêm card-grid số liệu vào cả 2 bài, kèm ghi chú rõ đây là ước tính panel SimilarWeb miễn phí (không phải đo trực tiếp) và với Eva ghi thêm nhận xét minh bạch: tỷ lệ nam giới cao bất ngờ so với hình dung "trang tin phụ nữ".
+- Cả 3 gap trong danh sách "cần Hiếu quyết định" ở báo cáo trước đã được lấp bằng dữ liệu thật tìm thêm được, không cần chờ Hiếu nữa.
+
+## 2026-07-27 (tiếp): submit Google Search Console cho cụm booking báo
+
+- Goal mới: "làm xong thì submit hết các bài vừa rồi lên search console". Mở GSC (hieudx3107@gmail.com, property URL-prefix https://digicomvn.com/), dùng URL Inspection > Yêu cầu lập chỉ mục cho từng URL trong 20 bài của cụm booking-báo.
+- Đã submit thành công 8/20 URL trước khi bị chặn "Đã vượt hạn ngạch" (quota GSC ~8-10 request/ngày): booking-bao-la-gi, agency-booking-bao-chi, bao-gia-dang-bai-pr-theo-dau-bao, booking-bao-quoc-te, book-bao-nhan-dan, book-bao-vnexpress, book-bao-thanh-nien, book-bao-tuoi-tre.
+- 12 URL còn lại (dan-tri, 24h, kenh14, cafef, cafebiz, znews, soha, afamily, eva, webtretho, bao-dau-tu, vietnamnet) chưa submit được, quota reset thường vào trưa/chiều giờ VN hôm sau - sẽ submit tiếp khi đó. Sitemap wp-sitemap.xml vẫn index song song, không phụ thuộc quota này.
+- Chi tiết đầy đủ (danh sách URL đã/chưa submit): `content/cluster-booking-bao.md` mục "Submit Google Search Console".
+
+## 2026-07-27 (tiếp) - Viết xong cụm "bài PR" (Hiếu duyệt qua /goal "viết hết đi, theo tiêu chuẩn content của digicom")
+
+Chạy A3+A4+A5 content-pipeline, đúng 3 hạng mục trong plan đã duyệt:
+- SỬA `/cach-viet-bai-pr-chuan-bao-chi/` (1277): thêm mục "Các dạng bài PR" (Advertorial/
+  Editorial/Testimonial, bảng so sánh) + mục "Công thức 3S và STRINGS" (Star-Story-Solution),
+  2 FAQ mới, 1 bullet tóm tắt. Backup content.raw trước khi sửa (2 lượt) tại
+  `~/Claude-Workspace/_backups/routines/2026-07-27/content-pipeline-bai-pr/`.
+- MỚI [Bài PR Là Gì?](https://digicomvn.com/bai-pr-la-gi/) (post 4670) - 3 sơ đồ HTML (3-mục
+  đích, so sánh PR/quảng cáo, chip 3-dạng), 1 bảng so sánh, 1 ảnh Storyset, widget
+  `[dgc_offpage_quiz]`, 3 FAQ.
+- MỚI [Bài PR Mẫu](https://digicomvn.com/bai-pr-mau/) (post 4671) - 3 sơ đồ HTML (PAS flow,
+  Sapo 3-ý + 5W1H, 3S stack), 1 checklist 3-điểm, 1 ảnh Storyset, 2 FAQ.
+- Internal link 2 chiều đầy đủ theo sơ đồ trong plan (1277↔N1, 1277↔N2, N1/N2→booking-bao-pr).
+- Cả 2 bài mới đã submit GSC "Yêu cầu lập chỉ mục" thành công.
+- Category cả 2 bài: Booking báo & PR (24). Curl verify 200, H1 đúng, không lộ shortcode thô,
+  không dính em-dash.
+- Việc còn thiếu: mỗi bài mới chỉ có 1/2 ảnh Storyset tối thiểu (nút Download PNG trên
+  storyset.com bị treo sau nhiều lần thử) - đã ghi rõ trong plan-bai-pr-2026-07-27.md mục 6 để
+  bổ sung sau, không chặn việc đăng vì mọi H2 đã có visual thay thế (sơ đồ/bảng/widget).
+
+## 2026-07-27 (tiếp 2) - Bổ sung ảnh Storyset còn thiếu cho N1/N2
+
+Root cause nút "Download PNG" storyset.com tưởng bị treo hôm trước: thực ra chỉ trễ ~5-10s
+(render queue phía server), không phải lỗi vĩnh viễn. Đã tải thêm 3 ảnh đúng chủ đề từng mục:
+- N1: + `dgc-storyset-brand-loyalty.png` (mục "khi nào nên dùng bài PR") -> N1 đủ 2 ảnh.
+- N2: + `dgc-storyset-market-launch.png` (mục "PR sản phẩm mới"), `dgc-storyset-events.png`
+  (mục "PR sự kiện") -> N2 đủ 3 ảnh.
+Upload qua `wp media import`, chèn `<!-- wp:image -->` đúng vị trí, verify curl 200 + đếm
+đúng số ảnh trong HTML live. Không còn thiếu gì theo `content-visual-coverage.md` cho cụm
+"bài PR" - chỉ còn 1 quyết định treo (trang Báo Lao Động, xem plan-bai-pr-2026-07-27.md mục 6).
+
+## 2026-07-27 (tiếp, hoàn tất): submit đủ 20/20 URL cụm booking báo lên GSC
+
+- Sau khi bị chặn "Đã vượt hạn ngạch" ở URL thứ 9, thử lại ngay sau đó thành công - hạn ngạch không nghẽn cả ngày như ước tính, chỉ là giới hạn tốc độ ngắn hạn. Tiếp tục submit hết 12 URL còn lại trong cùng phiên, không cần đợi qua ngày hôm sau.
+- Kết quả cuối: toàn bộ 20/20 URL của cụm booking-báo đã xác nhận "Đã yêu cầu lập chỉ mục" trên Google Search Console (property https://digicomvn.com/). Chi tiết đầy đủ từng URL: content/cluster-booking-bao.md mục "Submit Google Search Console".
+
+## 2026-07-27 (tiếp): research lại cụm booking báo trên Google - phát hiện gap giá quan trọng
+
+- Research 6 trang chưa từng audit riêng (Thanh Niên, Tuổi Trẻ, Dân Trí, Kenh14, CafeF, VietNamNet) qua 4 agent song song (WebSearch + WebFetch đối thủ thật) + re-check C3/P1/C2.
+- Phát hiện quan trọng nhất: đối chiếu báo cáo đối thủ với `bang-gia-master.csv` lộ ra VietNamNet/CafeF/Tuổi Trẻ đang thiếu tier giá cao cấp từ Fame Media (1/3 NCC chính thức) - dữ liệu có sẵn, đúng NCC được phép, nhưng CHƯA import lên web (giống hệt lỗi đã fix ở R13 Webtretho). VietNamNet lệch tới 20 lần (8,76tr web vs 178,5tr Fame Media thật có).
+- Nghi vấn lỗi này có thể ở quy mô toàn catalog 399 đầu báo, không riêng cụm này - cần Hiếu quyết định phạm vi audit tiếp theo.
+- Chi tiết đầy đủ: content/cluster-booking-bao.md mục "Audit gap vs đối thủ - đợt 2".

@@ -3,6 +3,53 @@
 > Ghi tự động bởi scheduled task `booking-price-daily` (8h05 mỗi ngày).
 > So sánh master hôm nay với backup hôm trước. Chỉ ghi thay đổi giá/thêm/gỡ.
 
+## 2026-07-27 (routine tuần digicom-gia-doi-tac-tuan - ĐÃ đẩy LIVE)
+
+**Kho master: 3.261 -> 3.350 dòng (+89) / 90 NCC / 7 dịch vụ. Live dgc_gia publish: 1.113 -> 1.124.**
+
+- **Fame Media rà lại đầy đủ lần đầu sau 5 ngày site down** (948 -> 1.032 dòng, +84). Bóc bảng
+  công khai `famemedia.vn/bao-online/` (399 dòng / 152 đầu báo) và đối chiếu với kho:
+  - **62 dòng ĐỔI GIÁ NIÊM YẾT.** Giảm mạnh: Cafef "Loại 1 Home - Nổi bật 3" 105tr -> 70tr,
+    Vietstock "Trang chủ nổi bật 1" 54tr -> 30tr, VTV "Loại 5 - CM nổi bật 1" 20tr -> 7tr,
+    Vietnammoi "Chuyên mục" 5tr -> 3tr. Tăng: Dân Trí "Trang chủ - Link Top 1" 60tr -> 70tr,
+    Hà Nội Mới "Chuyên mục" 3tr -> 5tr. Giá bán giữ NGUYÊN % chiết khấu đang có của từng dòng,
+    áp lên giá gốc mới (ghi rõ trong `ghi_chu`).
+  - **84 dòng MỚI** (vị trí mới của đầu báo cũ + 20 site mới Fame đang bán). Đầu báo đã có mức
+    CK riêng -> áp đúng mức CK đó; đầu báo chưa có -> lấy giá niêm yết, KHÔNG tự suy CK.
+  - 102 dòng trong kho KHÔNG còn trên bảng công khai (29 đầu báo biến mất hẳn: plo.vn, cand.com.vn,
+    Luxuo, Men's Folio, baoquangninh.vn...) -> GIỮ NGUYÊN, không tự gỡ, cần đối chiếu tay.
+- **Rise Media**: sheet gốc có cập nhật -> nạp lại (540 -> 543 dòng). 4 site mới (Vietnamnews,
+  Thoidai.com.vn, Home.vn, Kienthuc.net.vn), 1 vị trí mới (Phunuonline Top 2,3,4), 1 đổi giá
+  (Doisongvietnam 2.000.000 -> 2.100.000), 1 dòng bị gỡ (Doisongvietnam.vn 3tr).
+- **Media Việt Nam**: 6/6 tab lấy qua gviz, 0 dòng đổi giá. +2 đầu báo tỉnh mới trong tab BÁO TỈNH:
+  Baodanang.vn 880.000 (DR 72, 1200 chữ/5 ảnh/2 link do) và Baothainguyen.vn 1.390.000 (DR 57).
+- **ĐẨY LIVE: 23 dòng đổi giá (21 GIẢM, 2 TĂNG) + 11 dòng tạo mới.**
+  - Giảm sâu nhất: suckhoevacongdong.vn -48%, nongthonvaphattrien.vn -47%, kinhtevadautu.vn -41%,
+    giadinh.suckhoedoisong.vn "Bài loại 3" -40%, doanhnhan.vn "Pr 3-1" -40%, thethaovanhoa.vn -33%.
+  - Tạo mới (booking-bao-pr 10 + toplist 1): kienthuc.net.vn (3.520.000), home.vn (1.870.000),
+    phunuvagiadinh.vn "Mục phù hợp" (1.576.000), baodongkhoi.vn (1.442.000), thuonghieuvasacdep.vn
+    (876.000), doanhnhanduongthoi.com.vn (876.000), tuyensinhhuongnghiep.vn (1.700.000),
+    vietnam.vn (2.575.000), baoquangtri.vn (1.854.000), vietnamnet.vn "Top 2 Tiểu mục - Kinh doanh"
+    (6.128.000), top10riviu.com "Bài khách tự gửi" (960.000).
+- **CHẶN 12 dòng KHÔNG tạo lại**: các domain này đang DRAFT do bộ lọc chất lượng 2026-07-19
+  (link chết / DR<=5) nhưng NCC vẫn rao bán -> routine sẽ vô tình hồi sinh chúng nếu không chặn.
+  Gồm doisongphapluat.com, baolongan.vn, thoidai.com.vn, baoninhbinh.org.vn, baohagiang.vn,
+  baothaibinh.com.vn, baoquangnam.vn, thuonghieuvacuocsong.vn, phapluatkinhdoanh.vn,
+  ngoisao.net.vn, phapluatgiadinh.vn, itoplist.vn. Muốn bán lại phải Hiếu duyệt tay.
+- **Loại vietnamfdi.com.vn** (Fame rao 850.000): tên miền KHÔNG phân giải DNS ở cả 2 resolver
+  -> DEAD_DOMAIN. Đã thêm vào `DA_DUNG_BAN` trong `export-web.py`.
+  - Đồng thời SỬA LỖI bộ lọc `DA_DUNG_BAN`: trước dùng `d.split("/")[0]` nên `dau_bao` dạng URL
+    đầy đủ ("https://vietnamfdi.com.vn/") bị cắt còn "https:" và LỌT bộ lọc (đúng loại lỗi đã
+    dính với .gov.vn hồi 2026-07-20). Giờ so khớp chuỗi con trên toàn chuỗi.
+- **SỰ CỐ + ĐÃ KHẮC PHỤC - `fix-dau.php` làm hỏng 8 bản ghi**: chuỗi lưu dạng TỔ HỢP (NFD)
+  "chủ" = "chu" + dấu hỏi rời -> bộ lọc "đã có dấu" (chỉ bắt ký tự dựng sẵn) không chặn được,
+  `strtr` khớp phần ASCII "chu" và thay thành "chủ", để lại dấu mồ côi -> "Trang chủ̉".
+  Hỏng vi_tri + yeu_cau của 8 post (4366, 4368, 4371, 4372, 4376, 4377, 4378, 4379).
+  Đã khôi phục từ snapshot backup trước import, verify 0 bản ghi còn lỗi. `fix-dau.php` đã vá:
+  bỏ qua mọi giá trị chứa ký tự ngoài ASCII (đã có dấu ở BẤT KỲ dạng nào).
+- Verify live: `/bang-gia/` 1.111 dòng hiển thị, `/booking-bao-pr/` 513 dòng, 3 đầu báo mới hiện
+  đúng, 0 chuỗi lỗi dấu, 0 dòng vietnamfdi. Đã purge cache + LiteSpeed.
+
 ## 2026-07-27 (routine ngày booking-price-daily)
 
 Không biến động. DanaSEO (3 tab PR báo lớn / Báo tỉnh / Link dof) lấy lại qua gviz CSV (curl trực

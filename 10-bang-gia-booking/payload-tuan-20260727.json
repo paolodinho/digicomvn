@@ -1,0 +1,197 @@
+{
+ "updates": [
+  {
+   "id": 3368,
+   "gia": 1442000
+  },
+  {
+   "id": 3369,
+   "gia": 2884000
+  },
+  {
+   "id": 3370,
+   "gia": 2832000
+  },
+  {
+   "id": 3371,
+   "gia": 2524000
+  },
+  {
+   "id": 3378,
+   "gia": 876000
+  },
+  {
+   "id": 3380,
+   "gia": 876000
+  },
+  {
+   "id": 3382,
+   "gia": 876000
+  },
+  {
+   "id": 3384,
+   "gia": 1485000
+  },
+  {
+   "id": 3400,
+   "gia": 1942000
+  },
+  {
+   "id": 3411,
+   "gia": 1432000
+  },
+  {
+   "id": 3435,
+   "gia": 15326000
+  },
+  {
+   "id": 3436,
+   "gia": 13411000
+  },
+  {
+   "id": 3443,
+   "gia": 9888000
+  },
+  {
+   "id": 3448,
+   "gia": 8549000
+  },
+  {
+   "id": 3457,
+   "gia": 7169000
+  },
+  {
+   "id": 3474,
+   "gia": 2565000
+  },
+  {
+   "id": 3338,
+   "gia": 2565000
+  },
+  {
+   "id": 3342,
+   "gia": 3584000
+  },
+  {
+   "id": 3354,
+   "gia": 1957000
+  },
+  {
+   "id": 3357,
+   "gia": 1710000
+  },
+  {
+   "id": 2172,
+   "gia": 876000
+  },
+  {
+   "id": 1659,
+   "gia": 1751000
+  },
+  {
+   "id": 1684,
+   "gia": 1236000
+  }
+ ],
+ "new": [
+  {
+   "nhom": "booking-bao-pr",
+   "title": "kienthuc.net.vn",
+   "vi_tri": "Chuyên mục",
+   "gia": 3520000,
+   "so_link": "",
+   "yeu_cau": "",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "home.vn",
+   "vi_tri": "Chuyên mục",
+   "gia": 1870000,
+   "so_link": "",
+   "yeu_cau": "",
+   "ma_ncc": "4"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "phunuvagiadinh.vn",
+   "vi_tri": "Muc phu hop",
+   "gia": 1576000,
+   "so_link": "",
+   "yeu_cau": "",
+   "ma_ncc": "3"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "baodongkhoi.vn",
+   "vi_tri": "Muc phu hop",
+   "gia": 1442000,
+   "so_link": "",
+   "yeu_cau": "",
+   "ma_ncc": "3"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "thuonghieuvasacdep.vn",
+   "vi_tri": "Muc phu hop",
+   "gia": 876000,
+   "so_link": "",
+   "yeu_cau": "",
+   "ma_ncc": "3"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "doanhnhanduongthoi.com.vn",
+   "vi_tri": "Muc phu hop",
+   "gia": 876000,
+   "so_link": "",
+   "yeu_cau": "",
+   "ma_ncc": "3"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "tuyensinhhuongnghiep.vn",
+   "vi_tri": "Mục phù hợp",
+   "gia": 1700000,
+   "so_link": "2 Link Dofollow",
+   "yeu_cau": "1000 từ 3 ảnh 2 link dof",
+   "ma_ncc": "1"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "vietnam.vn (~140 triệu traffic/tháng)",
+   "vi_tri": "Muc phu hop",
+   "gia": 2575000,
+   "so_link": "",
+   "yeu_cau": "1000 từ  - 3 ảnh - 2 link (Bài và link tồn tại 5 năm)",
+   "ma_ncc": "1"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "baoquangtri.vn (mới về)",
+   "vi_tri": "Muc phu hop",
+   "gia": 1854000,
+   "so_link": "",
+   "yeu_cau": "1000 từ  - 5 ảnh - 2 link dof + ĐKKD",
+   "ma_ncc": "1"
+  },
+  {
+   "nhom": "booking-bao-pr",
+   "title": "vietnamnet.vn",
+   "vi_tri": "Top 2 Tiểu mục - Kinh doanh",
+   "gia": 6128000,
+   "so_link": "",
+   "yeu_cau": "",
+   "ma_ncc": "3"
+  },
+  {
+   "nhom": "dich-vu-toplist",
+   "title": "top10riviu.com",
+   "vi_tri": "Bai khach tu gui",
+   "gia": 960000,
+   "so_link": "2 link dofollow",
+   "yeu_cau": "Duoi 1000 tu - tu 5 anh",
+   "ma_ncc": ""
+  }
+ ]
+}

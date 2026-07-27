@@ -201,3 +201,37 @@ Sheet: https://docs.google.com/spreadsheets/d/1uOvzvsZ-3clQR0bCPtr2JoCPJ3RyuTGF/
   - Backup snapshot live trước khi ghi: `~/Claude-Workspace/_backups/routines/2026-07-24/bang-gia-rise-media-import/`.
 - 13 dòng bị loại khi nạp (không có giá THÀNH TIỀN cụ thể - vd Elleman, Banner Vnexpress): giữ trong
   `rise-media-raw.csv` gốc, không đưa vào master.
+
+## Cập nhật 2026-07-27 (routine tuần)
+
+### Fame Media - đã rà lại đầy đủ (site sống lại)
+- Bảng công khai `https://famemedia.vn/bao-online/` bóc được **399 dòng / 152 đầu báo** bằng
+  curl + parse HTML `<table>` (có rowspan ở cột "Đầu báo" - phải carry-forward tên báo).
+  Giá trên trang này là **giá NIÊM YẾT**, kho của mình lưu **giá sau chiết khấu** (mức CK ghi
+  trong `ghi_chu` từng dòng, lấy từ Google Sheet Hiếu gửi 2026-07-18).
+- 62 dòng đổi giá niêm yết, 84 dòng mới, 102 dòng trong kho không còn trên trang (xem CHANGELOG).
+- **CẦN HIẾU HỖ TRỢ**: link Google Sheet Fame Media (bản có cột chiết khấu, nạp 2026-07-18)
+  KHÔNG được ghi lại ở đâu trong repo. Không có nó thì:
+  (a) 495 dòng guest-post + 15 dòng textlink + 3 dòng entity của Fame KHÔNG rà lại được
+      (trang công khai chỉ có booking-pr);
+  (b) 84 dòng mới tuần này phải suy mức CK theo đầu báo (đầu báo chưa có CK thì lấy giá niêm yết).
+  Xin Hiếu gửi lại link sheet để lưu vào file này.
+
+### Rise Media
+Sheet gốc CÓ cập nhật (khác bản 2026-07-24) - nạp lại bằng `parse-rise-media.py` +
+`parse-rise-media-more.py`, 540 -> 543 dòng. Sheet này nên rà mỗi tuần.
+
+### Media Việt Nam
+6/6 tab lấy được qua gviz CSV, 0 dòng đổi giá. +2 đầu báo tỉnh mới (Baodanang.vn, Baothainguyen.vn).
+Lưu ý baodanang.vn từng bị loại 2026-07-18 vì Fame ghi "Không nhận bài" - nay CẢ Media Việt Nam
+lẫn Fame đều rao bán trở lại.
+
+### Chưa làm trong tuần này (còn nợ)
+- **Admicro**: 10 URL rate card còn sống chưa bóc (cafef, nld, cafebiz, dantri, thanhnien,
+  vietnamnet, vnenconomy bản jan2026; kenh14, soha, afamily bản apr2025). Admicro KHÔNG thuộc
+  4 NCC lên web -> chỉ là dữ liệu tham chiếu thị trường, ưu tiên thấp hơn 4 NCC bán thật.
+  phunuvietnam vẫn không tìm được URL (cần Hiếu lấy từ admicro.vn/baogia).
+- **SEODO 8 tab**: 6 tab đã xử lý xong 2026-07-18; 2 tab còn lại (490006843 toplist theo ngành,
+  570329285 textlink gói Brando) đã kết luận LOẠI theo rule "không rõ nơi đăng" - không làm lại.
+- **goi_sites**: vẫn 0 NCC nào công bố list site trong gói (quét lại Solann 2026-07-20 đã kết luận).
+  Chưa điền được dòng nào tuần này.

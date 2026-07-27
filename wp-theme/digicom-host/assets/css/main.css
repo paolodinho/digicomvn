@@ -2373,3 +2373,15 @@ body.mnav-open{overflow:hidden}
 }
 [data-theme="dark"] .dgc-data-table tbody tr:nth-child(even){background:rgba(95,203,190,.05)}
 [data-theme="dark"] .dgc-data-table tbody tr:hover{background:rgba(95,203,190,.09)}
+
+/* Svc-intro fact chips + FAQ quicklinks - so lieu that/dieu huong that cho 8 trang dich vu
+   dung chung template tpl-service.php (Hieu 2026-07-27, lap "tin hieu tin cay"). Dung bien
+   semantic - tu dong dung dark mode, khong hardcode mau (theo ui-mau-sac.md). */
+.svc-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.svc-facts .chip{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;
+  padding:9px 15px;font-size:13px;color:var(--ink-soft)}
+.svc-facts .chip b{color:var(--action)}
+.faq-quicklinks{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+.faq-quicklinks a{background:var(--surface-2);border:1px solid var(--line-2);border-radius:20px;
+  padding:8px 16px;font-size:13px;font-weight:600;color:var(--action);text-decoration:none}
+.faq-quicklinks a:hover{border-color:var(--action);background:rgba(71,97,255,.06)}

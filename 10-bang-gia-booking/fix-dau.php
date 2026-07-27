@@ -111,6 +111,11 @@ foreach ( get_posts( array( 'post_type' => 'dgc_gia', 'numberposts' => -1, 'post
 		if ( $v === '' ) continue;
 		/* Chi sua dong KHONG DAU (dong da co dau la du lieu goc, khong dung toi) */
 		if ( preg_match( '/[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/u', $v ) ) continue;
+		/* 2026-07-27: chuoi luu dang TO HOP (NFD) - "chủ" = "chu" + U+0309 - KHONG lot bo loc
+		   precomposed o tren. strtr se khop phan ASCII "chu" va thay bang "chủ", bo lai dau
+		   to hop mo coi -> "Trang chủ̉". Da lam hong 8 ban ghi (4366..4379) truoc khi phat hien.
+		   Chan tan goc: bo qua moi gia tri con ky tu ngoai ASCII (da co dau duoi bat ky dang nao). */
+		if ( preg_match( '/[^\x00-\x7F]/', $v ) ) continue;
 		$new = strtr( $v, $map );
 		if ( $new !== $v ) {
 			if ( ! $dry ) update_post_meta( $p->ID, $f, $new );
