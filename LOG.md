@@ -2376,3 +2376,23 @@ Upload qua `wp media import`, chèn `<!-- wp:image -->` đúng vị trí, verify
 - Backup trước khi sửa: ~/Claude-Workspace/_backups/routines/2026-07-27/gia-tier-fame-media-vietnamnet-cafef-tuoitre/. Verify: 6/6 dòng giá hiện đúng live, cả 3 trang HTTP 200, 1 H1, 0 em dash.
 - Còn treo: audit toàn bộ 399 đầu báo xem có lỗi import tương tự trên diện rộng không - chờ Hiếu quyết định phạm vi.
 - Chi tiết: content/cluster-booking-bao.md mục "Audit gap vs đối thủ - đợt 2".
+
+## 2026-07-27 (tiếp): research lại đối thủ + viết sâu bài Booking báo Lao Động (theo phản hồi "bài sơ sài")
+
+- Research 4 đối thủ thật đang bán vị trí này (brando.vn, brandcom.vn, sieumarketing.com, uptopz.com lỗi
+  không truy cập được) - phát hiện brando.vn có cấu trúc 11 H2 sâu hơn hẳn bài cũ của ta (traffic
+  breakdown, profile độc giả, chuyên mục, quy trình...), giá thị trường phổ biến 7-8tr/bài.
+- Đối chiếu `10-bang-gia-booking/bang-gia-master.csv`: phát hiện Fame Media (1/3 NCC chính thức, đã
+  markup 1,03x nhưng CHƯA import) có 6 tier giá cho Lao Động từ 15,76tr đến 87,55tr - giống hệt lỗi
+  đã fix ở VietNamNet/CafeF. Đã import 5 dòng dgc_gia mới (post 4691-4695, ma_ncc=3), bài giờ có ĐỦ
+  6 vị trí giá thay vì 1 (5.047.000đ -> 87.550.000đ).
+- Viết lại toàn bộ bài: +2 ảnh Storyset thật (trước đó 0 ảnh - vi phạm content-visual-coverage.md),
+  +widget [dgc_offpage_quiz] (trước đó 0 widget tương tác - vi phạm BƯỚC 4 content-pipeline), +H2 mới
+  "Giá có rẻ hơn thị trường không" (so sánh trực tiếp với brando.vn/brandcom.vn, giá base 5.047.000đ
+  thấp hơn 28-37% mặt bằng), +H2 mới "Lịch sử & uy tín" (Wikipedia: thành lập 1929, 2 Huân chương Độc
+  lập hạng Nhất, được Courrier International chọn vào 200 báo nổi tiếng thế giới), +bar chart 6 tier
+  giá, +traffic/demographic thật (SimilarWeb: 31,6tr lượt/tháng hạng 35 VN, 58,7% nam, tuổi 25-34,
+  67% organic), +2 FAQ mới, fix thông tin phí link sai lệch giữa các gói (1tr vs 3tr/link tuỳ vị trí).
+- GSC "Yêu cầu lập chỉ mục" thử lại 3 lần (tab cũ, combobox khác, tab hoàn toàn mới) đều không phản
+  hồi - lỗi công cụ trình duyệt vẫn tồn tại. Xác nhận URL đã có trong wp-sitemap-posts-post-1.xml với
+  lastmod 2026-07-27T10:14:00 - Google sẽ tự crawl qua sitemap dù không submit thủ công được.
