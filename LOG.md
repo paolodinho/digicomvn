@@ -2368,3 +2368,11 @@ Upload qua `wp media import`, chèn `<!-- wp:image -->` đúng vị trí, verify
 - GSC "Yêu cầu lập chỉ mục" cho `/book-bao-lao-dong/` bị lỗi công cụ trình duyệt (không phản hồi
   sau nhiều lần thử, kể cả tab mới) - bỏ qua, sitemap.xml vẫn tự đưa bài vào hàng chờ Google quét.
 - Cập nhật `content/cluster-booking-bao.md`: thêm dòng C6, tổng cụm 20/20 -> 21/21 (100%).
+
+## 2026-07-27 (tiếp): lấp gap giá VietNamNet/CafeF/Tuổi Trẻ (Hiếu duyệt "ok làm đi")
+
+- Tạo 6 dòng dgc_gia mới trên live (ID 4682-4687) từ dữ liệu Fame Media có sẵn trong bang-gia-master.csv, markup 1,03x đúng rule bang-gia-booking.md: Tuổi Trẻ +Hiển thị Trang chủ 35,844,000đ +Chuyên mục nhóm 1 26,883,000đ; CafeF +Loại 1 Home-Nổi bật-Trang chủ 62,727,000đ +Box sản phẩm nổi bật Home PC 16,130,000đ; VietNamNet +Tiêu điểm Home 1,2,3-Top1CM 183,855,000đ +Top 1 Chuyên mục-Home 26,265,000đ.
+- Sửa post_content 3 bài (2202/2196/2203) để mô tả đúng tier mới - quan trọng nhất: CafeF có 1 câu tuyên bố cũ giờ đã sai ("chuyên mục 1 cao nhất bảng, cao hơn cả trang chủ") do tier Home nổi bật mới cao hơn 6 lần - đã sửa lại toàn bộ đoạn liên quan.
+- Backup trước khi sửa: ~/Claude-Workspace/_backups/routines/2026-07-27/gia-tier-fame-media-vietnamnet-cafef-tuoitre/. Verify: 6/6 dòng giá hiện đúng live, cả 3 trang HTTP 200, 1 H1, 0 em dash.
+- Còn treo: audit toàn bộ 399 đầu báo xem có lỗi import tương tự trên diện rộng không - chờ Hiếu quyết định phạm vi.
+- Chi tiết: content/cluster-booking-bao.md mục "Audit gap vs đối thủ - đợt 2".

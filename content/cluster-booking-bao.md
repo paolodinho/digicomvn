@@ -265,6 +265,34 @@ cao cấp của Fame Media/DanaSEO/Media Việt Nam trên diện rộng, không 
    với `gia-web.csv`/CPT `dgc_gia` hiện tại, để tìm hết các dòng Fame Media/DanaSEO/Media Việt Nam bị bỏ
    sót tương tự - có thể ảnh hưởng doanh thu tiềm năng lớn hơn nhiều so với phạm vi 20 bài của cụm này.
 
+### ĐÃ LÀM (2026-07-27, tiếp - Hiếu duyệt "ok làm đi"): xử lý xong việc nhỏ (mục 1 ở trên)
+
+Đã tạo 2 tier Fame Media còn thiếu cho MỖI báo (chọn tier cao nhất + 1 tier trung gian bắc cầu, theo
+đúng mẫu Webtretho - không import toàn bộ 15-17 dòng để tránh phình bảng giá quá tay):
+
+| Báo | ID mới | Vị trí | Giá web (markup 1,03x Fame Media) |
+|---|---|---|---|
+| Tuổi Trẻ | 4682 | Hiển thị Trang chủ | 35.844.000đ |
+| Tuổi Trẻ | 4683 | Chuyên mục nhóm 1 | 26.883.000đ |
+| CafeF | 4684 | Loại 1 Home - Nổi bật - Trang chủ | 62.727.000đ |
+| CafeF | 4685 | Box sản phẩm nổi bật - Home PC | 16.130.000đ |
+| VietNamNet | 4686 | Tiêu điểm Home 1,2,3 - Top 1 Chuyên mục | 183.855.000đ |
+| VietNamNet | 4687 | Top 1 Chuyên mục - Home | 26.265.000đ |
+
+- Dữ liệu lấy nguyên từ `bang-gia-master.csv` (Fame Media = NCC hợp lệ), markup đúng 1,03x theo
+  `bang-gia-booking.md`, làm tròn nghìn. Không bịa số.
+- Đã cập nhật post_content 3 bài (2202 Tuổi Trẻ, 2196 CafeF, 2203 VietNamNet) để mô tả đúng các tier
+  mới - **quan trọng nhất**: CafeF trước đó có câu khẳng định "chuyên mục 1 cao nhất bảng, cao hơn cả
+  trang chủ" - câu này giờ SAI (tier Home nổi bật mới cao gấp ~6 lần chuyên mục 1) nên đã sửa lại toàn
+  bộ đoạn liên quan (tóm tắt, giải thích 3 nhóm giá trị, FAQ, kết luận) để không còn tuyên bố sai.
+- Backup trước khi sửa: `~/Claude-Workspace/_backups/routines/2026-07-27/gia-tier-fame-media-vietnamnet-cafef-tuoitre/`
+  (danh sách ID/giá cũ + post_content gốc cả 3 bài).
+- Verify: cả 6 dòng giá hiện đúng trên bảng giá live (đếm số `aria-controls="intro-<id>"` khớp), cả 3
+  trang HTTP 200, đúng 1 H1, 0 em dash.
+- **Chưa làm** (mục 2 - quy mô lớn hơn): audit toàn bộ 399 đầu báo trong `bang-gia-master.csv` so với
+  CPT `dgc_gia` hiện tại để tìm hết các dòng Fame Media/DanaSEO/Media Việt Nam bị bỏ sót tương tự -
+  cần Hiếu xác nhận có muốn mở rộng phạm vi audit ra ngoài cụm booking-báo hay không.
+
 ## Submit Google Search Console (2026-07-27, sau khi hoàn thiện content) - XONG 20/20
 
 Yêu cầu lập chỉ mục qua GSC URL Inspection (tài khoản hieudx3107@gmail.com, property URL-prefix
