@@ -31,6 +31,7 @@ mở rộng thêm C6 đợt 2026-07-27 (tiếp, phát hiện qua cụm "bài PR"
 | R13 | Booking báo Webtretho | /book-bao-webtretho/ | REFRESH | ✅ Xong | 2026-07-17 | | +lĩnh vực phù hợp +link P1
 | R14 | Booking báo Đầu Tư | /book-bao-bao-dau-tu/ | REFRESH | ✅ Xong | 2026-07-17 | | +lĩnh vực phù hợp +link P1
 | R15 | Booking báo VietNamNet | /book-bao-vietnamnet/ | REFRESH | ✅ Xong | 2026-07-17 | | +lĩnh vực phù hợp +link P1
+| C6 | Booking báo Lao Động | /book-bao-lao-dong/ | MỚI | ✅ Xong | 2026-07-27 | post 4678, 1 tier giá thật (5.047.000đ, DR 82), thêm laodong.vn vào dr-chart.php -> 15 bài R1-R15 tự có link về; chip link thêm ở page 475 + 1261; GSC submit lỗi công cụ, chờ sitemap
 
 ## Bài supporting đã có (chỉ nhận thêm internal link, không viết mới)
 - /so-sanh-booking-bao-pr-va-quang-cao-bao/ (so sánh)

@@ -2353,3 +2353,18 @@ Upload qua `wp media import`, chèn `<!-- wp:image -->` đúng vị trí, verify
 - Phát hiện quan trọng nhất: đối chiếu báo cáo đối thủ với `bang-gia-master.csv` lộ ra VietNamNet/CafeF/Tuổi Trẻ đang thiếu tier giá cao cấp từ Fame Media (1/3 NCC chính thức) - dữ liệu có sẵn, đúng NCC được phép, nhưng CHƯA import lên web (giống hệt lỗi đã fix ở R13 Webtretho). VietNamNet lệch tới 20 lần (8,76tr web vs 178,5tr Fame Media thật có).
 - Nghi vấn lỗi này có thể ở quy mô toàn catalog 399 đầu báo, không riêng cụm này - cần Hiếu quyết định phạm vi audit tiếp theo.
 - Chi tiết đầy đủ: content/cluster-booking-bao.md mục "Audit gap vs đối thủ - đợt 2".
+
+## 2026-07-27 (tiếp): thêm bài Booking báo Lao Động (C6, ngoài plan gốc, theo yêu cầu trực tiếp)
+
+- Đăng post 4678 "Book Báo Lao Động: Bảng Giá PR & Quy Cách Đăng Bài 2026", slug `book-bao-lao-dong`,
+  category Booking báo & PR. Chỉ 1 tier giá thật đang publish (dgc_gia 1069, 5.047.000đ, DR 82) -
+  không bịa thêm tier như mẫu 24h, ghi rõ liên hệ trực tiếp nếu cần vị trí khác.
+- Fix `inc/dr-chart.php`: thêm `laodong.vn` vào mảng `dgc_dr_chart_outlets()` (trước đó thiếu,
+  widget DR sẽ không hiện báo mới nếu không sửa) - hiệu ứng phụ: 15 bài book-bao-* cũ tự động có
+  thêm link nội bộ trỏ về bài mới qua widget DR chart, không cần chèn tay từng bài.
+  Backup: `~/Claude-Workspace/_backups/routines/2026-07-27/book-bao-lao-dong/dr-chart-before.php`.
+- Thêm chip link "Báo Lao Động" vào 2 trang hub: page 475 (`/booking-bao-pr/`) và page 1261
+  (`/bao-gia-dang-bai-pr-theo-dau-bao/`). Backup content.raw cả 2 trước khi sửa.
+- GSC "Yêu cầu lập chỉ mục" cho `/book-bao-lao-dong/` bị lỗi công cụ trình duyệt (không phản hồi
+  sau nhiều lần thử, kể cả tab mới) - bỏ qua, sitemap.xml vẫn tự đưa bài vào hàng chờ Google quét.
+- Cập nhật `content/cluster-booking-bao.md`: thêm dòng C6, tổng cụm 20/20 -> 21/21 (100%).
