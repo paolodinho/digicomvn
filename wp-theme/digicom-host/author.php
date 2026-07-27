@@ -55,33 +55,12 @@ if ( ! $dgc_feat_ids ) {
 }
 $dgc_feat_ids = array_slice( array_unique( $dgc_feat_ids ), 0, 6 );
 
-/* --- Schema Person day du (danh tinh + linh vuc am hieu + ho so mang xa hoi) --- */
-$dgc_schema = array(
-	'@context' => 'https://schema.org',
-	'@type'    => 'Person',
-	'name'     => $dgc_name,
-	'url'      => $dgc_url,
-	'jobTitle' => $dgc_role,
-	'worksFor' => array( '@type' => 'Organization', 'name' => 'DigicomVN', 'url' => home_url( '/' ) ),
-);
-if ( $dgc_bio )    $dgc_schema['description'] = wp_strip_all_tags( $dgc_bio );
-if ( $dgc_avatar ) $dgc_schema['image']       = $dgc_avatar;
-if ( $dgc_expert ) {
-	$dgc_schema['knowsAbout'] = array_map( function ( $e ) { return $e[0]; }, $dgc_expert );
-} elseif ( $dgc_cats ) {
-	$dgc_schema['knowsAbout'] = array_map( function ( $c ) { return $c->name; }, $dgc_cats );
-}
-$dgc_same = array_values( array_filter( array( $dgc_fb, $dgc_li ) ) );
-if ( $dgc_same ) $dgc_schema['sameAs'] = $dgc_same;
-if ( $dgc_creds ) {
-	$dgc_schema['hasCredential'] = array_map( function ( $c ) {
-		return array( '@type' => 'EducationalOccupationalCredential', 'name' => $c[0], 'credentialCategory' => $c[1] );
-	}, $dgc_creds );
-}
+/* Schema Person da chuyen sang khoi @graph duy nhat (inc/schema.php -> dgc_sch_person()),
+   doc cung nguon meta ho so nen noi dung khong doi, nhung nay lien ket duoc voi
+   Organization/ProfilePage bang @id thay vi dung mot minh. */
 ?>
-<script type="application/ld+json"><?php echo wp_json_encode( $dgc_schema ); ?></script>
 
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Tác giả</nav></div>
+<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <?php echo esc_html( $dgc_name ); ?></nav></div>
 
 <section class="page-hero author-hero">
 	<div class="wrap" style="max-width:900px">

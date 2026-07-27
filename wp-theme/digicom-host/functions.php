@@ -67,6 +67,8 @@ require_once get_template_directory() . '/inc/ai-chat.php';
 require_once get_template_directory() . '/inc/glossary.php';
 require_once get_template_directory() . '/inc/toc.php';
 require_once get_template_directory() . '/inc/post-sidebars.php';
+/* Schema.org: 1 khoi @graph duy nhat cho moi trang (xem inc/schema.php). */
+require_once get_template_directory() . '/inc/schema.php';
 
 /**
  * Helper doc 1 option.

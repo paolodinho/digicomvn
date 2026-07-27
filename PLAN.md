@@ -135,7 +135,52 @@ web/tên miền/hosting ở giai đoạn 2.
 Ngoài ra không còn việc gấp - 4 dịch vụ đã đủ nội dung, giá, demo. Tiếp theo tuỳ Hiếu quyết định
 khi nào chuyển sang giai đoạn 2 bên dưới.
 
+- [x] Audit toàn bộ site (134 bài blog + 7 money page, không tính cụm Booking báo & PR đã xong
+      riêng) qua 9 agent research song song, xác định gap so đối thủ + đề xuất phân lại cụm chủ đề
+      - 2026-07-27. Kết quả: `content/audit-toanbo-2026-07-27.csv` (117 dòng chi tiết) +
+      `content/audit-toanbo-2026-07-27-cum-de-xuat.md` (đề xuất 16 cụm mới + việc ưu tiên). Đây là
+      RESEARCH thuần, CHƯA sửa bài nào - dùng làm cơ sở cho các đợt sửa tiếp theo.
+
+### Backlog rút ra từ audit toàn site 2026-07-27 (chưa làm, chờ ưu tiên)
+- [ ] Bổ sung trust signal (MST, năm hoạt động, testimonial thật) cho 7/7 money page - ưu tiên
+      cao nhất, ảnh hưởng trực tiếp chuyển đổi.
+- [ ] Quyết định số phận `/dich-vu-backlink-tong-quan/` (trang bán hàng ẩn trong category kiến
+      thức, giá 3 gói không khớp `dgc_gia`) - gộp vào pillar hay xoá/redirect.
+- [ ] Sửa cannibalization xác nhận: `/cach-viet-thong-cao-bao-chi-chuan/` ↔ `/thong-cao-bao-chi-la-gi/`.
+- [ ] Sửa số liệu lỗi thời: `/ai-overview/` (tỷ lệ AI Overview), `/semrush/` + `/ahrefs-vs-semrush/`
+      (giá gói Semrush One 2026), `/keyword-research/` (giá Ahrefs $129), `/thuat-toan-google/` +
+      `/google-core-update/` (thiếu Core Update 5/2026 + Spam Update 6/2026).
+- [ ] Sửa `/crawl-budget/` (ngưỡng sai lệch 10-1.000 lần + trích dẫn bịa gán cho Google).
+- [ ] Sửa case study không kiểm chứng được ở `/technical-seo/` (lệch phạm vi dịch vụ thật).
+- [ ] Áp dụng phân cụm mới (16 cụm) theo `content/audit-toanbo-2026-07-27-cum-de-xuat.md` khi
+      làm lại sitemap/menu blog.
+
+### Đợt viết bài lấp gap toàn site 2026-07-27 (tiếp, theo yêu cầu Hiếu "làm trên sheet, viết nốt bài chưa viết")
+- Gap-scan 5 file từ khoá gốc (backlink 3752, guest-post 334, pr-báo 370, pr broad-match 14351
+  dòng CHƯA từng khai thác, mua-textlink 7) + 3 file mới Hiếu thêm sáng nay (booking/pr/báo chí,
+  không volume) đối chiếu 135 bài live -> phát hiện **gap lớn nhất dự án**: cụm "PR (Quan hệ công
+  chúng) tổng quát" chưa có bài nào, riêng từ khoá "pr là gì" volume ~8.100 (đơn từ khoá lớn nhất
+  từng thấy ở site này). Chi tiết: `content/plan-pr-tongquat-2026-07-27.md`.
+- Danh sách 12 bài mới cần viết (ưu tiên booking/PR/báo chí theo yêu cầu): 4 bài cụm PR tổng quát
+  (P1-P4) + 1 bài Booking báo Tiền Phong (T1, mã R16 đã ghi trong pivot-2026-07.md) + 5 bài cụm
+  Backlink (B1-B5: Audit/Profile, Indexer, Disavow, Loại backlink, Social backlink) + 2 bài Guest
+  Post (G1-G2). Sổ cái cụm mới: `content/cluster-pr-tongquat.md`.
+- [ ] Batch 1 (P1 PR là gì, P2 Loại hình PR, T1 Tiền Phong) - đang chạy 2026-07-27.
+- [ ] Batch 2 (P3, P4 + backlog).
+- [ ] Batch 3-5 (B1-B5 backlink).
+- [ ] Batch 6 (G1-G2 guest post).
+
 ### Backlog (giai đoạn 2 - sau khi 4 dịch vụ ổn định)
 - [ ] Mở lại Thiết kế website / Tên miền / Hosting / Bản quyền phần mềm (trang đang draft, giữ nguyên)
 - [ ] Cổng đăng ký/thanh toán thật
 - [ ] Client area / quản lý dịch vụ
+
+### Schema toàn site (2026-07-27) - ĐÃ XONG
+- [x] Dựng `inc/schema.php` - 1 khối @graph/trang, 0 lỗi trên validator.schema.org (169 URL).
+- [x] Gỡ 108 khối JSON-LD nhúng trong 58 bài, chuyển 197 câu FAQ sang meta có ô sửa ở WP Admin.
+- [ ] **Việc còn lại (ngoài phạm vi schema, phát hiện khi làm):** site KHÔNG có meta description,
+      KHÔNG có og:/twitter: tag nào trên bất kỳ trang nào (không có SEO plugin, theme cũng không
+      tự sinh). Ảnh hưởng trực tiếp CTR và cách bài hiện khi share Facebook/Zalo. Đề xuất: thêm
+      module `inc/seo-meta.php` cùng kiểu schema.php (tự sinh description từ excerpt, og:image từ
+      featured image) thay vì cài Rank Math.
+- [ ] Bật Review/AggregateRating khi có đánh giá khách hàng thật (tên + nội dung khách viết).

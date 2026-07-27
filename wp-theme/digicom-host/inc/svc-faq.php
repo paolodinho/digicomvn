@@ -14,12 +14,9 @@ $dgc_sf_nhom = isset( $nhom ) && $nhom ? $nhom : dgc_current_nhom();
 if ( ! $dgc_sf_nhom ) return;
 $dgc_sf_slug = $dgc_sf_nhom['slug'];
 
-$dgc_sf = array();
-foreach ( dgc_lines( 'svc_faqs' ) as $row ) {
-	if ( isset( $row[0] ) && trim( $row[0] ) === $dgc_sf_slug && ! empty( $row[1] ) && ! empty( $row[2] ) ) {
-		$dgc_sf[] = array( trim( $row[1] ), trim( $row[2] ) );
-	}
-}
+/* Schema FAQPage KHONG con sinh o day - da gop vao khoi @graph duy nhat (inc/schema.php),
+   dung chung nguon du lieu dgc_svc_faq_items() nen noi dung luon khop voi phan hien thi. */
+$dgc_sf = dgc_svc_faq_items( $dgc_sf_slug );
 if ( ! $dgc_sf ) return;
 ?>
 <section class="sec" id="faq" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
@@ -44,18 +41,3 @@ if ( ! $dgc_sf ) return;
 		</div>
 	</div>
 </section>
-<?php
-$dgc_sf_ld = array(
-	'@context'   => 'https://schema.org',
-	'@type'      => 'FAQPage',
-	'mainEntity' => array_values( array_map(
-		fn( $f ) => array(
-			'@type'          => 'Question',
-			'name'           => wp_strip_all_tags( $f[0] ),
-			'acceptedAnswer' => array( '@type' => 'Answer', 'text' => wp_strip_all_tags( $f[1] ) ),
-		),
-		$dgc_sf
-	) ),
-);
-?>
-<script type="application/ld+json"><?php echo wp_json_encode( $dgc_sf_ld, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ); ?></script>

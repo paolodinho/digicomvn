@@ -43,6 +43,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/audit-intent-truoc.md` | **Research SERP xac dinh intent TRUOC khi sua bai cu** |
 | `.claude/rules/khong-ban-gov-edu.md` | **TUYET DOI khong ban/nhac ban backlink .gov.vn .edu.vn (phap ly)** |
 | `.claude/rules/trang-tac-gia.md` | Trang tac gia /author/ - landing E-E-A-T, khong trung /blog/ |
+| `.claude/rules/schema-markup.md` | **Schema.org: 1 khoi @graph/trang (inc/schema.php), khong chen JSON-LD vao bai** |
 
 ## 7. File quan trong
 `PLAN.md`, `LOG.md`, `DECISIONS.md`, `.claude/context/brand-info.md` (luu y: mo ta site

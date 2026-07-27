@@ -1,5 +1,40 @@
 # LOG - digicomvn.com
 
+## 2026-07-27 (tiếp - bài mới T1/R16 Booking báo Tiền Phong)
+- Đăng live `/book-bao-tien-phong/` (post ID 4720, category booking-bao-pr), theo đúng mẫu chuẩn
+  R1 VnExpress/C6 Lao Động. Bảng giá 3 tier thật: 4.532.000đ (DanaSEO, đã có sẵn live) +
+  15.759.000đ / 52.530.000đ (2 tier mới tạo từ Fame Media, markup 1,03x đúng `bang-gia-booking.md`,
+  post ID 4716/4717 - không bịa giá, không dùng NCC ngoài 3 bên chính thức).
+- DR 82 verify độc lập qua MCP `public-domain-rating-free` (khớp giá trị đã lưu trong CSDL).
+  Traffic thật qua SimilarWeb (18,3tr lượt/tháng, hạng 73 VN, hạng 14 News&Media, kèm demographic).
+  Lịch sử thật từ Wikipedia (thành lập 16/11/1953, cơ quan Đoàn TNCS HCM, sáp nhập Báo Sinh viên
+  VN 2020). Chuyên mục lấy từ menu thật tienphong.vn (Giới trẻ, Địa ốc, Xe, Hàng không-Du lịch...).
+- 2 ảnh Storyset tái dùng từ thư viện có sẵn (media 4668, 4673), mọi H2 có yếu tố trực quan
+  (bar chart giá, dr-chart, chip-grid, card-grid quy trình) đúng `content-visual-coverage.md`.
+- Thumbnail render qua `tools/blog-thumbnail/render-illus.py` (phân loại BOOKING PR), set
+  featured image (attachment 4721).
+- Thêm `tienphong.vn` vào `inc/dr-chart.php` (backup live trước khi ghi đè, deploy qua SSH) ->
+  15 bài R1-R15 tự có link chéo qua biểu đồ DR. Internal link -> P1 (`/booking-bao-la-gi/`) +
+  C2 (`/bao-gia-dang-bai-pr-theo-dau-bao/`).
+- Verify: HTTP 200, 1 H1, 0 em dash, đủ 3 tier giá + 2 ảnh + quiz widget hiện đúng trên live.
+  Cập nhật `content/cluster-booking-bao.md` (22/22 bài).
+
+## 2026-07-27 (audit toàn bộ site - 9 agent song song)
+- Research toàn bộ 134 bài blog + 7 money page (trừ cụm Booking báo & PR đã xong riêng) qua 9
+  agent chạy song song, mỗi agent phụ trách 1-2 cụm, research SERP thật (WebFetch/WebSearch đối
+  thủ), không sửa/publish gì - thuần research để lập bản đồ gap.
+- Tổng 117 dòng gap ghi nhận, gộp vào `content/audit-toanbo-2026-07-27.csv` (import thẳng Google
+  Sheets qua File > Import). Đề xuất phân lại 16 cụm chủ đề: `content/audit-toanbo-2026-07-27-cum-de-xuat.md`.
+- Phát hiện đáng chú ý: 7/7 money page thiếu trust signal; `/dich-vu-backlink-tong-quan/` là trang
+  bán hàng ẩn giá lệch hệ thống `dgc_gia`; 2 cặp cannibalization; nhiều bài AI/GEO + thuật toán
+  Google lỗi thời số liệu 2026; `/crawl-budget/` có trích dẫn bịa gán cho Google.
+- **Lỗi công cụ (đã khắc phục)**: thao tác trình duyệt tự động vào Google Sheets bị kẹt (tab
+  `visibilityState: hidden`, Chrome tự treo nền tab automation, không ép lên foreground được).
+  Chuyển sang dùng thẳng Google Drive API (tool tạo file) - upload CSV, để Drive tự convert
+  sang Google Sheets, không cần thao tác trình duyệt. Kết quả:
+  https://docs.google.com/spreadsheets/d/1IYqgL0Yl5iB5jVc4w6Ql50drzfOXU9cWTvN44ytDeAs/edit
+  (117 dòng, xác nhận qua get_file_metadata - dữ liệu đã lên đủ, đúng cột).
+
 ## 2026-07-21 (viết bài #1 Batch 1 cụm Backlink - Anchor Text)
 - **Bài 1/3 Batch 1 Backlink**: viết + đăng bài "Tỷ Lệ Anchor Text Chuẩn Khi Mua Backlink/Guest Post Là Bao Nhiêu?"
   (post 4297, URL /ty-le-anchor-text-chuan/). Widget [dgc_offpage_quiz]. Thumbnail generator. Internal link từ bài
@@ -2396,3 +2431,62 @@ Upload qua `wp media import`, chèn `<!-- wp:image -->` đúng vị trí, verify
 - GSC "Yêu cầu lập chỉ mục" thử lại 3 lần (tab cũ, combobox khác, tab hoàn toàn mới) đều không phản
   hồi - lỗi công cụ trình duyệt vẫn tồn tại. Xác nhận URL đã có trong wp-sitemap-posts-post-1.xml với
   lastmod 2026-07-27T10:14:00 - Google sẽ tự crawl qua sitemap dù không submit thủ công được.
+
+## 2026-07-27 (tiếp, "làm hết đi"): lấp toàn bộ gap còn treo của cụm booking-báo
+
+- **R2 Thanh Niên / R4 Dân Trí**: xác nhận R2 không có gap giá thật (đã có tier 30tr, gần đúng mức
+  đối thủ 33,5tr). R4 phát hiện + fix lỗi thật: meta `yeu_cau` và nội dung bài ghi sai "dưới 3 ảnh"
+  trong khi dữ liệu Media Việt Nam gốc là "5 ảnh" - sửa 2 dòng dgc_gia (1005, 1006) + post 2197.
+- **Audit toàn catalog booking-bao-pr** (script `audit-gap-booking-pr.py`, tái dùng logic
+  export-web.py): phát hiện bug `domain()` làm gãy tên miền có chú thích kiểu "znews.vn (Zing)" -
+  đã fix vĩnh viễn trong export-web.py + sửa 13 post_title bị mislabel trên live (znews, CafeF,
+  CafeBiz, Autopro, Tinnhanhchungkhoan, Baodautu, Kenh14 x2). Phát hiện thêm 15 domain có gap giá
+  thật (Fame Media có tier cao hơn chưa import) - đã import đủ 15 dòng (post 4698-4712), trong đó
+  4 domain thuộc cụm này (24h, Kenh14, Znews, Báo Đầu Tư) đã verify không có câu văn nào trong bài
+  bị tier mới phản bác (khác CafeF/VietNamNet/Tuổi Trẻ đợt trước).
+- **4 agent nền audit song song** 4 trang chưa từng research riêng (CafeBiz, Soha, Eva, aFamily):
+  CafeBiz + Soha có gap thật (profile độc giả, danh sách chuyên mục) - đã fix cả 2. Eva xác nhận
+  không có gap, số liệu SimilarWeb hiện tại đã chính xác (đối thủ mới là bên bịa số). aFamily có
+  gap giá nhưng do giới hạn chính sách 3-NCC (không phải lỗi), 2 gap nội dung nhỏ để lại ưu tiên thấp.
+- **GSC**: thử lại 2 lần nữa cho Lao Động (tab cũ + tab mới), vẫn lỗi công cụ như trước - bỏ qua,
+  dựa vào sitemap.
+- Toàn bộ 21 trang trong cụm giờ đã qua ít nhất 1 đợt audit đối thủ riêng. Chi tiết đầy đủ:
+  content/cluster-booking-bao.md.
+
+## 2026-07-27 (tiếp): làm schema triệt để toàn site
+
+**Trước:** site không có SEO plugin nào, schema chỉ là 3 mảnh rời (FAQPage ở trang chủ, FAQPage ở
+trang dịch vụ, Person ở /author/). Không có Organization, WebSite, BreadcrumbList, Article, Service,
+Offer. Riêng 58 bài blog còn bị chèn thẳng `<script ld+json>` vào thân bài (Article + FAQPage,
+có bài lặp 3 lần) - các thực thể này không có `@id`, mâu thuẫn nhau, Google phải tự đoán.
+
+**Đã làm:**
+- Tạo `wp-theme/digicom-host/inc/schema.php` (~700 dòng): mỗi trang chỉ còn **1 khối `@graph`**,
+  các node nối bằng `@id`. Node theo loại trang: Organization+ProfessionalService / WebSite +
+  SearchAction / WebPage (biến thể ContactPage, AboutPage, CollectionPage, ProfilePage,
+  SearchResultsPage, FAQPage) / BreadcrumbList / Service + AggregateOffer / Article+BlogPosting /
+  ItemList / Person.
+- Organization lấy 100% dữ liệu thật: MST 0109816406, địa chỉ tách thành PostalAddress, hotline
+  E.164, giờ làm việc parse từ option, logo ImageObject có kích thước thật, founder trỏ hồ sơ WP,
+  `subjectOf` = 2 bài báo thật đã viết về DigicomVN, `hasOfferCatalog` = 7 dịch vụ.
+- `priceRange` + `AggregateOffer` tính từ CPT `dgc_gia` thật (vd Booking báo & PR: 440.000đ -
+  183.855.000đ trên 560 dòng giá), cache 12h, tự xoá cache khi sửa dòng giá.
+- Gỡ 3 khối JSON-LD rời cũ (blk-faq, svc-faq, author.php) - giờ dùng chung nguồn dữ liệu với graph.
+- `tools/migrate-inline-schema.php`: gỡ **108 khối script** khỏi 58 bài, chuyển **197 câu FAQ** sang
+  meta `dgc_faqs`; **loại 15 câu không hề hiển thị trong bài** (dữ liệu ẩn - vi phạm policy Google).
+  Backup nội dung gốc: host `~/backups/2026-07-27/schema-inline/` (58 file).
+- Thêm meta box "FAQ cho schema" ở WP Admin để Hiếu sửa FAQ từng bài, không chạm code.
+
+**Lỗi thật phát hiện + sửa trong quá trình:**
+- `get_the_author_meta('ID')` luôn rỗng ở `wp_head` -> Article mất `author` (thuộc tính bắt buộc).
+  Đổi sang `get_post_field('post_author', ...)`.
+- 5 case study có `post_author = 0` -> fallback `author` về Organization thay vì gán bừa tên người.
+- `inLanguage` không hợp lệ trên Organization (validator báo UNKNOWN_FIELD) -> bỏ.
+- Tên chuyên mục chứa `&` lọt entity `&amp;` vào `keywords` -> chạy qua bộ làm sạch.
+
+**QA:** quét 169 URL (toàn sitemap) = 0 lỗi, 0 cảnh báo. Kiểm định độc lập bằng
+validator.schema.org của Google cho 6 loại trang = **0 lỗi, 0 cảnh báo**.
+Script QA lưu tại `tools/schema-qa.py` + `tools/schema-validate.py`.
+
+**KHÔNG làm (có chủ ý):** không emit Review/AggregateRating vì testimonial hiện là nội dung mẫu,
+chưa phải đánh giá thật có danh tính - emit sẽ là dữ liệu sai sự thật và vi phạm policy Google.

@@ -1,11 +1,13 @@
 <?php
 /**
- * Block FAQ + schema FAQPage - dung chung trang chu + trang dich vu.
- * Doc option 'faqs'. Schema giup Google/AI trich dan dung cau tra loi.
+ * Block FAQ (hien thi) - doc option 'faqs' qua dgc_faq_items().
+ * SCHEMA FAQPage KHONG con sinh o day: da gop vao khoi @graph duy nhat trong
+ * inc/schema.php (dung chung nguon du lieu dgc_faq_items()) de tranh 2 khoi JSON-LD
+ * roi rac tren cung 1 trang.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-$dgc_faqs = array_filter( dgc_lines( 'faqs' ), fn( $f ) => ! empty( $f[0] ) && ! empty( $f[1] ) );
+$dgc_faqs = dgc_faq_items();
 if ( ! $dgc_faqs ) return;
 ?>
 <section class="sec" id="faq">
@@ -25,18 +27,3 @@ if ( ! $dgc_faqs ) return;
 		</div>
 	</div>
 </section>
-<?php
-$dgc_faq_ld = array(
-	'@context'   => 'https://schema.org',
-	'@type'      => 'FAQPage',
-	'mainEntity' => array_values( array_map(
-		fn( $f ) => array(
-			'@type'          => 'Question',
-			'name'           => wp_strip_all_tags( $f[0] ),
-			'acceptedAnswer' => array( '@type' => 'Answer', 'text' => wp_strip_all_tags( $f[1] ) ),
-		),
-		$dgc_faqs
-	) ),
-);
-?>
-<script type="application/ld+json"><?php echo wp_json_encode( $dgc_faq_ld, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ); ?></script>
