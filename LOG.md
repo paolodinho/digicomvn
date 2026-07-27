@@ -1,5 +1,37 @@
 # LOG - digicomvn.com
 
+## 2026-07-27 (tiếp - bài B4 cụm Backlink gap: /cac-loai-backlink/)
+- Đăng live `/cac-loai-backlink/` (post ID 4746, category `backlink-offpage`) - bài B4 cụm
+  "Backlink gap" (`content/cluster-backlink-gap.md`), từ khoá chính "các loại backlink"/"pbn
+  backlinks"/"backlink pyramid" (~360 volume, gộp thêm nhóm nhỏ ping/HARO/web2.0/GSA ~90 volume).
+- Research: WebSearch "các loại backlink là gì" + "backlink tier 1 2 3 là gì" + "pbn là gì rủi
+  ro seo google" + "GSA backlink HARO web 2.0", WebFetch loganix.com/tiered-link-building
+  (cấu trúc Tier 1/2/3) và gtvseo.com/pbn-la-gi (dấu hiệu SpamBrain phát hiện PBN). Đối chiếu
+  bài đã có `4226 co-nen-mua-backlink-khong` (PBN ở góc rủi ro khi MUA) để chọn góc KHÁC: B4 là
+  PHÂN LOẠI đầy đủ mọi loại backlink theo tầng + cách tạo, không lặp góc "nên mua hay không".
+- **An toàn nội dung (bắt buộc theo yêu cầu)**: PBN và GSA viết theo tinh thần giải thích khái
+  niệm + CẢNH BÁO rủi ro rõ ràng, KHÔNG hướng dẫn triển khai. External link dẫn Google Search
+  Central Spam Policies khi nêu PBN là hành vi thao túng liên kết bị Google xử phạt.
+- Nội dung 10 H2/8 H3 (~2.400 từ): phân loại theo 4 tiêu chí (chip-grid), mô hình Tier 1/2/3
+  (sơ đồ kim tự tháp 3 tầng + 3 H3 con), bảng `.dgc-data-table` so sánh 7 loại backlink (cách
+  tạo/độ an toàn/khuyến nghị), PBN là gì + rủi ro (sơ đồ 2 cột lợi ích ngắn hạn/rủi ro thật),
+  Web 2.0 (chip-grid nền tảng), HARO (sơ đồ quy trình 3 bước), Ping/GSA (card cảnh báo), khuyến
+  nghị chọn loại an toàn (sơ đồ quy trình 3 bước), FAQ 5 câu, kết luận. 2 ảnh Storyset tái dùng
+  (storyset-booking-quocte-network.webp id 4626, storyset-agency-warning-1.webp id 4618, đúng
+  chủ đề mạng lưới/cảnh báo, đủ credit) + widget `[dgc_offpage_quiz]` (giữa bài, sau phần PBN).
+- Internal link (5, đúng giới hạn, mỗi URL 1 lần): `/dich-vu-backlink/` (money page),
+  `/backlink-audit/`, `/kiem-tra-backlink/`, `/backlink-quoc-te/`, `/guest-post/`. Link ngược:
+  thêm 1 đoạn vào bài 4226 (backup content.raw trước khi sửa tại
+  `~/Claude-Workspace/_backups/routines/2026-07-27/backlink-cluster-B4/post-4226-before.html`).
+  KHÔNG thêm link ngược vào 4739 (backlink-audit) vì bài đó đã ở đúng giới hạn 5 link riêng.
+- Thumbnail: `tools/blog-thumbnail/render-illus.py` -> gắn làm ảnh đại diện (attachment 4747).
+- Verify: curl 200, 1 H1 đúng thứ tự H1->SAPO->Tóm tắt, 0 em/en dash, quiz widget + data-table
+  render đúng trên live (shortcode đã xử lý, không còn text thô), category hiển thị đúng.
+- GSC: KHÔNG submit được - kiểm tra search.google.com/search-console ra trang landing chưa
+  đăng nhập, không có session Google trong trình duyệt phiên này, không tự đăng nhập hộ (rule
+  bảo mật).
+- Sổ cái `content/cluster-backlink-gap.md` cập nhật: 2/5 bài xong (B1, B4).
+
 ## 2026-07-27 (tiếp - bài B1 cụm Backlink gap: /backlink-audit/)
 - Đăng live `/backlink-audit/` (post ID 4739, category `backlink-offpage`) - bài B1 cụm
   "Backlink gap" (`content/cluster-backlink-gap.md`), từ khoá chính "backlink audit"/"backlink
@@ -2668,3 +2700,54 @@ trước đó. Đã sửa. Cũng loại `/cam-on/` (đã noindex) khỏi wp-site
 
 **Lưu ý vận hành:** chạy các script QA tối đa 3 luồng. Lần chạy 6 luồng + 2 script song song làm
 host quá tải, sinh HTTP 500 rải rác và báo 28 lỗi GIẢ - chạy lại đúng cách thì sạch.
+
+---
+
+**2026-07-27 (tiếp) - Bài B2 cụm Backlink gap: Backlink Indexer.** Đăng live
+`/backlink-indexer/` (post ID 4751, category backlink-offpage). Research SERP xác nhận đúng dạng
+bài liệt kê phương pháp (vinalink.edu.vn top đầu không hề cảnh báo rủi ro auto-index - đây là
+info gain chính, có dẫn nguồn quốc tế indexbolt.com/schemawriter.ai cảnh báo "spammy footprint").
+8 H2, 7 H3, bảng `.dgc-data-table` so sánh 6 phương pháp index kèm tốc độ/rủi ro, 2 ảnh Storyset
+mới tải trực tiếp (File Searching, Connected World - style Rafiki, màu #407bff), widget
+`[dgc_offpage_quiz]`, 5 internal link (money page `/dich-vu-backlink/` + `/backlink-audit/` +
+3 bài liên quan). Thumbnail gắn qua `wp media import --featured_image` - phải purge LiteSpeed
+cache (`wp cache flush` + `litespeed-purge all`) mới thấy og:image mới, nếu không site live vẫn
+serve ảnh cache cũ dù đã đổi featured image trong DB. GSC: không submit được (không có session
+Google đăng nhập sẵn trong trình duyệt phiên này). Cụm Backlink gap: 3/5 bài xong (B1, B2, B4).
+Sổ cái: `content/cluster-backlink-gap.md`.
+
+---
+
+**2026-07-27 (tiếp) - Bài B3 cụm Backlink gap: Disavow Backlink.** Đăng live
+`/disavow-backlink/` (post ID 4749, category backlink-offpage). Research SERP + WebFetch trực
+tiếp Google Search Central (support.google.com/webmasters/answer/2648487) lấy đúng URL công cụ,
+định dạng file .txt, điều kiện nên/không nên dùng nguyên văn; + Ahrefs (toxic-backlinks) trích
+John Mueller ("toxic link" không phải khái niệm Google, hệ thống tự bỏ qua spam) và Marie Haynes,
+kèm case thật mất 60% traffic vì disavow bừa bãi theo "Toxic Score" công cụ tự gán - đây là info
+gain chính, phần lớn bài đối thủ VN không nêu rõ ranh giới này. 10 H2, 5 H3 FAQ, 1 bảng
+`.dgc-data-table` (7 dấu hiệu x mức rủi ro x hành động), 1 sơ đồ quy trình 6 bước, 1 bảng so sánh
+NÊN/KHÔNG NÊN, ví dụ code file disavow.txt, glossary "i" cho PBN, 2 ảnh Storyset tái dùng (ID
+4618, 4736), widget `[dgc_offpage_quiz]`. External link: 1 dofollow (Google Search Central),
+1 nofollow (Ahrefs, trích dẫn cá nhân). 5 internal link (money page `/dich-vu-backlink/` +
+`/backlink-audit/` + `/co-nen-mua-backlink-khong/` + `/kiem-tra-backlink/` + `/google-penguin/`).
+Thêm link ngược từ 2 bài cũ (4739 backlink-audit, 224 kiem-tra-backlink - backup content.raw
+trước khi sửa tại `~/Claude-Workspace/_backups/routines/2026-07-27/content-pipeline-disavow/`).
+Thumbnail gắn qua `wp media import` + set `_thumbnail_id` (attachment 4750). Sự cố kỹ thuật: lần
+đầu `wp post create < file` không nạp được content (thiếu cờ đọc STDIN đúng cách, bài tạo ra
+rỗng) - sửa bằng `wp post update <id> <file>` (WP-CLI đọc file khi truyền làm positional argument)
+rồi verify lại content.raw > 0 ký tự trước khi tiếp tục. GSC: không submit được (search.google.com
+redirect ra landing page marketing, không có session đăng nhập). Phát hiện: bài cũ #4 trong
+`cluster-backlink.md` ("Backlink Xấu Là Gì? Dấu Hiệu Và Cách Xử Lý") giờ trùng lặp lớn với B3 -
+đã ghi cảnh báo cannibalization, chưa tự xoá/gộp, chờ Hiếu quyết định. Cụm Backlink gap: 4/5 bài
+xong (B1, B2, B3, B4), còn B5. Sổ cái: `content/cluster-backlink-gap.md`.
+
+**Chốt cuối:** validator.schema.org chặn 429 kéo dài (thử lại sau 7 phút và 25 phút vẫn chặn) nên
+không dùng để quét cả site được. Bổ sung `tools/schema-google-check.py` kiểm đúng phần còn thiếu:
+thuộc tính BẮT BUỘC theo tài liệu Google cho từng loại rich result (Organization/LocalBusiness,
+Article, BreadcrumbList, FAQPage, ProfilePage, Offer/AggregateOffer, SearchAction) + tham chiếu
+`@id` không treo. Kết quả: **176 URL, 0 lỗi, 0 tham chiếu treo.**
+
+Bộ 4 script QA hiện có: `schema-qa.py` (cấu trúc) + `schema-vocab-check.py` (từ vựng schema.org) +
+`schema-google-check.py` (yêu cầu Google + @id) + `meta-qa.py` (meta/OG/canonical).
+Lưu ý trung thực: bộ này phủ rộng hơn hẳn (toàn site) nhưng KHÔNG sao chép 100% parser của Google -
+nghi ngờ loại rich result cụ thể thì vẫn soi thủ công bằng Rich Results Test.

@@ -70,10 +70,16 @@
 3. **`python3 tools/schema-vocab-check.py`** - kiểm TOÀN SITE theo từ vựng schema.org chính thức:
    mọi `@type` có thật, mọi thuộc tính có thật và đúng `domainIncludes` của kiểu node đó.
    Đây là bộ bắt lỗi chính (đã bắt được cả 2 lỗi `inLanguage`). **Mục tiêu: 0 lỗi.**
-4. Kiểm định chéo bằng `validator.schema.org` (script `tools/schema-validate.py`) cho vài loại
-   trang. **Lưu ý: API này chặn 429 sau khoảng 10-15 lượt/giờ** - dùng để đối chiếu mẫu, không
-   dùng để quét cả site (đó là việc của bước 3).
-5. Sửa CSS/JS kèm theo -> vẫn phải bump `DGC_VER` (xem `deploy.md`). Sửa riêng PHP thì không cần.
+4. **`python3 tools/schema-google-check.py`** - kiểm thuộc tính BẮT BUỘC theo tài liệu Google cho
+   từng loại rich result (Organization/LocalBusiness, Article, BreadcrumbList, FAQPage,
+   ProfilePage, Offer/AggregateOffer, SearchAction) + **tham chiếu `@id` không được treo**
+   (trỏ sang trang khác thì trang đó phải tồn tại thật). **Mục tiêu: 0 lỗi.**
+5. Kiểm định chéo bằng `validator.schema.org` (script `tools/schema-validate.py`) khi cần.
+   **Lưu ý: API này chặn 429 rất sớm (~10-15 lượt/giờ) và block kéo dài** - chỉ dùng đối chiếu
+   vài trang mẫu, KHÔNG dùng quét cả site (đó là việc của bước 3+4). Bộ 3 script tự kiểm phủ
+   rộng hơn (toàn site) nhưng không sao chép 100% bộ parser của Google - khi có nghi ngờ về
+   một loại rich result cụ thể thì vẫn nên soi lại bằng Rich Results Test thủ công.
+6. Sửa CSS/JS kèm theo -> vẫn phải bump `DGC_VER` (xem `deploy.md`). Sửa riêng PHP thì không cần.
 
 ## Liên quan
 - `deploy.md` - quy trình đẩy file lên live + purge cache.
