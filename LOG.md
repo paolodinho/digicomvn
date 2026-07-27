@@ -1,5 +1,31 @@
 # LOG - digicomvn.com
 
+## 2026-07-27 (tiếp - bài B1 cụm Backlink gap: /backlink-audit/)
+- Đăng live `/backlink-audit/` (post ID 4739, category `backlink-offpage`) - bài B1 cụm
+  "Backlink gap" (`content/cluster-backlink-gap.md`), từ khoá chính "backlink audit"/"backlink
+  profile" (~610 volume). Trùng dòng #6 sổ cái cũ `cluster-backlink.md`, đã cập nhật chéo.
+- Research: WebSearch "backlink audit là gì" + "how to audit backlink profile step by step",
+  WebFetch backlinko.com (quy trình 5 bước + 5 công cụ) và ahrefs.com/blog/backlink-audit
+  (Referring Domains, DR, anchor branded ratio, dấu hiệu spam). Đối chiếu bài đã có `224
+  kiem-tra-backlink` (review công cụ + 3 bước gỡ backlink xấu) để chọn góc KHÁC: B1 là QUY
+  TRÌNH audit 7 bước + bảng chỉ số kèm ngưỡng, không lặp phần thao tác công cụ/disavow.
+- Nội dung 9 H2/7 H3 (~2.600 từ): định nghĩa audit + backlink profile, 4 trigger cần audit,
+  quy trình 7 bước (sơ đồ card), bảng `.dgc-data-table` 7 chỉ số kèm ngưỡng tốt/cần chú ý, sơ đồ
+  2 cột lành mạnh/khả nghi, chip-grid công cụ free/trả phí, mục tự audit vs thuê dịch vụ, FAQ 5
+  câu, kết luận. 2 ảnh Storyset (tái dùng storyset-analysis.png + storyset-datareport.png đã có
+  sẵn trên site, đúng chủ đề, đủ credit) + widget `[dgc_offpage_quiz]`.
+- Internal link (5, đúng giới hạn site, mỗi URL 1 lần): `/dich-vu-backlink/` (money page),
+  `/kiem-tra-backlink/`, `/co-nen-mua-backlink-khong/`, `/ty-le-anchor-text-chuan/`,
+  `/backlink-dofollow-va-nofollow/`. Link ngược: thêm vào bài 224 và 4226 (backup content.raw
+  trước khi sửa tại `~/Claude-Workspace/_backups/routines/2026-07-27/content-pipeline/`).
+- Thumbnail: `tools/blog-thumbnail/render-illus.py` -> gắn làm ảnh đại diện (attachment 4740).
+- Verify: curl 200, 1 H1 đúng thứ tự H1->SAPO->Tóm tắt, 0 em dash, quiz widget + data-table
+  render đúng trên live, link ngược lên live ở cả 2 bài cũ.
+- GSC: KHÔNG submit được - không có session Google đã đăng nhập trong trình duyệt phiên này,
+  không tự đăng nhập hộ (rule bảo mật). Cần Hiếu tự đăng nhập rồi submit sau, hoặc để sitemap
+  tự crawl.
+- Sổ cái mới `content/cluster-backlink-gap.md` (B1-B5, B1 xong, B2-B5 chưa làm).
+
 ## 2026-07-27 (tiếp - bài P1 cụm PR tổng quát: /pr-la-gi/)
 - Đăng live `/pr-la-gi/` (post ID 4722, category booking-bao-pr) - bài P1 cụm content mới
   "PR tổng quát" (`content/cluster-pr-tongquat.md`), từ khoá chính "pr là gì" (~8.100-12.080
@@ -2608,3 +2634,37 @@ meta description, không có og:/twitter: tag nào, trang lưu trữ không có 
 
 **QA:** schema 171 URL = 0 lỗi/0 cảnh báo; meta 171 URL = 0 lỗi. Script: `tools/schema-qa.py`,
 `tools/meta-qa.py`, `tools/schema-validate.py`.
+
+## 2026-07-27 (tiếp) - Content pipeline P4: Mô Hình RACE Trong PR (cụm PR tổng quát 4/4)
+
+Đăng live bài P4 (bài cuối cụm PR tổng quát): `/mo-hinh-race-pr/` (post ID 4737, category
+booking-bao-pr). Research SERP xác nhận top Việt Nam đang **nhầm lẫn 2 mô hình RACE khác nhau**
+(RACE-PR của John Marston vs RACE-digital-marketing của Dave Chaffey & PR Smith, Smart Insights) -
+đã viết đúng mô hình PR và thêm mục phân biệt rõ, đính chính luôn brief gốc ghi nhầm tác giả
+"PR Smith" cho mô hình PR (thực ra PR Smith là đồng tác giả mô hình RACE marketing số khác).
+
+Nội dung: 4 bước R-A-C-E giải thích + ví dụ áp dụng (Công ty X giả định, gắn nhãn rõ) + bảng
+6 chỉ số đo lường hiệu quả PR (AVE/Impressions/SOV/Sentiment/Traffic/Backlink) + cảnh báo AVE lỗi
+thời (nguồn AMEC/Barcelona Principles). 2 ảnh Storyset tự tải SVG gốc (rsvg-convert + cwebp).
+2 external link dofollow (nguồn học thuật RACE + AMEC). Quiz widget `[dgc_offpage_quiz]` ở FAQ.
+
+Internal link 2 chiều: P4 -> /pr-la-gi/, /cac-loai-hinh-pr/, /booking-bao-pr/, /case-study-chien-dich-pr/
+(P3 vừa publish song song trong lúc làm P4, đã bổ sung link). Link ngược đã thêm vào P1 (4722) và
+P2 (4728), backup tại `~/Claude-Workspace/_backups/routines/2026-07-27/content-pipeline/`.
+GSC: đã submit "Yêu cầu lập chỉ mục" thành công qua Chrome (property URL-prefix digicomvn.com/).
+
+Cụm PR tổng quát hoàn thành 4/4 bài (P1-P4). Sổ cái: `content/cluster-pr-tongquat.md`.
+
+**Bổ sung cuối 2026-07-27:** dựng `tools/schema-vocab-check.py` - tự kiểm định JSON-LD theo TỪ VỰNG
+SCHEMA.ORG CHÍNH THỨC (tải trực tiếp từ schema.org: 933 lớp, 1.522 thuộc tính), kiểm mọi `@type` có
+thật + mọi thuộc tính có thật + đúng `domainIncludes` của kiểu node. Lý do phải tự dựng: API
+validator.schema.org chặn 429 sau ~10-15 lượt/giờ nên không quét nổi cả site.
+
+Công cụ này lập tức bắt được **1 lỗi thật vừa mới thêm**: `inLanguage` đặt trên `EntryPoint`
+(target của OrderAction) - không hợp lệ, đúng cùng loại lỗi `inLanguage` trên Organization sửa
+trước đó. Đã sửa. Cũng loại `/cam-on/` (đã noindex) khỏi wp-sitemap để không còn tín hiệu mâu thuẫn.
+
+**Kết quả cuối:** 173 URL - schema 0 lỗi, meta 0 lỗi, từ vựng schema.org 0 lỗi.
+
+**Lưu ý vận hành:** chạy các script QA tối đa 3 luồng. Lần chạy 6 luồng + 2 script song song làm
+host quá tải, sinh HTTP 500 rải rác và báo 28 lỗi GIẢ - chạy lại đúng cách thì sạch.

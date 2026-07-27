@@ -182,6 +182,8 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       giữa trang phân trang và trang 1.
 - [x] `inc/seo-meta.php`: meta description + Open Graph + Twitter Card + canonical trang lưu trữ +
       ô "SEO & Schema" sửa tiêu đề/mô tả từng bài trong WP Admin. QA 171 URL = 0 lỗi.
+- [x] `tools/schema-vocab-check.py` - kiểm định theo từ vựng schema.org chính thức, quét cả site
+      (thay cho validator.schema.org bị giới hạn 429). Bắt được lỗi `inLanguage` trên EntryPoint.
 - [ ] **Cần Hiếu làm:** thiết kế 1 ảnh chia sẻ 1200x630 của DigicomVN rồi điền vào WP Admin >
       DigicomVN > mục 0 > "Anh chia se mac dinh". Hiện đang fallback về logo (1278x363) nên khi
       share Facebook/Zalo bị viền trên dưới. (KHÔNG dùng `ogimagedn.jpg` ở thư mục gốc - đó là

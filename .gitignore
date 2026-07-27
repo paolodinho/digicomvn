@@ -30,3 +30,5 @@ _static/
 
 # Token Apps Script tao bao gia - KHONG commit
 tools/bao-gia/config.json
+
+tools/.schemaorg-vocab.jsonld

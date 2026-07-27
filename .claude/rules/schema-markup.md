@@ -24,6 +24,8 @@
 | Trang dịch vụ pillar | `Service` (#service) + `AggregateOffer` (giá thật min/max từ `dgc_gia`) |
 | Trang ngách con (vd /dich-vu-backlink/bat-dong-san/) | `Service` không kèm giá + `isRelatedTo` -> service cha |
 | Bài viết / case study | `Article`(+`BlogPosting`), `about` -> Service của cụm (nếu cụm có money page) |
+| Bài có `[dgc_bang_gia]` (18 bài đầu báo) | + `Service` + `Offer` **giá thật của đầu báo đó**; `Article.about` trỏ về Service này |
+| Trang lưu trữ phân trang | `@id`/`url` riêng theo `/page/N/` |
 | /blog/, chuyên mục, /bang-gia/ | `CollectionPage` + `ItemList` |
 | /lien-he/, /ve-digicom/ | `ContactPage` / `AboutPage`, `mainEntity` -> Organization |
 | /author/... | `ProfilePage` + `Person` |
@@ -40,6 +42,13 @@
   KHÔNG gán bừa tên cá nhân.
 - **Tên chuyên mục chứa `&`** -> phải chạy qua `dgc_sch_txt()` để giải mã entity, nếu không
   `keywords` sẽ ra `Backlink &amp; Off-page`.
+- **`inLanguage` cũng KHÔNG hợp lệ trên `EntryPoint`** (target của OrderAction/SearchAction).
+  Đây là lỗi lặp lại lần 2 của cùng một thói quen "gắn inLanguage cho mọi node" -> luôn chạy
+  `tools/schema-vocab-check.py` sau khi thêm bất kỳ thuộc tính mới nào.
+- **Trang phân trang `/category/x/page/2/`** phải có `@id`/`url` RIÊNG (dùng `dgc_sch_url_paged()`).
+  Dùng chung với trang 1 = hai trang nội dung khác nhau cùng khai là một thực thể.
+- **Bài không có ảnh đại diện** vẫn phải có `Article.image` -> lấy ảnh đầu tiên trong thân bài,
+  nhớ bỏ hậu tố `-WxH` để `attachment_url_to_postid()` tra được bản gốc (có width/height).
 
 ## Sửa nội dung schema ở đâu (không chạm code)
 
@@ -48,7 +57,8 @@
 | Tên/địa chỉ/hotline/email/giờ làm việc/Facebook/Zalo | WP Admin > DigicomVN |
 | FAQ trang chủ | option `faqs` |
 | FAQ từng trang dịch vụ | option `svc_faqs` |
-| FAQ từng bài viết | Meta box **"FAQ cho schema"** ngay dưới trình soạn thảo bài |
+| FAQ từng bài viết | Meta box **"SEO & Schema"** ngay dưới trình soạn thảo bài |
+| Giá từng đầu báo trong bài | Shortcode `[dgc_bang_gia bao="..." domain="..."]` - schema tự sinh Offer khớp đúng bảng hiển thị |
 | Khoảng giá dịch vụ | Sửa CPT Bảng giá - schema tự tính lại (cache 12h, tự xoá khi lưu dòng giá) |
 | Hồ sơ tác giả (chức danh, tiểu sử, chuyên môn, bằng cấp, social) | WP Admin > Thành viên > Hồ sơ |
 
@@ -57,9 +67,13 @@
 1. `php -l inc/schema.php` (lint trên host, máy Hiếu không có PHP).
 2. Quét toàn site: `tools/schema-qa.py` (**tối đa 3 luồng - chạy 6 luồng hoặc 2 script song song làm host quá tải, sinh HTTP 500 rải rác và báo lỗi giả**) - kiểm mỗi URL đúng 1 khối JSON-LD, JSON parse được,
    đủ thuộc tính bắt buộc, không có trường rỗng.
-3. Kiểm định độc lập bằng `validator.schema.org` (script `tools/schema-validate.py`) cho tối
-   thiểu 6 loại trang: chủ, dịch vụ, bài viết, blog, tác giả, bảng giá. **Mục tiêu: 0 lỗi, 0 cảnh báo.**
-4. Sửa CSS/JS kèm theo -> vẫn phải bump `DGC_VER` (xem `deploy.md`). Sửa riêng PHP thì không cần.
+3. **`python3 tools/schema-vocab-check.py`** - kiểm TOÀN SITE theo từ vựng schema.org chính thức:
+   mọi `@type` có thật, mọi thuộc tính có thật và đúng `domainIncludes` của kiểu node đó.
+   Đây là bộ bắt lỗi chính (đã bắt được cả 2 lỗi `inLanguage`). **Mục tiêu: 0 lỗi.**
+4. Kiểm định chéo bằng `validator.schema.org` (script `tools/schema-validate.py`) cho vài loại
+   trang. **Lưu ý: API này chặn 429 sau khoảng 10-15 lượt/giờ** - dùng để đối chiếu mẫu, không
+   dùng để quét cả site (đó là việc của bước 3).
+5. Sửa CSS/JS kèm theo -> vẫn phải bump `DGC_VER` (xem `deploy.md`). Sửa riêng PHP thì không cần.
 
 ## Liên quan
 - `deploy.md` - quy trình đẩy file lên live + purge cache.

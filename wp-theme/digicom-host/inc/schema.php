@@ -809,10 +809,11 @@ function dgc_sch_service() {
 		'potentialAction'  => array(
 			'@type'  => 'OrderAction',
 			'name'   => 'Đặt bài',
+			// KHONG dat 'inLanguage' tren EntryPoint - schema.org khong cho phep
+			// (chi hop le tren CreativeWork/Event/BroadcastService...). Da kiem 2026-07-27.
 			'target' => array(
 				'@type'       => 'EntryPoint',
 				'urlTemplate' => home_url( '/dat-bai/' ),
-				'inLanguage'  => 'vi-VN',
 			),
 		),
 	);
