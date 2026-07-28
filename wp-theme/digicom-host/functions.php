@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '2.0.9' );
+define( 'DGC_VER', '2.1.0' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -66,7 +66,6 @@ require_once get_template_directory() . '/inc/case-study.php';
 require_once get_template_directory() . '/inc/ai-chat.php';
 require_once get_template_directory() . '/inc/glossary.php';
 require_once get_template_directory() . '/inc/toc.php';
-require_once get_template_directory() . '/inc/post-sidebars.php';
 /* Schema.org: 1 khoi @graph duy nhat cho moi trang (xem inc/schema.php). */
 require_once get_template_directory() . '/inc/schema.php';
 /* Meta description + Open Graph + Twitter Card + canonical trang luu tru. */

@@ -2751,3 +2751,34 @@ Bộ 4 script QA hiện có: `schema-qa.py` (cấu trúc) + `schema-vocab-check.
 `schema-google-check.py` (yêu cầu Google + @id) + `meta-qa.py` (meta/OG/canonical).
 Lưu ý trung thực: bộ này phủ rộng hơn hẳn (toàn site) nhưng KHÔNG sao chép 100% parser của Google -
 nghi ngờ loại rich result cụ thể thì vẫn soi thủ công bằng Rich Results Test.
+
+## 2026-07-28 - Audit internal link toàn site
+Crawl 178 URL (sitemap + trang tác giả), dựng link graph outbound/inbound đầy đủ, tách riêng
+link thân bài (content) khỏi link nav/sidebar/related-widget để có bức tranh thật.
+
+Kết quả: 0 link 404. Phát hiện + fix 15 dòng `.htaccess` redirect kép (khối "BEGIN DGC 301
+REDIRECTS" 2026-07-11 chưa cập nhật sau khi bỏ hub `/dich-vu/` ngày 2026-07-16) - backup tại
+`~/Claude-Workspace/_backups/routines/2026-07-28/htaccess-redirect-fix/.htaccess-before`, đã
+verify lại bằng curl (còn 1 hop). Money page `/dich-vu-toplist/` có 0 link thân bài trỏ tới -
+đã thêm 1 câu ở bài `cac-loai-backlink` (post 4746, backup tại
+`~/Claude-Workspace/_backups/routines/2026-07-28/link-audit-fixes/post-4746-before.html`).
+
+Phát hiện thêm (chưa sửa, cần Hiếu quyết định): sidebar "Sơ đồ nội dung" + "Bài viết liên quan"
+trên mỗi bài blog liệt kê TOÀN BỘ bài cùng chuyên mục (tới 35-36 bài/chuyên mục), khiến 103/145
+bài vượt ngưỡng "tối đa 5 link thân bài" của content-pipeline SKILL - đây là thiết kế chủ đích
+(điều hướng cụm), không phải bug, nhưng đáng để xem lại.
+
+## 2026-07-28 - Bỏ sidebar "Sơ đồ nội dung", chuyển mục lục sang trái
+Theo yêu cầu Hiếu sau audit internal link: xoá hẳn cột trái "Sơ đồ nội dung" (accordion liệt kê
+toàn bộ bài cùng chuyên mục trên mỗi bài blog - nguồn gây ~180 internal link/trang phát hiện lúc
+audit), chuyển Mục lục (TOC) từ cột phải sang cột trái. Trang blog giờ chỉ còn layout 2 cột
+(trái: mục lục, phải: nội dung) thay vì 3 cột.
+
+Đã xoá: `inc/post-sidebars.php` (hàm `dgc_render_cluster_sidebar`, `dgc_cat_service_links`,
+không dùng ở đâu khác - backup tại `remove-cluster-sidebar/post-sidebars.php.removed`), CSS
+`.cluster-cat/.cluster-list/.cluster-svc/.post-side-left__title` (chết theo). Sửa `single.php`
+(gọi `dgc_toc_render_sidebar` ở vị trí cột trái, bỏ gọi cột phải cũ), `inc/toc.php` (đổi class
+`post-side-right` -> `post-side-left`), `main.css` (grid 3 cột `236px+820px+260px` -> 2 cột
+`260px+820px`, thêm rule `.post-layout--no-toc` để bài <3 heading không còn khoảng trống).
+Backup live trước khi sửa tại `~/Claude-Workspace/_backups/routines/2026-07-28/remove-cluster-sidebar/`.
+Bump DGC_VER 2.0.9 -> 2.1.0, deploy + purge cache, verify qua curl (đủ class, 0 dấu vết cũ).

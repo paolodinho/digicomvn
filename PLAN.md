@@ -184,8 +184,25 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       ô "SEO & Schema" sửa tiêu đề/mô tả từng bài trong WP Admin. QA 171 URL = 0 lỗi.
 - [x] `tools/schema-vocab-check.py` - kiểm định theo từ vựng schema.org chính thức, quét cả site
       (thay cho validator.schema.org bị giới hạn 429). Bắt được lỗi `inLanguage` trên EntryPoint.
-- [ ] **Cần Hiếu làm:** thiết kế 1 ảnh chia sẻ 1200x630 của DigicomVN rồi điền vào WP Admin >
-      DigicomVN > mục 0 > "Anh chia se mac dinh". Hiện đang fallback về logo (1278x363) nên khi
-      share Facebook/Zalo bị viền trên dưới. (KHÔNG dùng `ogimagedn.jpg` ở thư mục gốc - đó là
-      logo Báo Đà Nẵng, không phải của Digicom.)
+- [x] Ảnh chia sẻ OG 1200x630 riêng của DigicomVN (attachment ID 4768, dùng logo thật +
+      blend-mode screen) - đã set vào option `og_image`, không còn fallback logo méo.
 - [ ] Bật Review/AggregateRating khi có đánh giá khách hàng thật (tên + nội dung khách viết).
+
+### Audit internal link toàn site (2026-07-28) - ĐÃ XONG
+- [x] Crawl 178 trang (145 bài + 16 page + 5 case study + 11 category + trang tác giả), dựng
+      link graph đầy đủ. Kết quả: 0 link 404, 1 "orphan" hoá ra false-positive (case study vẫn
+      lên từ `/case-study/` archive, chỉ do crawler không seed archive route).
+- [x] Phát hiện + fix **15 dòng redirect kép** trong `.htaccess` (khối "BEGIN DGC 301 REDIRECTS"
+      2026-07-11, sót lại sau khi bỏ hub `/dich-vu/` ngày 2026-07-16): các URL cũ
+      (dich-vu-seo, thiet-ke-website, entity-branding, pr-bao-chi, cham-soc-website, chatbot-ai,
+      google-ads, ten-mien, hosting, lap-trinh-website, ban-quyen-phan-mem, ban-quyen-windows-11,
+      google-workspace, office-365, automation) redirect qua trang hub cũ rồi mới redirect lần 2
+      về đích thật - giờ trỏ thẳng 1 lần. 24 link trong 19 bài viết (anchor "dịch vụ SEO",
+      "chiến lược SEO", "thiết kế website"...) được hưởng lợi trực tiếp, đỡ 1 hop.
+- [x] Phát hiện money page `/dich-vu-toplist/` có **0 link nội dung trỏ tới** (mọi money page
+      khác đều có 5-49 link từ bài blog) - đã thêm 1 câu link tự nhiên từ bài `cac-loai-backlink`.
+- [x] Sidebar "Sơ đồ nội dung" (accordion liệt kê toàn bộ bài cùng chuyên mục, có chuyên mục
+      35-36 bài, gây ~180 internal link/trang) - Hiếu chốt: BỎ HẲN, chuyển Mục lục (TOC) từ cột
+      phải sang cột trái thay thế. Đã xoá `inc/post-sidebars.php`, đổi layout blog còn 2 cột.
+      Khối "Bài viết liên quan" cuối bài (vẫn liệt kê hết chuyên mục trong `<details>`) CHƯA đụng
+      tới - vẫn còn góp phần vượt ngưỡng "tối đa 5 link thân bài", để riêng nếu cần xử lý tiếp.

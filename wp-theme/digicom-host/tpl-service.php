@@ -69,10 +69,17 @@ if ( $nhom ) {
 <?php endif; ?>
 
 <?php
-/* KHONG cắm cac block dung chung trang chu (vi sao chon / dau bao / testimonials / FAQ) vao day
-   nua (Hieu 2026-07-16): 8 trang dich vu lap y het nhau -> trung lap/boilerplate, loang do doc nhat.
+/* KHONG cắm cac block dung chung trang chu (vi sao chon / dau bao / FAQ) vao day nua
+   (Hieu 2026-07-16): 8 trang dich vu lap y het nhau -> trung lap/boilerplate, loang do doc nhat.
    Trang dich vu chi giu noi dung RIENG: hero + "... la gi" + bang gia + noi dung bai + form.
-   Cac block dung chung van song o trang chu (front-page.php). */
+   Cac block dung chung van song o trang chu (front-page.php).
+
+   NGOAI LE (Hieu 2026-07-28, sau audit toan site): 7 trang money page van thieu trust
+   signal (MST, nam hoat dong, danh gia khach hang) - anh huong truc tiep chuyen doi.
+   inc/svc-trust.php RIENG BIET voi blk-testimonials.php: chi 1 danh gia KHOP dung dich vu
+   trang nay (khong lap lai carousel toan bo testimonial cua trang chu), nen khong tinh la
+   "boilerplate lap 8 trang" nhu truoc. Chi hien khi co $nhom (trang co bang gia that). */
+if ( $nhom ) include get_template_directory() . '/inc/svc-trust.php';
 ?>
 
 <?php

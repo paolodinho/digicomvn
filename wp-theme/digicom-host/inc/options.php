@@ -18,6 +18,12 @@ function dgc_defaults() {
 		'facebook'      => 'https://www.facebook.com/profile.php?id=61591139212103',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
 
+		// Phap nhan (hien tren trang dich vu de tang trust signal) - so that theo dang ky
+		// kinh doanh, KHONG bia. Doi ten cong ty/MST -> sua o day, khong sua template.
+		'company_name'  => 'CÔNG TY TNHH DỊCH VỤ TRUYỀN THÔNG DIGITO COMBAT',
+		'company_mst'   => '0109816406',
+		'company_since' => '2021-11-12',
+
 		'hero_title'    => 'Backlink, Guest Post, Textlink và Booking báo PR uy tín',
 		'hero_sub'      => 'DigicomVN cung cấp trọn gói off-page SEO: mua textlink chất lượng, dịch vụ backlink an toàn, guest post đúng chủ đề và booking đăng bài PR trên các đầu báo lớn.',
 
@@ -167,6 +173,9 @@ function dgc_settings_page() {
 				dgc_field( 'address', 'Tru so (dia chi dang ky kinh doanh)' );
 				dgc_field( 'address2', 'Van phong giao dich', 'De trong neu chi co tru so.' );
 				dgc_field( 'working_hours', 'Gio lam viec' );
+				dgc_field( 'company_name', 'Ten phap nhan day du', 'Hien o dai trust-signal trang dich vu. Dung ten dang ky kinh doanh, khong viet tat.' );
+				dgc_field( 'company_mst', 'Ma so thue' );
+				dgc_field( 'company_since', 'Ngay hoat dong (yyyy-mm-dd)', 'Dung de tinh so nam hoat dong hien tren trang dich vu - tu dong cap nhat theo nam, khong can sua lai.' );
 				?>
 			</table>
 

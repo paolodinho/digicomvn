@@ -3,8 +3,9 @@
  * Template cho single blog post.
  * Khong tu render H1 tu post_title - noi dung Gutenberg cua bai da co H1 rieng
  * (content-writer skill luon xuat H1 trong than bai). Rendering ca 2 se bi trung H1.
- * Layout 3 cot >=1240px (kieu SEONGON): trai = so do cum (accordion category), giua = noi dung,
- * phai = muc luc. Duoi 1240px giu nguyen 1 cot + muc luc dropdown/floating nhu truoc (inc/toc.php).
+ * Layout 2 cot >=1240px: trai = muc luc, phai = noi dung (Hieu 2026-07-28: bo cot "so do noi
+ * dung" accordion category, chuyen muc luc sang trai). Duoi 1240px giu nguyen 1 cot + muc luc
+ * dropdown/floating nhu truoc (inc/toc.php).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -20,7 +21,7 @@ get_header();
 			$dgc_toc_items    = $GLOBALS['dgc_toc_items'];
 			?>
 			<div class="post-layout<?php echo empty( $dgc_toc_items ) ? ' post-layout--no-toc' : ''; ?>">
-				<?php dgc_render_cluster_sidebar( $dgc_post_id ); ?>
+				<?php dgc_toc_render_sidebar( $dgc_toc_items ); ?>
 
 				<div class="post-main">
 					<?php if ( has_post_thumbnail() ) : ?>
@@ -84,8 +85,6 @@ get_header();
 						<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a></div>
 					</div>
 				</div>
-
-				<?php dgc_toc_render_sidebar( $dgc_toc_items ); ?>
 			</div>
 		<?php endwhile; endif; ?>
 	</div>
