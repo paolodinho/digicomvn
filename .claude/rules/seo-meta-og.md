@@ -42,10 +42,15 @@ sinh canonical cho trang đơn). Hệ quả: share Facebook/Zalo ra thẻ trắn
 - **KHÔNG dùng file `ogimagedn.jpg` ở thư mục gốc dự án làm ảnh OG** - đó là logo Báo Đà Nẵng
   (ảnh tư liệu), không phải của Digicom. Dùng sẽ là mạo nhận thương hiệu báo khác.
 
-## Việc còn thiếu
+## Ảnh OG mặc định (xong 2026-07-28)
 
-- Chưa có **ảnh OG riêng 1200x630 của DigicomVN** -> đang fallback về logo (1278x363), khi
-  share sẽ bị viền trên dưới. Cần Hiếu thiết kế 1 ảnh 1200x630 rồi điền vào `og_image`.
+Đã dựng ảnh cover riêng 1200x630 (logo thật + nền brand navy/action/teal, blend-mode
+`screen` để ẩn khung nền glow sẵn có của logo, không lộ viền chữ nhật) thay cho fallback
+logo 1278x363 (từng bị viền trên dưới khi share). Attachment ID **4768**
+(`wp-content/uploads/2026/07/og-cover-digicomvn.jpg`), đã set vào option `dgc_settings['og_image']`
+qua `wp eval` merge (không đụng field khác). Muốn đổi lại -> WP Admin > DigicomVN > mục 0
+(nhận ID ảnh hoặc URL) hoặc thay ảnh mới rồi `wp media import` + update lại field này.
+Backup giá trị `og_image` trước khi sửa (rỗng): `~/Claude-Workspace/_backups/routines/2026-07-28/og-image-home/dgc_settings-before.json`.
 
 ## QA bắt buộc sau khi sửa
 
