@@ -639,6 +639,10 @@ add_action( 'template_redirect', function () {
 	$dgc_gop = array(
 		'/dich-vu-entity/'  => '/backlink-social-entity/',
 		'/backlink-social/' => '/backlink-social-entity/',
+		/* /dich-vu-backlink-tong-quan/ (post 227) trung chuc nang + gia khong khop pillar
+		   /dich-vu-backlink/ (page 268) - Hieu chot 2026-07-28: gop noi dung giao duc that
+		   (khong PBN) vao pillar, draft 227, 301 ve day. */
+		'/dich-vu-backlink-tong-quan/' => '/dich-vu-backlink/',
 	);
 	$dgc_p = untrailingslashit( $path ) . '/';
 	if ( isset( $dgc_gop[ $dgc_p ] ) ) {
