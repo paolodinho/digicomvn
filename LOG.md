@@ -1,5 +1,36 @@
 # LOG - digicomvn.com
 
+## 2026-07-27 (tiếp - bài B5 cụm Backlink gap, CỤM HOÀN THÀNH 5/5: /backlink-mang-xa-hoi/)
+- Đăng live `/backlink-mang-xa-hoi/` (post ID 4759, category `backlink-offpage`) - bài B5, bài
+  CUỐI CÙNG cụm "Backlink gap" (`content/cluster-backlink-gap.md`, giờ 5/5 bài xong). Từ khoá
+  chính "social media backlinks"/"backlink youtube"/"backlink facebook"/"backlink pinterest"
+  (~260 volume).
+- Research: WebSearch nofollow social media 2026 + backlink facebook/youtube/pinterest dofollow.
+  WebFetch marketinglad.io/social-backlinks (bảng nền tảng + funnel), Wikipedia Nofollow (lịch
+  sử 2005, rel=ugc/sponsored 2019), developers.google.com/search/blog (thông báo chính thức
+  9/2019: nofollow thành "hint" từ 3/2020), thecommamamaco.com (3 case study DA tăng nhờ backlink
+  dofollow Pinterest, có số liệu thật). Đọc trước `/backlink-social-entity/` live để tách bạch
+  rõ: trang đó là DỊCH VỤ bán gói social entity, bài mới là KIẾN THỨC "MXH có tính SEO không" -
+  không trùng nội dung, bài dẫn về dịch vụ ở mục cuối.
+- Nội dung 9 H2/5 H3 (~3.013 từ): sự thật nofollow, bảng 8 nền tảng dofollow/nofollow, lịch sử
+  nofollow 2005-2020, giá trị gián tiếp (traffic/index nhanh/brand signal/funnel dẫn tới dofollow
+  biên tập thật), Pinterest ngoại lệ dofollow (case study DA), cách tận dụng đúng 4 bước, khi nào
+  đầu tư social entity bài bản, FAQ, tổng kết.
+- Visual: 5 sơ đồ/card-grid HTML (so sánh 2-khối, timeline nofollow, funnel 5 bước, quy trình 4
+  bước, so sánh tự đăng MXH vs social entity) + 2 bảng `.dgc-data-table` (nền tảng, case study
+  Pinterest) + 2 ảnh Storyset MỚI (Social Media - Rafiki id 4757, Social Growth - Rafiki id 4758,
+  tải trực tiếp storyset.com, giữ màu gốc #407BFF khớp brand, `wp media import` chuẩn) + widget
+  `[dgc_offpage_quiz]` + 2 chip-grid. Internal link (5, mỗi URL 1 lần, cả 5 verify 200):
+  `/dich-vu-backlink/`, `/cac-loai-backlink/` (B4), `/backlink-indexer/` (B2), `/kiem-tra-backlink/`,
+  `/backlink-social-entity/`. External link: Wikipedia + Google Search Central (dofollow, nguồn
+  chính thống), MarketingLad + The Comma Mama Co. (nofollow, trích số liệu bên thứ ba).
+- Thumbnail: `render-illus.py` -> `dgc-thumb-4759.png`, gắn qua `wp media import --post_id` +
+  `_thumbnail_id` (attachment 4760), `wp cache flush` + `litespeed-purge all` sau khi gắn.
+- Verify: curl 200, 1 H1, 0 em/en dash, 2 bảng, 1 widget, 2 ảnh Storyset, og:image đúng, wordCount
+  3013 (schema). GSC: KHÔNG submit được - search.google.com/search-console redirect landing page
+  marketing, không có session Google đăng nhập trong trình duyệt phiên này (cùng tình trạng B1-B4).
+- **CỤM BACKLINK GAP HOÀN THÀNH 5/5 BÀI.** Chi tiết đầy đủ từng bài: `content/cluster-backlink-gap.md`.
+
 ## 2026-07-27 (tiếp - bài B4 cụm Backlink gap: /cac-loai-backlink/)
 - Đăng live `/cac-loai-backlink/` (post ID 4746, category `backlink-offpage`) - bài B4 cụm
   "Backlink gap" (`content/cluster-backlink-gap.md`), từ khoá chính "các loại backlink"/"pbn
@@ -2751,3 +2782,138 @@ Bộ 4 script QA hiện có: `schema-qa.py` (cấu trúc) + `schema-vocab-check.
 `schema-google-check.py` (yêu cầu Google + @id) + `meta-qa.py` (meta/OG/canonical).
 Lưu ý trung thực: bộ này phủ rộng hơn hẳn (toàn site) nhưng KHÔNG sao chép 100% parser của Google -
 nghi ngờ loại rich result cụ thể thì vẫn soi thủ công bằng Rich Results Test.
+
+---
+
+## 2026-07-27 (tiếp) - Bài G1 cụm Guest Post gap: Guest Post Forbes
+
+Viết + đăng live bài "Guest Post Forbes: Sự Thật Và Cách Nhận Biết Lời Mời Lừa Đảo"
+(`/guest-post-forbes/`, post ID 4763, category `backlink-offpage`). Research xác nhận qua
+councils.forbes.com (chính thức), contentpowered.com và wordsmattr.io (đã fetch, verify nội
+dung): Forbes không bán "guest post" kiểu blog thường - chỉ có 3 con đường thật (Forbes
+Councils ~70-156tr/năm, Forbes BrandVoice từ 1,3 tỷ, được phóng viên phỏng vấn miễn phí).
+Đối chiếu với dữ liệu giá THẬT đang publish trên `/backlink-quoc-te/` (dgc_gia ID 1974,
+forbes.com DA 90+ dofollow, 242.892.000đ) để đảm bảo bài không mâu thuẫn với trang dịch vụ
+hiện có - dùng chính con số này làm bằng chứng "Forbes thật không rẻ".
+
+4 sơ đồ HTML + 2 bảng .dgc-data-table (gồm bảng 7 dấu hiệu lừa đảo) + 2 ảnh Storyset tái dùng
+(4626, 4627 - khớp chủ đề trực tiếp) + widget [dgc_offpage_quiz] + price-callout box. 5 internal
+link (guest-post, backlink-quoc-te, guest-post-la-gi, top-site-guest-post-uy-tin,
+dich-vu-guest-post-gia-bao-nhieu) + link ngược thêm vào post 1275. Thumbnail gắn (attachment
+4764). Verify: curl 200, 1 H1, 0 em/en dash, 2 bảng + quiz render đúng. GSC: KHÔNG submit được -
+không có session Google đăng nhập sẵn trong phiên này.
+
+Sổ cái: `content/cluster-guest-post-gap.md` (G1 xong, G2 chưa làm).
+
+## 2026-07-27 (tiếp) - Bài G2 cụm Guest Post gap: Email Pitch Outreach - HOÀN TẤT 12/12 bài lấp gap
+
+Viết + đăng live bài "Cách Viết Email Pitch Guest Post (Outreach) Hiệu Quả" (`/pitch-guest-post/`,
+post ID 4761, category `backlink-offpage`, thumbnail attachment 4762). Góc DIY tự outreach - khác
+hẳn 4 bài guest post hiện có trên site (đều viết theo góc mua dịch vụ qua Digicom, đã đọc hết H2
+từng bài để xác nhận không trùng). Research WebFetch trực tiếp Backlinko (12 triệu email: 8,5%
+phản hồi trung bình, personalization +30,5%/+32,7%, follow-up +65,8%), Respona (chiến dịch thật
+1.000 email: 20,5% phản hồi nhưng chỉ 5,5% đăng free thật, 66,8% quay lại đòi phí), CoSchedule
+(cấu trúc mở đầu) và Lilach Bullock (editor nhận 30-60 pitch/tuần, chấp nhận ~2, 7 lý do từ chối).
+
+Nội dung: mẫu email pitch tiếng Việt đầy đủ 4 phần (subject/mở đầu cá nhân hoá/giá trị/CTA),
+checklist 7 điểm, bảng 7 sai lầm kèm hậu quả + cách tránh, mục follow-up (timeline 3 mốc), và
+mục "khi nào tự làm - khi nào thuê dịch vụ" dẫn về money page `/guest-post/`. 9 H2 đều có visual:
+1 bar chart tỷ lệ phản hồi/đăng free (kỹ thuật table+div), 1 sơ đồ 4-block cấu trúc email, 1
+mockup email mẫu, 1 timeline follow-up, 1 bảng `.dgc-data-table`, 1 card-grid so sánh, 2 ảnh
+Storyset tái dùng (storyset-checklist-rafiki.webp, storyset-decision-crossroad.webp - khớp đúng
+chủ đề, không cần tải ảnh mới), widget `[dgc_offpage_quiz]`. 5 internal link (guest-post money
+page, guest-post-la-gi, quy-trinh-trien-khai-guest-post, top-site-guest-post-uy-tin,
+dich-vu-guest-post-gia-bao-nhieu) + link ngược thêm vào post 544 và 1281 (backup content.raw tại
+`~/Claude-Workspace/_backups/routines/2026-07-27/pitch-guest-post-G2/`). Verify: curl 200, 1 H1,
+0 em/en dash, page ~145KB, mọi internal link 200, bảng/widget/sơ đồ render đúng trên live. GSC:
+KHÔNG submit được - phiên trình duyệt không có session Google đăng nhập sẵn.
+
+Sổ cái: `content/cluster-guest-post-gap.md` (2/2 xong). **ĐÃ HOÀN TẤT toàn bộ 12 bài lấp gap đợt
+2026-07-27** (P1-P4 cụm PR tổng quát, T1 Tiền Phong, B1-B5 cụm Backlink, G1-G2 cụm Guest Post) -
+xác nhận qua `wp post list` toàn bộ 12 slug đều `publish`.
+
+## 2026-07-28 - Fix trùng lặp giá booking báo Tiền Phong (T1) + cập nhật nội dung
+
+Nhận yêu cầu tạo trang `/book-bao-tien-phong/` (5 dòng giá dgc_gia mới ID 4783-4787, đã publish
+sẵn từ trước phiên) - kiểm tra thì phát hiện trang này **đã tồn tại** (post 4720, publish từ đợt
+2026-07-27) với nội dung dựa trên **3 dòng giá cũ** (post 1032 "Bài chuyên mục phù hợp" 4.532.000đ
+ma_ncc=1, post 4716/4717 trùng y hệt 2 dòng mới 4785/4787). Vì shortcode `[dgc_bang_gia]` và
+schema Offer đều khớp theo `post_title` = domain (không phải ID), bảng giá + schema trên trang
+sẽ hiện 8 dòng lẫn 2 giá khác nhau cho cùng 1 vị trí "chuyên mục phù hợp" nếu không xử lý.
+
+Đã xử lý: backup 3 dòng giá cũ (`_backups/routines/2026-07-28/digicom-tienphong-dedupe/`) rồi
+draft (post 1032, 4716, 4717 - giữ để rollback), chỉ còn 5 dòng mới (4783-4787) publish. Cập
+nhật lại nội dung bài 4720: SAPO/summary/bar-chart/quy cách/FAQ/kết luận đổi từ "3 vị trí" sang
+"5 vị trí" đúng tên + giá thật (4.378.000đ / 13.133.000đ / 15.759.000đ / 26.265.000đ /
+52.530.000đ), sửa chi tiết "mọi vị trí đều kèm 1 box thông tin" (trước ghi nhầm chỉ vị trí cao
+nhất mới có). Thêm chip link `/book-bao-tien-phong/` vào pillar `/booking-bao-pr/` (post 475,
+trước đó thiếu). Verify: HTTP 200, bảng giá + schema Offer hiện đúng 5 dòng khớp giá, không
+shortcode thô, không em/en dash, mọi internal link 200. Backup + manifest:
+`_backups/routines/2026-07-28/manifest.md`.
+
+Còn lại: chưa chạy `schema-google-check.py`/`meta-qa.py` toàn site (chỉ verify riêng trang này) -
+nên chạy 1 lần nếu nghi ngờ ảnh hưởng lan sang trang khác dùng chung dữ liệu Tiền Phong.
+
+## 2026-07-28 - Viết + đăng bài P2 "Các Loại Hình PR" (phát hiện + gộp bài trùng)
+
+Nhận yêu cầu viết bài mới `/cac-loai-hinh-pr/` (P2 trong plan-pr-tongquat-2026-07-27.md) và đăng
+trực tiếp qua SSH. Research SERP thật (WebSearch + WebFetch 3 domain top: lptech.asia 7 loại/
+2000-2500 từ, vietcore.com.vn hứa 7 loại nhưng chỉ viết ~850 từ không đúng lời hứa, pac8.org chỉ
+4 loại/~475 từ không đủ) - xác nhận intent informational/phân loại, chưa nguồn nào tổ chức theo
+đúng khung 5 đối tượng (nội bộ/đối ngoại/cộng đồng/online/khủng hoảng) mạch lạc.
+
+Viết bài theo đúng cấu trúc yêu cầu: 3 sơ đồ HTML (framework 5-loại, quy trình xử lý khủng hoảng
+5 bước, mô hình phạm vi công chúng tăng dần), 2 ảnh Storyset thật lấy từ trang chi tiết
+(storyset.com/illustration/collab/pana, storyset.com/illustration/charity/pana - verify bằng
+cách trích xuất SVG qua JS + rsvg-convert sang webp, không dùng ảnh đoán), 1 bảng so sánh
+`.dgc-data-table`, quiz `[dgc_offpage_quiz]`, 3 external link EEAT (PRSA definition, Wikipedia
+CSR, Wikipedia crisis communication - đều verify HTTP 200), 3 internal link (`/pr-la-gi/`,
+`/booking-bao-pr/`, `/thong-cao-bao-chi-xu-ly-khung-hoang/`), FAQ 4 câu.
+
+**Phát hiện khi đăng:** `wp post create` tự thêm hậu tố slug thành `cac-loai-hinh-pr-2` vì bài
+`/cac-loai-hinh-pr/` (post 4728) **đã được một phiên khác dựng sẵn từ 2026-07-27** (chưa cập nhật
+"xong" vào plan) - có cấu trúc tương tự nhưng **0 internal link, 0 external EEAT link**. Để tránh
+2 URL trùng nội dung (cannibalization), đã: backup post 4728 gốc + meta
+(`~/Claude-Workspace/_backups/routines/2026-07-28/digicom-cac-loai-hinh-pr-merge/`), ghi đè
+post_content + post_title bài 4728 bằng bản mới (giữ nguyên slug/ID/URL), gắn lại 2 ảnh mới vào
+đúng post_parent, set `dgc_seo_title`/`dgc_seo_desc`/`dgc_faqs` qua `wp eval-file`, chuyển bài
+trùng (post 4790, `/cac-loai-hinh-pr-2/`) sang trash.
+
+Verify cuối: HTTP 200, title/meta description khớp, H1 đúng, quiz widget render (không lộ
+shortcode thô), 0 em/en dash, schema FAQPage đủ 4 câu qua `<script ld+json>`, 3 internal link
+200, `/cac-loai-hinh-pr-2/` trả 404 (không còn trùng). Đã cập nhật dòng P2 trong
+`content/plan-pr-tongquat-2026-07-27.md` thành xong kèm chi tiết gộp bài.
+
+Còn lại: chưa submit GSC (không có session Google đăng nhập sẵn trong phiên này); chưa chạy lại
+`schema-google-check.py`/`meta-qa.py` toàn site sau khi trash post 4790 - nên chạy nếu nghi ngờ
+ảnh hưởng lan sang sitemap/trang khác.
+
+## 2026-07-28 - Bổ sung 2 trang tĩnh/điều khoản còn thiếu (Cookie + Hoàn tiền)
+
+Rà 4 trang pháp lý (Chính sách bảo mật 284, Điều khoản sử dụng 285, Chính sách Cookie 286,
+Chính sách hoàn tiền 287) - phát hiện 286/287 đang **draft**, nội dung rất mỏng (775-987 ký tự,
+không phải Gutenberg block, không khớp style 2 trang kia), ghi "tháng 4/2025" (trước cả pivot
+07/2026), và **không hề hiển thị công khai** vì .htaccess có sẵn 2 dòng redirect 301 cứng từ đợt
+dọn dẹp 2026-07-11 (`/chinh-sach-cookie/` và `/chinh-sach-hoan-tien/` -> `/chinh-sach-bao-mat/`,
+gắn từ lúc 2 trang này còn rỗng).
+
+Đã viết lại đầy đủ theo đúng format Gutenberg block như 2 trang kia, khớp bối cảnh thật của
+DigicomVN (4 dịch vụ off-page SEO, không giỏ hàng/thanh toán online):
+- **Chính sách Cookie**: cookie cần thiết/phân tích (Google Analytics/GTM có thật trên site)/
+  chức năng, cookie bên thứ ba (Zalo), cách tắt cookie, liên hệ.
+- **Chính sách hoàn tiền**: 5 điều kiện hoàn tiền cụ thể theo từng tình huống (không thực hiện
+  được/không đạt thoả thuận/huỷ trước-sau triển khai/link bị gỡ trong bảo hành), 4 trường hợp
+  không áp dụng, quy trình yêu cầu (email, 3 ngày phản hồi, 7-14 ngày xử lý).
+
+Phát hiện thêm khi rà: 2 trang cũ (284, 285) đang ghi sai email liên hệ **info@digicomvn.com**
+(email công khai thật của site là **sales@digicomvn.com**, theo `dgc_settings`) - đã sửa đồng bộ
+cả 4 trang. Gỡ 2 dòng redirect cứng trong `.htaccess`, publish 286/287, thêm link cả 4 trang vào
+footer (trước chỉ có 2/4). Backup: `~/Claude-Workspace/_backups/routines/2026-07-28/digicom-trang-tinh-bosung/`
+(nội dung gốc 4 trang + .htaccess + footer.php trước sửa).
+
+Verify: cả 4 URL trả 200 (trước đó 2 URL bị 301 redirect chéo do .htaccess), 0 em/en dash, email
+đúng trên cả 4 trang, footer hiển thị đủ 4 link. Không cần bump DGC_VER (không đổi CSS/JS).
+
+Còn lại: nếu Hiếu muốn, có thể bổ sung 1 dòng nhắc Nghị định 13/2023/NĐ-CP (bảo vệ dữ liệu cá
+nhân) vào Chính sách bảo mật cho chặt hơn về pháp lý - hiện trang đã đủ ý cơ bản (thu thập, mục
+đích, chia sẻ, lưu trữ, quyền khách hàng) nhưng chưa trích dẫn luật cụ thể.

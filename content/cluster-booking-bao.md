@@ -3,11 +3,10 @@
 > File "sổ cái" của cụm. Nguồn kế hoạch: `plan-booking-bao-2026-07-17.md`.
 > Quy tắc (rule Hiếu 2026-07-17, riêng dự án digicom): mỗi lần viết/sửa xong 1 bài ->
 > cập nhật bảng này (✅/⏳), báo "đã xong gì, còn gì". Sang cụm mới -> tổng kết cụm này trước.
-> Cập nhật gần nhất: 2026-07-27 (tiếp) - thêm C6 Booking báo Lao Động, mở rộng cụm sau khi hoàn tất
-> (xem mục cuối file).
+> Cập nhật gần nhất: 2026-07-27 (tiếp) - thêm T1/R16 Booking báo Tiền Phong, mở rộng cụm.
 
-## Trạng thái tổng: 21/21 bài XONG (100%) ✅ - cụm hoàn tất 2026-07-17, lấp gap sâu đợt 2026-07-27,
-mở rộng thêm C6 đợt 2026-07-27 (tiếp, phát hiện qua cụm "bài PR")
+## Trạng thái tổng: 22/22 bài XONG (100%) ✅ - cụm hoàn tất 2026-07-17, lấp gap sâu đợt 2026-07-27,
+mở rộng thêm C6 (Lao Động) và T1 (Tiền Phong) đợt 2026-07-27
 
 | # | Bài | URL | Loại | Trạng thái | Ngày | Ghi chú |
 |---|---|---|---|---|---|---|
@@ -32,6 +31,7 @@ mở rộng thêm C6 đợt 2026-07-27 (tiếp, phát hiện qua cụm "bài PR"
 | R14 | Booking báo Đầu Tư | /book-bao-bao-dau-tu/ | REFRESH | ✅ Xong | 2026-07-17 | | +lĩnh vực phù hợp +link P1
 | R15 | Booking báo VietNamNet | /book-bao-vietnamnet/ | REFRESH | ✅ Xong | 2026-07-17 | | +lĩnh vực phù hợp +link P1
 | C6 | Booking báo Lao Động | /book-bao-lao-dong/ | MỚI | ✅ Xong (nâng cấp sâu 2026-07-27 tiếp) | 2026-07-27 | post 4678, 6 tier giá thật (5.047.000đ - 87.550.000đ, DR 82, +5 tier Fame Media mới import), 2 ảnh Storyset, widget quiz, +2 H2 mới (so giá thị trường, lịch sử/uy tín), traffic+demographic SimilarWeb thật. Thêm laodong.vn vào dr-chart.php -> 15 bài R1-R15 tự có link về; chip link ở page 475 + 1261; GSC submit lỗi công cụ (thử 3 lần), xác nhận có trong sitemap chờ Google tự crawl
+| T1/R16 | Booking báo Tiền Phong | /book-bao-tien-phong/ | MỚI | ✅ Xong | 2026-07-27 | post 4720, 3 tier giá thật (4.532.000đ Bài chuyên mục phù hợp - DanaSEO đã có sẵn live; +2 tier mới tạo từ Fame Media: 15.759.000đ Top 1-Chuyên mục-Home, 52.530.000đ Bài trung tâm-Top 1, markup 1,03x đúng `bang-gia-booking.md`, post ID 4716/4717), DR 82 (verify độc lập qua MCP `public-domain-rating-free`, khớp giá trị đã lưu), traffic SimilarWeb thật 18,3tr lượt/tháng hạng 73 VN/hạng 14 News&Media (kèm demographic + bounce rate), lịch sử thật từ Wikipedia (thành lập 1953, cơ quan Đoàn TNCS HCM, sáp nhập Báo Sinh viên VN 2020), chuyên mục thật từ menu tienphong.vn (Giới trẻ, Địa ốc, Xe, Hàng không-Du lịch...). 2 ảnh Storyset tái dùng từ thư viện có sẵn (4668, 4673). Đã thêm tienphong.vn vào `dr-chart.php` (deploy qua SSH) -> 15 bài R1-R15 tự có link về qua biểu đồ DR. Internal link -> P1 (booking-bao-la-gi) + C2 (bao-gia-dang-bai-pr-theo-dau-bao). Verify: HTTP 200, 1 H1, 0 em dash, đủ 3 tier giá + 2 ảnh + quiz widget hiện đúng trên live
 
 ## Bài supporting đã có (chỉ nhận thêm internal link, không viết mới)
 - /so-sanh-booking-bao-pr-va-quang-cao-bao/ (so sánh)
@@ -264,6 +264,72 @@ cao cấp của Fame Media/DanaSEO/Media Việt Nam trên diện rộng, không 
 2. Việc lớn hơn, cần quyết định phạm vi: chạy audit đối chiếu TOÀN BỘ `bang-gia-master.csv` (399 đầu báo)
    với `gia-web.csv`/CPT `dgc_gia` hiện tại, để tìm hết các dòng Fame Media/DanaSEO/Media Việt Nam bị bỏ
    sót tương tự - có thể ảnh hưởng doanh thu tiềm năng lớn hơn nhiều so với phạm vi 20 bài của cụm này.
+
+## ĐÃ LÀM XONG MỤC 2 (2026-07-27, tiếp - Hiếu duyệt "làm hết đi"): audit toàn bộ catalog booking-bao-pr
+
+Viết `audit-gap-booking-pr.py` (scratchpad, dùng lại đúng logic loc/markup của `export-web.py` -
+CHI_NCC, is_soft, is_gov_edu, is_khong_ro_noi_dang, web_gia - không viet lai de tranh lech logic),
+so sánh gia cao nhat CO SAN trong `bang-gia-master.csv` (401 domain sau loc) voi gia cao nhat DANG
+CO tren live (moi status, tranh hoi sinh dong da draft co chu dich).
+
+**Phat hien 2 loai loi:**
+1. **Bug domain() trong export-web.py**: vai NCC (Fame Media, Rise Media) ghi kem chu thich sau ten
+   mien kieu "znews.vn (Zing)", "CafeF.vn (Giá mới 2026)" - regex domain khong khop -> tao "domain
+   gia" tach rieng khoi domain that, lam mat tier gia khoi shortcode `[dgc_bang_gia domain="..."]`
+   cua chinh trang do. Da fix vinh vien trong `export-web.py` (them `PAREN_SUFFIX_RE`) + sua 11
+   post_title da bi mislabel tren live (znews.vn x2, CafeF.vn x2, CafeBiz.vn x2, Autopro.com.vn x2,
+   Tinnhanhchungkhoan.vn x2, Baodautu.vn x1) + 2 dong "Kênh 14.vn" (co dau+space, khong khop domain
+   shortcode "kenh14.vn" cua trang book-bao-kenh14 - ca 2 dong gia cua Kenh14 tren live TRUOC DAY
+   KHONG HIEN THI duoc tren chinh trang do do loi nay).
+2. **15 domain co gap gia THAT** (master cao hon live >=1.5x va >=3tr, toan bo tu Fame Media chua
+   import): znews.vn, kenh14.vn, vov.vn, doanhnhan.vn, bongdaplus.vn, 24h.com.vn,
+   giadinh.suckhoedoisong.vn, baodautu.vn, vir.com.vn, phunuvagiadinh.vn, gamek.vn, nhipcaudautu.vn,
+   congan.com.vn, 2sao.vn, guu.vn. Da import 1 tier cao nhat/domain (post ID 4698-4712), markup dung
+   1,03x, kem meta `dr`/`nganh` tu dong sao chep tu dong publish khac cung domain khi tim thay (9/15
+   domain co DR xac thuc: znews 78, kenh14 78, vov 79, 24h 83, baodautu 79, phunuvagiadinh 50, gamek
+   65, nhipcaudautu 67, congan 70 - 6 domain con lai chua co nguon DR, de trong, khong bia).
+   4 domain trong nhom nay THUOC cum booking-bao (24h R5, Kenh14 R6, Znews R9, Bao Dau Tu R14) -
+   verify lai bang gia tren chinh 4 trang do da hien tier moi, khong co cau van nao trong bai thanh
+   sai (khac CafeF/VietNamNet/Tuoi Tre truoc do - kiem tra ky khong thay claim "cao nhat" nao bi
+   tier moi phan bac).
+3. **Ngoai pham vi 21 trang cua cum nay** (khong co trang blog rieng, chi anh huong /bang-gia/ +
+   CPT chung): vov.vn, doanhnhan.vn, bongdaplus.vn, giadinh.suckhoedoisong.vn, vir.com.vn,
+   phunuvagiadinh.vn, gamek.vn, nhipcaudautu.vn, congan.com.vn, 2sao.vn, guu.vn.
+
+Backup: `~/Claude-Workspace/_backups/routines/2026-07-27/catalog-gap-fix-booking-pr/` (live data
+truoc import + payload JSON). Verify: /bang-gia/ va 4 trang cum tren live deu HTTP 200, dem dung so
+tier moi trong HTML.
+
+**Con lai (chua lam, ngoai pham vi domain "booking-pr")**: chua audit cac dich_vu khac (guest-post,
+textlink, entity, toplist, booking-tv) xem co cung loi domain()/gap giong vay khong - script hien
+chi loc `dich_vu=="booking-pr"`. Mo rong sang dich_vu khac neu Hieu muon.
+
+## Audit noi dung 4 trang con lai chua tung soi rieng (2026-07-27, tiep - 4 agent nen song song)
+
+R8 CafeBiz, R10 Soha, R11 Eva, R11 aFamily (ten slug that: book-bao-cafebiz/-soha/-eva/-afamily) -
+day la 4 trang duy nhat trong cum CHUA tung duoc research doi thu rieng o cac dot audit truoc.
+
+- **CafeBiz**: 2 gap that (profile doc gia, danh sach chuyen muc) - DA FIX, them doan gioi tinh/tuoi
+  (SimilarWeb 65,1% nam/34,9% nu, tuoi 25-34) + 5 chuyen muc that (Xa hoi, Kinh te vi mo, Kinh doanh,
+  Cong nghe, Song). Agent con canh bao doi thu claim traffic 12-13tr/thang (gap 5x so voi 2,6tr cua
+  Digicom) - DA TU VERIFY LAI qua SimilarWeb: so 2,6tr/hang 392 VN/hang 29 News&Media cua Digicom
+  la DUNG (khop chinh xac voi SimilarWeb that), so 12-13tr cua doi thu KHONG co nguon dang tin -
+  KHONG sua theo doi thu.
+- **Soha**: 2 gap nho - da fix danh sach chuyen muc that (Thoi su, Kinh doanh, BDS, Phap luat, Song
+  khoe, Cong nghe, Doi song, Giai tri). Gap con lai (demographic tuoi/khu vuc) KHONG co nguon dang
+  tin (doi thu tu nhan, khong dan nguon) - de trong, khong bia.
+- **Eva**: KHONG co gap that. Xac nhan lai so lieu SimilarWeb hien co (3,4tr/hang 313/hang 26,
+  gioi tinh 63,6% nam) la CHINH XAC va la nguon dang tin duy nhat - 2 doi thu (brando 30tr,
+  seovip 45tr qua "Google Analytics" - vo ly vi ben thu 3 khong co quyen truy cap GA noi bo) deu
+  bia so khong nguon. Khong sua gi.
+- **aFamily**: gap that ve GIA (doi thu Admicro/VCCorp co 8 tier 3-25tr, Digicom chi 2 tier) nhung
+  KIEM TRA LAI voi 3 NCC duoc phep (bang-gia-master.csv) - Fame Media chi co "Trang chu dac biet"
+  13,05tr (x1,03 = 13,44tr, chi cao hon ~4% so tier dang co 12,96tr, duoi nguong gap that) - day la
+  GIOI HAN CHINH SACH NCC (nhu Kenh14/Dan Tri), KHONG PHAI loi import. 2 gap noi dung nho khac (dieu
+  khoan quyen bien tap toa soan, gioi han tieu de/sapo) - CHUA sua (uu tien thap, de lai neu Hieu can).
+
+**Ket luan cuoi cung cum booking-bao (2026-07-27, tiep):** ca 21 trang deu da qua it nhat 1 dot audit
+doi thu rieng. Khong con trang nao "chua bao gio soi qua".
 
 ### ĐÃ LÀM (2026-07-27, tiếp - Hiếu duyệt "ok làm đi"): xử lý xong việc nhỏ (mục 1 ở trên)
 

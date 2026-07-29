@@ -165,10 +165,18 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
   (P1-P4) + 1 bài Booking báo Tiền Phong (T1, mã R16 đã ghi trong pivot-2026-07.md) + 5 bài cụm
   Backlink (B1-B5: Audit/Profile, Indexer, Disavow, Loại backlink, Social backlink) + 2 bài Guest
   Post (G1-G2). Sổ cái cụm mới: `content/cluster-pr-tongquat.md`.
-- [ ] Batch 1 (P1 PR là gì, P2 Loại hình PR, T1 Tiền Phong) - đang chạy 2026-07-27.
-- [ ] Batch 2 (P3, P4 + backlog).
-- [ ] Batch 3-5 (B1-B5 backlink).
-- [ ] Batch 6 (G1-G2 guest post).
+- [x] Toàn bộ 12/12 bài ĐÃ ĐĂNG LIVE - 2026-07-27: P1 `/pr-la-gi/` (4722), P2 `/cac-loai-hinh-pr/`
+      (4728), P3 `/case-study-chien-dich-pr/` (4732), P4 `/mo-hinh-race-pr/` (4737), T1
+      `/book-bao-tien-phong/` (4720, cụm booking-báo 22/22), B1 `/backlink-audit/` (4739), B2
+      `/backlink-indexer/` (4751), B3 `/disavow-backlink/` (4749), B4 `/cac-loai-backlink/`
+      (4746), B5 `/backlink-mang-xa-hoi/` (4759), G1 `/guest-post-forbes/` (4763), G2
+      `/pitch-guest-post/` (4761). Sổ cái: `content/cluster-pr-tongquat.md` (4/4),
+      `content/cluster-backlink-gap.md` (5/5), `content/cluster-guest-post-gap.md` (2/2).
+- [ ] Submit Google Search Console cho các bài chưa submit được (phần lớn B1-B5, G1-G2, T1 -
+      phiên trình duyệt agent không có session Google đăng nhập sẵn) - Hiếu tự đăng nhập rồi
+      submit tay, hoặc chờ sitemap tự crawl.
+- [ ] Site-wide: KHÔNG có thẻ `<meta name="description">`/Open Graph ở bất kỳ trang nào (RankMath
+      không active) - phát hiện khi viết P1, đã spawn task riêng cho Hiếu, chưa xử lý.
 
 ### Backlog (giai đoạn 2 - sau khi 4 dịch vụ ổn định)
 - [ ] Mở lại Thiết kế website / Tên miền / Hosting / Bản quyền phần mềm (trang đang draft, giữ nguyên)

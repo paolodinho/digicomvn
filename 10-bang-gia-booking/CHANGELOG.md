@@ -337,3 +337,4 @@ Vietnam vẫn như ghi nhận 2026-07-20 (không công bố giá từng đầu b
   baodanang.vn qua Fame Media) bi loai khoi web.
 - Dong bo live: draft 375 ban ghi dgc_gia khong con thuoc 3 NCC, tao moi 943 ban ghi, sua gia 7.
   Backup day du tai ~/Claude-Workspace/_backups/routines/2026-07-18/famemedia-pricing/.
+2026-07-28 10:xx | dgc_gia | tienphong.vn: tạo mới 5 dòng giá (Fame Media, markup 1.03, DR 82) thủ công qua wp eval-file (ID 4783-4787) để phục vụ bài book-bao-tienphong (T1, mã R16). Nguồn: 10-bang-gia-booking/bang-gia-master.csv dòng Fame Media Tiền Phong 2026-07-27. Routine tuần digicom-gia-doi-tac-tuan sẽ đối chiếu bình thường ở lần chạy kế tiếp (đã publish nên không bị tạo trùng).

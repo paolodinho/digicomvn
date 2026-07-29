@@ -47,7 +47,7 @@
 		</div>
 		<div class="foot-bottom">
 			<span>&copy; <?php echo esc_html( date( 'Y' ) ); ?> DigicomVN - Digito Combat. All rights reserved.</span>
-			<span><a href="<?php echo esc_url( home_url( '/dieu-khoan-su-dung/' ) ); ?>">Điều khoản</a> &middot; <a href="<?php echo esc_url( home_url( '/chinh-sach-bao-mat/' ) ); ?>">Chính sách bảo mật</a></span>
+			<span><a href="<?php echo esc_url( home_url( '/dieu-khoan-su-dung/' ) ); ?>">Điều khoản</a> &middot; <a href="<?php echo esc_url( home_url( '/chinh-sach-bao-mat/' ) ); ?>">Chính sách bảo mật</a> &middot; <a href="<?php echo esc_url( home_url( '/chinh-sach-cookie/' ) ); ?>">Cookie</a> &middot; <a href="<?php echo esc_url( home_url( '/chinh-sach-hoan-tien/' ) ); ?>">Hoàn tiền</a></span>
 		</div>
 	</div>
 </footer>

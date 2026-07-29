@@ -9,14 +9,26 @@ File này chỉ theo dõi các bài GAP mới xác định 2026-07-20.
 | 1 | Anchor Text Là Gì? Các Loại Và Tỷ Lệ Chuẩn Cho SEO 2026 | ✅ đã đăng (4297, viết lại theo đúng intent) | /ty-le-anchor-text-chuan/ | 2026-07-21 |
 | 2 | Vì Sao Backlink Báo Và Guest Post An Toàn Hơn PBN? | ⏳ chưa viết | - | - |
 | 3 | Cách Xây Dựng Hồ Sơ Backlink (Backlink Profile) Lành Mạnh | ⏳ chưa viết | - | - |
-| 4 | Backlink Xấu (Toxic Backlink) Là Gì? Dấu Hiệu Và Cách Xử Lý | ⏳ chờ research SERP | - | - |
-| 5 | Disavow Backlink Là Gì? Khi Nào Cần Dùng Google Disavow Tool | ⏳ chờ research SERP | - | - |
-| 6 | Backlink Audit Là Gì? Quy Trình Tự Kiểm Tra Định Kỳ | ⏳ chờ research SERP + soát cannibal với `kiem-tra-backlink` (224) | - | - |
+| 4 | Backlink Xấu (Toxic Backlink) Là Gì? Dấu Hiệu Và Cách Xử Lý | ❌ Không viết nữa - trùng hoàn toàn với #5 (`/disavow-backlink/` đã bao phủ đủ "dấu hiệu backlink xấu" trong 1 bảng riêng) | - | 2026-07-27 (đóng) |
+| 5 | Disavow Backlink Là Gì? Khi Nào Cần Dùng Google Disavow Tool | ✅ đã đăng (4749, viết theo mã B3 trong `cluster-backlink-gap.md`, tên bài đổi thành "Disavow Backlink: Cách Xử Lý Backlink Xấu, Toxic Và Spam") | /disavow-backlink/ | 2026-07-27 |
+| 6 | Backlink Audit Là Gì? Quy Trình Tự Kiểm Tra Định Kỳ | ✅ đã đăng (4739, tên bài đổi thành "Backlink Audit: Cách Phân Tích Backlink Profile Đối Thủ Và Website") | /backlink-audit/ | 2026-07-27 |
 | 7 | Referring Domain Là Gì? Khác Backlink Thế Nào? | ⏳ chờ research SERP | - | - |
 | 8 | (Backlink quốc tế - hỗ trợ trang dịch vụ mới) | ⏳ chờ Hiếu xác nhận có thuộc phạm vi cụm | - | - |
 
 Batch 1 (#1-3) đã duyệt 2026-07-20, sẵn sàng viết. Batch 2 (#4-7) cần research SERP đầy đủ
 trước khi trình duyệt. #8 chờ quyết định phạm vi.
+
+**Ghi chú #4 (2026-07-27):** bài #5/B3 (`/disavow-backlink/`, 4749) đã viết đầy đủ định nghĩa
+"backlink xấu/toxic backlink là gì" + dấu hiệu nhận biết + bảng dấu hiệu x rủi ro x hành động
+ngay ở 2 H2 đầu bài (không chỉ nói riêng về disavow) - vì 2 chủ đề #4 và #5 cùng chung 1 intent
+informational, tách 2 bài dễ cannibalize nhau (rule `content-pipeline` mục A2c). Đề xuất: KHÔNG
+viết bài #4 riêng, hoặc nếu Hiếu vẫn muốn có bài riêng thì đổi hướng #4 sang góc thật sự khác
+(vd định nghĩa sâu hơn về phân loại backlink theo mức hại - đã một phần trùng B4 `/cac-loai-backlink/`
+cũng vừa đăng). Chưa tự xoá/gộp - chờ Hiếu quyết định.
+
+**#6 xong 2026-07-27** - viết theo plan mới `plan-pr-tongquat-2026-07-27.md` (mã B1), theo dõi
+tiến độ tại `content/cluster-backlink-gap.md` (sổ cái riêng cho đợt gap-scan 2026-07-27, gồm
+B1-B5). #5 (Disavow) cũng trùng mã B3 trong file đó.
 
 ## Sửa bài cũ đã đăng (2026-07-20)
 

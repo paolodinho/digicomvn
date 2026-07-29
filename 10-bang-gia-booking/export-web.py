@@ -31,11 +31,19 @@ def fold(s):
     return s.replace("d", "d")
 
 DOMAIN_RE = re.compile(r"^(https?://)?(www\.)?[a-z0-9-]+(\.[a-z0-9-]+)+(/|$)", re.I)
+# Vai NCC (Fame Media, Rise Media) ghi kem chu thich sau ten mien, vd "znews.vn (Zing)",
+# "CafeF.vn (Gia moi 2026)" - neu khong bo di, DOMAIN_RE khong match (vi ky tu sau domain
+# khong phai "/" hay het chuoi) -> domain() tra ve nguyen chuoi loi -> tao "domain gia" tach
+# rieng khoi domain that, mat tier gia trong shortcode [dgc_bang_gia domain="..."] va lam
+# doi trung tren /bang-gia/. Bug phat hien 2026-07-27 (audit-gap-booking-pr.py) - anh huong
+# it nhat znews.vn, CafeF.vn, CafeBiz.vn, Autopro.com.vn, Tinnhanhchungkhoan.vn, Baodautu.vn.
+PAREN_SUFFIX_RE = re.compile(r"\s*\([^)]*\)\s*$")
 
 def domain(s):
     """Chuan hoa ve domain NEU day thuc su la ten mien. Con lai (ten goi dich vu,
     ten combo toplist...) giu nguyen - neu khong se bi cat bay (vd 'Blog/website ...' -> 'blog')."""
     s = (s or "").strip()
+    s = PAREN_SUFFIX_RE.sub("", s).strip()
     if not DOMAIN_RE.match(s):
         return s
     v = s.lower()
