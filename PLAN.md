@@ -263,6 +263,10 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       listener + setTimeout). DGC_VER -> 2.2.2. Verify: cuộn tự nạp liên tục 10 -> 418/418 báo.
 - [x] Fix bug bộ lọc Khoảng giá: dòng gốc hardcode data-price="0" vô tình khớp mọi filter
       "dưới X triệu" -> đổi thành giá thấp nhất thật trong nhóm. DGC_VER -> 2.2.3.
+- [x] Tách "Nhóm báo" ra cột dọc trái (`inc/price-sidebar.php`, mới) + gọn thanh lọc ngang
+      (bỏ dropdown nganh, thu nhỏ padding) + mở rộng Khoảng giá (6 mức, có "Dưới 1 triệu") và
+      Điểm DR (thêm "Dưới 10"). Verify: sidebar 26 mục, lọc đúng, "Dưới 1 triệu" = 197 báo.
+      DGC_VER -> 2.3.0.
 - [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.

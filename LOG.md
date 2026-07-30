@@ -3303,3 +3303,30 @@ MỌI báo có ≥2 vị trí đều lọt qua bộ lọc giá dù giá thật c
   3,2tr, tuoitre.vn 4,69tr, vietnamnet.vn 4,14tr...), không còn báo giá cao lọt vào.
 - Bump `DGC_VER` 2.2.2 -> 2.2.3. Đồng bộ live + Local WP. Backup: `~/Claude-Workspace/_backups/
   routines/2026-07-30/bang-gia-price-filter-bug/`.
+
+## 2026-07-30 - Tách "Nhóm báo" ra cột dọc trái + bộ lọc gọn hơn + mở rộng khoảng giá/DR
+
+Hiếu: bộ lọc còn rối, muốn "Nhóm báo" tách ra cột dọc bên trái, thanh lọc còn lại gọn hơn, và
+khoảng giá/DR chia nhỏ hơn (ví dụ hỏi "dưới 1 triệu thì có báo nào không" - trước đó bucket
+thấp nhất chỉ là "Dưới 5 triệu", không trả lời được câu này).
+
+- **File mới `inc/price-sidebar.php`**: render danh sách "Nhóm báo" dạng cột dọc (nav item +
+  số đếm), tách hẳn khỏi thanh lọc ngang. Include như 1 SIBLING của `.price-main` trong
+  `.price-layout` (sửa `service-pricing.php` + `page-bang-gia.php`) - CSS `.price-layout{display:
+  flex}` chia 2 cột: sidebar 200px sticky bên trái + bảng bên phải.
+- `inc/price-filter.php`: bỏ hẳn dropdown "Nhóm báo" (đã chuyển sang sidebar) - giờ chỉ còn
+  6 dropdown facet (Khoảng giá, DR, Vị trí, Loại link, Số ảnh, Độ dài), thu nhỏ padding/font để
+  thanh lọc thấp gọn hơn hẳn.
+- `inc/cpt-gia.php` `dgc_facet_groups()`: soi phân bố giá thật (`gia-web.csv`: 197 báo <1tr, 341
+  báo 1-3tr...) để chia lại **Khoảng giá** thành 6 mức (Dưới 1tr / 1-3tr / 3-5tr / 5-10tr /
+  10-20tr / Trên 20tr) thay vì 4 mức cũ - giờ trả lời được đúng câu hỏi "có báo dưới 1 triệu
+  không" (197 báo booking-bao-pr). **Điểm DR** thêm mức "DR dưới 10" (tách khỏi "dưới 25" quá
+  rộng, vì 93% dữ liệu rơi vào nhóm DR thấp).
+- `assets/js/main.js`: thay toàn bộ logic `.filter-nganh` (select) bằng click handler cho
+  `.side-nav-item` (`setActiveNganh()`), `syncChips()` bỏ nganh khỏi chip (sidebar tự hiện active
+  state, không cần chip riêng).
+- CSS: sidebar co lại thành hàng chip cuộn ngang khi màn hẹp (<=900px), ẩn nhãn nhóm-ngành phụ.
+- Verify qua Browser + JS: sidebar hiện 26 mục nhóm ngành, bấm "Bất động sản" lọc đúng còn 10
+  hiển thị; dropdown "Khoảng giá" hiện đủ 6 mức với số đếm đúng (Dưới 1 triệu: 197).
+- Bump `DGC_VER` 2.2.3 -> 2.3.0. Đồng bộ live + Local WP. Backup: `~/Claude-Workspace/_backups/
+  routines/2026-07-30/bang-gia-sidebar/`.

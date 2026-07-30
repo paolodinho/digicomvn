@@ -66,12 +66,13 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 		<div class="tab-panel<?php echo $first ? ' active' : ''; ?>" data-panel="<?php echo esc_attr( $slug ); ?>">
 			<?php /* data-limit: hien 12 dong dau, cuon toi cuoi bang tu nap them (cuon vo han - main.js). */ ?>
 			<div class="price-layout" data-price-panel data-limit="12">
-			<div class="price-main">
 			<?php
 			$pf_items      = $items;
 			$pf_show_nganh = $has_nganh_filter;
-			include get_template_directory() . '/inc/price-filter.php';
+			include get_template_directory() . '/inc/price-sidebar.php';
 			?>
+			<div class="price-main">
+			<?php include get_template_directory() . '/inc/price-filter.php'; ?>
 			<div class="tab-toolbar">
 				<div class="tab-search">
 					<input type="text" class="tab-search-input" placeholder="<?php echo esc_attr( $ph_search ); ?>" aria-label="Tìm kiếm trong <?php echo esc_attr( $label ); ?>">

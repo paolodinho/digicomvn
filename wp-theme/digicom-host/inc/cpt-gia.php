@@ -597,14 +597,21 @@ function dgc_facet_value( $it, $key ) {
  */
 function dgc_facet_groups() {
 	return array(
+		/* Buc thang gia (Hieu 2026-07-30: "cho rong hon, vi du duoi 1 trieu thi co bao nao ko" -
+		   dua theo phan bo gia that trong gia-web.csv: 500k-1tr da co ~500 dong, 1-2tr ~265
+		   dong... chia nho hon o day duoi de tra loi dung cau hoi do, thay vi gom chung "duoi
+		   5 trieu" qua tho). */
 		'Khoảng giá' => array(
-			array( 'key' => 'price', 'mode' => 'max',   'val' => '5000000',           'label' => 'Dưới 5 triệu' ),
+			array( 'key' => 'price', 'mode' => 'max',   'val' => '1000000',           'label' => 'Dưới 1 triệu' ),
+			array( 'key' => 'price', 'mode' => 'range', 'val' => '1000000-3000000',   'label' => '1 - 3 triệu' ),
+			array( 'key' => 'price', 'mode' => 'range', 'val' => '3000000-5000000',   'label' => '3 - 5 triệu' ),
 			array( 'key' => 'price', 'mode' => 'range', 'val' => '5000000-10000000',  'label' => '5 - 10 triệu' ),
 			array( 'key' => 'price', 'mode' => 'range', 'val' => '10000000-20000000', 'label' => '10 - 20 triệu' ),
 			array( 'key' => 'price', 'mode' => 'min',   'val' => '20000000',          'label' => 'Trên 20 triệu' ),
 		),
 		'Điểm DR (uy tín)' => array(
-			array( 'key' => 'dr', 'mode' => 'max',   'val' => '24',    'label' => 'DR dưới 25' ),
+			array( 'key' => 'dr', 'mode' => 'max',   'val' => '9',     'label' => 'DR dưới 10' ),
+			array( 'key' => 'dr', 'mode' => 'range', 'val' => '10-25', 'label' => 'DR 10 - 25' ),
 			array( 'key' => 'dr', 'mode' => 'range', 'val' => '25-40', 'label' => 'DR 25 - 40' ),
 			array( 'key' => 'dr', 'mode' => 'range', 'val' => '40-70', 'label' => 'DR 40 - 70' ),
 			array( 'key' => 'dr', 'mode' => 'min',   'val' => '70',    'label' => 'DR 70 trở lên' ),

@@ -404,7 +404,7 @@
 		var shownEl   = panel.querySelector('.tab-count-shown');
 		var totalEl   = panel.querySelector('.tab-count-total');
 		var sortBtns  = panel.querySelectorAll('.sort-btn');
-		var nganhSel  = panel.querySelector('.filter-nganh');
+		var sideItems = panel.querySelectorAll('.side-nav-item');
 		var facetSels = panel.querySelectorAll('.filter-facet');
 		var chipsBox  = panel.querySelector('.filter-chips');
 		var clearBtn  = panel.querySelector('.filter-clear');
@@ -608,8 +608,9 @@
 			});
 		}
 
-		// Thanh loc ngang: 1 dropdown cho nhom bao + 1 dropdown moi nhom quy cach, AND voi nhau.
-		// Dieu kien dang bat hien thanh chip co nut x de bo nhanh tung cai.
+		// Cot doc "Nhom bao" (price-sidebar.php) rieng ngoai thanh loc ngang (Hieu 2026-07-30) +
+		// thanh loc ngang chi con cac facet quy cach - AND voi nhau. Dieu kien facet dang bat
+		// hien thanh chip co nut x de bo nhanh; nganh khong can chip vi sidebar da tu hien active.
 		function selLabel(sel) {
 			var o = sel.options[sel.selectedIndex];
 			return o ? o.textContent.replace(/\s*\(\d+\)\s*$/, '') : '';
@@ -618,7 +619,6 @@
 		function syncChips() {
 			if (!chipsBox) return;
 			var active = [];
-			if (nganhSel && nganhSel.value) active.push({ sel: nganhSel, text: selLabel(nganhSel) });
 			facetSels.forEach(function (s) { if (s.value) active.push({ sel: s, text: selLabel(s) }); });
 
 			chipsBox.innerHTML = '';
@@ -638,14 +638,19 @@
 			if (clearBtn) clearBtn.hidden = active.length < 2;
 		}
 
-		if (nganhSel) {
-			nganhSel.addEventListener('change', function () {
-				curNganh = nganhSel.value || '';
-				resetShown();
-				applyFilter();
-				syncChips();
+		function setActiveNganh(val) {
+			curNganh = val || '';
+			sideItems.forEach(function (b) {
+				b.classList.toggle('active', (b.getAttribute('data-nganh-val') || '') === curNganh);
 			});
 		}
+		sideItems.forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				setActiveNganh(btn.getAttribute('data-nganh-val') || '');
+				resetShown();
+				applyFilter();
+			});
+		});
 
 		facetSels.forEach(function (sel) {
 			sel.addEventListener('change', function () {
@@ -664,9 +669,8 @@
 
 		if (clearBtn) {
 			clearBtn.addEventListener('click', function () {
-				if (nganhSel) nganhSel.value = '';
+				setActiveNganh('');
 				facetSels.forEach(function (s) { s.value = ''; });
-				curNganh = '';
 				curFacets = {};
 				resetShown();
 				applyFilter();

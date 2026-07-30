@@ -78,12 +78,13 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 		<?php include get_template_directory() . '/inc/sel-bar.php'; ?>
 
 		<div class="price-layout" data-price-panel data-limit="<?php echo esc_attr( $dgc_sp_limit ); ?>">
+			<?php
+			$pf_items      = $dgc_sp_items;
+			$pf_show_nganh = $dgc_sp_has_nganh;
+			include get_template_directory() . '/inc/price-sidebar.php';
+			?>
 			<div class="price-main">
-				<?php
-				$pf_items      = $dgc_sp_items;
-				$pf_show_nganh = $dgc_sp_has_nganh;
-				include get_template_directory() . '/inc/price-filter.php';
-				?>
+				<?php include get_template_directory() . '/inc/price-filter.php'; ?>
 				<?php if ( $dgc_sp_has_tools ) : ?>
 				<div class="tab-toolbar">
 					<div class="tab-search">

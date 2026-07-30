@@ -944,35 +944,64 @@ body.mnav-open{overflow:hidden}
 }
 @keyframes selBarIn{from{transform:translateY(100%)}to{transform:translateY(0)}}
 
+.price-layout{display:flex;align-items:flex-start;gap:20px}
 .price-layout>*{min-width:0}
+.price-main{flex:1;min-width:0}
 .price-table-wrap{max-width:100%}
 
-/* Thanh loc NGANG (Hieu 2026-07-14: gon hon cot loc doc cu). 4 dropdown + chip dang loc,
-   bang gia dung tron be ngang. Dung <select> that -> mobile bat picker he dieu hanh, khong
-   phai keo danh sach 25 nut. */
-.filter-bar{display:flex;align-items:flex-end;flex-wrap:wrap;gap:10px 12px;margin-bottom:14px;
-  padding:12px 14px;background:linear-gradient(180deg,#DFE8FF,#EDF2FF);
-  border:1px solid rgba(71,97,255,.32);border-radius:var(--r-md)}
+/* Cot doc "Nhom bao" (Hieu 2026-07-30: "cho sang hang doc ben trai") - inc/price-sidebar.php.
+   Tach khoi thanh loc ngang de danh sach nganh (co the >20 muc) khong lam thanh loc phinh to,
+   dong thoi de bam/quet mat hon kieu danh muc website thuong gap. */
+.price-sidebar{flex:0 0 200px;width:200px;position:sticky;top:90px;
+  background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-md);
+  padding:10px;max-height:calc(100vh - 110px);overflow-y:auto}
+.side-nav-head{font-family:var(--font-display);font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--ink-soft);padding:4px 8px 8px}
+.side-nav{display:flex;flex-direction:column;gap:1px}
+.side-nav-group{font-family:var(--font-display);font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;color:var(--ink-soft);opacity:.7;padding:10px 8px 3px}
+.side-nav-item{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;
+  text-align:left;font-family:var(--font-body);font-size:13.5px;color:var(--ink);background:none;
+  border:0;border-radius:8px;padding:7px 8px;cursor:pointer;transition:.12s}
+.side-nav-item:hover{background:var(--surface-2)}
+.side-nav-item.active{background:#EAF6F5;color:var(--teal);font-weight:600}
+[data-theme="dark"] .side-nav-item.active{background:rgba(14,140,127,.16);color:#5FCBBE}
+.side-nav-cnt{font-size:11.5px;color:var(--ink-soft);flex-shrink:0}
+.side-nav-item.active .side-nav-cnt{color:inherit;opacity:.75}
+
+/* Thanh loc NGANG cac facet quy cach (khoang gia/DR/vi tri/link/anh/tu) - Hieu 2026-07-30:
+   "lam gon lai". Bo Nhom bao da chuyen sang sidebar -> thu nho padding/gap/font de thanh loc
+   thap gon hon nhieu so ban truoc. Dung <select> that -> mobile bat picker he dieu hanh. */
+.filter-bar{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-bottom:12px;
+  padding:8px 10px;background:linear-gradient(180deg,#DFE8FF,#EDF2FF);
+  border:1px solid rgba(71,97,255,.32);border-radius:var(--r-sm)}
 [data-theme="dark"] .filter-bar{background:#1B2330;border-color:rgba(130,150,255,.28)}
-.filter-sel{display:flex;flex-direction:column;gap:4px;min-width:0}
-.filter-sel-lb{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;
-  letter-spacing:.05em;color:var(--ink-soft)}
-.filter-sel select{font-family:var(--font-body);font-size:13.5px;color:var(--ink);background:var(--surface);
-  border:1px solid var(--line-2);border-radius:var(--r-sm);padding:8px 30px 8px 11px;cursor:pointer;
-  max-width:220px;appearance:none;
+.filter-sel{display:flex;flex-direction:row;align-items:center;gap:6px;min-width:0}
+.filter-sel-lb{font-family:var(--font-display);font-size:10px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.04em;color:var(--ink-soft);white-space:nowrap}
+.filter-sel select{font-family:var(--font-body);font-size:12.5px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--line-2);border-radius:var(--r-sm);padding:5px 26px 5px 9px;cursor:pointer;
+  max-width:160px;appearance:none;
   background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 8px center;background-size:14px}
+  background-repeat:no-repeat;background-position:right 6px center;background-size:12px}
 .filter-sel select:focus{outline:2px solid var(--action);outline-offset:1px}
 .filter-chips{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
-.filter-chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;
-  color:#fff;background:var(--action);border:0;border-radius:999px;padding:6px 10px;cursor:pointer}
-.filter-chip span{font-size:14px;line-height:1;opacity:.8}
+.filter-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;
+  color:#fff;background:var(--action);border:0;border-radius:999px;padding:5px 9px;cursor:pointer}
+.filter-chip span{font-size:13px;line-height:1;opacity:.8}
 .filter-chip:hover span{opacity:1}
-.filter-clear{font-size:12.5px;color:var(--ink-soft);background:none;border:0;
-  text-decoration:underline;cursor:pointer;padding:6px 2px}
+.filter-clear{font-size:12px;color:var(--ink-soft);background:none;border:0;
+  text-decoration:underline;cursor:pointer;padding:5px 2px}
 .price-empty-row td{padding:22px 14px;text-align:center;color:var(--ink-soft);font-size:14px}
+@media(max-width:900px){
+  .price-layout{flex-direction:column}
+  .price-sidebar{width:100%;flex:0 0 auto;position:static;max-height:none;overflow:visible}
+  .side-nav{flex-direction:row;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding-bottom:2px}
+  .side-nav-group{display:none}
+  .side-nav-item{flex-shrink:0;white-space:nowrap;border:1px solid var(--line-2)}
+}
 @media(max-width:640px){
-  .filter-bar{gap:10px}
+  .filter-bar{gap:8px}
   .filter-sel{flex:1 1 calc(50% - 6px)}
   .filter-sel select{max-width:100%;width:100%}
   .filter-chips{margin-left:0;width:100%}

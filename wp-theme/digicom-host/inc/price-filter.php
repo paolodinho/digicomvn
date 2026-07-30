@@ -1,50 +1,20 @@
 <?php
 /**
  * Thanh loc NGANG phia tren bang gia - dung CHUNG cho /bang-gia/ va bang gia trong trang dich vu.
- * Thay cho cot loc doc cu (Hieu 2026-07-14: "lam cho gon hon") - 4 dropdown + chip dang loc,
- * bang gia duoc them ~220px be ngang.
- *   1. Nhom bao / nganh (meta "nganh" - admin tick trong WP Admin).
- *   2-4. Quy cach bai: loai link (do/nofollow), so anh, so tu - suy tu dong qua dgc_gia_facets().
- * Bien can set truoc khi include: $pf_items (mang dong gia), $pf_show_nganh (bool).
+ * Quy cach bai: khoang gia, diem DR, vi tri dang, loai link (do/nofollow), so anh, so tu - suy
+ * tu dong qua dgc_gia_facets()/dgc_facet_value(). Bo loc "Nhóm báo" (nganh) da TACH ra cot doc
+ * rieng ben trai (`inc/price-sidebar.php`, Hieu 2026-07-30: "roi qua, cho sang cot doc") - file
+ * nay gio CHI con cac facet quy cach, gon hon han truoc.
+ * Bien can set truoc khi include: $pf_items (mang dong gia).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 if ( empty( $pf_items ) ) return;
 
 $pf_total       = count( $pf_items );
-$pf_show_nganh  = ! empty( $pf_show_nganh );
 $pf_show_facets = dgc_has_facet_filter( $pf_items );
-if ( ! $pf_show_nganh && ! $pf_show_facets ) return;
-
-$pf_nganh_used = array();
-foreach ( $pf_items as $pf_it ) {
-	foreach ( dgc_gia_nganh_tags( $pf_it->meta['nganh'] ?? '' ) as $pf_n ) { $pf_nganh_used[ $pf_n ] = true; }
-}
+if ( ! $pf_show_facets ) return;
 ?>
 <div class="filter-bar">
-	<?php if ( $pf_show_nganh ) : ?>
-	<label class="filter-sel">
-		<span class="filter-sel-lb">Nhóm báo</span>
-		<select class="filter-nganh">
-			<option value="">Tất cả (<?php echo (int) $pf_total; ?>)</option>
-			<?php foreach ( dgc_nganh_groups() as $pf_gname => $pf_gopts ) :
-				$pf_slugs = array_filter( array_keys( $pf_gopts ), fn( $s ) => ! empty( $pf_nganh_used[ $s ] ) );
-				if ( ! $pf_slugs ) continue;
-			?>
-			<optgroup label="<?php echo esc_attr( $pf_gname ); ?>">
-				<?php foreach ( $pf_slugs as $pf_slug ) :
-					$pf_n = 0;
-					foreach ( $pf_items as $pf_it ) {
-						if ( in_array( $pf_slug, dgc_gia_nganh_tags( $pf_it->meta['nganh'] ?? '' ), true ) ) $pf_n++;
-					}
-				?>
-				<option value="<?php echo esc_attr( $pf_slug ); ?>"><?php echo esc_html( $pf_gopts[ $pf_slug ] ); ?> (<?php echo (int) $pf_n; ?>)</option>
-				<?php endforeach; ?>
-			</optgroup>
-			<?php endforeach; ?>
-		</select>
-	</label>
-	<?php endif; ?>
-
 	<?php if ( $pf_show_facets ) :
 		foreach ( dgc_facet_groups() as $pf_gname => $pf_opts ) :
 			$pf_render = array();
