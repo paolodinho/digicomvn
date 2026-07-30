@@ -1001,6 +1001,45 @@ body.mnav-open{overflow:hidden}
 .filter-clear{font-size:12px;color:var(--ink-soft);background:none;border:0;
   text-decoration:underline;cursor:pointer;padding:5px 2px}
 .price-empty-row td{padding:22px 14px;text-align:center;color:var(--ink-soft);font-size:14px}
+
+/* 3 lua chon xem bang gia (PDF / Google Sheet / xem ngay tren trang) - inc/price-view-options.php.
+   Hieu 2026-07-30. Nen sang phot teal nhe (dong bo voi sel-bar), khong dung khoi den. */
+.price-view-opts{background:linear-gradient(180deg,#F1FAF8,var(--surface-2));
+  border:1px solid rgba(14,140,127,.2);border-radius:var(--r-md);padding:16px 18px}
+[data-theme="dark"] .price-view-opts{background:#1B2733;border-color:rgba(14,140,127,.28)}
+.pvo-label{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--heading);
+  margin-bottom:12px}
+.pvo-choices{display:flex;flex-wrap:wrap;gap:10px}
+.pvo-choice{display:flex;align-items:center;gap:10px;flex:1 1 220px;min-width:200px;
+  background:var(--surface-2);border:1px solid var(--line-2);border-radius:12px;
+  padding:11px 14px;text-decoration:none;transition:.15s;color:var(--ink);
+  font-family:var(--font-body);cursor:pointer;text-align:left}
+.pvo-choice:hover{border-color:var(--teal);box-shadow:0 2px 10px rgba(14,140,127,.14)}
+.pvo-choice strong{display:block;font-size:13.5px;color:var(--heading);font-weight:600}
+.pvo-choice small{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:2px}
+.pvo-ic{flex-shrink:0;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;
+  justify-content:center;font-size:16px;background:#EAF6F5;color:var(--teal)}
+.pvo-primary .pvo-ic{background:var(--action);color:#fff}
+[data-theme="dark"] .pvo-ic{background:rgba(14,140,127,.18)}
+[data-theme="dark"] .pvo-primary .pvo-ic{background:var(--action);color:#fff}
+@media(max-width:640px){.pvo-choices{flex-direction:column}.pvo-choice{flex:1 1 auto}}
+
+/* Modal cong chan lead (nhap ten/sdt/email truoc khi nhan link PDF/Sheet) */
+.pvo-modal{position:fixed;inset:0;z-index:200;background:rgba(20,24,43,.55);
+  display:flex;align-items:center;justify-content:center;padding:16px}
+.pvo-modal[hidden]{display:none}
+.pvo-modal-box{position:relative;width:100%;max-width:380px;background:var(--surface-2);
+  border-radius:var(--r-md);padding:24px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.pvo-modal-box h3{margin:0 0 4px;font-size:18px;color:var(--heading)}
+.pvo-modal-sub{margin:0 0 16px;font-size:13px;color:var(--ink-soft)}
+.pvo-modal-close{position:absolute;top:10px;right:12px;background:none;border:0;
+  font-size:22px;line-height:1;color:var(--ink-soft);cursor:pointer;padding:4px}
+.pvo-modal-box .fl{display:block;font-size:12.5px;font-weight:600;color:var(--heading);margin:10px 0 4px}
+.pvo-modal-box .req{color:#E0483C}
+.pvo-modal-box input{width:100%;font-size:14px;padding:9px 11px;border:1px solid var(--line-2);
+  border-radius:8px;background:var(--surface);color:var(--ink);font-family:var(--font-body)}
+.pvo-modal-box input:focus{outline:2px solid var(--action);outline-offset:1px}
+.pvo-modal-err{color:#E0483C;font-size:12.5px;margin:10px 0 0}
 @media(max-width:900px){
   .price-layout{flex-direction:column}
   .price-sidebar{width:100%;flex:0 0 auto;position:static;max-height:none;overflow:visible}

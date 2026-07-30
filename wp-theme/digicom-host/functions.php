@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '2.3.10' );
+define( 'DGC_VER', '2.3.13' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -51,6 +51,13 @@ add_action( 'wp_enqueue_scripts', function () {
 			'nonce' => wp_create_nonce( 'dgc_ai' ),
 		) );
 	}
+
+	// Cong chan tai PDF/Google Sheet bang gia (inc/price-view-options.php) - khach phai de lai
+	// ho ten/SDT/email truoc khi nhan link, moi lan gui se bao qua email cho Digicom.
+	wp_localize_script( 'dgc-main-js', 'DGC_GATE', array(
+		'url'   => admin_url( 'admin-ajax.php' ),
+		'nonce' => wp_create_nonce( 'dgc_gate_lead' ),
+	) );
 } );
 
 /* ---------------------------------------------------------------------------
@@ -358,6 +365,50 @@ add_action( 'wp_head', function () {
 }, 1 );
 add_action( 'admin_post_dgc_lead', 'dgc_handle_lead' );
 add_action( 'admin_post_nopriv_dgc_lead', 'dgc_handle_lead' );
+
+/* ---------------------------------------------------------------------------
+ * Cong chan tai PDF / xem Google Sheet bang gia (Hieu 2026-07-30): khach phai de lai
+ * ho ten + SDT + email truoc khi nhan link -> luu thanh lead + bao qua email cho Digicom,
+ * chan doi thu lay link truc tiep tu HTML (khong con href tinh, chi tra link sau khi gui).
+ * ------------------------------------------------------------------------- */
+function dgc_handle_gate_lead() {
+	check_ajax_referer( 'dgc_gate_lead', 'nonce' );
+
+	$name   = sanitize_text_field( wp_unslash( $_POST['name'] ?? '' ) );
+	$phone  = sanitize_text_field( wp_unslash( $_POST['phone'] ?? '' ) );
+	$email  = sanitize_email( wp_unslash( $_POST['email'] ?? '' ) );
+	$target = sanitize_key( wp_unslash( $_POST['target'] ?? '' ) ); // 'pdf' hoac 'sheet'
+
+	if ( '' === $name || '' === $phone || '' === $email || ! is_email( $email ) ) {
+		wp_send_json_error( array( 'message' => 'Vui lòng nhập đầy đủ họ tên, số điện thoại và email hợp lệ.' ) );
+	}
+
+	$url = '';
+	if ( 'pdf' === $target ) {
+		$url = home_url( '/wp-content/uploads/bao-gia-tong-hop-digicom.pdf' );
+	} elseif ( 'sheet' === $target ) {
+		$url = trim( (string) dgc( 'sheet_view_url' ) );
+	}
+	if ( '' === $url ) {
+		wp_send_json_error( array( 'message' => 'Đường dẫn hiện chưa sẵn sàng, vui lòng thử lại sau.' ) );
+	}
+
+	$label = ( 'pdf' === $target ) ? 'Tải PDF tổng hợp bảng giá' : 'Xem Google Sheet bảng giá';
+	$body  = "Ho ten: $name\nDien thoai: $phone\nEmail: $email\nYeu cau: $label";
+
+	wp_insert_post( array(
+		'post_type'    => 'dgc_lead',
+		'post_status'  => 'private',
+		'post_title'   => $name . ' - ' . $label . ' - ' . current_time( 'd/m/Y H:i' ),
+		'post_content' => $body,
+	) );
+
+	wp_mail( dgc( 'lead_email', get_option( 'admin_email' ) ), '[DigicomVN] Yeu cau moi tu ' . $name, $body );
+
+	wp_send_json_success( array( 'url' => $url ) );
+}
+add_action( 'wp_ajax_dgc_gate_lead', 'dgc_handle_gate_lead' );
+add_action( 'wp_ajax_nopriv_dgc_gate_lead', 'dgc_handle_gate_lead' );
 
 /* ---------------------------------------------------------------------------
  * Trang tac gia: them Facebook/LinkedIn vao ho so user (WP Admin > Ho so),

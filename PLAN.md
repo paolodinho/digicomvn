@@ -271,6 +271,36 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       sang nhận diện theo tên miền `bao<tỉnh>.vn`, gán thêm 183 dòng. Gỡ nhầm `bao-lon` khỏi
       `wiki.batdongsan.com.vn` (không phải báo). Thêm icon mũi tên xoay vào nút "Mở rộng vị
       trí". Sửa `gan-nganh.py` để áp tự động cho báo/site mới. DGC_VER -> 2.3.1.
+- [x] To cot "Nhom bao" (200->260px, chu 13.5->15.5px) + lam gon thanh cuon (thin, mau nhat).
+      DGC_VER -> 2.3.10.
+- [x] 3 lua chon xem bang gia (`inc/price-view-options.php`, moi) tren `/bang-gia/`: (1) Tai
+      PDF tong hop 7 nhom dang publish, (2) Xem live Google Sheet (option moi `sheet_view_url`,
+      WP Admin > DigicomVN > muc 3 - nut tu an neu de trong), (3) xem ngay tren trang (anchor
+      xuong bang chi tiet). DGC_VER -> 2.3.11.
+      **CHUA XONG - cho Hieu**: tao Service Account Google (xem
+      `10-bang-gia-booking/HUONG-DAN-SERVICE-ACCOUNT.md`, ~5 phut) de kich hoat dong bo tu
+      dong Google Sheet (`sync-google-sheet.py` da viet san, cho `service-account.json`).
+      Sau khi co key: chay sync lan dau -> dan link vao option `sheet_view_url`. Da noi vao
+      routine tuan `digicom-gia-doi-tac-tuan` (buoc 5b) de tu cap nhat PDF+Sheet moi tuan.
+- [x] Watermark + chong "an cap" bang gia PDF (Hieu 2026-07-30): thay `generate-pdf.py` (Chrome
+      CLI, watermark loi - position:fixed KHONG lap lai theo trang khi in) bang
+      `10-bang-gia-booking/generate-pdf.js` (Node + puppeteer-core, ket noi Chrome co san khong
+      tai Chromium rieng). PDF gio co: watermark "DIGICOMVN.COM" lap deu MOI trang (background
+      SVG tile tren `<body>`, khong dung position:fixed), header/footer LAP LAI that su moi
+      trang (CDP `page.pdf({headerTemplate,footerTemplate})`) ghi ro hotline/email/website +
+      dong ban quyen "vui long khong sao chep/phat tan". Contact lay tu `dgc()` qua `_meta`
+      trong `publish-gia.json` (sua `dump-publish-gia.php` them block `_meta`), khong hardcode.
+- [x] Cong chan lead truoc khi nhan PDF/Sheet (Hieu 2026-07-30, doi y giua chung): nut (1) va
+      (2) khong con href tinh - bam mo modal (`#pvoModal`) bat nhap Ho ten/SDT/Email, submit
+      AJAX (`dgc_gate_lead`, `functions.php`) luu CPT `dgc_lead` + `wp_mail` bao ve
+      `lead_email`, tra ve link that qua JSON roi JS moi `window.open`. DGC_VER -> 2.3.13.
+      Da QA: submit thu tren live, lead luu dung (`wp post list --post_type=dgc_lead`), AJAX
+      tra dung URL PDF - da xoa lead test. Bug da gap+sua: CSS `.pvo-modal{display:flex}` de
+      luon hien de cho ca khi co attribute `hidden` (thieu selector `[hidden]`) - lam modal
+      che kin trang ngay luc tai; va script doc bien `DGC_GATE` (localize o wp_footer) qua
+      SOM lam listener khong gan duoc - da boc trong `DOMContentLoaded`.
+      **Con thieu**: chi moi gui EMAIL, CHUA gui Zalo tu dong (can Zalo OA + API rieng, chua
+      setup - hoi Hieu co muon lam tiep khong).
 - [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.

@@ -32,3 +32,8 @@ _static/
 tools/bao-gia/config.json
 
 tools/.schemaorg-vocab.jsonld
+
+# Google service account key (đồng bộ bảng giá -> Google Sheet)
+10-bang-gia-booking/service-account.json
+10-bang-gia-booking/node_modules
+10-bang-gia-booking/package-lock.json

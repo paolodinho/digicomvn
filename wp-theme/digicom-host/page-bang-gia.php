@@ -37,6 +37,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 	</div>
 </section>
 
+<?php include get_template_directory() . '/inc/price-view-options.php'; ?>
 
 <!-- Bang gia chi tiet theo tab + cong cu tick chon (ghim dau khu vuc nay) -->
 <section class="sec" id="bang-gia-chi-tiet" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
