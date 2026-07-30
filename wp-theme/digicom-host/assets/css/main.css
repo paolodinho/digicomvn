@@ -1008,6 +1008,36 @@ body.mnav-open{overflow:hidden}
 .price-table-cpt td.cell-price .price-old-line{justify-content:flex-end}
 .price-table-cpt .row-link{display:block;font-size:12px;color:var(--teal);margin-top:2px}
 
+/* Gop nhieu vi tri/quy cach CUNG 1 bao/site thanh 1 CAY, MAC DINH MO SAN (Hieu 2026-07-29,
+   sua lan 3: "dong dau la thong tin chung, khong gia ca gi ca, khong nut dat ngay"). Dong GOC
+   ".bao-tree-head" (dgc_gia_group_head_html trong inc/cpt-gia.php) CHI co logo/ten/DR/gioi
+   thieu - khong quy cach, khong gia, khong Dat ngay. Cac dong vi tri that (".bao-group-cont",
+   moi dong van co gia + nut Dat ngay rieng) noi voi nhau bang duong ke kieu cay thu muc. */
+.bao-tree-head .cell-price,
+.bao-tree-head .cell-action{padding-top:0;padding-bottom:0}
+.bao-head-note{font-size:12px;color:var(--ink-soft)}
+.bao-group-toggle{display:inline-flex;align-items:center;gap:3px;margin-left:8px;padding:2px 9px;
+  font-family:var(--font-display);font-size:11.5px;font-weight:600;color:var(--ink-soft);
+  background:var(--surface);border:1px solid var(--line-2);border-radius:20px;cursor:pointer;
+  white-space:nowrap;vertical-align:middle;transition:.15s}
+.bao-group-toggle:hover{border-color:var(--teal);color:var(--teal)}
+.bao-tree-head.is-collapsed .bao-group-toggle{background:#EAF6F5;border-color:#CBE6E3;color:var(--teal)}
+[data-theme="dark"] .bao-group-toggle{background:var(--surface-2);border-color:var(--line-2);color:var(--ink-soft)}
+[data-theme="dark"] .bao-tree-head.is-collapsed .bao-group-toggle{background:rgba(14,140,127,.16);border-color:rgba(14,140,127,.35);color:#5FCBBE}
+
+.price-table-cpt tr.bao-group-cont td.cell-site{padding-top:6px;padding-bottom:6px;position:relative}
+.price-table-cpt tr.bao-group-cont .row-check-wrap{gap:9px}
+/* Duong ke doc "cay" - noi lien tu dong nay sang dong ke tiep (dung canh nhau, khong khe ho
+   giua cac <tr> nen 2 doan border xep chong nhin thanh 1 duong lien mach). Dong CUOI cua nhom
+   chi ve nua tren (den giua dong) roi re ngang - dung kieu "└", khong ke tiep xuong duoi nua. */
+.price-table-cpt tr.bao-group-cont td.cell-site:before{content:"";position:absolute;left:20px;
+  top:0;bottom:0;width:1px;background:var(--line-2)}
+.price-table-cpt tr.bao-group-cont.is-last-in-group td.cell-site:before{bottom:50%}
+.price-table-cpt tr.bao-group-cont td.cell-site:after{content:"";position:absolute;left:20px;
+  top:50%;width:9px;height:1px;background:var(--line-2)}
+.price-table-cpt tr.bao-group-cont td.cell-site .row-name{font-size:12.5px !important;font-weight:500;
+  color:var(--ink-soft);padding-left:16px;display:inline-block}
+
 /* Chip quy cach dang: moi y (so tu, so anh, so link, vi tri...) 1 the rieng cho de doc */
 .spec-chip{display:inline-block;background:var(--surface);border:1px solid var(--line);
   border-radius:20px;padding:4px 11px;margin:0 6px 6px 0;font-size:12.5px;line-height:1.35;

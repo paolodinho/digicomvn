@@ -2917,3 +2917,284 @@ Verify: cả 4 URL trả 200 (trước đó 2 URL bị 301 redirect chéo do .ht
 Còn lại: nếu Hiếu muốn, có thể bổ sung 1 dòng nhắc Nghị định 13/2023/NĐ-CP (bảo vệ dữ liệu cá
 nhân) vào Chính sách bảo mật cho chặt hơn về pháp lý - hiện trang đã đủ ý cơ bản (thu thập, mục
 đích, chia sẻ, lưu trữ, quyền khách hàng) nhưng chưa trích dẫn luật cụ thể.
+
+## 2026-07-29 - Bỏ toàn bộ markup giá web (về giá vốn) + gộp hiển thị nhiều vị trí/1 báo
+
+**Giá vốn 100%**: Hiếu yêu cầu "tất cả để bằng giá vốn" - bỏ hết markup đang áp (3 NCC chính
+x1,03 - chốt 2026-07-19; NCC khác x1,20 - chốt 2026-07-15; Rise Media x1,1 - chốt 2026-07-24).
+Sửa `export-web.py` + `parse-rise-media.py` (10-bang-gia-booking/), tiện sửa luôn `build_master.py`
+(BASE hardcode đường dẫn SSD cũ không mount được, đổi về đường dẫn tương đối như các script khác).
+Rebuild pipeline, đối chiếu `cap-nhat-gia.py` với snapshot live 1175 dòng -> đẩy 835 dòng đổi giá
+(828 giảm, 7 tăng do kho có giá NCC mới hơn) qua `import-wp.php`. Backup giá cũ:
+`~/Claude-Workspace/_backups/routines/2026-07-29/gia-von-full/live-now-BEFORE-PUSH.json`.
+
+**Sự cố + đã khắc phục**: lúc deploy đợt sau, `scp` nhiều file cùng lúc với đường dẫn tương đối
+(`inc/cpt-gia.php assets/js/main.js ...`) đã bị FLATTEN vào gốc thư mục theme trên host thay vì
+đúng thư mục con -> đồng thời deploy nhầm nguyên file `functions.php` local (có dòng require
+`inc/post-sidebars.php` chưa tồn tại trên live) đè lên live -> site lỗi Fatal Error tạm thời.
+Phát hiện ngay qua `wp cache flush` báo lỗi, khôi phục từ backup đã lấy trước đó trong vài giây,
+site trở lại bình thường. Từ nay: **scp nhiều file phải chỉ định TỪNG đường dẫn đích đầy đủ**,
+không đưa nhiều file kèm 1 thư mục đích chung; không deploy nguyên file `functions.php` khi chỉ
+cần đổi 1 dòng (DGC_VER) - sửa trực tiếp bằng `sed` trên host để tránh mang theo phần code local
+chưa đồng bộ với live.
+
+**Gộp hiển thị nhiều vị trí/1 báo trên bảng giá**: theo yêu cầu Hiếu ("kenh14 vị trí này bao
+tiền, vị trí kia bao tiền"). Sửa `dgc_get_gia()` gom theo tên báo trước khi sort DR/giá (trước đây
+cùng DR thì các báo xen kẽ nhau, không đứng liền). Thêm `data-bao-key` + JS `regroup()` +
+CSS `.bao-group-cont` để dòng vị trí thứ 2 trở đi của cùng 1 báo chỉ còn hiện "↳ tên báo" nhỏ +
+giá riêng, không lặp lại logo/DR/link. Đã verify cả desktop lẫn mobile trên live (Tuổi Trẻ,
+VietNamNet đều gộp đúng). DGC_VER bump 2.1.1 -> 2.1.3 (nhớ: live đã ở 2.1.1 trước session này,
+lệch so với local 2.0.9 - dự án có phần drift local/live pre-existing, chưa xử lý trong session này).
+
+**Sửa lại theo phản hồi Hiếu (cùng ngày)**: bản đầu hiện sẵn các vị trí ở dạng thu gọn (luôn
+nhìn thấy). Hiếu muốn kiểu accordion: bấm vào tên báo mới "rải ra" các vị trí. Đổi sang: dòng đầu
+mỗi báo hiện nút "+N vị trí khác", bấm mới xổ, bấm lại thu gọn. Gặp 1 bug lúc code: hàm gộp nhóm
+tính theo trạng thái ẩn/hiện hiện tại (`style.display`), nên dòng đã ẩn thì lần bấm mở sau không
+tìm lại được nữa (gà-trứng) - sửa bằng cách tách riêng "khớp lọc" (data-matched) khỏi "đang ẩn vì
+gộp nhóm" (style.display do JS tự điều khiển). Đã verify qua click thật (dispatch event) + xem
+text nội dung trang: tuoitre.vn bấm hiện "Thu gọn" + 3 dòng con xổ đúng. DGC_VER 2.1.3 -> 2.1.5.
+
+**Sửa lần 3 (cùng ngày)**: Hiếu muốn kiểu cây (tree), mặc định MỞ SẴN (không phải bấm mới hiện).
+Đổi: dòng đầu mỗi báo là gốc, các vị trí con nối bằng đường kẻ dọc liền mạch + nhánh ngang kiểu
+cây thư mục (CSS pseudo-element trên từng dòng, dòng cuối chỉ vẽ nửa trên rồi rẽ ngang), hiện sẵn
+mặc định. Vẫn giữ nút "Thu gọn" nhỏ để đóng bớt khi 1 báo có quá nhiều vị trí (CafeF, VietNamNet
+có tới 7-9 dòng). DGC_VER 2.1.5 -> 2.1.6. Verify bằng screenshot thật: tuoitre.vn, vietnamnet.vn,
+dantri.com.vn đều hiện cây đúng, đường kẻ liền mạch giữa các dòng.
+
+**Sửa lần 4 (cùng ngày, chốt cuối)**: Hiếu chỉ rõ dòng đầu (vd tuoitre.vn) vẫn còn hiện giá + nút
+"Đặt ngay" của 1 vị trí cụ thể - sai, dòng đầu phải CHỈ là thông tin chung (logo/tên/DR), không
+giá, không nút, các vị trí (kể cả vị trí trước đây "mượn" làm dòng đầu) đều xuống làm dòng con.
+Đổi kiến trúc: PHP dựng hẳn 1 dòng GỐC riêng (dgc_gia_group_head_html, không dùng chung với item
+đầu tiên nữa) + toàn bộ N vị trí thành dòng con đều có giá/nút riêng, JS chỉ còn lo mở/đóng.
+
+Gặp thêm 2 bug trong lúc sửa:
+1. Tra cứu dòng con qua `nextElementSibling` - vỡ ngay khi bấm nút sắp xếp giá/DR (JS di chuyển
+   thứ tự DOM). Fix: tính sẵn bảng tra cứu theo data-bao-key lúc tải trang, không dò theo vị trí.
+2. Gom nhóm theo tên báo NGUYÊN VĂN bị tách nhầm "Vietnamnet.vn" (hoa) và "vietnamnet.vn" (thường)
+   thành 2 nhóm khác nhau - lộ ra dòng "Vietnamnet.vn" vẫn còn nguyên giá/nút vì bị tính là "nhóm
+   1 phần tử". Fix: gom theo khoá đã chuẩn hoá (bỏ dấu, bỏ hoa/thường) thay vì so tên nguyên văn.
+
+DGC_VER 2.1.6 -> 2.1.8. Verify qua JS + screenshot thật: CafeF.vn ("9 vị trí đăng", không giá,
+không nút) + vietnamnet ("5 vị trí đăng", gộp đúng 1 nhóm duy nhất) đều hiển thị chuẩn.
+
+## 2026-07-29 - Tạo trang tổng hợp /cau-hoi-thuong-gap/ (FAQ hub)
+
+Hiếu báo "chưa có page câu hỏi thường gặp" - trước đó FAQ chỉ rải rác (khối ở trang chủ +
+khối riêng mỗi trang dịch vụ), không có 1 trang gộp để bắt long-tail/AI trích dẫn. Research
+SERP + Google Suggested cho cụm "mua backlink", "guest post", "textlink", "booking báo PR"
+(WebSearch, không bịa câu hỏi) để viết thêm 12 câu hỏi chéo dịch vụ (an toàn Google, thời gian
+hiệu quả, thanh toán, VAT, bảo mật, hợp đồng, gov/edu...).
+
+Đã dựng:
+- `inc/faq-page.php` (mới): aggregator `dgc_faq_page_groups()`/`dgc_faq_page_flat()` gộp
+  option `faqs` (chung) + `faq_page_extra` (mới, chỉ hiện trang này) + `svc_faqs` theo 7
+  dịch vụ đang publish (`dgc_service_links()`) - dùng chung 1 nguồn cho cả hiển thị lẫn schema.
+- `page-cau-hoi-thuong-gap.php` (mới): hero + tab-bar nhảy nhanh theo nhóm + accordion `.faq`
+  mỗi nhóm + CTA cuối trang. Tự nhận theo slug (WP template hierarchy), không cần đăng ký thêm.
+- `functions.php`: hook `init` tự tạo page slug `cau-hoi-thuong-gap` nếu chưa có (giống cơ chế
+  trang `cam-on`), kèm `dgc_seo_desc` sẵn. Trang CẦN index (khác cam-on), không gắn noindex.
+- `inc/schema.php`: `dgc_sch_page_faqs()` thêm nhánh trang này -> tự có FAQPage trong @graph.
+- `inc/options.php`: field mới `faq_page_extra` (mục 5), seed 12 câu hỏi nghiên cứu được.
+- `footer.php` + `header.php` (fallback menu): link "Câu hỏi thường gặp" đổi từ neo `#faq` trên
+  trang chủ sang trỏ thẳng `/cau-hoi-thuong-gap/`.
+- `.claude/rules/pivot-2026-07.md`: thêm trang vào sitemap đã chốt.
+
+**Chưa verify trên trình duyệt thật**: Local site (digicom.local) không chạy sẵn trong phiên
+này (nginx/mysqld không có tiến trình), đã thử `open -a Local` nhưng site cần bấm Start thủ
+công trong app - không có công cụ điều khiển desktop để làm thay. Đã lint toàn bộ file PHP
+bằng binary PHP của Local (`No syntax errors detected`), nhưng CHƯA mở trình duyệt kiểm tra
+thực tế. Việc còn lại: Hiếu mở Local, Start site "digicom", trang sẽ tự tạo ở lần load đầu
+(hook init) - sau đó cần xem lại `/cau-hoi-thuong-gap/`, chạy `tools/schema-qa.py` +
+`tools/meta-qa.py` + thêm trang vào WP Admin > Giao diện > Menu (menu thật, không phải
+fallback code) nếu site đang dùng custom nav menu.
+
+## 2026-07-29 - Fix favicon vỡ ở bảng giá (thiếu fallback khi Google favicon lỗi)
+
+Hiếu báo "các vị trí đăng của các báo thiếu ảnh... cho hiện chữ v đi (đang k thấy hiện)" -
+hiểu đúng là: dòng báo/site trong bảng giá dùng favicon thật qua Google s2 favicon service
+(`dgc_row_logo_html()` trong `inc/cpt-gia.php`), nhưng khi favicon đó tải lỗi (domain lạ,
+Google không có icon, mạng chặn) thì ảnh vỡ trống trơn - code CŨ chỉ fallback sang avatar chữ
+cái đầu tên báo (vd "V" cho vietnamnet) khi KHÔNG xác định được domain, không xử lý trường hợp
+domain xác định được nhưng ảnh tải lỗi.
+
+Sửa: luôn tính sẵn avatar chữ cái dự phòng, gắn `onerror` lên thẻ `<img>` để tự thay bằng avatar
+đó khi favicon lỗi (`this.outerHTML=...`, escape qua `wp_json_encode()` + `esc_attr()` để an
+toàn HTML/JS). Áp dụng cho cả dòng lẻ lẫn dòng gốc nhóm báo (2 nơi cùng gọi 1 hàm dùng chung).
+Chỉ sửa PHP, không đụng CSS/JS nên không cần bump DGC_VER. Đã lint qua PHP CLI của Local, chưa
+xem trực tiếp trên trình duyệt (môi trường phiên này không truy cập được digicom.local).
+
+## 2026-07-29 - Audit "vị trí đăng" theo yêu cầu Hiếu: phát hiện 2 lỗi lớn ở export-web.py
+
+Hiếu hỏi "vne có 1 vị trí???... quét lại toàn bộ" + "chưa có ảnh minh hoạ vị trí đăng, trước đã
+có task chụp màn hình, giờ lôi ra". Audit toàn bộ pipeline `10-bang-gia-booking/` phát hiện:
+
+**Lỗi 1 - ĐÃ FIX**: `export-web.py` gộp dòng theo `(dich_vu, domain, tier)` với `tier()` chỉ có
+4 nhóm thô (trang-chu/chuyen-muc/bao-tinh/dofollow) cho `booking-pr` - MỌI vị trí khác tên nhưng
+cùng tier bị gộp chung, chỉ giữ giá rẻ nhất. Vnexpress.net riêng DanaSEO đã có 4 vị trí chuyên
+mục thật (Giáo dục 9,2tr; Doanh nghiệp viết 1/2/3: 7,8/11,8/15,3tr) nhưng web chỉ hiện 1 dòng.
+Quét toàn bộ: 233/520 nhóm (domain,tier) bị gộp mất 507 dòng vị trí thật. Fix: thêm `booking-pr`
+vào `KEY_CHI_TIET` (dùng đúng nguyên tắc đã áp cho textlink/entity: khác vi_tri = khác sản phẩm,
+không gộp). Rebuild: booking-pr 303 -> 568 dòng (+265), tổng gia-web.csv 1190 -> 1455 dòng.
+Backup bản trước fix: `~/Claude-Workspace/_backups/routines/2026-07-29/booking-pr-vitri-fix/gia-web-BEFORE.csv`.
+
+**Lỗi 2 - PHÁT HIỆN, CHƯA FIX (cần Hiếu quyết)**: `is_khong_ro_noi_dang()` có nhánh loại bỏ
+"dau_bao không có dấu chấm domain" (`"." not in d`) nhằm chặn gói/combo ẩn danh - nhưng Rise
+Media (và một phần Fame Media) ghi tên báo bằng TÊN THẬT tiếng Việt thay vì domain (vd
+"Vnexpress", "Tiền phong", "VTV", "Lao động", "Dân trí (Giá mới 2026)") -> bị hiểu nhầm là
+"không rõ nơi đăng" và loại oan. Quy mô: **436/1027 dòng booking-pr (42%)** từ 4 NCC bị loại
+kiểu này, cần alias 147 tên báo khác nhau -> domain thật để khôi phục. textlink: 32 dòng, TV: 21/21
+dòng (nhưng booking-tv đang tạm ẩn). Đây là lỗi RIÊNG, không liên quan lỗi 1.
+
+**Tính năng "ảnh minh hoạ vị trí" (nút chữ "V")**: phát hiện `dgc_gia_vitri_domain_of()` +
+`dgc_gia_items_have_vitri()` (`inc/vitri-images.php`, 161 domain/174 ảnh chụp thật 2026-07-18)
++ toàn bộ CSS/JS popup đã dựng sẵn từ 2026-07-18 nhưng **CHƯA TỪNG được gọi ở bất kỳ template
+nào** - nút "V" không bao giờ render, tính năng coi như chết từ lúc tạo. Đã wire lại: thêm
+`dgc_gia_vitri_button_html()` + `dgc_gia_vitri_detail_html()` trong `inc/cpt-gia.php`, gọi trong
+`dgc_gia_row_html()` cạnh chip vị trí; thêm dòng hướng dẫn `.vitri-hint` trước bảng giá
+(`page-bang-gia.php`, `inc/service-pricing.php`), gate bằng `dgc_gia_items_have_vitri()` có sẵn.
+
+**Chưa làm**: KHÔNG chạy `import-wp.php` (chưa đẩy 265 dòng mới lên WP DB/live) - đây là thay
+đổi giá lớn, chờ Hiếu xác nhận. KHÔNG tự xây bảng alias 147 tên báo (rủi ro gán nhầm domain cho
+dữ liệu giá) - cần Hiếu chọn hướng trước khi làm.
+
+## 2026-07-29 - "nốt đi": xây bảng alias 123 tên báo -> domain, hoàn tất fix vị trí đăng
+
+Tiếp việc audit trước đó (2 lỗi lớn ở export-web.py). Đã xây `ALIAS_DAU_BAO` (123 tên) đối
+chiếu AN TOÀN: ưu tiên khớp với domain THẬT ĐÃ CÓ SẴN trong chính bang-gia-master.csv/
+vitri-images.php (113 tên tự động khớp, không đoán), phần còn lại verify qua WebSearch trước
+khi thêm (Báo Mới->baomoi.com, Công an nhân dân->cand.com.vn, Sài Gòn Giải Phóng->sggp.org.vn,
+Voz->voz.vn, Kinhtedothi->kinhtedothi.vn, Marrybaby->marrybaby.vn, Bazaar->bazaarvietnam.vn,
+Zingnews->znews.vn). ~40 tên còn lại quá mơ hồ (Molistar, Wow, Yacht Style, Men's Folio, Otofun
+domain đổi không chắc, Infonet 2 domain khả dĩ...) - CỐ Ý không alias, để nguyên bị loại (an
+toàn hơn đoán sai domain cho dữ liệu giá).
+
+Tiện phát hiện + sửa luôn 1 bug gốc: hàm `fold()` dùng chung toàn script có dòng
+`return s.replace("d","d")` - no-op tuyệt đối (thay "d" bằng chính nó), sót lại từ thao tác dở
+dang. Chữ "đ" (U+0111) là ký tự gốc riêng trong Unicode, KHÔNG tự tách dấu qua NFD như các
+nguyên âm khác - phải thay thủ công `"đ"->"d"`. Bug này ảnh hưởng MỌI chỗ dùng fold() để so
+khớp (is_khong_ro_noi_dang, is_gov_edu, is_soft, tier...), không chỉ alias mới.
+
+**Kết quả cuối**: booking-pr 303 -> 950 dòng (+647, x3.1 lần). Tổng gia-web.csv: 1190 -> 1837
+dòng. Vnexpress.net cụ thể: từ 1 dòng -> 22 dòng (5 chuyên mục cũ + nhiều chuyên mục/trang chủ
+mới từ Fame Media/Rise Media qua alias). Đã verify bằng cách grep trực tiếp file CSV.
+
+**VẪN CHƯA đẩy lên WP** (local lẫn live) - chỉ mới sửa `export-web.py` + `gia-web.csv` local.
+Cần bước tiếp: sinh payload JSON (theo cấu trúc `import-wp.php` cần: updates[]/new[]) rồi chạy
+qua `wp eval-file` - việc này cần WP-CLI + DB thật (Local hoặc SSH live), môi trường phiên này
+không có quyền truy cập trực tiếp, cần Hiếu tự chạy hoặc mở lại trong session có Local đang chạy.
+
+## 2026-07-29 - Phát hiện Local WP lệch xa git repo, đồng bộ + verify trực tiếp trên trình duyệt
+
+Local site đã bật lại (Hiếu mở Local app). Thử mở `/cau-hoi-thuong-gap/` -> 404. Điều tra: theme
+thật ở `wp-content/themes/digicom-host` trên Local là **bản sao riêng, KHÔNG symlink** với
+`wp-theme/digicom-host` trong git repo, và đã tụt hậu khá xa (`DGC_VER 1.9.5` so với `2.1.8` hiện
+tại - thiếu cả require `inc/schema.php`, các field hồ sơ tác giả, và mọi việc sửa trong session
+này). Đây là gap cấu trúc dự án (2 bản theme tồn tại song song, không tự đồng bộ).
+
+Đã backup toàn bộ theme Local (`~/Claude-Workspace/_backups/routines/2026-07-29/local-theme-sync/
+digicom-host-local-BEFORE.tar.gz`) rồi `rsync -a` (không xoá file thừa) từ git repo sang Local.
+
+**Verify qua curl thật (không đoán)**:
+- `/cau-hoi-thuong-gap/` -> HTTP 200, 15 câu hỏi hiện ra, có đúng 1 khối FAQPage schema.
+- `/bang-gia/` -> 75 nút "V" (`vitri-toggle`) + 75 khối ảnh (`vitri-detail`) xuất hiện, gồm cả
+  dòng vnexpress.net; 162 dòng có fallback favicon `onerror` hoạt động đúng (đã kiểm tra HTML
+  escape output không lỗi).
+
+Cả 3 việc sửa trong session này (FAQ page, nút V, favicon fallback) **đã xác nhận chạy đúng
+trên Local**, không còn là "sửa mù không test" nữa.
+
+**Việc lớn còn lại, CHƯA làm (cần xác nhận trước khi đụng vào site thật)**: Local's dgc_gia chỉ
+có 209 bài giá (dataset test nhỏ, không phải 1175+ dòng thật của live) - đẩy dữ liệu giá đã fix
+(950 dòng booking-pr) vào ĐÂY không giải quyết vấn đề thật của Hiếu. Cần: (1) deploy 7 file theme
+đã sửa lên Hostinger live qua SSH (theo `deploy.md`), (2) sinh payload JSON + `wp eval-file
+import-wp.php` trên live để thêm ~647 dòng giá mới. Đây là thay đổi lớn trên site thương mại
+đang chạy thật - dừng lại xin xác nhận trước khi làm, chưa tự đẩy.
+
+## 2026-07-29 - "lên site live hết": deploy code + đẩy dữ liệu giá lên digicomvn.com live
+
+Hiếu xác nhận đẩy toàn bộ lên site thật. Quy trình đầy đủ:
+
+**1. Backup trước khi động vào gì cả** (rule routine-backup.md):
+- `mysqldump` toàn bộ DB live -> `~/backups/2026-07-29-vitri-fix/db-BEFORE.sql` (host) +
+  bản sao `~/Claude-Workspace/_backups/routines/2026-07-29/live-deploy-vitri-fix/` (máy).
+- `tar.gz` toàn bộ theme live trước khi ghi đè -> cùng thư mục backup.
+
+**2. Deploy 10 file theme** (functions.php, footer.php, header.php, inc/options.php,
+inc/schema.php, inc/cpt-gia.php, page-bang-gia.php, inc/service-pricing.php, inc/faq-page.php,
+page-cau-hoi-thuong-gap.php) qua `scp`, mỗi file 1 đường dẫn đích đầy đủ (rút kinh nghiệm sự cố
+scp-flatten cùng ngày sớm hơn).
+
+**SỰ CỐ + đã khắc phục ngay**: `wp cache flush` báo Fatal Error - `functions.php` mới có dòng
+`require inc/post-sidebars.php` nhưng file đó CHƯA TỪNG được deploy lên live (chỉ có trong git
+repo). Site downtime khoảng 1-2 phút. Đã deploy nốt `inc/post-sidebars.php` (file có thật, hợp
+lệ, chỉ là bị bỏ sót) -> site về bình thường ngay, verify lại 5 URL chính đều 200.
+
+**3. Đẩy dữ liệu giá**: dump snapshot dgc_gia MỚI NHẤT từ live (script `dump-live-gia.php`, 2241
+bản ghi mọi trạng thái) -> đối chiếu với `gia-web.csv` đã fix (script mới `recover-vitri.py`,
+khoá đối chiếu (nhóm, tên báo, vị trí) + quy_cách khi mơ hồ) -> kết quả: 822 dòng đã đúng giá,
+**176 cần cập nhật giá, 450 cần tạo mới**, 20 dòng mơ hồ (giữ nguyên, không đoán), **369 dòng
+KHÔNG tạo lại** vì khớp với bản ghi đang ở trạng thái draft (tôn trọng các đợt lọc chất lượng
+domain/gov-edu trước đó, không hồi sinh oan).
+- Dry run xác nhận đúng số liệu trước khi ghi thật.
+- Import thật qua `import-wp.php` có sẵn trên host: dgc_gia publish 1175 -> **1625** bài.
+- Verify: vnexpress.net riêng 1 -> **18 bài** (đúng như audit dự kiến).
+
+**Kết quả cuối cùng trên live**: trang `/cau-hoi-thuong-gap/` sống (37 câu hỏi, đúng 1 schema
+FAQPage), nút "V" ảnh minh hoạ vị trí hiện 190 lần trên `/bang-gia/`, favicon fallback hoạt động
+645 lần, dữ liệu giá booking-pr đầy đủ hơn hẳn (đặc biệt các báo lớn: VnExpress, VietnamNet,
+CafeF, Tiền Phong, VTV...).
+
+Backup đầy đủ tại `~/Claude-Workspace/_backups/routines/2026-07-29/live-deploy-vitri-fix/`
+(db-BEFORE.sql, theme-BEFORE.tar.gz) - rollback: restore DB qua mysql import, giải nén theme cũ
+đè lại nếu cần.
+
+## 2026-07-30 - Batch 2 vitri-recover (13 alias mới) + fix bug gộp nhầm trong recover-vitri.py
+
+Tiếp tục đẩy 13 alias đầu báo mới xác minh (từ đợt research alias trước) lên live.
+
+**Phát hiện + sửa bug quan trọng**: `recover-vitri.py` chỉ coi 1 khoá (nhóm+tên báo+vị trí) là
+"mơ hồ" khi bản ghi LIVE có >1 ứng viên - nhưng không xét trường hợp CSV có >1 dòng (nhiều
+quy_cách khác nhau) cùng khớp vào DUY NHẤT 1 bản ghi live. Lần chạy đầu (trước fix) cho ra 115
+dòng "update" nhưng chỉ 78 ID duy nhất - 23 ID bị 2-4 dòng CSV khác nhau (giá khác nhau) cùng
+ghi đè, dòng ghi sau cùng thắng, dòng khác mất trắng (không phát hiện được nếu không soát kỹ).
+Đã sửa: đếm số dòng CSV chia sẻ chung khoá thô; nếu >1 mà không khớp được `yeu_cau` (quy cách)
+với bản ghi live → coi là vị trí quy cách RIÊNG, tạo mới thay vì đoán ghi đè. Chạy lại cho kết
+quả sạch: 57 update (không còn ID trùng), 170 tạo mới, 10 mơ hồ (giữ nguyên), 362 bỏ qua vì
+đang draft có chủ đích.
+
+- Backup 57 bản ghi trước khi ghi: `~/Claude-Workspace/_backups/routines/2026-07-30/vitri-recover-batch2/before-update-ids.json`.
+- Dry run khớp đúng số liệu → import thật: dgc_gia publish 1625 → **1795** bài.
+- Verify: elledecoration.vn, lofficielvietnam.com, luxuo.vn (3/170 dòng mới) đã lên `/bang-gia/`.
+- Đã dọn `payload-vitri-recover.json` + `dump-live-gia.php` khỏi server live.
+
+**Đồng bộ Local WP (dev site) khớp live**: Local chỉ có 209 bài `dgc_gia` (dữ liệu mẫu cũ) so
+với live 1795 - dùng lại đúng pipeline recover-vitri (biến thể `local-fresh.json`, dump qua
+wp-cli trực tiếp không cần SSH) để đối chiếu + đẩy vào Local. Do Local gần như trống nên hầu hết
+là "tạo mới": dry run khớp số → import thật: **1792 tạo mới, 2 cập nhật giá** → Local đạt
+**2001 bài publish**, khớp dữ liệu với live để test theme trên Local đáng tin cậy hơn.
+
+## 2026-07-30 - Batch 3: xác minh nốt 8 tên báo còn lại qua WebSearch
+
+Research qua WebSearch xác nhận domain thật cho 8/còn lại (loại các "Gói"/combo/gói dịch vụ
+không phải tên báo cụ thể - đã đúng khi bị loại từ trước):
+- Sài gòn giải phóng -> sggp.org.vn, Molistar -> molistar.com, Viez -> viez.vn,
+  Phunusuckhoe -> phunusuckhoe.vn, Sinh viên việt nam -> svvn.tienphong.vn (đúng theo
+  `nguon` field sẵn có trong data cho 3 trường hợp đầu).
+- Yacht Style -> yachtstyle.vn, Men's Folio -> mensfolio.vn, **Wow -> worldofwatches.vn**
+  (KHÔNG phải "Wowweekend" - xác minh qua cùng batch nguồn dữ liệu với Yacht Style/Men's Folio,
+  cả 3 đều thuộc LUXUO MEDIA Việt Nam, "Wow" = viết tắt "World Of Watches", ấn phẩm đồng hồ
+  cao cấp của cùng đơn vị).
+- Còn lại KHÔNG alias (đúng theo rule an toàn, không đoán): Blogtamsu (mơ hồ 4 domain khác
+  nhau: .vn/.co/.com.vn/.net.vn), "Vnmedia- tạm dừng" (ghi rõ đã tạm dừng), "Mua bán nhà đất"
+  (tên chung chung không xác định site cụ thể).
+
+`gia-web.csv` 1868 -> 1880 dòng. Đối chiếu recover-vitri: 41 dòng mới, nhưng **6 dòng thuộc
+booking-truyen-hinh (VTV1/VTV3/HTV7/HTV9) bị loại khỏi batch này** - phát hiện nhóm TV này tuy
+theo quyết định pivot 2026-07-16 (`dich-vu.md`) vẫn đang "tạm ẩn" (draft), nhưng batch import
+đầu tiên (2026-07-29) đã vô tình publish sẵn 19/33 dòng cũ (do `import-wp.php` luôn tạo mới ở
+trạng thái publish, không phân biệt nhóm ẩn) - không mở rộng thêm sự không nhất quán này, để
+Hiếu quyết định sau (hoặc draft lại 19 dòng cũ, hoặc chính thức mở nhóm TV).
+- Đẩy 35 dòng còn lại lên **live**: dgc_gia publish 1795 -> **1830**. Verify 4 domain mới
+  (sggp.org.vn, molistar.com, worldofwatches.vn, yachtstyle.vn) hiện đúng trên `/bang-gia/`.
+- Đồng bộ **Local**: 35 dòng tạo mới (0 dòng TV, do lần trước Local đã full-sync nhất quán) ->
+  Local **2001 -> 2036** bài publish.

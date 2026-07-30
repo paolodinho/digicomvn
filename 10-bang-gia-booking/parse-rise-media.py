@@ -4,14 +4,15 @@
 -> raw/Rise-Media.csv (định dạng pipe giống ncc-khac.csv).
 
 Nguồn: https://docs.google.com/spreadsheets/d/1uOvzvsZ-3clQR0bCPtr2JoCPJ3RyuTGF (public, gid=1867970395)
-Giá web = giá THÀNH TIỀN (đã chiết khấu) x 1.1 (theo yêu cầu Hiếu 2026-07-24).
+Giá web = giá THÀNH TIỀN (đã chiết khấu) - đúng giá vốn NCC, KHÔNG markup
+(Hiếu 2026-07-29: bỏ hệ số x1.1 đã chốt 2026-07-24, chuyển toàn site về giá vốn).
 """
 import csv, re, os
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(BASE, "rise-media-raw.csv")
 OUT = os.path.join(BASE, "raw", "Rise-Media.csv")
-MARKUP = 1.1
+MARKUP = 1.0
 
 def num(s):
     if not s: return None
@@ -58,8 +59,8 @@ for r in rows:
 
     gia_web = round(thanh_tien * MARKUP / 1000) * 1000
     # KHONG dung ky tu '|' trong noi dung field - build_master.py split ca dong theo '|'
-    ghi = f"Gia goc niem yet NCC: {niem_yet:,} d - CK {chiet_khau} - gia sau CK: {thanh_tien:,} d - da nhan 1.1".replace(",", ".") if niem_yet else \
-          f"Gia sau CK (NCC): {thanh_tien:,} d - da nhan 1.1".replace(",", ".")
+    ghi = f"Gia goc niem yet NCC: {niem_yet:,} d - CK {chiet_khau} - gia von sau CK: {thanh_tien:,} d".replace(",", ".") if niem_yet else \
+          f"Gia von sau CK (NCC): {thanh_tien:,} d".replace(",", ".")
     if ghi_chu:
         ghi = ghi + " - " + clean(ghi_chu)
 

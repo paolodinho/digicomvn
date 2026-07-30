@@ -261,18 +261,55 @@ function dgc_get_gia( $nhom_slug ) {
 	}
 
 	/* Mac dinh xep DR cao -> thap (Hieu 2026-07-14): bao/site manh len dau, dong khong co DR
-	   (goi dich vu) xuong cuoi, cung DR thi gia thap truoc. */
-	usort( $items, function ( $a, $b ) {
-		$da = (int) ( $a->meta['dr'] ?? 0 );
-		$db = (int) ( $b->meta['dr'] ?? 0 );
-		if ( $da !== $db ) return $db <=> $da;
-		if ( (int) $a->menu_order !== (int) $b->menu_order ) {
-			return (int) $a->menu_order <=> (int) $b->menu_order;
+	   (goi dich vu) xuong cuoi, cung DR thi gia thap truoc.
+	   Hieu 2026-07-29: 1 bao co the co NHIEU vi tri/quy cach (vd Kenh14 "Trang chu" + "Chuyen
+	   muc") - truoc day cac dong cung 1 bao KHONG chac nam canh nhau (cung DR thi xen ke theo
+	   menu_order/gia giua nhieu bao khac nhau), nen JS gom nhom (main.js regroup()) khong co
+	   gi de gom. Sua: gom theo TEN BAO TRUOC (giu nguyen thu tu DR/menu_order giua cac nhom),
+	   trong 1 nhom sap theo gia tang dan - dam bao moi vi tri/quy cach cua cung 1 bao luon
+	   dung sat nhau trong bang. */
+	/* Gom theo KHOA DA CHUAN HOA (dgc_search_key - bo dau, bo hoa/thuong, bo duoi ten mien),
+	   KHONG theo post_title nguyen van - du lieu nhap tay tung co "Vietnamnet.vn" (hoa V) lan
+	   "vietnamnet.vn" (thuong) cho 2 dong khac nhau cua CUNG 1 bao; so khop nguyen van se tach
+	   nham thanh 2 nhom (bug phat hien 2026-07-29 khi lam cay bang gia - dong dau con day du
+	   gia/nut Dat ngay, dong "vietnamnet.vn" thuong lai thanh nhom rieng ben duoi). */
+	$groups = array();
+	foreach ( $items as $it ) {
+		$groups[ dgc_search_key( $it->post_title ) ][] = $it;
+	}
+
+	$group_rank = array();
+	foreach ( $groups as $title => $arr ) {
+		$max_dr   = 0;
+		$min_menu = PHP_INT_MAX;
+		foreach ( $arr as $it ) {
+			$max_dr   = max( $max_dr, (int) ( $it->meta['dr'] ?? 0 ) );
+			$min_menu = min( $min_menu, (int) $it->menu_order );
 		}
-		$ga = (float) preg_replace( '/[^0-9.]/', '', str_replace( ',', '', $a->meta['gia_km'] ) );
-		$gb = (float) preg_replace( '/[^0-9.]/', '', str_replace( ',', '', $b->meta['gia_km'] ) );
-		return $ga <=> $gb;
+		$group_rank[ $title ] = array( 'dr' => $max_dr, 'menu' => $min_menu );
+	}
+
+	foreach ( $groups as $title => &$arr ) {
+		usort( $arr, function ( $a, $b ) {
+			$ga = (float) preg_replace( '/[^0-9.]/', '', str_replace( ',', '', $a->meta['gia_km'] ) );
+			$gb = (float) preg_replace( '/[^0-9.]/', '', str_replace( ',', '', $b->meta['gia_km'] ) );
+			return $ga <=> $gb;
+		} );
+	}
+	unset( $arr );
+
+	$titles = array_keys( $groups );
+	usort( $titles, function ( $ta, $tb ) use ( $group_rank ) {
+		$ra = $group_rank[ $ta ];
+		$rb = $group_rank[ $tb ];
+		if ( $ra['dr'] !== $rb['dr'] ) return $rb['dr'] <=> $ra['dr'];
+		return $ra['menu'] <=> $rb['menu'];
 	} );
+
+	$items = array();
+	foreach ( $titles as $title ) {
+		foreach ( $groups[ $title ] as $it ) $items[] = $it;
+	}
 
 	return $items;
 }
@@ -317,13 +354,61 @@ function dgc_row_logo_html( $url_bao, $post_title ) {
 	if ( ! $domain && preg_match( '/^[a-z0-9-]+(\.[a-z0-9-]+)+$/i', trim( $post_title ) ) ) {
 		$domain = trim( $post_title );
 	}
-	if ( $domain ) {
-		$src = 'https://www.google.com/s2/favicons?domain=' . rawurlencode( $domain ) . '&sz=64';
-		return '<img class="row-logo" src="' . esc_url( $src ) . '" alt="" loading="lazy" width="28" height="28">';
-	}
-	$hue    = crc32( $post_title ) % 360;
-	$letter = mb_strtoupper( mb_substr( trim( $post_title ), 0, 1 ) );
-	return '<span class="row-logo row-logo-fallback" style="background:hsl(' . (int) $hue . ',55%,88%);color:hsl(' . (int) $hue . ',45%,32%)">' . esc_html( $letter ) . '</span>';
+
+	// Chu cai dau ten bao, dung lam du phong khi khong co domain HOAC khi favicon Google
+	// tai loi (mang chan, domain la, Google khong co san icon) - truoc day khong co du phong
+	// nay nen anh vo la hien trong (Hieu 2026-07-29: "cac vi tri dang cua cac bao thieu anh").
+	$hue      = crc32( $post_title ) % 360;
+	$letter   = mb_strtoupper( mb_substr( trim( $post_title ), 0, 1 ) );
+	$fallback = '<span class="row-logo row-logo-fallback" style="background:hsl(' . (int) $hue . ',55%,88%);color:hsl(' . (int) $hue . ',45%,32%)">' . esc_html( $letter ) . '</span>';
+
+	if ( ! $domain ) return $fallback;
+
+	$src     = 'https://www.google.com/s2/favicons?domain=' . rawurlencode( $domain ) . '&sz=64';
+	$onerror = 'this.outerHTML=' . wp_json_encode( $fallback ) . ';';
+	return '<img class="row-logo" src="' . esc_url( $src ) . '" alt="" loading="lazy" width="28" height="28" onerror="' . esc_attr( $onerror ) . '">';
+}
+
+/**
+ * Nut "V" + noi dung popup anh minh hoa VI TRI dang bai THAT (chup thuc te 15-161+ dau bao,
+ * xem inc/vitri-images.php) cho 1 dong bang gia. Domain-level: bam mo TOAN BO anh da chup
+ * cua BAO do (khong loc rieng theo dung vi_tri cua dong nay - dung 1 gallery chung/bao).
+ *
+ * Hieu 2026-07-18 da dung san CSS (.vitri-toggle/.vitri-pop) + JS (main.js) + du lieu anh
+ * (inc/vitri-images.php, dgc_gia_vitri_domain_of()) cho tinh nang nay, nhung CHUA TUNG duoc
+ * goi o bat ky template nao -> nut khong bao gio hien (Hieu 2026-07-29: "cho hien chu v di,
+ * dang k thay hien"). Ham nay wire lai vao dgc_gia_row_html().
+ */
+function dgc_gia_vitri_button_html( $it ) {
+	if ( ! function_exists( 'dgc_gia_vitri_domain_of' ) ) return '';
+	$domain = dgc_gia_vitri_domain_of( $it->post_title );
+	if ( ! $domain ) return '';
+	$map  = dgc_gia_vitri_images_map();
+	$list = $map[ $domain ] ?? array();
+	if ( ! $list ) return '';
+	return '<button type="button" class="vitri-toggle" aria-controls="vitri-' . (int) $it->ID . '" aria-label="Ảnh minh họa vị trí đăng thực tế" title="Ảnh minh họa vị trí đăng thực tế"></button>';
+}
+
+/** Noi dung an (popup doc qua JS) di kem dgc_gia_vitri_button_html() - dat NGOAI span/chip
+ *  vi chua the block (figure/figcaption), tranh long the khong hop le trong 1 span inline. */
+function dgc_gia_vitri_detail_html( $it ) {
+	if ( ! function_exists( 'dgc_gia_vitri_domain_of' ) ) return '';
+	$domain = dgc_gia_vitri_domain_of( $it->post_title );
+	if ( ! $domain ) return '';
+	$map  = dgc_gia_vitri_images_map();
+	$list = $map[ $domain ] ?? array();
+	if ( ! $list ) return '';
+	ob_start(); ?>
+	<div class="vitri-detail" id="vitri-<?php echo (int) $it->ID; ?>" hidden>
+		<?php foreach ( $list as $im ) : ?>
+		<figure>
+			<img src="<?php echo esc_url( $im['url'] ); ?>" alt="<?php echo esc_attr( $im['alt'] ); ?>" loading="lazy">
+			<figcaption><?php echo esc_html( $im['caption'] ); ?></figcaption>
+		</figure>
+		<?php endforeach; ?>
+	</div>
+	<?php
+	return ob_get_clean();
 }
 
 /**
@@ -816,10 +901,26 @@ function dgc_gia_row_html( $it, $args ) {
 	$mkgain = dgc_line_mkgain( $price_num, $m['ma_ncc'] ?? '' ); // san von cho chiet khau combo
 
 	$st = dgc_gia_search_terms( $it->post_title, $vi_tri );
+	/* Khoa GOM theo bao/site (chi ten, khong kem vi tri) - dung de JS gop nhieu vi tri/quy
+	   cach cua CUNG 1 bao lai voi nhau tren bang gia (Hieu 2026-07-29: "kenh14 vi tri nay
+	   bao tien, vi tri kia bao tien"). Khac data-key (co the trung cho nhieu dong). */
+	$bao_key = dgc_search_key( $it->post_title );
+	/* Dong nay co thuoc 1 nhom (bao co >=2 vi tri, da co dong dau rieng - dgc_gia_group_head_html())
+	   khong - neu co thi AN bot logo/DR/link/intro (da hien o dong dau), chi con quy cach + gia
+	   rieng cua vi tri nay, noi bang duong ke cay (Hieu 2026-07-29, sua lan 3). */
+	$in_group = ! empty( $args['in_group'] );
+	$is_last  = ! empty( $args['is_last_in_group'] );
+	$tr_class = trim( ( $hot ? 'hot ' : '' ) . ( $in_group ? 'bao-group-cont' : '' ) . ( $is_last ? ' is-last-in-group' : '' ) );
 
 	ob_start(); ?>
-	<tr class="<?php echo $hot ? 'hot' : ''; ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-mkgain="<?php echo (int) $mkgain; ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
+	<tr class="<?php echo esc_attr( $tr_class ); ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-mkgain="<?php echo (int) $mkgain; ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-bao-key="<?php echo esc_attr( $bao_key ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
 		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
+			<?php if ( $in_group ) : ?>
+			<label class="row-check-wrap">
+				<input type="checkbox" id="<?php echo esc_attr( $cb_id ); ?>" class="row-check" data-label="<?php echo esc_attr( $it->post_title . ' (' . $args['ctx'] . ')' ); ?>">
+				<span class="row-name"><?php echo esc_html( $vi_tri !== '' ? $vi_tri : $it->post_title ); ?></span>
+			</label>
+			<?php else : ?>
 			<?php
 			/* Icon "i" gioi thieu bao/trang - dat NGAY SAU ten (superscript, kieu dau mu)
 			   thay vi dong rieng ben duoi (Hieu 2026-07-15). Chi cho dong le (bao/site). */
@@ -845,9 +946,10 @@ function dgc_gia_row_html( $it, $args ) {
 				</ul>
 			</div>
 			<?php endif; ?>
+			<?php endif; ?>
 		</td>
 		<td data-label="Quy cách đăng" class="cell-spec">
-			<?php if ( $show_pos ) : ?><span class="spec-chip spec-chip-pos"><?php echo esc_html( $vi_tri ); ?></span><?php endif; ?>
+			<?php if ( $show_pos ) : ?><span class="spec-chip spec-chip-pos"><?php echo esc_html( $vi_tri ); ?><?php echo dgc_gia_vitri_button_html( $it ); ?></span><?php echo dgc_gia_vitri_detail_html( $it ); ?><?php endif; ?>
 			<?php foreach ( $specs as $sp ) : ?><span class="spec-chip"><?php echo esc_html( $sp ); ?></span><?php endforeach; ?>
 			<?php if ( ! $show_pos && ! $specs && ! $tiers ) : ?><span class="spec-empty">Liên hệ để nhận quy cách chi tiết</span><?php endif; ?>
 
@@ -924,6 +1026,94 @@ function dgc_gia_row_html( $it, $args ) {
 	</tr>
 	<?php
 	return ob_get_clean();
+}
+
+/**
+ * Dong DAU 1 nhom bao co >=2 vi tri - CHI thong tin chung ve bao (logo, ten, DR, gioi thieu),
+ * KHONG gia, KHONG nut Dat ngay (Hieu 2026-07-29, sua lan 3: "dong dau la thong tin chung,
+ * khong co gia ca gi ca, khong co nut dat ngay - cac dong ben duoi la cac vi tri").
+ */
+function dgc_gia_group_head_html( $it, $count, $args ) {
+	$m        = $it->meta;
+	$slug     = $args['nhom_slug'];
+	$row_link = $m['url_bao'] ? $m['url_bao'] : '';
+	$bao_key  = dgc_search_key( $it->post_title );
+
+	$dgc_show_intro = ! dgc_gia_la_goi( $it->post_title, $slug );
+	$dgc_intro_id   = 'introhead-' . (int) $it->ID;
+	$dgc_intro_dv   = dgc_nhom_don_vi( $slug );
+
+	/* Dong dau van phai tham gia loc/tim kiem/sap xep nhu 1 dong binh thuong (rows[] o main.js
+	   doc theo selector [data-name]) - khong thi tim kiem se khong an/hien dong dau dung luc,
+	   de lai "goc cay" mo coi khi loc het cac vi tri con. Gia = 0 (khong ban), DR/nganh/facet
+	   lay tam theo vi tri DAU TIEN trong nhom (uoc luong, khong hoan hao 100% nhung du dung
+	   cho da so truong hop 1 bao chi thuoc 1 nganh/1 loai link). */
+	$st = dgc_gia_search_terms( $it->post_title, '' );
+	$fc = dgc_gia_facets( $m );
+
+	ob_start(); ?>
+	<tr class="bao-tree-head" data-price="0" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-bao-key="<?php echo esc_attr( $bao_key ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
+		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
+			<div class="row-check-wrap bao-head-wrap">
+				<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>
+				<span>
+					<span class="row-name"><?php echo esc_html( $it->post_title ); ?><?php if ( $dgc_show_intro ) : ?><button type="button" class="intro-toggle" aria-controls="<?php echo esc_attr( $dgc_intro_id ); ?>" aria-label="Giới thiệu <?php echo esc_attr( $dgc_intro_dv ); ?> này" title="Giới thiệu <?php echo esc_attr( $dgc_intro_dv ); ?> này"></button><?php endif; ?></span>
+					<button type="button" class="bao-group-toggle" aria-expanded="true">Thu gọn</button>
+					<?php echo dgc_dr_chip_html( $m['dr'] ?? '' ); ?>
+					<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
+				</span>
+			</div>
+			<?php if ( $dgc_show_intro ) : ?>
+			<div class="intro-detail" id="<?php echo esc_attr( $dgc_intro_id ); ?>" hidden>
+				<ul>
+				<?php foreach ( dgc_gia_intro_rows( $it, $slug ) as $dgc_ir ) : ?>
+					<li><span class="intro-k"><?php echo esc_html( $dgc_ir[0] ); ?></span><span class="intro-v"><?php echo esc_html( $dgc_ir[1] ); ?></span></li>
+				<?php endforeach; ?>
+				</ul>
+			</div>
+			<?php endif; ?>
+		</td>
+		<td class="cell-spec"><span class="bao-head-note"><?php echo (int) $count; ?> vị trí đăng</span></td>
+		<td class="cell-price"></td>
+		<td class="cell-action"></td>
+	</tr>
+	<?php
+	return ob_get_clean();
+}
+
+/**
+ * Xuat HTML toan bo cac dong gia cho 1 danh sach $items (da duoc dgc_get_gia() gom theo ten
+ * bao truoc do). Bao co >=2 vi tri -> chen 1 dong dau CHI thong tin chung (dgc_gia_group_head_html)
+ * roi moi toi cac dong vi tri (danh dau in_group de an bot logo/DR lap lai + noi duong ke cay).
+ * Bao chi co 1 vi tri -> dong binh thuong nhu cu, khong tree. Dung chung cho page-bang-gia.php
+ * va inc/service-pricing.php - sua 1 noi la ca 2 trang deu doi theo (Hieu 2026-07-29).
+ */
+function dgc_gia_rows_html( $items, $args ) {
+	$out = '';
+	$n   = count( $items );
+	$i   = 0;
+	while ( $i < $n ) {
+		/* Khoa da chuan hoa - dong bo voi cach dgc_get_gia() da gom nhom (xem ghi chu o do),
+		   khong so nguyen van post_title (se tach nham "Vietnamnet.vn" khoi "vietnamnet.vn"). */
+		$key = dgc_search_key( $items[ $i ]->post_title );
+		$j   = $i + 1;
+		while ( $j < $n && dgc_search_key( $items[ $j ]->post_title ) === $key ) $j++;
+		$group_size = $j - $i;
+
+		if ( $group_size > 1 ) {
+			$out .= dgc_gia_group_head_html( $items[ $i ], $group_size, $args );
+			for ( $k = $i; $k < $j; $k++ ) {
+				$row_args                     = $args;
+				$row_args['in_group']         = true;
+				$row_args['is_last_in_group'] = ( $k === $j - 1 );
+				$out .= dgc_gia_row_html( $items[ $k ], $row_args );
+			}
+		} else {
+			$out .= dgc_gia_row_html( $items[ $i ], $args );
+		}
+		$i = $j;
+	}
+	return $out;
 }
 
 /** Trung vi (median) - it bi lech boi gia tri qua cao/thap so voi trung binh cong, phu hop khi 1 nhom co ca goi re va goi cao cap. */

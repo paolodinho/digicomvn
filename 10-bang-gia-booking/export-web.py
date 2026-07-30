@@ -7,10 +7,10 @@ Quy tac (chot 2026-07-14):
 - AN danh tinh nha cung cap. An gia mua vao. Khong lo link nguon NCC.
 - Gia hien thi = gia_ban_digicom co MARKUP, chua VAT 8%.
 
-MARKUP (Hieu 2026-07-15): moi NCC TRU DanaSEO -> gia web = gia von x 1,20.
-  DanaSEO giu nguyen gia cuoi (khong markup). Markup ap O CAP DONG, TRUOC khi chon
-  min giua cac NCC -> DanaSEO (khong markup) va ben khac (x1,20) canh tranh song phang,
-  van lay re nhat. Bao trum ca rule cu "truyen hinh +20%" (TV deu la NCC ngoai DanaSEO).
+GIA VON (Hieu 2026-07-29, GHI DE moi rule markup truoc do 1,03/1,20/1,1):
+  Gia web = DUNG BANG gia von cua NCC (gia_ban_digicom), KHONG markup bat ky NCC nao.
+  Lich su markup da bo: 2026-07-15 NCC ngoai DanaSEO x1,20; 2026-07-19 3 NCC chinh x1,03;
+  2026-07-24 Rise Media x1,1 (rieng o parse-rise-media.py, cung da bo).
 
 Tang san pham (tu dong phan loai tu vi_tri/nhom, vi moi NCC goi ten mot kieu):
   trang-chu   : vi tri noi bat trang chu (Top 1, Top Story, dac biet, home...)  -> gia cao
@@ -26,9 +26,15 @@ SRC = os.path.join(BASE, "bang-gia-master.csv")
 OUT = os.path.join(BASE, "gia-web.csv")
 
 def fold(s):
-    s = unicodedata.normalize("NFD", (s or "").lower())
+    # BUG cu: "return s.replace('d','d')" la no-op (thay 'd' bang chinh no) - khong lam gi ca.
+    # Chu "d cham" (U+0111) la 1 ky tu GOC rieng trong Unicode (khac "o similar/a/e..." von la
+    # nguyen am + dau ket hop) -> NFD KHONG tach duoc dau cua no, phai tu thay the thu cong.
+    # Phat hien 2026-07-29 khi alias ten bao Rise Media ("Dan tri", "Doi song phap luat"...)
+    # ve domain that - fold() cu khong nhan dien duoc, gay sai lech khi so khop chuoi.
+    s = (s or "").lower()
+    s = unicodedata.normalize("NFD", s)
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    return s.replace("d", "d")
+    return s.replace("đ", "d")
 
 DOMAIN_RE = re.compile(r"^(https?://)?(www\.)?[a-z0-9-]+(\.[a-z0-9-]+)+(/|$)", re.I)
 # Vai NCC (Fame Media, Rise Media) ghi kem chu thich sau ten mien, vd "znews.vn (Zing)",
@@ -84,17 +90,6 @@ def is_soft(r):
     return ("dai gia ncc" in g) or ('gia "tu"' in g) or ("gia mem" in g) or ("gia tu" in g) \
         or ("gia tu" in v) or ("khoi diem" in v) or ("khoang gia chung" in v)
 
-MARKUP = 1.20  # Hieu 2026-07-15: NCC ngoai 3 ben duoi -> gia web = gia von x 1,20.
-# Hieu 2026-07-19: 3 NCC nguon chinh (DanaSEO, Media Viet Nam, Fame Media) markup NHE x1,03
-# (truoc la giu nguyen 1.0) - "de chac" co bien loi nhuan toi thieu, van re hon han NCC khac.
-MARKUP_CHINH = 1.03
-KHONG_MARKUP = {"danaseo", "media viet nam", "fame media"}
-
-# Rise Media (them 2026-07-24, Hieu): gia_ban_digicom trong master DA nhan san x1,1 luc nap
-# (xem parse-rise-media.py) -> KHONG duoc nhan them markup nao o day nua, tru khong se thanh
-# x1,1 x 1,20 = x1,32. web_gia() ben duoi xu ly rieng NCC nay he_so = 1.0.
-KHONG_MARKUP_DA_TINH = {"rise media"}
-
 # Ma NCC noi bo (Hieu 2026-07-19: "danh dau de do phai tra lai") - CHI hien trong WP Admin
 # (cot rieng + field an), KHONG BAO GIO dua ra front-end/public (van AN danh tinh NCC voi khach).
 NCC_MA = {"danaseo": "1", "media viet nam": "2", "fame media": "3", "rise media": "4"}
@@ -110,17 +105,8 @@ CHI_NCC = {"danaseo", "media viet nam", "fame media", "rise media"}
 DICH_VU_NGOAI_LE_CHI_NCC = {"toplist", "backlink-quocte"}
 
 def web_gia(r):
-    """Gia hien thi len web tu 1 dong master: 3 NCC chinh x 1,03; NCC khac x 1,20 (lam tron nghin).
-    Rise Media: gia master da nhan san x1,1 -> he_so = 1.0 (khong nhan them)."""
-    g = int(r["gia_ban_digicom"])
-    ncc = fold(r["nha_cung_cap"])
-    if ncc in KHONG_MARKUP_DA_TINH:
-        he_so = 1.0
-    elif ncc in KHONG_MARKUP:
-        he_so = MARKUP_CHINH
-    else:
-        he_so = MARKUP
-    return int(round(g * he_so / 1000) * 1000)
+    """Gia hien thi len web = DUNG BANG gia von NCC (Hieu 2026-07-29), khong markup NCC nao."""
+    return int(r["gia_ban_digicom"])
 
 with open(SRC) as f:
     all_rows = [r for r in csv.DictReader(f) if r["gia_ban_digicom"]]
@@ -128,6 +114,166 @@ with open(SRC) as f:
 n_before_ncc = len(all_rows)
 all_rows = [r for r in all_rows if fold(r["nha_cung_cap"]) in CHI_NCC or r["dich_vu"] in DICH_VU_NGOAI_LE_CHI_NCC]
 print(f"Chi dung {len(all_rows)}/{n_before_ncc} dong tu 3 NCC {sorted(CHI_NCC)} (Toplist + Backlink quoc te ngoai le, giu moi NCC) - cac NCC khac luu trong master nhung khong len web (Hieu 2026-07-18).\n")
+
+# ALIAS ten bao -> domain that (Hieu 2026-07-29: "vne co 1 vi tri???... quet lai toan bo").
+# Rise Media (+ 1 phan Fame Media) ghi dau_bao bang TEN THAT tieng Viet ("Vnexpress", "Tien
+# phong", "VTV"...) thay vi domain ("vnexpress.net"...) -> is_khong_ro_noi_dang() ben duoi hieu
+# nham la "khong ro noi dang" (khong co dau cham) roi loai oan. Da doi chieu 123 ten voi domain
+# THAT DA CO SAN trong chinh bo du lieu nay (khong doan mo) truoc khi ap dung, con lai ~40 ten
+# qua mo ho (Molistar, Wow, Yacht Style...) CHUA alias - de nguyen, tiep tuc bi loai nhu cu.
+ALIAS_DAU_BAO = {
+    '2Game': '2game.vn',
+    '2Sao': '2sao.vn',
+    'Advertisingvietnam': 'advertisingvietnam.com',
+    'Afamily': 'afamily.vn',
+    'Afamily (Giá mới 2026)': 'afamily.vn',
+    'Alobacsi': 'alobacsi.com',
+    'Anninhthudo': 'anninhthudo.vn',
+    'Autodaily': 'autodaily.vn',
+    'Autopro': 'autopro.com.vn',
+    'Baogiaothong': 'baogiaothong.vn',
+    'Baophapluat': 'baophapluat.vn',
+    'Baoquocte': 'baoquocte.vn',
+    'Baoxaydung': 'baoxaydung.vn',
+    'Batdongsan': 'batdongsan.com.vn',
+    'Bazaar': 'bazaarvietnam.vn',
+    'Bazaarvietnam (Giá mới 2026)': 'bazaarvietnam.vn',
+    'Bienphong': 'bienphong.com.vn',
+    'Bongdaplus': 'bongdaplus.vn',
+    'Báo Mới': 'baomoi.com',
+    'Báo xây dựng': 'baoxaydung.vn',
+    'Cafebiz': 'cafebiz.vn',
+    'Cafedautu': 'cafedautu.vn',
+    'Cafef': 'cafef.vn',
+    'Cafeland': 'cafeland.vn',
+    'Cafeland (Giá mới 2026)': 'cafeland.vn',
+    'Congan': 'congan.com.vn',
+    'Congluan': 'congluan.vn',
+    'Congly': 'congly.vn',
+    'Công an nhân dân': 'cand.com.vn',
+    'Diễn đàn doanh nghiệp': 'diendandoanhnghiep.vn',
+    'Doanh nhân sài gòn': 'doanhnhansaigon.vn',
+    'Doanhnghiepvn': 'doanhnghiepvn.vn',
+    'Doanhnhan': 'doanhnhan.vn',
+    'Doanhnhansaigon': 'doanhnhansaigon.vn',
+    'Doisongvietnam': 'doisongvietnam.vn',
+    'Elledecoration': 'elledecoration.vn',
+    'Dân trí (Giá mới 2026)': 'dantri.com.vn',
+    'Dân việt': 'danviet.vn',
+    'Elle': 'elle.vn',
+    'Eva': 'eva.vn',
+    'Forbes': 'forbes.com',
+    'GameK': 'gamek.vn',
+    'Gen K': 'genk.vn',
+    'Gia đình mới': 'giadinhmoi.vn',
+    'Giadinhmoi': 'giadinhmoi.vn',
+    'Giadinhvaphapluat': 'giadinhvaphapluat.vn',
+    'Giáo dục thời đại': 'giaoducthoidai.vn',
+    'Guu': 'guu.vn',
+    'Hanoimoi': 'hanoimoi.vn',
+    'Hà nội mới': 'hanoimoi.vn',
+    'Ictvietnam': 'ictvietnam.vn',
+    'Infonet': 'infonet.vietnamnet.vn',
+    'Kenh 14': 'kenh14.vn',
+    'Kienviet': 'kienviet.net',
+    'Kinhtedothi': 'kinhtedothi.vn',
+    'Kiênviet': 'kienviet.net',
+    "L'officiel": 'lofficielvietnam.com',
+    'Lao động': 'laodong.vn',
+    'Lofficielvietnam': 'lofficielvietnam.com',
+    'Luxuo': 'luxuo.vn',
+    'Làm cha mẹ': 'lamchame.vn',
+    'Marrybaby': 'marrybaby.vn',
+    'Megafun': 'megafun.vn',
+    'Người đưa tin': 'nguoiduatin.vn',
+    'Nhandan': 'nhandan.vn',
+    'Nhipcaudautu': 'nhipcaudautu.vn',
+    'Nhipsongdothi': 'nhipsongdothi.vn',
+    'Nhà đầu tư': 'nhadautu.vn',
+    'Nông nghiệp môi trường': 'nongnghiepmoitruong.vn',
+    'Otofun': 'otofun.net.vn',
+    'Otosaigon': 'otosaigon.com',
+    'Otosaigon (Giá mới 2026)': 'otosaigon.com',
+    'Otoxemay': 'otoxemay.vn',
+    'PhunuVietNam': 'phunuvietnam.vn',
+    'Phunuhiendai': 'phunuhiendai.vn',
+    'Phunuonline': 'phunuonline.com.vn',
+    'Phununews': 'phununews.vn',
+    'Phunutoday': 'phunutoday.vn',
+    'Phunuvagiadinh': 'phunuvagiadinh.vn',
+    'Phụ nữ online': 'phunuonline.com.vn',
+    'Reatimes': 'reatimes.vn',
+    'Saigongiaiphong': 'sggp.org.vn',
+    'Saostar': 'saostar.vn',
+    'Soha': 'soha.vn',
+    'Songdep': 'songdep.com.vn',
+    'Sài Gòn Giải Phóng': 'sggp.org.vn',
+    'Sức khoẻ đời sống (Giá mới 2026)': 'suckhoedoisong.vn',
+    'Sức khỏe đời sống': 'suckhoedoisong.vn',
+    'Tapchikientruc': 'tapchikientruc.com.vn',
+    'TechZ': 'techz.vn',
+    'Techrum': 'techrum.vn',
+    'Techz': 'techz.vn',
+    'Thanh Niên': 'thanhnien.vn',
+    'Thanh niên (Giá mới 2026)': 'thanhnien.vn',
+    'Theleader': 'theleader.vn',
+    'Thethao247': 'thethao247.vn',
+    'Thuonghieucongluan': 'thuonghieucongluan.com.vn',
+    'Tiin': 'tiin.vn',
+    'Tin tức online': 'tintuconline.com.vn',
+    'Tinh tế': 'tinhte.vn',
+    'Tinhte': 'tinhte.vn',
+    'Tintuconline': 'tintuconline.com.vn',
+    'Tiền phong': 'tienphong.vn',
+    'Travellive': 'vntravellive.com',
+    'Tuoitrethudo': 'tuoitrethudo.vn',
+    'Tuoitrexahoi': 'tuoitrexahoi.vn',
+    'Tuổi trẻ': 'tuoitre.vn',
+    'Tuổi trẻ (Giá mới 2026)': 'tuoitre.vn',
+    'VTC': 'vtc.vn',
+    'VTV': 'vtv.vn',
+    'VTV (Giá mới 2026)': 'vtv.vn',
+    'Vietbao': 'vietbao.vn',
+    'Vietcetera': 'vietcetera.com',
+    'Vietnambiz': 'vietnambiz.vn',
+    'Vietnamfinance': 'vietnamfinance.vn',
+    'Vietnammoi': 'vietnammoi.vn',
+    'Vietnamnet (Giá mới 2026)': 'vietnamnet.vn',
+    'Vietnamnews': 'vietnamnews.vn',
+    'Vietstock': 'vietstock.vn',
+    'Vneconomy': 'vneconomy.vn',
+    'Vneconomy (Giá mới 2026)': 'vneconomy.vn',
+    'Vnexpress': 'vnexpress.net',
+    'Vov': 'vov.vn',
+    'Voz': 'voz.vn',
+    'Vtcnews (Giá mới 2026)': 'vtcnews.vn',
+    'Webtretho': 'webtretho.com',
+    'Xaluannews': 'xaluannews.com',
+    'Xedoisong': 'xedoisong.vn',
+    'Xehay': 'xehay.vn',
+    'Yan': 'yan.vn',
+    'Yeah1': 'yeah1.com',
+    'Yeah1 (Giá mới 2026)': 'yeah1.com',
+    'Zingnews': 'znews.vn',
+    'công lý': 'congly.vn',
+    'dantri': 'dantri.com.vn',
+    'Đầu tư Việt Nam': 'dautuvietnam.com.vn',
+    'Đời sống pháp luật': 'doisongphapluat.com.vn',
+    'Sài gòn giải phóng': 'sggp.org.vn',
+    'Wow': 'worldofwatches.vn',
+    'Molistar': 'molistar.com',
+    'Sinh viên việt nam': 'svvn.tienphong.vn',
+    'Viez': 'viez.vn',
+    'Phunusuckhoe': 'phunusuckhoe.vn',
+    'Yacht Style': 'yachtstyle.vn',
+    "Men's Folio": 'mensfolio.vn',
+}
+n_alias = 0
+for r in all_rows:
+    if "." not in r["dau_bao"] and r["dau_bao"] in ALIAS_DAU_BAO:
+        r["dau_bao"] = ALIAS_DAU_BAO[r["dau_bao"]]
+        n_alias += 1
+print(f"Da alias {n_alias} dong ten bao -> domain that (Vnexpress -> vnexpress.net...) - rule 2026-07-29.\n")
 
 rows = [r for r in all_rows if not is_soft(r)]
 print(f"Bo qua {len(all_rows) - len(rows)} dong gia mem (gia tu / dai gia) - khong dung de dinh gia web.\n")
@@ -223,7 +369,13 @@ print(f"Bo qua {n0 - len(rows)} dong khong ro noi dang (goi an danh / khong doma
 #   backlink-quocte       : khac tang DR/DA (DR30+ vs DR60+).
 #   booking-tv (2026-07-14): cung kenh VTV1 nhung "TVC 30 giay" (105tr) khac han "phong su ban tin"
 #                            (40tr) - gop lai la ban TVC bang gia phong su.
-KEY_CHI_TIET = ("textlink", "entity", "backlink-quocte", "booking-tv")
+#   booking-pr (2026-07-29): BUG phat hien khi Hieu hoi "vne co 1 vi tri???" - tier() chi co
+#   4 nhom THO (trang-chu/chuyen-muc/bao-tinh/dofollow), nen MOI vi tri khac ten trong cung 1
+#   tier bi gop chung roi chi giu gia re nhat. Vd Vnexpress.net rieng DanaSEO da co 4 vi tri
+#   chuyen-muc that (Giao duc 9.2tr, DN viet 1/2/3: 7.8/11.8/15.3tr) nhung web chi con 1 dong.
+#   Quet toan bo: 233/520 nhom (domain,tier) bi gop mat 507 dong vi tri that. Them booking-pr
+#   vao day (dung nguyen tac giong textlink/entity: khac vi_tri = khac san pham, KHONG gop).
+KEY_CHI_TIET = ("textlink", "entity", "backlink-quocte", "booking-tv", "booking-pr")
 
 groups = defaultdict(list)
 for r in rows:

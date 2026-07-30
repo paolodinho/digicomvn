@@ -98,6 +98,10 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 				<p class="tab-count"><span class="tab-count-shown"><?php echo (int) $dgc_sp_total; ?></span>/<span class="tab-count-total"><?php echo (int) $dgc_sp_total; ?></span> kết quả</p>
 				<?php endif; ?>
 
+				<?php if ( function_exists( 'dgc_gia_items_have_vitri' ) && dgc_gia_items_have_vitri( $dgc_sp_items ) ) : ?>
+				<p class="vitri-hint"><span class="vitri-hint-ic">V</span> Bấm chữ "V" cạnh vị trí đăng để xem ảnh chụp thực tế trên báo/site đó.</p>
+				<?php endif; ?>
+
 				<div class="price-table-wrap">
 					<table class="price-table price-table-cpt">
 						<thead>
@@ -109,13 +113,11 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 							</tr>
 						</thead>
 						<tbody>
-						<?php foreach ( $dgc_sp_items as $it ) {
-							echo dgc_gia_row_html( $it, array(
-								'nhom_slug' => $nhom['slug'],
-								'ctx'       => $svc_name,
-								'col_name'  => $dgc_sp_col_name,
-							) );
-						} ?>
+						<?php echo dgc_gia_rows_html( $dgc_sp_items, array(
+							'nhom_slug' => $nhom['slug'],
+							'ctx'       => $svc_name,
+							'col_name'  => $dgc_sp_col_name,
+						) ); ?>
 						</tbody>
 					</table>
 				</div>

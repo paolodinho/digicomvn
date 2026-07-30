@@ -9,7 +9,7 @@ Cot gia_ncc_km = gia mua vao thuc te (loi nhuan Digicom) - KHONG dua cho khach.
 import csv, os, re, datetime
 from collections import Counter
 
-BASE = "/Volumes/Extreme SSD/CÔNG VIỆC CỦA TÔI/Projects/digicom/10-bang-gia-booking"
+BASE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(BASE, "raw")
 TODAY = datetime.date.today().isoformat()
 

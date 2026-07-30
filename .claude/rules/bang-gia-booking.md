@@ -2,6 +2,50 @@
 
 > Kho dữ liệu: `10-bang-gia-booking/`. Đọc `README.md` trong đó trước khi sửa.
 
+## Gộp nhiều vị trí/quy cách CÙNG 1 báo trên bảng giá web (chốt 2026-07-29)
+
+1 báo (vd Kênh14, VietNamNet, Tuổi Trẻ) có thể bán nhiều vị trí/quy cách khác nhau (Trang chủ,
+Chuyên mục, Tiểu mục...), mỗi vị trí là 1 dòng CPT `dgc_gia` riêng. Trước đây các dòng cùng 1
+báo không chắc nằm cạnh nhau (cùng DR thì xen kẽ giữa nhiều báo khác nhau theo menu_order/giá)
+-> bảng nhìn rối, tên báo lặp lại rải rác.
+
+- `dgc_get_gia()` (`inc/cpt-gia.php`) giờ **gom theo tên báo TRƯỚC** (nhóm có DR/menu_order
+  cao hơn lên trước), rồi mới sắp theo giá tăng dần TRONG từng nhóm - đảm bảo mọi vị trí của
+  cùng 1 báo luôn đứng liền nhau trong bảng mặc định.
+- **Kiểu CÂY, dòng gốc CHỈ thông tin chung, MỞ SẴN mặc định** (chốt cuối 2026-07-29, qua 3 lần
+  sửa theo phản hồi Hiếu - lần 1 "bấm mới rải", lần 2 "kiểu cây, mặc định mở ra chứ", lần 3 "dòng
+  đầu tiên là thông tin chung về báo, không có giá cả gì cả, không có nút đặt ngay, các dòng bên
+  dưới là các vị trí"):
+  - **PHP dựng cấu trúc tĩnh** (`dgc_gia_rows_html()` trong `inc/cpt-gia.php`, dùng chung cho
+    `/bang-gia/` lẫn bảng giá trang dịch vụ `inc/service-pricing.php` - sửa 1 nơi cả 2 trang
+    theo). Báo có >=2 vị trí -> render 1 dòng GỐC riêng (`dgc_gia_group_head_html()`, class
+    `.bao-tree-head`) CHỈ có logo/tên/DR/nút "Giới thiệu"/nút thu gọn - cột Quy cách chỉ ghi
+    "N vị trí đăng", cột Giá và Đặt ngay ĐỂ TRỐNG. Sau đó là N dòng vị trí thật
+    (`dgc_gia_row_html($it, array('in_group'=>true, 'is_last_in_group'=>...))`, class
+    `.bao-group-cont`) - MỖI dòng vẫn có checkbox + quy cách + giá + nút Đặt ngay RIÊNG, chỉ ẩn
+    phần lặp lại (logo/DR/link/nút giới thiệu, vì dòng gốc đã hiện). Báo chỉ có 1 vị trí -> dòng
+    bình thường như cũ (không tách gốc, không tree).
+  - **Đường kẻ cây**: nối dọc liền mạch + nhánh ngang bằng `td.cell-site:before/:after` trên
+    từng dòng con (dòng cuối nhóm chỉ vẽ nửa trên - class `.is-last-in-group`, do PHP gắn sẵn
+    lúc render, không cần JS tính).
+  - **JS chỉ còn việc mở/đóng** (`main.js` `regroup()`): dòng gốc luôn mặc định mở
+    (`expandedGroups[key]` mặc định `true`); bấm nút `.bao-group-toggle` trên dòng gốc mới đổi
+    trạng thái. Tra cứu "dòng con thuộc nhóm nào" bằng `groupChildren{}` tính 1 lần lúc load
+    (theo `data-bao-key`, KHÔNG dò `nextElementSibling`) - vì nút sắp xếp giá/DR sẽ di chuyển
+    `<tr>` qua `tbody.appendChild()`, lúc đó dòng gốc và dòng con có thể không còn nằm cạnh
+    nhau nữa; dò theo vị trí DOM sẽ vỡ ngay khi người dùng bấm sắp xếp.
+  - **Bug 1 đã gặp + fix**: `regroup()` bản đầu tính nhóm dựa trên `r.style.display !== 'none'`
+    - dòng con đã bị ẩn (thu gọn) thì bị loại luôn khỏi phép tính lần sau, nên bấm mở KHÔNG bao
+    giờ hiện lại được (gà-trứng). Fix: theo dõi trạng thái "khớp lọc/phân trang" riêng bằng
+    `r.dataset.matched` (set trong `applyFilter()`), độc lập với `style.display`.
+  - **Bug 2 đã gặp + fix**: nhóm theo `post_title` NGUYÊN VĂN (cả ở `dgc_get_gia()` lẫn
+    `dgc_gia_rows_html()`) bị tách nhầm khi dữ liệu nhập tay không đồng nhất hoa/thường
+    ("Vietnamnet.vn" vs "vietnamnet.vn") - ra 2 nhóm cho cùng 1 báo, dòng đầu vẫn còn đủ giá/nút
+    (do "nhóm" 1 phần tử render như dòng thường). Fix: gom theo `dgc_search_key($post_title)`
+    (khoá đã chuẩn hoá bỏ dấu/hoa-thường/đuôi tên miền) ở CẢ HAI nơi, không so nguyên văn.
+- Áp dụng chung cho cả `/bang-gia/` lẫn bảng giá trong trang dịch vụ (`inc/service-pricing.php`)
+  vì cùng dùng `dgc_get_gia()` + `dgc_gia_row_html()`.
+
 ## Lọc chất lượng domain (chốt 2026-07-19)
 
 Trước khi đưa 1 domain lên bảng giá, phải đạt tối thiểu:
@@ -119,7 +163,27 @@ Backup trước khi import: `~/Claude-Workspace/_backups/routines/<ngày>/bang-g
 
 `build_master.py` tự áp: `gia_ban_digicom = gia_ncc_km or gia_ncc_goc`.
 
-## MARKUP: 3 NCC chính x1,03, NCC khác x1,20 (chốt 2026-07-19 - GHI ĐÈ phần trên)
+## GIÁ VỐN 100% - KHÔNG MARKUP AI (chốt 2026-07-29, GHI ĐÈ toàn bộ mục markup bên dưới)
+
+Hiếu: "tất cả để bằng giá vốn". Đã bỏ TOÀN BỘ markup đang áp (3 NCC chính x1,03 - chốt
+2026-07-19; NCC khác x1,20 - chốt 2026-07-15; Rise Media x1,1 - chốt 2026-07-24).
+Giá web hiện tại = **đúng giá vốn NCC báo (gia_ban_digicom)**, không cộng thêm đồng nào.
+
+- Sửa ở `export-web.py` (`web_gia()` chỉ trả về `gia_ban_digicom`, đã xoá hằng số MARKUP/
+  MARKUP_CHINH/KHONG_MARKUP) và `parse-rise-media.py` (MARKUP 1.1 -> 1.0).
+- Tiện thể sửa `build_master.py`: BASE trước hardcode đường dẫn SSD
+  (`/Volumes/Extreme SSD/...`) trong khi dự án đang chạy trên Google Drive -> pipeline
+  không rebuild được. Đổi về `os.path.dirname(os.path.abspath(__file__))` như các script khác.
+- Đã đẩy live 2026-07-29: đối chiếu `cap-nhat-gia.py` với snapshot live mới fetch (1175 dòng)
+  -> 835 dòng đổi giá (828 giảm vì bỏ markup, 7 tăng vì kho có giá mới hơn từ NCC), 303 dòng
+  không khớp giữ nguyên, 30 dòng bảng nhiều mức (textlink) bỏ qua, 7 dòng mơ hồ giữ nguyên -
+  đúng theo rule an toàn cũ. Backup gia_km TRƯỚC khi ghi:
+  `~/Claude-Workspace/_backups/routines/2026-07-29/gia-von-full/live-now-BEFORE-PUSH.json`.
+- **Ý nghĩa:** Digicom không còn biên lợi nhuận nào trên giá niêm yết trên web nữa - đây là
+  quyết định kinh doanh của Hiếu, không phải lỗi. Muốn có lại biên -> phải chủ động thêm
+  markup trở lại (sửa `web_gia()`), không tự ý khôi phục.
+
+## (LỊCH SỬ - không còn áp dụng) MARKUP: 3 NCC chính x1,03, NCC khác x1,20 (chốt 2026-07-19)
 
 **Giá web = giá vốn × 1,03 cho 3 NCC chính (DanaSEO, Media Việt Nam, Fame Media), × 1,20 cho
 mọi NCC khác.** Trước đó 3 NCC chính giữ nguyên giá gốc (không markup) - Hiếu đổi 2026-07-19:

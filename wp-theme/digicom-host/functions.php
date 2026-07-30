@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '2.0.9' );
+define( 'DGC_VER', '2.1.8' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -71,6 +71,8 @@ require_once get_template_directory() . '/inc/post-sidebars.php';
 require_once get_template_directory() . '/inc/schema.php';
 /* Meta description + Open Graph + Twitter Card + canonical trang luu tru. */
 require_once get_template_directory() . '/inc/seo-meta.php';
+/* Trang tong hop "Cau hoi thuong gap" (/cau-hoi-thuong-gap/) - gom faqs + svc_faqs + faq_page_extra. */
+require_once get_template_directory() . '/inc/faq-page.php';
 
 /**
  * Helper doc 1 option.
@@ -330,6 +332,24 @@ add_action( 'init', function () {
 		'post_name'    => 'cam-on',
 		'post_content' => '',
 	) );
+}, 30 );
+
+/* Tao san trang "Cau hoi thuong gap" (slug cau-hoi-thuong-gap) neu chua co - template
+   page-cau-hoi-thuong-gap.php tu nhan theo slug. Trang nay CAN duoc index (khac cam-on),
+   khong gan noindex. Meta SEO dien san vi noi dung page rong (post_content trong -
+   xem cam bay trong .claude/rules/seo-meta-og.md). */
+add_action( 'init', function () {
+	if ( get_page_by_path( 'cau-hoi-thuong-gap' ) ) return;
+	$id = wp_insert_post( array(
+		'post_type'    => 'page',
+		'post_status'  => 'publish',
+		'post_title'   => 'Câu hỏi thường gặp',
+		'post_name'    => 'cau-hoi-thuong-gap',
+		'post_content' => '',
+	) );
+	if ( $id ) {
+		update_post_meta( $id, 'dgc_seo_desc', 'Giải đáp câu hỏi thường gặp về mua Textlink, Dịch vụ Backlink, Guest Post, Booking báo & PR, Backlink Social Entity và Backlink quốc tế tại DigicomVN: giá, quy trình, thời gian, thanh toán và độ an toàn.' );
+	}
 }, 30 );
 
 /* Trang cam on la trang ket qua, khong co gia tri tim kiem -> noindex. */

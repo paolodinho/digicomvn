@@ -84,6 +84,10 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			</div>
 			<p class="tab-count"><span class="tab-count-shown"><?php echo count( $items ); ?></span>/<span class="tab-count-total"><?php echo count( $items ); ?></span> kết quả</p>
 
+			<?php if ( function_exists( 'dgc_gia_items_have_vitri' ) && dgc_gia_items_have_vitri( $items ) ) : ?>
+			<p class="vitri-hint"><span class="vitri-hint-ic">V</span> Bấm chữ "V" cạnh vị trí đăng để xem ảnh chụp thực tế trên báo/site đó.</p>
+			<?php endif; ?>
+
 			<div class="price-table-wrap">
 				<table class="price-table price-table-cpt">
 					<thead>
@@ -97,14 +101,13 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 					<tbody>
 					<?php if ( empty( $items ) ) : ?>
 						<tr><td colspan="4">Đang cập nhật dữ liệu.</td></tr>
-					<?php endif; ?>
-					<?php foreach ( $items as $it ) {
-						echo dgc_gia_row_html( $it, array(
+					<?php else : ?>
+						<?php echo dgc_gia_rows_html( $items, array(
 							'nhom_slug' => $slug,
 							'ctx'       => $label,
 							'col_name'  => $col_name,
-						) );
-					} ?>
+						) ); ?>
+					<?php endif; ?>
 					</tbody>
 				</table>
 			</div>

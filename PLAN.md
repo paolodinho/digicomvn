@@ -197,3 +197,57 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       share Facebook/Zalo bị viền trên dưới. (KHÔNG dùng `ogimagedn.jpg` ở thư mục gốc - đó là
       logo Báo Đà Nẵng, không phải của Digicom.)
 - [ ] Bật Review/AggregateRating khi có đánh giá khách hàng thật (tên + nội dung khách viết).
+
+### Trang /cau-hoi-thuong-gap/ (2026-07-29) - ĐÃ DỰNG CODE, CHỜ VERIFY
+- [x] `inc/faq-page.php`, `page-cau-hoi-thuong-gap.php`, hook auto-tạo page trong `functions.php`,
+      option `faq_page_extra` (12 câu research SERP/PAA), schema FAQPage, link footer/menu.
+- [ ] Hiếu mở Local, Start site "digicom" (session này không có công cụ điều khiển desktop để tự
+      bấm) -> trang tự tạo ở lần load đầu -> mở `http://digicom.local/cau-hoi-thuong-gap/` xem
+      thực tế (chỉ mới lint PHP, chưa xem trình duyệt).
+- [ ] Chạy `tools/schema-qa.py` + `tools/meta-qa.py` sau khi site chạy được.
+- [ ] Nếu site dùng WP Admin > Giao diện > Menu (custom nav menu) thay vì menu fallback trong
+      code -> thêm link "Câu hỏi thường gặp" vào đó (menu code fallback chỉ áp dụng khi CHƯA có
+      custom menu).
+- [ ] Rà trùng lặp giữa `faqs`/`faq_page_extra` (mới) và nội dung `svc_faqs` hiện có trên live/DB
+      thật (session này không truy cập được DB để đối chiếu).
+
+### Audit "vị trí đăng" báo (2026-07-29) - 1 lỗi đã fix, 1 lỗi lớn hơn đang chờ quyết định
+- [x] Fix lỗi gộp vị trí booking-pr (`export-web.py` KEY_CHI_TIET) - booking-pr 303 -> 568 dòng.
+- [x] Wire nút "V" (ảnh minh hoạ vị trí thật) vào bảng giá - tính năng có sẵn từ 2026-07-18
+      nhưng chưa từng hoạt động (chưa render ở đâu).
+- [x] Xây bảng alias 123 tên báo -> domain thật (113 tự động đối chiếu với domain có sẵn trong
+      data, 10 verify qua WebSearch) - khôi phục thêm 382 dòng. Tiện fix luôn bug `fold()` gốc
+      (no-op "đ"->"d") ảnh hưởng mọi bộ lọc trong export-web.py.
+- [x] Kết quả cuối: booking-pr 303 -> **950 dòng** (x3.1), tổng gia-web.csv 1190 -> 1837 dòng.
+      Vnexpress.net: 1 -> 22 vị trí. ~40 tên còn mơ hồ (Molistar, Wow, Otofun...) CỐ Ý chưa
+      alias, vẫn bị loại - an toàn hơn đoán sai domain giá.
+- [x] Deploy 10 file theme + đẩy dữ liệu giá lên LIVE (digicomvn.com) - 2026-07-29.
+      Backup DB + theme trước khi làm: `~/Claude-Workspace/_backups/routines/2026-07-29/
+      live-deploy-vitri-fix/` (db-BEFORE.sql, theme-BEFORE.tar.gz).
+      Sự cố nhỏ: thiếu `inc/post-sidebars.php` trên live gây Fatal Error ~1-2 phút, đã deploy
+      nốt file và khắc phục ngay.
+      Kết quả: dgc_gia publish 1175 -> 1625 (176 cập nhật giá + 450 tạo mới, 369 giữ nguyên vì
+      khớp bản ghi đang draft - không hồi sinh oan, 20 mơ hồ giữ nguyên). VnExpress.net 1 -> 18 bài.
+      Trang `/cau-hoi-thuong-gap/` sống (37 câu hỏi), nút "V" hiện 190 lần trên `/bang-gia/`.
+- [x] Batch 2 (2026-07-30): đẩy nốt 13 alias mới xác minh lên live. Phát hiện + fix bug
+      `recover-vitri.py` (nhiều dòng CSV khác quy_cách bị gộp nhầm vào 1 ID live, ghi đè giá
+      cho nhau) - sau fix: 57 update sạch (không trùng ID) + 170 tạo mới. dgc_gia publish
+      1625 -> 1795.
+- [x] Đồng bộ dữ liệu giá vào Local WP (dev site) - dùng lại pipeline recover-vitri (bản
+      local, dump qua wp-cli trực tiếp không cần SSH). Local từ 209 -> **2001 bài publish**
+      (1792 tạo mới + 2 cập nhật giá), khớp dữ liệu với live để test theme đáng tin cậy hơn.
+- [x] Batch 3 (2026-07-30): xác minh qua WebSearch 8/8 tên còn lại có thể xác định được domain
+      thật - Sài gòn giải phóng (sggp.org.vn), Molistar (molistar.com), Viez (viez.vn),
+      Phunusuckhoe (phunusuckhoe.vn), Sinh viên việt nam (svvn.tienphong.vn), Yacht Style
+      (yachtstyle.vn), Men's Folio (mensfolio.vn), Wow (worldofwatches.vn - KHÔNG phải
+      Wowweekend, xác minh qua cùng batch LUXUO MEDIA với Yacht Style/Men's Folio). Còn lại
+      thật sự không xác định được (Blogtamsu mơ hồ 4 domain, Vnmedia đã tạm dừng, "Mua bán nhà
+      đất" quá chung chung) - vẫn giữ nguyên KHÔNG alias theo rule an toàn.
+      gia-web.csv 1868 -> 1880 dòng. Đẩy live: dgc_gia publish 1795 -> **1830** (35 dòng, loại
+      6 dòng booking-truyen-hinh khỏi batch - phát hiện nhóm TV "tạm ẩn" theo pivot 2026-07-16
+      đã bị batch đầu vô tình publish 19/33 dòng, không mở rộng thêm sai lệch này).
+      Đồng bộ Local: 2001 -> **2036** bài.
+- [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
+      1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
+         chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.
+      2. Blogtamsu/Vnmedia/"Mua bán nhà đất" - chỉ alias nếu Hiếu cung cấp domain xác nhận.

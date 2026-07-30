@@ -412,10 +412,22 @@
 		var limit     = parseInt(panel.getAttribute('data-limit') || '0', 10);
 		var STEP      = 10;              // moi lan cuon toi cuoi bang: nap them 10 dong
 		var curNganh  = '';
+		var expandedGroups = {};         // { baoKey: true } - nhom nao dang mo (Hieu 2026-07-29)
 		// Bo loc quy cach bai: { link: {val:'dofollow'}, anh: {val:5, mode:'min'}, ... } - ket hop AND.
 		var curFacets = {};
 		var shownMax  = limit > 0 ? limit : Infinity;  // so dong dang hien (cuon vo han tang dan)
 		if (!rows.length) return;
+
+		/* Tra cuu con cua tung nhom bao THEO DATA (khong theo vi tri ke nhau trong DOM) - vi
+		   nut sap xep (Giá/DR) se doi cho <tr> qua lai bang tbody.appendChild(), luc do dong
+		   goc va dong con co the KHONG con nam canh nhau nua. Tinh 1 lan, dung mai (thanh vien
+		   nhom la thuoc tinh du lieu tinh, khong doi theo thu tu hien thi). */
+		var groupChildren = {};
+		rows.forEach(function (r) {
+			if (!r.classList.contains('bao-group-cont')) return;
+			var k = r.getAttribute('data-bao-key') || '';
+			(groupChildren[k] = groupChildren[k] || []).push(r);
+		});
 
 		function okFacets(r) {
 			for (var key in curFacets) {
@@ -441,6 +453,44 @@
 				.replace(/^bao/, '');
 		}
 
+		/* Cay bao/site nhieu vi tri (vd Kenh14 co ca "Trang chu" lan "Chuyen muc"): PHP
+		   (dgc_gia_rows_html trong inc/cpt-gia.php) da dung san dong GOC ".bao-tree-head"
+		   (chi thong tin chung, khong gia) + cac dong con ".bao-group-cont" ngay sau no cung
+		   data-bao-key - JS o day CHI can dong/mo theo trang thai nguoi dung bam, MAC DINH MO
+		   SAN (Hieu 2026-07-29, sua lan 3: "dong dau la thong tin chung... khong gia ca gi ca").
+		   Chay lai sau moi lan loc/sap xep/tai them vi trang thai hien/an co the doi. */
+		function regroup() {
+			rows.forEach(function (head) {
+				if (!head.classList.contains('bao-tree-head')) return;
+				var key  = head.getAttribute('data-bao-key') || '';
+				var open = key in expandedGroups ? expandedGroups[key] : true;
+				head.classList.toggle('is-collapsed', !open);
+				var toggle = head.querySelector('.bao-group-toggle');
+				if (toggle) {
+					toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+					toggle.textContent = open ? 'Thu gọn' : 'Mở rộng vị trí';
+				}
+				(groupChildren[key] || []).forEach(function (child) {
+					child.style.display = (open && child.dataset.matched === '1') ? '' : 'none';
+				});
+			});
+		}
+
+		// Bam nut "Thu gọn" / "Mở rộng vị trí" tren dong goc -> dao trang thai nhom do.
+		if (tbody) {
+			tbody.addEventListener('click', function (e) {
+				var btn = e.target.closest && e.target.closest('.bao-group-toggle');
+				if (!btn) return;
+				e.preventDefault();
+				e.stopPropagation();
+				var tr  = btn.closest('tr');
+				var key = tr ? tr.getAttribute('data-bao-key') : '';
+				if (!key) return;
+				expandedGroups[key] = !expandedGroups[key];
+				regroup();
+			});
+		}
+
 		function applyFilter() {
 			var qRaw = (input ? input.value : '').trim().toLowerCase();
 			var q    = qRaw;
@@ -455,8 +505,9 @@
 			var collapse = shownMax < matched.length;
 			var visible  = collapse ? matched.slice(0, shownMax) : matched;
 
-			rows.forEach(function (r) { r.style.display = 'none'; });
-			visible.forEach(function (r) { r.style.display = ''; });
+			rows.forEach(function (r) { r.style.display = 'none'; r.dataset.matched = '0'; });
+			visible.forEach(function (r) { r.style.display = ''; r.dataset.matched = '1'; });
+			regroup();
 
 			// Khong con dong nao khop -> bao ro thay vi de bang trong.
 			if (tbody) {

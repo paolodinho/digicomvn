@@ -385,8 +385,11 @@ function dgc_post_faq_items( $post_id = 0 ) {
 	return $out;
 }
 
-/** FAQ ap dung cho request hien tai (bai viet -> FAQ rieng; trang chu -> FAQ chung; dich vu -> FAQ dich vu). */
+/** FAQ ap dung cho request hien tai (bai viet -> FAQ rieng; trang chu -> FAQ chung; dich vu -> FAQ dich vu; trang tong hop -> tat ca). */
 function dgc_sch_page_faqs() {
+	if ( is_page( 'cau-hoi-thuong-gap' ) && function_exists( 'dgc_faq_page_flat' ) ) {
+		return dgc_faq_page_flat();
+	}
 	if ( is_singular() ) {
 		$own = dgc_post_faq_items();
 		if ( $own ) return $own;
