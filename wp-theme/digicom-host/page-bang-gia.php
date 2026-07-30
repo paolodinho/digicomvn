@@ -40,7 +40,7 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 
 <!-- Bang gia chi tiet theo tab + cong cu tick chon (ghim dau khu vuc nay) -->
 <section class="sec" id="bang-gia-chi-tiet" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap">
+	<div class="wrap wrap-wide">
 		<div class="center" style="margin-bottom:18px"><span class="eyebrow">Chi tiết</span><h2>Tra cứu giá theo từng báo / site</h2>
 		</div>
 

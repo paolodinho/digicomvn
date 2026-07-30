@@ -1087,8 +1087,21 @@ function dgc_gia_row_html( $it, $args ) {
 			<?php endif; ?>
 		</td>
 		<td data-label="" class="cell-action">
-			<a class="btn btn-ghost btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>"><?php echo $in_group ? 'Chọn ' . esc_html( dgc_nhom_don_vi( $slug ) ) . ' này' : 'Đặt ngay'; ?></a>
-			<?php /* Mobile: nut toggle chon thay cho checkbox nho + nut Dat ngay (CSS an o desktop). */ ?>
+			<?php
+			/* "Chon ... nay" = nut TICK (them vao gio hang o thanh chon phia duoi), KHONG con
+			   nhay thang sang /dat-bai/ nua (Hieu 2026-07-30: "bam chon bao nay thi phai cho
+			   chon nhieu chu ko thi da nhay ra bao gia luon roi" - truoc day 1 cai la nhay trang
+			   ngay, khong gom duoc nhieu bao). Doi tu <a href> sang <button> vi khong con dieu
+			   huong; JS (.order-now click) chi toggle checkbox an + goi update(), KHONG con
+			   window.location. Nhan dong nhat "Chon <don vi> nay" cho MOI dong (khong con phan
+			   biet dong don le/dong trong cay). */
+			$dgc_don_vi = dgc_nhom_don_vi( $slug );
+			?>
+			<button type="button" class="btn btn-ghost btn-sm order-now">
+				<span class="order-add">Chọn <?php echo esc_html( $dgc_don_vi ); ?> này</span>
+				<span class="order-picked">Đã chọn</span>
+			</button>
+			<?php /* Mobile: nut toggle chon thay cho checkbox nho + nut order-now (CSS an o desktop). */ ?>
 			<label class="pick-btn" for="<?php echo esc_attr( $cb_id ); ?>">
 				<span class="pick-add">+ Chọn ngay</span>
 				<span class="pick-on">Đã chọn</span>

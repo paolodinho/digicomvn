@@ -55,6 +55,9 @@ h3{font-size:20px}
 p{margin:0 0 1em}
 p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+/* Bang gia rong hon (Hieu 2026-07-30: "cai bang nay cho rong ra di cho de nhin") - chi rieng
+   khu vuc bang gia + sidebar "Nhom bao", KHONG doi --maxw toan site (se anh huong moi trang). */
+.wrap-wide{max-width:1440px}
 .sec{padding:62px 0}
 .sec-tight{padding:40px 0}
 
@@ -952,21 +955,21 @@ body.mnav-open{overflow:hidden}
 /* Cot doc "Nhom bao" (Hieu 2026-07-30: "cho sang hang doc ben trai") - inc/price-sidebar.php.
    Tach khoi thanh loc ngang de danh sach nganh (co the >20 muc) khong lam thanh loc phinh to,
    dong thoi de bam/quet mat hon kieu danh muc website thuong gap. */
-.price-sidebar{flex:0 0 200px;width:200px;position:sticky;top:90px;
+.price-sidebar{flex:0 0 260px;width:260px;position:sticky;top:90px;
   background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-md);
-  padding:10px;max-height:calc(100vh - 110px);overflow-y:auto}
-.side-nav-head{font-family:var(--font-display);font-size:11px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.06em;color:var(--ink-soft);padding:4px 8px 8px}
-.side-nav{display:flex;flex-direction:column;gap:1px}
-.side-nav-group{font-family:var(--font-display);font-size:10.5px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.04em;color:var(--ink-soft);opacity:.7;padding:10px 8px 3px}
-.side-nav-item{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;
-  text-align:left;font-family:var(--font-body);font-size:13.5px;color:var(--ink);background:none;
-  border:0;border-radius:8px;padding:7px 8px;cursor:pointer;transition:.12s}
+  padding:14px;max-height:calc(100vh - 110px);overflow-y:auto}
+.side-nav-head{font-family:var(--font-display);font-size:13px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--ink-soft);padding:4px 10px 10px}
+.side-nav{display:flex;flex-direction:column;gap:2px}
+.side-nav-group{font-family:var(--font-display);font-size:12px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;color:var(--ink-soft);opacity:.7;padding:12px 10px 4px}
+.side-nav-item{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;
+  text-align:left;font-family:var(--font-body);font-size:15.5px;color:var(--ink);background:none;
+  border:0;border-radius:8px;padding:10px 10px;cursor:pointer;transition:.12s}
 .side-nav-item:hover{background:var(--surface-2)}
 .side-nav-item.active{background:#EAF6F5;color:var(--teal);font-weight:600}
 [data-theme="dark"] .side-nav-item.active{background:rgba(14,140,127,.16);color:#5FCBBE}
-.side-nav-cnt{font-size:11.5px;color:var(--ink-soft);flex-shrink:0}
+.side-nav-cnt{font-size:13px;color:var(--ink-soft);flex-shrink:0}
 .side-nav-item.active .side-nav-cnt{color:inherit;opacity:.75}
 
 /* Thanh loc NGANG cac facet quy cach (khoang gia/DR/vi tri/link/anh/tu) - Hieu 2026-07-30:
@@ -1028,7 +1031,10 @@ body.mnav-open{overflow:hidden}
 .price-table-cpt th.col-site{width:26%}
 .price-table-cpt th.col-spec{width:auto}
 .price-table-cpt th.col-price{width:170px;text-align:right}
-.price-table-cpt th.col-action{width:120px}
+/* 150px (khong phai 120px): tu khi nut dong nhat thanh "Chon bao/trang nay" (dai hon "Dat ngay"
+   cu), 120px qua hep -> nut trang bi tran ~10-25px ra ngoai bang, bi .price-table{overflow:hidden}
+   cat cut chu "y" cuoi (Hieu bao "bị cắt" 2026-07-30, tai breakpoint bang~640-900px). */
+.price-table-cpt th.col-action{width:150px}
 .price-table-cpt td.cell-site{vertical-align:middle}
 .price-table-cpt td.cell-spec{vertical-align:middle;padding-top:11px;padding-bottom:5px}
 .price-table-cpt td.cell-price{vertical-align:middle;text-align:right;white-space:nowrap;max-width:none}
@@ -1094,9 +1100,18 @@ body.mnav-open{overflow:hidden}
 .sel-bar-combo-note{font-size:12.5px;color:var(--ink-soft);margin:8px 2px 0}
 .order-summary-disc{font-size:13.5px;color:var(--teal);font-weight:600;margin-bottom:4px}
 
-/* Nut toggle "Chon bao nay" - chi dung o mobile (desktop dung checkbox + nut Dat ngay) */
+/* Nut toggle "Chon bao nay" - chi dung o mobile (desktop dung checkbox + nut order-now) */
 .pick-btn{display:none}
 .pick-on{display:none}
+
+/* Desktop: nut "Chon ... nay" (.order-now) la nut TICK, khong dieu huong (Hieu 2026-07-30).
+   Mac dinh hien "Chon X nay", tick roi doi sang "Da chon" + mau brand - dong bo voi .pick-btn
+   ben mobile de 1 hanh vi thong nhat ca 2 kich thuoc man hinh. */
+.order-picked{display:none}
+tr:has(.row-check:checked) .order-now{background:var(--action);border-color:var(--action);color:#fff}
+tr:has(.row-check:checked) .order-add{display:none}
+tr:has(.row-check:checked) .order-picked{display:inline}
+.bao-group-cont:has(.row-check:checked){background:rgba(255,86,0,.05)}
 
 /* --- MOBILE (<=640px): moi dong gia thanh 1 CARD sach ---
    Hang 1: logo + ten bao (trai) | gia (phai). Hang 2: chip quy cach. Hang 3: nut chon.
@@ -1334,6 +1349,11 @@ body.mnav-open{overflow:hidden}
 }
 /* Le phai qua hep (< ~180px) -> khong con cho cho watermark, an han thay vi de len chu. */
 @media(max-width:1560px){ .brand-watermark{display:none} }
+/* Trang single post (.post-layout-wrap) rong toi 1680px (xem quy tac o duoi) trong khi watermark
+   van tinh le theo --maxw 1180px global -> tren man rong watermark de len ~220px cuoi cot noi dung
+   (bang gia, nut CTA). An watermark tren toan bo trang bai viet, khong sua theo tung breakpoint
+   (Hieu bao "bo cuc meo xeo" 2026-07-30). */
+body.single-post .brand-watermark{display:none}
 .brand-watermark img{
   width:clamp(160px,20vw,320px);height:auto;
   transform:rotate(90deg);

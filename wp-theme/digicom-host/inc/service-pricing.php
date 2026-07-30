@@ -68,7 +68,7 @@ $dgc_sp_has_filter = ( $dgc_sp_has_nganh || dgc_has_facet_filter( $dgc_sp_items 
 $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 ?>
 <section class="sec" id="bang-gia" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap">
+	<div class="wrap wrap-wide">
 		<div class="center" style="margin-bottom:18px">
 			<span class="eyebrow">Bảng giá</span>
 			<h2><?php echo esc_html( $dgc_sp_heading ); ?></h2>

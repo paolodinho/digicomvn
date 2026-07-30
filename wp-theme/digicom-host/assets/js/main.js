@@ -283,15 +283,16 @@
 			if (e.target && e.target.classList && e.target.classList.contains('row-check')) update();
 		});
 
-		// "Dat ngay" tren 1 dong -> tu tick chinh bao/goi do roi sang trang gui yeu cau (Hieu 2026-07-15).
+		// "Chon ... nay" tren 1 dong -> CHI toggle tick (them/bo khoi thanh chon phia duoi),
+		// KHONG con nhay thang sang /dat-bai/ nua (Hieu 2026-07-30: "bam chon 1 cai da nhay ra
+		// bao gia luon" - phai cho chon NHIEU truoc, roi tu bam nut o thanh chon de gui yeu cau).
 		document.addEventListener('click', function (e) {
 			var btn = e.target.closest ? e.target.closest('.order-now') : null;
 			if (!btn) return;
 			e.preventDefault();
 			var tr = btn.closest('tr');
 			var cb = tr ? tr.querySelector('.row-check') : null;
-			if (cb && !cb.checked) { cb.checked = true; update(); }
-			window.location.href = (cta && cta.getAttribute('href')) || btn.getAttribute('href') || '/dat-bai/';
+			if (cb) { cb.checked = !cb.checked; update(); }
 		});
 
 		// "Chon lai": bo tick toan bo, dua thanh tong ve 0

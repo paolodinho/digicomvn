@@ -1,5 +1,13 @@
 # LOG - digicomvn.com
 
+## 2026-07-30 (tiếp - fix nút "Chọn báo/trang này" bị cắt chữ ở màn hình vừa)
+- Hiếu báo ảnh chụp "bị cắt": nút bị cụt còn "Chọn trang nà". Nguyên nhân: cột nút
+  (`.col-action`) cố định 120px từ hồi còn chữ ngắn "Đặt ngay" - khi đổi thành chữ dài hơn
+  "Chọn báo/trang này" (2.3.6), nút rộng ~130px tràn ra ngoài bảng, bị `.price-table{overflow:
+  hidden}` (bo góc) cắt cụt. Chỉ lộ ra ở bề rộng máy vừa (~641-899px, bảng còn ở dạng cột
+  chứ chưa chuyển thẻ mobile). Sửa: `.col-action` 120px -> 150px (main.css). DGC_VER -> 2.3.7.
+  Đã verify live: nút 130px nằm gọn trong cột 150px, không tràn bảng.
+
 ## 2026-07-30 (tiếp - fix "Báo tỉnh" chỉ 2 báo + gỡ nhầm wiki.batdongsan.com.vn khỏi "báo" + icon mũi tên "Mở rộng vị trí")
 - Hiếu phát hiện qua ảnh chụp: lọc "Báo tỉnh - địa phương" chỉ ra 2 báo, và
   `wiki.batdongsan.com.vn` (giá 5,2tr) hiện trong bảng "Booking báo & PR" dù không phải báo.
@@ -27,6 +35,14 @@
   dòng vị trí trong cây - dòng đơn lẻ (không thuộc cây) vẫn giữ "Đặt ngay". Đường kẻ cây dịch
   sang trái (20px -> 14px) + dày hơn (1px -> 1.5px) để rõ nét hơn khi không còn checkbox che.
   DGC_VER -> 2.3.4.
+- Tiếp (Hiếu phản hồi 3 điểm): (1) vẫn còn sót nút "Đặt ngay" ở dòng đơn lẻ - đồng nhất TOÀN BỘ
+  thành "Chọn <báo/trang> này". (2) Bấm nút trước đây tự tick + NHẢY THẲNG sang /dat-bai/ ngay
+  lập tức -> không gom được nhiều báo cùng lúc, gây hiểu lầm ("chọn 1 cái đã nhảy ra báo giá").
+  Sửa: nút giờ chỉ TOGGLE tick (thêm/bớt khỏi thanh chọn phía dưới), không điều hướng nữa - đổi
+  từ `<a href>` sang `<button>`, bỏ `window.location.href` trong JS. Khách tick nhiều báo rồi tự
+  bấm "Gửi yêu cầu báo giá" ở thanh chọn khi xong. Nút đổi màu + chữ "Đã chọn" khi đã tick, đồng
+  bộ hành vi với nút mobile `.pick-btn` sẵn có. (3) Bảng giá + sidebar rộng ra 1180px -> 1440px
+  (class `.wrap-wide` riêng khu vực này, không đổi `--maxw` toàn site). DGC_VER -> 2.3.6.
 
 ## 2026-07-27 (tiếp - bài B5 cụm Backlink gap, CỤM HOÀN THÀNH 5/5: /backlink-mang-xa-hoi/)
 - Đăng live `/backlink-mang-xa-hoi/` (post ID 4759, category `backlink-offpage`) - bài B5, bài
