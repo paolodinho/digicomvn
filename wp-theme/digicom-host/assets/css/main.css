@@ -1008,14 +1008,15 @@ body.mnav-open{overflow:hidden}
 .price-table-cpt td.cell-price .price-old-line{justify-content:flex-end}
 .price-table-cpt .row-link{display:block;font-size:12px;color:var(--teal);margin-top:2px}
 
-/* Gop nhieu vi tri/quy cach CUNG 1 bao/site thanh 1 CAY, MAC DINH MO SAN (Hieu 2026-07-29,
-   sua lan 3: "dong dau la thong tin chung, khong gia ca gi ca, khong nut dat ngay"). Dong GOC
-   ".bao-tree-head" (dgc_gia_group_head_html trong inc/cpt-gia.php) CHI co logo/ten/DR/gioi
-   thieu - khong quy cach, khong gia, khong Dat ngay. Cac dong vi tri that (".bao-group-cont",
-   moi dong van co gia + nut Dat ngay rieng) noi voi nhau bang duong ke kieu cay thu muc. */
-.bao-tree-head .cell-price,
+/* Gop nhieu vi tri/quy cach CUNG 1 bao/site thanh 1 CAY, MAC DINH THU GON (Hieu 2026-07-30:
+   "mac dinh bang nhu nay" - chi hien dong goc + nut "Mo rong vi tri", bam moi xo cac vi tri
+   that ra). Dong GOC ".bao-tree-head" (dgc_gia_group_head_html trong inc/cpt-gia.php) co
+   logo/ten/DR/gioi thieu + khoang gia tong quat (thap nhat - cao nhat trong nhom), khong co
+   nut Dat ngay rieng. Cac dong vi tri that (".bao-group-cont", moi dong van co gia + nut Dat
+   ngay rieng) noi voi nhau bang duong ke kieu cay thu muc khi mo rong. */
 .bao-tree-head .cell-action{padding-top:0;padding-bottom:0}
 .bao-head-note{font-size:12px;color:var(--ink-soft)}
+.price-range{font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--heading);white-space:nowrap}
 .bao-group-toggle{display:inline-flex;align-items:center;gap:3px;margin-left:8px;padding:2px 9px;
   font-family:var(--font-display);font-size:11.5px;font-weight:600;color:var(--ink-soft);
   background:var(--surface);border:1px solid var(--line-2);border-radius:20px;cursor:pointer;

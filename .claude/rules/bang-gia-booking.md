@@ -12,28 +12,32 @@ báo không chắc nằm cạnh nhau (cùng DR thì xen kẽ giữa nhiều báo
 - `dgc_get_gia()` (`inc/cpt-gia.php`) giờ **gom theo tên báo TRƯỚC** (nhóm có DR/menu_order
   cao hơn lên trước), rồi mới sắp theo giá tăng dần TRONG từng nhóm - đảm bảo mọi vị trí của
   cùng 1 báo luôn đứng liền nhau trong bảng mặc định.
-- **Kiểu CÂY, dòng gốc CHỈ thông tin chung, MỞ SẴN mặc định** (chốt cuối 2026-07-29, qua 3 lần
-  sửa theo phản hồi Hiếu - lần 1 "bấm mới rải", lần 2 "kiểu cây, mặc định mở ra chứ", lần 3 "dòng
-  đầu tiên là thông tin chung về báo, không có giá cả gì cả, không có nút đặt ngay, các dòng bên
-  dưới là các vị trí"):
+- **Kiểu CÂY, dòng gốc CHỈ thông tin chung + khoảng giá tổng quát, MẶC ĐỊNH THU GỌN** (chốt
+  2026-07-30, GHI ĐÈ quyết định "mở sẵn mặc định" của 2026-07-29 - lý do đổi: trang có tới
+  1212 dòng vị trí, mở sẵn hết khiến 1 báo nhiều vị trí chiếm hết "10 mục đầu" hiển thị, không
+  ai lướt hết được. Hiếu: "mặc định bảng như này đi" kèm ảnh dòng gốc thu gọn + nút "Mở rộng
+  vị trí"):
   - **PHP dựng cấu trúc tĩnh** (`dgc_gia_rows_html()` trong `inc/cpt-gia.php`, dùng chung cho
     `/bang-gia/` lẫn bảng giá trang dịch vụ `inc/service-pricing.php` - sửa 1 nơi cả 2 trang
     theo). Báo có >=2 vị trí -> render 1 dòng GỐC riêng (`dgc_gia_group_head_html()`, class
-    `.bao-tree-head`) CHỈ có logo/tên/DR/nút "Giới thiệu"/nút thu gọn - cột Quy cách chỉ ghi
-    "N vị trí đăng", cột Giá và Đặt ngay ĐỂ TRỐNG. Sau đó là N dòng vị trí thật
+    `.bao-tree-head`) có logo/tên/DR/nút "Giới thiệu"/nút "Mở rộng vị trí" - cột Quy cách ghi
+    "N vị trí đăng", **cột Giá hiện khoảng giá thấp nhất - cao nhất trong nhóm** (`$prices` do
+    `dgc_gia_rows_html()` tính từ `dgc_gia_to_number(gia_km)` mọi vị trí con, truyền vào
+    `dgc_gia_group_head_html($it,$count,$args,$prices)`), cột Đặt ngay để trống (đặt theo
+    từng vị trí sau khi mở rộng). Sau đó là N dòng vị trí thật
     (`dgc_gia_row_html($it, array('in_group'=>true, 'is_last_in_group'=>...))`, class
     `.bao-group-cont`) - MỖI dòng vẫn có checkbox + quy cách + giá + nút Đặt ngay RIÊNG, chỉ ẩn
     phần lặp lại (logo/DR/link/nút giới thiệu, vì dòng gốc đã hiện). Báo chỉ có 1 vị trí -> dòng
     bình thường như cũ (không tách gốc, không tree).
   - **Đường kẻ cây**: nối dọc liền mạch + nhánh ngang bằng `td.cell-site:before/:after` trên
     từng dòng con (dòng cuối nhóm chỉ vẽ nửa trên - class `.is-last-in-group`, do PHP gắn sẵn
-    lúc render, không cần JS tính).
-  - **JS chỉ còn việc mở/đóng** (`main.js` `regroup()`): dòng gốc luôn mặc định mở
-    (`expandedGroups[key]` mặc định `true`); bấm nút `.bao-group-toggle` trên dòng gốc mới đổi
-    trạng thái. Tra cứu "dòng con thuộc nhóm nào" bằng `groupChildren{}` tính 1 lần lúc load
-    (theo `data-bao-key`, KHÔNG dò `nextElementSibling`) - vì nút sắp xếp giá/DR sẽ di chuyển
-    `<tr>` qua `tbody.appendChild()`, lúc đó dòng gốc và dòng con có thể không còn nằm cạnh
-    nhau nữa; dò theo vị trí DOM sẽ vỡ ngay khi người dùng bấm sắp xếp.
+    lúc render, không cần JS tính). Chỉ hiện khi đã bấm mở rộng.
+  - **JS chỉ còn việc mở/đóng** (`main.js` `regroup()`): dòng gốc mặc định THU GỌN
+    (`expandedGroups[key]` mặc định `false`); bấm nút `.bao-group-toggle` trên dòng gốc mới đổi
+    trạng thái, "xổ ra hết" toàn bộ vị trí con của báo đó. Tra cứu "dòng con thuộc nhóm nào" bằng
+    `groupChildren{}` tính 1 lần lúc load (theo `data-bao-key`, KHÔNG dò `nextElementSibling`) -
+    vì nút sắp xếp giá/DR sẽ di chuyển `<tr>` qua `tbody.appendChild()`, lúc đó dòng gốc và dòng
+    con có thể không còn nằm cạnh nhau nữa; dò theo vị trí DOM sẽ vỡ ngay khi người dùng bấm sắp xếp.
   - **Bug 1 đã gặp + fix**: `regroup()` bản đầu tính nhóm dựa trên `r.style.display !== 'none'`
     - dòng con đã bị ẩn (thu gọn) thì bị loại luôn khỏi phép tính lần sau, nên bấm mở KHÔNG bao
     giờ hiện lại được (gà-trứng). Fix: theo dõi trạng thái "khớp lọc/phân trang" riêng bằng

@@ -3198,3 +3198,90 @@ Hiếu quyết định sau (hoặc draft lại 19 dòng cũ, hoặc chính thứ
   (sggp.org.vn, molistar.com, worldofwatches.vn, yachtstyle.vn) hiện đúng trên `/bang-gia/`.
 - Đồng bộ **Local**: 35 dòng tạo mới (0 dòng TV, do lần trước Local đã full-sync nhất quán) ->
   Local **2001 -> 2036** bài publish.
+
+## 2026-07-30 - Bảng giá quá dài (1212 dòng booking-bao-pr) - sửa cách đếm + thêm bộ lọc Excel
+
+Hiếu phản hồi: bảng giá quá nhiều báo/vị trí, không thể ngồi lướt hàng trăm dòng. Nguyên nhân:
+cây vị trí (mở sẵn theo quyết định 2026-07-29) khiến "hiện 10 mục" đếm luôn cả dòng vị trí con
+- 1 báo có 10 vị trí chiếm hết cả 10 "mục đầu tiên", nên trang tải cảm giác như liệt kê cả
+nghìn dòng. Hiếu chọn: giữ nguyên trải nghiệm cây mở sẵn + cuộn vô hạn, nhưng (1) đếm giới hạn
+theo ĐẦU BÁO không theo dòng vị trí, (2) thêm bộ lọc đa dạng kiểu Excel (khoảng giá, DR) bên
+cạnh bộ lọc ngành/loại link/số ảnh/độ dài đã có.
+
+- `inc/cpt-gia.php`: thêm `dgc_facet_value()` (đọc giá qua `dgc_gia_to_number(gia_km)`, DR qua
+  meta `dr`) + 2 nhóm lọc mới trong `dgc_facet_groups()`: **Khoảng giá** (dưới 5tr/5-10tr/10-20tr/
+  trên 20tr) và **Điểm DR** (dưới 25/25-40/40-70/70+). `dgc_facet_count()` thêm mode `max`/`range`
+  (trước chỉ có `min`/`eq`). Tái dùng thẳng `data-price`/`data-dr` đã có sẵn trên mỗi `<tr>` -
+  không cần thêm data-attribute mới.
+- `assets/js/main.js`: `okFacets()` thêm xử lý mode `max`/`range`. Viết lại `applyFilter()`:
+  tách `topRows` (đầu báo/trang - loại `.bao-group-cont`) khỏi dòng vị trí con; 1 đầu báo được
+  coi là "khớp" nếu chính nó khớp lọc HOẶC có ít nhất 1 vị trí con khớp (tránh mồ côi: vị trí
+  con khớp nhưng dòng đầu báo bị ẩn). Giới hạn "hiện N mục" + đếm "shown/total" tính theo
+  `topRows`, không theo tổng số `<tr>` (gồm cả vị trí con).
+- **Sự cố deploy phát sinh khi QA**: sau khi `scp` 3 file lên live qua thư mục tạm rồi `mv`,
+  quyền file thành `700` (chỉ user sở hữu đọc được) thay vì `644` - webserver phục vụ tĩnh
+  `main.js` trả về **403 Forbidden** (PHP vẫn chạy bình thường vì qua PHP-FPM khác cơ chế).
+  Phát hiện qua Browser tool: trang chạy nhưng không lọc được gì, dòng bảng không có
+  `style="display"` nào (chứng tỏ JS chưa từng chạy) - `ls -la` trên host lộ rõ `-rwx------`.
+  Đã `chmod 644` cả 3 file + purge cache lại. **Bài học: sau `mv` từ thư mục scp tạm trên
+  Hostinger, luôn kiểm `ls -la` xác nhận quyền `644`/`755`, không chỉ tin `php -l` pass.**
+- Verify qua Browser thật (không phải curl - domain có WAF chặn request tự động lặp lại):
+  mặc định hiện đúng 10 báo (trước đó tổng 1212), gõ "vnexpress" lọc còn 2 báo đúng, chọn
+  "Trên 20 triệu" lọc còn 10 báo đầu (52 dòng gồm vị trí con) - đúng như thiết kế.
+- Bump `DGC_VER` 2.1.8 -> 2.1.9. Đồng bộ live + Local WP (`app/public/wp-content/themes/
+  digicom-host`). Backup 3 file gốc: `~/Claude-Workspace/_backups/routines/2026-07-30/
+  bang-gia-filter-excel/`.
+
+## 2026-07-30 - Đổi cây vị trí sang MẶC ĐỊNH THU GỌN + khoảng giá + lọc "Vị trí đăng"
+
+Hiếu gửi ảnh chốt: bảng mặc định chỉ hiện dòng gốc (logo/tên/DR + "Mở rộng vị trí"), bấm mới
+xổ vị trí; thêm cột khoảng giá trên dòng gốc; bộ lọc đầy đủ theo báo/giá/vị trí/loại. Đây là
+**đảo ngược quyết định 2026-07-29** ("mặc định mở sẵn") - lý do: cùng gốc vấn đề "bảng quá dài"
+ở mục trên, mở sẵn hết vẫn khiến người xem phải cuộn qua từng vị trí thay vì lướt theo báo.
+
+- `inc/cpt-gia.php`: `dgc_gia_rows_html()` tính khoảng giá (min-max qua `dgc_gia_to_number`)
+  của cả nhóm rồi truyền vào `dgc_gia_group_head_html($it,$count,$args,$prices)` - dòng gốc
+  giờ hiện `<span class="price-range">X - Yđ</span>` ở cột Giá (trước để trống). Thêm
+  `dgc_vitri_loai()` phân loại `vi_tri` theo từ khoá (Trang chủ/Chuyên mục/Tiểu mục/Doanh
+  nghiệp viết/Khác - ước lượng, không bao phủ 100% cách đặt tên) + `data-vitri` trên mọi `<tr>`
+  + nhóm lọc mới **"Vị trí đăng"** trong `dgc_facet_groups()`.
+- `assets/js/main.js` `regroup()`: `expandedGroups[key]` mặc định đổi `true` -> `false`.
+- `assets/css/main.css`: bỏ `padding-top:0` trên `.cell-price` của dòng gốc (giờ có nội dung),
+  thêm `.price-range` (chữ đậm màu heading).
+- **Rút kinh nghiệm từ sự cố 403 lần trước**: `chmod 644` ngay sau `mv` từ thư mục scp tạm,
+  trước khi purge cache - verify luôn `ls -la` thấy `-rw-r--r--` chứ không đợi phát hiện qua lỗi.
+- Verify qua Browser thật trên `/booking-bao-pr/`: mặc định 10 dòng = 10 báo (đúng, trước đây
+  visibleRowsCount có thể lên tới hàng trăm dòng vị trí con), mỗi dòng có khoảng giá (VD
+  vnexpress.net "6.600.000đ - 120.000.000đ"), bấm "Mở rộng vị trí" xổ đủ 18/18 vị trí, đổi
+  nút thành "Thu gọn". Lọc "Vị trí đăng" = Trang chủ (206 kết quả) hoạt động đúng.
+- Bump `DGC_VER` 2.1.9 -> 2.2.0. Đồng bộ live + Local WP. Backup: `~/Claude-Workspace/_backups/
+  routines/2026-07-30/bang-gia-collapse-vitri/`.
+
+## 2026-07-30 - "Xem thêm" phải tự nạp khi cuộn (Hiếu: "để auto scroll đi")
+
+Nút "Xem thêm N mục" trước đó dùng `IntersectionObserver` để tự nạp khi cuộn gần tới - nhưng
+file `main.js` đã có sẵn 1 ghi chú tiền lệ ở tính năng nút "lên đầu trang" rằng
+`IntersectionObserver` "không chắc chắn hoạt động" và phải dùng scroll listener trực tiếp thay
+thế. Áp dụng lại bài học đó cho nút "Xem thêm":
+
+- Bỏ `IntersectionObserver`, thay bằng `window.addEventListener('scroll', ...)` +
+  `getBoundingClientRect()` kiểm tra nút còn cách viewport bao xa (`checkLoadMore()`), tự gọi
+  `loadMore()` khi trong phạm vi 400px - khách không cần bấm, cứ cuộn là tự nạp thêm 10 báo.
+  `loadMore()` gọi lại `checkLoadMore()` ngay sau khi nạp - phòng trường hợp cuộn nhanh nhảy
+  qua ngưỡng trong 1 lần (fling scroll), tự nạp liên tục tới khi hết cách 400px.
+- **Sự cố lúc đầu**: bản đầu dùng `window.requestAnimationFrame` để giảm tần suất gọi
+  `checkLoadMore` khi cuộn (giống pattern nút "lên đầu trang") - nhưng `rAF` bị trình duyệt
+  tạm dừng khi tab ở nền/ẩn, nên nếu Hiếu mở tab khác hoặc trình duyệt coi tab là không hoạt
+  động thì cuộn xong không nạp được. Đổi sang `setTimeout(checkLoadMore, 100)` - vẫn hoạt động
+  khi tab ở nền (chỉ giảm tần suất, không dừng hẳn).
+- **Sự cố deploy phụ**: sửa xong bản `setTimeout` nhưng QUÊN bump `DGC_VER` (vẫn giữ 2.2.1 từ
+  bản `rAF` trước đó) - browser/cache có thể giữ bản cũ dưới cùng URL `?ver=2.2.1`, phát hiện
+  qua fetch trực tiếp thấy nội dung vẫn là `rAF`. Bump lên 2.2.2, deploy lại, verify đúng nội
+  dung `setTimeout` mới lên live.
+- **Verify**: môi trường Browser tool ở đây không cuộn thật được (bug riêng của tool, không
+  phải code - `window.scrollTo()` không đổi `scrollY`, `innerHeight` báo 0) nên test bằng cách
+  giả lập sự kiện `scroll` thật (`dispatchEvent`) sau khi mock `getBoundingClientRect()` của nút
+  trả về vị trí gần - xác nhận cơ chế tự nạp liên tục chạy đúng, tải hết 10 -> 418/418 báo mà
+  không cần bấm tay.
+- Bump `DGC_VER` 2.2.0 -> 2.2.2 (2 lần, xem sự cố ở trên). Đồng bộ live + Local WP. Backup:
+  `~/Claude-Workspace/_backups/routines/2026-07-30/bang-gia-autoscroll/`.

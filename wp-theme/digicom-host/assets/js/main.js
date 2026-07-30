@@ -435,6 +435,12 @@
 				var raw = r.getAttribute('data-' + key) || '';
 				if (f.mode === 'min') {
 					if ((parseFloat(raw) || 0) < parseFloat(f.val)) return false;
+				} else if (f.mode === 'max') {
+					if ((parseFloat(raw) || 0) > parseFloat(f.val)) return false;
+				} else if (f.mode === 'range') {
+					var b  = String(f.val).split('-');
+					var rv = parseFloat(raw) || 0;
+					if (!(rv >= parseFloat(b[0]) && rv < parseFloat(b[1]))) return false;
 				} else if (raw !== f.val) {
 					return false;
 				}
@@ -455,15 +461,16 @@
 
 		/* Cay bao/site nhieu vi tri (vd Kenh14 co ca "Trang chu" lan "Chuyen muc"): PHP
 		   (dgc_gia_rows_html trong inc/cpt-gia.php) da dung san dong GOC ".bao-tree-head"
-		   (chi thong tin chung, khong gia) + cac dong con ".bao-group-cont" ngay sau no cung
-		   data-bao-key - JS o day CHI can dong/mo theo trang thai nguoi dung bam, MAC DINH MO
-		   SAN (Hieu 2026-07-29, sua lan 3: "dong dau la thong tin chung... khong gia ca gi ca").
-		   Chay lai sau moi lan loc/sap xep/tai them vi trang thai hien/an co the doi. */
+		   (thong tin chung + khoang gia tong quat) + cac dong con ".bao-group-cont" ngay sau no
+		   cung data-bao-key - JS o day CHI can dong/mo theo trang thai nguoi dung bam, MAC DINH
+		   THU GON (Hieu 2026-07-30: "mac dinh bang nhu nay" - chi hien dong goc, bam "Mo rong
+		   vi tri" moi xo cac vi tri that ra). Chay lai sau moi lan loc/sap xep/tai them vi
+		   trang thai hien/an co the doi. */
 		function regroup() {
 			rows.forEach(function (head) {
 				if (!head.classList.contains('bao-tree-head')) return;
 				var key  = head.getAttribute('data-bao-key') || '';
-				var open = key in expandedGroups ? expandedGroups[key] : true;
+				var open = key in expandedGroups ? expandedGroups[key] : false;
 				head.classList.toggle('is-collapsed', !open);
 				var toggle = head.querySelector('.bao-group-toggle');
 				if (toggle) {
@@ -491,28 +498,52 @@
 			});
 		}
 
-		function applyFilter() {
+		function rowOk(r) {
 			var qRaw = (input ? input.value : '').trim().toLowerCase();
-			var q    = qRaw;
 			var qKey = nenKhoa(qRaw);
-			var matched = rows.filter(function (r) {
-				var okQ = !q
-					|| r.getAttribute('data-name').indexOf(q) !== -1
-					|| (qKey && (r.getAttribute('data-key') || '').indexOf(qKey) !== -1);
-				var okN = !curNganh || (' ' + r.getAttribute('data-nganh') + ' ').indexOf(' ' + curNganh + ' ') !== -1;
-				return okQ && okN && okFacets(r);
+			var okQ = !qRaw
+				|| r.getAttribute('data-name').indexOf(qRaw) !== -1
+				|| (qKey && (r.getAttribute('data-key') || '').indexOf(qKey) !== -1);
+			var okN = !curNganh || (' ' + r.getAttribute('data-nganh') + ' ').indexOf(' ' + curNganh + ' ') !== -1;
+			return okQ && okN && okFacets(r);
+		}
+
+		/* Gioi han "hien N muc" phai tinh theo SO DAU BAO/TRANG (dong goc + dong don le),
+		   KHONG tinh ca dong vi tri con - neu khong 1 bao co 10 vi tri se chiem het ca
+		   10 "muc dau tien", tao cam giac phai luot qua hang tram dong (Hieu 2026-07-30).
+		   1 dau bao duoc coi la "khop" neu chinh no khop LOC, HOAC (voi dong cay) it nhat
+		   1 vi tri con cua no khop - de khong bi mo coi dong con khop ma dong dau bi an. */
+		function applyFilter() {
+			var topRows = rows.filter(function (r) { return !r.classList.contains('bao-group-cont'); });
+
+			var matchedTop = topRows.filter(function (r) {
+				if (rowOk(r)) return true;
+				if (!r.classList.contains('bao-tree-head')) return false;
+				var key = r.getAttribute('data-bao-key') || '';
+				return (groupChildren[key] || []).some(rowOk);
 			});
-			var collapse = shownMax < matched.length;
-			var visible  = collapse ? matched.slice(0, shownMax) : matched;
+
+			var collapse    = shownMax < matchedTop.length;
+			var visibleTop  = collapse ? matchedTop.slice(0, shownMax) : matchedTop;
+			var visibleSet  = new Set(visibleTop);
 
 			rows.forEach(function (r) { r.style.display = 'none'; r.dataset.matched = '0'; });
-			visible.forEach(function (r) { r.style.display = ''; r.dataset.matched = '1'; });
+			visibleTop.forEach(function (r) {
+				r.style.display   = '';
+				r.dataset.matched = '1';
+				if (r.classList.contains('bao-tree-head')) {
+					var key = r.getAttribute('data-bao-key') || '';
+					(groupChildren[key] || []).forEach(function (c) {
+						c.dataset.matched = rowOk(c) ? '1' : '0';
+					});
+				}
+			});
 			regroup();
 
-			// Khong con dong nao khop -> bao ro thay vi de bang trong.
+			// Khong con muc nao khop -> bao ro thay vi de bang trong.
 			if (tbody) {
 				var emptyRow = tbody.querySelector('.price-empty-row');
-				if (!matched.length) {
+				if (!matchedTop.length) {
 					if (!emptyRow) {
 						emptyRow = document.createElement('tr');
 						emptyRow.className = 'price-empty-row';
@@ -525,26 +556,45 @@
 				}
 			}
 
-			if (shownEl) shownEl.textContent = visible.length;
-			if (totalEl) totalEl.textContent = rows.length;
+			if (shownEl) shownEl.textContent = visibleTop.length;
+			if (totalEl) totalEl.textContent = topRows.length;
 			if (moreBtn) {
 				moreBtn.style.display = collapse ? '' : 'none';
-				moreBtn.textContent = 'Xem thêm ' + Math.min(STEP, matched.length - shownMax) + ' mục';
+				moreBtn.textContent = 'Xem thêm ' + Math.min(STEP, matchedTop.length - shownMax) + ' mục';
 			}
 			return collapse;
 		}
 
-		// Cuon vo han: nut "Xem thêm" vua la fallback (khong JS observer) vua la moc quan sat -
-		// vao tam nhin la tu nap them STEP dong, khong bat khach bam.
+		// Cuon vo han: nut "Xem thêm" van la fallback bam tay (khong mat di), nhung nap them
+		// TU DONG khi cuon gan toi no - khong bat khach phai bam (Hieu 2026-07-30: "de auto
+		// scroll di"). Dung scroll listener truc tiep + getBoundingClientRect, KHONG dung
+		// IntersectionObserver - da co tien le trong file nay (nut "len dau trang" o duoi,
+		// ghi chu "IntersectionObserver khong chac chan hoat dong") rang IO co the khong bao
+		// gio bao intersecting trong 1 so truong hop (trang qua dai, panel an/hien lien tuc).
 		function loadMore() {
 			if (shownMax === Infinity) return;
 			shownMax += STEP;
 			applyFilter();
+			// Cuon nhanh/fling co the nhay qua nguong trong 1 lan - kiem tra lai ngay, phong khi
+			// nut "Xem thêm" van con trong tam voi sau khi vua nap.
+			if (moreBtn) checkLoadMore();
 		}
-		if (moreBtn && 'IntersectionObserver' in window) {
-			new IntersectionObserver(function (entries) {
-				entries.forEach(function (e) { if (e.isIntersecting) loadMore(); });
-			}, { rootMargin: '200px 0px' }).observe(moreBtn);
+		var loadTicking = false;
+		function checkLoadMore() {
+			loadTicking = false;
+			if (!moreBtn || moreBtn.style.display === 'none') return;
+			var r = moreBtn.getBoundingClientRect();
+			if (r.top < window.innerHeight + 400) loadMore();
+		}
+		if (moreBtn) {
+			// KHONG dung requestAnimationFrame de throttle - rAF bi trinh duyet tam dung khi
+			// tab o nen/an, nghia la neu khach mo tab khac roi cuon lai thi khong nap them
+			// duoc. Dung setTimeout (chay ca khi tab nen, chi bi giam tan so, khong dung han).
+			window.addEventListener('scroll', function () {
+				if (!loadTicking) { loadTicking = true; setTimeout(checkLoadMore, 100); }
+			}, { passive: true });
+			window.addEventListener('resize', checkLoadMore);
+			checkLoadMore();
 		}
 
 		// Doi tu khoa / doi bo loc -> quay lai xem tu dau danh sach moi.

@@ -247,6 +247,20 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       6 dòng booking-truyen-hinh khỏi batch - phát hiện nhóm TV "tạm ẩn" theo pivot 2026-07-16
       đã bị batch đầu vô tình publish 19/33 dòng, không mở rộng thêm sai lệch này).
       Đồng bộ Local: 2001 -> **2036** bài.
+- [x] Bảng giá quá dài (1212 dòng booking-bao-pr) - Hiếu chọn: đếm giới hạn theo ĐẦU BÁO
+      (không theo dòng vị trí con) + thêm bộ lọc Excel (Khoảng giá, Điểm DR) cạnh bộ lọc có
+      sẵn (ngành/loại link/số ảnh/độ dài). Sửa `inc/cpt-gia.php` (dgc_facet_value + 2 nhóm lọc
+      mới, mode max/range) + `assets/js/main.js` (applyFilter đếm theo topRows, không mồ côi
+      dòng con). Sự cố deploy: quyền file `700` sau `mv` từ thư mục scp tạm -> main.js 403,
+      đã `chmod 644` + purge cache. Verify qua Browser thật: mặc định 10 báo (trước 1212),
+      lọc "vnexpress" còn 2 báo, lọc "Trên 20 triệu" còn 10 báo/52 dòng - đúng thiết kế.
+      DGC_VER 2.1.8 -> 2.1.9. Đã đồng bộ live + Local WP.
+- [x] Đổi cây vị trí sang MẶC ĐỊNH THU GỌN (đảo ngược quyết định 2026-07-29 theo yêu cầu
+      Hiếu) + thêm cột khoảng giá trên dòng gốc (min-max cả nhóm) + bộ lọc mới "Vị trí đăng"
+      (Trang chủ/Chuyên mục/Tiểu mục/Doanh nghiệp viết). Verify: mặc định 10 dòng = 10 báo,
+      bấm "Mở rộng vị trí" xổ đủ, lọc vị trí hoạt động đúng. DGC_VER 2.1.9 -> 2.2.0.
+- [x] Nút "Xem thêm" tự nạp khi cuộn (bỏ IntersectionObserver không chắc chắn -> scroll
+      listener + setTimeout). DGC_VER -> 2.2.2. Verify: cuộn tự nạp liên tục 10 -> 418/418 báo.
 - [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.

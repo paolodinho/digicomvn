@@ -526,7 +526,33 @@ function dgc_spec_num( $s, $unit ) {
 	return 0;
 }
 
-/** Tra ve ['link' => 'dofollow|nofollow|none|', 'anh' => int, 'tu' => int] cho 1 dong gia. */
+/**
+ * Nhom "loai vi tri dang" tu chuoi vi_tri tu do (Hieu 2026-07-30: them bo loc "theo vi tri").
+ * Uoc luong theo tu khoa pho bien nhat trong du lieu that - khong bao phu 100% cac cach dat
+ * ten vi tri (rat da dang giua cac bao), nhung du dung cho da so truong hop de loc nhanh.
+ */
+function dgc_vitri_loai( $vi_tri ) {
+	$s = mb_strtolower( trim( (string) $vi_tri ), 'UTF-8' );
+	if ( '' === $s ) return '';
+	if ( false !== mb_strpos( $s, 'trang chủ' ) )   return 'trang-chu';
+	if ( false !== mb_strpos( $s, 'chuyên mục' ) )  return 'chuyen-muc';
+	if ( false !== mb_strpos( $s, 'tiểu mục' ) )    return 'tieu-muc';
+	if ( false !== mb_strpos( $s, 'doanh nghiệp' ) ) return 'doanh-nghiep';
+	return 'khac';
+}
+
+function dgc_vitri_loai_label( $slug ) {
+	$m = array(
+		'trang-chu'    => 'Trang chủ',
+		'chuyen-muc'   => 'Chuyên mục',
+		'tieu-muc'     => 'Tiểu mục',
+		'doanh-nghiep' => 'Doanh nghiệp viết',
+		'khac'         => 'Khác',
+	);
+	return $m[ $slug ] ?? '';
+}
+
+/** Tra ve ['link' => 'dofollow|nofollow|none|', 'anh' => int, 'tu' => int, 'vitri' => slug] cho 1 dong gia. */
 function dgc_gia_facets( $meta ) {
 	$s = mb_strtolower( trim( ( $meta['so_link'] ?? '' ) . ' | ' . ( $meta['yeu_cau'] ?? '' ) ) );
 
@@ -540,22 +566,55 @@ function dgc_gia_facets( $meta ) {
 	}
 
 	return array(
-		'link' => $link,
-		'anh'  => dgc_spec_num( $s, 'ảnh' ),
+		'link'  => $link,
+		'anh'   => dgc_spec_num( $s, 'ảnh' ),
 		// (?!\s*kho) de "giới hạn 50 từ khoá" (goi backlink sidebar) khong bi hieu thanh bai 50 tu.
-		'tu'   => dgc_spec_num( $s, 'từ(?!\s*kho)' ),
+		'tu'    => dgc_spec_num( $s, 'từ(?!\s*kho)' ),
+		'vitri' => dgc_vitri_loai( $meta['vi_tri'] ?? '' ),
 	);
 }
 
 /**
- * Dinh nghia cac nhom bo loc quy cach. Moi lua chon co:
- *  - key   : ten facet tren dong (data-link / data-anh / data-tu)
- *  - val   : gia tri so sanh
- *  - mode  : 'eq' (bang chuoi) hoac 'min' (>= so)
- * Nhom/lua chon nao khong co dong nao khop se tu an (xem dgc_facet_render).
+ * Gia tri 1 facet cho 1 dong gia - dung chung cho link/anh/tu (tu dgc_gia_facets) VA
+ * gia/DR (doc thang tu meta, khong qua dgc_gia_facets) - de bo loc "kieu Excel" co them
+ * Khoang gia + Diem DR ma khong phai them data-attribute moi tren the <tr> (da co san
+ * data-price/data-dr tu truoc, xem dgc_gia_row_html/dgc_gia_group_head_html).
+ */
+function dgc_facet_value( $it, $key ) {
+	if ( 'price' === $key ) return dgc_gia_to_number( $it->meta['gia_km'] ?? '' );
+	if ( 'dr' === $key )    return (int) ( $it->meta['dr'] ?? 0 );
+	$fc = dgc_gia_facets( $it->meta );
+	return $fc[ $key ] ?? '';
+}
+
+/**
+ * Dinh nghia cac nhom bo loc quy cach + gia/DR (Hieu 2026-07-30: "kieu Excel" de dan mo
+ * hang tram dong). Moi lua chon co:
+ *  - key   : ten facet tren dong (data-link / data-anh / data-tu / data-price / data-dr)
+ *  - val   : gia tri so sanh ('min'/'max' la so; 'range' la chuoi "lo-hi"; 'eq' la chuoi)
+ *  - mode  : 'eq' (bang chuoi), 'min' (>= so), 'max' (<= so), 'range' (lo <= x < hi)
+ * Nhom/lua chon nao khong co dong nao khop se tu an (xem dgc_has_facet_filter).
  */
 function dgc_facet_groups() {
 	return array(
+		'Khoảng giá' => array(
+			array( 'key' => 'price', 'mode' => 'max',   'val' => '5000000',           'label' => 'Dưới 5 triệu' ),
+			array( 'key' => 'price', 'mode' => 'range', 'val' => '5000000-10000000',  'label' => '5 - 10 triệu' ),
+			array( 'key' => 'price', 'mode' => 'range', 'val' => '10000000-20000000', 'label' => '10 - 20 triệu' ),
+			array( 'key' => 'price', 'mode' => 'min',   'val' => '20000000',          'label' => 'Trên 20 triệu' ),
+		),
+		'Điểm DR (uy tín)' => array(
+			array( 'key' => 'dr', 'mode' => 'max',   'val' => '24',    'label' => 'DR dưới 25' ),
+			array( 'key' => 'dr', 'mode' => 'range', 'val' => '25-40', 'label' => 'DR 25 - 40' ),
+			array( 'key' => 'dr', 'mode' => 'range', 'val' => '40-70', 'label' => 'DR 40 - 70' ),
+			array( 'key' => 'dr', 'mode' => 'min',   'val' => '70',    'label' => 'DR 70 trở lên' ),
+		),
+		'Vị trí đăng' => array(
+			array( 'key' => 'vitri', 'mode' => 'eq', 'val' => 'trang-chu',    'label' => 'Trang chủ' ),
+			array( 'key' => 'vitri', 'mode' => 'eq', 'val' => 'chuyen-muc',   'label' => 'Chuyên mục' ),
+			array( 'key' => 'vitri', 'mode' => 'eq', 'val' => 'tieu-muc',     'label' => 'Tiểu mục' ),
+			array( 'key' => 'vitri', 'mode' => 'eq', 'val' => 'doanh-nghiep', 'label' => 'Doanh nghiệp viết' ),
+		),
 		'Loại link' => array(
 			array( 'key' => 'link', 'mode' => 'eq',  'val' => 'dofollow', 'label' => 'Link dofollow' ),
 			array( 'key' => 'link', 'mode' => 'eq',  'val' => 'nofollow', 'label' => 'Link nofollow' ),
@@ -575,10 +634,15 @@ function dgc_facet_groups() {
 function dgc_facet_count( $items, $opt ) {
 	$n = 0;
 	foreach ( $items as $it ) {
-		$f = dgc_gia_facets( $it->meta );
+		$v = dgc_facet_value( $it, $opt['key'] );
 		if ( 'min' === $opt['mode'] ) {
-			if ( (int) $f[ $opt['key'] ] >= (int) $opt['val'] ) $n++;
-		} elseif ( $f[ $opt['key'] ] === $opt['val'] ) {
+			if ( (float) $v >= (float) $opt['val'] ) $n++;
+		} elseif ( 'max' === $opt['mode'] ) {
+			if ( (float) $v <= (float) $opt['val'] ) $n++;
+		} elseif ( 'range' === $opt['mode'] ) {
+			$b = explode( '-', (string) $opt['val'] );
+			if ( (float) $v >= (float) $b[0] && (float) $v < (float) ( $b[1] ?? 0 ) ) $n++;
+		} elseif ( $v === $opt['val'] ) {
 			$n++;
 		}
 	}
@@ -913,7 +977,7 @@ function dgc_gia_row_html( $it, $args ) {
 	$tr_class = trim( ( $hot ? 'hot ' : '' ) . ( $in_group ? 'bao-group-cont' : '' ) . ( $is_last ? ' is-last-in-group' : '' ) );
 
 	ob_start(); ?>
-	<tr class="<?php echo esc_attr( $tr_class ); ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-mkgain="<?php echo (int) $mkgain; ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-bao-key="<?php echo esc_attr( $bao_key ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
+	<tr class="<?php echo esc_attr( $tr_class ); ?>" data-price="<?php echo esc_attr( $price_num ); ?>" data-mkgain="<?php echo (int) $mkgain; ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-bao-key="<?php echo esc_attr( $bao_key ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>" data-vitri="<?php echo esc_attr( $fc['vitri'] ); ?>">
 		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
 			<?php if ( $in_group ) : ?>
 			<label class="row-check-wrap">
@@ -1029,11 +1093,12 @@ function dgc_gia_row_html( $it, $args ) {
 }
 
 /**
- * Dong DAU 1 nhom bao co >=2 vi tri - CHI thong tin chung ve bao (logo, ten, DR, gioi thieu),
- * KHONG gia, KHONG nut Dat ngay (Hieu 2026-07-29, sua lan 3: "dong dau la thong tin chung,
- * khong co gia ca gi ca, khong co nut dat ngay - cac dong ben duoi la cac vi tri").
+ * Dong DAU 1 nhom bao co >=2 vi tri - thong tin chung ve bao (logo, ten, DR, gioi thieu) +
+ * KHOANG GIA tong quat (Hieu 2026-07-30: "co 1 cot ghi khoang gia tu bao nhieu den bao nhieu"),
+ * KHONG co nut Dat ngay rieng (dat theo tung vi tri sau khi bam mo rong - Hieu 2026-07-29).
+ * $prices: mang gia (int/float) cua toan bo vi tri trong nhom, do dgc_gia_rows_html() tinh san.
  */
-function dgc_gia_group_head_html( $it, $count, $args ) {
+function dgc_gia_group_head_html( $it, $count, $args, $prices = array() ) {
 	$m        = $it->meta;
 	$slug     = $args['nhom_slug'];
 	$row_link = $m['url_bao'] ? $m['url_bao'] : '';
@@ -1051,14 +1116,23 @@ function dgc_gia_group_head_html( $it, $count, $args ) {
 	$st = dgc_gia_search_terms( $it->post_title, '' );
 	$fc = dgc_gia_facets( $m );
 
+	$price_range = '';
+	if ( $prices ) {
+		$lo = min( $prices );
+		$hi = max( $prices );
+		$price_range = ( $lo === $hi )
+			? number_format( $lo, 0, ',', '.' ) . 'đ'
+			: number_format( $lo, 0, ',', '.' ) . 'đ - ' . number_format( $hi, 0, ',', '.' ) . 'đ';
+	}
+
 	ob_start(); ?>
-	<tr class="bao-tree-head" data-price="0" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-bao-key="<?php echo esc_attr( $bao_key ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>">
+	<tr class="bao-tree-head" data-price="0" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-bao-key="<?php echo esc_attr( $bao_key ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>" data-vitri="<?php echo esc_attr( $fc['vitri'] ); ?>">
 		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
 			<div class="row-check-wrap bao-head-wrap">
 				<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>
 				<span>
 					<span class="row-name"><?php echo esc_html( $it->post_title ); ?><?php if ( $dgc_show_intro ) : ?><button type="button" class="intro-toggle" aria-controls="<?php echo esc_attr( $dgc_intro_id ); ?>" aria-label="Giới thiệu <?php echo esc_attr( $dgc_intro_dv ); ?> này" title="Giới thiệu <?php echo esc_attr( $dgc_intro_dv ); ?> này"></button><?php endif; ?></span>
-					<button type="button" class="bao-group-toggle" aria-expanded="true">Thu gọn</button>
+					<button type="button" class="bao-group-toggle" aria-expanded="false">Mở rộng vị trí</button>
 					<?php echo dgc_dr_chip_html( $m['dr'] ?? '' ); ?>
 					<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
 				</span>
@@ -1074,7 +1148,7 @@ function dgc_gia_group_head_html( $it, $count, $args ) {
 			<?php endif; ?>
 		</td>
 		<td class="cell-spec"><span class="bao-head-note"><?php echo (int) $count; ?> vị trí đăng</span></td>
-		<td class="cell-price"></td>
+		<td class="cell-price"><?php if ( $price_range ) : ?><span class="price-range"><?php echo esc_html( $price_range ); ?></span><?php endif; ?></td>
 		<td class="cell-action"></td>
 	</tr>
 	<?php
@@ -1101,7 +1175,12 @@ function dgc_gia_rows_html( $items, $args ) {
 		$group_size = $j - $i;
 
 		if ( $group_size > 1 ) {
-			$out .= dgc_gia_group_head_html( $items[ $i ], $group_size, $args );
+			$prices = array();
+			for ( $k = $i; $k < $j; $k++ ) {
+				$p = dgc_gia_to_number( $items[ $k ]->meta['gia_km'] ?? '' );
+				if ( $p > 0 ) $prices[] = $p;
+			}
+			$out .= dgc_gia_group_head_html( $items[ $i ], $group_size, $args, $prices );
 			for ( $k = $i; $k < $j; $k++ ) {
 				$row_args                     = $args;
 				$row_args['in_group']         = true;
