@@ -1116,7 +1116,15 @@ function dgc_gia_group_head_html( $it, $count, $args, $prices = array() ) {
 	$st = dgc_gia_search_terms( $it->post_title, '' );
 	$fc = dgc_gia_facets( $m );
 
+	/* data-price PHAI la gia THAT (thap nhat trong nhom), KHONG duoc de 0 - dong goc tung
+	   hardcode data-price="0" (vi ban than dong goc "khong ban", chi la thong tin chung), nhung
+	   0 lai vo tinh KHOP moi bo loc "duoi X trieu" (mode max: 0 <= X luon dung) -> dong goc
+	   hien ra du KHONG co vi tri nao trong nhom that su ре dưới muc do (Hieu 2026-07-30 phat
+	   hien: loc "Duoi 5 trieu" nhung vnexpress.net re nhat 6,6tr van hien ra). Dung $lo (gia
+	   re nhat, da tinh o duoi de hien cot Gia) lam data-price - dung luc la gia tri dai dien
+	   dung nhat cho "co it nhat 1 vi tri trong nhom khop khoang gia nay". */
 	$price_range = '';
+	$lo          = 0;
 	if ( $prices ) {
 		$lo = min( $prices );
 		$hi = max( $prices );
@@ -1126,7 +1134,7 @@ function dgc_gia_group_head_html( $it, $count, $args, $prices = array() ) {
 	}
 
 	ob_start(); ?>
-	<tr class="bao-tree-head" data-price="0" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-bao-key="<?php echo esc_attr( $bao_key ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>" data-vitri="<?php echo esc_attr( $fc['vitri'] ); ?>">
+	<tr class="bao-tree-head" data-price="<?php echo esc_attr( $lo ); ?>" data-dr="<?php echo (int) ( $m['dr'] ?? 0 ); ?>" data-name="<?php echo esc_attr( $st['name'] ); ?>" data-key="<?php echo esc_attr( $st['key'] ); ?>" data-bao-key="<?php echo esc_attr( $bao_key ); ?>" data-nganh="<?php echo esc_attr( implode( ' ', dgc_gia_nganh_tags( $m['nganh'] ?? '' ) ) ); ?>" data-link="<?php echo esc_attr( $fc['link'] ); ?>" data-anh="<?php echo (int) $fc['anh']; ?>" data-tu="<?php echo (int) $fc['tu']; ?>" data-vitri="<?php echo esc_attr( $fc['vitri'] ); ?>">
 		<td data-label="<?php echo esc_attr( $args['col_name'] ); ?>" class="cell-site">
 			<div class="row-check-wrap bao-head-wrap">
 				<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>

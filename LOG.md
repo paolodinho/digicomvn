@@ -3285,3 +3285,21 @@ thế. Áp dụng lại bài học đó cho nút "Xem thêm":
   không cần bấm tay.
 - Bump `DGC_VER` 2.2.0 -> 2.2.2 (2 lần, xem sự cố ở trên). Đồng bộ live + Local WP. Backup:
   `~/Claude-Workspace/_backups/routines/2026-07-30/bang-gia-autoscroll/`.
+
+## 2026-07-30 - Bug bộ lọc "Khoảng giá" hiện sai báo giá cao (Hiếu phát hiện qua ảnh chụp)
+
+Hiếu chụp màn hình: lọc "Dưới 5 triệu" nhưng vnexpress.net (rẻ nhất 6,6tr), thanhnien.vn... vẫn
+hiện ra. Nguyên nhân: dòng gốc `.bao-tree-head` (thêm cột khoảng giá ở mục trên) vẫn giữ
+`data-price="0"` HARDCODE từ thiết kế cũ (dòng gốc "không bán gì", chỉ là thông tin chung) -
+nhưng số 0 lại VÔ TÌNH khớp mọi bộ lọc "dưới X triệu" (mode `max`: 0 <= X luôn đúng) khiến
+MỌI báo có ≥2 vị trí đều lọt qua bộ lọc giá dù giá thật cao hơn nhiều.
+
+- Fix: `dgc_gia_group_head_html()` (`inc/cpt-gia.php`) đổi `data-price="0"` -> `data-price="<gia
+  thấp nhất trong nhóm>"` (biến `$lo` đã tính sẵn để hiện cột "Khoảng giá") - vừa đúng dữ liệu
+  thật, vừa là giá trị đại diện hợp lý cho "nhóm có ít nhất 1 vị trí khớp mức giá này". Tác dụng
+  phụ có lợi: nút sắp xếp "Giá thấp -> cao/cao -> thấp" giờ xếp dòng gốc đúng theo giá thật thay
+  vì luôn dồn về 1 đầu bảng (giá 0).
+- Verify: lọc "Dưới 5 triệu" -> mọi báo hiện ra đều có `data-price` <= 5.000.000 thật (thanhnien.vn
+  3,2tr, tuoitre.vn 4,69tr, vietnamnet.vn 4,14tr...), không còn báo giá cao lọt vào.
+- Bump `DGC_VER` 2.2.2 -> 2.2.3. Đồng bộ live + Local WP. Backup: `~/Claude-Workspace/_backups/
+  routines/2026-07-30/bang-gia-price-filter-bug/`.

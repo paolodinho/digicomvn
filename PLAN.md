@@ -261,6 +261,8 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       bấm "Mở rộng vị trí" xổ đủ, lọc vị trí hoạt động đúng. DGC_VER 2.1.9 -> 2.2.0.
 - [x] Nút "Xem thêm" tự nạp khi cuộn (bỏ IntersectionObserver không chắc chắn -> scroll
       listener + setTimeout). DGC_VER -> 2.2.2. Verify: cuộn tự nạp liên tục 10 -> 418/418 báo.
+- [x] Fix bug bộ lọc Khoảng giá: dòng gốc hardcode data-price="0" vô tình khớp mọi filter
+      "dưới X triệu" -> đổi thành giá thấp nhất thật trong nhóm. DGC_VER -> 2.2.3.
 - [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.
