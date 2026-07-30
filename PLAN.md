@@ -267,6 +267,10 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       (bỏ dropdown nganh, thu nhỏ padding) + mở rộng Khoảng giá (6 mức, có "Dưới 1 triệu") và
       Điểm DR (thêm "Dưới 10"). Verify: sidebar 26 mục, lọc đúng, "Dưới 1 triệu" = 197 báo.
       DGC_VER -> 2.3.0.
+- [x] Fix bug phân loại "Loại hình báo": bao-tinh chỉ gán 2/446 báo (nhãn NCC quá thưa) - đổi
+      sang nhận diện theo tên miền `bao<tỉnh>.vn`, gán thêm 183 dòng. Gỡ nhầm `bao-lon` khỏi
+      `wiki.batdongsan.com.vn` (không phải báo). Thêm icon mũi tên xoay vào nút "Mở rộng vị
+      trí". Sửa `gan-nganh.py` để áp tự động cho báo/site mới. DGC_VER -> 2.3.1.
 - [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.

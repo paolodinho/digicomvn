@@ -1,5 +1,25 @@
 # LOG - digicomvn.com
 
+## 2026-07-30 (tiếp - fix "Báo tỉnh" chỉ 2 báo + gỡ nhầm wiki.batdongsan.com.vn khỏi "báo" + icon mũi tên "Mở rộng vị trí")
+- Hiếu phát hiện qua ảnh chụp: lọc "Báo tỉnh - địa phương" chỉ ra 2 báo, và
+  `wiki.batdongsan.com.vn` (giá 5,2tr) hiện trong bảng "Booking báo & PR" dù không phải báo.
+- Nguyên nhân: `gan-nganh.py` chỉ gán "bao-tinh" dựa vào nhãn `nhom` gốc từ NCC ("Bao tinh /
+  bao dang") - nhãn này rất thưa/không đồng nhất trong dữ liệu thô, nên 444/446 báo tỉnh thật
+  (baocamau.vn, baodanang.vn, baonghean.vn...) không được gán. Đồng thời NCC gắn nhầm
+  `wiki.batdongsan.com.vn` (trang wiki nội dung của batdongsan.com.vn) vào nhãn "PR bao lon".
+- Đã sửa: quét toàn bộ `dgc_gia` (mọi nhóm, mọi trạng thái), nhận diện domain dạng
+  `bao<tên tỉnh>.vn` (63 tỉnh/thành cũ, đúng tên miền thực tế) → gán thêm `bao-tinh` cho 183
+  dòng chưa có tag "Loại hình báo". Gỡ `bao-lon` khỏi 2 dòng `wiki.batdongsan.com.vn` (giữ
+  `bat-dong-san`). Backup nganh TRƯỚC khi sửa:
+  `~/Claude-Workspace/_backups/routines/2026-07-30/nganh-baotinh-fix/nganh-BEFORE.json`.
+  Kết quả riêng nhóm booking-bao-pr: bao-tinh 2 -> 83, bao-lon 45 -> 44.
+- Cập nhật `10-bang-gia-booking/gan-nganh.py` để routine tuần sau này tự áp đúng luật này cho
+  báo/site MỚI (nhận diện theo tên miền tỉnh + danh sách loại trừ `KHONG_PHAI_BAO`), không chỉ
+  vá 1 lần trên live.
+- Thêm icon mũi tên xuống (chevron SVG) vào nút "Mở rộng vị trí"/"Thu gọn" - Hiếu: "nên là mũi
+  tên xuống, rõ ràng hơn". Xoay 180 độ khi mở rộng (`inc/cpt-gia.php`, `main.js`, `main.css`).
+- DGC_VER 2.3.0 -> 2.3.1. Đã deploy live (backup, lint, chmod 644, purge cache) + đồng bộ Local WP.
+
 ## 2026-07-27 (tiếp - bài B5 cụm Backlink gap, CỤM HOÀN THÀNH 5/5: /backlink-mang-xa-hoi/)
 - Đăng live `/backlink-mang-xa-hoi/` (post ID 4759, category `backlink-offpage`) - bài B5, bài
   CUỐI CÙNG cụm "Backlink gap" (`content/cluster-backlink-gap.md`, giờ 5/5 bài xong). Từ khoá

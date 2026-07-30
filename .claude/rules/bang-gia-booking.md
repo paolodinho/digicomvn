@@ -417,3 +417,22 @@ trước khi lên web. 2026-07-27 phát hiện `vietnamfdi.com.vn` (Fame rao 850
 -> đã chặn vĩnh viễn qua `DA_DUNG_BAN`.
 **Đồng thời sửa lỗi `DA_DUNG_BAN`**: cũ so khớp `d.split("/")[0]` nên `dau_bao` dạng URL đầy đủ
 bị cắt còn `"https:"` và lọt bộ lọc. Giờ so khớp chuỗi con trên toàn chuỗi (giống `is_gov_edu()`).
+
+## Phân loại "Loại hình báo" (bao-lon/bao-tinh/truyen-hinh) - đừng tin nhãn NCC (chốt 2026-07-30)
+
+Hiếu phát hiện lọc "Báo tỉnh - địa phương" chỉ ra **2 báo** (thực tế có ~85 báo tỉnh thật trong
+nhóm booking-bao-pr) và `wiki.batdongsan.com.vn` (trang wiki nội dung, không phải báo) bị gắn
+nhầm `bao-lon`.
+
+**Nguyên nhân:** `gan-nganh.py` gán bao-tinh/bao-lon dựa vào nhãn `nhom` NCC cung cấp ("Bao
+tinh / bao dang", "PR bao lon"...) - nhãn này quá thưa/không đồng nhất, NCC cũng tự gắn nhầm
+site không phải báo vào nhãn "PR bao lon".
+
+**Đã sửa `gan-nganh.py`:** nhận diện `bao-tinh` theo TÊN MIỀN dạng `bao<tên tỉnh>.vn` (danh
+sách 63 tỉnh/thành cũ trong code, vì domain đặt tên từ trước sáp nhập địa giới) - đáng tin hơn
+nhãn NCC nhiều. Có danh sách loại trừ `KHONG_PHAI_BAO` cho domain rõ ràng không phải báo dù
+tên/nhãn gây hiểu nhầm (hiện có `wiki.batdongsan.com.vn`). Áp dụng 1 lần cho dữ liệu cũ (183
+dòng được gán bao-tinh, 2 dòng gỡ bao-lon) + áp dụng tự động cho báo/site MỚI từ nay.
+
+**Bài học:** đừng tin nhãn phân loại thô từ NCC khi có tín hiệu đáng tin hơn (tên miền) để tự
+suy luận - đặc biệt với dữ liệu nhập từ nhiều nguồn không đồng nhất.
