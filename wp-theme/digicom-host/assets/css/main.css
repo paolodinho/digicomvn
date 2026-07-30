@@ -1050,25 +1050,31 @@ body.mnav-open{overflow:hidden}
   font-family:var(--font-display);font-size:11.5px;font-weight:600;color:var(--ink-soft);
   background:var(--surface);border:1px solid var(--line-2);border-radius:20px;cursor:pointer;
   white-space:nowrap;vertical-align:middle;transition:.15s}
-.bao-group-toggle:hover{border-color:var(--teal);color:var(--teal)}
+.bao-group-toggle:hover{border-color:#F0492E;color:#F0492E}
 .toggle-chevron{transition:transform .15s;flex-shrink:0}
 .bao-group-toggle[aria-expanded="true"] .toggle-chevron{transform:rotate(180deg)}
-.bao-tree-head.is-collapsed .bao-group-toggle{background:#EAF6F5;border-color:#CBE6E3;color:var(--teal)}
+.bao-tree-head.is-collapsed .bao-group-toggle{background:#FFF1EC;border-color:#FFD3C2;color:#F0492E}
 [data-theme="dark"] .bao-group-toggle{background:var(--surface-2);border-color:var(--line-2);color:var(--ink-soft)}
-[data-theme="dark"] .bao-tree-head.is-collapsed .bao-group-toggle{background:rgba(14,140,127,.16);border-color:rgba(14,140,127,.35);color:#5FCBBE}
+[data-theme="dark"] .bao-tree-head.is-collapsed .bao-group-toggle{background:rgba(240,73,46,.16);border-color:rgba(240,73,46,.4);color:#FF8F6B}
 
 .price-table-cpt tr.bao-group-cont td.cell-site{padding-top:6px;padding-bottom:6px;position:relative}
 .price-table-cpt tr.bao-group-cont .row-check-wrap{gap:9px}
+/* Da co nut "Chon ... nay" rieng o cot Hanh dong -> bo o vuong tick trong cay vi tri (Hieu
+   2026-07-30: "ben kia da co nut dat ngay roi thi ko can o vuong nua"). Van GIU input trong DOM
+   (chi an bang CSS) vi JS (.order-now click, sel-bar tinh tong/combo) van doc/tick no ngam -
+   go hoan toan se gay dut logic gom don, chi la khach khong con thay o vuong thoi. */
+.price-table-cpt tr.bao-group-cont .row-check{display:none}
 /* Duong ke doc "cay" - noi lien tu dong nay sang dong ke tiep (dung canh nhau, khong khe ho
    giua cac <tr> nen 2 doan border xep chong nhin thanh 1 duong lien mach). Dong CUOI cua nhom
-   chi ve nua tren (den giua dong) roi re ngang - dung kieu "└", khong ke tiep xuong duoi nua. */
-.price-table-cpt tr.bao-group-cont td.cell-site:before{content:"";position:absolute;left:20px;
-  top:0;bottom:0;width:1px;background:var(--line-2)}
+   chi ve nua tren (den giua dong) roi re ngang - dung kieu "└", khong ke tiep xuong duoi nua.
+   Toa do 14px (thay 20px cu) vi bo checkbox lam chu "vi tri" doc len sat trai hon. */
+.price-table-cpt tr.bao-group-cont td.cell-site:before{content:"";position:absolute;left:14px;
+  top:0;bottom:0;width:1.5px;background:var(--line-2)}
 .price-table-cpt tr.bao-group-cont.is-last-in-group td.cell-site:before{bottom:50%}
-.price-table-cpt tr.bao-group-cont td.cell-site:after{content:"";position:absolute;left:20px;
-  top:50%;width:9px;height:1px;background:var(--line-2)}
+.price-table-cpt tr.bao-group-cont td.cell-site:after{content:"";position:absolute;left:14px;
+  top:50%;width:12px;height:1.5px;background:var(--line-2)}
 .price-table-cpt tr.bao-group-cont td.cell-site .row-name{font-size:12.5px !important;font-weight:500;
-  color:var(--ink-soft);padding-left:16px;display:inline-block}
+  color:var(--ink-soft);padding-left:22px;display:inline-block}
 
 /* Chip quy cach dang: moi y (so tu, so anh, so link, vi tri...) 1 the rieng cho de doc */
 .spec-chip{display:inline-block;background:var(--surface);border:1px solid var(--line);
@@ -2337,18 +2343,21 @@ body.mnav-open{overflow:hidden}
 [data-theme="dark"] .toc-sheet{box-shadow:0 -8px 30px rgba(0,0,0,.5)}
 
 /* ==========================================================================
-   Layout 3 cot bai blog (kieu SEONGON) - trai: so do cum, giua: noi dung,
-   phai: muc luc. Duoi 1240px giu nguyen 1 cot nhu truoc (2026-07-25).
-   ========================================================================== */
+   Layout 2 cot bai blog - trai: muc luc, phai: noi dung (Hieu 2026-07-28: bo
+   cot "so do noi dung", chi con post-side-left = TOC. CSS truoc day van khai
+   3 cot (gia dinh co ca post-side-right) trong khi DOM chi con 2 phan tu ->
+   cot thu 3 bo trong, day het layout dồn sang trai (Hieu bao 2026-07-30).
+   Duoi 1240px giu nguyen 1 cot + muc luc dropdown/floating (inc/toc.php). */
 .post-layout-wrap{max-width:var(--maxw)}
 .post-layout{display:block}
-.post-main{max-width:900px;margin:0 auto}
+.post-main{max-width:1160px;margin:0 auto}
+.post-main .page-content{max-width:none;margin:0}
 
 .post-side-left,.post-side-right{display:none}
 
 @media(min-width:1240px){
-  .post-layout-wrap{max-width:1560px}
-  .post-layout{display:grid;grid-template-columns:250px minmax(0,960px) 280px;gap:32px;align-items:start}
+  .post-layout-wrap{max-width:1680px}
+  .post-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:36px;align-items:start}
   .post-main{max-width:none;margin:0}
   .post-side-left,.post-side-right{
     display:block;position:sticky;top:calc(84px + var(--ribbon-h,0px) + 16px);

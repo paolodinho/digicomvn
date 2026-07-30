@@ -19,6 +19,14 @@
 - Thêm icon mũi tên xuống (chevron SVG) vào nút "Mở rộng vị trí"/"Thu gọn" - Hiếu: "nên là mũi
   tên xuống, rõ ràng hơn". Xoay 180 độ khi mở rộng (`inc/cpt-gia.php`, `main.js`, `main.css`).
 - DGC_VER 2.3.0 -> 2.3.1. Đã deploy live (backup, lint, chmod 644, purge cache) + đồng bộ Local WP.
+- Tiếp: đổi màu nút "Mở rộng vị trí" từ teal sang cam-đỏ (`#F0492E`, cùng tông với ribbon ưu đãi
+  `#FF7A3D`/`#F0492E` cho đồng bộ) theo yêu cầu Hiếu. DGC_VER -> 2.3.2.
+- Tiếp: bỏ ô vuông tick trong các dòng vị trí đã mở rộng (đã có nút hành động riêng, tick thừa) -
+  input checkbox vẫn giữ trong DOM (ẩn bằng CSS) để không phá logic gộp đơn/chiết khấu combo của
+  JS. Đổi nút "Đặt ngay" thành "Chọn <báo/trang> này" (dùng `dgc_nhom_don_vi()` có sẵn) cho các
+  dòng vị trí trong cây - dòng đơn lẻ (không thuộc cây) vẫn giữ "Đặt ngay". Đường kẻ cây dịch
+  sang trái (20px -> 14px) + dày hơn (1px -> 1.5px) để rõ nét hơn khi không còn checkbox che.
+  DGC_VER -> 2.3.4.
 
 ## 2026-07-27 (tiếp - bài B5 cụm Backlink gap, CỤM HOÀN THÀNH 5/5: /backlink-mang-xa-hoi/)
 - Đăng live `/backlink-mang-xa-hoi/` (post ID 4759, category `backlink-offpage`) - bài B5, bài

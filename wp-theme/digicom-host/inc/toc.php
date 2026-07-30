@@ -126,7 +126,7 @@ function dgc_toc_render_inline( $items ) {
 function dgc_toc_render_sidebar( $items ) {
 	if ( empty( $items ) ) return;
 	?>
-	<div class="post-side-right">
+	<div class="post-side-left">
 		<div class="post-toc-side__head">
 			<span class="post-toc__icon" aria-hidden="true">
 				<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>

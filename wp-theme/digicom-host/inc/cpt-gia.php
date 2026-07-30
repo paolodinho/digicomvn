@@ -1087,7 +1087,7 @@ function dgc_gia_row_html( $it, $args ) {
 			<?php endif; ?>
 		</td>
 		<td data-label="" class="cell-action">
-			<a class="btn btn-ghost btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt ngay</a>
+			<a class="btn btn-ghost btn-sm order-now" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>"><?php echo $in_group ? 'Chọn ' . esc_html( dgc_nhom_don_vi( $slug ) ) . ' này' : 'Đặt ngay'; ?></a>
 			<?php /* Mobile: nut toggle chon thay cho checkbox nho + nut Dat ngay (CSS an o desktop). */ ?>
 			<label class="pick-btn" for="<?php echo esc_attr( $cb_id ); ?>">
 				<span class="pick-add">+ Chọn ngay</span>
