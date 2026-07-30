@@ -66,6 +66,25 @@ NHOM_NGANH = {
     "Rate card chinh thuc": "bao-lon",
 }
 
+# Fix 2026-07-30 (Hieu phat hien "bao tinh chi co 2 bao??? xem lai"): nguon nhom trong
+# master.csv qua thua/khong dong nhat de gan bao-tinh dung - da dinh chi 2/446 dau bao trong
+# booking-bao-pr duoc gan. Bo sung nhan dien theo TEN MIEN "bao<ten-tinh>.vn" (doi mau
+# 63 tinh/thanh cu, domain dat ten truoc sap nhap dia gioi nen giu nguyen ten cu).
+TINH_THANH = ["angiang","bariavungtau","vungtau","bacgiang","backan","baclieu","bacninh",
+    "bentre","binhdinh","binhduong","binhphuoc","binhthuan","camau","cantho","caobang",
+    "danang","daklak","daknong","dienbien","dongnai","dongthap","gialai","hagiang",
+    "hanam","hanoi","hatinh","haiduong","haiphong","haugiang","hoabinh","hungyen",
+    "khanhhoa","kiengiang","kontum","laichau","lamdong","langson","laocai","longan","namdinh",
+    "nghean","ninhbinh","ninhthuan","phutho","phuyen","quangbinh","quangnam","quangngai",
+    "quangninh","quangtri","soctrang","sonla","tayninh","thaibinh","thainguyen","thanhhoa",
+    "thuathienhue","hue","tiengiang","tphcm","hochiminh","travinh","tuyenquang","vinhlong",
+    "vinhphuc","yenbai"]
+
+# Domain KHONG phai bao du ten trung khop tu khoa nganh (vd wiki noi dung cua site BDS) -
+# loai khoi moi phan loai "Loai hinh bao" (bao-lon/bao-tinh/truyen-hinh), van giu nganh noi
+# dung binh thuong. Hieu 2026-07-30: "wiki.batdongsan.com.vn" bi gan nham bao-lon.
+KHONG_PHAI_BAO = ["wiki.batdongsan.com.vn"]
+
 def nganh_for(title, nhom, quy_cach=""):
     hay = fold(title) + " " + fold(quy_cach)
     hay = re.sub(r"[^a-z0-9]", "", hay)
@@ -73,9 +92,16 @@ def nganh_for(title, nhom, quy_cach=""):
     for ng, kws in KW.items():
         if any(re.sub(r"[^a-z0-9]", "", k) in hay for k in kws):
             tags.append(ng)
+    is_khong_phai_bao = fold(title).strip() in KHONG_PHAI_BAO
     base = NHOM_NGANH.get(nhom)
-    if base and base not in tags:
+    if base and base not in tags and not is_khong_phai_bao:
         tags.insert(0, base)
+    if not is_khong_phai_bao and "bao-tinh" not in tags and "bao-lon" not in tags:
+        title_fold = re.sub(r"[^a-z0-9]", "", fold(title))
+        if title_fold.startswith("bao"):
+            rest = title_fold[3:]
+            if any(rest.startswith(t) for t in TINH_THANH):
+                tags.insert(0, "bao-tinh")
     return tags
 
 if __name__ == "__main__":

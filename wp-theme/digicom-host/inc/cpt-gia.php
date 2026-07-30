@@ -1147,7 +1147,7 @@ function dgc_gia_group_head_html( $it, $count, $args, $prices = array() ) {
 				<?php echo dgc_row_logo_html( $row_link, $it->post_title ); ?>
 				<span>
 					<span class="row-name"><?php echo esc_html( $it->post_title ); ?><?php if ( $dgc_show_intro ) : ?><button type="button" class="intro-toggle" aria-controls="<?php echo esc_attr( $dgc_intro_id ); ?>" aria-label="Giới thiệu <?php echo esc_attr( $dgc_intro_dv ); ?> này" title="Giới thiệu <?php echo esc_attr( $dgc_intro_dv ); ?> này"></button><?php endif; ?></span>
-					<button type="button" class="bao-group-toggle" aria-expanded="false">Mở rộng vị trí</button>
+					<button type="button" class="bao-group-toggle" aria-expanded="false"><span class="toggle-label">Mở rộng vị trí</span><svg class="toggle-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 					<?php echo dgc_dr_chip_html( $m['dr'] ?? '' ); ?>
 					<?php if ( $row_link ) : ?><a class="row-link" href="<?php echo esc_url( $row_link ); ?>" target="_blank" rel="noopener nofollow">Xem site</a><?php endif; ?>
 				</span>

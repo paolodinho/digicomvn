@@ -475,7 +475,8 @@
 				var toggle = head.querySelector('.bao-group-toggle');
 				if (toggle) {
 					toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-					toggle.textContent = open ? 'Thu gọn' : 'Mở rộng vị trí';
+					var lbl = toggle.querySelector('.toggle-label');
+					if (lbl) lbl.textContent = open ? 'Thu gọn' : 'Mở rộng vị trí';
 				}
 				(groupChildren[key] || []).forEach(function (child) {
 					child.style.display = (open && child.dataset.matched === '1') ? '' : 'none';
