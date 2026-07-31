@@ -128,5 +128,48 @@ IDEA = wrap(f'''
 <path d="M300 150 v-24 M370 178 l18 -18 M230 178 l-18 -18 M410 260 h24 M166 260 h24" stroke="{TEAL}" stroke-width="8" stroke-linecap="round"/>
 <circle cx="160" cy="330" r="12" fill="{BLUE}"/><circle cx="452" cy="330" r="10" fill="{PINK}"/>''')
 
+# 11. Booking PR bien the 2: bao mo + but ky duyet (hop dong dang bai)
+PR2 = wrap(f'''
+<path d="M150 210 L300 184 L300 400 L150 426 Z" fill="{WHITE}" stroke="{NAVY}" stroke-width="8" stroke-linejoin="round"/>
+<path d="M300 184 L450 210 L450 426 L300 400 Z" fill="{WHITE}" stroke="{NAVY}" stroke-width="8" stroke-linejoin="round"/>
+<rect x="176" y="240" width="90" height="10" rx="5" fill="{BLUEL}"/>
+<rect x="176" y="266" width="90" height="10" rx="5" fill="{BLUEL}"/>
+<rect x="176" y="292" width="66" height="10" rx="5" fill="{BLUEL}"/>
+<rect x="336" y="240" width="90" height="10" rx="5" fill="{BLUEL}"/>
+<rect x="336" y="266" width="90" height="10" rx="5" fill="{BLUEL}"/>
+<circle cx="410" cy="346" r="48" fill="{TEAL}"/>
+<path d="M388 346 l16 16 l32 -34" stroke="{WHITE}" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="170" cy="180" r="12" fill="{YEL}"/><circle cx="470" cy="180" r="10" fill="{PINK}"/>''')
+
+# 12. Booking PR bien the 3: chong bao + lich dang bai
+PR3 = wrap(f'''
+<rect x="168" y="270" width="216" height="150" rx="10" fill="{BLUEL}"/>
+<rect x="188" y="248" width="216" height="150" rx="10" fill="{BLUEM}"/>
+<rect x="208" y="224" width="216" height="150" rx="10" fill="{WHITE}" stroke="{NAVY}" stroke-width="7"/>
+<rect x="230" y="252" width="126" height="14" rx="7" fill="{BLUE}"/>
+<rect x="230" y="282" width="172" height="10" rx="5" fill="{BLUEL}"/>
+<rect x="230" y="304" width="146" height="10" rx="5" fill="{BLUEL}"/>
+<rect x="230" y="326" width="172" height="10" rx="5" fill="{BLUEL}"/>
+<g transform="translate(410 168)"><rect x="-42" y="-30" width="84" height="72" rx="10" fill="{TEAL}" stroke="{NAVY}" stroke-width="6"/>
+<rect x="-42" y="-30" width="84" height="22" rx="10" fill="{NAVY}"/>
+<line x1="-22" y1="-42" x2="-22" y2="-24" stroke="{NAVY}" stroke-width="6" stroke-linecap="round"/>
+<line x1="22" y1="-42" x2="22" y2="-24" stroke="{NAVY}" stroke-width="6" stroke-linecap="round"/>
+<circle cx="-16" cy="10" r="6" fill="{WHITE}"/><circle cx="14" cy="10" r="6" fill="{WHITE}"/><circle cx="-16" cy="28" r="6" fill="{WHITE}"/></g>
+<circle cx="158" cy="200" r="12" fill="{YEL}"/><circle cx="470" cy="270" r="10" fill="{PINK}"/>''')
+
+# 13. Booking PR bien the 4: micro + song phat + do vuon toi
+PR4 = wrap(f'''
+<rect x="270" y="220" width="60" height="140" rx="30" fill="{WHITE}" stroke="{NAVY}" stroke-width="8"/>
+<rect x="290" y="350" width="20" height="50" fill="{NAVY}"/>
+<rect x="256" y="394" width="88" height="16" rx="8" fill="{NAVY}"/>
+<path d="M240 288 a60 60 0 0 0 120 0" stroke="{TEAL}" stroke-width="8" fill="none" stroke-linecap="round"/>
+<path d="M200 246 q100 -60 200 0" stroke="{BLUEL}" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M180 216 q120 -80 240 0" stroke="{BLUEL}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".6"/>
+<circle cx="150" cy="330" r="30" fill="{TEAL}"/>
+<path d="M132 330 h36 M150 312 v36" stroke="{WHITE}" stroke-width="5"/>
+<circle cx="452" cy="330" r="30" fill="{BLUEL}"/>
+<circle cx="170" cy="180" r="12" fill="{YEL}"/><circle cx="470" cy="200" r="10" fill="{PINK}"/>''')
+
 LIB = {"SEO":SEO,"BACKLINK":BACKLINK,"CONTENT":CONTENT,"TEXTLINK":TEXTLINK,
-       "PR":PR,"ANALYTICS":ANALYTICS,"LOCAL":LOCAL,"TECH":TECH,"KEYWORD":KEYWORD,"IDEA":IDEA}
+       "PR":PR,"PR2":PR2,"PR3":PR3,"PR4":PR4,
+       "ANALYTICS":ANALYTICS,"LOCAL":LOCAL,"TECH":TECH,"KEYWORD":KEYWORD,"IDEA":IDEA}

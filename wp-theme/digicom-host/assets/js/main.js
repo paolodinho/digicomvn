@@ -480,7 +480,16 @@
 					if (lbl) lbl.textContent = open ? 'Thu gọn' : 'Mở rộng vị trí';
 				}
 				(groupChildren[key] || []).forEach(function (child) {
-					child.style.display = (open && child.dataset.matched === '1') ? '' : 'none';
+					var willShow = open && child.dataset.matched === '1';
+					// Dong vua chuyen tu AN -> HIEN (bam "Mo rong vi tri") -> gan class de CSS
+					// fade nhe (.row-anim, xem main.css) - tao cam giac muot thay vi bat/tat
+					// cung ngac (Hieu 2026-07-31: "tuong tac gan gui de chiu").
+					if (willShow && child.style.display === 'none') {
+						child.classList.remove('row-anim');
+						void child.offsetWidth; // ep reflow de animation chay lai tu dau
+						child.classList.add('row-anim');
+					}
+					child.style.display = willShow ? '' : 'none';
 				});
 			});
 		}

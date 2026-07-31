@@ -28,9 +28,13 @@ $out = array();
 // Thong tin lien he that (doc tu WP Admin > DigicomVN, khong bia) - dung cho header/footer/
 // watermark ben PDF (chong doi thu crop mat nguon, in generate-pdf.py).
 $out['_meta'] = array(
-	'hotline' => dgc( 'hotline' ),
-	'email'   => dgc( 'email' ),
-	'website' => home_url( '/bang-gia/' ),
+	'hotline'     => dgc( 'hotline' ),
+	'email'       => dgc( 'email' ),
+	'website'     => home_url( '/bang-gia/' ),
+	'company'     => 'CÔNG TY TNHH DỊCH VỤ TRUYỀN THÔNG DIGITO COMBAT',
+	'mst'         => '0109816406',
+	'bank'        => 'STK 567898838 - MB Bank',
+	'promo_note'  => dgc( 'promo_saving' ) ? ( 'Ưu đãi tới ' . dgc( 'promo_saving' ) . ' - Tư vấn chọn báo miễn phí, xem chi tiết tại ' . home_url( '/bang-gia/' ) ) : '',
 );
 foreach ( $nhom_labels as $slug => $label ) {
 	$out[ $slug ] = array( 'label' => $label, 'rows' => array() );
@@ -48,6 +52,8 @@ foreach ( $q->posts as $id ) {
 		'gia'     => $gia,
 		'so_link' => get_post_meta( $id, 'so_link', true ),
 		'yeu_cau' => get_post_meta( $id, 'yeu_cau', true ),
+		'dr'      => (int) get_post_meta( $id, 'dr', true ),
+		'url_bao' => get_post_meta( $id, 'url_bao', true ),
 	);
 }
 

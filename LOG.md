@@ -3374,3 +3374,38 @@ thấp nhất chỉ là "Dưới 5 triệu", không trả lời được câu n�
   hiển thị; dropdown "Khoảng giá" hiện đủ 6 mức với số đếm đúng (Dưới 1 triệu: 197).
 - Bump `DGC_VER` 2.2.3 -> 2.3.0. Đồng bộ live + Local WP. Backup: `~/Claude-Workspace/_backups/
   routines/2026-07-30/bang-gia-sidebar/`.
+
+## 2026-07-31 - Đồng bộ Google Sheet bảng giá xong, phát hiện lỗi bộ lọc DR
+- Rà soát /bang-gia/ theo yêu cầu Hiếu: phát hiện lỗi bộ lọc "Điểm DR (uy tín)" sai với báo
+  nhiều vị trí (dòng gộp lấy DR từ vị trí đầu tiên, đa số vị trí thiếu DR -> báo lớn lọt vào
+  "DR dưới 10"). Đã báo Hiếu, chờ xác nhận sửa (`inc/cpt-gia.php` dòng ~1157/1164, đổi sang
+  lấy MAX DR trong nhóm).
+- Hoàn tất đồng bộ Google Sheet: Hiếu tạo service account + sheet trống share Editor. Fix
+  `sync-google-sheet.py` (bỏ qua key `_meta`, dùng spreadsheet_id có sẵn thay vì tự tạo vì
+  service account không có dung lượng Drive riêng). Sync 7 tab, 1811 dòng. Set option
+  `sheet_view_url` trên live + purge cache - nút "Xem live trên Google Sheet" đã hoạt động.
+
+## 2026-07-31 (tiếp) - Trình bày Sheet giống bố cục DanaSEO
+- Theo yêu cầu Hiếu "trình bày file sheet như bên DanaSEO": mở sheet DanaSEO tham khảo bố cục
+  (khối thông tin công ty + dải ưu đãi + hàng tiêu đề màu + cột giá tô sáng + tên báo có link).
+- Áp dụng cho sheet Digicom (giữ màu brand teal/navy, không copy màu hồng của DanaSEO):
+  - Dòng 1-2: tên công ty + MST/STK/email/hotline (nền teal nhạt).
+  - Dòng 3: dải ưu đãi tự lấy từ option `promo_saving` (nền teal đậm, chữ trắng).
+  - Dòng 5: tiêu đề cột (nền navy, chữ trắng) - thêm cột STT + DR so với bản trước.
+  - Tên báo/trang giờ là link thật (nếu có `url_bao`), cột Giá tô nền teal nhạt + định dạng số.
+- Cập nhật `dump-publish-gia.php` lấy thêm field `dr`, `url_bao`, `promo_note`, thông tin công ty
+  vào `_meta`. Viết lại toàn bộ phần dựng nội dung trong `sync-google-sheet.py` (merge cell,
+  băng màu, freeze 5 dòng đầu). Đã verify qua Sheets API (đọc lại effectiveFormat) - đúng màu/
+  chữ/định dạng số như thiết kế, không tin vào screenshot trình duyệt (renderer bị lỗi hiển thị
+  trắng nhiều lần trong session, không phải lỗi dữ liệu thật).
+- Đồng bộ lại cả 7 tab với format mới.
+
+## 2026-07-31 (tiếp) - Thiết kế lại bảng giá thành "thẻ" to, rõ ràng
+- Theo yêu cầu Hiếu (kèm ảnh chụp bảng cũ): bảng giá đang quá sát/nhỏ, muốn "to, rõ ràng từng
+  báo, xem toàn cục được mà xem chi tiết từng báo cũng dc, tương tác gần gũi dễ chịu".
+- Chỉ sửa CSS + 1 đoạn JS nhỏ, KHÔNG đụng cấu trúc bảng/logic lọc-sắp xếp-tick chọn đang chạy
+  (rủi ro thấp hơn viết lại toàn bộ). Mỗi báo/site giờ là 1 "thẻ" cách nhau, bo góc, đổ bóng,
+  chữ to hơn hẳn (tên báo 17px, giá 21px). Dòng vị trí con khi mở rộng có hiệu ứng mờ dần.
+  Test kỹ qua JS trên live (không tin ảnh chụp trình duyệt - công cụ chụp màn hình bị lỗi trắng
+  trang nhiều lần trong session này, không phải lỗi web thật): đúng thiết kế cả light/dark mode,
+  mobile giữ nguyên layout cũ không bị vỡ. DGC_VER 2.3.13 -> 2.4.0.

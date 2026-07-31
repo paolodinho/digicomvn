@@ -2520,3 +2520,69 @@ body.single-post .brand-watermark{display:none}
 .faq-quicklinks a{background:var(--surface-2);border:1px solid var(--line-2);border-radius:20px;
   padding:8px 16px;font-size:13px;font-weight:600;color:var(--action);text-decoration:none}
 .faq-quicklinks a:hover{border-color:var(--action);background:rgba(71,97,255,.06)}
+
+/* =========================================================================
+   Bang gia CPT - lam lai TO/RO RANG hon, moi bao/site la 1 "the" (card) rieng
+   biet, cach nhau bang khoang trong (Hieu 2026-07-31: "to, ro rang tung bao,
+   xem toan cuc duoc ma xem chi tiet tung bao cung dc, tuong tac gan gui de
+   chiu"). CHI doi CSS + hieu ung mo/dong (main.js regroup) - khong doi cau
+   truc <table>/JS loc-sap xep, giu nguyen toan bo logic dang chay.
+   ========================================================================= */
+/* Typography/nut - ap dung ca mobile lan desktop (khong dung cau truc bang nen
+   an toan de dung chung, mobile da co CSS rieng bien <tr> thanh card luoi). */
+.price-table-cpt .row-logo{width:36px;height:36px;border-radius:10px}
+.price-table-cpt .row-name{font-size:17px;font-weight:700}
+.price-table-cpt .dr-chip{font-size:12.5px;padding:4px 11px;font-weight:800}
+.price-table-cpt td.cell-price .price-now{font-size:21px;font-weight:800}
+.price-table-cpt .price-range{font-size:17px}
+.price-table-cpt .bao-head-note{font-size:13px;display:block;margin-top:2px}
+.bao-group-toggle{padding:7px 16px 7px 14px;font-size:12.5px;border-radius:999px;gap:5px}
+.bao-tree-head.is-collapsed .bao-group-toggle{background:var(--action);border-color:var(--action);color:#fff}
+.bao-tree-head.is-collapsed .bao-group-toggle:hover{background:var(--action-2,var(--action));border-color:var(--action-2,var(--action));color:#fff}
+[data-theme="dark"] .bao-tree-head.is-collapsed .bao-group-toggle{background:var(--action);border-color:var(--action);color:#fff}
+
+/* Hieu ung fade nhe khi 1 dong con vua duoc "Mo rong vi tri" hien ra (main.js
+   gan class .row-anim luc chuyen tu an -> hien) - tao cam giac muot/gan gui
+   thay vi bat/tat cung ngac. Ap dung chung ca 2 kich thuoc man hinh. */
+@keyframes dgcRowIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.price-table-cpt tr.row-anim{animation:dgcRowIn .22s ease both}
+
+/* Tu 641px tro len (duoi la mobile grid-card rieng, xem block "MOBILE (<=640px)"
+   phia tren) - bang van la <table> that, lam moi bao/site thanh "the" rieng
+   biet cach nhau bang khoang trong, thay vi cac dong ke sat day dac. */
+@media(min-width:641px){
+  /* border-collapse:separate + border-spacing tao khoang cach DEU giua MOI
+     cap dong (ke ca dong goc <-> dong con khi mo rong) - doi lai duong ke
+     "cay" noi lien cu (:before/:after) khong con hop vi co khe ho, thay bang
+     vien trai mau de phan biet dong con thuoc bao nao thay vi 1 duong lien. */
+  .price-table-wrap{overflow-x:auto}
+  .price-table-cpt{border-collapse:separate;border-spacing:0 10px;background:transparent;
+    border:0;table-layout:fixed}
+  .price-table-cpt thead th{background:transparent;border:0;color:var(--ink-soft);
+    font-size:11.5px;padding:0 16px 8px;letter-spacing:.06em}
+  .price-table-cpt tbody tr{background:var(--surface-2);box-shadow:0 1px 2px rgba(16,24,40,.05);
+    transition:box-shadow .15s,transform .15s}
+  .price-table-cpt tbody tr:hover{box-shadow:0 4px 16px rgba(16,24,40,.09);transform:translateY(-1px)}
+  .price-table-cpt tbody tr td{border-bottom:0;padding-top:16px;padding-bottom:16px}
+  .price-table-cpt tbody tr td:first-child{border-radius:var(--r-md) 0 0 var(--r-md);padding-left:18px}
+  .price-table-cpt tbody tr td:last-child{border-radius:0 var(--r-md) var(--r-md) 0;padding-right:18px}
+  .price-table-cpt tbody tr.price-empty-row{background:transparent;box-shadow:none}
+  .price-table-cpt tbody tr.price-empty-row:hover{transform:none;box-shadow:none}
+
+  /* Dong goc (1 bao/site, thu gon hoac don le) - "the" chinh, dam hon dong con */
+  .price-table-cpt tr.bao-tree-head,
+  .price-table-cpt tr:not(.bao-tree-head):not(.bao-group-cont){border:1px solid var(--line)}
+
+  /* Dong con (vi tri that trong nhom) - nho hon, nen nhat hon, vien trai mau
+     de nhan biet "thuoc ve" the phia tren thay cho duong ke cay cu. */
+  .price-table-cpt tr.bao-group-cont{background:var(--surface);box-shadow:none;
+    border:1px dashed var(--line-2);border-left:3px solid var(--teal)}
+  .price-table-cpt tr.bao-group-cont:hover{box-shadow:0 2px 10px rgba(16,24,40,.06);transform:none}
+  .price-table-cpt tr.bao-group-cont td.cell-site:before,
+  .price-table-cpt tr.bao-group-cont td.cell-site:after{content:none}
+  .price-table-cpt tr.bao-group-cont td.cell-site .row-name{padding-left:6px;font-size:13.5px !important}
+  .price-table-cpt tr.bao-group-cont td{padding-top:11px;padding-bottom:11px}
+}
+@media(min-width:641px) and (max-width:900px){
+  .price-table-cpt tbody tr td:first-child,.price-table-cpt tbody tr td:last-child{border-radius:var(--r-md)}
+}

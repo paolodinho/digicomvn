@@ -277,10 +277,21 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       PDF tong hop 7 nhom dang publish, (2) Xem live Google Sheet (option moi `sheet_view_url`,
       WP Admin > DigicomVN > muc 3 - nut tu an neu de trong), (3) xem ngay tren trang (anchor
       xuong bang chi tiet). DGC_VER -> 2.3.11.
-      **CHUA XONG - cho Hieu**: tao Service Account Google (xem
-      `10-bang-gia-booking/HUONG-DAN-SERVICE-ACCOUNT.md`, ~5 phut) de kich hoat dong bo tu
-      dong Google Sheet (`sync-google-sheet.py` da viet san, cho `service-account.json`).
-      Sau khi co key: chay sync lan dau -> dan link vao option `sheet_view_url`. Da noi vao
+- [x] Hoan tat dong bo Google Sheet (2026-07-31): Hieu tao service account
+      (`digicom-sheet-sync@digicom-price-sync.iam.gserviceaccount.com`) + tao sheet trong tu
+      share Editor (service account KHONG co dung luong Drive rieng - storageQuota=0, khong
+      tu tao file duoc, day la gioi han chuan cua Google, khong phai loi cau hinh). Da fix
+      script `sync-google-sheet.py`: bo qua key `_meta` trong publish-gia.json (gay
+      KeyError 'label'), doi logic tu "tu tao spreadsheet" sang "dung spreadsheet_id co san
+      trong google-sheet-config.json", set quyen "anyone-with-link xem" thanh cong (rieng
+      quyen khoa tai/copy chi owner (Hieu) moi doi duoc - service account la Editor khong du
+      quyen, da boc try/except khong dung script). Chay sync lan dau: 7 tab, 1811 dong (Booking
+      bao&PR 1212, Guest Post 225, Mua Textlink 335, Toplist 21, Backlink quoc te 18; Dich vu
+      Backlink + Social Entity dang 0 dong vi CPT dang draft toan bo, dung theo pivot). Da set
+      option `sheet_view_url` tren live qua wp eval + purge cache - nut "Xem live tren Google
+      Sheet" da hien tren `/bang-gia/`. Link:
+      https://docs.google.com/spreadsheets/d/1qF7o6WYno1PJCtUFQ5Sv-I3RQGB7tx3SxogMcc2Wxaw/edit
+      Da noi vao
       routine tuan `digicom-gia-doi-tac-tuan` (buoc 5b) de tu cap nhat PDF+Sheet moi tuan.
 - [x] Watermark + chong "an cap" bang gia PDF (Hieu 2026-07-30): thay `generate-pdf.py` (Chrome
       CLI, watermark loi - position:fixed KHONG lap lai theo trang khi in) bang
@@ -301,7 +312,32 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       SOM lam listener khong gan duoc - da boc trong `DOMContentLoaded`.
       **Con thieu**: chi moi gui EMAIL, CHUA gui Zalo tu dong (can Zalo OA + API rieng, chua
       setup - hoi Hieu co muon lam tiep khong).
+- [x] Thiết kế lại bảng giá thành "thẻ" to/rõ ràng, giữ nguyên table/JS lọc-sắp xếp-tick chọn
+      (Hiếu 2026-07-31: "to, rõ ràng từng báo, xem toàn cục được mà xem chi tiết từng báo cũng
+      dc, tạo cảm giác tương tác gần gũi dễ chịu"). CHỈ sửa CSS (`main.css`, khối cuối file,
+      bọc trong `@media(min-width:641px)` để không đụng layout card mobile <=640px đã có sẵn)
+      + 1 đoạn JS nhỏ (`main.js` hàm `regroup()`).
+      - `border-collapse:separate;border-spacing:0 10px` - mỗi báo/site cách nhau 1 khoảng
+        trống thay vì dòng kẻ sát nhau; mỗi dòng có nền + bo góc + đổ bóng nhẹ, bóng đậm hơn
+        khi hover (cảm giác "thẻ" tương tác được).
+      - Chữ to hơn: tên báo 17px đậm (trước ~14-15px), giá 21px đậm (trước 16.5px), logo 36px
+        (trước 28px), chip DR to/đậm hơn.
+      - Nút "Mở rộng vị trí" đổi thành nút bo tròn đầy đủ, tô màu brand khi đang thu gọn (rõ
+        ràng hơn là còn có thể bấm xem thêm).
+      - Dòng vị trí con (sau khi mở rộng) tách biệt: nền nhạt hơn + viền trái màu teal thay
+        cho đường kẻ "cây" nối liền cũ (không còn hợp vì có khoảng cách giữa các dòng).
+      - Thêm hiệu ứng mờ dần (`.row-anim`, `@keyframes dgcRowIn`) khi 1 dòng vị trí vừa hiện ra
+        - JS gắn/gỡ class ngay lúc chuyển từ ẩn sang hiện trong `regroup()`.
+      - Verify qua JS trên live: border-spacing/bo góc/font-size đúng thiết
+        kế; bấm "Mở rộng vị trí" ra đúng `row-anim` + nền/viền dòng con; dark mode tự đổi màu
+        đúng (dùng biến `--surface-2`/`--heading`, không hardcode); mobile 375px vẫn giữ nguyên
+        layout card lưới cũ (`display:grid`, bo góc 14px) - không bị đè bởi CSS desktop mới.
+      DGC_VER 2.3.13 -> 2.4.0. Đồng bộ live.
 - [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.
       2. Blogtamsu/Vnmedia/"Mua bán nhà đất" - chỉ alias nếu Hiếu cung cấp domain xác nhận.
+      3. Nối sync Google Sheet vào routine tuần `digicom-gia-doi-tac-tuan` để tự đồng bộ.
+      4. Lỗi bộ lọc "Điểm DR" sai với báo nhiều vị trí (báo cáo 2026-07-31, xem cuối phiên) -
+         chờ Hiếu xác nhận có sửa `inc/cpt-gia.php` (đổi DR dòng gộp từ "lấy dòng đầu" sang
+         "lấy DR cao nhất trong nhóm") không.
