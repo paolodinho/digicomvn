@@ -101,34 +101,50 @@
 
 		// Nho bao da tick qua localStorage (Hieu 2026-07-18): khach tick VNE nhung chua gui
 		// yeu cau -> lan sau quay lai (trang nay hoac trang khac co cung bang gia) van thay
-		// tick san. Khoa theo tr[data-key] (on dinh, giong nhau moi noi bao do xuat hien).
+		// tick san.
+		//
+		// Hieu 2026-08-01: bang gia doi sang luoi cuon ao (chi ve ~30 dong dang trong khung
+		// nhin, xem assets/js/price-grid.js) - checkbox .row-check cua 1 dong co the bi HUY
+		// KHOI DOM khi cuon qua (khong con "moi checkbox tren trang" nhu bang cu). Vi vay
+		// nguon su that cua "da chon gi" KHONG con la document.querySelectorAll('.row-check')
+		// nua, ma la 1 SO DANG KY (pickedRegistry) giu theo KEY - ton tai doc lap voi viec
+		// checkbox/nut co dang nam trong DOM hay khong. Bang cu (tung trang dich vu, van con
+		// dung ca bang HTML) van hoat dong y nhu truoc, vi checkbox cua no luon nam san trong
+		// DOM tu dau -> change event van dang ky vao registry binh thuong.
 		var PICK_STORE_KEY = 'dgc_picked_bao';
+		var pickedRegistry = loadPickStore(); // { key: {price, mkgain, name} }
+
 		function loadPickStore() {
-			try { return JSON.parse(localStorage.getItem(PICK_STORE_KEY) || '[]'); } catch (err) { return []; }
+			try {
+				var raw = JSON.parse(localStorage.getItem(PICK_STORE_KEY) || '{}');
+				// Tuong thich nguoc: ban cu luu mang key (['abc','xyz']) khong kem gia/ten -
+				// bo qua (khong the doan lai gia) de tranh cong tong sai, chi giu dinh dang moi.
+				return (raw && !Array.isArray(raw)) ? raw : {};
+			} catch (err) { return {}; }
 		}
-		function savePickStore(keys) {
-			try { localStorage.setItem(PICK_STORE_KEY, JSON.stringify(keys)); } catch (err) { /* noop */ }
+		function savePickStore() {
+			try { localStorage.setItem(PICK_STORE_KEY, JSON.stringify(pickedRegistry)); } catch (err) { /* noop */ }
 		}
-		function persistPicks() {
-			var set = {};
-			loadPickStore().forEach(function (k) { set[k] = true; });
-			document.querySelectorAll('.row-check').forEach(function (cb) {
-				var tr = cb.closest('tr');
-				var key = tr ? tr.getAttribute('data-key') : '';
-				if (!key) return;
-				if (cb.checked) set[key] = true; else delete set[key];
-			});
-			savePickStore(Object.keys(set));
+
+		// Dang ky/bo dang ky 1 muc theo key - goi tu: (a) checkbox .row-check doi trang thai
+		// (bang HTML cu), (b) nut .grid-pick tren luoi moi (price-grid.js).
+		function registerPick(key, meta) {
+			if (!key) return;
+			pickedRegistry[key] = meta;
+			savePickStore();
 		}
+		function unregisterPick(key) {
+			if (!key || !(key in pickedRegistry)) return;
+			delete pickedRegistry[key];
+			savePickStore();
+		}
+		// Dong bo checkbox .row-check dang MOUNT trong DOM ve dung trang thai registry - dung
+		// khi mo lai 1 tab/nhom vua hydrate (bang cu) de tick san cac dong da chon truoc do.
 		function restorePicks() {
-			var stored = loadPickStore();
-			if (!stored.length) return;
-			var set = {};
-			stored.forEach(function (k) { set[k] = true; });
 			document.querySelectorAll('.row-check').forEach(function (cb) {
 				var tr = cb.closest('tr');
 				var key = tr ? tr.getAttribute('data-key') : '';
-				if (key && set[key]) cb.checked = true;
+				if (key && pickedRegistry[key]) cb.checked = true;
 			});
 		}
 
@@ -161,16 +177,10 @@
 		}
 
 		function collect() {
-			var picked = [];
-			document.querySelectorAll('.row-check').forEach(function (cb) {
-				if (!cb.checked) return;
-				var tr = cb.closest('tr');
-				var price = tr ? (parseFloat(tr.getAttribute('data-price')) || 0) : 0;
-				// mkgain = so tien giam toi da cho phep tren dong nay (khong an vao gia von)
-				var mkgain = tr ? (parseFloat(tr.getAttribute('data-mkgain')) || 0) : 0;
-				picked.push({ cb: cb, name: cb.getAttribute('data-label') || '', price: price, mkgain: mkgain });
+			return Object.keys(pickedRegistry).map(function (key) {
+				var m = pickedRegistry[key] || {};
+				return { key: key, name: m.name || '', price: m.price || 0, mkgain: m.mkgain || 0 };
 			});
-			return picked;
 		}
 
 		// Chiet khau combo CO SAN VON: moi dong giam toi da = mkgain (phan markup),
@@ -204,7 +214,16 @@
 				removeBtn.setAttribute('aria-label', 'Bỏ chọn ' + p.name);
 				removeBtn.textContent = '×';
 				removeBtn.addEventListener('click', function () {
-					p.cb.checked = false;
+					unregisterPick(p.key);
+					// Neu dong nay dang mount trong DOM (bang cu hoac luoi moi) - dong bo lai
+					// giao dien cua no ve trang thai "chua chon" ngay, khong doi den lan ve sau.
+					document.querySelectorAll('.row-check').forEach(function (cb) {
+						var tr = cb.closest('tr');
+						if (tr && tr.getAttribute('data-key') === p.key) cb.checked = false;
+					});
+					document.querySelectorAll('.grid-pick[data-key="' + CSS.escape(p.key) + '"]').forEach(function (b) {
+						b.classList.remove('is-picked');
+					});
 					update();
 				});
 				row.appendChild(nameSpan);
@@ -215,7 +234,6 @@
 		}
 
 		function update() {
-			persistPicks();
 			var picked   = collect();
 			var subtotal = picked.reduce(function (s, p) { return s + p.price; }, 0);
 			var pct      = tierFor(picked.length);
@@ -279,8 +297,28 @@
 			}
 		}
 
+		// Doc du lieu dong (gia/mkgain) tu tr chua checkbox + nhan (data-label) tu chinh checkbox,
+		// dang ky/bo dang ky vao registry theo dung trang thai checked hien tai.
+		function syncCheckboxToRegistry(cb) {
+			var tr  = cb.closest('tr');
+			var key = tr ? tr.getAttribute('data-key') : '';
+			if (!key) return;
+			if (cb.checked) {
+				registerPick(key, {
+					price:  tr ? (parseFloat(tr.getAttribute('data-price')) || 0) : 0,
+					mkgain: tr ? (parseFloat(tr.getAttribute('data-mkgain')) || 0) : 0,
+					name:   cb.getAttribute('data-label') || ''
+				});
+			} else {
+				unregisterPick(key);
+			}
+		}
+
 		document.addEventListener('change', function (e) {
-			if (e.target && e.target.classList && e.target.classList.contains('row-check')) update();
+			if (e.target && e.target.classList && e.target.classList.contains('row-check')) {
+				syncCheckboxToRegistry(e.target);
+				update();
+			}
 		});
 
 		// "Chon ... nay" tren 1 dong -> CHI toggle tick (them/bo khoi thanh chon phia duoi),
@@ -292,17 +330,49 @@
 			e.preventDefault();
 			var tr = btn.closest('tr');
 			var cb = tr ? tr.querySelector('.row-check') : null;
-			if (cb) { cb.checked = !cb.checked; update(); }
+			if (cb) { cb.checked = !cb.checked; syncCheckboxToRegistry(cb); update(); }
+		});
+
+		// Luoi "kieu Excel" (price-grid.js) khong dung checkbox/tr - moi dong "+" trong panel
+		// mo rong la 1 nut .grid-pick mang san data-key/data-price/data-mkgain/data-label.
+		// Dang ky thang vao registry, khong can tim tr.
+		document.addEventListener('click', function (e) {
+			var btn = e.target.closest ? e.target.closest('.grid-pick') : null;
+			if (!btn) return;
+			e.preventDefault();
+			var key = btn.getAttribute('data-key');
+			if (!key) return;
+			var picking = !(key in pickedRegistry);
+			if (picking) {
+				registerPick(key, {
+					price:  parseFloat(btn.getAttribute('data-price')) || 0,
+					mkgain: parseFloat(btn.getAttribute('data-mkgain')) || 0,
+					name:   btn.getAttribute('data-label') || ''
+				});
+			} else {
+				unregisterPick(key);
+			}
+			document.querySelectorAll('.grid-pick[data-key="' + CSS.escape(key) + '"]').forEach(function (b) {
+				b.classList.toggle('is-picked', picking);
+			});
+			update();
 		});
 
 		// "Chon lai": bo tick toan bo, dua thanh tong ve 0
 		if (resetBtn) {
 			resetBtn.addEventListener('click', function () {
 				document.querySelectorAll('.row-check:checked').forEach(function (cb) { cb.checked = false; });
+				pickedRegistry = {};
+				savePickStore();
+				document.querySelectorAll('.grid-pick.is-picked').forEach(function (b) { b.classList.remove('is-picked'); });
 				update();
 				bar.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 			});
 		}
+
+		// API dung chung cho price-grid.js: hoi 1 key da duoc chon chua (de ve dung trang thai
+		// nut "+"/"Đã chọn" khi mo panel chi tiet), khong can tu quan ly registry rieng.
+		window.dgcCartIsPicked = function (key) { return !!pickedRegistry[key]; };
 
 		if (listToggle) {
 			listToggle.addEventListener('click', function () {
@@ -398,7 +468,13 @@
 	// Bang gia: tim kiem + sap xep + loc nganh + "xem them" cho MOI khoi bang gia
 	// ([data-price-panel]). Dung chung cho trang Bang gia (5 tab) va bang gia nhung
 	// trong tung trang dich vu (inc/service-pricing.php).
-	document.querySelectorAll('[data-price-panel]').forEach(function (panel) {
+	// Tach thanh HAM RIENG (khong con IIFE vo danh trong forEach) de trang Bang gia
+	// co the goi lai khi "no lazy" 1 tab moi (xem duoi + page-bang-gia.php) - tab
+	// chua mo KHONG co [data-price-panel] that trong DOM luc dau (nam trong <template>),
+	// nen vong lap duoi day khong tu init duoc, phai goi ham nay THU CONG sau khi
+	// noi dung tab duoc "hydrate" (Hieu 2026-07-31: trang nang/dơ do 7 tab x hang tram
+	// dong deu nam san trong DOM tu dau, du an - giam con 1 tab that/luc tai trang).
+	function dgcInitPricePanel(panel) {
 		var input     = panel.querySelector('.tab-search-input');
 		var tbody     = panel.querySelector('.price-table-cpt tbody');
 		var rows      = Array.prototype.slice.call(panel.querySelectorAll('.price-table-cpt tbody tr[data-name]'));
@@ -710,7 +786,9 @@
 		}
 
 		applyFilter();
-	});
+	}
+	document.querySelectorAll('[data-price-panel]').forEach(dgcInitPricePanel);
+	window.dgcInitPricePanel = dgcInitPricePanel;
 
 	// Dem nguoc han chot uu dai ([data-promo-end] = timestamp giay).
 	// Chay toi PHUT:GIAY, nhay tung giay (Hieu 2026-07-14) - moc "N ngay X gio" khong tao suc ep.

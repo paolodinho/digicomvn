@@ -3409,3 +3409,76 @@ thấp nhất chỉ là "Dưới 5 triệu", không trả lời được câu n�
   Test kỹ qua JS trên live (không tin ảnh chụp trình duyệt - công cụ chụp màn hình bị lỗi trắng
   trang nhiều lần trong session này, không phải lỗi web thật): đúng thiết kế cả light/dark mode,
   mobile giữ nguyên layout cũ không bị vỡ. DGC_VER 2.3.13 -> 2.4.0.
+
+## 2026-07-31 (tiếp) - Sửa hiệu năng + lỗi hiển thị mobile trang bảng giá
+- Hiếu báo "bản di động vẫn lỗi hiển thị nhiều lắm" + "trang cũng đang bị nặng quá, hay đơ lag".
+- Đo được nguyên nhân nặng máy: cả 7 tab dịch vụ (2168 dòng giá, 57.000 node DOM, 1390 ảnh
+  logo) đều được tải sẵn trong trang cùng lúc dù chỉ 1 tab hiển thị. Sửa bằng kỹ thuật
+  "lazy hydrate": 6 tab chưa mở nằm trong thẻ `<template>` (trình duyệt không dựng/không tải
+  ảnh cho tới khi cần) - bấm mở tab nào mới "bơm" nội dung thật vào + kích hoạt lọc/sắp xếp
+  cho tab đó. Giảm 57.106 -> 38.595 node DOM (-32%) ngay khi tải trang, các thao tác chọn
+  nhiều báo/tab qua lại vẫn hoạt động đúng (đã test kỹ, đây là thay đổi rủi ro cao nhất).
+- Lỗi hiển thị mobile cụ thể tìm được qua ảnh chụp trực tiếp:
+  1. Nút Zalo nổi đè lên thẻ "Tải PDF tổng hợp" ngay từ lần tải trang đầu - thu hẹp khối 3 lựa
+     chọn để chừa chỗ cho nút Zalo, không còn che chữ.
+  2. Nút "Mở rộng vị trí" (báo có nhiều vị trí đăng) đè lên số giá cạnh bên - do đợt làm to nút
+     cho desktop trước đó chưa giới hạn riêng cho màn hình hẹp. Hạ kích thước nút về gọn trên
+     mobile, không còn đè lên giá.
+- Làm đẹp hơn khối "Bạn muốn xem bảng giá theo cách nào?" theo yêu cầu Hiếu: to hơn, icon có
+  bóng đổ màu theo từng loại, nhấc lên khi hover/chạm.
+- DGC_VER 2.4.0 -> 2.4.3, đồng bộ live qua từng bước, verify bằng JS đo tọa độ phần tử trên
+  live (không chỉ tin ảnh chụp, vì công cụ chụp màn hình phiên này hay bị lỗi trắng trang).
+
+## 2026-07-31 (tiếp) - Sửa lỗi bộ lọc DR + phân biệt thẻ mẹ/con khi mở rộng
+- Hiếu bảo "làm đi" (xác nhận sửa lỗi bộ lọc DR đã báo trước đó). Sửa `inc/cpt-gia.php`:
+  dòng gộp (1 báo nhiều vị trí) giờ lấy DR CAO NHẤT trong cả nhóm (thay vì chỉ lấy vị trí đầu
+  tiên) + truyền DR này xuống CẢ các dòng con (trước đó dòng con giữ DR riêng, đa số =0 vì
+  thiếu dữ liệu, khiến JS "rơi" về so khớp dòng con và bộ lọc vẫn sai dù dòng gốc đã đúng).
+  Verify trên live: "DR dưới 10" giờ ra đúng toàn báo nhỏ, "DR 70 trở lên" ra đúng VnExpress/
+  Thanh Niên/Tuổi Trẻ/CafeF/Nhân Dân... Số nhóm hiện được chip DR tăng từ 5/228 lên 44/194.
+- Hiếu góp ý thêm: "khi đã mở ra thì thẻ mẹ và thẻ con cần có thiết kế khác biệt" - phát hiện
+  phần phân biệt màu/viền đã làm trước đó chỉ nằm trong khối CSS desktop (`@media
+  min-width:641px`), quên áp cho mobile nên 2 loại thẻ nhìn giống hệt nhau trên điện thoại.
+  Thêm CSS riêng cho `.bao-group-cont` trong khối mobile: nền tinted nhạt hơn, viền trái teal
+  3px, thụt lề trái 14px, bỏ đổ bóng, chữ nhỏ hơn - đã verify qua computed style trên live
+  (nền/viền/margin đúng như thiết kế).
+- DGC_VER 2.4.3 -> 2.4.4.
+
+## 2026-08-01 - Làm lại bảng giá: lưới cuộn ảo "kiểu Excel" thay bảng HTML nặng
+- Hiếu: "chưa hài lòng với bảng giá, số lượng dữ liệu quá lớn hiển thị kiểu này thì ko ăn thua,
+  bị nặng máy và ko nhìn được tổng quan tất cả các sản phẩm". Đo lại: trang /bang-gia/ tải về
+  4,6MB HTML (2168 dòng `<tr>`, 1389 ảnh logo) dù đã lazy-load 6/7 tab từ đợt trước - vì kỹ
+  thuật `<template>` chỉ hoãn VẼ, không hoãn TẢI (cả 7 tab vẫn nằm sẵn trong gói HTML gửi về).
+- Dựng mockup demo (Artifact) kiểu lưới cuộn ảo giống Excel - Hiếu duyệt, góp ý thêm: nút xổ
+  chi tiết đặt cạnh tên báo (không tách cột riêng), giao diện mặc định sáng.
+- Xây bản thật, kiến trúc: server chỉ xuất 1 gói JSON GỌN mỗi tab (tên/DR/khoảng giá/facet lọc
+  - không kèm logo/markup lặp) thay bảng HTML đầy đủ; JS (`assets/js/price-grid.js`) chỉ vẽ
+  ~19-27 dòng đang nằm trong khung nhìn ra DOM, cuộn tới đâu vẽ tới đó (kỹ thuật virtual
+  scroll). Bấm mở 1 báo mới gọi AJAX lấy chi tiết (quy cách/bảng giá nhiều bậc/gói gồm gì/ảnh
+  vị trí thật) - tái dùng 100% hàm PHP cũ (`inc/price-grid.php` gọi lại
+  `dgc_gia_specs/dgc_gia_price_tiers/dgc_gia_goi_chi_tiet/dgc_gia_intro_rows...`), không mất
+  tính năng nào của bảng cũ.
+- Sửa cỗ máy giỏ hàng (thanh chọn/sel-bar) trong `main.js`: trước đây `collect()` quét TOÀN BỘ
+  checkbox `.row-check` đang có trong DOM - với lưới ảo, dòng đã tick có thể bị "xoá" khỏi DOM
+  khi cuộn qua nên sẽ rớt khỏi tổng tiền. Đổi sang 1 "sổ đăng ký" (registry) lưu theo key, tồn
+  tại độc lập với việc dòng đó có đang hiển thị hay không - áp dụng cho CẢ bảng cũ (trang dịch
+  vụ đơn lẻ) lẫn lưới mới, không đổi hành vi bảng cũ.
+- QA trên live qua JS (không chỉ tin ảnh chụp - công cụ chụp màn hình phiên này hay treo):
+  tìm kiếm, lọc theo lĩnh vực/DR/giá/loại link, sắp xếp giá-DR, mở chi tiết (AJAX), tick chọn
+  + tổng tiền + lưu localStorage qua lần tải lại, chuyển tab (6 tab còn lại tự "bơm" dữ liệu
+  đúng lúc bấm) - đều đúng. Vá thêm 3 lỗi phát hiện lúc test: (1) đổi bộ lọc/tìm kiếm khi đang
+  cuộn sâu làm khung nhìn "treo" ngoài vùng có dữ liệu -> reset về đầu danh sách mỗi lần lọc;
+  (2) bộ lọc "Khoảng giá" luôn đúng 100% với báo có nhiều vị trí đăng (thiếu trường giá riêng
+  cho dòng gộp) -> dùng giá thấp nhất trong nhóm làm đại diện, giống cách bảng cũ làm; (3) tab
+  vừa mở lần đầu không tự khởi động lưới (thiếu 1 dòng gọi hàm sau khi "bơm" nội dung thật).
+- Kết quả đo: HTML trang giảm từ 4.665.237 byte xuống 456.679 byte (giảm hơn 10 lần). Số dòng
+  đang thực sự nằm trong bộ nhớ trình duyệt lúc xem giảm từ ~2168 xuống ~19-27 dòng bất kể cuộn
+  tới đâu trong danh sách hàng trăm dòng.
+- Đánh đổi cần biết: crawler KHÔNG chạy JS sẽ chỉ thấy danh sách rút gọn (tên + giá, không có
+  logo/mô tả) qua `<noscript>` - đã giữ fallback này cho cả 7 tab để không mất trắng nội dung,
+  nhưng phần chi tiết phong phú (gói gồm gì, bảng giá nhiều bậc...) chỉ hiện khi bấm mở + có
+  JS. Đây là đánh đổi hiệu năng đã được Hiếu chấp nhận từ đợt lazy-load trước (PLAN.md).
+- File mới: `inc/price-grid.php`, `assets/js/price-grid.js`. Sửa: `functions.php` (DGC_VER
+  2.4.4 -> 2.5.6, enqueue script mới + AJAX handler), `page-bang-gia.php` (thay bảng bằng
+  lưới), `assets/js/main.js` (registry giỏ hàng), `assets/css/main.css` (+~2,9KB CSS lưới).
+  Backup file gốc: `~/Claude-Workspace/_backups/routines/2026-08-01/price-grid-rebuild/`.

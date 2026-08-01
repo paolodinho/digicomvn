@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '2.4.0' );
+define( 'DGC_VER', '2.5.6' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -44,6 +44,19 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'owl-carousel-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
 	wp_enqueue_script( 'dgc-main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'owl-carousel-js' ), DGC_VER, true );
 
+	// Luoi bang gia "kieu Excel" (Hieu 2026-08-01: trang /bang-gia/ qua nang/kho xem tong quan)
+	// - chi tai o trang Bang gia, khong dung o cac trang dich vu don (van dung bang cu).
+	if ( is_page( 'bang-gia' ) ) {
+		// Phu thuoc dgc-main-js de dam bao window.dgcCartIsPicked() (dinh nghia trong main.js,
+		// cong cu tick chon/sel-bar) da san sang truoc khi price-grid.js chay - khong dua vao
+		// thu tu dang ky ngau nhien (Hieu 2026-08-01, luoi bang gia moi).
+		wp_enqueue_script( 'dgc-price-grid-js', get_template_directory_uri() . '/assets/js/price-grid.js', array( 'dgc-main-js' ), DGC_VER, true );
+		wp_localize_script( 'dgc-price-grid-js', 'DGC_GRID', array(
+			'url'   => admin_url( 'admin-ajax.php' ),
+			'nonce' => wp_create_nonce( 'dgc_grid' ),
+		) );
+	}
+
 	// Chat AI (DeepSeek) - cung cap ajaxurl + nonce cho JS (key van o server, khong lo).
 	if ( function_exists( 'dgc_ai_enabled' ) && dgc_ai_enabled() ) {
 		wp_localize_script( 'dgc-main-js', 'DGC_AI', array(
@@ -66,6 +79,7 @@ add_action( 'wp_enqueue_scripts', function () {
  * ------------------------------------------------------------------------- */
 require_once get_template_directory() . '/inc/options.php';
 require_once get_template_directory() . '/inc/cpt-gia.php';
+require_once get_template_directory() . '/inc/price-grid.php';
 require_once get_template_directory() . '/inc/vitri-images.php';
 require_once get_template_directory() . '/inc/dr-chart.php';
 require_once get_template_directory() . '/inc/widgets-blog.php';

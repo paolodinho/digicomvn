@@ -333,11 +333,56 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
         đúng (dùng biến `--surface-2`/`--heading`, không hardcode); mobile 375px vẫn giữ nguyên
         layout card lưới cũ (`display:grid`, bo góc 14px) - không bị đè bởi CSS desktop mới.
       DGC_VER 2.3.13 -> 2.4.0. Đồng bộ live.
+- [x] Tối ưu hiệu năng + sửa lỗi hiển thị mobile bảng giá (Hiếu 2026-07-31: "bản di động vẫn
+      lỗi hiển thị nhiều lắm" + "trang cũng đang bị nặng quá, hay đơ lag"):
+      - Nguyên nhân nặng: cả 7 tab (2168 dòng, 57.000 node DOM, 1390 ảnh) tải sẵn cùng lúc dù
+        chỉ 1 tab hiện. Sửa bằng "lazy hydrate" - tab chưa mở nằm trong `<template>` (trình
+        duyệt không dựng/tải ảnh), bấm mở mới bơm nội dung thật + gọi `dgcInitPricePanel()`
+        (tách hàm riêng trong `main.js` để gọi lại được). Còn 38.595 node lúc tải trang (-32%).
+        Đã test kỹ: chuyển tab qua lại, tìm kiếm, tick chọn nhiều báo khác tab đều hoạt động
+        đúng (rủi ro cao nhất của đợt sửa này).
+      - Fix 2 lỗi hiển thị mobile: (1) nút Zalo nổi đè lên thẻ "Tải PDF tổng hợp" ngay lần tải
+        đầu - `.price-view-opts{margin-right:60px}` ở mobile để chừa chỗ. (2) Nút "Mở rộng vị
+        trí" (đợt làm to cho desktop trước) đè lên số giá cạnh bên trên mobile - hạ kích thước
+        riêng cho mobile.
+      - Làm đẹp khối "Bạn muốn xem bảng giá theo cách nào?" theo yêu cầu Hiếu: to hơn, icon có
+        bóng đổ màu, nhấc lên khi hover/chạm.
+      - DGC_VER 2.4.0 -> 2.4.3. Đồng bộ live, verify bằng JS đo toạ độ phần tử trực tiếp trên
+        live (ảnh chụp trình duyệt không ổn định trong phiên này).
+- [x] Sửa lỗi bộ lọc "Điểm DR" + phân biệt thẻ mẹ/con khi mở rộng (Hiếu "làm đi" + góp ý thêm
+      2026-07-31). `inc/cpt-gia.php`: dòng gộp lấy DR CAO NHẤT cả nhóm (không chỉ vị trí đầu),
+      truyền DR này xuống CẢ dòng con (trước đó dòng con giữ DR riêng thường =0, khiến JS
+      fallback vẫn lọt bộ lọc sai dù dòng gốc đã đúng). Verify: "DR dưới 10"/"DR 70 trở lên"
+      ra đúng nhóm báo tương ứng; số nhóm có chip DR tăng 5/228 -> 44/194. Thêm CSS phân biệt
+      `.bao-group-cont` cho MOBILE (trước chỉ có ở desktop, quên áp mobile khiến thẻ mẹ/con
+      giống hệt nhau trên điện thoại): nền tinted nhạt, viền trái teal 3px, thụt lề, bỏ đổ
+      bóng. DGC_VER -> 2.4.4.
+- [x] Làm lại bảng giá thành lưới cuộn ảo "kiểu Excel" (Hiếu 2026-08-01: "số lượng dữ liệu
+      quá lớn hiển thị kiểu này thì ko ăn thua, bị nặng máy và ko nhìn được tổng quan").
+      - Dựng mockup (Artifact) trước, Hiếu duyệt + góp ý (nút xổ chi tiết cạnh tên báo, mặc
+        định giao diện sáng) rồi mới làm bản thật.
+      - Kiến trúc: server xuất JSON gọn/tab (tên/DR/khoảng giá/facet lọc) thay bảng HTML đầy
+        đủ; `assets/js/price-grid.js` chỉ vẽ ~19-27 dòng trong khung nhìn (virtual scroll),
+        cuộn tới đâu vẽ tới đó. Mở 1 báo -> AJAX lấy chi tiết, tái dùng 100% hàm PHP cũ
+        (`inc/price-grid.php`), không mất tính năng (bảng giá nhiều bậc, "gói gồm gì", ảnh
+        vị trí thật, giới thiệu báo).
+      - Sửa giỏ hàng (`main.js`): `collect()` cũ quét checkbox đang có trong DOM - với lưới ảo
+        dòng đã tick có thể bị gỡ khỏi DOM lúc cuộn nên rớt khỏi tổng tiền. Đổi sang "sổ đăng
+        ký" theo key, độc lập với việc dòng có đang hiển thị hay không (áp cho cả bảng cũ).
+      - QA trên live qua JS: tìm kiếm/lọc/sắp xếp/mở chi tiết/tick chọn/lưu localStorage qua
+        lần tải lại/chuyển 7 tab đều đúng. Fix 3 lỗi phát hiện lúc test (reset cuộn khi đổi bộ
+        lọc, bộ lọc giá cho báo nhiều vị trí, tab mới mở lần đầu chưa tự khởi động lưới).
+      - Kết quả: HTML trang 4,6MB -> 456KB (giảm 10 lần), số dòng thực sự nằm trong DOM lúc
+        xem giảm từ ~2168 xuống ~19-27 dòng bất kể cuộn tới đâu. DGC_VER 2.4.4 -> 2.5.6.
+      - Đánh đổi: crawler không chạy JS chỉ thấy noscript rút gọn (tên+giá), chi tiết phong
+        phú chỉ hiện khi bấm mở + có JS - đánh đổi đã được Hiếu chấp nhận từ đợt lazy-load
+        trước, không phải điểm mới.
 - [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.
       2. Blogtamsu/Vnmedia/"Mua bán nhà đất" - chỉ alias nếu Hiếu cung cấp domain xác nhận.
       3. Nối sync Google Sheet vào routine tuần `digicom-gia-doi-tac-tuan` để tự đồng bộ.
-      4. Lỗi bộ lọc "Điểm DR" sai với báo nhiều vị trí (báo cáo 2026-07-31, xem cuối phiên) -
-         chờ Hiếu xác nhận có sửa `inc/cpt-gia.php` (đổi DR dòng gộp từ "lấy dòng đầu" sang
-         "lấy DR cao nhất trong nhóm") không.
+      4. Tab "Guest Post/Dịch vụ Backlink/..." trên /bang-gia/ giờ chỉ render khi bấm mở (lazy)
+         -> dữ liệu giá của 6 nhóm đó không còn được Google index trực tiếp trên URL /bang-gia/
+         (đã có trang dịch vụ riêng render đủ dữ liệu, không mất index tuyệt đối) - đánh đổi
+         chấp nhận được để giảm nặng trang, nhưng cần biết nếu muốn xem xét lại.

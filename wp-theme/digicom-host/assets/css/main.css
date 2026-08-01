@@ -1007,22 +1007,47 @@ body.mnav-open{overflow:hidden}
 .price-view-opts{background:linear-gradient(180deg,#F1FAF8,var(--surface-2));
   border:1px solid rgba(14,140,127,.2);border-radius:var(--r-md);padding:16px 18px}
 [data-theme="dark"] .price-view-opts{background:#1B2733;border-color:rgba(14,140,127,.28)}
-.pvo-label{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--heading);
-  margin-bottom:12px}
-.pvo-choices{display:flex;flex-wrap:wrap;gap:10px}
-.pvo-choice{display:flex;align-items:center;gap:10px;flex:1 1 220px;min-width:200px;
-  background:var(--surface-2);border:1px solid var(--line-2);border-radius:12px;
-  padding:11px 14px;text-decoration:none;transition:.15s;color:var(--ink);
-  font-family:var(--font-body);cursor:pointer;text-align:left}
-.pvo-choice:hover{border-color:var(--teal);box-shadow:0 2px 10px rgba(14,140,127,.14)}
-.pvo-choice strong{display:block;font-size:13.5px;color:var(--heading);font-weight:600}
-.pvo-choice small{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:2px}
-.pvo-ic{flex-shrink:0;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;
-  justify-content:center;font-size:16px;background:#EAF6F5;color:var(--teal)}
-.pvo-primary .pvo-ic{background:var(--action);color:#fff}
+.pvo-label{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--heading);
+  margin-bottom:14px}
+.pvo-choices{display:flex;flex-wrap:wrap;gap:14px}
+/* Hieu 2026-07-31: "may nut nay lam noi bat va dep hon" - to hon, bong ro hon, icon dam mau
+   hon tung loai, nhich len + vien sang mau khi hover (van chi 1 nut PRIMARY to xanh dac
+   theo dung ui-mau-sac.md, 2 nut con la card sang vien mau, khong lam ca 3 deu dac). */
+.pvo-choice{display:flex;align-items:center;gap:14px;flex:1 1 240px;min-width:220px;
+  background:var(--surface-2);border:1.5px solid var(--line-2);border-radius:16px;
+  padding:18px 20px;text-decoration:none;transition:.18s cubic-bezier(.2,.8,.3,1);color:var(--ink);
+  font-family:var(--font-body);cursor:pointer;text-align:left;position:relative;
+  box-shadow:0 1px 3px rgba(16,24,40,.05)}
+.pvo-choice:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,24,40,.12)}
+.pvo-choice strong{display:block;font-size:15px;color:var(--heading);font-weight:700}
+.pvo-choice small{display:block;font-size:12px;color:var(--ink-soft);margin-top:3px}
+.pvo-ic{flex-shrink:0;width:46px;height:46px;border-radius:13px;display:flex;align-items:center;
+  justify-content:center;font-size:19px;background:#EAF6F5;color:var(--teal);
+  box-shadow:0 4px 12px rgba(14,140,127,.18);transition:transform .18s}
+.pvo-choice:hover .pvo-ic{transform:scale(1.08) rotate(-4deg)}
+.pvo-choice.pvo-teal{border-color:rgba(14,140,127,.35)}
+.pvo-choice.pvo-teal:hover{border-color:var(--teal)}
+.pvo-choice.pvo-plain{border-color:var(--line-2)}
+.pvo-choice.pvo-plain:hover{border-color:var(--action)}
+.pvo-choice.pvo-plain .pvo-ic{background:var(--surface);color:var(--ink-soft);box-shadow:none}
+/* Nut chinh (Tai PDF) - VIEN mau action + icon xanh dac, day la nut duoc goi y nhat
+   trong 3 nut nhung KHONG to nen dac ca the (tranh pham quy tac "chi 1-2 nut xanh dac/man") */
+.pvo-choice.pvo-primary{border-color:rgba(71,97,255,.35)}
+.pvo-choice.pvo-primary:hover{border-color:var(--action)}
+.pvo-primary .pvo-ic{background:var(--action);color:#fff;box-shadow:0 4px 14px rgba(71,97,255,.35)}
 [data-theme="dark"] .pvo-ic{background:rgba(14,140,127,.18)}
 [data-theme="dark"] .pvo-primary .pvo-ic{background:var(--action);color:#fff}
-@media(max-width:640px){.pvo-choices{flex-direction:column}.pvo-choice{flex:1 1 auto}}
+[data-theme="dark"] .pvo-choice{box-shadow:none}
+@media(max-width:640px){
+  .pvo-choices{flex-direction:column;gap:12px}
+  .pvo-choice{flex:1 1 auto;padding:16px 18px}
+  .pvo-ic{width:42px;height:42px}
+  /* Khoi nay nam ngay dau trang -> luc moi tai, nut Zalo noi (.fab-zalo, right:12px,
+     rong 58px) de nam DE LEN card dau tien (Hieu 2026-07-31: "loi hien thi"). Thu hep
+     ca khoi (margin, khong phai padding) de no khong con vuon toi vung do - Zalo noi
+     tren khoang trong ben canh thay vi de len chu. */
+  .price-view-opts{margin-right:60px}
+}
 
 /* Modal cong chan lead (nhap ten/sdt/email truoc khi nhan link PDF/Sheet) */
 .pvo-modal{position:fixed;inset:0;z-index:200;background:rgba(20,24,43,.55);
@@ -1172,6 +1197,19 @@ tr:has(.row-check:checked) .order-picked{display:inline}
   .price-table-cpt tr.hot td:first-child{border-top:0}
   .price-table-cpt tr:has(.row-check:checked){border-color:var(--action);box-shadow:0 0 0 3px rgba(255,86,0,.08)}
 
+  /* The CON (1 vi tri, sau khi bam "Mo rong vi tri") - PHAI khac ro voi the ME (Hieu
+     2026-07-31: "khi da mo ra thi the me va the con can co thiet ke khac biet") - truoc chi
+     lam khac tren desktop (khoi @media min-width:641px), quen lam tren mobile nen 2 the
+     nhin giong het nhau tren dien thoai. Thu nho + nen nhat hon + thut le vao + vien trai
+     mau teal (dau hieu "thuoc ve" bao phia tren) + khong do bong (the ME moi noi bat). */
+  .price-table-cpt tr.bao-group-cont{
+    background:var(--surface);border-color:var(--line-2);border-left:3px solid var(--teal);
+    border-radius:10px;margin:-4px 0 8px 14px;padding:12px 14px;box-shadow:none}
+  .price-table-cpt tr.bao-group-cont .row-name{font-size:14px !important;font-weight:600;color:var(--ink)}
+  .price-table-cpt tr.bao-group-cont td.cell-price .price-now{font-size:15.5px}
+  .price-table-cpt tr.bao-group-cont .spec-chip{font-size:11px;padding:3px 8px}
+  [data-theme="dark"] .price-table-cpt tr.bao-group-cont{background:#1B2130}
+
   .price-table-cpt td{display:block;padding:0;text-align:left;border-bottom:0}
   .price-table-cpt td:before{display:none !important}
 
@@ -1184,6 +1222,13 @@ tr:has(.row-check:checked) .order-picked{display:inline}
   .price-table-cpt td.cell-price{grid-column:2;grid-row:1;text-align:right;padding:0;align-self:center}
   .price-table-cpt td.cell-price .price-now{font-size:17px}
   .price-table-cpt td.cell-price .price-old{font-size:12px}
+  .price-table-cpt td.cell-price .price-range{font-size:15px;white-space:normal}
+
+  /* Nut "Mo rong vi tri" (dong bao gop nhieu vi tri) - ten bao la block nen nut da tu
+     xuong dong rieng, nhung kich thuoc TO hon moi them cho desktop (Hieu 2026-07-31)
+     rong hon ca cot ten tren man hinh hep -> TRAN ngang de len chu gia canh ben (grid
+     khong tu cat noi dung tran o). Ha nho lai + gioi han rong toi da tren mobile. */
+  .bao-tree-head .bao-group-toggle{margin:6px 0 0;padding:4px 11px 4px 10px;font-size:11.5px;max-width:100%}
 
   .price-table-cpt td.cell-spec{grid-column:1/-1;grid-row:2}
   .spec-chip{background:#F4F6FA;border:0;padding:4px 10px;font-size:12px;margin:0 5px 5px 0}
@@ -2585,4 +2630,126 @@ body.single-post .brand-watermark{display:none}
 }
 @media(min-width:641px) and (max-width:900px){
   .price-table-cpt tbody tr td:first-child,.price-table-cpt tbody tr td:last-child{border-radius:var(--r-md)}
+}
+
+/* ===========================================================================
+   Luoi bang gia "kieu Excel" (price-grid.js) - Hieu 2026-08-01: thay bang
+   <table> day du (2168 <tr>, 4,6MB) bang luoi cuon ao chi ve dong dang xem,
+   giup "xem toan cuc" (cuon muot xuyen suot, sticky header/cot) va nhe may.
+   Mac dinh giao dien SANG (khong tu doi theo OS - dung rule global site).
+   ========================================================================= */
+.price-grid{border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface-2);
+  overflow:hidden;box-shadow:var(--sh-low)}
+.price-grid .price-empty-row{margin:0;padding:22px;text-align:center;color:var(--ink-soft);font-size:14px}
+
+.grid-scroll{position:relative;height:560px;overflow:auto}
+
+.grid-head{display:grid;position:sticky;top:0;z-index:3;
+  grid-template-columns:minmax(200px,2.4fr) 76px 1.2fr;
+  background:var(--surface);border-bottom:1px solid var(--line)}
+.price-grid-goi .grid-head{grid-template-columns:minmax(200px,2.6fr) 1.2fr}
+.grid-head>div{padding:11px 14px;font-size:11px;font-weight:800;color:var(--ink-soft);
+  text-transform:uppercase;letter-spacing:.04em;display:flex;align-items:center;
+  border-right:1px solid var(--line-2)}
+.grid-head>div:last-child{border-right:0}
+
+.viewport{position:relative}
+.rows-window{position:absolute;left:0;right:0;will-change:transform}
+
+.grid-col-name{position:sticky;left:0;z-index:1}
+
+.price-grid .row{display:grid;grid-template-columns:minmax(200px,2.4fr) 76px 1.2fr;
+  border-bottom:1px solid var(--line-2);background:var(--surface-2);align-items:center;
+  transition:background .1s}
+.price-grid-goi .row{grid-template-columns:minmax(200px,2.6fr) 1.2fr}
+.price-grid .row:hover{background:var(--surface)}
+.price-grid .row:hover .grid-col-name{background:var(--surface)}
+.price-grid .row.is-open{background:var(--teal-tint,#EAF7F5)}
+.price-grid .row.is-open .grid-col-name{background:inherit}
+.price-grid .row>div{padding:0 14px;font-size:13px;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap;border-right:1px solid var(--line-2);height:100%;display:flex;align-items:center}
+.price-grid .row>div:last-child{border-right:0}
+
+.r-toggle{display:flex;align-items:center;justify-content:center;flex:none;width:20px;height:20px;
+  border-radius:6px;background:var(--surface);color:var(--ink-soft);cursor:pointer;transition:.15s;margin-right:8px}
+.r-toggle:hover{background:var(--teal-tint,#EAF7F5);color:var(--teal)}
+.r-toggle svg{transition:transform .18s}
+.row.is-open .r-toggle{background:var(--teal-tint,#EAF7F5);color:var(--teal)}
+.row.is-open .r-toggle svg{transform:rotate(90deg)}
+
+.r-name{font-weight:700;color:var(--heading)}
+.r-logo{width:22px;height:22px;border-radius:7px;flex:none;margin-right:8px;object-fit:cover}
+.r-logo-fb{display:flex;align-items:center;justify-content:center;color:#fff;font-size:10.5px;font-weight:800}
+.r-name-txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.r-count{font-size:10px;font-weight:700;color:var(--ink-soft);background:var(--surface);
+  padding:1px 7px;border-radius:999px;margin-left:8px;flex:none}
+.r-hot{font-size:10px;font-weight:700;color:#B7791F;background:#FCF3E0;padding:1px 7px;
+  border-radius:999px;margin-left:6px;flex:none}
+[data-theme="dark"] .r-hot{background:#332A16;color:#E0A94B}
+
+.r-dr{justify-content:center}
+.dr-chip{display:inline-flex;align-items:center;justify-content:center;min-width:32px;padding:2px 7px;
+  border-radius:7px;font-size:11px;font-weight:800;color:#fff}
+
+.r-price{font-weight:800;font-family:var(--font-body);font-variant-numeric:tabular-nums;
+  font-size:12.8px;color:var(--heading);gap:8px;justify-content:space-between}
+.r-price .sep{color:var(--ink-soft);font-weight:500;margin:0 3px}
+
+.grid-pick{flex:none;width:26px;height:26px;border-radius:7px;border:1px solid var(--line);
+  background:var(--surface-2);color:var(--teal);cursor:pointer;display:flex;align-items:center;
+  justify-content:center;font-size:15px;font-weight:800;line-height:1;padding:0}
+.grid-pick .pick-on{display:none}
+.grid-pick:hover{background:var(--teal-tint,#EAF7F5);border-color:var(--teal)}
+.grid-pick.is-picked{background:var(--teal);border-color:var(--teal);color:#fff}
+.grid-pick.is-picked .pick-add{display:none}
+.grid-pick.is-picked .pick-on{display:block}
+
+.row-loading{grid-template-columns:1fr !important;color:var(--ink-soft);font-size:12.5px;
+  font-style:italic;justify-content:center}
+.row-loading>div{justify-content:center;border-right:0}
+
+/* ---- panel chi tiet (mo rong 1 bao/site) - cao co dinh, cuon rieng ---- */
+.grid-detail-wrap{border-bottom:1px solid var(--line-2);background:var(--surface)}
+.grid-detail{height:100%;overflow-y:auto;padding:14px 16px 14px 46px}
+
+.gd-intro{margin-bottom:12px;padding-bottom:12px;border-bottom:1px dashed var(--line-2)}
+.gd-intro ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.gd-intro li{display:flex;gap:8px;font-size:12.5px;line-height:1.5}
+.gd-intro .intro-k{flex:none;width:150px;color:var(--ink-soft);font-weight:600}
+.gd-intro .intro-v{color:var(--ink)}
+
+.gd-item{padding:12px 0;border-bottom:1px solid var(--line-2)}
+.gd-item:last-child{border-bottom:0;padding-bottom:0}
+.gd-item-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+.gd-item-name{font-weight:700;color:var(--heading);font-size:13.5px}
+.gd-specs{display:flex;flex-wrap:wrap;gap:6px}
+.gd-item .spec-chip{font-size:11.5px;background:var(--surface-2);border:1px solid var(--line-2);
+  color:var(--ink-soft);padding:3px 9px;border-radius:7px}
+.gd-item .spec-empty{font-size:12px;color:var(--ink-soft);font-style:italic}
+
+.gd-pkg{margin:8px 0}
+.gd-pkg ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.gd-pkg li{display:flex;gap:8px;font-size:12.5px}
+.gd-pkg .pkg-k{flex:none;width:150px;color:var(--ink-soft);font-weight:600}
+
+.gd-item .tier-table{width:100%;border-collapse:collapse;margin:8px 0;font-size:12px}
+.gd-item .tier-table th,.gd-item .tier-table td{border:1px solid var(--line-2);padding:5px 8px;text-align:center}
+.gd-item .tier-table th{background:var(--surface-2);font-weight:700;color:var(--ink-soft)}
+
+.gd-item-bot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}
+.gd-price{font-weight:800;font-family:var(--font-body);color:var(--heading);font-size:14px}
+.gd-item-bot .grid-pick{width:auto;height:auto;padding:8px 14px;border-radius:8px;font-size:12.5px;font-weight:700}
+.gd-item-bot .grid-pick .pick-add,.gd-item-bot .grid-pick .pick-on{display:inline}
+.gd-item-bot .grid-pick.is-picked .pick-add{display:none}
+.gd-item-bot .grid-pick:not(.is-picked) .pick-on{display:none}
+.gd-err{color:#B3261E;font-size:12.5px;margin:0}
+
+/* ---- mobile: an cot DR, thu gon padding, cot ten dinh trai khi keo ngang ---- */
+@media(max-width:640px){
+  .grid-scroll{height:480px}
+  .grid-head,.price-grid .row{grid-template-columns:minmax(150px,1.9fr) 52px 1fr}
+  .price-grid-goi .grid-head,.price-grid-goi .row{grid-template-columns:minmax(150px,2.2fr) 1fr}
+  .r-price{font-size:11.8px}
+  .grid-detail{padding:12px 12px 12px 34px}
+  .gd-intro .intro-k,.gd-pkg .pkg-k{width:100px}
 }

@@ -65,6 +65,19 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			$ph_search = $is_goi ? 'Tìm theo tên gói...' : 'Tìm theo tên báo/site...';
 		?>
 		<div class="tab-panel<?php echo $first ? ' active' : ''; ?>" data-panel="<?php echo esc_attr( $slug ); ?>">
+			<?php
+			/* Tab KHONG phai mac dinh -> dung khoi noi dung nang (hang tram dong gia,
+			   logo, checkbox...) vao 1 <template> "tro" (khong render/khong tai anh, JS
+			   chua dung toi) THAY VI de thang trong DOM nhu truoc - trang bang-gia truoc
+			   day render san CA 7 tab (2168 <tr>, 57.000 node DOM, 1390 <img> logo) dan
+			   toi trang nang/giat lag tren dien thoai (Hieu 2026-07-31: "trang dang bi
+			   nang qua, hay do lag"). Tab dau tien (mac dinh mo) van render binh thuong
+			   de co noi dung ngay khi tai trang (khong phu thuoc JS). Cac tab con lai chi
+			   "hydrate" (nhet noi dung that vao DOM + goi dgcInitPricePanel()) dung 1 lan,
+			   luc nguoi dung bam mo tab do lan dau (xem script cuoi file). */
+			if ( ! $first ) : ?>
+			<template data-lazy-panel="<?php echo esc_attr( $slug ); ?>">
+			<?php endif; ?>
 			<?php /* data-limit: hien 12 dong dau, cuon toi cuoi bang tu nap them (cuon vo han - main.js). */ ?>
 			<div class="price-layout" data-price-panel data-limit="12">
 			<?php
@@ -90,37 +103,40 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 			<p class="vitri-hint"><span class="vitri-hint-ic">V</span> Bấm chữ "V" cạnh vị trí đăng để xem ảnh chụp thực tế trên báo/site đó.</p>
 			<?php endif; ?>
 
-			<div class="price-table-wrap">
-				<table class="price-table price-table-cpt">
-					<thead>
-						<tr>
-							<th class="col-site"><?php echo esc_html( $col_name ); ?></th>
-							<th class="col-spec"><?php echo $is_goi ? 'Quy mô gói' : 'Quy cách đăng'; ?></th>
-							<th class="col-price">Giá</th>
-							<th class="col-action"></th>
-						</tr>
-					</thead>
-					<tbody>
-					<?php if ( empty( $items ) ) : ?>
-						<tr><td colspan="4">Đang cập nhật dữ liệu.</td></tr>
-					<?php else : ?>
-						<?php echo dgc_gia_rows_html( $items, array(
-							'nhom_slug' => $slug,
-							'ctx'       => $label,
-							'col_name'  => $col_name,
-						) ); ?>
-					<?php endif; ?>
-					</tbody>
-				</table>
+			<?php
+			/* Luoi "kieu Excel" (Hieu 2026-08-01): thay bang <table> day du 200-300 dong/tab
+			   (nguon chinh khien /bang-gia/ nang 4,6MB, xem LOG.md) bang 1 goi JSON GON (chi
+			   ten/DR/khoang gia/facet loc - khong logo/khong markup lap) + JS chi ve ~30 dong
+			   dang trong khung nhin luc cuon (assets/js/price-grid.js). Bam mo rong 1 bao moi
+			   goi AJAX lay chi tiet (quy cach/gia/nut chon) - tai su dung dung ham PHP cu
+			   (inc/price-grid.php), khong mat tinh nang (bang gia nhieu bac, "goi gom gi",
+			   anh vi tri, gioi thieu bao...). */
+			$grid_rows = empty( $items ) ? array() : dgc_gia_grid_rows( $items, array(
+				'nhom_slug' => $slug,
+				'ctx'       => $label,
+				'col_name'  => $col_name,
+			) );
+			?>
+			<div class="price-grid" data-price-grid data-nhom="<?php echo esc_attr( $slug ); ?>" data-ctx="<?php echo esc_attr( $label ); ?>" data-col-name="<?php echo esc_attr( $col_name ); ?>" data-is-goi="<?php echo $is_goi ? '1' : '0'; ?>" data-don-vi="<?php echo esc_attr( dgc_nhom_don_vi( $slug ) ); ?>">
+				<?php if ( empty( $items ) ) : ?><p class="price-empty-row">Đang cập nhật dữ liệu.</p><?php endif; ?>
 			</div>
+			<script type="application/json" class="price-grid-data"><?php echo wp_json_encode( $grid_rows, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP ); ?></script>
 
-			<?php if ( count( $items ) > 12 ) : ?>
-			<p class="center" style="margin-top:18px">
-				<button type="button" class="btn btn-ghost btn-sm price-more-btn">Xem thêm mục</button>
-			</p>
+			<?php /* Du phong cho trinh duyet tat JS / crawler khong chay JS - danh sach thuan text, nhe. */ ?>
+			<noscript>
+				<table class="price-table-noscript">
+					<?php foreach ( $items as $ns_it ) :
+						$ns_vt = trim( (string) ( $ns_it->meta['vi_tri'] ?? '' ) );
+					?>
+					<tr><td><?php echo esc_html( $ns_it->post_title ); ?><?php if ( $ns_vt !== '' ) : ?> - <?php echo esc_html( $ns_vt ); ?><?php endif; ?></td><td><?php echo esc_html( dgc_format_price( $ns_it->meta['gia_km'] ?? '' ) ); ?></td></tr>
+					<?php endforeach; ?>
+				</table>
+			</noscript>
+			</div>
+			</div>
+			<?php if ( ! $first ) : ?>
+			</template>
 			<?php endif; ?>
-			</div>
-			</div>
 		</div>
 		<?php $first = false; endforeach; ?>
 
@@ -171,11 +187,31 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 	/* ---- Tabs ---- */
 	var tabBtns   = document.querySelectorAll('.tab-btn');
 	var tabPanels = document.querySelectorAll('.tab-panel');
+
+	/* Tab chua mo lan nao -> noi dung nang (hang tram dong gia) dang "ngu" trong 1
+	   <template> (xem page-bang-gia.php) de khong lam trang nang luc tai. Lan dau
+	   bam vao tab do -> nhet noi dung that vao DOM roi goi dgcInitPricePanel()
+	   (ham dung chung trong main.js) de bat loc/sap xep/tick chon cho tab do. */
+	function dgcHydratePanel(panel) {
+		var tpl = panel.querySelector('template[data-lazy-panel]');
+		if (!tpl) return; // da hydrate roi, hoac la tab dau (khong dung template)
+		panel.appendChild(document.importNode(tpl.content, true));
+		tpl.remove();
+		var pp = panel.querySelector('[data-price-panel]');
+		if (pp && window.dgcInitPricePanel) window.dgcInitPricePanel(pp);
+		var pg = panel.querySelector('[data-price-grid]');
+		if (pg && window.dgcInitPriceGrid) window.dgcInitPriceGrid(pg);
+	}
+
 	tabBtns.forEach(function(btn){
 		btn.addEventListener('click', function(){
 			var target = btn.getAttribute('data-tab');
 			tabBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
-			tabPanels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel') === target); });
+			tabPanels.forEach(function(p){
+				var active = p.getAttribute('data-panel') === target;
+				p.classList.toggle('active', active);
+				if (active) dgcHydratePanel(p);
+			});
 		});
 	});
 
