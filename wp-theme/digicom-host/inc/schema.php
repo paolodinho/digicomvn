@@ -1063,6 +1063,12 @@ function dgc_faqs_box_html( $post ) {
 	echo '<p class="description">Mỗi dòng một câu: <code>Câu hỏi | Câu trả lời</code>. Nội dung này được đưa vào schema FAQPage của trang.<br>
 	<strong>Lưu ý:</strong> chỉ ghi câu hỏi/câu trả lời <strong>thực sự có hiển thị trong bài</strong> - Google yêu cầu dữ liệu có cấu trúc phải khớp nội dung người đọc nhìn thấy. Để trống = bài không có FAQPage.</p>';
 	echo '<textarea name="dgc_faqs_raw" rows="8" style="width:100%" class="large-text code">' . esc_textarea( implode( "\n", $lines ) ) . '</textarea>';
+
+	echo '<p style="margin-top:18px"><strong>Thực thể / từ khoá mục tiêu (SEO)</strong></p>';
+	$ents = get_post_meta( $post->ID, 'dgc_entities', true );
+	if ( ! is_array( $ents ) ) $ents = array();
+	echo '<p class="description">Mỗi dòng 1 thực thể/từ khoá quan trọng của bài (lấy từ bước research SERP/entity lúc viết bài). Theme tự quét nội dung xem đã nhắc tới chưa và hiển thị công khai ngay dưới mục "Sơ đồ bài viết" trên trang. Để trống = ẩn mục này.</p>';
+	echo '<textarea name="dgc_entities_raw" rows="6" style="width:100%" class="large-text code">' . esc_textarea( implode( "\n", $ents ) ) . '</textarea>';
 }
 
 add_action( 'save_post', function ( $post_id ) {
@@ -1082,6 +1088,16 @@ add_action( 'save_post', function ( $post_id ) {
 	}
 	if ( $out ) update_post_meta( $post_id, 'dgc_faqs', $out );
 	else delete_post_meta( $post_id, 'dgc_faqs' );
+
+	$ent_raw = isset( $_POST['dgc_entities_raw'] ) ? (string) wp_unslash( $_POST['dgc_entities_raw'] ) : '';
+	$ents    = array();
+	foreach ( preg_split( '/\r\n|\r|\n/', $ent_raw ) as $line ) {
+		$line = trim( $line );
+		if ( '' === $line ) continue;
+		$ents[] = sanitize_text_field( $line );
+	}
+	if ( $ents ) update_post_meta( $post_id, 'dgc_entities', $ents );
+	else delete_post_meta( $post_id, 'dgc_entities' );
 
 	do_action( 'dgc_seo_box_save', $post_id );
 } );

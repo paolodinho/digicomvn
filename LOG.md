@@ -3482,3 +3482,394 @@ thấp nhất chỉ là "Dưới 5 triệu", không trả lời được câu n�
   2.4.4 -> 2.5.6, enqueue script mới + AJAX handler), `page-bang-gia.php` (thay bảng bằng
   lưới), `assets/js/main.js` (registry giỏ hàng), `assets/css/main.css` (+~2,9KB CSS lưới).
   Backup file gốc: `~/Claude-Workspace/_backups/routines/2026-08-01/price-grid-rebuild/`.
+
+## 2026-08-02 - Thêm sơ đồ bài viết (mindmap) trên mọi bài blog
+- Yêu cầu: mỗi bài viết cần 1 sơ đồ trực quan (mindmap) cho thấy ngay kết cấu/bố cục bài, bấm
+  vào từng phần nhảy tới đoạn đó đọc chi tiết - tương tự TOC nhưng trực quan hơn dạng cây.
+- Đã thêm khối "Sơ đồ bài viết" (`inc/toc.php` - `dgc_toc_build_tree()`, `dgc_toc_render_mindmap()`)
+  hiện SONG SONG với hộp "Mục lục" list-text cũ (giữ nguyên, không thay thế theo yêu cầu Hiếu).
+  Dạng cây phân nhánh: gốc = tiêu đề bài, nhánh = từng H2, nhánh con = H3 thuộc H2 đó. Dùng lại
+  đúng id/slug đã gắn cho TOC nên bấm vào nhảy chính xác tới đoạn; tái dùng `data-toc-link` nên
+  scroll-spy + active-state trong main.js áp dụng luôn, không cần thêm JS riêng.
+- CSS mới (`assets/css/main.css`): `.post-mindmap`, `.mm-root`, `.mm-tree`, `.mm-node` - style
+  chấm tròn + đường nối dọc (không dùng đường chéo góc pixel-perfect vì tiêu đề dài dễ xuống 2
+  dòng làm vỡ đường nối - chọn kiểu dot+line bền hơn khi wrap). Có dark mode.
+- Đã deploy lên live (digicomvn.com) qua SSH, bump `DGC_VER` 2.5.6 -> 2.5.7, purge cache.
+  Verify qua curl trên bài `guest-post-forbes`: 9 nhánh H2 + 7 nhánh con H3 khớp đúng 100% với
+  cấu trúc heading thật của bài (2 H3 dưới "3 Con Đường Thật", 5 H3 dưới "Câu Hỏi Thường Gặp").
+- Backup file gốc trước khi ghi đè: `~/Claude-Workspace/_backups/routines/2026-08-02/post-mindmap/`.
+- File sửa: `wp-theme/digicom-host/inc/toc.php`, `functions.php`, `assets/css/main.css`.
+
+## 2026-08-02 - Thêm khối "Thực thể / từ khoá đã quét trong bài" (dưới mindmap)
+- Yêu cầu tiếp: dưới mindmap cần thêm phần liệt kê thực thể trong bài, để check bài đã nhắc
+  thực thể nào rồi và đã quét hết bộ từ khoá chưa. Hiếu chốt: (1) danh sách thực thể/từ khoá
+  mục tiêu đến từ bước RESEARCH khi viết/audit bài (không phải PHP tự bịa bằng regex), (2)
+  hiện công khai trên trang (không chỉ riêng WP Admin).
+- Thêm field mới **"Thực thể / từ khoá mục tiêu"** trong meta box "SEO & Schema" (cạnh ô FAQ đã
+  có) - `inc/schema.php`. Mỗi dòng 1 thực thể, điền lúc research/viết/audit bài (nội dung công
+  việc content-pipeline, KHÔNG phải Claude tự đoán khi hiển thị). Meta `dgc_entities`.
+- Theme tự động hoá phần KIỂM TRA: `dgc_entity_render()` (`inc/toc.php`) đếm số lần mỗi thực thể
+  xuất hiện thật trong nội dung bài (`preg_match_all` case-insensitive, an toàn dấu tiếng Việt),
+  hiện dạng chip ✓ (kèm số lần) hoặc ✕ "chưa nhắc". Trống -> ẩn cả khối (đúng pattern FAQ).
+- Đặt ngay dưới khối mindmap, cùng khối cha `.post-toc` insert point trong `dgc_toc_process`.
+- Đã deploy + test end-to-end trên bài `guest-post-forbes` (post 4763): gán tạm 7 thực thể mẫu
+  (6 có thật trong bài, 1 cố tình sai để test nhánh "chưa nhắc") -> hiện đúng 6 ✓ (đếm đúng số
+  lần: 14/12/8/1/7/5) + 1 ✕. Đã xoá dữ liệu test sau khi verify (Hiếu/content-pipeline sẽ điền
+  thật cho từng bài khi viết/audit).
+- File sửa: `inc/schema.php`, `inc/toc.php`, `assets/css/main.css` (chip-list `.post-entities`).
+  DGC_VER 2.5.7 -> 2.5.8. Backup: `~/Claude-Workspace/_backups/routines/2026-08-02/post-entities/`.
+- Việc còn lại: các bài cũ chưa có field này -> khối không hiện (không lỗi, chỉ ẩn). Muốn bung
+  cho toàn site cần điền `dgc_entities` từng bài (thủ công hoặc tích hợp vào content-pipeline
+  skill làm bước cuối tự sinh field này khi viết bài mới).
+
+## 2026-08-02 - Sửa lại mindmap: dạng flowchart thật (hub + node box + đường nối)
+- Phản hồi Hiếu: bản đầu (chấm tròn + link trần, xếp dọc) "không giống mindmap thật" và
+  "trùng lặp với Mục lục" (2 khối liền nhau cùng liệt kê y hệt 1 danh sách).
+- Thiết kế lại `dgc_toc_render_mindmap()` (`inc/toc.php`) + CSS `.mm2*` (`main.css`): tiêu đề
+  bài thành 1 HUB box màu teal nổi bật ở trên, đường thân cây (trunk) kẻ dọc thật xuống các
+  NHÁNH dạng THẺ có viền/bóng (không phải link trần), nối bằng đường ngang (stub) - đúng kiểu
+  flowchart/sơ đồ tổ chức. Nhánh con (H3) thụt vào, có trunk+stub riêng nhỏ hơn.
+- Tránh cuộn ngang trên mobile (đúng quy ước site - xem `content-diagram-explain.md`): dùng
+  cây dọc (top-down) responsive tự nhiên, không phải cây ngang cần cuộn.
+- Đã deploy live, verify qua browser thật (không chỉ curl) ở cả mobile-width (900px) và desktop
+  (1600px, có sidebar Mục lục) - nhánh/nhánh con hiện đúng, đường nối đúng, khác biệt rõ với
+  hộp Mục lục list-chữ phía trên. DGC_VER 2.5.8 -> 2.5.9.
+- Sự cố công cụ (không phải lỗi site): Browser pane render blank khi cuộn trang bằng
+  scroll/JS scrollTo trên trang có content cao ~12.700px - né bằng cách phóng chiều cao viewport
+  (resize_window) để phần cần xem lọt trong màn hình ban đầu (scrollY=0), không cần cuộn.
+- File sửa: `inc/toc.php`, `main.css`, `functions.php`.
+  Backup: `~/Claude-Workspace/_backups/routines/2026-08-02/post-mindmap-v2/`.
+
+## 2026-08-02 - Mindmap v3: bám theo mẫu loadevialet.vn (hub + card ghim lệch)
+- Hiếu đưa mẫu tham chiếu: https://loadevialet.vn/product-category/devialet-phantom/ (dự án
+  khác của Hiếu, có sẵn mindmap ".loade-mindmap"). Lấy đúng HTML/CSS gốc qua browser (không
+  đoán), đổi màu vàng/navy của brand đó sang teal/heading Digicom, giữ nguyên cấu trúc.
+- Thiết kế mới (`dgc_toc_render_mindmap()` + CSS `.dgc-mm*`):
+  - 1 hub tối màu ở giữa (tiêu đề bài) có gạch chân teal nhỏ nhô xuống.
+  - Các nhánh là THẺ rời xếp lưới (flex-wrap), lệch nghiêng nhẹ xen kẽ (Â±0.6deg) kiểu ghim
+    note, mỗi thẻ có 1 chấm nối ngắn phía trên trỏ ngầm về hub - không cần vẽ 1 đường trunk
+    liền mạch (né được lỗi lệch dòng khi bọc lưới nhiều hàng của bản v2).
+  - Mỗi thẻ có tên mục (H2) + **1 dòng mô tả ngắn tự trích trong bài** (hàm mới
+    `dgc_toc_snippet_after()`, lấy ~68 ký tự đầu đoạn văn ngay sau heading đó - KHÔNG bịa).
+    Đây là điểm khác biệt thật với hộp Mục lục (chỉ có tên, không có mô tả) - giải quyết đúng
+    phàn nàn "trùng lặp" của Hiếu.
+  - CHỈ hiện cấp H2 (bỏ lồng H3) - gọn, đúng vai "tổng quan", Mục lục vẫn giữ vai "chi tiết đầy đủ".
+- Bug phát hiện lúc tự QA dark mode: hộp hub dùng `var(--heading)` làm nền - biến này ở dark
+  mode là màu SÁNG (dùng cho chữ) nên hộp hoá sáng trong khi chữ vẫn trắng cứng -> chữ biến
+  mất. Sửa: đổi sang `var(--navy)` (biến luôn tối ở cả 2 chế độ, dùng chung với header/footer
+  tối của site) - đã verify lại ảnh chụp dark mode, chữ rõ.
+- Đã QA bằng browser thật ở 3 mốc: desktop 1000px, mobile 390px (lưới 2 cột, không cuộn
+  ngang), dark mode - đều đạt trước khi báo.
+- DGC_VER 2.5.9 -> 2.6.1. File sửa: `inc/toc.php`, `main.css`, `functions.php`.
+  Backup: `~/Claude-Workspace/_backups/routines/2026-08-02/post-mindmap-v3/`.
+
+## 2026-08-02 - Bổ sung 7 ảnh minh hoạ cho bài Guest Post Forbes (post 4763)
+- Bài chỉ có 2/9 mục H2 có ảnh - bổ sung đủ 7 mục còn thiếu, đúng style Storyset amico đã
+  dùng trong bài (đồng bộ với 2 ảnh cũ), màu chủ đạo đổi từ tím mặc định (#BA68C8) sang
+  teal brand (#0E8C7F) bằng cách sửa trực tiếp mã màu trong SVG gốc (native color picker
+  của storyset.com là input màu hệ điều hành, không script được qua trình duyệt tự động -
+  dùng cách khác đạt cùng kết quả: tải SVG gốc, sed đổi hex, render lại bằng rsvg-convert,
+  nén webp bằng cwebp, dưới 74KB/ảnh).
+- 7 ảnh mới (attachment ID, mục H2, nguồn Storyset): 5483 "Có thật sự tồn tại không"
+  (shrug/amico), 5484 "Bảng chi phí thực tế" (price/amico), 5485 "7 dấu hiệu lừa đảo"
+  (warning/amico), 5486 "Forbes.com khác Forbes Việt Nam" (methodology-comparison/amico),
+  5487 "DigicomVN có bán guest post Forbes" (agreement/amico), 5488 "Câu hỏi thường gặp"
+  (faqs/amico), 5489 "Tổng kết" (checklist/amico). Đã cập nhật khối credit Storyset cuối bài
+  đủ cả 9 nguồn.
+- QA: 9/9 H2 đều có ảnh, page live 140KB, ảnh 37-74KB/cái, verify màu teal đúng trên live.
+- Backup nội dung gốc: `~/Claude-Workspace/_backups/routines/2026-08-02/gpf-images/content-before.html`.
+
+## 2026-08-02 - QA + sửa lỗi ảnh vừa thêm (bài Guest Post Forbes)
+- Agent nền vừa thêm 7 ảnh Storyset cho 7/9 mục còn thiếu ảnh (báo cáo trước đó). Tự QA lại
+  bằng mắt (tải từng ảnh về xem trực tiếp, không tin báo cáo agent) - phát hiện 2/7 ảnh SAI
+  CHỦ ĐỀ nghiêm trọng: mục "Bảng Chi Phí Thực Tế" bị gắn ảnh quảng cáo giảm giá giày online
+  ("50% OFF", theo đúng nghĩa đen shopping/ecommerce - Storyset trả nhầm ảnh "price" thành ảnh
+  minh hoạ mua sắm thay vì minh hoạ chi phí/ngân sách); mục "Forbes.com khác Forbes.vn" bị gắn
+  ảnh "methodology-comparison" là sơ đồ Agile/Scrum/Kanban/Waterfall (quản lý dự án phần mềm),
+  có chữ tiếng Anh chuyên ngành không liên quan gì tới so sánh 2 phiên bản Forbes - vi phạm cả
+  2 điều của `image-sourcing.md` (sai chủ đề + có chữ nước ngoài không phải địa danh xác thực).
+- Đã tự tay tìm lại đúng ảnh: mục Chi phí -> Storyset "Finance" (amico, người + biểu đồ tăng
+  trưởng + tiền xu), mục Forbes.com/vn -> Storyset "World" (amico, quả địa cầu). Tải SVG gốc,
+  đổi màu vàng mặc định (#FFC727) sang teal brand (#0E8C7F) bằng sed trực tiếp trên SVG (bấm
+  "Change color" trên storyset.com không tự động hoá được vì mở color-picker hệ điều hành),
+  render lại PNG/WebP, upload thay thế (attachment 5491, 5492 - xoá bỏ 2 ảnh sai 5484, 5486
+  khỏi nội dung, không xoá file media để có thể rollback).
+- Hiếu phản hồi thêm: link Storyset chỉ nên dẫn 1 LẦN/bài (trước đó có tới 9 link riêng từng
+  ảnh + 1 khối credit liệt kê lại 9 link nữa = 18 link Storyset/bài, quá nhiều). Đã sửa: bỏ
+  hyperlink ở TẤT CẢ 9 figcaption riêng lẻ (giữ chữ "Minh hoạ: Storyset" dạng text thường,
+  không link), gộp credit về ĐÚNG 1 dòng cuối bài "Ảnh minh hoạ trong bài: [Storyset](storyset.com)."
+- Kết quả cuối: 9/9 mục H2 có ảnh đúng chủ đề, đúng màu brand, chỉ 1 link storyset.com/bài
+  (verify bằng curl: `grep -c storyset.com` = 1 trên live).
+- Backup nội dung trước khi sửa: `~/Claude-Workspace/_backups/routines/2026-08-02/gpf-images-fix/`.
+- Bài học: KHÔNG tin báo cáo "đã QA" của agent nền khi việc liên quan chọn ảnh minh hoạ theo
+  chủ đề - phải tự tải ảnh về xem bằng mắt, vì tên slug ảnh (vd "price", "methodology-comparison")
+  không đảm bảo đúng ngữ cảnh nội dung, agent chọn theo tên khớp từ khoá chứ không hiểu ngữ cảnh.
+
+## 2026-08-02 - Bổ sung ảnh minh hoạ đợt 1/nhiều - cụm bài dịch vụ (10 bài)
+
+Áp dụng `content-visual-coverage.md` cho các bài blog cũ (khảo sát toàn site: 145 bài
+published, 108 bài 0 ảnh + 5 bài 1 ảnh = 113 bài cần làm). Đợt 1 giao agent nền xử lý 10 bài
+cụm dịch vụ (Mua Textlink, Dịch vụ Backlink, Guest Post, PR - ID 1258/1259/1275-1282).
+
+- Mỗi bài: 2 ảnh Storyset (Rafiki style), tự đổi màu vàng gốc -> teal #0E8C7F, upload qua
+  wp media import, chèn sau đoạn mở H2 quan trọng nhất.
+- Rút kinh nghiệm lỗi bài Forbes: agent đã tự xem ảnh thật trước khi chọn (không chỉ tin tên
+  tag search) - loại bỏ ~10 ảnh ứng viên có chữ tiếng Anh/sai chủ đề trước khi chốt.
+- Tôi tự tải lại toàn bộ 20 ảnh về xem bằng mắt (không tin báo cáo agent) - không phát hiện
+  ảnh nào sai chủ đề nghiêm trọng (không có quảng cáo/sơ đồ tiếng Anh lạc đề như lần trước).
+  2 ảnh hơi chung chung (1259_1 "ăn mừng trên đống tiền" cho mục giá tham khảo, 1277_2 "nhà
+  văn viết lãng mạn" cho mục cấu trúc bài PR) nhưng không sai chủ đề, chấp nhận được.
+- Credit Storyset: đúng 1 link/bài ở cuối bài (đã verify qua curl, không lặp lại lỗi 18
+  link/bài của batch trước).
+- Backup nội dung gốc: `~/backups/img-batch1/<id>-before.html` trên host.
+- Attachment ID: 5494-5513 (2 ảnh/bài x 10 bài).
+- CHƯA làm: 2 bài (1277 có 12 H2, 1281 có 6 H2) mới phủ 2 H2/bài, chưa đạt "mỗi H2 1 ảnh"
+  đầy đủ - để đợt sau nếu Hiếu muốn phủ hết.
+- Còn lại 103 bài (108 - 5 nhóm dịch-vu đã xong... thực ra 113 - 10 = 103 bài) chưa làm,
+  làm tiếp theo đợt ~10 bài/lần.
+
+## 2026-08-02 - Bổ sung ảnh minh hoạ đợt 2/nhiều - cụm bài backlink kỹ thuật (10 bài)
+
+Tiếp tục áp dụng `content-visual-coverage.md`. Đợt 2: 10 bài cụm backlink kỹ thuật (ID 223,
+224, 225, 228, 231-235, 2577) - phần mềm đi backlink, kiểm tra backlink, diễn đàn, fanpage,
+dofollow/nofollow, backlink gov/edu, backlink chất lượng, bài pillar "Backlink là gì", booking
+báo Nhân Dân.
+
+- 17 ảnh Storyset (bài pillar 235 được 3 ảnh vì là bài trụ cột dài nhất).
+- Agent lấy ảnh qua Algolia search nội bộ của Storyset (API key lộ trong JS site storyset.com),
+  quy đổi từ khoá tiếng Việt (kiểm tra, sai lầm, chiến thuật...) sang từ khoá tiếng Anh gần
+  nghĩa (audit, lost, chess...) vì Storyset không có tag "backlink" trực tiếp.
+- Đã loại 8 ảnh ứng viên trước khi chốt vì dính chữ tiếng Anh rõ (AGILE/WATERFALL/SCRUM,
+  PRICING PLANS, WARNING, "Your Income $$$$"...).
+- Tôi tự tải lại 17/17 ảnh xem bằng mắt - không phát hiện sai chủ đề. 3 điểm nhỏ chấp nhận
+  được: chữ "TIME" trên đồng hồ cờ vua, chữ "LAW" trên gáy sách (rất khớp chủ đề pháp lý bài
+  gov/edu), số liệu "1K/5K/10K" + logo Facebook/Instagram/Twitter trên ảnh tăng trưởng social
+  (số/logo không phải văn xuôi tiếng Anh, không vi phạm rule).
+- Phát hiện: 1 số attachment ID dùng lại cho nhiều bài khác nhau (vd "audit" dùng cho cả bài
+  224 và 235, "lost"/"chess"/"choice" dùng lại 2 lần) - do các bài cùng cụm backlink có H2 ý
+  nghĩa gần giống nhau, chấp nhận được, không phải lỗi.
+- Verify trên live (curl trực tiếp từng bài): đủ số ảnh + đúng 1 link storyset.com/bài, kể cả
+  bài book-bao-nhan-dan (script loop ban đầu báo nhầm 0 link do lỗi ký tự trong for-loop, đã
+  kiểm tra riêng và xác nhận đúng).
+- Backup: `~/backups/img-batch2/<id>-before.html` trên host.
+- Attachment ID: 5524-5540.
+- Còn lại: 93 bài (113 - 20 đã làm 2 đợt) chưa có ảnh, tiếp tục các đợt sau.
+
+## 2026-08-02 - Fix lỗi mindmap nuốt widget quiz (bài "Mô Hình RACE Trong PR")
+
+Hiếu báo lỗi qua ảnh chụp: 1 nhánh trong sơ đồ mindmap bị kéo dài bất thường, nhét nguyên
+cả widget quiz "Kiểm tra nhanh off-page" vào trong khung nhánh nhỏ, vỡ layout.
+
+**Nguyên nhân:** bài 4737 (Mô Hình RACE Trong PR) có shortcode `[dgc_offpage_quiz]` nằm
+NGAY ĐẦU mục H2 "Câu Hỏi Thường Gặp". Hàm trích đoạn tóm tắt cho mindmap (`dgc_toc_snippet_after`
+trong `inc/toc.php`) chạy TRƯỚC khi WordPress bung shortcode (ưu tiên 9, sớm hơn `do_shortcode`
+mặc định ưu tiên 11) nên "chộp" nguyên văn bản `[dgc_offpage_quiz]` làm đoạn trích. Đoạn trích
+này được chèn vào bên trong khung nhánh mindmap - đến lượt `do_shortcode` chạy (ưu tiên 11), nó
+quét lại TOÀN BỘ nội dung trang (đã bao gồm cả mindmap mới chèn) và bung shortcode ngay tại đó,
+nhét cả quiz 6 câu vào 1 khung nhánh nhỏ.
+
+**Đã kiểm tra toàn site:** quét 128/129 bài có dùng 1 trong 3 shortcode widget
+(`dgc_offpage_quiz`, `dgc_budget_calc`, `dgc_agency_check`) xem có bài nào khác dính cùng lỗi
+(shortcode nằm ngay đầu 1 mục H2/H3) - **chỉ duy nhất bài 4737 dính**, các bài khác đặt
+shortcode ở giữa/cuối đoạn văn nên không bị mindmap "chộp" nhầm.
+
+**Fix:** `inc/toc.php` hàm `dgc_toc_snippet_after()` - thêm bước loại bỏ cú pháp shortcode
+`[...]` khỏi đoạn trích trước khi trả về, để nó không còn tồn tại trong content lúc
+`do_shortcode` quét lại. Deploy qua SSH (`php -l` pass), `wp cache flush` + `litespeed-purge`.
+Verify curl live: nhánh FAQ trong mindmap giờ chỉ còn tiêu đề, quiz widget nằm đúng vị trí gốc
+trong bài (dòng 591 raw HTML), không còn kẹt trong mindmap nữa.
+
+Backup: `~/Claude-Workspace/_backups/routines/2026-08-02/toc-shortcode-fix/toc.php.before`.
+
+## 2026-08-02 - Fix lỗi nhân đôi nội dung bài (comment Gutenberg gõ sai) + tiếp đợt ảnh 3
+
+**Đợt 3 (10 bài):** bổ sung ảnh cho 5 bài chỉ số (Citation Flow, Domain Authority, Domain
+Rating, Page Authority, Trust Flow - mỗi bài từ 1 lên 3 ảnh) + 5 bài SEO đầu bảng chữ cái
+(Ahrefs vs SEMrush, Ahrefs Là Gì, AI Overview, BERT SEO, Bounce Rate - mỗi bài 2 ảnh). Tự tải
+21 ảnh về xem - phát hiện 1 ảnh vi phạm rule (413a "Trust Flow" có chữ "CERTIFICATION"/
+"CERTIFIED" rõ ràng) - đã tự tìm ảnh khoá bảo mật khác (storyset "security/amico"), tự đổi màu
+tím sang teal bằng Python (chuyển hue thay vì sed vì ảnh chỉ có bản PNG, không có SVG), thay
+thế trực tiếp (attachment 5581 thay 5559).
+
+**Lỗi nghiêm trọng hơn phát hiện khi QA:** bài BERT SEO (340) sau khi agent thêm ảnh, nội dung
+NỬA SAU của bài (từ đoạn "BERT không thay đổi rules của SEO" tới hết) hiển thị **LẶP LẠI 2 LẦN**
+trên trang live. Nguyên nhân: 2 chỗ trong bài có comment Gutenberg gõ sai `<!-- /wp:parameter>`
+thay vì `<!-- /wp:paragraph -->` - lỗi có sẵn từ TRƯỚC (không phải do agent gây ra, xác nhận qua
+backup trước khi sửa). Comment sai làm WordPress hiểu lầm ranh giới block, khiến phần nội dung
+sau đó bị render 2 lần với ID heading tự động thêm hậu tố "-2" để tránh trùng.
+
+**Quét toàn site:** tìm thấy thêm 3 bài khác dính CÙNG lỗi này (không liên quan đợt ảnh vừa
+làm, có sẵn từ trước): 389 (Schema Ecommerce), 399 (SEO Trang Danh Mục), 416 (Viết Bài SEO).
+Đã sửa cả 4 bài (340, 389, 399, 416) - thay `<!-- /wp:parameter>` bằng `<!-- /wp:paragraph -->`,
+verify trên live: không còn ID trùng hậu tố "-2" ở cả 4 bài.
+
+Backup: `~/Claude-Workspace/_backups/routines/2026-08-02/post340-comment-fix/<id>-before.html`
+(cả 4 bài) + `img-batch3-fix/413-before.html`.
+
+Tổng tiến độ bổ sung ảnh: 30/113 bài xong (đợt 1+2+3). Còn 83 bài.
+
+## 2026-08-02 - Bổ sung ảnh minh hoạ đợt 4/nhiều - cụm SEO cơ bản (10 bài)
+
+10 bài: Các Loại SEO, Canonical Tag, Công Cụ Keyword Research, Công Cụ SEO Miễn Phí, Content
+Gap Analysis, Content SEO Framework, Core Web Vitals, Crawl Budget, CTR SEO, Độ Dài Nội Dung
+SEO (ID 342, 343, 345-352). 2 ảnh/bài, tự tải 20 ảnh xem lại - không phát hiện ảnh sai chủ đề
+hay dính chữ tiếng Anh vi phạm rule (chỉ có nhãn UI/số liệu ngắn như "SEO", "ERROR 404",
+"RESTAURANT", "THESIS" - đều chấp nhận được vì không phải văn xuôi).
+Verify live 10/10 bài: đúng 1 link storyset.com/bài, 0 ID heading trùng "-2" (không lặp lỗi
+comment Gutenberg đã fix ở đợt trước - agent đã tự kiểm tra cân bằng wp:/…/wp: trước khi update).
+Backup: `~/backups/img-batch4/<id>-before.html` trên host.
+Tổng tiến độ: 40/113 bài xong. Còn 73 bài.
+
+## 2026-08-02 - Đợt ảnh 5 + quét & fix toàn site lỗi comment Gutenberg (11 bài)
+
+**Đợt 5 (10 bài):** Duplicate Content, E-E-A-T, Featured Snippet, GEO, GA4, Google Core Update,
+Google Maps SEO, Google My Business, Google Panda, Google Search Console (ID 355-363, 365).
+20 ảnh Storyset. Tự QA phát hiện 4 ảnh (358b, 363b, 365a, 365b) agent để nguyên màu cam/vàng
+gốc thay vì đổi sang teal thương hiệu (agent tự nhận trong báo cáo là tránh đổi nhầm màu da) -
+đã tự viết script Python chuyển hue có chọn lọc (chỉ pixel màu cam/vàng đậm, giữ da/đen/trắng)
+để đồng bộ cả 4 ảnh, upload đè (attachment 5662-5665), verify lại trên live.
+
+**Lỗi nhân đôi nội dung - quét toàn site (phát hiện thêm 1 bài từ báo cáo agent, mở rộng
+thành audit toàn site):**
+- Agent phát hiện bài GEO (358) cũng dính lỗi tương tự 340 (comment `<!-- /wp:function_calls>`
+  sai thay vì `<!-- /wp:heading -->`).
+- Đã viết script kiểm tra dạng "stack" (so khớp từng cặp mở-đóng theo đúng thứ tự, không chỉ
+  đếm số lượng) chạy qua toàn bộ 145 bài + trang - phát hiện thêm 7 bài nữa dính lỗi tương tự
+  hoặc biến thể: 362, 375, 379, 385, 386, 391, 396 (`/wp:parameter` thay vì `/wp:paragraph`),
+  và phát hiện thêm 4 bài dính dạng khác (thiếu hẳn 1 comment đóng, hoặc dư 1 comment đóng không
+  khớp): 385, 386, 391 (dư 1 `/wp:paragraph` hoặc `/wp:heading` thừa), 544, 1277, 1281, 4671
+  (thiếu comment đóng - riêng 4671 thiếu 2 chỗ, đều là block `wp:paragraph` trống ngay trước
+  ảnh, có vẻ sót lại khi ai đó chèn ảnh thủ công trước đây).
+- Đã sửa TOÀN BỘ 11 bài dính lỗi (340 đã fix từ trước + 358, 362, 375, 379, 385, 386, 391, 396,
+  544, 1277, 1281, 4671 = 12 bài tổng). Verify bằng script quét lại toàn site: **0 bài còn lỗi**.
+  Verify trên live (curl) toàn bộ 8 bài mới sửa: không còn ID heading trùng hậu tố "-2".
+- Backup: `~/Claude-Workspace/_backups/routines/2026-08-02/gutenberg-comment-fix-round2/` và
+  `round3/` (mỗi bài 1 file `<id>-before.html`).
+
+**Bài học:** lỗi gõ nhầm comment Gutenberg (đóng sai tên block, thiếu/dư comment đóng) là lỗi
+âm thầm - không báo lỗi PHP, không hiện cảnh báo gì, chỉ lộ ra khi người dùng thực sự đọc thấy
+nội dung lặp trên trang. Đã có công cụ kiểm tra dạng stack (không chỉ đếm số lượng mở/đóng) để
+lần sau audit nhanh toàn site nếu nghi ngờ.
+
+Tổng tiến độ bổ sung ảnh: 50/113 bài xong. Còn 63 bài.
+
+## 2026-08-02 - Bổ sung ảnh minh hoạ đợt 6/nhiều (10 bài)
+
+10 bài: Google SGE, Helpful Content Update, Học SEO, HTTPS SEO, Impression SEO, Internal Link,
+Keyword Clustering, Keyword Research, Local Citations, Long Tail Keyword (ID 366-374, 376).
+20 ảnh Storyset, agent đã rút kinh nghiệm từ lỗi đợt 5 (bảo vệ da người khi đổi màu) - tự phát
+hiện và sửa 3 ảnh bị nhuộm nhầm da (367, 369, 374) TRƯỚC KHI tôi kiểm tra, cũng tự loại 1 ảnh
+"warning" có cụm "Attention please" (vi phạm rule không câu tiếng Anh) thay bằng ảnh "alert"
+chỉ 1 từ. Tôi tự tải 20 ảnh xem lại - toàn bộ đạt chuẩn, da người tự nhiên, không lạc đề, không
+câu tiếng Anh vi phạm. Verify live 10/10 bài: đúng 1 link storyset.com, 0 lỗi nhân đôi nội dung.
+Backup: `~/backups/img-batch6/<id>-before.html` trên host.
+Tổng tiến độ: 60/113 bài xong. Còn 53 bài.
+
+## 2026-08-02 - Bổ sung ảnh minh hoạ đợt 7/nhiều (10 bài) + phát hiện & sửa 1 ảnh sai chủ đề
+
+10 bài: Majestic SEO, Meta Description, Mobile First Indexing, NAP SEO, On-Page SEO, Organic
+Traffic, Pillar Page, Redirect 301/302, Robots.txt SEO, Schema Ecommerce (ID 377-382, 384, 387-389).
+20 ảnh Storyset. Tự QA phát hiện **1 ảnh lặp lại đúng lỗi đã cấm từ trước** (bài 377 Majestic SEO
+dùng ảnh so sánh phương pháp luận phần mềm Agile/Scrum/Waterfall/Kanban - y hệt ảnh đã bị loại ở
+bài Guest Post Forbes vì sai chủ đề + 4 từ tiếng Anh) - agent không nhớ bài học cũ dù đã dặn trong
+prompt. Đã tự thay bằng ảnh "choice" (2 cửa A/B, không chữ) khớp đúng ý "so sánh 3 công cụ SEO".
+19 ảnh còn lại đạt chuẩn, da người tự nhiên không bị ám xanh.
+Verify live 10/10 bài: đúng 1 link storyset.com, 0 lỗi nhân đôi nội dung.
+Backup: `~/backups/img-batch7/<id>-before.html` trên host.
+Tổng tiến độ: 70/113 bài xong. Còn 43 bài.
+
+## 2026-08-03 - Đợt ảnh 8 (10 bài) + phát hiện & sửa lỗi hệ thống "nền đen" toàn đợt
+
+10 bài: Schema Markup, Search Intent, SEMrush, SEO Địa Phương, SEO E-commerce, SEO Hình Ảnh,
+SEO Là Gì, SEO Shopify, SEO Trang Danh Mục, SEO Trang Sản Phẩm (ID 390, 392-400). 20 ảnh Storyset.
+
+**Lỗi nghiêm trọng phát hiện khi QA:** TOÀN BỘ 20/20 ảnh của đợt này có **nền đen đặc** thay vì
+nền trắng/trong suốt như mọi ảnh trước đó trên site (agent dùng pipeline khác đợt trước - render
+SVG qua rsvg-convert ở độ phân giải 900px rồi nén WebP, có bước làm mất kênh alpha và tự động
+lấp bằng màu đen thay vì trắng). Ảnh sẽ hiện thành khối đen lớn giữa trang trắng, rất phản cảm.
+
+**Cách sửa:** viết script Python flood-fill từ 4 viền ảnh, chỉ thay các pixel đen LIÊN THÔNG với
+viền ngoài thành trắng (giữ nguyên các chi tiết đen thật bên trong hình như bàn phím, viền màn
+hình, cửa sổ tối) - áp dụng cho cả 20 ảnh, xem lại từng ảnh bằng mắt để xác nhận không ăn nhầm
+chi tiết thật.
+
+**Phát hiện thêm 1 lỗi lẻ:** ảnh 398-1 (SEO Shopify, "5 Hạn Chế Shopify") có chữ bị vỡ sẵn từ
+bản gốc của agent (hiện "ADD T B" thay vì "ADD TO BAG" - một số nét chữ mảnh bị mất khi nền đen
+đè lên) - lỗi có sẵn TRƯỚC flood-fill, không liên quan cách sửa trên. Đã tự tải lại đúng ảnh gốc
+"online-shopping/amico" từ Storyset (có kênh alpha đầy đủ), đổi màu tím sang teal đúng cách, chữ
+hiển thị đầy đủ "$10.59" / "ADD TO BAG".
+
+Upload lại toàn bộ 20 ảnh đã sửa nền (attachment 5762-5780 + 5761 cho ảnh chữ vỡ), thay thế
+trong nội dung 10 bài, verify cân bằng comment Gutenberg + verify live: cả 10/10 bài dùng đúng
+ảnh nền trắng mới, không còn ảnh nền đen, đúng 1 link storyset.com/bài.
+
+Backup: `~/backups/img-batch8/<id>-before.html` (bản trước khi thêm ảnh) +
+`~/Claude-Workspace/_backups/routines/2026-08-02/img-batch8-bgfix/<id>-before.html` (bản có ảnh
+nền đen, trước khi sửa nền).
+
+**Bài học:** agent nền tự đổi pipeline kỹ thuật giữa các lần chạy (khác cách agent đợt 1-7 xử
+lý) mà không báo trước - luôn phải tự mở từng ảnh xem bằng mắt, không chỉ tin báo cáo dù đã yêu
+cầu agent tự xem trước khi upload.
+
+Tổng tiến độ: 80/113 bài xong. Còn 33 bài.
+
+## 2026-08-03 - Bổ sung ảnh minh hoạ đợt 9/nhiều (10 bài) - đã tránh lặp lỗi nền đen
+
+10 bài: SEO Trong Thời Đại AI, SEO Website, SEO WooCommerce, Sitemap XML, SpamBrain, Technical
+SEO, Thin Content, Thuật Toán Google, Title Tag SEO, Tốc Độ Website (ID 401-410). 20 ảnh Storyset.
+
+Rút kinh nghiệm lỗi "nền đen" của đợt 8: đã dặn agent dùng PNG gốc (có sẵn alpha) thay vì
+render lại qua rsvg-convert, và bắt buộc kiểm tra mode=RGBA + pixel góc trong suốt trước khi
+upload. Agent làm đúng - tự kiểm tra và verify. Tôi tải lại 20/20 ảnh, kiểm tra bằng code
+(pixel góc = (0,0,0,0) - trong suốt thật) VÀ bằng mắt: tất cả nền trắng sạch, không lặp lỗi.
+Không có ảnh nào dùng lại ảnh cấm (Agile/Scrum/Waterfall/Kanban). Không phát hiện chữ tiếng Anh
+vi phạm (chỉ nhãn UI ngắn: DATA, Sitemaps, Hello there).
+Verify live 10/10 bài: đúng 1 link storyset.com/bài, 0 lỗi nhân đôi nội dung.
+Backup: `~/backups/img-batch9/<id>-before.html` trên host.
+Tổng tiến độ: 90/113 bài xong. Còn 23 bài.
+
+## 2026-08-03 - Bổ sung ảnh minh hoạ đợt 10/nhiều (8 bài, 4 bài đã có ảnh sẵn nên bỏ qua)
+
+8 bài: H1 H2 H3 SEO, Topic Cluster, Từ Khoá Cạnh Tranh, URL SEO, Viết Bài SEO, Voice Search SEO,
+Có Nên Mua Backlink Không, Mua Backlink Báo Là Gì (ID 411,412,414-417,4226,4228). 4 bài dự kiến
+(4671, 2569, 4739, 4746) đã có sẵn ảnh từ trước nên agent tự bỏ qua đúng theo hướng dẫn.
+14 ảnh (10 ảnh mới + 2 ảnh dùng lại hợp lý cho 2 bài khác H2). Agent tự loại đúng 1 ảnh cấm
+(methodology-comparison Agile/Scrum) thay bằng ảnh "choose" A/B/C phù hợp - đã nhớ đúng bài học
+từ 2 lần vi phạm trước. Tôi tự tải 14 ảnh kiểm tra: mode RGBA, pixel góc trong suốt thật (không
+lặp lỗi nền đen), xem bằng mắt cả 14 ảnh - không sai chủ đề, không vi phạm chữ tiếng Anh.
+Verify live 8/8 bài: đúng 1 link storyset.com/bài.
+Backup: `~/backups/img-batch10/<id>-before.html` trên host.
+
+**Quét lại chính xác số bài còn thiếu ảnh trên toàn site** (thay vì ước lượng): chỉ còn ĐÚNG 19
+bài (không phải 43 như ước tính trước) - vì nhiều bài tưởng thiếu đã được các đợt trước xử lý
+gộp chung. Đã làm 8/19 ở đợt này, còn 11 bài cho đợt cuối: 364, 375, 385, 386, 391 (SEO cluster
+cũ sót lại), 544, 545 (Guest Post/Textlink định nghĩa), 3848, 3849, 3850, 3869 (cụm Thông Cáo
+Báo Chí).
+
+## 2026-08-03 - HOÀN THÀNH: Bổ sung ảnh minh hoạ đợt cuối (11 bài) + verify toàn site
+
+Đợt 11 (cuối): Google Penguin, Local SEO, Quy Trình SEO 7 Bước, RankBrain, Screaming Frog,
+Guest Post Là Gì, Textlink Khác Backlink, Thông Cáo Báo Chí Là Gì, Cách Viết TCBC, Mẫu TCBC,
+TCBC Khủng Hoảng (ID 364, 375, 385, 386, 391, 544, 545, 3848, 3849, 3850, 3869). 22 ảnh Storyset.
+Tự tải 22/22 ảnh kiểm tra: RGBA + pixel góc trong suốt thật (không lặp lỗi nền đen), xem bằng
+mắt toàn bộ - không sai chủ đề, không vi phạm chữ tiếng Anh, không dùng ảnh cấm Agile/Scrum.
+Backup: `~/backups/img-batch11/<id>-before.html` trên host.
+
+**VERIFY TOÀN SITE LẦN CUỐI (query trực tiếp database, không suy luận):**
+`145/145 bài published đạt chuẩn tối thiểu 2 ảnh` - hoàn thành 100% rule `content-visual-coverage.md`.
+
+**Tổng kết dự án bổ sung ảnh (11 đợt, 2026-08-02 đến 2026-08-03):**
+- Quét đầu: 113/145 bài thiếu ảnh (78%).
+- 11 đợt agent nền + tự QA từng đợt (tải ảnh về xem bằng mắt, không tin báo cáo agent).
+- 3 lỗi kỹ thuật nghiêm trọng phát hiện và sửa dọc đường:
+  1. Mindmap nuốt trọn widget quiz do shortcode nằm đầu H2 (fix `inc/toc.php`).
+  2. 12 bài trên toàn site dính lỗi comment Gutenberg gõ sai (đóng sai tên/thiếu/dư) gây nhân
+     đôi nội dung khi hiển thị - có sẵn từ trước, không liên quan việc thêm ảnh.
+  3. Đợt 8: toàn bộ 20 ảnh bị nền đen do agent đổi pipeline xử lý ảnh (mất kênh alpha) - đã
+     sửa bằng flood-fill + phát hiện thêm 1 ảnh chữ bị vỡ, xử lý riêng.
+  4. Phát hiện 3 lần ảnh dùng sai "methodology-comparison" (Agile/Scrum/Waterfall/Kanban) cho
+     bài không liên quan - đã dặn cấm tuyệt đối từ đợt 8 trở đi, đợt 9-11 không còn tái phạm.
+
+**Bài học rút ra (đã note vào feedback cho các dự án sau):** không bao giờ tin báo cáo "đã QA"
+của agent nền cho việc liên quan phán đoán chủ quan (chọn ảnh đúng chủ đề, xử lý màu không lỗi)
+- luôn tự tải về kiểm tra bằng mắt trước khi báo hoàn thành với Hiếu.

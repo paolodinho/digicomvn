@@ -2428,6 +2428,65 @@ body.single-post .brand-watermark{display:none}
 .post-toc__list .post-toc__item a.is-active,.toc-sheet__list .post-toc__item a.is-active{background:rgba(14,140,127,.1);color:var(--teal);font-weight:600}
 [data-theme="dark"] .post-toc{box-shadow:0 2px 10px rgba(0,0,0,.25)}
 
+/* So do bai viet (mindmap) - cay phan nhanh: goc = tieu de bai, nhanh = H2, nhanh con = H3.
+   Bam vao nhanh nao nhay toi doan do (dung chung id/scroll-spy voi .post-toc). 2026-08-02. */
+.post-mindmap{max-width:820px;margin:0 auto 28px;background:var(--surface-2);
+  border:1px solid var(--line-2);border-left:4px solid var(--teal);border-radius:0 14px 14px 0;
+  box-shadow:0 2px 10px rgba(15,23,42,.05);padding:16px 20px 20px}
+.post-mindmap__head{display:flex;align-items:center;flex-wrap:wrap;gap:9px;font-weight:700;color:var(--heading);margin-bottom:12px}
+.post-mindmap__hint{font-weight:500;font-size:12.5px;color:var(--ink-soft);margin-left:2px}
+/* Mindmap that: 1 hub trung tam (tieu de bai) + the nhanh xep luoi, lech nhe kieu ghim note,
+   moi the co ten muc + 1 dong mo ta ngan trich that tu bai - khac ro voi hop Muc luc list
+   chu ben tren (chi lap level H2, co teaser rieng). Pattern tham khao loadevialet.vn (du an
+   khac cua Hieu), doi mau vang/navy sang teal/heading brand Digicom. 2026-08-02 (v3). */
+.dgc-mm{text-align:center;margin:0;padding:22px 14px 20px;border-radius:10px;
+  background:radial-gradient(var(--surface) 0%,var(--surface-2) 100%)}
+.dgc-mm__center{display:inline-block;background:linear-gradient(155deg,var(--navy) 0%,#0a111f 65%);
+  color:#fff;font-family:var(--font-display);font-weight:700;font-size:15px;line-height:1.3;
+  padding:14px 26px;border-radius:8px;box-shadow:0 10px 22px -6px rgba(10,17,31,.35),0 2px 0 var(--teal);
+  position:relative;z-index:2;max-width:100%}
+.dgc-mm__center::after{content:"";display:block;width:2px;height:20px;background:var(--teal);
+  margin:0 auto;box-shadow:0 0 6px rgba(14,140,127,.5)}
+.dgc-mm__branches{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 12px;
+  max-width:960px;margin:0 auto;padding-top:4px}
+.dgc-mm__branch{flex:1 1 190px;max-width:210px;padding:14px 13px;position:relative;display:block;
+  text-decoration:none;border-radius:8px;background:var(--surface);border:1px solid var(--line-2);
+  box-shadow:0 6px 16px -6px rgba(15,23,42,.16),0 1px 2px rgba(15,23,42,.06);
+  transition:transform .2s cubic-bezier(.3,1,.3,1),box-shadow .2s,border-color .2s}
+.dgc-mm__branch:nth-child(2n+1){transform:rotate(-.6deg)}
+.dgc-mm__branch:nth-child(2n){transform:rotate(.6deg)}
+.dgc-mm__branch:hover{transform:translateY(-3px) rotate(0deg);border-color:var(--teal);
+  box-shadow:0 12px 24px -8px rgba(15,23,42,.22),0 2px 4px rgba(15,23,42,.08)}
+.dgc-mm__branch::before{content:"";position:absolute;top:-16px;left:50%;width:2px;height:16px;
+  background:var(--teal);transform:translateX(-50%)}
+.dgc-mm__branch strong{display:block;font-size:13px;color:var(--heading);margin-bottom:4px}
+.dgc-mm__branch:hover strong{color:var(--teal)}
+.dgc-mm__branch span{display:block;font-size:12px;color:var(--ink-soft);line-height:1.5}
+@media(max-width:600px){
+  .dgc-mm{padding:18px 10px}
+  .dgc-mm__branch{flex:1 1 45%;transform:none!important}
+  .dgc-mm__branch::before{display:none}
+}
+[data-theme="dark"] .dgc-mm__branch{box-shadow:none}
+[data-theme="dark"] .post-mindmap{box-shadow:0 2px 10px rgba(0,0,0,.25)}
+
+/* Thuc the / tu khoa muc tieu da quet trong bai - chip-list duoi mindmap. 2026-08-02. */
+.post-entities{max-width:820px;margin:0 auto 28px;background:var(--surface-2);
+  border:1px solid var(--line-2);border-left:4px solid var(--action,#2456E6);border-radius:0 14px 14px 0;
+  box-shadow:0 2px 10px rgba(15,23,42,.05);padding:16px 20px 20px}
+.post-entities__head{display:flex;align-items:center;flex-wrap:wrap;gap:9px;font-weight:700;color:var(--heading);margin-bottom:12px}
+.post-entities__head .post-toc__icon{color:var(--action,#2456E6)}
+.post-entities__hint{font-weight:600;font-size:12.5px;color:var(--teal);margin-left:2px}
+.ent-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ent-item{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;line-height:1.3}
+.ent-item--found{background:rgba(14,140,127,.1);border:1px solid rgba(14,140,127,.28);color:var(--heading)}
+.ent-item--found .ent-check{color:var(--teal)}
+.ent-item--missing{background:transparent;border:1px dashed var(--line-2);color:var(--ink-soft)}
+.ent-item--missing .ent-check{color:var(--ink-soft)}
+.ent-count{font-size:11.5px;font-weight:600;opacity:.75}
+.ent-count--miss{font-style:italic;font-weight:500}
+[data-theme="dark"] .post-entities{box-shadow:0 2px 10px rgba(0,0,0,.25)}
+
 .toc-fab{position:fixed;left:18px;bottom:82px;z-index:81;display:inline-flex;align-items:center;gap:7px;
   background:var(--surface-2);border:1.5px solid var(--line-2);color:var(--heading);border-radius:999px;
   padding:9px 15px 9px 12px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(15,23,42,.14);
