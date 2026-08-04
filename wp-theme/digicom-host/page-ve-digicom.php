@@ -36,6 +36,18 @@ get_header();
 	</div>
 </section>
 
+<section class="sec-tight">
+	<div class="wrap" style="max-width:1000px">
+		<img
+			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-about-1200.jpg' ); ?>"
+			alt="Đội ngũ DigicomVN"
+			width="1200" height="719"
+			style="width:100%;height:auto;border-radius:var(--r-lg);box-shadow:var(--sh-high);display:block"
+			loading="lazy"
+		>
+	</div>
+</section>
+
 <section class="sec">
 	<div class="wrap">
 		<div class="row" style="gap:24px;align-items:stretch">
@@ -57,7 +69,6 @@ get_header();
 				</p>
 			</div>
 		</div>
-		<p class="form-note" style="margin-top:14px">Ảnh đội ngũ và văn phòng sẽ được bổ sung (cần ảnh thật từ DigicomVN).</p>
 	</div>
 </section>
 
