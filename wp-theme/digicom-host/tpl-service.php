@@ -86,6 +86,13 @@ include get_template_directory() . '/inc/svc-faq.php';
 	<div class="wrap">
 		<div class="row" style="gap:30px;align-items:flex-start">
 			<div class="col">
+				<img
+					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-service-800.jpg' ); ?>"
+					alt="Đội ngũ DigicomVN"
+					width="800" height="479"
+					style="width:100%;height:auto;border-radius:var(--r-md);box-shadow:var(--sh-low);display:block;margin-bottom:22px"
+					loading="lazy"
+				>
 				<span class="eyebrow">Báo giá</span>
 				<h2>Nhận tư vấn &amp; báo giá <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2>
 				<p class="muted">Mỗi dự án có nhu cầu khác nhau. Để lại thông tin, DigicomVN sẽ tư vấn giải pháp và gửi báo giá phù hợp.</p>

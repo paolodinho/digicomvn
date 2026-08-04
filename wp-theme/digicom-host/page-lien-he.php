@@ -23,6 +23,13 @@ get_header();
 				include get_template_directory() . '/inc/form-lead.php';
 			?></div>
 			<div class="col">
+				<img
+					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-service-800.jpg' ); ?>"
+					alt="Đội ngũ DigicomVN"
+					width="800" height="479"
+					style="width:100%;height:auto;border-radius:var(--r-md);box-shadow:var(--sh-low);display:block;margin-bottom:22px"
+					loading="lazy"
+				>
 				<div class="contact-info">
 					<h3>Thông tin liên hệ</h3>
 					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'phone' ); ?></span><div>Hotline<br><b><a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></a><?php if ( dgc( 'hotline2' ) ) : ?> · <a href="tel:<?php echo esc_attr( dgc_tel2() ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'hotline2' ) ); ?></a><?php endif; ?></b></div></div>
