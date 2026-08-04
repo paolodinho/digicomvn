@@ -3,6 +3,14 @@
 <?php /* Khoi uu dai to DA BO (Hieu 2026-07-15) - thay bang pill noi (promo-fab.php) o cuoi footer. */ ?>
 
 <footer class="site-footer">
+	<div class="footer-photo">
+		<img
+			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-footer-1024.jpg' ); ?>"
+			alt="Đội ngũ DigicomVN"
+			width="1024" height="768"
+			loading="lazy"
+		>
+	</div>
 	<div class="wrap">
 		<div class="foot-grid">
 			<div>
