@@ -3,14 +3,13 @@
 <?php /* Khoi uu dai to DA BO (Hieu 2026-07-15) - thay bang pill noi (promo-fab.php) o cuoi footer. */ ?>
 
 <footer class="site-footer">
-	<div class="footer-photo">
-		<img
-			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-footer-1024.jpg' ); ?>"
-			alt="Đội ngũ DigicomVN"
-			width="1024" height="768"
-			loading="lazy"
-		>
-	</div>
+	<section class="footer-band" style="--bgimg:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-footer-1024.jpg' ); ?>')">
+		<div class="wrap footer-band-in">
+			<span class="eyebrow">Đội ngũ</span>
+			<h2>Đội ngũ đứng sau DigicomVN</h2>
+			<p>Con người thật, làm việc thật - phía sau mỗi báo cáo và mỗi kết quả bàn giao.</p>
+		</div>
+	</section>
 	<div class="wrap">
 		<div class="foot-grid">
 			<div>
