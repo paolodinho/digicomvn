@@ -764,11 +764,12 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
   radial-gradient(58% 55% at 88% 4%,rgba(18,179,156,.16),transparent 60%),
   radial-gradient(55% 68% at 2% 100%,rgba(71,97,255,.18),transparent 58%),
   linear-gradient(118deg,rgba(7,13,28,.80) 0%,rgba(11,20,42,.72) 48%,rgba(9,17,36,.70) 100%)}
-.footer-band-in{position:relative;z-index:1;padding:56px 22px 44px;max-width:760px}
+.footer-band-in{position:relative;z-index:1;padding:22px;max-width:760px;
+  min-height:320px;display:flex;flex-direction:column;justify-content:center}
 .footer-band-in .eyebrow{color:#7fd1c8}
 .footer-band-in h2{color:#fff;text-shadow:0 2px 18px rgba(4,12,24,.55);margin:8px 0 12px}
 .footer-band-in p{color:rgba(255,255,255,.92);text-shadow:0 1px 10px rgba(4,12,24,.4);margin:0;max-width:560px}
-@media(max-width:640px){.footer-band-in{padding:34px 18px 28px}}
+@media(max-width:640px){.footer-band-in{min-height:240px;padding:18px}}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px}
 .site-footer .brand{color:#fff;margin-bottom:12px}
 .footer-logo{height:40px;width:auto;margin-bottom:14px}
