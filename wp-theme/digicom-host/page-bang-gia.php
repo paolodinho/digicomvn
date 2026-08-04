@@ -37,6 +37,18 @@ foreach ( $dgc_nhom_list as $slug => $label ) {
 	</div>
 </section>
 
+<section class="sec-tight">
+	<div class="wrap" style="max-width:1000px">
+		<img
+			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-service-800.jpg' ); ?>"
+			alt="Đội ngũ DigicomVN"
+			width="800" height="479"
+			style="width:100%;height:auto;border-radius:var(--r-lg);box-shadow:var(--sh-high);display:block"
+			loading="lazy"
+		>
+	</div>
+</section>
+
 <?php include get_template_directory() . '/inc/price-view-options.php'; ?>
 
 <!-- Bang gia chi tiet theo tab + cong cu tick chon (ghim dau khu vuc nay) -->
