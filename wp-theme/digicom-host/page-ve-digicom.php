@@ -41,7 +41,7 @@ get_header();
 		<img
 			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-about-1200.jpg' ); ?>"
 			alt="Đội ngũ DigicomVN"
-			width="1200" height="719"
+			width="1200" height="800"
 			style="width:100%;height:auto;border-radius:var(--r-lg);box-shadow:var(--sh-high);display:block"
 			loading="lazy"
 		>

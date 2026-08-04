@@ -761,9 +761,10 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .footer-band:before{content:"";position:absolute;left:0;right:0;top:-14%;height:128%;
   background:var(--bgimg) center 25%/cover no-repeat;z-index:0}
 .footer-band:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:
-  radial-gradient(58% 55% at 88% 4%,rgba(18,179,156,.16),transparent 60%),
-  radial-gradient(55% 68% at 2% 100%,rgba(71,97,255,.18),transparent 58%),
-  linear-gradient(118deg,rgba(7,13,28,.80) 0%,rgba(11,20,42,.72) 48%,rgba(9,17,36,.70) 100%)}
+  radial-gradient(58% 55% at 88% 4%,rgba(18,179,156,.14),transparent 60%),
+  radial-gradient(55% 68% at 2% 100%,rgba(71,97,255,.16),transparent 58%),
+  linear-gradient(118deg,rgba(7,13,28,.72) 0%,rgba(11,20,42,.62) 48%,rgba(9,17,36,.58) 100%),
+  linear-gradient(180deg,rgba(9,17,36,0) 40%,var(--navy) 100%)}
 .footer-band-in{position:relative;z-index:1;padding:22px;max-width:760px;
   min-height:320px;display:flex;flex-direction:column;justify-content:center}
 .footer-band-in .eyebrow{color:#7fd1c8}
