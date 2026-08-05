@@ -26,6 +26,11 @@ $nhom     = dgc_current_nhom();
 				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 			<?php endif; ?>
 		</div>
+		<?php /* Link phu duoi CTA, rieng trang booking-bao-pr (Hieu 2026-08-05): dua duong dan
+		         toi form dat lich len gan Hero hon ma khong pha rule toi da 2 nut hero. */ ?>
+		<?php if ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) : ?>
+			<p style="margin-top:14px"><a href="#lien-he" style="font-size:13.5px;font-weight:600;color:var(--action);text-decoration:underline">Hoặc để lại thông tin, DigicomVN tư vấn & báo giá ngay →</a></p>
+		<?php endif; ?>
 	</div>
 </section>
 
