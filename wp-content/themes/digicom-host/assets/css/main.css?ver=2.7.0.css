@@ -2450,81 +2450,55 @@ body.single-post .brand-watermark{display:none}
   box-shadow:0 2px 10px rgba(15,23,42,.05);padding:16px 20px 20px}
 .post-mindmap__head{display:flex;align-items:center;flex-wrap:wrap;gap:9px;font-weight:700;color:var(--heading);margin-bottom:12px}
 .post-mindmap__hint{font-weight:500;font-size:12.5px;color:var(--ink-soft);margin-left:2px}
-/* Mindmap dang CAY NGANG: goc (tieu de bai) ben TRAI, nhanh (H2->H3) toa ra ben PHAI.
-   KHAC RO voi hop Muc luc (danh sach link phang, khong mau, khong y chinh) o 3 diem:
-   (1) nen dang "canvas" cham luoi - tin hieu thi giac day la SO DO, khong phai list;
-   (2) MOI nhanh dao trong tam chu: Y CHINH la chu to/dam chinh, ten muc H chi la nhan
-   nho mau nhat phia tren - doc luot thay ngay "cau ket luan", khong phai "ten de muc"
-   nhu TOC; (3) moi nhanh chinh (H2) mang 1 mau accent rieng (xen ke teal/action), nhanh
-   con (H3) thua huong mau nhat hon cua nhanh cha - tao cam giac "ban do phan nhanh mau"
-   dung nghia thay vi danh sach 1 mau. Hieu phan hoi 2026-08-05: "van cha khac gi muc luc"
-   -> doi lai theo huong nay (v5), tu bo kieu the-link-don-gian cu (v4). */
-.dgc-mm{display:flex;align-items:center;gap:0;text-align:left;margin:0;padding:28px 24px;
-  border-radius:12px;overflow-x:auto;
+/* Mindmap dang LUOI THE GON (v6). Ly do doi tu ban cay doc/ngang (v4/v5) - Hieu phan hoi
+   2026-08-05 lan 2: "ton dien tich, kho xem" - vi xep 1 cot doc thi bai nhieu H2/H3 keo dai
+   vo han theo chieu cao. Cach lam moi:
+   - The H2 xep LUOI nhieu cot (CSS grid tu dong xuong dong theo be rong man hinh), khong
+     con 1 cot doc dai - chieu cao chi phu thuoc so hang, khong phu thuoc tong so muc.
+   - Y chinh GIOI HAN 3 DONG (-webkit-line-clamp) - moi the cao co dinh, khong phinh to.
+   - Nhanh con (H3) don thanh CHIP nho nam ngang trong cung the H2 cha (khong con la the
+     rieng chiem 1 hang) - chi hien ten muc, khong keo y chinh rieng, giu the gon.
+   Van khac ro voi Muc luc (danh sach link phang, 1 mau, khong y chinh) nho: y chinh la chu
+   chinh to/dam, mau accent xen ke tung the, bo cuc luoi thay vi danh sach doc. */
+.dgc-mm{margin:0;padding:24px;border-radius:12px;
   background-image:radial-gradient(var(--line-2) 1.2px,transparent 1.2px);
   background-size:20px 20px;background-color:var(--surface-2);
   border:1px solid var(--line-2)}
-.dgc-mm__center{flex:0 0 auto;align-self:center;background:linear-gradient(155deg,var(--navy) 0%,#0a111f 65%);
+.dgc-mm__center{display:inline-block;background:linear-gradient(155deg,var(--navy) 0%,#0a111f 65%);
   color:#fff;font-family:var(--font-display);font-weight:700;font-size:15px;line-height:1.3;
-  padding:18px 24px;border-radius:10px;box-shadow:0 10px 22px -6px rgba(10,17,31,.4),2px 0 0 var(--teal);
-  position:relative;z-index:2;max-width:230px}
-.dgc-mm__center::after{content:"";position:absolute;top:50%;right:-30px;width:30px;height:3px;
-  background:var(--teal);box-shadow:0 0 6px rgba(14,140,127,.5);transform:translateY(-50%)}
-.dgc-mm__branches{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:18px;
-  position:relative;margin-left:30px;padding-left:26px}
-.dgc-mm__branches::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
-  background:var(--teal)}
-.dgc-mm__node{display:flex;flex-direction:column;gap:10px;max-width:560px}
-/* Mau accent xen ke theo tung nhanh chinh - "ban do mau", khong con 1 mau don dieu nhu TOC */
-.dgc-mm__node:nth-child(odd){--mm-accent:var(--teal)}
-.dgc-mm__node:nth-child(even){--mm-accent:var(--action,#4761FF)}
-.dgc-mm__branch{position:relative;display:flex;flex-direction:column;padding:14px 18px 15px;
-  text-decoration:none;border-radius:9px;background:var(--surface);
-  border:1px solid var(--line-2);border-left:4px solid var(--mm-accent);
+  padding:14px 22px;border-radius:9px;box-shadow:0 10px 22px -6px rgba(10,17,31,.4);
+  margin-bottom:18px;max-width:100%}
+.dgc-mm__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+/* Mau accent xen ke theo tung the - "ban do mau", khong con 1 mau don dieu nhu TOC */
+.dgc-mm__card:nth-child(3n+1){--mm-accent:var(--teal)}
+.dgc-mm__card:nth-child(3n+2){--mm-accent:var(--action,#4761FF)}
+.dgc-mm__card:nth-child(3n+3){--mm-accent:#B45309}
+.dgc-mm__card{display:flex;flex-direction:column;border-radius:9px;background:var(--surface);
+  border:1px solid var(--line-2);border-top:3px solid var(--mm-accent);
   box-shadow:0 6px 16px -6px rgba(15,23,42,.16),0 1px 2px rgba(15,23,42,.06);
-  transition:transform .2s cubic-bezier(.3,1,.3,1),box-shadow .2s}
-.dgc-mm__branch::before{content:"";position:absolute;top:50%;left:-26px;width:22px;height:3px;
-  background:var(--mm-accent);transform:translateY(-50%)}
-.dgc-mm__branch::after{content:"";position:absolute;top:50%;left:-29px;width:7px;height:7px;
-  border-radius:50%;background:var(--mm-accent);transform:translate(-50%,-50%);box-shadow:0 0 0 3px var(--surface-2)}
-.dgc-mm__branch:hover{transform:translateX(3px);box-shadow:0 12px 24px -8px rgba(15,23,42,.22),0 2px 4px rgba(15,23,42,.08)}
-/* Y CHINH la chu chinh (to, dam, mau heading) - tieu de muc chi con la nhan nho o tren */
-.dgc-mm__branch strong{order:2;display:block;font-size:10.5px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.05em;color:var(--mm-accent);margin-top:6px}
-.dgc-mm__branch span{order:1;display:block;font-size:14.5px;font-weight:600;
-  color:var(--heading);line-height:1.5}
-/* Nhanh con (H3) - xep doc ngay duoi nhanh chinh (H2), thut le, mau accent NHAT hon (ke thua
-   bien --mm-accent cua .dgc-mm__node cha) de phan cap ro: nhanh chinh dam, nhanh con nhat. */
-.dgc-mm__subbranches{display:flex;flex-direction:column;gap:9px;position:relative;
-  margin-left:16px;padding-left:20px}
-.dgc-mm__subbranches::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
-  background:var(--mm-accent);opacity:.35}
-.dgc-mm__subbranch{position:relative;display:flex;flex-direction:column;padding:10px 14px;
-  text-decoration:none;border-radius:7px;background:var(--surface);
-  border:1px solid var(--line-2);border-left:3px solid var(--mm-accent);opacity:.85;
-  transition:transform .2s cubic-bezier(.3,1,.3,1),opacity .2s}
-.dgc-mm__subbranch::before{content:"";position:absolute;top:50%;left:-20px;width:18px;height:2px;
-  background:var(--mm-accent);opacity:.45;transform:translateY(-50%)}
-.dgc-mm__subbranch:hover{transform:translateX(3px);opacity:1}
-.dgc-mm__subbranch strong{order:2;display:block;font-size:9.5px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);margin-top:4px}
-.dgc-mm__subbranch span{order:1;display:block;font-size:12.5px;font-weight:600;
-  color:var(--heading);line-height:1.5}
-@media(max-width:760px){
-  .dgc-mm{flex-direction:column;align-items:stretch;text-align:left;padding:18px 14px 16px;
-    overflow-x:visible;background-size:16px 16px}
-  .dgc-mm__center{align-self:center;max-width:100%;text-align:center}
-  .dgc-mm__center::after{content:"";display:block;position:static;width:3px;height:18px;
-    margin:0 auto;transform:none}
-  .dgc-mm__branches{flex-direction:column;margin-left:0;padding-left:0;padding-top:8px;gap:16px}
-  .dgc-mm__branches::before{display:none}
-  .dgc-mm__node{max-width:none}
-  .dgc-mm__branch::before,.dgc-mm__branch::after{display:none}
-  .dgc-mm__subbranches{margin-left:8px;padding-left:14px}
-  .dgc-mm__subbranch::before{display:none}
+  transition:transform .2s cubic-bezier(.3,1,.3,1),box-shadow .2s;overflow:hidden}
+.dgc-mm__card:hover{transform:translateY(-3px);box-shadow:0 12px 24px -8px rgba(15,23,42,.22),0 2px 4px rgba(15,23,42,.08)}
+.dgc-mm__cardlink{display:flex;flex-direction:column;padding:14px 16px 12px;text-decoration:none;flex:1 1 auto}
+/* Y CHINH la chu chinh (to, dam, mau heading), gioi han 3 dong de the luon cao co dinh */
+.dgc-mm__idea{order:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+  overflow:hidden;font-size:14px;font-weight:600;color:var(--heading);line-height:1.5}
+.dgc-mm__tag{order:2;display:block;font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;color:var(--mm-accent);margin-top:8px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* Nhanh con (H3) - CHIP nho nam ngang trong cung the, khong chiem rieng 1 hang */
+.dgc-mm__chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 14px;margin-top:-2px}
+.dgc-mm__chip{display:block;max-width:100%;padding:5px 10px;border-radius:6px;font-size:11px;
+  font-weight:600;color:var(--ink-soft);background:var(--surface-2);border:1px solid var(--line-2);
+  border-left:2px solid var(--mm-accent);text-decoration:none;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;transition:color .2s,border-color .2s}
+.dgc-mm__chip:hover{color:var(--mm-accent);border-color:var(--mm-accent)}
+@media(max-width:640px){
+  .dgc-mm{padding:16px}
+  .dgc-mm__center{display:block;text-align:center}
+  .dgc-mm__grid{grid-template-columns:1fr}
+  .dgc-mm__chip{max-width:220px}
 }
-[data-theme="dark"] .dgc-mm__branch{box-shadow:none}
-[data-theme="dark"] .dgc-mm__branch::after{box-shadow:0 0 0 3px var(--surface-2)}
+[data-theme="dark"] .dgc-mm__card{box-shadow:none}
 [data-theme="dark"] .post-mindmap{box-shadow:0 2px 10px rgba(0,0,0,.25)}
 
 /* Thuc the / tu khoa muc tieu da quet trong bai - chip-list duoi mindmap. 2026-08-02. */
