@@ -44,9 +44,12 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'owl-carousel-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
 	wp_enqueue_script( 'dgc-main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'owl-carousel-js' ), DGC_VER, true );
 
-	// Luoi bang gia "kieu Excel" (Hieu 2026-08-01: trang /bang-gia/ qua nang/kho xem tong quan)
-	// - chi tai o trang Bang gia, khong dung o cac trang dich vu don (van dung bang cu).
-	if ( is_page( 'bang-gia' ) ) {
+	// Luoi bang gia "kieu Excel" (Hieu 2026-08-01: trang /bang-gia/ qua nang/kho xem tong quan).
+	// Mo rong 2026-08-05: cac trang dich vu don (tpl-service.php) cung dung bang cu
+	// (dgc_gia_rows_html, render het toan bo dong + logo vao HTML) -> trang nhu /booking-bao-pr/
+	// (1212 dong) nang toi 3,3MB/1400 <tr>, tai rat cham (Hieu bao "trang dang load rat nang").
+	// Dung chung luoi ao nay cho ca trang dich vu co bang gia ($nhom khac null).
+	if ( is_page( 'bang-gia' ) || ( function_exists( 'dgc_current_nhom' ) && dgc_current_nhom() ) ) {
 		// Phu thuoc dgc-main-js de dam bao window.dgcCartIsPicked() (dinh nghia trong main.js,
 		// cong cu tick chon/sel-bar) da san sang truoc khi price-grid.js chay - khong dua vao
 		// thu tu dang ky ngau nhien (Hieu 2026-08-01, luoi bang gia moi).

@@ -103,31 +103,29 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 				<p class="vitri-hint"><span class="vitri-hint-ic">V</span> Bấm chữ "V" cạnh vị trí đăng để xem ảnh chụp thực tế trên báo/site đó.</p>
 				<?php endif; ?>
 
-				<div class="price-table-wrap">
-					<table class="price-table price-table-cpt">
-						<thead>
-							<tr>
-								<th class="col-site"><?php echo esc_html( $dgc_sp_col_name ); ?></th>
-								<th class="col-spec"><?php echo $dgc_sp_is_goi ? 'Quy mô gói' : 'Quy cách đăng'; ?></th>
-								<th class="col-price">Giá</th>
-								<th class="col-action"></th>
-							</tr>
-						</thead>
-						<tbody>
-						<?php echo dgc_gia_rows_html( $dgc_sp_items, array(
-							'nhom_slug' => $nhom['slug'],
-							'ctx'       => $svc_name,
-							'col_name'  => $dgc_sp_col_name,
-						) ); ?>
-						</tbody>
-					</table>
-				</div>
+				<?php
+				/* Luoi ao (giong /bang-gia/, Hieu 2026-08-05: trang dich vu don dung bang HTML
+				   day du - vd booking-bao-pr 1212 dong - nang toi 3,3MB, tai rat cham). Chi ve
+				   ~20-30 dong dang trong khung nhin thay vi nhet het vao DOM. */
+				$dgc_sp_grid_rows = dgc_gia_grid_rows( $dgc_sp_items, array(
+					'nhom_slug' => $nhom['slug'],
+					'ctx'       => $svc_name,
+					'col_name'  => $dgc_sp_col_name,
+				) );
+				?>
+				<div class="price-grid" data-price-grid data-nhom="<?php echo esc_attr( $nhom['slug'] ); ?>" data-ctx="<?php echo esc_attr( $svc_name ); ?>" data-col-name="<?php echo esc_attr( $dgc_sp_col_name ); ?>" data-is-goi="<?php echo $dgc_sp_is_goi ? '1' : '0'; ?>" data-don-vi="<?php echo esc_attr( $dgc_sp_dv ); ?>"></div>
+				<script type="application/json" class="price-grid-data"><?php echo wp_json_encode( $dgc_sp_grid_rows, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP ); ?></script>
 
-				<?php if ( $dgc_sp_total > $dgc_sp_limit ) : ?>
-				<p class="center" style="margin-top:18px">
-					<button type="button" class="btn btn-ghost btn-sm price-more-btn">Xem thêm <?php echo (int) ( $dgc_sp_total - $dgc_sp_limit ); ?> mục</button>
-				</p>
-				<?php endif; ?>
+				<?php /* Du phong cho trinh duyet tat JS / crawler khong chay JS - danh sach thuan text, nhe. */ ?>
+				<noscript>
+					<table class="price-table-noscript">
+						<?php foreach ( $dgc_sp_items as $dgc_sp_ns_it ) :
+							$dgc_sp_ns_vt = trim( (string) ( $dgc_sp_ns_it->meta['vi_tri'] ?? '' ) );
+						?>
+						<tr><td><?php echo esc_html( $dgc_sp_ns_it->post_title ); ?><?php if ( $dgc_sp_ns_vt !== '' ) : ?> - <?php echo esc_html( $dgc_sp_ns_vt ); ?><?php endif; ?></td><td><?php echo esc_html( dgc_format_price( $dgc_sp_ns_it->meta['gia_km'] ?? '' ) ); ?></td></tr>
+						<?php endforeach; ?>
+					</table>
+				</noscript>
 
 				<?php /* Ghi chu "gia tham khao" - cuoi bang, dong chu nho, khong CTA (Hieu 2026-07-15). */ ?>
 				<?php include get_template_directory() . '/inc/price-note.php'; ?>
