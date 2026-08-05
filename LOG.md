@@ -3873,3 +3873,101 @@ Backup: `~/backups/img-batch11/<id>-before.html` trên host.
 **Bài học rút ra (đã note vào feedback cho các dự án sau):** không bao giờ tin báo cáo "đã QA"
 của agent nền cho việc liên quan phán đoán chủ quan (chọn ảnh đúng chủ đề, xử lý màu không lỗi)
 - luôn tự tải về kiểm tra bằng mắt trước khi báo hoàn thành với Hiếu.
+
+## 2026-08-05 (18) - Bổ sung entity FPT/iOne/Ngôi Sao/eClick/e.VnExpress/Tia Sáng vào bài book-bao-vnexpress
+- Post ID 2189 (`/book-bao-vnexpress/`). Backup gốc:
+  `~/Claude-Workspace/_backups/routines/2026-08-05/book-bao-vnexpress/post-2189-BEFORE.html`.
+- Research thật (WebSearch + tải PDF/ảnh gốc qua curl, không bịa số liệu):
+  - eClick.vn (FPT Online) là trung tâm quảng cáo chính thức của VnExpress/iOne/Ngôi Sao/e.VnExpress.
+    Tải 2 PDF báo giá banner chính thức (bản 02/2023 và 2020) - dùng bản 2023 làm nguồn chính.
+  - Xác nhận qua WebSearch: VnExpress là đơn vị sự nghiệp thuộc Bộ Khoa học và Công nghệ (Nghị định
+    55/2025/NĐ-CP). Tia Sáng đã sáp nhập Báo Khoa học và Phát triển, cùng thuộc Bộ KH&CN - cùng chủ
+    quản với VnExpress nhưng KHÔNG chung đơn vị vận hành thương mại, không có kênh booking công khai
+    -> quyết định KHÔNG bịa giá, nêu rõ Digicom chưa nhận booking Tia Sáng.
+  - iOne: tải PDF báo giá thật từ agency trung gian (bookingquangcao.com, cập nhật 20/06/2025).
+  - Ngôi Sao: dùng dữ liệu vendor thật đã có trong `10-bang-gia-booking/bang-gia-master.csv`
+    (DanaSEO/Fame Media, xác nhận ngoisao.net redirect -> ngoisao.vnexpress.net qua WebSearch).
+  - e.VnExpress (VnExpress International): xác nhận KHÔNG có bảng giá công khai -> nêu rõ, không bịa.
+- Thêm 5 mục H2 mới (trước "Kết luận"): hệ sinh thái FPT Online/iOne/Ngôi Sao/Số Hoá/e.VnExpress,
+  bảng giá PR Ngôi Sao (giá vốn + % tiết kiệm so giá gốc), bảng giá iOne, bảng giá banner eClick
+  (2 bảng: Premium Ads trang chủ theo tuần + CPM chuyên mục), mục e.VnExpress/Tia Sáng. Thêm 2 FAQ.
+- Chèn từ khoá theo Google Suggested Hiếu gửi (trừ "Quảng cáo 24h com vn"): Báo giá VnExpress 2026,
+  Bài báo quảng cáo, Chi phí quảng cáo trên vnexpress, Bài PR trên vnexpress, Quảng cáo trên báo,
+  Đăng bài trên VnExpress.
+- Deploy: `wp post update 2189` qua SSH (không qua REST/app-password, theo pattern LOG 2026-07-08).
+  Verify: curl 200 + `.dgc-data-table` x4 + get_page_text đọc đúng nội dung, mục lục tự động bắt
+  đúng heading mới.
+
+## 2026-08-05 (19) - Phát hiện iOne đã ngừng hoạt động độc lập + thêm ảnh thật vào book-bao-vnexpress
+- Khi chuẩn bị chụp ảnh minh hoạ, phát hiện `ione.vnexpress.net` 301 redirect thẳng về trang chủ
+  vnexpress.net (không redirect vào 1 section nào) và mục "Chủ đề iOne" trên chính vnexpress.net
+  không còn bài mới -> kết luận iOne đã ngừng hoạt động như chuyên trang riêng. Bảng giá iOne vừa
+  đăng ở bản trước (theo PDF agency 20/06/2025) đã LỖI THỜI - đã sửa lại: bỏ bảng giá "còn hiệu
+  lực", thay bằng ảnh báo giá gốc dán nhãn lịch sử + đoạn giải thích rõ DigicomVN không còn nhận
+  booking kênh này. Cũng sửa card + FAQ liên quan trong phần hệ sinh thái.
+- Thêm 5 ảnh THẬT vào bài (upload qua `wp media import` qua SSH, không qua REST):
+  - `eclick-banner-trangchu.webp` (ID 5897) + `eclick-banner-cpm.webp` (ID 5896): chụp lại 2 trang
+    PDF báo giá banner CHÍNH THỨC của eClick (pdftoppm từ PDF gốc tải trực tiếp eclick.vn).
+  - `ione-bao-gia-goc.webp` (ID 5898): trang 1 PDF báo giá gốc iOne (bookingquangcao.com,
+    20/06/2025), dán nhãn "không còn áp dụng".
+  - `ngoisao-thuc-te.webp` (ID 5899): chụp thật `ngoisao.vnexpress.net` bằng Chrome headless
+    (`.claude/skills/visual-screenshot/render.sh` pattern - dùng trực tiếp Chrome CLI thay vì
+    browser MCP vì cần lưu file để upload).
+  - `vne-congnghe-thuc-te.webp` (ID 5900): chụp thật chuyên mục "Khoa học công nghệ" vnexpress.net
+    (tên hiện tại của mục từng gọi "Số Hoá" -> đổi "Công Nghệ" -> nay "Khoa học công nghệ" theo
+    nav thật quan sát được, không phải theo bài báo cũ nói "Công Nghệ" - ưu tiên quan sát trực tiếp).
+- Bài học: LUÔN verify domain/redirect còn sống trước khi coi dữ liệu vendor là "hiện hành", dù
+  ngày cập nhật PDF gần (2025-06-20 vẫn có thể lỗi thời chỉ sau 1 năm với các kênh sáp nhập).
+
+## 2026-08-05 (20) - Thêm ảnh minh hoạ cho từng vị trí banner (theo yêu cầu Hiếu)
+- Tải link Demo nhúng trong PDF gốc eClick (regex trích URL trong file PDF), chụp bằng Chrome
+  headless các trang demo trực quan chính thức của eClick (static.eclick.vn) cho 8 vị trí:
+  Super Masthead, Background U, Background đồng bộ, Large 1/2/3, Billboard (ảnh thực tế),
+  Cover Page toàn trang (trang chủ) + Super Masthead/Background U (trang chuyên mục).
+  1 demo (Article Banner) trả về trang trắng -> loại bỏ, không dùng ảnh lỗi.
+- Ghép mỗi nhóm thành 1 ảnh grid có nhãn (Pillow) thay vì 8 ảnh rời rạc -> đỡ nặng trang:
+  `grid-trangchu-web.webp` (ID 5902, 6 vị trí) + `grid-chuyenmuc-web.webp` (ID 5903, 2 vị trí).
+  Chèn ngay sau ảnh "báo giá gốc" tương ứng trong mục banner eClick.
+- Lưu ý minh bạch: caption ghi rõ đây là "tư liệu demo lưu trữ chính thức từ eClick" (ảnh chụp gốc
+  đề ngày 2020-2022, không phải giao diện VnExpress hiện tại) - tránh gây hiểu nhầm là ảnh mới.
+
+## 2026-08-05 (21) - Fix lộ ngôn ngữ "giá vốn" + thêm ảnh vị trí Ngôi Sao
+- Hiếu phát hiện bảng giá Ngôi Sao để lộ cột "Giá DigicomVN (giá vốn)" và đoạn văn "giá vốn...
+  không cộng thêm biên lợi nhuận" ra ngoài công khai - đây là ngôn ngữ nội bộ (nguyên tắc định giá
+  của Digicom), không phải thứ khách hàng cần thấy, dễ gây hiểu lầm/lộ chiến lược giá. Đã sửa:
+  bỏ chữ "(giá vốn)" khỏi header cột, đổi đoạn văn sang cách nói bình thường (giá niêm yết vs giá
+  DigicomVN đang áp dụng), không nhắc "giá vốn/không markup" trước mặt khách.
+- Bổ sung ảnh minh hoạ vị trí cho bảng Ngôi Sao (trước đó thiếu, chỉ có mỗi bảng số không ảnh):
+  chụp thực tế `ngoisao.vnexpress.net` (Chrome headless, viewport cao hơn để lấy đủ 2 khối), tự vẽ
+  khung + nhãn (Pillow) đánh dấu 2 nhóm vị trí "Top Story/Top 1 chuyên mục" và "Streaming" ngay
+  trên ảnh thật - `ngoisao-vitri-web.webp` (ID 5905).
+
+## 2026-08-05 (22) - Sắp xếp lại thứ tự H2 cho logic
+- Hiếu chê bài "lộn xộn quá" sau nhiều lần chèn thêm mục. Vấn đề: mục FAQ đứng TRƯỚC mục "hệ sinh
+  thái VnExpress" dù trong FAQ có câu trỏ "xem phần hệ sinh thái phía trên" - sai vị trí thực tế.
+  Toàn bộ nhóm mục ecosystem (hệ sinh thái, Ngôi Sao, iOne, banner eClick, e.VnExpress/Tia Sáng)
+  cũng bị chèn xen giữa FAQ và Kết luận thay vì đi liền mạch.
+- Sắp xếp lại (script python cắt-dán theo H2 block, verify độ dài không đổi -> không mất nội dung):
+  Bảng giá chính -> Vì sao VnExpress đáng giá -> [hệ sinh thái -> Ngôi Sao -> iOne -> banner eClick
+  -> e.VnExpress/Tia Sáng] -> Quy cách bài -> Quy trình -> Lưu ý duyệt bài -> Lĩnh vực phù hợp ->
+  FAQ -> Kết luận. FAQ giờ đứng NGAY TRƯỚC Kết luận nên mọi câu "xem phần phía trên" đều đúng.
+
+## 2026-08-05 (23) - FIX LỖI THEME: bảng giá không hiện trên MỌI bài blog dùng shortcode
+- Hiếu báo "bảng giá này ko hiện" trên book-bao-vnexpress. Điều tra: đây là LỖI CÓ SẴN CỦA THEME,
+  không phải do các thay đổi nội dung hôm nay gây ra.
+- Nguyên nhân gốc: `functions.php` chỉ enqueue `assets/js/price-grid.js` (script dựng bảng giá
+  kiểu lưới ảo, thêm 2026-08-01) khi `is_page('bang-gia')` hoặc `dgc_current_nhom()` (7 trang dịch
+  vụ pillar) - KHÔNG bao giờ enqueue cho các bài BLOG dùng shortcode `[dgc_bang_gia]` (vd toàn bộ
+  chuỗi bài "book-bao-*" cho từng đầu báo). Kết quả: `<div class="price-grid">` rỗng, JS không
+  chạy, chỉ còn bản `<noscript>` (dành cho trình duyệt tắt JS) - người dùng thường không thấy gì.
+  Đây là hệ quả bỏ sót khi migrate `/bang-gia/` sang lưới ảo ngày 2026-08-01, ảnh hưởng TẤT CẢ
+  bài "book-bao-*" khác (kenh14, dan-tri, 24h, cafef...), không riêng VnExpress.
+- Fix: `functions.php` - thêm điều kiện `is_singular() && has_shortcode(post_content,
+  'dgc_bang_gia')` để enqueue price-grid.js + set `window.DGC_GRID` cho MỌI bài blog có nhúng
+  shortcode này, không chỉ 8 trang cố định. Backup file gốc:
+  `~/Claude-Workspace/_backups/routines/2026-08-05/functions-php-fix/functions.php.BEFORE.php`.
+  Lint `php -l` pass trước khi ghi đè live, verify DOM đã render đúng `.price-grid` + `.rows-window`
+  (18 vị trí vnexpress.net, giá 6.6tr-120tr) qua screenshot thực tế.
+- Việc còn lại: các bài "book-bao-*" khác (kenh14/dan-tri/24h/cafef/tienphong...) tự động ăn theo
+  fix này (điều kiện áp dụng chung), không cần sửa riêng từng bài - nhưng nên kiểm tra lại 1-2 bài
+  mẫu khác để chắc chắn.
