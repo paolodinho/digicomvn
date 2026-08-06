@@ -3952,6 +3952,22 @@ của agent nền cho việc liên quan phán đoán chủ quan (chọn ảnh đ
   -> e.VnExpress/Tia Sáng] -> Quy cách bài -> Quy trình -> Lưu ý duyệt bài -> Lĩnh vực phù hợp ->
   FAQ -> Kết luận. FAQ giờ đứng NGAY TRƯỚC Kết luận nên mọi câu "xem phần phía trên" đều đúng.
 
+## 2026-08-06 (1) - Sơ đồ bài viết: mặc định thu gọn, bấm để mở
+- Hiếu: "phần sơ đồ bài viết mặc định co gọn lại, ai thích đọc thì bấm vào đọc nó sẽ xổ ra".
+- Đổi khối `.post-mindmap` (`inc/toc.php`) từ `<div>` luôn mở sang `<details>/<summary>` (giống
+  cơ chế khối Mục lục đã có). Mặc định KHÔNG có thuộc tính `open` -> đóng sẵn, chỉ hiện dòng tiêu
+  đề "Sơ đồ bài viết" + mô tả ngắn; bấm vào dòng đó mới xổ lưới thẻ ra. Thêm icon mũi tên chevron
+  tự xoay 180° khi mở (CSS `.post-mindmap[open] .post-mindmap__chevron`).
+- CSS: bỏ marker mặc định của `<summary>`, `cursor:pointer`, margin-bottom chỉ áp khi `[open]`.
+  Bump `DGC_VER` 2.7.0 -> 2.7.1 (functions.php) để browser tải CSS mới.
+- Đã sync code sang Local WP và verify qua curl: HTML render đúng `<details class="post-mindmap"
+  id="postMindmap">` không kèm `open` trên bài mẫu `bao-gia-dang-bai-pr-theo-dau-bao` (post 1261) -
+  đúng bài trong ảnh Hiếu gửi. Chưa verify được bằng ảnh chụp trình duyệt (site cần duyệt quyền
+  truy cập riêng, không thao tác được trong phiên này) - nếu Hiếu tự mở Local kiểm tra thấy lệch
+  thì báo lại.
+- Việc còn lại: CHƯA đẩy lên live (Hostinger) - đang chỉ sửa + test ở Local theo đúng rule
+  `local-sync.md`. Cần Hiếu xác nhận rồi mới deploy live theo `deploy.md`.
+
 ## 2026-08-05 (23) - FIX LỖI THEME: bảng giá không hiện trên MỌI bài blog dùng shortcode
 - Hiếu báo "bảng giá này ko hiện" trên book-bao-vnexpress. Điều tra: đây là LỖI CÓ SẴN CỦA THEME,
   không phải do các thay đổi nội dung hôm nay gây ra.
