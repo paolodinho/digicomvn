@@ -727,6 +727,7 @@ add_action( 'template_redirect', function () {
 	$dgc_gop = array(
 		'/dich-vu-entity/'  => '/backlink-social-entity/',
 		'/backlink-social/' => '/backlink-social-entity/',
+		'/dich-vu/dich-vu-backlink/bat-dong-san/' => '/backlink-bat-dong-san/',
 	);
 	$dgc_p = untrailingslashit( $path ) . '/';
 	if ( isset( $dgc_gop[ $dgc_p ] ) ) {

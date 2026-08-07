@@ -64,9 +64,10 @@ function dgc_toc_process( $content ) {
 	$GLOBALS['dgc_toc_items'] = $items;
 
 	$toc_html      = dgc_toc_render_inline( $items );
-	$mindmap_html  = dgc_toc_render_mindmap( $items, get_the_title(), $content );
+	// Tam an "So do bai viet" toan site theo yeu cau Hieu 2026-08-07 - giu ham
+	// dgc_toc_render_mindmap() nguyen ven de bat lai sau, chi khong goi no o day.
 	$entity_html   = dgc_entity_render( get_the_ID(), $content );
-	$toc_html     .= $mindmap_html . $entity_html;
+	$toc_html     .= $entity_html;
 
 	// Uu tien chen sau khoi "Tom tat noi dung chinh" (div class co "summary") neu bai co khoi nay,
 	// vi khoi nay luon dat truoc H2 dau tien. Khong co thi chen ngay sau H1 (fallback).

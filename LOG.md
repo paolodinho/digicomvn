@@ -3987,3 +3987,43 @@ của agent nền cho việc liên quan phán đoán chủ quan (chọn ảnh đ
 - Việc còn lại: các bài "book-bao-*" khác (kenh14/dan-tri/24h/cafef/tienphong...) tự động ăn theo
   fix này (điều kiện áp dụng chung), không cần sửa riêng từng bài - nhưng nên kiểm tra lại 1-2 bài
   mẫu khác để chắc chắn.
+
+## 2026-08-06 (2) - Bài mới: Book Báo Batdongsan.com.vn (post 5910, live)
+
+- URL: https://digicomvn.com/book-bao-batdongsan/ (post ID 5910, category Booking báo & PR).
+  Theo đúng khuôn cấu trúc bài book-bao-vnexpress (2189) nhưng viết nội dung riêng - không copy
+  nguyên văn.
+- Research trước khi viết (không bịa số liệu):
+  - WebSearch xác nhận batdongsan.com.vn là **cổng thông tin bất động sản** (PropertyGuru Việt
+    Nam), không phải báo điện tử: thành lập 8/2006, gia nhập PropertyGuru 2018 (nguồn Tuổi Trẻ,
+    dofollow), chiếm ~80% tin đăng/90% thông tin dự án toàn thị trường (nguồn chính wiki.
+    batdongsan.com.vn, dofollow).
+  - Không có dữ liệu DR nội bộ (CPT `dgc_gia` chưa gắn meta `dr` cho domain này) nên KHÔNG dùng
+    shortcode `[dgc_dr_chart]` (sẽ hiển thị sai lệch "theo dữ liệu DigicomVN theo dõi"). Thay vào
+    đó trích DR ~76 từ AhrefsTop (bên thứ ba, link nofollow, có ghi rõ nguồn) - đúng
+    `external-link-eeat.md`.
+  - Dùng Claude Browser thật kiểm tra trực tiếp batdongsan.com.vn ngày 06/08/2026: xác nhận các
+    bài nổi bật trang chủ đều trỏ sang `wiki.batdongsan.com.vn/tin-tuc/...` - đúng cơ chế "trang
+    chủ hiển thị, nội dung ở wiki" mô tả trong CSV giá gốc. Headless Chrome (không profile thật)
+    bị Cloudflare chặn nên không chụp được ảnh trực tiếp batdongsan.com.vn - dùng lại ảnh thật đã
+    có (wiki BDS, ID 3799) + 2 ảnh Storyset mới (nhà/tìm kiếm BĐS, không chữ tiếng Anh).
+- Giá: dùng `[dgc_bang_gia bao="Batdongsan.com.vn" domain="batdongsan.com.vn,wiki.batdongsan.com.vn"]`
+  - tự động lấy đúng 5 dòng giá thật đang publish trên CPT `dgc_gia` (Bài tin tức trang trong
+    1,76tr; 3 mức Bài Hot trang chủ 4,4tr/9,2tr/18,75tr; Bao link dofollow wiki 5,2tr - mã NCC 3
+    Fame Media theo `bang-gia-booking.md`). Schema Service+Offer tự sinh khớp đúng 5 dòng này
+    (verify qua `tools/schema-vocab-check.py` + `tools/schema-google-check.py`: 0 lỗi).
+- Visual coverage: 3 ảnh thật (1 screenshot thật + 2 Storyset), 7 khối HTML diagram/chip (stat
+  card, flow 3 bước, quy cách chip, quy trình 5 bước, chip lỗi duyệt, chip lĩnh vực, CTA band) -
+  vượt mức tối thiểu 3 sơ đồ/bài. Widget `[dgc_budget_calc]` sau H2 thứ 2. FAQ 5 câu lưu vào meta
+  `dgc_faqs` (khớp đúng nội dung hiển thị trong bài).
+- Internal link (5): `/dich-vu-backlink/bat-dong-san/`, `/backlink-bat-dong-san/`,
+  `/booking-bao-pr/` (x2, mở bài + kết luận), `/bang-gia/`, `/dat-bai/` - đều verify 200.
+- Thumbnail: `tools/blog-thumbnail/render-illus.py` -> attachment 5911, gắn featured image.
+- QA: curl 200, meta title/description/OG/canonical đúng, `tools/meta-qa.py` 0 lỗi toàn site,
+  `tools/schema-vocab-check.py` + `tools/schema-google-check.py` 0 lỗi cho URL này, không có
+  dấu "—", không lộ shortcode thô, giá trong bài khớp CPT live.
+- Manifest: bài MỚI hoàn toàn (không ghi đè nội dung cũ) - không cần backup rollback, chỉ ghi
+  "created" theo `routine-backup.md`.
+- Việc còn thiếu (chưa làm, effort budget đã dùng hết cho việc viết + đăng + QA): CHƯA chèn link
+  chiều ngược từ 1-2 bài cũ cùng cụm (vd `backlink-bat-dong-san`, `dich-vu-backlink/bat-dong-san`)
+  trỏ về bài mới; CHƯA submit Google Search Console yêu cầu lập chỉ mục.
