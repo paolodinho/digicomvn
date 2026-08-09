@@ -4101,3 +4101,73 @@ Backup: `~/Claude-Workspace/_backups/routines/2026-08-09/footer-illus-layout/`.
      mục "Bảng giá" khỏi đó - code chỉ sửa được menu fallback khi CHƯA tạo menu WP Admin.
   3. Google Search Console: submit lại sitemap, cân nhắc gỡ index URL `/bang-gia/` cũ nếu đã được
      Google index từ trước.
+
+## 2026-08-09 (2) - Deploy PR #6 lên live: xoá hẳn /bang-gia/, dọn DB, fix bug permission
+
+**Merge PR #6** (`claude/remove-pricing-page-lvadfq` -> `main`): main đang có 2 fix chưa commit
+(bảng giá trống 18 bài book-bao + layout ảnh footer mobile, đều đã deploy live từ trước) - commit
+riêng (`243cd45`) trước, merge PR bằng `git merge` (không dùng `gh pr merge` vì PR ở trạng thái
+draft) - chỉ conflict ở LOG.md (2 entry cùng ngày nối liền nhau), giữ cả hai theo thứ tự thời
+gian, functions.php/footer.php tự merge sạch. Push `7a808a1` lên `main`. GitHub tự nhận PR #6 là
+MERGED (trùng nội dung commit), không cần thao tác merge/close thủ công qua `gh`.
+
+**Đồng bộ Local WP** trước khi deploy: rsync theme (loại `assets/images/`), xoá tay
+`page-bang-gia.php` + `inc/price-view-options.php` (rsync không có `--delete` nên không tự xoá).
+Verify qua curl (browser tool bị chặn truy cập domain `.local`): redirect `/bang-gia/` -> `/` 301
+đúng, trang dịch vụ không còn CTA/link nào trỏ `/bang-gia/` trong code, chỉ còn 1 mục menu THẬT
+trong WP Admin (`menu-item-540` "Bảng giá") - xác nhận đúng dự đoán, sẽ dọn ở bước DB trên live.
+
+**Backup trước khi ghi đè live**: theme tar.gz (`~/backups/2026-08-09/digicom-host-1041.tar.gz`,
+1,87MB) + DB mysqldump (`~/backups/2026-08-09/db-before-bangia-deploy.sql`, 36MB, dùng mysqldump
+trực tiếp vì `wp db export` fail exit 255 trên host này - theo `deploy.md`).
+
+**Deploy theme**: `rsync -avz --delete` (27 file sửa, gồm xoá `page-bang-gia.php` +
+`inc/price-view-options.php`) - **BUG NGHIÊM TRỌNG phát hiện ngay sau deploy**: `rsync -a` (chế
+độ archive, giữ nguyên permission) đã copy permission `700` từ thư mục local (Google Drive Stream
+trên macOS) đè lên toàn bộ thư mục theme + `assets/`/`js/`/`css`/`inc` trên live (trước đó `755`).
+Thư mục `700` chặn nginx (chạy user khác owner file) đọc file tĩnh -> **toàn bộ CSS/JS trả 404**
+trên live dù PHP page vẫn 200 (PHP-FPM chạy as owner nên không bị chặn) - lỗi ẩn, chỉ phát hiện
+qua verify curl bước 7, không thấy qua "trang chủ vẫn load được". Fix: `find . -type d -exec chmod
+755 {} \;` + `find . -type f -exec chmod 644 {} \;` trên toàn theme, purge cache lại - main.js/
+main.css về 200. **Rút kinh nghiệm cho lần sau: `rsync -avz` từ Google Drive path lên host luôn
+phải kèm `--chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r` hoặc chmod lại sau, KHÔNG dùng `-a`/`-p` thuần vì
+Drive Stream trên Mac thường set permission 700 cho file/thư mục.**
+
+**Dọn DB (đúng như dự đoán ở bước trước 2026-08-09 (1) mục "việc còn lại")**:
+- Page "Bảng giá" (ID 483): thử draft trước theo kế hoạch ban đầu -> phát hiện **bug thứ 2**:
+  `template_redirect` hook dùng `is_page('bang-gia')` để bắt 301 - khi page ở trạng thái draft,
+  WordPress query chính (front-end, khách chưa đăng nhập) đã tự trả 404 TRƯỚC khi hook chạy (query
+  loại draft khỏi kết quả) -> `is_page()` trả false -> redirect không kích hoạt -> khách nhận 404
+  THẬT thay vì 301 êm (tệ hơn cho SEO/UX so với dự định ban đầu). Đã **publish lại** post 483 -
+  đúng như comment gốc trong code giải thích ("an toàn bất kể trang bang-gia publish hay không"),
+  logic 301 chỉ hoạt động đúng khi page CÒN publish. Verify lại: 301 hoạt động.
+- Menu: `get_nav_menu_locations()` xác nhận location `primary` = term_id 11 ("Menu DigicomVN");
+  `menu-chinh` (term_id 9) không gán location nào, không hiển thị trên site (bỏ qua). Xoá mục
+  `db_id 540` "Bảng giá" trong `menu-digicom`. Location `footer` không có menu WP Admin gán ->
+  dùng fallback code trong `footer.php` (đã sạch từ PR).
+
+**Verify cuối (curl)**:
+- `curl -sI https://digicomvn.com/bang-gia/` -> `HTTP/2 301`, `location: https://digicomvn.com/`.
+- `main.js?ver=2.7.2` + `main.css?ver=2.7.2` -> 200.
+- Trang chủ: "Đặt bài" x4, "Bảng giá" x5 còn lại - **đều là nội dung** (2 câu FAQ trong option
+  `faqs` nhắc "trang Bảng giá" như khái niệm, 1 tiêu đề bài blog "...Bảng Giá PR..."), không phải
+  link/CTA hỏng - ngoài phạm vi PR (PR chỉ sửa code CTA, không sửa nội dung bài/FAQ đã đăng).
+
+**Việc còn lại - Hiếu cần tự xử lý (nội dung, không phải code)**:
+1. Trang `/booking-bao-pr/` (post content, Gutenberg) còn 1 câu **"...xem đầy đủ 503 mức giá tại
+   [trang Bảng giá](/bang-gia/)"** - link chết thật (trỏ trang giờ redirect về home). Cần sửa lại
+   câu này qua WP Admin > Trang > Booking báo & PR (không phải file code).
+2. Nội dung FAQ (option `faqs`, WP Admin > DigicomVN) có 2 câu trả lời nhắc "trang Bảng giá" như
+   nơi tra cứu giá - nên cập nhật câu trả lời để không còn nhắc trang đã bỏ.
+3. Đã quét toàn site bằng `wp db query` (post_content LIKE href="/bang-gia...") - **43 bài/trang
+   publish còn link thật trỏ `/bang-gia/` trong nội dung** (7 trang pillar + 36 bài blog, chủ yếu
+   cụm booking-báo-PR và backlink). Danh sách đầy đủ 43 ID trong LOG.md bản đầy đủ (không liệt kê
+   lại ở đây cho gọn) - đây là NỘI DUNG bài viết (Gutenberg post_content), không phải code, ngoài
+   phạm vi PR #6 (PR chỉ sửa CTA/link trong file theme). Cần Hiếu quyết định: sửa tay từng bài,
+   hoặc chạy 1 script thay thế hàng loạt (nếu vậy nên review kỹ câu văn quanh mỗi link trước khi
+   thay, vì câu văn có thể cần viết lại chứ không chỉ đổi URL - vd "xem đầy đủ 503 mức giá tại
+   trang Bảng giá" không còn đúng nữa vì trang đó không còn tồn tại).
+4. Google Search Console: submit lại sitemap, cân nhắc gỡ index URL `/bang-gia/` cũ (vẫn đang lưu
+   trong LOG entry trước, chưa làm).
+
+Backup: `~/backups/2026-08-09/` (host, theme tar.gz + DB sql).
