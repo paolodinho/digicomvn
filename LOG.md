@@ -4234,3 +4234,63 @@ Backup đầy đủ (title cũ + post_content cũ 3 bài đã sửa):
 **Còn lại (chưa làm, cần Hiếu quyết nếu muốn làm tiếp)**: audit này dựa trên tiêu đề/nội dung,
 không có xác nhận từ Google Search Console (query thật, số click/impression từng trang cho cùng
 1 từ khoá) - muốn chính xác hơn nữa cần kết nối GSC cho digicomvn.com.
+
+---
+
+## 2026-08-09 - Entity schema toàn site: 4 lớp mới (DefinedTerm, citation, HowTo, mentions)
+
+Research schema thật của 3 đối thủ cùng ngành (Mona Media, MIC Creative, SEODO - fetch JSON-LD
+trực tiếp) - cả 3 dùng schema mặc định plugin Yoast/RankMath, chưa khai thác 4 điểm này. Đã bổ
+sung `inc/schema.php` (mục "6b"), toàn bộ dữ liệu THẬT (không suy đoán):
+
+1. **DefinedTerm**: bài tiêu đề "X Là Gì?" -> tự nhận diện, gắn vào 1 DefinedTermSet chung
+   ("Thuật ngữ SEO, Backlink & Booking báo PR - DigicomVN"). 44 trang trên live.
+2. **Citation**: Article.citation lấy đúng link ngoài THẬT đã có sẵn trong bài (loại link nội
+   bộ + zalo/facebook). 146 trang trên live.
+3. **HowTo**: bài có ≥3 heading "Bước N:" thật -> tự dựng HowTo + HowToStep. 3 trang (các bài
+   quy trình N bước).
+4. **Mentions thương hiệu thật**: danh sách 11 thương hiệu/công cụ đã verify URL Wikipedia/
+   chính chủ trả 200 (Coca-Cola, Pepsi, Grab, Heineken, Viettel, Vinamilk, Dove, Ahrefs,
+   SEMrush, Google Search Console, Google Analytics) - bài nào nhắc tên này trong H1/H2 thật
+   thì tự gắn `mentions` kèm `sameAs`. 51 trang trên live.
+
+Organization: thêm `knowsLanguage` (hợp lệ theo vocab chính thức, đã kiểm), `slogan` + LinkedIn/
+YouTube (option mới trong WP Admin > DigicomVN > mục 1, để trống - Hiếu điền khi có thật).
+
+QA: `schema-vocab-check.py` + `schema-google-check.py` + `schema-qa.py` đều 0 lỗi trên 182 URL
+sau triển khai. Backup: `~/Claude-Workspace/_backups/routines/2026-08-09/entity-schema-full/`.
+Chi tiết: `.claude/rules/schema-markup.md` mục "Lớp entity mở rộng".
+
+---
+
+## 2026-08-09 (tối muộn) - Điền nốt dữ liệu Organization schema theo xác nhận của Hiếu
+
+Hiếu xác nhận: chưa có LinkedIn/YouTube (giữ trống), slogan thật "Digital Marketing Agency
+chuyên booking", số nhân sự thật = 5, không tham gia hiệp hội quảng cáo nào.
+
+- Thêm `numberOfEmployees` (QuantitativeValue, value=5) vào `dgc_sch_organization()`
+  (`inc/schema.php`) - hardcode giống pattern `foundingDate`/`vatID` (sự thật công ty ít đổi).
+- Set `slogan` = "Digital Marketing Agency chuyên booking" vào option `dgc_settings` (live DB)
+  + default trong `inc/options.php` để Local/dev khớp.
+- QA lại `schema-vocab-check.py` + `schema-google-check.py`: 0 lỗi trên 182 URL.
+
+Backup: `~/Claude-Workspace/_backups/routines/2026-08-09/entity-schema-slogan-employees/`.
+
+---
+
+## 2026-08-09 (khuya) - Thêm toạ độ + Google Business Profile vào Organization schema
+
+Hiếu bảo tự tra Google Maps ("search digicomvn trên google là thấy map, vào map lấy toạ độ").
+Mở Google Maps tìm "digicomvn" -> ra đúng listing "DigicomVN - Media company" tại địa chỉ
+Toà nhà Thăng Long A1, Thôn Bầu Kim Chung, Đông Anh (khớp `address2` đang có). Lấy toạ độ thật
+từ URL Maps + Place ID -> dựng link CID cố định, verify link mở đúng lại listing đó.
+
+- `Organization.geo` = GeoCoordinates (21.0029761, 105.8385588).
+- `Organization.hasMap` = `https://maps.google.com/?cid=2252645296724540673` (Google Business
+  Profile thật, đã verify), thêm luôn vào `sameAs`.
+- Hợp lệ theo vocab: `ProfessionalService` kế thừa `Place` qua `LocalBusiness` nên `geo`/`hasMap`
+  dùng được (đã kiểm domainIncludes trước khi thêm).
+- QA: `schema-vocab-check.py` + `schema-google-check.py` 0 lỗi trên 182 URL (2 lỗi timeout mạng
+  ở lần chạy đầu, chạy lại sạch).
+
+Backup: `~/Claude-Workspace/_backups/routines/2026-08-09/entity-schema-geo/`.

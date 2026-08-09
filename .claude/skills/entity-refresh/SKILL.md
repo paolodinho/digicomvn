@@ -97,6 +97,97 @@ khi họ là nguồn gốc phát hiện ra thực thể đó.
 3. KHÔNG bịa số liệu/tên riêng không xác minh được (`content-professional.md`). Thực thể
    cần số liệu cụ thể mà không có nguồn xác nhận -> viết chung chung, không gán con số.
 
+### 3 tiêu chí bắt buộc cho MỌI câu viết thêm (chốt 2026-08-09, cập nhật 2026-08-09 dựa trên research Google + chuyên gia SEO uy tín)
+
+Trước khi chèn bất kỳ câu nào vào bài, tự kiểm đủ 3 tiêu chí sau - thiếu 1 trong 3 thì viết
+lại, không chèn câu chỉ "nhét thêm từ khoá cho đủ". Căn cứ: hướng dẫn chính thức đầu tiên
+của Google Search Central về AI Search (công bố 15/5/2026), nghiên cứu GEO của Princeton
+(paper gốc formalize thuật ngữ GEO) và CMU (KDD 2024), cùng phân tích của Backlinko/Search
+Engine Journal/Search Engine Land về information gain và patent "Contextual estimation of
+link information gain" của Google.
+
+**a) Tối ưu cho AI (GEO/AEO) - câu phải tự đứng được, trích dẫn được**
+- Nguyên tắc gốc của Google (Search Central, 5/2026): **"Write content for your human
+  audience, not for AI."** Không có trick riêng để "qua mặt" AI Overview/AI Mode - nền tảng
+  vẫn là nội dung hữu ích thật, kiến trúc rõ ràng, trải nghiệm tốt. 3 tiêu chí này KHÔNG
+  thay thế nguyên tắc gốc đó, chỉ là cách trình bày để nội dung hữu ích thật dễ được AI
+  trích đúng hơn.
+- Thiết kế mỗi đoạn/mục là **self-contained**: đọc riêng đoạn đó ra khỏi bài vẫn hiểu và trả
+  lời trọn vẹn 1 câu hỏi - nêu rõ chủ ngữ cụ thể (tên báo, tên thực thể thật), không dùng
+  đại từ mơ hồ ("nó", "đây", "điều này") ở câu mở đầu đoạn.
+- Đặt khẳng định/câu trả lời chính NGAY ĐẦU đoạn hoặc đầu câu, giải thích/ngữ cảnh theo sau
+  - không vòng vo dẫn dắt rồi mới ra ý chính ở cuối.
+- Với thực thể là khái niệm/tên riêng: theo khung của CMU (KDD 2024, "impression score" cao
+  hơn với nội dung có cấu trúc định nghĩa rõ), ưu tiên format **"[Thực thể] là [loại] mà
+  [đặc điểm phân biệt]"** ở câu đầu tiên nhắc tới thực thể đó, thay vì mô tả rải rác.
+- Theo nghiên cứu Princeton (GEO gốc): 3 đòn bẩy tăng khả năng được AI trích dẫn mạnh nhất
+  là **thêm trích dẫn nguồn (citation), thêm quote/phát ngôn xác thực, và làm giàu bằng số
+  liệu cụ thể (statistics)** - ưu tiên 3 loại này khi có dữ liệu thật, hơn là mô tả chung
+  chung không có con số/nguồn.
+- Freshness: Google xét cả ngày đăng/ngày cập nhật khi đánh giá AI Overviews - khi sửa
+  thông tin quan trọng (số liệu, giấy phép, chủ quản), cân nhắc đây cũng là lý do nên cập
+  nhật `modified_time` của bài (đã có sẵn qua `dgc_sch_*` - xem `schema-markup.md`).
+
+**b) Giọng viết KHÁC ROBOT - không lặp công thức máy móc**
+- Dấu hiệu robot dễ nhận biết nhất theo giới chuyên gia (Forbes Communications Council,
+  các bài phân tích AI-writing 2026): câu dài đều nhau, lặp từ, giọng phẳng trung tính
+  xuyên suốt, và cấu trúc liệt kê song song cứng nhắc ("Thứ nhất... Thứ hai... Thứ ba...",
+  "Ngoài ra, X còn bao gồm Y, Z") lặp lại ở nhiều đoạn liên tiếp.
+- Cách sửa được khuyến nghị rộng rãi: **đọc to câu vừa viết**, trộn câu ngắn xen câu dài,
+  thay cụm lặp bằng cách diễn đạt khác, thêm 1-2 chi tiết cụ thể (số liệu, tên thật, hoàn
+  cảnh) thay vì tính từ mô tả chung chung.
+
+**Danh sách mẫu câu/từ AI hay dùng - RÀ và LOẠI trước khi chèn (research 2026-08-09, nguồn:
+Wikipedia:Signs of AI writing, phân tích 15 triệu abstract PubMed của Science Advances,
+Max Planck Institute, BRANDS Vietnam):**
+
+| Nhóm | Dấu hiệu | Ví dụ cụ thể (tránh) |
+|---|---|---|
+| Editorializing - chèn lời "làm ra vẻ khách quan/trung thực" | Mở câu bằng cụm tự nhận xét thay vì đi thẳng vào fact | "Cần nói thẳng là...", "Điều quan trọng cần lưu ý là...", "Không thể phủ nhận rằng...", "`<Brand>` không giấu điều này..." (tự khen sự trung thực - đã bắt được ở bài Webtretho 2026-08-09, coi là case mẫu) |
+| Chuyển đoạn máy móc | Nối đoạn bằng đúng 1 trong vài từ lặp lại | "Hơn nữa", "Thêm vào đó", "Ngoài ra" dùng liên tục làm từ mở đầu nhiều đoạn liên tiếp trong CÙNG 1 bài |
+| Rule of three | Liệt kê đúng 3 vế làm "khuôn tu từ" dù nội dung không tự nhiên chia 3 | Adjective/benefit 3 vế đều nhau kiểu "toàn diện, đột phá, hiệu quả"; "Thứ nhất... Thứ hai... Thứ ba..." lặp ở nhiều đoạn |
+| Ngôn ngữ thổi phồng tầm quan trọng | Gán ý nghĩa lớn lao cho chi tiết nhỏ | "đóng vai trò then chốt", "là minh chứng cho...", "khẳng định tầm quan trọng của...", tương đương "stands as a testament to", "underscores its importance", "plays a vital role" |
+| Từ vựng AI tần suất cao (áp cho bản dịch/ý tương đương tiếng Việt) | Từ xuất hiện ở AI cao hơn hẳn tần suất người viết thật (delve/tapestry/pivotal/underscore/crucial/robust/leverage/comprehensive - theo Science Advances, tăng ~400% kể từ ChatGPT) | Tránh bản dịch sáo rỗng tương đương: "sâu sắc/đào sâu" dùng lặp lại, "bức tranh toàn cảnh", "bước tiến đúng hướng", "một phần nhỏ của tảng băng chìm", "tạo giá trị", "đồng bộ hoá mục tiêu" - đúng như BRANDS Vietnam liệt kê là sáo ngữ AI hay dùng |
+| Kết luận rập khuôn | Chốt đoạn/bài bằng công thức lặp | "Tóm lại...", "Kết luận là..." chèn giữa bài (khác H2 "Kết luận" ở cuối bài - đó là mục có chủ đích, không tính) |
+| Meta-reference (đã cấm trong `content-professional.md`, củng cố thêm ở đây) | Tự nhắc tới chính bài viết/quá trình viết | "đúng như cách bài viết này gọi...", "như đã giải thích ở phần trên", "phần dưới đây sẽ..." lặp nhiều lần |
+
+Quy trình áp dụng: sau khi viết xong câu/đoạn mới, **grep nhanh** các cụm ở cột 3 trong bản
+nháp trước khi chèn vào bài - thấy khớp thì viết lại theo hướng đi thẳng vào fact (bỏ hẳn
+câu mở editorializing, không thay bằng từ đồng nghĩa sáo rỗng khác).
+- Tự kiểm bằng câu hỏi: "câu này có thể xuất hiện y hệt trong bất kỳ bài SEO nào khác về
+  chủ đề tương tự không?" Nếu có -> viết lại cho gắn cụ thể với chính thực thể/bối cảnh
+  đang nói (tên báo, số liệu, quy định thật của bài này), không phải câu generic dùng đâu
+  cũng được. Đúng tinh thần `content-professional.md` (biên tập chuyên nghiệp, không bỗ bã)
+  nhưng KHÔNG đánh đổi thành văn phong công thức, sáo rỗng kiểu bài SEO đại trà.
+- Chèn 1 câu/mục mới cũng đừng luôn rơi đúng cùng 1 vị trí công thức (vd luôn thêm ngay sau
+  câu mở đầu H2, luôn thành FAQ cuối cùng) - đa dạng điểm chèn giữa các lần refresh khác
+  nhau, cùng tinh thần "không rập khuôn dàn bài máy móc" ở cấp toàn bài
+  (xem `content-pipeline` SKILL.md BƯỚC 3, rule Hiếu 2026-08-09) áp cho cả việc bổ sung nội
+  dung vào bài có sẵn, không chỉ bài viết mới.
+
+**c) Information gain - có phần ĐỘC NHẤT so với mọi đối thủ đã quét, không chỉ lấp gap**
+- Căn cứ: Google có patent "Contextual estimation of link information gain" (nộp 2018,
+  công bố 2022) - đo "additional information vượt ra ngoài thông tin đã có ở các tài liệu
+  người dùng từng xem", dùng như một tín hiệu xếp hạng. Lấp gap (thêm thực thể đối thủ đã
+  nói mà bài mình thiếu) là điều kiện CẦN nhưng CHƯA ĐỦ theo đúng định nghĩa information
+  gain - phải có phần KHÔNG NẰM TRONG bất kỳ tài liệu nào đối thủ đã có mới thật sự tính là
+  gain, không phải chỉ "đủ như đối thủ".
+- Phân tích của Cyrus Shepard (sau Google core update 3/2026, khảo sát 400+ site): sở hữu
+  **tài sản độc quyền/first-party data** ("content moat") là 1 trong 3 yếu tố dự đoán mạnh
+  nhất việc giữ được traffic; site chỉ có thông tin phổ quát (ai cũng viết được) là nhóm
+  mất traffic nhiều nhất. Ưu tiên các loại thông tin AI không tự tổng hợp được:
+  - Verify trực tiếp từ nguồn gốc (footer/schema.org của chính site được nhắc tới) thay vì
+    lặp lại điều đối thủ đã viết - nhiều lần trong session đã phát hiện đối thủ ghi SAI
+    (nhầm chủ quản, nhầm số giấy phép) trong khi verify tận gốc mới ra sự thật.
+  - Số liệu/dữ liệu tự đo của DigicomVN (Ahrefs DR, ngày chụp ảnh thực tế) thay vì con số
+    đối thủ tự nhận không kiểm chứng được.
+  - Góc phân tích/khuyến nghị thực dụng riêng (khi nào nên chọn vị trí này thay vì vị trí
+    kia, cạm bẫy cụ thể cần tránh) - không chỉ liệt kê thông số như mọi bài đối thủ.
+- Nếu sau khi rà cả checklist chỉ toàn là lấp gap thuần tuý (không có lớp nào độc nhất) ->
+  vẫn chèn (đúng BƯỚC 4/5), nhưng ưu tiên tìm thêm 1 câu verify-gốc hoặc góc nhìn riêng để
+  bài không chỉ là "chép lại đủ ý đối thủ có", tránh trùng lặp thông tin với chính các
+  nguồn đã quét.
+
 ## BƯỚC 7 - BACKUP + ĐĂNG LIVE
 
 1. Backup: `content.raw` GỐC (đã lấy ở BƯỚC 1) -> lưu

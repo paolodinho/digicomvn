@@ -502,9 +502,15 @@ function dgc_sch_organization() {
 			'value' => '0109816406',
 		),
 		'foundingDate'  => '2021-11-12',
+		// So nhan su that (Hieu xac nhan 2026-08-09) - doi khi doi ngu thay doi that, khong doan.
+		'numberOfEmployees' => array( '@type' => 'QuantitativeValue', 'value' => 5 ),
 		'areaServed'    => array( '@type' => 'Country', 'name' => 'Việt Nam' ),
 		// KHONG dat 'inLanguage' o day: schema.org chi cho phep tren CreativeWork,
 		// validator.schema.org bao UNKNOWN_FIELD cho Organization (da kiem 2026-07-27).
+		// 'knowsLanguage' thi HOP LE tren Organization (domainIncludes: Organization, Person -
+		// da kiem lai vocab chinh thuc 2026-08-10, khac 'inLanguage' o tren).
+		'knowsLanguage' => array( 'vi' ),
+		'slogan'        => dgc_sch_txt( dgc( 'slogan' ) ),
 		'knowsAbout'    => array(
 			'Booking báo chí', 'Đăng bài PR trên báo điện tử', 'Guest Post', 'Mua Textlink',
 			'Dịch vụ Backlink', 'Backlink Social Entity', 'Backlink quốc tế', 'SEO off-page',
@@ -519,6 +525,16 @@ function dgc_sch_organization() {
 
 	$hours = dgc_sch_hours( dgc( 'working_hours' ) );
 	if ( $hours ) $node['openingHoursSpecification'] = array( $hours );
+
+	// Toa do + link Google Business Profile that (Hieu tra tu Google Maps 2026-08-09, khop
+	// dung dia chi van phong giao dich "Toa nha Thang Long A1..." - 'geo'/'hasMap' hop le tren
+	// ProfessionalService vi no ke thua Place qua LocalBusiness, da kiem vocab chinh thuc).
+	$node['geo'] = array(
+		'@type'     => 'GeoCoordinates',
+		'latitude'  => 21.0029761,
+		'longitude' => 105.8385588,
+	);
+	$node['hasMap'] = 'https://maps.google.com/?cid=2252645296724540673';
 
 	// Khoang gia THAT: gia thap nhat / cao nhat dang niem yet tren toan bang gia.
 	$range = dgc_sch_price_range();
@@ -537,11 +553,15 @@ function dgc_sch_organization() {
 		) ) );
 	}
 
-	// Ho so mang xa hoi that (khong bia link)
+	// Ho so mang xa hoi that (khong bia link) - linkedin/youtube de trong den khi Hieu dien
+	// that qua WP Admin > DigicomVN > muc 1, schema tu hien khi co du lieu.
 	$same = array();
 	if ( dgc( 'facebook' ) ) $same[] = dgc( 'facebook' );
+	if ( dgc( 'linkedin' ) ) $same[] = dgc( 'linkedin' );
+	if ( dgc( 'youtube' ) ) $same[] = dgc( 'youtube' );
 	$zalo = preg_replace( '/[^0-9]/', '', (string) dgc( 'zalo' ) );
 	if ( $zalo ) $same[] = 'https://zalo.me/' . $zalo;
+	$same[] = $node['hasMap']; // Google Business Profile that - cung la trang dinh danh doanh nghiep
 	if ( $same ) $node['sameAs'] = $same;
 
 	// Nguoi sang lap (lay tu ho so WP, khong hardcode)
@@ -907,7 +927,132 @@ function dgc_sch_article() {
 	$wc = preg_match_all( '/[\p{L}\p{N}]+/u', wp_strip_all_tags( strip_shortcodes( (string) get_post_field( 'post_content', get_the_ID() ) ) ) );
 	if ( $wc > 0 ) $node['wordCount'] = (int) $wc;
 
+	// Lam giau entity (2026-08-10) - chi them khi CO du lieu that trong bai, xem muc 6b.
+	$cit = dgc_sch_citations();
+	if ( $cit ) $node['citation'] = $cit;
+
+	$mentions = dgc_sch_brand_mentions();
+	if ( $mentions ) $node['mentions'] = $mentions;
+
 	return dgc_sch_prune( $node );
+}
+
+/* ===========================================================================
+ * 6b. Lam giau ENTITY - dau 2026-08-10, muc tieu day du hon doi thu tren cung nganh.
+ *     Doi chieu schema cua Mona Media / MIC Creative / SEODO (cung nganh booking bao/PR):
+ *     ho dung schema mac dinh cua plugin Yoast/RankMath (Organization/Article/Breadcrumb
+ *     co ban) - CHUA dung DefinedTerm cho bai glossary, CHUA co citation, CHUA co HowTo,
+ *     CHUA lien ket thuong hieu that qua mentions/sameAs. 4 muc duoi day la phan lam giau
+ *     THEM, dung 100% du lieu THAT (tieu de/H2/link that co trong bai) - KHONG bia thuc the.
+ * ========================================================================= */
+
+/** Bai dang "X Là Gì?" -> DefinedTerm (thuat ngu duoc chinh bai nay dinh nghia). */
+function dgc_sch_defined_term() {
+	if ( ! is_singular( 'post' ) ) return null;
+	if ( ! preg_match( '/^(.{2,60}?)\s+Là\s+Gì\b/ui', get_the_title(), $m ) ) return null;
+	$term = dgc_sch_txt( $m[1] );
+	if ( ! $term ) return null;
+	$url = dgc_sch_url();
+	return dgc_sch_prune( array(
+		'@type'            => 'DefinedTerm',
+		'@id'              => $url . '#term',
+		'name'             => $term,
+		'description'      => dgc_sch_txt( get_the_excerpt(), 300 ),
+		'url'              => $url,
+		'inDefinedTermSet' => array( '@id' => dgc_sch_id( 'glossary' ) ),
+	) );
+}
+
+/** Tap thuat ngu chung site - CHI dua vao @graph khi trang hien tai co it nhat 1 DefinedTerm. */
+function dgc_sch_defined_term_set() {
+	return array(
+		'@type' => 'DefinedTermSet',
+		'@id'   => dgc_sch_id( 'glossary' ),
+		'name'  => 'Thuật ngữ SEO, Backlink & Booking báo PR - DigicomVN',
+		'url'   => get_permalink( (int) get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
+	);
+}
+
+/**
+ * Trich dan (citation) tu link ngoai THAT da co san trong bai (theo rule external-link-eeat:
+ * link toi luat/dinh nghia goc/chuyen gia). Loai link noi bo va tien ich (zalo, facebook).
+ * Toi da 10 link, giu nguyen thu tu xuat hien.
+ */
+function dgc_sch_citations() {
+	if ( ! is_singular( array( 'post', 'dgc_case' ) ) ) return array();
+	$html = (string) get_post_field( 'post_content', get_the_ID() );
+	if ( ! preg_match_all( '/<a[^>]+href=["\']([^"\']+)["\']/i', $html, $m ) ) return array();
+	$home       = (string) wp_parse_url( home_url(), PHP_URL_HOST );
+	$skip_hosts = array( 'zalo.me', 'facebook.com', 'www.facebook.com', 'wa.me' );
+	$out        = array();
+	foreach ( $m[1] as $href ) {
+		if ( strpos( $href, 'http' ) !== 0 ) continue;
+		$host = (string) wp_parse_url( $href, PHP_URL_HOST );
+		if ( ! $host || $host === $home ) continue;
+		if ( in_array( $host, $skip_hosts, true ) ) continue;
+		$out[ esc_url_raw( $href ) ] = true; // khoa mang de tu dedupe, giu thu tu
+	}
+	return array_slice( array_keys( $out ), 0, 10 );
+}
+
+/**
+ * Bai co cau truc buoc-theo-buoc that ("Bước N:" trong H2, >=3 buoc) -> HowTo. Google da
+ * bo rich-result HowTo cho da so site tu 8/2023, nhung du lieu nay van co gia tri cho AI/LLM
+ * doc va trich dan quy trinh (GEO) - khong ton hai gi khi Google khong dung toi.
+ */
+function dgc_sch_howto() {
+	if ( ! is_singular( 'post' ) ) return null;
+	$html = (string) get_post_field( 'post_content', get_the_ID() );
+	if ( ! preg_match_all( '/<h2[^>]*>\s*(Bước\s*\d+[:.][^<]*)<\/h2>/iu', $html, $m ) ) return null;
+	$steps = array();
+	foreach ( $m[1] as $h ) {
+		$name = dgc_sch_txt( $h, 150 );
+		if ( $name ) $steps[] = array( '@type' => 'HowToStep', 'name' => $name, 'text' => $name );
+	}
+	if ( count( $steps ) < 3 ) return null;
+	$url = dgc_sch_url();
+	return array(
+		'@type' => 'HowTo',
+		'@id'   => $url . '#howto',
+		'name'  => dgc_sch_txt( get_the_title() ),
+		'step'  => array_values( $steps ),
+	);
+}
+
+/**
+ * Danh sach thuong hieu/cong cu THAT PHO BIEN, tung dong da xac minh URL that (200 OK,
+ * kiem tay 2026-08-10) - dung de gan 'mentions' khi bai viet nhac toi trong H1/H2 (tin hieu
+ * chac chan, khong doan). Them dong moi PHAI kiem URL that truoc, khong doan/bia lien ket.
+ */
+function dgc_sch_brand_wiki_map() {
+	return array(
+		'Coca-Cola'             => 'https://vi.wikipedia.org/wiki/Coca-Cola',
+		'Pepsi'                 => 'https://vi.wikipedia.org/wiki/Pepsi',
+		'Grab'                  => 'https://vi.wikipedia.org/wiki/Grab',
+		'Heineken'              => 'https://vi.wikipedia.org/wiki/Heineken',
+		'Viettel'               => 'https://vi.wikipedia.org/wiki/Viettel',
+		'Vinamilk'              => 'https://vi.wikipedia.org/wiki/Vinamilk',
+		'Dove'                  => 'https://en.wikipedia.org/wiki/Dove_(brand)',
+		'Ahrefs'                => 'https://ahrefs.com',
+		'SEMrush'               => 'https://en.wikipedia.org/wiki/Semrush',
+		'Google Search Console' => 'https://en.wikipedia.org/wiki/Google_Search_Console',
+		'Google Analytics'      => 'https://en.wikipedia.org/wiki/Google_Analytics',
+	);
+}
+
+/** Thuong hieu/cong cu that duoc BAI VIET nhac toi trong H1/H2 -> mentions (khong doan tu than bai). */
+function dgc_sch_brand_mentions() {
+	if ( ! is_singular( array( 'post', 'dgc_case' ) ) ) return array();
+	$html = (string) get_post_field( 'post_content', get_the_ID() );
+	if ( ! preg_match_all( '/<h[12][^>]*>([^<]*)<\/h[12]>/iu', $html, $m ) ) return array();
+	$headings = dgc_sch_txt( implode( ' | ', $m[1] ) );
+	$out = array();
+	foreach ( dgc_sch_brand_wiki_map() as $name => $ref ) {
+		if ( mb_stripos( $headings, $name ) !== false ) {
+			$out[] = array( '@type' => 'Thing', 'name' => $name, 'sameAs' => $ref );
+		}
+	}
+	return $out;
 }
 
 /* ===========================================================================
@@ -985,6 +1130,22 @@ function dgc_sch_graph() {
 		if ( $service && $service['@id'] === $url . '#service' ) {
 			$article['about'] = array( '@id' => $service['@id'] );
 		}
+
+		// Bai "X La Gi?" -> gan them DefinedTerm vao mentions (entity ma bai nay dinh nghia).
+		$term = dgc_sch_defined_term();
+		if ( $term ) {
+			$graph[]              = dgc_sch_defined_term_set();
+			$graph[]              = $term;
+			$article['mentions']  = array_merge( array( array( '@id' => $term['@id'] ) ), $article['mentions'] ?? array() );
+		}
+
+		// Bai co quy trinh "Buoc N:" that trong H2 -> them HowTo, noi vao Article qua hasPart.
+		$howto = dgc_sch_howto();
+		if ( $howto ) {
+			$graph[]           = $howto;
+			$article['hasPart'] = array( '@id' => $howto['@id'] );
+		}
+
 		$graph[] = $article;
 		if ( ! $main ) $main[] = array( '@id' => $article['@id'] );
 	}

@@ -16,6 +16,9 @@ function dgc_defaults() {
 		'address2'      => 'Tầng 3, tòa nhà Thăng Long A1, đường Tây Cao Tốc, thôn Bầu, xã Kim Chung, huyện Đông Anh, Hà Nội',
 		'zalo'          => '2806292509481772964',
 		'facebook'      => 'https://www.facebook.com/profile.php?id=61591139212103',
+		'linkedin'      => '',
+		'youtube'       => '',
+		'slogan'        => 'Digital Marketing Agency chuyên booking',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
 
 		'hero_title'    => 'Backlink, Guest Post, Textlink và Booking báo PR uy tín',
@@ -169,6 +172,9 @@ function dgc_settings_page() {
 				dgc_field( 'lead_email', 'Email nhan lead form (khong hien thi cong khai)' );
 				dgc_field( 'zalo', 'So Zalo' );
 				dgc_field( 'facebook', 'Link Fanpage Facebook', 'URL day du, vd https://www.facebook.com/profile.php?id=...' );
+				dgc_field( 'linkedin', 'Link LinkedIn cong ty', 'De trong neu chua co trang LinkedIn - dung ghi bua, schema chi hien khi co du lieu that.' );
+				dgc_field( 'youtube', 'Link kenh YouTube', 'De trong neu chua co kenh YouTube.' );
+				dgc_field( 'slogan', 'Slogan / cham ngon thuong hieu', 'Cau slogan that dang dung (neu co) - hien trong schema Organization. De trong neu chua co.' );
 				dgc_field( 'address', 'Tru so (dia chi dang ky kinh doanh)' );
 				dgc_field( 'address2', 'Van phong giao dich', 'De trong neu chi co tru so.' );
 				dgc_field( 'working_hours', 'Gio lam viec' );

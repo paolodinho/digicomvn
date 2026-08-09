@@ -148,6 +148,24 @@ intent, SERP features, section đối thủ có, 3-5 câu PAA làm FAQ, góc kh�
   widget budget_calc đặt ngay sau SAPO/tóm tắt, TRƯỚC các đoạn giải thích dài. Người tìm giá
   phải thấy giá trong 1 màn hình đầu, không phải cuộn xuống cuối.
 - Gạch "-", không "—"/"–". Không câu khẩu ngữ/meta lọt vào text hiển thị.
+- **Không rập khuôn dàn bài một cách máy móc (rule Hiếu 2026-08-09)**: khung
+  `H1 -> SAPO -> Tóm tắt nhanh -> mở bài -> H2...` và các mục bắt buộc (interactive, FAQ,
+  giá đẩy lên đầu nếu đúng intent...) là XƯƠNG SỐNG bắt buộc giữ, KHÔNG được bỏ - nhưng bên
+  TRONG khung đó phải biến hoá khéo léo giữa các bài để không đọc như bản sao nhau:
+  - Thứ tự các mục con trong 1 H2, cách vào đề mỗi mục (câu hỏi/tình huống/số liệu/định
+    nghĩa - đổi luân phiên, không mở đầu mọi mục bằng cùng 1 công thức).
+  - Độ dài đoạn văn khác nhau giữa các bài (không phải bài nào cũng 3-4 câu/đoạn đều tăm
+    tắp), số lượng H2/H3 linh hoạt theo nội dung thật có gì để nói, không ép đủ số mục cho
+    "đẹp cấu trúc".
+  - Vị trí đặt ví dụ cụ thể, câu chuyện thực tế, góc nhìn cá nhân của tác giả - không luôn
+    rơi đúng 1 chỗ cố định (vd luôn ở cuối mỗi H2) mà xen linh hoạt theo mạch bài.
+  - Đây là hệ quả tất yếu của tiêu chí "giọng viết khác robot" (xem `entity-refresh`
+    SKILL.md mục BƯỚC 6) áp ở cấp ĐỘ CẤU TRÚC BÀI, không chỉ cấp câu/đoạn - dàn bài giống hệt
+    nhau giữa nhiều bài cùng cụm là dấu hiệu AI-generated dễ nhận ra ở cấp vĩ mô, kể cả khi
+    từng câu viết đã tự nhiên.
+  - Tự kiểm trước khi đăng: đặt cạnh 1-2 bài đã đăng gần đây cùng dạng (vd cùng dạng "Book
+    Báo X") - nếu thứ tự H2 và cách mở mỗi mục gần như y hệt nhau chỉ đổi tên riêng, phải
+    biến hoá lại trước khi publish.
 
 ## BƯỚC 4 - INTERACTIVE BẮT BUỘC MỖI BÀI (rule Hiếu 2026-07-17)
 

@@ -15,6 +15,46 @@
 4. **Schema phải khớp nội dung NGƯỜI ĐỌC NHÌN THẤY.** FAQ chỉ được đưa vào FAQPage nếu câu hỏi
    thật sự hiển thị trong bài (đợt migrate 2026-07-27 đã loại 15 câu vi phạm điều này).
 
+## Lớp entity mở rộng (chốt 2026-08-09) - "đầy đủ hơn đối thủ"
+
+Hiếu: "Làm entity schema toàn trang đầy đủ nhất có thể, đầy đủ hơn mọi đối thủ". Đã đối chiếu
+schema thật của Mona Media, MIC Creative, SEODO (fetch JSON-LD trực tiếp từ trang của họ,
+2026-08-09) - cả 3 đều dùng schema mặc định của plugin (Yoast/RankMath), CHƯA có DefinedTerm
+cho bài glossary, CHƯA có citation, CHƯA có HowTo, CHƯA link thực thể thật qua mentions/sameAs.
+4 hàm mới trong `inc/schema.php` mục "6b" lấp đúng 4 khoảng trống này - **100% dữ liệu thật**,
+không suy đoán:
+
+| Hàm | Sinh ra gì | Điều kiện áp dụng |
+|---|---|---|
+| `dgc_sch_defined_term()` + `dgc_sch_defined_term_set()` | `DefinedTerm` (thuật ngữ bài định nghĩa) trong 1 `DefinedTermSet` chung của site | Tiêu đề bài khớp mẫu "X Là Gì?" (regex, không đoán) |
+| `dgc_sch_citations()` | `Article.citation[]` - danh sách URL | Link ngoài THẬT đã có sẵn trong `post_content` (loại link nội bộ + zalo/facebook), tối đa 10 |
+| `dgc_sch_howto()` | `HowTo` + `HowToStep[]`, nối vào Article qua `hasPart` | Bài có ≥3 heading H2 khớp mẫu "Bước N:" thật trong nội dung |
+| `dgc_sch_brand_mentions()` | `Article.mentions[]` (kiểu `Thing` + `sameAs`/URL thật) | Tên thương hiệu/công cụ trong `dgc_sch_brand_wiki_map()` xuất hiện trong H1/H2 thật của bài |
+
+**`dgc_sch_brand_wiki_map()`** - danh sách thương hiệu/công cụ đã xác minh URL thật (200 OK,
+kiểm tay 2026-08-09, KHÔNG đoán slug Wikipedia). Thêm dòng mới -> BẮT BUỘC verify URL trả 200
+trước (`curl -o /dev/null -w "%{http_code}"`), không có Wikipedia thì dùng URL chính chủ (vd
+Ahrefs không có trang Wikipedia -> dùng `https://ahrefs.com`).
+
+**Organization mở rộng**: `knowsLanguage` (hợp lệ trên Organization theo vocab chính thức,
+khác `inLanguage` chỉ dành cho CreativeWork), `slogan` (option `slogan`, để trống nếu chưa có),
+`sameAs` thêm LinkedIn/YouTube (option `linkedin`/`youtube`, WP Admin > DigicomVN > mục 1 -
+để trống mặc định, KHÔNG bịa link).
+
+**Kết quả trên live (2026-08-09, quét 170 URL post+page+case study)**: 44 trang có `DefinedTerm`,
+3 trang có `HowTo`, 51 trang có `mentions` thương hiệu thật, 146 trang có `citation`. Cả 3 script
+QA (`tools/schema-vocab-check.py`, `tools/schema-google-check.py`, `tools/schema-qa.py`) đều
+0 lỗi trên 182 URL sau khi triển khai.
+
+**Đã điền đủ (Hiếu xác nhận 2026-08-09)**: `numberOfEmployees` = 5 (hardcode trong
+`dgc_sch_organization()`, giống pattern `foundingDate`), `slogan` = "Digital Marketing
+Agency chuyên booking" (option `slogan`, DB live). LinkedIn/YouTube: CHƯA có trang thật -
+để trống đúng như Hiếu xác nhận, KHÔNG bịa link. Không tham gia hiệp hội quảng cáo nào -> không
+thêm `memberOf`.
+
+**Muốn mở rộng thêm**: thêm thương hiệu/công cụ vào `dgc_sch_brand_wiki_map()` khi bài mới
+nhắc tới (luôn verify URL trả 200 trước khi thêm), điền LinkedIn/YouTube khi Hiếu tạo trang thật.
+
 ## Bản đồ node theo loại trang
 
 | Loại trang | Node chính |
