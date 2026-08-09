@@ -52,6 +52,8 @@ danh sach dau bao that, M5 QA + demo).
 agency cu, can doi chieu khi dung).
 Quy trinh content tu dong: `.claude/skills/content-pipeline/SKILL.md` (topic -> bai live).
 Anh dang chup man hinh (dashboard/bao cao): `.claude/skills/visual-screenshot/SKILL.md`.
+Research thuc the doi thu + tu bo sung + dang live 1 lenh: `.claude/skills/entity-refresh/SKILL.md`
+(dan URL bai co san la chay).
 
 ## 8. Quy trinh chuan
 1. Doc PLAN.md -> task tiep theo

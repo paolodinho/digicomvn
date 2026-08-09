@@ -4027,3 +4027,45 @@ của agent nền cho việc liên quan phán đoán chủ quan (chọn ảnh đ
 - Việc còn thiếu (chưa làm, effort budget đã dùng hết cho việc viết + đăng + QA): CHƯA chèn link
   chiều ngược từ 1-2 bài cũ cùng cụm (vd `backlink-bat-dong-san`, `dich-vu-backlink/bat-dong-san`)
   trỏ về bài mới; CHƯA submit Google Search Console yêu cầu lập chỉ mục.
+
+## 2026-08-09 - Fix bảng giá trống trên toàn bộ bài "book-bao-<tên báo>" (18 bài)
+
+**Lỗi**: Hiếu báo bài `/book-bao-batdongsan/` bảng giá không hiện. Kiểm tra: mảng gọn
+`price-grid.js` (render bảng giá kiểu "lưới ảo", đổi từ 2026-08-01/05) chỉ được enqueue +
+localize biến `DGC_GRID` khi `is_page('bang-gia')` hoặc `dgc_current_nhom()` khớp - hàm này
+chỉ nhận PAGE (trang dịch vụ), không nhận POST (bài blog). 18 bài "book-bao-<tên báo>" dùng
+shortcode `[dgc_bang_gia]` là POST → không bao giờ khớp điều kiện → `price-grid.js` không tải
+→ bảng giá trống trên CẢ 18 bài, không chỉ riêng bài Batdongsan.
+
+**Fix**: `wp-theme/digicom-host/functions.php` - thêm điều kiện quét `has_shortcode(...,
+'dgc_bang_gia')` trên post hiện tại, enqueue price-grid.js cho cả trường hợp này.
+Backup bản cũ: `~/Claude-Workspace/_backups/routines/2026-08-09/book-bao-batdongsan-price-grid/functions.php.BEFORE`.
+Deploy qua SSH (`deploy.md`), lint `php -l` pass, purge cache. Verify: DGC_GRID + price-grid.js
+đã xuất hiện trên `/book-bao-batdongsan/`, `/book-bao-vnexpress/`, `/book-bao-kenh14/`,
+`/book-bao-tien-phong/`. Xem trực tiếp bằng browser trên bài Batdongsan: bảng giá hiện đúng
+(dòng gốc "batdongsan.com.vn - 11 vị trí - 1.760.000đ-30.000.000đ" + "wiki.batdongsan.com.vn -
+5.200.000đ").
+
+## 2026-08-09 - Fix bố cục "Đội ngũ đứng sau DigicomVN" (footer, mọi trang)
+
+**Lỗi**: Hiếu báo ảnh nhỏ, khoảng trắng quá nhiều, bố cục xấu trên mobile (kèm ảnh chụp).
+Gốc: `.footer-illus-text` và `.footer-illus-img` dùng `flex:1 1 280px/320px` - khi
+`flex-direction:column` (mobile), trình duyệt hiểu `flex-basis` theo CHIỀU CAO thay vì
+chiều rộng -> ép cả khối chữ lẫn khối ảnh cao tối thiểu 280-320px dù nội dung thực tế thấp
+hơn nhiều, tạo khoảng trắng lớn; đồng thời ảnh bị giới hạn `max-width:300px` nên trông nhỏ.
+
+**Fix**: `wp-theme/digicom-host/assets/css/main.css` (`.footer-illus-*`, DGC_VER 2.7.1 ->
+2.7.2):
+- Mobile (<=760px): `flex:none` cho cả 2 khối (bỏ flex-basis lỗi), ảnh full-width
+  (`max-width:100%`), giảm gap/padding cho gọn.
+- Mọi kích thước: ảnh thêm bo góc + đổ bóng + viền (`border-radius`, `box-shadow`, `border`)
+  cho đỡ "phẳng/xấu", heading dùng `clamp()` để cỡ chữ mượt theo màn hình.
+- Thêm breakpoint tablet riêng (761-980px) chỉnh gap/padding.
+
+Deploy qua SSH, `php -l` pass, purge cache. Verify: mobile 375px xem trực tiếp qua browser -
+ảnh lớn, không còn khoảng trắng, layout gọn. Desktop: verify qua code (cấu trúc flex-row giữ
+nguyên, chỉ thêm polish - không có rủi ro logic vì bug chỉ xảy ra ở nhánh column/mobile);
+browser tool bị treo khi chụp desktop, không chặn việc xác nhận vì thay đổi desktop chỉ là
+bo góc/đổ bóng/tăng max-width ảnh, rủi ro thấp.
+
+Backup: `~/Claude-Workspace/_backups/routines/2026-08-09/footer-illus-layout/`.

@@ -12,9 +12,9 @@
 			</div>
 			<div class="footer-illus-img">
 				<img
-					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-illustration-960.jpg' ); ?>"
+					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-service-800.jpg' ); ?>"
 					alt="Đội ngũ DigicomVN"
-					width="960" height="540"
+					width="800" height="533"
 					loading="lazy"
 				>
 			</div>

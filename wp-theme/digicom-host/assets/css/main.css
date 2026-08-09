@@ -759,16 +759,25 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
    2 cot nen sang thay vi kieu anh-that-lam-nen-toi (Hieu 2026-08-04: doi tu anh that
    sang ve illustration, khong hop overlay toi cua ky thuat whoweare-band). */
 .footer-illus{background:var(--surface-2);border-bottom:1px solid var(--line)}
-.footer-illus-in{display:flex;align-items:center;gap:34px;padding:40px 22px;flex-wrap:wrap}
-.footer-illus-text{flex:1 1 280px;min-width:240px}
+.footer-illus-in{display:flex;align-items:center;gap:44px;padding:52px 22px;flex-wrap:wrap;max-width:1180px;margin:0 auto}
+.footer-illus-text{flex:1 1 320px;min-width:260px}
 .footer-illus-text .eyebrow{color:var(--action)}
-.footer-illus-text h2{margin:8px 0 10px;color:var(--heading)}
-.footer-illus-text p{color:var(--ink-soft);margin:0;max-width:460px}
-.footer-illus-img{flex:1 1 320px;max-width:440px}
-.footer-illus-img img{width:100%;height:auto;display:block}
-@media(max-width:700px){
-  .footer-illus-in{flex-direction:column;text-align:center;padding:30px 18px}
-  .footer-illus-img{max-width:300px}
+.footer-illus-text h2{margin:8px 0 12px;color:var(--heading);font-size:clamp(22px,3vw,30px)}
+.footer-illus-text p{color:var(--ink-soft);margin:0;max-width:440px;font-size:15.5px;line-height:1.6}
+.footer-illus-img{flex:1 1 380px;max-width:480px}
+.footer-illus-img img{width:100%;height:auto;display:block;border-radius:var(--r-md,14px);box-shadow:var(--sh-low,0 10px 30px rgba(20,30,45,.12));border:1px solid var(--line)}
+/* Bug da sua (Hieu bao 2026-08-09, kem anh chup mobile): trong flex-direction:column,
+   flex-basis (280px/320px cua ban cu) bi trinh duyet doc theo truc chinh la CHIEU CAO
+   -> ep ca khoi chu lan khoi anh cao toi thieu 280-320px du noi dung/anh thap hon nhieu,
+   tao khoang trang khong lo giua chu va anh. Fix: flex-basis ve auto + flex:none tren mobile. */
+@media(max-width:760px){
+  .footer-illus-in{flex-direction:column;text-align:center;gap:24px;padding:36px 20px 34px}
+  .footer-illus-text{flex:none;min-width:0;max-width:420px}
+  .footer-illus-text p{max-width:none;margin:0 auto}
+  .footer-illus-img{flex:none;max-width:100%;width:100%}
+}
+@media(min-width:761px) and (max-width:980px){
+  .footer-illus-in{gap:28px;padding:40px 20px}
 }
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px}
 .site-footer .brand{color:#fff;margin-bottom:12px}
