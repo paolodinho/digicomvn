@@ -4195,3 +4195,42 @@ bị chặn quyền chụp ảnh) - đã kiểm code kỹ (JS syntax hợp lệ,
 tự mở site kiểm tra lại 1 lần.
 
 Backup theme trước khi ghi đè: `~/Claude-Workspace/_backups/routines/2026-08-09/price-grid-pagination/`.
+
+---
+
+## 2026-08-09 (khuya) — Rà soát + xử lý ăn thịt từ khoá (keyword cannibalization)
+
+Rà 166 URL live (post+page) theo tiêu đề/H1/intent (không có dữ liệu GSC query thật - đây là
+audit heuristic dựa trên tiêu đề/nội dung, không phải xác nhận 100% qua search query overlap).
+
+**Tìm được 6 cặp trang trùng/gần trùng chủ đề, đã xử lý:**
+
+1. **case-study-chien-dich-pr ↔ chien-dich-pr-an-tuong-viet-nam** (post 4732/1280): đọc kỹ nội
+   dung mới phát hiện KHÔNG thực sự trùng (1 bài phân tích 7 thương hiệu lớn có thật, 1 bài phân
+   loại 4 kiểu chiến dịch cho SME) - Hiếu chốt giữ cả 2, chỉ đổi tiêu đề/H1 bài 1280 thành "4 Kiểu
+   Chiến Dịch PR Ấn Tượng Cho Doanh Nghiệp SME Việt Nam" cho rõ khác biệt (bài 4732 H1 đã đủ rõ
+   sẵn: "...Của Coca-Cola, Grab, Vinamilk, Heineken, Viettel, Pepsi Và Dove").
+2. **agency-booking-bao-chi ↔ trang pillar booking-bao-pr** (page 475): research SERP top 5
+   Google cho "agency booking báo chí uy tín" - toàn bộ là dạng listicle "Top 5 agency" (đúng
+   dạng bài blog hiện có), còn money page chuẩn ngành dùng mẫu "Dịch Vụ Booking [X] Uy Tín" (Mona,
+   SEODO, MIC Creative...). Đổi SEO title trang pillar từ "Agency Booking Báo Chí Uy Tín - Bảng
+   Giá 2026" → "Dịch Vụ Booking Báo & PR Uy Tín - Bảng Giá 2026" (bỏ đúng cụm "Agency...Uy Tín" mà
+   bài blog đang nhắm), thêm link nội dung page → bài blog. Sửa lần 2: bỏ luôn "Theo Từng Đầu Báo"
+   khỏi title pillar vì lại trùng với bài `/bao-gia-dang-bai-pr-theo-dau-bao/`.
+3. **guest-post-la-gi ↔ quy-trinh-trien-khai-guest-post** (post 544/1281): H1 bài 544 tự hứa
+   "Cách Triển Khai Hiệu Quả Cho SEO" - trùng gần y hệt H1 bài 1281 "Quy Trình Triển Khai Guest
+   Post Hiệu Quả Cho SEO". Đổi H1/title 544 thành "Guest Post Là Gì? Khái Niệm, Lợi Ích Và Phân
+   Biệt Với Backlink" (tập trung định nghĩa), thêm link sang bài 1281 cho phần "quy trình".
+4. **bao-gia-dang-bai-pr-theo-dau-bao ↔ pillar + 18 trang book-bao-\***: kiểm tra thấy bài này
+   ĐANG làm đúng vai trò hub (link tới 15/18 trang con) - không sửa, chỉ tránh để title pillar
+   trùng (xử lý ở mục 2).
+5. **backlink-bat-dong-san ↔ /dich-vu-backlink/bat-dong-san/**: kiểm tra - đã phân intent đúng
+   (bài blog = tiêu chí chọn/rủi ro, trang = money page ngắn) + đã link đúng hướng. Không sửa.
+6. **backlink ↔ /dich-vu-backlink/**: tương tự #5, đã phân intent đúng, không sửa.
+
+Backup đầy đủ (title cũ + post_content cũ 3 bài đã sửa):
+`~/Claude-Workspace/_backups/routines/2026-08-09/keyword-cannibal/`.
+
+**Còn lại (chưa làm, cần Hiếu quyết nếu muốn làm tiếp)**: audit này dựa trên tiêu đề/nội dung,
+không có xác nhận từ Google Search Console (query thật, số click/impression từng trang cho cùng
+1 từ khoá) - muốn chính xác hơn nữa cần kết nối GSC cho digicomvn.com.
