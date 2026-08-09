@@ -4027,3 +4027,35 @@ của agent nền cho việc liên quan phán đoán chủ quan (chọn ảnh đ
 - Việc còn thiếu (chưa làm, effort budget đã dùng hết cho việc viết + đăng + QA): CHƯA chèn link
   chiều ngược từ 1-2 bài cũ cùng cụm (vd `backlink-bat-dong-san`, `dich-vu-backlink/bat-dong-san`)
   trỏ về bài mới; CHƯA submit Google Search Console yêu cầu lập chỉ mục.
+
+## 2026-08-09 (1) - Bỏ hẳn trang tổng hợp /bang-gia/, đổi hướng CTA về money page dịch vụ
+- Yêu cầu Hiếu: "Bỏ trang bảng giá trên site. Dọn thật sạch. T ko muốn gg hiểu nhầm đích đến là
+  trang bảng giá, các trang dịch vụ sẽ là money page."
+- Xoá hẳn (không giữ rollback vì đây chính là nguồn gây hiểu nhầm): `page-bang-gia.php`,
+  `inc/price-view-options.php` (cổng chặn tải PDF/xem Google Sheet tổng hợp giá), handler
+  `dgc_handle_gate_lead`/`wp_localize_script('DGC_GATE',...)` trong `functions.php`, option
+  `sheet_view_url` trong `inc/options.php`.
+- Thêm `template_redirect` ưu tiên 1 trong `functions.php`: `is_page('bang-gia')` -> 301 về `/`
+  (an toàn kể cả khi page "bang-gia" còn publish trong DB - code chỉ chặn hiển thị, không tự
+  xoá/draft page trong DB, cần Hiếu tự làm ở WP Admin > Trang).
+- Đổi hướng CTA/link "Xem bảng giá" trên toàn site tuỳ ngữ cảnh: đa số -> `/dat-bai/` (form gửi
+  yêu cầu báo giá, không đổi vai trò); "xem bảng giá đầy đủ" trong 1 trang dịch vụ -> `#bang-gia`
+  (cuộn tới bảng giá của CHÍNH trang đó); link tổng quát khác -> `/#services`. File đã sửa:
+  header.php, footer.php, front-page.php, single.php, category.php, author.php, page-dich-vu.php,
+  page-cau-hoi-thuong-gap.php, page-cam-on.php, search.php, inc/blk-reasons.php,
+  inc/promo-popup.php, inc/promo-bar.php, inc/widgets-blog.php (+ assets/js/main.js tương ứng),
+  inc/svc-faq.php, inc/post-sidebars.php, inc/blk-press-partners.php, inc/ai-chat.php,
+  inc/schema.php (bỏ CollectionPage + ItemList cho `bang-gia`), inc/service-pricing.php.
+- DGC_VER 2.7.1 -> 2.7.2 (đổi assets/js/main.js).
+- Cập nhật rule: `.claude/rules/uu-dai-cta.md` (mục mới, ghi đè "nút chính popup -> /bang-gia/"),
+  `bang-gia-booking.md` (mục nút menu), `schema-markup.md` (bảng loại trang), `pivot-2026-07.md`
+  (sitemap + theme files sửa).
+- QA: `php -l` sạch trên toàn bộ file PHP đã sửa. CHƯA test được trên WP thật (không có Local/live
+  trong phiên code này) - cần Hiếu rsync theme + xem qua browser trước khi deploy live theo
+  `.claude/rules/local-sync.md` + `deploy.md`.
+- Việc còn lại (Hiếu, ngoài khả năng của phiên code này - không có quyền SSH/DB):
+  1. WP Admin > Trang: chuyển page "Bảng giá" (slug `bang-gia`) sang Draft/Trash.
+  2. WP Admin > Giao diện > Menu: nếu có menu `primary` thật (khác menu fallback trong code), gỡ
+     mục "Bảng giá" khỏi đó - code chỉ sửa được menu fallback khi CHƯA tạo menu WP Admin.
+  3. Google Search Console: submit lại sitemap, cân nhắc gỡ index URL `/bang-gia/` cũ nếu đã được
+     Google index từ trước.

@@ -114,3 +114,29 @@ tooltip qua `title`, a11y qua `aria-label`. Bấm vẫn mở popup giới thiệ
 - **Nút Zalo nổi = vòng tròn** (GHI ĐÈ bản "chỉ chữ" ở trên): `.fab-zalo` 58px tròn, nền trắng, viền `#D6E4FF`, chữ "Zalo" xanh `#0068FF` (SVG text giữ nguyên). Dark mode giữ trắng.
 - **Icon "i" giới thiệu báo = superscript ngay sau tên** (GHI ĐÈ "chỉ icon i" đặt dòng riêng): button `.intro-toggle` nằm TRONG `.row-name`, `vertical-align:super`, 15px. Bấm vẫn mở popup giới thiệu.
 - **Section dịch vụ trang chủ** (`front-page.php`): bỏ lưới nhóm-card (dgc_service_groups) bị lệch, thay bằng `.svc-links` (lưới card-link 4x2) link thẳng tới 7 trang pillar + ô "Tất cả dịch vụ" -> /dich-vu/. Danh sách pillar cố định theo sitemap (slug không đổi).
+
+## Bỏ hẳn trang tổng hợp /bang-gia/ - moi trang dich vu la money page rieng (2026-08-09)
+
+Hiếu: "T ko muốn gg hiểu nhầm đích đến là trang bảng giá, các trang dịch vụ sẽ là money page."
+`page-bang-gia.php` (template trang `/bang-gia/`) và `inc/price-view-options.php` (cổng chặn
+tải PDF/xem Google Sheet tổng hợp giá, kèm handler `dgc_handle_gate_lead` trong `functions.php`
+và option `sheet_view_url`) đã **XOÁ HẲN** - không giữ để rollback (khác các file promo cũ),
+vì đây đúng là thứ đang khiến Google/khách hiểu nhầm đích đến. `functions.php` có hook
+`template_redirect` ưu tiên 1 (`is_page('bang-gia')`) 301 thẳng về trang chủ, phòng trường hợp
+page "bang-gia" còn ở trạng thái publish trong DB (Hiếu cần vào WP Admin > Trang, chuyển page
+"Bảng giá" sang Draft/Trash và gỡ khỏi menu nếu còn - code chỉ chặn hiển thị, không tự xoá DB).
+
+Mọi CTA/nút "Xem bảng giá" từng trỏ `/bang-gia/` đã đổi hướng theo ngữ cảnh:
+- CTA chuyển đổi chung (hero, popup, ribbon, blk-reasons, budget calc...) -> **`/dat-bai/`**
+  (trang gửi yêu cầu báo giá, KHÔNG đổi - đây là money page hội tụ leads, không phải liệt kê giá).
+- Link "xem bảng giá đầy đủ" trong 1 trang dịch vụ (svc-faq, service-pricing "so sánh giá") ->
+  anchor `#bang-gia` (cuộn tới đúng bảng giá của CHÍNH trang dịch vụ đó) hoặc `/#services`
+  (link sang các dịch vụ khác), không còn điểm hội tụ giá nào ngoài từng trang dịch vụ.
+- Footer/menu/bottom-nav: bỏ hẳn mục "Bảng giá", thay bằng mục "Đặt bài" (`/dat-bai/`).
+
+Popup ưu đãi (`inc/promo-popup.php`) nút chính giờ -> `/dat-bai/` (không còn `/bang-gia/` để trỏ
+tới) - GHI ĐÈ dòng "Nút chính -> `/bang-gia/`" ở mục "Popup ưu đãi" phía trên. Ribbon/popup/skip
+lists chỉ còn loại trừ `dat-bai`, `cam-on` (bỏ `bang-gia` khỏi mọi mảng skip đang hoạt động).
+
+CPT `dgc_gia` và bảng giá THẬT vẫn còn nguyên - chỉ bỏ TRANG TỔNG HỢP đứng riêng, giá vẫn hiển
+thị đầy đủ ngay trong từng trang dịch vụ pillar (`inc/service-pricing.php`, section `#bang-gia`).

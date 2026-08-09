@@ -330,11 +330,12 @@ Script: `10-bang-gia-booking/cap-nhat-gia.py` (đã cài đủ 3 chốt trên).
 - **Layout `intro-detail` xếp DỌC** (nhãn nhỏ in hoa màu brand ở trên, nội dung ở dưới, vạch ngăn
   giữa các mục) - bỏ lưới 2 cột 120px cũ (gây vỡ chữ mỗi từ 1 dòng trên mobile, Hiếu chê xấu).
 
-## Nút menu "Bảng giá" - nổi bật nhẹ (2026-07-15)
+## Nút menu "Bảng giá" - ĐÃ BỎ (2026-08-09)
 
-Menu "Bảng giá" KHÔNG tô nền đặc (trước là pill xanh, tranh nổi bật với "Đặt bài ngay" + các nút
-khác). Giờ: chữ màu brand + gạch chân luôn hiện (`:after right:0`), nền trong suốt - nhấn nhẹ, không
-tranh chú ý. CSS `.nav>ul>li>a[href*="/bang-gia"]`.
+Mục menu "Bảng giá" (từng nổi bật nhẹ theo rule 2026-07-15) đã gỡ khỏi header/footer/bottom-nav
+khi bỏ hẳn trang tổng hợp `/bang-gia/` - xem `.claude/rules/uu-dai-cta.md` mục "Bỏ hẳn trang tổng
+hợp /bang-gia/ - moi trang dich vu la money page rieng". CSS `.nav>ul>li>a[href*="/bang-gia"]`
+trong `main.css` giờ là dead selector (không còn link nào khớp) - vô hại, có thể xoá khi dọn CSS.
 
 ## Trang dịch vụ + routine tuần (2026-07-15)
 

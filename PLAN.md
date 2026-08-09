@@ -381,8 +381,32 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.
       2. Blogtamsu/Vnmedia/"Mua bán nhà đất" - chỉ alias nếu Hiếu cung cấp domain xác nhận.
-      3. Nối sync Google Sheet vào routine tuần `digicom-gia-doi-tac-tuan` để tự đồng bộ.
-      4. Tab "Guest Post/Dịch vụ Backlink/..." trên /bang-gia/ giờ chỉ render khi bấm mở (lazy)
-         -> dữ liệu giá của 6 nhóm đó không còn được Google index trực tiếp trên URL /bang-gia/
-         (đã có trang dịch vụ riêng render đủ dữ liệu, không mất index tuyệt đối) - đánh đổi
-         chấp nhận được để giảm nặng trang, nhưng cần biết nếu muốn xem xét lại.
+      3. Nối sync Google Sheet vào routine tuần `digicom-gia-doi-tac-tuan` để tự đồng bộ
+         (LƯU Ý: nút "Xem live trên Google Sheet" + option `sheet_view_url` đã xoá cùng
+         `/bang-gia/` 2026-08-09 - nếu nối lại sync, cần tìm nơi hiển thị mới, không phải
+         `inc/price-view-options.php` nữa vì file đó đã xoá).
+      4. ~~Tab "Guest Post/Dịch vụ Backlink/..." trên /bang-gia/ giờ chỉ render khi bấm mở~~ -
+         HẾT HIỆU LỰC: `/bang-gia/` đã bỏ hẳn (xem mục 2026-08-09 bên dưới), việc còn lại là
+         đảm bảo mọi trang dịch vụ pillar tự index đủ giá của chính nó (đã vậy từ trước).
+- [x] Bỏ hẳn trang tổng hợp `/bang-gia/` - mọi trang dịch vụ là money page riêng (Hiếu 2026-08-09:
+      "T ko muốn gg hiểu nhầm đích đến là trang bảng giá, các trang dịch vụ sẽ là money page").
+      - Xoá `page-bang-gia.php` + `inc/price-view-options.php` (cổng chặn tải PDF/Google Sheet
+        tổng hợp giá) + handler `dgc_handle_gate_lead`/`DGC_GATE`/option `sheet_view_url` liên quan
+        trong `functions.php`/`inc/options.php` - không giữ để rollback (đây chính là nguồn gây
+        hiểu nhầm, không phải tính năng cần bảo lưu).
+      - Thêm `template_redirect` ưu tiên 1 trong `functions.php`: `is_page('bang-gia')` -> 301 về
+        trang chủ, phòng khi Hiếu chưa kịp chuyển page "bang-gia" trong DB sang Draft/Trash.
+      - Đổi hướng toàn bộ CTA/link từng trỏ `/bang-gia/` trên header, footer, bottom-nav, hero
+        trang chủ, popup/ribbon ưu đãi, blk-reasons, budget calc, agency-check, offpage-quiz,
+        press-partners, FAQ trang dịch vụ, sidebar bài blog, trang cảm ơn, trang câu hỏi thường
+        gặp, AI chat, search.php, service-pricing.php - đích mới tuỳ ngữ cảnh: `/dat-bai/`
+        (form gửi yêu cầu, đa số trường hợp), `#bang-gia` (cuộn tới bảng giá của CHÍNH trang
+        dịch vụ đang xem), hoặc `/#services` (link sang các dịch vụ khác).
+      - Cập nhật rule: `.claude/rules/uu-dai-cta.md` (mục mới), `bang-gia-booking.md`, `ui-mau-sac.md`
+        (qua bang-gia-booking.md), `schema-markup.md` (bỏ CollectionPage cho `/bang-gia/`),
+        `pivot-2026-07.md` (sitemap + theme files).
+      - CHƯA LÀM (cần Hiếu, không đụng được DB từ phiên code này): vào WP Admin > Trang, chuyển
+        page "Bảng giá" (slug `bang-gia`) sang Draft hoặc Trash, gỡ khỏi menu điều hướng nếu WP
+        Admin có tạo menu item riêng cho nó (header.php chỉ dùng menu fallback khi CHƯA có menu
+        `primary` trong WP Admin - nếu Hiếu đã tạo menu thật thì mục "Bảng giá" nằm trong đó,
+        code không sửa được). Cũng nên xoá noindex/sitemap cache liên quan nếu có.

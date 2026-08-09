@@ -16,7 +16,7 @@ if ( ! $why_items ) return;
 				<h2>Off-page SEO làm đúng, nguồn thật, minh bạch</h2>
 				<p class="muted">Textlink, backlink, guest post và booking báo PR triển khai trên nguồn chọn lọc có uy tín thật - báo giá rõ ràng, bàn giao kèm bằng chứng để bạn kiểm chứng.</p>
 				<div class="why-intro-actions">
-					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a>
+					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu báo giá</a>
 					<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 				</div>
 			</div>

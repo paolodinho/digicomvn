@@ -26,7 +26,7 @@
 | Bài viết / case study | `Article`(+`BlogPosting`), `about` -> Service của cụm (nếu cụm có money page) |
 | Bài có `[dgc_bang_gia]` (18 bài đầu báo) | + `Service` + `Offer` **giá thật của đầu báo đó**; `Article.about` trỏ về Service này |
 | Trang lưu trữ phân trang | `@id`/`url` riêng theo `/page/N/` |
-| /blog/, chuyên mục, /bang-gia/ | `CollectionPage` + `ItemList` |
+| /blog/, chuyên mục | `CollectionPage` + `ItemList` |
 | /lien-he/, /ve-digicom/ | `ContactPage` / `AboutPage`, `mainEntity` -> Organization |
 | /author/... | `ProfilePage` + `Person` |
 | /cam-on/ | KHÔNG có schema (trang noindex) |

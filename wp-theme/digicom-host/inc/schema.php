@@ -713,7 +713,6 @@ function dgc_sch_page_type() {
 	if ( is_home() || is_category() || is_post_type_archive() ) return array( 'CollectionPage' );
 	if ( is_page( 'lien-he' ) )          return array( 'ContactPage' );
 	if ( is_page( 've-digicom' ) )       return array( 'AboutPage' );
-	if ( is_page( 'bang-gia' ) )         return array( 'CollectionPage' );
 	return array( 'WebPage' );
 }
 
@@ -737,17 +736,11 @@ function dgc_sch_primary_image() {
 	return null;
 }
 
-/** ItemList cho cac trang danh sach (blog, chuyen muc, case study, bang gia). */
+/** ItemList cho cac trang danh sach (blog, chuyen muc, case study). */
 function dgc_sch_item_list() {
 	$items = array();
 
-	if ( is_page( 'bang-gia' ) ) {
-		if ( function_exists( 'dgc_service_links' ) ) {
-			foreach ( dgc_service_links() as $sl ) {
-				$items[] = array( $sl[0], home_url( $sl[1] ) );
-			}
-		}
-	} elseif ( is_home() ) {
+	if ( is_home() ) {
 		foreach ( get_categories( array( 'hide_empty' => true ) ) as $c ) {
 			$items[] = array( $c->name, get_category_link( $c ) );
 		}

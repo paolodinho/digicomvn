@@ -71,7 +71,6 @@ $dgc_faq_total  = dgc_faq_page_count();
 		<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
 			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu tư vấn</a>
 			<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-			<a class="btn btn-ghost" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a>
 		</div>
 	</div>
 </section>

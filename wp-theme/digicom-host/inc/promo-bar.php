@@ -7,9 +7,9 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 if ( ! dgc_lines( 'promos' ) ) return;
-/* Bam ribbon -> mo popup (#promoPop). Popup bi loai o bang-gia/dat-bai/cam-on -> ribbon cung an
+/* Bam ribbon -> mo popup (#promoPop). Popup bi loai o dat-bai/cam-on -> ribbon cung an
    o do (tranh bam khong ra gi; khach da o buoc chot). */
-foreach ( array( 'bang-gia', 'dat-bai', 'cam-on' ) as $dgc_pb_skip ) {
+foreach ( array( 'dat-bai', 'cam-on' ) as $dgc_pb_skip ) {
 	if ( is_page( $dgc_pb_skip ) ) return;
 }
 
