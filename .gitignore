@@ -2,6 +2,11 @@
 .DS_Store
 ._*
 
+# Editor lock/temp
+.~lock.*#
+__pycache__/
+*.pyc
+
 # Media nang / raw
 *.png
 *.jpg
