@@ -63,9 +63,39 @@ Với MỖI trang đối thủ fetch được nội dung thật:
    Ví dụ SAI (quá dài, đây là Ý không phải thực thể): "minh bạch trong quy trình báo giá".
 3. Ghi bảng nháp mỗi đối thủ: `thực thể | nguyên văn câu chứa nó (để hiểu ngữ cảnh dùng)`.
 
+## BƯỚC 3B - TỪ KHOÁ CÙNG CỤM (bổ sung 2026-08-09)
+
+Ngoài thực thể lấy từ đối thủ (BƯỚC 3), phải quét thêm **biến thể từ khoá trong CÙNG CỤM
+DỊCH VỤ** mà bài đang thuộc - đây là nguồn khác hẳn (không phải thực thể/khái niệm, mà là
+cách người dùng THẬT gõ tìm kiếm quanh chủ đề). Ví dụ: cụm "booking báo" có các biến thể mô
+tả như `giá rẻ`, `uy tín`, `nhanh`, `chuyên nghiệp` - bài về 1 đầu báo cụ thể thiếu hẳn các
+biến thể này dù nội dung đã đúng ý, vẫn là tối ưu chưa hết.
+
+1. Xác định cụm dịch vụ bài đang thuộc (booking báo PR / guest post / textlink / backlink...).
+2. Nếu cụm đó đã có sẵn file keyword phân nhóm trong dự án (vd
+   `10-bang-gia-booking/book-bao-tu-khoa-phan-nhom_<ngày>.csv` cho booking báo PR) - đọc
+   TOÀN BỘ Keyword trong nhóm liên quan, không chỉ nhóm "theo đầu báo cụ thể" mà cả nhóm
+   "core" chứa biến thể mô tả chung (giá rẻ, uy tín, nhanh, chuyên nghiệp, tốt nhất...).
+   Không có file sẵn cho cụm đó -> chạy nhanh Google Suggest cho 3-5 biến thể mô tả phổ
+   biến (`giá rẻ`, `uy tín`, `nhanh`, `tốt nhất`, `chuyên nghiệp`) ghép với từ khoá chính,
+   lấy kết quả thật, không tự bịa danh sách biến thể.
+3. Với mỗi biến thể: verify bài hiện tại ĐÃ có cụm đó chưa bằng grep chuỗi thật (như BƯỚC 4),
+   ưu tiên biến thể có volume > 0 hoặc lặp lại ở nhiều dòng trong file (dấu hiệu nhu cầu
+   thật dù công cụ đo volume=0 với từ khoá dài).
+4. **Chỉ chèn khi khớp ĐÚNG SỰ THẬT của bài đó** - "giá rẻ" chỉ hợp lý khi giá của báo/dịch
+   vụ đó thực sự thuộc nhóm rẻ trong bảng giá thật (đối chiếu `bang-gia-booking.md`), KHÔNG
+   tự ý gắn "giá rẻ" cho mọi bài bất kể giá thật cao hay thấp - đó là claim sai sự thật
+   (`content-professional.md`), không phải tối ưu từ khoá.
+5. Chèn tự nhiên vào câu văn có sẵn, KHÔNG liệt kê trần trụi liên tiếp kiểu "giá rẻ, uy tín,
+   nhanh chóng" (dấu hiệu nhồi từ khoá/keyword stuffing). Ví dụ đúng: nếu bài đang viết "mức
+   chi phí thuộc nhóm dễ tiếp cận trong các báo kinh tế" và giá đó thật sự rẻ so mặt bằng ->
+   có thể diễn lại tự nhiên hơn thành câu có chứa cụm "giá rẻ"/"chi phí rẻ" ở đúng ngữ cảnh,
+   không thêm thành 1 câu rời rạc chỉ để nhét từ khoá.
+
 ## BƯỚC 4 - GỘP CHECKLIST + ĐỐI CHIẾU TỪNG TỪ (bắt buộc verify bằng tìm chuỗi thật)
 
-1. Union toàn bộ thực thể theo BƯỚC 3, đếm tần suất (bao nhiêu/N đối thủ có).
+1. Union toàn bộ thực thể theo BƯỚC 3 VÀ biến thể từ khoá theo BƯỚC 3B, đếm tần suất (bao
+   nhiêu/N đối thủ có, hoặc volume/tần suất xuất hiện trong file keyword đối với BƯỚC 3B).
 2. Với MỖI thực thể trong checklist, verify sự tồn tại trong bài mình bằng tìm chuỗi trực
    tiếp trên bản text thuần đã strip ở BƯỚC 1 (không phân biệt hoa/thường, chấp nhận biến
    thể viết liền/rời gần đúng nếu cần, vd "AEO/GEO" khớp cả khi bài viết "AEO" và "GEO"
@@ -201,7 +231,8 @@ câu mở editorializing, không thay bằng từ đồng nghĩa sáo rỗng kh�
 
 1. Danh sách đối thủ đã fetch OK / fetch lỗi (nêu rõ domain nào lỗi, không im lặng bỏ qua).
 2. Bảng checklist thực thể đầy đủ (BƯỚC 4) - không chỉ liệt kê thực thể đã thêm, phải cho
-   thấy cả những thực thể ĐÃ CÓ SẴN (để Hiếu biết đã verify kỹ, không phải qua loa).
+   thấy cả những thực thể ĐÃ CÓ SẴN (để Hiếu biết đã verify kỹ, không phải qua loa). Ghi rõ
+   nguồn từng dòng là "đối thủ" (BƯỚC 3) hay "từ khoá cùng cụm" (BƯỚC 3B).
 3. Bảng định tuyến C1/C2 (BƯỚC 5).
 4. Trích nguyên văn từng câu đã chèn vào bài (như 2 lần chạy tay trước đó Hiếu đã yêu cầu
    "trích dẫn câu mà thực thể mới được chèn vào").
