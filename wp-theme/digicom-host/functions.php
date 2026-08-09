@@ -49,7 +49,19 @@ add_action( 'wp_enqueue_scripts', function () {
 	// (dgc_gia_rows_html, render het toan bo dong + logo vao HTML) -> trang nhu /booking-bao-pr/
 	// (1212 dong) nang toi 3,3MB/1400 <tr>, tai rat cham (Hieu bao "trang dang load rat nang").
 	// Dung chung luoi ao nay cho ca trang dich vu co bang gia ($nhom khac null).
-	if ( is_page( 'bang-gia' ) || ( function_exists( 'dgc_current_nhom' ) && dgc_current_nhom() ) ) {
+	$dgc_needs_price_grid = is_page( 'bang-gia' ) || ( function_exists( 'dgc_current_nhom' ) && dgc_current_nhom() );
+	// Bai blog dung shortcode [dgc_bang_gia] (vd 18 bai "book-bao-<ten>") cung render bang
+	// gia bang markup luoi ao nay (inc/service-pricing.php) nhung KHONG khop dieu kien tren
+	// (post thuong, khong phai page, khong co post_parent) - phai quet shortcode rieng, neu
+	// khong price-grid.js/DGC_GRID khong duoc nap va bang gia trong bai bi trong (Hieu bao
+	// 2026-08-09, bai book-bao-batdongsan).
+	if ( ! $dgc_needs_price_grid && is_singular() ) {
+		$dgc_cur_post = get_post();
+		if ( $dgc_cur_post && has_shortcode( $dgc_cur_post->post_content, 'dgc_bang_gia' ) ) {
+			$dgc_needs_price_grid = true;
+		}
+	}
+	if ( $dgc_needs_price_grid ) {
 		// Phu thuoc dgc-main-js de dam bao window.dgcCartIsPicked() (dinh nghia trong main.js,
 		// cong cu tick chon/sel-bar) da san sang truoc khi price-grid.js chay - khong dua vao
 		// thu tu dang ky ngau nhien (Hieu 2026-08-01, luoi bang gia moi).
