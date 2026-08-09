@@ -26,7 +26,7 @@ if ( ! $dgc_sf ) return;
 			<h2>Câu hỏi thường gặp</h2>
 			<p class="muted" style="max-width:620px;margin:8px auto 0">Giải đáp nhanh trước khi bạn đặt dịch vụ. Chưa thấy câu trả lời cần tìm? Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?> để được tư vấn trực tiếp.</p>
 			<div class="faq-quicklinks">
-				<a href="/bang-gia/">Xem bảng giá đầy đủ</a>
+				<a href="#bang-gia">Xem bảng giá dịch vụ này</a>
 				<a href="/case-study/">Dự án đã triển khai</a>
 				<a href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 			</div>

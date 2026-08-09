@@ -42,10 +42,6 @@ function dgc_defaults() {
 		// phai nang markup (export-web.py) - xem .claude/rules/bang-gia-booking.md.
 		'combo_discount' => "2|1\n4|2\n8|3",
 
-		// Link Google Sheet xem truc tuyen (chi doc, khong tai/copy duoc) - dong bo tu dong tu
-		// 10-bang-gia-booking/sync-google-sheet.py. De trong = an nut "Xem tren Google Sheet".
-		'sheet_view_url' => '',
-
 		// Uu dai noi bat (tieu de | mo ta ngan | nhan uu dai). Nhan la cot thu 3, de trong duoc.
 		'promos'        => "Viết bài PR miễn phí | Đặt từ 3 đầu báo trở lên, DigicomVN viết bài, bạn chỉ cần duyệt nội dung | Miễn phí trọn gói\nTư vấn và chọn báo miễn phí | Chuyên viên lên danh sách báo/site theo ngành hàng và ngân sách của bạn | Miễn phí, không ràng buộc\nƯu đãi combo nhiều đầu báo | Đặt càng nhiều mục trong một đơn, chiết khấu càng cao | Áp dụng tự động\nBáo giá minh bạch, không phí ẩn | Niêm yết theo từng đầu báo, xuất VAT đầy đủ | Cam kết bằng hợp đồng",
 
@@ -202,7 +198,6 @@ function dgc_settings_page() {
 				dgc_field( 'promo_saving', 'Uu dai quy ra tien (so tien tiet kiem toi da)', 'VD "25 trieu". Hien noi bat trong khoi uu dai + popup. De TRONG = an dong nay. Con so phai tinh duoc tu bang gia + bac chiet khau, KHONG ghi bua.' );
 				dgc_field( 'promo_saving_note', 'Giai thich con so tren', 'VD: Don 15 dau bao lon: giam 15% theo bac combo + mien phi viet 15 bai.' );
 				dgc_field( 'combo_discount', 'Chiet khau combo (tick nhieu bao cang giam)', 'Moi dong: <so muc toi thieu>|<% giam>. VD "4|5" = tu 4 muc tro len giam 5%. Bac cao nhat dat duoc se ap dung. De trong = khong giam.', 'textarea' );
-				dgc_field( 'sheet_view_url', 'Link Google Sheet xem truc tuyen (chi doc)', 'Link Google Sheet dong bo tu dong voi bang gia (moi tab = 1 nhom dich vu). De TRONG = an nut "Xem tren Google Sheet" o trang Bang gia.' );
 				?>
 			</table>
 

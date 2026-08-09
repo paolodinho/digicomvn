@@ -1,12 +1,13 @@
 <?php
 /**
- * Popup gioi thieu chuong trinh uu dai -> dan ve trang bang gia (Hieu 2026-07-14).
+ * Popup gioi thieu chuong trinh uu dai -> dan ve trang dat bai (Hieu 2026-07-14,
+ * doi dich toi 2026-08-09 khi bo trang tong hop /bang-gia/).
  * Noi dung lay tu CUNG option "promos" / "promo_title" / "promo_slots" / "promo_deadline"
  * voi khoi uu dai (inc/promo-band.php) - sua o WP Admin, khong sua PHP.
  *
  * Quy tac hien:
  *   - Chi hien 1 lan / phien (sessionStorage), sau 7 giay hoac khi cuon qua 35% trang.
- *   - KHONG hien tren trang bang gia / dat bai / cam on - khach da o buoc chuyen doi roi.
+ *   - KHONG hien tren trang dat bai / cam on - khach da o buoc chuyen doi roi.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
@@ -14,7 +15,7 @@ $dgc_pp = dgc_lines( 'promos' );
 if ( ! $dgc_pp ) return;
 
 /* Trang da o cuoi phieu chuyen doi -> khong lam phien. */
-foreach ( array( 'bang-gia', 'dat-bai', 'cam-on' ) as $dgc_pp_skip ) {
+foreach ( array( 'dat-bai', 'cam-on' ) as $dgc_pp_skip ) {
 	if ( is_page( $dgc_pp_skip ) ) return;
 }
 
@@ -52,7 +53,7 @@ $dgc_pp_days  = $dgc_pp_end ? max( 0, (int) ceil( ( $dgc_pp_end - current_time( 
 		<?php endif; ?>
 
 		<div class="promo-pop-actions">
-			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a>
+			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận ưu đãi ngay</a>
 			<button type="button" class="promo-pop-later" data-pop-close>Để sau</button>
 		</div>
 	</div>

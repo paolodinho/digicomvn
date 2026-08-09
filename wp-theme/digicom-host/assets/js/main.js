@@ -1110,7 +1110,7 @@ document.addEventListener('click', function (e) {
 			if (score >= 5) {
 				html = '<b>' + score + '/6 - Nền tảng off-page tốt.</b> Bước hợp lý tiếp theo là nâng chất nguồn: thêm bài trên báo DR cao qua <a href="' + urls.booking + '">booking báo & PR</a> hoặc <a href="' + urls.textlink + '">textlink</a> trên site mạnh đúng ngành.';
 			} else if (score >= 3) {
-				html = '<b>' + score + '/6 - Đã có nền, còn khoảng trống.</b> Ưu tiên lấp phần đang thiếu: <a href="' + urls.guest + '">guest post</a> đúng chủ đề để đa dạng nguồn, kèm 1-2 bài PR trên báo để có trích dẫn uy tín. Tham khảo <a href="' + urls.banggia + '">bảng giá</a> để ước tính ngân sách.';
+				html = '<b>' + score + '/6 - Đã có nền, còn khoảng trống.</b> Ưu tiên lấp phần đang thiếu: <a href="' + urls.guest + '">guest post</a> đúng chủ đề để đa dạng nguồn, kèm 1-2 bài PR trên báo để có trích dẫn uy tín. <a href="' + urls.datbai + '">Gửi yêu cầu báo giá</a> để ước tính ngân sách.';
 			} else {
 				html = '<b>' + score + '/6 - Mới ở điểm xuất phát.</b> Bắt đầu từ móng: dựng <a href="' + urls.entity + '">hồ sơ social entity chuẩn NAP</a> trước, rồi thêm <a href="' + urls.guest + '">guest post</a> và 1 bài PR đầu tiên trên báo phù hợp ngân sách.';
 			}
@@ -1145,7 +1145,7 @@ document.addEventListener('click', function (e) {
 			} else if (n <= 5) {
 				html = head + 'tạm ổn nhưng cần làm rõ các mục chưa tick (đặc biệt hợp đồng, hoá đơn, quy cách bài) trước khi ký.';
 			} else {
-				html = head + 'đáng tin cậy theo bộ tiêu chí cơ bản. Bước tiếp theo: so giá theo cùng quy cách bài trên <a href="' + (urls.banggia || '#') + '">bảng giá tham chiếu</a>.';
+				html = head + 'đáng tin cậy theo bộ tiêu chí cơ bản. Bước tiếp theo: <a href="' + (urls.datbai || '#') + '">gửi yêu cầu báo giá</a> để so giá theo đúng quy cách bài.';
 			}
 			res.innerHTML = html;
 		}

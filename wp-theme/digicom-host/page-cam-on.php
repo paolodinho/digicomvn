@@ -44,9 +44,9 @@ $dgc_ty_svc = isset( $_GET['dv'] ) ? sanitize_text_field( wp_unslash( $_GET['dv'
 		</div>
 		<div class="pillar-links">
 			<div class="pillar-card">
-				<h3>Bảng giá chi tiết theo từng báo</h3>
-				<p class="muted">Lọc theo nhóm ngành, loại link dofollow/nofollow, số ảnh và độ dài bài - tự ước tính chi phí trước khi trao đổi.</p>
-				<div class="pillar-actions"><a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá</a></div>
+				<h3>Dịch vụ off-page SEO của DigicomVN</h3>
+				<p class="muted">Xem chi tiết quy cách, bảng giá và cách đặt của từng dịch vụ - Textlink, Backlink, Guest Post, Booking báo &amp; PR.</p>
+				<div class="pillar-actions"><a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Xem dịch vụ</a></div>
 			</div>
 			<div class="pillar-card">
 				<h3>Kiến thức SEO off-page</h3>

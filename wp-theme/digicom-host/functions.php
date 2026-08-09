@@ -44,12 +44,13 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'owl-carousel-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
 	wp_enqueue_script( 'dgc-main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'owl-carousel-js' ), DGC_VER, true );
 
-	// Luoi bang gia "kieu Excel" (Hieu 2026-08-01: trang /bang-gia/ qua nang/kho xem tong quan).
-	// Mo rong 2026-08-05: cac trang dich vu don (tpl-service.php) cung dung bang cu
+	// Luoi bang gia "kieu Excel" (Hieu 2026-08-01: ban dau lam cho trang /bang-gia/, trang do da
+	// bo hoan toan 2026-08-09 - moi trang dich vu la mot money page rieng, khong con trang tong
+	// hop gia nua). Mo rong 2026-08-05: cac trang dich vu don (tpl-service.php) cung dung bang cu
 	// (dgc_gia_rows_html, render het toan bo dong + logo vao HTML) -> trang nhu /booking-bao-pr/
 	// (1212 dong) nang toi 3,3MB/1400 <tr>, tai rat cham (Hieu bao "trang dang load rat nang").
 	// Dung chung luoi ao nay cho ca trang dich vu co bang gia ($nhom khac null).
-	$dgc_needs_price_grid = is_page( 'bang-gia' ) || ( function_exists( 'dgc_current_nhom' ) && dgc_current_nhom() );
+	$dgc_needs_price_grid = ( function_exists( 'dgc_current_nhom' ) && dgc_current_nhom() );
 	// Bai blog dung shortcode [dgc_bang_gia] (vd 18 bai "book-bao-<ten>") cung render bang
 	// gia bang markup luoi ao nay (inc/service-pricing.php) nhung KHONG khop dieu kien tren
 	// (post thuong, khong phai page, khong co post_parent) - phai quet shortcode rieng, neu
@@ -80,12 +81,6 @@ add_action( 'wp_enqueue_scripts', function () {
 		) );
 	}
 
-	// Cong chan tai PDF/Google Sheet bang gia (inc/price-view-options.php) - khach phai de lai
-	// ho ten/SDT/email truoc khi nhan link, moi lan gui se bao qua email cho Digicom.
-	wp_localize_script( 'dgc-main-js', 'DGC_GATE', array(
-		'url'   => admin_url( 'admin-ajax.php' ),
-		'nonce' => wp_create_nonce( 'dgc_gate_lead' ),
-	) );
 } );
 
 /* ---------------------------------------------------------------------------
@@ -396,50 +391,6 @@ add_action( 'admin_post_dgc_lead', 'dgc_handle_lead' );
 add_action( 'admin_post_nopriv_dgc_lead', 'dgc_handle_lead' );
 
 /* ---------------------------------------------------------------------------
- * Cong chan tai PDF / xem Google Sheet bang gia (Hieu 2026-07-30): khach phai de lai
- * ho ten + SDT + email truoc khi nhan link -> luu thanh lead + bao qua email cho Digicom,
- * chan doi thu lay link truc tiep tu HTML (khong con href tinh, chi tra link sau khi gui).
- * ------------------------------------------------------------------------- */
-function dgc_handle_gate_lead() {
-	check_ajax_referer( 'dgc_gate_lead', 'nonce' );
-
-	$name   = sanitize_text_field( wp_unslash( $_POST['name'] ?? '' ) );
-	$phone  = sanitize_text_field( wp_unslash( $_POST['phone'] ?? '' ) );
-	$email  = sanitize_email( wp_unslash( $_POST['email'] ?? '' ) );
-	$target = sanitize_key( wp_unslash( $_POST['target'] ?? '' ) ); // 'pdf' hoac 'sheet'
-
-	if ( '' === $name || '' === $phone || '' === $email || ! is_email( $email ) ) {
-		wp_send_json_error( array( 'message' => 'Vui lòng nhập đầy đủ họ tên, số điện thoại và email hợp lệ.' ) );
-	}
-
-	$url = '';
-	if ( 'pdf' === $target ) {
-		$url = home_url( '/wp-content/uploads/bao-gia-tong-hop-digicom.pdf' );
-	} elseif ( 'sheet' === $target ) {
-		$url = trim( (string) dgc( 'sheet_view_url' ) );
-	}
-	if ( '' === $url ) {
-		wp_send_json_error( array( 'message' => 'Đường dẫn hiện chưa sẵn sàng, vui lòng thử lại sau.' ) );
-	}
-
-	$label = ( 'pdf' === $target ) ? 'Tải PDF tổng hợp bảng giá' : 'Xem Google Sheet bảng giá';
-	$body  = "Ho ten: $name\nDien thoai: $phone\nEmail: $email\nYeu cau: $label";
-
-	wp_insert_post( array(
-		'post_type'    => 'dgc_lead',
-		'post_status'  => 'private',
-		'post_title'   => $name . ' - ' . $label . ' - ' . current_time( 'd/m/Y H:i' ),
-		'post_content' => $body,
-	) );
-
-	wp_mail( dgc( 'lead_email', get_option( 'admin_email' ) ), '[DigicomVN] Yeu cau moi tu ' . $name, $body );
-
-	wp_send_json_success( array( 'url' => $url ) );
-}
-add_action( 'wp_ajax_dgc_gate_lead', 'dgc_handle_gate_lead' );
-add_action( 'wp_ajax_nopriv_dgc_gate_lead', 'dgc_handle_gate_lead' );
-
-/* ---------------------------------------------------------------------------
  * Trang tac gia: them Facebook/LinkedIn vao ho so user (WP Admin > Ho so),
  * sua duoc khong can cham code (rule wordpress-non-code-editable).
  * ------------------------------------------------------------------------- */
@@ -602,6 +553,22 @@ add_action( 'pre_get_posts', function ( $q ) {
 		$q->set( 'posts_per_page', 12 );
 	}
 } );
+
+/* ---------------------------------------------------------------------------
+ * Bo trang bang gia tong hop /bang-gia/ (Hieu 2026-08-09): tranh de Google hieu
+ * nham dich la trang gia, trong khi moi trang dich vu (pillar) moi la money page
+ * that su. 301 THANG ve trang chu (khong con hub/trang tong hop gia nao thay the) -
+ * chan o day (template_redirect, chay TRUOC khi chon template) de an toan bat ke
+ * trang "bang-gia" trong DB con o trang.thai publish hay khong (page-bang-gia.php
+ * va inc/price-view-options.php da xoa, "no template" se load page.php mac dinh
+ * neu khong chan o day).
+ * ------------------------------------------------------------------------- */
+add_action( 'template_redirect', function () {
+	if ( is_page( 'bang-gia' ) ) {
+		wp_safe_redirect( home_url( '/' ), 301 );
+		exit;
+	}
+}, 1 );
 
 /* ---------------------------------------------------------------------------
  * 301 URL danh muc cu "/danh-muc/..." (category base tu theme/site cu, khong

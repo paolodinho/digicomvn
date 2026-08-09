@@ -6,7 +6,8 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * Dich vu Digicom lien quan toi tung category. Category khong khai o day -> fallback ve /bang-gia/.
+ * Dich vu Digicom lien quan toi tung category. Category khong khai o day -> fallback
+ * ve section dich vu tren trang chu (khong con trang tong hop /bang-gia/, 2026-08-09).
  */
 function dgc_cat_service_links( $slug ) {
 	$map = array(
@@ -22,7 +23,7 @@ function dgc_cat_service_links( $slug ) {
 	if ( isset( $map[ $slug ] ) ) {
 		return $map[ $slug ];
 	}
-	return array( array( 'label' => 'Xem bảng giá dịch vụ', 'url' => home_url( '/bang-gia/' ) ) );
+	return array( array( 'label' => 'Xem tất cả dịch vụ', 'url' => home_url( '/#services' ) ) );
 }
 
 /**

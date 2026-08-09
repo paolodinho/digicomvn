@@ -1,7 +1,8 @@
 <?php
 /**
- * Bang gia chi tiet nhung TRONG tung trang dich vu (tpl-service.php) - cung dang bang
- * voi trang /bang-gia/: tim kiem, sap xep, loc nhom bao, tick chon tinh tong tam tinh.
+ * Bang gia chi tiet TRONG tung trang dich vu (tpl-service.php) - moi trang dich vu la
+ * mot money page rieng (khong con trang tong hop /bang-gia/, 2026-08-09): tim kiem,
+ * sap xep, loc nhom bao, tick chon tinh tong tam tinh.
  * Include file - can bien $nhom (dgc_current_nhom()) va $svc_name truoc khi require.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -134,7 +135,7 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 
 		<?php if ( ! $dgc_sp_is_goi ) : ?>
 		<p class="center" style="margin-top:16px;font-size:14px">
-			<a class="link-more" href="<?php echo esc_url( home_url( '/bang-gia/#' . $nhom['slug'] ) ); ?>">So sánh giá với các dịch vụ khác tại Bảng giá tổng hợp &rarr;</a>
+			<a class="link-more" href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Xem các dịch vụ khác của DigicomVN &rarr;</a>
 		</p>
 		<?php endif; ?>
 	</div>

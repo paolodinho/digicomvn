@@ -55,7 +55,7 @@ add_shortcode( 'dgc_budget_calc', function () {
 	ob_start(); ?>
 <div class="bcalc" data-bcalc data-stats="<?php echo esc_attr( wp_json_encode( $data ) ); ?>">
 	<p class="bcalc-title">Ước tính ngân sách off-page của bạn</p>
-	<p class="bcalc-sub">Tính từ bảng giá thật DigicomVN đang bán - kéo thử để hình dung chi phí trước khi xem bảng giá chi tiết.</p>
+	<p class="bcalc-sub">Tính từ bảng giá thật DigicomVN đang bán - kéo thử để hình dung chi phí trước khi gửi yêu cầu báo giá chi tiết.</p>
 	<div class="bcalc-controls">
 		<label class="bcalc-field">
 			<span>Dịch vụ</span>
@@ -85,8 +85,7 @@ add_shortcode( 'dgc_budget_calc', function () {
 		<span class="bcalc-result-note">Giá tham khảo chưa gồm VAT, tính theo dải giá đang bán (không phải cam kết). Đặt nhiều mục có ưu đãi combo.</span>
 	</div>
 	<div class="bcalc-cta">
-		<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Xem bảng giá chi tiết</a>
-		<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu báo giá</a>
+		<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu báo giá</a>
 	</div>
 </div>
 <?php
@@ -119,7 +118,7 @@ add_shortcode( 'dgc_agency_check', function () {
 	<div class="acheck-result" aria-live="polite"
 		data-urls="<?php echo esc_attr( wp_json_encode( array(
 			'booking' => home_url( '/booking-bao-pr/' ),
-			'banggia' => home_url( '/bang-gia/' ),
+			'datbai'  => home_url( '/dat-bai/' ),
 		) ) ); ?>"></div>
 </div>
 <?php
@@ -157,7 +156,7 @@ add_shortcode( 'dgc_offpage_quiz', function () {
 			'guest'    => home_url( '/guest-post/' ),
 			'entity'   => home_url( '/backlink-social-entity/' ),
 			'textlink' => home_url( '/mua-textlink/' ),
-			'banggia'  => home_url( '/bang-gia/' ),
+			'datbai'   => home_url( '/dat-bai/' ),
 		) ) ); ?>"></div>
 </div>
 <?php

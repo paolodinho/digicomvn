@@ -2,7 +2,8 @@
 /**
  * Thanh cong cu tick chon bao/site/goi + tong tien tam tinh (chua VAT) + chiet khau combo
  * bac thang (cang tick nhieu muc cang giam - bac cau hinh o WP Admin, xem dgc_combo_tiers()).
- * Ghim (sticky) dau khu vuc bang gia; dung chung cho page-bang-gia.php va inc/service-pricing.php.
+ * Ghim (sticky) dau khu vuc bang gia; dung trong inc/service-pricing.php (bang gia tung
+ * trang dich vu - khong con trang tong hop /bang-gia/, 2026-08-09).
  * Khong nhan bien dau vao - JS trong main.js tu quet moi checkbox ".row-check" tren trang.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;

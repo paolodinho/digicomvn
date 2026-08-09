@@ -747,7 +747,7 @@ function dgc_search_key( $s ) {
 /**
  * Tim trong BANG GIA (CPT dgc_gia) theo tu khoa - phuc vu trang tim kiem toan site.
  * Khop ca dang co dau, khong dau va dang ten mien ("Báo Thanh Niên" = "thanhnien.vn").
- * Tra ve mang phang: title, vi_tri, gia, nhom_label, url (tro toi tab tuong ung o /bang-gia/).
+ * Tra ve mang phang: title, vi_tri, gia, nhom_label, url (tro thang toi /dat-bai/, da chon san dong nay).
  */
 function dgc_search_gia( $q ) {
 	$q = trim( (string) $q );

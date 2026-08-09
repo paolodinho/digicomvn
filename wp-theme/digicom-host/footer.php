@@ -46,7 +46,6 @@
 				<h4>Hỗ trợ</h4>
 				<ul>
 					<li><a href="<?php echo esc_url( home_url( '/cau-hoi-thuong-gap/' ) ); ?>">Câu hỏi thường gặp</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Bảng giá</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt bài</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Liên hệ</a></li>
 				</ul>
@@ -89,7 +88,7 @@
 $dgc_bottom_nav = array(
 	array( 'icon' => 'home',   'label' => 'Trang chủ', 'url' => home_url( '/' ) ),
 	array( 'icon' => 'layers', 'label' => 'Dịch vụ',   'sheet' => true ), // bam -> mo bottom sheet, khong dieu huong
-	array( 'icon' => 'tag',    'label' => 'Bảng giá',  'url' => home_url( '/bang-gia/' ), 'feat' => true ),
+	array( 'icon' => 'edit',   'label' => 'Đặt bài',   'url' => home_url( '/dat-bai/' ), 'feat' => true ),
 	array( 'icon' => 'phone',  'label' => 'Gọi ngay',  'url' => 'tel:' . dgc_tel(), 'feat' => true ),
 );
 $dgc_cur_url = home_url( add_query_arg( array(), $GLOBALS['wp']->request ?? '' ) );

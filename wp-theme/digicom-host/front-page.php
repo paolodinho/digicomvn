@@ -15,7 +15,7 @@ get_header();
 				<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 				<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 				<div class="hero-cta-row">
-					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/bang-gia/' ) ); ?>">Nhận báo giá</a>
+					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận báo giá</a>
 					<a class="btn-text-link" href="#services">Xem dịch vụ &rarr;</a>
 				</div>
 			</div>

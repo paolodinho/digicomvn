@@ -105,7 +105,7 @@ function dgc_ai_system_prompt() {
 	}
 	$sp .= "QUY TAC BAT BUOC:\n";
 	$sp .= "- KHONG bia ten dau bao da hop tac, case study, so lieu, cam ket thu hang cu the.\n";
-	$sp .= "- Gia chi la THAM KHAO; khi khach hoi bao gia chinh xac cho don cu the -> huong dan xem trang Bang gia (/bang-gia/) va lien he de chot gia dung.\n";
+	$sp .= "- Gia chi la THAM KHAO; khi khach hoi bao gia chinh xac cho don cu the -> huong dan xem bang gia ngay trong trang dich vu tuong ung (vd /booking-bao-pr/, /guest-post/...) va lien he de chot gia dung.\n";
 	$sp .= "- Khuyen khich khach de lai nhu cau (dich vu quan tam, nganh, so luong) va lien he: hotline " . $hotline;
 	if ( $zalo ) $sp .= " / Zalo " . $zalo;
 	if ( $email ) $sp .= " / email " . $email;
