@@ -1,17 +1,20 @@
 /**
- * Luoi bang gia "kieu Excel" (cuon ao) cho /bang-gia/ (Hieu 2026-08-01: du lieu qua lon hien
- * thi kieu bang day du bi nang may, khong xem duoc tong quan). Chi ve ~20-30 dong dang trong
- * khung nhin thay vi nhet ca tram/nghin dong vao DOM - xem mockup da duyet + inc/price-grid.php
- * (nguon du lieu JSON + AJAX chi tiet).
+ * Bang gia dang bang thuong (khong con cuon ao trong khung cao co dinh) + PHAN TRANG that
+ * (Hieu 2026-08-09: "ko con co dinh trong 1 khung nua ma tran ra, ko auto load nua ma phan
+ * trang"). Thay the ban virtual-scroll 2026-08-01 (grid-scroll cao 560px, cuon noi bo, ve
+ * ~20-30 dong dang trong khung nhin) - ban do gay 2 van de: (1) bi "nhot" trong 1 khung cao
+ * co dinh thay vi troi tu nhien theo trang, (2) cot gia dang range (vd "3.350.000d - 4.680.000d")
+ * bat buoc 1 dong khong wrap -> vuot rong container tren mobile (Hieu chup man hinh 2026-08-09).
+ *
+ * Ban moi: chi ve dung 1 TRANG (~20 dong) vao DOM tai 1 thoi diem (van nhe nhu ban cu, khong
+ * nhet ca nghin dong), nhung la <div> troi binh thuong (khong overflow:auto/height co dinh) +
+ * co nut chuyen trang o duoi bang. Gia range duoc phep xuong dong (khong ep 1 dong nua).
  */
 (function () {
 	'use strict';
-	if (!window.DGC_GRID) return; // trang khong phai /bang-gia/ - script khong duoc enqueue nen khong toi day, phong hu
+	if (!window.DGC_GRID) return; // trang khong dung luoi nay - script khong duoc enqueue nen khong toi day, phong hu
 
-	var ROW_H    = 46;   // 1 dong bao/site thu gon
-	var DETAIL_H = 300;  // panel "mo rong" - cao co dinh, cuon rieng ben trong neu noi dung dai
-	var LOAD_H   = 46;   // dong "Dang tai..."
-	var BUFFER   = 8;    // so dong du them ngoai khung nhin (2 phia) de cuon muot, khong giat trang
+	var PAGE_SIZE = 20; // so dong/trang
 
 	function fmtVnd(n) { return Math.round(n || 0).toLocaleString('vi-VN'); }
 
@@ -89,16 +92,12 @@
 		var shownEl     = panel.querySelector('.tab-count-shown');
 		var totalEl     = panel.querySelector('.tab-count-total');
 
-		var state = { q: '', qKey: '', nganh: '', facets: {}, sortKey: 'dr', sortDir: -1, openIds: {} };
+		var state = { q: '', qKey: '', nganh: '', facets: {}, sortKey: 'dr', sortDir: -1, openIds: {}, page: 1 };
 		var detailCache = {}; // key -> 'loading' | htmlString
 
 		function facetOk(d) {
 			for (var key in state.facets) {
 				var f = state.facets[key];
-				// Bao co nhieu vi tri (d.count>1) khong co "d.price" rieng (moi vi tri 1 gia
-				// khac nhau) - dung GIA THAP NHAT trong nhom (d.priceMin) lam dai dien, dung
-				// y nhu ban bang cu (data-price="$lo" tren dong dau, xem dgc_gia_group_head_html()
-				// trong inc/price-grid.php) - "nhom nay CO IT NHAT 1 vi tri khop khoang gia".
 				var raw = key === 'price' ? d.priceMin
 					: (key === 'link' || key === 'vitri') ? (d[key] || '')
 					: (d[key] || 0);
@@ -122,8 +121,7 @@
 			return okQ && okN && facetOk(d);
 		}
 
-		/* ---------- flatten (loc + sap xep + chen panel chi tiet dang mo) ---------- */
-		function buildFlat() {
+		function filteredSorted() {
 			var list = DATA.filter(rowOk);
 			list.sort(function (a, b) {
 				var dir = state.sortDir;
@@ -131,16 +129,7 @@
 				if (state.sortKey === 'dr') return ((a.dr || 0) - (b.dr || 0)) * dir;
 				return 0;
 			});
-			var flat = [];
-			list.forEach(function (d) {
-				flat.push({ type: 'row', d: d });
-				if (state.openIds[d.key]) {
-					var cached = detailCache[d.key];
-					if (cached === 'loading') flat.push({ type: 'loading', d: d });
-					else if (typeof cached === 'string') flat.push({ type: 'detail', d: d, html: cached });
-				}
-			});
-			return { flat: flat, total: list.length };
+			return list;
 		}
 
 		function fetchDetail(d) {
@@ -166,37 +155,25 @@
 				});
 		}
 
-		/* ---------- virtual scroll ---------- */
-		var scroller = document.createElement('div');
-		scroller.className = 'grid-scroll';
+		/* ---------- DOM: bang troi binh thuong (khong cuon noi bo) + thanh phan trang ---------- */
+		var wrap = document.createElement('div');
+		wrap.className = 'grid-wrap';
 		var head = document.createElement('div');
 		head.className = 'grid-head';
 		head.innerHTML =
 			'<div class="gh-name">' + esc(colName) + '</div>' +
 			(isGoi ? '' : '<div class="gh-dr">DR</div>') +
 			'<div class="gh-price">Giá</div>';
-		var viewport = document.createElement('div');
-		viewport.className = 'viewport';
-		var win = document.createElement('div');
-		win.className = 'rows-window';
-		viewport.appendChild(win);
-		scroller.appendChild(head);
-		scroller.appendChild(viewport);
+		var body = document.createElement('div');
+		body.className = 'grid-body';
+		var pager = document.createElement('div');
+		pager.className = 'grid-pager';
+		wrap.appendChild(head);
+		wrap.appendChild(body);
+		wrap.appendChild(pager);
 		container.innerHTML = '';
-		container.appendChild(scroller);
+		container.appendChild(wrap);
 		container.classList.toggle('price-grid-goi', isGoi);
-
-		var layout = { offsets: [], total: 0 };
-
-		function computeLayout(flat) {
-			var offsets = [], y = 0;
-			flat.forEach(function (item) {
-				var h = item.type === 'detail' ? DETAIL_H : (item.type === 'loading' ? LOAD_H : ROW_H);
-				offsets.push({ top: y, h: h, item: item });
-				y += h;
-			});
-			return { offsets: offsets, total: y };
-		}
 
 		function rowHtml(d) {
 			var picked = d.count === 1 && window.dgcCartIsPicked && window.dgcCartIsPicked(d.key);
@@ -206,7 +183,7 @@
 				? fmtVnd(d.priceMin) + 'đ'
 				: fmtVnd(d.priceMin) + 'đ<span class="sep">-</span>' + fmtVnd(d.priceMax) + 'đ';
 			return '' +
-				'<div class="row' + (open ? ' is-open' : '') + '" data-key="' + esc(d.key) + '" style="height:' + ROW_H + 'px">' +
+				'<div class="row' + (open ? ' is-open' : '') + '" data-key="' + esc(d.key) + '">' +
 					'<div class="r-name grid-col-name">' +
 						'<span class="r-toggle" data-act="toggle" data-key="' + esc(d.key) + '"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m9 6 6 6-6 6"/></svg></span>' +
 						(fav ? '<img class="r-logo" src="' + esc(fav) + '" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;r-logo r-logo-fb&quot; style=&quot;background:' + logoColor(d.name) + '&quot;>' + esc(initial(d.name)) + '</span>\'">' : '<span class="r-logo r-logo-fb" style="background:' + logoColor(d.name) + '">' + esc(initial(d.name)) + '</span>') +
@@ -222,69 +199,81 @@
 		}
 
 		function loadingHtml() {
-			return '<div class="row row-loading" style="height:' + LOAD_H + 'px"><div class="r-name grid-col-name">Đang tải chi tiết...</div></div>';
+			return '<div class="row row-loading">Đang tải chi tiết...</div>';
 		}
 
 		function detailHtml(d, html) {
-			return '<div class="grid-detail-wrap" style="height:' + DETAIL_H + 'px"><div class="grid-detail">' + html + '</div></div>';
+			return '<div class="grid-detail-wrap"><div class="grid-detail">' + html + '</div></div>';
 		}
 
-		function paintItem(it) {
-			if (it.type === 'row') return rowHtml(it.d);
-			if (it.type === 'loading') return loadingHtml();
-			return detailHtml(it.d, it.html);
-		}
-
-		function findStart(offsets, y) {
-			var lo = 0, hi = offsets.length - 1, ans = 0;
-			while (lo <= hi) {
-				var mid = (lo + hi) >> 1;
-				if (offsets[mid].top + offsets[mid].h >= y) { ans = mid; hi = mid - 1; } else lo = mid + 1;
+		function pageWindow(cur, total) {
+			// Toi da 5 so trang hien thi, con lai rut gon bang "…" - luon giu trang dau/cuoi.
+			if (total <= 7) {
+				var all = []; for (var i = 1; i <= total; i++) all.push(i); return all;
 			}
-			return ans;
+			var out = [1];
+			var lo = Math.max(2, cur - 1), hi = Math.min(total - 1, cur + 1);
+			if (lo > 2) out.push('...');
+			for (var j = lo; j <= hi; j++) out.push(j);
+			if (hi < total - 1) out.push('...');
+			out.push(total);
+			return out;
 		}
 
-		function paint() {
-			var scrollTop = scroller.scrollTop;
-			var viewH = scroller.clientHeight || 560;
-			var startY = Math.max(0, scrollTop - BUFFER * ROW_H);
-			var endY   = scrollTop + viewH + BUFFER * ROW_H;
-
-			var startIdx = layout.offsets.length ? findStart(layout.offsets, startY) : 0;
-			var endIdx = startIdx;
-			while (endIdx < layout.offsets.length && layout.offsets[endIdx].top < endY) endIdx++;
-
-			var visible = layout.offsets.slice(startIdx, endIdx);
-			var top = visible.length ? visible[0].top : 0;
-			win.style.transform = 'translateY(' + top + 'px)';
-			win.innerHTML = visible.map(function (o) { return paintItem(o.item); }).join('');
+		function renderPager(totalPages) {
+			if (totalPages <= 1) { pager.innerHTML = ''; pager.hidden = true; return; }
+			pager.hidden = false;
+			var p = state.page;
+			var btns = '<button type="button" class="pg-btn pg-nav" data-pg="' + (p - 1) + '"' + (p <= 1 ? ' disabled' : '') + ' aria-label="Trang trước">‹</button>';
+			pageWindow(p, totalPages).forEach(function (n) {
+				if (n === '...') btns += '<span class="pg-dots">…</span>';
+				else btns += '<button type="button" class="pg-btn pg-num' + (n === p ? ' active' : '') + '" data-pg="' + n + '">' + n + '</button>';
+			});
+			btns += '<button type="button" class="pg-btn pg-nav" data-pg="' + (p + 1) + '"' + (p >= totalPages ? ' disabled' : '') + ' aria-label="Trang sau">›</button>';
+			pager.innerHTML = '<div class="pg-info">Trang ' + p + '/' + totalPages + '</div><div class="pg-btns">' + btns + '</div>';
 		}
 
-		function render(resetScroll) {
-			var res = buildFlat();
-			layout = computeLayout(res.flat);
-			viewport.style.height = layout.total + 'px';
-			// Doi bo loc/tim kiem/sap xep -> ve lai tu dau danh sach, tranh truong hop dang cuon
-			// sau (vd 3000px) roi loc con it dong hon -> khung nhin "treo" ngoai vung co du lieu,
-			// tuong nhu bang trong (Hieu se gap neu khong xu ly, phat hien khi QA tim kiem).
-			if (resetScroll) scroller.scrollTop = 0;
-			// Phong khi danh sach vua ngan lai sau khi mo/dong 1 panel chi tiet (khong chu dich
-			// reset) ma scroll dang o qua vi tri hop le - keo ve diem hop le gan nhat.
-			var maxScroll = Math.max(0, layout.total - (scroller.clientHeight || 560));
-			if (scroller.scrollTop > maxScroll) scroller.scrollTop = maxScroll;
-			paint();
-			if (shownEl) shownEl.textContent = res.total;
+		function render(resetPage) {
+			var list = filteredSorted();
+			var total = list.length;
+			var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+			if (resetPage) state.page = 1;
+			if (state.page > totalPages) state.page = totalPages;
+			if (state.page < 1) state.page = 1;
+
+			var startIdx = (state.page - 1) * PAGE_SIZE;
+			var pageItems = list.slice(startIdx, startIdx + PAGE_SIZE);
+
+			if (!pageItems.length) {
+				body.innerHTML = '<div class="price-empty-row">Không tìm thấy kết quả phù hợp.</div>';
+			} else {
+				body.innerHTML = pageItems.map(function (d) {
+					var html = rowHtml(d);
+					if (state.openIds[d.key]) {
+						var cached = detailCache[d.key];
+						if (cached === 'loading') html += loadingHtml();
+						else if (typeof cached === 'string') html += detailHtml(d, cached);
+					}
+					return html;
+				}).join('');
+			}
+
+			renderPager(totalPages);
+			if (shownEl) shownEl.textContent = total;
 			if (totalEl) totalEl.textContent = DATA.length;
 		}
 
-		var paintTicking = false;
-		scroller.addEventListener('scroll', function () {
-			if (paintTicking) return;
-			paintTicking = true;
-			requestAnimationFrame(function () { paint(); paintTicking = false; });
+		pager.addEventListener('click', function (e) {
+			var b = e.target.closest('[data-pg]');
+			if (!b || b.disabled) return;
+			var n = parseInt(b.getAttribute('data-pg'), 10);
+			if (!n || n < 1) return;
+			state.page = n;
+			render();
+			wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		});
 
-		win.addEventListener('click', function (e) {
+		body.addEventListener('click', function (e) {
 			var t = e.target.closest('[data-act="toggle"]');
 			if (!t) return;
 			var key = t.getAttribute('data-key');

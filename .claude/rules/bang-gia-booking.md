@@ -2,6 +2,16 @@
 
 > Kho dữ liệu: `10-bang-gia-booking/`. Đọc `README.md` trong đó trước khi sửa.
 
+## Giao diện bảng giá: phân trang thật, KHÔNG còn khung cuộn ảo cố định (chốt 2026-08-09)
+
+Hiếu chê bảng bị "nhốt" trong 1 khung cao cố định (`grid-scroll{height:560px;overflow:auto}`,
+bản virtual-scroll dựng 2026-08-01) và cột giá dạng khoảng ("X - Y") bị ép 1 dòng nên tràn
+ra ngoài màn hình mobile. Đã thay bằng bảng trôi tự nhiên theo trang + nút phân trang
+(20 dòng/trang) ở `wp-theme/digicom-host/assets/js/price-grid.js` +
+`assets/css/main.css` (khối `.grid-wrap/.grid-body/.grid-pager`, DGC_VER 2.7.3). Vẫn chỉ
+ve 1 trang vào DOM tại 1 thời điểm (nhẹ như bản cũ), chỉ khác ở chỗ có nút chuyển trang thay
+vì tự động vẽ thêm khi cuộn. Cột tên/giá dùng `minmax(0,...)` để không còn ép tràn ngang.
+
 ## Gộp nhiều vị trí/quy cách CÙNG 1 báo trên bảng giá web (chốt 2026-07-29)
 
 1 báo (vd Kênh14, VietNamNet, Tuổi Trẻ) có thể bán nhiều vị trí/quy cách khác nhau (Trang chủ,
@@ -167,7 +177,28 @@ Backup trước khi import: `~/Claude-Workspace/_backups/routines/<ngày>/bang-g
 
 `build_master.py` tự áp: `gia_ban_digicom = gia_ncc_km or gia_ncc_goc`.
 
-## GIÁ VỐN 100% - KHÔNG MARKUP AI (chốt 2026-07-29, GHI ĐÈ toàn bộ mục markup bên dưới)
+## CHỈ DANASEO + LÃI 5% (chốt 2026-08-09, GHI ĐÈ mục "GIÁ VỐN 100%" ngay dưới đây)
+
+Hiếu: "nguồn báo giá chỉ giữ lại danaseo; giá niêm yết bằng giá danaseo + 5%, đây là mức lãi 5%".
+
+- **Nguồn**: `CHI_NCC = {"danaseo"}` trong `export-web.py` (bỏ Media Việt Nam, Fame Media,
+  Rise Media khỏi web - vẫn lưu trong `bang-gia-master.csv` làm tham khảo). Ngoại lệ
+  `dich-vu-toplist` + `backlink-quoc-te` vẫn giữ mọi NCC (không có dữ liệu DanaSEO cho 2
+  nhóm này, để trang không trống).
+- **Giá web** = `gia_ban_digicom` (giá vốn DanaSEO) × **1,05**, làm tròn nghìn
+  (`MARKUP_DANASEO` trong `export-web.py`, hàm `web_gia()`).
+- **Đã đẩy live 2026-08-09**: 1837 dòng `dgc_gia` đang publish → 596 cập nhật giá (theo
+  công thức mới), **959 chuyển draft** (từng thuộc NCC vừa bị loại, xác định bằng cách đối
+  chiếu 2 bản `gia-web.csv` TRƯỚC/SAU khi đổi `CHI_NCC`, không dựa vào field `ma_ncc` vì
+  ~745/1837 dòng chưa từng được gắn mã). 249 dòng không khớp cả 2 bản → giữ nguyên, cần xem
+  tay. Script: `cap-nhat-gia-danaseo.py` (khác `cap-nhat-gia.py` cũ ở chỗ CÓ bước draft).
+  Backup đầy đủ (giá + trạng thái publish của toàn bộ 1837 ID):
+  `~/Claude-Workspace/_backups/routines/2026-08-09/gia-danaseo-only/live-now-BEFORE.json`.
+- Muốn đổi mức lãi (vd 5% → 8%) → sửa hằng số `MARKUP_DANASEO` trong `export-web.py`, chạy
+  lại `python3 export-web.py`, rồi chạy `cap-nhat-gia-danaseo.py` (cần `GIA_WEB_BEFORE` trỏ
+  tới bản snapshot cũ để so sánh) và áp qua `apply-danaseo-only.php` như lần 2026-08-09.
+
+## (LỊCH SỬ - không còn áp dụng) GIÁ VỐN 100% - KHÔNG MARKUP AI (chốt 2026-07-29)
 
 Hiếu: "tất cả để bằng giá vốn". Đã bỏ TOÀN BỘ markup đang áp (3 NCC chính x1,03 - chốt
 2026-07-19; NCC khác x1,20 - chốt 2026-07-15; Rise Media x1,1 - chốt 2026-07-24).

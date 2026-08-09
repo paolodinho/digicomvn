@@ -7,10 +7,13 @@ Quy tac (chot 2026-07-14):
 - AN danh tinh nha cung cap. An gia mua vao. Khong lo link nguon NCC.
 - Gia hien thi = gia_ban_digicom co MARKUP, chua VAT 8%.
 
-GIA VON (Hieu 2026-07-29, GHI DE moi rule markup truoc do 1,03/1,20/1,1):
-  Gia web = DUNG BANG gia von cua NCC (gia_ban_digicom), KHONG markup bat ky NCC nao.
-  Lich su markup da bo: 2026-07-15 NCC ngoai DanaSEO x1,20; 2026-07-19 3 NCC chinh x1,03;
-  2026-07-24 Rise Media x1,1 (rieng o parse-rise-media.py, cung da bo).
+CHI DANASEO + LAI 5% (Hieu 2026-08-09, GHI DE rule "gia von 100%" 2026-07-29):
+  Nguon: CHI con DanaSEO (bo Media Viet Nam / Fame Media / Rise Media khoi web, van luu
+  trong master lam tham khao). Gia web = gia_ban_digicom (gia von DanaSEO) x 1,05, lam
+  tron nghin - day la muc lai 5% Hieu chon. Ngoai le toplist/backlink-quocte van giu moi
+  NCC (khong co du lieu DanaSEO) nhung van qua cung cong thuc markup 5%.
+  Lich su markup da bo truoc do: 2026-07-15 NCC ngoai DanaSEO x1,20; 2026-07-19 3 NCC
+  chinh x1,03; 2026-07-24 Rise Media x1,1; 2026-07-29 bo het ve gia von 100%.
 
 Tang san pham (tu dong phan loai tu vi_tri/nhom, vi moi NCC goi ten mot kieu):
   trang-chu   : vi tri noi bat trang chu (Top 1, Top Story, dac biet, home...)  -> gia cao
@@ -94,19 +97,22 @@ def is_soft(r):
 # (cot rieng + field an), KHONG BAO GIO dua ra front-end/public (van AN danh tinh NCC voi khach).
 NCC_MA = {"danaseo": "1", "media viet nam": "2", "fame media": "3", "rise media": "4"}
 
-# Hieu 2026-07-18: TAM THOI CHI dung 3 NCC nay len web (danaseo, media viet nam, fame media).
-# Cac NCC khac VAN LUU trong bang-gia-master.csv (du lieu tham khao), nhung KHONG xuat ra
-# gia-web.csv / khong dua len site. Bo rong lai -> xoa/sua CHI_NCC ben duoi.
-# Rise Media them 2026-07-24 (Hieu: "dua rise len").
-CHI_NCC = {"danaseo", "media viet nam", "fame media", "rise media"}
-# NGOAI LE (Hieu 2026-07-18): Toplist va Backlink quoc te KHONG co du lieu tu 3 NCC tren
-# -> se trong trang neu ap dung CHI_NCC. Giu nguyen hanh vi CU (moi NCC, co markup 1.2x)
-# CHI cho 2 dich_vu nay, de trang khong bi trong bang gia.
+# Hieu 2026-08-09: CHI con DUY NHAT DanaSEO len web (bo Media Viet Nam, Fame Media, Rise
+# Media - GHI DE quyet dinh mo rong 2026-07-18/2026-07-24). Cac NCC khac VAN LUU trong
+# bang-gia-master.csv (du lieu tham khao), nhung KHONG xuat ra gia-web.csv.
+CHI_NCC = {"danaseo"}
+# NGOAI LE (Hieu 2026-07-18): Toplist va Backlink quoc te KHONG co du lieu DanaSEO
+# -> se trong trang neu ap dung CHI_NCC. Giu nguyen hanh vi CU (moi NCC) de trang khong
+# bi trong bang gia - nhung van qua web_gia() nen van duoc markup 5% nhu duoi.
 DICH_VU_NGOAI_LE_CHI_NCC = {"toplist", "backlink-quocte"}
 
+# Hieu 2026-08-09: "gia niem yet bang gia DanaSEO tru them 5%, day la muc lai 5%" - vi "lai"
+# (loi nhuan) nghia la CONG THEM (ban tren gia von), khong phai TRU (se ban lo). Lam tron nghin.
+MARKUP_DANASEO = 1.05
+
 def web_gia(r):
-    """Gia hien thi len web = DUNG BANG gia von NCC (Hieu 2026-07-29), khong markup NCC nao."""
-    return int(r["gia_ban_digicom"])
+    """Gia hien thi len web = gia von DanaSEO x 1,05 (Hieu 2026-08-09, lai 5%), lam tron nghin."""
+    return int(round(int(r["gia_ban_digicom"]) * MARKUP_DANASEO / 1000)) * 1000
 
 with open(SRC) as f:
     all_rows = [r for r in csv.DictReader(f) if r["gia_ban_digicom"]]

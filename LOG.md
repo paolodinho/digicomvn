@@ -4171,3 +4171,27 @@ Drive Stream trên Mac thường set permission 700 cho file/thư mục.**
    trong LOG entry trước, chưa làm).
 
 Backup: `~/backups/2026-08-09/` (host, theme tar.gz + DB sql).
+
+---
+
+## 2026-08-09 (tối) — Bỏ nút "Đặt bài" khỏi bottom-nav + bảng giá chỉ DanaSEO +5% + phân trang
+
+**1. Bottom-nav mobile còn 3 nút**: bỏ "Đặt bài", giữ Trang chủ / Dịch vụ / Gọi ngay
+(`footer.php`). CTA "Đặt bài" vẫn còn ở footer + trong từng trang dịch vụ, chỉ bỏ khỏi thanh
+menu dưới cùng.
+
+**2. Nguồn giá chỉ còn DanaSEO, lãi 5%** (Hiếu yêu cầu sau khi xem ảnh chụp bảng giá bị tràn):
+`export-web.py` đổi `CHI_NCC = {"danaseo"}` (bỏ Media Việt Nam/Fame Media/Rise Media), giá web
+= giá vốn DanaSEO × 1,05. Đẩy live: 596 dòng đổi giá, **959 dòng chuyển draft** (từng thuộc NCC
+bị loại). Script mới: `10-bang-gia-booking/cap-nhat-gia-danaseo.py`. Backup đầy đủ giá + trạng
+thái cũ: `~/Claude-Workspace/_backups/routines/2026-08-09/gia-danaseo-only/live-now-BEFORE.json`.
+Chi tiết: `.claude/rules/bang-gia-booking.md` mục "CHỈ DANASEO + LÃI 5%".
+
+**3. Bảng giá bỏ khung cuộn ảo cố định, chuyển phân trang thật**: `price-grid.js` viết lại -
+không còn `height:560px;overflow:auto`, chỉ ve 1 trang (20 dòng) vào DOM + nút chuyển trang.
+Sửa lỗi tràn ngang mobile (cột giá dạng khoảng bị ép 1 dòng) bằng `minmax(0,...)` + cho phép
+xuống dòng. DGC_VER 2.7.2 → 2.7.3. Chưa QA được bằng browser trực quan trong phiên này (tool
+bị chặn quyền chụp ảnh) - đã kiểm code kỹ (JS syntax hợp lệ, PHP lint sạch trên host), Hiếu nên
+tự mở site kiểm tra lại 1 lần.
+
+Backup theme trước khi ghi đè: `~/Claude-Workspace/_backups/routines/2026-08-09/price-grid-pagination/`.
