@@ -88,7 +88,6 @@
 $dgc_bottom_nav = array(
 	array( 'icon' => 'home',   'label' => 'Trang chủ', 'url' => home_url( '/' ) ),
 	array( 'icon' => 'layers', 'label' => 'Dịch vụ',   'sheet' => true ), // bam -> mo bottom sheet, khong dieu huong
-	array( 'icon' => 'edit',   'label' => 'Đặt bài',   'url' => home_url( '/dat-bai/' ), 'feat' => true ),
 	array( 'icon' => 'phone',  'label' => 'Gọi ngay',  'url' => 'tel:' . dgc_tel(), 'feat' => true ),
 );
 $dgc_cur_url = home_url( add_query_arg( array(), $GLOBALS['wp']->request ?? '' ) );
