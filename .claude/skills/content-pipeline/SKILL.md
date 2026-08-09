@@ -177,8 +177,16 @@ liệt kê giá trong bài.
   đồng bộ style site, credit storyset.com cuối bài. Không có ảnh phù hợp -> bỏ qua,
   KHÔNG chèn placeholder.
 
-## BƯỚC 6 - ĐĂNG LIVE (SSH Hostinger - rule deploy.md)
+## BƯỚC 6 - ĐĂNG LIVE
 
+**Chọn cách theo môi trường đang chạy:**
+- **Có SSH key `~/.ssh/id_ed25519` (máy Mac Hiếu)** -> dùng SSH + wp-cli (rule `deploy.md`), như cũ (mục A).
+- **Không có SSH key (phiên di động/cloud qua Claude Code web/mobile)** -> dùng REST API qua
+  `tools/wp-rest-publish.py` (mục B). Credential: `.claude/secrets/wp_app.json` (gitignored,
+  Application Password user `admin`) - phải tồn tại trong repo/mirror đang mở, nếu thiếu thì
+  báo Hiếu, KHÔNG tự bịa hay xin credential qua kênh khác.
+
+### A. SSH Hostinger (wp-cli)
 1. Upload nội dung: `wp post create` (hoặc `wp post update` nếu refresh) với
    `--post_status=publish --post_author=1`, content là Gutenberg blocks.
    Escape an toàn: ghi content ra file tạm, scp lên, `wp post create ... < file` hoặc
@@ -186,9 +194,23 @@ liệt kê giá trong bài.
 2. Gán category đúng 1 trong 11 chuyên mục blog (menu Blog đã tách category);
    bài dịch vụ off-page thường là `backlink-offpage` (24) hoặc `booking-bao-pr`.
 3. Thumbnail: render theo ID -> scp lên -> `wp media import <png> --post_id=<ID> --featured_image`.
-4. Backup: nếu là refresh bài cũ -> fetch `content.raw` TRƯỚC khi update, lưu
-   `~/Claude-Workspace/_backups/routines/<ngày>/content-pipeline/` + 1 dòng manifest.md
-   (rule routine-backup). Bài mới hoàn toàn -> ghi manifest "created".
+
+### B. REST API (`tools/wp-rest-publish.py`)
+1. Bài mới: `python3 tools/wp-rest-publish.py create --title "..." --content-file bai.html
+   --category-id <id> --status publish` -> trả về `id` + `link` live.
+2. Refresh bài cũ: `python3 tools/wp-rest-publish.py update --id <ID> --content-file bai.html`.
+3. Thumbnail: render PNG theo ID (BƯỚC 5) rồi
+   `python3 tools/wp-rest-publish.py set-thumbnail --id <ID> --image-file out/v2-<id>-*.png`.
+4. Category id tra theo danh sách chuyên mục (giống mục A).
+
+### Backup (cả 2 cách)
+Refresh bài cũ -> fetch `content.raw` TRƯỚC khi update (mục A: `wp post get --field=content`;
+mục B: `python3 tools/wp-rest-publish.py get-raw --id <ID>`), lưu
+`~/Claude-Workspace/_backups/routines/<ngày>/content-pipeline/` + 1 dòng manifest.md
+(rule routine-backup). Nếu đang ở môi trường không truy cập được thư mục Claude-Workspace
+(cloud/di động) -> lưu backup vào `_backups/routines/<ngày>/content-pipeline/` NGAY TRONG
+repo dự án (đã gitignore theo `.gitignore` mục `_backups/`) rồi báo rõ vị trí thay thế.
+Bài mới hoàn toàn -> ghi manifest "created".
 
 ## BƯỚC 7 - INTERNAL LINK (2 chiều)
 
