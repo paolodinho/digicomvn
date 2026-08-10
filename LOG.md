@@ -17,6 +17,22 @@
 - Verify: H1=1, status 200, không em-dash, URL cũ 301 sang URL mới, link ngược từ 6206 đã trỏ
   đúng URL mới. Link live: https://digicomvn.com/top-ngay-hoi-sach-lon-nhat-viet-nam/
 
+## 2026-08-10 (tiếp - sửa lại lần 2: toplist phải là BÀI VIẾT/mẫu PR, không phải toplist sự kiện)
+- Hiếu chỉnh: "top list bài viết về hội sách chứ ko phải top hội sách" - toplist đúng nghĩa là
+  liệt kê nhiều MẪU BÀI VIẾT PR, không phải liệt kê các sự kiện hội sách thật.
+- Viết lại lần 2 (vẫn post 6215): "Top 5 Mẫu Bài PR Ngày Hội Sách Hay, Dễ Áp Dụng" - 5 mẫu bài
+  PR đầy đủ theo cấu trúc tháp ngược, chia theo giai đoạn (mời tham dự/tường thuật/tổng kết) và
+  theo đơn vị tổ chức (trường học-thư viện/doanh nghiệp-chuỗi nhà sách), mỗi mẫu có placeholder
+  ngoặc vuông để điền dữ kiện thật. Đổi slug về lại `mau-bai-pr-ngay-hoi-sach` (khớp nội dung
+  hơn `top-ngay-hoi-sach-lon-nhat-viet-nam` cũ - URL cũ tự 301). Render lại thumbnail (badge
+  BOOKING PR đúng do title có chữ "PR"). Sửa lại anchor link ngược từ bài `viet-bai-pr-su-kien`
+  (post 6206) trỏ đúng URL + anchor "các mẫu bài PR ngày hội sách".
+- Backup content.raw cả 2 lần sửa (6215 + 6206):
+  `~/Claude-Workspace/_backups/routines/2026-08-10/content-pipeline/` (post-6215-before-
+  toplistarticles-*, post-6206-before-anchorfix2-*).
+- Verify: H1=1, status 200, không em-dash, widget quiz render (35 lần class oquiz), link ngược
+  từ 6206 đã trỏ đúng. Link live: https://digicomvn.com/mau-bai-pr-ngay-hoi-sach/
+
 ## 2026-07-30 (tiếp - fix nút "Chọn báo/trang này" bị cắt chữ ở màn hình vừa)
 - Hiếu báo ảnh chụp "bị cắt": nút bị cụt còn "Chọn trang nà". Nguyên nhân: cột nút
   (`.col-action`) cố định 120px từ hồi còn chữ ngắn "Đặt ngay" - khi đổi thành chữ dài hơn
