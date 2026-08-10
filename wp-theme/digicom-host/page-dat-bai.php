@@ -26,14 +26,16 @@ get_header();
 			<div class="col">
 				<div class="contact-info">
 					<h3>Quy trình xử lý</h3>
-					<div class="ci"><span>1</span><div>Tiếp nhận yêu cầu, xác nhận dịch vụ và ngân sách</div></div>
-					<div class="ci"><span>2</span><div>Tư vấn site/báo phù hợp, gửi báo giá chi tiết</div></div>
-					<div class="ci"><span>3</span><div>Xác nhận, triển khai và bàn giao link/bài kèm báo cáo</div></div>
+					<ol class="ci-steps">
+						<li><span class="ci-num">1</span><span>Tiếp nhận yêu cầu, xác nhận dịch vụ và ngân sách</span></li>
+						<li><span class="ci-num">2</span><span>Tư vấn site/báo phù hợp, gửi báo giá chi tiết</span></li>
+						<li><span class="ci-num">3</span><span>Xác nhận, triển khai và bàn giao link/bài kèm báo cáo</span></li>
+					</ol>
 				</div>
 				<div class="contact-info" style="margin-top:16px">
 					<h3>Liên hệ nhanh</h3>
-					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'phone' ); ?></span><div>Hotline<br><b><a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></a><?php if ( dgc( 'hotline2' ) ) : ?> · <a href="tel:<?php echo esc_attr( dgc_tel2() ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'hotline2' ) ); ?></a><?php endif; ?></b></div></div>
-					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'mail' ); ?></span><div>Email<br><b><a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'email' ) ); ?></a></b></div></div>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'phone' ); ?></span><dl><dt>Hotline</dt><dd><a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo esc_html( dgc( 'hotline' ) ); ?></a><?php if ( dgc( 'hotline2' ) ) : ?> · <a href="tel:<?php echo esc_attr( dgc_tel2() ); ?>"><?php echo esc_html( dgc( 'hotline2' ) ); ?></a><?php endif; ?></dd></dl></div>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'mail' ); ?></span><dl><dt>Email</dt><dd><a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>"><?php echo esc_html( dgc( 'email' ) ); ?></a></dd></dl></div>
 				</div>
 			</div>
 		</div>

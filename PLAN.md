@@ -51,6 +51,36 @@
   `.claude/rules/schema-markup.md`.
 - Cập nhật lúc: 2026-08-10
 
+## Backlog - Port pricing pipeline sang PHP chạy cron Hostinger (2026-08-10)
+
+Mục tiêu: `digicom-gia-doi-tac-tuan` (routine tuần cập nhật giá booking báo/PR) hiện tắt vì
+Hostinger (host live digicomvn.com) KHÔNG có Python3/crontab CLI - đã xác nhận qua SSH
+2026-08-10. Hiếu chọn hướng: viết lại `build_master.py` (185 dòng) + `gan-nganh.py` (141) +
+`export-web.py` (426) + `cap-nhat-gia-danaseo.py` (125) bằng PHP để chạy độc lập trên
+Hostinger qua `wp eval-file` (không phụ thuộc Mac bật/tắt) - tổng ~900 dòng logic nghiệp vụ
+giá (sàn giá vốn, chốt chặn gov/edu, lọc DR domain, combo discount an toàn - xem
+`.claude/rules/bang-gia-booking.md` + `khong-ban-gov-edu.md`). CHƯA làm - cần 1 session
+riêng, có plan rõ trước khi động vào (rủi ro sai giá thật trên site nếu port vội).
+
+Việc còn thiếu trước khi bắt tay port:
+1. Đọc kỹ 4 script Python + rule `bang-gia-booking.md` để liệt kê đầy đủ toàn bộ luật giá
+   (không bỏ sót cạm bẫy đã dính - textlink bảng nhiều mức, tầng vị trí, gov/edu...).
+2. Xác nhận bước "quét sheet DanaSEO" (cần Chrome đăng nhập Google) VẪN giữ chạy qua Claude
+   hàng tuần (không port được, Google chặn scrape không đăng nhập) - chỉ phần build+áp giá+
+   đẩy live chuyển PHP. Cần thiết kế chỗ Claude "giao" CSV mới cho script PHP (upload lên
+   Hostinger qua SCP sau khi quét, hay Google Sheet public 1 phần?).
+3. Viết PHP tương đương, test kỹ trên vài dòng mẫu trước khi chạy full, so sánh output với
+   bản Python cũ (không được lệch).
+4. Đặt cron qua `wp eval-file` (do Hostinger không có `crontab` CLI - cần hỏi hỗ trợ Hostinger
+   cách đặt cron qua hPanel, hoặc dùng WP-Cron + trigger ngoài).
+
+Đã làm xong cùng ngày (không liên quan port trên, nhưng cùng đợt dọn routine):
+- Xoá routine trùng `booking-price-daily` (giữ `digicom-booking-price-daily`).
+- `icd-vps-network-recovery-check`: mạng VPS PA Vietnam đã phục hồi, đã báo mail + tắt routine.
+- `icd-zalo-bot-healthcheck`: thay bằng cron thật trên VPS (`ssl_expiry_check.py`, thứ Hai
+  hàng tuần, dùng SMTP có sẵn) - VPS đã có sẵn `health_run.sh` (15 phút/lần) phủ phần còn lại
+  (bot HTTP, token Zalo, disk, RAM). Routine Claude đã tắt, 0 token cho cả 2 việc theo dõi VPS.
+
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
 Guest Post, Booking báo & PR), chạy trên WP Local, demo gửi khách. Mở rộng thiết kế

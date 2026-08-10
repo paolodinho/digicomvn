@@ -32,12 +32,12 @@ get_header();
 				>
 				<div class="contact-info">
 					<h3>Thông tin liên hệ</h3>
-					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'phone' ); ?></span><div>Hotline<br><b><a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'hotline' ) ); ?></a><?php if ( dgc( 'hotline2' ) ) : ?> · <a href="tel:<?php echo esc_attr( dgc_tel2() ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'hotline2' ) ); ?></a><?php endif; ?></b></div></div>
-					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'mail' ); ?></span><div>Email<br><b><a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>" style="color:#fff"><?php echo esc_html( dgc( 'email' ) ); ?></a></b></div></div>
-					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'pin' ); ?></span><div>Trụ sở<br><b><?php echo esc_html( dgc( 'address' ) ); ?></b><?php if ( dgc( 'address2' ) ) : ?><br><span style="opacity:.85">Văn phòng giao dịch</span><br><b><?php echo esc_html( dgc( 'address2' ) ); ?></b><?php endif; ?></div></div>
-					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'clock' ); ?></span><div>Giờ làm việc<br><b><?php echo esc_html( dgc( 'working_hours' ) ); ?></b></div></div>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'phone' ); ?></span><dl><dt>Hotline</dt><dd><a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo esc_html( dgc( 'hotline' ) ); ?></a><?php if ( dgc( 'hotline2' ) ) : ?> · <a href="tel:<?php echo esc_attr( dgc_tel2() ); ?>"><?php echo esc_html( dgc( 'hotline2' ) ); ?></a><?php endif; ?></dd></dl></div>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'mail' ); ?></span><dl><dt>Email</dt><dd><a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>"><?php echo esc_html( dgc( 'email' ) ); ?></a></dd></dl></div>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'pin' ); ?></span><dl><dt>Trụ sở</dt><dd><?php echo esc_html( dgc( 'address' ) ); ?></dd><?php if ( dgc( 'address2' ) ) : ?><dt>Văn phòng giao dịch</dt><dd><?php echo esc_html( dgc( 'address2' ) ); ?></dd><?php endif; ?></dl></div>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'clock' ); ?></span><dl><dt>Giờ làm việc</dt><dd><?php echo esc_html( dgc( 'working_hours' ) ); ?></dd></dl></div>
 					<?php if ( dgc( 'facebook' ) ) : ?>
-					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'facebook' ); ?></span><div>Fanpage<br><b><a href="<?php echo esc_url( dgc( 'facebook' ) ); ?>" target="_blank" rel="noopener" style="color:#fff">Facebook DigicomVN</a></b></div></div>
+					<div class="ci"><span class="ci-ico"><?php echo dgc_icon( 'facebook' ); ?></span><dl><dt>Fanpage</dt><dd><a href="<?php echo esc_url( dgc( 'facebook' ) ); ?>" target="_blank" rel="noopener">Facebook DigicomVN</a></dd></dl></div>
 					<?php endif; ?>
 				</div>
 				<div class="contact-map">

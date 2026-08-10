@@ -28,11 +28,11 @@ $dgc_ty_svc = isset( $_GET['dv'] ) ? sanitize_text_field( wp_unslash( $_GET['dv'
 		</div>
 		<?php /* KHONG dat grid-template-columns inline: style inline de len ca media query
 		         -> mobile van 3 cot, chu bi bop con 2 tu/dong (Hieu 2026-07-14). Dung class .proc-3. */ ?>
-		<div class="proc proc-3">
-			<div class="step"><h3>Xác nhận yêu cầu</h3><p>Chuyên viên gọi hoặc nhắn Zalo để nắm rõ ngành hàng, từ khoá và ngân sách của bạn.</p></div>
-			<div class="step"><h3>Đề xuất danh sách báo / site</h3><p>Bạn nhận danh sách phù hợp kèm chỉ số DR, quy cách bài và giá từng đầu mục - miễn phí, không ràng buộc.</p></div>
-			<div class="step"><h3>Triển khai và báo cáo</h3><p>Chốt đơn, DigicomVN đăng bài đúng tiến độ, gửi báo cáo link/bài đã lên khi hoàn thành.</p></div>
-		</div>
+		<ol class="proc proc-3">
+			<li class="step"><h3>Xác nhận yêu cầu</h3><p>Chuyên viên gọi hoặc nhắn Zalo để nắm rõ ngành hàng, từ khoá và ngân sách của bạn.</p></li>
+			<li class="step"><h3>Đề xuất danh sách báo / site</h3><p>Bạn nhận danh sách phù hợp kèm chỉ số DR, quy cách bài và giá từng đầu mục - miễn phí, không ràng buộc.</p></li>
+			<li class="step"><h3>Triển khai và báo cáo</h3><p>Chốt đơn, DigicomVN đăng bài đúng tiến độ, gửi báo cáo link/bài đã lên khi hoàn thành.</p></li>
+		</ol>
 	</div>
 </section>
 

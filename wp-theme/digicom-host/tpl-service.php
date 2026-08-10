@@ -63,12 +63,12 @@ if ( $nhom ) {
 <section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:34px"><span class="eyebrow">Quy trình</span><h2>Cách DigicomVN triển khai</h2></div>
-		<div class="proc">
-			<div class="step"><h3>Khảo sát</h3><p>Tìm hiểu mục tiêu, hiện trạng và yêu cầu của bạn.</p></div>
-			<div class="step"><h3>Đề xuất &amp; báo giá</h3><p>Lên phương án, phạm vi công việc và báo giá minh bạch.</p></div>
-			<div class="step"><h3>Triển khai</h3><p>Thực hiện theo kế hoạch, cập nhật tiến độ thường xuyên.</p></div>
-			<div class="step"><h3>Bàn giao &amp; bảo hành</h3><p>Nghiệm thu, hướng dẫn sử dụng và hỗ trợ sau bàn giao.</p></div>
-		</div>
+		<ol class="proc">
+			<li class="step"><h3>Khảo sát</h3><p>Tìm hiểu mục tiêu, hiện trạng và yêu cầu của bạn.</p></li>
+			<li class="step"><h3>Đề xuất &amp; báo giá</h3><p>Lên phương án, phạm vi công việc và báo giá minh bạch.</p></li>
+			<li class="step"><h3>Triển khai</h3><p>Thực hiện theo kế hoạch, cập nhật tiến độ thường xuyên.</p></li>
+			<li class="step"><h3>Bàn giao &amp; bảo hành</h3><p>Nghiệm thu, hướng dẫn sử dụng và hỗ trợ sau bàn giao.</p></li>
+		</ol>
 	</div>
 </section>
 <?php endif; ?>
