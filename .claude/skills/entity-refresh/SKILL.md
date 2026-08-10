@@ -319,18 +319,25 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 ## BƯỚC B5 - TẠO BÀI MỚI + ĐĂNG (khác BƯỚC 7 - không có "before" vì bài chưa tồn tại)
 
 1. Tạo post mới qua `tools/wp-rest-publish.py` (dùng action `create` nếu script hỗ trợ, hoặc
-   POST trực tiếp `wp/v2/posts` với Basic Auth) - **mặc định `status: draft`**, KHÔNG tự
-   publish thẳng trừ khi Hiếu nói rõ "đăng luôn/publish thẳng".
+   POST trực tiếp `wp/v2/posts` với Basic Auth) - **`status: publish` ngay, đăng luôn**
+   (Hiếu chốt 2026-08-10, ghi đè quyết định "mặc định draft" ban đầu 2026-08-10 - lý do:
+   mỗi bài đã đi đủ BƯỚC B1-B4 (research SERP top 10, dàn bài, viết theo 3 tiêu chí chất
+   lượng) trước khi tới bước này, không cần thêm 1 lớp duyệt draft nữa).
 2. Log 1 dòng vào manifest ngày hiện tại (`routine-backup.md`) với loại sửa = "created" (bài
    mới không có bản gốc để backup, chỉ cần ghi nhận đã tạo).
-3. Nếu Hiếu duyệt và yêu cầu publish -> `wp-rest-publish.py update --id <ID>` đổi status.
+3. Điền đủ SEO meta (`dgc_seo_title`/`dgc_seo_desc` - BƯỚC B4.4) VÀ gán category/`dgc_nhom`
+   đúng cụm dịch vụ TRƯỚC khi publish - đăng thẳng nghĩa là không có bước duyệt sau để bắt
+   thiếu sót này.
 
 ## BƯỚC B6 - VERIFY
 
-1. Verify bài tạo thành công: `curl -s "https://digicomvn.com/wp-json/wp/v2/posts/<ID>?_fields=id,slug,status,link"`.
-2. Nếu đã publish: verify visual coverage thật trên live (đủ ảnh/sơ đồ mỗi H2, không vỡ dark
-   mode - theo `content-visual-coverage.md` + `ui-mau-sac.md`), verify schema
-   (`tools/schema-vocab-check.py` nếu đăng thật).
+1. Verify bài đã publish thành công: `curl -s "https://digicomvn.com/wp-json/wp/v2/posts/<ID>?_fields=id,slug,status,link"`
+   - PHẢI thấy `status:"publish"`, không dừng ở "tạo xong" nếu vẫn còn draft.
+2. Verify visual coverage thật trên live (đủ ảnh/sơ đồ mỗi H2, không vỡ dark mode - theo
+   `content-visual-coverage.md` + `ui-mau-sac.md`), verify schema
+   (`tools/schema-vocab-check.py`).
+3. Verify từng thực thể/từ khoá cùng cụm đã chèn xuất hiện thật trên live (như BƯỚC 7.3 của
+   Chế độ A) - không chỉ tin bản nháp.
 
 ## BƯỚC B7 - BÁO CÁO
 
@@ -338,7 +345,8 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 2. Danh sách 10 đối thủ đã research (fetch OK/lỗi).
 3. Dàn bài đã dùng (danh sách H2 + loại visual gán cho từng H2).
 4. Bảng thực thể/từ khoá cùng cụm đã chèn (như BƯỚC 4 của Chế độ A).
-5. Link bài (draft hoặc live) + trạng thái hiện tại (draft/publish), hỏi Hiếu duyệt nếu còn draft.
+5. Link bài đã LIVE (đã verify status publish) + xác nhận đã lên internal link vào cụm liên
+   quan nếu phù hợp (không tạo bài mồ côi - theo tinh thần đợt internal-link 2026-08-09).
 
 ## Liên quan
 - `entity-extraction-seo` (skill global) - phương pháp luận gốc, 6 nhóm thực thể, BƯỚC C
