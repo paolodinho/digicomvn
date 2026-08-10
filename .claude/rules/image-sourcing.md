@@ -3,6 +3,23 @@
 > Rule Hiếu: xoay giữa các nguồn free, chọn ảnh tốt nhất cho từng trường hợp -
 > không mặc định 1 nguồn, không dùng đại cho đủ số lượng.
 
+## KHÔNG dùng lặp 1 ảnh trong cùng 1 bài (chốt 2026-08-10)
+
+Mỗi ảnh (theo `src`, không tính query string hay hậu tố `-WxH` resize) chỉ được xuất hiện
+**đúng 1 lần** trong thân 1 bài viết/trang. Sự cố phát hiện 2026-08-10: 3 bài (`mau-thong-cao-bao-chi`,
+`so-sanh-booking-bao-pr-va-quang-cao-bao`, `cach-viet-bai-pr-chuan-bao-chi`) dùng chung 1 "kho ảnh
+generic" (phone-read.jpg, handshake.jpg, team-meeting.jpg...) và lặp lại chính ảnh đó 2 lần trong
+cùng bài ở 2 mục khác nhau - làm mất tác dụng minh hoạ (người đọc thấy ảnh quen ở mục khác).
+
+- **Trước khi chèn ảnh cho 1 H2 mới**: kiểm ảnh định dùng đã xuất hiện ở H2 nào trước đó trong
+  CÙNG bài chưa - trùng thì đổi ảnh khác dù cùng chủ đề/kho ảnh.
+- Khi audit bài cũ: `python3 tools/find-duplicate-images.py` quét toàn bộ post publish qua REST,
+  in danh sách bài + ảnh bị lặp (không sửa gì, chỉ báo cáo).
+- Cách chọn ảnh thay thế: ưu tiên ảnh CHƯA DÙNG Ở ĐÂU (tra nhanh bằng REST search theo slug ảnh)
+  và khớp đúng ngữ cảnh đoạn văn đó - không đổi bừa cho khác nhau mà sai chủ đề.
+- Vẫn phải qua toàn bộ checklist chọn ảnh ở các mục bên dưới (nguồn, không AI-slop, không lỗi
+  thời...) - đây là điều kiện BỔ SUNG, không thay thế.
+
 ## 2 LOẠI ẢNH KHÁC NHAU - đừng nhầm (bổ sung 2026-07-21)
 
 - **Ảnh minh hoạ khái niệm/chủ đề** (trang trí, tăng thẩm mỹ): dùng Storyset/Wikimedia... theo
