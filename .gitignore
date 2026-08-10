@@ -37,3 +37,7 @@ tools/.schemaorg-vocab.jsonld
 10-bang-gia-booking/service-account.json
 10-bang-gia-booking/node_modules
 10-bang-gia-booking/package-lock.json
+
+# Google service account key (Search Console sitemap submit)
+digicom-price-sync-*.json
+*service-account*.json
