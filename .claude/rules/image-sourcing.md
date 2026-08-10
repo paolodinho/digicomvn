@@ -3,6 +3,28 @@
 > Rule Hiếu: xoay giữa các nguồn free, chọn ảnh tốt nhất cho từng trường hợp -
 > không mặc định 1 nguồn, không dùng đại cho đủ số lượng.
 
+## Ảnh minh hoạ thuần trang trí (Storyset/kho ảnh generic) - KHÔNG cần caption mô tả (chốt 2026-08-10)
+
+Ảnh minh hoạ khái niệm (Storyset, hoặc kho ảnh stock generic như team-meeting.jpg,
+handshake.jpg, phone-read.jpg...) chỉ có vai trò trang trí/tạo điểm nghỉ mắt, KHÔNG chứa
+thông tin thật - vì vậy **KHÔNG cần figcaption mô tả cảnh trong ảnh**. Sự cố phát hiện
+2026-08-10: figcaption tái sử dụng cùng câu ("Bắt tay xác nhận hợp tác đăng bài",
+"Trao đổi phương án nội dung trước khi đăng bài"...) cho nhiều ảnh khác nhau ở nhiều bài
+khác nhau - nhiều lần còn MÔ TẢ SAI ảnh thật đang hiển thị (ảnh chụp laptop+điện thoại+báo
+giấy nhưng caption ghi "bắt tay xác nhận hợp tác"). Đã xoá 288 figcaption loại này trên
+118/144 bài publish có figcaption (giữ nguyên `alt` cho SEO/a11y, giữ nguyên ảnh).
+
+- **Khi chèn ảnh Storyset/stock generic mới**: KHÔNG thêm `<figcaption>`, chỉ cần `alt` mô tả
+  đúng nội dung ảnh. Vẫn giữ khối credit Storyset gộp 1 lần cuối bài ("Ảnh minh hoạ trong bài:
+  Storyset.") theo yêu cầu giấy phép - không lặp "Minh hoạ: Storyset" dưới từng ảnh.
+- **VẪN PHẢI giữ caption cho ảnh mang thông tin thật**: ảnh chụp màn hình bằng chứng (giá,
+  ngày chụp, vị trí đăng trên 1 báo cụ thể - theo `visual-screenshot` skill), ảnh có nguồn/tác
+  giả cần ghi công (Wikimedia, Freepik công ty cụ thể...), hoặc caption làm nhãn chức năng
+  trong lưới thẻ nhỏ (vd "Bước 1: Gửi yêu cầu & tư vấn"). Những loại này KHÔNG được xoá.
+- Quy tắc phân biệt nhanh: caption có số liệu/giá/ngày/domain cụ thể/tên nguồn ảnh → GIỮ.
+  Caption chỉ là câu mô tả cảnh chung ("đang trao đổi", "đang bắt tay", "đang đọc điện thoại")
+  không gắn với dữ kiện cụ thể nào của bài → BỎ.
+
 ## KHÔNG dùng lặp 1 ảnh trong cùng 1 bài (chốt 2026-08-10)
 
 Mỗi ảnh (theo `src`, không tính query string hay hậu tố `-WxH` resize) chỉ được xuất hiện
