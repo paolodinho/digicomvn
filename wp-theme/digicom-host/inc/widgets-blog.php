@@ -162,3 +162,35 @@ add_shortcode( 'dgc_offpage_quiz', function () {
 <?php
 	return ob_get_clean();
 } );
+
+/**
+ * 5. [dgc_pr_checklist] - checklist 6 tieu chi tu cham bai PR su kien da viet du chua
+ * (tai su dung style/markup acheck, khac data-attribute + noi dung + JS rieng).
+ */
+add_shortcode( 'dgc_pr_checklist', function () {
+	$items = array(
+		'Sapo trả lời đủ sự kiện là gì - thời gian - địa điểm trong 2-3 câu đầu',
+		'Có tối thiểu 2 trích dẫn: đại diện ban tổ chức và phụ huynh/khách mời/trẻ em',
+		'Đã xin phép phụ huynh trước khi dùng hình ảnh, tên đầy đủ của trẻ em',
+		'Giữ giọng tin tức, không chèn lời mời mua hàng/giảm giá trực tiếp',
+		'Có thông tin liên hệ đơn vị tổ chức ở cuối bài',
+		'Gửi bài cho báo trước sự kiện tối thiểu 3-5 ngày',
+	);
+	ob_start(); ?>
+<div class="acheck" data-prcheck>
+	<p class="acheck-title">Tự chấm: bài PR sự kiện Quốc tế Thiếu nhi đã đạt chưa?</p>
+	<p class="acheck-sub">Tick những điều bài viết của bạn đã có - kết quả hiện ngay bên dưới.</p>
+	<div class="acheck-list">
+	<?php foreach ( $items as $it ) : ?>
+		<label class="acheck-item"><input type="checkbox" data-v="1"><span><?php echo esc_html( $it ); ?></span></label>
+	<?php endforeach; ?>
+	</div>
+	<div class="acheck-result" aria-live="polite"
+		data-urls="<?php echo esc_attr( wp_json_encode( array(
+			'booking' => home_url( '/booking-bao-pr/' ),
+			'datbai'  => home_url( '/dat-bai/' ),
+		) ) ); ?>"></div>
+</div>
+<?php
+	return ob_get_clean();
+} );
