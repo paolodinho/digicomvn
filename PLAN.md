@@ -1,5 +1,24 @@
 # PLAN - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
+## Đang làm dở (checkpoint)
+- Task: Xây dựng entity cho thương hiệu DigicomVN (Entity SEO / Knowledge Panel)
+- Đã xong: Research state hiện tại - schema Organization đã đủ NAP/legalName/alternateName/
+  GBP verified/vatID; sameAs Facebook có, LinkedIn+YouTube trống; DR digicomvn.com = 6.0
+  (đo qua Ahrefs public API 2026-08-10); đã có 4 báo viết ĐỘC LẬP về DigicomVN (An Giang TV,
+  Báo Đồng Nai, Báo Đà Nẵng, Vietnam.vn) - tín hiệu entity mạnh nhất hiện có.
+- Đang làm: Chưa bắt đầu phần thực thi - mới dừng ở research + đề xuất checklist.
+- Tiếp theo (theo thứ tự ưu tiên đã đề xuất):
+  1. Điền LinkedIn/YouTube vào WP Admin > DigicomVN (option `linkedin`/`youtube` trong
+     `inc/options.php`) - chờ Hiếu có link trang thật trước.
+  2. Đăng ký NAP lên directory uy tín VN (Cổng thông tin quốc gia về ĐKDN, VCCI, MOIT nếu hợp).
+  3. Soạn hồ sơ Wikidata cho DigicomVN/Digito Combat, dùng 4 bài báo độc lập làm reference.
+  4. Tự dùng dịch vụ booking báo/backlink của Digicom để PR cho chính domain digicomvn.com,
+     kéo DR (đang 6.0, quá thấp) lên.
+  5. Sau khi đủ tín hiệu -> yêu cầu Google xác nhận/tạo Knowledge Panel.
+- File liên quan: `wp-theme/digicom-host/inc/schema.php` (Organization node), `inc/options.php`
+  (field facebook/linkedin/youtube dòng 17-20 + 174-177), `.claude/rules/schema-markup.md`.
+- Cập nhật lúc: 2026-08-10
+
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
 Guest Post, Booking báo & PR), chạy trên WP Local, demo gửi khách. Mở rộng thiết kế
