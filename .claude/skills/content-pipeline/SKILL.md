@@ -186,6 +186,9 @@ intent, SERP features, section đối thủ có, 3-5 câu PAA làm FAQ, góc kh�
   content ra để đăng (BƯỚC 6), tự kiểm bằng mắt/`grep -c '<h1' <file>` phải ra đúng `1` -
   ra `0` thì DỪNG, thêm H1 trước khi đăng; ra `>1` thì bỏ bớt (chỉ 1 H1/trang).
 - Title <=58 ký tự, KW đầu; meta 140-160; slug flat `/[slug]/` (không /blog/).
+- Nội dung cốt lõi là toplist (danh sách đếm được) -> H1/title PHẢI ghi rõ dạng toplist kèm số
+  thật khớp số lượng liệt kê (vd "Top 8 Đầu Báo..."), KHÔNG đặt title mô tả chung chung - xem
+  `.claude/rules/do-dont.md` mục "Title/H1 phải khớp DẠNG nội dung".
 - Giọng E-E-A-T tác giả Đỗ Hiếu (brand-info mục 3), thương hiệu viết là **DigicomVN**.
 - KHÔNG bịa: giá, tên đầu báo hợp tác, case study, số liệu không nguồn.
 - Nhắc tới giá -> KHÔNG ghi số cứng trong text, dùng widget/bảng giá live (bước 4).

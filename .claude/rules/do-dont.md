@@ -44,3 +44,21 @@
 4. Chỉ sau khi có dàn bài đạt các tiêu chí trên mới bắt đầu viết nội dung đầy đủ.
 
 Mục tiêu: đáp ứng truy vấn tốt hơn top 10 hiện tại, không chỉ đẹp hình thức mà đúng và vượt intent.
+
+## ✅ DO - Title/H1 phải khớp DẠNG nội dung, đặc biệt toplist (rule Hiếu, 2026-08-10)
+
+> Sự cố gốc: bài `bai-pr-su-kien-quoc-te-thieu-nhi` có bảng liệt kê 8 đầu báo (bản chất là
+> toplist) nhưng H1 đặt chung chung "Mẫu Đầy Đủ Và Cách Viết" - không phản ánh đúng nội dung
+> cốt lõi. Hiếu: "đã bảo toplist thì title cũng phải toplist chứ".
+
+- Nếu nội dung CỐT LÕI của bài (hoặc phần chiếm trọng tâm nhất) là một **danh sách đếm được**
+  (đầu báo, công cụ, case study, địa điểm...) → H1 và SEO title **PHẢI** ghi rõ dạng toplist,
+  có **số thật khớp đúng số lượng liệt kê** (vd "Top 8 Đầu Báo...", "7 Case Study...") - không
+  dùng title mô tả chung chung ("Hướng dẫn...", "Mẫu Đầy Đủ...") khi bài thực chất là danh sách.
+- Áp dụng cả khi lập dàn bài (trước khi viết, theo mục "Research SERP + dựng dàn bài" ở trên)
+  lẫn khi audit/refresh bài cũ - nếu phát hiện nội dung là toplist mà title không phản ánh, phải
+  sửa ngay title/H1 cho khớp, không chỉ sửa nội dung.
+- Nếu danh sách chỉ là 1 phần nhỏ/phụ trong bài (không chiếm trọng tâm) thì KHÔNG cần ép title
+  thành toplist - chỉ áp dụng khi danh sách đó là lý do chính người đọc tìm đến bài.
+- Pattern tham khảo đã áp dụng đúng trên site: `top-ngay-hoi-sach-lon-nhat-viet-nam` (Top 7),
+  `case-study-chien-dich-pr` (7 Case Study), `chien-dich-pr-an-tuong-viet-nam` (6 Case Study).
