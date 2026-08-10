@@ -2,21 +2,48 @@
 
 ## Đang làm dở (checkpoint)
 - Task: Xây dựng entity cho thương hiệu DigicomVN (Entity SEO / Knowledge Panel)
-- Đã xong: Research state hiện tại - schema Organization đã đủ NAP/legalName/alternateName/
-  GBP verified/vatID; sameAs Facebook có, LinkedIn+YouTube trống; DR digicomvn.com = 6.0
-  (đo qua Ahrefs public API 2026-08-10); đã có 4 báo viết ĐỘC LẬP về DigicomVN (An Giang TV,
-  Báo Đồng Nai, Báo Đà Nẵng, Vietnam.vn) - tín hiệu entity mạnh nhất hiện có.
-- Đang làm: Chưa bắt đầu phần thực thi - mới dừng ở research + đề xuất checklist.
-- Tiếp theo (theo thứ tự ưu tiên đã đề xuất):
-  1. Điền LinkedIn/YouTube vào WP Admin > DigicomVN (option `linkedin`/`youtube` trong
+- Đã xong (2026-08-10, verify kỹ hơn - SỬA lại số liệu đã báo sai ở vòng trước):
+  - Schema Organization đã đủ NAP/legalName/alternateName/GBP verified/vatID; sameAs Facebook
+    có, LinkedIn+YouTube trống; DR digicomvn.com = 6.0 (Ahrefs public API).
+  - **CHỈ 2 bài báo có URL THẬT verify được** (đã fetch, đọc nội dung xác nhận nói về
+    DigicomVN): Truyền hình An Giang (angiangtv.vn, chặn fetch trực tiếp 403 nhưng URL nằm
+    trong option `press_mentions` từ trước) và Báo Đồng Nai (baodongnai.com.vn, đã fetch đọc
+    được, đăng 2026-07-13, nói về case ICD Việt Nam do DigicomVN booking báo).
+  - **Tìm thêm 1 nguồn thật qua WebSearch** (chưa có trong option `press_mentions`):
+    `vietnam.vn` (cổng thông tin đa ngôn ngữ của TTXVN/VNA) có bài (bản tiếng Tây Ban Nha)
+    `vietnam.vn/es/digicomvn-don-vi-booking-bao-chi-va-truyen-thong-so-dong-hanh-cung-doanh-nghiep`
+    - đáng tin vì là cổng nhà nước, NHƯNG cần kiểm bản tiếng Việt gốc + có thể là nội dung
+      PR tự đăng (không chắc là báo ĐỘC LẬP viết) - cần Hiếu xác nhận nguồn gốc bài này.
+  - **Báo Đà Nẵng: KHÔNG tìm được URL bài thật nào** dù có logo trên site (LOG.md 2026-07:
+    "Báo Đà Nẵng CHƯA có link bài, chỉ hiện logo"). Kết luận "4 báo độc lập" ở báo cáo trước
+    là SAI/quá lời - thực tế đang có 2 (chắc chắn) + 1 (cần xác minh thêm) + 1 (chưa có bằng
+    chứng, chỉ có logo).
+  - **PHÁT HIỆN QUAN TRỌNG - rủi ro trùng tên**: thị trường VN có nhiều pháp nhân KHÔNG liên
+    quan cùng tên "Digicom": "Digicom Company Limited" (Yellow Pages VN), "DIGICOM VIET NAM
+    COMPANY LIMITED" MST 0109916506 (rất giống MST thật 0109816406 - dễ nhầm), "Công ty TNHH
+    Mạng Viễn Thông Số - Digicom" (dgc.net.vn), "VTC DigiCom". Đăng ký directory/Wikidata
+    bằng tên trần "Digicom" RẤT DỄ bị gộp nhầm hồ sơ hoặc gây nghi ngờ xác minh. -> BẮT BUỘC
+    mọi hồ sơ mới dùng tên đầy đủ "Công ty TNHH Dịch vụ Truyền thông Digito Combat" (hoặc
+    "DigicomVN" liền, không tách "Digicom") + luôn kèm domain digicomvn.com + MST 0109816406
+    để phân biệt.
+- Đang làm: Tạm dừng phần Wikidata (chưa soạn) - cần xác minh thêm nguồn vietnam.vn + Báo Đà
+  Nẵng trước, tránh dựng hồ sơ trên 2/4 nguồn không vững (rủi ro bị Wikidata gắn cờ nguồn yếu,
+  và rủi ro trùng tên với các "Digicom" khác nếu Hiếu tự làm mà không đọc cảnh báo trên).
+- Tiếp theo (đã điều chỉnh thứ tự sau phát hiện trên):
+  1. Hiếu xác nhận: (a) bài vietnam.vn có phải báo ĐỘC LẬP viết hay là PR tự đăng; (b) có link
+     bài Báo Đà Nẵng thật không, hay chỉ là logo treo nhầm/chưa có bài.
+  2. Điền LinkedIn/YouTube vào WP Admin > DigicomVN (option `linkedin`/`youtube` trong
      `inc/options.php`) - chờ Hiếu có link trang thật trước.
-  2. Đăng ký NAP lên directory uy tín VN (Cổng thông tin quốc gia về ĐKDN, VCCI, MOIT nếu hợp).
-  3. Soạn hồ sơ Wikidata cho DigicomVN/Digito Combat, dùng 4 bài báo độc lập làm reference.
-  4. Tự dùng dịch vụ booking báo/backlink của Digicom để PR cho chính domain digicomvn.com,
+  3. Đăng ký NAP lên directory uy tín VN - LUÔN dùng tên đầy đủ pháp nhân, không dùng "Digicom"
+     trần (Cổng thông tin quốc gia về ĐKDN, VCCI, MOIT nếu hợp).
+  4. Soạn hồ sơ Wikidata CHỈ SAU KHI bước 1 xong - dùng tối thiểu 2 nguồn thật đã verify
+     (An Giang TV + Báo Đồng Nai), thêm vietnam.vn nếu Hiếu xác nhận độc lập.
+  5. Tự dùng dịch vụ booking báo/backlink của Digicom để PR cho chính domain digicomvn.com,
      kéo DR (đang 6.0, quá thấp) lên.
-  5. Sau khi đủ tín hiệu -> yêu cầu Google xác nhận/tạo Knowledge Panel.
-- File liên quan: `wp-theme/digicom-host/inc/schema.php` (Organization node), `inc/options.php`
-  (field facebook/linkedin/youtube dòng 17-20 + 174-177), `.claude/rules/schema-markup.md`.
+  6. Sau khi đủ tín hiệu -> yêu cầu Google xác nhận/tạo Knowledge Panel.
+- File liên quan: `wp-theme/digicom-host/inc/schema.php` (Organization node + press_mentions
+  render dòng ~596), `inc/options.php` (option `press_mentions` dòng 82, field
+  facebook/linkedin/youtube dòng 17-20 + 174-177), `.claude/rules/schema-markup.md`.
 - Cập nhật lúc: 2026-08-10
 
 ## Mục tiêu tổng
