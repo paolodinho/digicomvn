@@ -1,5 +1,17 @@
 # LOG - digicomvn.com
 
+## 2026-08-10 (tiếp - bài mới: mẫu bài PR ngày hội sách)
+- Đăng bài blog mới `mau-bai-pr-ngay-hoi-sach` (post 6215), category Booking báo & PR.
+  Nội dung: mẫu bài PR đầy đủ cho sự kiện ngày hội sách (đặc điểm khác PR sự kiện thông
+  thường, dữ liệu cần chuẩn bị, cấu trúc tháp ngược, mẫu bài hoàn chỉnh, 3 giai đoạn viết,
+  lỗi thường gặp, checklist, gợi ý booking báo). Widget `[dgc_offpage_quiz]`, 2 ảnh Storyset
+  đã có sẵn trên site (không tạo mới, tiết kiệm thời gian). Thumbnail render qua
+  `tools/blog-thumbnail`. Verify: H1=1, status 200, không có em-dash, GSC auto-index OK.
+- Chèn 1 internal link ngược từ bài `viet-bai-pr-su-kien` (post 6206) trỏ về bài mới, anchor
+  "mẫu bài PR ngày hội sách". Backup content.raw trước khi sửa:
+  `~/Claude-Workspace/_backups/routines/2026-08-10/content-pipeline/post-6206-before-152059.html`.
+- Link live: https://digicomvn.com/mau-bai-pr-ngay-hoi-sach/
+
 ## 2026-07-30 (tiếp - fix nút "Chọn báo/trang này" bị cắt chữ ở màn hình vừa)
 - Hiếu báo ảnh chụp "bị cắt": nút bị cụt còn "Chọn trang nà". Nguyên nhân: cột nút
   (`.col-action`) cố định 120px từ hồi còn chữ ngắn "Đặt ngay" - khi đổi thành chữ dài hơn
