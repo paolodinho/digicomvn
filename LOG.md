@@ -4447,3 +4447,4 @@ ca trong nguong). Con 3 muc tieu QUY MO LON chua fix (booking-bao-pr 78 link/22 
 bai book-bao-*, can ~57 edit them - CHUA lam, cho Hieu xac nhan vi quy mo lon.
 Da cap nhat .claude/skills/content-pipeline/SKILL.md muc A2d moi: quy tac ty le anchor +
 khong nhoi anchor trung, ap dung NGAY luc dat link (khong doi audit sau).
+| 2026-08-10 | Content pipeline | viet-bai-pr-su-kien đăng mới (post 6206, category booking-bao-pr), widget oquiz, +2 internal link ngược (bai-pr-mau, cach-viet-bai-pr-chuan-bao-chi) |

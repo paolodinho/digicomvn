@@ -24,9 +24,9 @@
 |---|---|
 | Hotline | 0988 769 317 |
 | Phone tel: link | `tel:0988769317` |
-| Email | info@digicomvn.com |
+| Email | sales@digicomvn.com |
 | Giờ làm việc | Thứ 2 - Thứ 6, 8:00 - 18:00 |
-| Social | Facebook, LinkedIn, TikTok, YouTube |
+| Social (đã lên schema `Organization.sameAs`, chốt 2026-08-10) | Facebook `facebook.com/profile.php?id=61591139212103`, LinkedIn công ty `linkedin.com/company/digicomvn`, YouTube `youtube.com/@digicomvn`, Pinterest `pinterest.com/digicomvn`, Zalo OA `zalo.me/2806292509481772964`, Google Business Profile. LinkedIn CÁ NHÂN của Hiếu (founder) `linkedin.com/in/hiếu-đ-193b128a` nằm ở `Person.sameAs` riêng (hồ sơ tác giả WP), KHÔNG gộp vào Organization. TikTok: có trong kế hoạch social ban đầu nhưng CHƯA có kênh thật, bổ sung sau. |
 
 ## 3. Tác giả mặc định
 

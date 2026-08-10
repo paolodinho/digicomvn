@@ -18,6 +18,7 @@ function dgc_defaults() {
 		'facebook'      => 'https://www.facebook.com/profile.php?id=61591139212103',
 		'linkedin'      => '',
 		'youtube'       => '',
+		'pinterest'     => '',
 		'slogan'        => 'Digital Marketing Agency chuyên booking',
 		'working_hours' => 'Thứ 2 - Thứ 6, 8:00 - 18:00',
 
@@ -175,6 +176,7 @@ function dgc_settings_page() {
 				dgc_field( 'facebook', 'Link Fanpage Facebook', 'URL day du, vd https://www.facebook.com/profile.php?id=...' );
 				dgc_field( 'linkedin', 'Link LinkedIn cong ty', 'De trong neu chua co trang LinkedIn - dung ghi bua, schema chi hien khi co du lieu that.' );
 				dgc_field( 'youtube', 'Link kenh YouTube', 'De trong neu chua co kenh YouTube.' );
+				dgc_field( 'pinterest', 'Link Pinterest cong ty', 'De trong neu chua co trang Pinterest.' );
 				dgc_field( 'slogan', 'Slogan / cham ngon thuong hieu', 'Cau slogan that dang dung (neu co) - hien trong schema Organization. De trong neu chua co.' );
 				dgc_field( 'address', 'Tru so (dia chi dang ky kinh doanh)' );
 				dgc_field( 'address2', 'Van phong giao dich', 'De trong neu chi co tru so.' );

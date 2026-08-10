@@ -559,6 +559,7 @@ function dgc_sch_organization() {
 	if ( dgc( 'facebook' ) ) $same[] = dgc( 'facebook' );
 	if ( dgc( 'linkedin' ) ) $same[] = dgc( 'linkedin' );
 	if ( dgc( 'youtube' ) ) $same[] = dgc( 'youtube' );
+	if ( dgc( 'pinterest' ) ) $same[] = dgc( 'pinterest' );
 	$zalo = preg_replace( '/[^0-9]/', '', (string) dgc( 'zalo' ) );
 	if ( $zalo ) $same[] = 'https://zalo.me/' . $zalo;
 	$same[] = $node['hasMap']; // Google Business Profile that - cung la trang dinh danh doanh nghiep
