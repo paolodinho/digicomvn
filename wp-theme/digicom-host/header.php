@@ -4,6 +4,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="p:domain_verify" content="8b8ebbef39c8a46dd5d2703b1eb9c12f"/>
 	<?php
 	// Dat che do sang/toi TRUOC khi trang ve -> khong bi nhay trang mot nhip khi khach chon dark.
 	// MAC DINH LA GIAO DIEN SANG (rule Hieu 2026-07-14): khach chua bam nut doi thi luon thay ban
