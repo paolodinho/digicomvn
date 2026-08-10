@@ -1,16 +1,21 @@
 # LOG - digicomvn.com
 
-## 2026-08-10 (tiếp - bài mới: mẫu bài PR ngày hội sách)
-- Đăng bài blog mới `mau-bai-pr-ngay-hoi-sach` (post 6215), category Booking báo & PR.
-  Nội dung: mẫu bài PR đầy đủ cho sự kiện ngày hội sách (đặc điểm khác PR sự kiện thông
-  thường, dữ liệu cần chuẩn bị, cấu trúc tháp ngược, mẫu bài hoàn chỉnh, 3 giai đoạn viết,
-  lỗi thường gặp, checklist, gợi ý booking báo). Widget `[dgc_offpage_quiz]`, 2 ảnh Storyset
-  đã có sẵn trên site (không tạo mới, tiết kiệm thời gian). Thumbnail render qua
-  `tools/blog-thumbnail`. Verify: H1=1, status 200, không có em-dash, GSC auto-index OK.
-- Chèn 1 internal link ngược từ bài `viet-bai-pr-su-kien` (post 6206) trỏ về bài mới, anchor
-  "mẫu bài PR ngày hội sách". Backup content.raw trước khi sửa:
-  `~/Claude-Workspace/_backups/routines/2026-08-10/content-pipeline/post-6206-before-152059.html`.
-- Link live: https://digicomvn.com/mau-bai-pr-ngay-hoi-sach/
+## 2026-08-10 (tiếp - bài mới: Top ngày hội sách lớn nhất Việt Nam, sửa lại theo đúng intent toplist)
+- Đăng bài blog mới (post 6215), category Booking báo & PR. Bản đầu viết dạng "mẫu bài PR ngày
+  hội sách" (hướng dẫn viết) - Hiếu phản hồi title sai intent, từ khoá "ngày hội sách" SERP
+  đang là dạng toplist (đã thấy bài "6 hội sách lớn nhất tại Việt Nam" của Bách Hoá Xanh top).
+  Đã viết lại toàn bộ: danh sách 7 ngày hội sách/hội chợ sách lớn tại Việt Nam có thật (Ngày
+  Sách và Văn hoá đọc VN 21/4 theo QĐ 1862/QĐ-TTg 2021, Hội sách TP.HCM, Hội sách Hà Nội, Hội
+  sách trực tuyến Tiki 1-11/11, Hội sách thiếu nhi TP.HCM, Đường sách Nguyễn Văn Bình, hội sách
+  lưu động của NXB) - không bịa số liệu, có nguồn từ WebSearch. Cuối bài nối sang góc PR/booking
+  báo (link `/viet-bai-pr-su-kien/` và `/booking-bao-pr/`) để giữ liên quan dịch vụ.
+- Đổi slug `mau-bai-pr-ngay-hoi-sach` -> `top-ngay-hoi-sach-lon-nhat-viet-nam` (WP tự 301 URL
+  cũ). Render lại thumbnail theo title mới, sửa anchor internal link ngược từ bài
+  `viet-bai-pr-su-kien` (post 6206) cho khớp nội dung mới. Backup content.raw cả 2 lần sửa:
+  `~/Claude-Workspace/_backups/routines/2026-08-10/content-pipeline/` (post-6215-before-retitle-*,
+  post-6206-before-anchorfix-*).
+- Verify: H1=1, status 200, không em-dash, URL cũ 301 sang URL mới, link ngược từ 6206 đã trỏ
+  đúng URL mới. Link live: https://digicomvn.com/top-ngay-hoi-sach-lon-nhat-viet-nam/
 
 ## 2026-07-30 (tiếp - fix nút "Chọn báo/trang này" bị cắt chữ ở màn hình vừa)
 - Hiếu báo ảnh chụp "bị cắt": nút bị cụt còn "Chọn trang nà". Nguyên nhân: cột nút
@@ -4462,3 +4467,5 @@ khong nhoi anchor trung, ap dung NGAY luc dat link (khong doi audit sau).
 | 2026-08-10 | Content pipeline | viet-bai-pr-su-kien đăng mới (post 6206, category booking-bao-pr), widget oquiz, +2 internal link ngược (bai-pr-mau, cach-viet-bai-pr-chuan-bao-chi) |
 | 2026-08-10 | Nâng cấp skill | entity-refresh: thêm BƯỚC 2B (Chế độ A) + nâng B2.3/B3/B7 (Chế độ B) - research title+dạng bài (listicle/how-to/định nghĩa...) đang top TRƯỚC khi viết/bổ sung, không chỉ trích thực thể |
 | 2026-08-10 | Content pipeline | bai-pr-su-kien-o-to đăng mới (post 6212, category booking-bao-pr) - niche PR sự kiện ngành ô tô (ra mắt xe/lái thử/khai trương showroom/triển lãm/roadshow), 8 H2 đều có visual (4 sơ đồ HTML + 1 bảng data-table + 2 ảnh Storyset), widget oquiz, thumbnail, +1 link ngược từ bai-pr-mau (4671), đã submit GSC (OK) |
+| 2026-08-10 | Content pipeline | Sửa title 3 bài PR (bai-pr-mau, cach-viet-bai-pr-chuan-bao-chi, case-study-chien-dich-pr) thêm số thật khớp pattern SERP |
+| 2026-08-10 | Content pipeline | Bổ sung nội dung so-sanh-booking-bao-pr-va-quang-cao-bao (CTA bảng giá) + booking-bao-quoc-te (phân biệt mua backlink quốc tế) theo audit SERP |

@@ -1153,6 +1153,29 @@ document.addEventListener('click', function (e) {
 	});
 })();
 
+/* PR event checklist: 6 tieu chi tu cham bai PR su kien (tai su dung style acheck). */
+(function () {
+	document.querySelectorAll('[data-prcheck]').forEach(function (box) {
+		var res = box.querySelector('.acheck-result'), urls = {};
+		try { urls = JSON.parse(res.getAttribute('data-urls') || '{}'); } catch (e) {}
+		function render() {
+			var inputs = box.querySelectorAll('.acheck-item input'), n = 0;
+			inputs.forEach(function (c) { if (c.checked) n++; });
+			if (n === 0) { res.innerHTML = ''; return; }
+			var head = '<b>' + n + '/' + inputs.length + ' tiêu chí</b> - ', html;
+			if (n <= 2) {
+				html = head + 'bài còn thiếu quá nhiều dữ liệu bắt buộc, khả năng cao bị ban biên tập từ chối. Bổ sung 5W1H và trích dẫn trước khi gửi.';
+			} else if (n <= 4) {
+				html = head + 'tạm ổn nhưng cần rà lại các mục chưa tick trước khi gửi báo.';
+			} else {
+				html = head + 'đã sẵn sàng gửi đăng. Nếu chưa chốt đầu báo phù hợp, xem <a href="' + (urls.booking || '#') + '">dịch vụ booking báo &amp; PR</a> hoặc <a href="' + (urls.datbai || '#') + '">gửi yêu cầu báo giá</a>.';
+			}
+			res.innerHTML = html;
+		}
+		box.querySelectorAll('.acheck-item input').forEach(function (c) { c.addEventListener('change', render); });
+	});
+})();
+
 /* Muc luc bai viet (TOC): nut noi theo khi cuon qua hop muc luc dau bai + scroll-spy. */
 (function () {
 	var inline = document.getElementById('postToc');
