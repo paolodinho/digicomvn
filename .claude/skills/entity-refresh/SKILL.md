@@ -22,7 +22,7 @@ và bộ 3 tiêu chí chất lượng ở BƯỚC 6 - chỉ khác ở đầu và
 | Input | URL bài digicomvn.com đã tồn tại | Tên chủ đề/từ khoá CHƯA có bài nào |
 | Research | 2 lượt WebSearch lấy thực thể (BƯỚC 2) | Research SERP ĐẦY ĐỦ top 10 + Suggest/PAA (BƯỚC B2, sâu hơn) |
 | Sản phẩm | Bổ sung câu/đoạn vào bài cũ | Viết bài hoàn chỉnh từ đầu, có dàn bài |
-| Đăng | `update` post ID có sẵn | `create` post mới, mặc định **draft** chờ duyệt |
+| Đăng | `update` post ID có sẵn | `create` post mới, **đăng luôn (publish)** - Hiếu chốt 2026-08-10, không chờ duyệt draft |
 
 **Khác biệt bắt buộc so với review chung chung**: không chấm "gap ở mức khái niệm" (kiểu
 "đối thủ có nói về minh bạch giá") mà phải chỉ ra **đúng TỪ/CỤM TỪ NGẮN** đối thủ dùng
