@@ -4294,3 +4294,38 @@ từ URL Maps + Place ID -> dựng link CID cố định, verify link mở đún
   ở lần chạy đầu, chạy lại sạch).
 
 Backup: `~/Claude-Workspace/_backups/routines/2026-08-09/entity-schema-geo/`.
+
+---
+
+## 2026-08-10 - Auto-submit sitemap len Google Search Console khi co bai moi
+
+Hieu tao Service Account rieng (project `digicom-price-sync`, email
+`search-console@digicom-price-sync.iam.gserviceaccount.com`), them lam Full user tren property
+Search Console `https://digicomvn.com/`. File JSON key tai ve luu tam trong thu muc du an
+(root) - da chan khoi git ngay (`.gitignore` them `digicom-price-sync-*.json` va
+`*service-account*.json`) truoc khi lam gi khac, tranh lo secret khi auto-push cuoi session.
+
+- File moi `inc/gsc-sitemap-submit.php`: tu ky JWT (RS256, khong can thu vien Google API Client)
+  doi access token OAuth2, goi `sitemaps.submit` (Search Console API v3) bao Google doc lai
+  `wp-sitemap.xml` (sitemap goc cua WP core, khong dung plugin SEO nao).
+- Trigger: hook `transition_post_status` khi post/page/dgc_case chuyen sang `publish`, rate-limit
+  5 phut/lan (transient) de dang hang loat khong spam API, chay lech 10s qua
+  `wp_schedule_single_event` de khong lam cham thao tac dang bai.
+- Toggle bat/tat: WP Admin > DigicomVN > muc 9 (`gsc_submit_on`, mac dinh tat). Key path +
+  site URL dat qua 2 constant trong `wp-config.php` (KHONG luu DB): `DGC_GSC_KEY_PATH`,
+  `DGC_GSC_SITE_URL`. Thieu constant/file -> tu dong bo qua, khong loi.
+- Key JSON that (`service-account.json`) da upload len `~/gsc-secret/` tren host (NGOAI
+  `public_html`, chmod 600) - khong nam trong ma nguon theme, khong bi lo qua HTTP.
+- Bug da gap + sua khi test tren live qua `wp eval`:
+  1. PUT thieu header `Content-Length` -> Google tra 411. Sua: them `body=>''` +
+     `Content-Length: 0` vao `wp_remote_request`.
+  2. `feedpath` phai la URL DAY DU cua sitemap (`https://digicomvn.com/wp-sitemap.xml`), khong
+     phai duong dan tuong doi (`wp-sitemap.xml`) - Google tra 400 invalidParameter.
+- Da test thanh cong tren live: Google xac nhan da tai sitemap (182 URL, 0 loi, 0 warning).
+  Da bat `gsc_submit_on = 1`.
+- Backup truoc khi ghi de: `~/Claude-Workspace/_backups/routines/2026-08-10/gsc-sitemap-submit/`
+  (functions.php, inc/options.php live truoc sua) + `wp-config.php.bak-2026-08-10` tren host
+  (`~/gsc-secret/`).
+
+Con lai: xoa file JSON key o root du an local (da deploy xong len host, khong can giu ban local
+nua - tranh du thua ban sao secret) khi Hieu xac nhan.

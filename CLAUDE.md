@@ -46,6 +46,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/schema-markup.md` | **Schema.org: 1 khoi @graph/trang (inc/schema.php), khong chen JSON-LD vao bai** |
 | `.claude/rules/seo-meta-og.md` | **Meta description + Open Graph + canonical do theme tu sinh (inc/seo-meta.php), khong dung plugin SEO** |
 | `.claude/rules/bao-gia-khach-hang.md` | **Bao gia khach: ky cang doi chieu gia von + luon co chiet khau hap dan** |
+| `.claude/rules/gsc-sitemap-submit.md` | Auto-submit sitemap len Google Search Console khi co bai moi |
 
 ## 7. File quan trong
 `PLAN.md`, `LOG.md`, `DECISIONS.md`, `.claude/context/brand-info.md` (luu y: mo ta site

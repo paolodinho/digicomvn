@@ -104,6 +104,7 @@ require_once get_template_directory() . '/inc/schema.php';
 require_once get_template_directory() . '/inc/seo-meta.php';
 /* Trang tong hop "Cau hoi thuong gap" (/cau-hoi-thuong-gap/) - gom faqs + svc_faqs + faq_page_extra. */
 require_once get_template_directory() . '/inc/faq-page.php';
+require_once get_template_directory() . '/inc/gsc-sitemap-submit.php';
 
 /**
  * Helper doc 1 option.

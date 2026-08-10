@@ -114,6 +114,7 @@ function dgc_defaults() {
 		'ai_intro'      => '',
 		'ai_suggestions' => '',
 		'ai_kb'         => '',
+		'gsc_submit_on' => '0',
 	);
 }
 
@@ -258,6 +259,21 @@ function dgc_settings_page() {
 				dgc_field( 'ai_intro', 'Cau chao mo dau', 'De trong = dung cau chao mac dinh. VD: Xin chao! Toi la tro ly Digicom, ban can textlink hay booking bao?', 'textarea' );
 				dgc_field( 'ai_suggestions', 'Cau hoi goi y (nut bam nhanh)', 'Cach nhau dau | . VD: Nen chon dich vu nao de len top? | Booking bao PR gia bao nhieu? | Tu van backlink cho shop.' );
 				dgc_field( 'ai_kb', 'Kien thuc bo sung cho AI', 'Thong tin them ban muon AI biet (chinh sach, uu the, quy trinh...). AI se dung khi tra loi. KHONG ghi thong tin bi mat/gia von.', 'textarea' );
+				?>
+			</table>
+
+			<h2>9. Google Search Console (tu dong bao sitemap co bai moi)</h2>
+			<p class="description" style="max-width:760px">Moi khi co bai/trang moi publish, tu goi Search Console API bao Google doc lai sitemap. Can 2 constant trong <code>wp-config.php</code> (KHONG dien key vao day - key khong luu trong CSDL):<br>
+			<code>define('DGC_GSC_KEY_PATH', '/duong-dan-tuyet-doi/service-account.json');</code><br>
+			<code>define('DGC_GSC_SITE_URL', 'https://digicomvn.com/');</code> (dung dung URL da verify trong Search Console)<br>
+			Thieu 1 trong 2 constant hoac khong tim thay file key -> tu dong bo qua, khong loi.
+			<?php $last = get_option( 'dgc_gsc_last_result' ); if ( $last ) : ?>
+				<br>Lan chay gan nhat: <?php echo esc_html( $last['time'] ); ?> - <?php echo $last['success'] ? '<strong style="color:#0E8C7F">Thanh cong</strong>' : '<strong style="color:#C0392B">That bai: ' . esc_html( $last['detail'] ) . '</strong>'; ?>
+			<?php endif; ?>
+			</p>
+			<table class="form-table">
+				<?php
+				dgc_field( 'gsc_submit_on', 'Bat auto-submit sitemap (1 = bat, 0 = tat)', 'Dat 1 de bat. Chi hoat dong khi da co du 2 constant + file key tren server.' );
 				?>
 			</table>
 
