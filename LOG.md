@@ -4329,3 +4329,121 @@ Search Console `https://digicomvn.com/`. File JSON key tai ve luu tam trong thu 
 
 Con lai: xoa file JSON key o root du an local (da deploy xong len host, khong can giu ban local
 nua - tranh du thua ban sao secret) khi Hieu xac nhan.
+
+---
+
+## 2026-08-10 (tiep) - Mo rong: ep index tung URL / tung cum bai (Indexing API)
+
+Hieu bao chi submit sitemap chua du, can nap index rieng cho tung bai hoac tung cum bai. Da
+mo rong `inc/gsc-sitemap-submit.php` them co che thu 2 song song voi sitemap submit:
+
+- **Indexing API** (`urlNotifications.publish`, scope rieng `.../auth/indexing`) - ham
+  `dgc_gsc_request_indexing($url)` ep Google index nhanh 1 URL. Ham `dgc_gsc_index_urls()` /
+  `dgc_gsc_index_category($slug)` goi hang loat cho nhieu URL hoac ca 1 category (cum chu de).
+- Hook `transition_post_status` gio vua submit sitemap (rate-limit 5 phut/lan nhu cu) VUA tu
+  dong ep index dung URL bai vua publish (khong rate-limit, moi bai 1 request rieng qua
+  `wp_schedule_single_event`).
+- File CLI moi `tools/gsc-cli.php` (chay qua `wp eval-file`, KHONG require trong
+  functions.php) doc `$args` tu dong lenh, phan biet 3 kieu: rong/"toan trang" -> sitemap;
+  "cum <slug>" -> ep index ca category; con lai -> ep index tung URL/slug.
+- `submit-sitemap.sh` sua lai goi `wp eval-file tools/gsc-cli.php <args> --allow-root`.
+- Slash-command `/submit-sitemap` cap nhat nhan `$ARGUMENTS` truyen thang xuong script.
+
+Bug/cam bay da gap khi trien khai (chi tiet xem `.claude/rules/gsc-sitemap-submit.md`):
+1. Bat API "Web Search Indexing API" xong van bao 403 SERVICE_DISABLED ngay lap tuc - Google
+   can ~3-5 phut de propagate, khong phai loi cau hinh sai.
+2. Sau khi API da hoat dong, van bi 403 "Permission denied. Failed to verify the URL
+   ownership." - ly do quyen service account dang la "Full user", Indexing API doi hoi
+   **Owner**. Hieu tu nang quyen trong Search Console > Settings > Users and permissions len
+   Owner -> het loi ngay.
+3. Dung `--` truoc danh sach tham so khi goi `wp eval-file` (tuong tu cu phap npm) -> SAI, `--`
+   bi dua thang vao `$args` cua PHP, lam sai logic phan loai lenh. Bo `--` la dung.
+
+Da test thanh cong tren live ca 3 kieu goi: sitemap toan trang, 1 URL rieng
+(`/guest-post/`), 1 cum bai category `seo-local` (6 bai, tat ca OK) va category `seo-tu-khoa`
+(5 bai, tat ca OK).
+
+Backup: dung chung backup functions.php/options.php/wp-config.php da luu luc dau session
+(`~/Claude-Workspace/_backups/routines/2026-08-10/gsc-sitemap-submit/`) - file moi
+(`tools/gsc-cli.php`) chua tung ton tai truoc do nen khong can backup rieng.
+
+---
+
+## 2026-08-10 (tiep 2) - Ghep auto-index vao skill entity-refresh: sua bai da publish cung tu index lai
+
+Hieu: "cu sua hay viet xong 1 bai la auto index lai" - phat hien hook cu (`transition_post_status`)
+CHI bat duoc bai MOI publish lan dau, KHONG bat duoc luc SUA bai da publish san (dung cach
+entity-refresh hay lam: goi `tools/wp-rest-publish.py update` qua REST, status van la
+publish -> publish, khong doi trang thai nen hook cu khong fire).
+
+- Doi hook chinh tu `transition_post_status` sang `save_post` (check
+  `wp_is_post_autosave`/`wp_is_post_revision` de loai bo, check `post_status === 'publish'`
+  truc tiep thay vi so sanh old/new) - bat duoc CA 2 truong hop: tao moi VA sua bai da publish.
+- Them rate-limit RIENG TUNG BAI (`dgc_gsc_idx_lock_<ID>`, 2 phut) vi `save_post` co the fire
+  nhieu lan trong 1 lan luu (thumbnail, meta box...) - tranh gui trung request index.
+- Test gia lap: goi `wp_update_post()` tren 1 page da publish (`/guest-post/`, khong doi
+  content) -> xac nhan scheduled event `dgc_gsc_do_index` duoc tao, chay `wp cron event run`
+  thu cong -> Indexing API tra OK, ghi vao `dgc_gsc_index_log`.
+- Cap nhat skill `entity-refresh/SKILL.md`: BUOC 7 (Che do A - update bai co san) va BUOC B6
+  (Che do B - tao bai moi) deu them muc "tu dong ep Google index lai qua hook save_post,
+  khong can goi tay, chi goi `./submit-sitemap.sh <url>` khi muon xac nhan ngay lap tuc".
+
+Tu gio moi lan entity-refresh viet/sua xong 1 bai va dang len live, Google se tu duoc bao
+index lai (qua WP-Cron, thuong chay khi co nguoi truy cap site trong vong vai phut sau) -
+khong can chay them lenh nao.
+
+2026-08-10 | Internal link auto | Tao tools/internal-link-auto.py: tu phat hien cum bai
+bang TF-IDF content similarity + tu cham internal link con thieu (dry-run mac dinh, chi
+AUTO-INSERT khi similarity cao VA tim duoc anchor that trong bai nguon; con lai chi GHI
+NHAN vao bao cao, khong dung vao bai). Chay thu toan site: 2081 cap xet, 0 auto-insert (da
+dat tran 5 link/bai o hau het bai cu, cac cap con lai chua co anchor khop nguyen van tieu
+de dich). Chua --apply len live.
+
+2026-08-10 | Fix thiếu H1 | Phát hiện 2 bài đăng cùng ngày (6003 hieu-lam-booking-bao-chi,
+6002 booking-bao-tinh) hoàn toàn KHÔNG có H1 trong thân bài - nội dung nhảy thẳng từ SAPO
+sang H2, vi phạm rule content-pipeline BƯỚC 3 (thứ tự H1->SAPO...) và bỏ qua BƯỚC 8
+(verify curl phải thấy H1). Đã fix: chèn H1 = post_title vào đầu content.raw, update qua
+wp-rest-publish.py, verify live 1 H1/trang. Đồng thời thêm lưới an toàn ở
+wp-theme/digicom-host/single.php: nếu content thiếu H1 thì tự chèn từ post_title (tránh lặp
+lại việc trang hoàn toàn không H1 nếu quy trình viết bài lại bỏ sót). Deploy live + purge
+cache. Backup: ~/Claude-Workspace/_backups/routines/2026-08-10/content-pipeline/.
+
+2026-08-10 (tiếp) | Vá skill chống tái diễn thiếu H1 | Đã sửa `.claude/skills/content-pipeline/SKILL.md`
+(BƯỚC 3 thêm mục bắt buộc H1 là dòng đầu content + BƯỚC 8 verify curl grep H1 phải =1) và
+`.claude/skills/entity-refresh/SKILL.md` (thêm BƯỚC B4.0 bắt buộc H1 trước khi đăng + BƯỚC
+B6.1 verify H1=1 ngay sau publish, cả 2 đều trích dẫn sự cố thật 2026-08-10 làm lý do). Đã
+đồng bộ sang mirror local `~/Claude-Workspace/digicom/drive-mirror/`.
+
+2026-08-10 | Internal link map | Them tools/internal-link-map.py (doc link that + anchor tu
+content.raw qua REST) + tools/internal-link-map-render.py (dung HTML: so do radial bam-de-soi
++ bang hub/mo coi/full edge loc duoc) + lenh /internal-link-map <cum>. Chi doc, khong sua live.
+
+2026-08-10 | Internal link map fix | tools/internal-link-map.py truoc chi fetch wp/v2/posts,
+bo sot cac TRANG (page, vd /booking-bao-pr/) vi page khong co category -> bai trung tam that
+(pillar nhan link tong luc) bi thieu khoi so do. Sua: fetch them wp/v2/pages, tu keo trang co
+link qua lai voi cum vao lam node. Kiem lai cum booking-bao-pr: pillar /booking-bao-pr/ gio la
+hub dung (75 link den), tong 45 node/288 edge (truoc 38/130 vi thieu page).
+
+2026-08-10 | Internal link audit - cum Booking Bao & PR | Ra soat toan bo 45 node/288 edge, phat
+hien 3 loi dinh tuyen ve money page /booking-bao-pr/: (1) booking-bao-quoc-te dung anchor
+thuong mai "dich vu booking bao" nhung tro sai sang bai blog booking-bao-la-gi - da doi href
+ve dung money page; (2) booking-bao-tinh va (3) hieu-lam-booking-bao-chi khong co link nao
+ve money page - da them cau CTA moi. (4) Trang pillar /booking-bao-pr/ thieu 2/19 chip lien
+ket toi bai dau bao (Nhan Dan, Batdongsan.com.vn) - da bo sung. Backup content.raw ca 4 trang
+tai _backups/routines/2026-08-10/internal-link-booking-bao/ + manifest. Da verify lai bang
+tools/internal-link-map.py + curl (co cache LiteSpeed, phai bust cache moi thay ngay).
+
+2026-08-10 | Anchor text optimization - cum Booking Bao & PR | Them phan loai 5 loai
+anchor (khop chinh xac/mo ta/thuong mai/thuong hieu/chung chung) + nguong ty le khuyen nghi
+vao tools/internal-link-map-render.py, them kiem tra "da dang anchor theo tung bai dich"
+(>=3 link den, canh bao neu <50% anchor khac nhau, tru truong hop ten rieng bai dang). Da tu
+dieu chinh 8 bai (da hoa anchor cho 3 muc tieu: cach-viet-bai-pr-chuan-bao-chi 12 link,
+guest-post 18 link, thong-cao-bao-chi-la-gi 5 link, cong them mau-thong-cao-bao-chi va
+dich-vu-backlink) - tong 18 edit tren 16 bai khac nhau, backup + manifest tai
+_backups/routines/2026-08-10/anchor-diversify/. Ket qua: 4/5 loai anchor dat chuan (khop
+chinh xac 14.7%, mo ta 47.6%, thuong mai 21.9%, thuong hieu 14%, chung chung 1.7% - tat
+ca trong nguong). Con 3 muc tieu QUY MO LON chua fix (booking-bao-pr 78 link/22 trung, dat-bai
+31 link/18 trung, booking-bao-la-gi 24 link/17 trung) - la CTA template lap lai tren ~15-19
+bai book-bao-*, can ~57 edit them - CHUA lam, cho Hieu xac nhan vi quy mo lon.
+Da cap nhat .claude/skills/content-pipeline/SKILL.md muc A2d moi: quy tac ty le anchor +
+khong nhoi anchor trung, ap dung NGAY luc dat link (khong doi audit sau).

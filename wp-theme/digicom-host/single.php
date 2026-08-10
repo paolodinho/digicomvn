@@ -19,6 +19,12 @@ get_header();
 			the_content();
 			$dgc_content_html = ob_get_clean();
 			$dgc_toc_items    = $GLOBALS['dgc_toc_items'];
+			// Luoi an toan: bai phai co H1 trong than bai (content-writer skill).
+			// Neu vi ly do gi do thieu (loi quy trinh dang bai) -> tu chen H1 tu post_title,
+			// tranh trang khong co H1 nao (xau cho SEO/accessibility).
+			if ( stripos( $dgc_content_html, '<h1' ) === false ) {
+				$dgc_content_html = '<h1>' . esc_html( get_the_title() ) . '</h1>' . $dgc_content_html;
+			}
 			?>
 			<div class="post-layout<?php echo empty( $dgc_toc_items ) ? ' post-layout--no-toc' : ''; ?>">
 				<?php dgc_toc_render_sidebar( $dgc_toc_items ); ?>

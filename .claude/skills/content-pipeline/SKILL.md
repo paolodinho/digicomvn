@@ -91,6 +91,43 @@ cạnh tranh với chính mình.
    động GỘP (bài yếu 301/redirect nội dung về bài mạnh) hoặc ĐỔI HƯỚNG bài yếu sang intent
    khác - cần Hiếu duyệt, không tự gộp/xoá.
 
+## A2d. TỶ LỆ LOẠI ANCHOR TEXT - tối ưu NGAY LÚC ĐẶT LINK, không đợi audit sau (rule Hiếu 2026-08-10)
+
+Mỗi khi chèn 1 internal link (bài mới, refresh bài cũ, hay A4 bên dưới), PHẢI tự phân loại
+anchor sắp dùng vào 1 trong 5 loại và cân đối tỷ lệ THEO TỪNG TRANG ĐÍCH (không phải theo cả
+site) - kiểm bằng `/internal-link-map <cụm>` (mục "Tỷ lệ loại anchor text") trước khi coi 1
+cụm là xong:
+
+| Loại | Định nghĩa | Tỷ lệ khuyến nghị/trang đích |
+|---|---|---|
+| Khớp chính xác | Anchor = đúng nguyên văn tiêu đề cốt lõi trang đích (trước dấu `:`/`-`/`?`) | 10-25% |
+| Mô tả tự nhiên | Cụm từ đúng ngữ cảnh câu, không phải brand/thương mại thuần | 30-60% |
+| Từ khoá thương mại | Chứa "dịch vụ/giá/đặt bài/chi phí" | 10-30% |
+| Thương hiệu | Chứa "DigicomVN"/"Digicom" | 5-20% |
+| Chung chung | "xem thêm/tại đây/bấm vào đây"... | 0-10% |
+
+**Bắt buộc có "khớp chính xác"** - không phải 0%, vì Google cần ít nhất một số anchor nói
+đúng từ khoá trang đích để hiểu quan hệ ngữ nghĩa; nhưng KHÔNG lạm dụng >25% (thao túng anchor,
+áp dụng cả cho internal link chứ không chỉ backlink ngoài).
+
+**Không nhồi 1 anchor y hệt cho nhiều bài nguồn khác nhau trỏ về CÙNG 1 trang đích** - đặc biệt
+nguy hiểm với template/CTA lặp lại (vd nhiều bài "book-bao-X" cùng nhét 1 câu CTA y hệt trỏ về
+money page). Quy tắc: nếu 1 trang đích có từ 3 link đến trở lên, tối thiểu 50% trong số đó phải
+dùng anchor KHÁC NHAU (đo bằng `distinct_anchor / total_inbound >= 0.5`). Ngoại lệ: anchor
+ngắn (<=3 từ) trùng tên riêng của chính trang đích (vd "CafeF", "VnExpress") không tính là lỗi
+- đó là nhắc đúng tên, không phải nhồi từ khoá.
+
+**Cách áp dụng khi viết bài mới/A3**: trước khi paste 1 câu CTA/link đã dùng ở bài khác cùng
+cụm, đổi cách diễn đạt (không copy y nguyên) - xem cách các anchor variant đã dùng cho cùng 1
+trang đích (chạy `/internal-link-map` hoặc đọc sổ cái cụm) để không lặp lại.
+
+**Công cụ kiểm/audit**: `tools/internal-link-map.py` + `tools/internal-link-map-render.py`
+(gọi qua lệnh `/internal-link-map <cụm>`) - tính tỷ lệ 5 loại + cờ cảnh báo trang đích có
+<50% anchor khác nhau. Không đạt -> tự đa dạng hoá anchor (đổi TEXT hiển thị của thẻ `<a>`,
+giữ nguyên href) theo đúng quy trình backup-before-edit, không cần hỏi lại nếu số bài cần sửa
+nhỏ (<10); batch lớn hơn (nhiều chục bài, vd sửa cả 1 khối CTA template lặp) -> báo Hiếu số
+lượng cụ thể trước khi làm, vì đây là thay đổi diện rộng.
+
 ## A3. VIẾT + ĐĂNG LOẠT BÀI
 
 Chạy từng bài theo plan bằng các bước 2-6 của chế độ B bên dưới (research lại SERP chi tiết
@@ -106,7 +143,9 @@ Sau khi các bài của cluster đã live:
    trỏ bài blog trùng slug thay vì page pillar - xem cảnh báo brand-info mục 7).
 3. Tự chèn link thiếu vào bài cũ + bài mới: anchor là cụm từ CÓ SẴN trong câu (không nhét),
    mỗi URL 1 lần/bài, tối đa 5 internal link/bài, >=1 money page với bài commercial.
-   Backup content.raw TỪNG bài trước khi sửa (routine-backup) + manifest.
+   Backup content.raw TỪNG bài trước khi sửa (routine-backup) + manifest. Anchor phải theo
+   tỷ lệ 5 loại + không lặp y hệt cho nhiều bài trỏ cùng 1 đích - xem [[A2d]] TỶ LỆ LOẠI
+   ANCHOR TEXT, áp dụng NGAY khi chèn, không đợi audit riêng.
 4. Verify: mỗi link mới curl 200 đúng đích; cập nhật link graph vào
    `content/linkgraph-<cụm>-<ngày>.md` để lần sau đối chiếu.
 
@@ -139,6 +178,13 @@ intent, SERP features, section đối thủ có, 3-5 câu PAA làm FAQ, góc kh�
 
 - **Thứ tự đầu bài (rule Digicom 2026-07-16, GHI ĐÈ mặc định skill):**
   `H1 -> SAPO -> Tóm tắt nhanh -> mở bài -> H2...`
+- **BẮT BUỘC: dòng ĐẦU TIÊN của content phải là `<h1>{tiêu đề bài}</h1>`** (khớp `post_title`).
+  Đây là điểm dễ quên nhất, hậu quả nặng nhất: `single.php` CHỦ ĐỘNG không tự render H1 từ
+  `post_title` (tránh trùng H1 nếu content đã có) - nếu content thiếu H1, TOÀN TRANG không
+  còn H1 nào (xấu SEO/accessibility, sự cố thật 2026-08-10: bài `hieu-lam-booking-bao-chi`
+  + `booking-bao-tinh` đăng thiếu H1, lọt qua vì bỏ verify ở BƯỚC 8). Trước khi ghi file
+  content ra để đăng (BƯỚC 6), tự kiểm bằng mắt/`grep -c '<h1' <file>` phải ra đúng `1` -
+  ra `0` thì DỪNG, thêm H1 trước khi đăng; ra `>1` thì bỏ bớt (chỉ 1 H1/trang).
 - Title <=58 ký tự, KW đầu; meta 140-160; slug flat `/[slug]/` (không /blog/).
 - Giọng E-E-A-T tác giả Đỗ Hiếu (brand-info mục 3), thương hiệu viết là **DigicomVN**.
 - KHÔNG bịa: giá, tên đầu báo hợp tác, case study, số liệu không nguồn.
@@ -234,6 +280,8 @@ Bài mới hoàn toàn -> ghi manifest "created".
 
 - Trong bài mới: tối đa 5 link, >=1 money page, anchor tự nhiên trong câu,
   URL GỐC theo brand-info mục 4 (vd `/booking-bao-pr/` - KHÔNG dùng `/dich-vu/...` đã 301).
+  Anchor theo đúng tỷ lệ 5 loại ở [[A2d]] - KHÔNG copy y nguyên 1 câu CTA đã dùng cho bài
+  khác cùng cụm trỏ về cùng đích, phải đổi cách diễn đạt.
 - Chiều ngược: chọn 1-2 bài cũ cùng cụm đang mạnh, chèn 1 link trỏ về bài mới
   (backup content.raw trước khi sửa).
 
@@ -252,10 +300,13 @@ Mỗi bài đăng mới/sửa lớn xong -> submit index ngay:
 > trong `functions.php` (đã có cho money page 475). Ghi `rank_math_*` meta = vô tác dụng.
 > Chống ăn thịt: money page giữ head-term thương mại, bài blog dùng modifier ("cách chọn"/"là gì").
 
-## BƯỚC 8 - VERIFY + LOG (bắt buộc trước khi báo xong)
+## BƯỚC 8 - VERIFY + LOG (bắt buộc trước khi báo xong - KHÔNG được bỏ qua)
 
-- `curl -s https://digicomvn.com/<slug>/` : 200, có H1, widget render (tìm class widget),
-  không "—", không lộ shortcode dạng text thô, thumbnail hiện.
+- **`curl -s https://digicomvn.com/<slug>/ | grep -o '<h1[^>]*>' | wc -l` PHẢI ra đúng `1`.**
+  Đây là dòng lệnh bắt buộc chạy, không phải tuỳ chọn - ra `0` nghĩa là trang không có H1
+  nào (sự cố đã xảy ra thật, xem BƯỚC 3), phải quay lại chèn H1 và đăng lại NGAY, chưa được
+  coi là xong. Đồng thời kiểm 200, widget render (tìm class widget), không "—", không lộ
+  shortcode dạng text thô, thumbnail hiện.
 - Kiểm tra thứ tự H1 -> SAPO -> Tóm tắt đúng rule.
 - Purge cache nếu có sửa theme/CSS (bình thường KHÔNG cần - chỉ sửa content).
 - Append LOG.md: `| <ngày> | Content pipeline | <slug> đăng/refresh, category X, widget Y |`.

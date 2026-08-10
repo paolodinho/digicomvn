@@ -150,12 +150,19 @@ function dgc_gsc_index_category( $slug ) {
 add_action( 'dgc_gsc_do_submit', 'dgc_gsc_submit_sitemap' );
 add_action( 'dgc_gsc_do_index', 'dgc_gsc_request_indexing' );
 
-add_action( 'transition_post_status', function ( $new_status, $old_status, $post ) {
-	if ( $new_status !== 'publish' || $old_status === 'publish' ) return;
+/**
+ * Bat CA 2 truong hop: bai MOI publish lan dau VA bai DA publish san bi SUA lai (vd
+ * entity-refresh update content qua REST) - ca 2 deu can bao lai Google. Dung save_post
+ * (khong phai transition_post_status) vi transition_post_status KHONG fire khi status
+ * giu nguyen publish->publish luc chi sua noi dung.
+ */
+add_action( 'save_post', function ( $post_id, $post ) {
+	if ( wp_is_post_autosave( $post_id ) || wp_is_post_revision( $post_id ) ) return;
+	if ( $post->post_status !== 'publish' ) return;
 	if ( ! in_array( $post->post_type, array( 'post', 'page', 'dgc_case' ), true ) ) return;
 	if ( ! dgc_gsc_enabled() ) return;
 
-	// Sitemap: publish hang loat chi bao Google 1 lan / 5 phut, khong spam API.
+	// Sitemap: dang/sua hang loat chi bao Google 1 lan / 5 phut, khong spam API.
 	if ( ! get_transient( 'dgc_gsc_lock' ) ) {
 		set_transient( 'dgc_gsc_lock', 1, 5 * MINUTE_IN_SECONDS );
 		if ( ! wp_next_scheduled( 'dgc_gsc_do_submit' ) ) {
@@ -163,9 +170,14 @@ add_action( 'transition_post_status', function ( $new_status, $old_status, $post
 		}
 	}
 
-	// Indexing rieng dung URL bai nay - khong rate-limit chung, moi bai 1 request.
+	// Indexing rieng dung URL bai nay - rate-limit RIENG TUNG BAI (2 phut) de 1 lan sua
+	// khong bi save_post goi lai nhieu lan (thumbnail, meta box...) sinh trung request.
+	$lock_key = 'dgc_gsc_idx_lock_' . $post_id;
+	if ( get_transient( $lock_key ) ) return;
+	set_transient( $lock_key, 1, 2 * MINUTE_IN_SECONDS );
+
 	$permalink = get_permalink( $post );
 	if ( $permalink && ! wp_next_scheduled( 'dgc_gsc_do_index', array( $permalink ) ) ) {
 		wp_schedule_single_event( time() + 15, 'dgc_gsc_do_index', array( $permalink ) );
 	}
-}, 10, 3 );
+}, 10, 2 );

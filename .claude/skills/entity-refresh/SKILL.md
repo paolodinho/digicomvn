@@ -20,7 +20,7 @@ và bộ 3 tiêu chí chất lượng ở BƯỚC 6 - chỉ khác ở đầu và
 | | CHẾ ĐỘ A - Refresh bài có sẵn | CHẾ ĐỘ B - Viết bài mới |
 |---|---|---|
 | Input | URL bài digicomvn.com đã tồn tại | Tên chủ đề/từ khoá CHƯA có bài nào |
-| Research | 2 lượt WebSearch lấy thực thể (BƯỚC 2) | Research SERP ĐẦY ĐỦ top 10 + Suggest/PAA (BƯỚC B2, sâu hơn) |
+| Research | 2 lượt WebSearch lấy thực thể (BƯỚC 2) + đo độ dài/số ảnh đối thủ (BƯỚC 3C) | Research SERP ĐẦY ĐỦ top 10 + Suggest/PAA (BƯỚC B2, sâu hơn), gồm cả BƯỚC 3C |
 | Sản phẩm | Bổ sung câu/đoạn vào bài cũ | Viết bài hoàn chỉnh từ đầu, có dàn bài |
 | Đăng | `update` post ID có sẵn | `create` post mới, **đăng luôn (publish)** - Hiếu chốt 2026-08-10, không chờ duyệt draft |
 
@@ -100,6 +100,70 @@ biến thể này dù nội dung đã đúng ý, vẫn là tối ưu chưa hết
    chi phí thuộc nhóm dễ tiếp cận trong các báo kinh tế" và giá đó thật sự rẻ so mặt bằng ->
    có thể diễn lại tự nhiên hơn thành câu có chứa cụm "giá rẻ"/"chi phí rẻ" ở đúng ngữ cảnh,
    không thêm thành 1 câu rời rạc chỉ để nhét từ khoá.
+
+## BƯỚC 3C - ĐO ĐỘ DÀI BÀI + SỐ ẢNH ĐỐI THỦ (bổ sung 2026-08-10)
+
+Ngoài thực thể (BƯỚC 3) và từ khoá cùng cụm (BƯỚC 3B), phải đo 2 chỉ số định lượng để căn
+chỉnh "độ dày nội dung" bài mình đúng chuẩn đối thủ đang được xếp hạng cho từ khoá này - không
+chỉ đủ Ý mà còn đủ KHỐI LƯỢNG nội dung. Benchmark này tính CHO CẢ CỤM dịch vụ (áp dụng mọi
+bài trong cụm, không phải riêng 1 URL) - **trước khi research mới, kiểm tra bảng benchmark
+trong `content-visual-coverage.md` mục "Chuẩn định lượng theo CỤM dịch vụ" xem cụm + ĐÚNG LOẠI
+TRANG (hub tổng quan hay trang con theo đối tượng cụ thể - xem bước 0 dưới) này đã có dòng
+chưa và còn mới (≤60 ngày) không; có rồi thì DÙNG LUÔN, chỉ research lại (bước 1-4 dưới) khi
+chưa có benchmark đúng loại trang hoặc benchmark đã cũ/SERP đổi mạnh.**
+
+0. **Xác định loại trang trước khi research** - bài đang audit/viết là trang HUB tổng quan cả
+   cụm dịch vụ, hay trang CON đi sâu 1 đối tượng cụ thể (vd 1 đầu báo, 1 loại dịch vụ con)?
+   2 loại có độ dài/số ảnh khác hẳn nhau, không được trộn chung.
+1. **Research đúng mẫu của loại trang đó, đo TRÊN NHIỀU DOMAIN, không dừng ở 1 trang/domain**:
+   - Với trang HUB: dùng lại đúng bộ URL đã fetch ở BƯỚC 2 (từ khoá dịch vụ tổng quát).
+   - Với trang CON: phải tìm thêm cấu trúc trang con tương ứng của TỪNG domain đối thủ đã có ở
+     BƯỚC 2 bằng `site:<domain> "<mẫu tiêu đề trang con>" <2-3 đối tượng cụ thể mẫu>` (vd
+     `site:seodo.vn "báo giá bài pr trên" vnexpress`) - domain nào có cấu trúc trang con y hệt
+     Digicom (đa số domain lớn trong ngành booking báo/guest post đều có) thì fetch thêm 3-5
+     trang con của domain đó (không cần vét hết, đủ đại diện); domain không có cấu trúc này chỉ
+     tính 1 mẫu (trang hub) của họ. Mục tiêu tối thiểu ~20-25 trang con gộp từ nhiều domain để
+     trung vị đáng tin, không phải 8-10 mẫu như 1 trang/domain.
+2. Với MỖI trang đã fetch (dùng lại HTML đã tải ở BƯỚC 2, chỉ fetch thêm phần trang con mới):
+   - **Số từ**: dùng bản text thuần thân bài đã strip ở BƯỚC 3.1, đếm bằng tách khoảng trắng
+     (`len(text.split())`) - CHỈ tính phần nội dung chính, loại bỏ header/footer/menu/sidebar/
+     quảng cáo/phần lặp lại giống nhau ở nhiều trang cùng site trước khi đếm.
+   - **Số ảnh**: đếm thẻ `<img>` trong CÙNG phạm vi thân bài dùng để đếm từ (không tính icon/
+     logo lặp ở header/footer, banner quảng cáo rõ ràng không phải ảnh minh hoạ nội dung).
+3. Lập bảng `domain | trang | số từ | số ảnh` TÁCH RIÊNG theo loại trang (hub / con), tính cho
+   MỖI loại:
+   - **Trung vị (median)** số từ và số ảnh - ưu tiên trung vị hơn trung bình, tránh 1 bài quá
+     dài/quá nhiều ảnh kéo lệch số liệu.
+   - **Giá trị cao nhất** (bài dài nhất, nhiều ảnh nhất) - biết trần thực tế đối thủ đang làm.
+   - **Khoảng phổ biến nhất** (đa số đối thủ rơi vào khoảng nào, vd 1.200-1.500 từ) - đây là
+     MỤC TIÊU ưu tiên áp dụng, không chạy theo giá trị cao nhất một cách máy móc (bài dài nhất
+     có thể là ngoại lệ, không đại diện chuẩn chung).
+4. Đếm số từ + số ảnh HIỆN TẠI của bài Digicom bằng đúng phương pháp trên (bản text đã strip
+   ở BƯỚC 1) để so sánh công bằng, đối chiếu ĐÚNG dòng benchmark theo loại trang (hub/con) của
+   chính bài đó. CHẾ ĐỘ B (bài chưa tồn tại) bỏ qua bước này, dùng số liệu đối thủ làm mục tiêu
+   ngay khi dàn bài (xem BƯỚC B3).
+5. Kết luận:
+   - Bài Digicom NGẮN HƠN/ÍT ẢNH HƠN khoảng phổ biến đúng loại trang -> gap ĐỊNH LƯỢNG, ghi rõ
+     số liệu (vd "đối thủ trung vị trang con 1.343 từ/18 ảnh, bài hiện có 890 từ/2 ảnh - thiếu
+     ~450 từ và 16 ảnh so với mức phổ biến").
+   - Bài đã BẰNG hoặc DÀI HƠN mức phổ biến -> không cần thêm cho đủ số lượng.
+6. Research mới (không tái dùng benchmark cũ) -> ghi/cập nhật ĐÚNG dòng (theo loại trang) trong
+   bảng benchmark của `content-visual-coverage.md` (từ khoá đại diện, số mẫu, trung vị từ/ảnh,
+   ngày đo) để các bài SAU trong cùng cụm VÀ cùng loại trang dùng lại, không research trùng lặp.
+
+### Áp dụng khi bổ sung (nối vào BƯỚC 6)
+
+- Số từ/số ảnh thiếu theo BƯỚC 3C **không phải lý do để viết filler**. Đây chỉ là NGƯỠNG THAM
+  CHIẾU để biết còn bao nhiêu dư địa nội dung THẬT có thể thêm - không bịa đoạn văn vô nghĩa
+  để đạt đúng số từ mục tiêu (`quality-bar.md` - chống filler/scope creep).
+  - Ưu tiên: nếu checklist BƯỚC 4 có nhiều mục C1 cần viết và bài đang thiếu độ dài so đối
+    thủ -> viết ĐẦY ĐỦ các mục đó (đừng viết tắt 1 câu cho có) để tự nhiên tiệm cận mức phổ
+    biến, thay vì thêm đoạn không có thực thể/thông tin mới chỉ để đủ số từ.
+  - Đã viết đủ hết mục C1/C2 thật mà VẪN ngắn hơn nhiều so với đối thủ -> báo rõ cho Hiếu,
+    không tự ý thêm nội dung không có nguồn/không có thực thể mới.
+- Số ảnh thiếu -> đối chiếu `content-visual-coverage.md` (tối thiểu 2 ảnh/bài + mọi H2 có yếu
+  tố trực quan) và `image-sourcing.md` (nguồn Storyset/ảnh thật) - thêm đúng vị trí H2 đang
+  thiếu visual, không thêm ảnh không liên quan chỉ để đủ số lượng.
 
 ## BƯỚC 4 - GỘP CHECKLIST + ĐỐI CHIẾU TỪNG TỪ (bắt buộc verify bằng tìm chuỗi thật)
 
@@ -235,6 +299,12 @@ câu mở editorializing, không thay bằng từ đồng nghĩa sáo rỗng kh�
 2. Đăng: `python3 tools/wp-rest-publish.py update --id <ID> --content-file <file-moi>`.
 3. Verify: `curl -s "<url-bai>" | grep -o "<chuoi-dac-trung-vua-them>"` cho TỪNG thực thể
    đã thêm - phải thấy xuất hiện thật trên live, không chỉ tin đã update thành công.
+4. **Tự động ép Google index lại** - hook `save_post` trong theme
+   (`.claude/rules/gsc-sitemap-submit.md`) tự bắt lúc `update` này và lên lịch gọi
+   Indexing API cho đúng URL bài (không cần gọi tay). Chỉ cần gọi tay
+   `./submit-sitemap.sh <url-bai>` khi muốn xác nhận NGAY LẬP TỨC thay vì chờ cron chạy
+   (~15s-1 phút tuỳ tần suất truy cập site kích hoạt WP-Cron), hoặc khi `gsc_submit_on`
+   đang tắt.
 
 ## BƯỚC 8 - BÁO CÁO (bắt buộc đủ, theo `explain-after-done.md`)
 
@@ -243,9 +313,11 @@ câu mở editorializing, không thay bằng từ đồng nghĩa sáo rỗng kh�
    thấy cả những thực thể ĐÃ CÓ SẴN (để Hiếu biết đã verify kỹ, không phải qua loa). Ghi rõ
    nguồn từng dòng là "đối thủ" (BƯỚC 3) hay "từ khoá cùng cụm" (BƯỚC 3B).
 3. Bảng định tuyến C1/C2 (BƯỚC 5).
-4. Trích nguyên văn từng câu đã chèn vào bài (như 2 lần chạy tay trước đó Hiếu đã yêu cầu
+4. Bảng đo độ dài/số ảnh đối thủ (BƯỚC 3C): số từ + số ảnh từng đối thủ, trung vị/cao nhất/
+   khoảng phổ biến, so với số từ/ảnh bài hiện tại, kết luận có bổ sung độ dài/ảnh hay không.
+5. Trích nguyên văn từng câu đã chèn vào bài (như 2 lần chạy tay trước đó Hiếu đã yêu cầu
    "trích dẫn câu mà thực thể mới được chèn vào").
-5. Link live đã verify.
+6. Link live đã verify.
 
 ## Khi bài không có gap thật
 
@@ -289,8 +361,10 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 2. Đọc hết **Google Suggest** + "Mọi người cũng hỏi" (PAA) + tìm kiếm liên quan cuối trang.
 3. Từ top 10, phân loại dạng nội dung đang xếp hạng (listicle/how-to/định nghĩa/thương mại
    - theo `audit-intent-truoc.md`) để chắc chắn viết ĐÚNG DẠNG đối thủ đang được xếp hạng.
-4. Thực hiện lại BƯỚC 2/3/3B (research thực thể mức từ + từ khoá cùng cụm) trên đúng bộ
-   URL top 10 này - không cần research riêng 2 lần.
+4. Thực hiện lại BƯỚC 2/3/3B/3C (research thực thể mức từ + từ khoá cùng cụm + đo độ dài/số
+   ảnh đối thủ) trên đúng bộ URL top 10 này - không cần research riêng 2 lần. Vì chưa có bài
+   hiện tại để so sánh, BƯỚC 3C chỉ lấy trung vị/khoảng phổ biến số từ + số ảnh của đối thủ
+   làm MỤC TIÊU cho bài mới (dùng ở BƯỚC B3).
 
 ## BƯỚC B3 - DÀN BÀI (bắt buộc trước khi viết, theo `do-dont.md`)
 
@@ -299,12 +373,22 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 2. Gán loại visual cho MỖI H2 ngay từ bước dàn bài (ảnh Storyset/ảnh thật, sơ đồ HTML, bảng
    dữ liệu, hoặc widget tương tác) - theo `content-visual-coverage.md`, tối thiểu 2 ảnh +
    mọi H2 có yếu tố trực quan. Tối thiểu 3 sơ đồ HTML cho đoạn phức tạp (`content-diagram-explain.md`).
+3. Mục tiêu độ dài bài + tổng số ảnh bám theo **khoảng phổ biến** đối thủ đã đo ở BƯỚC 3C
+   (không chạy theo giá trị cao nhất một cách máy móc) - phân bổ số ảnh mục tiêu đều cho các
+   H2 theo dàn bài, không dồn hết vào 1-2 mục rồi để H2 khác trống visual.
 3. Dàn ý KHÔNG được rập khuôn 1 khuôn cố định nếu viết nhiều bài liên tiếp trong cùng cụm -
    đổi thứ tự mục/cách mở bài giữa các bài để tránh đọc như 1 công thức (đúng tinh thần mục
    "giọng viết khác robot" ở BƯỚC 6b, áp cả cho cấu trúc toàn bài chứ không chỉ câu văn).
 
 ## BƯỚC B4 - VIẾT BÀI ĐẦY ĐỦ
 
+0. **BẮT BUỘC: dòng ĐẦU TIÊN của content là `<h1>{tiêu đề bài}</h1>`**, khớp `post_title`,
+   TRƯỚC SAPO (thứ tự `H1 -> SAPO -> Tóm tắt nhanh -> mở bài -> H2...` như Chế độ A/`do-dont.md`).
+   `single.php` KHÔNG tự render H1 từ `post_title` - thiếu bước này thì cả trang không còn
+   H1 nào (sự cố thật 2026-08-10: bài `hieu-lam-booking-bao-chi` + `booking-bao-tinh` viết
+   qua Chế độ B, đăng thẳng `status:publish`, thiếu H1 hoàn toàn vì BƯỚC B6 lúc đó chưa có
+   dòng verify H1 tường minh - đã bổ sung ở BƯỚC B6.1 dưới). Trước khi đăng
+   (BƯỚC B5), tự kiểm `grep -c '<h1' <file-content>` phải ra đúng `1`.
 1. Áp dụng NGUYÊN VẸN 3 tiêu chí ở BƯỚC 6 (GEO/AEO tự đứng được, giọng khác robot - rà
    bảng "dấu hiệu AI" trước khi chèn, information gain có phần độc nhất) cho TOÀN BỘ bài,
    không chỉ 1-2 câu bổ sung như Chế độ A.
@@ -329,15 +413,21 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
    đúng cụm dịch vụ TRƯỚC khi publish - đăng thẳng nghĩa là không có bước duyệt sau để bắt
    thiếu sót này.
 
-## BƯỚC B6 - VERIFY
+## BƯỚC B6 - VERIFY (KHÔNG được bỏ qua dòng 1 - đây là gate bắt buộc)
 
 1. Verify bài đã publish thành công: `curl -s "https://digicomvn.com/wp-json/wp/v2/posts/<ID>?_fields=id,slug,status,link"`
    - PHẢI thấy `status:"publish"`, không dừng ở "tạo xong" nếu vẫn còn draft.
+   - **Ngay sau đó: `curl -s <link> | grep -o '<h1[^>]*>' | wc -l` PHẢI ra đúng `1`.** Ra `0`
+     -> trang không có H1 nào (xem BƯỚC B4.0) - quay lại chèn H1, update lại bài, chưa được
+     báo xong. Đây là bước bắt buộc chạy thật, không phải kiểm tra qua loa bằng mắt.
 2. Verify visual coverage thật trên live (đủ ảnh/sơ đồ mỗi H2, không vỡ dark mode - theo
    `content-visual-coverage.md` + `ui-mau-sac.md`), verify schema
    (`tools/schema-vocab-check.py`).
 3. Verify từng thực thể/từ khoá cùng cụm đã chèn xuất hiện thật trên live (như BƯỚC 7.3 của
    Chế độ A) - không chỉ tin bản nháp.
+4. **Tự động ép Google index bài mới** - hook `save_post` trong theme
+   (`.claude/rules/gsc-sitemap-submit.md`) tự bắt lúc `create` này, không cần gọi tay. Muốn
+   xác nhận ngay thay vì chờ cron: `./submit-sitemap.sh <url-bai-vua-tao>`.
 
 ## BƯỚC B7 - BÁO CÁO
 
@@ -345,7 +435,10 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 2. Danh sách 10 đối thủ đã research (fetch OK/lỗi).
 3. Dàn bài đã dùng (danh sách H2 + loại visual gán cho từng H2).
 4. Bảng thực thể/từ khoá cùng cụm đã chèn (như BƯỚC 4 của Chế độ A).
-5. Link bài đã LIVE (đã verify status publish) + xác nhận đã lên internal link vào cụm liên
+5. Số từ/số ảnh trung vị + khoảng phổ biến của đối thủ (BƯỚC 3C) và số từ/ảnh thực tế của
+   bài mới vừa viết - đối chiếu 2 con số này để Hiếu biết bài đã đạt "độ dày" chuẩn đối thủ
+   hay chưa.
+6. Link bài đã LIVE (đã verify status publish) + xác nhận đã lên internal link vào cụm liên
    quan nếu phù hợp (không tạo bài mồ côi - theo tinh thần đợt internal-link 2026-08-09).
 
 ## Liên quan
