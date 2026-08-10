@@ -4448,3 +4448,5 @@ bai book-bao-*, can ~57 edit them - CHUA lam, cho Hieu xac nhan vi quy mo lon.
 Da cap nhat .claude/skills/content-pipeline/SKILL.md muc A2d moi: quy tac ty le anchor +
 khong nhoi anchor trung, ap dung NGAY luc dat link (khong doi audit sau).
 | 2026-08-10 | Content pipeline | viet-bai-pr-su-kien đăng mới (post 6206, category booking-bao-pr), widget oquiz, +2 internal link ngược (bai-pr-mau, cach-viet-bai-pr-chuan-bao-chi) |
+| 2026-08-10 | Nâng cấp skill | entity-refresh: thêm BƯỚC 2B (Chế độ A) + nâng B2.3/B3/B7 (Chế độ B) - research title+dạng bài (listicle/how-to/định nghĩa...) đang top TRƯỚC khi viết/bổ sung, không chỉ trích thực thể |
+| 2026-08-10 | Content pipeline | bai-pr-su-kien-o-to đăng mới (post 6212, category booking-bao-pr) - niche PR sự kiện ngành ô tô (ra mắt xe/lái thử/khai trương showroom/triển lãm/roadshow), 8 H2 đều có visual (4 sơ đồ HTML + 1 bảng data-table + 2 ảnh Storyset), widget oquiz, thumbnail, +1 link ngược từ bai-pr-mau (4671), đã submit GSC (OK) |

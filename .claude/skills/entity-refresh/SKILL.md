@@ -58,6 +58,42 @@ không suy diễn "ý này chắc đã có rồi" bằng cảm tính.
    - Trang fetch OK nhưng thân bài rỗng/toàn menu (kiểm bằng: số dòng text sau khi strip
      script/style/nav/footer < ~30 dòng có nghĩa) -> ghi "fetch OK, nội dung rỗng - loại".
 
+## BƯỚC 2B - PHÂN TÍCH TIÊU ĐỀ + DẠNG BÀI GOOGLE ĐANG ƯU TIÊN (bổ sung 2026-08-10)
+
+Trước khi trích thực thể (BƯỚC 3), phải biết Google đang xếp hạng DẠNG NỘI DUNG nào cho từ
+khoá này - bổ sung thực thể vào 1 bài SAI DẠNG vẫn khó tăng hạng, theo đúng bài học của
+`audit-intent-truoc.md` (case `dien-dan-di-backlink`: sửa hình thức cho bài sai dạng là công
+cốc). Entity-refresh trước đây bỏ qua bước này, chỉ lo phủ thực thể - nay bắt buộc chạy trước.
+
+1. Với MỖI trang đối thủ đã fetch OK ở BƯỚC 2, lấy **`<title>` thật** (đọc từ thẻ `<title>`
+   trong HTML đã fetch, không suy đoán từ URL/snippet) và **H1 thật**, phân loại dạng theo
+   `audit-intent-truoc.md`: listicle/danh sách (có số trong tiêu đề: "Top 10", "15 mẫu"...),
+   how-to/hướng dẫn từng bước, định nghĩa/giải thích khái niệm ("X Là Gì"), so sánh, trang
+   thương mại/dịch vụ, case study. Ghi bảng nháp:
+
+   | Domain | Title thật | H1 thật | Dạng |
+   |---|---|---|---|
+
+2. Đếm tần suất dạng: `X/N là listicle, Y/N là how-to...`. Dạng chiếm đa số (≥50% hoặc rõ
+   rệt nhất so các dạng còn lại) là **dạng Google đang ưu tiên** cho từ khoá này.
+3. Trích PATTERN tiêu đề cụ thể đang lặp lại - không dừng ở tên dạng chung chung:
+   - Có số trong tiêu đề không? Nếu có, số phổ biến nhất là bao nhiêu (top 10? top 15?)?
+   - Có năm (2026) không - bao nhiêu % đối thủ có?
+   - Cụm mở đầu/mẫu câu lặp lại: "Top...", "N Cách...", "N Mẫu/Ví dụ...", "X Là Gì?",
+     "Hướng Dẫn...", "So Sánh..."?
+   - Độ dài tiêu đề trung bình (số ký tự) của nhóm đang top.
+4. Đối chiếu với title/H1/dạng của bài digicomvn.com hiện tại (đã lấy ở BƯỚC 1):
+   - **KHỚP dạng** -> đi tiếp bình thường sang BƯỚC 3, chỉ cần bổ sung thực thể như quy trình
+     cũ.
+   - **LỆCH dạng** (vd bài đang là "X Là Gì" dạng định nghĩa nhưng top 10 toàn "Top N X" dạng
+     listicle, hoặc ngược lại) -> đây là vấn đề LỚN HƠN thiếu thực thể. KHÔNG tự đổi
+     title/cấu trúc bài ngầm trong lúc "chỉ refresh bổ sung entity" (đổi dạng bài là quyết
+     định ảnh hưởng URL/SEO title/toàn bộ cấu trúc, vượt phạm vi 1 lần refresh thông thường).
+     Vẫn tiếp tục refresh thực thể theo BƯỚC 3-7 như bình thường (không dừng cả pipeline), NHƯNG
+     phải nêu rõ trong báo cáo (BƯỚC 8): bảng tỷ lệ dạng + pattern tiêu đề đối thủ, kèm đề xuất
+     có nên viết lại toàn bộ theo dạng đang top hay không - để Hiếu quyết định riêng, tách khỏi
+     việc bổ sung thực thể đang làm.
+
 ## BƯỚC 3 - TRÍCH THỰC THỂ MỨC TỪ/CỤM TỪ (khác CHẾ ĐỘ B của entity-extraction-seo ở độ hạt mịn hơn)
 
 Với MỖI trang đối thủ fetch được nội dung thật:
@@ -309,15 +345,18 @@ câu mở editorializing, không thay bằng từ đồng nghĩa sáo rỗng kh�
 ## BƯỚC 8 - BÁO CÁO (bắt buộc đủ, theo `explain-after-done.md`)
 
 1. Danh sách đối thủ đã fetch OK / fetch lỗi (nêu rõ domain nào lỗi, không im lặng bỏ qua).
-2. Bảng checklist thực thể đầy đủ (BƯỚC 4) - không chỉ liệt kê thực thể đã thêm, phải cho
+2. **Bảng dạng bài + tiêu đề đối thủ (BƯỚC 2B)**: title/H1/dạng từng đối thủ, tỷ lệ dạng
+   chiếm đa số, pattern tiêu đề (số/năm/cụm mở đầu lặp lại), kết luận bài hiện tại KHỚP hay
+   LỆCH dạng - nếu lệch, nêu rõ đề xuất riêng (không tự đổi).
+3. Bảng checklist thực thể đầy đủ (BƯỚC 4) - không chỉ liệt kê thực thể đã thêm, phải cho
    thấy cả những thực thể ĐÃ CÓ SẴN (để Hiếu biết đã verify kỹ, không phải qua loa). Ghi rõ
    nguồn từng dòng là "đối thủ" (BƯỚC 3) hay "từ khoá cùng cụm" (BƯỚC 3B).
-3. Bảng định tuyến C1/C2 (BƯỚC 5).
-4. Bảng đo độ dài/số ảnh đối thủ (BƯỚC 3C): số từ + số ảnh từng đối thủ, trung vị/cao nhất/
+4. Bảng định tuyến C1/C2 (BƯỚC 5).
+5. Bảng đo độ dài/số ảnh đối thủ (BƯỚC 3C): số từ + số ảnh từng đối thủ, trung vị/cao nhất/
    khoảng phổ biến, so với số từ/ảnh bài hiện tại, kết luận có bổ sung độ dài/ảnh hay không.
-5. Trích nguyên văn từng câu đã chèn vào bài (như 2 lần chạy tay trước đó Hiếu đã yêu cầu
+6. Trích nguyên văn từng câu đã chèn vào bài (như 2 lần chạy tay trước đó Hiếu đã yêu cầu
    "trích dẫn câu mà thực thể mới được chèn vào").
-6. Link live đã verify.
+7. Link live đã verify.
 
 ## Khi bài không có gap thật
 
@@ -359,8 +398,16 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 "Research SERP + dựng dàn bài TRƯỚC khi viết", KHÔNG dừng ở 2 lượt lấy thực thể:
 1. Đọc **top 10 Google** (không phải top 7) cho từ khoá chính + các biến thể sát intent.
 2. Đọc hết **Google Suggest** + "Mọi người cũng hỏi" (PAA) + tìm kiếm liên quan cuối trang.
-3. Từ top 10, phân loại dạng nội dung đang xếp hạng (listicle/how-to/định nghĩa/thương mại
-   - theo `audit-intent-truoc.md`) để chắc chắn viết ĐÚNG DẠNG đối thủ đang được xếp hạng.
+3. **Phân tích tiêu đề + dạng bài đang top (bắt buộc, dùng nguyên BƯỚC 2B của Chế độ A - đọc
+   lại nếu cần chi tiết)**: với mỗi kết quả top 10, lấy `<title>` thật + H1 thật, phân loại
+   dạng theo `audit-intent-truoc.md` (listicle/how-to/định nghĩa/so sánh/thương mại/case
+   study), lập bảng `URL | title | H1 | dạng`. Đếm tỷ lệ dạng chiếm đa số, trích PATTERN
+   tiêu đề cụ thể: có số không (số phổ biến nhất là bao nhiêu, vd "Top 10", "15 cách"), có
+   năm không, cụm mở đầu lặp lại ("Top...", "N Cách...", "X Là Gì?", "Hướng Dẫn...", "So
+   Sánh..."), độ dài tiêu đề trung bình. Đây KHÔNG phải bước tham khảo - kết quả này là ĐẦU
+   VÀO BẮT BUỘC cho tiêu đề + cấu trúc H2 ở BƯỚC B3 (vd top 10 đa số là listicle "Top N X" ->
+   bài mới cũng phải đặt tiêu đề có số + cấu trúc H2 dạng liệt kê từng mục, không viết tuyến
+   tính như 1 bài định nghĩa).
 4. Thực hiện lại BƯỚC 2/3/3B/3C (research thực thể mức từ + từ khoá cùng cụm + đo độ dài/số
    ảnh đối thủ) trên đúng bộ URL top 10 này - không cần research riêng 2 lần. Vì chưa có bài
    hiện tại để so sánh, BƯỚC 3C chỉ lấy trung vị/khoảng phổ biến số từ + số ảnh của đối thủ
@@ -368,6 +415,13 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 
 ## BƯỚC B3 - DÀN BÀI (bắt buộc trước khi viết, theo `do-dont.md`)
 
+0. **Tiêu đề + cấu trúc H2 chính PHẢI khớp dạng đa số đã xác định ở BƯỚC B2.3** - đây là ưu
+   tiên hàng đầu, đứng trước cả việc gán visual hay đủ thực thể. Ví dụ: đối thủ đa số là
+   listicle "Top N X" -> tiêu đề bài mới cũng ở dạng liệt kê có số, H2 là từng mục trong danh
+   sách (không viết tuyến tính kiểu định nghĩa/giải thích khái niệm); đối thủ đa số là how-to
+   -> tiêu đề dạng "Cách..."/"Hướng dẫn...", H2 là các bước tuần tự. Số trong tiêu đề (nếu có)
+   lấy theo số phổ biến nhất đã đếm được, không tự chọn số tuỳ ý. Sai dạng thì dù đủ thực thể/
+   độ dài cũng khó cạnh tranh với nhóm đang top - đây chính là lý do BƯỚC B2.3 tồn tại.
 1. Dàn bài phải: đủ như top 10 (không thiếu khía cạnh đối thủ đã có), có phần ĐỘC NHẤT
    (theo tiêu chí (c) information gain ở BƯỚC 6), trả lời trực diện ngay đầu mỗi mục.
 2. Gán loại visual cho MỖI H2 ngay từ bước dàn bài (ảnh Storyset/ảnh thật, sơ đồ HTML, bảng
@@ -433,6 +487,9 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 
 1. Chủ đề, từ khoá chính, dạng nội dung đã xác định (theo BƯỚC B2.3).
 2. Danh sách 10 đối thủ đã research (fetch OK/lỗi).
+2b. **Bảng tiêu đề + dạng bài đối thủ (BƯỚC B2.3)**: title/H1/dạng từng đối thủ, tỷ lệ dạng
+   chiếm đa số, pattern tiêu đề (số/năm/cụm mở đầu), và tiêu đề + dạng đã CHỌN cho bài mới -
+   đối chiếu rõ đã khớp dạng đa số hay có lý do chủ động lệch (nêu lý do nếu có).
 3. Dàn bài đã dùng (danh sách H2 + loại visual gán cho từng H2).
 4. Bảng thực thể/từ khoá cùng cụm đã chèn (như BƯỚC 4 của Chế độ A).
 5. Số từ/số ảnh trung vị + khoảng phổ biến của đối thủ (BƯỚC 3C) và số từ/ảnh thực tế của
