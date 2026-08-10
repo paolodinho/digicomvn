@@ -2,18 +2,27 @@
 name: entity-refresh
 description: >
   Research thực thể (entity) CHI TIẾT ở mức từ/cụm từ (không phải ý chung chung) từ đối
-  thủ đang top Google cho 1 bài digicomvn.com, đối chiếu bài hiện có, tự bổ sung thực thể
-  còn thiếu và đăng thẳng lên live. Input: 1 URL bài trên digicomvn.com (+ từ khoá tuỳ
-  chọn). Trigger: "entity-refresh <url>", "research thực thể bài <url> rồi bổ sung",
-  "chạy entity refresh cho <url>".
+  thủ đang top Google, đối chiếu, tự viết và đăng thẳng lên live. 2 chế độ: CHẾ ĐỘ A
+  refresh bài digicomvn.com đã có sẵn (input: URL bài); CHẾ ĐỘ B viết bài MỚI hoàn toàn
+  cho 1 chủ đề/từ khoá chưa có bài (input: tên chủ đề). Trigger CHẾ ĐỘ A: "entity-refresh
+  <url>", "research thực thể bài <url> rồi bổ sung". Trigger CHẾ ĐỘ B: "entity-refresh
+  viết bài mới <chủ đề>", "dùng entity refresh viết <chủ đề>".
 ---
 
 # Entity Refresh - digicomvn.com
 
-Quy trình 1 lệnh: dán URL bài -> research đối thủ -> trích thực thể MỨC TỪ/CỤM TỪ ->
-đối chiếu bài -> tự viết bổ sung -> đăng live -> báo cáo. Dựa trên phương pháp luận của
-skill global `entity-extraction-seo` (đọc file đó nếu cần nhắc lại 6 nhóm thực thể) nhưng
-đóng gói thành pipeline chạy thẳng, không dừng lại ở báo cáo.
+Quy trình 1 lệnh: research đối thủ -> trích thực thể MỨC TỪ/CỤM TỪ -> đối chiếu -> tự viết
+-> đăng live -> báo cáo. Dựa trên phương pháp luận của skill global `entity-extraction-seo`
+(đọc file đó nếu cần nhắc lại 6 nhóm thực thể) nhưng đóng gói thành pipeline chạy thẳng,
+không dừng lại ở báo cáo. Có 2 chế độ, dùng chung BƯỚC 2/3/3B (research + trích thực thể)
+và bộ 3 tiêu chí chất lượng ở BƯỚC 6 - chỉ khác ở đầu vào và nơi đăng:
+
+| | CHẾ ĐỘ A - Refresh bài có sẵn | CHẾ ĐỘ B - Viết bài mới |
+|---|---|---|
+| Input | URL bài digicomvn.com đã tồn tại | Tên chủ đề/từ khoá CHƯA có bài nào |
+| Research | 2 lượt WebSearch lấy thực thể (BƯỚC 2) | Research SERP ĐẦY ĐỦ top 10 + Suggest/PAA (BƯỚC B2, sâu hơn) |
+| Sản phẩm | Bổ sung câu/đoạn vào bài cũ | Viết bài hoàn chỉnh từ đầu, có dàn bài |
+| Đăng | `update` post ID có sẵn | `create` post mới, mặc định **draft** chờ duyệt |
 
 **Khác biệt bắt buộc so với review chung chung**: không chấm "gap ở mức khái niệm" (kiểu
 "đối thủ có nói về minh bạch giá") mà phải chỉ ra **đúng TỪ/CỤM TỪ NGẮN** đối thủ dùng
@@ -21,7 +30,7 @@ skill global `entity-extraction-seo` (đọc file đó nếu cần nhắc lại 
 verify bằng cách grep/tìm trực tiếp trong bài mình xem từ đó CÓ XUẤT HIỆN CHỮ hay không -
 không suy diễn "ý này chắc đã có rồi" bằng cảm tính.
 
-## Input
+## Input CHẾ ĐỘ A (refresh)
 
 - **Bắt buộc**: URL bài trên digicomvn.com (Hiếu paste).
 - **Tuỳ chọn**: từ khoá research (nếu không đưa, tự suy từ title/H1 bài, bỏ "digicomvn",
@@ -245,10 +254,104 @@ Nếu sau BƯỚC 4 không có thực thể nào verify là THIẾU thật sự 
 nhiêu đối thủ, bảng đối chiếu đầy đủ, kết luận bài đã phủ đủ - dừng ở báo cáo, không sửa
 bài (`quality-bar.md` - chống scope creep/filler).
 
+---
+
+# CHẾ ĐỘ B - VIẾT BÀI MỚI (bổ sung 2026-08-10)
+
+Dùng khi chủ đề/từ khoá CHƯA có bài nào trên digicomvn.com (khác Chế độ A - không có bài
+gốc để đối chiếu). Tái dùng nguyên BƯỚC 2 (research SERP lấy thực thể), BƯỚC 3 (trích thực
+thể mức từ), BƯỚC 3B (từ khoá cùng cụm) và bộ 3 tiêu chí chất lượng ở BƯỚC 6 phía trên -
+KHÔNG viết lại các phần đó, chỉ thêm phần research SÂU HƠN (do là bài mới, không phải vá 1
+đoạn) và phần tạo bài/đăng mới thay vì update.
+
+**Trả lời câu hỏi "viết nhiều bài cùng lúc có kém chất lượng hơn viết từng bài không":
+KHÔNG kém hơn nếu mỗi bài vẫn đi đủ các bước B1-B7 riêng (research riêng, dàn bài riêng, QA
+riêng) - rủi ro chỉ xảy ra khi dùng chung 1 vòng research/dàn bài cho nhiều bài hoặc bỏ bớt
+bước để chạy nhanh. Batch nhỏ (2-3 bài) không cần cảnh báo gì thêm; batch >=5 bài cùng chủ
+đề/cụm phải áp `publish-volume-warning.md` (global) trước khi viết hàng loạt.**
+
+## BƯỚC B1 - INPUT + XÁC ĐỊNH PHẠM VI
+
+1. Xác định: tên chủ đề, từ khoá chính dự kiến, cụm dịch vụ bài thuộc về (booking báo PR /
+   guest post / textlink / backlink / toplist...), slug dự kiến (không dấu, có gạch ngang).
+2. Verify CHƯA có bài nào trùng chủ đề: `curl -s "https://digicomvn.com/wp-json/wp/v2/search?search=<tu-khoa>&_fields=id,title,url"`
+   - Có bài trùng/gần trùng -> DỪNG, báo Hiếu, hỏi có phải ý là refresh (Chế độ A) bài đó
+     không thay vì viết bài mới (tránh trùng lặp nội dung/cannibalization).
+3. Xác nhận đúng phạm vi dịch vụ thật của Digicom (`dich-vu.md`) - từ chối viết nếu chủ đề
+   thuộc dịch vụ Digicom không bán (vd bố cáo doanh nghiệp, quảng cáo banner/video, booking
+   gov/edu - theo `khong-ban-gov-edu.md`).
+
+## BƯỚC B2 - RESEARCH SERP ĐẦY ĐỦ (sâu hơn BƯỚC 2 của Chế độ A)
+
+Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải research đủ theo `do-dont.md` mục
+"Research SERP + dựng dàn bài TRƯỚC khi viết", KHÔNG dừng ở 2 lượt lấy thực thể:
+1. Đọc **top 10 Google** (không phải top 7) cho từ khoá chính + các biến thể sát intent.
+2. Đọc hết **Google Suggest** + "Mọi người cũng hỏi" (PAA) + tìm kiếm liên quan cuối trang.
+3. Từ top 10, phân loại dạng nội dung đang xếp hạng (listicle/how-to/định nghĩa/thương mại
+   - theo `audit-intent-truoc.md`) để chắc chắn viết ĐÚNG DẠNG đối thủ đang được xếp hạng.
+4. Thực hiện lại BƯỚC 2/3/3B (research thực thể mức từ + từ khoá cùng cụm) trên đúng bộ
+   URL top 10 này - không cần research riêng 2 lần.
+
+## BƯỚC B3 - DÀN BÀI (bắt buộc trước khi viết, theo `do-dont.md`)
+
+1. Dàn bài phải: đủ như top 10 (không thiếu khía cạnh đối thủ đã có), có phần ĐỘC NHẤT
+   (theo tiêu chí (c) information gain ở BƯỚC 6), trả lời trực diện ngay đầu mỗi mục.
+2. Gán loại visual cho MỖI H2 ngay từ bước dàn bài (ảnh Storyset/ảnh thật, sơ đồ HTML, bảng
+   dữ liệu, hoặc widget tương tác) - theo `content-visual-coverage.md`, tối thiểu 2 ảnh +
+   mọi H2 có yếu tố trực quan. Tối thiểu 3 sơ đồ HTML cho đoạn phức tạp (`content-diagram-explain.md`).
+3. Dàn ý KHÔNG được rập khuôn 1 khuôn cố định nếu viết nhiều bài liên tiếp trong cùng cụm -
+   đổi thứ tự mục/cách mở bài giữa các bài để tránh đọc như 1 công thức (đúng tinh thần mục
+   "giọng viết khác robot" ở BƯỚC 6b, áp cả cho cấu trúc toàn bài chứ không chỉ câu văn).
+
+## BƯỚC B4 - VIẾT BÀI ĐẦY ĐỦ
+
+1. Áp dụng NGUYÊN VẸN 3 tiêu chí ở BƯỚC 6 (GEO/AEO tự đứng được, giọng khác robot - rà
+   bảng "dấu hiệu AI" trước khi chèn, information gain có phần độc nhất) cho TOÀN BỘ bài,
+   không chỉ 1-2 câu bổ sung như Chế độ A.
+2. Thực thể/số liệu/nhân vật nổi tiếng trích dẫn -> gắn nguồn + `rel="nofollow"` theo
+   `external-link-eeat.md`. Không bịa số liệu (`content-professional.md`).
+3. Văn phong biên tập chuyên nghiệp, không "bỗ bã" (`content-professional.md`), tiếng Việt
+   có dấu đầy đủ, tránh AI-slop hình ảnh (`ui-anti-slop.md`, `image-sourcing.md` - phong
+   cách Storyset cho ảnh minh hoạ khái niệm).
+4. Chuẩn bị kèm: tiêu đề SEO + mô tả SEO (field `dgc_seo_title`/`dgc_seo_desc`, xem
+   `seo-meta-og.md`), gán đúng category `dgc_nhom`/category 24 nếu thuộc booking báo.
+
+## BƯỚC B5 - TẠO BÀI MỚI + ĐĂNG (khác BƯỚC 7 - không có "before" vì bài chưa tồn tại)
+
+1. Tạo post mới qua `tools/wp-rest-publish.py` (dùng action `create` nếu script hỗ trợ, hoặc
+   POST trực tiếp `wp/v2/posts` với Basic Auth) - **mặc định `status: draft`**, KHÔNG tự
+   publish thẳng trừ khi Hiếu nói rõ "đăng luôn/publish thẳng".
+2. Log 1 dòng vào manifest ngày hiện tại (`routine-backup.md`) với loại sửa = "created" (bài
+   mới không có bản gốc để backup, chỉ cần ghi nhận đã tạo).
+3. Nếu Hiếu duyệt và yêu cầu publish -> `wp-rest-publish.py update --id <ID>` đổi status.
+
+## BƯỚC B6 - VERIFY
+
+1. Verify bài tạo thành công: `curl -s "https://digicomvn.com/wp-json/wp/v2/posts/<ID>?_fields=id,slug,status,link"`.
+2. Nếu đã publish: verify visual coverage thật trên live (đủ ảnh/sơ đồ mỗi H2, không vỡ dark
+   mode - theo `content-visual-coverage.md` + `ui-mau-sac.md`), verify schema
+   (`tools/schema-vocab-check.py` nếu đăng thật).
+
+## BƯỚC B7 - BÁO CÁO
+
+1. Chủ đề, từ khoá chính, dạng nội dung đã xác định (theo BƯỚC B2.3).
+2. Danh sách 10 đối thủ đã research (fetch OK/lỗi).
+3. Dàn bài đã dùng (danh sách H2 + loại visual gán cho từng H2).
+4. Bảng thực thể/từ khoá cùng cụm đã chèn (như BƯỚC 4 của Chế độ A).
+5. Link bài (draft hoặc live) + trạng thái hiện tại (draft/publish), hỏi Hiếu duyệt nếu còn draft.
+
 ## Liên quan
 - `entity-extraction-seo` (skill global) - phương pháp luận gốc, 6 nhóm thực thể, BƯỚC C
   định tuyến C1/C2. Skill này là bản đóng gói chạy thẳng riêng cho digicomvn.com.
+- `content-pipeline` (skill project) - pipeline viết bài mới đầy đủ hơn (nếu cần các bước
+  ngoài phạm vi entity/từ khoá, vd nghiên cứu ảnh/case study sâu) - Chế độ B ở trên là bản
+  rút gọn tái dùng hạ tầng research của entity-refresh, dùng khi trọng tâm là phủ đủ
+  thực thể/từ khoá cạnh tranh; việc lớn/phức tạp hơn vẫn nên qua `content-pipeline`.
+- `do-dont.md` mục "Research SERP + dựng dàn bài" - quy trình gốc BƯỚC B2/B3 tham chiếu.
+- `audit-intent-truoc.md` - xác định đúng dạng nội dung trước khi viết.
+- `content-visual-coverage.md`, `content-diagram-explain.md` - yêu cầu visual mỗi bài.
+- `publish-volume-warning.md` (global) - cảnh báo khi viết hàng loạt (>=5 bài/cụm).
 - `khong-link-doi-thu.md`, `content-professional.md`, `external-link-eeat.md` (rules
   project + global) - ràng buộc bắt buộc khi viết/link.
 - `routine-backup.md` (global) - backup trước khi ghi đè.
-- `tools/wp-rest-publish.py` - script đăng bài dùng ở BƯỚC 7.
+- `tools/wp-rest-publish.py` - script đăng bài dùng ở BƯỚC 7 / BƯỚC B5.
