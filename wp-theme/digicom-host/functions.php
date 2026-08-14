@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '2.7.5' );
+define( 'DGC_VER', '2.7.6' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -570,6 +570,20 @@ add_action( 'template_redirect', function () {
 		exit;
 	}
 }, 1 );
+
+/* ---------------------------------------------------------------------------
+ * TEMPLATE RIENG /booking-bao-pr/ (2026-08-14): trang nay dung ban thiet ke
+ * rieng (tpl-booking-bao-pr.php) thay vi tpl-service.php dung chung 7 trang
+ * dich vu con lai - ep qua template_include (khong phu thuoc template dang
+ * gan trong DB cua page nay) de chac chan co hieu luc ngay khi deploy.
+ * ------------------------------------------------------------------------- */
+add_filter( 'template_include', function ( $template ) {
+	if ( is_page( 'booking-bao-pr' ) ) {
+		$custom = get_template_directory() . '/tpl-booking-bao-pr.php';
+		if ( file_exists( $custom ) ) return $custom;
+	}
+	return $template;
+} );
 
 /* ---------------------------------------------------------------------------
  * 301 URL danh muc cu "/danh-muc/..." (category base tu theme/site cu, khong

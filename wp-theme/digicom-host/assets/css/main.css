@@ -2879,3 +2879,27 @@ body.single-post .brand-watermark{display:none}
   .grid-pager{padding:10px 10px;gap:8px}
   .pg-btn{min-width:28px;height:28px;font-size:12px}
 }
+
+/* ==========================================================================
+   Trang rieng /booking-bao-pr/ (tpl-booking-bao-pr.php, 2026-08-14)
+   ========================================================================== */
+/* Goi y chon bao theo muc tieu - card sang, icon badge nen tint xen ke (theo
+   ui-mau-sac.md: khong nen den, khong bo hop nang). */
+.bk-goals{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bk-goal{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:22px}
+.bk-goal-ic{width:42px;height:42px;border-radius:12px;display:inline-flex;align-items:center;
+  justify-content:center;margin-bottom:14px}
+.bk-goal-ic svg{width:20px;height:20px}
+.bk-goal-ic-a{background:rgba(71,97,255,.1);color:var(--action)}
+.bk-goal-ic-b{background:rgba(14,140,127,.1);color:var(--teal)}
+.bk-goal h3{font-size:16px;margin:0 0 8px}
+.bk-goal p{font-size:13.5px;line-height:1.6;color:var(--ink-soft);margin:0 0 10px}
+.bk-goal .bk-goal-hint{font-size:12.5px;color:var(--heading);font-weight:600;
+  padding-top:10px;border-top:1px dashed var(--line-2);margin:0}
+@media(max-width:860px){.bk-goals{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.bk-goals{grid-template-columns:1fr}}
+
+/* Vi sao chon DigicomVN - tai dung khung .promos/.promo (dai lien, icon tint) da co san,
+   chi doi ten section rieng de khong dinh JS/CSS rieng cua khoi uu dai (promo-band). */
+.bk-reasons-sec .promos{box-shadow:none}
