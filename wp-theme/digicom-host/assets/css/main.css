@@ -2903,3 +2903,25 @@ body.single-post .brand-watermark{display:none}
 /* Vi sao chon DigicomVN - tai dung khung .promos/.promo (dai lien, icon tint) da co san,
    chi doi ten section rieng de khong dinh JS/CSS rieng cua khoi uu dai (promo-band). */
 .bk-reasons-sec .promos{box-shadow:none}
+
+/* Hero co anh dai dien (2026-08-14): mac dinh (chua co Anh dai dien trong WP Admin) giu
+   nguyen bo cuc can giua nhu .page-hero goc - khong vo layout khi Hieu chua upload anh.
+   Co Anh dai dien -> chuyen 2 cot, anh that (Storyset/anh chup - theo image-sourcing.md,
+   Hieu tu upload qua WP Admin > Anh dai dien) ben phai. */
+.bk-hero-grid{max-width:840px;margin:0 auto}
+.bk-hero.has-media .bk-hero-grid{max-width:1080px;display:grid;grid-template-columns:1.15fr .85fr;
+  gap:40px;align-items:center;text-align:left}
+.bk-hero.has-media h1,.bk-hero.has-media .lead{margin-left:0;margin-right:0}
+.bk-hero.has-media .hero-actions{justify-content:flex-start}
+.bk-hero-media img{width:100%;height:auto;border-radius:var(--r-md);box-shadow:var(--sh-mid);display:block}
+.bk-hero-trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;padding-top:16px;
+  border-top:1px solid var(--line)}
+.bk-hero:not(.has-media) .bk-hero-trust{justify-content:center}
+.bk-trust-item{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-soft)}
+.bk-trust-item svg{width:16px;height:16px;color:var(--teal);flex:none}
+.bk-trust-item b{font-family:var(--font-display);color:var(--heading);font-size:14.5px}
+@media(max-width:860px){
+  .bk-hero.has-media .bk-hero-grid{grid-template-columns:1fr;text-align:center;gap:26px}
+  .bk-hero.has-media .bk-hero-trust{justify-content:center}
+  .bk-hero-media{order:2}
+}

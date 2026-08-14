@@ -18,19 +18,40 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 $svc_name = get_the_title();
 $nhom     = dgc_current_nhom();
+
+/* Trust-row hero (2026-08-14): so lieu THAT (dem tu CPT dgc_gia, khong bia), dua len ngay
+   hero de tang tin cay ngay man hinh dau - tang ty le chuyen doi. Tinh som o day vi
+   svc-intro.php chi tinh o pham vi rieng no. */
+$dgc_hero_items = $nhom ? dgc_get_gia( $nhom['slug'] ) : array();
+$dgc_hero_names = array();
+foreach ( $dgc_hero_items as $dgc_hero_it ) { $dgc_hero_names[ trim( $dgc_hero_it->post_title ) ] = 1; }
+$dgc_hero_outlet_count = count( $dgc_hero_names );
+$dgc_hero_price_count  = count( $dgc_hero_items );
+$dgc_hero_has_thumb    = has_post_thumbnail();
 ?>
 <div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
 
-<section class="page-hero">
-	<div class="wrap" style="max-width:840px">
-		<span class="eyebrow">Dịch vụ</span>
-		<h1><?php echo esc_html( $svc_name ); ?></h1>
-		<?php if ( has_excerpt() ) : ?><p class="lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
-		<div class="hero-actions">
-			<a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a>
-			<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+<section class="page-hero bk-hero<?php echo $dgc_hero_has_thumb ? ' has-media' : ''; ?>">
+	<div class="wrap bk-hero-grid">
+		<div class="bk-hero-copy">
+			<span class="eyebrow">Dịch vụ</span>
+			<h1><?php echo esc_html( $svc_name ); ?></h1>
+			<?php if ( has_excerpt() ) : ?><p class="lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
+			<div class="hero-actions">
+				<a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a>
+				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+			</div>
+			<p style="margin-top:14px"><a href="#lien-he" style="font-size:13.5px;font-weight:600;color:var(--action);text-decoration:underline">Hoặc để lại thông tin, DigicomVN tư vấn & báo giá ngay →</a></p>
+			<?php if ( $dgc_hero_outlet_count > 0 ) : ?>
+			<div class="bk-hero-trust">
+				<span class="bk-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b><?php echo esc_html( $dgc_hero_outlet_count ); ?>+</b>&nbsp;đầu báo hợp tác</span>
+				<span class="bk-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><b><?php echo esc_html( $dgc_hero_price_count ); ?></b>&nbsp;vị trí giá công khai</span>
+			</div>
+			<?php endif; ?>
 		</div>
-		<p style="margin-top:14px"><a href="#lien-he" style="font-size:13.5px;font-weight:600;color:var(--action);text-decoration:underline">Hoặc để lại thông tin, DigicomVN tư vấn & báo giá ngay →</a></p>
+		<?php if ( $dgc_hero_has_thumb ) : ?>
+		<div class="bk-hero-media"><?php the_post_thumbnail( 'large', array( 'loading' => 'eager', 'alt' => $svc_name ) ); ?></div>
+		<?php endif; ?>
 	</div>
 </section>
 
