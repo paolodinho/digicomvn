@@ -116,6 +116,8 @@ function dgc_defaults() {
 		'ai_suggestions' => '',
 		'ai_kb'         => '',
 		'gsc_submit_on' => '0',
+		'leads_sheet_on' => '0',
+		'leads_sheet_id' => '',
 	);
 }
 
@@ -276,6 +278,15 @@ function dgc_settings_page() {
 			<table class="form-table">
 				<?php
 				dgc_field( 'gsc_submit_on', 'Bat auto-submit sitemap (1 = bat, 0 = tat)', 'Dat 1 de bat. Chi hoat dong khi da co du 2 constant + file key tren server.' );
+				?>
+			</table>
+
+			<h2>10. Google Sheet - luu khach dang ky</h2>
+			<p class="description" style="max-width:760px">Moi khach dien form lien he/bao gia se duoc ghi them 1 dong vao Google Sheet nay (song song voi email + luu CSDL). Dung chung service account voi muc 9 (Search Console) - <strong>khong can them file key moi</strong>, chi can Sheet duoc share quyen Editor cho dung email service account trong file key. Tao Sheet moi, sau do dan Sheet ID (doan ky tu giua <code>/d/</code> va <code>/edit</code> trong URL) vao o duoi.</p>
+			<table class="form-table">
+				<?php
+				dgc_field( 'leads_sheet_on', 'Bat day khach sang Google Sheet (1 = bat, 0 = tat)', 'Dat 1 de bat. Chi hoat dong khi da co Sheet ID + Sheet da share cho service account.' );
+				dgc_field( 'leads_sheet_id', 'Sheet ID', 'VD: 1AbCDefGhIjklmnOPqrsTUVwxyz1234567890abcdEFG' );
 				?>
 			</table>
 

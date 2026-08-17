@@ -48,6 +48,8 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/seo-meta-og.md` | **Meta description + Open Graph + canonical do theme tu sinh (inc/seo-meta.php), khong dung plugin SEO** |
 | `.claude/rules/bao-gia-khach-hang.md` | **Bao gia khach: ky cang doi chieu gia von + luon co chiet khau hap dan** |
 | `.claude/rules/gsc-sitemap-submit.md` | Auto-submit sitemap len Google Search Console khi co bai moi |
+| `.claude/rules/mobile-responsive-content.md` | **Bai viet khong duoc tran/vo tren mobile - QA bang tools/mobile-overflow-check.py** |
+| `.claude/rules/leads-sheet-sync.md` | Khach dang ky form tu dong vao Google Sheet (dung chung service account GSC) |
 
 ## 7. File quan trong
 `PLAN.md`, `LOG.md`, `DECISIONS.md`, `.claude/context/brand-info.md` (luu y: mo ta site
@@ -56,6 +58,8 @@ Quy trinh content tu dong: `.claude/skills/content-pipeline/SKILL.md` (topic -> 
 Anh dang chup man hinh (dashboard/bao cao): `.claude/skills/visual-screenshot/SKILL.md`.
 Research thuc the doi thu + tu bo sung + dang live 1 lenh: `.claude/skills/entity-refresh/SKILL.md`
 (dan URL bai co san la chay).
+Audit internal link toan site (pillar/cluster attractor, money page mo coi, anchor
+over-optimization, link chet): `.claude/skills/internal-link-audit/SKILL.md`.
 
 ## 8. Quy trinh chuan
 1. Doc PLAN.md -> task tiep theo

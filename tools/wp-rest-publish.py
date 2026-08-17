@@ -80,13 +80,13 @@ def cmd_update(args):
         payload["status"] = args.status
     if args.category_id:
         payload["categories"] = [int(x) for x in args.category_id.split(",")]
-    res = call("POST", f"wp/v2/posts/{args.id}", site, user, pw, data=payload)
+    res = call("POST", f"wp/v2/{args.post_type}/{args.id}", site, user, pw, data=payload)
     print(json.dumps({"id": res["id"], "link": res["link"], "status": res["status"]}, ensure_ascii=False))
 
 
 def cmd_get_raw(args):
     site, user, pw = load_cred()
-    res = call("GET", f"wp/v2/posts/{args.id}?context=edit", site, user, pw)
+    res = call("GET", f"wp/v2/{args.post_type}/{args.id}?context=edit", site, user, pw)
     out = {
         "id": res["id"],
         "title": res["title"]["raw"],
@@ -140,10 +140,12 @@ def main():
     u.add_argument("--title")
     u.add_argument("--category-id")
     u.add_argument("--status")
+    u.add_argument("--post-type", default="posts", help="posts|pages|dgc_case")
     u.set_defaults(func=cmd_update)
 
     g = sub.add_parser("get-raw")
     g.add_argument("--id", required=True, type=int)
+    g.add_argument("--post-type", default="posts", help="posts|pages|dgc_case")
     g.set_defaults(func=cmd_get_raw)
 
     t = sub.add_parser("set-thumbnail")

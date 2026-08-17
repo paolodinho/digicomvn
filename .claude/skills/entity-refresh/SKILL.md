@@ -94,6 +94,38 @@ cốc). Entity-refresh trước đây bỏ qua bước này, chỉ lo phủ th�
      có nên viết lại toàn bộ theo dạng đang top hay không - để Hiếu quyết định riêng, tách khỏi
      việc bổ sung thực thể đang làm.
 
+## BƯỚC 2C - RESEARCH NGUỒN QUỐC TẾ (bổ sung 2026-08-11)
+
+Toàn bộ BƯỚC 2 chỉ research đối thủ tiếng Việt -> dễ bị bó hẹp trong những ý mà thị trường
+VN đã lặp đi lặp lại lẫn nhau, bỏ lỡ thông tin/góc nhìn mới mà nguồn quốc tế (thường đi trước
+VN) đã có. Hiếu chốt 2026-08-11: MỌI bài (refresh lẫn viết mới) phải research thêm ít nhất
+1 lượt bằng nguồn nước ngoài trước khi chốt dàn ý/checklist bổ sung.
+
+1. Dịch từ khoá chính sang tiếng Anh (hoặc giữ nguyên nếu đã là thuật ngữ quốc tế như PAS,
+   AIDA, E-E-A-T), search bằng WebSearch KHÔNG giới hạn domain (mặc định trả kết quả toàn
+   cầu, ưu tiên đọc các domain .com/.org quốc tế xuất hiện tự nhiên trong kết quả).
+2. Ưu tiên đọc nguồn THUỘC LOẠI UY TÍN: cơ quan/tổ chức gốc phát minh khái niệm (Search Engine
+   Journal, Search Engine Land, Google Search Central, Moz, Ahrefs, HubSpot, Copyblogger,
+   Nielsen Norman Group, Princeton/CMU/đại học có paper gốc...), KHÔNG lấy nguồn spam/affiliate
+   thấp chất lượng dù xếp hạng cao.
+3. Mục tiêu tìm **THÔNG TIN THẬT SỰ MỚI** mà 100% nguồn tiếng Việt đã research (BƯỚC 2) chưa
+   có - không phải diễn đạt lại ý đã có bằng tiếng Anh. Ví dụ loại thông tin đáng tìm:
+   - Nghiên cứu/số liệu gốc (khảo sát, paper học thuật, báo cáo ngành) mà nguồn VN không trích
+     dẫn hoặc trích sai/thiếu nguồn.
+   - Ví dụ/case study thực tế từ thị trường quốc tế (thương hiệu lớn đã làm, có thể kiểm
+     chứng qua nguồn báo chí/công bố chính thức).
+   - Góc nhìn/tiêu chí mới nguồn quốc tế đã cập nhật nhưng bài tiếng Việt còn viết theo thông
+     tin cũ (đặc biệt các chủ đề SEO/AI Search - nguồn quốc tế luôn đi trước VN vài tháng).
+   - Định nghĩa gốc/nguồn gốc thuật ngữ chính xác hơn (nhiều bài VN dịch/diễn giải sai ý gốc).
+4. KHÔNG bịa hoặc suy diễn số liệu từ nguồn quốc tế - mọi con số/claim phải đọc được trực
+   tiếp trong bài đã fetch (`content-professional.md`), trích dẫn kèm tên nguồn cụ thể.
+5. Không tìm được thông tin mới thực sự đáng giá (nguồn quốc tế chỉ lặp lại đúng ý nguồn VN
+   đã có) -> KHÔNG cố nhét thêm cho có, ghi rõ trong báo cáo "đã research quốc tế, không có
+   thông tin mới đáng bổ sung" - đây là kết quả hợp lệ, không phải làm thiếu việc.
+6. Thông tin mới tìm được -> đưa vào checklist chung ở BƯỚC 4 (coi như 1 dạng "thực thể/Ý
+   thiếu" cần định tuyến C1/C2 ở BƯỚC 5), viết bổ sung theo đúng 3 tiêu chí chất lượng ở
+   BƯỚC 6, và transparent nguồn gốc trong báo cáo BƯỚC 8 (ghi rõ lấy từ nguồn quốc tế nào).
+
 ## BƯỚC 3 - TRÍCH THỰC THỂ MỨC TỪ/CỤM TỪ (khác CHẾ ĐỘ B của entity-extraction-seo ở độ hạt mịn hơn)
 
 Với MỖI trang đối thủ fetch được nội dung thật:
@@ -136,6 +168,39 @@ biến thể này dù nội dung đã đúng ý, vẫn là tối ưu chưa hết
    chi phí thuộc nhóm dễ tiếp cận trong các báo kinh tế" và giá đó thật sự rẻ so mặt bằng ->
    có thể diễn lại tự nhiên hơn thành câu có chứa cụm "giá rẻ"/"chi phí rẻ" ở đúng ngữ cảnh,
    không thêm thành 1 câu rời rạc chỉ để nhét từ khoá.
+
+## BƯỚC 3B-USER - BỘ TỪ KHOÁ LẺ HIẾU DÁN TRỰC TIẾP VÀO CHAT (bổ sung 2026-08-11)
+
+Khác BƯỚC 3B (skill tự tìm biến thể từ file/Google Suggest): đây là trường hợp Hiếu dán thẳng
+1 danh sách từ khoá lẻ/long-tail (thường xuất từ công cụ đo volume, dạng "Google Suggest thô"
+chưa lọc) kèm yêu cầu bổ sung vào ĐÚNG bài vừa refresh. Coi đây là nguồn ưu tiên cao nhất - có
+sẵn, không cần research thêm - nhưng vẫn phải qua đủ các bước lọc dưới đây trước khi chèn,
+KHÔNG chèn nguyên văn từng dòng theo kiểu liệt kê.
+
+1. **Lọc nhiễu trước khi xử lý**: danh sách dạng này thường có lỗi gõ/thiếu dấu ("dđịnh nghĩa",
+   "viết bài pr la gì") và cụm ghép nghĩa mơ hồ do công cụ tự động ghép 2 khái niệm không liên
+   quan (vd "bài pr có chân dung quảng cáo là gì"). Với mỗi dòng: suy ra Ý/intent thật đằng sau
+   (bỏ qua lỗi chính tả), rồi tự hỏi "cụm này có thể viết tự nhiên trong 1 câu tiếng Việt chuẩn
+   không, hay là rác ghép từ?" - loại thẳng loại rác, không cố nhét nguyên văn cho đủ số.
+2. **Verify từng Ý (không phải từng dòng thô) đã có trong bài chưa** bằng grep chuỗi thật trên
+   bản text đã strip (như BƯỚC 4) - nhiều dòng khác nhau trong danh sách có thể cùng chỉ 1 Ý
+   đã có sẵn trong bài (vd 3 biến thể "viết bài pr là gì/la gì/nghĩa là gì" chỉ là 1 gap).
+3. **Phân loại theo đúng sự thật của bài, không ép mọi cụm thành nội dung có sẵn**:
+   - Ý đúng phạm vi bài, đã verify THIẾU thật -> chèn theo đúng 3 tiêu chí chất lượng ở BƯỚC 6
+     (self-contained, giọng khác robot, có thể tự nhiên) + BƯỚC 3B bước 5 (không liệt kê trần
+     trụi, không stuffing).
+   - Ý gần nghĩa nhưng KHÔNG khớp đúng sự thật/phạm vi bài (vd từ khoá gợi ý 1 dạng nội dung PR
+     khác hẳn dạng bài đang nói, như "diễn văn/bài phát biểu" so với "bài PR báo chí") -> KHÔNG
+     ép nó là cùng 1 khái niệm hay bịa thêm 1 "dạng bài PR" mới không có thật. Thay vào đó viết
+     1 câu/FAQ **phân biệt rõ 2 khái niệm** - vừa đáp ứng người tìm kiếm đúng cụm đó, vừa không
+     sai sự thật (`content-professional.md`).
+   - Ý ngữ nghĩa quá mơ hồ/rác sau bước 1 -> bỏ qua, không chèn gì, nêu rõ trong báo cáo là đã
+     loại vì lý do gì (không im lặng bỏ qua).
+4. Đăng lại theo đúng BƯỚC 7, verify từng cụm đã chèn xuất hiện thật trên live (đếm cả biến thể
+   viết hoa/thường, có dấu/không dấu nếu cần).
+5. Trong báo cáo (BƯỚC 8), thêm 1 bảng riêng liệt kê MỌI dòng trong danh sách Hiếu đưa (không
+   chỉ dòng đã chèn) kèm cách xử lý: đã có sẵn / đã chèn (trích câu) / loại vì không đúng sự
+   thật / loại vì rác ngữ nghĩa - để Hiếu thấy đã xử lý hết danh sách, không sót dòng nào.
 
 ## BƯỚC 3C - ĐO ĐỘ DÀI BÀI + SỐ ẢNH ĐỐI THỦ (bổ sung 2026-08-10)
 
@@ -327,6 +392,36 @@ câu mở editorializing, không thay bằng từ đồng nghĩa sáo rỗng kh�
   bài không chỉ là "chép lại đủ ý đối thủ có", tránh trùng lặp thông tin với chính các
   nguồn đã quét.
 
+## BƯỚC 6B - MỤC "TÀI LIỆU THAM KHẢO" CUỐI BÀI (bổ sung 2026-08-11, bắt buộc mọi bài)
+
+Hiếu chốt 2026-08-11: MỌI bài (refresh lẫn viết mới) phải có 1 mục **"Tài liệu tham khảo"**
+ở CUỐI bài (ngay trước hoặc sau "Kết luận"), liệt kê link tới các nguồn liên quan/uy tín đã
+dùng khi viết - không chỉ link rải rác trong thân bài như C2 ở BƯỚC 5.
+
+1. **Nguồn đưa vào mục này**: mọi nguồn THẬT đã đọc/trích dẫn khi viết/refresh bài - gồm cả
+   nguồn tiếng Việt (BƯỚC 2) lẫn nguồn quốc tế (BƯỚC 2C) đã dùng để lấy thông tin/số liệu/
+   định nghĩa. KHÔNG liệt kê nguồn chưa từng đọc thật hoặc chỉ đoán tên cho có
+   (`content-professional.md`).
+2. **Định dạng**: danh sách `<ul>` cuối bài, mỗi dòng là 1 link `<a>` kèm tên nguồn + mô tả
+   ngắn (1 câu) nội dung nguồn đó nói gì/dùng để làm gì trong bài. Ví dụ:
+   ```html
+   <li><a href="https://searchengineland.com/..." target="_blank" rel="nofollow noopener">Search Engine Land</a> - phân tích gốc về thay đổi thuật toán AI Overview, dùng làm căn cứ cho mục "Vì sao...".</li>
+   ```
+3. **`rel="nofollow noopener"`** cho MỌI link trong mục này (khác link C2 trong thân bài có
+   thể dofollow nếu là nguồn luật/gov theo `external-link-eeat.md`) - đây là danh sách tham
+   khảo tổng hợp, không phải trích dẫn có chủ đích 1 khái niệm cụ thể, nên mặc định nofollow
+   trừ khi nguồn đó đã dofollow ở đâu đó trong thân bài rồi (không lặp lại 2 kiểu rel khác
+   nhau cho cùng 1 URL trong cùng 1 bài).
+4. **Số lượng**: tối thiểu 3 nguồn cho bài viết mới (Chế độ B), tối thiểu 2 nguồn khi refresh
+   bài cũ (Chế độ A) nếu bài gốc chưa có mục này. Không giới hạn tối đa, nhưng chỉ liệt kê
+   nguồn THỰC SỰ đã dùng - không nhồi thêm cho đủ số.
+5. **Không trùng** `khong-link-doi-thu.md` - không đưa agency/brand đối thủ trực tiếp cùng
+   ngành PR/backlink/booking báo vào mục này dù đã đọc bài của họ khi research SERP (BƯỚC 2);
+   chỉ đưa nguồn kiến thức/dữ liệu trung lập hoặc tổ chức không cạnh tranh trực tiếp.
+6. Bài ĐÃ CÓ mục "Tài liệu tham khảo" từ trước (refresh lần 2 trở đi) -> bổ sung thêm nguồn
+   MỚI phát sinh trong lần refresh này (không tạo mục thứ 2, không xoá nguồn cũ trừ khi phát
+   hiện nguồn đó đã chết/sai - verify HTTP 200 trước khi thêm bất kỳ link nào, theo BƯỚC 2).
+
 ## BƯỚC 7 - BACKUP + ĐĂNG LIVE
 
 1. Backup: `content.raw` GỐC (đã lấy ở BƯỚC 1) -> lưu
@@ -370,10 +465,11 @@ bài (`quality-bar.md` - chống scope creep/filler).
 # CHẾ ĐỘ B - VIẾT BÀI MỚI (bổ sung 2026-08-10)
 
 Dùng khi chủ đề/từ khoá CHƯA có bài nào trên digicomvn.com (khác Chế độ A - không có bài
-gốc để đối chiếu). Tái dùng nguyên BƯỚC 2 (research SERP lấy thực thể), BƯỚC 3 (trích thực
-thể mức từ), BƯỚC 3B (từ khoá cùng cụm) và bộ 3 tiêu chí chất lượng ở BƯỚC 6 phía trên -
-KHÔNG viết lại các phần đó, chỉ thêm phần research SÂU HƠN (do là bài mới, không phải vá 1
-đoạn) và phần tạo bài/đăng mới thay vì update.
+gốc để đối chiếu). Tái dùng nguyên BƯỚC 2 (research SERP lấy thực thể), BƯỚC 2C (research
+nguồn quốc tế), BƯỚC 3 (trích thực thể mức từ), BƯỚC 3B (từ khoá cùng cụm), bộ 3 tiêu chí
+chất lượng và BƯỚC 6B (mục "Tài liệu tham khảo" cuối bài, bắt buộc ≥3 nguồn cho bài mới) ở
+BƯỚC 6 phía trên - KHÔNG viết lại các phần đó, chỉ thêm phần research SÂU HƠN (do là bài
+mới, không phải vá 1 đoạn) và phần tạo bài/đăng mới thay vì update.
 
 **Trả lời câu hỏi "viết nhiều bài cùng lúc có kém chất lượng hơn viết từng bài không":
 KHÔNG kém hơn nếu mỗi bài vẫn đi đủ các bước B1-B7 riêng (research riêng, dàn bài riêng, QA
@@ -413,6 +509,40 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
    hiện tại để so sánh, BƯỚC 3C chỉ lấy trung vị/khoảng phổ biến số từ + số ảnh của đối thủ
    làm MỤC TIÊU cho bài mới (dùng ở BƯỚC B3).
 
+## BƯỚC B2d - KHUNG ENTITY-ATTRIBUTE-VALUE GỐC (bổ sung 2026-08-12, chạy TRƯỚC BƯỚC B3)
+
+> Lý do thêm bước này: BƯỚC 3/3B của skill trích thực thể TỪ đối thủ (lấp gap), còn BƯỚC B2.3
+> dựng tiêu đề/H2 THEO dạng đối thủ đang top - cả 2 đều xuất phát từ đối thủ trước. Nếu chỉ làm
+> vậy, bài vẫn là "tổng hợp lại top 10 rồi viết theo" (information gain gần 0, đúng thứ Google
+> không thưởng theo nghiên cứu Ahrefs 2026-06 - xem DECISIONS/báo cáo liên quan). Bước này bắt
+> bài phải có 1 khung nội dung ĐỘC LẬP dựng từ kiến thức ngành thật của Digicom TRƯỚC, rồi mới
+> đối chiếu đối thủ (B2.3, B3, B4) để bổ sung - không phải ngược lại.
+
+1. **Xác định Entity trung tâm** của bài: đúng 1 danh từ/cụm từ là chủ đề cốt lõi (vd "booking
+   báo VnExpress", "textlink", "DR - Domain Rating"), lấy từ chính từ khoá chính, không suy diễn
+   từ đối thủ.
+2. **Liệt kê Attribute nội tại của Entity đó** - thuộc tính THẬT mà bất kỳ ai hiểu đúng ngành
+   backlink/booking báo/PR đều biết phải có, dựa trên dữ liệu thật đã sẵn có trong dự án
+   (KHÔNG đoán, lấy từ các nguồn đã có sẵn: `bang-gia-booking.md`/CPT `dgc_gia` cho giá-vị trí-
+   quy cách, `entity-seo-checklist.md`/brand-info cho NAP/pháp lý, `dich-vu.md` cho phạm vi dịch
+   vụ). Ví dụ Attribute cho Entity "1 đầu báo cụ thể": vị trí đăng (trang chủ/chuyên mục), giá,
+   thời gian lên bài, loại link (dofollow/nofollow), DR, đối tượng độc giả phù hợp, hạn chế nội
+   dung (không nhận ngành gì). Ví dụ cho Entity "dịch vụ Textlink": số lượng site, thời hạn đặt
+   (3/6/12 tháng), vị trí (home/chuyên mục/fullsite), tiêu chí chọn site (DR/traffic).
+3. **Gán Value thật** cho từng Attribute - số liệu/dữ kiện thật của Digicom (giá thật, DR thật,
+   quy cách thật), không gán giá trị đối thủ hay giá trị bịa. Attribute nào Digicom chưa có dữ
+   liệu thật -> để trống, KHÔNG bịa (theo `content-professional.md`).
+4. Khung Entity-Attribute-Value này (bảng `Attribute | Value | Nguồn dữ liệu`) là XƯƠNG SỐNG nội
+   dung - mỗi Attribute có Value thật nên trở thành 1 đoạn/H2 riêng trả lời đúng 1 câu hỏi, viết
+   theo format "[Entity] có [Attribute] là [Value]" ở câu mở đoạn (khớp tiêu chí GEO/AEO đã có ở
+   BƯỚC 6a - format CMU "[Thực thể] là [loại] mà [đặc điểm phân biệt]").
+5. **Sau khi có khung này mới chạy BƯỚC B2.3 (dạng bài đối thủ) và B3 (dàn bài)** - lúc đó đối
+   thủ chỉ dùng để: (a) kiểm khung Attribute ở bước 2 có thiếu Attribute quan trọng nào đối thủ
+   đều nói mà mình bỏ sót không (bổ sung THÊM, không thay thế khung gốc), và (b) xác định
+   tiêu đề/hình thức trình bày (listicle/how-to...) theo B2.3. Thứ tự đúng: khung EAV riêng
+   trước -> đối chiếu đối thủ để lấp thiếu sót -> mới viết. KHÔNG được đảo ngược (đọc đối thủ
+   rồi tổng hợp lại thành dàn bài, sau đó mới nghĩ thêm Attribute cho có).
+
 ## BƯỚC B3 - DÀN BÀI (bắt buộc trước khi viết, theo `do-dont.md`)
 
 0. **Tiêu đề + cấu trúc H2 chính PHẢI khớp dạng đa số đã xác định ở BƯỚC B2.3** - đây là ưu
@@ -422,6 +552,37 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
    -> tiêu đề dạng "Cách..."/"Hướng dẫn...", H2 là các bước tuần tự. Số trong tiêu đề (nếu có)
    lấy theo số phổ biến nhất đã đếm được, không tự chọn số tuỳ ý. Sai dạng thì dù đủ thực thể/
    độ dài cũng khó cạnh tranh với nhóm đang top - đây chính là lý do BƯỚC B2.3 tồn tại.
+0b. **Trong SỐ các biến thể tiêu đề cùng khớp đúng dạng ở bước 0, ưu tiên biến thể có
+   allintitle THẤP NHẤT** (chốt Hiếu 2026-08-11) - đúng dạng chỉ là điều kiện cần, allintitle
+   thấp mới quyết định độ dễ lên top thực tế (ít trang cùng nhồi đúng cụm từ đó trong title).
+   Quy trình:
+   1. Từ dàn bài dạng đã chọn (bước 0), liệt kê 2-4 biến thể tiêu đề khả dĩ (đổi thứ tự từ,
+      từ đồng nghĩa, có/không kèm năm, có/không kèm địa danh...) - tất cả vẫn phải đúng dạng
+      nội dung và đúng từ khoá chính, không đổi ý nghĩa chỉ để hạ allintitle.
+   2. Check allintitle từng biến thể: `python3 tools/allintitle-check.py "<biến thể 1>" "<biến thể 2>" ...`
+      (tự fallback Google CSE -> SerpApi -> Serper theo key có sẵn trong
+      `.claude/secrets/allintitle-keys.json`).
+   3. **Cả 3 nguồn đều lỗi/hết key** (đã xảy ra thật 2026-08-11 - CSE API chưa bật cho
+      project, SerpApi/Serper thiếu key) -> KHÔNG dừng lại, tự PHÁN ĐOÁN allintitle qua 2 tín
+      hiệu gián tiếp đã có sẵn từ BƯỚC B2 (Hiếu xác nhận cách làm này 2026-08-11):
+      - **Volume từ khoá** (đã có trong file keyword/sheet Hiếu cung cấp, hoặc suy từ tần suất
+        cụm từ lặp lại trong các trang top research được) - volume càng THẤP, allintitle có xu
+        hướng càng THẤP (ít nội dung được sản xuất nhắm đúng cụm từ đó).
+      - **Độ khó cạnh tranh** (số đối thủ mạnh/agency lớn đã ra bài đúng cụm từ này ở BƯỚC B2,
+        và mức độ TRÙNG LẶP cụm từ trong chính title các đối thủ đó - đếm bằng
+        `grep -c "<cụm từ>"` trên các file HTML đã fetch) - độ khó càng THẤP (ít đối thủ, cụm
+        từ ít lặp lại y hệt trong title họ), allintitle có xu hướng càng THẤP.
+      - Nguyên tắc suy luận: volume thấp + độ khó thấp -> allintitle nhiều khả năng bé (ít
+        trang cạnh tranh + ít nhu cầu sản xuất nội dung đúng cụm đó). Đây là suy đoán ĐỊNH
+        TÍNH thay thế tạm thời, không phải số liệu chính xác - ghi rõ trong báo cáo là "ước
+        lượng qua volume/độ khó, không phải allintitle đo được thật" để Hiếu phân biệt với số
+        liệu thật từ BƯỚC 2.
+   4. Chọn biến thể allintitle thấp nhất (đo được thật, hoặc ước lượng theo bước 3) trong nhóm
+      đã liệt kê. Allintitle bằng nhau hoặc chênh không đáng kể (< ~20% khác biệt) -> ưu tiên
+      biến thể tự nhiên/đúng volume Ahrefs cao hơn thay vì chênh lệch allintitle nhỏ không
+      đáng đổi.
+   5. Ghi kết quả check (biến thể + số allintitle thật HOẶC ước lượng, ghi rõ loại nào) vào báo
+      cáo BƯỚC B7 - không chỉ chốt tiêu đề mà không cho Hiếu thấy đã so sánh gì.
 1. Dàn bài phải: đủ như top 10 (không thiếu khía cạnh đối thủ đã có), có phần ĐỘC NHẤT
    (theo tiêu chí (c) information gain ở BƯỚC 6), trả lời trực diện ngay đầu mỗi mục.
 2. Gán loại visual cho MỖI H2 ngay từ bước dàn bài (ảnh Storyset/ảnh thật, sơ đồ HTML, bảng
@@ -490,6 +651,9 @@ Vì đây là bài viết từ đầu (không phải vá 1 đoạn), phải rese
 2b. **Bảng tiêu đề + dạng bài đối thủ (BƯỚC B2.3)**: title/H1/dạng từng đối thủ, tỷ lệ dạng
    chiếm đa số, pattern tiêu đề (số/năm/cụm mở đầu), và tiêu đề + dạng đã CHỌN cho bài mới -
    đối chiếu rõ đã khớp dạng đa số hay có lý do chủ động lệch (nêu lý do nếu có).
+2c. **Bảng allintitle các biến thể tiêu đề đã so sánh (BƯỚC B3.0b)**: liệt kê từng biến thể +
+   số allintitle, đánh dấu biến thể đã chọn + lý do (thấp nhất, hoặc gần bằng nhưng volume
+   cao hơn).
 3. Dàn bài đã dùng (danh sách H2 + loại visual gán cho từng H2).
 4. Bảng thực thể/từ khoá cùng cụm đã chèn (như BƯỚC 4 của Chế độ A).
 5. Số từ/số ảnh trung vị + khoảng phổ biến của đối thủ (BƯỚC 3C) và số từ/ảnh thực tế của

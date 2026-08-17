@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '2.7.5' );
+define( 'DGC_VER', '2.7.8' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -105,6 +105,7 @@ require_once get_template_directory() . '/inc/seo-meta.php';
 /* Trang tong hop "Cau hoi thuong gap" (/cau-hoi-thuong-gap/) - gom faqs + svc_faqs + faq_page_extra. */
 require_once get_template_directory() . '/inc/faq-page.php';
 require_once get_template_directory() . '/inc/gsc-sitemap-submit.php';
+require_once get_template_directory() . '/inc/leads-sheet-sync.php';
 
 /**
  * Helper doc 1 option.
@@ -299,6 +300,12 @@ function dgc_handle_lead() {
 	wp_mail( dgc( 'lead_email', get_option( 'admin_email' ) ),
 		'[DigicomVN] Yeu cau moi tu ' . $name,
 		$body );
+
+	// Day sang Google Sheet - chay ngam (khong lam cham redirect ve trang cam on).
+	if ( function_exists( 'dgc_leads_sheet_enabled' ) && dgc_leads_sheet_enabled() ) {
+		wp_schedule_single_event( time() + 2, 'dgc_leads_sheet_do_push',
+			array( $name, $phone, $email, $svc, $msg, current_time( 'mysql' ) ) );
+	}
 
 	// Gui thanh cong -> trang cam on rieng (/cam-on/), khong quay lai form nua: khach biet chac
 	// da gui xong, va do la moc de do chuyen doi (Analytics/Ads). Loi -> ve lai form nhu cu.

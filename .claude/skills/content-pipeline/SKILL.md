@@ -40,11 +40,32 @@ cạnh tranh với chính mình.
 1. **Quét bài đã có**: đọc sitemap live (`wp-sitemap.xml` + `wp post list` qua SSH) lọc mọi
    URL/bài thuộc cụm keyword. Keyword nào đã có bài phủ đúng intent -> plan ghi
    **SỬA TRÊN BÀI ĐÓ** (giữ URL, bổ sung), TUYỆT ĐỐI không tạo bài mới trùng.
-2. **Check allintitle** từng keyword mục tiêu (Google `allintitle:"<keyword>"`, lấy số kết quả):
-   - Allintitle THẤP (vd <10-30) = ít bài chứa đúng cụm trong title -> DỄ TOP -> ưu tiên viết trước.
-   - Dùng allintitle để ĐẶT TÍT: chọn biến thể cụm có allintitle thấp nhất mà vẫn đúng
-     intent + volume, đưa nguyên cụm đó vào đầu title.
-   - Ghi số allintitle vào bảng plan làm cột ưu tiên.
+2. **Check allintitle theo SAMPLE + BUCKET volume** (chốt Hiếu 2026-08-12, dải hẹp lại cùng
+   ngày - thay cho check từng keyword riêng lẻ, vì không có ngân sách API để check hết toàn
+   bộ bộ từ khoá mỗi lần lập plan):
+   1. Gom toàn bộ keyword của batch đang lập plan vào bucket theo volume/tháng (Ahrefs/GSC),
+      dải HẸP mỗi 20 volume một bucket: **vol=0 riêng 1 bucket**, rồi **1-20, 21-40, 41-60,
+      61-80, 81-100...** cứ +20 volume thành 1 bucket tiếp theo, đến hết batch.
+   2. Với mỗi bucket có **>= 3 keyword**: check allintitle THẬT (Google `allintitle:"<kw>"`
+      hoặc `tools/allintitle-check.py` nếu đã có key) cho **tối thiểu 3 keyword mẫu** (bucket
+      nhiều keyword thì có thể check thêm cho chắc, nhưng không dưới 3), chọn mẫu đa dạng chủ
+      đề con trong bucket (không lấy 3 từ na ná nhau) - lấy **trung bình** các số đo được làm
+      "allintitle ước tính" áp dụng cho MỌI keyword còn lại CÙNG BUCKET, CÙNG CỤM/BATCH đang xử
+      lý (không áp chéo sang cụm/dự án khác - độ cạnh tranh khác theo ngành/thời điểm).
+      Bucket có < 3 keyword -> check hết luôn (mẫu quá ít để suy trung bình đáng tin).
+   3. Suy **độ khó ước tính** mỗi bucket = kết hợp allintitle trung bình + volume bucket:
+      bucket nào vừa allintitle trung bình thấp vừa volume thấp -> DỄ NHẤT -> ưu tiên viết
+      trước (đúng chiến lược rank từ dễ trước). Ghi độ khó ước tính (Dễ/Vừa/Khó) vào cột ưu
+      tiên trong bảng plan cho từng keyword, kèm chú thích bucket + số mẫu đã check thật.
+   4. Đây là ước lượng thay thế tạm thời khi không đủ ngân sách check hết - **ghi rõ trong
+      báo cáo**: "Bucket X (vol N-M): mẫu check thật [list kw + số], trung bình Y -> áp dụng
+      ước tính cho Z keyword còn lại" - để Hiếu phân biệt số đo thật với số suy diễn.
+   5. **Khi thực sự bắt tay viết 1 bài cụ thể** (không phải lúc lập plan tổng): vẫn check
+      allintitle THẬT riêng cho (các) biến thể tiêu đề của đúng keyword đó trước khi chốt title
+      (theo logic BƯỚC B3.0b của skill `entity-refresh`) - sampling ở trên chỉ dùng để XẾP THỨ
+      TỰ ƯU TIÊN VIẾT BÀI NÀO TRƯỚC trong plan, không thay thế bước chốt title cuối cùng.
+   - Dùng allintitle (thật hoặc ước tính) để ĐẶT TÍT: chọn biến thể cụm có allintitle thấp nhất
+     mà vẫn đúng intent + volume, đưa nguyên cụm đó vào đầu title.
 
 ## A2. GOM CLUSTER + KẾ HOẠCH NỘI DUNG (checkpoint duyệt)
 
@@ -59,6 +80,10 @@ cạnh tranh với chính mình.
 3. Với từng bài trong plan, chốt sẵn: tiêu đề (<=58 ký tự), search intent, loại bài,
    angle khác biệt + info gain cụ thể để hơn đối thủ, widget dự kiến, URL slug,
    category (1/11 chuyên mục), đích money page sẽ link tới.
+   **Trước khi chốt "angle khác biệt": dựng khung Entity-Attribute-Value ĐỘC LẬP** theo
+   `entity-refresh` SKILL.md BƯỚC B2d (từ dữ liệu thật của Digicom - giá/vị trí/DR/quy cách,
+   không suy từ đối thủ) - đây mới là nguồn info gain thật, đối thủ chỉ dùng để kiểm khung có
+   thiếu Attribute nào không, không phải để tổng hợp lại thành dàn ý.
 4. Vẽ **sơ đồ internal link theo hành trình khách**:
    `Supporting (học) -> Cluster (cân nhắc) -> Pillar (tổng quan) -> Money page (mua)/-> /bang-gia/`
    - Cluster -> Pillar: 1 link/bài, anchor informational.
@@ -142,7 +167,10 @@ Sau khi các bài của cluster đã live:
 2. So với sơ đồ ở A2 -> danh sách link THIẾU và link SAI ĐÍCH (vd trỏ `/dich-vu/...` cũ,
    trỏ bài blog trùng slug thay vì page pillar - xem cảnh báo brand-info mục 7).
 3. Tự chèn link thiếu vào bài cũ + bài mới: anchor là cụm từ CÓ SẴN trong câu (không nhét),
-   mỗi URL 1 lần/bài, tối đa 5 internal link/bài, >=1 money page với bài commercial.
+   **1 bài nguồn CHỈ trỏ đúng 1 link tới CÙNG 1 trang đích - TUYỆT ĐỐI không lặp lại link
+   tới cùng URL đó lần thứ 2 trong cùng bài dù đổi anchor khác** (chốt Hiếu 2026-08-12 -
+   nhiều link cùng đích trong 1 bài là dấu hiệu spam/thao túng, không phải tự nhiên), tối đa
+   5 internal link/bài (5 URL đích KHÁC NHAU), >=1 money page với bài commercial.
    Backup content.raw TỪNG bài trước khi sửa (routine-backup) + manifest. Anchor phải theo
    tỷ lệ 5 loại + không lặp y hệt cho nhiều bài trỏ cùng 1 đích - xem [[A2d]] TỶ LỆ LOẠI
    ANCHOR TEXT, áp dụng NGAY khi chèn, không đợi audit riêng.
@@ -176,6 +204,10 @@ intent, SERP features, section đối thủ có, 3-5 câu PAA làm FAQ, góc kh�
 
 ## BƯỚC 3 - VIẾT BÀI (theo skill content-writer + đặc thù Digicom)
 
+- **Dàn bài phải bám khung Entity-Attribute-Value đã dựng ở A2 bước 3** (hoặc dựng ngay tại đây
+  nếu chạy Chế độ B đơn lẻ không qua A2 - xem `entity-refresh` SKILL.md BƯỚC B2d) TRƯỚC khi
+  research SERP để "khớp dạng" - thứ tự đúng: khung EAV riêng trước, đối thủ chỉ để lấp thiếu
+  Attribute + xác định hình thức trình bày, không phải nguồn duy nhất của dàn ý.
 - **Thứ tự đầu bài (rule Digicom 2026-07-16, GHI ĐÈ mặc định skill):**
   `H1 -> SAPO -> Tóm tắt nhanh -> mở bài -> H2...`
 - **BẮT BUỘC: dòng ĐẦU TIÊN của content phải là `<h1>{tiêu đề bài}</h1>`** (khớp `post_title`).
@@ -281,8 +313,10 @@ Bài mới hoàn toàn -> ghi manifest "created".
 
 ## BƯỚC 7 - INTERNAL LINK (2 chiều)
 
-- Trong bài mới: tối đa 5 link, >=1 money page, anchor tự nhiên trong câu,
-  URL GỐC theo brand-info mục 4 (vd `/booking-bao-pr/` - KHÔNG dùng `/dich-vu/...` đã 301).
+- Trong bài mới: tối đa 5 link (5 URL đích KHÁC NHAU), >=1 money page, anchor tự nhiên trong
+  câu, URL GỐC theo brand-info mục 4 (vd `/booking-bao-pr/` - KHÔNG dùng `/dich-vu/...` đã 301).
+  **1 trang đích chỉ nhận đúng 1 link/bài nguồn - không lặp lại link tới cùng URL lần 2 trong
+  cùng bài dù đổi anchor** (nhiều link cùng đích = spam/thao túng, xem [[A4]]).
   Anchor theo đúng tỷ lệ 5 loại ở [[A2d]] - KHÔNG copy y nguyên 1 câu CTA đã dùng cho bài
   khác cùng cụm trỏ về cùng đích, phải đổi cách diễn đạt.
 - Chiều ngược: chọn 1-2 bài cũ cùng cụm đang mạnh, chèn 1 link trỏ về bài mới

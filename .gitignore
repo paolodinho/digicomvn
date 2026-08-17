@@ -41,3 +41,6 @@ tools/.schemaorg-vocab.jsonld
 # Google service account key (Search Console sitemap submit)
 digicom-price-sync-*.json
 *service-account*.json
+
+# API keys allintitle checker
+.claude/secrets/allintitle-keys.json

@@ -1,57 +1,17 @@
 # PLAN - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: Xây dựng entity cho thương hiệu DigicomVN (Entity SEO / Knowledge Panel).
-  Kế hoạch đầy đủ: `~/.claude/plans/t-m-l-i-vi-t-cho-mighty-waffle.md` (đã duyệt 2026-08-10).
-- Đã xong (2026-08-10):
-  - Xác nhận với Hiếu: bài `vietnam.vn` là **PR tự đăng** (không dùng làm nguồn Wikidata);
-    Báo Đà Nẵng **có bài thật** (đã kiểm live: URL đã có sẵn trong option `press_mentions` -
-    `baodanang.vn/digicomvn-don-vi-booking-bao-chi-va-truyen-thong-so-dong-hanh-cung-doanh-nghiep-3347361.html`,
-    khác với ghi nhận cũ trong LOG.md "chưa có link" - đã lỗi thời, live đã cập nhật từ trước).
-  - **-> Có ĐỦ 3 nguồn báo độc lập thật dùng được cho Wikidata**: Truyền hình An Giang, Báo
-    Đồng Nai, Báo Đà Nẵng (cả 3 đã có URL thật trong `dgc_settings.press_mentions` trên live).
-  - Kiểm live DB (`wp option get dgc_settings`) phát hiện **email đã SẴN LÀ `sales@digicomvn.com`**
-    (không phải `info@digicomvn.com` như brand-info.md cũ ghi - đã sửa lại brand-info.md mục 2).
-  - **Đã điền xong + deploy live**: `Organization.sameAs` giờ đủ 6 kênh - Facebook, LinkedIn
-    công ty (`linkedin.com/company/digicomvn`), YouTube (`youtube.com/@digicomvn`), Pinterest
-    (`pinterest.com/digicomvn`, field MỚI thêm vào `inc/options.php`+`inc/schema.php`), Zalo OA,
-    Google Business Profile. Verify bằng curl live - đã xuất hiện đủ trong JSON-LD.
-    `Person.sameAs` (Hiếu, founder) đã có sẵn LinkedIn cá nhân riêng từ trước (`dgc_linkedin`
-    user meta) - KHÔNG lẫn với LinkedIn công ty (Hiếu nhấn mạnh tách biệt 2 link này).
-  - Backup trước khi sửa: `~/Claude-Workspace/_backups/routines/2026-08-10/entity-seo-options/`
-    (dgc_settings-BEFORE.json, options.php.BEFORE, schema.php.BEFORE) + manifest.md.
-  - Đã đồng bộ code sang Local WP (`rsync` theo `local-sync.md`).
-  - Rủi ro trùng tên đã ghi vào bước 1 của kế hoạch (nhiều "Digicom" khác không liên quan tại
-    VN, đặc biệt MST 0109916506 dễ nhầm với MST thật 0109816406) - luôn dùng tên đầy đủ pháp
-    nhân trong mọi hồ sơ mới.
-- Đã xong thêm (2026-08-10, mục 1/2/4 của kế hoạch - Hiếu yêu cầu làm giúp):
-  - Soạn xong file `.claude/context/entity-seo-checklist.md`: NAP chuẩn dùng chung, danh sách
-    directory VN (4 nơi đã có sẵn do là DN thật - chỉ cần rà lại; 6 nơi cần Hiếu tự đăng ký
-    kèm link trực tiếp + mẫu mô tả), hồ sơ Wikidata soạn sẵn đầy đủ (label/description/alias/
-    statements/references dùng đúng 3 nguồn báo thật), và kiểm tra Knowledge Panel hiện trạng.
-  - Phát hiện: masothue.com hiển thị SĐT đăng ký thuế `0901059666` (khác hotline vận hành
-    `0988 769 317`) - không phải lỗi, là dữ liệu nhà nước không sửa được, chỉ cần lưu ý không
-    dùng nhầm số này khi điền NAP citation.
-  - Kiểm tra Google: **CHƯA có Knowledge Panel** cho "DigicomVN" - mục 4 hiện KHÔNG có hành
-    động cụ thể để ép tạo ngay, chỉ có thể tiếp tục củng cố mục 1/2/3/5 rồi theo dõi định kỳ.
-  - Việc đăng ký directory + tạo item Wikidata thật sự CẦN TÀI KHOẢN của Hiếu (Claude không tự
-    tạo tài khoản/điền form bên thứ ba được) - đã chuẩn bị sẵn toàn bộ nội dung để Hiếu copy-
-    paste nhanh, chưa tự thực thi phần submit.
-- Đang làm: Chờ Hiếu tự đăng ký directory + tạo item Wikidata theo nội dung đã soạn sẵn trong
-  `entity-seo-checklist.md`. Còn lại mục 3 (tự PR cho digicomvn.com kéo DR) chưa bắt đầu.
-- Tiếp theo:
-  1. Hiếu tự đăng ký 6 directory + Wikidata theo checklist đã soạn (hoặc nhờ Claude hỗ trợ điền
-     nếu Hiếu đăng nhập sẵn và muốn Claude thao tác cùng qua trình duyệt).
-  2. Tự dùng dịch vụ booking báo/backlink của Digicom PR cho chính digicomvn.com, kéo DR
-     (đang 6.0, đo 2026-08-10 qua Ahrefs public API) lên.
-  3. Theo dõi định kỳ Knowledge Panel xuất hiện chưa (không có shortcut ép tạo ngay).
-- File liên quan: `wp-theme/digicom-host/inc/schema.php` (Organization sameAs dòng ~556-566,
-  press_mentions render ~596), `inc/options.php` (field facebook/linkedin/youtube/pinterest
-  dòng 18-21 + 175-178, option `press_mentions`), `.claude/context/brand-info.md` mục 2,
-  `.claude/rules/schema-markup.md`.
-- Cập nhật lúc: 2026-08-10
+Không có việc dở - Internal-link audit 2026-08-12/13 đã xong cả 3 task (xem LOG.md 2026-08-13
+"Internal-link audit - Task 3 xong" + skill mới `.claude/skills/internal-link-audit/SKILL.md`).
+Dữ liệu audit đầy đủ (out_links/indeg/anchors mọi URL): `/tmp/link-audit-full.json` (file tạm,
+chạy lại `python3 tools/internal-link-audit.py` để tái tạo nếu mất).
 
-## Backlog - Port pricing pipeline sang PHP chạy cron Hostinger (2026-08-10)
+(2 việc khác đã xong 2026-08-12, không còn liên quan checkpoint này:
+1. Chiến dịch "Tài liệu tham khảo toàn site" (bắt đầu 2026-08-11) - 174/174 URL, xem
+   `tools/_state/refs-queue.json` + LOG.md mục "HOÀN TẤT chiến dịch".
+2. Fix tràn/vỡ layout mobile toàn site - quét thật bằng Playwright (tools/mobile-overflow-check.py,
+   190/190 URL), sửa 1 lần bằng CSS hệ thống (main.css .page-content overflow-wrap/max-width),
+   xem LOG.md mục "Fix mobile overflow" + rule mới `.claude/rules/mobile-responsive-content.md`.)
 
 Mục tiêu: `digicom-gia-doi-tac-tuan` (routine tuần cập nhật giá booking báo/PR) hiện tắt vì
 Hostinger (host live digicomvn.com) KHÔNG có Python3/crontab CLI - đã xác nhận qua SSH
@@ -458,6 +418,23 @@ khi nào chuyển sang giai đoạn 2 bên dưới.
       - Đánh đổi: crawler không chạy JS chỉ thấy noscript rút gọn (tên+giá), chi tiết phong
         phú chỉ hiện khi bấm mở + có JS - đánh đổi đã được Hiếu chấp nhận từ đợt lazy-load
         trước, không phải điểm mới.
+- [x] Internal link audit toàn site (2026-08-13) - skill mới `.claude/skills/internal-link-audit/SKILL.md`
+      (chuyển thể từ ICD, dùng REST API thay Screaming Frog):
+      1. Task 1+2 (link chết/redirect chain, money page mồ côi) - xong trước đó (2026-08-12).
+      2. Task 3 - giảm anchor over-optimization `booking-bao-pr` (118 inlink) + `dich-vu-backlink`
+         (40 inlink, giảm từ 42 sau khi xoá link dư): tạo `tools/internal-link-anchor-check.py` +
+         `tools/diversify-anchor.py`, đa dạng hoá anchor qua nhiều đợt (round 1-3), max anchor còn
+         lại 7.5% (dưới ngưỡng 8%). Backup: `~/Claude-Workspace/_backups/routines/2026-08-13/
+         anchor-diversify/` + `anchor-diversify-round2/`.
+      3. Rule mới chốt Hiếu 2026-08-13: **1 bài KHÔNG được link quá 1 lần tới cùng 1 đích** - quét
+         thấy 167 cặp (bài, đích) vi phạm trên 95 bài (230 link dư, đa số CTA lặp `/dat-bai/` hoặc
+         cụm SEO thuật ngữ nhắc lại nhiều đoạn). Đã dọn hết bằng script tự động (giữ link đầu tiên
+         xuất hiện, xoá wrapper `<a>` các lần lặp sau, giữ nguyên text) - verify bằng diff ký tự
+         trên bài mẫu trước khi push cả 95 bài. Backup:
+         `~/Claude-Workspace/_backups/routines/2026-08-13/dedupe-onelink-per-post/`.
+      4. Re-audit sau cùng: 0 vi phạm anchor over-optimization ở 2 pillar chính, 0 vi phạm
+         "1 link/bài" toàn site. Các URL chỉ 1-2 inlink báo "100%" trong anchor-check là artifact
+         số lượng nhỏ, không phải lỗi thật - không cần xử lý.
 - [ ] Việc còn lại (không khẩn, cần Hiếu quyết định):
       1. 33 dòng `booking-truyen-hinh` hiện có 19 publish/14 draft không nhất quán trên live -
          chọn draft lại 19 dòng đó (giữ đúng quyết định "tạm ẩn") hay chính thức mở nhóm TV.

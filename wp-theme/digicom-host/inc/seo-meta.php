@@ -228,3 +228,25 @@ add_action( 'dgc_seo_box_save', function ( $post_id ) {
 		else delete_post_meta( $post_id, $k );
 	}
 } );
+
+/* ===========================================================================
+ * 5. Toi uu crawl budget - chan crawler vao duong dan khong co gia tri index
+ *    (WP core da tu them Disallow /wp-admin/ - filter nay CHI BO SUNG THEM,
+ *    khong ghi de). Cac trang nay da co the noindex rieng (search, feed,
+ *    wp-json) nhung De crawler THAY duoc noindex van phai TON 1 luot crawl -
+ *    chan thang trong robots.txt tiet kiem luot crawl that su, khong chi an
+ *    khoi index. Xem .claude/rules routine hoac LOG.md 2026-08-10 "crawl budget".
+ * ========================================================================= */
+
+add_filter( 'robots_txt', function ( $output, $public ) {
+	if ( ! $public ) return $output;
+	$extra  = "Disallow: /wp-json/\n";
+	$extra .= "Disallow: /?s=\n";
+	$extra .= "Disallow: /*?s=\n";
+	$extra .= "Disallow: /feed/\n";
+	$extra .= "Disallow: /*/feed/\n";
+	$extra .= "Disallow: /comments/feed/\n";
+	$extra .= "Disallow: /wp-content/plugins/\n";
+	$extra .= "Disallow: /*/trackback/\n";
+	return rtrim( $output ) . "\n" . $extra;
+}, 10, 2 );
