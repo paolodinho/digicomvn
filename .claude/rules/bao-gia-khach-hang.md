@@ -73,6 +73,21 @@ Digicom × 0,95" → lộ tên NCC và công thức tính giá nội bộ. Từ 
 - **Phụ phí thuê phóng viên đến tận nơi (không phải Digicom biên tập từ tư liệu khách
   cung cấp): 1.000.000đ/buổi**, ghi rõ trong mục Ghi chú, chưa gồm trong giá bảng.
 
+## 6. File tổng hợp (list site/giá số lượng lớn) - LUÔN phân theo lĩnh vực (chốt 2026-08-18)
+
+Khi gửi khách file tổng hợp dạng danh sách lớn (guest post, textlink, backlink...) - KHÔNG
+liệt kê 1 bảng phẳng dài. Phải:
+- **Phân nhóm theo lĩnh vực/ngành** (tài chính, bất động sản, công nghệ, du lịch, y tế...)
+  - dùng logic suy ngành có sẵn (`gan-nganh.py`, hàm `nganh_for()`) theo tên miền. Site không
+    suy được ngành cụ thể -> xếp vào 1 nhóm riêng "Đa lĩnh vực/Tổng hợp" (không bỏ, không gán bừa).
+- **Có mục lục/điều hướng** để khách tìm nhanh: file Excel -> sheet "Mục lục" đầu tiên, liệt kê
+  từng lĩnh vực kèm số lượng site + hyperlink nhảy thẳng tới sheet lĩnh vực đó; mỗi sheet lĩnh
+  vực có link "← Về Mục lục" để quay lại.
+- Trong mỗi nhóm: sắp theo tiêu chí giúp khách chọn nhanh (DR giảm dần, hoặc giá tăng dần) -
+  không để thứ tự ngẫu nhiên/theo thứ tự nhập liệu gốc.
+- Áp dụng cho MỌI file tổng hợp số lượng lớn gửi khách (không riêng guest post) - textlink,
+  booking báo theo đầu báo, backlink... đều theo nguyên tắc này.
+
 ## Liên quan
 - `bang-gia-booking.md` - nguồn giá, sàn giá vốn, mã NCC (tài liệu NỘI BỘ, không copy vào
   file gửi khách).
