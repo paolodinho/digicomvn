@@ -29,6 +29,45 @@
 - Đánh đổi (hạ vị trí, rút ngắn thời hạn để giảm giá) phải giải thích RÕ cho khách hiểu
   đang đổi gì lấy gì - không giấu diếm để giá trông rẻ hơn bản chất.
 
+## 3. Công thức giá NỘI BỘ khi báo giá thủ công lấy từ sheet DanaSEO (chốt 2026-08-18)
+
+> Xem thêm rule global `~/.claude/rules/bao-gia-khong-lo-gia-von.md` - áp dụng mọi dự án,
+> không riêng digicom. Mục này là phần tính toán NỘI BỘ - không được đưa nguyên văn vào
+> file gửi khách (xem mục 4 ngay dưới).
+
+- **"Giá DanaSEO báo"** = số trong sheet DanaSEO. DanaSEO còn CHIẾT KHẤU THÊM 10% cho Hiếu
+  trên số này → **giá vốn thật = giá DanaSEO báo × 0.90**.
+- **Giá bán thật cho khách (nội bộ) = giá DanaSEO báo × 0.95** → lãi đúng 5% trên giá
+  DanaSEO báo (~5,56% trên giá vốn thật). Đây là con số DUY NHẤT cần giữ đúng khi tính toán.
+- **Báo giá mới và báo giá cũ (cùng đầu báo/vị trí) không được chênh lệch nhau** - đối chiếu
+  lại số cũ trước khi gửi; lệch nhiều phải giải thích lý do, không im lặng đổi số.
+- Không áp dụng mục này cho giá hiển thị trên website (`dgc_gia` CPT) - nơi đó vẫn theo
+  công thức ×1.05 đã chốt trong `bang-gia-booking.md`.
+
+## 4. Cách HIỂN THỊ giá trong file gửi khách (chốt 2026-08-18 - BẮT BUỘC, xem ảnh sự cố)
+
+Sự cố: file gửi khách từng ghi thẳng cột "Giá DanaSEO báo" + câu "giá bán = giá DanaSEO báo
+Digicom × 0,95" → lộ tên NCC và công thức tính giá nội bộ. Từ nay:
+
+- **KHÔNG BAO GIỜ** đặt tên cột/nhãn nào chứa tên NCC (DanaSEO, Media Việt Nam, Fame Media...)
+  trong file gửi khách. Cột giá chỉ được gọi "Giá niêm yết", "Giá gói", "Giá ưu đãi"...
+- **KHÔNG BAO GIỜ** viết câu giải thích công thức (vd "giá bán = X × 0,95", "đã trừ Y% trên
+  giá NCC báo") trong file gửi khách - kể cả trong ghi chú, footnote, email kèm theo.
+- **"Giá niêm yết" hiển thị cho khách = SỐ TỰ ĐẶT (anchor marketing)**, KHÔNG phải giá NCC
+  báo thật. Tính ngược từ giá bán thật: `giá niêm yết = giá bán thật / (1 - CK%)`, làm tròn
+  đẹp (chục nghìn).
+- **Cột "CK" (chiết khấu) hiển thị số NGẪU NHIÊN/xoay vòng trong khoảng 20-29%** cho từng
+  dòng (không dùng % cố định 5% - dễ bị soi ra công thức thật, và trông kém hấp dẫn). Số %
+  này KHÔNG phản ánh công thức nội bộ, chỉ để tạo cảm giác ưu đãi sâu.
+- **"Giá sau CK"/"Giá ưu đãi" hiển thị = giá bán thật (mục 3)** - đây là con số duy nhất phải
+  đúng tuyệt đối, mọi thứ khác (giá niêm yết, %) chỉ là lớp trình bày.
+- Muốn kiểm tra công thức/giá vốn thật → mở riêng ghi chú/script nội bộ (không phải file đã
+  gửi khách), hoặc hỏi lại Hiếu.
+
 ## Liên quan
-- `bang-gia-booking.md` - nguồn giá, sàn giá vốn, mã NCC.
-- `content-professional.md` (global) - không bịa số liệu trong nội dung báo giá.
+- `bang-gia-booking.md` - nguồn giá, sàn giá vốn, mã NCC (tài liệu NỘI BỘ, không copy vào
+  file gửi khách).
+- `content-professional.md` (global) - không bịa số liệu SỰ KIỆN/THỰC THỂ trong nội dung báo
+  giá (khác với số CK hiển thị ở mục 4, vốn là con số marketing được phép "làm đẹp" theo rule
+  global `bao-gia-khong-lo-gia-von.md`).
+- `~/.claude/rules/bao-gia-khong-lo-gia-von.md` (global, mọi dự án) - nguyên tắc gốc.
