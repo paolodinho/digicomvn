@@ -177,7 +177,50 @@ Backup trước khi import: `~/Claude-Workspace/_backups/routines/<ngày>/bang-g
 
 `build_master.py` tự áp: `gia_ban_digicom = gia_ncc_km or gia_ncc_goc`.
 
-## CHỈ DANASEO + LÃI 5% (chốt 2026-08-09, GHI ĐÈ mục "GIÁ VỐN 100%" ngay dưới đây)
+## CHỈ DANASEO, GIÁ = GIÁ DANASEO x 0,95 (chốt 2026-08-18, GHI ĐÈ mục "CHỈ DANASEO + LÃI 5%" ngay dưới)
+
+Hiếu: "toàn bộ sản phẩm niêm yết trên digicomvn chỉ lấy của danaseo và giá sẽ bằng giá danaseo -5%".
+
+- **Nguồn**: vẫn CHỈ DanaSEO (`CHI_NCC = {"danaseo"}`, không đổi so với 2026-08-09).
+- **Giá web** = "giá DanaSEO báo" (`gia_ban_digicom`) **× 0,95**, làm tròn nghìn
+  (`MARKUP_DANASEO = 0.95` trong `export-web.py`, hàm `web_gia()`).
+- **Vẫn lãi thật ~5,56%**, không bán lỗ: theo `bao-gia-khach-hang.md` mục 3, DanaSEO chiết
+  khấu NGẦM thêm 10% riêng cho Hiếu không thể hiện trên giá báo → **giá vốn thật = giá
+  DanaSEO báo × 0,90**. Bán ở mức ×0,95 = lãi (0,95-0,90)/0,90 ≈ 5,56% trên giá vốn thật.
+  Đây là cùng công thức đã dùng cho báo giá tay gửi khách, giờ áp dụng chung cho cả giá
+  niêm yết website - không còn 2 công thức khác nhau giữa web và báo giá tay nữa.
+- **Đã đẩy live 2026-08-18**: 645/651 dòng đổi giá (đều GIẢM, đúng hướng ×0,95 < ×1,05 cũ).
+  **6 dòng bị loại khỏi đợt push này** vì phát hiện lỗi dữ liệu nguồn có sẵn (không liên
+  quan việc đổi công thức lần này): `bang-gia-master.csv` có 6 dòng DanaSEO Textlink "Link
+  fullsite - 6 tháng" (hanoitimes.vn, thieunien.vn, thanhnienviet.vn, tapchinghiencuuphathoc.vn,
+  phunuvagiadinh.vn, reatimes.vn) bị dính giá "1.200.000" và "1.400.000" thành 1 chuỗi số
+  liền `12000001400000` (mất dấu gạch nối khi parse từ sheet DanaSEO gốc, ngày nhập
+  2026-07-29) - nếu đẩy sẽ ra giá web ~11,4 nghìn tỷ đồng/dòng. Đã lọc bỏ trước khi push
+  (kiểm tra `gia > 500.000.000` trước khi ghi), 6 dòng này TRÊN LIVE vẫn giữ giá cũ (trước
+  đợt update này) - **CẦN Hiếu vào Google Sheet DanaSEO tra lại giá thật của "Link fullsite
+  6 tháng" cho 6 site trên rồi sửa tay `bang-gia-master.csv`/CPT tương ứng**, chưa tự đoán.
+  Backup đầy đủ (mọi trạng thái, mọi ID) trước khi ghi:
+  `~/Claude-Workspace/_backups/routines/2026-08-18/gia-danaseo-minus5/live-BEFORE.json`.
+- Muốn đổi lại mức chiết khấu (vd -5% → -3%) → sửa `MARKUP_DANASEO` trong `export-web.py`,
+  chạy lại `python3 export-web.py` rồi `python3 cap-nhat-gia.py` (kiểm tra không có dòng
+  `gia > 500tr` bất thường trước khi đẩy), rồi import qua `import-wp.php` như lần này.
+- **Lưu ý phụ (chưa đồng bộ, không ảnh hưởng an toàn)**: `dgc_line_markup()` trong
+  `inc/cpt-gia.php` (dùng cho sàn giá vốn combo, xem mục "SÀN GIÁ VỐN..." bên dưới) vẫn đang
+  dùng hằng số cũ 1,03/1,20 từ thời nhiều NCC - CHƯA cập nhật theo công thức ×0,95 mới. Không
+  gây rủi ro bán lỗ (chỉ khiến sàn chiết khấu combo tính BẢO THỦ hơn mức thật ~5,56%), nhưng
+  nếu muốn combo chiết khấu sâu hơn thì cần đồng bộ lại hàm này.
+- **Sự cố git 2026-08-18 (đã xử lý)**: phát hiện toàn bộ working directory bị 1 quá trình
+  không rõ nguyên nhân LÙI VỀ bản cũ (33 file theme wp-theme/digicom-host mất hàng nghìn
+  dòng code, `.gitignore` mất 12 dòng bảo vệ secret khiến `.claude/secrets/allintitle-keys.json`
+  + `10-bang-gia-booking/service-account.json` + `digicom-price-sync-*.json` suýt bị commit
+  vào repo GitHub PUBLIC `paolodinho/digicomvn`). Auto-push hook đã trót tạo commit lỗi
+  `77c1175` (2026-08-18 09:18) nhưng CHƯA kịp push - đã `git reset --hard origin/main` (=
+  `7c5ca8c`, bản tốt cuối cùng đã lên GitHub) để khôi phục, rồi áp lại riêng phần sửa giá
+  ×0,95 lên bản sạch. **CẦN Hiếu kiểm tra/xoay vòng 2 key Google (`allintitle-keys.json`,
+  service account) nếu nghi ngờ đã lộ ra ngoài trước đó** dù lần này chưa push thành công.
+  Nguyên nhân gốc gây lùi file CHƯA xác định được - nếu tái diễn cần điều tra riêng.
+
+## (LỊCH SỬ) CHỈ DANASEO + LÃI 5% (chốt 2026-08-09)
 
 Hiếu: "nguồn báo giá chỉ giữ lại danaseo; giá niêm yết bằng giá danaseo + 5%, đây là mức lãi 5%".
 

@@ -7,13 +7,16 @@ Quy tac (chot 2026-07-14):
 - AN danh tinh nha cung cap. An gia mua vao. Khong lo link nguon NCC.
 - Gia hien thi = gia_ban_digicom co MARKUP, chua VAT 8%.
 
-CHI DANASEO + LAI 5% (Hieu 2026-08-09, GHI DE rule "gia von 100%" 2026-07-29):
+CHI DANASEO, GIA = GIA DANASEO x 0,95 (Hieu 2026-08-18, GHI DE "CHI DANASEO + LAI 5%"
+2026-08-09):
   Nguon: CHI con DanaSEO (bo Media Viet Nam / Fame Media / Rise Media khoi web, van luu
-  trong master lam tham khao). Gia web = gia_ban_digicom (gia von DanaSEO) x 1,05, lam
-  tron nghin - day la muc lai 5% Hieu chon. Ngoai le toplist/backlink-quocte van giu moi
-  NCC (khong co du lieu DanaSEO) nhung van qua cung cong thuc markup 5%.
+  trong master lam tham khao). Gia web = "gia DanaSEO bao" (gia_ban_digicom) x 0,95, lam
+  tron nghin. VAN LAI THAT ~5,56% vi DanaSEO chiet khau NGAM them 10% rieng cho Hieu
+  (gia von THAT = gia DanaSEO bao x 0,90) - xem bao-gia-khach-hang.md muc 3, gio dung
+  chung cong thuc do cho ca gia niem yet website. Ngoai le toplist/backlink-quocte van giu
+  moi NCC (khong co du lieu DanaSEO) nhung van qua cung cong thuc x0,95.
   Lich su markup da bo truoc do: 2026-07-15 NCC ngoai DanaSEO x1,20; 2026-07-19 3 NCC
-  chinh x1,03; 2026-07-24 Rise Media x1,1; 2026-07-29 bo het ve gia von 100%.
+  chinh x1,03; 2026-07-24 Rise Media x1,1; 2026-07-29 gia von 100%; 2026-08-09 x1,05.
 
 Tang san pham (tu dong phan loai tu vi_tri/nhom, vi moi NCC goi ten mot kieu):
   trang-chu   : vi tri noi bat trang chu (Top 1, Top Story, dac biet, home...)  -> gia cao
@@ -106,12 +109,14 @@ CHI_NCC = {"danaseo"}
 # bi trong bang gia - nhung van qua web_gia() nen van duoc markup 5% nhu duoi.
 DICH_VU_NGOAI_LE_CHI_NCC = {"toplist", "backlink-quocte"}
 
-# Hieu 2026-08-09: "gia niem yet bang gia DanaSEO tru them 5%, day la muc lai 5%" - vi "lai"
-# (loi nhuan) nghia la CONG THEM (ban tren gia von), khong phai TRU (se ban lo). Lam tron nghin.
-MARKUP_DANASEO = 1.05
+# Hieu 2026-08-18: "gia niem yet bang gia DanaSEO tru 5%". DanaSEO chiet khau NGAM them 10%
+# rieng cho Hieu (gia von THAT = gia DanaSEO bao x 0,90) nen ban o muc x0,95 van lai ~5,56%
+# tren gia von that - xem bao-gia-khach-hang.md muc 3 (cung cong thuc dung cho bao gia tay).
+MARKUP_DANASEO = 0.95
 
 def web_gia(r):
-    """Gia hien thi len web = gia von DanaSEO x 1,05 (Hieu 2026-08-09, lai 5%), lam tron nghin."""
+    """Gia hien thi len web = gia DanaSEO bao (gia_ban_digicom) x 0,95 (Hieu 2026-08-18),
+    lam tron nghin. Van lai ~5,56% tren gia von that vi DanaSEO chiet khau ngam 10% rieng."""
     return int(round(int(r["gia_ban_digicom"]) * MARKUP_DANASEO / 1000)) * 1000
 
 with open(SRC) as f:
