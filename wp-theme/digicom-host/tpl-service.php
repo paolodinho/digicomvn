@@ -51,6 +51,79 @@ if ( $nhom ) {
 	$dgc_og_ctx = $svc_name;
 	include get_template_directory() . '/inc/order-guide.php';
 }
+
+/* Khoi "Vi sao chon DigicomVN" + cum bai lien quan - rieng trang booking-bao-pr (2026-08-17).
+   4 su that da xac nhan trong du an (khong bia): 15+ dau bao lon hop tac that (pivot-2026-07.md),
+   gia cong khai tu DanaSEO + 5% (bang-gia-booking.md), dofollow theo tung vi tri (field so_link
+   CPT dgc_gia), xuat VAT (da noi trong order-guide.php). Hardcode PHP giong dung pattern cac
+   buoc order-guide.php/proc o tren (khong phai noi dung sua thuong xuyen qua WP Admin). */
+/* dgc_current_nhom() tra ve slug 'booking-bao-pr' cho CA trang hub LAN cac trang con theo
+   dau bao (ke thua qua chuoi ancestor) - phai kiem post_name CUA CHINH trang hien tai, khong
+   phai $nhom['slug'], neu khong khoi nay se lap lai tren ca 15 trang con (dung rule "khong
+   boilerplate" da ghi ngay ben duoi). */
+if ( $nhom && 'booking-bao-pr' === $nhom['slug'] && 'booking-bao-pr' === get_post_field( 'post_name', get_the_ID() ) ) :
+	$dgc_bao_why = array(
+		array(
+			'title' => '15+ đầu báo lớn hợp tác trực tiếp',
+			'desc'  => 'VnExpress, Kênh14, Dân Trí, 24h, CafeF, VietNamNet, Thanh Niên, Tuổi Trẻ... và mọi báo điện tử Việt Nam khác theo yêu cầu (trừ .gov.vn/.edu.vn).',
+		),
+		array(
+			'title' => 'Giá công khai ngay trong bảng giá',
+			'desc'  => 'Không giấu giá, không báo giá "tuỳ trường hợp". Xem giá từng đầu báo, chọn nhiều mục cùng lúc ngay phía trên.',
+		),
+		array(
+			'title' => 'Hỗ trợ dofollow theo từng vị trí',
+			'desc'  => 'Mỗi đầu báo ghi rõ loại link (dofollow/nofollow/không chèn link) ngay trong bảng giá - chọn đúng mục tiêu SEO trước khi đặt.',
+		),
+		array(
+			'title' => 'Xuất hoá đơn VAT đầy đủ',
+			'desc'  => 'Có hoá đơn VAT cho doanh nghiệp cần đối soát chi phí, đúng quy trình mua bán rõ ràng.',
+		),
+	);
+	?>
+	<section class="sec">
+		<div class="wrap">
+			<div class="center" style="margin-bottom:26px"><span class="eyebrow">Vì sao chọn DigicomVN</span><h2>Booking báo PR minh bạch, đúng đầu báo bạn cần</h2></div>
+			<div class="feat-row">
+				<?php foreach ( $dgc_bao_why as $w ) : ?>
+				<div class="feat">
+					<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+					<h3><?php echo esc_html( $w['title'] ); ?></h3>
+					<p><?php echo esc_html( $w['desc'] ); ?></p>
+				</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+	<?php
+	$dgc_bao_cum = array(
+		array( 'slug' => 'booking-bao-la-gi', 'title' => 'Booking Báo Chí Là Gì?', 'desc' => 'Định nghĩa, quy trình đặt bài PR chi tiết cho người mới bắt đầu.' ),
+		array( 'slug' => 'so-sanh-booking-bao-pr-va-quang-cao-bao', 'title' => 'So Sánh Booking Báo PR &amp; Quảng Cáo Báo', 'desc' => 'Khác nhau về chi phí, độ tin cậy, SEO và thời gian tồn tại nội dung.' ),
+		array( 'slug' => 'bao-gia-dang-bai-pr-theo-dau-bao', 'title' => 'Báo Giá Đăng Bài PR Theo Đầu Báo', 'desc' => 'Bảng giá từng đầu báo và cách chọn đầu báo phù hợp ngân sách.' ),
+		array( 'slug' => 'cach-viet-bai-pr-chuan-bao-chi', 'title' => 'Cách Viết Bài PR Chuẩn Báo Chí', 'desc' => 'Công thức tháp ngược, mô hình 5W1H và mẫu bài PR tham khảo.' ),
+		array( 'slug' => 'hieu-lam-booking-bao-chi', 'title' => 'Hiểu Lầm Thường Gặp Khi Booking', 'desc' => 'Những sai lầm khiến chiến dịch booking báo không đạt hiệu quả.' ),
+		array( 'slug' => 'booking-bao-tinh', 'title' => 'Booking Báo Tỉnh', 'desc' => 'Đặt bài PR trên báo địa phương - quy trình và mức giá tham khảo.' ),
+		array( 'slug' => 'agency-booking-bao-chi', 'title' => 'Agency Booking Báo Chí: 7 Tiêu Chí', 'desc' => 'Cách chọn đúng đơn vị booking báo uy tín, tránh mất tiền oan.' ),
+		array( 'slug' => 'chien-dich-pr-an-tuong-viet-nam', 'title' => 'Case Study Chiến Dịch PR Ấn Tượng', 'desc' => 'Phân tích chiến dịch PR thực tế, bài học cho doanh nghiệp SME.' ),
+	);
+	?>
+	<section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+		<div class="wrap">
+			<div class="center" style="margin-bottom:26px"><span class="eyebrow">Tìm hiểu thêm</span><h2>Kiến thức booking báo &amp; PR</h2></div>
+			<div class="svc-links">
+				<?php foreach ( $dgc_bao_cum as $c ) : ?>
+				<a class="svc-link" href="<?php echo esc_url( home_url( '/' . $c['slug'] . '/' ) ); ?>">
+					<div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+					<h3><?php echo $c['title']; // phpcs:ignore - chuoi tinh, co entity &amp; ?></h3>
+					<p><?php echo esc_html( $c['desc'] ); ?></p>
+					<span class="svc-more">Đọc bài →</span>
+				</a>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+	<?php
+endif;
 ?>
 
 <?php if ( get_the_content() ) : ?>
