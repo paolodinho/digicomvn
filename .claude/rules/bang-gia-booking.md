@@ -190,16 +190,19 @@ Hiếu: "toàn bộ sản phẩm niêm yết trên digicomvn chỉ lấy của d
   Đây là cùng công thức đã dùng cho báo giá tay gửi khách, giờ áp dụng chung cho cả giá
   niêm yết website - không còn 2 công thức khác nhau giữa web và báo giá tay nữa.
 - **Đã đẩy live 2026-08-18**: 645/651 dòng đổi giá (đều GIẢM, đúng hướng ×0,95 < ×1,05 cũ).
-  **6 dòng bị loại khỏi đợt push này** vì phát hiện lỗi dữ liệu nguồn có sẵn (không liên
-  quan việc đổi công thức lần này): `bang-gia-master.csv` có 6 dòng DanaSEO Textlink "Link
-  fullsite - 6 tháng" (hanoitimes.vn, thieunien.vn, thanhnienviet.vn, tapchinghiencuuphathoc.vn,
-  phunuvagiadinh.vn, reatimes.vn) bị dính giá "1.200.000" và "1.400.000" thành 1 chuỗi số
-  liền `12000001400000` (mất dấu gạch nối khi parse từ sheet DanaSEO gốc, ngày nhập
-  2026-07-29) - nếu đẩy sẽ ra giá web ~11,4 nghìn tỷ đồng/dòng. Đã lọc bỏ trước khi push
-  (kiểm tra `gia > 500.000.000` trước khi ghi), 6 dòng này TRÊN LIVE vẫn giữ giá cũ (trước
-  đợt update này) - **CẦN Hiếu vào Google Sheet DanaSEO tra lại giá thật của "Link fullsite
-  6 tháng" cho 6 site trên rồi sửa tay `bang-gia-master.csv`/CPT tương ứng**, chưa tự đoán.
-  Backup đầy đủ (mọi trạng thái, mọi ID) trước khi ghi:
+  **6 dòng bị lỗi dữ liệu nguồn có sẵn** (không liên quan việc đổi công thức lần này):
+  `raw/Textlink-home.csv` cột "Link fullsite 3-6-12 tháng" của 6 site (hanoitimes.vn,
+  thieunien.vn, thanhnienviet.vn, tapchinghiencuuphathoc.vn, phunuvagiadinh.vn, reatimes.vn)
+  bị THIẾU 1 dấu gạch nối trong sheet DanaSEO gốc (`"1.000.000 - 1.200.000 1.400.000"` thay
+  vì `"... - 1.200.000 - 1.400.000"`) → `build_master.py` gộp "1.200.000" và "1.400.000"
+  thành 1 số `12000001400000`, đồng thời làm mất luôn dòng "12 tháng" (chỉ tách được 2/3 giá
+  trị). ĐÃ SỬA XONG 2026-08-18: xác nhận lại giá trị đúng (1.200.000 / 1.400.000) qua dòng
+  đối chiếu ID 1143-1148 ("Link Home/CM/Fullsite theo site" - liệt kê rõ "Fullsite:
+  1000000-1200000-1400000đ" cho đúng 6 site này) → vá lại `raw/Textlink-home.csv` +
+  `bang-gia-master.csv` (thêm dòng "12 tháng" còn thiếu), đẩy live: 6 dòng "6 tháng" (ID
+  3629/3630/3631/3632/3633/3479) sửa còn 1.140.000 (=1.200.000×0,95), tạo mới 6 dòng "12
+  tháng" giá 1.330.000 (=1.400.000×0,95). Không còn dòng nào cần Hiếu tra tay.
+  Backup đầy đủ (mọi trạng thái, mọi ID, trước cả 2 đợt ghi) tại
   `~/Claude-Workspace/_backups/routines/2026-08-18/gia-danaseo-minus5/live-BEFORE.json`.
 - Muốn đổi lại mức chiết khấu (vd -5% → -3%) → sửa `MARKUP_DANASEO` trong `export-web.py`,
   chạy lại `python3 export-web.py` rồi `python3 cap-nhat-gia.py` (kiểm tra không có dòng
