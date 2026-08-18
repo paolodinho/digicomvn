@@ -64,6 +64,15 @@ Digicom × 0,95" → lộ tên NCC và công thức tính giá nội bộ. Từ 
 - Muốn kiểm tra công thức/giá vốn thật → mở riêng ghi chú/script nội bộ (không phải file đã
   gửi khách), hoặc hỏi lại Hiếu.
 
+## 5. Cấu trúc file báo giá gửi khách (chốt 2026-08-18)
+
+- **KHÔNG có mục "Gói đề xuất"/"Gói combo"** - chỉ liệt kê bảng giá từng vị trí đăng theo
+  đầu báo, không gợi ý sẵn gói kết hợp nhiều đầu báo. Khách tự chọn dòng cần đặt.
+- **Email liên hệ trong file báo giá dùng `sales@digicomvn.com`** (KHÔNG dùng
+  `info@digicomvn.com` - email đó dùng cho việc khác, không phải kênh bán hàng).
+- **Phụ phí thuê phóng viên đến tận nơi (không phải Digicom biên tập từ tư liệu khách
+  cung cấp): 1.000.000đ/buổi**, ghi rõ trong mục Ghi chú, chưa gồm trong giá bảng.
+
 ## Liên quan
 - `bang-gia-booking.md` - nguồn giá, sàn giá vốn, mã NCC (tài liệu NỘI BỘ, không copy vào
   file gửi khách).
