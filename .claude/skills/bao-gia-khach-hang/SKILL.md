@@ -45,6 +45,44 @@ Mỗi lần làm báo giá, **LUÔN xuất ra ĐÚNG 2 FILE**, không bao giờ 
 5. Chỉ gọi `SendUserFile` cho file gửi khách theo mặc định. File nội bộ chỉ gửi khi
    Hiếu yêu cầu rõ ràng ("gửi cả file nội bộ", "cho xem giá vốn").
 
+## Template sẵn dùng - sheet/trang "Thông tin & Thanh toán" (mục 7)
+
+Copy đúng nội dung này vào cuối MỌI file gửi khách (đổi ngày phát hành + ngày hết hạn
+= ngày phát hành + 7; đổi hình thức thanh toán nếu Hiếu chỉ định khác cho đơn cụ thể):
+
+```
+1. Thông tin bên bán
+   Tên công ty:        CÔNG TY TNHH DỊCH VỤ TRUYỀN THÔNG DIGITO COMBAT
+   Mã số thuế:          0109816406
+   Địa chỉ giao dịch:   Số nhà 200, Đường 3.1, Khu đô thị Gamuda Garden,
+                        Phường Trần Phú, Quận Hoàng Mai, TP. Hà Nội
+   Hotline:              0988 769 317
+   Email:                sales@digicomvn.com
+   Website:              digicomvn.com
+
+2. Thông tin thanh toán
+   Số tài khoản:         567898838
+   Ngân hàng:            Ngân hàng TMCP Quân đội (MB Bank)
+   Chủ tài khoản:        CONG TY TNHH DVTT DIGITO COMBAT
+   Nội dung chuyển khoản: [Số báo giá/mã đơn] + [Họ tên người chuyển]
+   Hình thức thanh toán: Thanh toán 100% giá trị đơn hàng trước khi triển khai
+                        đăng bài. Đơn giá trị lớn/khách mới có thể áp dụng đặt
+                        cọc 50% - liên hệ để thống nhất trước khi đặt.
+
+3. Hiệu lực báo giá
+   Ngày phát hành:       <ngày làm báo giá>
+   Hiệu lực đến hết:     <ngày phát hành + 7> (7 ngày kể từ ngày phát hành)
+   Lưu ý:                Sau thời hạn trên, giá có thể thay đổi theo chính sách
+                        nhà cung cấp - vui lòng liên hệ để xác nhận lại giá
+                        trước khi đặt.
+```
+
+- File Excel: dựng thành sheet riêng tên `Thong tin & Thanh toan`, đặt ngay sau sheet
+  "Mục lục" (nếu có) để khách thấy sớm; thêm 1 dòng trong Mục lục trỏ hyperlink tới
+  sheet này.
+- File Word/PDF: đặt thành 1 trang/mục riêng ở cuối văn bản, có heading rõ ràng.
+- Thiếu sheet/mục này = file báo giá CHƯA ĐẠT, phải bổ sung trước khi coi là xong.
+
 ## Cấm
 
 - Không bao giờ xuất 1 file duy nhất rồi tự ý thêm/bớt cột theo ngữ cảnh - luôn tách
