@@ -88,6 +88,34 @@ liệt kê 1 bảng phẳng dài. Phải:
 - Áp dụng cho MỌI file tổng hợp số lượng lớn gửi khách (không riêng guest post) - textlink,
   booking báo theo đầu báo, backlink... đều theo nguyên tắc này.
 
+## 7. Mọi báo giá PHẢI có khối "Thông tin Digicom + thanh toán + hiệu lực" (chốt 2026-08-18)
+
+Bất kỳ file báo giá nào gửi khách (docx/xlsx, 1 dòng hay hàng trăm dòng) đều phải có 1
+khối/sheet riêng (đặt cuối file, hoặc trang riêng nếu docx) gồm đủ các mục sau - KHÔNG
+được thiếu:
+
+1. **Thông tin bên bán (Digicom)** - lấy từ pháp nhân mặc định
+   `~/.claude/rules/digito-combat.md` (global):
+   - Tên công ty: CÔNG TY TNHH DỊCH VỤ TRUYỀN THÔNG DIGITO COMBAT
+   - MST: 0109816406
+   - Địa chỉ giao dịch: Số nhà 200, Đường 3.1, Khu đô thị Gamuda Garden, Phường Trần Phú,
+     Quận Hoàng Mai, TP. Hà Nội
+   - Hotline: 0988 769 317 - Email: sales@digicomvn.com (theo mục 5, KHÔNG dùng info@)
+2. **Thông tin thanh toán**:
+   - STK: 567898838 - Ngân hàng TMCP Quân đội (MB Bank) - Chủ TK: CONG TY TNHH DVTT
+     DIGITO COMBAT
+   - Nội dung chuyển khoản: `[Số báo giá/mã đơn]` + `[Họ tên người chuyển]`
+   - **Hình thức thanh toán MẶC ĐỊNH** (áp dụng nếu Hiếu không chỉ định khác cho đơn cụ
+     thể): thanh toán 100% giá trị đơn hàng trước khi triển khai đăng bài/backlink.
+     Đơn giá trị lớn (>=50 triệu) hoặc khách mới lần đầu -> có thể đề xuất đặt cọc 50%
+     trước, 50% còn lại trước khi bàn giao báo cáo link live - HỎI Hiếu nếu không chắc
+     nên áp dụng cách nào cho đơn cụ thể, đừng tự quyết khi số tiền lớn.
+3. **Hiệu lực báo giá: 7 ngày kể từ ngày phát hành báo giá.** Sau thời hạn này giá có
+   thể thay đổi theo chính sách nhà cung cấp - khách cần liên hệ xác nhận lại. Luôn ghi
+   rõ NGÀY PHÁT HÀNH + NGÀY HẾT HẠN (ngày phát hành + 7) tính sẵn, không để khách tự cộng.
+4. Các điều khoản khác nếu phát sinh theo từng đơn (thời gian triển khai, chính sách
+   huỷ/đổi vị trí...) - bổ sung thêm, không thay thế 3 mục bắt buộc trên.
+
 ## Liên quan
 - `bang-gia-booking.md` - nguồn giá, sàn giá vốn, mã NCC (tài liệu NỘI BỘ, không copy vào
   file gửi khách).

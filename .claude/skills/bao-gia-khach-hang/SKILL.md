@@ -35,6 +35,8 @@ Mỗi lần làm báo giá, **LUÔN xuất ra ĐÚNG 2 FILE**, không bao giờ 
 3. Từ file nội bộ, lọc bỏ cột NCC/giá vốn/công thức -> dựng **file gửi khách** theo
    đúng mục 4 (giá niêm yết ảo + CK 20-29% + giá ưu đãi = giá bán thật) và mục 6 (phân
    theo lĩnh vực + mục lục điều hướng nếu số lượng lớn). Lưu cùng thư mục `11-bao-gia-khach/`.
+   **BẮT BUỘC** thêm 1 sheet/trang "Thông tin & Thanh toán" theo mục 7 (thông tin Digicom,
+   STK, hình thức thanh toán, ngày phát hành + hạn 7 ngày) - thiếu mục này = chưa xong.
 4. Khi báo cáo xong: **LUÔN đưa full path của file GỬI KHÁCH lên đầu**, rõ ràng, không
    lẫn với file nội bộ (theo rule global `output-file-path.md` + `to-chuc-file-goi-y.md`).
    Ví dụ:
