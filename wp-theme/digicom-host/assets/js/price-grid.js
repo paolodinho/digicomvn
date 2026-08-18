@@ -163,7 +163,8 @@
 		head.innerHTML =
 			'<div class="gh-name">' + esc(colName) + '</div>' +
 			(isGoi ? '' : '<div class="gh-dr">DR</div>') +
-			'<div class="gh-price">Giá</div>';
+			'<div class="gh-price">Giá</div>' +
+			'<div class="gh-action"></div>';
 		var body = document.createElement('div');
 		body.className = 'grid-body';
 		var pager = document.createElement('div');
@@ -192,7 +193,8 @@
 						(d.noiBat ? '<span class="r-hot">Phổ biến</span>' : '') +
 					'</div>' +
 					(isGoi ? '' : '<div class="r-dr">' + (d.dr ? '<span class="dr-chip" style="background:' + drColor(d.dr) + '">' + d.dr + '</span>' : '') + '</div>') +
-					'<div class="r-price">' + rangeTxt +
+					'<div class="r-price">' + rangeTxt + '</div>' +
+					'<div class="r-action">' +
 						(d.count === 1 ? '<button type="button" class="grid-pick' + (picked ? ' is-picked' : '') + '" data-key="' + esc(d.key) + '" data-price="' + esc(d.price) + '" data-mkgain="' + esc(d.mkgain) + '" data-label="' + esc(d.label) + '" title="Chọn ' + esc(colName.toLowerCase()) + ' này"><span class="pick-add">+</span><span class="pick-on">✓</span></button>' : '') +
 					'</div>' +
 				'</div>';
