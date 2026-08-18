@@ -12,6 +12,10 @@
   --action:#4761FF;         /* primary xanh duong GrowMark, KHONG purple/indigo */
   --action-2:#3450E0;       /* CTA hover */
   --teal:#0E8C7F;           /* accent phu (badge/icon), giu rieng biet voi primary */
+  --dr-hi:#0E8C7F;   /* badge DR>=70 (price-grid.js drColor()) */
+  --dr-mid:#2563EB;  /* badge DR>=40 */
+  --dr-lo:#5B6675;   /* badge DR>=25 */
+  --dr-none:#8B93A7; /* badge DR<25 / chua co du lieu */
   --surface:#F1F3FA;        /* nen sang GrowMark */
   --surface-2:#FFFFFF;
   --line:#E1E6F5;
