@@ -226,6 +226,18 @@ Sheet gốc CÓ cập nhật (khác bản 2026-07-24) - nạp lại bằng `pars
 Lưu ý baodanang.vn từng bị loại 2026-07-18 vì Fame ghi "Không nhận bài" - nay CẢ Media Việt Nam
 lẫn Fame đều rao bán trở lại.
 
+## VCCorp - Google Sheet báo giá nhiều dịch vụ (2026-08-19, Hiếu gửi)
+
+Sheet: https://docs.google.com/spreadsheets/d/14BX10wnvAIs0KWGxedOJG_RSjms-A9e3kdsUYYp8H94/edit?gid=265163305
+(gid mặc định 265163305, chưa rõ có bao nhiêu tab khác). Chưa bóc nội dung - mới lưu link theo
+yêu cầu Hiếu. VCCorp là công ty mẹ của Admicro (đã có rate card PDF Admicro trong mục "Admicro
+PDF" ở trên) - sheet này có thể là báo giá tổng hợp rộng hơn (nhiều đầu báo/dịch vụ VCCorp),
+cần rà để tránh trùng lặp với dữ liệu Admicro đã có.
+
+**Việc còn lại**: mở sheet (Chrome đã đăng nhập Google, theo đúng cách đã lấy DanaSEO - sheet
+dạng "chỉ xem" nội bộ, Drive API/curl không lấy được), liệt kê hết các tab, bóc giá theo đúng
+quy trình `build_master.py`/`gan-nganh.py` nếu Hiếu muốn đưa vào kho dữ liệu báo giá.
+
 ### Chưa làm trong tuần này (còn nợ)
 - **Admicro**: 10 URL rate card còn sống chưa bóc (cafef, nld, cafebiz, dantri, thanhnien,
   vietnamnet, vnenconomy bản jan2026; kenh14, soha, afamily bản apr2025). Admicro KHÔNG thuộc
