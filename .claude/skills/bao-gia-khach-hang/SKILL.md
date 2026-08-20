@@ -157,6 +157,9 @@ ghi nội dung.
   Hiếu bấm nhầm gửi file có giá vốn cho khách.
 - Không để lại dòng "Liên hệ"/giá trống cho báo/vị trí không có giá thật - báo/vị trí nào
   không xác định được giá thì XOÁ HẲN dòng đó khỏi cả 2 file, không hiển thị placeholder.
+- **Không gộp sẵn "Gói đề xuất"/"Gói combo"** trong file gửi khách (chốt `bao-gia-khach-hang.md`
+  mục 5) - chỉ liệt kê bảng giá từng vị trí đăng theo đầu báo, để khách tự chọn dòng cần đặt.
+  Nếu Hiếu yêu cầu rõ ràng muốn có gói gợi ý cho 1 báo giá cụ thể thì mới thêm, không mặc định.
 
 ## Liên quan
 
