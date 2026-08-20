@@ -37,12 +37,23 @@ Mỗi lần làm báo giá, **LUÔN xuất ra ĐÚNG 2 FILE**, không bao giờ 
    theo lĩnh vực + mục lục điều hướng nếu số lượng lớn). Lưu cùng thư mục `11-bao-gia-khach/`.
    **BẮT BUỘC** thêm 1 sheet/trang "Thông tin & Thanh toán" theo mục 7 (thông tin Digicom,
    STK, hình thức thanh toán, ngày phát hành + hạn 7 ngày) - thiếu mục này = chưa xong.
-4. Khi báo cáo xong: **LUÔN đưa full path của file GỬI KHÁCH lên đầu**, rõ ràng, không
-   lẫn với file nội bộ (theo rule global `output-file-path.md` + `to-chuc-file-goi-y.md`).
-   Ví dụ:
-   - "File gửi khách: `<path>`"
-   - "File nội bộ (có giá vốn, ĐỪNG gửi khách): `<path>`" (nêu sau, phụ)
-5. Chỉ gọi `SendUserFile` cho file gửi khách theo mặc định. File nội bộ chỉ gửi khi
+4. **Auto-upload lên Google Drive (chốt 2026-08-20, Hiếu: "auto up lên gg drive")** -
+   sau khi lưu cả 2 file vào `11-bao-gia-khach/` (local SSD), COPY THÊM 1 bản (cả file
+   nội bộ lẫn file gửi khách) sang đúng thư mục tương ứng trên Drive Stream local:
+   `~/Library/CloudStorage/GoogleDrive-hieudx3107@gmail.com/My Drive/Projects/digicom/11-bao-gia-khach/`
+   (dùng lệnh `cp`, KHÔNG dùng MCP Drive `create_file`/base64 - vừa chậm vừa tốn rất
+   nhiều token vì phải nạp toàn bộ nội dung nhị phân file vào context chỉ để upload).
+   Nếu thư mục đích trên Drive chưa tồn tại -> tạo bằng `mkdir -p` (Drive Stream tự đồng
+   bộ khi có file/thư mục mới, không cần gọi API). Bản gốc trên SSD vẫn là source of
+   truth khi sửa/cập nhật - copy sang Drive là bản NHÂN THÊM để tiện chia sẻ link, không
+   phải ngược lại.
+5. Khi báo cáo xong: **LUÔN đưa full path của file GỬI KHÁCH lên đầu** (path local SSD,
+   không lẫn với file nội bộ - theo rule global `output-file-path.md` +
+   `to-chuc-file-goi-y.md`), sau đó báo thêm 1 dòng đã đồng bộ Drive. Ví dụ:
+   - "File gửi khách: `<path SSD>`"
+   - "File nội bộ (có giá vốn, ĐỪNG gửi khách): `<path SSD>`" (nêu sau, phụ)
+   - "Đã đồng bộ cả 2 file lên Google Drive: Projects/digicom/11-bao-gia-khach/"
+6. Chỉ gọi `SendUserFile` cho file gửi khách theo mặc định. File nội bộ chỉ gửi khi
    Hiếu yêu cầu rõ ràng ("gửi cả file nội bộ", "cho xem giá vốn").
 
 ## Template sẵn dùng - sheet/trang "Thông tin & Thanh toán" (mục 7)
