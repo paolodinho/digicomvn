@@ -110,6 +110,22 @@ thừa style Normal, phải ép trực tiếp lên từng cell sau khi ghi xong.
 Với file Word (docx): đặt style "Normal" của document về Times New Roman 12pt trước khi
 ghi nội dung.
 
+## Trình bày số liệu + tên sheet (chốt 2026-08-20, Hiếu: "định dạng số tiền khó nhìn... tên sheet ko dấu ko ổn")
+
+- **Mọi ô giá tiền** (openpyxl) đặt `number_format = "#,##0"` - hiển thị có dấu phẩy ngăn
+  cách hàng nghìn, không để số thô kiểu `6000000`.
+- **Không tự fix width cột theo cảm tính** - dùng 1 hàm `auto_fit_columns(ws)` chạy SAU
+  khi ghi xong toàn bộ dữ liệu 1 sheet: duyệt mọi ô có giá trị, **bỏ qua ô nằm trong vùng
+  merge** (banner công ty, ghi chú dài - nếu không loại trừ sẽ làm 1 cột bị kéo giãn quá
+  khổ theo đúng độ dài của dòng ghi chú), đo độ dài hiển thị thật (số tiền tính theo dạng
+  đã có dấu phẩy `f"{v:,.0f}"`), set `width = min(max_width, length + padding)`. Mọi dòng
+  ghi chú/mô tả dài chạy ngang nhiều cột **PHẢI `merge_cells` trước khi ghi giá trị**, nếu
+  không cũng gây lỗi kéo giãn cột y hệt (đã dính lỗi này ở sheet "Textlink Báo" lần đầu -
+  dòng mô tả 158 ký tự không merge làm cột A rộng 140).
+- **Tên sheet + mọi text hiển thị LUÔN có dấu tiếng Việt đầy đủ** - không viết tắt bỏ dấu
+  kiểu "Bao lon", "Thong tin & Thanh toan". Áp dụng cho tiêu đề sheet, header cột, hyperlink
+  text ("← Về Mục lục"), tên trong Mục lục.
+
 ## Cấm
 
 - Không bao giờ xuất 1 file duy nhất rồi tự ý thêm/bớt cột theo ngữ cảnh - luôn tách
