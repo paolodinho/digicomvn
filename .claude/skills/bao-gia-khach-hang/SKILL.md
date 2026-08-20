@@ -93,6 +93,14 @@ Copy đúng nội dung này vào cuối MỌI file gửi khách (đổi ngày ph
   sheet này.
 - File Word/PDF: đặt thành 1 trang/mục riêng ở cuối văn bản, có heading rõ ràng.
 - Thiếu sheet/mục này = file báo giá CHƯA ĐẠT, phải bổ sung trước khi coi là xong.
+- **Cột B (chứa nội dung: địa chỉ, STK, điều khoản...) PHẢI set width đủ rộng tường minh**
+  (chốt 2026-08-20, Hiếu: "sheet thông tin thanh toán đang bị trống" - nguyên nhân: cột B
+  không được set width, mặc định quá hẹp (~8) nên nội dung gần như không hiển thị, nhìn như
+  sheet trống dù dữ liệu vẫn có đủ). Set `column_dimensions['A'].width = 26`,
+  `column_dimensions['B'].width = 78`, mọi ô cột B bật `Alignment(wrap_text=True,
+  vertical="top")`, KHÔNG set row height cố định (để Sheets/Excel tự giãn theo nội dung
+  wrap) - sheet này KHÔNG dùng `auto_fit_columns()` chung (hàm đó cap max_width=24, quá hẹp
+  cho các đoạn điều khoản dài như "Hình thức thanh toán").
 
 ## Font mặc định (chốt 2026-08-20)
 
