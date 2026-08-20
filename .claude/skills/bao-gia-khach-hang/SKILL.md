@@ -125,6 +125,12 @@ ghi nội dung.
 - **Tên sheet + mọi text hiển thị LUÔN có dấu tiếng Việt đầy đủ** - không viết tắt bỏ dấu
   kiểu "Bao lon", "Thong tin & Thanh toan". Áp dụng cho tiêu đề sheet, header cột, hyperlink
   text ("← Về Mục lục"), tên trong Mục lục.
+- **Banner công ty ở đầu mỗi sheet (merge nhiều dòng dài: MST/STK/hotline/hạn báo giá)
+  PHẢI bật `wrap_text=True` + đặt `row_dimensions[i].height` đủ cao** (dòng chữ dài ~110-124
+  ký tự, merge càng ít cột thì càng cần cao hơn - sheet 3-4 cột dùng ~46, sheet nhiều cột
+  dùng ~30) - nếu không chữ bị CẮT NGANG khi mở bằng Google Sheets (đã dính lỗi này: dòng
+  STK/hotline bị cắt cụt ở sheet Mục lục vì chỉ merge 3 cột, không đủ rộng cho 1 dòng, và
+  không có wrap_text để tự xuống dòng).
 
 ## Cấm
 
