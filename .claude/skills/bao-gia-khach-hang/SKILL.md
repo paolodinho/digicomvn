@@ -122,6 +122,14 @@ ghi nội dung.
   ghi chú/mô tả dài chạy ngang nhiều cột **PHẢI `merge_cells` trước khi ghi giá trị**, nếu
   không cũng gây lỗi kéo giãn cột y hệt (đã dính lỗi này ở sheet "Textlink Báo" lần đầu -
   dòng mô tả 158 ký tự không merge làm cột A rộng 140).
+- **`max_width` PHẢI đặt THẤP (chốt 2026-08-20 lần 2: ~24 ký tự), KHÔNG để tự do theo nội
+  dung dài nhất** - Hiếu: "làm sao trong 1 màn hình là đọc dễ dàng, ko phải kéo sửa gì cả".
+  Bảng nhiều cột văn bản dài (Link, Ghi chú, Vị trí đăng, Mô tả...) nếu để width tự do theo
+  đúng độ dài nội dung sẽ cộng dồn ra hàng trăm ký tự tổng chiều rộng, tràn khỏi 1 màn hình
+  dù mỗi cột trông "vừa đủ". Cột nào bị cắt do cap `max_width` -> `auto_fit_columns` tự bật
+  `wrap_text=True, vertical="top"` cho MỌI ô dữ liệu của cột đó (trừ dòng header đã tự canh
+  giữa) để chữ xuống dòng thay vì mất nội dung - Google Sheets/Excel tự giãn chiều cao dòng
+  theo số dòng chữ, không cần set row height tay.
 - **Tên sheet + mọi text hiển thị LUÔN có dấu tiếng Việt đầy đủ** - không viết tắt bỏ dấu
   kiểu "Bao lon", "Thong tin & Thanh toan". Áp dụng cho tiêu đề sheet, header cột, hyperlink
   text ("← Về Mục lục"), tên trong Mục lục.
