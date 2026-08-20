@@ -94,6 +94,22 @@ Copy đúng nội dung này vào cuối MỌI file gửi khách (đổi ngày ph
 - File Word/PDF: đặt thành 1 trang/mục riêng ở cuối văn bản, có heading rõ ràng.
 - Thiếu sheet/mục này = file báo giá CHƯA ĐẠT, phải bổ sung trước khi coi là xong.
 
+## Font mặc định (chốt 2026-08-20)
+
+Toàn bộ file báo giá (cả file khách lẫn file nội bộ, docx lẫn xlsx) dùng **Times New
+Roman, cỡ 12** làm font mặc định cho phần thân/dữ liệu. Heading/tiêu đề lớn hơn (13-14pt)
+vẫn giữ nguyên cỡ chữ để phân cấp thị giác - CHỈ đổi family sang Times New Roman, không
+ép về đúng 12pt nếu đang cố tình to hơn để làm tiêu đề.
+
+Cách áp dụng khi dựng file bằng openpyxl: sau khi ghi xong toàn bộ dữ liệu 1 sheet, chạy
+1 hàm chuẩn hoá font (ví dụ `normalize_fonts(ws)`) duyệt qua mọi cell đã có giá trị, ép
+`font.name = "Times New Roman"`, giữ nguyên `bold/italic/color/underline` đã set, chỉ set
+`size = 12` cho cell nào đang dùng size mặc định/nhỏ hơn 12. KHÔNG áp dụng bằng cách sửa
+style "Normal" của workbook - cell nào đã có `cell.font = Font(...)` riêng sẽ không kế
+thừa style Normal, phải ép trực tiếp lên từng cell sau khi ghi xong.
+Với file Word (docx): đặt style "Normal" của document về Times New Roman 12pt trước khi
+ghi nội dung.
+
 ## Cấm
 
 - Không bao giờ xuất 1 file duy nhất rồi tự ý thêm/bớt cột theo ngữ cảnh - luôn tách
@@ -101,6 +117,8 @@ Copy đúng nội dung này vào cuối MỌI file gửi khách (đổi ngày ph
 - 2 file nằm CÙNG 1 thư mục (không tách thư mục con) nhưng PHẢI khác nhau rõ ràng qua
   tên (tiền tố `NOIBO-`) VÀ màu (đỏ cảnh báo vs xanh brand) để nhìn là biết ngay, tránh
   Hiếu bấm nhầm gửi file có giá vốn cho khách.
+- Không để lại dòng "Liên hệ"/giá trống cho báo/vị trí không có giá thật - báo/vị trí nào
+  không xác định được giá thì XOÁ HẲN dòng đó khỏi cả 2 file, không hiển thị placeholder.
 
 ## Liên quan
 
