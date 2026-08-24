@@ -1,6 +1,19 @@
 # PLAN - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
+- Task: Báo giá CafeF/CafeBiz/kênh doanh nhân (khách Lưu Nguyễn Ánh Minh - AP Consulting)
+- Đã xong: so sánh giá CafeBiz vs Doanh Nhân Sài Gòn (HTV) từ báo giá 2026-08-18 +
+  `10-bang-gia-booking/bang-gia-master.csv`. Kết quả: DNSG tin ngắn 2.954.000đ rẻ nhất;
+  bài đầy đủ thì CafeBiz Bài thương hiệu 6.650.000đ rẻ hơn DNSG 7.087.000đ.
+- Đang làm: Hiếu ĐANG HỎI NHÀ CUNG CẤP để lấy giá thật (file gửi NCC:
+  `De-nghi-bao-gia-CafeF-CafeBiz-DoanhNhan-2026-08-24.docx`, gửi Nhanh.vn).
+- Tiếp theo: khi NCC trả giá -> cập nhật `bang-gia-master.csv` (Doanh Nhân Sài Gòn hiện chỉ
+  có 1 nguồn Rise Media: tin ngắn 2.610.000 / chuyên mục SKDN 6.960.000), tính lại giá bán
+  (×0,95 theo `bao-gia-khach-hang.md` mục 3) rồi phát hành báo giá mới trong `11-bao-gia-khach/`.
+- File liên quan: `11-bao-gia-khach/Bao-gia-CafeF-CafeBiz-DoanhNhan-LuuNguyenAnhMinh-2026-08-18.docx`
+- Cập nhật lúc: 2026-08-24
+
+### Ghi chú cũ (không còn dở)
 Không có việc dở - Internal-link audit 2026-08-12/13 đã xong cả 3 task (xem LOG.md 2026-08-13
 "Internal-link audit - Task 3 xong" + skill mới `.claude/skills/internal-link-audit/SKILL.md`).
 Dữ liệu audit đầy đủ (out_links/indeg/anchors mọi URL): `/tmp/link-audit-full.json` (file tạm,
