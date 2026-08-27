@@ -47,6 +47,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/schema-markup.md` | **Schema.org: 1 khoi @graph/trang (inc/schema.php), khong chen JSON-LD vao bai** |
 | `.claude/rules/seo-meta-og.md` | **Meta description + Open Graph + canonical do theme tu sinh (inc/seo-meta.php), khong dung plugin SEO** |
 | `.claude/rules/bao-gia-khach-hang.md` | **Bao gia khach: ky cang doi chieu gia von + luon co chiet khau hap dan** |
+| `.claude/rules/pr-phong-van-nhieu-bao.md` | **PR co phong van: 1 goc tiep can, ~20 cau, tach 2 ban gui khach / gui phong vien** |
 | `.claude/rules/gsc-sitemap-submit.md` | Auto-submit sitemap len Google Search Console khi co bai moi |
 | `.claude/rules/mobile-responsive-content.md` | **Bai viet khong duoc tran/vo tren mobile - QA bang tools/mobile-overflow-check.py** |
 | `.claude/rules/leads-sheet-sync.md` | Khach dang ky form tu dong vao Google Sheet (dung chung service account GSC) |
