@@ -47,6 +47,17 @@ back-link-chat-luong), phải nêu thẳng **"hành vi vi phạm pháp luật"**
 Nếu khách hỏi mua: từ chối dứt khoát, giải thích lý do, điều hướng sang nguồn hợp pháp
 (báo điện tử, guest post site cùng ngành, social entity, diễn đàn còn hoạt động).
 
+## Ngoại lệ: dòng THÔNG BÁO "không nhận bài PR" - GIỮ, không phải diện cấm (chốt 2026-09-05)
+
+Rule này cấm **BÁN/rao bán** link .gov.vn/.edu.vn. Khi 1 bảng giá nguồn (NCC gửi) liệt kê 1 đầu
+báo/site .gov.vn kèm ghi chú kiểu "Không nhận bài PR" (tức là **từ chối bán**, không có giá, không
+có gì để đặt) - đây KHÔNG phải hành vi chào bán, nên **GIỮ NGUYÊN dòng đó trong báo giá/bảng
+tổng hợp** làm thông tin tham khảo, không tự ý xoá. Chỉ xoá/chặn khi dòng đó có GIÁ và đang được
+CHÀO BÁN thật (đúng bản chất rule ở trên).
+
+Sự cố 2026-09-05: tự ý xoá dòng `Moh.gov.vn - Không nhận bài PR` khỏi 1 báo giá gửi khách vì áp
+rule này quá tay - Hiếu yêu cầu giữ lại vì đây chỉ là dòng thông báo, không phải rao bán.
+
 ## Đã dọn ngày 2026-07-20
 
 | Nơi | Vấn đề | Xử lý |

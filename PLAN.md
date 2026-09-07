@@ -1,17 +1,42 @@
 # PLAN - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
+- Task: (KHÔNG có việc dở) Thiết kế lại trang /booking-bao-pr/ - ĐÃ XONG 2026-09-04.
+  Xem LOG.md 2026-09-04 + content/cluster-booking-bao.md mục 2026-09-04. Template mới
+  `page-booking-bao-pr.php` đã deploy live (DGC_VER 2.8.0), post_content 475 viết lại, GSC
+  submit xong. Backup: ~/Claude-Workspace/_backups/routines/2026-09-04/booking-bao-pr-redesign/.
+  Việc nhỏ chưa làm (không gấp): không có.
+
+### (Lịch sử) THIẾT KẾ LẠI trang /booking-bao-pr/ (page id 475) - money page cụm booking báo.
+  5 yêu cầu Hiếu: (1) rà internal link IN/OUT cả cụm 64 bài (category 24) để trang này đúng là
+  money page, (2) nhồi semantic keyword cụm vào content, (3) thiết kế thoáng/đẹp/dễ đọc theo nhịp
+  MailBluster, (4) ảnh chọn lọc (bỏ Storyset/stock generic - dùng sơ đồ HTML + logo báo thật +
+  screenshot), (5) layout tham khảo mailbluster.com.
+- Quyết định đã chốt: (a) tách template RIÊNG `page-booking-bao-pr.php` (WP tự nạp theo slug,
+  không đụng 7 pillar kia), (b) ảnh = sơ đồ HTML + logo báo + screenshot, tối đa 1-2 illustration,
+  (c) deploy thẳng live có backup.
+- Đã xong: backup page 475 + 64 bài cụm + theme (~/Claude-Workspace/_backups/routines/2026-09-04/
+  booking-bao-pr-redesign/). Dựng xong link graph cụm (/tmp/bbp-cluster/posts.json).
+  Phát hiện: 17 bài chưa link tới money page /booking-bao-pr/ (16 trang book-bao-* batch R cũ chỉ
+  link /booking-bao-la-gi/ + bao-gia-dang-bai-pr-theo-dau-bao + so-sanh-booking-bao-pr-va-quang-cao-bao).
+  Page 475 hiện KHÔNG link ra /booking-bao-la-gi/, /booking-bao-tinh/, /booking-bao-quoc-te/,
+  /booking-truyen-hinh/, cụm kiến thức PR.
+- Đang làm: đọc nốt các include cần dùng (header/press-partners/dr-chart/svc-faq/form-lead/
+  front-page marquee logo + helper functions + nhom array) rồi dựng page-booking-bao-pr.php + CSS.
+- Tiếp theo: (1) build template + CSS scoped .bbp-*, (2) rewrite post_content page 475 (>=1500 từ,
+  mọi H2 có visual, semantic cụm, link ra đủ trang con + cụm kiến thức), (3) thêm link money page
+  cho 17 bài thiếu (anchor đa dạng, check internal-link-anchor-check.py <8%), (4) deploy SSH +
+  REST, bump DGC_VER, purge, QA (mobile-overflow/schema/meta/list-semantic + browser), GSC submit,
+  cập nhật LOG.md + content/cluster-booking-bao.md.
+- File: wp-theme/digicom-host/page-booking-bao-pr.php (chưa tạo), tpl-service.php (mẫu tham khảo),
+  inc/service-pricing.php, content/cluster-booking-bao.md
+- Cập nhật lúc: 2026-09-04
+
+### Checkpoint cũ (báo giá CafeF - tạm gác, chưa xong, KHÔNG mất)
 - Task: Báo giá CafeF/CafeBiz/kênh doanh nhân (khách Lưu Nguyễn Ánh Minh - AP Consulting)
-- Đã xong: so sánh giá CafeBiz vs Doanh Nhân Sài Gòn (HTV) từ báo giá 2026-08-18 +
-  `10-bang-gia-booking/bang-gia-master.csv`. Kết quả: DNSG tin ngắn 2.954.000đ rẻ nhất;
-  bài đầy đủ thì CafeBiz Bài thương hiệu 6.650.000đ rẻ hơn DNSG 7.087.000đ.
-- Đang làm: Hiếu ĐANG HỎI NHÀ CUNG CẤP để lấy giá thật (file gửi NCC:
-  `De-nghi-bao-gia-CafeF-CafeBiz-DoanhNhan-2026-08-24.docx`, gửi Nhanh.vn).
-- Tiếp theo: khi NCC trả giá -> cập nhật `bang-gia-master.csv` (Doanh Nhân Sài Gòn hiện chỉ
-  có 1 nguồn Rise Media: tin ngắn 2.610.000 / chuyên mục SKDN 6.960.000), tính lại giá bán
-  (×0,95 theo `bao-gia-khach-hang.md` mục 3) rồi phát hành báo giá mới trong `11-bao-gia-khach/`.
-- File liên quan: `11-bao-gia-khach/Bao-gia-CafeF-CafeBiz-DoanhNhan-LuuNguyenAnhMinh-2026-08-18.docx`
-- Cập nhật lúc: 2026-08-24
+- Đang chờ: NCC trả giá thật (file `De-nghi-bao-gia-CafeF-CafeBiz-DoanhNhan-2026-08-24.docx` gửi Nhanh.vn)
+- Tiếp theo khi có giá: cập nhật `bang-gia-master.csv`, tính giá bán ×0,95, phát hành báo giá mới
+  trong `11-bao-gia-khach/`. File: `11-bao-gia-khach/Bao-gia-CafeF-CafeBiz-DoanhNhan-LuuNguyenAnhMinh-2026-08-18.docx`
 
 ### Ghi chú cũ (không còn dở)
 Không có việc dở - Internal-link audit 2026-08-12/13 đã xong cả 3 task (xem LOG.md 2026-08-13

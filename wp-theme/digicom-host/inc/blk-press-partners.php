@@ -26,7 +26,11 @@ $press_chip = function ( $pp ) {
 		<div class="center" style="margin-bottom:22px">
 			<span class="eyebrow">Mạng lưới báo chí</span>
 			<h2>Đầu báo DigicomVN hỗ trợ đặt bài, booking PR</h2>
+			<?php if ( ! is_page( 'booking-bao-pr' ) ) : ?>
 			<p class="muted" style="max-width:600px;margin:8px auto 0">Danh sách rút gọn, xem đầy đủ tại trang <a href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>" style="color:var(--action);font-weight:600">Booking báo &amp; PR</a>.</p>
+			<?php else : ?>
+			<p class="muted" style="max-width:600px;margin:8px auto 0">Danh sách rút gọn - toàn bộ đầu báo và giá niêm yết ở bảng giá bên dưới.</p>
+			<?php endif; ?>
 		</div>
 	</div>
 	<div class="press-rows press-rows--full">

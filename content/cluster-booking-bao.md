@@ -389,3 +389,42 @@ GSC hoá ra rộng rãi hơn ước tính ban đầu (8-10/ngày), không phải
 18. ✅ /book-bao-webtretho/ (trước đó "chưa lập chỉ mục" - discovered nhưng chưa crawl)
 19. ✅ /book-bao-bao-dau-tu/
 20. ✅ /book-bao-vietnamnet/ (trước đó "chưa lập chỉ mục" - discovered nhưng chưa crawl)
+
+## 2026-09-04 - THIẾT KẾ LẠI money page /booking-bao-pr/ (M1, page 475)
+
+Yêu cầu Hiếu: (1) rà internal link cả cụm để trang này đúng là money page, (2) semantic cụm cho
+Google hiểu, (3) thiết kế thoáng/đẹp/dễ đọc kiểu mailbluster.com, (4) ảnh chọn lọc (bỏ ảnh
+generic phá cấu trúc), (5) layout ref mailbluster.com.
+
+**Đã làm:**
+- Template RIÊNG `wp-theme/digicom-host/page-booking-bao-pr.php` (WP nạp theo `_wp_page_template`),
+  KHÔNG dùng `tpl-service.php` chung 7 pillar. CSS scoped `.bbp-*` cuối `main.css`. DGC_VER 2.8.0.
+- Section rhythm mới: hero + mockup báo (HTML thuần, KHÔNG ảnh) + trust strip -> dải logo báo thật
+  -> khái niệm + bảng so sánh -> lưới 6 lợi ích -> bảng giá (reuse) + 4 bước -> body viết lại
+  -> FAQ + form + cta band.
+- post_content 475 viết lại ~1450 từ: phân loại đầu báo (typegrid link /bao-gia-dang-bai-pr-theo-dau-bao/
+  /booking-bao-tinh/ /book-bao-cong-thuong/ /booking-bao-quoc-te/ /agency-booking-bao-chi/), bảng
+  "yếu tố quyết định giá", chip-grid 27 đầu báo (/book-bao-*/), lưới 12 bài kiến thức cụm
+  (/bai-pr-la-gi/ /cac-loai-hinh-pr/ /cach-viet-bai-pr-chuan-bao-chi/ /viet-bai-pr-su-kien/
+  /bai-pr-doanh-nghiep/ /mau-thong-cao-bao-chi/ /thong-cao-bao-chi-xu-ly-khung-hoang/
+  /hieu-lam-booking-bao-chi/ /mo-hinh-race-pr/ /kim-tu-thap-nguoc-trong-viet-bai-pr/
+  /chien-dich-pr-an-tuong-viet-nam/ /pr-la-gi/), 3 dịch vụ đi kèm (/guest-post/ /dich-vu-toplist/
+  /mua-textlink/), 4 case study, lưu ý (dl-card), tài liệu tham khảo. Template concept link
+  /booking-bao-la-gi/ /so-sanh-booking-bao-pr-va-quang-cao-bao/ /advertorial-la-gi/
+  /thong-cao-bao-chi-la-gi/.
+- ẢNH: bỏ toàn bộ Storyset/stock generic. Chỉ còn mockup HTML + logo báo thật (marquee) + bảng/card HTML.
+
+**Internal link cụm - kết luận audit 64 bài (category 24):**
+- INBOUND: 64/64 bài ĐÃ link vào /booking-bao-pr/. Audit đợt trước tưởng thiếu 17 -> FALSE NEGATIVE
+  (link các trang R-batch là `/booking-bao-pr/#bang-gia`, script cũ không strip fragment). Anchor
+  phân bố lành mạnh, max 6.2% (< ngưỡng 8%). KHÔNG sửa bài nào.
+- OUTBOUND: money page trước chỉ link 27 URL (thiếu hẳn pillar /booking-bao-la-gi/, sub-hub, cụm
+  kiến thức). Nay link ra 48 URL cụm + 3 dịch vụ + 4 case study -> đúng vai trò hub.
+
+**QA:** mobile-overflow 0/1, schema 1 @graph (Service + FAQPage + BreadcrumbList), meta/OG/canonical
+OK, 0 em dash. GSC submit money page + re-index cả cụm 2026-09-04.
+Backup: `~/Claude-Workspace/_backups/routines/2026-09-04/booking-bao-pr-redesign/`.
+
+**Còn có thể cải thiện (không gấp):** `inc/blk-press-partners.php` có câu "xem đầy đủ tại trang
+Booking báo & PR" giờ tự trỏ về chính trang này (self-link) khi hiển thị trên /booking-bao-pr/ -
+component dùng chung, chưa xử lý điều kiện ẩn dòng đó khi đang ở đúng trang.

@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '📂 Dự án có CLAUDE.md + PLAN.md. Đọc kỹ trước khi làm. Dùng /status để xem trạng thái, /qa để kiểm tra output, /wrap khi kết thúc session.'"
+          }
+        ]
+      }
+    ]
+  }
+}

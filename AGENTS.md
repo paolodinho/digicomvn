@@ -1,0 +1,73 @@
+# AGENTS.md - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
+
+> Bo nao du an. Doc moi session. Chi tiet o `.Codex/rules/` va `.Codex/context/`.
+
+## 1. Du an la gi?
+Website **digicomvn.com** tren WordPress Local. PIVOT 2026-07-02: tap trung DUY NHAT
+4 dich vu off-page SEO (xem `.Codex/rules/dich-vu.md`): Mua Textlink, Dich vu Backlink
+(co ngach bat dong san), Guest Post, Booking bao & PR (theo tung dau bao).
+Sau khi 4 dich vu nay on dinh moi mo rong: Thiet ke website, Ten mien, Hosting (giai doan 2,
+dang tam an - chi tiet `.Codex/rules/pivot-2026-07.md`).
+
+## 2. Loai du an
+Coding / Web (WordPress) + content-SEO.
+
+## 3. Stakeholders
+- Chu du an / nguoi duyet: Hieu
+- Khach hang cuoi: SME, agency SEO, chu website can mua textlink/backlink/guest post/booking bao PR
+
+## 4. Milestone hien tai
+Xem `.Codex/rules/pivot-2026-07.md` (M3b done 2026-07-02, M4 dang cho Hieu xac nhan
+danh sach dau bao that, M5 QA + demo).
+
+## 5. Tieu chi "xong"
+- Site chay tren Local, sua noi dung tu WP Admin (khong cham PHP).
+- 4 trang pillar dich vu + trang hub /dich-vu/ hoat dong, URL dung sitemap da chot.
+- Responsive sach o moi viewport, menu 1 dong, khong AI-slop.
+
+## 6. Rules
+| File | Dung cho |
+|---|---|
+| `.Codex/rules/pivot-2026-07.md` | Chi tiet pivot: theme, trang cu, sitemap, backup |
+| `.Codex/rules/dich-vu.md` | Danh muc dich vu chinh thuc |
+| `.Codex/rules/content-visual-coverage.md` | Moi bai >=2 anh, moi H2 co visual/interactive |
+| `.Codex/rules/word-count-minimum.md` | Bai viet >=1500 tu; audit cum booking-bao-pr/PR |
+| `.Codex/rules/quality-bar.md` | Tieu chi "xong" chi tiet |
+| `.Codex/rules/tone-voice.md` | Van phong |
+| `.Codex/rules/workflow.md` | Quy trinh lam viec |
+| `.Codex/rules/do-dont.md` | Do/Dont |
+| `.Codex/rules/deploy.md` | Deploy len live Hostinger (SSH, cache-busting DGC_VER) |
+| `.Codex/rules/image-sourcing.md` | Quy trinh chon nguon anh minh hoa (Wikimedia/Openverse/Pexels) |
+| `.Codex/rules/uu-dai-cta.md` | Uu dai (khan hiem + han chot), trang cam on, mac dinh giao dien sang |
+| `.Codex/rules/external-link-eeat.md` | Link thuat ngu/luat quan trong ra nguon uy tin (E-E-A-T) |
+| `.Codex/rules/content-diagram-explain.md` | Toi thieu 3 so do HTML giai thich doan phuc tap moi bai |
+| `.Codex/rules/audit-intent-truoc.md` | **Research SERP xac dinh intent TRUOC khi sua bai cu** |
+| `.Codex/rules/khong-ban-gov-edu.md` | **TUYET DOI khong ban/nhac ban backlink .gov.vn .edu.vn (phap ly)** |
+| `.Codex/rules/trang-tac-gia.md` | Trang tac gia /author/ - landing E-E-A-T, khong trung /blog/ |
+| `.Codex/rules/schema-markup.md` | **Schema.org: 1 khoi @graph/trang (inc/schema.php), khong chen JSON-LD vao bai** |
+| `.Codex/rules/seo-meta-og.md` | **Meta description + Open Graph + canonical do theme tu sinh (inc/seo-meta.php), khong dung plugin SEO** |
+| `.Codex/rules/bao-gia-khach-hang.md` | **Bao gia khach: ky cang doi chieu gia von + luon co chiet khau hap dan** |
+| `.Codex/rules/pr-phong-van-nhieu-bao.md` | **PR co phong van: 1 goc tiep can, ~20 cau, tach 2 ban gui khach / gui phong vien** |
+| `.Codex/rules/gsc-sitemap-submit.md` | Auto-submit sitemap len Google Search Console khi co bai moi |
+| `.Codex/rules/mobile-responsive-content.md` | **Bai viet khong duoc tran/vo tren mobile - QA bang tools/mobile-overflow-check.py** |
+| `.Codex/rules/leads-sheet-sync.md` | Khach dang ky form tu dong vao Google Sheet (dung chung service account GSC) |
+
+## 7. File quan trong
+`PLAN.md`, `LOG.md`, `DECISIONS.md`, `.Codex/context/brand-info.md` (luu y: mo ta site
+agency cu, can doi chieu khi dung).
+Quy trinh content tu dong: `.Codex/skills/content-pipeline/SKILL.md` (topic -> bai live).
+Anh dang chup man hinh (dashboard/bao cao): `.Codex/skills/visual-screenshot/SKILL.md`.
+Research thuc the doi thu + tu bo sung + dang live 1 lenh: `.Codex/skills/entity-refresh/SKILL.md`
+(dan URL bai co san la chay).
+Audit internal link toan site (pillar/cluster attractor, money page mo coi, anchor
+over-optimization, link chet): `.Codex/skills/internal-link-audit/SKILL.md`.
+
+## 8. Quy trinh chuan
+1. Doc PLAN.md -> task tiep theo
+2. Plan neu task lon -> lam -> tu QA
+3. Backup truoc khi sua/xoa thu co san
+4. Update LOG.md + PLAN.md -> bao cao ngan
+
+## 9. Ghi chu cho Codex
+Uu tien: chat luong > nhanh > it chat > automation. De xuat 2-3 phuong an thay vi hoi mo.
+Tieng Viet voi Hieu.
