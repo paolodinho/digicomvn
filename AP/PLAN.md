@@ -17,19 +17,18 @@
   - **Vị trí file đã đổi**: Hiếu tự tổ chức lại thư mục AP/ trong lúc tôi đang sửa - 2 file bài giờ
     nằm ở `AP/Bài đăng báo/`, ảnh gốc/ghi âm đã gộp vào `AP/Ghi âm phỏng vấn/` và các thư mục
     `anh-chi-loan-*` (chưa kiểm tra đường dẫn mới của các thư mục ảnh, cần đọc lại `ls AP/` nếu cần).
-- **CẢNH BÁO vẫn còn hiệu lực từ checkpoint trước**: file CafeBiz đã có 1 ảnh THẬT được Hiếu tự
-  gắn thủ công (khả năng Word/Pages) trong lúc tôi thao tác script - cần hỏi Hiếu xác nhận đang
-  tự sửa file song song hay không, để tránh ghi đè lẫn nhau. Ảnh placeholder "phòng đào tạo" đã
-  mất hoàn toàn ở bản CafeBiz (không phục hồi, không rõ có cần bổ sung ảnh thay thế không).
+- **Đã giải quyết (2026-09-17)**: Hiếu xác nhận ảnh thật đã gắn trong CafeBiz -> GIỮ NGUYÊN. Các
+  vị trí [ẢNH] placeholder còn lại (cả 2 bài, gồm cả "phòng đào tạo" đã mất ở CafeBiz) -> ĐANG ĐỢI
+  KHÁCH (A&P) cấp ảnh, KHÔNG cần tôi tự gắn ảnh từ bộ `anh-chi-loan-xu-ly/` nữa trừ khi Hiếu nói
+  khác đi. Không cần hỏi lại việc Hiếu có tự sửa file song song không - coi như đã xác nhận ổn.
 - Đang làm: chờ Hiếu xác nhận nội dung DDI-angle mới này là bản CUỐI, rồi mới:
   1. Xử lý đồng bộ 2 link Google Drive cũ (docs.google.com/document/d/1ZzJvduiuh7MHJOlzhiGGK4OMr0JlgNlZ
      = bản DDDN, .../1aVAIVzSHFdO3QuOTeBN3GqikyljdewiQ = bản CafeBiz) - vẫn đang là bản CŨ (title/sapo/
      nội dung cũ), chưa đồng bộ được (API Drive chỉ tạo file mới không ghi đè nội dung; trình duyệt
      Claude chưa đăng nhập tài khoản Hiếu). Cần Hiếu chọn: (a) tôi tạo file mới đè + xin phép trash
      bản cũ (link đổi), hoặc (b) Hiếu tự copy nội dung mới dán vào (giữ link cũ).
-  2. Gắn ảnh thật còn thiếu (bộ ảnh xử lý sẵn, đường dẫn cũ `AP/anh-chi-loan-xu-ly/6-anh-giam-doc/`
-     - cần xác nhận lại đường dẫn sau khi Hiếu tổ chức lại thư mục).
-  3. Gửi A&P duyệt trước khi chuyển toà soạn (theo brief `bai-pr/2026/08/NOIBO-Brief-Phong-Vien-AP-Vietnam-2026-08-27.docx`).
+  2. Gửi A&P duyệt trước khi chuyển toà soạn (theo brief `bai-pr/2026/08/NOIBO-Brief-Phong-Vien-AP-Vietnam-2026-08-27.docx`).
+  3. Khi khách gửi ảnh -> chèn thay các placeholder [ẢNH] còn lại.
   4. Gửi bài final cho toà soạn DDDN (biên tập viên yêu cầu: "khi nào a chốt nội dung với khách xong
      thì gửi bài final").
 - File liên quan:
