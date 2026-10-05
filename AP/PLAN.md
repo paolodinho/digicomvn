@@ -19,13 +19,23 @@
     "tie-back" công thức "...đây cũng chính là điều DDI..." hơi suy diễn). KHÔNG còn theo đúng khung
     1.500/1.000 từ đã chốt trước đó - giờ ưu tiên gọn & đủ ý hơn số từ.
   - Quy cách hiện tại: CafeBiz **1.218 từ** / 4 ảnh (3 placeholder text + 1 ảnh thật Hiếu đã gắn) / 1
-    link; DDDN **801 từ** / 3 ảnh / 1 link.
+    link (title "Vì sao A&P Việt Nam chọn DDI làm đối tác chiến lược sau gần một thập kỷ độc lập");
+    DDDN **813 từ** / 3 ảnh / 1 link (title MỚI "Nhân 10 năm thành lập, A&P Việt Nam lý giải vì sao
+    chọn DDI làm đối tác chiến lược", sapo 195 ký tự).
   - **(2026-09-17, cập nhật lần 3)** Hiếu chốt: CafeBiz KHÔNG sửa thêm nữa (coi như xong). DDDN đã
     viết lại câu văn cho trực diện/dễ đọc hơn (câu ngắn, mỗi câu 1 ý, tách thêm đoạn) - không đổi ý
     hay số liệu, chỉ đổi cách diễn đạt. Tiện thể bỏ 1 chỗ lặp số liệu "95% đối tác là tập đoàn đa
     quốc gia" (nói 2 lần, giờ chỉ còn 1). CafeBiz muốn thêm caption cho ảnh thật đã gắn (dòng:
     "Bà Võ Thị Thanh Loan, Giám đốc Điều hành A&P Việt Nam, tại bàn làm việc.") nhưng Hiếu muốn TỰ
     dán vào Word, KHÔNG cần tôi sửa file - đã cung cấp text, không động vào file CafeBiz.
+  - **(2026-09-17, cập nhật lần 4)** DDDN viết lại HẲN phần mở đầu theo phản hồi Hiếu ("tự dưng lại
+    DDI, người ta biết DDI là ai đâu... viết có đầu có đuôi", "ko viết kiểu AP x DDI, ngôn ngữ báo
+    chí ko viết thế"). Đổi title bỏ format "A&P x DDI" (kiểu marketing) sang câu báo chí đầy đủ chủ
+    ngữ - vị ngữ - sự kiện: "Nhân 10 năm thành lập, A&P Việt Nam lý giải vì sao chọn DDI làm đối tác
+    chiến lược". Viết lại sapo + đoạn mở đầu thân bài để GIỚI THIỆU RÕ DDI LÀ AI (tổ chức quốc tế
+    phát triển lãnh đạo, 50 năm kinh nghiệm, 3 triệu lãnh đạo/năm, 75% Fortune 500) TRƯỚC KHI nói lý
+    do A&P chọn hợp tác - đúng thứ tự đầu (sự kiện + giới thiệu) -> thân (lý do, bằng chứng) -> đuôi
+    (nền tảng công ty, quote kết). CafeBiz vẫn giữ nguyên, không đụng tới.
   - DDDN đã đạt cả 3 yêu cầu toà soạn Diễn Đàn Doanh Nghiệp: title 86 ký tự (<160), sapo 189 ký tự
     (<200), chỉ 1 link .vn (apconsulting.vn, đã bỏ link ddiworld.com).
   - Mỗi bài có 2 tít phụ (Heading 2), ĐÃ ĐỔI để khớp góc DDI thuần (không còn nhắc AI): CafeBiz

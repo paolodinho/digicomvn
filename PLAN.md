@@ -1,6 +1,12 @@
 # PLAN - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
+- Task: Báo giá booking báo PR cho khách Zalo "Vinh" (công ty mới thành lập) - XONG 2026-10-05. File: /Volumes/Extreme SSD/Projects/digicom/11-bao-gia-khach/Bao-Gia-Booking-Bao-PR-DigicomVN-Vinh-2026-10-05.xlsx (163 dòng, nguồn gia-web.csv = giá DanaSEO x0,95; script: scratchpad build.py). Chờ khách trả lời lĩnh vực/ngân sách. Cập nhật lúc: 2026-10-05
+- (Checkpoint trước)
+- Task: Báo giá SEO 30tr/3 tháng cho daesunvina.com (Daesun Vina). File gửi khách ĐÃ XONG: /Volumes/Extreme SSD/Projects/digicom/11-bao-gia-khach/Bao-gia-SEO-Tong-The-DaesunVina-2026-09-24.docx (script sinh: /tmp/w/b.py, mất khi khởi động lại). Đã gồm on-page, technical, entity, GEO dễ, cải thiện giao diện, Core Web Vitals. Thanh toán mặc định 100% trước (chờ Hiếu xác nhận nếu muốn chia đợt). Chưa render PDF kiểm tra (không có soffice), chưa gửi khách.
+- Cập nhật lúc: 2026-09-24
+
+### (Lịch sử checkpoint trước)
 - Task: (KHÔNG có việc dở) Thiết kế lại trang /booking-bao-pr/ - ĐÃ XONG 2026-09-04.
   Xem LOG.md 2026-09-04 + content/cluster-booking-bao.md mục 2026-09-04. Template mới
   `page-booking-bao-pr.php` đã deploy live (DGC_VER 2.8.0), post_content 475 viết lại, GSC
