@@ -1,4 +1,12 @@
 ## Đang làm dở (checkpoint)
+- Task: PR A&P Việt Nam - 2 bài CafeBiz + DDDN. **2026-10-08: ĐÃ GEN BẢN FINAL từ file mẫu `AP/CONTENT PR BÁO_FINAL_01.10.2026-2.docx`** (góc "Bệ phóng lãnh đạo", 4 ảnh).
+  - CafeBiz: `AP/Bài đăng báo/CafeBiz-AP-Vietnam-2026-10-08.docx` (1019 từ, 4 ảnh có caption, 1 link apconsulting.vn) = nội dung mẫu + caption + dòng link cuối.
+  - DDDN: `AP/Bài đăng báo/DienDanDoanhNghiep-AP-Vietnam-2026-10-08.docx` (738 từ, 3 ảnh, title 105 ký tự, sapo 183 ký tự, 1 link .vn); viết lại khác CafeBiz (0 câu trùng).
+  - Bản nháp cũ (góc DDI 09-15) đã chuyển `AP/Bài đăng báo/_backup/`.
+- Tiếp theo: Hiếu duyệt -> gửi toà soạn; nếu cần bản Google Doc thì báo.
+- Cập nhật lúc: 2026-10-08
+
+## (Cũ) checkpoint 2026-09-17
 - Task: PR kỷ niệm 10 năm A&P Việt Nam - 2 bài CafeBiz + Diễn Đàn Doanh Nghiệp (DDDN).
 - Đã xong:
   - Góc tiếp cận MỚI NHẤT (2026-09-17, Hiếu chọn): "vì sao A&P chọn DDI làm đối tác chiến lược" -
@@ -67,3 +75,24 @@
   - `/Volumes/Extreme SSD/Projects/digicom/bai-pr/2026/08/NOIBO-Brief-Phong-Vien-AP-Vietnam-2026-08-27.docx` (brief nghiệp vụ)
 - Lệnh đang chạy nền: không có.
 - Cập nhật lúc: 2026-09-17 08:20
+
+## 2026-10-05 — Thay nền ảnh chân dung văn phòng
+- Nguồn: `AP/8 ảnh mới`, 8 HEIC. Chưa chốt phạm vi cả 8 hay một ảnh; đã làm bản mẫu IMG_8243.
+- Yêu cầu: chỉ thay nền tường/rèm/clutter bằng văn phòng kem/greige + lam óc chó, 2 tranh, kệ sách và bình cây, ánh sáng ấm nhẹ, nền mờ. Giữ tuyệt đối người/mặt/tóc/trang phục/ghế/bàn/laptop/sổ/bút/chuột và logo HP/AP; giữ góc chụp và độ phân giải gốc.
+- Công cụ: image_gen built-in. Bản mẫu lưu local Mac: `/Users/dohieu/Codex-Workspace/digicom/ap-anh-moi-office-2026-10-05/IMG_8243-office-v1.png`.
+- Chưa đạt tiêu chí giữ nguyên tuyệt đối: output 1448x1086, gốc 5712x4284; AI có tái tạo chi tiết tiền cảnh. Không coi là bản final đạt yêu cầu, không upscale để giả độ phân giải gốc. Ảnh HEIC gốc không bị sửa.
+- Prompt: `/Users/dohieu/Codex-Workspace/digicom/context/photo-office-2026-10-05/edit-prompt.txt`.
+- Hiếu chốt 2026-10-05: làm CẢ 8 ảnh, giữ cùng phong cách nền. Tiếp tục 7 ảnh còn lại bằng imagegen; kiểm tra và báo rõ giới hạn nguyên trạng/độ phân giải.
+- Feedback 2026-10-05 15:49 (ảnh chụp chat khách): bên phải quá nhiều chi tiết (sách+cây+khung tranh cùng kệ), hướng sáng chưa logic. Điều chỉnh toàn bộ 8 ảnh v2: kệ bên phải chỉ một bình cây nhỏ; bỏ sách/khung tranh phụ, đèn LED hắt và bóng nắng lá; ánh sáng nền tản từ camera-right phù hợp foreground gốc. Giữ một tranh lớn trên mảng kem/greige và lam óc chó. V1 giữ làm lịch sử, v2 là bộ giao mới.
+- Hoàn tất tạo đủ 8 bản v2 lúc 15:59 ngày 2026-10-05 bằng imagegen built-in. ZIP chỉ chứa 8 PNG v2, 15 MB: `/Users/dohieu/Codex-Workspace/digicom/ap-anh-moi-office-2026-10-05/AP-8-anh-van-phong-v2.zip`. Kiểm tra unzip -t: 8/8 OK.
+- QA trực quan cả 8: nền đã giảm rối đúng feedback, không sách/khung phụ/LED/bóng lá; ánh sáng mềm thiên phải. Mặt/tư thế/vật dụng tương đồng, logo chính còn hiện diện. Vẫn chưa đạt giữ foreground pixel tuyệt đối: chi tiết da ghế, vải/chữ nhỏ bị tái tạo. Tất cả output 1448x1086, không giữ độ phân giải nguồn. Ảnh HEIC gốc không bị sửa; bản v1 giữ lịch sử.
+- Prompt chính xác cho từng ảnh: `/Users/dohieu/Codex-Workspace/digicom/context/photo-office-2026-10-05/v2-prompts.json`.
+
+## 2026-10-06 — Retouch 3 ảnh khách đã chọn
+- Khách xác nhận content đã được sếp duyệt, background OK. Chọn IMG_8245-office-v2, IMG_8285-office-v2, IMG_8292-office-v2.
+- Yêu cầu mới qua ảnh chat: giảm nếp nhăn, bọng mắt/quầng thâm, làm mặt nhỏ/thon hơn một chút. Yêu cầu này thay ràng buộc không sửa mặt trước đó trong phạm vi 3 ảnh chọn. Chỉnh nhẹ tự nhiên, giữ nhận diện/biểu cảm; nền và đồ vật đã duyệt giữ nguyên.
+- Đang tạo bản v3-retouch bằng imagegen built-in từ từng ảnh v2. Không sửa/ghi đè v2.
+- Output cùng thư mục local `/Users/dohieu/Codex-Workspace/digicom/ap-anh-moi-office-2026-10-05/`, tên IMG_XXXX-office-v3-retouch.png. Kiểm tra trước bàn giao, ZIP riêng chỉ 3 ảnh.
+- Đã tạo đủ 3 bản v3-retouch, 1448x1086, từ đúng 3 ảnh khách chọn. ZIP `/Users/dohieu/Codex-Workspace/digicom/ap-anh-moi-office-2026-10-05/AP-3-anh-retouch-v3.zip` (5,3 MB), kiểm tra unzip -t 3/3 OK. Prompt từng ảnh: `/Users/dohieu/Codex-Workspace/digicom/context/photo-office-2026-10-05/v3-retouch-prompts.json`. Bản v2 giữ nguyên, không gửi khách tự động.
+- Hiếu bổ sung ảnh chat mới: khách chọn tổng 4 ảnh, thêm IMG_8273-office-v2 (tin nhắn sau danh sách 3 ảnh ban đầu). Đang retouch bổ sung 8273 cùng mức nhẹ và đóng ZIP mới đủ 8245/8273/8285/8292. ZIP 3 ảnh cũ giữ lịch sử.
+- Đã bổ sung IMG_8273-office-v3-retouch, 1448x1086. Bộ bàn giao mới đủ 4 ảnh: `/Users/dohieu/Codex-Workspace/digicom/ap-anh-moi-office-2026-10-05/AP-4-anh-retouch-v3.zip`. unzip -t 4/4 OK. Prompt bổ sung `v3-retouch-8273-prompt.txt` trong context local.
