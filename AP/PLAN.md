@@ -1,7 +1,7 @@
 ## Đang làm dở (checkpoint)
 - Task: PR A&P Việt Nam - 2 bài CafeBiz + DDDN. **2026-10-08: ĐÃ GEN BẢN FINAL từ file mẫu `AP/CONTENT PR BÁO_FINAL_01.10.2026-2.docx`** (góc "Bệ phóng lãnh đạo", 4 ảnh).
   - CafeBiz: `AP/Bài đăng báo/CafeBiz-AP-Vietnam-2026-10-08.docx` (1019 từ, 4 ảnh có caption, 1 link apconsulting.vn) = nội dung mẫu + caption + dòng link cuối.
-  - DDDN: `AP/Bài đăng báo/DienDanDoanhNghiep-AP-Vietnam-2026-10-08.docx` (738 từ, 3 ảnh, title 105 ký tự, sapo 183 ký tự, 1 link .vn); viết lại khác CafeBiz (0 câu trùng).
+  - DDDN: `AP/Bài đăng báo/DienDanDoanhNghiep-AP-Vietnam-2026-10-08.docx` (~1.079 từ, giữ ĐỦ Ý bài mẫu theo yêu cầu Hiếu 10-08, có bảng quy cách đầu file; 3 ảnh, title 105 ký tự, sapo 183 ký tự, 1 link .vn); viết lại khác CafeBiz (0 câu trùng).
   - Bản nháp cũ (góc DDI 09-15) đã chuyển `AP/Bài đăng báo/_backup/`.
 - Tiếp theo: Hiếu duyệt -> gửi toà soạn; nếu cần bản Google Doc thì báo.
 - Cập nhật lúc: 2026-10-08
