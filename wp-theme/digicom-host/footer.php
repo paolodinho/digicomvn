@@ -46,6 +46,7 @@
 				<h4>Hỗ trợ</h4>
 				<ul>
 					<li><a href="<?php echo esc_url( home_url( '/cau-hoi-thuong-gap/' ) ); ?>">Câu hỏi thường gặp</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/quy-trinh-hop-tac/' ) ); ?>">Quy trình hợp tác</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt bài</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Liên hệ</a></li>
 				</ul>
