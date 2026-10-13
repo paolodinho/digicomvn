@@ -3060,3 +3060,326 @@ body.single-post .brand-watermark{display:none}
   .bbp-body .bbp-readgrid,.bbp-body .bbp-csgrid{grid-template-columns:1fr}
 }
 @media(max-width:520px){ .bbp-body .bbp-typegrid{grid-template-columns:1fr} }
+
+/* ==========================================================================
+   PRO SKIN 2026-10-13 - giao dien chuyen nghiep (Hieu: "trang dich vu xau, be hep, tre con").
+   Nguyen tac: navy dam + 1 xanh brand sau (lay tu logo), bo goc nho 6-10px, bo gradient/vong tron
+   trang tri, bo nen lavender, khung rong dong nhat 1320px, chu tieu de cung 1 ho font (bo Lora serif).
+   Chi doi token + ghi de component; dark mode giu bo token rieng.
+   ========================================================================== */
+:root:not([data-theme="dark"]){
+  --action:#0B57D0; --action-2:#0847A9;
+  --navy:#0F1B33; --navy-2:#182A4D;
+  --heading:#0F1B33; --ink:#172033; --ink-soft:#3B465A;
+  --surface:#F4F6F9; --line:#E2E7EE; --line-2:#CFD7E3;
+  --r-sm:6px; --r-md:10px; --r-lg:12px;
+  --sh-low:0 1px 2px rgba(15,27,51,.06); --sh-mid:0 6px 18px rgba(15,27,51,.08); --sh-high:0 16px 40px rgba(15,27,51,.12);
+  --maxw:1320px;
+}
+.wrap-wide{max-width:1320px}
+body:before{display:none}
+
+/* Ribbon uu dai: thanh navy mong, bo cam do */
+.promo-bar{background:var(--navy) !important;border-bottom:1px solid rgba(255,255,255,.08)}
+.promo-bar a,.promo-bar b{color:#fff}
+.promo-bar .promo-count,.promo-bar .promo-count-val{color:#F6C76B}
+
+/* Header */
+.site-header{background:rgba(255,255,255,.96)}
+.topbar{background:#fff;color:var(--ink-soft);border-bottom:1px solid var(--line)}
+.topbar a{color:var(--ink-soft)}.topbar a:hover{color:var(--action)}
+
+/* Nut: vuong vuc hon, khong nhay */
+.btn{border-radius:var(--r-sm);font-weight:600;letter-spacing:0}
+.btn-primary,.btn-primary:hover{box-shadow:none;transform:none}
+.btn-ghost{background:#fff}
+
+/* Hero trang dich vu: nen navy, can trai, 2 cot */
+.page-hero{background:var(--navy);border-bottom:0;padding:56px 0 60px;text-align:left;position:relative;overflow:hidden;color:#fff}
+.page-hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/72px 72px,
+             linear-gradient(0deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/72px 72px;
+  -webkit-mask-image:linear-gradient(90deg,#000,transparent 80%);mask-image:linear-gradient(90deg,#000,transparent 80%)}
+.page-hero .wrap{position:relative;max-width:var(--maxw) !important}
+.page-hero .hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:56px;align-items:center}
+.page-hero h1{color:#fff;max-width:none;margin:0 0 .35em;font-size:clamp(32px,3.6vw,50px);text-align:left}
+.page-hero .lead{color:#C3CCDD;max-width:62ch;margin:0 0 26px;font-size:18px;text-align:left}
+.page-hero .eyebrow{color:#6FD6C9}
+.page-hero .hero-actions{justify-content:flex-start}
+.page-hero .btn-primary{background:#fff;color:var(--navy)}
+.page-hero .btn-primary:hover{background:#E8EEF8}
+.page-hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.page-hero .btn-ghost:hover{border-color:#fff;color:#fff}
+.page-hero a[href="#lien-he"]{color:#9DB6E6 !important}
+.hero-panel{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);border-radius:var(--r-md);padding:24px 26px}
+.hero-panel h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#6FD6C9;margin:0 0 14px;font-weight:600}
+.hero-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.hero-panel li{position:relative;padding-left:26px;color:#E6ECF7;font-size:15.5px;line-height:1.5}
+.hero-panel li:before{content:"";position:absolute;left:0;top:6px;width:14px;height:8px;border-left:2px solid #6FD6C9;border-bottom:2px solid #6FD6C9;transform:rotate(-45deg)}
+@media(max-width:900px){.page-hero .hero-grid{grid-template-columns:1fr;gap:28px}.page-hero{padding:38px 0 42px}}
+
+/* Khoi "... la gi": dai rong, bo vach mau trai */
+.svc-intro-sec .wrap{max-width:var(--maxw)}
+.svc-intro{border-left:1px solid var(--line);border-top:3px solid var(--action);box-shadow:none;padding:28px 32px}
+.svc-intro p{max-width:112ch}
+.svc-facts .chip{border-radius:6px;background:var(--surface)}
+
+/* Dai chon (sel-bar) desktop: navy dac, khong gradient */
+@media(min-width:641px){
+  .sel-bar{background:var(--navy) !important;border-radius:var(--r-md) !important;box-shadow:0 8px 24px rgba(15,27,51,.22) !important}
+  .sel-bar.has-picks{box-shadow:0 8px 24px rgba(15,27,51,.28),0 0 0 3px rgba(11,87,208,.35) !important}
+  .sel-bar-cta{background:#fff;color:var(--navy);border-radius:var(--r-sm);box-shadow:none}
+  .sel-bar-cta:hover{background:#E8EEF8;color:var(--navy);transform:none;box-shadow:none}
+  .sel-bar-disc,.sel-bar-list-toggle,.sel-bar-reset{border-radius:6px}
+  .sel-bar-total-wrap{border-left:1px solid rgba(255,255,255,.2)}
+}
+
+/* Noi dung bai: cung ho font tieu de, khung rong hon */
+.page-content{max-width:1000px}
+.page-content h2{font-family:var(--font-display);font-size:26px;letter-spacing:-.01em;font-weight:700}
+.page-content h3{font-family:var(--font-display)}
+.page-content p,.page-content li{font-size:16.5px}
+
+/* Huong dan dat hang + the: phang, vien mong */
+.order-step,.feat,.card{box-shadow:none}
+.order-step-num{border-radius:6px}
+
+/* CTA band: navy dac */
+.cta-band{background:var(--navy);border-radius:var(--r-md);box-shadow:none}
+.cta-band:before,.cta-band:after{display:none}
+.cta-band .btn-ghost{background:#fff;color:var(--navy);border-color:#fff}
+.cta-band .btn-navy{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+
+/* Form lead */
+.lead-form,.form-lead{border-radius:var(--r-md)}
+
+/* Bo loc: nen trang, vien mong */
+:root:not([data-theme="dark"]) .filter-bar{background:#fff !important;border:1px solid var(--line-2) !important;border-radius:var(--r-md)}
+/* Anh minh hoa trong bai: khong chiem het khung */
+.page-content figure,.page-content .wp-block-image{margin:22px 0}
+.page-content img{max-width:min(560px,100%);margin-left:auto;margin-right:auto;border-radius:var(--r-md)}
+.page-content figure img{max-height:360px;width:auto;object-fit:contain}
+/* Tieu de khoi: can trai, dong nhat voi hero */
+.page-template-tpl-service .sec .center,.page-template-page-booking-bao-pr .sec .center{text-align:left}
+.page-template-tpl-service .sec .center p,.page-template-tpl-service .sec .center .muted{margin-left:0;margin-right:0;max-width:none}
+.page-template-tpl-service .wrap.page-content{max-width:var(--maxw);margin-left:auto;margin-right:auto}
+.page-template-tpl-service .page-content>*{max-width:1080px}
+.page-template-tpl-service .page-content>.wp-block-table,.page-template-tpl-service .page-content>figure.dgc-data-table{max-width:100%}
+
+/* ---- Trang Booking bao & PR: hero navy cung ho voi 7 trang dich vu, bo blob + mockup nghieng ---- */
+.bbp-hero{background:var(--navy);color:#fff;padding-top:56px}
+.bbp-hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/72px 72px,
+             linear-gradient(0deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/72px 72px;
+  -webkit-mask-image:linear-gradient(90deg,#000,transparent 80%);mask-image:linear-gradient(90deg,#000,transparent 80%)}
+.bbp-blob{display:none}
+.bbp-hero .wrap{max-width:var(--maxw)}
+.bbp-hero-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:56px}
+.bbp-hero-copy h1{color:#fff;max-width:22ch;font-size:clamp(30px,3.5vw,46px)}
+.bbp-hero-copy .lead{color:#C3CCDD;max-width:64ch;font-size:18px}
+.bbp-hero .eyebrow{color:#6FD6C9}
+.bbp-hero-sub,.bbp-hero-sub a{color:#B7C3DA}
+.bbp-hero .btn-primary{background:#fff;color:var(--navy)}
+.bbp-hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.bbp-hero-mock{transform:none;border-radius:var(--r-md);box-shadow:none;border-color:rgba(255,255,255,.18)}
+.bbp-trust{border-top:1px solid rgba(255,255,255,.14);padding-top:18px}
+.bbp-trust li{text-align:left}
+.bbp-trust b{color:#fff}.bbp-trust span{color:#AEBBD2}
+
+.page-template-page-booking-bao-pr .sec .center p,.page-template-page-booking-bao-pr .sec .center .muted{margin-left:0;margin-right:0;max-width:none}
+
+[data-theme="dark"]{--maxw:1320px}
+
+/* ==========================================================================
+   SVC 3D 2026-10-13 (Hieu: "van xau, thiet ke lai, hieu ung 3D khi scroll, hap dan khong the roi mat").
+   Hero trang dich vu: chu lon, so lieu that, bang gia noi 3D (du lieu dgc_gia) nghieng theo chuot
+   + phang dan khi cuon. Cac khoi ben duoi lat 3D vao khi cuon toi (main.js IIFE svc3d).
+   Tat het chuyen dong khi prefers-reduced-motion.
+   ========================================================================== */
+.svc3d-hero{padding:72px 0 84px;background:#0A1428;isolation:isolate}
+.svc3d-hero:before{opacity:.65}
+.svc3d-glow{position:absolute;right:-8%;top:-30%;width:62%;height:150%;pointer-events:none;z-index:-1;
+  background:radial-gradient(closest-side,rgba(11,87,208,.38),rgba(11,87,208,0) 70%)}
+.svc3d-hero .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px}
+.svc3d-hero h1{font-size:clamp(38px,5vw,72px);line-height:1.02;letter-spacing:-.035em;font-weight:700;margin-bottom:.3em}
+.svc3d-hero .lead{font-size:clamp(17px,1.4vw,20px);line-height:1.6;color:#B9C4D8;max-width:56ch}
+.svc3d-hero .eyebrow{letter-spacing:.16em;font-size:12.5px}
+.svc3d-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:40px 0 0;padding:22px 0 0;border-top:1px solid rgba(255,255,255,.14);max-width:620px}
+.svc3d-stats>div{padding-right:18px}
+.svc3d-stats>div+div{padding-left:18px;border-left:1px solid rgba(255,255,255,.12)}
+.svc3d-stats dt{order:2;font-size:12.5px;color:#93A2BD;line-height:1.4;margin-top:4px}
+.svc3d-stats>div{display:flex;flex-direction:column}
+.svc3d-stats dd{order:1;margin:0;font-family:var(--font-display);font-size:clamp(26px,2.6vw,38px);font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1.1;white-space:nowrap}
+
+/* San khau 3D */
+.svc3d-stage{perspective:1400px;perspective-origin:30% 40%;position:relative;min-height:340px;display:flex;align-items:center}
+.svc3d-board{--rx:12deg;--ry:-20deg;--rz:2deg;--ty:0px;position:relative;width:100%;max-width:560px;margin-left:auto;
+  transform-style:preserve-3d;transform:translateY(var(--ty)) rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz));
+  background:#fff;color:var(--ink);border-radius:12px;padding:20px 22px 18px;
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 40px 80px -20px rgba(0,0,0,.55),0 18px 30px -18px rgba(0,0,0,.5);
+  transition:transform .25s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.svc3d-board-head{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#5A6680;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.svc3d-live{display:inline-flex;align-items:center;gap:7px;text-transform:none;letter-spacing:0;font-weight:500;color:#0E8C7F}
+.svc3d-live:before{content:"";width:7px;height:7px;border-radius:50%;background:#0E8C7F;box-shadow:0 0 0 4px rgba(14,140,127,.18);animation:svc3dPulse 2s infinite}
+@keyframes svc3dPulse{50%{box-shadow:0 0 0 7px rgba(14,140,127,0)}}
+.svc3d-rows{list-style:none;margin:0;padding:0}
+.svc3d-rows li{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);
+  transform:translateZ(calc(18px + var(--i) * 10px));background:#fff}
+.svc3d-name{font-weight:600;font-size:15.5px;color:var(--heading);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.svc3d-dr{font-size:12px;font-weight:700;color:#fff;background:#0E8C7F;border-radius:4px;padding:3px 7px;white-space:nowrap}
+.svc3d-price{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--action);white-space:nowrap;min-width:100px;text-align:right}
+.svc3d-board-foot{font-size:13px;color:#5A6680;padding-top:12px}
+.svc3d-chip{position:absolute;display:flex;gap:8px;align-items:center;background:#0F1B33;color:#E6ECF7;font-size:13px;border:1px solid rgba(255,255,255,.14);
+  border-radius:8px;padding:10px 14px;white-space:nowrap;box-shadow:0 20px 40px -12px rgba(0,0,0,.6)}
+.svc3d-chip b{color:#6FD6C9;font-weight:700;letter-spacing:.04em}
+.svc3d-chip-a{left:-34px;bottom:-26px;transform:translateZ(90px)}
+.svc3d-chip-b{right:-18px;top:-24px;transform:translateZ(60px)}
+
+/* Dai cam ket ngay duoi hero */
+.svc3d-trust{background:var(--surface-2);border-bottom:1px solid var(--line)}
+.svc3d-trust ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.svc3d-trust li{padding:26px 24px;display:flex;flex-direction:column;gap:4px;border-left:1px solid var(--line)}
+.svc3d-trust li:first-child{border-left:0;padding-left:0}
+.svc3d-trust b{font-family:var(--font-display);font-size:17px;color:var(--heading)}
+.svc3d-trust span{font-size:14px;color:var(--ink-soft);line-height:1.5}
+
+/* Tieu de khoi to, chac */
+.page-template-tpl-service .sec h2{font-size:clamp(28px,2.8vw,42px);letter-spacing:-.025em;line-height:1.12}
+
+/* Huong dan dat: the so lon */
+.page-template-tpl-service .order-steps,.page-template-page-booking-bao-pr .order-steps{gap:18px;counter-reset:none}
+.page-template-tpl-service .order-step,.page-template-page-booking-bao-pr .order-step{flex-direction:column;gap:14px;padding:26px 24px 24px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line);position:relative;overflow:hidden;
+  transition:box-shadow .3s,border-color .3s}
+.page-template-tpl-service .order-step:hover,.page-template-page-booking-bao-pr .order-step:hover{border-color:var(--line-2);box-shadow:var(--sh-high)}
+.page-template-tpl-service .order-step-num,.page-template-page-booking-bao-pr .order-step-num{flex:none;width:auto;height:auto;background:none;color:transparent;font-family:var(--font-display);font-size:56px;font-weight:700;line-height:1;
+  -webkit-text-stroke:1.5px var(--action);letter-spacing:-.04em;border-radius:0}
+.page-template-tpl-service .order-step h3,.page-template-page-booking-bao-pr .order-step h3{font-size:18px}
+.page-template-tpl-service .order-step p,.page-template-page-booking-bao-pr .order-step p{font-size:14.5px}
+
+/* Thanh tien do cuon */
+.svc3d-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:200;transform-origin:0 50%;transform:scaleX(0);background:#0B57D0;pointer-events:none}
+
+/* Lat 3D khi cuon toi (JS gan class) */
+.js-3d .svc3d-in{opacity:0;transform:perspective(1200px) translateY(28px) rotateX(10deg) scale(.98);transform-origin:50% 100%;
+  transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform 1.1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js-3d .svc3d-in.is-in{opacity:1;transform:none}
+.svc3d-tilt{transform-style:preserve-3d;will-change:transform}
+
+@media(max-width:1100px){.svc3d-hero .hero-grid{grid-template-columns:1fr;gap:48px}.svc3d-board{margin:0 auto}.svc3d-stage{min-height:0}}
+@media(max-width:900px){.svc3d-trust ul{grid-template-columns:repeat(2,minmax(0,1fr))}.svc3d-trust li:nth-child(3){border-left:0;padding-left:0}.svc3d-trust li{padding:18px 16px}}
+@media(max-width:640px){
+  .svc3d-hero{padding:44px 0 56px}
+  .svc3d-stats{grid-template-columns:1fr 1fr 1fr;margin-top:28px}
+  .svc3d-stats>div{padding-right:10px}.svc3d-stats>div+div{padding-left:10px}
+  .svc3d-stats dt{font-size:11.5px}
+  .svc3d-board{--rx:8deg;--ry:-6deg;--rz:0deg;padding:16px}
+  .svc3d-rows li{gap:8px;grid-template-columns:minmax(0,1fr) auto}
+  .svc3d-dr{display:none}
+  .svc3d-price{min-width:0}
+  .svc3d-chip-a{left:8px;bottom:-22px}.svc3d-chip-b{right:8px;top:-20px}
+  .svc3d-trust ul{grid-template-columns:1fr}.svc3d-trust li,.svc3d-trust li:nth-child(3){border-left:0;padding:14px 0;border-top:1px solid var(--line)}
+  .svc3d-trust li:first-child{border-top:0}
+  .page-template-tpl-service .order-step-num{font-size:44px}
+}
+[data-theme="dark"] .svc3d-board,[data-theme="dark"] .svc3d-rows li{background:#16233D;color:#E6ECF7}
+[data-theme="dark"] .svc3d-name{color:#fff}
+[data-theme="dark"] .svc3d-price{color:#8FB4FF}
+[data-theme="dark"] .svc3d-board-head,[data-theme="dark"] .svc3d-board-foot{color:#93A2BD;border-color:rgba(255,255,255,.1)}
+[data-theme="dark"] .svc3d-rows li{border-color:rgba(255,255,255,.08)}
+@media(prefers-reduced-motion:reduce){
+  .svc3d-board{transform:none !important;transition:none}
+  .js-3d .svc3d-in{opacity:1 !important;transform:none !important;transition:none}
+  .svc3d-live:before{animation:none}
+  .svc3d-progress{display:none}
+}
+.svc3d-tilt{transition:transform .2s ease-out,box-shadow .3s,border-color .3s}
+.svc3d-price small{font-family:var(--font-body);font-size:11.5px;font-weight:500;color:#5A6680;margin-right:2px}
+@media(max-width:640px){.svc3d-board-head{flex-direction:column;align-items:flex-start;gap:4px}.svc3d-hero h1{font-size:40px}}
+
+/* Booking bao & PR: dung chung hero 3D (2026-10-13, Hieu "ap hieu ung 3D cho booking-bao-pr") */
+.bbp-3d{padding-bottom:56px}
+.bbp-3d .bbp-hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:center}
+.bbp-3d .bbp-hero-copy h1{font-size:clamp(32px,3.6vw,52px);line-height:1.08;letter-spacing:-.03em;max-width:20ch}
+.bbp-3d .bbp-trust{margin-top:48px}
+.bbp-3d .bbp-trust b{font-family:var(--font-display);font-size:clamp(22px,2vw,30px);letter-spacing:-.02em}
+.bbp-feat{transition:box-shadow .3s,border-color .3s}
+.bbp-feat:hover{box-shadow:var(--sh-high)}
+.page-template-page-booking-bao-pr .sec h2{font-size:clamp(28px,2.8vw,42px);letter-spacing:-.025em;line-height:1.12}
+@media(max-width:1100px){.bbp-3d .bbp-hero-grid{grid-template-columns:1fr;gap:48px}}
+
+/* ==========================================================================
+   LAYOUT KIT 2026-10-13 (Hieu: "da dang cach trinh bay, lam the qua, day dan noi dung").
+   Bo kieu trinh bay KHONG phai the, dung trong post_content trang dich vu (sua duoc o WP Admin):
+   .dgc-split (chu + so do/bang, xen trai phai) | .dgc-tl (dong thoi gian doc) |
+   .dgc-stat (dai so lon nen navy) | .dgc-dd (Nen / Khong nen 2 cot) | .dgc-check (checklist 2 cot) |
+   .dgc-quote (trich dan lon) | .dgc-sticky (tieu de dinh trai + noi dung dai phai) | .dgc-rows (hang ke ngang)
+   ========================================================================== */
+.page-content .dgc-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;margin:40px 0;max-width:none}
+.page-content .dgc-split.rev>:first-child{order:2}
+.page-content .dgc-split>*{min-width:0}
+.page-content .dgc-split h2,.page-content .dgc-split h3{margin-top:0}
+.page-content .dgc-split .dgc-panel{background:var(--surface);border-radius:12px;padding:26px 28px;border:1px solid var(--line)}
+
+.page-content .dgc-tl{list-style:none;margin:28px 0;padding:0 0 0 34px;position:relative;max-width:900px}
+.page-content .dgc-tl:before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--action),rgba(11,87,208,.15))}
+.page-content .dgc-tl>li{position:relative;padding:0 0 26px;margin:0}
+.page-content .dgc-tl>li:last-child{padding-bottom:0}
+.page-content .dgc-tl>li:before{content:counter(list-item);position:absolute;left:-34px;top:0;width:24px;height:24px;border-radius:50%;background:var(--surface-2);border:2px solid var(--action);color:var(--action);font:700 12px/20px var(--font-display);text-align:center}
+.page-content .dgc-tl>li>b:first-child,.page-content .dgc-tl>li>strong:first-child{display:block;font-family:var(--font-display);font-size:18px;color:var(--heading);margin-bottom:4px}
+
+.page-content .dgc-stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;background:var(--navy);color:#fff;border-radius:12px;margin:36px 0;padding:8px 0;max-width:none}
+.page-content .dgc-stat>div{padding:22px 26px;border-left:1px solid rgba(255,255,255,.12)}
+.page-content .dgc-stat>div:first-child{border-left:0}
+.page-content .dgc-stat b{display:block;font-family:var(--font-display);font-size:clamp(28px,3vw,40px);letter-spacing:-.03em;line-height:1.1;color:#fff}
+.page-content .dgc-stat span{display:block;font-size:14px;color:#B9C4D8;margin-top:6px;line-height:1.45}
+
+.page-content .dgc-dd{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:30px 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;max-width:none}
+.page-content .dgc-dd>div{padding:24px 28px}
+.page-content .dgc-dd>div+div{border-left:1px solid var(--line);background:#FBF7F6}
+.page-content .dgc-dd h3{margin:0 0 12px;font-size:17px}
+.page-content .dgc-dd>div:first-child h3{color:#0E8C7F}
+.page-content .dgc-dd>div+div h3{color:#B3402B}
+.page-content .dgc-dd ul{margin:0;padding-left:18px}
+.page-content .dgc-dd li{margin:6px 0;font-size:15.5px}
+
+.page-content .dgc-check{list-style:none;margin:24px 0;padding:0;columns:2;column-gap:40px;max-width:none}
+.page-content .dgc-check li{break-inside:avoid;position:relative;padding:0 0 14px 30px;margin:0}
+.page-content .dgc-check li:before{content:"";position:absolute;left:2px;top:7px;width:13px;height:7px;border-left:2px solid #0E8C7F;border-bottom:2px solid #0E8C7F;transform:rotate(-45deg)}
+
+.page-content .dgc-quote{margin:40px 0;padding:6px 0 6px 28px;border-left:4px solid var(--action);font-family:var(--font-display);font-size:clamp(20px,2vw,26px);line-height:1.4;color:var(--heading);letter-spacing:-.01em;max-width:900px}
+.page-content .dgc-quote cite{display:block;margin-top:10px;font:500 14px var(--font-body);color:var(--ink-soft);font-style:normal}
+
+.page-content .dgc-sticky{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;margin:44px 0;max-width:none;align-items:start}
+.page-content .dgc-sticky>:first-child{position:sticky;top:120px}
+.page-content .dgc-sticky>:first-child h2{margin-top:0}
+
+.page-content .dgc-rows{margin:26px 0;border-top:1px solid var(--line);max-width:none}
+.page-content .dgc-rows>div{display:grid;grid-template-columns:minmax(160px,.35fr) minmax(0,1fr);gap:28px;padding:18px 0;border-bottom:1px solid var(--line)}
+.page-content .dgc-rows dt,.page-content .dgc-rows>div>b{font-family:var(--font-display);font-weight:700;color:var(--heading);font-size:17px}
+.page-content .dgc-rows dd{margin:0}
+
+/* Huong dan dat 4 buoc: bo the, thanh dong thoi gian ngang */
+.page-template-tpl-service .order-steps,.page-template-page-booking-bao-pr .order-steps{position:relative;gap:28px}
+.page-template-tpl-service .order-steps:before,.page-template-page-booking-bao-pr .order-steps:before{content:"";position:absolute;left:0;right:0;top:34px;height:2px;background:var(--line-2)}
+.page-template-tpl-service .order-step,.page-template-page-booking-bao-pr .order-step{background:transparent !important;border:0 !important;padding:0 !important;box-shadow:none !important;overflow:visible}
+.page-template-tpl-service .order-step-num,.page-template-page-booking-bao-pr .order-step-num{background:var(--surface-2) !important;padding-right:12px;position:relative}
+/* Khoi "... la gi": dang bai bao, khong hop */
+.svc-intro{border:0 !important;box-shadow:none !important;background:transparent !important;padding:8px 0 !important;display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);column-gap:56px}
+.svc-intro>.eyebrow,.svc-intro>h2{grid-column:1}
+.svc-intro>:not(.eyebrow):not(h2){grid-column:2}
+.svc-intro>h2{font-size:clamp(28px,2.8vw,40px);letter-spacing:-.025em;line-height:1.12;margin-top:4px}
+.svc-intro>p:first-of-type{grid-row:1 / span 2;font-size:18px}
+.svc-intro-sec{background:var(--surface-2)}
+
+@media(max-width:900px){
+  .page-content .dgc-split,.page-content .dgc-sticky{grid-template-columns:1fr;gap:24px}
+  .page-content .dgc-split.rev>:first-child{order:0}
+  .page-content .dgc-sticky>:first-child{position:static}
+  .page-content .dgc-dd{grid-template-columns:1fr}.page-content .dgc-dd>div+div{border-left:0;border-top:1px solid var(--line)}
+  .page-content .dgc-check{columns:1}
+  .page-content .dgc-rows>div{grid-template-columns:1fr;gap:6px}
+  .svc-intro{grid-template-columns:1fr}.svc-intro>*{grid-column:1 !important;grid-row:auto !important}
+  .page-template-tpl-service .order-steps:before,.page-template-page-booking-bao-pr .order-steps:before{display:none}
+}
+[data-theme="dark"] .page-content .dgc-dd>div+div{background:rgba(179,64,43,.08)}
+.page-content>.dgc-split,.page-content>.dgc-stat,.page-content>.dgc-dd,.page-content>.dgc-check,.page-content>.dgc-sticky,.page-content>.dgc-rows{max-width:none !important}

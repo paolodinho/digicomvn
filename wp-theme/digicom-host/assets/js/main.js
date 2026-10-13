@@ -1256,3 +1256,138 @@ document.addEventListener('click', function (e) {
 	window.addEventListener('resize', onScroll, { passive: true });
 	update();
 })();
+
+/* Chống chữ mồ côi (1 từ trên 1 dòng) - dán vào JS của mọi site.
+   Nối bằng NBSP từ cuối cùng với từ liền trước trong mọi tiêu đề, đoạn, mục danh sách, nút, chú thích.
+   Đi kèm CSS: h1..h6,.title{text-wrap:balance} p,li,figcaption{text-wrap:pretty} */
+(function () {
+  var SEL = 'h1,h2,h3,h4,h5,h6,p,li,figcaption,blockquote,dd,dt,.btn,.kicker,[data-nowrap-tail]';
+  function glue(root) {
+    (root || document).querySelectorAll(SEL).forEach(function (el) {
+      if (el.dataset.orphanDone) return;
+      /* bỏ qua chữ trong script/style: JSON-LD lọt trong <p> bị chèn NBSP sẽ hỏng JSON (lỗi GSC LOA 12/10/2026) */
+      var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, { acceptNode: function (t) { return t.parentNode.closest('script,style,noscript,template') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; } }), last = null, n;
+      while ((n = w.nextNode())) if (n.nodeValue.trim()) last = n;
+      if (!last) return;
+      var t = last.nodeValue.replace(/\s+$/, ''), m = t.match(/^([\s\S]*\S)\s+(\S+)$/);
+      if (m && /\S\s+\S/.test(t)) last.nodeValue = m[1] + ' ' + m[2] + last.nodeValue.slice(t.length);
+      else if (last.previousSibling === null && last.parentNode !== el) return; /* từ cuối nằm riêng trong thẻ con: bỏ qua */
+      el.dataset.orphanDone = '1';
+    });
+  }
+  if (document.readyState !== 'loading') glue(); else document.addEventListener('DOMContentLoaded', function () { glue(); });
+  window.icdGlueOrphans = glue;
+})();
+
+/* SVC 3D 2026-10-13: hieu ung 3D khi cuon cho trang dich vu (tpl-service.php).
+   - Bang gia noi trong hero: nghieng theo chuot, phang dan + nang len khi cuon xuong.
+   - Cac khoi ben duoi lat 3D (rotateX -> 0) khi vao tam nhin, lan luot tung the.
+   - Thanh tien do cuon tren cung.
+   KHONG transform khoi bang gia (#bang-gia) va to tien cua sel-bar (sticky) - transform tren
+   to tien lam vo position sticky/fixed. Tat het khi prefers-reduced-motion. */
+(function () {
+  var hero = document.querySelector('[data-svc3d-hero]');
+  if (!hero) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js-3d');
+
+  var bar = document.createElement('div');
+  bar.className = 'svc3d-progress';
+  document.body.appendChild(bar);
+
+  var board = hero.querySelector('[data-svc3d-board]');
+  var mobile = window.matchMedia('(max-width:640px)');
+  var base = function () { return mobile.matches ? { rx: 8, ry: -6, rz: 0 } : { rx: 12, ry: -20, rz: 2 }; };
+  var mx = 0, my = 0, ticking = false;
+
+  function frame() {
+    ticking = false;
+    var sy = window.scrollY || window.pageYOffset;
+    var docH = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (docH > 0 ? Math.min(1, sy / docH) : 0) + ')';
+    /* Luoi an toan: khoi da nam tren mep duoi man hinh (cuon nhanh/nhay anchor) thi hien luon */
+    var pend = document.querySelectorAll('.svc3d-in:not(.is-in)');
+    for (var q = 0; q < pend.length; q++) {
+      if (pend[q].getBoundingClientRect().top < window.innerHeight) pend[q].classList.add('is-in');
+    }
+    if (!board) return;
+    var hh = hero.offsetHeight || 1;
+    var p = Math.max(0, Math.min(1, sy / hh));
+    var b = base();
+    board.style.setProperty('--rx', (b.rx * (1 - p) + 4 * p - my * 6).toFixed(2) + 'deg');
+    board.style.setProperty('--ry', (b.ry * (1 - p) + mx * 10).toFixed(2) + 'deg');
+    board.style.setProperty('--rz', (b.rz * (1 - p)).toFixed(2) + 'deg');
+    board.style.setProperty('--ty', (-p * 60).toFixed(1) + 'px');
+  }
+  function req() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', req, { passive: true });
+  window.addEventListener('resize', req);
+  hero.addEventListener('mousemove', function (e) {
+    var r = hero.getBoundingClientRect();
+    mx = (e.clientX - r.left) / r.width - 0.5;
+    my = (e.clientY - r.top) / r.height - 0.5;
+    req();
+  });
+  hero.addEventListener('mouseleave', function () { mx = 0; my = 0; req(); });
+  frame();
+
+  /* Dem so trong hero */
+  hero.querySelectorAll('[data-count]').forEach(function (el) {
+    var to = parseInt(el.getAttribute('data-count'), 10);
+    if (!(to > 0)) return;
+    var t0 = null;
+    function step(ts) {
+      if (!t0) t0 = ts;
+      var k = Math.min(1, (ts - t0) / 1400);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))).toLocaleString('vi-VN') + (el.getAttribute('data-suffix') || '');
+      if (k < 1) requestAnimationFrame(step);
+    }
+    el.textContent = '0';
+    requestAnimationFrame(step);
+    setTimeout(function () { el.textContent = to.toLocaleString('vi-VN') + (el.getAttribute('data-suffix') || ''); }, 1700); /* phong khi tab an, rAF dung */
+  });
+
+  /* Lat 3D khi cuon toi */
+  var sel = [
+    '.svc3d-trust li', '.svc-intro', '#bang-gia .center', '#huong-dan-dat .center', '.order-step',
+    '.order-help', '.page-template-tpl-service .page-content > h2',
+    '.page-template-tpl-service .page-content > figure', '.page-template-tpl-service .page-content > .wp-block-table',
+    '#faq .center', '#faq .faq > *', '.page-template-tpl-service .sec .row > .col', '.cta-band',
+    '.bbp-concept-copy', '.bbp-concept-table', '.bbp-benefits .center', '.bbp-feat',
+    '.bbp-body > h2', '.bbp-body > figure', '.bbp-form-grid > *'
+  ].join(',');
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (el) {
+    return !el.querySelector('.sel-bar') && !el.closest('.sel-bar');
+  });
+  var io = new IntersectionObserver(function (ents) {
+    ents.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('is-in');
+      io.unobserve(en.target);
+      /* Bo transform sau khi lat xong de khong anh huong sticky/hover */
+      setTimeout(function () { en.target.classList.remove('svc3d-in', 'is-in'); }, 1600);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function (el) {
+    var sib = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty('--d', (Math.min(sib, 5) * 0.08) + 's');
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) return; /* da trong man hinh: khong an */
+    el.classList.add('svc3d-in');
+    io.observe(el);
+  });
+
+  /* Nghieng the theo chuot (may co chuot) */
+  if (window.matchMedia('(hover:hover)').matches) {
+    document.querySelectorAll('.page-template-tpl-service .order-step, .page-template-page-booking-bao-pr .order-step, .svc3d-trust li, .bbp-feat').forEach(function (c) {
+      c.classList.add('svc3d-tilt');
+      c.addEventListener('mousemove', function (e) {
+        if (c.classList.contains('svc3d-in')) return;
+        var r = c.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        c.style.transform = 'perspective(800px) rotateX(' + (-y * 8).toFixed(2) + 'deg) rotateY(' + (x * 10).toFixed(2) + 'deg) translateY(-4px)';
+      });
+      c.addEventListener('mouseleave', function () { c.style.transform = ''; });
+    });
+  }
+})();

@@ -35,7 +35,8 @@ $bbp_ic = function ( $p ) {
 <div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
 
 <!-- ============ 1. HERO ============ -->
-<section class="bbp-hero">
+<section class="bbp-hero svc3d-hero bbp-3d" data-svc3d-hero>
+	<div class="svc3d-glow" aria-hidden="true"></div>
 	<span class="bbp-blob bbp-blob-a" aria-hidden="true"></span>
 	<span class="bbp-blob bbp-blob-b" aria-hidden="true"></span>
 	<div class="wrap bbp-hero-grid">
@@ -50,27 +51,33 @@ $bbp_ic = function ( $p ) {
 			<p class="bbp-hero-sub"><a href="tel:<?php echo esc_attr( $tel ); ?>">Hoặc gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a> &middot; tư vấn chọn báo miễn phí, không ràng buộc</p>
 		</div>
 
-		<!-- Mockup bai bao dien tu + vi tri PR - HTML thuan, khong dung anh -->
-		<div class="bbp-hero-mock" aria-hidden="true">
-			<div class="bbp-mock-bar"><span></span><span></span><span></span><em>bao-dien-tu.vn</em></div>
-			<div class="bbp-mock-body">
-				<div class="bbp-mock-kicker">CHUYÊN MỤC DOANH NGHIỆP</div>
-				<div class="bbp-mock-h"></div>
-				<div class="bbp-mock-h bbp-mock-h2"></div>
-				<div class="bbp-mock-media">Bài PR thương hiệu<br><b>vị trí booking</b></div>
-				<div class="bbp-mock-p"></div>
-				<div class="bbp-mock-p"></div>
-				<div class="bbp-mock-p short"></div>
-				<div class="bbp-mock-tag">link dofollow &rarr; website của bạn</div>
+		<?php $bbp_h = dgc_svc_hero_data( 'booking-bao-pr' ); ?>
+		<div class="svc3d-stage" aria-hidden="true">
+			<?php if ( ! empty( $bbp_h['rows'] ) ) : ?>
+			<div class="svc3d-board" data-svc3d-board>
+				<div class="svc3d-board-head"><span>Bảng giá đầu báo</span><span class="svc3d-live">Cập nhật <?php echo esc_html( wp_date( 'd/m/Y' ) ); ?></span></div>
+				<ol class="svc3d-rows">
+					<?php foreach ( $bbp_h['rows'] as $i => $r ) : ?>
+					<li style="--i:<?php echo (int) $i; ?>">
+						<span class="svc3d-name"><?php echo esc_html( $r['name'] ); ?></span>
+						<?php if ( $r['dr'] > 0 ) : ?><span class="svc3d-dr">DR <?php echo (int) $r['dr']; ?></span><?php else : ?><span></span><?php endif; ?>
+						<span class="svc3d-price"><small>từ</small> <?php echo esc_html( number_format( $r['price'], 0, ',', '.' ) ); ?>đ</span>
+					</li>
+					<?php endforeach; ?>
+				</ol>
+				<div class="svc3d-board-foot">+ <?php echo (int) max( 0, $bbp_h['count'] - count( $bbp_h['rows'] ) ); ?> đầu báo khác trong bảng giá</div>
+				<div class="svc3d-chip svc3d-chip-a"><b>VAT</b> Hợp đồng, hoá đơn đầy đủ</div>
+				<div class="svc3d-chip svc3d-chip-b"><b>Link</b> Bàn giao bài đã đăng</div>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 
 	<!-- Trust strip -->
 	<div class="wrap">
 		<ul class="bbp-trust">
-			<li><b><?php echo esc_html( $bbp_outlets ); ?>+</b><span>đầu báo, tạp chí hợp tác</span></li>
-			<li><b><?php echo esc_html( $bbp_count ); ?></b><span>vị trí có giá niêm yết công khai</span></li>
+			<li><b data-count="<?php echo (int) $bbp_outlets; ?>" data-suffix="+"><?php echo esc_html( $bbp_outlets ); ?>+</b><span>đầu báo, tạp chí hợp tác</span></li>
+			<li><b data-count="<?php echo (int) $bbp_count; ?>"><?php echo esc_html( $bbp_count ); ?></b><span>vị trí có giá niêm yết công khai</span></li>
 			<li><b>dofollow</b><span>hoặc nofollow tuỳ chuyên mục</span></li>
 			<li><b>VAT</b><span>xuất hoá đơn, hợp đồng đầy đủ</span></li>
 		</ul>

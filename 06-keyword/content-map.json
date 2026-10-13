@@ -1,0 +1,264 @@
+{
+ "title": "Sơ đồ nội dung digicomvn.com",
+ "root": [
+  "DigicomVN",
+  "Booking báo PR, Guest Post, Textlink, Backlink"
+ ],
+ "out": "../content/so-do-noi-dung.html",
+ "money_prefixes": [],
+ "money_posts": [],
+ "money_pages": [
+  "mua-textlink",
+  "dich-vu-backlink",
+  "guest-post",
+  "booking-bao-pr",
+  "dich-vu-toplist",
+  "backlink-social-entity",
+  "backlink-quoc-te",
+  "booking-truyen-hinh"
+ ],
+ "money_kind": "Trang dịch vụ",
+ "clusters": [
+  {
+   "name": "Booking báo & PR",
+   "color": "#0E8C7F",
+   "slugs": [
+    "book-bao-dan-ong-magazine-dep",
+    "book-bao-tu-van-tieu-dung",
+    "book-bao-thoi-bao-kinh-te-vneconomy",
+    "book-bao-hoa-hoc-tro",
+    "book-bao-doanh-nhan-plus",
+    "book-bao-theleader",
+    "book-bao-the-thao-van-hoa",
+    "book-bao-cong-thuong",
+    "bai-pr-thuong-hieu-nike",
+    "bai-pr-cong-ty-honda",
+    "bai-pr-cong-ty-thiet-ke-noi-that",
+    "bai-pr-doanh-nghiep-may-mac",
+    "bai-pr-doanh-nghiep",
+    "cong-thuc-strings",
+    "cong-thuc-3s",
+    "cong-thuc-pas-la-gi",
+    "testimonial-la-gi",
+    "editorial-la-gi",
+    "advertorial-la-gi",
+    "kim-tu-thap-nguoc-trong-viet-bai-pr",
+    "sapo-la-gi-trong-bai-pr",
+    "lead-bai-pr-la-gi",
+    "bai-pr-su-kien-quoc-te-thieu-nhi",
+    "mau-bai-pr-ngay-hoi-sach",
+    "bai-pr-su-kien-o-to",
+    "viet-bai-pr-su-kien",
+    "hieu-lam-booking-bao-chi",
+    "booking-bao-tinh",
+    "book-bao-batdongsan",
+    "mo-hinh-race-pr",
+    "case-study-chien-dich-pr",
+    "cac-loai-hinh-pr",
+    "pr-la-gi",
+    "book-bao-tien-phong",
+    "book-bao-lao-dong",
+    "bai-pr-mau",
+    "bai-pr-la-gi",
+    "thong-cao-bao-chi-xu-ly-khung-hoang",
+    "mau-thong-cao-bao-chi",
+    "cach-viet-thong-cao-bao-chi-chuan",
+    "thong-cao-bao-chi-la-gi",
+    "booking-bao-quoc-te",
+    "book-bao-nhan-dan",
+    "agency-booking-bao-chi",
+    "book-bao-znews",
+    "book-bao-webtretho",
+    "book-bao-vietnamnet",
+    "book-bao-tuoi-tre",
+    "book-bao-thanh-nien",
+    "book-bao-soha",
+    "book-bao-kenh14",
+    "book-bao-eva",
+    "book-bao-dan-tri",
+    "book-bao-cafef",
+    "book-bao-cafebiz",
+    "book-bao-bao-dau-tu",
+    "book-bao-afamily",
+    "book-bao-24h",
+    "book-bao-vnexpress",
+    "chien-dich-pr-an-tuong-viet-nam",
+    "so-sanh-booking-bao-pr-va-quang-cao-bao",
+    "cach-viet-bai-pr-chuan-bao-chi",
+    "booking-bao-la-gi",
+    "bao-gia-dang-bai-pr-theo-dau-bao"
+   ]
+  },
+  {
+   "name": "Backlink & Off-page",
+   "color": "#2563EB",
+   "slugs": [
+    "guest-post-forbes",
+    "pitch-guest-post",
+    "backlink-mang-xa-hoi",
+    "backlink-indexer",
+    "disavow-backlink",
+    "cac-loai-backlink",
+    "backlink-audit",
+    "ty-le-anchor-text-chuan",
+    "mua-backlink-bao-la-gi",
+    "co-nen-mua-backlink-khong",
+    "quy-trinh-trien-khai-guest-post",
+    "backlink-bat-dong-san",
+    "top-site-guest-post-uy-tin",
+    "mua-textlink-edu-gov",
+    "dich-vu-guest-post-gia-bao-nhieu",
+    "dich-vu-backlink-gia-bao-nhieu",
+    "mua-textlink-la-gi",
+    "textlink-khac-backlink-the-nao",
+    "guest-post-la-gi",
+    "citation-flow",
+    "domain-authority",
+    "domain-rating",
+    "google-penguin",
+    "page-authority",
+    "spambrain",
+    "trust-flow",
+    "trao-doi-backlink",
+    "phan-mem-di-back-link",
+    "kiem-tra-backlink",
+    "dien-dan-di-backlink",
+    "di-backlink-cho-fanpage",
+    "backlink-dofollow-va-nofollow",
+    "back-link-hieu-qua",
+    "back-link-gov",
+    "back-link-chat-luong",
+    "backlink"
+   ]
+  },
+  {
+   "name": "Công cụ & Đo lường SEO",
+   "color": "#8A5A00",
+   "slugs": [
+    "ahrefs-vs-semrush",
+    "ahrefs",
+    "bounce-rate-seo",
+    "cong-cu-keyword-research",
+    "cong-cu-seo-mien-phi",
+    "ctr-seo",
+    "google-analytics-seo",
+    "google-search-console",
+    "impression-seo",
+    "majestic-seo",
+    "organic-traffic",
+    "screaming-frog",
+    "semrush"
+   ]
+  },
+  {
+   "name": "SEO & AI (GEO)",
+   "color": "#7C3AED",
+   "slugs": [
+    "ai-overview",
+    "geo-generative-engine-optimization",
+    "google-sge",
+    "seo-trong-thoi-dai-ai",
+    "voice-search-seo"
+   ]
+  },
+  {
+   "name": "Thuật toán & Cập nhật Google",
+   "color": "#B45309",
+   "slugs": [
+    "bert-seo",
+    "google-core-update",
+    "google-panda",
+    "helpful-content-update",
+    "rankbrain",
+    "thuat-toan-google"
+   ]
+  },
+  {
+   "name": "SEO Tổng quan & Lộ trình",
+   "color": "#0F766E",
+   "slugs": [
+    "cac-loai-seo",
+    "eeat-seo",
+    "hoc-seo",
+    "quy-trinh-seo",
+    "seo-hinh-anh",
+    "seo-la-gi",
+    "seo-website",
+    "toc-do-website-seo",
+    "viet-bai-seo"
+   ]
+  },
+  {
+   "name": "Technical SEO",
+   "color": "#BE185D",
+   "slugs": [
+    "canonical-tag",
+    "core-web-vitals",
+    "crawl-budget",
+    "https-seo",
+    "mobile-first-indexing",
+    "redirect-301-302",
+    "robots-txt-seo",
+    "sitemap-xml",
+    "technical-seo"
+   ]
+  },
+  {
+   "name": "On-page & Content SEO",
+   "color": "#4D7C0F",
+   "slugs": [
+    "content-gap",
+    "content-seo",
+    "do-dai-noi-dung-seo",
+    "duplicate-content",
+    "featured-snippet",
+    "internal-link",
+    "meta-description",
+    "on-page-seo",
+    "pillar-page",
+    "schema-markup",
+    "thin-content",
+    "title-tag-seo",
+    "toi-uu-heading-seo",
+    "topic-cluster",
+    "url-chuan-seo"
+   ]
+  },
+  {
+   "name": "SEO Local",
+   "color": "#5B6675",
+   "slugs": [
+    "google-maps-seo",
+    "google-my-business",
+    "local-citations",
+    "local-seo",
+    "nap-seo",
+    "seo-dia-phuong"
+   ]
+  },
+  {
+   "name": "Nghiên cứu từ khoá",
+   "color": "#C2410C",
+   "slugs": [
+    "keyword-clustering",
+    "keyword-research",
+    "long-tail-keyword",
+    "search-intent",
+    "tu-khoa-canh-tranh"
+   ]
+  },
+  {
+   "name": "SEO E-commerce",
+   "color": "#0369A1",
+   "slugs": [
+    "schema-ecommerce",
+    "seo-ecommerce",
+    "seo-shopify",
+    "seo-trang-danh-muc",
+    "seo-trang-san-pham",
+    "seo-woocommerce"
+   ]
+  }
+ ],
+ "plan_cluster": {}
+}

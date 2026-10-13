@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '2.8.0' );
+define( 'DGC_VER', '3.2.0' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -89,6 +89,7 @@ add_action( 'wp_enqueue_scripts', function () {
  * ------------------------------------------------------------------------- */
 require_once get_template_directory() . '/inc/options.php';
 require_once get_template_directory() . '/inc/cpt-gia.php';
+require_once get_template_directory() . '/inc/svc-hero-data.php';
 require_once get_template_directory() . '/inc/price-grid.php';
 require_once get_template_directory() . '/inc/vitri-images.php';
 require_once get_template_directory() . '/inc/dr-chart.php';

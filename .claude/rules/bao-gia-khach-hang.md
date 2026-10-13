@@ -123,3 +123,11 @@ khối/sheet riêng (đặt cuối file, hoặc trang riêng nếu docx) gồm �
   giá (khác với số CK hiển thị ở mục 4, vốn là con số marketing được phép "làm đẹp" theo rule
   global `bao-gia-khong-lo-gia-von.md`).
 - `~/.claude/rules/bao-gia-khong-lo-gia-von.md` (global, mọi dự án) - nguyên tắc gốc.
+
+## 8. Mọi báo giá gửi khách PHẢI ghi vào tab "Báo giá khách hàng" của file tổng quan (chốt Hiếu 2026-10-13)
+
+- File tổng quan: https://docs.google.com/spreadsheets/d/14QdTAePl5_x5gmykeoSpw_Madg7VUNUhrKyfmZTOX_U/edit#gid=864876144
+- Mỗi báo giá mới (Sheet/xlsx/docx) -> thêm 1 dòng NGAY trong cùng lượt, mới nhất ở trên (chèn dưới header dòng 4, đánh lại STT):
+  Ngày phát hành | Khách hàng | Dịch vụ | File gửi khách (link) | File NOIBO (link, nếu có) | Hiệu lực đến | Trạng thái | Mã việc tab Tổng quan | Ghi chú.
+- Đổi trạng thái khi khách phản hồi/đặt/bỏ, đồng bộ với dòng K tương ứng ở tab Tổng quan.
+- Sheet locale vi_VN: công thức HYPERLINK dùng dấu ";". Ghi bằng service account trong `.claude/tong-quan.json`.

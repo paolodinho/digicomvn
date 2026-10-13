@@ -53,6 +53,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/leads-sheet-sync.md` | Khach dang ky form tu dong vao Google Sheet (dung chung service account GSC) |
 
 ## 7. File quan trong
+- **File tổng quan** (Google Sheet duy nhất, tab Tổng quan dự án; Hiếu ghi vào khu Ghi chú/cột Ý kiến, Claude quét và ghi nhớ): [Tổng quan dự án](https://docs.google.com/spreadsheets/d/14QdTAePl5_x5gmykeoSpw_Madg7VUNUhrKyfmZTOX_U/edit#gid=0)
 `PLAN.md`, `LOG.md`, `DECISIONS.md`, `.claude/context/brand-info.md` (luu y: mo ta site
 agency cu, can doi chieu khi dung).
 Quy trinh content tu dong: `.claude/skills/content-pipeline/SKILL.md` (topic -> bai live).

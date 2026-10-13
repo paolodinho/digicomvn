@@ -10,29 +10,84 @@ $nhom     = dgc_current_nhom();
 ?>
 <div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
 
-<section class="page-hero">
-	<div class="wrap" style="max-width:840px">
+<?php
+$dgc_h = $nhom ? dgc_svc_hero_data( $nhom['slug'] ) : array( 'count' => 0, 'rows' => array() );
+$dgc_unit = ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) ? 'đầu báo' : 'website';
+?>
+<section class="page-hero svc3d-hero" data-svc3d-hero>
+	<div class="svc3d-glow" aria-hidden="true"></div>
+	<div class="wrap">
+	<div class="hero-grid">
+	<div class="hero-copy">
 		<span class="eyebrow">Dịch vụ</span>
 		<h1><?php echo esc_html( $svc_name ); ?></h1>
 		<?php if ( has_excerpt() ) : ?><p class="lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
-		<?php /* Toi da 2 nut: 1 chinh + 1 phu (Hieu 2026-07-15 "nhieu loai nut qua").
-		         Bo "Nhan bao gia" - trung muc dich voi bang gia (co san nut gui yeu cau) va voi nut Goi. */ ?>
+		<?php /* Toi da 2 nut: 1 chinh + 1 phu (Hieu 2026-07-15). */ ?>
 		<div class="hero-actions">
 			<?php if ( $nhom ) : ?>
 				<a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a>
-				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 			<?php else : ?>
 				<a class="btn btn-primary" href="#lien-he">Nhận báo giá</a>
-				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 			<?php endif; ?>
+			<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 		</div>
-		<?php /* Link phu duoi CTA, rieng trang booking-bao-pr (Hieu 2026-08-05): dua duong dan
-		         toi form dat lich len gan Hero hon ma khong pha rule toi da 2 nut hero. */ ?>
 		<?php if ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) : ?>
-			<p style="margin-top:14px"><a href="#lien-he" style="font-size:13.5px;font-weight:600;color:var(--action);text-decoration:underline">Hoặc để lại thông tin, DigicomVN tư vấn & báo giá ngay →</a></p>
+			<p style="margin-top:14px"><a href="#lien-he" style="font-size:13.5px;font-weight:600;text-decoration:underline">Hoặc để lại thông tin, DigicomVN tư vấn &amp; báo giá ngay →</a></p>
+		<?php endif; ?>
+		<?php if ( ! empty( $dgc_h['count'] ) ) : ?>
+		<dl class="svc3d-stats">
+			<div><dt><?php echo esc_html( $dgc_unit ); ?> có giá công khai</dt><dd data-count="<?php echo (int) $dgc_h['count']; ?>"><?php echo (int) $dgc_h['count']; ?></dd></div>
+			<?php if ( ! empty( $dgc_h['min'] ) ) : ?><div><dt>Giá chỉ từ</dt><dd><?php echo esc_html( dgc_svc_money( $dgc_h['min'] ) ); ?></dd></div><?php endif; ?>
+			<?php if ( ! empty( $dgc_h['maxdr'] ) ) : ?><div><dt>DR cao nhất (Ahrefs)</dt><dd data-count="<?php echo (int) $dgc_h['maxdr']; ?>"><?php echo (int) $dgc_h['maxdr']; ?></dd></div><?php endif; ?>
+		</dl>
 		<?php endif; ?>
 	</div>
+
+	<div class="svc3d-stage" aria-hidden="<?php echo empty( $dgc_h['rows'] ) ? 'false' : 'true'; ?>">
+		<?php if ( ! empty( $dgc_h['rows'] ) ) : ?>
+		<div class="svc3d-board" data-svc3d-board>
+			<div class="svc3d-board-head"><span>Bảng giá đang áp dụng</span><span class="svc3d-live">Cập nhật <?php echo esc_html( wp_date( 'd/m/Y' ) ); ?></span></div>
+			<ol class="svc3d-rows">
+				<?php foreach ( $dgc_h['rows'] as $i => $r ) : ?>
+				<li style="--i:<?php echo (int) $i; ?>">
+					<span class="svc3d-name"><?php echo esc_html( $r['name'] ); ?></span>
+					<?php if ( $r['dr'] > 0 ) : ?><span class="svc3d-dr">DR <?php echo (int) $r['dr']; ?></span><?php else : ?><span></span><?php endif; ?>
+					<span class="svc3d-price"><small>từ</small> <?php echo esc_html( number_format( $r['price'], 0, ',', '.' ) ); ?>đ</span>
+				</li>
+				<?php endforeach; ?>
+			</ol>
+			<div class="svc3d-board-foot">+ <?php echo (int) max( 0, $dgc_h['count'] - count( $dgc_h['rows'] ) ); ?> <?php echo esc_html( $dgc_unit ); ?> khác trong bảng giá</div>
+			<div class="svc3d-chip svc3d-chip-a"><b>VAT</b> Xuất hoá đơn đầy đủ</div>
+			<div class="svc3d-chip svc3d-chip-b"><b>Link</b> Bàn giao bài đã đăng</div>
+		</div>
+		<?php else : ?>
+		<aside class="hero-panel" aria-label="Cam kết làm việc">
+			<h2>Cam kết làm việc</h2>
+			<ul>
+				<li>Báo giá rõ ràng theo phạm vi công việc</li>
+				<li>Xuất hoá đơn VAT đầy đủ</li>
+				<li>Cập nhật tiến độ ở từng bước</li>
+				<li>Tư vấn miễn phí, không ràng buộc</li>
+			</ul>
+		</aside>
+		<?php endif; ?>
+	</div>
+	</div>
+	</div>
 </section>
+
+<?php if ( $nhom ) : ?>
+<section class="svc3d-trust" aria-label="Cam kết làm việc">
+	<div class="wrap">
+		<ul>
+			<li><b>Giá công khai</b><span>Niêm yết trên từng vị trí đăng, không báo giá mập mờ</span></li>
+			<li><b>Hoá đơn VAT</b><span>Xuất đầy đủ cho doanh nghiệp</span></li>
+			<li><b>Bàn giao link</b><span>Gửi link bài đã lên để bạn tự kiểm tra</span></li>
+			<li><b>Tư vấn miễn phí</b><span>Chọn đúng <?php echo esc_html( $dgc_unit ); ?> theo ngành và ngân sách</span></li>
+		</ul>
+	</div>
+</section>
+<?php endif; ?>
 
 <?php
 /* Khoi dinh nghia dich vu ("... la gi") ngay duoi hero - bat intent thong tin + GEO.

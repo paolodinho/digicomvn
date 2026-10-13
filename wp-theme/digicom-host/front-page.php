@@ -119,9 +119,9 @@ $dgc_services = array(
 <section class="sec press-mentions-sec" style="background:var(--surface-2);border-top:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:30px">
-			<span class="eyebrow">Truyền thông</span>
-			<h2>Báo chí nói về DigicomVN</h2>
-			<p class="muted" style="max-width:600px;margin:8px auto 0">Cách DigicomVN ứng dụng AI và quy trình booking báo bài bản được các cơ quan báo chí ghi nhận.</p>
+			<span class="eyebrow">Đối tác báo chí</span>
+			<h2>Đầu báo DigicomVN hợp tác đăng bài</h2>
+			<p class="muted" style="max-width:600px;margin:8px auto 0">Các đầu báo điện tử DigicomVN làm việc trực tiếp để đặt bài PR, guest post cho khách hàng.</p>
 		</div>
 		<div class="pm-grid">
 			<?php foreach ( $dgc_mentions as $m ) :

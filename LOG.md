@@ -4838,3 +4838,18 @@ khong nhoi anchor trung, ap dung NGAY luc dat link (khong doi audit sau).
 ## 2026-10-06 — AP: bổ sung ảnh thứ 4 theo ảnh chat mới
 - Danh sách mới xác nhận IMG_8273-office-v2 là ảnh thứ 4 sau 8245/8285/8292. Retouch bổ sung bằng imagegen built-in cùng mức nhẹ, giữ nụ cười khép môi/hướng nhìn/nền/logo tương đồng trực quan.
 - ZIP mới đủ 4 PNG v3: `/Users/dohieu/Codex-Workspace/digicom/ap-anh-moi-office-2026-10-05/AP-4-anh-retouch-v3.zip`; unzip -t 4/4 OK. IMG_8273 1448x1086. Giữ ZIP 3 ảnh và v2 lịch sử, không gửi tin nhắn khách.
+
+## 2026-10-13 - Báo giá booking báo Giáo dục khách Loan (Edtech)
+- So 3 báo giá NCC (Life Media PR PLAN 12/10, Goodcom Combat 2026, DanaSEO Book báo), chọn giá vốn rẻ nhất 18 báo chuyên mục Giáo dục, giá khách = vốn x1,12 (làm tròn lên 10.000). Tổng vốn 18 báo 98.071.481, bán 109.890.000, lãi 11.818.519.
+- File khách: Google Sheet 1P7l_Wu03bxFObvTUUHLj_HCFO_tQpJ21tHJNmWHhb5o (CK hiển thị 20-29%, ô tick tự tính, khối Digito Combat + thanh toán + hiệu lực 13-20/10). File NOIBO: 1GbbBGLvtRMo-JYPz87QQgly1OV3OuOoPryfyKJ8BAvQ.
+- Tiền Phong: DanaSEO 4tr chỉ 2 ảnh; Goodcom 4,17tr 5 ảnh - chờ Hiếu chốt. File tổng quan: thêm dòng K7.
+
+## 2026-10-13 - UI pro skin
+Deploy skin chuyên nghiệp cho 8 trang dịch vụ + site-wide tokens (main.css cuối file 'PRO SKIN', tpl-service.php hero-grid/hero-panel, DGC_VER 2.9.0). Backup: ~/Claude-Workspace/_backups/routines/2026-10-13/pro-skin/.
+
+- 2026-10-13: Tạo tab 'Báo giá khách hàng' (gid 864876144) trong file tổng quan: 9 báo giá 04/08-13/10, link file khách + NOIBO, trạng thái đồng bộ dòng K. Thêm link ở A4 tab Tổng quan. Rule mới: bao-gia-khach-hang.md mục 8.
+- 2026-10-13: Kiểm lại giao diện trang dịch vụ (W10): 8 file theme local = live (so từng byte), xoá cache, 8 trang dịch vụ 200 + main.css 2.9.1.
+
+## 2026-10-13 tối - Trang dịch vụ v3 (3D)
+Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới (chữ 72px, 3 số liệu thật đếm chạy, bảng giá nổi 3D 3 site thật nghiêng theo chuột/phẳng khi cuộn), dải cam kết, lật 3D các khối khi cuộn (không transform #bang-gia để giữ sel-bar sticky), thẻ 4 bước số viền lớn + tilt, thanh tiến độ cuộn, tắt hết khi prefers-reduced-motion. DGC_VER 2.9.1 -> 3.0.3. QA 7 trang mobile 0 tràn. Thêm N9 (xuất từ khoá thủ công) vào file tổng quan.
+- 2026-10-13: Áp hero 3D + lật khi cuộn cho /booking-bao-pr/ (bảng giá nổi: Ngoisao.vnexpress.net, Vnexpress.net, Thanhnien.vn giá thật), số trust đếm chạy, DGC_VER 3.1.0, Local đã sync. Mobile overflow 0.
