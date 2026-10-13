@@ -3383,3 +3383,88 @@ body:before{display:none}
 }
 [data-theme="dark"] .page-content .dgc-dd>div+div{background:rgba(179,64,43,.08)}
 .page-content>.dgc-split,.page-content>.dgc-stat,.page-content>.dgc-dd,.page-content>.dgc-check,.page-content>.dgc-sticky,.page-content>.dgc-rows{max-width:none !important}
+
+/* ===== DGC MEDIA SPLIT (3.2.1, Hieu 13/10: "ben phai trong tron, tim anh phu hop") =====
+   .dgc-split.dgc-media = noi dung (rows/timeline/checklist) + anh minh hoa Storyset dinh khi cuon.
+   .dgc-rows dung <dl><div><dt><dd> de wpautop khong chen <p> lam vo luoi. */
+.page-content .dgc-split.dgc-media{align-items:start;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.page-content .dgc-split.dgc-media.rev{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}
+.page-content .dgc-split.dgc-media .dgc-tl{margin-top:0}
+.page-content .dgc-split.dgc-media .dgc-rows{margin-top:0}
+.page-content .dgc-split.dgc-media .dgc-check{grid-template-columns:1fr;margin-top:0}
+.page-content .dgc-fig{position:sticky;top:120px;margin:0;align-self:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;justify-content:center}
+.page-content .dgc-fig img{display:block;width:100%;max-width:460px;height:auto;margin:0 auto;border-radius:10px}
+.page-content dl.dgc-rows{padding:0}
+.page-content dl.dgc-rows>div{align-items:baseline}
+.page-content .dgc-panel dl.dgc-rows>div{grid-template-columns:minmax(90px,.4fr) minmax(0,1fr);gap:16px;padding:12px 0}
+.page-content .dgc-credit{font-size:13px;color:var(--ink-soft);margin-top:28px}
+@media(max-width:900px){
+  .page-content .dgc-split.dgc-media,.page-content .dgc-split.dgc-media.rev{grid-template-columns:1fr}
+  .page-content .dgc-split.dgc-media.rev>:first-child{order:0}
+  .page-content .dgc-fig{position:static;padding:12px}
+  .page-content .dgc-fig img{max-width:320px}
+}
+.page-content .dgc-split.dgc-media .dgc-check{columns:1}
+.page-content .dgc-check-h{font-size:17px;margin:0 0 12px}
+.page-content .dgc-check+.dgc-check-h{margin-top:18px}
+.page-content .dgc-check.no li:before{content:"\00d7";border:0;transform:none;width:auto;height:auto;top:-2px;left:3px;color:#C2410C;font:700 20px/1 var(--font-display)}
+
+/* ===== BBP 3.2.3 (13/10): khoi "Vi sao chon" bo luoi 6 the -> tieu de trai + hang ke phai; post_content rong nhu trang dich vu ===== */
+.bbp-why{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.bbp-why-head{margin-bottom:0 !important;position:sticky;top:120px}
+.bbp-why-head h2{margin-top:6px}
+.bbp-why-head .muted{margin:10px 0 0;max-width:none}
+.bbp-why-list{margin:0;padding:0;border-top:1px solid var(--line)}
+.bbp-why-row{display:grid;grid-template-columns:minmax(200px,.42fr) minmax(0,1fr);gap:28px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.bbp-why-row dt{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:700;font-size:16.5px;color:var(--heading);line-height:1.35}
+.bbp-why-row dd{margin:0;font-size:15px;line-height:1.65;color:var(--ink-soft)}
+.bbp-why-ic{flex:0 0 36px;display:inline-flex;width:36px;height:36px;border-radius:10px;align-items:center;justify-content:center;background:rgba(11,87,208,.08);color:var(--action)}
+.bbp-why-row:nth-child(even) .bbp-why-ic{background:rgba(14,140,127,.1);color:var(--teal)}
+.bbp-why-ic svg{width:19px;height:19px}
+@media(max-width:900px){
+  .bbp-why{grid-template-columns:1fr;gap:24px}
+  .bbp-why-head{position:static}
+  .bbp-why-row{grid-template-columns:1fr;gap:6px;padding:16px 0}
+}
+.page-template-page-booking-bao-pr .wrap.page-content.bbp-body{max-width:var(--maxw)}
+.bbp-body>*{max-width:1080px}
+.bbp-body>.wp-block-table,.bbp-body>figure.dgc-data-table{max-width:100%}
+.bbp-body .dgc-data-table td a{font-weight:600}
+.bbp-body .dgc-data-table td a,.bbp-body .dgc-rows dt a,.bbp-body .dgc-tl>li>b a{color:var(--action);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.bbp-body .dgc-data-table td[data-label="Giá từ"],.bbp-body .dgc-data-table td[data-label="Mức phổ biến"],.bbp-body .dgc-data-table td[data-label="Đầu báo / vị trí"],.bbp-body .dgc-data-table td[data-label="Domain Rating"]{white-space:nowrap}
+.page-content .dgc-panel .dgc-check{columns:1}
+/* 3.2.5: link trong hang ke / bang / dong thoi gian luon nhin ra la link (moi trang) */
+.page-content .dgc-rows a,.page-content .dgc-data-table td a,.page-content .dgc-tl a,.page-content .dgc-check a,.page-content .dgc-dd a{color:var(--action);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+
+/* ===== 3.3.0 COT DOC 1 COT (Hieu 13/10: "it anh, anh xau, bo cuc kho doc, roi rắm") =====
+   Noi dung trang dich vu: 1 cot 860px can giua, bo kieu 2 cot xen ke. Anh/bang rong (.dgc-shot,
+   .dgc-wide) duoc tran ra 1080px. Dong chu ~75-90 ky tu de doc. */
+.page-template-tpl-service .wrap.page-content,
+.page-template-page-booking-bao-pr .wrap.page-content.bbp-body{max-width:860px !important;margin-left:auto !important;margin-right:auto !important;font-size:17px;line-height:1.78}
+.page-template-tpl-service .page-content>*,.page-template-page-booking-bao-pr .bbp-body>*{max-width:none !important}
+.page-content h2{margin:64px 0 16px;font-size:clamp(24px,2.4vw,30px);line-height:1.25;border-bottom:0;padding-bottom:0}
+.page-content h2:first-child{margin-top:8px}
+.page-content h2+p{font-size:18px;color:var(--heading)}
+.page-content .dgc-split,.page-content .dgc-sticky,.page-content .dgc-split.dgc-media,.page-content .dgc-split.dgc-media.rev{display:block !important;margin:22px 0}
+.page-content .dgc-split>*+*,.page-content .dgc-sticky>*+*{margin-top:20px}
+.page-content .dgc-sticky>:first-child{position:static !important}
+.page-content .dgc-sticky>:first-child h2{margin-top:64px}
+.page-content .dgc-check{columns:2}
+.page-content .dgc-split.dgc-media .dgc-check{columns:2}
+.page-content .dgc-fig{position:static;max-width:440px;margin:24px auto 0;background:none;border:0;padding:0}
+.page-content .dgc-rows>div,.page-content dl.dgc-rows>div{grid-template-columns:minmax(150px,.32fr) minmax(0,1fr)}
+/* anh infographic + khoi rong */
+.page-content figure.dgc-shot{margin:28px 0 36px}
+.page-content figure.dgc-shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 30px -14px rgba(16,24,40,.25)}
+.page-content figure.dgc-shot figcaption{font-size:14px;color:var(--ink-soft);margin-top:10px;text-align:center}
+@media(min-width:1140px){
+  .page-content figure.dgc-shot,.page-content .dgc-wide{width:1080px;margin-left:calc(50% - 540px);margin-right:0}
+}
+@media(max-width:700px){
+  .page-content .dgc-check,.page-content .dgc-split.dgc-media .dgc-check{columns:1}
+  .page-content .dgc-rows>div,.page-content dl.dgc-rows>div{grid-template-columns:1fr}
+  .page-content h2{margin-top:44px}
+}
+
+/* 3.3.1 dgc-shot: bo gioi han img chung 560/360 cua .page-content */
+.page-content figure.dgc-shot img{max-width:100% !important;max-height:none !important;object-fit:contain}

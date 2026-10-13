@@ -121,44 +121,38 @@ $bbp_ic = function ( $p ) {
 
 <!-- ============ 4. VI SAO CHON DIGICOM ============ -->
 <section class="sec bbp-benefits" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:34px">
+	<div class="wrap bbp-why">
+		<div class="center bbp-why-head">
 			<span class="eyebrow">Vì sao chọn DigicomVN</span>
 			<h2>Booking báo &amp; PR trọn gói, minh bạch từ giá tới link bàn giao</h2>
-			<p class="muted" style="max-width:640px;margin:8px auto 0">Một đầu mối cho toàn bộ mạng lưới báo điện tử - thay vì liên hệ, thương lượng và theo dõi từng toà soạn riêng lẻ.</p>
+			<p class="muted">Một đầu mối cho toàn bộ mạng lưới báo điện tử - thay vì liên hệ, thương lượng và theo dõi từng toà soạn riêng lẻ.</p>
 		</div>
-		<div class="bbp-feat-grid">
-			<div class="bbp-feat">
-				<span class="bbp-feat-ic"><?php echo $bbp_ic( '<path d="M4 7h16M4 12h16M4 17h10"/>' ); ?></span>
-				<h3>Bảng giá công khai từng đầu báo</h3>
-				<p><?php echo esc_html( $bbp_count ); ?> vị trí niêm yết theo chuyên mục, DR và loại link - lọc theo ngành, khoảng giá, so sánh ngay không cần chờ báo giá.</p>
-			</div>
-			<div class="bbp-feat">
-				<span class="bbp-feat-ic"><?php echo $bbp_ic( '<path d="M12 20V10M6 20V4M18 20v-7"/>' ); ?></span>
-				<h3>Chọn báo theo mục tiêu</h3>
-				<p>Đẩy top từ khoá, ra mắt sản phẩm, tuyển dụng hay xử lý khủng hoảng truyền thông - mỗi mục tiêu cần bộ đầu báo và chuyên mục khác nhau.</p>
-			</div>
-			<div class="bbp-feat">
-				<span class="bbp-feat-ic"><?php echo $bbp_ic( '<path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 12h8M8 16h6"/>' ); ?></span>
-				<h3>Viết bài đúng văn phong toà soạn</h3>
-				<p>Đội biên tập viết theo chuẩn từng báo (tiêu đề, sapo, độ dài, cách nhắc thương hiệu) để bài được duyệt nhanh và đọc tự nhiên.</p>
-			</div>
-			<div class="bbp-feat">
-				<span class="bbp-feat-ic"><?php echo $bbp_ic( '<path d="M20 6 9 17l-5-5"/>' ); ?></span>
-				<h3>Bàn giao link, theo dõi tiến độ</h3>
-				<p>Xác nhận báo còn nhận bài trước khi chốt, cập nhật trạng thái từng bước, bàn giao đường link bài đã lên kèm ảnh chụp vị trí.</p>
-			</div>
-			<div class="bbp-feat">
-				<span class="bbp-feat-ic"><?php echo $bbp_ic( '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>' ); ?></span>
-				<h3>Tài sản truyền thông lâu dài</h3>
-				<p>Bài PR trên báo còn index nhiều năm, tạo backlink từ tên miền uy tín và nguồn dẫn khi AI, báo chí nói về thương hiệu.</p>
-			</div>
-			<div class="bbp-feat">
-				<span class="bbp-feat-ic"><?php echo $bbp_ic( '<path d="M9 12h6m-6 4h6M6 4h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>' ); ?></span>
-				<h3>Hoá đơn VAT, hợp đồng rõ ràng</h3>
-				<p>Xuất hoá đơn đầy đủ, hợp đồng dịch vụ minh bạch - phù hợp doanh nghiệp cần chứng từ cho ngân sách marketing.</p>
-			</div>
-		</div>
+		<dl class="bbp-why-list">
+				<div class="bbp-why-row">
+					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M4 7h16M4 12h16M4 17h10"/>' ); ?></span>Bảng giá công khai từng đầu báo</dt>
+					<dd><?php echo esc_html( $bbp_count ); ?> vị trí niêm yết theo chuyên mục, DR và loại link - lọc theo ngành, khoảng giá, so sánh ngay không cần chờ báo giá.</dd>
+				</div>
+				<div class="bbp-why-row">
+					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M12 20V10M6 20V4M18 20v-7"/>' ); ?></span>Chọn báo theo mục tiêu</dt>
+					<dd>Đẩy top từ khoá, ra mắt sản phẩm, tuyển dụng hay xử lý khủng hoảng truyền thông - mỗi mục tiêu cần bộ đầu báo và chuyên mục khác nhau.</dd>
+				</div>
+				<div class="bbp-why-row">
+					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 12h8M8 16h6"/>' ); ?></span>Viết bài đúng văn phong toà soạn</dt>
+					<dd>Đội biên tập viết theo chuẩn từng báo (tiêu đề, sapo, độ dài, cách nhắc thương hiệu) để bài được duyệt nhanh và đọc tự nhiên.</dd>
+				</div>
+				<div class="bbp-why-row">
+					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M20 6 9 17l-5-5"/>' ); ?></span>Bàn giao link, theo dõi tiến độ</dt>
+					<dd>Xác nhận báo còn nhận bài trước khi chốt, cập nhật trạng thái từng bước, bàn giao đường link bài đã lên kèm ảnh chụp vị trí.</dd>
+				</div>
+				<div class="bbp-why-row">
+					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>' ); ?></span>Tài sản truyền thông lâu dài</dt>
+					<dd>Bài PR trên báo còn index nhiều năm, tạo backlink từ tên miền uy tín và nguồn dẫn khi AI, báo chí nói về thương hiệu.</dd>
+				</div>
+				<div class="bbp-why-row">
+					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M9 12h6m-6 4h6M6 4h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>' ); ?></span>Hoá đơn VAT, hợp đồng rõ ràng</dt>
+					<dd>Xuất hoá đơn đầy đủ, hợp đồng dịch vụ minh bạch - phù hợp doanh nghiệp cần chứng từ cho ngân sách marketing.</dd>
+				</div>
+		</dl>
 	</div>
 </section>
 

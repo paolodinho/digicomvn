@@ -10,7 +10,7 @@ CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 [ -f "$IN" ] || { echo "Khong thay file HTML: $IN"; exit 1; }
 [ -x "$CHROME" ] || { echo "Khong thay Google Chrome"; exit 1; }
 DIR="$(cd "$(dirname "$IN")" && pwd)"; BASE="$(basename "$IN")"
-"$CHROME" --headless=new --disable-gpu --hide-scrollbars \
+"$CHROME" --headless=new --disable-gpu --hide-scrollbars --virtual-time-budget=5000 \
   --force-device-scale-factor=2 --window-size="$W,$H" \
   --screenshot="$OUT@2x.png" "file://$DIR/$BASE" 2>/dev/null
 # resize ban 2x xuong 1600px chieu rong (du sac net cho khung noi dung ~760px, retina 2x)

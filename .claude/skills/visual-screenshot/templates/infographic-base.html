@@ -1,0 +1,75 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<!-- MAU INFOGRAPHIC CHUNG cho trang dich vu digicomvn.com (3.3.0, 13/10/2026).
+     Kich thuoc co dinh 1200x675 (16:9). Render: ./render.sh <file>.html <out> 1200 675
+     Thanh phan: .kpis (so lon) | .hbars (thanh ngang) | .cols (so sanh cot) | .flow (quy trinh ngang)
+     | .grid2 (2 khung) | .tagrow (the nhan). Chi giu lai thanh phan can dung, xoa phan con lai.
+     KHONG em/en dash. So lieu phai that (bang gia live) hoac gan nhan "MAU MINH HOA". -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14182B;--soft:#4A5268;--mute:#8A93A8;--line:#E3E8F2;--bg:#F5F7FB;--card:#fff;
+--pri:#0B57D0;--pri-l:#E8F0FE;--teal:#0E8C7F;--teal-l:#E3F4F1;--warm:#E8833A;--warm-l:#FDF0E6;--red:#C2410C;--red-l:#FDECE4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:675px;background:var(--bg);font-family:"Be Vietnam Pro",system-ui,sans-serif;color:var(--ink);overflow:hidden}
+.card{position:relative;width:1200px;height:675px;padding:48px 56px 40px;display:flex;flex-direction:column}
+.card:before{content:"";position:absolute;left:0;top:0;width:100%;height:6px;background:linear-gradient(90deg,var(--pri) 0 70%,var(--teal) 70% 100%)}
+.eyebrow{font:700 14px/1 "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.title{font:700 38px/1.15 "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;letter-spacing:-.02em;margin-top:12px;max-width:960px}
+.sub{font-size:17px;color:var(--soft);margin-top:10px;max-width:900px;line-height:1.5}
+.main{flex:1;margin-top:30px;display:flex;flex-direction:column;justify-content:center;min-height:0}
+.foot{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mute);border-top:1px solid var(--line);padding-top:14px;margin-top:22px}
+.brand{font:900 17px "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--ink);letter-spacing:-.01em}.brand span{color:var(--teal)}
+.badge{background:#FEF3C7;color:#92400E;font:700 12px "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;padding:6px 10px;border-radius:6px;letter-spacing:.06em}
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+.kpi b{display:block;font:900 46px/1 "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;letter-spacing:-.03em;color:var(--pri)}
+.kpi span{display:block;margin-top:10px;font-size:15px;color:var(--soft);line-height:1.4}
+/* THANH NGANG: width bar = % tu tinh */
+.hbars{display:flex;flex-direction:column;gap:16px}
+.hb{display:grid;grid-template-columns:230px 1fr 150px;align-items:center;gap:18px}
+.hb .lb{font-size:16px;font-weight:600}.hb .lb small{display:block;font-weight:400;color:var(--mute);font-size:13px}
+.hb .tr{height:30px;background:#EAEFF7;border-radius:8px;overflow:hidden}
+.hb .tr i{display:block;height:100%;border-radius:8px;background:var(--pri)}
+.hb .tr i.t{background:var(--teal)}.hb .tr i.w{background:var(--warm)}
+.hb .vl{font:700 20px "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;text-align:right}
+/* SO SANH COT */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.col{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.col h4{font:700 20px "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;padding:18px 22px;color:#fff;background:var(--pri)}
+.col.t h4{background:var(--teal)}.col.w h4{background:var(--warm)}
+.col ul{list-style:none;padding:16px 22px 20px}
+.col li{font-size:15px;line-height:1.45;padding:9px 0;border-top:1px solid var(--line)}.col li:first-child{border-top:0}
+.col li b{display:block;font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:2px}
+/* QUY TRINH NGANG */
+.flow{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0;position:relative}
+.flow:before{content:"";position:absolute;left:7%;right:7%;top:30px;height:3px;background:linear-gradient(90deg,var(--pri),var(--teal))}
+.st{position:relative;text-align:center;padding:0 10px}
+.st .n{width:62px;height:62px;border-radius:50%;margin:0 auto;background:#fff;border:3px solid var(--pri);display:flex;align-items:center;justify-content:center;font:900 24px "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--pri)}
+.st:last-child .n{border-color:var(--teal);color:var(--teal)}
+.st h5{font:700 18px/1.25 "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;margin-top:16px}
+.st p{font-size:14px;color:var(--soft);margin-top:8px;line-height:1.45}
+.st .tm{display:inline-block;margin-top:10px;font:700 12px "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--teal);background:var(--teal-l);padding:5px 9px;border-radius:999px}
+/* 2 KHUNG */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 26px}
+.box h4{font:700 20px "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.box.ok h4{color:var(--teal)}.box.no h4{color:var(--red)}
+.box li{list-style:none;font-size:15.5px;line-height:1.5;padding:7px 0 7px 28px;position:relative}
+.box.ok li:before{content:"";position:absolute;left:4px;top:13px;width:12px;height:7px;border-left:3px solid var(--teal);border-bottom:3px solid var(--teal);transform:rotate(-45deg)}
+.box.no li:before{content:"\00d7";position:absolute;left:3px;top:3px;font:700 22px/1 "Roboto",-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--red)}
+/* THE NHAN */
+.tagrow{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:15px;font-weight:600}
+</style></head>
+<body><div class="card">
+  <div class="eyebrow">Mua textlink · Thời hạn</div>
+  <div class="title">Gói càng dài, chi phí mỗi tháng càng thấp</div>
+  <div class="sub">Quy giá gói link chuyên mục (nhóm A) ra chi phí trung bình mỗi tháng</div>
+  <div class="main">
+    <div class="hbars">
+      <div class="hb"><div class="lb">Gói 3 tháng<small>665.000đ</small></div><div class="tr"><i style="width:100%"></i></div><div class="vl">~222.000đ/th</div></div>
+      <div class="hb"><div class="lb">Gói 12 tháng<small>855.000đ</small></div><div class="tr"><i class="t" style="width:32%"></i></div><div class="vl">~71.000đ/th</div></div>
+    </div>
+  </div>
+  <div class="foot"><div class="brand">Digicom<span>VN</span></div><div>Nguồn: bảng giá digicomvn.com, cập nhật 13/10/2026 · giá chưa gồm VAT</div></div>
+</div></body></html>
