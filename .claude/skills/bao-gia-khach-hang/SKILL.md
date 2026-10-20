@@ -26,6 +26,19 @@ Mỗi lần làm báo giá, **LUÔN xuất ra ĐÚNG 2 FILE**, không bao giờ 
 | Vị trí lưu | **CÙNG thư mục** `11-bao-gia-khach/` với file gửi khách (chốt 2026-08-18: Hiếu yêu cầu 2 file nằm cùng chỗ, phân biệt bằng TÊN + MÀU, không tách thư mục con) | `11-bao-gia-khach/` |
 | Header/màu | Nền ĐỎ đậm (`#B91C1C`), dòng cảnh báo to: **"⚠ FILE NỘI BỘ - TUYỆT ĐỐI KHÔNG GỬI KHÁCH"** ở dòng 1, tab sheet màu đỏ | Nền brand xanh/teal (`#1C2035` / `#0E8C7F`) như file khách hàng bình thường, tab sheet màu teal |
 
+## FILE GỬI KHÁCH = GOOGLE SHEET/DOC (chốt Hiếu 2026-10-14, BẮT BUỘC)
+
+Hiếu: "nguyên tắc báo giá là phải tạo gg doc/gg sheet". Bản gửi khách cuối cùng LUÔN là
+Google Sheet (bảng giá) hoặc Google Doc (báo giá dạng văn bản), không phải chỉ file xlsx/docx.
+- Dựng xlsx/docx local như cũ -> upload bằng MCP Drive `create_file` (base64, contentMimeType
+  xlsx/docx, ĐỂ Drive tự convert sang Google type) -> share writer cho service account trong
+  `.claude/tong-quan.json` -> đọc lại bằng Sheets API để kiểm tra nội dung đã lên đủ.
+- Link Google Sheet/Doc là thứ báo cho Hiếu ĐẦU TIÊN và ghi vào cột "File gửi khách" (HYPERLINK)
+  của tab "Báo giá khách hàng". File xlsx local chỉ là bản gốc.
+- LUÔN 2 LINK Google (Hiếu chốt 14/10): 1 link gửi khách + 1 link NOIBO gửi Hiếu (title bắt đầu "NOIBO -", kèm "(KHÔNG GỬI KHÁCH)"). Share writer cho service account trong `.claude/tong-quan.json`.
+- Cập nhật báo giá đã có link: GIỮ LINK CŨ - upload bản mới thành file tạm, `sheets().copyTo` tab sang file cũ, xoá tab cũ, đổi tên tab; xin phép Hiếu rồi trash file tạm.
+- Điền cả 2 link vào tab "Báo giá khách hàng" file tổng quan: cột E (khách), cột F (NOIBO), HYPERLINK dùng ";".
+
 ## Quy trình bắt buộc
 
 1. Tính giá theo đúng công thức đang chốt (đọc `.claude/rules/bao-gia-khach-hang.md`

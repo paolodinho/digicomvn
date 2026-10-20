@@ -4863,3 +4863,28 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - 13/10 khuya (tiếp): Hiếu chê "bên phải trống trơn". Nguyên nhân: wpautop chèn <p> vỡ lưới .dgc-rows -> đổi sang <dl><dt><dd>. Thêm .dgc-media (nội dung + ảnh Storyset dính khi cuộn) cho dòng thời gian + 1 khối khác mỗi trang, 2 ảnh/trang, credit Storyset cuối trang. Trang BĐS tách "Giúp được / Không giúp được" (dấu x). DGC_VER 3.2.2, đã sync Local. 0/6 tràn mobile.
 - 13/10 22:30 booking-bao-pr (475): viết lại post_content 1.415 -> ~3.340 từ, 13 H2 (bảng nhóm báo có số liệu thật 519 vị trí, chip đầu báo, sticky yếu tố giá, bảng mục tiêu, timeline duyệt bài + ảnh, bảng yêu cầu biên tập từng báo, Nên/Không nên + Luật Báo chí Đ44/Luật Quảng cáo Đ21,23, checklist hồ sơ, hàng kẻ bàn giao + ảnh, giúp được/không, bảng dịch vụ kèm, lộ trình đọc + ảnh, hàng kẻ case study). Template: bỏ lưới 6 thẻ .bbp-feat -> .bbp-why. DGC_VER 3.2.4 live + Local.
 - 13/10 22:00: Booking báo & PR (475) 1.415->~3.340 từ, bỏ 4 lưới thẻ nội dung + lưới 6 thẻ "Vì sao chọn" trong page-booking-bao-pr.php; Social Entity (1621) 1.856->~3.100 từ, chuyển Tài liệu tham khảo xuống cuối, FAQ 8->3 câu. 3.2.5: link trong hàng kẻ/bảng/dòng thời gian có màu + gạch chân toàn site. 0/8 tràn mobile, Local đã sync.
+
+## 2026-10-14 00:30 - Infographic thay Storyset 8 trang dịch vụ (DGC_VER 3.3.1)
+- Hiếu: "ít ảnh, ảnh xấu, bố cục khó đọc, rối rắm". Layout 1 cột 860px (3.3.0) + 42 infographic thương hiệu 1200x675 tự dựng (mẫu .claude/skills/visual-screenshot/templates/infographic-base.html; render.sh thêm --virtual-time-budget để đợi font).
+- Số ảnh/trang: textlink 5, guest post 5, backlink 5, toplist 5, quốc tế 5, BĐS 6, booking 5, entity 6. Số liệu từ bảng giá live 13/10 hoặc số sẵn có trong trang; ví dụ có nhãn MẪU MINH HOẠ. Media ID 6825-6872, uploads/2026/10/ig-<slug>-*.webp.
+- 3.3.1: .page-content figure.dgc-shot img bỏ giới hạn max-width 560px/max-height 360px chung.
+- QA: 0 Storyset trên 8 trang live, 0/8 tràn mobile. Backup *-BEFORE-ig.json trong ~/Claude-Workspace/_backups/routines/2026-10-13/svc-v2-content/.
+- Còn: chữ trong infographic nhỏ trên mobile (346px) - cân nhắc bản dọc cho mobile nếu Hiếu thấy khó đọc.
+- 2026-10-14: Báo giá lamfile.vn (29 trang báo tỉnh/trang tin, giá DanaSEO giữ nguyên).
+
+## 2026-10-14 - Màu tươi sáng theo thương hiệu (DGC_VER 3.4.0)
+- Hiếu: "màu site tươi sáng hơn, dựa vào màu thương hiệu". Màu lấy từ logo: xanh #005CF6, aqua #00C4B8 (chữ dùng #00877C cho đủ tương phản).
+- Bỏ nền navy đậm: hero 8 trang dịch vụ + booking -> nền sáng tint xanh, quầng aqua; ribbon ưu đãi, thanh chọn (sel-bar), CTA band, dải số -> xanh brand đặc; footer xanh brand đậm #08245E. Chỉ light mode, dark mode giữ nguyên.
+- Khối CSS "3.4.0 BRIGHT BRAND" cuối main.css. Backup: ~/backups/*.pre340 (host), ~/Claude-Workspace/_backups/routines/2026-10-14/theme-bright/. QA 0/8 tràn.
+
+## 2026-10-14 - Bản dọc mobile cho 42 infographic
+- Hiếu: "làm bản ảnh dọc cho mobile". 42 ảnh -m (khung 480px, render-m.py + templates/infographic-mobile.css), gắn <picture><source media="(max-width:700px)">: điện thoại tải bản dọc, máy tính giữ bản ngang. Media ID ~6880-6924, uploads/2026/10/ig-*-m.webp.
+- QA: picture còn trên live 8/8 trang, currentSrc 390 = bản -m, 1440 = bản ngang, 0 tràn. Backup *-BEFORE-m.json trong ~/Claude-Workspace/_backups/routines/2026-10-14/svc-v2-content/.
+- 2026-10-14: Palette 3 màu thương hiệu (Hiếu: "quá 3 màu, biến thể cũng từ màu thương hiệu"). Theme DGC_VER 3.5.0 (khối PALETTE 3 MÀU cuối main.css) + 84 ảnh infographic (42 ngang + 42 dọc) đổi: cam/tím -> xanh biến thể #4D74C7, đỏ -> navy #0E1B3D, nhãn MẪU MINH HOẠ vàng -> nền #E3F8F6 chữ #00877C, #0B57D0 -> #005CF6. Ghi đè cùng tên file trên host, content dùng ?v=2, publish 8 trang. QA: 0 màu cũ trong nguồn, 0/8 trang tràn mobile. Backup nguồn: ~/Claude-Workspace/_backups/routines/2026-10-14/ig-src-BEFORE-recolor.tgz; template infographic-base.html đã đổi token.
+- 2026-10-14 chiều: (1) Ảnh đầu trang chủ: thay ảnh vẽ bằng ảnh Pexels 8101931 (hero-team-*.jpg?v=2, alt trung tính, không gắn là đội ngũ Digicom); giữ 2 ảnh văn phòng thật có logo. (2) Bảng giá gọn DGC_VER 3.6.0/3.6.1: inc/price-sidebar.php thành 1 ô "Lĩnh vực" (optgroup), inc/price-filter.php chỉ hiện Khoảng giá + Điểm DR, còn lại trong "Lọc thêm"; 1 ô sắp xếp; giá nhiều vị trí hiện "Từ X"; sel-bar chỉ hiện khi đã chọn; ghi chú combo chuyển xuống cuối bảng; mobile bỏ nhãn phụ để tên báo không bị cắt. (3) Đọc lướt DGC_VER 3.7.0: CSS .dgc-summary/.dgc-lead/details.dgc-more + JS mở details theo hash; 8 trang dịch vụ có "Tóm tắt nhanh", câu chốt dưới mỗi H2, phần sâu thu trong "Xem chi tiết: ...", 0 đoạn > 60 từ; số từ tăng 15-19% (không xoá nội dung), H2/H3/img/a giữ nguyên, 0 số liệu mới, 0/8 tràn mobile. Backup: ~/Claude-Workspace/_backups/routines/2026-10-14/svc-v2-content/*-BEFORE-skim.*, host ~/backups/2026-10-14/pre360/ + *.pre370.
+
+## 2026-10-16 - Báo giá Hoàng Gia Thiên Phúc
+- 2 báo (sohuutritue.net.vn, doanhnghieptiepthi.vn) 1.705.000/bài = giá cũ 1.550.000 x1,10 (Hiếu chốt). File khách + NOIBO trong 11-bao-gia-khach/, 2 Google Sheet, file tổng quan K9 + tab Báo giá dòng 1.
+
+## 2026-10-20 - Báo giá PR giá rẻ lĩnh vực giáo dục
+- 24 báo (giáo dục 5, đời sống/gia đình 9, địa phương 10), giữ nguyên giá DanaSEO, không CK/lãi cộng thêm. Khách: 11-bao-gia-khach/Bao-Gia-Dang-Bai-PR-Giao-Duc-Gia-Re-2026-10-20.xlsx; NOIBO cùng thư mục. 2 Google Sheet, ghi tab Báo giá khách hàng + K10. Chưa có tên khách.

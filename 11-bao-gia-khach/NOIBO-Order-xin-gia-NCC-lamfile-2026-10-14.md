@@ -1,0 +1,1 @@
+Chào anh/chị, bên em đang có 1 khách mảng dịch vụ tin học văn phòng (làm file Excel, báo cáo, kế toán - nhân sự cho doanh nghiệp nhỏ). Anh/chị gửi em báo giá guest post + textlink trên các site cùng chủ đề (công nghệ, tin học văn phòng, kế toán, nhân sự, kinh doanh) giúp em nhé. Mỗi site ghi giúp em DR, traffic, loại link và giá. Em cảm ơn.

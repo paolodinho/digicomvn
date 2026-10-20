@@ -3468,3 +3468,162 @@ body:before{display:none}
 
 /* 3.3.1 dgc-shot: bo gioi han img chung 560/360 cua .page-content */
 .page-content figure.dgc-shot img{max-width:100% !important;max-height:none !important;object-fit:contain}
+
+/* ==========================================================================
+   3.4.0 BRIGHT BRAND (Hieu 14/10: "mau site tuoi sang hon, dua vao mau thuong hieu").
+   Mau lay tu logo: xanh #005CF6 + aqua #00C4B8. Bo cac khoi nen navy dam (hero dich vu, ribbon,
+   sel-bar, cta-band, dai so) -> nen sang tint xanh/aqua hoac xanh brand dac. Chi ap light mode.
+   ========================================================================== */
+:root:not([data-theme="dark"]){
+  --action:#005CF6; --action-2:#004AD0;
+  --teal:#00877C; --aqua:#00C4B8; --sky:#EAF2FF; --aqua-l:#E3F8F6;
+  --heading:#0E1B3D; --ink:#16213A; --ink-soft:#3E4A63;
+  --surface:#F3F7FF; --line:#DCE6F7; --line-2:#C9D7F0;
+}
+:root:not([data-theme="dark"]) .promo-bar{background:var(--action) !important;border-bottom:0}
+:root:not([data-theme="dark"]) .promo-bar .promo-count,:root:not([data-theme="dark"]) .promo-bar .promo-count-val{color:#FFE27A}
+:root:not([data-theme="dark"]) .svc3d-progress{background:linear-gradient(90deg,var(--action),var(--aqua))}
+
+/* Hero trang dich vu + booking: nen sang tint xanh, quang aqua ben phai */
+:root:not([data-theme="dark"]) .page-hero,:root:not([data-theme="dark"]) .svc3d-hero,:root:not([data-theme="dark"]) .bbp-hero{
+  background:radial-gradient(60% 90% at 88% 30%,rgba(0,196,184,.18),rgba(0,196,184,0) 70%),
+             radial-gradient(50% 80% at 60% 110%,rgba(0,92,246,.12),rgba(0,92,246,0) 70%),#EEF4FF;color:var(--ink);border-bottom:1px solid var(--line)}
+:root:not([data-theme="dark"]) .page-hero:before,:root:not([data-theme="dark"]) .bbp-hero:before{
+  background:linear-gradient(90deg,rgba(0,92,246,.07) 1px,transparent 1px) 0 0/72px 72px,
+             linear-gradient(0deg,rgba(0,92,246,.07) 1px,transparent 1px) 0 0/72px 72px;opacity:1}
+:root:not([data-theme="dark"]) .svc3d-glow{background:radial-gradient(closest-side,rgba(0,92,246,.16),rgba(0,92,246,0) 70%)}
+:root:not([data-theme="dark"]) .page-hero h1,:root:not([data-theme="dark"]) .bbp-hero-copy h1{color:var(--heading)}
+:root:not([data-theme="dark"]) .page-hero .lead,:root:not([data-theme="dark"]) .svc3d-hero .lead,:root:not([data-theme="dark"]) .bbp-hero-copy .lead{color:var(--ink-soft)}
+:root:not([data-theme="dark"]) .page-hero .eyebrow,:root:not([data-theme="dark"]) .bbp-hero .eyebrow{color:var(--teal)}
+:root:not([data-theme="dark"]) .page-hero .btn-primary,:root:not([data-theme="dark"]) .bbp-hero .btn-primary{background:var(--action);color:#fff}
+:root:not([data-theme="dark"]) .page-hero .btn-primary:hover,:root:not([data-theme="dark"]) .bbp-hero .btn-primary:hover{background:var(--action-2);color:#fff}
+:root:not([data-theme="dark"]) .page-hero .btn-ghost,:root:not([data-theme="dark"]) .bbp-hero .btn-ghost{background:#fff;color:var(--heading);border-color:var(--line-2)}
+:root:not([data-theme="dark"]) .page-hero .btn-ghost:hover,:root:not([data-theme="dark"]) .bbp-hero .btn-ghost:hover{border-color:var(--action);color:var(--action)}
+:root:not([data-theme="dark"]) .page-hero a[href="#lien-he"]{color:var(--action) !important}
+:root:not([data-theme="dark"]) .hero-panel{background:#fff;border-color:var(--line)}
+:root:not([data-theme="dark"]) .hero-panel h2{color:var(--teal)}
+:root:not([data-theme="dark"]) .hero-panel li{color:var(--ink)}
+:root:not([data-theme="dark"]) .hero-panel li:before{border-color:var(--aqua)}
+:root:not([data-theme="dark"]) .svc3d-stats{border-top-color:var(--line-2)}
+:root:not([data-theme="dark"]) .svc3d-stats>div+div{border-left-color:var(--line-2)}
+:root:not([data-theme="dark"]) .svc3d-stats dt{color:var(--ink-soft)}
+:root:not([data-theme="dark"]) .svc3d-stats dd{color:var(--action)}
+:root:not([data-theme="dark"]) .svc3d-board{box-shadow:0 40px 80px -24px rgba(0,60,170,.28),0 14px 28px -16px rgba(0,60,170,.22);border:1px solid var(--line)}
+:root:not([data-theme="dark"]) .svc3d-chip{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:0 18px 36px -14px rgba(0,60,170,.3)}
+:root:not([data-theme="dark"]) .svc3d-chip b{color:var(--action)}
+:root:not([data-theme="dark"]) .svc3d-dr{background:var(--teal)}
+:root:not([data-theme="dark"]) .bbp-hero-sub,:root:not([data-theme="dark"]) .bbp-hero-sub a{color:var(--ink-soft)}
+:root:not([data-theme="dark"]) .bbp-hero-mock{border-color:var(--line);box-shadow:0 30px 60px -24px rgba(0,60,170,.25)}
+:root:not([data-theme="dark"]) .bbp-trust{border-top-color:var(--line-2)}
+:root:not([data-theme="dark"]) .bbp-trust b{color:var(--action)}
+:root:not([data-theme="dark"]) .bbp-trust span{color:var(--ink-soft)}
+
+/* Sel-bar, CTA band, dai so: xanh brand dac thay navy */
+@media(min-width:641px){
+  :root:not([data-theme="dark"]) .sel-bar{background:var(--action) !important;box-shadow:0 10px 26px rgba(0,74,208,.28) !important}
+  :root:not([data-theme="dark"]) .sel-bar.has-picks{box-shadow:0 10px 26px rgba(0,74,208,.32),0 0 0 3px rgba(0,196,184,.45) !important}
+  :root:not([data-theme="dark"]) .sel-bar-cta{color:var(--action)}
+  :root:not([data-theme="dark"]) .sel-bar-cta:hover{background:var(--aqua-l);color:var(--action-2)}
+}
+:root:not([data-theme="dark"]) .cta-band{background:var(--action)}
+:root:not([data-theme="dark"]) .cta-band .btn-ghost{color:var(--action)}
+:root:not([data-theme="dark"]) .page-content .dgc-stat{background:var(--action)}
+:root:not([data-theme="dark"]) .page-content .dgc-stat>div{border-left-color:rgba(255,255,255,.22)}
+
+/* Diem nhan aqua nho: eyebrow, so buoc, icon the dich vu */
+:root:not([data-theme="dark"]) .eyebrow{color:var(--teal)}
+:root:not([data-theme="dark"]) .page-template-tpl-service .order-step-num,:root:not([data-theme="dark"]) .page-template-page-booking-bao-pr .order-step-num{-webkit-text-stroke-color:var(--action)}
+:root:not([data-theme="dark"]) .svc-intro{border-top-color:var(--aqua)}
+
+/* Footer: xanh brand rat dam thay navy xam */
+:root:not([data-theme="dark"]) .site-footer{background:#08245E;color:#B9C9EA}
+
+/* ==========================================================================
+   3.5.0 PALETTE 3 MAU (Hieu 14/10: "dang qua 3 mau tren trang, dung mau thuong hieu va it mau
+   hon, bien the cung tu mau thuong hieu"). CHI dung: xanh brand #005CF6, xanh ngoc (#00877C chu /
+   #00C4B8 nen), navy chu #0E1B3D + tint/shade cua 3 mau nay. Bo cam, do, vang, tim.
+   Ngoai le: thong bao LOI form (chi hien khi nhap sai) giu do de nguoi dung nhan ra.
+   ========================================================================== */
+:root:not([data-theme="dark"]){
+  --action-l:#EAF2FF; --action-m:#B9D2FF;
+  --dr-hi:#00877C; --dr-mid:#005CF6; --dr-lo:#4D74C7; --dr-none:#8A9BBF;
+}
+:root:not([data-theme="dark"]) .promo-bar .promo-count,:root:not([data-theme="dark"]) .promo-bar .promo-count-val{color:#A6F0E8}
+:root:not([data-theme="dark"]) .promo-slots{background:var(--action-l);border-color:var(--action-m);color:var(--heading)}
+:root:not([data-theme="dark"]) .promo-slots b{color:var(--action)}
+:root:not([data-theme="dark"]) .price-note{background:var(--action-l);border-color:var(--action-m)}
+:root:not([data-theme="dark"]) .price-note p{color:var(--heading)}
+:root:not([data-theme="dark"]) .price-note-ico{color:var(--action)}
+:root:not([data-theme="dark"]) .dr-chip.dr-high{background:var(--action-l);color:var(--action-2);border-color:var(--action-m)}
+:root:not([data-theme="dark"]) .dr-chip.dr-mid{background:var(--aqua-l);color:var(--teal);border-color:#BDEBE6}
+:root:not([data-theme="dark"]) .dr-row-bar{background:linear-gradient(90deg,var(--action),var(--aqua))}
+:root:not([data-theme="dark"]) .dgc-mm__card:nth-child(3n+2){--mm-accent:var(--action)}
+:root:not([data-theme="dark"]) .dgc-mm__card:nth-child(3n+3){--mm-accent:#4D74C7}
+:root:not([data-theme="dark"]) .why-quote-role{color:#A6F0E8}
+:root:not([data-theme="dark"]) .page-content .dgc-dd>div+div h3{color:var(--heading)}
+:root:not([data-theme="dark"]) .page-content .dgc-check.no li:before{color:var(--heading)}
+:root:not([data-theme="dark"]) .r-hot{color:var(--action)}
+:root:not([data-theme="dark"]) .sel-item-remove{color:var(--ink-soft)}
+:root:not([data-theme="dark"]) .sel-item-remove:hover{color:var(--action)}
+:root:not([data-theme="dark"]) .price-discount-badge{background:var(--teal);color:#fff}
+:root:not([data-theme="dark"]) .form-card .fl .req,:root:not([data-theme="dark"]) .pvo-modal-box .req{color:var(--action)}
+:root:not([data-theme="dark"]) .bao-group-toggle:hover,:root:not([data-theme="dark"]) .bao-tree-head.is-collapsed .bao-group-toggle{background:var(--action-l);color:var(--action-2);border-color:var(--action-m)}
+:root:not([data-theme="dark"]) .tm-stars,:root:not([data-theme="dark"]) .tm-carousel .owl-item.center .tm-stars{color:var(--aqua)}
+:root:not([data-theme="dark"]) .tm-carousel .owl-item.center .tm-svc{color:#DDEBFF}
+:root:not([data-theme="dark"]) .sel-bar-nudge{background:var(--aqua-l)}
+:root:not([data-theme="dark"]) .alert-ok{background:var(--aqua-l);color:var(--teal);border-color:#BDEBE6}
+:root:not([data-theme="dark"]) .promo-fab{background:var(--action)}
+:root:not([data-theme="dark"]) .dr-row.is-current .dr-row-bar{background:linear-gradient(90deg,var(--aqua),var(--teal))}
+
+/* ===== 3.6.0 BẢNG GIÁ GỌN (2026-10-14, Hiếu: "bảng giá lắm thông tin, rối") =====
+   Bỏ cột 26 nhóm bên trái -> 1 ô "Lĩnh vực"; chỉ hiện 3 ô lọc, phần còn lại trong "Lọc thêm";
+   thanh tổng tiền chỉ hiện khi đã chọn >= 1 mục; giá nhiều vị trí hiện "Từ X". */
+.price-layout{display:block}
+.price-main{width:100%}
+.tab-toolbar{gap:12px;margin-bottom:10px}
+.tab-sort-sel{display:flex;align-items:center;gap:8px}
+.tab-sort-sel select,.filter-sel-main select{font-size:14px;padding:10px 12px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--ink);min-width:170px}
+.filter-bar{display:block;margin-bottom:10px}
+.filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.filter-more{position:relative}
+.filter-more>summary{list-style:none;cursor:pointer;font-size:14px;font-weight:600;color:var(--action);padding:10px 4px;user-select:none}
+.filter-more>summary::-webkit-details-marker{display:none}
+.filter-more>summary::after{content:" +";font-weight:700}
+.filter-more[open]>summary::after{content:" -"}
+.filter-more-body{display:flex;flex-wrap:wrap;gap:10px 14px;padding:12px 14px;margin-top:4px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.filter-chips{margin-top:8px}
+.tab-count{font-size:13.5px;margin:4px 0 12px}
+.tab-count b{color:var(--heading)}
+.vitri-hint,.sel-bar-combo-note{display:none !important}
+.sel-bar:not(.has-picks){display:none !important}
+.r-from{font-weight:500;font-size:.82em;color:var(--ink-soft);margin-right:2px}
+.price-foot-note{font-size:12.5px;color:var(--ink-soft);margin:6px 2px 0}
+@media (max-width:768px){
+  .tab-sort-sel,.filter-sel-main{flex:1 1 100%}
+  .tab-sort-sel select,.filter-sel-main select{width:100%;min-width:0}
+  .filter-more{flex:1 1 100%}
+  .filter-more-body .filter-sel{flex:1 1 100%}
+}
+/* 3.6.1: mobile - nhuong cho ten bao, bo nhan phu trong dong */
+@media (max-width:640px){
+  .grid-body .r-count,.grid-body .r-hot{display:none}
+  .grid-body .r-name-txt{white-space:normal;overflow:visible;text-overflow:clip;word-break:break-word;line-height:1.3}
+  .r-from{display:block;font-size:10.5px}
+}
+
+/* ===== 3.7.0 ĐỌC LƯỚT (2026-10-14, Hiếu: "nhiều chữ, đọc mệt" + vẫn đủ sâu cho SEO) =====
+   Mỗi H2: 1 câu chốt in đậm (.dgc-lead) -> hình/2 đoạn ngắn -> phần sâu trong <details class="dgc-more">.
+   Nội dung trong details vẫn nằm trong HTML (Google vẫn đọc), chỉ thu gọn hiển thị. */
+.page-content .dgc-summary{background:var(--action-l,#EAF2FF);border:1px solid var(--action-m,#B9D2FF);border-radius:14px;padding:18px 22px;margin:0 0 28px}
+.page-content .dgc-summary>p:first-child{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--action,#005CF6);margin:0 0 8px}
+.page-content .dgc-summary ul{margin:0;padding-left:20px}
+.page-content .dgc-summary li{margin:6px 0;line-height:1.55}
+.page-content .dgc-lead{font-size:1.08em;line-height:1.6;color:var(--heading);margin:4px 0 14px;padding-left:14px;border-left:3px solid var(--aqua,#00C4B8)}
+.page-content details.dgc-more{margin:14px 0 26px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.page-content details.dgc-more>summary{cursor:pointer;list-style:none;padding:13px 18px;font-weight:600;color:var(--action,#005CF6);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.page-content details.dgc-more>summary::-webkit-details-marker{display:none}
+.page-content details.dgc-more>summary::after{content:"+";font-size:20px;line-height:1;font-weight:700;flex:none}
+.page-content details.dgc-more[open]>summary::after{content:"-"}
+.page-content details.dgc-more>summary:hover{background:var(--action-l,#EAF2FF);border-radius:12px}
+.page-content details.dgc-more>.dgc-more-body{padding:4px 18px 16px;border-top:1px solid var(--line)}
+@media print{.page-content details.dgc-more>.dgc-more-body{display:block}}

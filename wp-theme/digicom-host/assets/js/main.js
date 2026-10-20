@@ -1391,3 +1391,16 @@ document.addEventListener('click', function (e) {
     });
   }
 })();
+
+/* 3.7.0: mo <details class="dgc-more"> khi link muc luc / hash tro vao noi dung ben trong (2026-10-14). */
+(function () {
+	function openFor(hash) {
+		if (!hash || hash.length < 2) return;
+		var el; try { el = document.querySelector(hash); } catch (e) { return; }
+		if (!el) return;
+		var d = el.closest('details.dgc-more');
+		if (d && !d.open) { d.open = true; setTimeout(function () { el.scrollIntoView({ block: 'start' }); }, 30); }
+	}
+	window.addEventListener('hashchange', function () { openFor(location.hash); });
+	document.addEventListener('DOMContentLoaded', function () { openFor(location.hash); });
+})();

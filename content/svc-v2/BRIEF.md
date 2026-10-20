@@ -62,8 +62,35 @@ Layout đã đổi (DGC_VER 3.3.0): cột đọc 1 cột 860px, `.dgc-split`/`.d
 2. Mẫu: `.claude/skills/visual-screenshot/templates/infographic-base.html` (1200x675; thành phần .kpis .hbars .cols .flow .grid2 .tagrow). Copy ra scratchpad, chỉ giữ thành phần cần, nội dung phải LẤP ĐẦY khung (không để khoảng trống lớn: bars 4-7 dòng, cols 3 cột 3-4 dòng, flow 4-5 bước...). Chữ tối thiểu 14px. Không em/en dash.
 3. Số liệu: chỉ số THẬT từ bảng giá live (`dgc_get_gia`, lệnh trong mục "Lấy dữ liệu thật") hoặc số đã có sẵn trong chính nội dung trang. Ví dụ không phải số thật -> thêm `<span class="badge">MẪU MINH HOẠ</span>` vào footer. Không tên đối thủ, không tên NCC, không giá vốn/markup. Không giả giao diện công cụ bên thứ ba.
 4. Render: `cd .claude/skills/visual-screenshot && ./render.sh <in.html> <scratch>/<slug>-<n> 1200 675` rồi XEM file @2x.png (Read) - chữ không tràn, không đè, không trống. Sửa tới khi đẹp.
-5. Upload: `scp -P 65002 -i ~/.ssh/id_ed25519 <file>.webp u704250056@145.79.26.63:/tmp/` rồi `ssh ... "cd domains/digicomvn.com/public_html && ID=\$(wp media import /tmp/<file>.webp --title='<tiêu đề>' --alt='<alt>' --porcelain --allow-root) && wp eval \"echo wp_get_attachment_url(\$ID);\" --allow-root"`. Tên file: `ig-<slug>-<chu-de>.webp`.
+5. Upload: `scp -P 65002 -i ~/.ssh/id_ed25519 <file>.webp u704250056@145.79.26.63:/tmp/` rồi `ssh ... "cd domains/digicomvn.com/public_html && ID=\$(wp media import /tmp/<file>.webp --title='<tiêu đề>' --alt='<alt>' --porcelain --allow-root) && wp post get \$ID --field=guid --allow-root"` (guid = URL file). Tên file: `ig-<slug>-<chu-de>.webp`.
 6. Chèn vào content/svc-v2/<slug>.html ngay sau đoạn mở của H2 tương ứng, 1 dòng:
    `<figure class="dgc-shot"><img src="URL" alt="..." width="1600" height="900" loading="lazy" decoding="async"><figcaption>chú thích ngắn có nguồn/ngày nếu là số liệu</figcaption></figure>`
    XOÁ toàn bộ `<figure class="dgc-fig">...</figure>` Storyset; bỏ wrapper `<div class="dgc-split dgc-media...">` chỉ để lại nội dung bên trong (giữ cân thẻ div). Hết Storyset thì xoá dòng `<p class="dgc-credit">`.
 7. Đăng + purge + QA như "Quy trình ghi" (backup lại BEFORE với hậu tố -BEFORE-ig.json trước khi đăng). QA bắt buộc: overflow 0; chụp full trang Playwright 1440 và 390 (script scratchpad `full.py <url> <out.png> <width>`), xem ảnh, kiểm từng infographic hiển thị đúng.
+
+## BỔ SUNG đợt 4 - BẢN DỌC MOBILE cho infographic (Hiếu 14/10: "làm bản ảnh dọc cho mobile")
+- Mỗi infographic 16:9 đã đăng -> thêm 1 bản dọc. Nguồn HTML gốc ở scratchpad `ig/<nhóm>/` (tl-gp, bl-bds, top-qt, bbp-se).
+- Tạo `<tên>-m.html` = HTML gốc + chèn `<style>` nội dung `.claude/skills/visual-screenshot/templates/infographic-mobile.css` trước `</head>`, rồi CHỈNH RIÊNG thành phần tự chế của ảnh đó (ô nhãn phụ, lưới riêng...) để: khung 480px, chữ thân >= 15px, không chữ vỡ từng từ, không khoảng trống lớn, ảnh không dài quá ~1.6 lần chiều ngang nếu gộp/rút gọn được (tối đa 2.2 lần). Nội dung/số liệu GIỐNG bản ngang, không thêm bớt dữ kiện.
+- Render: `python3 .claude/skills/visual-screenshot/render-m.py <in-m.html> <scratch>/<tên>-m` (in ra kích thước 1080xH). XEM @2x.png, sửa tới khi đẹp.
+- Upload như đợt 3, tên file `ig-<slug>-<chu-de>-m.webp`.
+- Thay `<img ...>` trong figure.dgc-shot bằng (1 dòng):
+  `<picture><source media="(max-width:700px)" srcset="URL-m.webp" width="1080" height="H"><img src="URL-ngang.webp" ...giữ nguyên thuộc tính cũ...></picture>`
+- Đăng (backup trước, hậu tố -BEFORE-m.json), purge, rồi kiểm: curl HTML live còn đủ `<picture>`/`<source` (không bị lọc). Playwright 390px: `document.querySelectorAll('figure.dgc-shot img')` currentSrc phải là bản -m, cuộn hết trang cho ảnh tải rồi chụp từng figure và XEM. Desktop 1440 currentSrc vẫn là bản ngang. overflow-check 0.
+
+## đợt 8 - ĐỌC LƯỚT (14/10/2026, Hiếu: "nhiều text đọc mệt" + "vẫn cần nội dung sâu đầy đủ để còn SEO")
+
+Mục tiêu: khách lướt 30 giây vẫn nắm đủ ý chính; người cần chi tiết bấm mở. KHÔNG xoá nội dung - số từ sau khi sửa >= số từ trước (sai số ±3%), giữ nguyên mọi H2/H3, số liệu, link, ảnh, bảng, shortcode.
+
+Khuôn mỗi trang (CSS có sẵn từ DGC_VER 3.7.0):
+1. Đầu bài (trước H2 đầu tiên, sau đoạn mở nếu có): khối tóm tắt
+   `<div class="dgc-summary"><p>Tóm tắt nhanh</p><ul><li>...</li></ul></div>` - 4 gạch đầu dòng: nhận được gì, giá từ bao nhiêu (số thật từ bảng giá/nội dung hiện có), thời gian triển khai, bàn giao gì. Không bịa số.
+2. Mỗi H2: ngay dưới H2 là 1 câu chốt trả lời thẳng `<p class="dgc-lead"><strong>...</strong></p>` (<= 30 từ, viết mới, tóm ý cả mục).
+3. Phần hiển thị sẵn của mỗi H2: tối đa 2 đoạn ngắn (mỗi đoạn <= 45 từ) + ảnh infographic/bảng chính của mục.
+4. Phần sâu (giải thích dài, H3 con, danh sách dài, ví dụ, tiêu chí chi tiết): gói trong
+   `<details class="dgc-more"><summary>Xem chi tiết: <chủ đề cụ thể></summary><div class="dgc-more-body"> ... </div></details>`
+   Summary là nhãn cụ thể (vd "Xem chi tiết: 5 yếu tố làm giá chênh lệch"), không ghi chung chung "Xem thêm".
+5. Mọi đoạn văn còn lại (kể cả trong details) <= 60 từ: tách đoạn dài theo ý; đoạn liệt kê nhiều ý -> chuyển thành <ul>.
+6. KHÔNG gói vào details: ảnh infographic chính, bảng giá shortcode, khối CTA, mục "Tài liệu tham khảo".
+7. Không em/en dash, không tên đối thủ, không lộ NCC/giá vốn, không .gov/.edu.
+
+QA trước khi đăng: số từ trước/sau (strip HTML), đếm H2/H3/img/a khớp trước-sau, không đoạn > 60 từ, overflow mobile 0.

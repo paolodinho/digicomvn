@@ -131,3 +131,8 @@ khối/sheet riêng (đặt cuối file, hoặc trang riêng nếu docx) gồm �
   Ngày phát hành | Khách hàng | Dịch vụ | File gửi khách (link) | File NOIBO (link, nếu có) | Hiệu lực đến | Trạng thái | Mã việc tab Tổng quan | Ghi chú.
 - Đổi trạng thái khi khách phản hồi/đặt/bỏ, đồng bộ với dòng K tương ứng ở tab Tổng quan.
 - Sheet locale vi_VN: công thức HYPERLINK dùng dấu ";". Ghi bằng service account trong `.claude/tong-quan.json`.
+
+## 9. File gửi khách LUÔN là Google Sheet/Google Doc (chốt Hiếu 2026-10-14)
+Không dừng ở xlsx/docx local. Upload + convert sang Google Sheet/Doc, báo link Google đầu tiên.
+Luôn 2 link Google: 1 gửi khách + 1 NOIBO gửi Hiếu; cập nhật thì giữ link cũ; điền cả 2 link vào cột E/F tab "Báo giá khách hàng".
+Chi tiết: skill `bao-gia-khach-hang` mục "FILE GỬI KHÁCH = GOOGLE SHEET/DOC".

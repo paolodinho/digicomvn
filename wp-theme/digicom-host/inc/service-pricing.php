@@ -54,7 +54,7 @@ $dgc_sp_heading  = $dgc_sp_is_goi
 		: 'Bảng giá ' . mb_strtolower( $svc_name ) . ' theo từng ' . $dgc_sp_dv );
 $dgc_sp_sub      = $dgc_sp_is_goi
 	? 'Tick chọn gói bạn quan tâm - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.'
-	: 'Tìm theo tên, sắp xếp theo giá và tick chọn ' . $dgc_sp_dv . ' cần đặt - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.';
+	: 'Chọn lĩnh vực, bấm + để thêm ' . $dgc_sp_dv . ' cần đặt - tổng chi phí tạm tính hiện ngay.';
 $dgc_sp_ph       = $dgc_sp_is_goi ? 'Tìm theo tên gói...' : 'Tìm theo tên ' . $dgc_sp_dv . '...';
 
 // Bo loc nhom nganh - chi hien khi du lieu co tu 2 nhom tro len (chu yeu Booking bao & PR).
@@ -79,29 +79,30 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 		<?php include get_template_directory() . '/inc/sel-bar.php'; ?>
 
 		<div class="price-layout" data-price-panel data-limit="<?php echo esc_attr( $dgc_sp_limit ); ?>">
-			<?php
-			$pf_items      = $dgc_sp_items;
-			$pf_show_nganh = $dgc_sp_has_nganh;
-			include get_template_directory() . '/inc/price-sidebar.php';
-			?>
 			<div class="price-main">
-				<?php include get_template_directory() . '/inc/price-filter.php'; ?>
 				<?php if ( $dgc_sp_has_tools ) : ?>
+				<?php /* 2026-10-14: 1 hang cong cu gon - o tim + 1 o sap xep; bo loc ngay ben duoi. */ ?>
 				<div class="tab-toolbar">
 					<div class="tab-search">
 						<input type="text" class="tab-search-input" placeholder="<?php echo esc_attr( $dgc_sp_ph ); ?>" aria-label="Tìm kiếm trong bảng giá <?php echo esc_attr( $svc_name ); ?>">
 					</div>
-					<div class="tab-sort">
-						<button type="button" class="sort-btn" data-key="price" data-dir="asc">Giá thấp → cao</button>
-						<button type="button" class="sort-btn" data-key="price" data-dir="desc">Giá cao → thấp</button>
-						<?php if ( ! $dgc_sp_is_goi ) : ?><button type="button" class="sort-btn active" data-key="dr" data-dir="desc">DR cao → thấp</button><?php endif; ?>
-					</div>
+					<label class="tab-sort-sel">
+						<span class="filter-sel-lb">Sắp xếp</span>
+						<select class="sort-sel" aria-label="Sắp xếp bảng giá">
+							<?php if ( ! $dgc_sp_is_goi ) : ?><option value="dr-desc" selected>Uy tín cao trước</option><?php endif; ?>
+							<option value="price-asc">Giá thấp trước</option>
+							<option value="price-desc">Giá cao trước</option>
+						</select>
+					</label>
 				</div>
-				<p class="tab-count"><span class="tab-count-shown"><?php echo (int) $dgc_sp_total; ?></span>/<span class="tab-count-total"><?php echo (int) $dgc_sp_total; ?></span> kết quả</p>
 				<?php endif; ?>
-
-				<?php if ( function_exists( 'dgc_gia_items_have_vitri' ) && dgc_gia_items_have_vitri( $dgc_sp_items ) ) : ?>
-				<p class="vitri-hint"><span class="vitri-hint-ic">V</span> Bấm chữ "V" cạnh vị trí đăng để xem ảnh chụp thực tế trên báo/site đó.</p>
+				<?php
+				$pf_items      = $dgc_sp_items;
+				$pf_show_nganh = $dgc_sp_has_nganh;
+				include get_template_directory() . '/inc/price-filter.php';
+				?>
+				<?php if ( $dgc_sp_has_tools ) : ?>
+				<p class="tab-count">Đang hiện <b class="tab-count-shown"><?php echo (int) $dgc_sp_total; ?></b>/<span class="tab-count-total"><?php echo (int) $dgc_sp_total; ?></span> <?php echo esc_html( $dgc_sp_dv ); ?> - bấm vào tên để xem từng vị trí đăng và giá chi tiết.</p>
 				<?php endif; ?>
 
 				<?php
@@ -130,6 +131,9 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 
 				<?php /* Ghi chu "gia tham khao" - cuoi bang, dong chu nho, khong CTA (Hieu 2026-07-15). */ ?>
 				<?php include get_template_directory() . '/inc/price-note.php'; ?>
+				<?php $dgc_tiers_text_foot = dgc_combo_tiers_text(); if ( $dgc_tiers_text_foot ) : ?>
+				<p class="price-foot-note">Đặt nhiều <?php echo esc_html( $dgc_sp_dv ); ?> cùng lúc được giảm tự động: <?php echo esc_html( $dgc_tiers_text_foot ); ?> trên tổng đơn (chưa gồm VAT).</p>
+				<?php endif; ?>
 			</div>
 		</div>
 

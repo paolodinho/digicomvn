@@ -39,6 +39,4 @@ $dgc_tiers_text = dgc_combo_tiers_text();
 	</div>
 	<?php if ( $dgc_tiers ) : ?><p class="sel-bar-nudge" hidden></p><?php endif; ?>
 </div>
-<?php if ( $dgc_tiers_text ) : ?>
-<p class="sel-bar-combo-note">Ưu đãi combo tự động: <b><?php echo esc_html( $dgc_tiers_text ); ?></b> trên tổng đơn (chưa gồm VAT).</p>
-<?php endif; ?>
+<?php /* Ghi chu uu dai combo da chuyen xuong cuoi bang gia (2026-10-14, gon dau bang). */ ?>

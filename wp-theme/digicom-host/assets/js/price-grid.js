@@ -89,6 +89,8 @@
 		var chipsBox    = panel.querySelector('.filter-chips');
 		var clearBtn    = panel.querySelector('.filter-clear');
 		var sortBtns    = panel.querySelectorAll('.sort-btn');
+		var sortSel     = panel.querySelector('.sort-sel');
+		var nganhSel    = panel.querySelector('.filter-nganh');
 		var shownEl     = panel.querySelector('.tab-count-shown');
 		var totalEl     = panel.querySelector('.tab-count-total');
 
@@ -180,9 +182,10 @@
 			var picked = d.count === 1 && window.dgcCartIsPicked && window.dgcCartIsPicked(d.key);
 			var open = !!state.openIds[d.key];
 			var fav = faviconUrl(d.url, d.name);
+			// 2026-10-14: nhieu vi tri chi hien "Từ X" (gia thap nhat), chi tiet tung vi tri bam mo ra.
 			var rangeTxt = (d.priceMin === d.priceMax)
 				? fmtVnd(d.priceMin) + 'đ'
-				: fmtVnd(d.priceMin) + 'đ<span class="sep">-</span>' + fmtVnd(d.priceMax) + 'đ';
+				: '<span class="r-from">Từ</span> ' + fmtVnd(d.priceMin) + 'đ';
 			return '' +
 				'<div class="row' + (open ? ' is-open' : '') + '" data-key="' + esc(d.key) + '">' +
 					'<div class="r-name grid-col-name">' +
@@ -315,6 +318,7 @@
 		function syncChips() {
 			if (!chipsBox) return;
 			var active = [];
+			if (nganhSel && nganhSel.value) active.push({ sel: nganhSel, text: selLabel(nganhSel) });
 			facetSels.forEach(function (s) { if (s.value) active.push({ sel: s, text: selLabel(s) }); });
 			chipsBox.innerHTML = '';
 			active.forEach(function (a) {
@@ -338,8 +342,25 @@
 				syncChips();
 			});
 		});
+		if (nganhSel) {
+			nganhSel.addEventListener('change', function () {
+				state.nganh = nganhSel.value || '';
+				render(true);
+				syncChips();
+			});
+		}
+		if (sortSel) {
+			sortSel.addEventListener('change', function () {
+				var v = sortSel.value.split('-');
+				state.sortKey = v[0] === 'dr' ? 'dr' : 'price';
+				state.sortDir = v[1] === 'asc' ? 1 : -1;
+				render(true);
+			});
+			if (sortSel.value.indexOf('price') === 0) { state.sortKey = 'price'; state.sortDir = sortSel.value === 'price-asc' ? 1 : -1; }
+		}
 		if (clearBtn) {
 			clearBtn.addEventListener('click', function () {
+				if (nganhSel) nganhSel.value = '';
 				sideItems.forEach(function (b) { b.classList.toggle('active', !b.getAttribute('data-nganh-val')); });
 				state.nganh = '';
 				facetSels.forEach(function (s) { s.value = ''; });

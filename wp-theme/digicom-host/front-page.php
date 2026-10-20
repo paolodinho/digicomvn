@@ -22,11 +22,11 @@ get_header();
 		</div>
 		<div class="hero-diag-media">
 			<img
-				src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg' ); ?>"
-				srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-640.jpg' ); ?> 640w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-960.jpg' ); ?> 960w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg' ); ?> 1280w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1600.jpg' ); ?> 1600w"
+				src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg?v=2' ); ?>"
+				srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-640.jpg?v=2' ); ?> 640w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-960.jpg?v=2' ); ?> 960w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg?v=2' ); ?> 1280w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1600.jpg?v=2' ); ?> 1600w"
 				sizes="(max-width: 767px) 100vw, 44vw"
 				width="1600" height="959"
-				alt="Đội ngũ DigicomVN làm việc cùng nhau"
+				alt="Nhóm tư vấn truyền thông trao đổi kế hoạch tại văn phòng"
 				fetchpriority="high"
 			>
 		</div>

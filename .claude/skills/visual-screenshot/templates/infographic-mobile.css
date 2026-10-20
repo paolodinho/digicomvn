@@ -1,0 +1,24 @@
+/* BAN DOC MOBILE - dan SAU <style> goc cua infographic (trong 1 <style> moi truoc </head>).
+   Khung 480px ngang, cao tu do; hien thi tren dien thoai ~346-390px => chu toi thieu 15px. */
+body{width:480px !important;height:auto !important;overflow:visible !important}
+.card{width:480px !important;height:auto !important;padding:30px 24px 22px !important}
+.card:before{height:5px}
+.eyebrow{font-size:13px !important;letter-spacing:.1em !important}
+.title{font-size:27px !important;line-height:1.2 !important}
+.sub{font-size:16px !important}
+.main{margin-top:22px !important;display:block !important}
+.foot{flex-direction:column;align-items:flex-start !important;gap:6px;font-size:12.5px !important}
+.kpis{grid-template-columns:1fr 1fr !important;gap:12px !important}
+.kpi{padding:16px 14px !important}.kpi b{font-size:34px !important}.kpi span{font-size:14.5px !important}
+.hbars{gap:14px !important}
+.hb{grid-template-columns:1fr auto !important;row-gap:6px !important;gap:6px 12px !important}
+.hb .lb{grid-column:1;grid-row:1;font-size:16px !important}.hb .vl{grid-column:2;grid-row:1;font-size:18px !important}
+.hb .tr{grid-column:1 / -1;grid-row:2;height:22px !important}
+.cols,.grid2{grid-template-columns:1fr !important;gap:14px !important}
+.col h4,.box h4{font-size:19px !important}.col li,.box li{font-size:15.5px !important}
+.flow{grid-auto-flow:row !important;grid-auto-columns:auto !important;gap:16px !important}
+.flow:before{left:30px !important;right:auto !important;top:10px !important;bottom:10px !important;width:3px !important;height:auto !important;background:linear-gradient(180deg,var(--pri),var(--teal)) !important}
+.st{display:grid !important;grid-template-columns:62px 1fr;column-gap:14px;text-align:left !important;padding:0 !important}
+.st .n{grid-row:1 / span 3;margin:0 !important;width:58px !important;height:58px !important}
+.st h5{margin-top:4px !important;font-size:18px !important}.st p{font-size:15px !important}
+.tag{font-size:15px !important}
