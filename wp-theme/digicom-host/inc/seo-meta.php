@@ -120,6 +120,13 @@ function dgc_seo_og_title() {
  * 2. Xuat the meta trong <head>
  * ========================================================================= */
 
+/* Xac minh mien digicomvn.com trong Meta Business Manager (2026-10-23) - chi can o trang chu */
+add_action( 'wp_head', function () {
+	if ( is_front_page() ) {
+		echo '<meta name="facebook-domain-verification" content="60ytj6u0wd5bfmgi8dcsxdk1g1w6ch" />' . "\n";
+	}
+}, 1 );
+
 add_action( 'wp_head', 'dgc_seo_head', 2 );
 function dgc_seo_head() {
 	if ( is_feed() || is_robots() ) return;
