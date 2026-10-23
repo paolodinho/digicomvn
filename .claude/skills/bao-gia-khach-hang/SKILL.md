@@ -33,6 +33,7 @@ Google Sheet (bảng giá) hoặc Google Doc (báo giá dạng văn bản), khô
 - Dựng xlsx/docx local như cũ -> upload bằng MCP Drive `create_file` (base64, contentMimeType
   xlsx/docx, ĐỂ Drive tự convert sang Google type) -> share writer cho service account trong
   `.claude/tong-quan.json` -> đọc lại bằng Sheets API để kiểm tra nội dung đã lên đủ.
+- **Cách upload nhanh, không tốn token (23/10)**: MCP `create_file` tạo Google Sheet RỖNG (contentMimeType `application/vnd.google-apps.spreadsheet`, không content) -> `share_file` writer cho service account -> service account gọi Drive API `files().update(fileId, media_body=MediaFileUpload(xlsx))` để đổ xlsx vào (tự convert, giữ link). Không dán base64 vào MCP (dễ sai 1 ký tự -> "Invalid conversion").
 - Link Google Sheet/Doc là thứ báo cho Hiếu ĐẦU TIÊN và ghi vào cột "File gửi khách" (HYPERLINK)
   của tab "Báo giá khách hàng". File xlsx local chỉ là bản gốc.
 - LUÔN 2 LINK Google (Hiếu chốt 14/10): 1 link gửi khách + 1 link NOIBO gửi Hiếu (title bắt đầu "NOIBO -", kèm "(KHÔNG GỬI KHÁCH)"). Share writer cho service account trong `.claude/tong-quan.json`.
