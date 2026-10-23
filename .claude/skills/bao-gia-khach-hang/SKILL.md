@@ -181,3 +181,8 @@ ghi nội dung.
 - `~/.claude/rules/bao-gia-khong-lo-gia-von.md` (global) - nguyên tắc gốc không lộ giá vốn,
   áp dụng mọi dự án.
 - `10-bang-gia-booking/bang-gia-booking.md` (rule) - nguồn dữ liệu giá gốc, mã NCC.
+
+## Gửi mail báo giá cho khách từ sales@digicomvn.com (23/10)
+- Hộp sales@digicomvn.com chạy trên **Lark Mail** (MX larksuite), KHÔNG phải Gmail - Gmail MCP (hieudx3107) không gửi thay được. Dùng `lark-cli mail` (skill lark-mail), `--as user`; chưa đăng nhập thì `lark-cli auth login --domain mail --no-wait --json`, gửi QR cho Hiếu đăng nhập bằng sales@, chờ bằng `--device-code` chạy nền; kiểm `user_mailboxes profile` = sales@.
+- Mặc định Hiếu muốn mail NGẮN: chào + 1 câu + link Google Sheet báo giá + hotline + chữ ký; không nhắc lại nội dung đã có trong file. BCC hieudx3107@gmail.com.
+- Trước khi gửi: mở Sheet khách "ai có link cũng xem được" (Drive API service account, permission type anyone/reader). Tạo nháp (`+send` không `--confirm-send`), cho Hiếu duyệt, rồi `drafts send --yes`, kiểm `send_status` (4 = đã giao).
