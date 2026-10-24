@@ -1,7 +1,7 @@
 {
  "size": 10,
  "loai": {
-  "ngoài phạm vi (--exclude)": 1837,
+  "ngoài phạm vi (--exclude)": 1839,
   "không khớp phạm vi (--need/--ok)": 2724,
   "dài quá": 46,
   "bản không dấu trùng bản có dấu": 3,
@@ -9,1293 +9,2248 @@
  },
  "lots": [
   {
-   "chu_de": "Booking báo PR, đăng bài PR",
+   "chu_de": "Booking báo PR, đăng bài PR - bài mới",
    "so": 1,
-   "tong": 20,
+   "tong": 3,
    "tu": [
-    {
-     "tu_khoa": "agency book báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "agency booking báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
     {
      "tu_khoa": "backlink báo chí",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book bài báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 2
-    },
-    {
-     "tu_khoa": "book báo cafef",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo giá",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo kenh14",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo online",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 2,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "book báo pr",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo vietnamnet",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo vne",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo vnexpress",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book báo vtv",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "booking bài pr",
-     "nguon": "seed",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "booking báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 2
-    },
-    {
-     "tu_khoa": "booking báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.5,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "booking báo mới",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "booking báo online",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 3,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "booking báo pr",
-     "nguon": "seed",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "booking báo tỉnh",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "booking báo vietnamnet",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "booking báo vnexpress",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "cách book báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "giá book báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "giá booking báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "quảng cáo pr",
-     "nguon": "seed",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "đăng bài pr",
-     "nguon": "seed",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "agency booking báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 4,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "boilerplate trong thông cáo báo chí là gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
-    {
-     "tu_khoa": "book bài báo dân trí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "book bài là gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book bài pr báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book bài đăng báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo bao nhiêu tiền",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "book báo dân trí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo giá rẻ",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo kênh 14",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo là gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 5,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "book báo nước ngoài",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo quốc tế",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo thanh niên",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo tiền phong",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo tuổi trẻ",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo viết bài",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo điện tử",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "book báo đăng bài",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking báo chí là gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "booking báo dân trí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 6,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "booking báo lao động",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking báo nhân dân",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking báo nước ngoài",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking báo quốc tế",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking báo thanh niên",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking báo tiền phong",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking báo tuổi trẻ",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking báo điện tử",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking pr báo chí",
-     "nguon": "Google Suggest từ \"booking báo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "booking quảng cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 7,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "bài pr báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "báo chí marketing quảng cáo pr",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên alobacsi",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên autopro",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "báo giá đăng bài pr trên cafef",
-     "nguon": "Google Suggest từ \"đăng bài pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên cafeland",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên diễn đàn doanh nghiệp",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 10
+     "so_chu": 10,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên dân việt",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên genk",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên giáo dục thời đại",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 10
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 8,
-   "tong": 20,
-   "tu": [
+     "so_chu": 10,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
+    },
     {
      "tu_khoa": "báo giá đăng bài pr trên hà nội mới",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
-    },
-    {
-     "tu_khoa": "báo giá đăng bài pr trên kenh14",
-     "nguon": "Google Suggest từ \"đăng bài pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - bài mới",
+   "so": 2,
+   "tong": 3,
+   "tu": [
     {
      "tu_khoa": "báo giá đăng bài pr trên kinh tế sài gòn",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 10
+     "so_chu": 10,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên ngôi sao",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên người đưa tin",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên phụ nữ today",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên techz",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên tiin",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên tinhte",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
-    {
-     "tu_khoa": "báo giá đăng bài pr trên tuổi trẻ",
-     "nguon": "Google Suggest từ \"đăng bài pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 9,
-   "tong": 20,
-   "tu": [
     {
      "tu_khoa": "báo giá đăng bài pr trên vietnambiz",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên việt nam mới",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
-    },
-    {
-     "tu_khoa": "báo giá đăng bài pr trên vnexpress",
-     "nguon": "Google Suggest từ \"đăng bài pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "báo giá đăng bài pr trên vnreview",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "báo giá đăng bài pr trên vtc news",
-     "nguon": "seed",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - bài mới",
+   "so": 3,
+   "tong": 3,
+   "tu": [
     {
      "tu_khoa": "báo giá đăng bài pr trên yan",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.0,
+     "huong": "bài mới"
     },
-    {
-     "tu_khoa": "báo giá đăng bài trên báo dân trí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
-    {
-     "tu_khoa": "báo giá đăng bài trên vnexpress",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "báo giá đăng bài tuổi trẻ online",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "báo giá đăng bài vnexpress",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 10,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "bảng giá book báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "bảng giá đăng bài pr trên vnexpress",
-     "nguon": "Google Suggest từ \"đăng bài pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "chi phí book bài báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "chi phí book báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "chi phí book báo vnexpress",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "chạy quảng cáo pr",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "cách gửi thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "cách làm thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "cách trình bày thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "cách viết bài pr báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 11,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "cách viết thông cáo báo chí chuẩn",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "cách viết thông cáo báo chí sự kiện",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
-    {
-     "tu_khoa": "cách viết tin từ thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
-    {
-     "tu_khoa": "dịch vụ book báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "dịch vụ book báo pr",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "dịch vụ booking báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "dịch vụ booking báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "email gửi thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "giá book bài báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "giá book bài báo thanh niên",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 12,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "giá book bài báo vnexpress",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá book báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "giá book báo dân trí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá book báo kenh14",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "giá book báo pr",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "giá book báo thanh niên",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá book báo tiền phong",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá book báo tuổi trẻ",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá book báo vnexpress",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "giá booking báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 13,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "giá booking báo dân trí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá booking báo thanh niên",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá booking báo tuổi trẻ",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá booking báo vietnamnet",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "giá booking báo vnexpress",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "giá quảng cáo trên báo điện tử",
-     "nguon": "Google Suggest từ \"quảng cáo báo điện tử\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "giá đăng bài báo tuổi trẻ",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "giá đăng bài pr",
-     "nguon": "Google Suggest từ \"đăng bài pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "giá đăng bài trên báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "giá đăng bài trên báo thanh niên",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 14,
-   "tong": 20,
-   "tu": [
     {
      "tu_khoa": "https www petrolimex com vn thông cáo báo chí",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
-    },
-    {
-     "tu_khoa": "in thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "khi nào nên gửi thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
-    {
-     "tu_khoa": "khoa pr quảng cáo",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "khoa pr và quảng cáo ajc",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.38,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "link building digital pr",
      "nguon": "Suggest lần trước (link building)",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.25,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "link building vs digital pr",
      "nguon": "Suggest lần trước (link building)",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "mẫu email gửi thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "mục đích của thông cáo báo chí là gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
-    },
-    {
-     "tu_khoa": "pr booking báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 15,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "pr có phải quảng cáo không",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "pr là quảng cáo hả",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "pr là quảng cáo phải không",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "pr quảng cáo là viết tắt của từ gì",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
-    },
-    {
-     "tu_khoa": "pr quảng cáo viết tắt của từ gì",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
-    {
-     "tu_khoa": "pr quảng cáo và marketing",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "pr trong quảng cáo là gì",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.2,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "pr và quảng cáo có gì giống và khác nhau",
      "nguon": "Google Suggest từ \"quảng cáo pr\"",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 10
-    },
-    {
-     "tu_khoa": "pr và quảng cáo là gì",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "quy chuẩn thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 16,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "quy định thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
+     "so_chu": 10,
+     "y_dinh": "kiến thức",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.5,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "quảng cáo banner trên báo điện tử",
      "nguon": "Google Suggest từ \"quảng cáo báo điện tử\"",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "quảng cáo báo mạng",
-     "nguon": "seed",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "quảng cáo báo điện tử",
-     "nguon": "seed",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "quảng cáo gọi là pr",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "quảng cáo khác gì pr",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "quảng cáo khác pr",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "quảng cáo khác pr chỗ nào",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "quảng cáo khác pr như thế nào",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "quảng cáo là pr",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 17,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "quảng cáo là pr hay pa",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "quảng cáo pr là gì",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "quảng cáo pr sản phẩm",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "quảng cáo thoái vị pr lên ngôi",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "quảng cáo trên báo điện tử",
-     "nguon": "Google Suggest từ \"quảng cáo báo điện tử\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "quảng cáo trên báo điện tử là gì",
-     "nguon": "Google Suggest từ \"quảng cáo báo điện tử\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
-    {
-     "tu_khoa": "quảng cáo và pr",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "quảng cáo và pr khác nhau như thế nào",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
-    },
-    {
-     "tu_khoa": "so sánh quảng cáo và pr",
-     "nguon": "Google Suggest từ \"quảng cáo pr\"",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.5,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "sách quảng cáo thoái vị pr lên ngôi",
      "nguon": "Google Suggest từ \"quảng cáo pr\"",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 18,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "thông cáo báo chí",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
-    },
-    {
-     "tu_khoa": "thông cáo báo chí cách viết",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "thông cáo báo chí doanh nghiệp",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "thông cáo báo chí gồm mấy phần",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "thông cáo báo chí gồm những gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "thông cáo báo chí là gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "thông cáo báo chí là j",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
-    },
-    {
-     "tu_khoa": "thông cáo báo chí mẫu",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
-    },
-    {
-     "tu_khoa": "thông cáo báo chí nghĩa là gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    },
-    {
-     "tu_khoa": "thông cáo báo chí ra mắt mv",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
-    }
-   ]
-  },
-  {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 19,
-   "tong": 20,
-   "tu": [
-    {
-     "tu_khoa": "thông cáo báo chí ra mắt sách",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.5,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "thông cáo báo chí ra mắt sản phẩm",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.5,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "thông cáo báo chí ra mắt sản phẩm mới",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 9
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.5,
+     "huong": "bài mới"
     },
     {
      "tu_khoa": "thông cáo báo chí ra mắt sự kiện",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "",
+     "tieu_de_bai": "",
+     "phu": 0.5,
+     "huong": "bài mới"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 1,
+   "tong": 17,
+   "tu": [
     {
-     "tu_khoa": "thông cáo báo chí sự kiện",
+     "tu_khoa": "agency book báo",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 6
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
     },
     {
-     "tu_khoa": "thông cáo báo chí đăng ở đâu",
+     "tu_khoa": "agency booking báo",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
     },
     {
-     "tu_khoa": "viết bài pr báo chí",
+     "tu_khoa": "book báo chí",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "cách book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "agency booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "chi phí book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "dịch vụ booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/agency-booking-bao-chi/",
+     "tieu_de_bai": "Top Agency Booking Báo Chí Uy Tín 2026 Và Cách Chọn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 2,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "pr là quảng cáo hả",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "pr là quảng cáo phải không",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "pr quảng cáo là viết tắt của từ gì",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "pr quảng cáo viết tắt của từ gì",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "pr trong quảng cáo là gì",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "pr và quảng cáo là gì",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo gọi là pr",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo khác gì pr",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo là pr",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo là pr hay pa",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 3,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "quảng cáo pr là gì",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo trên báo điện tử là gì",
+     "nguon": "Google Suggest từ \"quảng cáo báo điện tử\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí gồm mấy phần",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "viết bài pr và thông cáo báo chí",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 8
-    },
-    {
-     "tu_khoa": "viết thông cáo báo chí là gì",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 7
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 0.83,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "đăng bài pr là gì",
      "nguon": "Google Suggest từ \"đăng bài pr\"",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/bai-pr-la-gi/",
+     "tieu_de_bai": "Bài PR Là Gì? Phân Biệt Với Quảng Cáo Và Thông Cáo Báo Chí",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "đăng bài pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-mau/",
+     "tieu_de_bai": "Bài PR Mẫu: 3 Cấu Trúc Theo Sản Phẩm, Sự Kiện, Thương Hiệu Lớn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá đăng bài pr",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bai-pr-mau/",
+     "tieu_de_bai": "Bài PR Mẫu: 3 Cấu Trúc Theo Sản Phẩm, Sự Kiện, Thương Hiệu Lớn",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "bảng giá book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bang-gia/",
+     "tieu_de_bai": "Booking báo PR, truyền hình, phát thanh và link từ báo",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book bài báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/bao-gia-dang-bai-pr-theo-dau-bao/",
+     "tieu_de_bai": "Giá Booking Báo 2026: Báo Giá PR Theo Từng Đầu Báo",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo cafef",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-cafef/",
+     "tieu_de_bai": "Book Báo CafeF: Bảng Giá Đăng Bài PR Chi Tiết 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
     }
    ]
   },
   {
-   "chu_de": "Booking báo PR, đăng bài PR",
-   "so": 20,
-   "tong": 20,
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 4,
+   "tong": 17,
    "tu": [
+    {
+     "tu_khoa": "báo giá đăng bài pr trên cafef",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-cafef/",
+     "tieu_de_bai": "Book Báo CafeF: Bảng Giá Đăng Bài PR Chi Tiết 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book bài báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-dan-tri/",
+     "tieu_de_bai": "Book Báo Dân Trí: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-dan-tri/",
+     "tieu_de_bai": "Book Báo Dân Trí: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-dan-tri/",
+     "tieu_de_bai": "Book Báo Dân Trí: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá đăng bài trên báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-dan-tri/",
+     "tieu_de_bai": "Book Báo Dân Trí: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-dan-tri/",
+     "tieu_de_bai": "Book Báo Dân Trí: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá booking báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-dan-tri/",
+     "tieu_de_bai": "Book Báo Dân Trí: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo kenh14",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-kenh14/",
+     "tieu_de_bai": "Book Báo Kenh14: Bảng Giá PR và Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo kênh 14",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-kenh14/",
+     "tieu_de_bai": "Book Báo Kenh14: Bảng Giá PR và Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên kenh14",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-kenh14/",
+     "tieu_de_bai": "Book Báo Kenh14: Bảng Giá PR và Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 5,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "giá book báo kenh14",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-kenh14/",
+     "tieu_de_bai": "Book Báo Kenh14: Bảng Giá PR và Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo lao động",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-lao-dong/",
+     "tieu_de_bai": "Book Báo Lao Động: Bảng Giá PR & Quy Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo nhân dân",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-nhan-dan/",
+     "tieu_de_bai": "Booking Báo Nhân Dân: Bảng Giá, Quy Cách 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-thanh-nien/",
+     "tieu_de_bai": "Book Báo Thanh Niên: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-thanh-nien/",
+     "tieu_de_bai": "Book Báo Thanh Niên: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book bài báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-thanh-nien/",
+     "tieu_de_bai": "Book Báo Thanh Niên: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-thanh-nien/",
+     "tieu_de_bai": "Book Báo Thanh Niên: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá booking báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-thanh-nien/",
+     "tieu_de_bai": "Book Báo Thanh Niên: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá đăng bài trên báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-thanh-nien/",
+     "tieu_de_bai": "Book Báo Thanh Niên: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo tiền phong",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tien-phong/",
+     "tieu_de_bai": "Book Báo Tiền Phong: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 6,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "booking báo tiền phong",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tien-phong/",
+     "tieu_de_bai": "Book Báo Tiền Phong: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book báo tiền phong",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tien-phong/",
+     "tieu_de_bai": "Book Báo Tiền Phong: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tuoi-tre/",
+     "tieu_de_bai": "Book Báo Tuổi Trẻ: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tuoi-tre/",
+     "tieu_de_bai": "Book Báo Tuổi Trẻ: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên tuổi trẻ",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tuoi-tre/",
+     "tieu_de_bai": "Book Báo Tuổi Trẻ: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá đăng bài tuổi trẻ online",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tuoi-tre/",
+     "tieu_de_bai": "Book Báo Tuổi Trẻ: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tuoi-tre/",
+     "tieu_de_bai": "Book Báo Tuổi Trẻ: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá booking báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tuoi-tre/",
+     "tieu_de_bai": "Book Báo Tuổi Trẻ: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá đăng bài báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-tuoi-tre/",
+     "tieu_de_bai": "Book Báo Tuổi Trẻ: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo vietnamnet",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vietnamnet/",
+     "tieu_de_bai": "Book Báo VietNamNet: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 7,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "booking báo vietnamnet",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vietnamnet/",
+     "tieu_de_bai": "Book Báo VietNamNet: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá booking báo vietnamnet",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vietnamnet/",
+     "tieu_de_bai": "Book Báo VietNamNet: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo vne",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên vnexpress",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá đăng bài trên vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá đăng bài vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "bảng giá đăng bài pr trên vnexpress",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "chi phí book báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 8,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "giá book bài báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá booking báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-bao-la-gi/",
+     "tieu_de_bai": "Booking Báo Là Gì? Hình Thức, Chi Phí, Quy Trình 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-bao-la-gi/",
+     "tieu_de_bai": "Booking Báo Là Gì? Hình Thức, Chi Phí, Quy Trình 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book bài báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 2,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo giá",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo online",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo pr",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 9,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "booking bài pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 2,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo online",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá booking báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book bài là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book bài pr báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book bài đăng báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo bao nhiêu tiền",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 10,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "book báo giá rẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo viết bài",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo điện tử",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo đăng bài",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo điện tử",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "chi phí book bài báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "dịch vụ book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "dịch vụ book báo pr",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "dịch vụ booking báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá book báo pr",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 11,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "giá đăng bài trên báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "đăng bài viết pr",
      "nguon": "seed",
      "chu_de": "Booking báo PR, đăng bài PR",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo nước ngoài",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-quoc-te/",
+     "tieu_de_bai": "Booking Báo Quốc Tế: Cách Hoạt Động, Giá 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo quốc tế",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-quoc-te/",
+     "tieu_de_bai": "Booking Báo Quốc Tế: Cách Hoạt Động, Giá 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo nước ngoài",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-quoc-te/",
+     "tieu_de_bai": "Booking Báo Quốc Tế: Cách Hoạt Động, Giá 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo quốc tế",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-quoc-te/",
+     "tieu_de_bai": "Booking Báo Quốc Tế: Cách Hoạt Động, Giá 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking báo tỉnh",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-tinh/",
+     "tieu_de_bai": "Booking Báo Tỉnh: Bảng Giá 22 Đầu Báo Địa Phương Thật 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book báo vtv",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên vtc news",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "bài pr báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/cach-viet-bai-pr-chuan-bao-chi/",
+     "tieu_de_bai": "Cách Viết Bài PR Chuẩn Báo Chí: 3 Công Thức Và Cấu Trúc",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
     }
    ]
   },
   {
-   "chu_de": "Truyền hình, TVC",
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 12,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "cách viết bài pr báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/cach-viet-bai-pr-chuan-bao-chi/",
+     "tieu_de_bai": "Cách Viết Bài PR Chuẩn Báo Chí: 3 Công Thức Và Cấu Trúc",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "viết bài pr báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/cach-viet-bai-pr-chuan-bao-chi/",
+     "tieu_de_bai": "Cách Viết Bài PR Chuẩn Báo Chí: 3 Công Thức Và Cấu Trúc",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "cách gửi thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/cach-viet-thong-cao-bao-chi-chuan/",
+     "tieu_de_bai": "Cách Viết Thông Cáo Báo Chí Chuẩn: Cấu Trúc, 5W1H, Ví Dụ",
+     "phu": 0.8,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "cách làm thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/cach-viet-thong-cao-bao-chi-chuan/",
+     "tieu_de_bai": "Cách Viết Thông Cáo Báo Chí Chuẩn: Cấu Trúc, 5W1H, Ví Dụ",
+     "phu": 0.8,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "cách trình bày thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/cach-viet-thong-cao-bao-chi-chuan/",
+     "tieu_de_bai": "Cách Viết Thông Cáo Báo Chí Chuẩn: Cấu Trúc, 5W1H, Ví Dụ",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "cách viết thông cáo báo chí chuẩn",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/cach-viet-thong-cao-bao-chi-chuan/",
+     "tieu_de_bai": "Cách Viết Thông Cáo Báo Chí Chuẩn: Cấu Trúc, 5W1H, Ví Dụ",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "cách viết thông cáo báo chí sự kiện",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/cach-viet-thong-cao-bao-chi-chuan/",
+     "tieu_de_bai": "Cách Viết Thông Cáo Báo Chí Chuẩn: Cấu Trúc, 5W1H, Ví Dụ",
+     "phu": 0.71,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "cách viết tin từ thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/cach-viet-thong-cao-bao-chi-chuan/",
+     "tieu_de_bai": "Cách Viết Thông Cáo Báo Chí Chuẩn: Cấu Trúc, 5W1H, Ví Dụ",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quy chuẩn thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/cach-viet-thong-cao-bao-chi-chuan/",
+     "tieu_de_bai": "Cách Viết Thông Cáo Báo Chí Chuẩn: Cấu Trúc, 5W1H, Ví Dụ",
+     "phu": 0.8,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí cách viết",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/cach-viet-thong-cao-bao-chi-chuan/",
+     "tieu_de_bai": "Cách Viết Thông Cáo Báo Chí Chuẩn: Cấu Trúc, 5W1H, Ví Dụ",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 13,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "email gửi thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "in thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "khi nào nên gửi thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "mẫu email gửi thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "mục đích của thông cáo báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí doanh nghiệp",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí mẫu",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí ra mắt mv",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí ra mắt sách",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 14,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "thông cáo báo chí sự kiện",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí đăng ở đâu",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/mau-thong-cao-bao-chi/",
+     "tieu_de_bai": "Mẫu Thông Cáo Báo Chí: Tổng Hợp Theo Từng Mục Đích",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking pr báo chí",
+     "nguon": "Google Suggest từ \"booking báo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking quảng cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo chí marketing quảng cáo pr",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.8,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "chạy quảng cáo pr",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá quảng cáo trên báo điện tử",
+     "nguon": "Google Suggest từ \"quảng cáo báo điện tử\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "khoa pr quảng cáo",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "khoa pr và quảng cáo ajc",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 15,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "pr booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "pr có phải quảng cáo không",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "pr quảng cáo và marketing",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo báo mạng",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo báo điện tử",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo khác pr",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo khác pr chỗ nào",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo khác pr như thế nào",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo pr sản phẩm",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo thoái vị pr lên ngôi",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 16,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "quảng cáo trên báo điện tử",
+     "nguon": "Google Suggest từ \"quảng cáo báo điện tử\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo và pr",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo và pr khác nhau như thế nào",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "so sánh quảng cáo và pr",
+     "nguon": "Google Suggest từ \"quảng cáo pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "boilerplate trong thông cáo báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/thong-cao-bao-chi-la-gi/",
+     "tieu_de_bai": "Thông Cáo Báo Chí Là Gì? Định Nghĩa, Vai Trò, Ai Viết",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quy định thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/thong-cao-bao-chi-la-gi/",
+     "tieu_de_bai": "Thông Cáo Báo Chí Là Gì? Định Nghĩa, Vai Trò, Ai Viết",
+     "phu": 0.8,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí gồm những gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/thong-cao-bao-chi-la-gi/",
+     "tieu_de_bai": "Thông Cáo Báo Chí Là Gì? Định Nghĩa, Vai Trò, Ai Viết",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/thong-cao-bao-chi-la-gi/",
+     "tieu_de_bai": "Thông Cáo Báo Chí Là Gì? Định Nghĩa, Vai Trò, Ai Viết",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí là j",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/thong-cao-bao-chi-la-gi/",
+     "tieu_de_bai": "Thông Cáo Báo Chí Là Gì? Định Nghĩa, Vai Trò, Ai Viết",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "thông cáo báo chí nghĩa là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/thong-cao-bao-chi-la-gi/",
+     "tieu_de_bai": "Thông Cáo Báo Chí Là Gì? Định Nghĩa, Vai Trò, Ai Viết",
+     "phu": 0.75,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR - đào sâu bài có sẵn",
+   "so": 17,
+   "tong": 17,
+   "tu": [
+    {
+     "tu_khoa": "viết thông cáo báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/thong-cao-bao-chi-la-gi/",
+     "tieu_de_bai": "Thông Cáo Báo Chí Là Gì? Định Nghĩa, Vai Trò, Ai Viết",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
    "so": 1,
    "tong": 10,
    "tu": [
@@ -1303,66 +2258,116 @@
      "tu_khoa": "quảng cáo tvc",
      "nguon": "seed",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 3
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "1 phút quảng cáo trên truyền hình bao nhiêu tiền",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 10
+     "so_chu": 10,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "book quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "booking quảng cáo truyền hình",
      "nguon": "seed",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "báo giá quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "báo giá sản xuất tvc quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "báo giá truyền hình vtv",
      "nguon": "Google Suggest từ \"truyền hình vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "báo giá tvc quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "bảng giá quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "bảng giá quảng cáo truyền hình vĩnh long",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     }
    ]
   },
   {
-   "chu_de": "Truyền hình, TVC",
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
    "so": 2,
    "tong": 10,
    "tu": [
@@ -1370,666 +2375,1405 @@
      "tu_khoa": "bảng giá quảng cáo trên vtv",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "chi phí quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "chi phí quảng cáo trên truyền hình htv",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "chi phí quảng cáo trên truyền hình vtv",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "chi phí quảng cáo trên vtv",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "chi phí quảng cáo trên vtv1",
+     "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "chi phí quảng cáo trên vtv3",
+     "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "chạy quảng cáo tvc",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "clip quảng cáo tvc",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "các hình thức quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
+   "so": 3,
+   "tong": 10,
+   "tu": [
+    {
+     "tu_khoa": "các quảng cáo trên vtv",
+     "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "cách làm tvc quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "công ty cổ phần quảng cáo truyền hình việt",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 9
-    }
-   ]
-  },
-  {
-   "chu_de": "Truyền hình, TVC",
-   "so": 3,
-   "tong": 10,
-   "tu": [
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "công ty quảng cáo chương trình truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "doanh thu quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "dịch vụ làm tvc quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "dịch vụ quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "dịch vụ sản xuất tvc quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quay tvc quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quảng cáo giờ vàng trên vtv",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
-    },
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
+   "so": 4,
+   "tong": 10,
+   "tu": [
     {
      "tu_khoa": "giá quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quảng cáo trên truyền hình vtv3",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quảng cáo trên vtv",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
-    }
-   ]
-  },
-  {
-   "chu_de": "Truyền hình, TVC",
-   "so": 4,
-   "tong": 10,
-   "tu": [
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "giá quảng cáo trên vtv world cup",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quảng cáo trên vtv1",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá quảng cáo trên vtv1 là 30 triệu đồng",
+     "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quảng cáo trên vtv3",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quảng cáo trên vtv3 giờ vàng",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quảng cáo trên đài truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giá quảng cáo tvc",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
-    },
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
+   "so": 5,
+   "tong": 10,
+   "tu": [
     {
      "tu_khoa": "giấy phép quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "giọng quảng cáo tvc",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "kịch bản quảng cáo tvc",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "kịch bản tvc quảng cáo mỹ phẩm",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
-    }
-   ]
-  },
-  {
-   "chu_de": "Truyền hình, TVC",
-   "so": 5,
-   "tong": 10,
-   "tu": [
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "luật quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "làm tvc quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "làm tvc quảng cáo doanh nghiệp",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "một quảng cáo trên truyền hình kéo dài khoảng",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 9
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "phí quảng cáo trên vtv",
+     "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quay quảng cáo tvc",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
-    },
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
+   "so": 6,
+   "tong": 10,
+   "tu": [
     {
      "tu_khoa": "quay quảng cáo tvc là gì",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quay tvc quảng cáo sản phẩm",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quay video quảng cáo tvc",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo pop up trên truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo sản phẩm trên truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
-    }
-   ]
-  },
-  {
-   "chu_de": "Truyền hình, TVC",
-   "so": 6,
-   "tong": 10,
-   "tu": [
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "quảng cáo sản phẩm trên truyền hình là một",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 9
+     "so_chu": 9,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo thuốc trên truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo thuốc trên vtv",
+     "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo truyền hình",
      "nguon": "seed",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo truyền hình là gì",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
-    },
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
+   "so": 7,
+   "tong": 10,
+   "tu": [
     {
      "tu_khoa": "quảng cáo truyền hình tvc",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo truyền hình vtv",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo truyền hình vĩnh long",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên truyền hình giá bao nhiêu",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên truyền hình là gì",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
-    }
-   ]
-  },
-  {
-   "chu_de": "Truyền hình, TVC",
-   "so": 7,
-   "tong": 10,
-   "tu": [
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "quảng cáo trên truyền hình ở việt nam",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 8
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên vtv",
      "nguon": "seed",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên vtv bao nhiêu tiền",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên vtv1",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
-    },
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
+   "so": 8,
+   "tong": 10,
+   "tu": [
     {
      "tu_khoa": "quảng cáo trên vtv3",
      "nguon": "Google Suggest từ \"quảng cáo trên vtv\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo tvc 3d",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo tvc là gì",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo tvc truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo tvc trên truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo đài truyền hình việt nam",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
-    }
-   ]
-  },
-  {
-   "chu_de": "Truyền hình, TVC",
-   "so": 8,
-   "tong": 10,
-   "tu": [
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "script tvc quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "sản xuất tvc quảng cáo hà nội",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "thiết kế quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "thời lượng quảng cáo trên truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 7
-    },
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
+   "so": 9,
+   "tong": 10,
+   "tu": [
     {
      "tu_khoa": "trung tâm quảng cáo và dịch vụ truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 9
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "trung tâm quảng cáo và dịch vụ truyền hình tvad",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 10
+     "so_chu": 10,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "trung tâm quảng cáo đài truyền hình việt nam",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 9
+     "so_chu": 9,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tvc có phải quảng cáo không",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tvc quảng cáo bao nhiêu phút",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tvc quảng cáo công ty",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
-    }
-   ]
-  },
-  {
-   "chu_de": "Truyền hình, TVC",
-   "so": 9,
-   "tong": 10,
-   "tu": [
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "tvc quảng cáo doanh nghiệp",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tvc quảng cáo mẫu",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tvc quảng cáo ngắn",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tvc quảng cáo sản phẩm",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
-    },
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC - đào sâu bài có sẵn",
+   "so": 10,
+   "tong": 10,
+   "tu": [
     {
      "tu_khoa": "tvc quảng cáo thương hiệu",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tvc và quảng cáo",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tvc và quảng cáo khác nhau như thế nào",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 9
+     "so_chu": 9,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "tạo tvc quảng cáo bằng ai",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "video quảng cáo truyền hình",
      "nguon": "Google Suggest từ \"quảng cáo truyền hình\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 5
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "video quảng cáo tvc",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 4
-    }
-   ]
-  },
-  {
-   "chu_de": "Truyền hình, TVC",
-   "so": 10,
-   "tong": 10,
-   "tu": [
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "video quảng cáo tvc là gì",
      "nguon": "Google Suggest từ \"quảng cáo tvc\"",
      "chu_de": "Truyền hình, TVC",
-     "so_chu": 6
+     "so_chu": 6,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/booking-truyen-hinh/",
+     "tieu_de_bai": "Booking truyền hình",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     }
    ]
   },
   {
-   "chu_de": "Phát thanh, radio, VOV, VOH",
+   "chu_de": "Phát thanh, radio, VOV, VOH - đào sâu bài có sẵn",
    "so": 1,
-   "tong": 2,
+   "tong": 3,
    "tu": [
     {
      "tu_khoa": "quảng cáo radio",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 3
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo vov",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 3
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "booking quảng cáo radio",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "booking quảng cáo vov",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá quảng cáo vov",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "báo giá quảng cáo vov giao thông",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "bảng giá quảng cáo vov giao thông",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "chi phí quảng cáo trên vov giao thông",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "các hình thức quảng cáo trên radio",
+     "nguon": "Google Suggest từ \"quảng cáo radio\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "công ty cp quảng cáo radio việt nam",
+     "nguon": "Google Suggest từ \"quảng cáo radio\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 8,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Phát thanh, radio, VOV, VOH - đào sâu bài có sẵn",
+   "so": 2,
+   "tong": 3,
+   "tu": [
+    {
+     "tu_khoa": "giá quảng cáo trên radio",
+     "nguon": "Google Suggest từ \"quảng cáo radio\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá quảng cáo trên vov giao thông",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 7,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "giá quảng cáo vov giao thông",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo phát thanh",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo qua radio",
+     "nguon": "Google Suggest từ \"quảng cáo radio\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo radio là gì",
+     "nguon": "Google Suggest từ \"quảng cáo radio\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 5,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo radio tỉnh",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên radio",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên voh",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo trên vov",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    }
+   ]
+  },
+  {
+   "chu_de": "Phát thanh, radio, VOV, VOH - đào sâu bài có sẵn",
+   "so": 3,
+   "tong": 3,
+   "tu": [
+    {
+     "tu_khoa": "quảng cáo trên vov giao thông",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 6,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "quảng cáo vov giao thông",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 5
-    }
-   ]
-  },
-  {
-   "chu_de": "Phát thanh, radio, VOV, VOH",
-   "so": 2,
-   "tong": 2,
-   "tu": [
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
     {
      "tu_khoa": "quảng cáo đài voh",
      "nguon": "seed",
      "chu_de": "Phát thanh, radio, VOV, VOH",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "radio không quảng cáo",
+     "nguon": "Google Suggest từ \"quảng cáo radio\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "trung tâm quảng cáo vov",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 5,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "ví dụ về quảng cáo trên radio",
+     "nguon": "Google Suggest từ \"quảng cáo radio\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 7,
+     "y_dinh": "kiến thức",
+     "bai": "https://digicomvn.com/quang-cao-phat-thanh/",
+     "tieu_de_bai": "Quảng cáo phát thanh",
+     "phu": 0.6,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "quảng cáo vov1",
+     "nguon": "Google Suggest từ \"quảng cáo vov\"",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+     "tieu_de_bai": "So Sánh Booking Báo PR Và Quảng Cáo Báo Chí Truyền Thống",
+     "phu": 0.67,
+     "huong": "đào sâu bài có sẵn"
     }
    ]
   },
   {
-   "chu_de": "Booking quảng cáo chung",
+   "chu_de": "Booking quảng cáo chung - đào sâu bài có sẵn",
    "so": 1,
    "tong": 1,
    "tu": [
     {
-     "tu_khoa": "book link báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking quảng cáo chung",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "book viết báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking quảng cáo chung",
-     "so_chu": 3
-    },
-    {
-     "tu_khoa": "booking viết báo",
-     "nguon": "Suggest lần trước",
-     "chu_de": "Booking quảng cáo chung",
-     "so_chu": 3
-    },
-    {
      "tu_khoa": "báo giá booking vietnamnet",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking quảng cáo chung",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vietnamnet/",
+     "tieu_de_bai": "Book Báo VietNamNet: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "báo giá booking vnexpress",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking quảng cáo chung",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-vnexpress/",
+     "tieu_de_bai": "Book Báo VnExpress: Bảng Giá PR & Cách Đăng Bài 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
     },
     {
      "tu_khoa": "báo giá booking znews",
      "nguon": "Suggest lần trước",
      "chu_de": "Booking quảng cáo chung",
-     "so_chu": 4
+     "so_chu": 4,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/book-bao-znews/",
+     "tieu_de_bai": "Book Báo Znews: Bảng Giá PR Theo Vị Trí & Cách Đăng 2026",
+     "phu": 1.0,
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book link báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "book viết báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
+    },
+    {
+     "tu_khoa": "booking viết báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 3,
+     "y_dinh": "thương mại",
+     "bai": "https://digicomvn.com/booking-bao-pr/",
+     "tieu_de_bai": "Dịch Vụ Booking Báo & PR Uy Tín",
+     "phu": "trụ cột",
+     "huong": "đào sâu bài có sẵn"
     }
    ]
   }

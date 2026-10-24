@@ -10,5 +10,6 @@ python3 $S batches --work "$W" \
   --group "Truyền hình, TVC=truyền hình|\btvc\b|\bvtv|\bhtv|\bvtc\b" \
   --group "Phát thanh, radio, VOV, VOH=phát thanh|\bradio\b|\bvov|\bvoh|đài|tiếng nói" \
   --group "Booking quảng cáo chung=booking|\bbook\b" \
-  --known "$W/../kp-raw/kp-*.csv" --size 10
+  --known "$W/../kp-raw/kp-*.csv" --size 10 --own-pages "$W/crawl/digicomvn.com.jsonl" --names-file "$W/names.txt" \
+  --pillar "(book|booking|đăng|giá|chi phí).*(báo|bài)=/booking-bao-pr/" --pillar "truyền hình|tvc|vtv|htv=/booking-truyen-hinh/" --pillar "phát thanh|radio|vov|voh|đài=/quang-cao-phat-thanh/"
 [ "$1" = "--sheet" ] && python3 $S sheet --project "$W/../.." --work "$W"
