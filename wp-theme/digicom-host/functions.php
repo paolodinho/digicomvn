@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '3.8.0' );
+define( 'DGC_VER', '3.9.0' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -209,6 +209,8 @@ function dgc_service_links() {
 		array( 'Booking báo & PR',       '/booking-bao-pr/' ),
 		array( 'Booking truyền hình',    '/booking-truyen-hinh/' ),
 		array( 'Quảng cáo phát thanh',   '/quang-cao-phat-thanh/' ),
+		array( 'Booking fanpage',        '/booking-fanpage/' ),
+		array( 'Booking KOL, KOC',       '/booking-kol-koc/' ),
 		array( 'Mua Textlink',           '/mua-textlink/' ),
 		array( 'Guest Post',             '/guest-post/' ),
 		array( 'Dịch vụ Backlink',       '/dich-vu-backlink/' ),

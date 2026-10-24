@@ -45,3 +45,7 @@ backup-before-edit). Danh mục chi tiết cũ tham khảo trong lịch sử DEC
 ## Lưu ý
 - Không bịa tên đầu báo đã hợp tác / case study / số liệu (rule content-professional).
 - Giai đoạn 1: form tư vấn/báo giá, KHÔNG giỏ hàng/thanh toán online.
+
+## Booking mạng xã hội (mở 2026-10-24, xem DECISIONS)
+- **Booking fanpage** `/booking-fanpage/` - đăng bài trên fanpage báo điện tử và fanpage cộng đồng lớn. Chưa có bảng giá NCC, báo giá theo yêu cầu.
+- **Booking KOL/KOC** `/booking-kol-koc/` - KOL, KOC, TikToker, YouTuber, livestream, nghệ sĩ. Bắt buộc nêu nghĩa vụ theo Luật Quảng cáo 75/2025/QH15. Không làm seeding/buff tương tác.

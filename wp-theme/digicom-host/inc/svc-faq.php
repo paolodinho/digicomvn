@@ -11,8 +11,9 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 $dgc_sf_nhom = isset( $nhom ) && $nhom ? $nhom : dgc_current_nhom();
-if ( ! $dgc_sf_nhom ) return;
-$dgc_sf_slug = $dgc_sf_nhom['slug'];
+/* Dich vu khong bang gia (fanpage, KOL/KOC) van co FAQ rieng theo slug trang. */
+$dgc_sf_slug = $dgc_sf_nhom ? $dgc_sf_nhom['slug'] : ( function_exists( 'dgc_svc_slug' ) ? dgc_svc_slug() : '' );
+if ( ! $dgc_sf_slug ) return;
 
 /* Schema FAQPage KHONG con sinh o day - da gop vao khoi @graph duy nhat (inc/schema.php),
    dung chung nguon du lieu dgc_svc_faq_items() nen noi dung luon khop voi phan hien thi. */
@@ -26,7 +27,7 @@ if ( ! $dgc_sf ) return;
 			<h2>Câu hỏi thường gặp</h2>
 			<p class="muted" style="max-width:620px;margin:8px auto 0">Giải đáp nhanh trước khi bạn đặt dịch vụ. Chưa thấy câu trả lời cần tìm? Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?> để được tư vấn trực tiếp.</p>
 			<div class="faq-quicklinks">
-				<a href="#bang-gia">Xem bảng giá dịch vụ này</a>
+				<?php if ( $dgc_sf_nhom ) : ?><a href="#bang-gia">Xem bảng giá dịch vụ này</a><?php else : ?><a href="#lien-he">Nhận báo giá</a><?php endif; ?>
 				<a href="/case-study/">Dự án đã triển khai</a>
 				<a href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 			</div>

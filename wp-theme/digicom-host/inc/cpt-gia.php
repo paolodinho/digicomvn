@@ -1269,6 +1269,24 @@ function dgc_is_service_page() {
 	return dgc_current_nhom() !== null;
 }
 
+/** Dich vu KHONG co bang gia (booking mang xa hoi, mo 2026-10-24): chi bat FAQ + schema Service,
+ *  KHONG bat bang gia/huong dan dat hang (dgc_current_nhom van tra null cho cac slug nay). */
+function dgc_svc_noprice_slugs() {
+	return array(
+		'booking-fanpage' => 'Booking fanpage',
+		'booking-kol-koc' => 'Booking KOL, KOC',
+	);
+}
+
+/** Slug dich vu cua trang hien tai: nhom co bang gia hoac dich vu khong bang gia; khong phai -> ''. */
+function dgc_svc_slug( $post_id = 0 ) {
+	$n = dgc_current_nhom( $post_id );
+	if ( $n ) return $n['slug'];
+	$s = get_post_field( 'post_name', $post_id ?: get_the_ID() );
+	$np = dgc_svc_noprice_slugs();
+	return isset( $np[ $s ] ) ? $s : '';
+}
+
 function dgc_current_nhom( $post_id = 0 ) {
 	$post_id = $post_id ?: get_the_ID();
 	if ( ! $post_id ) return null;

@@ -395,9 +395,9 @@ function dgc_sch_page_faqs() {
 		if ( $own ) return $own;
 	}
 	if ( is_front_page() ) return dgc_faq_items();
-	if ( is_page() && function_exists( 'dgc_current_nhom' ) ) {
-		$nhom = dgc_current_nhom();
-		if ( $nhom ) return dgc_svc_faq_items( $nhom['slug'] );
+	if ( is_page() && function_exists( 'dgc_svc_slug' ) ) {
+		$slug = dgc_svc_slug();
+		if ( $slug ) return dgc_svc_faq_items( $slug );
 	}
 	return array();
 }
@@ -798,6 +798,12 @@ function dgc_sch_item_list() {
 function dgc_sch_service() {
 	if ( ! is_page() || ! function_exists( 'dgc_current_nhom' ) ) return null;
 	$nhom = dgc_current_nhom();
+	if ( ! $nhom && function_exists( 'dgc_svc_noprice_slugs' ) ) {
+		// Dich vu khong bang gia (booking mang xa hoi): Service khong kem offers.
+		$np = dgc_svc_noprice_slugs();
+		$s  = get_post_field( 'post_name', get_the_ID() );
+		if ( isset( $np[ $s ] ) ) $nhom = array( 'slug' => $s, 'label' => $np[ $s ], 'noprice' => true );
+	}
 	if ( ! $nhom ) return null;
 
 	$url       = dgc_sch_url();
@@ -819,7 +825,7 @@ function dgc_sch_service() {
 		'description' => $desc,
 		'provider'    => array( '@id' => dgc_sch_id( 'organization' ) ),
 		'areaServed'  => array( '@type' => 'Country', 'name' => 'Việt Nam' ),
-		'category'    => 'SEO off-page',
+		'category'    => empty( $nhom['noprice'] ) ? 'SEO off-page' : 'Truyền thông mạng xã hội',
 		'mainEntityOfPage' => array( '@id' => $url . '#webpage' ),
 		'termsOfService'   => dgc_sch_terms_url(),
 		// Buoc tiep theo ro rang cho ca nguoi dung lan tac tu AI: dat bai o dau.

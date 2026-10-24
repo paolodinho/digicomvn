@@ -1,5 +1,14 @@
 # DECISIONS - digicomvn.com
 
+## 2026-10-24 (tối) - Thêm nhóm "Booking mạng xã hội": fanpage + KOL/KOC
+- Hiếu giao: thêm booking fanpage, booking KOL/KOC, xem lĩnh vực truyền thông gần để thêm.
+- Thêm 2 trang dịch vụ: /booking-fanpage/ (đăng bài trên fanpage báo điện tử + fanpage cộng đồng lớn) và /booking-kol-koc/ (KOL, KOC, TikToker, YouTuber, livestream bán hàng, nghệ sĩ - gộp làm H2, không tách trang để tránh trùng intent).
+- Căn cứ: Google Suggest ẩn danh 24/10 có nhu cầu thật (booking kol/koc 10 gợi ý, thuê kol tiktok, giá booking tiktoker, booking livestream tiktok, giá/bảng giá booking fanpage, booking youtuber, booking ca sĩ); top 10 "booking fanpage" và "booking kol" đa số là trang dịch vụ/bảng giá (intent thương mại) - cùng intent với nhóm booking truyền thông.
+- KHÔNG làm: seeding Facebook, share group, buff tương tác (tương tác giả, trái chính sách Meta về hành vi không xác thực); booking hot face, Zalo OA, diễn đàn (gần như không có nhu cầu tìm).
+- Chưa làm, chờ Hiếu: sản xuất video/TVC, quản trị fanpage (cần năng lực triển khai thật - xếp như SEO/Ads: dòng "Dịch vụ khác").
+- Chưa có giá nhà cung cấp cho fanpage/KOL -> trang không có bảng giá, báo giá theo yêu cầu; không bịa giá.
+- Pháp lý bắt buộc nêu trên trang KOL: Luật Quảng cáo sửa đổi 75/2025/QH15 (hiệu lực 01/01/2026) - người chuyển tải sản phẩm quảng cáo phải gắn nhãn, kiểm tra hồ sơ sản phẩm, không quảng cáo sản phẩm chưa dùng.
+
 ## 2026-10-24 (chiều) - Dịch vụ ngoài chủ đề: site riêng mang tên Digicom
 - Hiếu giao Claude tự quyết, yêu cầu giữ chữ "digicom" để khách nhận ra.
 - digicomvn.com giữ 2 trụ: booking truyền thông + link từ báo. Không làm trang SEO tổng thể, Ads, tên miền, hosting.

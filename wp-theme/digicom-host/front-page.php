@@ -68,6 +68,14 @@ $dgc_svc_groups = array(
 		),
 	),
 	array(
+		'h'     => 'Booking mạng xã hội',
+		'class' => ' svc-core svc-links-2',
+		'items' => array(
+			array( 'Booking fanpage',   '/booking-fanpage/',  'Đăng bài trên fanpage báo điện tử và fanpage cộng đồng lớn, đúng tệp người theo dõi.', 'M7 10v11M7 10l4-8a3 3 0 0 1 3 3v4h5a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 17.6 21H7M3 10h4v11H3z' ),
+			array( 'Booking KOL, KOC',  '/booking-kol-koc/',  'KOL, KOC, TikToker, YouTuber và livestream bán hàng, có kiểm tra tương tác thật.',      'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0M19 3l2 2-2 2' ),
+		),
+	),
+	array(
 		'h'     => 'Link từ báo &amp; site uy tín',
 		'class' => '',
 		'items' => array(
@@ -85,8 +93,8 @@ $dgc_svc_groups = array(
 	<div class="wrap">
 		<div class="center" style="margin-bottom:40px">
 			<span class="eyebrow">Dịch vụ của DigicomVN</span>
-			<h2>Booking báo PR, truyền hình và link từ báo</h2>
-			<p class="muted">Đặt chỗ trên đúng kênh truyền thông doanh nghiệp cần: báo điện tử, sóng truyền hình, phát thanh. Link từ báo và site uy tín hỗ trợ thêm cho SEO.</p>
+			<h2>Booking báo PR, truyền hình, mạng xã hội và link từ báo</h2>
+			<p class="muted">Đặt chỗ trên đúng kênh truyền thông doanh nghiệp cần: báo điện tử, sóng truyền hình, phát thanh, fanpage và KOL. Link từ báo và site uy tín hỗ trợ thêm cho SEO.</p>
 		</div>
 		<?php foreach ( $dgc_svc_groups as $g ) : ?>
 		<div class="svc-grp">

@@ -398,6 +398,9 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .svc-core .svc-link h4{font-size:17px}
 @media(max-width:900px){.svc-links-3{grid-template-columns:repeat(2,1fr)}.svc-core{grid-template-columns:1fr}}
 @media(max-width:520px){.svc-links-3{grid-template-columns:1fr}}
+/* Nhom 'Booking mang xa hoi' (2026-10-24): 2 the -> 2 cot, mobile 1 cot */
+.svc-links-3.svc-links-2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.svc-links-3.svc-links-2{grid-template-columns:1fr}}
 
 /* ==========================================================================
    Reasons (band navy)

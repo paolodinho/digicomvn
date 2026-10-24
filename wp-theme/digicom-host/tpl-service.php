@@ -116,15 +116,28 @@ if ( $nhom ) {
 
 <?php /* Trang co bang gia da co "Huong dan dat hang" 4 buoc -> khong lap quy trinh chung nua.
          Chi hien quy trinh chung cho trang dich vu KHONG co bang gia. */ ?>
-<?php if ( ! $nhom ) : ?>
+<?php if ( ! $nhom ) :
+	/* Booking mang xa hoi (fanpage, KOL/KOC - mo 2026-10-24) co quy trinh rieng, khong dung ban chung. */
+	$dgc_social = in_array( get_post_field( 'post_name', get_the_ID() ), array( 'booking-fanpage', 'booking-kol-koc' ), true );
+	$dgc_steps  = $dgc_social ? array(
+		array( 'Nhận brief', 'Mục tiêu, sản phẩm, tệp khách và ngân sách dự kiến.' ),
+		array( 'Đề xuất danh sách', 'Gửi danh sách kèm số liệu tương tác để bạn chọn và báo giá.' ),
+		array( 'Duyệt nội dung', 'Kịch bản, bài đăng có nhãn quảng cáo được bạn duyệt trước khi lên.' ),
+		array( 'Đăng &amp; báo cáo', 'Bàn giao link, ảnh chụp và số liệu sau khi đăng.' ),
+	) : array(
+		array( 'Khảo sát', 'Tìm hiểu mục tiêu, hiện trạng và yêu cầu của bạn.' ),
+		array( 'Đề xuất &amp; báo giá', 'Lên phương án, phạm vi công việc và báo giá minh bạch.' ),
+		array( 'Triển khai', 'Thực hiện theo kế hoạch, cập nhật tiến độ thường xuyên.' ),
+		array( 'Bàn giao &amp; bảo hành', 'Nghiệm thu, hướng dẫn sử dụng và hỗ trợ sau bàn giao.' ),
+	);
+?>
 <section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:34px"><span class="eyebrow">Quy trình</span><h2>Cách DigicomVN triển khai</h2></div>
 		<ol class="proc">
-			<li class="step"><h3>Khảo sát</h3><p>Tìm hiểu mục tiêu, hiện trạng và yêu cầu của bạn.</p></li>
-			<li class="step"><h3>Đề xuất &amp; báo giá</h3><p>Lên phương án, phạm vi công việc và báo giá minh bạch.</p></li>
-			<li class="step"><h3>Triển khai</h3><p>Thực hiện theo kế hoạch, cập nhật tiến độ thường xuyên.</p></li>
-			<li class="step"><h3>Bàn giao &amp; bảo hành</h3><p>Nghiệm thu, hướng dẫn sử dụng và hỗ trợ sau bàn giao.</p></li>
+			<?php foreach ( $dgc_steps as $st ) : ?>
+			<li class="step"><h3><?php echo wp_kses_post( $st[0] ); ?></h3><p><?php echo esc_html( $st[1] ); ?></p></li>
+			<?php endforeach; ?>
 		</ol>
 	</div>
 </section>

@@ -98,6 +98,8 @@ function dgc_ai_system_prompt() {
 	$sp .= "7. Booking truyen hinh (/booking-truyen-hinh/): TVC, phong su, talkshow tren VTV, HTV.\n";
 	$sp .= "8. Quang cao phat thanh (/quang-cao-phat-thanh/): spot radio tren VOV1, VOV Giao thong, Joy FM, dai tinh.\n";
 	$sp .= "9. Dich vu Toplist (/dich-vu-toplist/): dua thuong hieu vao bai xep hang Top uy tin dung linh vuc.\n";
+	$sp .= "10. Booking fanpage (/booking-fanpage/): dang bai tren fanpage bao dien tu va fanpage cong dong lon. Chua co bang gia tren site, bao gia theo danh sach fanpage.\n";
+	$sp .= "11. Booking KOL, KOC (/booking-kol-koc/): KOL, KOC, TikToker, YouTuber, livestream ban hang. Bao gia theo danh sach de xuat. Tuan thu Luat Quang cao 75/2025/QH15 (gan nhan quang cao, kiem tra ho so san pham). KHONG lam seeding, buff tuong tac ao.\n";
 	$sp .= "Dich vu ngoai danh sach (SEO tong the, Google Ads, Facebook Ads): chi nhan theo yeu cau qua form/hotline, khong co bang gia tren site.\n\n";
 	$sp .= "CACH TU VAN CHON DICH VU (goi y ngan theo nhu cau khach):\n";
 	$sp .= "- Can tang uy tin/thuong hieu nhanh, PR: Booking bao & PR, Truyen hinh hoac Phat thanh (phu song dia phuong, nguoi lai xe).\n";
