@@ -42,7 +42,7 @@ $bbp_ic = function ( $p ) {
 	<div class="wrap bbp-hero-grid">
 		<div class="bbp-hero-copy">
 			<span class="eyebrow">Dịch vụ Booking báo &amp; PR</span>
-			<h1>Đăng bài PR trên báo điện tử uy tín, có bảng giá công khai từng đầu báo</h1>
+			<h1>Booking báo chí: đăng bài PR trên báo điện tử uy tín, bảng giá công khai từng đầu&nbsp;báo</h1>
 			<p class="lead">DigicomVN nhận booking báo chí trọn gói: tư vấn chọn đầu báo theo mục tiêu, viết bài PR đúng văn phong toà soạn, đăng và bàn giao link sau khi bài lên. Giá niêm yết theo từng chuyên mục, không giấu giá.</p>
 			<div class="bbp-hero-actions">
 				<a class="btn btn-primary" href="#bang-gia">Xem bảng giá <?php echo esc_html( $bbp_count ); ?> vị trí</a>

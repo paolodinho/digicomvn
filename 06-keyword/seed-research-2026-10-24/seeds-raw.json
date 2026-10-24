@@ -1,0 +1,4168 @@
+{
+ "own": "digicomvn.com",
+ "date": "2026-10-24",
+ "competitors": [
+  {
+   "domain": "brandcom.vn",
+   "serp_keywords": 11,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "seovip.vn",
+   "serp_keywords": 10,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "hapodigital.com",
+   "serp_keywords": 9,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "tindimedia.vn",
+   "serp_keywords": 7,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "peakagency.vn",
+   "serp_keywords": 6,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "ecpmedia.vn",
+   "serp_keywords": 6,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "butvangcorp.com",
+   "serp_keywords": 6,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "wifim.vn",
+   "serp_keywords": 5,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "radiovietnam.com.vn",
+   "serp_keywords": 5,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "miccreative.vn",
+   "serp_keywords": 4,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "quangcaongoaitroi.com",
+   "serp_keywords": 4,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "bookbaopr.vn",
+   "serp_keywords": 3,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "itify.vn",
+   "serp_keywords": 3,
+   "source": "top 10 Google đã đo"
+  }
+ ],
+ "crawl": {
+  "brandcom.vn": {
+   "trang": 1500,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 1500
+  },
+  "radiovietnam.com.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 0
+  },
+  "bookbaopr.vn": {
+   "trang": 66,
+   "danh-muc": 6,
+   "san-pham": 0,
+   "bai-viet": 43
+  },
+  "digicomvn.com": {
+   "trang": 212,
+   "danh-muc": 12,
+   "san-pham": 0,
+   "bai-viet": 174
+  },
+  "quangcaongoaitroi.com": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 300
+  },
+  "peakagency.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 281
+  },
+  "miccreative.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 300
+  },
+  "hapodigital.com": {
+   "trang": 261,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 260
+  },
+  "seovip.vn": {
+   "trang": 480,
+   "danh-muc": 0,
+   "san-pham": 366,
+   "bai-viet": 114
+  },
+  "ecpmedia.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 300
+  },
+  "itify.vn": {
+   "trang": 182,
+   "danh-muc": 7,
+   "san-pham": 0,
+   "bai-viet": 150
+  },
+  "tindimedia.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 197
+  },
+  "wifim.vn": {
+   "trang": 300,
+   "danh-muc": 1,
+   "san-pham": 23,
+   "bai-viet": 273
+  },
+  "butvangcorp.com": {
+   "trang": 278,
+   "danh-muc": 2,
+   "san-pham": 20,
+   "bai-viet": 256
+  }
+ },
+ "seeds": [
+  {
+   "seed": "quảng cáo",
+   "so_doi_thu": 13,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "itify.vn",
+    "miccreative.vn",
+    "peakagency.vn",
+    "quangcaongoaitroi.com",
+    "radiovietnam.com.vn",
+    "seovip.vn",
+    "tindimedia.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 1853,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/bang-gia/bang-gia-quang-cao-bao-mang/",
+    "https://bookbaopr.vn/vov2/",
+    "https://bookbaopr.vn/vov3/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/quang-cao-phat-thanh/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 3,
+   "nguon": "cả hai"
+  },
+  {
+   "seed": "quảng cáo trên",
+   "so_doi_thu": 10,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "itify.vn",
+    "miccreative.vn",
+    "quangcaongoaitroi.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 485,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/vov2/",
+    "https://bookbaopr.vn/vov3/",
+    "https://bookbaopr.vn/vov5/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông",
+   "so_doi_thu": 10,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "miccreative.vn",
+    "peakagency.vn",
+    "quangcaongoaitroi.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 292,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/",
+    "https://tindimedia.vn/lien-he/",
+    "https://tindimedia.vn/gioi-thieu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu hút",
+   "so_doi_thu": 10,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "itify.vn",
+    "miccreative.vn",
+    "quangcaongoaitroi.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 98,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/content-8-3/",
+    "https://itify.vn/content-20-10/",
+    "https://itify.vn/pheu-marketing/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo facebook",
+   "so_doi_thu": 9,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "itify.vn",
+    "miccreative.vn",
+    "peakagency.vn",
+    "seovip.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 76,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/dich-vu-facebook-ads/",
+    "https://peakagency.vn/khoa-hoc-facebook/",
+    "https://wifim.vn/tat-quang-cao-facebook/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu hút khách",
+   "so_doi_thu": 9,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "itify.vn",
+    "miccreative.vn",
+    "radiovietnam.com.vn",
+    "tindimedia.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 27,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/content-20-10/",
+    "https://itify.vn/pheu-marketing/",
+    "https://itify.vn/content-social-la-gi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thống",
+   "so_doi_thu": 8,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "itify.vn",
+    "peakagency.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 38,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/an-pham-quang-cao-la-gi/",
+    "https://itify.vn/marketing-truyen-thong-la-gi/",
+    "https://brandcom.vn/quang-cao-tren-radio-hieu-qua/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+   "dang_trang_minh": "bai-viet",
+   "so_trang_minh": 1,
+   "nguon": "cả hai"
+  },
+  {
+   "seed": "thu hút khách hàng",
+   "so_doi_thu": 8,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "itify.vn",
+    "miccreative.vn",
+    "radiovietnam.com.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 26,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/content-20-10/",
+    "https://itify.vn/pheu-marketing/",
+    "https://itify.vn/content-social-la-gi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng ký",
+   "so_doi_thu": 8,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn",
+    "itify.vn",
+    "miccreative.vn",
+    "quangcaongoaitroi.com",
+    "radiovietnam.com.vn",
+    "seovip.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 16,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/dang-ky-google-maps/",
+    "https://ecpmedia.vn/dang-ky-ten-mien.html",
+    "https://miccreative.vn/tiktok-beta-la-gi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền hình",
+   "so_doi_thu": 7,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 106,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/5957-2/",
+    "https://bookbaopr.vn/quang-cao-truyen-hinh/",
+    "https://brandcom.vn/viet-nam-kenh-quang-cao-nao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/bang-gia/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 3,
+   "nguon": "cả hai"
+  },
+  {
+   "seed": "đăng bài",
+   "so_doi_thu": 7,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "miccreative.vn",
+    "peakagency.vn",
+    "tindimedia.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 65,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/gio-vang-dang-bai/",
+    "https://hapodigital.com/quang-cao-thanh-nien/",
+    "https://hapodigital.com/khung-gio-vang-dang-bai/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/booking-bao-pr/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 24,
+   "nguon": "cả hai"
+  },
+  {
+   "seed": "quảng cáo google",
+   "so_doi_thu": 7,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "hapodigital.com",
+    "itify.vn",
+    "peakagency.vn",
+    "seovip.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 29,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/dich-vu-google-ads/",
+    "https://hapodigital.com/dich-vu-quang-cao-google/",
+    "https://peakagency.vn/chi-so-quang-cao-google-ads/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking quảng cáo",
+   "so_doi_thu": 6,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 49,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/vov3/",
+    "https://bookbaopr.vn/vov5/",
+    "https://bookbaopr.vn/vov-thoi-su/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng bá",
+   "so_doi_thu": 6,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com",
+    "seovip.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 46,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-bao-dang/",
+    "https://brandcom.vn/quang-cao-trung-dich/",
+    "https://seovip.vn/cach-quang-ba-doanh-nghiep"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo chuyên nghiệp",
+   "so_doi_thu": 6,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "peakagency.vn",
+    "quangcaongoaitroi.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 12,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/",
+    "https://peakagency.vn/dich-vu-toi-uu-quang-cao/",
+    "https://peakagency.vn/dich-vu-quay-tvc-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo banner",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 31,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-banner-tren-youtube/",
+    "https://brandcom.vn/bao-gia-quang-cao-banner-afamily/",
+    "https://brandcom.vn/quang-cao-banner-tren-bao-dien-tu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo vov",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 19,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/vov-thoi-su/",
+    "https://brandcom.vn/mau-giong-thu-voice-quang-cao-vov/",
+    "https://tindimedia.vn/dich-vu/quang-cao-vov-giao-thong-91mhz/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking quảng cáo trên",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 17,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/vov5/",
+    "https://brandcom.vn/booking-quang-cao-tren-radio-fm-vov/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-tren-bao-dien-tu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo tiktok",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "miccreative.vn",
+    "peakagency.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 16,
+   "trang_doi_thu_mau": [
+    "https://peakagency.vn/chi-so-quang-cao-tiktok/",
+    "https://peakagency.vn/chi-phi-quang-cao-tiktok/",
+    "https://peakagency.vn/xu-huong-quang-cao-tiktok/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên vov",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "hapodigital.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 15,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-vov/",
+    "https://brandcom.vn/quang-cao-tren-vov-giao-thong/",
+    "https://bookbaopr.vn/quang-cao-tren-vov-giao-thong/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo google ads",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "butvangcorp.com",
+    "hapodigital.com",
+    "itify.vn",
+    "peakagency.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 11,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/dich-vu-google-ads/",
+    "https://hapodigital.com/dich-vu-quang-cao-google/",
+    "https://peakagency.vn/chi-so-quang-cao-google-ads/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông marketing",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "peakagency.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 10,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/truyen-thong-la-gi/",
+    "https://wifim.vn/truyen-thong-marketing-la-gi/",
+    "https://peakagency.vn/dich-vu-truyen-thong-marketing/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo youtube",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "miccreative.vn",
+    "peakagency.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-youtube/",
+    "https://miccreative.vn/chan-quang-cao-youtube/",
+    "https://miccreative.vn/chay-quang-cao-youtube/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng ninh",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "brandcom.vn",
+    "peakagency.vn",
+    "quangcaongoaitroi.com",
+    "radiovietnam.com.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://seovip.vn/dich-vu-seo-tai-quang-ninh/",
+    "https://peakagency.vn/dich-vu-seo-tai-quang-ninh/",
+    "http://quangcaongoaitroi.com/pano-tuan-chau-marina/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông thương",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 80,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/5-m-trong-quang-cao-la-gi/",
+    "https://brandcom.vn/mot-thoi-dai-moi-trong-quang-cao/",
+    "https://brandcom.vn/truyen-thong-thuong-hieu-ca-nhan/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo truyền hình",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 57,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-truyen-hinh/",
+    "https://brandcom.vn/viet-nam-kenh-quang-cao-nao/",
+    "https://bookbaopr.vn/quang-cao-truyen-hinh-la-gi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo xe",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 55,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-xe-bus-tai-ha-noi/",
+    "https://brandcom.vn/quang-cao-xe-buyt-toan-quoc/",
+    "https://tindimedia.vn/dich-vu/quang-cao-xe-buyt/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo radio",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 43,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/",
+    "https://www.butvangcorp.com/quang-cao-radio/",
+    "https://tindimedia.vn/ooh-va-audio-marketing/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo billboard",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 43,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-billboard/",
+    "https://tindimedia.vn/quang-cao-billboard-2/",
+    "https://brandcom.vn/bien-quang-cao-billboard-co-dac-diem-gi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng bài pr",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 38,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/quang-cao-thanh-nien/",
+    "https://tindimedia.vn/dang-bai-pr-tren-bao-dien-tu/",
+    "https://hapodigital.com/bang-gia-quang-cao-vietstock/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/booking-bao-pr/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 15,
+   "nguon": "cả hai"
+  },
+  {
+   "seed": "quảng cáo lcd",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 28,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-lcd-xe-bus/",
+    "https://brandcom.vn/dich-vu-quang-cao-lcd-frame/",
+    "https://brandcom.vn/quang-cao-thang-may-goldsun/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên radio",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 22,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-radio/",
+    "https://brandcom.vn/quang-cao-tren-radio-hieu-qua/",
+    "https://tindimedia.vn/chi-phi-quang-cao-tren-radio/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo pano",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 22,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-pano/",
+    "https://tindimedia.vn/quang-cao-pano-ngoai-troi/",
+    "http://quangcaongoaitroi.com/pano-tuan-chau-marina/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "phòng marketing thuê ngoài",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "butvangcorp.com",
+    "ecpmedia.vn",
+    "peakagency.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 17,
+   "trang_doi_thu_mau": [
+    "https://ecpmedia.vn/1636.html",
+    "https://peakagency.vn/phong-marketing-thue-ngoai/",
+    "https://ecpmedia.vn/phong-marketing-thue-ngoai.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "loa phát thanh",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 16,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/",
+    "https://radiovietnam.com.vn/loa-phat-thanh.html",
+    "https://radiovietnam.com.vn/quang-cao-loa-phat-thanh.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo vov giao",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 13,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-vov-giao-thong-91mhz/",
+    "https://www.butvangcorp.com/dich-vu/qc-vov-giao-thong-ha-noi/",
+    "https://www.butvangcorp.com/dich-vu/qc-vov-giao-thong-tp-hcm/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo online",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "seovip.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 12,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/tao-video-quang-cao-online/",
+    "https://www.butvangcorp.com/san-pham/quang-cao-online/",
+    "https://brandcom.vn/cac-kenh-quang-cao-online-hieu-qua-nhat/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên kênh",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 12,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/vov5/",
+    "https://brandcom.vn/bang-gia-quang-cao-tren-kenh-14/",
+    "https://brandcom.vn/dich-vu-quang-cao-tren-kenh-xone-radio/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo đài",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-dai-voh/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-dai-voh/",
+    "https://brandcom.vn/dai-phat-thanh-hawaii-noi-khong-voi-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo ngoài trời",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 119,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/sang-tao-ooh-tot-nhat/",
+    "https://tindimedia.vn/quang-cao-ooh-digital/",
+    "https://tindimedia.vn/quang-cao-ngoai-troi-ooh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên xe",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 93,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-xe-buyt/",
+    "https://brandcom.vn/quang-cao-tren-xe-bus-2-tang/",
+    "https://brandcom.vn/dich-vu-quang-cao-tren-xe-bus/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking bài pr",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "ecpmedia.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 53,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/",
+    "https://hapodigital.com/bang-bao-gia-tiin-vn/",
+    "https://ecpmedia.vn/bang-gia-dang-bai-pr-tren-bao-eva.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên taxi",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 39,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/5176-2/",
+    "https://brandcom.vn/quang-cao-tren-taxi-g7/",
+    "https://brandcom.vn/quang-cao-tren-taxi-group/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo xe buýt",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 29,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-xe-buyt-toan-quoc/",
+    "https://tindimedia.vn/dich-vu/quang-cao-xe-buyt/",
+    "https://brandcom.vn/quang-cao-xe-buyt-tai-da-nang/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng bài pr trên",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 25,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dang-bai-pr-tren-bao-dien-tu/",
+    "https://brandcom.vn/bao-gia-dang-bai-pr-tren-vietnambiz/",
+    "https://ecpmedia.vn/bang-gia-dang-bai-pr-tren-bao-cafef.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/booking-bao-pr/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 5,
+   "nguon": "cả hai"
+  },
+  {
+   "seed": "quảng cáo taxi",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 24,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-taxi-mai-linh/",
+    "https://brandcom.vn/7-y-tuong-quang-cao-taxi-sang-tao/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-taxi-xe-bus/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo màn hình",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 22,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-man-hinh-lcd-trong-xe-buyt/",
+    "https://brandcom.vn/quang-cao-man-hinh-led-tai-trung-tam-thuong-mai/",
+    "https://tindimedia.vn/quang-cao-led-ngoai-troi-vs-pano-truyen-thong/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng bá thương",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 19,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-trung-dich/",
+    "https://www.butvangcorp.com/tam-quan-trong-cua-pr/",
+    "https://brandcom.vn/quang-cao-xe-taxi-vinasun-tai-tphcm/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo báo điện",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 19,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/bang-gia-quang-cao-bao-dien-tu-vtv/",
+    "https://brandcom.vn/bao-gia-quang-cao-bao-dien-tu-yan-vn/",
+    "https://brandcom.vn/bang-gia-quang-cao-bao-dien-tu-eva-vn/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu âm quảng cáo",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 19,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/",
+    "https://radiovietnam.com.vn/thu-am-quang-cao.html",
+    "https://www.butvangcorp.com/dich-vu/thu-am-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo xe bus",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 17,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-xe-bus-tai-ha-noi/",
+    "https://tindimedia.vn/quang-cao-xe-bus-2-tang-la-gi/",
+    "https://tindimedia.vn/bao-gia-quang-cao-xe-bus-2-tang/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên truyền",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 14,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-truyen-hinh/",
+    "https://tindimedia.vn/chi-phi-quang-cao-tren-truyen-hinh-htv/",
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-truyen-hinh-vtv/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng bài viết",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 14,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/huong-dan-dang-bai-viet-trong-wordpress/",
+    "https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-tiin-vn.html",
+    "https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-zing-vn.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo tại sân",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 14,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tai-san-bay/",
+    "https://tindimedia.vn/quang-cao-tai-san-bay-la-gi/",
+    "https://tindimedia.vn/bao-gia-quang-cao-tai-san-bay/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo biển",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 11,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/5776-2/",
+    "https://tindimedia.vn/quang-cao-bien-bang/",
+    "https://tindimedia.vn/dich-vu/quang-cao-bien-cho/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo phát thanh",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-phat-thanh-vov/",
+    "https://brandcom.vn/nhung-cau-hoi-ve-quang-cao-phat-thanh/",
+    "https://brandcom.vn/5-meo-thu-am-quang-cao-thu-hut-thinh-gia/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/quang-cao-phat-thanh/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 1,
+   "nguon": "cả hai"
+  },
+  {
+   "seed": "quảng cáo sản phẩm",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/tvc-quang-cao-san-pham-son-nero/",
+    "https://brandcom.vn/huong-dan-viet-bai-quang-cao-san-pham-mua-tet/",
+    "https://brandcom.vn/nhung-dieu-can-biet-khi-quang-cao-truyen-hinh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo sân bay",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-san-bay-tan-son-nhat-2/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-san-bay/",
+    "https://tindimedia.vn/hop-den-lightbox-quang-cao-san-bay/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên facebook",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 8,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-tren-facebook/",
+    "https://miccreative.vn/bang-gia-chay-quang-cao-tren-facebook/",
+    "https://miccreative.vn/cach-chon-vi-tri-quang-cao-tren-facebook/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo sáng tạo",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 8,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-trung-dich/",
+    "https://tindimedia.vn/cac-hinh-thuc-roadshow-quang-cao/",
+    "https://brandcom.vn/top-nhung-quang-cao-ngoai-troi-cuc-thong-minh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng quảng cáo trên",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 8,
+   "trang_doi_thu_mau": [
+    "https://ecpmedia.vn/bang-gia-dang-quang-cao-tren-bao-lao-dong.html",
+    "https://ecpmedia.vn/bang-gia-dang-quang-cao-tren-bao-tuoi-tre.html",
+    "https://ecpmedia.vn/bang-gia-dang-quang-cao-tren-bao-thanh-nien.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo banner trên",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 8,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-banner-tren-youtube/",
+    "https://brandcom.vn/quang-cao-banner-tren-bao-dien-tu/",
+    "https://brandcom.vn/bang-gia-quang-cao-banner-tren-bao-eva-vn/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo loa phát",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 8,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/quang-cao-loa-phat-thanh.html",
+    "https://brandcom.vn/co-nen-quang-cao-loa-phat-thanh-khong/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-loa-phat-thanh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo kênh",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 7,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/quang-cao-kenh-joy-fm-a853.html",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-kenh-mekong-fm/",
+    "https://brandcom.vn/bang-bao-gia-quang-cao-kenh-truyen-hinh-today-2015/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo ooh",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-ooh-digital/",
+    "https://brandcom.vn/quang-cao-ooh-tiem-nang-mo-nam-2020/",
+    "http://quangcaongoaitroi.com/ooh-quang-cao-tren-pano-billboard/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo thu",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/nhung-quang-cao-thu-hut-an-tuong/",
+    "https://www.butvangcorp.com/dich-vu/giong-am-quang-cao/",
+    "https://brandcom.vn/quang-cao-ooh-tiem-nang-mo-nam-2020/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên màn",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-quang-cao-lcd-tai-sieu-thi-lon-ha-noi/",
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-man-hinh-led-ngoai-troi/",
+    "http://quangcaongoaitroi.com/chien-dich-quang-cao-tren-xe-o-to-cua-vinmart/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo nhà chờ",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-nha-cho-xe-bus/",
+    "https://tindimedia.vn/quang-cao-nha-cho-xe-buyt/",
+    "https://brandcom.vn/top-11-quang-cao-nha-cho-xe-buyt-dang-hoc-hoi-nhat/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên sóng",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/giai-phap-quang-cao-tren-song-radio-cho-doanh-nghiep/",
+    "https://radiovietnam.com.vn/nhung-luu-y-khi-quang-cao-tren-song-radio-a891.html",
+    "https://brandcom.vn/quang-cao-tren-bao-mang-cach-lam-ra-sao-va-hieu-qua-the-nao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo facebook ads",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "butvangcorp.com",
+    "miccreative.vn",
+    "peakagency.vn"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://peakagency.vn/khoa-hoc-facebook/",
+    "https://miccreative.vn/chay-quang-cao-facebook-ads/",
+    "https://miccreative.vn/cach-toi-uu-chi-phi-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông ngoài trời",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-ooh-digital/",
+    "http://quangcaongoaitroi.com/truyen-thong-ngoai-troi/",
+    "https://brandcom.vn/quang-cao-ngoai-troi-hieu-qua-tiet-kiem-chi-phi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo billboard ngoài",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-billboard-ngoai-troi/",
+    "https://tindimedia.vn/dich-vu/quang-cao-billboard-ngoai-troi-hieu-qua/",
+    "http://quangcaongoaitroi.com/cung-chiem-nguong-chien-dich-quang-cao-billboard-cho-apm/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thống vẫn",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-frame-trong-thang-may/",
+    "https://brandcom.vn/phuong-phap-quang-cao-truyen-thong-van-con-huu-ich/",
+    "http://quangcaongoaitroi.com/cong-cu-marketing-truyen-thong-van-chua-loi-thoi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo facebook nhanh",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "miccreative.vn",
+    "peakagency.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/quang-cao-facebook-xet-duyet-lau/",
+    "https://peakagency.vn/cach-chan-quang-cao-facebook/",
+    "https://miccreative.vn/cach-tao-tai-khoan-quang-cao-facebook/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên tàu",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/bang-gia-quang-cao-tren-tau-cao-cap-bac-nam/",
+    "http://quangcaongoaitroi.com/hieu-qua-doc-dao-la-nhung-tu-danh-cho-quang-cao-tren-tau-hoa/",
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-tau-cat-linh-ha-dong-tiem-nang-truyen-thong-ooh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng bá doanh nghiệp",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-bao-dang/",
+    "https://seovip.vn/cach-quang-ba-doanh-nghiep",
+    "https://brandcom.vn/loi-ich-quang-ca-banner-trong-quang-ba-doanh-nghiep/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking kol",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "peakagency.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://peakagency.vn/dich-vu-booking-kol/",
+    "https://www.butvangcorp.com/giai-phap-booking-kol-koc/",
+    "https://brandcom.vn/bang-gia-kol-viet-nam-va-dich-vu-booking-kol-marketing-tron-goi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo nổi bật",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/content-ban-hang-hay/",
+    "https://brandcom.vn/top-5-xu-huong-quang-cao-noi-bat-bat-kip-xu-the-2024/",
+    "http://quangcaongoaitroi.com/euroha-quang-ba-thuong-hieu-voi-billboard-quang-cao-noi-bat/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng kí",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "hapodigital.com",
+    "miccreative.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/dmca-la-gi/",
+    "https://wifim.vn/dang-ky-google-maps/",
+    "https://miccreative.vn/content-id-youtube/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo tạp",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 53,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/bang-gia-tap-chi-elle/",
+    "https://brandcom.vn/bao-gia-quang-cao-tap-chi-vetter/",
+    "https://brandcom.vn/bang-gia-quang-cao-tap-chi-gf-2015/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên cầu",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 42,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-cau-vuot-di-bo/",
+    "https://brandcom.vn/quang-cao-tren-cau-vuot-di-bo-to-huu/",
+    "https://brandcom.vn/quang-cao-tren-cau-vuot-di-bo-xa-dan/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên tạp",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 38,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/cach-quang-cao-tren-tap-chi/",
+    "https://brandcom.vn/quang-cao-tren-tap-chi-bazaar/",
+    "https://brandcom.vn/quang-cao-tren-tap-chi-vetter/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo thang máy",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 34,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-thang-may/",
+    "https://brandcom.vn/quang-cao-thang-may-goldsun/",
+    "https://brandcom.vn/quang-cao-thang-may-chicilon/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trực tuyến",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 24,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-quang-cao-doanh-nghiep/",
+    "https://brandcom.vn/quang-cao-radio-song-dai-song-ngan/",
+    "https://brandcom.vn/quang-cao-truc-tuyen-su-dich-chuyen-thong-minh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng bài viết pr",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 13,
+   "trang_doi_thu_mau": [
+    "https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-tiin-vn.html",
+    "https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-zing-vn.html",
+    "https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-vnexpress.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo wifi marketing",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 12,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-wifi-marketing-ngoai-troi/",
+    "https://brandcom.vn/cac-hinh-thuc-quang-cao-wifi-marketing/",
+    "https://brandcom.vn/nhung-luu-y-khi-quang-cao-wifi-marketing/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trong thang",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 10,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-trong-thang-may/",
+    "https://tindimedia.vn/loi-ich-quang-cao-trong-thang-may/",
+    "https://brandcom.vn/quang-cao-trong-thang-may-tai-ha-noi-tp-hcm/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo google adwords",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-google-adwords-la-gi/",
+    "https://brandcom.vn/thiet-lap-chien-dich-quang-cao-google-adwords/",
+    "https://brandcom.vn/thuat-ngu-can-biet-trong-quang-cao-google-adwords/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trong siêu",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/chi-phi-quang-cao-trong-sieu-thi/",
+    "https://brandcom.vn/dich-vu-quang-cao-trong-sieu-thi/",
+    "https://brandcom.vn/bang-gia-quang-cao-trong-sieu-thi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông khác",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/so-sanh-quang-cao-cua-thang-may/",
+    "https://brandcom.vn/chien-luoc-truyen-thong-marketing-hieu-qua-2/",
+    "https://brandcom.vn/30-y-tuong-tao-ra-cau-chuyen-bao-chi-quan-tam/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo ấn tượng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/11-bien-quang-cao-an-tuong/",
+    "https://brandcom.vn/quang-cao-chong-chan-cho-tram-cho-xe-bus/",
+    "https://brandcom.vn/diem-danh-nhung-quang-cao-an-tuong-nhat-nam-2018/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên đài",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-tren-dai-phat-thanh/",
+    "https://tindimedia.vn/quang-cao-tren-dai-phat-thanh/",
+    "https://brandcom.vn/10-ly-do-nen-quang-cao-tren-dai-phat-thanh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông quảng cáo",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/5-yeu-to-quan-trong-trong-truyen-thong-quang-cao/",
+    "https://brandcom.vn/ooh-xu-huong-truyen-thong-quang-cao-hieu-qua-cao/",
+    "https://brandcom.vn/thuat-ngu-cpa-trong-nganh-truyen-thong-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo mà",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 8,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/luu-y-ve-hinh-anh-quang-cao/",
+    "https://brandcom.vn/quang-cao-trong-thang-may-ban-can-biet-nhung-gi/",
+    "https://brandcom.vn/quy-dinh-ve-quang-cao-tren-xe-buyt-cho-doanh-nghiep/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên phương",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 8,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/an-pham-quang-cao-la-gi/",
+    "https://tindimedia.vn/quang-cao-xe-buyt-taxi-hieu-qua/",
+    "https://brandcom.vn/quy-dinh-ve-quang-cao-tren-xe-buyt-cho-doanh-nghiep/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền tải thông điệp",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 8,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-radio-tiep-thi-tu-loi-noi/",
+    "https://brandcom.vn/logo-cung-co-anh-huong-toi-quyet-dinh-mua-hang/",
+    "https://brandcom.vn/5-bi-quyet-tao-nen-an-tuong-lau-dai-cho-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo lcd frame",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 7,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-quang-cao-lcd-frame/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-lcd-frame/",
+    "https://brandcom.vn/quang-cao-lcd-frame-tai-trung-tam-thuong-mai/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu hút sự chú",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 7,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-san-bay-tan-son-nhat-2/",
+    "https://brandcom.vn/nhung-cau-hoi-ve-quang-cao-phat-thanh/",
+    "https://brandcom.vn/10-ly-do-doanh-nghiep-nen-quang-cao-tren-tap-chi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo phổ biến",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 7,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/uu-nhuoc-diem-cua-cac-hinh-thuc-quang-cao-pho-bien/",
+    "https://brandcom.vn/nhung-loai-hinh-quang-cao-pho-bien-nhat-nam-2020-p1/",
+    "https://brandcom.vn/nhung-loai-hinh-quang-cao-pho-bien-nhat-nam-2020-p2/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền hình trên",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 7,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/tat-tan-tat-ve-tvc-quang-cao-truyen-hinh-va-lcd-frame/",
+    "https://brandcom.vn/bao-gia-quang-cao-truyen-hinh-tren-kenh-truyen-hinh-dong-nai-1/",
+    "https://tindimedia.vn/dich-vu/quang-cao-truyen-hinh-tren-htv-dai-truyen-hinh-tphcm/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "phòng khám",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "peakagency.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 7,
+   "trang_doi_thu_mau": [
+    "https://seovip.vn/dich-vu-seo-website-phong-kham/",
+    "https://peakagency.vn/dich-vu-thiet-ke-website-benh-vien/",
+    "https://seovip.vn/san-pham/theme-wordpress-benh-vien-phong-kham/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/case-study/pr-ra-mat-phong-kham-da-khoa-quoc-te-h-plus/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 1,
+   "nguon": "cả hai"
+  },
+  {
+   "seed": "đăng bài trên",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://miccreative.vn/cach-dang-bai-tren-google/",
+    "https://miccreative.vn/cach-xem-ngay-dang-bai-tren-web/",
+    "https://brandcom.vn/chi-phi-dang-bai-tren-bao-giay-brandcom/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo báo giấy",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-quang-cao-bao-giay/",
+    "https://brandcom.vn/quang-cao-bao-in-trong-mua-bao/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-bao-giay/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu nhập",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/digital-frame-la-gi/",
+    "https://brandcom.vn/quang-cao-radio-song-dai-song-ngan/",
+    "https://brandcom.vn/5-meo-thu-am-quang-cao-thu-hut-thinh-gia/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo tấm lớn",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/6-luu-y-khi-chon-quang-cao-tam-cao/",
+    "https://brandcom.vn/top-5-loai-bien-quang-cao-ngoai-troi-hang-dau-tren-thi-truong/",
+    "http://quangcaongoaitroi.com/ung-dung-chat-lieu-sequin-tren-bien-quang-cao-tam-lon/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo pano billboard",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "http://quangcaongoaitroi.com/ooh-quang-cao-tren-pano-billboard/",
+    "http://quangcaongoaitroi.com/yeu-giup-lam-tang-hieu-qua-cua-quang-cao-pano/",
+    "http://quangcaongoaitroi.com/pano-quang-cao-ruc-ro-cua-vinmart-an-tam-mua-sam-moi-ngay/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo pr",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/viet-bai-pr-quang-cao/",
+    "https://brandcom.vn/viet-bai-pr-cho-su-kien/",
+    "https://brandcom.vn/xay-dung-chien-dich-pr-theo-huong-brand-journalism/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo kỹ thuật",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-ooh-tiem-nang-mo-nam-2020/",
+    "https://brandcom.vn/toi-uu-quang-cao-ky-thuat-so-voi-ma-qr-codes/",
+    "https://brandcom.vn/nganh-nao-quang-cao-truc-tuyen-nhieu-nhat-tai-viet-nam/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo tvc",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-quang-cao-doanh-nghiep/",
+    "https://brandcom.vn/quang-cao-tvc-man-hinh-sau-ghe-may-bay-hieu-qua/",
+    "https://brandcom.vn/tat-tan-tat-ve-tvc-quang-cao-truyen-hinh-va-lcd-frame/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking quảng cáo truyền",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/booking-quang-cao-truyen-hinh/",
+    "https://www.butvangcorp.com/dich-vu-booking-quang-cao-truyen-hinh/",
+    "https://brandcom.vn/booking-quang-cao-truyen-hinh-uy-tin-tai-ha-noi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng bá hình ảnh",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-tren-xe-bus-voi-khoang-cach-giua-tay-va-ta/",
+    "https://brandcom.vn/5-cach-quang-cao-truyen-thong-giup-ban-tiep-can-khach-hang-tot-nhat/",
+    "https://brandcom.vn/dich-vu-viet-bai-pr-brandcom-lua-chon-thong-minh-nang-tam-doanh-nghiep/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo thương",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-thuong-hieu-la-gi/",
+    "https://tindimedia.vn/5-luu-y-khi-lua-chon-kenh-radio/",
+    "https://brandcom.vn/10-ly-do-doanh-nghiep-nen-quang-cao-tren-tap-chi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông online",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://ecpmedia.vn/ecp-media.html",
+    "https://ecpmedia.vn/phong-truyen-thong-online-dong-hanh.html",
+    "https://ecpmedia.vn/dich-vu-truyen-thong-online-tron-goi.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo thu hút",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/nhung-quang-cao-thu-hut-an-tuong/",
+    "https://brandcom.vn/quang-cao-ooh-tiem-nang-mo-nam-2020/",
+    "https://brandcom.vn/5-meo-thu-am-quang-cao-thu-hut-thinh-gia/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo bất động",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/uu-diem-quang-cao-bat-dong-san-tren-bao-chi/",
+    "https://www.butvangcorp.com/quang-cao-bat-dong-san-tren-truyen-hinh/",
+    "https://brandcom.vn/7-loi-ich-quang-cao-bat-dong-san-tren-bao-chi-hien-nay-can-biet/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo phướn",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/phuon-bang-ron-khai-truong/",
+    "https://tindimedia.vn/quang-cao-phuon-ngoai-troi/",
+    "https://brandcom.vn/quang-cao-phuon-tren-toan-quoc-voi-brandcom/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên máy",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/book-quang-cao-tren-may-bay-bamboo/",
+    "https://brandcom.vn/quang-cao-tren-may-bay-viet-nam-airlines/",
+    "https://brandcom.vn/cac-loai-hinh-quang-cao-tren-may-bay-vietjet/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng trường thời đại",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-ngoai-troi-sieu-sang-tao/",
+    "https://brandcom.vn/nhung-dia-diem-quang-cao-dat-do-nhat-the-gioi/",
+    "https://brandcom.vn/6-quang-cao-ngoai-troi-ap-dung-ki-thuat-so-noi-bat/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo đầu tiên",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/lich-su-cua-bang-quang-cao-dau-tien/",
+    "https://brandcom.vn/quang-cao-tren-bao-chi-cu-nhung-khong-toi/",
+    "https://miccreative.vn/openai-tung-chien-dich-quy-mo-lon-cho-chatgpt/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo điện",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/banner-quang-cao-dien-thoai/",
+    "https://brandcom.vn/nhung-dia-diem-quang-cao-dat-do-nhat-the-gioi/",
+    "https://brandcom.vn/su-dung-quang-cao-ngoai-troi-de-thu-hut-su-chu-y-cho-doanh-nghiep/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng bài pr quảng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/bao-gia-dang-bai-pr-tren-bao-dan-tri/",
+    "https://hapodigital.com/bang-gia-dang-bai-pr-tren-bao-dien-tu-24h/",
+    "https://brandcom.vn/chi-phi-dang-bai-pr-quang-cao-tren-bao-dien-tu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo toàn",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/chi-tieu-nganh-quang-cao-toan-cau-nam-2018/",
+    "https://brandcom.vn/vi-sao-cac-nhan-hang-tieu-dung-siet-hau-bao-quang-cao/",
+    "http://quangcaongoaitroi.com/youtube-doi-mat-voi-mot-cuoc-tay-chay-quang-cao-toan-dien/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trong thời",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://miccreative.vn/thue-quan-my-va-chien-luoc-quang-cao/",
+    "https://brandcom.vn/gia-tri-cua-quang-cao-khi-ra-mat-san-pham/",
+    "https://brandcom.vn/lich-su-nganh-quang-cao-ngoai-troi-outdoor-advertising/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông tổng thể",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/vai-tro-cua-pr-trong-chien-luoc-truyen-thong-tong-the/",
+    "https://www.butvangcorp.com/dich-vu-xay-dung-ke-hoach-truyen-thong-tong-the/",
+    "https://www.butvangcorp.com/dich-vu/giai-phap-truyen-thong-tong-the-sau-sap-nhap/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo doanh nghiệp",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-quang-cao-doanh-nghiep/",
+    "https://brandcom.vn/thu-tuc-xin-giay-phep-quang-cao-ngoai-troi/",
+    "https://www.butvangcorp.com/phim-quang-cao-doanh-nghiep-vietstar/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo poster frame",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-poster-frame-trong-thang-may/",
+    "https://tindimedia.vn/dich-vu/quang-cao-poster-frame-trong-thang-may/",
+    "https://brandcom.vn/bang-gia-quang-cao-poster-frame-trong-thang-may-hcm/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo radio tỉnh",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-radio-tinh-binh-duong/",
+    "https://radiovietnam.com.vn/quang-cao-radio-tinh-son-la-a863.html",
+    "https://radiovietnam.com.vn/quang-cao-radio-tinh-lang-son-a880.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo led ngoài",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-led-ngoai-troi/",
+    "https://tindimedia.vn/quang-cao-led-ngoai-troi-dooh/",
+    "https://tindimedia.vn/quang-cao-led-ngoai-troi-vs-pano-truyen-thong/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên google",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/tai-sao-nen-quang-cao-tren-google/",
+    "https://miccreative.vn/cach-tat-quang-cao-tren-google-chrome/",
+    "https://brandcom.vn/huong-dan-su-dung-google-keyword-planner-de-chon-tu-khoa-quang-cao-tren-google/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên lcd",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/5957-2/",
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-lcd-thang-may/",
+    "https://brandcom.vn/quang-cao-lcd-frame-tai-trung-tam-thuong-mai/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông mạng xã",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/7-nguyen-tac-vang-khi-quang-cao-tren-mang-xa-hoi/",
+    "http://quangcaongoaitroi.com/tan-dung-cong-cu-truyen-thong-mang-xa-hoi/",
+    "https://brandcom.vn/10-xu-huong-truyen-thong-mang-xa-hoi-dang-chu-y-nhat/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo ngắn",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/ky-nguyen-cua-quang-cao-sau-giay/",
+    "https://brandcom.vn/di-tim-chien-luoc-cho-nhung-quang-cao-ngan-han/",
+    "https://radiovietnam.com.vn/cach-lam-video-quang-cao-ngan-15s-an-tuong-tren-tiktok-facebook-a1104.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo đạt",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "http://quangcaongoaitroi.com/quang-cao-lam-sao-cho-hieu-qua/",
+    "https://brandcom.vn/gia-tri-cua-quang-cao-khi-ra-mat-san-pham/",
+    "https://brandcom.vn/lam-the-nao-toi-uu-hieu-qua-khi-lam-banner-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông tích",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/imc-nhung-cong-cu-truyen-thong-tich-hop-marketer-can-biet/",
+    "https://brandcom.vn/quang-cao-tren-bao-mang-cach-lam-ra-sao-va-hieu-qua-the-nao/",
+    "https://brandcom.vn/tam-quan-trong-cua-quang-cao-trong-chien-dich-truyen-thong-tich-hop-imc/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo báo mạng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/bang-gia/bang-gia-quang-cao-bao-mang/",
+    "https://brandcom.vn/nang-cao-hieu-qua-quang-cao-tren-bao-mang/",
+    "https://brandcom.vn/mua-le-tet-den-roi-quang-cao-bao-mang-tao-uy-tin-tang-doanh-so/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo độc",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/tan-dung-cac-y-tuong-quang-cao-doc-la-cho-thuong-hieu/",
+    "https://tindimedia.vn/maquette-la-gi-tips-thiet-ke-maquette-quang-cao-doc-dao/",
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-he-thong-buyt-dien-cua-vinbus-nang-tam-thuong-hieu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu hút độc giả",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "itify.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/content-ideas-la-gi/",
+    "https://brandcom.vn/phat-trien-bao-chi-truyen-thong-da-phuong-tien-thu-hut-quang-cao/",
+    "https://itify.vn/content-angle-la-gi-huong-dan-xac-dinh-content-angle-dung-cach-de-thu-hut-doc-gia/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông tết",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/truyen-thong-tet-va-3-bai-hoc-tu-cac-chien-dich-gianh-giai-thuong/",
+    "https://brandcom.vn/dieu-gi-giup-doanh-nghiep-khac-biet-trong-cuoc-chien-truyen-thong-tet-2020/",
+    "http://quangcaongoaitroi.com/quang-cao-tren-taxi-dong-hanh-cung-chien-dich-truyen-thong-tet-cua-mi-cung-dinh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền cảm",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-radio-tiep-thi-tu-loi-noi/",
+    "https://brandcom.vn/vi-sao-quang-cao-tren-tap-chi-luon-mang-lai-hieu-qua-cao/",
+    "https://radiovietnam.com.vn/thu-am-bai-giang-online-khoa-hoc-elearning-a1041.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trung",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/ambient-advertising-quang-cao-ma-khong-phai-quang-cao/",
+    "https://brandcom.vn/quang-cao-trung-tam-tieng-anh-tren-bao-chi-voi-brandcom/",
+    "https://radiovietnam.com.vn/thu-am-phat-loa-quang-cao-trung-thu-du-an-chong-vanh-nhung-ket-qua-vuot-mong-doi-a1103.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên loa",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-loa-phat-thanh-phuong-xa/",
+    "https://brandcom.vn/nhung-luu-y-khi-quang-cao-tren-loa-phat-thanh/",
+    "https://tindimedia.vn/dich-vu/quang-cao-loa-phat-thanh-hieu-qua-va-tiep-can-rong-lon/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo dịp tết",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/thu-am-quang-cao-phat-loa-tet-a1042.html",
+    "https://brandcom.vn/xay-dung-thong-diep-an-tuong-cho-quang-cao-dip-tet/",
+    "https://brandcom.vn/quang-cao-dip-tet-cach-toi-uu-hoa-ngan-sach-va-hieu-qua/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo lightbox",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "http://quangcaongoaitroi.com/chien-dich-quang-cao-lightbox-cua-rita-vo-pro/",
+    "https://brandcom.vn/quang-cao-lightbox-thu-hut-khach-hang-tang-doanh-so-ban-hang/",
+    "http://quangcaongoaitroi.com/quang-cao-lightbox-dang-cap-cua-swisstouches-laluna-resort-tai-san-bay/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng ngãi",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "radiovietnam.com.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://seovip.vn/dich-vu-seo-tai-quang-ngai/",
+    "https://radiovietnam.com.vn/dai-pt-th-quang-ngai.html",
+    "https://radiovietnam.com.vn/quang-cao-loa-phat-thanh-tinh-quang-ngai-a859.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking quảng cáo radio",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/quang-cao-radio-bvad-agency/",
+    "https://radiovietnam.com.vn/booking-quang-cao-radio-a344.html",
+    "https://radiovietnam.com.vn/tai-sao-nen-chon-radio-ad-lam-don-vi-booking-quang-cao-radio-a914.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo biển chợ",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-bien-cho/",
+    "http://quangcaongoaitroi.com/quang-cao-bien-cho-cua-nuoc-cham-ashimi-tai-cho-buoi/",
+    "http://quangcaongoaitroi.com/mamamy-va-du-an-quang-cao-bien-cho-quy-mo-tai-sai-gon/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo facebook đúng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "miccreative.vn",
+    "peakagency.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://miccreative.vn/nap-tien-quang-cao-facebook/",
+    "https://peakagency.vn/cach-viet-bai-quang-cao-facebook/",
+    "https://miccreative.vn/cach-kiem-tra-tai-khoan-quang-cao-facebook/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo facebook trên",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "miccreative.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/tat-quang-cao-facebook/",
+    "https://miccreative.vn/thanh-toan-quang-cao-facebook/",
+    "https://miccreative.vn/nap-tien-quang-cao-facebook-bang-momo/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên youtube",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/cac-hinh-thuc-quang-cao-tren-youtube/",
+    "https://miccreative.vn/cac-hinh-thuc-quang-cao-tren-youtube/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu cùng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/dich-vu-marketing-nganh-fb/",
+    "https://brandcom.vn/quang-cao-truc-tuyen-ap-dao-quang-cao-truyen-hinh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền miệng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/marketing-truyen-mieng-la-gi/",
+    "https://brandcom.vn/10-ly-do-doanh-nghiep-nen-quang-cao-tren-tap-chi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông cho doanh",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/xu-ly-khung-hoang-truyen-thong/",
+    "https://brandcom.vn/de-dang-truyen-thong-thuong-hieu-voi-billboard-quang-cao-ngoai-troi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo billboard pano",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "http://quangcaongoaitroi.com/kinh-nghiem-chon-agency-quang-cao-billboard-pano/",
+    "https://brandcom.vn/mach-ban-cach-chon-agency-quang-cao-billboard-pano-cho-doanh-nghiep/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông ấn tượng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "http://quangcaongoaitroi.com/hieu-qua-cua-quang-cao-tren-taxi/",
+    "https://brandcom.vn/quang-cao-billboard-tai-ha-noi-truyen-thong-an-tuong-va-manh-me/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo mỹ phẩm",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-my-pham-tren-bao-chi-to-roi/",
+    "https://www.butvangcorp.com/phim-quang-cao-my-pham-she-walks-in-beauty/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên vina",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-quang-cao-tren-vina-taxi/",
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-vinataxi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo thực phẩm",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/tvc-quang-cao-thuc-pham-chuc-nang-cellyva-mkp/",
+    "https://brandcom.vn/quang-cao-thuc-pham-chuc-nang-nhu-the-nao-de-khong-bi-phat/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu hút ánh nhìn",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/thiet-ke-bien-quang-cao-ngoai-troi-7-luu-y/",
+    "https://brandcom.vn/top-20-quang-cao-chong-chan-cho-tram-cho-xe-bus-p1/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo đa",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "peakagency.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://peakagency.vn/dich-vu-quang-cao-da-nen-tang/",
+    "https://brandcom.vn/quang-cao-da-phuong-tien-v-doi-thoai-tren-dien-thoai-di-dong/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo lố",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://miccreative.vn/cam-quang-cao-lo-my-pham/",
+    "https://brandcom.vn/lam-truyen-thong-gioi-co-can-nhung-ky-nang-cua-nguoi-lam-bao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo đứng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/bien-quang-cao-dung-hieu-qua-va-kinh-nghiem-trien-khai/",
+    "https://brandcom.vn/nghe-thuat-viet-bai-pr-bao-chi-quang-cao-dung-tren-vai-ke-khong-lo/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo miễn phí",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://miccreative.vn/chay-quang-cao-mien-phi-tren-google/",
+    "https://brandcom.vn/brandcom-huong-dan-pr-bat-dong-san-tren-bao-dien-tu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng nhập",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://miccreative.vn/adsense-dang-nhap/",
+    "https://brandcom.vn/cuoc-chay-dua-cua-facebook-va-bao-chi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo tã",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-trung-dich/",
+    "https://www.butvangcorp.com/tvc-quang-cao-ta-dan-nguoi-lon-sun-mate/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo ưu",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-trung-dich/",
+    "https://hapodigital.com/bang-gia-dang-bai-pr-tren-bao-dien-tu-zing-vn/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo frame thang",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-frame-thang-may/",
+    "https://brandcom.vn/project-quang-cao-frame-thang-may-cho-ngan-hang-vietcombank/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo cpd trên",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-cpd-tren-bao-dien-tu/",
+    "https://brandcom.vn/tai-sao-nen-lua-chon-hinh-thuc-quang-cao-cpd-tren-bao-dien-tu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông thế",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/loi-ich-quang-cao-trong-thang-may/",
+    "https://brandcom.vn/xu-huong-bao-chi-truyen-thong-the-gioi-tuong-tac-hon-da-dang-hon/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng bài lên",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-dang-bao-dien-tu-va-cach-dang-bai-len-bao-dien-tu/",
+    "https://tindimedia.vn/dich-vu/dich-vu-dang-bai-va-cach-dang-bai-len-bao-dien-tu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông nổi bật",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "http://quangcaongoaitroi.com/chien-dich-truyen-thong-cua-uber/",
+    "https://brandcom.vn/merry-christmas-voi-cac-chien-dich-truyen-thong-noi-bat-nam-2020/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu voice",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/mau-giong-thu-voice-quang-cao-vov/",
+    "https://www.butvangcorp.com/dich-vu/giong-am-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên xone",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-xone-fm-lan-toa-thuong-hieu-rong-rai/",
+    "https://brandcom.vn/xone-fm-va-quang-cao-tren-xone-fm-mang-lai-loi-ich-cho-thuong-hieu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền thông nội bộ",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/truyen-thong-noi-bo/",
+    "https://brandcom.vn/lua-chon-kenh-truyen-thong-noi-bo-hieu-qua-cho-doanh-nghiep/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "truyền hình vtv",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-truyen-hinh-vtv/",
+    "https://brandcom.vn/gia-quang-cao-truyen-hinh-vtv-moi-nhat-2022/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo báo đầu",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/bang-gia-quang-cao-bao-dau-tu/",
+    "https://brandcom.vn/bang-gia-quang-cao-bao-dau-tu-bat-dong-san/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "loa phát thanh phường",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-loa-phat-thanh-phuong-xa/",
+    "https://brandcom.vn/quang-cao-loa-phat-thanh-phuong-xa-va-nhung-dieu-can-biet/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo wifi sân",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-wifi-san-bay-va-sang-tao/",
+    "https://brandcom.vn/quang-cao-wifi-san-bay-tren-toan-quoc/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu hút người xem",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/nhung-bien-quang-cao-billboard-sang-tao-danh-cho-nguoi-thich-ngam/",
+    "https://radiovietnam.com.vn/7-y-tuong-lam-video-quang-cao-san-pham-doc-dao-thu-hut-nguoi-xem-a1102.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo hộp đèn",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/bien-quang-cao-hop-den-light-box-va-nhung-dieu-can-biet/",
+    "http://quangcaongoaitroi.com/bien-quang-cao-hop-den-swequity-ultimate-fitness/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên thời",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-tren-thoi-bao-viet-han-vietnam-korea-times/",
+    "https://ecpmedia.vn/bang-gia-quang-cao-tren-thoi-bao-kinh-te-viet-nam.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo mang lại",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-tai-san-bay-noi-bai-xu-huong-quang-cao-mang-lai-gia-tri-lon/",
+    "https://radiovietnam.com.vn/goi-y-cach-san-xuat-video-quang-cao-mang-lai-hieu-qua-ban-hang-a1108.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo website",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/dich-vu-toplist-review/",
+    "https://brandcom.vn/quang-cao-website-tren-zalo-ads/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo zalo ads",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/dich-vu/quang-cao-zalo-ads/",
+    "https://brandcom.vn/quang-cao-zalo-ads-va-cac-hinh-thuc-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo báo lao",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/bao-gia-quang-cao-bao-lao-dong/",
+    "https://hapodigital.com/bang-gia-quang-cao-bao-lao-dong/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng bình",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "radiovietnam.com.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://seovip.vn/dich-vu-seo-tai-quang-binh/",
+    "https://radiovietnam.com.vn/dai-pt-th-quang-binh.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo nước",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/tvc-quang-cao-nuoc-mam-hoang-gia/",
+    "https://radiovietnam.com.vn/10-mau-thu-am-quang-cao-nuoc-giat-cuc-thu-hut-a1055.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên voh",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-voh-cua-dai-tieng-noi-nhan-dan-tp-hcm/",
+    "https://radiovietnam.com.vn/quang-cao-tren-voh3-fm-956-mhz-giao-thong-do-thi-a996.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking quảng cáo vov",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/vov-thoi-su/",
+    "https://radiovietnam.com.vn/ban-kinh-phu-song-cua-vov-giao-thong-ha-noi-va-thanh-pho-hcm-nhu-the-nao-a619.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên vtv",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-tren-vtv/",
+    "https://hapodigital.com/bang-gia-dang-bai-pr-tren-bao-vtv-vn/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo trên đường",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "quangcaongoaitroi.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/billboard-quang-cao-tren-duong-cao-toc/",
+    "http://quangcaongoaitroi.com/lazada-va-chien-dich-treo-banner-quang-cao-tren-duong-pho-ha-noi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo tiktok ads",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "peakagency.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://peakagency.vn/hinh-thuc-quang-cao-tiktok/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-tiktok/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng facebook",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "peakagency.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/thiet-ke-bai-dang-facebook/",
+    "https://peakagency.vn/kich-thuoc-anh-dang-facebook/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking kol koc",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "peakagency.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://peakagency.vn/dich-vu-booking-kol/",
+    "https://www.butvangcorp.com/giai-phap-booking-kol-koc/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo shopee",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "peakagency.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://peakagency.vn/dich-vu-quang-cao-shopee/",
+    "https://seovip.vn/dich-vu-chay-quang-cao-shopee-ads-cac-san-thuong-mai-dien-tu/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo youtube ads",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "peakagency.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://peakagency.vn/dich-vu-quang-cao-youtube/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-youtube/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo gdn",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "miccreative.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://miccreative.vn/google-display-network-la-gi/",
+    "https://www.butvangcorp.com/quang-cao-google-display-network-gdn/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo facebook thu",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "miccreative.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/thiet-ke-anh-quang-cao-facebook/",
+    "https://miccreative.vn/cach-thiet-ke-hinh-anh-va-video-quang-cao-facebook/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu hút hàng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "ecpmedia.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/thiet-ke-website-me-va-be/",
+    "https://ecpmedia.vn/thu-hut-hang-ty-luot-tiep-can-nho-bo-phim-fake.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "phòng phẩm",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "hapodigital.com",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/thiet-ke-website-van-phong-pham/",
+    "https://seovip.vn/san-pham/theme-wordpress-ban-sach-van-phong-pham-02/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "đăng ký website",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "seovip.vn",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://seovip.vn/dang-ky-website-voi-bo-cong-thuong/",
+    "https://wifim.vn/quy-trinh-thong-bao-va-dang-ky-website-voi-bo-cong-thuong/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "thu hút mọi",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "itify.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/content-8-3/",
+    "https://tindimedia.vn/dich-vu/quang-cao-man-hinh-led-trong-nha-giup-tao-ra-hieu-ung-truyen-thong-cao-thu-hut-moi-anh-nhin/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo đài voh",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-dai-voh/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-dai-voh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "quảng cáo ngân",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "wifim.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://wifim.vn/ngan-sach-chay-quang-cao/",
+    "https://www.butvangcorp.com/tvc-quang-cao-ngan-hang-bidv-2d-motiongraphic/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ"
+  },
+  {
+   "seed": "booking báo pr",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "itify.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/dich-vu-booking-bao-pr/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/category/booking-bao-pr/",
+   "dang_trang_minh": "danh-muc",
+   "so_trang_minh": 7,
+   "nguon": "cả hai"
+  }
+ ]
+}

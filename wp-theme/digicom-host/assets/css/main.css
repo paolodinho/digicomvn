@@ -381,7 +381,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .svc-link .svc-ico{width:42px;height:42px;border-radius:12px;background:rgba(71,97,255,.12);
   color:var(--action);display:flex;align-items:center;justify-content:center}
 .svc-link .svc-ico svg{width:22px;height:22px}
-.svc-link h3{margin:2px 0 0;font-family:var(--font-display);font-size:16px;color:var(--heading);line-height:1.25}
+.svc-link h3,.svc-link h4{margin:2px 0 0;font-family:var(--font-display);font-size:16px;color:var(--heading);line-height:1.25}
 .svc-link p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.5}
 .svc-link .svc-more{margin-top:auto;padding-top:2px;font-size:13px;font-weight:700;color:var(--action)}
 .svc-link-hub{background:rgba(14,140,127,.06);border-color:rgba(14,140,127,.28)}
@@ -389,6 +389,15 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .svc-link-hub .svc-more{color:var(--teal)}
 @media(max-width:900px){.svc-links{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.svc-links{grid-template-columns:1fr}}
+/* Trang chu 2026-10-24: 2 nhom dich vu, moi nhom 3 cot (khong le the hang cuoi) */
+.svc-grp+.svc-grp{margin-top:36px}
+.svc-grp-h{margin:0 0 14px;font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.svc-links-3{grid-template-columns:repeat(3,1fr)}
+.svc-core .svc-link{background:rgba(14,140,127,.05);border-color:rgba(14,140,127,.26)}
+.svc-core .svc-link .svc-ico{background:rgba(14,140,127,.14);color:var(--teal)}
+.svc-core .svc-link h4{font-size:17px}
+@media(max-width:900px){.svc-links-3{grid-template-columns:repeat(2,1fr)}.svc-core{grid-template-columns:1fr}}
+@media(max-width:520px){.svc-links-3{grid-template-columns:1fr}}
 
 /* ==========================================================================
    Reasons (band navy)

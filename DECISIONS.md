@@ -1,5 +1,19 @@
 # DECISIONS - digicomvn.com
 
+## 2026-10-24 (chiều) - Dịch vụ ngoài chủ đề: site riêng mang tên Digicom
+- Hiếu giao Claude tự quyết, yêu cầu giữ chữ "digicom" để khách nhận ra.
+- digicomvn.com giữ 2 trụ: booking truyền thông + link từ báo. Không làm trang SEO tổng thể, Ads, tên miền, hosting.
+- SEO tổng thể/GEO/audit -> site riêng digicomseo.vn; Google Ads/Facebook Ads -> digicomads.vn. Chỉ mua + dựng khi có người làm và case thật; trước đó nhận qua dòng "Dịch vụ khác".
+- Tên miền/hosting: không bán (cần làm đại lý nhà đăng ký VNNIC + hỗ trợ kỹ thuật 24/7, lệch hẳn chủ đề). Khách cần thì giới thiệu nhà cung cấp.
+- Bảo vệ thương hiệu: mua thêm digicomvn.vn + digicomvn.com.vn, 301 về digicomvn.com. (digicom.vn đã có người đăng ký, NS inet.vn.)
+- KHÔNG gộp 9 chuyên mục SEO bây giờ: khi digicomseo.vn chạy thì chuyển thẳng 74 bài SEO chung sang đó bằng 301 1 bước, tránh 2 lần đổi URL (chuỗi 301).
+- Căn cứ: Google Creating helpful content ("primary purpose or focus"); Mueller: subdomain có thể bị coi là site riêng hoặc không tuỳ tín hiệu, nên không dùng subdomain để tách chủ đề; GSC 90 ngày: SEO chung 5% click, PR 79%.
+
+## 2026-10-24 - Cô đặc topic: booking truyền thông + link từ báo
+- Hiếu duyệt hướng cô đặc: site chỉ gồm 2 nhóm "Booking truyền thông" (báo PR, truyền hình, phát thanh) và "Link từ báo & site uy tín" (textlink, guest post, backlink, social entity, backlink quốc tế, toplist).
+- SEO tổng thể, Google Ads, Facebook Ads: KHÔNG làm trang, KHÔNG sang domain khác; chỉ 1 dòng "Dịch vụ khác" ở footer + lựa chọn trong form báo giá. Lý do: giữ độ tập trung chủ đề, các dịch vụ này khác intent và không có dữ liệu giá công khai.
+- Mở lại truyền hình + phát thanh (ẩn từ 16/07); loa phường, màn LED vẫn ẩn.
+
 ## 2026-07-24 - Mo rong pham vi hop tac Booking bao & PR
 - Hieu xac nhan Digicom hop tac voi TAT CA bao dien tu tai Viet Nam, khong chi gioi han
   15 dau bao da publish trang con (vnexpress, kenh14, dan-tri, 24h, cafef, vietnamnet,

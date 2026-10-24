@@ -1,0 +1,1096 @@
+{
+ "own": "digicomvn.com",
+ "date": "2026-10-24",
+ "competitors": [
+  {
+   "domain": "brandcom.vn",
+   "serp_keywords": 11,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "seovip.vn",
+   "serp_keywords": 10,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "hapodigital.com",
+   "serp_keywords": 9,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "tindimedia.vn",
+   "serp_keywords": 7,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "peakagency.vn",
+   "serp_keywords": 6,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "ecpmedia.vn",
+   "serp_keywords": 6,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "butvangcorp.com",
+   "serp_keywords": 6,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "wifim.vn",
+   "serp_keywords": 5,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "radiovietnam.com.vn",
+   "serp_keywords": 5,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "miccreative.vn",
+   "serp_keywords": 4,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "quangcaongoaitroi.com",
+   "serp_keywords": 4,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "bookbaopr.vn",
+   "serp_keywords": 3,
+   "source": "top 10 Google đã đo"
+  },
+  {
+   "domain": "itify.vn",
+   "serp_keywords": 3,
+   "source": "top 10 Google đã đo"
+  }
+ ],
+ "crawl": {
+  "brandcom.vn": {
+   "trang": 1500,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 1500
+  },
+  "radiovietnam.com.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 0
+  },
+  "bookbaopr.vn": {
+   "trang": 66,
+   "danh-muc": 6,
+   "san-pham": 0,
+   "bai-viet": 43
+  },
+  "digicomvn.com": {
+   "trang": 212,
+   "danh-muc": 12,
+   "san-pham": 0,
+   "bai-viet": 174
+  },
+  "quangcaongoaitroi.com": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 300
+  },
+  "peakagency.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 281
+  },
+  "miccreative.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 300
+  },
+  "hapodigital.com": {
+   "trang": 261,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 260
+  },
+  "seovip.vn": {
+   "trang": 480,
+   "danh-muc": 0,
+   "san-pham": 366,
+   "bai-viet": 114
+  },
+  "ecpmedia.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 300
+  },
+  "itify.vn": {
+   "trang": 182,
+   "danh-muc": 7,
+   "san-pham": 0,
+   "bai-viet": 150
+  },
+  "tindimedia.vn": {
+   "trang": 300,
+   "danh-muc": 0,
+   "san-pham": 0,
+   "bai-viet": 197
+  },
+  "wifim.vn": {
+   "trang": 300,
+   "danh-muc": 1,
+   "san-pham": 23,
+   "bai-viet": 273
+  },
+  "butvangcorp.com": {
+   "trang": 278,
+   "danh-muc": 2,
+   "san-pham": 20,
+   "bai-viet": 256
+  }
+ },
+ "seeds": [
+  {
+   "seed": "đăng bài pr",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn",
+    "hapodigital.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 38,
+   "trang_doi_thu_mau": [
+    "https://hapodigital.com/quang-cao-thanh-nien/",
+    "https://tindimedia.vn/dang-bai-pr-tren-bao-dien-tu/",
+    "https://hapodigital.com/bang-gia-quang-cao-vietstock/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/booking-bao-pr/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 15,
+   "nguon": "cả hai | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "booking bài pr",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "ecpmedia.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 53,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/",
+    "https://hapodigital.com/bang-bao-gia-tiin-vn/",
+    "https://ecpmedia.vn/bang-gia-dang-bai-pr-tren-bao-eva.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "đăng bài viết pr",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 13,
+   "trang_doi_thu_mau": [
+    "https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-tiin-vn.html",
+    "https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-zing-vn.html",
+    "https://ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-vnexpress.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo pr",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/viet-bai-pr-quang-cao/",
+    "https://brandcom.vn/viet-bai-pr-cho-su-kien/",
+    "https://brandcom.vn/xay-dung-chien-dich-pr-theo-huong-brand-journalism/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "booking báo pr",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "itify.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [
+    "https://itify.vn/dich-vu-booking-bao-pr/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/category/booking-bao-pr/",
+   "dang_trang_minh": "danh-muc",
+   "so_trang_minh": 7,
+   "nguon": "cả hai | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo báo điện tử",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 19,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/bang-gia-quang-cao-bao-dien-tu-vtv/",
+    "https://brandcom.vn/bao-gia-quang-cao-bao-dien-tu-yan-vn/",
+    "https://brandcom.vn/bang-gia-quang-cao-bao-dien-tu-eva-vn/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo báo mạng",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/bang-gia/bang-gia-quang-cao-bao-mang/",
+    "https://brandcom.vn/nang-cao-hieu-qua-quang-cao-tren-bao-mang/",
+    "https://brandcom.vn/mua-le-tet-den-roi-quang-cao-bao-mang-tao-uy-tin-tang-doanh-so/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo truyền hình",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 57,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-truyen-hinh/",
+    "https://brandcom.vn/viet-nam-kenh-quang-cao-nao/",
+    "https://bookbaopr.vn/quang-cao-truyen-hinh-la-gi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "booking quảng cáo truyền hình",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/booking-quang-cao-truyen-hinh/",
+    "https://www.butvangcorp.com/dich-vu-booking-quang-cao-truyen-hinh/",
+    "https://brandcom.vn/booking-quang-cao-truyen-hinh-uy-tin-tai-ha-noi/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo tvc",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 6,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/dich-vu-quang-cao-doanh-nghiep/",
+    "https://brandcom.vn/quang-cao-tvc-man-hinh-sau-ghe-may-bay-hieu-qua/",
+    "https://brandcom.vn/tat-tan-tat-ve-tvc-quang-cao-truyen-hinh-va-lcd-frame/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "truyền hình vtv",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-truyen-hinh-vtv/",
+    "https://brandcom.vn/gia-quang-cao-truyen-hinh-vtv-moi-nhat-2022/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo trên vtv",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "hapodigital.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-tren-vtv/",
+    "https://hapodigital.com/bang-gia-dang-bai-pr-tren-bao-vtv-vn/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo vov",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 19,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/vov-thoi-su/",
+    "https://brandcom.vn/mau-giong-thu-voice-quang-cao-vov/",
+    "https://tindimedia.vn/dich-vu/quang-cao-vov-giao-thong-91mhz/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo trên vov",
+   "so_doi_thu": 5,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "hapodigital.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 15,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-vov/",
+    "https://brandcom.vn/quang-cao-tren-vov-giao-thong/",
+    "https://bookbaopr.vn/quang-cao-tren-vov-giao-thong/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "booking quảng cáo vov",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/vov-thoi-su/",
+    "https://radiovietnam.com.vn/ban-kinh-phu-song-cua-vov-giao-thong-ha-noi-va-thanh-pho-hcm-nhu-the-nao-a619.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo vov giao thông",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 13,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-vov-giao-thong-91mhz/",
+    "https://www.butvangcorp.com/dich-vu/qc-vov-giao-thong-ha-noi/",
+    "https://www.butvangcorp.com/dich-vu/qc-vov-giao-thong-tp-hcm/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo đài voh",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-dai-voh/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-dai-voh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo trên voh",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/dich-vu/quang-cao-tren-voh-cua-dai-tieng-noi-nhan-dan-tp-hcm/",
+    "https://radiovietnam.com.vn/quang-cao-tren-voh3-fm-956-mhz-giao-thong-do-thi-a996.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo radio",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 43,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/",
+    "https://www.butvangcorp.com/quang-cao-radio/",
+    "https://tindimedia.vn/ooh-va-audio-marketing/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo trên radio",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 22,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-tren-radio/",
+    "https://brandcom.vn/quang-cao-tren-radio-hieu-qua/",
+    "https://tindimedia.vn/chi-phi-quang-cao-tren-radio/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo radio tỉnh",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-radio-tinh-binh-duong/",
+    "https://radiovietnam.com.vn/quang-cao-radio-tinh-son-la-a863.html",
+    "https://radiovietnam.com.vn/quang-cao-radio-tinh-lang-son-a880.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "booking quảng cáo radio",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/quang-cao-radio-bvad-agency/",
+    "https://radiovietnam.com.vn/booking-quang-cao-radio-a344.html",
+    "https://radiovietnam.com.vn/tai-sao-nen-chon-radio-ad-lam-don-vi-booking-quang-cao-radio-a914.html"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo phát thanh",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-phat-thanh-vov/",
+    "https://brandcom.vn/nhung-cau-hoi-ve-quang-cao-phat-thanh/",
+    "https://brandcom.vn/5-meo-thu-am-quang-cao-thu-hut-thinh-gia/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "https://digicomvn.com/quang-cao-phat-thanh/",
+   "dang_trang_minh": "trang",
+   "so_trang_minh": 1,
+   "nguon": "cả hai | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo trên đài",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 9,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-tren-dai-phat-thanh/",
+    "https://tindimedia.vn/quang-cao-tren-dai-phat-thanh/",
+    "https://brandcom.vn/10-ly-do-nen-quang-cao-tren-dai-phat-thanh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo đài",
+   "so_doi_thu": 4,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn",
+    "tindimedia.vn"
+   ],
+   "so_trang_doi_thu": 4,
+   "trang_doi_thu_mau": [
+    "https://tindimedia.vn/quang-cao-dai-voh/",
+    "https://www.butvangcorp.com/dich-vu/quang-cao-dai-voh/",
+    "https://brandcom.vn/dai-phat-thanh-hawaii-noi-khong-voi-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "thu âm quảng cáo",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 19,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/",
+    "https://radiovietnam.com.vn/thu-am-quang-cao.html",
+    "https://www.butvangcorp.com/dich-vu/thu-am-quang-cao/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng bá doanh nghiệp",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "bookbaopr.vn",
+    "brandcom.vn",
+    "seovip.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://bookbaopr.vn/quang-cao-bao-dang/",
+    "https://seovip.vn/cach-quang-ba-doanh-nghiep",
+    "https://brandcom.vn/loi-ich-quang-ca-banner-trong-quang-ba-doanh-nghiep/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng bá thương hiệu",
+   "so_doi_thu": 3,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 19,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-trung-dich/",
+    "https://www.butvangcorp.com/tam-quan-trong-cua-pr/",
+    "https://brandcom.vn/quang-cao-xe-taxi-vinasun-tai-tphcm/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo bất động sản trên báo",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 5,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/uu-diem-quang-cao-bat-dong-san-tren-bao-chi/",
+    "https://www.butvangcorp.com/quang-cao-bat-dong-san-tren-truyen-hinh/",
+    "https://brandcom.vn/7-loi-ich-quang-cao-bat-dong-san-tren-bao-chi-hien-nay-can-biet/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo mỹ phẩm trên báo",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/quang-cao-my-pham-tren-bao-chi-to-roi/",
+    "https://www.butvangcorp.com/phim-quang-cao-my-pham-she-walks-in-beauty/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo thực phẩm trên báo",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "butvangcorp.com"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [
+    "https://www.butvangcorp.com/tvc-quang-cao-thuc-pham-chuc-nang-cellyva-mkp/",
+    "https://brandcom.vn/quang-cao-thuc-pham-chuc-nang-nhu-the-nao-de-khong-bi-phat/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "truyền thông tết",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "quangcaongoaitroi.com"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://brandcom.vn/truyen-thong-tet-va-3-bai-hoc-tu-cac-chien-dich-gianh-giai-thuong/",
+    "https://brandcom.vn/dieu-gi-giup-doanh-nghiep-khac-biet-trong-cuoc-chien-truyen-thong-tet-2020/",
+    "http://quangcaongoaitroi.com/quang-cao-tren-taxi-dong-hanh-cung-chien-dich-truyen-thong-tet-cua-mi-cung-dinh/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "quảng cáo dịp tết",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "radiovietnam.com.vn"
+   ],
+   "so_trang_doi_thu": 3,
+   "trang_doi_thu_mau": [
+    "https://radiovietnam.com.vn/thu-am-quang-cao-phat-loa-tet-a1042.html",
+    "https://brandcom.vn/xay-dung-thong-diep-an-tuong-cho-quang-cao-dip-tet/",
+    "https://brandcom.vn/quang-cao-dip-tet-cach-toi-uu-hoa-ngan-sach-va-hieu-qua/"
+   ],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "đối thủ | lọc phạm vi Digicom 24/10"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên tinhte",
+   "so_doi_thu": 2,
+   "doi_thu": [
+    "brandcom.vn",
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 2,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên vietnambiz",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "brandcom.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên ngôi sao",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "brandcom.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên vtc news",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên người đưa tin",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên đời sống và pháp luật",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên dân việt",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên techz",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên kinh tế sài gòn",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên vnreview",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên phụ nữ today",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên tiin",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên hà nội mới",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên diễn đàn doanh nghiệp",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên việt nam mới",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên alobacsi",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên autopro",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên giáo dục thời đại",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên cafeland",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên genk",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  },
+  {
+   "seed": "báo giá đăng bài pr trên yan",
+   "so_doi_thu": 1,
+   "doi_thu": [
+    "ecpmedia.vn"
+   ],
+   "so_trang_doi_thu": 1,
+   "trang_doi_thu_mau": [],
+   "la_danh_muc_doi_thu": [],
+   "trang_minh": "",
+   "dang_trang_minh": "",
+   "so_trang_minh": 0,
+   "nguon": "GAP trang theo đầu báo: đối thủ có, Digicom có giá trong bảng giá nhưng chưa có trang riêng (cần đo volume trước khi làm)"
+  }
+ ],
+ "note": "Đã lọc tay theo phạm vi Digicom 24/10 (bỏ mảnh cụm, Facebook/Google/TikTok Ads, OOH, LED, loa phường, KOL, báo giấy). Bản thô: seeds-raw.json"
+}

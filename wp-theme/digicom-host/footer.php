@@ -29,18 +29,17 @@
 				<?php else : ?>
 					<div class="brand" style="color:#fff">DigicomVN<span class="dot" style="color:var(--action)">.</span></div>
 				<?php endif; ?>
-				<p>Chuyên Textlink, Backlink, Guest Post và Booking báo &amp; PR cho doanh nghiệp và agency SEO.</p>
+				<p>Booking báo PR, truyền hình, phát thanh và link từ báo cho doanh nghiệp, agency.</p>
 				<p style="font-size:13px;color:#8aa0b7">Công ty TNHH DVTT Digito Combat<br>MST: 0109816406</p>
 			</div>
 			<div>
 				<h4>Dịch vụ</h4>
 				<ul>
-					<li><a href="<?php echo esc_url( home_url( '/mua-textlink/' ) ); ?>">Mua Textlink</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/dich-vu-backlink/' ) ); ?>">Dịch vụ Backlink</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/guest-post/' ) ); ?>">Guest Post</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>">Booking báo &amp; PR</a></li>
-						<li><a href="<?php echo esc_url( home_url( '/backlink-social-entity/' ) ); ?>">Backlink Social Entity</a></li>
+					<?php foreach ( array_slice( dgc_service_links(), 0, 6 ) as $sl ) : ?>
+					<li><a href="<?php echo esc_url( home_url( $sl[1] ) ); ?>"><?php echo esc_html( $sl[0] ); ?></a></li>
+					<?php endforeach; ?>
 				</ul>
+				<p style="font-size:12.5px;color:#8aa0b7;margin-top:10px">Nhận thêm theo yêu cầu: SEO tổng thể, Google Ads, Facebook Ads.</p>
 			</div>
 			<div>
 				<h4>Hỗ trợ</h4>

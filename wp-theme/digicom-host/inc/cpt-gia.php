@@ -813,7 +813,7 @@ function dgc_search_gia( $q ) {
  */
 function dgc_nhom_don_vi( $slug ) {
 	if ( 'booking-bao-pr' === $slug ) return 'báo';
-	if ( 'quang-cao-phat-thanh' === $slug ) return 'kênh';
+	if ( 'quang-cao-phat-thanh' === $slug || 'booking-truyen-hinh' === $slug ) return 'kênh';
 	if ( 'quang-cao-loa-phuong' === $slug ) return 'khu vực';
 	if ( 'quang-cao-man-led' === $slug ) return 'vị trí';
 	return 'trang';

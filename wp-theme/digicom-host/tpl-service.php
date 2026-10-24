@@ -12,7 +12,9 @@ $nhom     = dgc_current_nhom();
 
 <?php
 $dgc_h = $nhom ? dgc_svc_hero_data( $nhom['slug'] ) : array( 'count' => 0, 'rows' => array() );
-$dgc_unit = ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) ? 'đầu báo' : 'website';
+/* Truyen hinh + phat thanh: don vi la "kenh", ban giao lich phat song thay vi link (2026-10-24). */
+$dgc_media = $nhom && in_array( $nhom['slug'], array( 'booking-truyen-hinh', 'quang-cao-phat-thanh' ), true );
+$dgc_unit  = ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) ? 'đầu báo' : ( $dgc_media ? 'kênh' : 'website' );
 ?>
 <section class="page-hero svc3d-hero" data-svc3d-hero>
 	<div class="svc3d-glow" aria-hidden="true"></div>
@@ -58,7 +60,7 @@ $dgc_unit = ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) ? 'đầu báo' : 'w
 			</ol>
 			<div class="svc3d-board-foot">+ <?php echo (int) max( 0, $dgc_h['count'] - count( $dgc_h['rows'] ) ); ?> <?php echo esc_html( $dgc_unit ); ?> khác trong bảng giá</div>
 			<div class="svc3d-chip svc3d-chip-a"><b>VAT</b> Xuất hoá đơn đầy đủ</div>
-			<div class="svc3d-chip svc3d-chip-b"><b>Link</b> Bàn giao bài đã đăng</div>
+			<?php if ( $dgc_media ) : ?><div class="svc3d-chip svc3d-chip-b"><b>Lịch</b> Bàn giao lịch phát sóng</div><?php else : ?><div class="svc3d-chip svc3d-chip-b"><b>Link</b> Bàn giao bài đã đăng</div><?php endif; ?>
 		</div>
 		<?php else : ?>
 		<aside class="hero-panel" aria-label="Cam kết làm việc">
@@ -82,7 +84,7 @@ $dgc_unit = ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) ? 'đầu báo' : 'w
 		<ul>
 			<li><b>Giá công khai</b><span>Niêm yết trên từng vị trí đăng, không báo giá mập mờ</span></li>
 			<li><b>Hoá đơn VAT</b><span>Xuất đầy đủ cho doanh nghiệp</span></li>
-			<li><b>Bàn giao link</b><span>Gửi link bài đã lên để bạn tự kiểm tra</span></li>
+			<?php if ( $dgc_media ) : ?><li><b>Lịch phát sóng</b><span>Gửi lịch phát và file phát sóng để bạn đối chiếu</span></li><?php else : ?><li><b>Bàn giao link</b><span>Gửi link bài đã lên để bạn tự kiểm tra</span></li><?php endif; ?>
 			<li><b>Tư vấn miễn phí</b><span>Chọn đúng <?php echo esc_html( $dgc_unit ); ?> theo ngành và ngân sách</span></li>
 		</ul>
 	</div>
@@ -161,7 +163,11 @@ include get_template_directory() . '/inc/svc-faq.php';
 			<div class="col"><?php
 				$dgc_form_title   = 'Nhận báo giá';
 				$dgc_form_btn     = 'Gửi yêu cầu báo giá';
-				$dgc_form_service = $svc_name;
+				$dgc_form_service = '';
+				$dgc_cur_path = trailingslashit( wp_parse_url( get_permalink(), PHP_URL_PATH ) );
+				foreach ( dgc_service_links() as $sl ) {
+					if ( $sl[1] === $dgc_cur_path ) { $dgc_form_service = $sl[0]; break; }
+				}
 				include get_template_directory() . '/inc/form-lead.php';
 			?></div>
 		</div>

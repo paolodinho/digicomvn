@@ -1,6 +1,7 @@
 <?php
 /**
- * Trang chu DigicomVN - dich vu Textlink, Backlink, Guest Post, Booking bao & PR.
+ * Trang chu DigicomVN - booking truyen thong (bao PR, truyen hinh, phat thanh) + link tu bao.
+ * Dinh vi co dac 1 chu de (Hieu duyet 2026-10-24, 03-thiet-ke/tai-cau-truc-2026-10/).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -11,7 +12,7 @@ get_header();
 	<div class="hero-diag-row">
 		<div class="hero-diag-copy">
 			<div class="hero-diag-copy-in">
-				<span class="eyebrow">Textlink &middot; Backlink &middot; Guest Post &middot; Booking báo &amp; PR</span>
+				<span class="eyebrow">Booking báo PR &middot; Truyền hình &middot; Phát thanh &middot; Link từ báo</span>
 				<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
 				<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 				<div class="hero-cta-row">
@@ -53,40 +54,55 @@ get_header();
 
 <?php /* 03. UU DAI: da chuyen thanh pill noi (promo-fab) tren moi trang - khong con khoi to (Hieu 2026-07-15). */ ?>
 
-<!-- 06. DICH VU - list gon + link toi trang dich vu (Hieu 2026-07-15: section chi can liet ke + link) -->
+<!-- 06. DICH VU - 2 nhom: booking truyen thong (loi) + link tu bao (Hieu duyet 2026-10-24) -->
 <?php
-/* Danh sach pillar dich vu theo sitemap da chot (pivot-2026-07). Slug co dinh -> link truc tiep.
-   8 dich vu = luoi 4x2 can doi; link "Tat ca dich vu" chuyen thanh dong chu duoi luoi. */
-$dgc_services = array(
-	array( 'Mua Textlink',           '/mua-textlink/',           'Chèn link vào bài có sẵn, chọn site theo DR &amp; traffic.',        'M13.5 6.5L17 3a4 4 0 1 1 5.5 5.5L19 12M10.5 17.5L7 21a4 4 0 1 1-5.5-5.5L5 12M8 16l8-8' ),
-	array( 'Dịch vụ Backlink',       '/dich-vu-backlink/',       'Hệ thống backlink chất lượng, đa nguồn, an toàn.',                  'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
-	array( 'Guest Post',             '/guest-post/',             'Viết bài &amp; đăng trên site đúng chủ đề, link dofollow.',          'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5' ),
-	array( 'Booking báo &amp; PR',   '/booking-bao-pr/',         'Đặt bài PR trên báo điện tử uy tín, theo từng đầu báo.',            'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
-	array( 'Dịch vụ Toplist',        '/dich-vu-toplist/',        'Đưa thương hiệu vào bài xếp hạng "Top uy tín" đúng lĩnh vực.',       'M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6-5.2-4.4 6.8-.5z' ),
-	array( 'Backlink Social Entity', '/backlink-social-entity/', 'Hồ sơ social chuẩn NAP, nội dung độc bản, làm thủ công.',           'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0' ),
-	array( 'Backlink quốc tế',       '/backlink-quoc-te/',       'Guest post, niche edit &amp; PR báo quốc tế theo tầng DR/DA.',       'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z' ),
-	/* 4 nhom media TAM AN (Hieu 2026-07-16: luu du lieu, chua dua len trang - mo lai sau):
-	   Booking truyen hinh /booking-truyen-hinh/, QC loa phuong /quang-cao-loa-phuong/,
-	   QC phat thanh /quang-cao-phat-thanh/, QC man LED /quang-cao-man-led/. */
+/* Slug co dinh theo sitemap -> link truc tiep. Moi nhom 3 cot de hang cuoi khong le the. */
+$dgc_svc_groups = array(
+	array(
+		'h'     => 'Booking truyền thông',
+		'class' => ' svc-core',
+		'items' => array(
+			array( 'Booking báo &amp; PR',  '/booking-bao-pr/',       'Đặt bài PR trên báo điện tử trong nước và quốc tế, theo từng đầu báo.', 'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
+			array( 'Booking truyền hình',   '/booking-truyen-hinh/',  'TVC, phóng sự, tự giới thiệu và talkshow trên VTV, HTV theo khung giờ.', 'M3 6h18v11H3zM8 21h8M12 17v4' ),
+			array( 'Quảng cáo phát thanh',  '/quang-cao-phat-thanh/', 'Spot radio trên VOV, VOV Giao thông, Joy FM và đài tỉnh.',                'M4 10h16v10H4zM8 10l9-6M8 15h3M15 15a1.5 1.5 0 1 0 0 .01' ),
+		),
+	),
+	array(
+		'h'     => 'Link từ báo &amp; site uy tín',
+		'class' => '',
+		'items' => array(
+			array( 'Mua Textlink',           '/mua-textlink/',           'Chèn link vào bài có sẵn, chọn site theo DR &amp; traffic.',        'M13.5 6.5L17 3a4 4 0 1 1 5.5 5.5L19 12M10.5 17.5L7 21a4 4 0 1 1-5.5-5.5L5 12M8 16l8-8' ),
+			array( 'Guest Post',             '/guest-post/',             'Viết bài &amp; đăng trên site đúng chủ đề, link dofollow.',          'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5' ),
+			array( 'Dịch vụ Backlink',       '/dich-vu-backlink/',       'Hệ thống backlink chất lượng, đa nguồn, an toàn.',                  'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
+			array( 'Backlink Social Entity', '/backlink-social-entity/', 'Hồ sơ social chuẩn NAP, nội dung độc bản, làm thủ công.',           'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0' ),
+			array( 'Backlink quốc tế',       '/backlink-quoc-te/',       'Guest post, niche edit &amp; PR báo quốc tế theo tầng DR/DA.',       'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z' ),
+			array( 'Dịch vụ Toplist',        '/dich-vu-toplist/',        'Đưa thương hiệu vào bài xếp hạng "Top uy tín" đúng lĩnh vực.',       'M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6-5.2-4.4 6.8-.5z' ),
+		),
+	),
 );
 ?>
 <section class="sec" id="services" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:40px">
 			<span class="eyebrow">Dịch vụ của DigicomVN</span>
-			<h2>Off-page SEO trọn gói cho doanh nghiệp</h2>
-			<p class="muted">Từ mua textlink, backlink, guest post đến booking đăng bài PR trên báo điện tử.</p>
+			<h2>Booking báo PR, truyền hình và link từ báo</h2>
+			<p class="muted">Đặt chỗ trên đúng kênh truyền thông doanh nghiệp cần: báo điện tử, sóng truyền hình, phát thanh. Link từ báo và site uy tín hỗ trợ thêm cho SEO.</p>
 		</div>
-		<div class="svc-links">
-			<?php foreach ( $dgc_services as $s ) : ?>
-				<a class="svc-link" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
-					<span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $s[3] ); ?>"/></svg></span>
-					<h3><?php echo esc_html( html_entity_decode( $s[0], ENT_QUOTES ) ); ?></h3>
-					<p><?php echo wp_kses_post( $s[2] ); ?></p>
-					<span class="svc-more">Xem chi tiết &rarr;</span>
-				</a>
-			<?php endforeach; ?>
+		<?php foreach ( $dgc_svc_groups as $g ) : ?>
+		<div class="svc-grp">
+			<h3 class="svc-grp-h"><?php echo wp_kses_post( $g['h'] ); ?></h3>
+			<div class="svc-links svc-links-3<?php echo esc_attr( $g['class'] ); ?>">
+				<?php foreach ( $g['items'] as $s ) : ?>
+					<a class="svc-link" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
+						<span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $s[3] ); ?>"/></svg></span>
+						<h4><?php echo esc_html( html_entity_decode( $s[0], ENT_QUOTES ) ); ?></h4>
+						<p><?php echo wp_kses_post( $s[2] ); ?></p>
+						<span class="svc-more">Xem chi tiết &rarr;</span>
+					</a>
+				<?php endforeach; ?>
+			</div>
 		</div>
+		<?php endforeach; ?>
 	</div>
 </section>
 
@@ -99,8 +115,8 @@ $dgc_services = array(
 		<div class="whoweare-hero">
 			<div class="whoweare-hero-in">
 				<span class="eyebrow">Chúng tôi là ai</span>
-				<h2>DigicomVN - thương hiệu off-page SEO của Digito Combat</h2>
-				<p class="lead">DigicomVN là thương hiệu dịch vụ số trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat, tập trung 4 dịch vụ off-page SEO: mua Textlink, dịch vụ Backlink, Guest Post và Booking đăng bài PR trên báo điện tử. DigicomVN chọn lọc site và đầu báo theo chỉ số thật, hướng tới sự minh bạch về giá, quy trình rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
+				<h2>DigicomVN - đơn vị booking truyền thông của Digito Combat</h2>
+				<p class="lead">DigicomVN là thương hiệu dịch vụ truyền thông trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat. DigicomVN tập trung vào booking truyền thông: đặt bài PR trên báo điện tử, đặt sóng truyền hình và phát thanh, cùng nhóm dịch vụ link từ báo và site uy tín hỗ trợ SEO. Đầu báo, kênh và khung giờ được chọn theo dữ liệu thật, giá niêm yết rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
 				<p style="margin-top:18px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về DigicomVN &rarr;</a></p>
 			</div>
 		</div>
@@ -183,8 +199,8 @@ $dgc_services = array(
 	<div class="wrap">
 		<div class="cta-band">
 			<div>
-				<h2>Chưa biết chọn dịch vụ nào?</h2>
-				<p>Để đội ngũ DigicomVN tư vấn miễn phí gói Textlink, Backlink, Guest Post hoặc Booking báo PR phù hợp.</p>
+				<h2>Chưa biết chọn kênh nào?</h2>
+				<p>Đội ngũ DigicomVN tư vấn miễn phí: đầu báo, kênh truyền hình, phát thanh hay link từ báo phù hợp với mục tiêu và ngân sách của bạn.</p>
 			</div>
 			<div class="cta-actions">
 				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>

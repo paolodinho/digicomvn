@@ -59,7 +59,7 @@
 				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
 			</button>
 			<a class="phone" href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-			<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Đặt bài ngay</a>
+			<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận báo giá</a>
 			<?php dgc_theme_toggle(); ?>
 			<button class="burger" aria-label="Mở menu" aria-expanded="false" onclick="document.getElementById('mnav').classList.toggle('open');document.body.classList.toggle('mnav-open');this.setAttribute('aria-expanded',document.getElementById('mnav').classList.contains('open'))"><span></span><span></span><span></span></button>
 		</div>

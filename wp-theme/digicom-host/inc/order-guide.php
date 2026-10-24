@@ -29,6 +29,19 @@ $dgc_og_steps = array(
 		'desc'  => 'Bài được biên tập theo yêu cầu của từng toà soạn rồi tiến hành đăng. Bàn giao đường link bài đã lên, bạn kiểm tra lại link và vị trí đặt trước khi kết thúc đơn.',
 	),
 );
+/* Truyen hinh + phat thanh ($dgc_media set o tpl-service.php): khong co anchor/link, ban giao lich phat. */
+$dgc_og_help = 'Mỗi ngành, mỗi mục tiêu (đẩy top từ khoá, xây thương hiệu, xử lý truyền thông) cần bộ báo và bộ site khác nhau. Gọi hotline hoặc nhắn Zalo, DigicomVN tư vấn miễn phí danh sách phù hợp với ngân sách của bạn.';
+$dgc_og_help_h = 'Chưa biết nên chọn báo hay gói nào?';
+if ( ! empty( $dgc_media ) ) {
+	$dgc_og_steps[0]['desc'] = 'Tick chọn kênh và khung giờ ngay trong bảng giá phía trên. Có thể chọn nhiều khung cùng lúc, tổng chi phí tạm tính hiện ngay ở thanh dưới màn hình.';
+	$dgc_og_steps[1]['title'] = 'Gửi yêu cầu đặt sóng';
+	$dgc_og_steps[1]['desc'] = 'Bấm "Đặt ngay" và cho biết thời gian muốn phát, số lần phát, sản phẩm cần quảng bá và bạn đã có sẵn TVC, spot thu âm hay cần DigicomVN sản xuất.';
+	$dgc_og_steps[2]['desc'] = 'DigicomVN kiểm tra lịch trống của nhà đài, hồ sơ pháp lý của sản phẩm và gửi báo giá chính thức kèm lịch phát dự kiến. Xuất hoá đơn VAT đầy đủ.';
+	$dgc_og_steps[3]['title'] = 'Phát sóng &amp; bàn giao';
+	$dgc_og_steps[3]['desc'] = 'Nội dung được nhà đài duyệt rồi phát theo lịch đã chốt. Bàn giao lịch phát sóng và file đối chiếu để bạn kiểm tra trước khi kết thúc đơn.';
+	$dgc_og_help_h = 'Chưa biết nên chọn kênh hay khung giờ nào?';
+	$dgc_og_help = 'Mỗi sản phẩm, mỗi tệp khách hàng hợp với một kênh và khung giờ khác nhau. Gọi hotline hoặc nhắn Zalo, DigicomVN tư vấn miễn phí phương án phù hợp với ngân sách của bạn.';
+}
 ?>
 <section class="sec" id="huong-dan-dat" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap">
@@ -52,8 +65,8 @@ $dgc_og_steps = array(
 
 		<div class="order-help">
 			<div class="order-help-txt">
-				<h3>Chưa biết nên chọn báo hay gói nào?</h3>
-				<p>Mỗi ngành, mỗi mục tiêu (đẩy top từ khoá, xây thương hiệu, xử lý truyền thông) cần bộ báo và bộ site khác nhau. Gọi hotline hoặc nhắn Zalo, DigicomVN tư vấn miễn phí danh sách phù hợp với ngân sách của bạn.</p>
+				<h3><?php echo esc_html( $dgc_og_help_h ); ?></h3>
+				<p><?php echo esc_html( $dgc_og_help ); ?></p>
 			</div>
 			<div class="order-help-actions">
 				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>

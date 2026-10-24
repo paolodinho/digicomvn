@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '3.7.0' );
+define( 'DGC_VER', '3.8.0' );
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -203,16 +203,18 @@ function dgc_tel2() {
 /** 8 trang dich vu pillar (label | path o goc). Dung cho bottom-sheet "Dich vu" mobile.
  *  Slug co dinh theo sitemap (flatten 2026-07-16). */
 function dgc_service_links() {
+	/* Thu tu theo dinh vi co dac 2026-10-24: booking truyen thong truoc, link tu bao sau.
+	   Loa phuong + man LED van an (quang cao ngoai troi, ngoai chu de). */
 	return array(
-		array( 'Mua Textlink',           '/mua-textlink/' ),
-		array( 'Dịch vụ Backlink',       '/dich-vu-backlink/' ),
-		array( 'Guest Post',             '/guest-post/' ),
 		array( 'Booking báo & PR',       '/booking-bao-pr/' ),
-		array( 'Dịch vụ Toplist',        '/dich-vu-toplist/' ),
+		array( 'Booking truyền hình',    '/booking-truyen-hinh/' ),
+		array( 'Quảng cáo phát thanh',   '/quang-cao-phat-thanh/' ),
+		array( 'Mua Textlink',           '/mua-textlink/' ),
+		array( 'Guest Post',             '/guest-post/' ),
+		array( 'Dịch vụ Backlink',       '/dich-vu-backlink/' ),
 		array( 'Backlink Social Entity', '/backlink-social-entity/' ),
 		array( 'Backlink quốc tế',       '/backlink-quoc-te/' ),
-		/* 4 nhom media tam an (Hieu 2026-07-16): booking-truyen-hinh, quang-cao-loa-phuong,
-		   quang-cao-phat-thanh, quang-cao-man-led - du lieu gia da luu (draft), mo lai sau. */
+		array( 'Dịch vụ Toplist',        '/dich-vu-toplist/' ),
 	);
 }
 

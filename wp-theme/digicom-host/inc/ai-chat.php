@@ -40,6 +40,7 @@ function dgc_ai_price_brief() {
 		'backlink-social-entity'  => 'Backlink Social Entity',
 		'backlink-quoc-te'        => 'Backlink quoc te',
 		'booking-truyen-hinh'     => 'Booking truyen hinh',
+		'quang-cao-phat-thanh'    => 'Quang cao phat thanh',
 		'dich-vu-toplist'         => 'Dich vu Toplist',
 	);
 	$lines = array();
@@ -85,7 +86,7 @@ function dgc_ai_system_prompt() {
 	$price   = dgc_ai_price_brief();
 	$extra   = trim( (string) dgc( 'ai_kb' ) );
 
-	$sp  = "Ban la tro ly tu van cua DigicomVN (digicomvn.com) - dich vu SEO off-page cho doanh nghiep va agency o Viet Nam. ";
+	$sp  = "Ban la tro ly tu van cua DigicomVN (digicomvn.com) - don vi booking truyen thong (bao PR, truyen hinh, phat thanh) va link tu bao cho doanh nghiep, agency o Viet Nam. ";
 	$sp .= "Tra loi bang tieng Viet, ngan gon, than thien, dung chuyen mon, KHONG loi noi thua.\n\n";
 	$sp .= "DICH VU DIGICOMVN:\n";
 	$sp .= "1. Mua Textlink (/mua-textlink/): chen link vao bai viet co san tren site chat luong, chon theo DR/traffic.\n";
@@ -94,9 +95,12 @@ function dgc_ai_system_prompt() {
 	$sp .= "4. Booking bao & PR (/booking-bao-pr/): dat bai PR tren bao dien tu uy tin (VnExpress, Dan Tri, CafeF, Kenh14, 24h...).\n";
 	$sp .= "5. Backlink Social Entity (/backlink-social-entity/): ho so social chuan NAP, noi dung doc ban, lam thu cong; ban theo goi.\n";
 	$sp .= "6. Backlink quoc te (/backlink-quoc-te/): guest post/niche edit va PR bao quoc te theo tang DR/DA.\n";
-	$sp .= "7. Booking truyen hinh (/booking-truyen-hinh/): TVC, phong su, talkshow tren VTV, HTV.\n\n";
+	$sp .= "7. Booking truyen hinh (/booking-truyen-hinh/): TVC, phong su, talkshow tren VTV, HTV.\n";
+	$sp .= "8. Quang cao phat thanh (/quang-cao-phat-thanh/): spot radio tren VOV1, VOV Giao thong, Joy FM, dai tinh.\n";
+	$sp .= "9. Dich vu Toplist (/dich-vu-toplist/): dua thuong hieu vao bai xep hang Top uy tin dung linh vuc.\n";
+	$sp .= "Dich vu ngoai danh sach (SEO tong the, Google Ads, Facebook Ads): chi nhan theo yeu cau qua form/hotline, khong co bang gia tren site.\n\n";
 	$sp .= "CACH TU VAN CHON DICH VU (goi y ngan theo nhu cau khach):\n";
-	$sp .= "- Can tang uy tin/thuong hieu nhanh, PR: Booking bao & PR hoac Truyen hinh.\n";
+	$sp .= "- Can tang uy tin/thuong hieu nhanh, PR: Booking bao & PR, Truyen hinh hoac Phat thanh (phu song dia phuong, nguoi lai xe).\n";
 	$sp .= "- Can keo tang thu hang tu khoa on dinh: Guest Post + Dich vu Backlink + Textlink.\n";
 	$sp .= "- Can nen tang thuong hieu/entity cho GEO (AI Overview, ChatGPT): Backlink Social Entity.\n";
 	$sp .= "- Thi truong nuoc ngoai: Backlink quoc te.\n\n";

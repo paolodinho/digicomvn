@@ -1,0 +1,580 @@
+[
+ {
+  "ten": "eva",
+  "khoa": "eva.vn",
+  "doi_thu": [
+   "brandcom.vn",
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "tinhte",
+  "khoa": "tinhte",
+  "doi_thu": [
+   "brandcom.vn",
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "tiep thi gia",
+  "khoa": "tiepthigiadinh",
+  "doi_thu": [
+   "brandcom.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "vietnambiz",
+  "khoa": "vietnambiz",
+  "doi_thu": [
+   "brandcom.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "ngoisao",
+  "khoa": "ngoisao",
+  "doi_thu": [
+   "brandcom.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "24h",
+  "khoa": "24h",
+  "doi_thu": [
+   "brandcom.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "tuoi tre",
+  "khoa": "tuoitre",
+  "doi_thu": [
+   "brandcom.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "heritage",
+  "khoa": "heritage",
+  "doi_thu": [
+   "brandcom.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "vtc",
+  "khoa": "vtc",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "nguoi dua tin",
+  "khoa": "nguoiduatin",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "doi song va",
+  "khoa": "doisongphapluat",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "tin tuc",
+  "khoa": "baotintuc",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "danviet",
+  "khoa": "danviet",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "pcworld",
+  "khoa": "pcworld",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "techz",
+  "khoa": "techz",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "kinh te sai",
+  "khoa": "thesaigontimes",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "otoxemay",
+  "khoa": "otoxemay",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "autodaily",
+  "khoa": "autodaily",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "vnreview",
+  "khoa": "vnreview",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "phunutoday",
+  "khoa": "phunutoday",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "tiin",
+  "khoa": "tiin",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "ha noi moi",
+  "khoa": "hanoimoi",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "vietnamfinance",
+  "khoa": "vietnamfinance",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "dien dan doanh",
+  "khoa": "diendandoanhnghiep",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "vietnammoi",
+  "khoa": "vietnammoi",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "doanhnhanonline",
+  "khoa": "doanhnhanonline",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "baomoi",
+  "khoa": "baomoi",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "thethaovietnam",
+  "khoa": "thethaovietnam",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "thethaovanhoa",
+  "khoa": "thethaovanhoa",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "marry",
+  "khoa": "marry",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "alobacsi",
+  "khoa": "alobacsi",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "autobike",
+  "khoa": "autobike",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "kinh te viet",
+  "khoa": "vneconomy",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "tien phong",
+  "khoa": "tienphong",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "elle",
+  "khoa": "elle",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "forbes",
+  "khoa": "forbes",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "dep",
+  "khoa": "dep.com",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "hoa hoc tro",
+  "khoa": "hoahoctro",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": false
+ },
+ {
+  "ten": "webtretho",
+  "khoa": "webtretho",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "soha",
+  "khoa": "soha",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "laodong",
+  "khoa": "laodong",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "autopro",
+  "khoa": "autopro",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "otofun",
+  "khoa": "otofun",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "ictnews",
+  "khoa": "ictnews",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "ione",
+  "khoa": "ione",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "doanhnhansaigon",
+  "khoa": "doanhnhansaigon",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "phunuonline",
+  "khoa": "phunuonline",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "tinthethao",
+  "khoa": "tinthethao",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "bongda",
+  "khoa": "bongda",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "giao duc thoi",
+  "khoa": "giaoducthoidai",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "thanh nien",
+  "khoa": "thanhnien",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "cafeland",
+  "khoa": "cafeland",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "zing",
+  "khoa": "zing",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "voz",
+  "khoa": "voz",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "vietnamnet",
+  "khoa": "vietnamnet",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "genk",
+  "khoa": "genk",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "2sao",
+  "khoa": "2sao",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "yan",
+  "khoa": "yan",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "otosaigon",
+  "khoa": "otosaigon",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": false
+ },
+ {
+  "ten": "dan tri",
+  "khoa": "dantri",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "cafef",
+  "khoa": "cafef",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ },
+ {
+  "ten": "vtv",
+  "khoa": "vtv",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "vov",
+  "khoa": "vov",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": false,
+  "co_gia": true
+ },
+ {
+  "ten": "vnexpress",
+  "khoa": "vnexpress",
+  "doi_thu": [
+   "ecpmedia.vn"
+  ],
+  "co_trang": true,
+  "co_gia": true
+ }
+]

@@ -1,5 +1,11 @@
 # LOG - digicomvn.com
 
+## 2026-10-24 (Cô đặc topic: trang chủ + menu + truyền hình/phát thanh)
+- Publish /booking-truyen-hinh/ (2107) và /quang-cao-phat-thanh/ (2440): nội dung mới theo BRIEF (giá thật từ dgc_gia, Luật 75/2025/QH15), 16 ảnh infographic desktop/mobile, 10 FAQ svc_faqs, dgc_seo_desc + excerpt.
+- Trang chủ: hero, số liệu, meta, FAQ (thêm câu truyền hình/phát thanh và SEO), section dịch vụ chia 2 nhóm; footer thêm dòng "Nhận thêm theo yêu cầu: SEO tổng thể, Google Ads, Facebook Ads"; form có lựa chọn "Dịch vụ khác".
+- Menu: 6 mục cấp 1 (Booking báo PR, Truyền hình, Link từ báo, Case study, Blog, Về DigicomVN), bỏ 9 chuyên mục SEO chung khỏi menu.
+- DGC_VER 3.8.0. QA: mobile-overflow 0/4, schema-vocab 0 lỗi, schema-google 2 lỗi cũ (booking-bao-tinh, hieu-lam-booking-bao-chi thiếu Article.image), meta-qa 1 lỗi cũ (/bang-gia/ redirect).
+
 ## 2026-08-13 (Skill internal-link-audit + Task 3 anchor + rule "1 link/bài")
 - Build skill `.claude/skills/internal-link-audit/SKILL.md` (theo yêu cầu Hiếu "build 1 skill
   internal link cho dự án, tham khảo ICD") - chuyển thể `icd-internal-link-audit` sang REST API
@@ -4888,3 +4894,10 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 ## 2026-10-20 - Báo giá PR giá rẻ lĩnh vực giáo dục
 - 24 báo (giáo dục 5, đời sống/gia đình 9, địa phương 10), giữ nguyên giá DanaSEO, không CK/lãi cộng thêm. Khách: 11-bao-gia-khach/Bao-Gia-Dang-Bai-PR-Giao-Duc-Gia-Re-2026-10-20.xlsx; NOIBO cùng thư mục. 2 Google Sheet, ghi tab Báo giá khách hàng + K10. Chưa có tên khách.
+
+## 2026-10-24 (chiều) - Seed từ khoá trụ lõi + tối ưu tiêu đề trang dịch vụ
+- Đo top 10 Google (ẩn danh) 14 từ lõi, chọn 13 đối thủ theo bằng chứng SERP; quét ~3.600 trang đối thủ.
+- Seed lọc theo phạm vi Digicom: 54 (34 chủ đề booking báo/truyền hình/phát thanh + 20 đầu báo có giá nhưng chưa có trang riêng). Tab "Seed từ khoá" file tổng quan.
+- GSC 90 ngày: /booking-bao-pr/, /mua-textlink/, /guest-post/ đứng trang 2-4 cho từ chính, top 10 toàn trang dịch vụ -> tối ưu trang có sẵn, không viết blog.
+- Đổi SEO title 3 trang (475, 505, 506) + H1 /booking-bao-pr/ thêm "Booking báo chí". Backup ~/Claude-Workspace/_backups/routines/2026-10-24/seo-title-svc/. 3 URL vào hàng đợi GSC.
+- Chờ Hiếu: lượt tìm Keyword Planner cho seeds.txt (Chrome đang kết nối là máy Windows).

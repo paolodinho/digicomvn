@@ -1,0 +1,1379 @@
+{
+ "size": 10,
+ "loai": {
+  "không khớp phạm vi (--need/--ok)": 2841,
+  "dài quá": 45,
+  "ngoài phạm vi (--exclude)": 1434,
+  "bản không dấu trùng bản có dấu": 3,
+  "tiếng Anh": 126
+ },
+ "lots": [
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 1,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "agency book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "agency booking báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "backlink báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book bài báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 2
+    },
+    {
+     "tu_khoa": "book báo cafef",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo giá",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo kenh14",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo online",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 2,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "book báo pr",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo vietnamnet",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo vne",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book báo vtv",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking bài pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 2
+    },
+    {
+     "tu_khoa": "booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking báo mới",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking báo online",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 3,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "booking báo pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking báo tỉnh",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking báo vietnamnet",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "cách book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "giá book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "giá booking báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "quảng cáo pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "đăng bài pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "agency booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 4,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "boilerplate trong thông cáo báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "book bài báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "book bài là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book bài pr báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book bài đăng báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo bao nhiêu tiền",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "book báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo giá rẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo kênh 14",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 5,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "book báo nước ngoài",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo quốc tế",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo tiền phong",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo viết bài",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo điện tử",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "book báo đăng bài",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "booking báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 6,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "booking báo lao động",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking báo nhân dân",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking báo nước ngoài",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking báo quốc tế",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking báo tiền phong",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking báo điện tử",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking pr báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking quảng cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 7,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "bài pr báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên alobacsi",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên autopro",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên cafef",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên cafeland",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên diễn đàn doanh nghiệp",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 10
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên dân việt",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên genk",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên giáo dục thời đại",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 10
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên hà nội mới",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 8,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "báo giá đăng bài pr trên kenh14",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên kinh tế sài gòn",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 10
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên ngôi sao",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên người đưa tin",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên phụ nữ today",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên techz",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên tiin",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên tinhte",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên tuổi trẻ",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên vietnambiz",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 9,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "báo giá đăng bài pr trên việt nam mới",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên vnexpress",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên vnreview",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên vtc news",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "báo giá đăng bài pr trên yan",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài trên báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "báo giá đăng bài trên vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "báo giá đăng bài tuổi trẻ online",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "báo giá đăng bài vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "bảng giá book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 10,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "bảng giá đăng bài pr trên vnexpress",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "chi phí book bài báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "chi phí book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "chi phí book báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "cách gửi thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "cách làm thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "cách trình bày thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "cách viết bài pr báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "cách viết thông cáo báo chí chuẩn",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "cách viết thông cáo báo chí sự kiện",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 11,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "cách viết tin từ thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "dịch vụ book báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "dịch vụ book báo pr",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "dịch vụ booking báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "dịch vụ booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "email gửi thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "giá book bài báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "giá book bài báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "giá book bài báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "giá book báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 12,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "giá book báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "giá book báo kenh14",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "giá book báo pr",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "giá book báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "giá book báo tiền phong",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "giá book báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "giá book báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "giá booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "giá booking báo dân trí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "giá booking báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 13,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "giá booking báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "giá booking báo vietnamnet",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "giá booking báo vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "giá đăng bài báo tuổi trẻ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "giá đăng bài pr",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "giá đăng bài trên báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "giá đăng bài trên báo thanh niên",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "https www petrolimex com vn thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9
+    },
+    {
+     "tu_khoa": "in thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "khi nào nên gửi thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 14,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "link building digital pr",
+     "nguon": "Suggest lần trước (link building)",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "link building vs digital pr",
+     "nguon": "Suggest lần trước (link building)",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "mẫu email gửi thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "mục đích của thông cáo báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9
+    },
+    {
+     "tu_khoa": "pr booking báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "quy chuẩn thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "quy định thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "quảng cáo báo mạng",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "quảng cáo báo điện tử",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 15,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "thông cáo báo chí cách viết",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí doanh nghiệp",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí giá dầu",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí giá gas",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí giá nhiên liệu",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "thông cáo báo chí giá xăng",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí giá xăng dầu",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "thông cáo báo chí giá xăng dầu petrolimex",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "thông cáo báo chí giá điện",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí gồm mấy phần",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 16,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "thông cáo báo chí gồm những gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "thông cáo báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí là j",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí làng háo hức",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "thông cáo báo chí mẫu",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "thông cáo báo chí nghĩa là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "thông cáo báo chí ra mắt mv",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "thông cáo báo chí ra mắt sách",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "thông cáo báo chí ra mắt sản phẩm",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "thông cáo báo chí ra mắt sản phẩm mới",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 17,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "thông cáo báo chí ra mắt sự kiện",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "thông cáo báo chí sự kiện",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí sự kiện âm nhạc",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "thông cáo báo chí tiếng anh",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 6
+    },
+    {
+     "tu_khoa": "thông cáo báo chí tiếng anh là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "thông cáo báo chí trong tiếng anh là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 9
+    },
+    {
+     "tu_khoa": "thông cáo báo chí đăng ở đâu",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    },
+    {
+     "tu_khoa": "viết bài pr báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "viết bài pr và thông cáo báo chí",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 8
+    },
+    {
+     "tu_khoa": "viết thông cáo báo chí là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 7
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking báo PR, đăng bài PR",
+   "so": 18,
+   "tong": 18,
+   "tu": [
+    {
+     "tu_khoa": "đăng bài pr là gì",
+     "nguon": "Google Suggest từ \"đăng bài pr\"",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "đăng bài viết pr",
+     "nguon": "seed",
+     "chu_de": "Booking báo PR, đăng bài PR",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Truyền hình, TVC",
+   "so": 1,
+   "tong": 1,
+   "tu": [
+    {
+     "tu_khoa": "quảng cáo tvc",
+     "nguon": "seed",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "truyền hình vtv",
+     "nguon": "seed",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking quảng cáo truyền hình",
+     "nguon": "seed",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "quảng cáo truyền hình",
+     "nguon": "seed",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "quảng cáo trên vtv",
+     "nguon": "seed",
+     "chu_de": "Truyền hình, TVC",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Phát thanh, radio, VOV, VOH",
+   "so": 1,
+   "tong": 2,
+   "tu": [
+    {
+     "tu_khoa": "pbn radio",
+     "nguon": "Suggest lần trước (pbn)",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 2
+    },
+    {
+     "tu_khoa": "quảng cáo radio",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "quảng cáo vov",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking quảng cáo radio",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "booking quảng cáo vov",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "quảng cáo phát thanh",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "quảng cáo radio tỉnh",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "quảng cáo trên radio",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "quảng cáo trên voh",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "quảng cáo trên vov",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Phát thanh, radio, VOV, VOH",
+   "so": 2,
+   "tong": 2,
+   "tu": [
+    {
+     "tu_khoa": "quảng cáo vov giao thông",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 5
+    },
+    {
+     "tu_khoa": "quảng cáo đài voh",
+     "nguon": "seed",
+     "chu_de": "Phát thanh, radio, VOV, VOH",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking quảng cáo chung",
+   "so": 1,
+   "tong": 2,
+   "tu": [
+    {
+     "tu_khoa": "anchor text book",
+     "nguon": "Suggest lần trước (anchor text)",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book baos",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 2
+    },
+    {
+     "tu_khoa": "book link báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book viết báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "booking viết báo",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "báo cáo booking",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 3
+    },
+    {
+     "tu_khoa": "book tứ báo thủ",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "báo giá booking fanpage",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "báo giá booking vietnamnet",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "báo giá booking vnexpress",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 4
+    }
+   ]
+  },
+  {
+   "chu_de": "Booking quảng cáo chung",
+   "so": 2,
+   "tong": 2,
+   "tu": [
+    {
+     "tu_khoa": "báo giá booking znews",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 4
+    },
+    {
+     "tu_khoa": "web book là gì",
+     "nguon": "Suggest lần trước",
+     "chu_de": "Booking quảng cáo chung",
+     "so_chu": 4
+    }
+   ]
+  }
+ ]
+}

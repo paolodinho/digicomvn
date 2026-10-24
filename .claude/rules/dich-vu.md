@@ -20,7 +20,10 @@
 - **Backlink quốc tế** - `dich-vu/backlink-quoc-te/` - guest post / niche edit / link insertion trên
   site quốc tế (theo tầng DR/DA) + đăng bài PR báo quốc tế (Forbes, Business Insider, Yahoo Finance,
   MarketWatch...) + phân phối thông cáo (PR Newswire, EIN Presswire, PRWeb...). Mở 2026-07-14.
-## 4 nhóm media TẠM ẨN (Hiếu 2026-07-16: lưu dữ liệu giá, chưa đưa lên trang, mở lại sau)
+## Truyền hình + phát thanh ĐÃ MỞ LẠI 2026-10-24 (Hiếu duyệt hướng cô đặc)
+/booking-truyen-hinh/ (2107) và /quang-cao-phat-thanh/ (2440) publish, có trong menu "Truyền hình" và nhóm "Booking truyền thông" trang chủ. Loa phường, màn LED vẫn ẩn như dưới. SEO/Google Ads/Facebook Ads: chỉ 1 dòng "Dịch vụ khác", không làm trang (DECISIONS 2026-10-24).
+
+## 4 nhóm media TẠM ẨN (Hiếu 2026-07-16: lưu dữ liệu giá, chưa đưa lên trang, mở lại sau) - truyền hình/phát thanh nay đã mở, xem mục trên
 
 - **Booking truyền hình** `/booking-truyen-hinh/` (page 2107) - TVC/phóng sự/talkshow VTV, HTV.
 - **Quảng cáo loa phường** `/quang-cao-loa-phuong/` (page 2439) - loa truyền thanh xã phường theo khu vực.
