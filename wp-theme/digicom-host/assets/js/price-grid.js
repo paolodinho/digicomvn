@@ -164,8 +164,7 @@
 		head.className = 'grid-head';
 		head.innerHTML =
 			'<div class="gh-name">' + esc(colName) + '</div>' +
-			(isGoi ? '' : '<div class="gh-dr">DR</div>') +
-			'<div class="gh-price">Giá</div>' +
+			'<div class="gh-price">Giá từ</div>' +
 			'<div class="gh-action"></div>';
 		var body = document.createElement('div');
 		body.className = 'grid-body';
@@ -179,27 +178,30 @@
 		container.classList.toggle('price-grid-goi', isGoi);
 
 		function rowHtml(d) {
+			// 2026-10-24 (Hieu: "bang gia phuc tap qua"): 3 cot gon - ten + 1 dong phu (DR, so vi tri),
+			// gia, 1 nut. Bo cot DR rieng, badge mau, vach ke doc. Ca dong bam duoc de mo chi tiet.
 			var picked = d.count === 1 && window.dgcCartIsPicked && window.dgcCartIsPicked(d.key);
 			var open = !!state.openIds[d.key];
 			var fav = faviconUrl(d.url, d.name);
-			// 2026-10-14: nhieu vi tri chi hien "Từ X" (gia thap nhat), chi tiet tung vi tri bam mo ra.
-			var rangeTxt = (d.priceMin === d.priceMax)
-				? fmtVnd(d.priceMin) + 'đ'
-				: '<span class="r-from">Từ</span> ' + fmtVnd(d.priceMin) + 'đ';
+			var meta = [];
+			if (!isGoi && d.dr) meta.push('DR ' + d.dr);
+			if (d.count > 1) meta.push(d.count + ' vị trí');
+			if (d.noiBat) meta.push('<span class="r-hot">Phổ biến</span>');
+			var logo = fav
+				? '<img class="r-logo" src="' + esc(fav) + '" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;r-logo r-logo-fb&quot; style=&quot;background:' + logoColor(d.name) + '&quot;>' + esc(initial(d.name)) + '</span>\'">'
+				: '<span class="r-logo r-logo-fb" style="background:' + logoColor(d.name) + '">' + esc(initial(d.name)) + '</span>';
+			var act = d.count === 1
+				? '<button type="button" class="grid-pick' + (picked ? ' is-picked' : '') + '" data-key="' + esc(d.key) + '" data-price="' + esc(d.price) + '" data-mkgain="' + esc(d.mkgain) + '" data-label="' + esc(d.label) + '"><span class="pick-add">Chọn</span><span class="pick-on">Đã chọn</span></button>'
+				: '<button type="button" class="r-more" data-act="toggle" data-key="' + esc(d.key) + '" aria-expanded="' + (open ? 'true' : 'false') + '">' + (open ? 'Thu gọn' : 'Xem giá') + '</button>';
 			return '' +
 				'<div class="row' + (open ? ' is-open' : '') + '" data-key="' + esc(d.key) + '">' +
-					'<div class="r-name grid-col-name">' +
-						'<span class="r-toggle" data-act="toggle" data-key="' + esc(d.key) + '"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m9 6 6 6-6 6"/></svg></span>' +
-						(fav ? '<img class="r-logo" src="' + esc(fav) + '" alt="" loading="lazy" onerror="this.outerHTML=\'<span class=&quot;r-logo r-logo-fb&quot; style=&quot;background:' + logoColor(d.name) + '&quot;>' + esc(initial(d.name)) + '</span>\'">' : '<span class="r-logo r-logo-fb" style="background:' + logoColor(d.name) + '">' + esc(initial(d.name)) + '</span>') +
-						'<span class="r-name-txt">' + esc(d.name) + '</span>' +
-						(d.count > 1 ? '<span class="r-count">' + d.count + ' vị trí</span>' : '') +
-						(d.noiBat ? '<span class="r-hot">Phổ biến</span>' : '') +
+					'<div class="r-name grid-col-name">' + logo +
+						'<span class="r-name-box"><span class="r-name-txt">' + esc(d.name) + '</span>' +
+						(meta.length ? '<span class="r-meta">' + meta.join(' · ') + '</span>' : '') +
+						'</span>' +
 					'</div>' +
-					(isGoi ? '' : '<div class="r-dr">' + (d.dr ? '<span class="dr-chip" style="background:' + drColor(d.dr) + '">' + d.dr + '</span>' : '') + '</div>') +
-					'<div class="r-price">' + rangeTxt + '</div>' +
-					'<div class="r-action">' +
-						(d.count === 1 ? '<button type="button" class="grid-pick' + (picked ? ' is-picked' : '') + '" data-key="' + esc(d.key) + '" data-price="' + esc(d.price) + '" data-mkgain="' + esc(d.mkgain) + '" data-label="' + esc(d.label) + '" title="Chọn ' + esc(colName.toLowerCase()) + ' này"><span class="pick-add">+</span><span class="pick-on">✓</span></button>' : '') +
-					'</div>' +
+					'<div class="r-price">' + fmtVnd(d.priceMin) + 'đ</div>' +
+					'<div class="r-action">' + act + '</div>' +
 				'</div>';
 		}
 
@@ -279,7 +281,8 @@
 		});
 
 		body.addEventListener('click', function (e) {
-			var t = e.target.closest('[data-act="toggle"]');
+			if (e.target.closest('.grid-pick, a')) return;
+			var t = e.target.closest('[data-act="toggle"]') || e.target.closest('.row[data-key]');
 			if (!t) return;
 			var key = t.getAttribute('data-key');
 			state.openIds[key] = !state.openIds[key];

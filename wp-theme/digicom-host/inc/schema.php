@@ -636,7 +636,8 @@ function dgc_sch_website() {
 		'@id'             => dgc_sch_id( 'website' ),
 		'url'             => home_url( '/' ),
 		'name'            => dgc_sch_txt( get_bloginfo( 'name' ) ),
-		'alternateName'   => 'DigicomVN',
+		// Thu tu uu tien; ten mien viet thuong de cuoi lam phuong an du phong (Google site names doc).
+		'alternateName'   => array( 'Digicom VN', 'Digicom', 'digicomvn.com' ),
 		'description'     => dgc_sch_txt( get_bloginfo( 'description' ), 300 ),
 		'inLanguage'      => 'vi-VN',
 		'publisher'       => array( '@id' => dgc_sch_id( 'organization' ) ),

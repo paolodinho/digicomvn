@@ -172,3 +172,10 @@
 Toán học: combo tối đa X% không lỗ ⟺ markup ≥ 1/(1-X); markup 1,03 chỉ cho combo an toàn ~2,9%.
 Hiếu chọn giữ lợi thế "giá rẻ nhất" (không nâng markup) → combo thành tượng trưng nhưng không bao
 giờ lỗ, và không quảng cáo 15% sai sự thật. Chi tiết cơ chế: .claude/rules/bang-gia-booking.md.
+
+## 2026-10-24 (tối) - Họp báo, đăng báo giấy
+- Hiếu: KHÔNG làm dịch vụ tổ chức họp báo, chỉ quét từ khoá họp báo đưa lên file tổng quan (dùng làm từ khoá/nội dung liên quan PR, không chào bán dịch vụ họp báo).
+- Đăng báo giấy: bỏ, không làm.
+
+## 2026-10-24 - Bỏ nhóm quay/sản xuất TVC khỏi kế hoạch từ khoá
+Hiếu chốt: chỉ giữ bài kiến thức "TVC là gì" (gộp vào bài quảng cáo truyền hình là gì, dẫn về /booking-truyen-hinh/). Không làm trang/bài cho quay, sản xuất, làm TVC vì Digicom không sản xuất TVC (chỉ booking phát sóng). Đã bỏ 18 từ khỏi hàng đợi đo SERP và dòng N11 tab KH.

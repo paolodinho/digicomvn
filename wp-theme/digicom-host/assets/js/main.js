@@ -358,6 +358,18 @@
 			update();
 		});
 
+		// 2026-10-24: nut "Bộ lọc" tren mobile mo/dong thanh loc (desktop luon hien).
+		document.addEventListener('click', function (e) {
+			var ft = e.target.closest ? e.target.closest('.filter-toggle') : null;
+			if (!ft) return;
+			var box = ft.closest('.price-main');
+			var fb = box ? box.querySelector('.filter-bar') : null;
+			if (!fb) return;
+			var on = !fb.classList.contains('is-open');
+			fb.classList.toggle('is-open', on);
+			ft.setAttribute('aria-expanded', on ? 'true' : 'false');
+		});
+
 		// "Chon lai": bo tick toan bo, dua thanh tong ve 0
 		if (resetBtn) {
 			resetBtn.addEventListener('click', function () {

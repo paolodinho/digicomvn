@@ -4901,3 +4901,9 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - GSC 90 ngày: /booking-bao-pr/, /mua-textlink/, /guest-post/ đứng trang 2-4 cho từ chính, top 10 toàn trang dịch vụ -> tối ưu trang có sẵn, không viết blog.
 - Đổi SEO title 3 trang (475, 505, 506) + H1 /booking-bao-pr/ thêm "Booking báo chí". Backup ~/Claude-Workspace/_backups/routines/2026-10-24/seo-title-svc/. 3 URL vào hàng đợi GSC.
 - Chờ Hiếu: lượt tìm Keyword Planner cho seeds.txt (Chrome đang kết nối là máy Windows).
+
+## 2026-10-24 tối - Booking mạng xã hội
+- Live /booking-fanpage/ + /booking-kol-koc/ (2 trang dịch vụ không bảng giá, FAQ + schema Service), menu KOL & Fanpage, nhóm trang chủ, chat AI mục 10-11, DGC_VER 3.9.1 (hamburger <=1219px). Chờ bảng giá NCC.
+
+## 2026-10-24 - Thiết kế lại bảng giá + trang dịch vụ
+- price-grid.js 3 cột (tên+DR/số vị trí | Giá từ | Chọn/Xem giá), bấm cả dòng; main.js nút Bộ lọc mobile; service-pricing.php gộp ghi chú; tpl-service.php class svc-body; main.css 2 khối mới; DGC_VER 3.10.2. QA 0 tràn ngang 5 trang, dark mode ổn.

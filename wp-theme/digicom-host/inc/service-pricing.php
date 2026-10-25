@@ -54,7 +54,7 @@ $dgc_sp_heading  = $dgc_sp_is_goi
 		: 'Bảng giá ' . mb_strtolower( $svc_name ) . ' theo từng ' . $dgc_sp_dv );
 $dgc_sp_sub      = $dgc_sp_is_goi
 	? 'Tick chọn gói bạn quan tâm - tổng chi phí tạm tính (chưa gồm VAT) hiện ngay bên cạnh.'
-	: 'Chọn lĩnh vực, bấm + để thêm ' . $dgc_sp_dv . ' cần đặt - tổng chi phí tạm tính hiện ngay.';
+	: 'Bấm "Chọn" để thêm ' . $dgc_sp_dv . ' cần đặt, tổng tạm tính hiện ngay.';
 $dgc_sp_ph       = $dgc_sp_is_goi ? 'Tìm theo tên gói...' : 'Tìm theo tên ' . $dgc_sp_dv . '...';
 
 // Bo loc nhom nganh - chi hien khi du lieu co tu 2 nhom tro len (chu yeu Booking bao & PR).
@@ -94,6 +94,9 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 							<option value="price-desc">Giá cao trước</option>
 						</select>
 					</label>
+					<?php if ( $dgc_sp_has_filter ) : ?>
+					<button type="button" class="filter-toggle" aria-expanded="false">Bộ lọc</button>
+					<?php endif; ?>
 				</div>
 				<?php endif; ?>
 				<?php
@@ -102,7 +105,7 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 				include get_template_directory() . '/inc/price-filter.php';
 				?>
 				<?php if ( $dgc_sp_has_tools ) : ?>
-				<p class="tab-count">Đang hiện <b class="tab-count-shown"><?php echo (int) $dgc_sp_total; ?></b>/<span class="tab-count-total"><?php echo (int) $dgc_sp_total; ?></span> <?php echo esc_html( $dgc_sp_dv ); ?> - bấm vào tên để xem từng vị trí đăng và giá chi tiết.</p>
+				<p class="tab-count"><b class="tab-count-shown"><?php echo (int) $dgc_sp_total; ?></b>/<span class="tab-count-total"><?php echo (int) $dgc_sp_total; ?></span> <?php echo esc_html( $dgc_sp_dv ); ?></p>
 				<?php endif; ?>
 
 				<?php
@@ -130,10 +133,10 @@ $dgc_sp_has_tools  = ( ! $dgc_sp_is_outlet && $dgc_sp_total > 4 );
 				</noscript>
 
 				<?php /* Ghi chu "gia tham khao" - cuoi bang, dong chu nho, khong CTA (Hieu 2026-07-15). */ ?>
+				<?php /* 2026-10-24: gop 2 ghi chu thanh 1 dong ngan. */ ?>
+				<?php $dgc_tiers_text_foot = dgc_combo_tiers_text(); ?>
+				<p class="price-foot-note">Giá chưa gồm VAT.<?php if ( $dgc_tiers_text_foot ) : ?> Đặt nhiều <?php echo esc_html( $dgc_sp_dv ); ?>: <?php echo esc_html( $dgc_tiers_text_foot ); ?>.<?php endif; ?></p>
 				<?php include get_template_directory() . '/inc/price-note.php'; ?>
-				<?php $dgc_tiers_text_foot = dgc_combo_tiers_text(); if ( $dgc_tiers_text_foot ) : ?>
-				<p class="price-foot-note">Đặt nhiều <?php echo esc_html( $dgc_sp_dv ); ?> cùng lúc được giảm tự động: <?php echo esc_html( $dgc_tiers_text_foot ); ?> trên tổng đơn (chưa gồm VAT).</p>
-				<?php endif; ?>
 			</div>
 		</div>
 

@@ -3639,3 +3639,117 @@ body:before{display:none}
 .page-content details.dgc-more>summary:hover{background:var(--action-l,#EAF2FF);border-radius:12px}
 .page-content details.dgc-more>.dgc-more-body{padding:4px 18px 16px;border-top:1px solid var(--line)}
 @media print{.page-content details.dgc-more>.dgc-more-body{display:block}}
+
+/* Menu 7 muc (them "KOL & Fanpage" 2026-10-24) can ~1170px: chuyen hamburger tu <=1219px de nut CTA khong tran (rule menu 1 dong) */
+@media (max-width:1219px){
+  .nav,.header-cta .phone{display:none}
+  .burger{display:flex}
+  .header-cta{margin-left:auto}
+}
+
+/* ============================================================================
+   BANG GIA GON - 2026-10-24 (Hieu: "bang gia phuc tap qua, toan trang don gian
+   ro rang sach se"). Ghi de cac khoi .price-grid/.filter-bar/.tab-toolbar cu.
+   3 cot: ten (+ 1 dong phu) | gia | 1 nut. Khong vach ke doc, khong badge mau.
+   Mobile: moi dong la 1 the 2 tang (ten tren, gia + nut duoi).
+   ============================================================================ */
+.price-grid{border:1px solid var(--line);border-radius:14px;box-shadow:none}
+.grid-head,.price-grid .row,.price-grid-goi .grid-head,.price-grid-goi .row{
+  grid-template-columns:minmax(0,1fr) 170px 128px}
+.grid-head{background:var(--surface-2);border-bottom:1px solid var(--line)}
+.grid-head>div{border-right:0;padding:12px 20px;font-size:11.5px;font-weight:700;letter-spacing:.06em}
+.grid-head .gh-price{justify-content:flex-end}
+.price-grid .row{border-bottom:1px solid var(--line);cursor:pointer}
+.price-grid .row>div{border-right:0;padding:14px 20px;font-size:15px}
+.price-grid .row:hover{background:#F7F9FE}
+.price-grid .row.is-open{background:#F3F6FF}
+.grid-body>.row:last-child{border-bottom:0}
+.r-logo{width:28px;height:28px;border-radius:8px;margin-right:12px;background:var(--surface)}
+.r-name{gap:0}
+.r-name-box{display:flex;flex-direction:column;min-width:0;flex:1}
+.r-name-txt{font-size:15.5px;font-weight:700;color:var(--heading);line-height:1.3}
+.r-meta{font-size:12.5px;font-weight:500;color:var(--ink-soft);line-height:1.4;margin-top:2px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r-meta .r-hot{background:none;padding:0;margin:0;font-size:12.5px;font-weight:600;color:var(--teal)}
+.r-price{justify-content:flex-end;font-size:15.5px;font-weight:700;white-space:nowrap;flex-wrap:nowrap}
+.r-action{justify-content:flex-end;padding-right:20px !important;padding-left:8px !important}
+.grid-pick,.r-more{width:auto;height:auto;min-width:96px;padding:8px 14px;border-radius:9px;
+  border:1px solid var(--line-2);background:var(--surface-2);color:var(--heading);
+  font-family:var(--font-body);font-size:13.5px;font-weight:600;line-height:1.2;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;transition:.15s}
+.grid-pick .pick-add,.grid-pick .pick-on{display:inline}
+.grid-pick:not(.is-picked) .pick-on{display:none}
+.grid-pick.is-picked .pick-add{display:none}
+.grid-pick:hover,.r-more:hover{border-color:var(--action);color:var(--action);background:var(--surface-2)}
+.grid-pick.is-picked{background:var(--action);border-color:var(--action);color:#fff}
+.row.is-open .r-more{border-color:var(--action);color:var(--action)}
+.grid-detail{padding:6px 20px 16px 60px}
+.gd-intro{display:none}
+.gd-item{padding:12px 0}
+.gd-item-name{font-size:14.5px}
+.gd-price{font-size:15px}
+.gd-item-bot .grid-pick{min-width:96px;padding:8px 14px;font-size:13.5px}
+.grid-pager{padding:14px 20px;border-top:1px solid var(--line)}
+.pg-btn.active{background:var(--action);border-color:var(--action)}
+
+/* thanh cong cu: tim + sap xep + (mobile) nut Bo loc; bo loc nen trang, khong vien xanh */
+.tab-toolbar{gap:10px;margin-bottom:12px}
+.tab-search-input{padding:11px 14px;border:1px solid var(--line-2);border-radius:10px;font-size:15px}
+.tab-search-input:focus{border-color:var(--action);outline:0}
+.tab-sort-sel .filter-sel-lb{display:none}
+.filter-toggle{display:none}
+.filter-bar{background:none;border:0;padding:0;margin-bottom:14px}
+[data-theme="dark"] .filter-bar,:root:not([data-theme="dark"]) .filter-bar{background:none !important;border:0 !important;border-radius:0}
+.filter-sel-lb{font-size:12px;text-transform:none;letter-spacing:0;font-weight:600}
+.tab-count{font-size:13px;margin:0 0 10px}
+.price-foot-note{font-style:normal;font-size:13px;margin:12px 2px 0}
+.price-foot-note+.price-foot-note{margin-top:4px}
+
+[data-theme="dark"] .price-grid .row:hover{background:#1E2436}
+[data-theme="dark"] .price-grid .row.is-open{background:#1F2740}
+
+@media(max-width:640px){
+  .grid-head{display:none}
+  .price-grid .row,.price-grid-goi .row{grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:"name name" "price act";row-gap:6px;padding:12px 14px}
+  .price-grid .row>div{padding:0;font-size:14.5px}
+  .price-grid .row>.r-name{grid-area:name}
+  .price-grid .row>.r-price{grid-area:price;justify-content:flex-start;padding-left:40px}
+  .price-grid .row>.r-action{grid-area:act;padding:0 !important}
+  .r-name-txt{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .r-meta{white-space:normal}
+  .grid-pick,.r-more{min-width:84px;padding:7px 12px;font-size:13px}
+  .grid-detail{padding:4px 14px 14px}
+  .tab-toolbar{flex-direction:row;flex-wrap:wrap;align-items:stretch}
+  .tab-search{flex:1 1 100%}
+  .tab-sort-sel{flex:1 1 0}
+  .tab-sort-sel select{width:100%;min-width:0}
+  .filter-toggle{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
+    padding:0 16px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface-2);
+    color:var(--heading);font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer}
+  .filter-toggle[aria-expanded="true"]{border-color:var(--action);color:var(--action)}
+  .filter-bar{display:none}
+  .filter-bar.is-open{display:block}
+}
+
+/* ============================================================================
+   BO CUC TRANG DICH VU GON - 2026-10-24 (cung dot "toan trang don gian, sach se")
+   ============================================================================ */
+/* Hero: tren dien thoai bo bang gia 3D minh hoa (chong de len chu, bang gia that o duoi) */
+@media(max-width:640px){
+  .svc3d-stage[aria-hidden="true"]{display:none}
+  .svc3d-hero .btn,.bbp-hero-actions .btn{width:100%;justify-content:center}
+}
+/* "Vi sao chon": tieu de tren, 6 muc luoi 3x2 - bo cot trai sticky de trong */
+.bbp-why{display:block}
+.bbp-why-head{position:static;text-align:left;max-width:760px;margin:0 0 28px !important}
+.bbp-why-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;border-top:0}
+.bbp-why-row{display:block;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.bbp-why-row dt{margin-bottom:10px;font-size:16.5px}
+.bbp-why-row dd{font-size:15px;color:var(--ink)}
+@media(max-width:900px){.bbp-why-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.bbp-why-list{grid-template-columns:1fr}.bbp-why-row{padding:18px}}
+/* Noi dung dai: chu to, dam hon, dong thoang de doc */
+.bbp-body p,.bbp-body li,.svc-body p,.svc-body li{font-size:17px;line-height:1.75;color:var(--ink)}
+/* chi tiet: ten vi tri trung voi the vi tri dau tien -> chi giu the (co nut anh minh hoa) */
+.gd-item-top:has(.spec-chip-pos) .gd-item-name{display:none}

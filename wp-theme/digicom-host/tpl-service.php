@@ -111,7 +111,7 @@ if ( $nhom ) {
 ?>
 
 <?php if ( get_the_content() ) : ?>
-<section class="sec"><div class="wrap page-content"><?php the_content(); ?></div></section>
+<section class="sec"><div class="wrap page-content svc-body"><?php the_content(); ?></div></section>
 <?php endif; ?>
 
 <?php /* Trang co bang gia da co "Huong dan dat hang" 4 buoc -> khong lap quy trinh chung nua.
