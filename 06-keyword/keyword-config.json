@@ -1,33 +1,170 @@
 {
  "domain": "digicomvn.com",
  "topics": [
-  ["booking-bao-pr", "book báo|booking báo|book bài|đặt bài.*báo|đăng bài.*báo|pr báo|bài pr|đăng pr|booking pr|pr booking|báo chí|bao chi|báo điện tử|vnexpress|dân trí|kênh14|kenh14|cafef|cafebiz|tuổi trẻ|thanh niên|vietnamnet|zing|soha|afamily|eva|24h|tiền phong|lao động|nhân dân|đầu tư|giá đăng bài|bảng giá.*báo|thông cáo"],
-  ["guest-post", "guest post|guestpost|đăng bài khách|bài khách|post khách"],
-  ["textlink", "textlink|text link|banner link|chèn link|link bài viết|niche edit|link insertion"],
-  ["backlink", "backlink|back link|liên kết ngoài|đi link|link building|xây dựng liên kết|pbn|entity|social entity|toplist|trang vệ tinh|anchor text|dofollow|nofollow|link ngoài"],
-  ["offpage", "off-page|offpage|off page|e-e-a-t|eeat|domain authority|domain rating|\\bda\\b|\\bdr\\b|trust flow|citation flow|spam score"],
-  ["geo-ai", "geo\\b|ai overview|ai search|chatgpt|generative|llm|perplexity|sge\\b|aeo\\b"],
-  ["onpage", "on-page|onpage|on page|title tag|thẻ title|meta description|thẻ meta|heading|thẻ h1|h1\\b|schema|dữ liệu có cấu trúc|nội dung seo|viết bài chuẩn seo|bài chuẩn seo|internal link|liên kết nội bộ|từ khoá|từ khóa|keyword|search intent|ý định tìm kiếm|content seo|topic cluster|topical"],
-  ["technical", "technical seo|seo kỹ thuật|core web vitals|tốc độ tải|pagespeed|sitemap|robots\\.txt|robots txt|canonical|index|crawl|301|redirect|404|hreflang|https|mobile.first|lỗi seo"],
-  ["thuat-toan", "thuật toán|core update|helpful content|spam update|penguin|panda|hummingbird|rankbrain|bert|google update|bị phạt|google phạt|manual action"],
-  ["cong-cu", "ahrefs|semrush|screaming frog|search console|gsc|google analytics|ga4|moz|majestic|công cụ seo|phần mềm seo|tool seo|kiểm tra backlink|kiểm tra thứ hạng|check backlink|check seo"],
-  ["seo-tong-quan", "seo là gì|seo tổng thể|lộ trình seo|học seo|seo cho người mới|seo website|dịch vụ seo|seo từ khoá|seo từ khóa|seo local|seo google map|seo ecommerce|seo thương mại|seo wordpress|seo audit|audit seo|checklist seo"]
+  [
+   "booking-bao-pr",
+   "book báo|booking báo|book bài|đặt bài.*báo|đăng bài.*báo|pr báo|bài pr|đăng pr|booking pr|pr booking|báo chí|bao chi|báo điện tử|vnexpress|dân trí|kênh14|kenh14|cafef|cafebiz|tuổi trẻ|thanh niên|vietnamnet|zing|soha|afamily|eva|24h|tiền phong|lao động|nhân dân|đầu tư|giá đăng bài|bảng giá.*báo|thông cáo"
+  ],
+  [
+   "guest-post",
+   "guest post|guestpost|đăng bài khách|bài khách|post khách"
+  ],
+  [
+   "textlink",
+   "textlink|text link|banner link|chèn link|link bài viết|niche edit|link insertion"
+  ],
+  [
+   "backlink",
+   "backlink|back link|liên kết ngoài|đi link|link building|xây dựng liên kết|pbn|entity|social entity|toplist|trang vệ tinh|anchor text|dofollow|nofollow|link ngoài"
+  ],
+  [
+   "offpage",
+   "off-page|offpage|off page|e-e-a-t|eeat|domain authority|domain rating|\\bda\\b|\\bdr\\b|trust flow|citation flow|spam score"
+  ],
+  [
+   "geo-ai",
+   "geo\\b|ai overview|ai search|chatgpt|generative|llm|perplexity|sge\\b|aeo\\b"
+  ],
+  [
+   "onpage",
+   "on-page|onpage|on page|title tag|thẻ title|meta description|thẻ meta|heading|thẻ h1|h1\\b|schema|dữ liệu có cấu trúc|nội dung seo|viết bài chuẩn seo|bài chuẩn seo|internal link|liên kết nội bộ|từ khoá|từ khóa|keyword|search intent|ý định tìm kiếm|content seo|topic cluster|topical"
+  ],
+  [
+   "technical",
+   "technical seo|seo kỹ thuật|core web vitals|tốc độ tải|pagespeed|sitemap|robots\\.txt|robots txt|canonical|index|crawl|301|redirect|404|hreflang|https|mobile.first|lỗi seo"
+  ],
+  [
+   "thuat-toan",
+   "thuật toán|core update|helpful content|spam update|penguin|panda|hummingbird|rankbrain|bert|google update|bị phạt|google phạt|manual action"
+  ],
+  [
+   "cong-cu",
+   "ahrefs|semrush|screaming frog|search console|gsc|google analytics|ga4|moz|majestic|công cụ seo|phần mềm seo|tool seo|kiểm tra backlink|kiểm tra thứ hạng|check backlink|check seo"
+  ],
+  [
+   "seo-tong-quan",
+   "seo là gì|seo tổng thể|lộ trình seo|học seo|seo cho người mới|seo website|dịch vụ seo|seo từ khoá|seo từ khóa|seo local|seo google map|seo ecommerce|seo thương mại|seo wordpress|seo audit|audit seo|checklist seo"
+  ]
  ],
- "brand_topics": ["booking-bao-pr", "guest-post", "textlink", "backlink"],
- "knowledge_topics": ["offpage", "geo-ai", "onpage", "technical", "thuat-toan", "cong-cu", "seo-tong-quan"],
+ "brand_topics": [
+  "booking-bao-pr",
+  "guest-post",
+  "textlink",
+  "backlink"
+ ],
+ "knowledge_topics": [
+  "offpage",
+  "geo-ai",
+  "onpage",
+  "technical",
+  "thuat-toan",
+  "cong-cu",
+  "seo-tong-quan"
+ ],
  "not_related": "tuyển dụng|việc làm|lương|xuất nhập khẩu|đầu tư chứng khoán|bảo hiểm|báo cáo thuế|báo thức|báo giá xe|báo giá laptop|báo giá thép|tin tức|thời tiết|bảng giá vàng|giá vàng",
  "off_positioning": "miễn phí|free|crack|hack|lậu|tool đi link tự động|spam|mua bán gov|backlink gov|backlink edu|\\.gov|\\.edu|cờ bạc|nhà cái|casino",
  "other_brands": "mona media|seodo|seovip|danaseo|hapo|mic creative|brandcom|brando|bookbaopr|itify|prbaochi|vietquangcao|fame media|novaon|ladipage",
- "match_stopwords": ["la", "gi", "cua", "va", "cho", "nhu", "the", "nao", "bao", "gia"],
+ "match_stopwords": [
+  "la",
+  "gi",
+  "cua",
+  "va",
+  "cho",
+  "nhu",
+  "the",
+  "nao",
+  "bao",
+  "gia"
+ ],
  "serp": {
-  "big_domains": ["wikipedia", "vnexpress", "shopee", "lazada", "tiki", "dantri", "tuoitre", "thanhnien", "vietnamnet", "kenh14", "cafef", "cafebiz", "zingnews", "google.com", "support.google", "developers.google"],
-  "niche_hints": ["seo", "backlink", "pr", "agency", "marketing", "mona", "seodo", "seovip", "danaseo", "hapo", "mic", "brando", "bookbao", "textlink", "guestpost", "digi", "ahrefs", "semrush", "moz", "searchengine"],
-  "weak": ["facebook", "reddit", "youtube", "tiktok", "quora", "dictionary", "pinterest", "linkedin"],
+  "big_domains": [
+   "wikipedia",
+   "vnexpress",
+   "shopee",
+   "lazada",
+   "tiki",
+   "dantri",
+   "tuoitre",
+   "thanhnien",
+   "vietnamnet",
+   "kenh14",
+   "cafef",
+   "cafebiz",
+   "zingnews",
+   "google.com",
+   "support.google",
+   "developers.google"
+  ],
+  "niche_hints": [
+   "seo",
+   "backlink",
+   "pr",
+   "agency",
+   "marketing",
+   "mona",
+   "seodo",
+   "seovip",
+   "danaseo",
+   "hapo",
+   "mic",
+   "brando",
+   "bookbao",
+   "textlink",
+   "guestpost",
+   "digi",
+   "ahrefs",
+   "semrush",
+   "moz",
+   "searchengine"
+  ],
+  "weak": [
+   "facebook",
+   "reddit",
+   "youtube",
+   "tiktok",
+   "quora",
+   "dictionary",
+   "pinterest",
+   "linkedin"
+  ],
   "commercial_path": "dich-vu|bang-gia|mua-|booking|book-bao|/service|/gia-",
   "min_overlap": 3
  },
- "qa": {"banned": ["mona media","seodo","seovip","danaseo","hapo digital","mic creative","brando","bookbaopr","itify","prbaochi","không bịa","nói thẳng"], "internal_min": 3, "internal_max": 6, "external_max": 3, "max_gap_words": 200, "faq_heading_nbsp": false, "forbid_tom_tat_nhanh": true},
- "publish": {"ssh": "u704250056@145.79.26.63", "ssh_port": 65002, "ssh_key": "~/.ssh/id_ed25519", "wp_path": "domains/digicomvn.com/public_html", "author_id": 1, "category_id": 1, "tag": ""},
+ "qa": {
+  "banned": [
+   "mona media",
+   "seodo",
+   "seovip",
+   "danaseo",
+   "hapo digital",
+   "mic creative",
+   "brando",
+   "bookbaopr",
+   "itify",
+   "prbaochi",
+   "không bịa",
+   "nói thẳng"
+  ],
+  "internal_min": 3,
+  "internal_max": 6,
+  "external_max": 3,
+  "max_gap_words": 200,
+  "faq_heading_nbsp": false,
+  "forbid_tom_tat_nhanh": true
+ },
+ "publish": {
+  "ssh": "u704250056@145.79.26.63",
+  "ssh_port": 65002,
+  "ssh_key": "~/.ssh/id_ed25519",
+  "wp_path": "domains/digicomvn.com/public_html",
+  "author_id": 1,
+  "category_id": 1,
+  "tag": ""
+ },
  "allintitle_tool": "/Volumes/Extreme SSD/Projects/ICD/08-tools/keyword-tools",
- "allintitle_python": "/usr/local/bin/python3.14"
+ "allintitle_python": "/usr/local/bin/python3.14",
+ "semrush_globs": [
+  "06-keyword/semrush/**/*broad-match*.csv",
+  "06-keyword/semrush/**/tu-khoa-tong-hop*.csv"
+ ]
 }

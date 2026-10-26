@@ -4907,3 +4907,10 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 ## 2026-10-24 - Thiết kế lại bảng giá + trang dịch vụ
 - price-grid.js 3 cột (tên+DR/số vị trí | Giá từ | Chọn/Xem giá), bấm cả dòng; main.js nút Bộ lọc mobile; service-pricing.php gộp ghi chú; tpl-service.php class svc-body; main.css 2 khối mới; DGC_VER 3.10.2. QA 0 tràn ngang 5 trang, dark mode ổn.
+
+## 2026-10-26 - Content pipeline V003
+- Gộp 19 file KP vào sổ cái (7218 từ), gom cụm theo SERP ẩn danh, đăng 2 bài mới + bổ sung 1 bài cũ, thêm 4 link ngược, cập nhật sơ đồ nội dung (html) và tab KH. Chưa đo allintitle (scraper bận).
+
+## 2026-10-26 - V003 phần 2
+- Tab 'Từ volume lớn 26-10' (15 nhóm, 10 từ nên dán Keyword Planner) và tab 'Kế hoạch đăng bài 27-10' (nhịp giãn: 1 bài mới/tuần cách nhau tối thiểu 5 ngày, tối đa 2 lần sửa/ngày, 1 trang tiền/ngày; điều kiện dừng ghi trong tab). Cơ sở: Google không công bố ngưỡng số bài/ngày, nhịp là suy luận của Claude.
+- Bản nháp T4 bảng giá quảng cáo truyền hình VTV (content/t4-...html, khoảng 2.100 từ). Jett 78/100: đã sửa mâu thuẫn giá VTV1 sáng, câu World Cup 2,25 tỷ (Golden Spot), bỏ khẳng định thẩm định chưa có căn cứ, sửa HTV7/HTV9. Còn thiếu: 2 ảnh, người duyệt, kiểm tra mobile, meta.
