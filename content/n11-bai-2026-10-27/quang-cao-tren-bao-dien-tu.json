@@ -1,0 +1,55 @@
+{
+ "title": "Quảng Cáo Trên Báo Điện Tử: 7 Hình Thức Và Cách Chọn",
+ "slug": "quang-cao-tren-bao-dien-tu",
+ "meta_desc": "Quảng cáo trên báo điện tử gồm 7 hình thức: banner, pop-up, video, bài PR, nội dung tài trợ... Cách tính giá CPD, CPM, giá bài PR và quy định mới 2026.",
+ "excerpt": "7 hình thức quảng cáo trên báo điện tử, cách tính giá CPD, CPM và theo bài, giá tham khảo một bài PR trên báo lớn, quy định Luật Quảng cáo sửa đổi từ 01/01/2026 và checklist trước khi ký hợp đồng.",
+ "tu_khoa_chinh": "quảng cáo trên báo điện tử",
+ "tu_khoa_phu": [
+  "quảng cáo banner trên báo điện tử",
+  "các hình thức quảng cáo trên báo điện tử",
+  "giá quảng cáo báo điện tử",
+  "quảng cáo báo mạng",
+  "native ads báo điện tử"
+ ],
+ "intent": "Informational/commercial: 7/9 trang top 10 (đo ẩn danh 24/10/2026) là bài viết liệt kê các hình thức quảng cáo báo điện tử (banner, PR, native, video, pop-up), 1 rate card báo, 1 trang pháp luật. Người tìm muốn biết có hình thức nào, ưu nhược, cách tính giá, chọn hình thức nào.",
+ "gap_doi_thu": [
+  "Không bài top nào giải thích đơn vị tính giá CPD/CPM/CPC/theo bài; chỉ nêu khoảng giá chung chung",
+  "Không bài nào cập nhật Luật Quảng cáo sửa đổi 75/2025/QH15 (hiệu lực 01/01/2026); trang pháp luật trong top còn dẫn quy định 2012 (thời gian chờ tắt 1,5 giây)",
+  "Không có chuẩn đo lượt hiển thị trong tầm nhìn (MRC) khi mua theo CPM",
+  "Không có checklist hợp đồng (xoay vòng banner, thời gian tồn tại bài, nhãn, loại link, nghiệm thu)",
+  "Giá bài PR nêu dạng 'vài triệu đến hàng trăm triệu', không có số liệu từng báo"
+ ],
+ "info_gain": [
+  "Điều 23 'Quảng cáo trên mạng' sau sửa đổi bởi Luật 75/2025/QH15 (đọc văn bản gốc): dấu hiệu nhận diện, quyền tắt/báo vi phạm, kiểm soát trang đích; thay quy định 1,5 giây cũ",
+  "Giá khởi điểm bài PR thật của 7 báo lớn lấy từ bảng giá live digicomvn.com ngày 26/10/2026 (infographic)",
+  "Bảng 4 đơn vị tính giá + chuẩn viewable MRC (50% diện tích, 1 giây banner / 2 giây video) để quy đổi báo giá",
+  "Checklist 7 điểm trước khi ký hợp đồng quảng cáo báo"
+ ],
+ "nguon": [
+  "Luật 75/2025/QH15 sửa đổi Luật Quảng cáo (PDF cổng TP. Hà Nội): https://storage-vnportal.vnpt.vn/gov-hni/7218/VanBan/2025/7/30/LUẬT SỬA ĐỔI BỔ SUNG LUẬT QUẢNG CÁO.pdf",
+  "VBHN 88/VBHN-VPQH 2025 Luật Quảng cáo: https://luatvietnam.vn/thuong-mai/van-ban-hop-nhat-88-vbhn-vpqh-nam-2025-do-van-phong-quoc-hoi-ban-hanh-hop-nhat-luat-quang-cao-409764-d5.html",
+  "Luật Báo chí 126/2025/QH15 hiệu lực 01/7/2026: https://vneconomy.vn/quoc-hoi-thong-qua-luat-bao-chi-sua-doi-voi-nhieu-diem-moi.htm",
+  "IAB New Standard Ad Unit Portfolio: https://iabtechlab.com/standards/iab-new-ad-portfolio/",
+  "MRC Viewable Ad Impression Guidelines: https://www.mediaratingcouncil.org/standards-and-guidelines",
+  "Google Search Central qualify outbound links: https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
+  "Bảng giá booking báo PR live digicomvn.com (price-grid-data) lấy 26/10/2026: https://digicomvn.com/booking-bao-pr/"
+ ],
+ "link_noi_bo": [
+  "https://digicomvn.com/so-sanh-booking-bao-pr-va-quang-cao-bao/",
+  "https://digicomvn.com/booking-bao-pr/",
+  "https://digicomvn.com/guest-post/",
+  "https://digicomvn.com/dat-bai/"
+ ],
+ "anh": [
+  {
+   "file": "ig-quang-cao-tren-bao-dien-tu-cach-tinh-gia.webp",
+   "loai": "infographic tự dựng, nội dung khái niệm"
+  },
+  {
+   "file": "ig-quang-cao-tren-bao-dien-tu-gia-bai-pr.webp",
+   "loai": "infographic số liệu thật bảng giá live 26/10/2026"
+  }
+ ],
+ "can_luu_y_qa": "Giá trong ảnh 2 lấy từ bảng giá live ngày 26/10/2026; nếu đổi giá trước khi đăng cần render lại. Không có giá banner vì Digicom không bán banner.",
+ "so_tu": 3546
+}

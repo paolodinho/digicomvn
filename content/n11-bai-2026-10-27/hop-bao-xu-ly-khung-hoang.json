@@ -1,0 +1,47 @@
+{
+ "title": "Họp Báo Xử Lý Khủng Hoảng: Kịch Bản Mẫu Từng Phút",
+ "slug": "hop-bao-xu-ly-khung-hoang",
+ "meta_desc": "Kịch bản họp báo xử lý khủng hoảng truyền thông theo 6 phân đoạn, mẫu lời MC và người phát ngôn, câu hỏi khó và thủ tục thông báo từ 01/7/2026. Xem ngay.",
+ "excerpt": "Mẫu kịch bản họp báo xử lý khủng hoảng 45 phút: chuẩn bị, lời MC, tuyên bố chính, hỏi đáp, 8 dạng câu hỏi khó, thủ tục thông báo theo Nghị định 237/2026 và checklist trước giờ họp.",
+ "tu_khoa_chinh": "họp báo xử lý khủng hoảng",
+ "tu_khoa_phu": [
+  "kịch bản họp báo xử lý khủng hoảng",
+  "họp báo xử lý khủng hoảng truyền thông",
+  "quy trình tổ chức họp báo khủng hoảng",
+  "người phát ngôn khủng hoảng",
+  "thủ tục tổ chức họp báo"
+ ],
+ "intent": "Informational/how-to: top 10 đa số tài liệu sinh viên (Studocu, Scribd, PDF trường) + bài hướng dẫn; người tìm muốn kịch bản mẫu và quy trình tổ chức họp báo khủng hoảng.",
+ "gap_doi_thu": [
+  "Tài liệu top dựa trên Luật Báo chí 2016 hoặc không nêu pháp lý; chưa ai cập nhật Luật Báo chí 2025 + Nghị định 237/2026 (thêm tài liệu chứng minh, danh sách báo mời, mốc từ chối 12 giờ).",
+  "Kịch bản sinh viên gắn với 1 thương hiệu cụ thể, không có khung mẫu điền được và thời lượng từng phân đoạn.",
+  "Không có bộ câu hỏi khó + hướng trả lời có căn cứ; không nêu kỹ thuật trả lời (no comment, lặp cáo buộc, A/B).",
+  "Không có phần sau họp báo: quyền phản hồi, cải chính theo luật.",
+  "Lời khuyên gửi thư mời trước 5-7 ngày không hợp tình huống khủng hoảng."
+ ],
+ "info_gain": [
+  "Thủ tục họp báo cập nhật theo Luật Báo chí 126/2025/QH15 (Điều 37) và Nghị định 237/2026 hiệu lực 01/7/2026, kèm mức phạt Nghị định 119/2020.",
+  "Kịch bản khung 45 phút 6 phân đoạn với mẫu lời MC và tuyên bố chính điền được (infographic).",
+  "Bảng 8 dạng câu hỏi khó + hướng trả lời và kỹ thuật phát ngôn dựa trên CDC CERC (trả lời dưới 2 phút, không no comment, không nhắc lại cáo buộc).",
+  "Quy trình 24 giờ sau họp báo dùng quyền phản hồi/cải chính Điều 34, 36 Luật Báo chí 2025; checklist 8 mục trước giờ họp."
+ ],
+ "nguon": [
+  "https://bvhttdl.gov.vn/luat-bao-chi-2025-tao-hanh-lang-phap-ly-day-du-gop-phan-thao-go-cac-diem-nghen-khoi-thong-nguon-luc-cho-nen-bao-chi-cach-mang-viet-nam-tiep-tuc-phat-trien-20260107111111286.htm",
+  "https://luatnguyen.vn/van-ban-phap-luat/luat-bao-chi-2025-so-126-2025-qh15-3767.html (đối chiếu Điều 31, 34, 36, 37, 50)",
+  "https://tuoitre.vn/plo/nhung-diem-moi-dang-chu-y-cua-nghi-dinh-huong-dan-luat-bao-chi-2025-post913242.html",
+  "https://tuoitre.vn/tu-buoi-hop-bao-cua-ca-si-jack-j97-quy-dinh-ve-hop-bao-ra-sao-20250725185305115.htm",
+  "https://www.cdc.gov/cerc/php/cerc-manual/index.html (PDF CERC_Spokesperson, cập nhật 2014)"
+ ],
+ "link_noi_bo": [
+  "https://digicomvn.com/thong-cao-bao-chi-xu-ly-khung-hoang/",
+  "https://digicomvn.com/thong-cao-bao-chi-la-gi/",
+  "https://digicomvn.com/booking-bao-pr/",
+  "https://digicomvn.com/dat-bai/"
+ ],
+ "anh": [
+  "ig-hop-bao-xu-ly-khung-hoang-kich-ban-45-phut.webp",
+  "ig-hop-bao-xu-ly-khung-hoang-nen-khong-nen.webp"
+ ],
+ "luu_y_qa": "Mức phạt trích Nghị định 119/2020/NĐ-CP; chưa xác minh nghị định xử phạt mới thay thế sau 01/7/2026 - cần kiểm lại trước khi đăng.",
+ "so_tu": 3465
+}
