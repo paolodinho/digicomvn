@@ -65,6 +65,10 @@ def cmd_create(args):
         payload["categories"] = [int(x) for x in args.category_id.split(",")]
     if args.author_id:
         payload["author"] = args.author_id
+    if getattr(args, "date", None):
+        payload["date"] = args.date  # gio VN, kem --status future de hen gio
+    if getattr(args, "excerpt", None):
+        payload["excerpt"] = args.excerpt
     res = call("POST", "wp/v2/posts", site, user, pw, data=payload)
     print(json.dumps({"id": res["id"], "link": res["link"], "status": res["status"]}, ensure_ascii=False))
 
@@ -132,6 +136,8 @@ def main():
     c.add_argument("--category-id")
     c.add_argument("--author-id", type=int)
     c.add_argument("--status", default="publish")
+    c.add_argument("--date", help="YYYY-MM-DDTHH:MM:SS gio site (hen gio: --status future)")
+    c.add_argument("--excerpt")
     c.set_defaults(func=cmd_create)
 
     u = sub.add_parser("update")
