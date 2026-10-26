@@ -8,7 +8,7 @@ while true; do
     ALIVE=$(kill -0 "$(cat "$W/suggest.pid")" 2>/dev/null && echo 1)
     FIN=$(grep -c XONG_SUGGEST "$W/suggest.log"); BLK=$(grep -c "BỊ CHẶN" "$W/suggest.log")
   else
-    TOT=$(wc -l < "$2" | tr -d ' '); DONE=$(cat "$3" 2>/dev/null | grep -c '"keyword"'); SEC=60; ALIVE=$(pgrep -f "allintitle_scrape.py --keywords $2" >/dev/null && echo 1); FIN=0; BLK=0
+    TOT=$(wc -l < "$2" | tr -d ' '); DONE=$(cat "$3" 2>/dev/null | grep -c '"keyword"'); SEC=60; ALIVE=$(kill -0 "$(cat "$(dirname "$2")/loop.pid" 2>/dev/null)" 2>/dev/null && echo 1); FIN=0; BLK=0
   fi
   NOW=$(date +%H:%M); ETA=$(/usr/bin/python3 -c "import datetime as d;r=max(int('$TOT')-int('$DONE'),0);print((d.datetime.now()+d.timedelta(seconds=r*$SEC)).strftime('%H:%M'))")
   if [ "$FIN" -gt 0 ] || { [ -z "$ALIVE" ] && [ "$DONE" -ge "$TOT" ]; }; then MSG="$KIND XONG $DONE/$TOT lúc $NOW"; END=1
