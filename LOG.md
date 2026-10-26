@@ -4914,3 +4914,6 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 ## 2026-10-26 - V003 phần 2
 - Tab 'Từ volume lớn 26-10' (15 nhóm, 10 từ nên dán Keyword Planner) và tab 'Kế hoạch đăng bài 27-10' (nhịp giãn: 1 bài mới/tuần cách nhau tối thiểu 5 ngày, tối đa 2 lần sửa/ngày, 1 trang tiền/ngày; điều kiện dừng ghi trong tab). Cơ sở: Google không công bố ngưỡng số bài/ngày, nhịp là suy luận của Claude.
 - Bản nháp T4 bảng giá quảng cáo truyền hình VTV (content/t4-...html, khoảng 2.100 từ). Jett 78/100: đã sửa mâu thuẫn giá VTV1 sáng, câu World Cup 2,25 tỷ (Golden Spot), bỏ khẳng định thẩm định chưa có căn cứ, sửa HTV7/HTV9. Còn thiếu: 2 ảnh, người duyệt, kiểm tra mobile, meta.
+
+## 2026-10-26 22:56 N11 viết bài
+- 3 bài Jett 84/87/89, hẹn giờ 7017/7018/7019 (27/10 08:30, 15:30; 28/10 08:30 VN), tab KH dòng 43-47 theo trang đích, N11 cập nhật. Đo top 10 72 từ còn chạy nền.
