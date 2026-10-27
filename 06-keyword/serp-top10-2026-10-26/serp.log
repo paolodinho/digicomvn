@@ -525,3 +525,17 @@
   ...đang chờ tool khác nhả proxy (kiểm tra lại sau 60s)
 2026-10-27 08:30:49 | LOOP lần 1, đã đo 7/72
 2026-10-27 08:30:50 | Engine: patchright | 1 key xoay homeproxy.vn | 72 từ khoá | tối đa 2 lần thử lại nếu dính chặn
+2026-10-27 08:32:24 | [1/72] allintitle:dịch vụ backlink -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:34:08 | [2/72] allintitle:backlink là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:36:06 | [3/72] allintitle:text link -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:38:02 | [4/72] allintitle:kol nghĩa là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:39:08 | [5/72] allintitle:bài pr mẫu -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:40:52 | [6/72] allintitle:ahrefs backlink -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:42:32 | [7/72] allintitle:anchor text là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:44:05 | [8/72] allintitle:thông cáo là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:45:06 |   [pr quảng cáo] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-27 08:45:14 |   [pr quảng cáo] lỗi: TimeoutError: Locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator("textarea[name=q], input[name=q]").first
+    -
+2026-10-27 08:45:14 | [9/72] allintitle:pr quảng cáo -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
