@@ -2,6 +2,7 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
+- 27/10 21:10 XONG W4: trang dịch vụ + /lien-he/ dùng 6 ảnh agency-team-1..6-800.jpg (Pexels) xoay theo ID, footer giữ team-service-800.jpg thật. Backup _backups/edits/2026-10-27/digicom-team-img/
 - 27/10 19:30 XONG: thay ảnh stock bằng minh hoạ Storyset 135 bài, GSC 156 URL đã xếp hàng. Danh sách: scratchpad edited-urls.tsv
 - 27/10 17:50 Task: thêm ảnh minh hoạ bài viết. Đã chèn 30 ảnh stock CC0 vào ~158 bài (backup _backups/edits/2026-10-27/digicom-anh/); Hiếu chê xấu, muốn illustration vẽ free. Tiếp theo: CHờ Hiếu chọn thay illustration (Storyset/unDraw) hay gỡ; sau đó LOA (giảm bảng/thẻ, thêm ảnh), GSC submit lại.
 - 27/10 14:xx N11: đã hẹn giờ thêm 6 bài (31/10 pbn-la-gi, backlink-bao-chi; 1/11 gia-booking-kol, booking-kol-la-gi; 2/11 pr-va-quang-cao-khac-nhau, micro-kol-la-gi), Jett đạt. Tiếp theo: tối ưu 16 trang có sẵn (tab KH), viết bao-mang-dien-tu-la-gi + social-entity-la-gi (CHỜ lệnh); CHỜ Hiếu: bảng giá VND gia-booking-kol, byline, nhịp V003. File: content/n11-bai-2026-10-27/da-hen-gio.tsv

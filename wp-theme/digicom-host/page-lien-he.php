@@ -24,8 +24,8 @@ get_header();
 			?></div>
 			<div class="col">
 				<img
-					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-service-800.jpg' ); ?>"
-					alt="Đội ngũ DigicomVN"
+					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-' . ( ( get_the_ID() % 6 ) + 1 ) . '-800.jpg' ); ?>"
+					alt="Nhóm làm việc tại văn phòng agency truyền thông"
 					width="800" height="533"
 					style="width:100%;height:auto;border-radius:var(--r-md);box-shadow:var(--sh-low);display:block;margin-bottom:22px"
 					loading="lazy"
