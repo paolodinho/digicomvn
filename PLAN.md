@@ -7,6 +7,7 @@
 - Đang làm: đo top 10 nền (06-keyword/serp-top10-2026-10-26/run_loop.sh, 15/72 lúc 08:45, ~1,5 phút/từ, khoá IP chung).
 - Tiếp theo: khi đo xong chạy gom_cum_n11.py -> ghi tab KH theo URL -> viết cụm mới đủ điều kiện, hẹn giờ từ 31/10 bằng content/n11-bai-2026-10-27/hen_gio.py (giờ UTC = VN - 7). Đăng bài phải có byline/người duyệt (CHỜ Hiếu). V003 nhịp 1 bài/tuần mâu thuẫn chỉ đạo 2 bài/ngày. Sau khi bài MV lên: thêm link từ mau-thong-cao-bao-chi.
 - File liên quan: /Volumes/Extreme SSD/Projects/digicom/content/n11-bai-2026-10-27/ ; /Volumes/Extreme SSD/Projects/digicom/06-keyword/serp-top10-2026-10-26/
+- Báo giá Hoa Học Trò + Webtretho 27/10 (nhóm Zalo Combat - Goodcom): xong 2 Google Sheet (khách 1WL4y_OSaDVuCoL_wIRW6N7PYsuAhsBVuWGvl5lTLO8k, NOIBO 1OtEjlg1fzwC10ECGJ0Ld6vegZ8W5j9lyZDcbRv66LqU), ghi tab Báo giá khách hàng dòng 1. HHT 2,31tr (Goodcom vốn 2,1tr, tab 12.10 đã quá hạn 10 ngày), Webtretho 4,75tr (DanaSEO kho 29/07). Tiếp theo: CHỜ Hiếu - hỏi Lê Thu/DanaSEO xác nhận giá + nội dung link Lê Thu gửi (Zalo web chưa đăng nhập, Claude chưa đọc được).
 - Báo giá Thanh Niên Piano 27/10: xong, 2 Google Sheet (khách 1EM_aAqOfne5UttQbRJeWibrBvb1adRdYjy83PS1REuc, NOIBO 1vXAt-rjDAnJJQhG24JQOoPi8idtV4yVVInvACULbECE), đã ghi tab Báo giá khách hàng dòng 1. Hiếu 27/10: ưu tiên giá Goodcom (file Combat 2026 tab 27.10) -> (A) đã đổi sang Goodcom 11,255tr (tiểu mục Giáo dục, giả định). CHỜ Hiếu: xác nhận tiểu mục Giáo dục hay Doanh nghiệp (12,986tr) và DanaSEO (B) 3,7tr kho 29/07.
 - Cập nhật lúc: 2026-10-27 09:15
 
