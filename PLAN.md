@@ -2,6 +2,7 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
+- 27/10 22:40 XONG W6: CSS 3.11.2 làm phẳng khung thẻ trong bài viết + phần kiến thức trang dịch vụ (chuẩn ICD), backup _backups/edits/2026-10-27/digicom-flat-cards/.
 - 27/10 22:00 XONG W5: tắt hiệu ứng JS (press-flash, watermark parallax, svc3d), CSS chữ bài 760px/16px, bài kiến thức trang dịch vụ dời xuống cuối thu gọn (tpl-service.php, page-booking-bao-pr.php), DGC_VER 3.11.0. Backup _backups/edits/2026-10-27/digicom-landing-font/
 - 27/10 21:10 XONG W4 (21:30 đổi sang 6 ảnh cùng 1 buổi chụp, Hiếu muốn đồng bộ): trang dịch vụ + /lien-he/ dùng 6 ảnh agency-team-1..6-800.jpg (Pexels) xoay theo ID, footer giữ team-service-800.jpg thật. Backup _backups/edits/2026-10-27/digicom-team-img/
 - 27/10 19:30 XONG: thay ảnh stock bằng minh hoạ Storyset 135 bài, GSC 156 URL đã xếp hàng. Danh sách: scratchpad edited-urls.tsv

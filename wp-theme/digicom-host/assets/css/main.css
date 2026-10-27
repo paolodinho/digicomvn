@@ -3789,3 +3789,25 @@ html{scroll-behavior:auto}
 .svc-knowledge .page-content.is-clamped:after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;
   background:linear-gradient(to bottom,transparent,var(--surface-2));pointer-events:none}
 .svc-knowledge-more{max-width:760px;margin:18px auto 0;text-align:center}
+
+/* Hieu 27/10/2026: bo lam dung khung the trong bai viet, trinh bay phang nhu ICD (doan van + danh sach) */
+:is(body.single,.svc-knowledge) .page-content :is(ol,ul):is([style*="display:flex"],[style*="display: flex"],[style*="display:grid"],[style*="display: grid"]){display:block!important;padding-left:22px!important;margin:12px 0 20px!important;border:0!important;background:none!important;border-radius:0!important;overflow:visible!important}
+:is(body.single,.svc-knowledge) .page-content ol:is([style*="display:flex"],[style*="display: flex"],[style*="display:grid"],[style*="display: grid"]){list-style:decimal!important}
+:is(body.single,.svc-knowledge) .page-content ul:is([style*="display:flex"],[style*="display: flex"],[style*="display:grid"],[style*="display: grid"]){list-style:disc!important}
+:is(body.single,.svc-knowledge) .page-content :is(ol,ul):is([style*="display:flex"],[style*="display: flex"],[style*="display:grid"],[style*="display: grid"])>li{display:list-item!important;flex:none!important;width:auto!important;min-width:0!important;max-width:none!important;background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;margin:0 0 10px!important;text-align:left!important;color:inherit!important}
+:is(body.single,.svc-knowledge) .page-content :is(ol,ul):is([style*="display:flex"],[style*="display: flex"],[style*="display:grid"],[style*="display: grid"]) li>div:is([aria-hidden="true"],[style*="border-radius:50%"],[style*="border-radius: 50%"],[style*="height:26px"],[style*="height:28px"],[style*="height:32px"]){display:none!important}
+:is(body.single,.svc-knowledge) .page-content li[style*="display:flex"]{display:list-item!important}
+:is(body.single,.svc-knowledge) .page-content li :is(dt,dd,div,p){color:inherit!important;text-align:left!important}
+/* the div co vien/nen (o 5W1H, vi du, luu y...) -> doan van thuong */
+:is(body.single,.svc-knowledge) .page-content div:is([style*="display:flex"],[style*="display: flex"],[style*="display:grid"],[style*="display: grid"]):has(>div:is([style*="border:1px"],[style*="border: 1px"])){display:block!important;gap:0!important}
+:is(body.single,.svc-knowledge) .page-content div:is([style*="border:1px"],[style*="border: 1px"]):not([style^="width"]):not([style*=";width"]):not([style*="; width"]){background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;margin:0 0 14px!important;min-width:0!important;text-align:left!important;color:inherit!important}
+:is(body.single,.svc-knowledge) .page-content div:is([style*="border:1px"],[style*="border: 1px"]) :is(div,p,dt,dd){text-align:left!important}
+:is(body.single,.svc-knowledge) .page-content div[style*="display:flex"]>div[style*="border-radius:50%"]{display:none!important}
+:is(body.single,.svc-knowledge) .page-content dl.dl-card{background:none!important;padding:0!important;margin:0 0 10px!important}
+:is(body.single,.svc-knowledge) .page-content dl.dl-card dd{margin:2px 0 0!important}
+:is(body.single,.svc-knowledge) .page-content .summary{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important}
+:is(body.single,.svc-knowledge) .page-content .summary strong{color:inherit}
+:is(body.single,.svc-knowledge) .page-content .wp-block-group.has-background{background:none!important;padding:0!important}
+:is(body.single,.svc-knowledge) .page-content blockquote{background:none!important;font-style:normal!important}
+:is(body.single,.svc-knowledge) .page-content :is(div:is([style*="border:1px"],[style*="border: 1px"]),:is(ol,ul):is([style*="display:flex"],[style*="display:grid"])>li) :is(div,p,dd,dt,span):not([style*="width"]){font-size:15px!important;line-height:1.65!important}
+:is(body.single,.svc-knowledge) .page-content div:is([style*="display:flex"],[style*="display: flex"])>div:not([style*="border"]):not([style*="width"]){font-size:15px!important}
