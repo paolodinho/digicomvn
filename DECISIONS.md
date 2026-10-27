@@ -1,5 +1,12 @@
 # DECISIONS - digicomvn.com
 
+## 2026-10-27 (tối) - ĐẢO quyết định 24/10: digicomvn.com làm MỌI dịch vụ liên quan SEO
+- Hiếu chốt: digicomvn.com là domain của nhánh SEO: dịch vụ SEO (tổng thể, từ khoá, audit, onpage, content, local, entity, AI/GEO...), off-page hiện có (textlink, backlink, guest post, booking báo PR, entity, quốc tế, toplist, booking truyền thông), mua bán tên miền, hosting, phần mềm SEO (booking/thuê tài khoản), khoá học.
+- Hệ sinh thái Digicom: web riêng Google Ads, web riêng Facebook Ads, sau này in ấn, OOH; mọi web đều có mục khoá học.
+- Thay thế mục 2026-10-24 "Dịch vụ ngoài chủ đề" (digicomseo.vn, không bán tên miền/hosting) và "Cô đặc topic". Giữ nguyên các URL off-page đang có (không đổi URL, không chuỗi 301).
+- Việc kéo theo: thiết kế lại trang chủ + menu + trang dịch vụ, sơ đồ nội dung, sơ đồ link nội bộ. Cây URL theo research SERP: 12-chuyen-huong-seo-2026-10/.
+
+
 ## 2026-10-24 (tối) - Thêm nhóm "Booking mạng xã hội": fanpage + KOL/KOC
 - Hiếu giao: thêm booking fanpage, booking KOL/KOC, xem lĩnh vực truyền thông gần để thêm.
 - Thêm 2 trang dịch vụ: /booking-fanpage/ (đăng bài trên fanpage báo điện tử + fanpage cộng đồng lớn) và /booking-kol-koc/ (KOL, KOC, TikToker, YouTuber, livestream bán hàng, nghệ sĩ - gộp làm H2, không tách trang để tránh trùng intent).

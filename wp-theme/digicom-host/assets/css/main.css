@@ -3811,3 +3811,23 @@ html{scroll-behavior:auto}
 :is(body.single,.svc-knowledge) .page-content blockquote{background:none!important;font-style:normal!important}
 :is(body.single,.svc-knowledge) .page-content :is(div:is([style*="border:1px"],[style*="border: 1px"]),:is(ol,ul):is([style*="display:flex"],[style*="display:grid"])>li) :is(div,p,dd,dt,span):not([style*="width"]){font-size:15px!important;line-height:1.65!important}
 :is(body.single,.svc-knowledge) .page-content div:is([style*="display:flex"],[style*="display: flex"])>div:not([style*="border"]):not([style*="width"]){font-size:15px!important}
+
+/* Hieu 27/10/2026 (2): khung doc mobile rong hon, it nut noi, bang khong thanh the */
+@media (max-width:768px){
+  body.single .post-layout-wrap,body.single .wrap.post-layout-wrap{padding-left:16px!important;padding-right:16px!important}
+  body.single .promo-bar{display:none!important}
+  body.single .fab-zalo,body.single .to-top,.to-top{display:none!important}
+  body.single .page-content>p:first-of-type{font-size:16.5px!important;font-weight:500!important;line-height:1.65!important}
+  body.single .page-content,body.single .page-content p,body.single .page-content li{font-size:16px!important;line-height:1.7!important}
+  body.single .page-content h2{font-size:21px!important;margin:26px 0 8px!important}
+  body.single .page-content h3{font-size:17.5px!important}
+  body.single h1{font-size:25px!important}
+  .page-content figure,.page-content .wp-block-image{margin:18px 0!important}
+  .page-content .wp-block-image img{max-width:100%!important;width:100%!important;height:auto!important}
+}
+@media (max-width:560px){
+  .page-content .dgc-data-table tbody tr{background:none!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;padding:10px 0!important;margin:0!important}
+  .page-content .dgc-data-table tbody tr:nth-child(even),.page-content .dgc-data-table tbody tr:hover{background:none!important}
+  .page-content .dgc-data-table td:first-child{border-bottom:0!important;padding-bottom:2px!important}
+}
+.bottom-nav .bn-item{background:none!important;border:0!important;box-shadow:none!important;-webkit-appearance:none;appearance:none}
