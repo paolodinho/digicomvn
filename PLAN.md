@@ -2,7 +2,7 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- 27/10 23:10 ĐANG LÀM W8 chuyển hướng: Hiếu chốt digicomvn.com làm mọi dịch vụ SEO + tên miền + hosting + phần mềm SEO + khoá học (DECISIONS 27/10). Đang chạy 2 research: cây URL theo SERP (12-chuyen-huong-seo-2026-10/research-sitemap.md) và tư vấn mô hình web kiếm tiền (tu-van-web-kiem-tien.md). Tiếp theo: dựng menu mới + trang chủ + trang dịch vụ SEO/tên miền/hosting/phần mềm/khoá học, sơ đồ nội dung + link nội bộ, deploy trước sáng 28/10.
+- 27/10 23:10 ĐANG LÀM W8 chuyển hướng: Hiếu chốt digicomvn.com làm mọi dịch vụ SEO + tên miền + hosting + phần mềm SEO + khoá học (DECISIONS 27/10). Đang chạy 2 research: cây URL theo SERP (12-chuyen-huong-seo-2026-10/research-sitemap.md) và tư vấn mô hình web kiếm tiền (tu-van-web-kiem-tien.md). Tiếp theo: CHỜ agent research nền (2 agent đang chạy, tự báo về phiên này) rồi dựng menu mới + trang chủ + trang dịch vụ SEO/tên miền/hosting/phần mềm/khoá học, sơ đồ nội dung + link nội bộ, deploy trước sáng 28/10.
 - 27/10 23:00 W7: đã gỡ 119 khối trắc nghiệm + icon tròn vỡ ở 161 trang (backup _backups/edits/2026-10-27/digicom-fix-layout/), CSS 3.11.4 deploy; agent nền đang chèn ảnh minh hoạ theo luật tiêu đề (scratchpad addimg.py + rules.py).
 - 27/10 22:40 XONG W6: CSS 3.11.2 làm phẳng khung thẻ trong bài viết + phần kiến thức trang dịch vụ (chuẩn ICD), backup _backups/edits/2026-10-27/digicom-flat-cards/.
 - 27/10 22:00 XONG W5: tắt hiệu ứng JS (press-flash, watermark parallax, svc3d), CSS chữ bài 760px/16px, bài kiến thức trang dịch vụ dời xuống cuối thu gọn (tpl-service.php, page-booking-bao-pr.php), DGC_VER 3.11.0. Backup _backups/edits/2026-10-27/digicom-landing-font/
