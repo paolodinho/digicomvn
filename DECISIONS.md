@@ -4,6 +4,8 @@
 - Hiếu chốt: digicomvn.com là domain của nhánh SEO: dịch vụ SEO (tổng thể, từ khoá, audit, onpage, content, local, entity, AI/GEO...), off-page hiện có (textlink, backlink, guest post, booking báo PR, entity, quốc tế, toplist, booking truyền thông), mua bán tên miền, hosting, phần mềm SEO (booking/thuê tài khoản), khoá học.
 - Hệ sinh thái Digicom: web riêng Google Ads, web riêng Facebook Ads, sau này in ấn, OOH; mọi web đều có mục khoá học.
 - Thay thế mục 2026-10-24 "Dịch vụ ngoài chủ đề" (digicomseo.vn, không bán tên miền/hosting) và "Cô đặc topic". Giữ nguyên các URL off-page đang có (không đổi URL, không chuỗi 301).
+- Tên miền + hosting: Digicom là đại lý P.A Việt Nam (Hiếu xác nhận 27/10). KHÔNG hiện tên nhà cung cấp ở bất kỳ đâu trên site/báo giá; khách đặt bình thường như dịch vụ của Digicom (bảng giá + form đặt, chưa giỏ hàng tự động).
+- Phần mềm SEO: chỉ tài khoản CHÍNH HÃNG (Ahrefs, Semrush...), Digicom ăn affiliate (link gắn rel="sponsored") hoặc bán trung gian (mua hộ gói chính hãng). KHÔNG bán/cho thuê tài khoản dùng chung (Hiếu chốt 27/10).
 - Việc kéo theo: thiết kế lại trang chủ + menu + trang dịch vụ, sơ đồ nội dung, sơ đồ link nội bộ. Cây URL theo research SERP: 12-chuyen-huong-seo-2026-10/.
 
 

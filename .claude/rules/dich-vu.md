@@ -49,3 +49,9 @@ backup-before-edit). Danh mục chi tiết cũ tham khảo trong lịch sử DEC
 ## Booking mạng xã hội (mở 2026-10-24, xem DECISIONS)
 - **Booking fanpage** `/booking-fanpage/` - đăng bài trên fanpage báo điện tử và fanpage cộng đồng lớn. Chưa có bảng giá NCC, báo giá theo yêu cầu.
 - **Booking KOL/KOC** `/booking-kol-koc/` - KOL, KOC, TikToker, YouTuber, livestream, nghệ sĩ. Bắt buộc nêu nghĩa vụ theo Luật Quảng cáo 75/2025/QH15. Không làm seeding/buff tương tác.
+
+## Tên miền + hosting (mở 2026-10-27)
+Nguồn: đại lý P.A Việt Nam - TUYỆT ĐỐI không hiện tên P.A/pavietnam trên site, bảng giá, báo giá, schema (rule bao-gia-khong-lo-gia-von). Khách đặt như dịch vụ của Digicom: bảng giá + form đặt; chưa làm giỏ hàng tự động.
+
+## Phần mềm SEO (mở 2026-10-27)
+Chỉ tài khoản chính hãng: affiliate (rel="sponsored") hoặc mua hộ gói chính hãng. KHÔNG bán tài khoản dùng chung/group buy.
