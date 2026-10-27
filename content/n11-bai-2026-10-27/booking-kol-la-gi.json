@@ -1,0 +1,48 @@
+{
+ "title": "Booking KOL Là Gì? Quy Trình, Hợp Đồng Và Lưu Ý Pháp Lý",
+ "slug": "booking-kol-la-gi",
+ "meta_desc": "Booking KOL là gì? Quy trình 8 bước, brief, điều khoản hợp đồng, cách đo KPI và nghĩa vụ pháp lý theo Luật Quảng cáo từ 2026. Xem ngay để thuê KOL đúng cách.",
+ "excerpt": "Booking KOL là thuê KOL tạo nội dung quảng bá theo hợp đồng. Bài giải thích các bên tham gia, 6 hình thức hợp tác, quy trình 8 bước, brief, 8 điều khoản hợp đồng, cách đo KPI theo mục tiêu và nghĩa vụ pháp lý từ 01/01/2026.",
+ "tu_khoa_chinh": "booking kol là gì",
+ "tu_khoa_phu": [
+  "booking kol la gì",
+  "book kol là gì",
+  "quy trình booking kol",
+  "hợp đồng booking kol",
+  "booking kols",
+  "thuê kol quảng cáo"
+ ],
+ "intent": "Informational + quy trình: top 8 trang 1 (đo ẩn danh 26/10/2026, serp-L.json) đều là bài viết định nghĩa kèm quy trình; 8/8 tiêu đề dạng câu hỏi, 2/8 có năm. PAA: chi phí booking KOL, lương KOL, KOL là gì trong marketing, KOL khác influencer. Không có trang dịch vụ trong top 8.",
+ "gap_doi_thu": [
+  "4/4 bài top đã đọc (CleverAds, REVU, DYM, SlimCRM) không có hoặc gần như không có phần pháp lý/hợp đồng; không bài nào nhắc nghĩa vụ thông báo quảng cáo hay Luật 75/2025/QH15",
+  "Quy trình chỉ liệt kê bước chung, không gắn đầu ra từng bước; brief chỉ cảnh báo mơ hồ, không có khung các mục brief",
+  "KPI liệt kê chỉ số nhưng không ghép theo mục tiêu, không nói link/mã riêng từng KOL để quy kết",
+  "Rủi ro (KOL ảo, kênh vi phạm) nêu sơ lược, không kèm cách kiểm tra cụ thể",
+  "Số liệu case study/quy mô là tự công bố của agency, không dẫn nguồn độc lập"
+ ],
+ "info_gain": [
+  "Đọc văn bản gốc Luật 75/2025/QH15 và lập bảng nghĩa vụ từng bên khi booking (KOL, KOL là người có ảnh hưởng, người dùng mạng xã hội, nhãn hàng, các bên quảng cáo trên mạng) kèm số điều khoản",
+  "Quy trình 8 bước mỗi bước có đầu ra (infographic), tách thẩm định khỏi lập danh sách",
+  "Khung brief 7 mục và bộ 8 điều khoản hợp đồng, nêu riêng quyền sử dụng hình ảnh theo Điều 32 BLDS 2015",
+  "Infographic chọn chỉ số theo mục tiêu (CPM/CPE/CPC/CPA) + lưu ý link/mã riêng từng KOL",
+  "Ánh xạ cách gọi các bên trong ngành sang khái niệm trong Luật Quảng cáo (người quảng cáo, người kinh doanh dịch vụ quảng cáo, người chuyển tải)"
+ ],
+ "nguon": [
+  "Luật 75/2025/QH15 (PDF cổng TP. Hà Nội): https://storage-vnportal.vnpt.vn/gov-hni/7218/VanBan/2025/7/30/LUẬT SỬA ĐỔI BỔ SUNG LUẬT QUẢNG CÁO.pdf",
+  "Ủy ban Cạnh tranh Quốc gia, đăng trên moit.gov.vn (người có ảnh hưởng, mức phạt 20-30 triệu theo NĐ 98/2020 sửa đổi): https://moit.gov.vn/tin-tuc/bao-chi-voi-nguoi-dan/hoat-dong-quang-cao-cua-nguoi-co-anh-huong-duoi-goc-do-bao-ve-quyen-loi-nguoi-tieu-dung-kinh-nghiem-quoc-te-va-giai-phap.html",
+  "Bộ Công Thương - quy định mới Luật BVQLNTD 2023: https://moit.gov.vn/tin-tuc/bao-chi-voi-nguoi-dan/mot-so-quy-dinh-moi-tai-luat-bao-ve-quyen-loi-nguoi-tieu-dung-nam-2023.html",
+  "Tạp chí Tòa án - Điều 32 BLDS 2015 về quyền đối với hình ảnh (nguồn thứ cấp, CHƯA đối chiếu bản gốc vbpl.vn): https://tapchitoaan.vn/bai-viet/phap-luat/quyen-cua-ca-nhan-doi-voi-hinh-anh-quy-dinh-va-bat-cap"
+ ],
+ "link_noi_bo": [
+  "https://digicomvn.com/kol-la-gi/",
+  "https://digicomvn.com/gia-booking-kol/",
+  "https://digicomvn.com/booking-kol-koc/",
+  "https://digicomvn.com/booking-bao-pr/"
+ ],
+ "so_tu": 3636,
+ "so_tu_van_xuoi": 2249,
+ "anh": [
+  "ig-booking-kol-la-gi-quy-trinh-8-buoc.webp",
+  "ig-booking-kol-la-gi-chi-so-theo-muc-tieu.webp"
+ ]
+}
