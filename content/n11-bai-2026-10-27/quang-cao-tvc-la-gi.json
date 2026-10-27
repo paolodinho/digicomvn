@@ -1,0 +1,55 @@
+{
+ "title": "Quảng Cáo TVC Là Gì? Độ Dài, Phân Loại Và Quy Trình",
+ "slug": "quang-cao-tvc-la-gi",
+ "meta_desc": "Quảng cáo TVC là gì, nên dài 15, 30 hay 60 giây, có những loại nào, quy trình sản xuất 5 bước, chi phí gồm gì và quy định phát sóng theo Luật Quảng cáo.",
+ "excerpt": "TVC là phim quảng cáo ngắn dựng khít độ dài spot. Bài giải thích độ dài phổ biến, các loại TVC, quy trình 5 chặng, các khoản chi phí, nơi phát sóng, quy định Luật Quảng cáo và checklist bàn giao cho đài.",
+ "tu_khoa_chinh": "quảng cáo tvc",
+ "tu_khoa_phu": [
+  "quảng cáo tvc là gì",
+  "tvc quảng cáo sản phẩm",
+  "tvc là gì",
+  "tvc dài bao nhiêu giây",
+  "chi phí quảng cáo tvc",
+  "các loại tvc"
+ ],
+ "intent": "Informational: top 10 đo ẩn danh 24/10/2026 cho 'quảng cáo tvc' (5 bài viết, 2 MXH) và 'quảng cáo tvc là gì' (5 bài viết, 1 trang khác, 1 MXH); tiêu đề đa số dạng câu hỏi 'TVC là gì?' kèm phân loại, yếu tố thành công, quy trình. PAA: chi phí, các loại, PR khác quảng cáo, độ dài.",
+ "gap_doi_thu": [
+  "Không bài top nào nêu quy định pháp luật cụ thể (Điều 22 Luật Quảng cáo: 10%/5% thời lượng, 5 phút mỗi lần ngắt) hay hồ sơ trước khi phát (Điều 20)",
+  "Độ dài nêu chung chung, có bài tự mâu thuẫn (15-60 giây và 10-30 giây); không ai gắn độ dài với cách mua spot và kế hoạch cutdown",
+  "Không tách chi phí sản xuất và chi phí phát sóng, không liệt kê khoản cấu thành (quyền hình ảnh, bản quyền nhạc, cutdown)",
+  "Đo hiệu quả chỉ nêu lượt xem; không có reach, frequency, GRP, brand lift, đo trước/sau",
+  "Không có checklist bàn giao bản phát sóng cho đài"
+ ],
+ "info_gain": [
+  "Điều 22, 8, 20, 15a Luật Quảng cáo hợp nhất sau sửa đổi 75/2025/QH15 (hiệu lực 01/01/2026), infographic giới hạn phát sóng",
+  "Bảng độ dài 60/30/15/6 giây gắn nơi dùng + kế hoạch cutdown, dẫn quy cách bumper 6 giây và bỏ qua sau 5 giây của Google Ads",
+  "Danh sách 7 khoản chi phí cấu thành, tách sản xuất và phát sóng, không nêu số",
+  "Checklist 8 điểm bàn giao TVC cho đài (độ dài, file, loudness ITU-R BS.1770/EBU R128, hồ sơ, từ cấm, quyền hình ảnh, bản digital)",
+  "6 chỉ số đo hiệu quả và cách đo trước/sau cho doanh nghiệp nhỏ"
+ ],
+ "nguon": [
+  "VBHN 88/VBHN-VPQH 2025 Luật Quảng cáo: https://luatvietnam.vn/thuong-mai/van-ban-hop-nhat-88-vbhn-vpqh-nam-2025-do-van-phong-quoc-hoi-ban-hanh-hop-nhat-luat-quang-cao-409764-d5.html",
+  "Luật 75/2025/QH15: https://storage-vnportal.vnpt.vn/gov-hni/7218/VanBan/2025/7/30/LUẬT SỬA ĐỔI BỔ SUNG LUẬT QUẢNG CÁO.pdf",
+  "Google Ads video ad formats: https://support.google.com/google-ads/answer/2375464",
+  "ITU-R BS.1770: https://www.itu.int/rec/R-REC-BS.1770",
+  "EBU R128: https://tech.ebu.ch/publications/r128"
+ ],
+ "link_noi_bo": [
+  "https://digicomvn.com/quang-cao-truyen-hinh/",
+  "https://digicomvn.com/booking-truyen-hinh/",
+  "https://digicomvn.com/booking-bao-pr/",
+  "https://digicomvn.com/dat-bai/"
+ ],
+ "anh": [
+  {
+   "file": "ig-quang-cao-tvc-la-gi-quy-trinh-san-xuat.webp",
+   "loai": "infographic tự dựng, nội dung khái niệm, không số liệu"
+  },
+  {
+   "file": "ig-quang-cao-tvc-la-gi-quy-dinh-phat-song.webp",
+   "loai": "infographic số liệu thật Điều 22 Luật Quảng cáo hợp nhất"
+  }
+ ],
+ "can_luu_y_qa": "Link https://digicomvn.com/quang-cao-truyen-hinh/ là bài MÃ H sắp đăng: đăng bài này sau hoặc cùng lúc. Chi tiết Bulova 1941/WNBT là kiến thức phổ biến, chưa có link nguồn trong Tài liệu tham khảo; bỏ câu nếu QA muốn chặt. Không nêu giá (theo BRIEF-2).",
+ "so_tu": 3595
+}
