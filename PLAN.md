@@ -2,11 +2,11 @@
 
 ## Đang làm dở (checkpoint)
 - Task: N11 quy trình từ khoá + viết bài 2 bài/ngày (giao từ phiên điều phối local_6cdadc8b)
-- Đã xong: 3 bài hẹn giờ (post 7017 hop-bao-xu-ly-khung-hoang 27/10 08:30 VN; 7018 thong-cao-bao-chi-ra-mat-mv 27/10 15:30 VN; 7019 quang-cao-tren-bao-dien-tu 28/10 08:30 VN), render sạch, GSC add, sơ đồ nội dung, tab KH dòng 43-47 (theo trang đích), N11 file tổng quan.
-- Đang làm: đo top 10 72 từ nền (06-keyword/serp-top10-2026-10-26/, loop.pid, xếp hàng chung lock, 7/72 lúc 22:55).
-- Tiếp theo: khi đo xong chạy gom_cum_n11.py -> ghi tab KH theo trang đích (mỗi dòng đậm 1 URL) -> viết bài cụm đủ điều kiện, hẹn giờ từ 28/10 15:30 VN (site chạy UTC: 08:30 VN = 01:30 UTC) bằng content/n11-bai-2026-10-27/hen_gio.py. Lưu ý V003 nhịp 1 bài/tuần mâu thuẫn chỉ đạo 2 bài/ngày. Sau khi bài MV đăng: thêm link từ mau-thong-cao-bao-chi mẫu 5.
+- Đã xong: 8 bài hẹn giờ (giờ VN): 7017 hop-bao-xu-ly-khung-hoang 27/10 08:30; 7018 thong-cao-bao-chi-ra-mat-mv 27/10 15:30; 7019 quang-cao-tren-bao-dien-tu 28/10 08:30; 7031 quang-cao-tvc-la-gi 28/10 15:30; 7032 quang-cao-truyen-hinh 29/10 08:30; 7033 quang-cao-radio 29/10 15:30; 7034 kol-la-gi 30/10 08:30; 7035 quang-cao-thoai-vi-pr-len-ngoi 30/10 15:30. Jett 84-91, render sạch, GSC add, sơ đồ nội dung, tab KH dòng 49-108 theo trang đích.
+- Đang làm: đo top 10 nền (06-keyword/serp-top10-2026-10-26/run_loop.sh, 15/72 lúc 08:45, ~1,5 phút/từ, khoá IP chung).
+- Tiếp theo: khi đo xong chạy gom_cum_n11.py -> ghi tab KH theo URL -> viết cụm mới đủ điều kiện, hẹn giờ từ 31/10 bằng content/n11-bai-2026-10-27/hen_gio.py (giờ UTC = VN - 7). Đăng bài phải có byline/người duyệt (CHỜ Hiếu). V003 nhịp 1 bài/tuần mâu thuẫn chỉ đạo 2 bài/ngày. Sau khi bài MV lên: thêm link từ mau-thong-cao-bao-chi.
 - File liên quan: /Volumes/Extreme SSD/Projects/digicom/content/n11-bai-2026-10-27/ ; /Volumes/Extreme SSD/Projects/digicom/06-keyword/serp-top10-2026-10-26/
-- Cập nhật lúc: 2026-10-26 22:56
+- Cập nhật lúc: 2026-10-27 09:15
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,

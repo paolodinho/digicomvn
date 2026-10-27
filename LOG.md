@@ -4917,3 +4917,6 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 ## 2026-10-26 22:56 N11 viết bài
 - 3 bài Jett 84/87/89, hẹn giờ 7017/7018/7019 (27/10 08:30, 15:30; 28/10 08:30 VN), tab KH dòng 43-47 theo trang đích, N11 cập nhật. Đo top 10 72 từ còn chạy nền.
+
+## 2026-10-27 09:15 N11
+- Thêm 5 bài hẹn giờ 7031-7035 (28-30/10), Jett 84-91; tab KH 49-108 theo URL; đo top 10 chạy lại 15/72.
