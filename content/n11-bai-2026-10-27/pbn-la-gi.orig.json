@@ -1,0 +1,52 @@
+{
+ "title": "PBN Là Gì? Cách Hoạt Động, Rủi Ro Và Lựa Chọn Thay Thế",
+ "slug": "pbn-la-gi",
+ "meta_desc": "PBN là gì? PBN (Private Blog Network) là mạng website vệ tinh đặt link về site chính. Xem cách hoạt động, rủi ro với Google và lựa chọn thay thế an toàn.",
+ "excerpt": "PBN (Private Blog Network) là gì, hoạt động ra sao, vì sao Google coi là link spam, cách nhận ra link PBN khi thẩm định nhà cung cấp, quy trình xử lý khi đã dính link PBN và vì sao DigicomVN không bán PBN.",
+ "tu_khoa_chinh": "pbn là gì",
+ "tu_khoa_phu": [
+  "pbn backlinks",
+  "backlink pbn",
+  "private blog network",
+  "pbn domain",
+  "pbn còn hiệu quả không",
+  "does pbn still work"
+ ],
+ "intent": "Informational/định nghĩa: top 7 SERP ẩn danh 26/10/2026 gồm 6 bài viết định nghĩa/hướng dẫn xây PBN (6/6 tiêu đề dạng câu hỏi) + 1 trang không mở được. AI Overview định nghĩa PBN và nêu cách hoạt động. PAA: What are PBN backlinks, Does PBN still work, What is the PBN domain, Are backlinks still relevant in 2026.",
+ "gap_doi_thu": [
+  "Đa số bài top (đã đọc 2: GTV SEO, Advertising Vietnam theo snippet) thiên về hướng dẫn tìm domain và xây PBN, ít đối chiếu với tài liệu chính thức của Google",
+  "Không bài nào nêu rõ tài liệu spam policies hiện hành không dùng chữ PBN và PBN rơi vào những điều khoản nào",
+  "Không có checklist người mua dùng để thẩm định nhà cung cấp link",
+  "Không có quy trình xử lý khi đã dính link PBN theo hướng dẫn Manual actions và Disavow của Google",
+  "Không có bảng so sánh PBN với guest post, PR và link tự nhiên theo chính sách Google"
+ ],
+ "info_gain": [
+  "Đối chiếu PBN với 3 điều khoản spam policies (cập nhật 28/08/2026): link spam, expired domain abuse, scaled content abuse; nêu rõ Google không dùng chữ PBN",
+  "Hai cơ chế xử lý có nguồn: vô hiệu hoá tự động (SpamBrain, 14/12/2022; báo cáo 2022 nêu phát hiện gấp 50 lần) và hành động thủ công Unnatural links",
+  "Checklist 7 dấu hiệu thẩm định link PBN, ghi rõ là thực hành ngành, không phải tiêu chí Google",
+  "Quy trình 5 bước xử lý theo Manual actions và Disavow, kèm cảnh báo không disavow tràn lan",
+  "Nói thẳng lý do DigicomVN không bán PBN và lựa chọn thay thế"
+ ],
+ "nguon": [
+  "https://developers.google.com/search/docs/essentials/spam-policies",
+  "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
+  "https://developers.google.com/search/blog/2022/12/december-22-link-spam-update",
+  "https://developers.google.com/search/blog/2023/04/webspam-report-2022",
+  "https://support.google.com/webmasters/answer/9044175",
+  "https://support.google.com/webmasters/answer/2648487",
+  "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+  "https://en.wikipedia.org/wiki/Spamdexing"
+ ],
+ "link_noi_bo": [
+  "https://digicomvn.com/cac-loai-backlink/",
+  "https://digicomvn.com/backlink/",
+  "https://digicomvn.com/co-nen-mua-backlink-khong/",
+  "https://digicomvn.com/backlink-dofollow-va-nofollow/",
+  "https://digicomvn.com/booking-bao-pr/"
+ ],
+ "so_tu": 2820,
+ "anh": [
+  "ig-pbn-la-gi-dieu-khoan-google.webp",
+  "ig-pbn-la-gi-5-buoc-xu-ly.webp"
+ ]
+}

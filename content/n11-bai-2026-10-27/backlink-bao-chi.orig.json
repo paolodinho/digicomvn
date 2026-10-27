@@ -1,0 +1,69 @@
+{
+ "title": "Backlink Báo Chí Là Gì? Cách Có Link Từ Báo Hợp Lệ",
+ "slug": "backlink-bao-chi",
+ "meta_desc": "Backlink báo chí là gì, loại link nào hợp lệ với Google, cách có link từ báo, rủi ro và cách đo hiệu quả. Xem checklist chọn báo trước khi đăng bài PR.",
+ "excerpt": "Backlink báo chí là link nằm trong bài của báo điện tử trỏ về website. Bài giải thích Google yêu cầu gì với link trả tiền, 5 cách có link hợp lệ, rủi ro, cách đo và checklist chọn báo.",
+ "tu_khoa_chinh": "backlink báo chí",
+ "tu_khoa_phu": [
+  "backlink báo chí là gì",
+  "backlink từ báo điện tử",
+  "link báo chí dofollow nofollow",
+  "mua backlink báo chí",
+  "đo hiệu quả backlink báo chí"
+ ],
+ "intent": "Informational kết hợp commercial: người tìm muốn hiểu backlink báo chí là gì, loại link nào hợp lệ, cách có link và có nên mua hay không. SERP đo ẩn danh 24/10/2026 (serp-P.json).",
+ "gap_doi_thu": [
+  "Nhiều bài top coi backlink báo chí như chắc chắn tăng thứ hạng, không nêu Google không công bố trọng số riêng cho link từ báo",
+  "Thiếu chi tiết chính sách Google: rel sponsored/nofollow, link spam, SpamBrain 12/2022",
+  "Đo hiệu quả chỉ bằng DR/DA, không nêu giới hạn của Search Console và GA4",
+  "Thiếu góc pháp lý Việt Nam về nhãn quảng cáo và hợp đồng đăng bài",
+  "Con số tỷ lệ anchor, thời gian lên top không dẫn nguồn"
+ ],
+ "info_gain": [
+  "Bản đồ 5 cách có link báo chí kèm điều Google nói về từng cách (infographic)",
+  "Trích đúng hướng dẫn Google về link trả tiền, bài PR và thông cáo hàng loạt (spam policy cập nhật 28/08/2026) và SpamBrain 14/12/2022",
+  "Hướng dẫn đo bằng 4 nguồn Google miễn phí kèm giới hạn từng công cụ (infographic)",
+  "Góc pháp luật VN: khoản 2 Điều 23 Luật Quảng cáo (Luật 75/2025/QH15, hiệu lực 01/01/2026) về nhận diện quảng cáo",
+  "Cách kiểm tra rel trực tiếp trên bài và checklist 7 điểm chọn báo, điều khoản hợp đồng"
+ ],
+ "nguon": [
+  "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
+  "https://developers.google.com/search/docs/essentials/spam-policies",
+  "https://developers.google.com/search/blog/2022/12/december-22-link-spam-update",
+  "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+  "https://developers.google.com/search/docs/appearance/ai-features",
+  "https://support.google.com/webmasters/answer/9049606",
+  "https://support.google.com/webmasters/answer/9012289",
+  "https://developers.google.com/search/blog/2025/11/search-console-branded-filter",
+  "https://support.google.com/analytics/answer/12923437",
+  "Luật 75/2025/QH15 và VBHN 88/VBHN-VPQH (Luật Quảng cáo)"
+ ],
+ "link_noi_bo": [
+  {
+   "url": "https://digicomvn.com/mua-backlink-bao-la-gi/",
+   "anchor": "mua backlink báo là gì"
+  },
+  {
+   "url": "https://digicomvn.com/backlink-dofollow-va-nofollow/",
+   "anchor": "backlink dofollow và nofollow"
+  },
+  {
+   "url": "https://digicomvn.com/guest-post/",
+   "anchor": "guest post trên website cùng ngành"
+  },
+  {
+   "url": "https://digicomvn.com/booking-bao-pr/",
+   "anchor": "booking báo PR"
+  },
+  {
+   "url": "https://digicomvn.com/quang-cao-tren-bao-dien-tu/",
+   "anchor": "quảng cáo trên báo điện tử",
+   "ghi_chu": "bài anh em MÃ D, có thể chưa đăng khi bài này lên"
+  }
+ ],
+ "anh": [
+  "ig-backlink-bao-chi-5-cach-co-link.webp",
+  "ig-backlink-bao-chi-do-luong.webp"
+ ],
+ "so_tu": 3154
+}
