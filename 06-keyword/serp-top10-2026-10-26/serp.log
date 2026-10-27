@@ -539,3 +539,93 @@ Call log:
   - waiting for locator("textarea[name=q], input[name=q]").first
     -
 2026-10-27 08:45:14 | [9/72] allintitle:pr quảng cáo -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-27 08:46:55 | [10/72] allintitle:guest posts -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:48:13 | [11/72] allintitle:kol là làm gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:50:29 | [12/72] allintitle:guest post -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:52:46 |   [kol là gì viết tắt] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-27 08:52:47 | [13/72] allintitle:kol là gì viết tắt -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:54:39 | [14/72] allintitle:guest post la gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:55:54 | [15/72] allintitle:guest post là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:57:23 | [16/72] allintitle:anchor text -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 08:58:42 | [17/72] allintitle:booking kol koc -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:00:34 | [18/72] allintitle:kol là gì koc là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:01:56 | [19/72] allintitle:seo off page -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:03:18 | [20/72] allintitle:backlink báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:04:12 |   [seo offpage] lỗi: TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/?hl=vi&gl=vn", waiting until "d
+2026-10-27 09:04:18 | [21/72] allintitle:seo offpage -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-27 09:05:11 |   [backlink seo là gì] lỗi: TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/?hl=vi&gl=vn", waiting until "d
+2026-10-27 09:05:11 | [22/72] allintitle:backlink seo là gì -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-27 09:05:45 |   [seo offpage là gì] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-27 09:05:45 |   [seo offpage là gì] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-27 09:07:07 | [23/72] allintitle:cách viết thông cáo báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:09:05 | [24/72] allintitle:domain authority -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:10:43 | [25/72] allintitle:kol là gì và koc là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:12:11 | [26/72] allintitle:dịch vụ viết bài pr -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:13:46 | [27/72] allintitle:micro kol là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:15:20 | [28/72] allintitle:pr báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:16:31 | [29/72] allintitle:booking báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:18:40 | [30/72] allintitle:backlink la gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:20:07 | [31/72] allintitle:social entity -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:21:19 | [32/72] allintitle:kol là cái gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:22:33 | [33/72] allintitle:kol là gì trong marketing -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:23:54 | [34/72] allintitle:booking kol la gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:25:19 | [35/72] allintitle:booking kol là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:26:24 | [36/72] allintitle:book báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:27:42 | [37/72] allintitle:domain rating -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:29:37 | [38/72] allintitle:viết thông cáo báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:31:53 | [39/72] allintitle:nhân viên booking kol koc -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:32:24 |   [booking báo] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-27 09:32:25 |   [booking báo] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-27 09:33:37 | [40/72] allintitle:giá booking kol tiktok -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:34:54 | [41/72] allintitle:backlink seo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:36:10 | [42/72] allintitle:dịch vụ toplist -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:37:57 | [43/72] allintitle:pr là quảng cáo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:39:07 | [44/72] allintitle:dịch vụ booking koc -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:41:13 |   [bài thông cáo báo chí mẫu] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-27 09:41:13 | [45/72] allintitle:bài thông cáo báo chí mẫu -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:43:18 | [46/72] allintitle:backlink indexer -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:44:27 | [47/72] allintitle:giá booking kols -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:45:20 |   [book quảng cáo la gì] lỗi: TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/?hl=vi&gl=vn", waiting until "d
+2026-10-27 09:45:20 | [48/72] allintitle:book quảng cáo la gì -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-27 09:45:53 |   [backlink chất lượng] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-27 09:45:54 |   [backlink chất lượng] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-27 09:47:08 | [49/72] allintitle:textlink là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:48:21 | [50/72] allintitle:giá booking kol -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:48:55 |   [pbn backlinks] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-27 09:48:55 |   [pbn backlinks] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-27 09:50:33 | [51/72] allintitle:mua backlink chất lượng -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:51:07 |   [báo điện tử giáo dục] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-27 09:51:08 |   [báo điện tử giáo dục] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-27 09:51:40 |   [booking koc kol] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-27 09:51:40 |   [booking koc kol] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-27 09:53:24 | [52/72] allintitle:dofollow và nofollow là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:54:37 | [53/72] allintitle:social entity là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:56:08 | [54/72] allintitle:mô hình race trong pr -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:57:35 | [55/72] allintitle:pr quảng cáo la gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 09:59:44 | [56/72] allintitle:domain authority là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:00:49 | [57/72] allintitle:báo mạng điện tử là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:02:28 | [58/72] allintitle:booking quảng cáo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:03:42 | [59/72] allintitle:mua textlink -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:04:54 | [60/72] allintitle:textlink -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:06:12 | [61/72] allintitle:dịch vụ textlink -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:07:53 | [62/72] allintitle:dịch vụ guest post -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:09:10 | [63/72] allintitle:mua backlink -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:10:24 | [64/72] allintitle:backlink quốc tế -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:11:27 | [65/72] allintitle:đăng báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:12:38 | [66/72] allintitle:booking fanpage -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:13:12 |   [seo offpage là gì] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-27 10:13:12 |   [seo offpage là gì] xếp lại cuối hàng chờ để thử lần 3/3.
+2026-10-27 10:26:02 |   [booking báo] warm-up lỗi nhẹ (Error), bỏ qua warm-up, chạy tiếp.
+2026-10-27 10:26:02 | [67/72] allintitle:booking báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:27:05 |   [backlink chất lượng] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-27 10:27:13 |   [backlink chất lượng] lỗi: TimeoutError: Locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator("textarea[name=q], input[name=q]").first
+    -
+2026-10-27 10:27:13 | [68/72] allintitle:backlink chất lượng -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
