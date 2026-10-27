@@ -11,15 +11,23 @@
     210
    ],
    [
+    "cách viết thông cáo báo chí",
+    110
+   ],
+   [
     "cách làm thông cáo báo chí",
     90
    ],
    [
     "thông cáo báo chí sự kiện",
     90
+   ],
+   [
+    "viết thông cáo báo chí",
+    70
    ]
   ],
-  "tong": 6990,
+  "tong": 7170,
   "dang_trang": {
    "Trang khác": 2,
    "Bài viết": 3,
@@ -71,13 +79,14 @@
   ],
   "tong": 3600,
   "dang_trang": {
-   "Bài viết": 10
+   "Bài viết": 9,
+   "Không mở được": 1
   },
   "dac_diem_tieu_de": {
    "giá": 3,
-   "câu hỏi": 1,
+   "câu hỏi": 0,
    "top/số": 2,
-   "năm": 2,
+   "năm": 0,
    "dịch vụ": 10
   },
   "tieu_de": [
@@ -85,10 +94,10 @@
    "DỊCH VỤ BACKLINK - TEXTLINK BÁO CHÍ🎖️ NO.1 ™【SEOTOPVN ®】",
    "Dịch Vụ Backlink Giá Rẻ Uy Tín - Mua Backlink Chất Lượng",
    "Dịch vụ Backlink Giá Rẻ: Mua bán Backlinks CHẤT LƯỢNG, UY TÍN",
-   "Dịch vụ Backlink uy tín: mua bán Báo PR rẻ, chất lượng 2026 - DanaSEO",
+   "Dịch vụ backlink: Giải pháp tăng authority cho website",
    "Dịch Vụ Backlink, Mua Backlink Báo Công Ty Chất Lượng Cao",
    "Dịch vụ Backlink Seo Thành Công | Lên TOP Google #Bền #Vững",
-   "Dịch Vụ Backlink Chất Lượng Tại AZnet"
+   "Seotoro cung cấp dịch vụ backlink báo uy tín, hiệu quả"
   ],
   "paa": "",
   "ai": "",
@@ -105,12 +114,78 @@
    "seotop.vn/dich-vu-backlink",
    "dichvubacklink.com.vn",
    "seovip.vn/dich-vu-backlink",
-   "danaseo.net/dich-vu-backlink",
+   "24hmoney.vn/news/dich-vu-backlink-giai-phap-tang-authority-cho-website-c53a2790945.html",
    "hapodigital.com/mua-backlink",
    "seothanhcong.vn/dich-vu-backlink",
-   "aznet.vn/dich-vu-backlink-chat-luong.html",
    "seotoro.vn/dich-vu/dich-vu-backlink-bao",
-   "scapbot.com/vi/kien-thuc/backlink-bao-la-gi-bao-gia-dich-vu-backlink-bao"
+   "aznet.vn/kiếnthứcseovàwebsite",
+   "sieutocviet.com/backlink-bao"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "text link",
+  "tu": [
+   [
+    "text link",
+    880
+   ],
+   [
+    "textlink",
+    880
+   ],
+   [
+    "textlink là gì",
+    50
+   ],
+   [
+    "dịch vụ textlink",
+    0
+   ]
+  ],
+  "tong": 1810,
+  "dang_trang": {
+   "Bài viết": 6,
+   "Không mở được": 2,
+   "Trang chủ": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 8,
+   "top/số": 0,
+   "năm": 2,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Textlink là gì? Hướng dẫn sử dụng Text Link an toàn cho SEO",
+   "Textlink Là Gì? Khác Backlink Thế Nào, Khi Nào Bị Phạt [2026]",
+   "Textlink là gì? Hướng dẫn triển Textlink hiệu quả cho SEO | bởi Steven Being | Brands Vietnam",
+   "Textlink là gì? Xây dựng hệ thống backlink hiệu quả cho SEO",
+   "Textlink Là Gì? Hướng Dẫn Cách Sử Dụng Text Link Hiệu Quả",
+   "Textlink là gì? Cách sử dụng Textlink trong SEO một cách an toàn 2026 - tenten.vn",
+   "Textlink là gì? Hướng dẫn cách sử dụng Textlink tối ưu SEO",
+   "Android SMS Gateway from $0.001 — Skip 10DLC | TextLink"
+  ],
+  "paa": "What is a text link? | How do I create a text link? | How can I create a text message link? | How do I copy text as a link?",
+  "ai": " A text link (also called anchor text or a hyperlink) is a clickable piece of text that takes a user to another web page or section when clicked. Seobility +1 Key Concepts Definition: Words or phrases highlighted and linked to an internal or external URL. Seobility HTML Format: Created using the anc",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/mua-textlink-edu-gov/"
+  ],
+  "urls": [
+   "gtvseo.com/textlink-la-gi",
+   "seodo.vn/textlink-la-gi",
+   "brandsvietnam.com/congdong/topic/textlink-la-gi-huong-dan-trien-textlink-hieu-qua-cho-seo",
+   "vinuni.edu.vn/textlink-la-gi",
+   "mona.media/textlink-la-gi",
+   "tenten.vn/tin-tuc/textlink-la-gi",
+   "imta.edu.vn/textlink-la-gi",
+   "textlinksms.com",
+   "monamedia.co/textlink-la-gi"
   ],
   "nguon": "serp-top10-2026-10-26"
  },
@@ -120,11 +195,16 @@
    [
     "backlink là gì",
     1300
+   ],
+   [
+    "backlink la gì",
+    90
    ]
   ],
-  "tong": 1300,
+  "tong": 1390,
   "dang_trang": {
-   "Bài viết": 8,
+   "Không mở được": 1,
+   "Bài viết": 7,
    "Danh mục": 1
   },
   "dac_diem_tieu_de": {
@@ -135,17 +215,17 @@
    "dịch vụ": 0
   },
   "tieu_de": [
-   "Backlink là gì? Tìm hiểu từ A-Z về Backlink",
+   "Backlink là gì? Tìm hiểu từ A-Z về Backlink - FPT Skillking",
    "Backlink là gì? Cách xây dựng backlink chất lượng và hiệu quả cho doanh nghiệp | Advertising Vietnam",
    "Backlink là gì? Cách tạo backlink chất lượng cao 2026",
-   "Backlink là gì? Cách xây dựng Backlink SEO chất lượng  - Digital Marketing & Technology Consultancy | Ematic Solutions",
    "Backlink là gì? Vai trò và cách đặt Backlink hiệu quả",
+   "Backlink là gì? Cách xây dựng Backlink SEO chất lượng  - Digital Marketing & Technology Consultancy | Ematic Solutions",
    "Backlink là gì? 3 mô hình Backlink chuẩn SEO nhất hiện nay | bởi GROUP ITP | Brands Vietnam",
    "Backlink là gì? Tầm quan trọng của backlink trong SEO - Báo Tuyên Quang điện tử",
-   "Backlink là gì? Cách xây dựng backlink chất lượng, hiệu quả"
+   "Backlink là gì? Làm sao xây dựng Backlink chất lượng? - Trung tâm hỗ trợ kỹ thuật | MATBAO.NET"
   ],
-  "paa": "Có những loại backlink nào? | Làm cách nào để tạo backlink? | Làm cách nào để kiểm tra backlink của website?",
-  "ai": "",
+  "paa": "Backlink social là gì? | Có những loại backlink nào? | Làm cách nào để tạo backlink? | Làm cách nào để kiểm tra backlink của website?",
+  "ai": " Backlink (liên kết ngược) là đường dẫn từ một trang web khác trỏ về website của bạn. Trong lĩnh vực SEO (Tối ưu hóa công cụ tìm kiếm), backlink hoạt động như một “phiếu bầu tín nhiệm” giúp Google đánh giá độ uy tín, cải thiện thứ hạng từ khóa và tăng lượng truy cập tự nhiên. VinUni +1 Phân loại Bac",
   "blocks": {
    "anh": true,
    "mua_sam": true
@@ -155,15 +235,15 @@
    "post:/backlink-mang-xa-hoi/"
   ],
   "urls": [
-   "skillking.fpt.edu.vn/tin-tuc/backlink",
+   "skillking.fpt.edu.vn/blog",
    "advertisingvietnam.com/article/backlink-la-gi-cach-xay-dung-backlink-chat-luong-va-hieu-qua-cho-doanh-nghiep-p23512",
    "seongon.com/blog/seo/backlink.html",
-   "ematicsolutions.com/vn/blog/backlink-la-gi",
    "fptcloud.com/backlink-la-gi",
+   "ematicsolutions.com/vn/blog/backlink-la-gi",
    "brandsvietnam.com/congdong/topic/328784-backlink-la-gi-3-mo-hinh-backlink-chuan-seo-nhat-hien-nay",
    "baotuyenquang.com.vn/thong-tin-quang-cao/202508/backlink-la-gi-tam-quan-trong-cua-backlink-trong-seo-30d00cf",
-   "vinuni.edu.vn/vi/backlink-la-gi-cach-xay-dung-backlink-chat-luong-de-tang-thu-hang-seo",
-   "wiki.matbao.net/backlink-la-gi-lam-sao-xay-dung-backlink-chat-luong"
+   "wiki.matbao.net/backlink-la-gi-lam-sao-xay-dung-backlink-chat-luong",
+   "vinuni.edu.vn/vi/backlink-la-gi-cach-xay-dung-backlink-chat-luong-de-tang-thu-hang-seo"
   ],
   "nguon": "serp-top10-2026-10-26"
  },
@@ -175,11 +255,15 @@
     880
    ],
    [
+    "thông cáo là gì",
+    320
+   ],
+   [
     "thông cáo báo chí gồm mấy phần",
     10
    ]
   ],
-  "tong": 890,
+  "tong": 1210,
   "dang_trang": {
    "Bài viết": 7,
    "Trang khác": 1
@@ -224,37 +308,53 @@
   "nguon": "serp-kp43-2026-10-24"
  },
  {
-  "loi": "text link",
+  "loi": "kol nghĩa là gì",
   "tu": [
    [
-    "text link",
-    880
+    "kol nghĩa là gì",
+    390
+   ],
+   [
+    "kol là làm gì",
+    260
+   ],
+   [
+    "kol là gì viết tắt",
+    210
+   ],
+   [
+    "kol là cái gì",
+    70
+   ],
+   [
+    "kol là gì trong marketing",
+    70
    ]
   ],
-  "tong": 880,
+  "tong": 1000,
   "dang_trang": {
-   "Bài viết": 8,
-   "Trang khác": 1
+   "Bài viết": 6,
+   "Không mở được": 2
   },
   "dac_diem_tieu_de": {
    "giá": 0,
-   "câu hỏi": 9,
+   "câu hỏi": 7,
    "top/số": 0,
-   "năm": 1,
+   "năm": 0,
    "dịch vụ": 0
   },
   "tieu_de": [
-   "Textlink là gì? Hướng dẫn sử dụng Text Link an toàn cho SEO",
-   "Textlink Là Gì? Khác Backlink Thế Nào, Khi Nào Bị Phạt [2026]",
-   "Textlink Là Gì? Hướng Dẫn Cách Sử Dụng Text Link Hiệu Quả",
-   "Textlink là gì? Hướng dẫn triển Textlink hiệu quả cho SEO | bởi Steven Being | Brands Vietnam",
-   "Textlink là gì? Xây dựng hệ thống backlink hiệu quả cho SEO",
-   "Textlink là gì? Liên kết biên tập, tài trợ và rủi ro SEO",
-   "Text link là gì? Cách sử dụng Textlink an toàn hiệu quả cho SEO",
-   "Textlink là gì? Cách sử dụng Textlink an toàn trong SEO"
+   "KOL là gì? Phân biệt giữa KOL với KOC & Influencer",
+   "KOL là gì? Phân biệt KOL, KOC, Influencer trong Marketing",
+   "KOL là gì? Phân biệt KOL, KOC, INFLUENCE",
+   "KOL (marketing) – Wikipedia tiếng Việt",
+   "KOL là gì? Phân biệt giữa KOL và KOC",
+   "KOL Là Gì? Cách Trở Thành KOL Chuyên Nghiệp, Vai Trò Trong Marketing | CareerViet.vn",
+   "KOLs là gì? Chiến lược Marketing hoàn hảo trong thời đại 4.0",
+   "KOL là gì? Vai trò và tầm ảnh hưởng của KOL trong Marketing"
   ],
-  "paa": "What is a text link? | How do I create a text link? | How can I create a text message link? | How to show a link as text?",
-  "ai": " A text link (also called anchor text or a hyperlink) is a clickable piece of text that takes a user to another web page or section when clicked. Seobility +1 Key Concepts Definition: Words or phrases highlighted and linked to an internal or external URL. Seobility HTML Format: Created using the anc",
+  "paa": "KOL khác gì với Influencer? | KOL là gì trong tiếng Anh? | KOL TikTok là gì? | Lương của KOL là bao nhiêu?",
+  "ai": " KOL (viết tắt của cụm từ tiếng Anh Key Opinion Leader, dịch là \"người dẫn dắt dư luận chủ chốt\" hoặc \"người có sức ảnh hưởng\") là những cá nhân hoặc tổ chức có kiến thức chuyên môn sâu rộng và uy tín trong một lĩnh vực cụ thể. Wikipedia +2 Đặc điểm chính của KOL Có chuyên môn: Khác với người nổi ti",
   "blocks": {
    "anh": true,
    "mua_sam": true
@@ -262,15 +362,201 @@
   "digicom": [],
   "kho_url": [],
   "urls": [
-   "gtvseo.com/textlink-la-gi",
-   "seodo.vn/textlink-la-gi",
-   "mona.media/textlink-la-gi",
-   "brandsvietnam.com/congdong/topic/textlink-la-gi-huong-dan-trien-textlink-hieu-qua-cho-seo",
-   "vinuni.edu.vn/vi/textlink-la-gi",
-   "cyno.com.vn/kien-thuc/textlink-la-gi",
-   "gobranding.com.vn/text-link-la-gi",
-   "markdao.com.vn/blog/textlink-la-gi-cach-su-dung-textlink-an-toan-trong-seo-website",
-   "vinalink.edu.vn/thu-vien-kien-thuc/textlink-la-gi"
+   "pace.edu.vn/tin-kho-tri-thuc/kol-la-gi",
+   "dienmayxanh.com/kinh-nghiem-hay/kol-la-gi-1589299",
+   "topcv.vn/.../kiếnthứcchuyênngành",
+   "vi.wikipedia.org/wiki/kol_(marketing)",
+   "vietnamnet.vn/kol-la-gi-phan-biet-giua-kol-va-koc-2516892.html",
+   "careerviet.vn/vi/talentcommunity/wiki-career/kol-la-gi-cach-tro-thanh-kol-chuyen-nghiep-vai-tro-trong-marketing.35a520fe.html",
+   "skillking.fpt.edu.vn/blog",
+   "base.vn/blog/kol-la-gi"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "guest posts",
+  "tu": [
+   [
+    "guest posts",
+    260
+   ],
+   [
+    "guest post",
+    260
+   ],
+   [
+    "guest post la gì",
+    210
+   ],
+   [
+    "guest post là gì",
+    210
+   ]
+  ],
+  "tong": 940,
+  "dang_trang": {
+   "Bài viết": 7,
+   "Không mở được": 1,
+   "Trang chủ": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 7,
+   "top/số": 2,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Guest Post là gì? Toàn tập hướng dẫn chi tiết cho người mới bắt đầu | Advertising Vietnam",
+   "Guest Post là gì? Giải thích kiểu học thuật pha trò cho dễ hiểu",
+   "Guest post là gì? Cách xây dựng Guest post chuyên nghiệp",
+   "Become a Guest Post Author - Guestpost.com",
+   "Guest Post là gì? Lợi ích và cách dùng Guest Post đúng chuẩn SEO - VinUni",
+   "What is a Guest Post? 4 Ways to build quality Guest Posts",
+   "Guest post là gì? 4 cách xây dựng guest post | Sapo Web",
+   "Guest Posts: What They Are & How to Get Yours Published"
+  ],
+  "paa": "What is a guest post? | How do I write a guest post? | Is guest posting worth it in 2026? | How to get a guest post?",
+  "ai": " A guest post is an article or piece of content written by an outside contributor and published on someone else's website or blog. Medium ·Wp-1Click +1 Key Benefits Brand Awareness: Exposes your name, business, or ideas to a brand-new, established audience. Jeff Goins +1 SEO & Backlinks: Earns links",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/guest-post-forbes/"
+  ],
+  "urls": [
+   "advertisingvietnam.com/article/guest-post-la-gi-toan-tap-huong-dan-chi-tiet-cho-nguoi-moi-bat-dau-p27014",
+   "brandsvietnam.com/.../digitalmarketing",
+   "seongon.com/blog/seo/guest-post.html",
+   "guestpost.com",
+   "vinuni.edu.vn/vi/guest-post-la-gi",
+   "markdao.com.vn/en/blog/guest-post-la-gi-cach-xay-dung-guest-post-chat-luong",
+   "sapo.vn/blog/guest-post-la-gi",
+   "semrush.com/blog/guest-posts",
+   "gtvseo.com/guest-post-la-gi"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "mua backlink",
+  "tu": [
+   [
+    "mua backlink",
+    720
+   ],
+   [
+    "backlink báo",
+    140
+   ],
+   [
+    "mua backlink chất lượng",
+    50
+   ]
+  ],
+  "tong": 910,
+  "dang_trang": {
+   "Bài viết": 7,
+   "Trang chủ": 1,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 4,
+   "câu hỏi": 2,
+   "top/số": 1,
+   "năm": 1,
+   "dịch vụ": 4
+  },
+  "tieu_de": [
+   "Dịch Vụ Backlink, Mua Backlink Báo Công Ty Chất Lượng Cao",
+   "Dịch vụ Backlink Giá Rẻ: Mua bán Backlinks CHẤT LƯỢNG, UY TÍN",
+   "Dịch vụ Backlink - Mua backlink chất lượng cao | BacklinkAZ",
+   "Có nên mua Backlink không và nếu có thì ở đâu? : r/SEO",
+   "Mua BackLink",
+   "Mua Backlink Báo Chí PR Chất Lượng, Uy Tín | FOOGLESEO",
+   "Dịch vụ Backlink IAC DIGITAL - Mua Backlink giá rẻ 2026",
+   "Mua backlink giá rẻ chất lượng guest post, toplist và review"
+  ],
+  "paa": "",
+  "ai": "",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/backlink-mang-xa-hoi/",
+   "post:/mua-backlink-bao-la-gi/"
+  ],
+  "urls": [
+   "hapodigital.com/mua-backlink",
+   "seovip.vn/dich-vu-backlink",
+   "backlinkaz.com",
+   "nguon:reddit · r/seo",
+   "buffseo.com/mua-backlink.html",
+   "foogleseo.com/mua-backlink-bao",
+   "iacdigital.org/dich-vu-backlink-mua-backlink-gia-re",
+   "dichvuguestpost.com.vn/mua-backlink",
+   "tinhte.vn/thread/mua-backlink-bao-o-dau-chat-luong-gia-re.4150242"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "anchor text là gì",
+  "tu": [
+   [
+    "anchor text là gì",
+    320
+   ],
+   [
+    "anchor text",
+    210
+   ]
+  ],
+  "tong": 530,
+  "dang_trang": {
+   "Bài viết": 7,
+   "Trang khác": 1,
+   "Không mở được": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 8,
+   "top/số": 2,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Anchor text là gì: Cẩm nang hướng dẫn sử dụng Anchor text từ A đến Z",
+   "Anchor Text Là Gì ? 6 Cách Sử Dụng Anchor Text Hiệu Quả Nhất Trong SEO | bởi SEODO Agency | Brands Vietnam",
+   "Anchor Text Là Gì? Hướng Dẫn Sử Dụng Anchor Text Hiệu Quả",
+   "Anchor text: Định nghĩa, loại hình và tầm quan trọng trong SEO",
+   "Anchor Text là gì? Cách dùng Anchor Text trong SEO",
+   "Anchor text là gì? 8 loại Anchor Text cơ bản thường sử dụng",
+   "Anchor text trong SEO và cách sử dụng anchor text đạt hiệu quả tốt nhất | Advertising Vietnam",
+   "Anchor text là gì? Cách tối ưu Anchor chuẩn SEO, kéo traffic"
+  ],
+  "paa": "Có những loại anchor text nào? | \"Anchor\" có nghĩa là gì? | Anchor là gì verb? | SEO là gì cho ví dụ?",
+  "ai": " Anchor text (hay văn bản neo) là đoạn văn bản hiển thị có thể nhấp chuột được trong một siêu liên kết (hyperlink). Khi người dùng bấm vào đoạn văn bản này, họ sẽ được chuyển hướng sang một trang web khác hoặc một phần khác trên cùng trang đó. Mona Media +1 Các loại Anchor text phổ biến Khớp chính x",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/ty-le-anchor-text-chuan/"
+  ],
+  "urls": [
+   "seongon.com/blog/seo/anchor-text.html",
+   "brandsvietnam.com/congdong/topic/324024-anchor-text-la-gi-6-cach-su-dung-anchor-text-hieu-qua-nhat-trong-seo",
+   "mona.media/anchor-text-la-gi",
+   "vietmoz.edu.vn/anchor-text-la-gi",
+   "gtvseo.com/anchor-text",
+   "vinalink.edu.vn/thu-vien-kien-thuc/anchor-text-la-gi",
+   "advertisingvietnam.com/article/anchor-text-trong-seo-va-cach-su-dung-anchor-text-dat-hieu-qua-tot-nhat-p23449",
+   "nhanhoa.com/tintức",
+   "zonecloud.vn/blog/anchor-text-la-gi"
   ],
   "nguon": "serp-top10-2026-10-26"
  },
@@ -290,6 +576,10 @@
     50
    ],
    [
+    "bài thông cáo báo chí mẫu",
+    50
+   ],
+   [
     "thông cáo báo chí họp báo",
     30
    ],
@@ -302,7 +592,7 @@
     10
    ]
   ],
-  "tong": 400,
+  "tong": 450,
   "dang_trang": {
    "Bài viết": 8
   },
@@ -346,54 +636,98 @@
   "nguon": "serp-kp43-2026-10-24"
  },
  {
-  "loi": "kol nghĩa là gì",
+  "loi": "book báo chí",
   "tu": [
    [
-    "kol nghĩa là gì",
-    390
+    "book báo chí",
+    90
+   ],
+   [
+    "booking báo chí",
+    90
+   ],
+   [
+    "book báo",
+    70
+   ],
+   [
+    "booking báo",
+    50
+   ],
+   [
+    "booking bài pr",
+    30
+   ],
+   [
+    "book báo pr",
+    30
+   ],
+   [
+    "agency booking báo chí",
+    20
+   ],
+   [
+    "book báo viết bài",
+    20
+   ],
+   [
+    "chi phí book báo",
+    10
+   ],
+   [
+    "book bài báo",
+    10
    ]
   ],
-  "tong": 390,
+  "tong": 420,
   "dang_trang": {
-   "Bài viết": 7,
-   "MXH": 1
+   "Bài viết": 4,
+   "MXH": 1,
+   "Trang khác": 2,
+   "Trang chủ": 1,
+   "Danh mục": 1
   },
   "dac_diem_tieu_de": {
-   "giá": 0,
-   "câu hỏi": 7,
-   "top/số": 0,
-   "năm": 0,
-   "dịch vụ": 0
+   "giá": 3,
+   "câu hỏi": 1,
+   "top/số": 3,
+   "năm": 1,
+   "dịch vụ": 3
   },
   "tieu_de": [
-   "KOL là gì? Phân biệt giữa KOL với KOC & Influencer",
-   "KOL là gì? Phân biệt KOL, KOC, Influencer trong Marketing",
-   "KOL (marketing) – Wikipedia tiếng Việt",
-   "KOL là gì? Phân biệt KOL, KOC, INFLUENCE",
-   "KOL là gì? Phân biệt giữa KOL và KOC",
-   "KOL Là Gì? Cách Trở Thành KOL Chuyên Nghiệp, Vai Trò Trong Marketing | CareerViet.vn",
-   "KOL là gì? Phân biệt KOL, KOC và Influencer dễ hiểu - Thegioididong.com",
-   "KOL là gì? Ý nghĩa chữ KOL và vai trò của con làm KOL"
+   "Dịch vụ Booking Báo Chí Media - PR báo chí 【>300 Trang Báo】",
+   "Book Báo Điện Tử - Booking bài PR lên 1000+ Báo Giá Rẻ đủ ngành",
+   "Booking PR Báo Chí, Truyền Thông, Social Media, Dịch vụ ...",
+   "Dịch Vụ Booking Báo Chí Độc Quyền Cho Doanh Nghiệp",
+   "Top 5 Agency báo chí booking uy tín, chuyên nghiệp",
+   "Booking báo chí là gì? Các hình thức booking PR báo chí",
+   "Bảng Giá Book Báo Điện Tử, bài PR Giá Rẻ【2026】1000+ Báo Đủ Ngành",
+   "Bảng giá Quảng cáo - Quảng cáo"
   ],
-  "paa": "KOL khác gì với Influencer? | KOL là gì trong tiếng Anh? | KOL TikTok là gì? | Lương của KOL là bao nhiêu?",
-  "ai": " KOL (viết tắt của cụm từ tiếng Anh Key Opinion Leader) dịch sang tiếng Việt là \"người dẫn dắt dư luận chủ chốt\" hay \"người có sức ảnh hưởng\". Wikipedia Họ là những cá nhân có kiến thức chuyên môn sâu, uy tín cao và am hiểu một lĩnh vực cụ thể (như công nghệ, làm đẹp, ẩm thực, y tế, tài chính...). T",
+  "paa": "",
+  "ai": " Dịch vụ booking báo chí là hình thức doanh nghiệp hoặc cá nhân trả phí để đặt viết và đăng bài PR, quảng cáo thương hiệu, sản phẩm lên các trang báo điện tử, báo giấy, đài truyền hình hoặc phát thanh chính thống. HaPoDigital +1 Bảng giá tham khảo dịch vụ book báo chí (Cập nhật 2026) Mức giá đăng bà",
   "blocks": {
    "anh": true,
    "mua_sam": true
   },
   "digicom": [],
-  "kho_url": [],
-  "urls": [
-   "pace.edu.vn/tin-kho-tri-thuc/kol-la-gi",
-   "dienmayxanh.com/kinh-nghiem-hay/kol-la-gi-1589299",
-   "vi.wikipedia.org/wiki/kol_(marketing)",
-   "topcv.vn/kol-la-gi",
-   "vietnamnet.vn/kol-la-gi-phan-biet-giua-kol-va-koc-2516892.html",
-   "careerviet.vn/vi/talentcommunity/wiki-career/kol-la-gi-cach-tro-thanh-kol-chuyen-nghiep-vai-tro-trong-marketing.35a520fe.html",
-   "thegioididong.com/hoi-dap/kol-la-gi-1600790",
-   "nguon:tiktok · đời của chính nghĩa"
+  "kho_url": [
+   "post:/agency-booking-bao-chi/",
+   "post:/book-bao-dan-ong-magazine-dep/",
+   "post:/hieu-lam-booking-bao-chi/"
   ],
-  "nguon": "serp-top10-2026-10-26"
+  "urls": [
+   "hapodigital.com/dich-vu-booking-bao-chi-media-pr-bao-chi",
+   "bookbaopr.vn",
+   "nguon:facebook · booking pr báo chí, truyền thông, social media, dịch vụ seo, quảng cáo",
+   "kmedia.vn/booking-bao-chi",
+   "miccreative.vn/agency-bao-chi",
+   "tinnghiamedia.vn/booking-bao-chi-la-gi-cac-hinh-thuc-booking-pr-bao-chi",
+   "seovip.vn/dich-vu-book-bao-pr",
+   "banggia.thanhnien.vn",
+   "ecpmedia.vn/booking-bao-chi"
+  ],
+  "nguon": "serp-kp43-2026-10-24"
  },
  {
   "loi": "bài pr mẫu",
@@ -405,13 +739,13 @@
   ],
   "tong": 320,
   "dang_trang": {
-   "Bài viết": 7,
+   "Bài viết": 5,
    "MXH": 1,
-   "Trang khác": 1
+   "Trang khác": 2
   },
   "dac_diem_tieu_de": {
    "giá": 0,
-   "câu hỏi": 1,
+   "câu hỏi": 0,
    "top/số": 0,
    "năm": 2,
    "dịch vụ": 0
@@ -419,11 +753,11 @@
   "tieu_de": [
    "Tổng hợp những bài PR hay nhất, tương tác cao theo ngành",
    "Bài viết PR: 3 temple và 10 bài PR mẫu chuyên nghiệp nổi bật 2025",
-   "Những bài viết giới thiệu sản phẩm hay PR mọi lĩnh vực 2026",
    "🔥 Những mẫu bài PR hay | 6 công thức và ... - Facebook",
-   "Tổng hợp mẫu những bài viết PR sản phẩm thu hút",
+   "Những bài viết giới thiệu sản phẩm hay PR mọi lĩnh vực 2026",
    "Các Bài PR Mẫu Với Đúng Chuẩn 3 Công Thức Cốt Lõi - YBOX",
    "3 kiểu bài Pr doanh nghiệp được sử dụng phổ biến hiện nay",
+   "WordPress › Lỗi",
    "Viet Bai PR Mau | PDF"
   ],
   "paa": "",
@@ -439,13 +773,12 @@
   "urls": [
    "marketingai.vn/tong-hop-nhung-tittle-bai-pr-da-dang-bao-co-tuong-tac-cao-theo-nganh-19418934.htm",
    "upcontent.vn/bai-pr-mau",
-   "miccreative.vn/cach-viet-bai-pr-gioi-thieu-san-pham",
    "nguon:facebook · võ tuấn hải",
-   "vn4u.vn/bai-viet-pr-san-pham",
+   "miccreative.vn/cach-viet-bai-pr-gioi-thieu-san-pham",
    "ybox.vn/ky-nang/cac-bai-pr-mau-voi-dung-chuan-3-cong-thuc-cot-loi-5b81dffcf62ff83c2a83c8a1",
    "ecpmedia.vn/3-kieu-bai-pr-doanh-nghiep-duoc-su-dung-pho-bien-hien-nay.html",
-   "scribd.com/document/835654623/575510442-viet-bai-pr-mau",
-   "imta.edu.vn/nhung-mau-bai-pr-hay"
+   "vn4u.vn/bai-viet-pr-san-pham",
+   "scribd.com/document/835654623/575510442-viet-bai-pr-mau"
   ],
   "nguon": "serp-top10-2026-10-26"
  },
@@ -459,25 +792,26 @@
   ],
   "tong": 320,
   "dang_trang": {
-   "Trang khác": 4,
-   "Bài viết": 4
+   "Không mở được": 1,
+   "Bài viết": 3,
+   "Trang khác": 4
   },
   "dac_diem_tieu_de": {
    "giá": 0,
    "câu hỏi": 1,
-   "top/số": 1,
+   "top/số": 0,
    "năm": 0,
    "dịch vụ": 0
   },
   "tieu_de": [
-   "Free Backlink Checker by Ahrefs: Check Backlinks to Any Site",
+   "Free Backlink Checker by Ahrefs",
    "What Are Backlinks in SEO? Everything You Need to Know",
    "How to Do a Backlink Gap Analysis (With Template)",
    "Backlinks | Ahrefs for Developers",
-   "Ahrefs Backlink Checker: Top Tips for Better Links | Brafton",
    "How To Use Ahrefs Backlink Checker To Earn Better Links and Improve Brand Authority | Fractl",
    "Free SEO Tools - Made by Ahrefs",
-   "Batch Analysis by Ahrefs: A Bulk SEO Analysis Tool"
+   "Batch Analysis by Ahrefs: A Bulk SEO Analysis Tool",
+   "Backlinks"
   ],
   "paa": "",
   "ai": " Check any website's link profile using the Free Backlink Checker by Ahrefs. Key Backlink Metrics Total Backlinks: The overall count of incoming links pointing to a target URL or domain. Ahrefs +1 Referring Domains: The total number of unique websites that link to your target. Domain Rating (DR): A ",
@@ -488,67 +822,266 @@
   "digicom": [],
   "kho_url": [],
   "urls": [
-   "ahrefs.com/backlink-checker",
+   "ahrefs.com/freeseotools",
    "ahrefs.com/blog/what-are-backlinks",
    "ahrefs.com/blog/backlink-gap-analysis",
    "docs.ahrefs.com/en/api/reference/site-explorer/get-all-backlinks",
-   "brafton.com/blog/marketing-tools/ahrefs-backlink-checker",
    "frac.tl/how-to-use-ahrefs-backlink-checker",
    "ahrefs.com/free-seo-tools",
-   "ahrefs.com/batch-analysis"
+   "ahrefs.com/batch-analysis",
+   "ahrefs.com/academy/how-to-use-ahrefs/site-explorer/backlinks"
   ],
   "nguon": "serp-top10-2026-10-26"
  },
  {
-  "loi": "anchor text là gì",
+  "loi": "dịch vụ guest post",
   "tu": [
    [
-    "anchor text là gì",
+    "dịch vụ guest post",
     320
    ]
   ],
   "tong": 320,
   "dang_trang": {
-   "Bài viết": 8,
-   "Trang khác": 1
+   "Trang khác": 1,
+   "Bài viết": 7,
+   "Không mở được": 1
   },
   "dac_diem_tieu_de": {
    "giá": 0,
-   "câu hỏi": 8,
+   "câu hỏi": 4,
    "top/số": 2,
    "năm": 0,
-   "dịch vụ": 0
+   "dịch vụ": 5
   },
   "tieu_de": [
-   "Anchor text là gì: Cẩm nang hướng dẫn sử dụng Anchor text từ A đến Z",
-   "Anchor Text Là Gì ? 6 Cách Sử Dụng Anchor Text Hiệu Quả Nhất Trong SEO | bởi SEODO Agency | Brands Vietnam",
-   "Anchor Text Là Gì? Hướng Dẫn Sử Dụng Anchor Text Hiệu Quả",
-   "Anchor text: Định nghĩa, loại hình và tầm quan trọng trong SEO",
-   "Anchor Text là gì? Cách dùng Anchor Text trong SEO",
-   "Anchor text là gì? 8 loại Anchor Text cơ bản thường sử dụng",
-   "Anchor text là gì? Cách tối ưu Anchor chuẩn SEO, kéo traffic",
-   "Anchor text trong SEO và cách sử dụng anchor text đạt hiệu quả tốt nhất | Advertising Vietnam"
+   "Maintenance",
+   "Guest Post là gì? 4 cách xây dựng, mua Guest Post chất lượng",
+   "Dịch Vụ Guest Post Uy Tín, Chất Lượng - Hỗ trợ SEO Lên ...",
+   "Dịch vụ Backlink - Guest Post chất lượng - Dịch Vụ Marketing Online",
+   "Bật mí các tiêu chí lựa chọn website dịch vụ Guest Post uy tín",
+   "Dịch vụ Guest Post: giải pháp giúp website thoát được sự dòm ngó của Google",
+   "Guest post là gì? [TẤT TẦN TẬT] cách tạo dùng Guest post chất lượng",
+   "Guest Post là gì? Cách sử dụng guest post để bán hàng website hiệu quả"
   ],
-  "paa": "Có những loại anchor text nào? | \"Anchor\" có nghĩa là gì? | Anchor là gì verb? | Backlink là gì trọng SEO?",
-  "ai": " Anchor text (hay còn gọi là link text, link label) là đoạn văn bản hiển thị có thể nhấp chuột được trong một siêu liên kết (hyperlink). Khi người dùng bấm vào đoạn văn bản này, họ sẽ được chuyển hướng sang một trang web hoặc một vị trí khác trên website. Mona Media +2 Trong mã HTML, anchor text nằm",
+  "paa": "Guest post là gì? | Có những loại backlink nào? | SEO là gì cho ví dụ? | Chi phí SEO website là bao nhiêu?",
+  "ai": " SEOViP Guest Post & PR service là một giải pháp giúp doanh nghiệp tăng trưởng thứ hạng tìm kiếm và độ uy tín thương hiệu. SEOViP +1 Guest Post là gì? Định nghĩa: Guest Post (Guest Posting) là hình thức bạn viết và đăng tải bài viết lên một website hoặc blog của người khác (thường cùng lĩnh vực hoặc",
   "blocks": {
    "anh": true,
    "mua_sam": true
   },
   "digicom": [],
   "kho_url": [
-   "post:/ty-le-anchor-text-chuan/"
+   "post:/dich-vu-guest-post-gia-bao-nhieu/"
   ],
   "urls": [
-   "seongon.com/blog/seo/anchor-text.html",
-   "brandsvietnam.com/congdong/topic/324024-anchor-text-la-gi-6-cach-su-dung-anchor-text-hieu-qua-nhat-trong-seo",
-   "mona.media/anchor-text-la-gi",
-   "vietmoz.edu.vn/anchor-text-la-gi",
-   "gtvseo.com/anchor-text",
-   "vinalink.edu.vn/thu-vien-kien-thuc/anchor-text-la-gi",
-   "nhanhoa.com/tin-tuc/anchor-text-la-gi.html",
-   "advertisingvietnam.com/article/anchor-text-trong-seo-va-cach-su-dung-anchor-text-dat-hieu-qua-tot-nhat-p23449",
-   "zonecloud.vn/blog/anchor-text-la-gi"
+   "cloud.z.com/vn/vi/news/guest-post",
+   "vietnix.vn/guest-post-la-gi",
+   "aiie.me/guest-post",
+   "pvm.vn/dich-vu-backlink-guest-post-chat-luong",
+   "eva.vn/ngon-bo-re/bat-mi-cac-tieu-chi-lua-chon-website-dich-vu-guest-post-uy-tin-c8a460149.html",
+   "eva.vn/mua-sam-gia-ca/dich-vu-guest-post-giai-phap-giup-website-thoat-duoc-su-dom-ngo-cua-google-c2a460178.html",
+   "seovip.vn/guest-post-la-gi",
+   "hocvien.haravan.com/blogs/seo/guest-post-la-gi",
+   "trustinviet.com/dich-vu-guest-post-la-gi-guest-post-mang-den-loi-ich-gi-cho-seo"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "kol là gì koc là gì",
+  "tu": [
+   [
+    "kol là gì koc là gì",
+    170
+   ],
+   [
+    "kol là gì và koc là gì",
+    90
+   ]
+  ],
+  "tong": 260,
+  "dang_trang": {
+   "Bài viết": 6,
+   "Không mở được": 2,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 9,
+   "top/số": 0,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "KOC là gì? Phân biệt KOL và KOC trong Marketing",
+   "Sự khác biệt giữa KOL và KOC? Đâu là lựa chọn tốt để ...",
+   "KOC là gì? 5 điểm khác nhau giữa KOL và KOC trong Marketing",
+   "KOL, KOC là gì? Phân biệt 2 kiểu ảnh hưởng phổ biến",
+   "KOL và KOC là gì? Cách phân biệt KOL và KOC đơn giản",
+   "KOC Là Gì? 4 Sự Khác Biệt Giữa KOL và KOC trong Marketing | CareerViet.vn",
+   "KOL, KOC, KOS, KOE là gì? Bản đồ ảnh hưởng và công ...",
+   "KOC là gì? Phân biệt KOC và KOL, vai trò của KOC trong marketing - permate.com"
+  ],
+  "paa": "KOL và koc khác gì nhau? | KOL koc influencer là gì? | Koc là viết tắt của gì? | Lương của KOL là bao nhiêu?",
+  "ai": " KOL và KOC là hai thuật ngữ phổ biến trong lĩnh vực marketing và truyền thông xã hội, dùng để chỉ những người có sức ảnh hưởng đến quyết định mua hàng của người tiêu dùng. Học Viện Quản Lý PACE +2 1. KOL là gì? Định nghĩa: KOL là viết tắt của Key Opinion Leader (Người dẫn dắt dư luận chủ chốt). Siê",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "pace.edu.vn/tin-kho-tri-thuc/koc-la-gi",
+   "advertisingvietnam.com/influencermarketing",
+   "fptshop.com.vn/tin-tuc/danh-gia/koc-la-gi-154040",
+   "tino.vn/blog/koc-la-gi",
+   "ila.edu.vn/bíkíphọctiếnganh",
+   "careerviet.vn/vi/talentcommunity/wiki-career/koc-la-gi-4-su-khac-biet-giua-kol-va-koc-trong-marketing.35a520fb.html",
+   "nguon:facebook · nguyễn đình thành",
+   "permate.com/koc-la-gi-phan-biet-koc-va-kol-vai-tro-cua-koc-trong-marketing",
+   "vietnamnet.vn/kol-la-gi-phan-biet-giua-kol-va-koc-2516892.html"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "quảng cáo pr là gì",
+  "tu": [
+   [
+    "quảng cáo pr là gì",
+    50
+   ],
+   [
+    "pr là quảng cáo",
+    50
+   ],
+   [
+    "pr quảng cáo la gì",
+    50
+   ],
+   [
+    "quảng cáo pr",
+    40
+   ],
+   [
+    "quảng cáo và pr khác nhau như thế nào",
+    20
+   ],
+   [
+    "pr và quảng cáo có gì giống và khác nhau",
+    10
+   ],
+   [
+    "pr quảng cáo là viết tắt của từ gì",
+    10
+   ],
+   [
+    "pr trong quảng cáo là gì",
+    10
+   ],
+   [
+    "quảng cáo khác gì pr",
+    10
+   ]
+  ],
+  "tong": 250,
+  "dang_trang": {
+   "Bài viết": 5,
+   "Trang khác": 2,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 6,
+   "top/số": 0,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "PR là gì? Phân biệt PR và Quảng Cáo, Marketing",
+   "PR là gì? Điểm khác nhau giữa quảng cáo? Cơ hội nghề PR hiện nay",
+   "So sánh quảng cáo và PR: Các điểm giống nhau và khác nhau | Subiz Blog",
+   "Chờ một chút...",
+   "Quảng cáo và PR khác nhau thế nào?",
+   "PA là gì PR là gì mà thấy xài hai từ này lung tung quá?",
+   "Sự khác biệt giữa Quảng cáo và PR là gì? - Thạc sĩ QTKD Đại học Andrews Hoa Kỳ",
+   "Giải Thích PR Là Gì Trong Digital Marketing Và Vai Trò Với Doanh Nghiệp"
+  ],
+  "paa": "PR và quảng cáo khác gì nhau? | Quảng cáo là PR hay PA? | PR nhà hàng là gì? | Pa và PR là gì?",
+  "ai": " PR (viết tắt của Public Relations – Quan hệ công chúng) là quá trình quản lý và lan tỏa thông tin nhằm xây dựng, duy trì uy tín và hình ảnh tích cực giữa một tổ chức, thương hiệu hay cá nhân với công chúng. TopCV +2 Nhiều người thường nhầm lẫn PR với Quảng cáo, nhưng đây là hai khái niệm hoàn toàn ",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/bai-pr-la-gi/"
+  ],
+  "urls": [
+   "topcv.vn/pr-la-gi",
+   "vieclam.thegioididong.com/tin-tuc/pr-la-gi-diem-khac-nhau-giua-quang-cao-co-hoi-nghe-pr-hien-nay-537",
+   "subiz.com.vn/blog/so-sanh-quang-cao-va-pr.html",
+   "thuvienphapluat.vn/phap-luat-doanh-nghiep/cau-hoi-thuong-gap/pr-la-gi-pr-co-phai-la-quang-cao-khong-7003.html",
+   "bizmanmedia.vn/quang-cao-pr-la-gi-va-su-khac-biet-cua-chung-trong-tiep-thi-truyen-thong",
+   "nguon:facebook · hội những người thích quảng cáo",
+   "andrews.edu.vn/su-khac-biet-giua-quang-cao-va-pr-la-gi",
+   "phuctdigital.com/pr-la-gi"
+  ],
+  "nguon": "serp-kp43-2026-10-24"
+ },
+ {
+  "loi": "booking kol koc",
+  "tu": [
+   [
+    "booking kol koc",
+    170
+   ],
+   [
+    "booking koc kol",
+    50
+   ]
+  ],
+  "tong": 220,
+  "dang_trang": {
+   "MXH": 1,
+   "Trang khác": 4,
+   "Trang chủ": 1,
+   "Bài viết": 3
+  },
+  "dac_diem_tieu_de": {
+   "giá": 1,
+   "câu hỏi": 0,
+   "top/số": 0,
+   "năm": 4,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Cộng Đồng Booking KOC, KOL - Vietnam Booking KOLs",
+   "Tuyển dụng 144 việc làm Kol tại Hà Nội [Update 27/10/2026]",
+   "Trang chủ | Kols Booking Platform",
+   "BOOKING KOC | CẦU NỐI GIỮA KOC VÀ DOANH NGHIỆP - BookingKOC",
+   "100+ Booking Kol Việc làm, tuyển dụng ở ngày 27 tháng 10 năm 2026| Indeed",
+   "404 Not Found",
+   "KOL/KOC Booking: Nghề Này Làm Gì & Cơ Hội Tại Hà Nội 2026",
+   "Cẩm nang booking KOC - KOL - Influencer TikTok: giá thuê,..."
+  ],
+  "paa": "",
+  "ai": " Dịch vụ booking KOL/KOC giúp doanh nghiệp kết nối với các nhà sáng tạo nội dung (TikTok, Facebook, Instagram) để quảng bá sản phẩm và thúc đẩy doanh số. Facebook ·Cộng Đồng Booking KOC, KOL - Vietnam Booking KOLs +1 Các bước cơ bản khi Booking KOL/KOC Xác định mục tiêu và ngân sách: Làm rõ cần tăng",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "nguon:facebook · cộng đồng booking koc, kol - vietnam booking kols",
+   "topcv.vn/tim-viec-lam-kol-tai-ha-noi-kl1",
+   "kols-koc.com",
+   "bookingkoc.com.vn",
+   "vn.indeed.com/q-booking-kol-vi%e1%bb%87c-l%c3%a0m.html",
+   "startmarketing.com.vn/start-marketing-booking-kol-koc-influencer",
+   "ultimatesup.info/kol-koc-booking-nghe-lam-thuc-te",
+   "blog.vn.revu.net/booking-koc-kol-influencer-tiktok-revu",
+   "careerviet.vn/viec-lam/booking-kol-k-vi.html"
   ],
   "nguon": "serp-top10-2026-10-26"
  },
@@ -603,87 +1136,6 @@
    "seodo.vn/backlink-bao-chi",
    "nguyenthanhphuong.com/digital-marketing/backlink-bao-la-gi",
    "havietnam.com/seo/huong-dan-tao-backlink-bao-chi-guest-post-hieu-qua-an-toan"
-  ],
-  "nguon": "serp-kp43-2026-10-24"
- },
- {
-  "loi": "book báo chí",
-  "tu": [
-   [
-    "book báo chí",
-    90
-   ],
-   [
-    "booking bài pr",
-    30
-   ],
-   [
-    "book báo pr",
-    30
-   ],
-   [
-    "agency booking báo chí",
-    20
-   ],
-   [
-    "book báo viết bài",
-    20
-   ],
-   [
-    "chi phí book báo",
-    10
-   ],
-   [
-    "book bài báo",
-    10
-   ]
-  ],
-  "tong": 210,
-  "dang_trang": {
-   "Bài viết": 4,
-   "MXH": 1,
-   "Trang khác": 2,
-   "Trang chủ": 1,
-   "Danh mục": 1
-  },
-  "dac_diem_tieu_de": {
-   "giá": 3,
-   "câu hỏi": 1,
-   "top/số": 3,
-   "năm": 1,
-   "dịch vụ": 3
-  },
-  "tieu_de": [
-   "Dịch vụ Booking Báo Chí Media - PR báo chí 【>300 Trang Báo】",
-   "Book Báo Điện Tử - Booking bài PR lên 1000+ Báo Giá Rẻ đủ ngành",
-   "Booking PR Báo Chí, Truyền Thông, Social Media, Dịch vụ ...",
-   "Dịch Vụ Booking Báo Chí Độc Quyền Cho Doanh Nghiệp",
-   "Top 5 Agency báo chí booking uy tín, chuyên nghiệp",
-   "Booking báo chí là gì? Các hình thức booking PR báo chí",
-   "Bảng Giá Book Báo Điện Tử, bài PR Giá Rẻ【2026】1000+ Báo Đủ Ngành",
-   "Bảng giá Quảng cáo - Quảng cáo"
-  ],
-  "paa": "",
-  "ai": " Dịch vụ booking báo chí là hình thức doanh nghiệp hoặc cá nhân trả phí để đặt viết và đăng bài PR, quảng cáo thương hiệu, sản phẩm lên các trang báo điện tử, báo giấy, đài truyền hình hoặc phát thanh chính thống. HaPoDigital +1 Bảng giá tham khảo dịch vụ book báo chí (Cập nhật 2026) Mức giá đăng bà",
-  "blocks": {
-   "anh": true,
-   "mua_sam": true
-  },
-  "digicom": [],
-  "kho_url": [
-   "post:/agency-booking-bao-chi/",
-   "post:/book-bao-dan-ong-magazine-dep/"
-  ],
-  "urls": [
-   "hapodigital.com/dich-vu-booking-bao-chi-media-pr-bao-chi",
-   "bookbaopr.vn",
-   "nguon:facebook · booking pr báo chí, truyền thông, social media, dịch vụ seo, quảng cáo",
-   "kmedia.vn/booking-bao-chi",
-   "miccreative.vn/agency-bao-chi",
-   "tinnghiamedia.vn/booking-bao-chi-la-gi-cac-hinh-thuc-booking-pr-bao-chi",
-   "seovip.vn/dich-vu-book-bao-pr",
-   "banggia.thanhnien.vn",
-   "ecpmedia.vn/booking-bao-chi"
   ],
   "nguon": "serp-kp43-2026-10-24"
  },
@@ -743,81 +1195,275 @@
   "nguon": "serp-truyen-hinh-phat-thanh-2026-10-24"
  },
  {
-  "loi": "quảng cáo pr là gì",
+  "loi": "domain authority",
   "tu": [
    [
-    "quảng cáo pr là gì",
+    "domain authority",
+    110
+   ],
+   [
+    "domain authority là gì",
     50
-   ],
-   [
-    "quảng cáo pr",
-    40
-   ],
-   [
-    "quảng cáo và pr khác nhau như thế nào",
-    20
-   ],
-   [
-    "pr và quảng cáo có gì giống và khác nhau",
-    10
-   ],
-   [
-    "pr quảng cáo là viết tắt của từ gì",
-    10
-   ],
-   [
-    "pr trong quảng cáo là gì",
-    10
-   ],
-   [
-    "quảng cáo khác gì pr",
-    10
    ]
   ],
-  "tong": 150,
+  "tong": 160,
   "dang_trang": {
-   "Bài viết": 5,
    "Trang khác": 2,
-   "MXH": 1
+   "Bài viết": 5,
+   "Không mở được": 1,
+   "Trang chủ": 1
   },
   "dac_diem_tieu_de": {
    "giá": 0,
-   "câu hỏi": 6,
-   "top/số": 0,
+   "câu hỏi": 5,
+   "top/số": 2,
    "năm": 0,
    "dịch vụ": 0
   },
   "tieu_de": [
-   "PR là gì? Phân biệt PR và Quảng Cáo, Marketing",
-   "PR là gì? Điểm khác nhau giữa quảng cáo? Cơ hội nghề PR hiện nay",
-   "So sánh quảng cáo và PR: Các điểm giống nhau và khác nhau | Subiz Blog",
-   "Chờ một chút...",
-   "Quảng cáo và PR khác nhau thế nào?",
-   "PA là gì PR là gì mà thấy xài hai từ này lung tung quá?",
-   "Sự khác biệt giữa Quảng cáo và PR là gì? - Thạc sĩ QTKD Đại học Andrews Hoa Kỳ",
-   "Giải Thích PR Là Gì Trong Digital Marketing Và Vai Trò Với Doanh Nghiệp"
+   "Website Authority Checker: Check the \"Authority\" Of Any Domain",
+   "Free Domain Authority Checker by Moz: Get Website DA & PA Metrics",
+   "Domain Authority là gì? 9 cách tăng điểm DA cho website",
+   "Hiểu rõ về Domain Authority: Là gì và cách đạt điểm số cao",
+   "Domain Authority là gì? 9 Cách tăng chỉ số DA cho website",
+   "Domain authority là gì? Cách tối ưu DA an toàn, lâu dài ...",
+   "Domain authority - Wikipedia",
+   "DA Checker - Bulk Domain Authority Checker"
   ],
-  "paa": "PR và quảng cáo khác gì nhau? | Quảng cáo là PR hay PA? | PR nhà hàng là gì? | Pa và PR là gì?",
-  "ai": " PR (viết tắt của Public Relations – Quan hệ công chúng) là quá trình quản lý và lan tỏa thông tin nhằm xây dựng, duy trì uy tín và hình ảnh tích cực giữa một tổ chức, thương hiệu hay cá nhân với công chúng. TopCV +2 Nhiều người thường nhầm lẫn PR với Quảng cáo, nhưng đây là hai khái niệm hoàn toàn ",
+  "paa": "",
+  "ai": " Domain Authority (DA) is a search engine ranking score from 1 to 100 developed by Moz that predicts how well a website will rank on search engine results pages (SERPs). Klipfolio +1 Core Facts Scale: Scored on a logarithmic scale from 1 to 100, where higher scores signal a greater ability to rank. ",
   "blocks": {
    "anh": true,
    "mua_sam": true
   },
   "digicom": [],
   "kho_url": [
-   "post:/bai-pr-la-gi/"
+   "post:/domain-authority/"
   ],
   "urls": [
-   "topcv.vn/pr-la-gi",
-   "vieclam.thegioididong.com/tin-tuc/pr-la-gi-diem-khac-nhau-giua-quang-cao-co-hoi-nghe-pr-hien-nay-537",
-   "subiz.com.vn/blog/so-sanh-quang-cao-va-pr.html",
-   "thuvienphapluat.vn/phap-luat-doanh-nghiep/cau-hoi-thuong-gap/pr-la-gi-pr-co-phai-la-quang-cao-khong-7003.html",
-   "bizmanmedia.vn/quang-cao-pr-la-gi-va-su-khac-biet-cua-chung-trong-tiep-thi-truyen-thong",
-   "nguon:facebook · hội những người thích quảng cáo",
-   "andrews.edu.vn/su-khac-biet-giua-quang-cao-va-pr-la-gi",
-   "phuctdigital.com/pr-la-gi"
+   "ahrefs.com/website-authority-checker",
+   "moz.com/domain-analysis",
+   "seongon.com/blog/seo/domain-authority.html",
+   "viblo.asia/p/hieu-ro-ve-domain-authority-la-gi-va-cach-dat-diem-so-cao-0gdjzr1njz5",
+   "mona.media/domain-authority-la-gi",
+   "nhanhoa.com/tintức",
+   "en.wikipedia.org/wiki/domain_authority",
+   "da-checker.org",
+   "viettelidc.com.vn/tin-tuc/domain-authority-la-gi-y-nghia-va-cach-cai-thien-chi-so-da-trong-seo-5660"
   ],
-  "nguon": "serp-kp43-2026-10-24"
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "seo off page",
+  "tu": [
+   [
+    "seo off page",
+    140
+   ]
+  ],
+  "tong": 140,
+  "dang_trang": {
+   "Bài viết": 9
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 8,
+   "top/số": 2,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Seo Offpage là gì? Hướng dẫn cách Seo Offpage đơn giản",
+   "SEO Offpage là gì? 5 bước triển khai SEO offpage hiệu quả",
+   "SEO Offpage là gì? Cách tối ưu SEO Offpage chuẩn, hút traffic",
+   "SEO Offpage là gì? Các phương pháp SEO Offpage phổ biến - Digital Marketing & Technology Consultancy | Ematic Solutions",
+   "SEO Offpage là gì? Tầm quan trọng trong chiến lược SEO",
+   "SEO On-Page và Off-Page: Sự khác biệt và cách kết hợp hiệu quả | bởi Lê Ân | Brands Vietnam",
+   "SEO Offpage là gì? 10 cách làm Offpage hiệu quả & bền vững",
+   "Tìm hiểu về SEO Offpage - Liệu marketer đã hiểu đúng về SEO Offpage chưa? | Advertising Vietnam"
+  ],
+  "paa": "SEO on page và SEO off page là gì? | SEO on page là gì? | SEO và sale khác nhau như thế nào? | SEO là gì cho ví dụ?",
+  "ai": " SEO Offpage là tập hợp tất cả các hoạt động tối ưu hóa diễn ra bên ngoài website nhằm nâng cao độ uy tín, thẩm quyền (authority), tín hiệu E-E-A-T và thứ hạng của trang web trên công cụ tìm kiếm. FPT Skillking +1 Các kỹ thuật SEO Offpage phổ biến Xây dựng liên kết (Link Building): Nhận các đường dẫ",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "skillking.fpt.edu.vn/tin-tuc/seo-offpage",
+   "seongon.com/blog/seo/seo-offpage-la-gi.html",
+   "nhanhoa.com/tin-tuc/seo-offpage-la-gi.html",
+   "ematicsolutions.com/vn/blog/off-page-seo-la-gi-cac-phuong-phap-seo-offpage-pho-bien",
+   "vinuni.edu.vn/vi/seo-offpage-la-gi-tam-quan-trong-va-cach-toi-uu-hieu-qua",
+   "brandsvietnam.com/congdong/topic/346659-seo-on-page-va-off-page-su-khac-biet-va-cach-ket-hop-hieu-qua",
+   "gtvseo.com/offpage-seo",
+   "advertisingvietnam.com/article/tim-hieu-ve-seo-offpage-lieu-marketer-da-hieu-dung-ve-seo-offpage-chua-p21019",
+   "eqvn.net/seo-onpage-va-seo-offpage-phan-biet-seo-onpage-va-seo-offpage"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "mua textlink",
+  "tu": [
+   [
+    "mua textlink",
+    140
+   ]
+  ],
+  "tong": 140,
+  "dang_trang": {
+   "Bài viết": 8,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 6,
+   "câu hỏi": 2,
+   "top/số": 1,
+   "năm": 2,
+   "dịch vụ": 5
+  },
+  "tieu_de": [
+   "Báo Giá đại Lý Mua Textlink Báo Và Booking Báo Chí 2026 - Trần Tiến Duy",
+   "Mua bán Textlink báo giá rẻ & chất lượng cao tại Dana SEO",
+   "Dịch Vụ Textlink Báo Uy Tín, Giá Gốc Tặng Ngay 200LinkSEOViP.edu.vn ™ - Cùng Bạn Tỏa Sáng",
+   "Textlink báo là gì? Hướng dẫn mua dịch vụ Textlink an toàn cho SEO",
+   "Dịch Vụ Textlink Báo Giá Rẻ Chỉ 2.5 Triệu/30 Báo Chính Thống",
+   "Gói 1000 textlink SEO giá từ 6xxk/tháng giúp website lên ...",
+   "Textlink là gì? Hướng dẫn sử dụng Text Link an toàn cho SEO",
+   "Dịch Vụ Mua Bán Textlink Báo Uy Tín, Giá Tốt 2026"
+  ],
+  "paa": "",
+  "ai": " Bạn có thể tham khảo dịch vụ Báo Giá đại Lý Mua Textlink Báo Và Booking Báo Chí 2026 hoặc tìm hiểu chi tiết các gói đặt link uy tín tại WINNET. Thông tin chung về mua Textlink Textlink là gì: Là một siêu liên kết dạng văn bản được đặt cố định trên một trang web (thường ở header, footer, sidebar hoặ",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/mua-textlink-edu-gov/"
+  ],
+  "urls": [
+   "trantienduy.com/bao-gia-mua-textlink-bao",
+   "danaseo.net/dich-vu-textlink",
+   "seovip.edu.vn/dich-vu-textlink-bao",
+   "seovip.vn/textlink-bao-la-gi",
+   "seeu.vn/dich-vu-textlink-bao",
+   "nguon:facebook · seo thành công",
+   "gtvseo.com/textlink-la-gi",
+   "web.danang.vn/dich-vu-mua-ban-textlink-bao",
+   "brando.vn/dich-vu-textlink"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "social entity",
+  "tu": [
+   [
+    "social entity",
+    90
+   ],
+   [
+    "social entity là gì",
+    50
+   ]
+  ],
+  "tong": 140,
+  "dang_trang": {
+   "Bài viết": 9
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 4,
+   "top/số": 1,
+   "năm": 3,
+   "dịch vụ": 2
+  },
+  "tieu_de": [
+   "Social Entity là gì? Cách xây dựng và triển khai [T9 2026]",
+   "Danh sách 300 link Social Entity chất lượng SEO website | bởi Trịnh Văn Tuyển | Brands Vietnam",
+   "Social Entity là gì? Tại sao cần xây dựng Social Entity?",
+   "Quy trình chăm sóc Social Entity chi tiết | EQVN SEO bền vững 2025 - EQVN",
+   "DỊCH VỤ ENTITY SOCIAL SỐ 1 VIỆT NAM ™【SEO TOP ®】",
+   "Chia sẻ list web xây dựng “Social entity”. - Công Ty Marketing B2B Jiker",
+   "Social Entity là gì? Cách tạo và chăm sóc Entity Social từ A-Z",
+   "Dịch vụ Entity Social 2026 [Cam Kết Index 85 - 90%]"
+  ],
+  "paa": "",
+  "ai": " A Social Entity is a collection of official social media profiles (such as Facebook, LinkedIn, YouTube, and X) that represent a business or a person consistently across the internet. seongon +1 Key Elements and Purpose Identity Verification: It helps search engines like Google confirm that a brand ",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "page:/backlink-social-entity/"
+  ],
+  "urls": [
+   "seongon.com/blog/seo/social-entity.html",
+   "brandsvietnam.com/congdong/topic/danh-sach-300-link-social-entity-chat-luong-seo-website",
+   "seovip.vn/social-entity-la-gi-tai-sao-can-xay-dung-social-entity",
+   "eqvn.net/cham-soc-social-entity",
+   "seotop.com.vn/dich-vu-entity",
+   "jiker.agency/chia-se-list-web-xay-dung-social-entity",
+   "seotongthe.vn/social-entity",
+   "seodao.vn/dich-vu-entity-branding",
+   "tanphatdigital.com/vi/blog/danh-sach-300-link-social-entity-chat-luong"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "booking kol la gì",
+  "tu": [
+   [
+    "booking kol la gì",
+    70
+   ],
+   [
+    "booking kol là gì",
+    70
+   ]
+  ],
+  "tong": 140,
+  "dang_trang": {
+   "Bài viết": 8
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 8,
+   "top/số": 0,
+   "năm": 2,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Booking KOLs là gì? Tổng quan thông tin bạn cần biết | bởi Ori Marketing Agency | Brands Vietnam",
+   "Book KOL là gì? Tất tần tật thông tin bạn cần biết - CleverAds",
+   "Booking KOLs là gì? Tất tần tật về chiến lược Booking KOLs",
+   "Booking KOLs là gì - Cách liên hệ với KOL",
+   "Doanh nghiệp nên booking KOL như thế nào để chiến dịch marketing hiệu quả? | DYM Việt Nam | Đại lý Digital Marketing Tiêu Chuẩn Nhật Bản",
+   "Booking KOL là gì? Book KOL hiệu quả với checklist 2026",
+   "KOL là gì? Quy trình Booking KOL Chuẩn Cho Doanh Nghiệp 2024",
+   "KOL là gì? Yếu tố quyết định thành công khi booking KOL"
+  ],
+  "paa": "Chi phí booking KOL là bao nhiêu? | Lương của KOL là bao nhiêu? | KOL là gì trong marketing? | KOL khác gì với influencer?",
+  "ai": " Booking KOL (Key Opinion Leader) là hoạt động doanh nghiệp hoặc thương hiệu tìm kiếm, liên hệ, đàm phán và thuê những người có tầm ảnh hưởng lớn trên mạng xã hội (như TikTok, Facebook, YouTube, Instagram) để quảng bá cho sản phẩm, dịch vụ hoặc sự kiện của mình. BrandsVietnam +1 Quy trình Booking KO",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "brandsvietnam.com/congdong/topic/345466-booking-kols-la-gi-tong-quan-thong-tin-ban-can-biet",
+   "cleverads.vn/blog/book-kol",
+   "vinuni.edu.vn/vi/booking-kols-la-gi-tat-tan-tat-ve-chien-luoc-hop-tac-voi-nguoi-anh-huong",
+   "butvangcorp.com/booking-kols-la-gi-cach-lien-he-voi-kol",
+   "dym-vietnam.com/columns/influencer/doanh-nghiep-nen-booking-kol-nhu-the-nao-de-chien-dich-marketing-hieu-qua",
+   "blog.vn.revu.net/booking-kol-la-gi",
+   "blog.slimcrm.vn/marketing/kol-la-gi-quy-trinh-booking-kol-youtube-step-step-danh-cho-moi-doanh-nghiep",
+   "sapo.vn/blog/kol-la-gi"
+  ],
+  "nguon": "serp-top10-2026-10-26"
  },
  {
   "loi": "quảng cáo tvc",
@@ -926,6 +1572,218 @@
    "sanxuattvc.vn/blog/top-5-cong-ty-truyen-thong-media-uy-tin-tai-ha-noi-tp-hcm.html"
   ],
   "nguon": "serp-kp43-2026-10-24"
+ },
+ {
+  "loi": "giá booking kols",
+  "tu": [
+   [
+    "giá booking kols",
+    50
+   ],
+   [
+    "giá booking kol",
+    50
+   ]
+  ],
+  "tong": 100,
+  "dang_trang": {
+   "Bài viết": 8,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 8,
+   "câu hỏi": 1,
+   "top/số": 0,
+   "năm": 5,
+   "dịch vụ": 1
+  },
+  "tieu_de": [
+   "Giá Book KOL 2026: Bảng giá 1000+ KOL tại Việt Nam Mới Nhất",
+   "Bảng báo giá KOL Việt Nam và chi phí thuê KOLS (Update 2026)",
+   "Giá booking KOL Việt Nam mới nhất 2026 theo từng lĩnh vực",
+   "Bảng giá KOL Việt Nam 2025 Mới Nhất. Cách tính giá thuê KOL",
+   "Bảng báo giá KOL Việt Nam cập nhật mới nhất năm 2025",
+   "Báo giá dịch vụ KOL, video ngắn và vận hành kênh TikTok",
+   "REVU: 4 công thức tính giá booking KOL | bởi REVU Vietnam | Brands Vietnam",
+   "Chi phí booking KOL theo ngành hàng: Tất tần tật cần biết"
+  ],
+  "paa": "",
+  "ai": " Giá book KOL tại Việt Nam phụ thuộc vào cấp bậc ảnh hưởng, nền tảng mạng xã hội và ngành hàng cụ thể. Bạn có thể tham khảo mức giá chung theo phân cấp và nền tảng mới nhất từ REVU Việt Nam và MKT Software: 1. Bảng giá chung theo phân cấp KOL (mỗi bài đăng/video) Nano KOL (1.000 – 10.000 followers):",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "blog.vn.revu.net/gia-book-kol",
+   "achau.vn/thue-kols",
+   "marketingai.vn/bang-bao-gia-kols-tiktok-hot-nhat-hien-nay-va-cach-booking-kols-hieu-qua-194123748.htm",
+   "blog.vn.revu.net/thue_kol",
+   "medialabs.asia/our-update/brand-marketing/bang-bao-gia-kol-viet-nam-cap-nhat-moi-nhat-nam-2024-118",
+   "nguon:facebook · cộng đồng tuyển dụng agency & marketing",
+   "brandsvietnam.com/congdong/topic/338829-revu-4-cong-thuc-tinh-gia-booking-kol",
+   "sharetmedia.com/chi-phi-booking-kol-theo-nganh-hang",
+   "dps.media/gia-thue-kol-4-yeu-to-quyet-dinh-quan-trong"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "dịch vụ viết bài pr",
+  "tu": [
+   [
+    "dịch vụ viết bài pr",
+    90
+   ]
+  ],
+  "tong": 90,
+  "dang_trang": {
+   "Bài viết": 6,
+   "Trang khác": 1,
+   "Trang sản phẩm": 1,
+   "Trang chủ": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 3,
+   "câu hỏi": 0,
+   "top/số": 1,
+   "năm": 0,
+   "dịch vụ": 9
+  },
+  "tieu_de": [
+   "Dịch Vụ Thuê Viết Báo PR Chuyên Nghiệp, Uy Tín Tại SEODO",
+   "Dịch Vụ Viết Bài PR Báo Chí Chuyên Nghiệp - ButVangCorp",
+   "Dịch Vụ Viết Bài PR Chuyên Nghiệp Giá Rẻ",
+   "Top 10 dịch vụ viết bài PR chuyên nghiệp giá rẻ nhất Hà Nội - toplist.vn",
+   "Dịch vụ Booking báo chí uy tín tại Hà Nội",
+   "Dịch vụ viết bài PR doanh nghiệp - Haravan – Kho Dịch Vụ",
+   "Dịch vụ đăng báo, Viết bài PR, Đăng Bài PR Báo Chí",
+   "Dịch vụ viết bài PR chuyên nghiệp giá rẻ chất lượng Tại Biss Brand"
+  ],
+  "paa": "",
+  "ai": " Dịch vụ viết bài PR là giải pháp thuê các đơn vị chuyên nghiệp soạn thảo nội dung giới thiệu thương hiệu, sản phẩm, dịch vụ hoặc sự kiện để đăng tải trên website, mạng xã hội hoặc các trang báo điện tử chính thống. Bạn có thể tham khảo các đơn vị cung cấp uy tín như SEODO hoặc tìm hiểu giải pháp bo",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "seodo.vn/thue-viet-bao",
+   "butvangcorp.com/dich-vu/viet-bai-pr-bao-chi",
+   "vinalink.vn/viet-bai-pr-chuyen-nghiep",
+   "toplist.vn/top-list/dich-vu-viet-bai-pr-chuyen-nghiep-gia-re-nhat-ha-noi-15878.htm",
+   "peakagency.vn/book-bao-chuyen-nghiep",
+   "services.haravan.com/products/dich-vu-viet-bai-pr-ve-doanh-nghiep-de-dang-len-website-va-cac-kenh-social-khac",
+   "bookingad.vn/dich-vu-dang-bao-viet-bai-pr-dang-bai-pr-bao-chi",
+   "bissbrand.com/dich-vu-viet-bai-pr",
+   "vietbaipr.com"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "micro kol là gì",
+  "tu": [
+   [
+    "micro kol là gì",
+    90
+   ]
+  ],
+  "tong": 90,
+  "dang_trang": {
+   "Bài viết": 7,
+   "Không mở được": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 7,
+   "top/số": 0,
+   "năm": 1,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Micro KOL là gì? Tại sao nên book? Cách triển khai hiệu quả",
+   "PHÂN BIỆT KOL - KOC - MICRO INFLUENCER - Vietstarmax",
+   "KOL là gì? 3 cấp độ KOL phổ biến trong Marketing bạn cần biết",
+   "Micro KOL là gì? Ưu điểm và nhược điểm của Micro KOL",
+   "Nano và Micro KOLs: Tại Sao Họ Đang Chiếm Lĩnh Thị Trường? Đặc Điểm và Lợi Thế Của Nano/Micro KOLs - Greenway Production",
+   "KOL là gì? Phân biệt KOL, KOC, INFLUENCE",
+   "KOL là gì? Tất cả những điều bạn cần biết về nghề KOL hiện nay - Công ty Tư vấn Quản lý OCD",
+   "KOL là gì? Phân loại KOL. Danh sách KOL Việt Nam 2026"
+  ],
+  "paa": "",
+  "ai": " Micro KOL (Micro Key Opinion Leader) là những người có tầm ảnh hưởng trên mạng xã hội với số lượng người theo dõi (follower) từ 10.000 đến 100.000 người. Họ thường là chuyên gia hoặc người rất am hiểu sâu trong một lĩnh vực ngách cụ thể như làm đẹp, thời trang, ẩm thực, công nghệ hay giáo dục. medi",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "medialabs.asia/our-update/brand-marketing/micro-kol-la-gi-ke-hoach-booking-micro-kol-178",
+   "vietstarmax.vn/vi/blog/phan-biet-kol-koc-micro-influencer.html",
+   "hrchannels.com/uptalent/kol-la-gi-3-cap-do-kol-pho-bien-trong-marketing-ban-can-biet.html",
+   "bizfly.vn/techblog/micro-kol-la-gi.html",
+   "greenway.com.vn/nano-va-micro-kols-tai-sao-ho-dang-chiem-linh-thi-truong-dac-diem-va-loi-the-cua-nano-micro-kols",
+   "topcv.vn/.../kiếnthứcchuyênngành",
+   "ocd.vn/kol-la-gi-tat-ca-nhung-dieu-ban-can-biet-ve-nghe-kol-hien-nay",
+   "blog.vn.revu.net/kol-la-gi"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "pr báo chí",
+  "tu": [
+   [
+    "pr báo chí",
+    90
+   ]
+  ],
+  "tong": 90,
+  "dang_trang": {
+   "Trang chủ": 1,
+   "Bài viết": 5,
+   "MXH": 1,
+   "Không mở được": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 2,
+   "top/số": 0,
+   "năm": 1,
+   "dịch vụ": 1
+  },
+  "tieu_de": [
+   "Prbaochi - Giải pháp truyền thông marketing cho doanh nghiệp",
+   "PR Báo Chí Là Gì? Giải Mã Sức Mạnh Truyền Thông Doanh Nghiệp - Chào Mừng Bạn Đến Với Công Ty Duy Anh Web",
+   "So sánh giữa Báo chí và PR: Khái niệm và Mối quan hệ - Studocu",
+   "🌿 BÀI PR BÁO CHÍ NÊN DÀI HAY NGẮN ĐỂ THU HÚT ...",
+   "PR và báo chí năm 2025: Kết nối đúng người, nội dung ...",
+   "3 kiểu bài Pr doanh nghiệp được sử dụng phổ biến hiện nay",
+   "PR Báo chí - SEFA Media",
+   "Tìm hiểu dịch vụ PR báo chí là gì thông qua các hoạt động chính"
+  ],
+  "paa": "",
+  "ai": " PR báo chí là hoạt động đăng tải các bài viết giới thiệu về sản phẩm, dịch vụ, cá nhân hoặc doanh nghiệp trên các trang báo điện tử và tạp chí uy tín nhằm xây dựng uy tín thương hiệu và tiếp cận khách hàng. SEFA Media +1 Lợi ích chính của PR báo chí Tăng độ tin cậy: Khách hàng tin tưởng thông tin x",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/book-bao-dan-ong-magazine-dep/"
+  ],
+  "urls": [
+   "prbaochi.com",
+   "duyanhweb.com.vn/pr-bao-chi-la-gi-giai-ma-suc-manh-truyen-thong-doanh-nghiep.html",
+   "studocu.vn/vn/document/truong-dai-hoc-noi-vu-ha-noi/marketing-van-hoa/so-sanh-bao-chi-va-pr-sdfgh/76512985",
+   "nguon:facebook · công ty truyền thông thương hiệu việt nam - brandcom media",
+   "brandsvietnam.com/congdong/topic",
+   "ecpmedia.vn/3-kieu-bai-pr-doanh-nghiep-duoc-su-dung-pho-bien-hien-nay.html",
+   "sefamedia.vn/pr-bao-chi",
+   "tinhhoamedia.com/tim-hieu-dich-vu-pr-bao-chi-la-gi-thong-qua-cac-hoat-dong-chinh"
+  ],
+  "nguon": "serp-top10-2026-10-26"
  },
  {
   "loi": "quảng cáo trên vtv",
@@ -1108,6 +1966,60 @@
    "lennguyenmedia.com/top-5-hinh-thuc-quang-cao-radio-hieu-qua-nhat-hien-nay"
   ],
   "nguon": "serp-truyen-hinh-phat-thanh-2026-10-24"
+ },
+ {
+  "loi": "domain rating",
+  "tu": [
+   [
+    "domain rating",
+    70
+   ]
+  ],
+  "tong": 70,
+  "dang_trang": {
+   "Trang khác": 4,
+   "Bài viết": 4,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 4,
+   "top/số": 1,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Website Authority Checker: Check the \"Authority\" Of Any Domain",
+   "Domain Rating là gì? Ý nghĩa và cách tăng chỉ số DR hiệu quả",
+   "Thông tin QUAN TRỌNG về Domain Rating nhiều SEOer chưa biết",
+   "Domain Rating Là Gì: Cách Tính, Phân Biệt DR/DA/UR và Phương Pháp Tăng Chỉ Số Trong Digital Marketing",
+   "Domain Rating Checker (Check 30 URLs at once)",
+   "Sự khác biệt giữa Domain Rating và Domain Authority là gì ...",
+   "Domain Rating là gì? 7+ cách tăng DR để Google ưa chuộng",
+   "Maintenance"
+  ],
+  "paa": "What is a domain rating? | How do I check my domain rating? | What are the 10 top level domains? | Is 75 a good SEO score?",
+  "ai": " Domain Rating (DR) is a proprietary metric developed by Ahrefs that measures the relative strength of a website's backlink profile on a logarithmic scale from 0 to 100. Ahrefs +1 Key Details What it measures: The quantity and quality of external unique \"do-follow\" backlinks pointing to a domain. Sc",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/domain-rating/"
+  ],
+  "urls": [
+   "ahrefs.com/website-authority-checker",
+   "mona.media/domain-rating-la-gi",
+   "nhanhoa.com/tin-tuc/domain-rating.html",
+   "phuctdigital.com/domain-rating-la-gi",
+   "dapachecker.org/dr-ur-checker",
+   "nguon:reddit · r/prowordpress",
+   "zipagency.vn/domain-rating-la-gi",
+   "cloud.z.com/vn/en/news/domain-rating",
+   "da-checker.org/dr-checker"
+  ],
+  "nguon": "serp-top10-2026-10-26"
  },
  {
   "loi": "book bài là gì",
@@ -1338,6 +2250,706 @@
   "nguon": "serp-kp43-2026-10-24"
  },
  {
+  "loi": "nhân viên booking kol koc",
+  "tu": [
+   [
+    "nhân viên booking kol koc",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Trang khác": 4,
+   "Không mở được": 3,
+   "MXH": 1,
+   "Bài viết": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 1,
+   "top/số": 0,
+   "năm": 5,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Tuyển dụng 122 việc làm Booking Kol Koc [Update 27/10/2026]",
+   "Tuyển dụng 12 việc làm Booking KOL KOC tại Hà Nội MỚI 10/2026 - CareerViet.vn",
+   "Tuyển dụng 50 việc làm Nhân Viên Booking tại Hà Nội",
+   "Tuyển Dụng KOLs, KOC, Livestream TikTok",
+   "50+ Booking Kol Remote Việc làm, tuyển dụng ở ngày 27 tháng 10 năm 2026| Indeed",
+   "KOL/KOC Booking: Nghề Làm Thật Sự Như Thế Nào?",
+   "Tuyển dụng 139 việc làm Kol tại Hà Nội [Update 25/10/2026]",
+   "Tuyển dụng Hà Nội – Nhân Viên Booking KOL/KOC"
+  ],
+  "paa": "",
+  "ai": "",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "topcv.vn/tim-viec-lam-booking-kol-koc",
+   "careerviet.vn/viec-lam/booking-kol-koc-tai-ha-noi-kl4-vi.html",
+   "jobsgo.vn/việclàm/việclàmtạihànội",
+   "nguon:facebook · booking kols việt nam - tuyển dụng kols, koc, livestream tiktok",
+   "vn.indeed.com/q-booking-kol-remote-jobs.html",
+   "ultimatesup.info/kol-koc-booking-nghe-lam-th",
+   "topcv.vn/việclàmhànội",
+   "hoplong.com/tuyendung/ha-noi-nhan-vien-booking-kol-koc",
+   "glints.com/vn/find-jobs/tim-viec-lam-booking-kol-koc"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "giá booking kol tiktok",
+  "tu": [
+   [
+    "giá booking kol tiktok",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Bài viết": 6,
+   "Trang khác": 2,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 8,
+   "câu hỏi": 1,
+   "top/số": 0,
+   "năm": 6,
+   "dịch vụ": 3
+  },
+  "tieu_de": [
+   "Báo giá KOL TikTok các lĩnh vực (cập nhật 100+ KOL 2025)",
+   "[Cập nhật] Giá booking KOL TikTok theo từng ngành hàng 2026",
+   "Giá thuê KOL TikTok 2025 (100+ KOL TikTok các lĩnh vực)",
+   "Bảng giá KOL TikTok: Tổng hợp các gói dịch vụ mới nhất",
+   "Báo giá dịch vụ KOL, video ngắn và vận hành kênh TikTok",
+   "Bảng báo giá KOL Việt Nam và chi phí thuê KOLS (Update 2026)",
+   "Bảng giá KOL TikTok 2026 mới nhất theo từng lĩnh vực",
+   "Chi phí thuê KOL Tiktok là bao nhiêu? Các yếu tố ảnh hưởng"
+  ],
+  "paa": "",
+  "ai": " Giá booking KOL TikTok tại Việt Nam phụ thuộc vào quy mô người theo dõi (tầm ảnh hưởng), lĩnh vực hoạt động và hình thức công việc (Scope of Work). REVU Blog +1 Dưới đây là mức giá tham khảo theo quy mô tài khoản và từng lĩnh vực được cập nhật mới nhất qua Bảng giá KOL TikTok tại REVU và Bảng giá M",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "blog.vn.revu.net/bao-gia-kol-tiktok",
+   "mktsoftware.vn/gia-booking-kol-tiktok",
+   "blog.vn.revu.net/gia-thue-kol-tiktok",
+   "blog.hcm.cleverads.vn/bang-gia-kol-tiktok",
+   "nguon:facebook · cộng đồng tuyển dụng agency & marketing",
+   "achau.vn/thue-kols",
+   "phanmemmkt.vn/bang-gia-kol-tiktok",
+   "pareto.vn/chi-phi-thue-kol-tiktok",
+   "ldhmedia.com/dich-vu/booking-koc-kol"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "backlink seo",
+  "tu": [
+   [
+    "backlink seo",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Bài viết": 7,
+   "Trang khác": 1,
+   "Danh mục": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 1,
+   "câu hỏi": 6,
+   "top/số": 1,
+   "năm": 2,
+   "dịch vụ": 1
+  },
+  "tieu_de": [
+   "Các dạng backlink trong SEO, loại nào chất lượng | bởi Hậu Nguyễn Phúc | Brands Vietnam",
+   "Backlink là gì? Cách tạo backlink chất lượng cao 2026",
+   "What Are Backlinks in SEO & Why You Need Them",
+   "Backlink là gì? Tìm hiểu từ A-Z về Backlink",
+   "Backlink SEO 2026: Cách làm đúng và an toàn | Viết bởi newbiehocseo",
+   "https://translate.google.com/translate?u=https://www.semrush.com/blog/what-are-backlinks/&hl=vi&sl=en&tl=vi&client=srp",
+   "Backlink là gì? Tầm quan trọng của backlink trong SEO - Báo Tuyên Quang điện tử",
+   "Dịch vụ Backlink Seo Thành Công | Lên TOP Google #Bền #Vững"
+  ],
+  "paa": "",
+  "ai": " Backlink là liên kết từ một website, blog hoặc diễn đàn khác trỏ về website của bạn. Trong SEO, backlink được ví như một \"phiếu bầu tín nhiệm\" giúp công cụ tìm kiếm đánh giá độ uy tín và chất lượng của trang web. seongon +1 Tầm quan trọng của Backlink trong SEO Cải thiện thứ hạng từ khóa: Giúp tăng",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/backlink-mang-xa-hoi/"
+  ],
+  "urls": [
+   "brandsvietnam.com/congdong/topic/343491-cac-dang-backlink-trong-seo-loai-nao-chat-luong",
+   "seongon.com/blog/seo/backlink.html",
+   "backlinko-com.translate.goog/hub/seo/backlinks",
+   "skillking.fpt.edu.vn/tin-tuc/backlink",
+   "tinhte.vn/thread/backlink-seo-2026-cach-lam-dung-va-an-toan.4091566",
+   "google.com/sorry/index",
+   "baotuyenquang.com.vn/thong-tin-quang-cao/202508/backlink-la-gi-tam-quan-trong-cua-backlink-trong-seo-30d00cf",
+   "seothanhcong.vn/dich-vu-backlink",
+   "zonecloud.vn/blog/backlink-seo-la-gi"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "dịch vụ toplist",
+  "tu": [
+   [
+    "dịch vụ toplist",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Bài viết": 6,
+   "Trang khác": 1,
+   "MXH": 1,
+   "Trang chủ": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 3,
+   "câu hỏi": 0,
+   "top/số": 9,
+   "năm": 1,
+   "dịch vụ": 6
+  },
+  "tieu_de": [
+   "Toplist.vn danh sách top khách quan đầy đủ và chính xác nhất",
+   "Dịch vụ booking Toplist hiệu quả theo tỉnh thành ở Việt Nam",
+   "Dịch vụ toplist – Brando Agency",
+   "Dịch Vụ Toplist PR Thương Hiệu Cực Kỳ Mạnh Mẽ",
+   "Top 10 dịch vụ viết bài PR chuyên nghiệp giá rẻ nhất Hà Nội - toplist.vn",
+   "Toplist.vn | Hanoi",
+   "Dịch vụ Toplist giá rẻ - Danh sách Top list mới nhất | Lize.vn",
+   "Bảng giá dịch vụ book báo PR Toplist chất lượng nhất 2025 – Setup & vận hành OTAs"
+  ],
+  "paa": "",
+  "ai": " Dịch vụ Toplist là hình thức marketing và SEO nơi doanh nghiệp thuê hoặc liên kết để đưa thương hiệu, sản phẩm hoặc dịch vụ của mình xuất hiện trong các bài viết tổng hợp dạng danh sách (ví dụ: “Top 10... tốt nhất”, “Top 5 địa chỉ uy tín tại...”) trên các website review hoặc báo điện tử. Brando Age",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "page:/dich-vu-toplist/"
+  ],
+  "urls": [
+   "toplist.vn",
+   "danaseo.net/dich-vu-toplist",
+   "brando.vn/dich-vu-toplist",
+   "btmkt.vn/dich-vu-toplist-pr",
+   "toplist.vn/top-list/dich-vu-viet-bai-pr-chuyen-nghiep-gia-re-nhat-ha-noi-15878.htm",
+   "nguon:facebook · toplist.vn",
+   "lize.vn",
+   "setupota.vn/book-bao-pr-toplist",
+   "toplist.info.vn"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "dịch vụ booking koc",
+  "tu": [
+   [
+    "dịch vụ booking koc",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Trang khác": 2,
+   "Bài viết": 5,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 1,
+   "câu hỏi": 0,
+   "top/số": 0,
+   "năm": 2,
+   "dịch vụ": 6
+  },
+  "tieu_de": [
+   "Dịch Vụ Booking KOL/KOC Chuyên Nghiệp | Height Media 2026",
+   "Dịch Vụ Booking KOL, KOC – Giải Pháp Truyền Thông Thương Hiệu Hiệu Quả – Brando Agency",
+   "Dịch vụ booking KOL và KOC trọn gói tăng doanh số cho ...",
+   "Dịch Vụ Booking KOLs - KOC độc quyền - ButVangCorp",
+   "Báo Giá & Quy Trình Booking KOC FreeCast Mới Nhất 2026: Tăng Độ Phủ Thương Hiệu Nhanh Chóng - Hoàng Anh Media",
+   "Dịch vụ Booking TikTok KOL - KOC - Influencer REVU Việt Nam",
+   "404 Not Found",
+   "DỊCH VỤ BOOKING KOC - KOL - INFLUENCER: TƯ VẤN GIẢI PHÁP BOOKING, TRIỂN KHAI BOOKING TỪ A - Z, THỰC THI CHIẾN DỊCH INFLUENCER MARKETING HIỆU QUẢ - Metall"
+  ],
+  "paa": "",
+  "ai": " Dịch vụ booking KOC là giải pháp giúp doanh nghiệp kết nối, đàm phán và quản lý các Key Opinion Consumer (người tiêu dùng có sức ảnh hưởng, thường từ 1.000 đến 100.000 người theo dõi) để quay video review, livestream và thúc đẩy doanh số bán hàng. Brando Agency +2 Lợi ích khi sử dụng dịch vụ Bookin",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "heightmedia.vn/dich-vu-koc-koc/booking/dich-vu-booking-koc-kol",
+   "brando.vn/dich-vu-booking-kol-koc",
+   "nguon:facebook · booking kols - tìm agency",
+   "butvangcorp.com/dich-vu/booking-kols-koc",
+   "hoanganhmedia.com.vn/bao-gia-quy-trinh-booking-koc-freecast-moi-nhat",
+   "blog.vn.revu.net/dich-vu/tiktok-koc-influencer",
+   "startmarketing.com.vn/start-marketing-booking-kol-koc-influencer",
+   "metall.vn/dich-vu-booking-koc-kol-influencer-tu-van-giai-phap-booking-trien-khai-booking-tu-a-z-thuc-thi-chien-dich-influencer-marketing-hieu-qua"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "backlink indexer",
+  "tu": [
+   [
+    "backlink indexer",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Không mở được": 2,
+   "Trang chủ": 3,
+   "Trang khác": 3,
+   "Bài viết": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 0,
+   "top/số": 0,
+   "năm": 2,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Backlink Indexer - Fast Link Indexing | Quick Links Indexer",
+   "FreeIndexer - Fast Backlinks & URL Indexing Service Online",
+   "6 Best Backlink Indexing Tools in 2026 (Tested & Ranked)",
+   "IndexJump Free Backlink Indexer | Fast Indexing for Google, Bing & ChatGPT",
+   "Monkey Indexer | Fast &amp; Reliable Google Indexing Tool · MonkeyIndexer",
+   "Backlink Indexer | LinkBox",
+   "Backlink & URL Indexer — Fast Website Indexing | UltraIndexer",
+   "Best Backlink Indexer 2026: I Tested 10 Tools and 7 of Them Were Useless - Indie Hackers"
+  ],
+  "paa": "",
+  "ai": " Một backlink indexer (công cụ lập chỉ mục backlink) là phần mềm hoặc dịch vụ giúp các công cụ tìm kiếm như Google, Bing phát hiện và thu thập dữ liệu (crawl) các trang web đang chứa liên kết (backlink) trỏ về website của bạn nhanh hơn. Bản chất hoạt động Vấn đề: Khi bạn tạo một backlink trên một tr",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/backlink-indexer/"
+  ],
+  "urls": [
+   "linksindexer.com",
+   "freeindexer.com",
+   "tinhte.vn/diễnđàn/quảngcáo-traođổi",
+   "indexjump.com",
+   "monkeyindexer.com",
+   "linkbox.pro/backlink-indexer-addurl-google",
+   "ultraindexer.com/indexing",
+   "indiehackers.com/post/best-backlink-indexer-2026-i-tested-10-tools-and-7-of-them-were-useless-ysfneppa6grtvbmmttdj",
+   "turboindexing.com/backlink-indexer"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "dofollow và nofollow là gì",
+  "tu": [
+   [
+    "dofollow và nofollow là gì",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Bài viết": 8,
+   "Không mở được": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 7,
+   "top/số": 0,
+   "năm": 3,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Dofollow Và Nofollow - Những kiến thức cần biết - Mona Media",
+   "Dofollow Và Nofollow - Những Kiến Thức Và Cách Sử dụng 2026",
+   "Dofollow và nofollow là gì? Cách phân biệt chúng trong Seo chi tiết từ A-Z",
+   "Dofollow và Nofollow là gì? Phân biệt và Ứng dụng trong Digital Marketing",
+   "Link NoFollow và DoFollow là gì? Những thông tin cần nắm dành cho SEOer",
+   "Dofollow và Nofollow là gì? Cách sử dụng chúng để xây ...",
+   "Dofollow và nofollow là gì? Link dofollow hay nofollow tốt hơn?",
+   "Backlink nofollow và backlink dofollow - Phân biệt để sử dụng hiệu quả October 2026"
+  ],
+  "paa": "",
+  "ai": " Dofollow và Nofollow là hai thuộc tính HTML nằm bên trong thẻ liên kết (<a>), dùng để chỉ dẫn cho các công cụ tìm kiếm (như Googlebot) cách ứng xử khi đi qua các đường link đó. Mona Media +1 1. Link Dofollow Khái niệm: Là liên kết mặc định (không cần khai báo thêm thẻ đặc biệt). Khi bạn trỏ link Do",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/backlink-dofollow-va-nofollow/"
+  ],
+  "urls": [
+   "mona.media/dofollow-va-nofollow-la-gi",
+   "imta.edu.vn/dofollow-va-nofollow-nhung-kien-thuc-va-cach-su-dung",
+   "vietmoz.edu.vn/dofollow-va-nofollow",
+   "phuctdigital.com/dofollow-va-nofollow",
+   "fptshop.com.vn/tin-tuc/danh-gia/link-nofollow-va-dofollow-la-gi-185041",
+   "fagoagency.vn/dofollow-va-nofollow-la-gi",
+   "navee.asia/docs/dofollow-va-nofollow",
+   "seongon.com/blog/seo/backlink-nofollow.html",
+   "foogleseo.com/dofollow-va-nofollow"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "mô hình race trong pr",
+  "tu": [
+   [
+    "mô hình race trong pr",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Bài viết": 6,
+   "Không mở được": 1,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 1,
+   "câu hỏi": 4,
+   "top/số": 1,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Mô hình RACE & chiến dịch“Real Beauty”: Khi truyền thông chạm tới giá trị xã hội | bởi Lăng Hồng Ý Nhi | Brands Vietnam",
+   "Quy trình PR: RACE",
+   "Mô Hình RACE Trong PR: Lập Kế Hoạch Và Đo Lường Hiệu Quả - DigicomVN",
+   "Mô hình RACE là gì? 4 bước lập kế hoạch PR cho người mới",
+   "Case Study 1: Lập Kế Hoạch PR cho Brand theo Mô Hình RACE - Studocu",
+   "Mô hình RACE tiếp thị quan hệ là gì? RACE Framework (Reach, Act, Convert, Engage) — Giải thích chi tiết | viecnganhang.com · Việc Ngân Hàng",
+   "Mô hình RACE là gì và cách áp dụng cho chiến dịch ...",
+   "Mô hình RACE là gì? Các giai đoạn chính của mô hình - Công ty Tư vấn Quản lý OCD"
+  ],
+  "paa": "Mô hình RACE trong marketing là gì? | Có những mô hình nào trong marketing? | Race là gì trong CV? | Có những loại PR nào?",
+  "ai": " Mô hình RACE trong Quan hệ công chúng (PR) là quy trình gồm 4 bước: Research (Nghiên cứu), Action (Lập kế hoạch hành động), Communication (Truyền thông) và Evaluation (Đánh giá). dykhoa.com (Lưu ý: Mô hình RACE trong PR khác với mô hình RACE Reach-Act-Convert-Engage dùng trong Digital Marketing). C",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [
+   [
+    3,
+    "digicomvn.com/mo-hinh-race-pr"
+   ]
+  ],
+  "kho_url": [
+   "post:/mo-hinh-race-pr/"
+  ],
+  "urls": [
+   "brandsvietnam.com/congdong/topic/mo-hinh-race-toi-uu-hoa-trong-truyen-thong-qua-chien-dich-tu-hao-viet-nam-zalo",
+   "campaigncreators.com/pr-process-race",
+   "digicomvn.com/mo-hinh-race-pr",
+   "dykhoa.com/blog/mo-hinh-race-la-gi",
+   "studocu.vn/vn/document/truong-dai-hoc-kinh-te-luat-dai-hoc-quoc-gia-thanh-pho-ho-chi-minh/lich-su-dang-cong-san-viet-nam/case-study-1-lap-ke-hoach-pr-cho-brand-theo-mo-hinh-race/133047157",
+   "vieclam.nganhang.com/thuat-ngu/mo-hinh-race-tiep-thi-quan-he-la-gi",
+   "nguon:facebook · eloq communications",
+   "ocd.vn/mo-hinh-race-la-gi-cac-giai-doan-chinh-cua-mo-hinh"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "báo mạng điện tử là gì",
+  "tu": [
+   [
+    "báo mạng điện tử là gì",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Bài viết": 4,
+   "Trang khác": 3,
+   "MXH": 1,
+   "Danh mục": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 1,
+   "top/số": 0,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Tổng quan về BÁO MẠNG ĐIỆN TỬ: Lịch sử, Ưu điểm & Vai trò - Studocu",
+   "Báo điện tử – Wikipedia tiếng Việt",
+   "Chuong 2 - Bao Mang Dien Tu-SV | PDF",
+   "Chờ một chút...",
+   "PLTT - Chương 1: Tổng quan về báo điện tử và lịch sử phát triển - Studocu",
+   "Truyền thông, Học viện Báo chí và Tuyên truyền",
+   "Phân biệt báo điện tử, trang thông tin điện tử và mạng xã hội",
+   "Báo mạng điện tử là gì?"
+  ],
+  "paa": "",
+  "ai": " Báo điện tử (còn gọi là báo trực tuyến, báo mạng) là loại hình báo chí sử dụng chữ viết, hình ảnh, âm thanh và đồ họa được truyền dẫn trên môi trường không gian mạng. Thư Viện Pháp Luật +1 Các hình thức chính Báo điện tử: Trang thông tin cập nhật tin tức tổng hợp hoặc chuyên đề thường xuyên. Tạp ch",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "studocu.vn/vn/document/hoc-vien-bao-chi-va-tuyen-truyen/bao-chi/bao-mang-dien-tu-bao-mang-dien-tu/109325066",
+   "vi.wikipedia.org/wiki/b%c3%a1o_%c4%91i%e1%bb%87n_t%e1%bb%ad",
+   "scribd.com/presentation/988915179/chuong-2-bao-mang-dien-tu-sv",
+   "thuvienphapluat.vn/phap-luat/bao-dien-tu-la-gi-co-quan-bao-chi-co-duoc-phep-lien-ket-trong-linh-vuc-san-xuat-cac-san-pham-bao-di-845954-179151.html",
+   "studocu.vn/vn/document/truong-dai-hoc-van-hien/triet-hoc-mac-lenin/pltt-chuong-1-ddd/36104357",
+   "nguon:facebook · viện báo chí - truyền thông, học viện báo chí và tuyên truyền",
+   "luatvietnam.vn/doanh-nghiep/phan-biet-bao-dien-tu-trang-thong-tin-dien-tu-va-mang-xa-hoi-561-30494-article.html",
+   "hocluat.vn/wiki/bao-dien-tu",
+   "ketoananpha.vn/phan-biet-bao-dien-tu-va-trang-thong-tin-dien-tu-tong-hop.html"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "booking quảng cáo",
+  "tu": [
+   [
+    "booking quảng cáo",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Không mở được": 1,
+   "Bài viết": 6,
+   "Trang khác": 1,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 2,
+   "câu hỏi": 2,
+   "top/số": 0,
+   "năm": 1,
+   "dịch vụ": 4
+  },
+  "tieu_de": [
+   "booking quảng cáo",
+   "Booking quảng cáo là gì? Những điều cần biết về booking quảng cáo",
+   "Dịch vụ Booking quảng cáo - SONG KIM",
+   "Quảng cáo tự nhiên trên Booking.com | Booking.com for Partners",
+   "Booking quảng cáo là gì? Bật mí các hình thức booking quảng cáo",
+   "Dịch vụ Booking quảng cáo media - Vietstarmax",
+   "Báo giá dịch vụ booking truyền hình",
+   "Các Yếu Tố Để Nhận Được Booking Quảng Cáo"
+  ],
+  "paa": "",
+  "ai": " Booking quảng cáo là dịch vụ đặt chỗ và mua lịch trình phát sóng hoặc hiển thị thông tin quảng cáo của doanh nghiệp lên các phương tiện truyền thông. Học viện Haravan +1 Các hình thức booking quảng cáo phổ biến Báo chí và báo điện tử: Đặt bài viết PR giới thiệu sản phẩm, dịch vụ hoặc thương hiệu. T",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/so-sanh-booking-bao-pr-va-quang-cao-bao/"
+  ],
+  "urls": [
+   "bookingquangcao.com",
+   "brandcom.vn/booking-quang-cao-la-gi-nhung-dieu-can-biet-ve-booking-quang-cao",
+   "songkim.net/dich-vu/dich-vu-booking-quang-cao",
+   "partner.booking.com/vi/gi%e1%ba%a3i-ph%c3%a1p/qu%e1%ba%a3ng-c%c3%a1o-t%e1%bb%b1-nhi%c3%aan",
+   "hocvien.haravan.com/blogs/thuat-ngu/booking-quang-cao-la-gi",
+   "vietstarmax.vn/vi/dich-vu/booking-quang-cao/booking-quang-cao-media.html",
+   "colormedia.vn/booking-truyen-thong-3425448",
+   "nguon:tiktok · mai thiên ân 👨🏻‍💻",
+   "quangcaongoaitroi.com/bao-gia-quang-cao-man-hinh-lcd-frame-moi-nhat-hien-nay"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "pbn backlinks",
+  "tu": [
+   [
+    "pbn backlinks",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Bài viết": 6,
+   "Không mở được": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 0,
+   "câu hỏi": 6,
+   "top/số": 0,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Pbn là gì? Cách thức xây dựng backlink và rủi ro của private blog networks | Advertising Vietnam",
+   "PBN là gì? Cách xây dựng hệ thống PBN chất lượng cho website",
+   "Backlink PBN là gì? Cách hoạt động và xây dựng PBN hiệu quả",
+   "PBN là gì? Cách tìm & Xây dựng PBN bền vững cho SEO",
+   "PBN là gì? Cách tìm kiếm và xây dựng PBN hiệu quả",
+   "PBN Backlinks là gì? Ưu nhược điểm của Private Blog Network",
+   "Backlink PBN"
+  ],
+  "paa": "What are PBN backlinks? | Does PBN still work? | What is the PBN domain? | Are backlinks still relevant in 2026?",
+  "ai": " Backlink PBN (Private Blog Network) là các liên kết ngược được đặt trên một hệ thống các website vệ tinh do một cá nhân hoặc tổ chức tự sở hữu và kiểm soát hoàn toàn, nhằm mục đích thao túng thứ hạng trên công cụ tìm kiếm. Advertising Vietnam +3 Cách thức hoạt động Tận dụng tên miền hết hạn: Người ",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "advertisingvietnam.com/article/pbn-la-gi-cach-thuc-xay-dung-backlink-va-rui-ro-cua-private-blog-networks-p23539",
+   "mona.media/pbn-la-gi",
+   "danaseo.net/kien-thuc/seo/offpage/backlink-pbn-la-gi",
+   "gtvseo.com/pbn-la-gi",
+   "seongon.com/blog/seo/pbn-la-gi.html",
+   "entitytop.com/pbn-backlinks",
+   "sites.google.com/view/backli"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "báo điện tử giáo dục",
+  "tu": [
+   [
+    "báo điện tử giáo dục",
+    50
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Trang chủ": 5,
+   "MXH": 1,
+   "Danh mục": 1,
+   "Trang khác": 1,
+   "Bài viết": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 9,
+   "câu hỏi": 0,
+   "top/số": 0,
+   "năm": 0,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Giáo dục Việt Nam",
+   "Báo Giáo dục và Thời đại Online",
+   "Tạp chí Giáo dục - Bộ Giáo dục và Đào tạo",
+   "Bộ Giáo dục và Đào tạo",
+   "Giáo dục và Thời đại | Hanoi",
+   "Tin tức Giáo Dục - Tin giáo dục, tuyển sinh mới nhất | Báo Tuổi Trẻ - Tuổi Trẻ Online",
+   "Thế giới - Giáo dục và Thời đại",
+   "Tạp chí điện tử Giáo dục Việt Nam 10 năm nhìn lại"
+  ],
+  "paa": "",
+  "ai": " Các tờ báo và tạp chí điện tử về giáo dục phổ biến và chính thống tại Việt Nam gồm: Tạp chí điện tử Giáo dục Việt Nam: Cơ quan ngôn luận của Hiệp hội Các trường đại học, cao đẳng Việt Nam tại địa chỉ giaoduc.net.vn Hiện thêm Bộ Giáo dục và Đào tạo moet.gov.vn https://moet.gov.vn Trang chủ; Giới thi",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "giaoduc.net.vn",
+   "giaoducthoidai.vn",
+   "tapchigiaoduc.edu.vn",
+   "moet.gov.vn",
+   "nguon:facebook · giáo dục và thời đại",
+   "tuoitre.vn/tto-giaoduc.htm",
+   "giaoducthoidai.vn/the-gioi",
+   "giaoduc.net.vn/tap-chi-dien-tu-giao-duc-viet-nam-10-nam-nhin-lai-post217764.gd",
+   "hanoi.edu.vn"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
+  "loi": "đăng báo",
+  "tu": [
+   [
+    "đăng báo",
+    40
+   ],
+   [
+    "giá book báo",
+    10
+   ]
+  ],
+  "tong": 50,
+  "dang_trang": {
+   "Bài viết": 5,
+   "Trang chủ": 1,
+   "Trang khác": 1,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 4,
+   "câu hỏi": 0,
+   "top/số": 1,
+   "năm": 1,
+   "dịch vụ": 2
+  },
+  "tieu_de": [
+   "Dịch vụ đăng báo điện tử, book báo chuyên nghiệp - BOOKNEWS24H",
+   "Bảng giá Quảng cáo - Quảng cáo",
+   "Bảng Giá Quảng Cáo Tuổi Trẻ Online 2026",
+   "Kinh nghiệm đăng bài báo khoa học lần đầu cho người mới",
+   "Dịch vụ đăng báo, Viết bài PR, Đăng Bài PR Báo Chí",
+   "Quy trình gửi bài báo khoa học: 7 bước chi tiết từ A đến Z",
+   "Báo Giá Đăng Bài Pr Book Trên Báo Điện Tử Chi Phí Viết Rẻ",
+   "Bảng giá đăng bài viết PR trên báo Hà Nội mới"
+  ],
+  "paa": "",
+  "ai": " Việc đăng báo tại Việt Nam thường được chia thành hai nhu cầu chính: đăng bài PR/quảng cáo doanh nghiệp và đăng bài báo khoa học. Hiện thêm Kết quả trên web Dịch vụ đăng báo điện tử, book báo chuyên nghiệp booknews24h.com https://booknews24h.com › dich-vu-dang-bao-dien-tu Dịch vụ đăng báo điện tử c",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "post:/book-bao-dan-ong-magazine-dep/",
+   "post:/book-bao-tu-van-tieu-dung/"
+  ],
+  "urls": [
+   "booknews24h.com/dich-vu-dang-bao-dien-tu",
+   "banggia.thanhnien.vn",
+   "quangcao.tuoitre.vn/ratecard",
+   "nguon:facebook · cộng đồng nghiên cứu khoa học (scholarly research community)",
+   "bookingad.vn/dich-vu-dang-bao-viet-bai-pr-dang-bai-pr-bao-chi",
+   "vojs.vn/bai-viet/quy-trinh-xuat-ban/quy-trinh-gui-bai-bao-khoa-hoc",
+   "hapodigital.com/bao-gia-dang-bai-pr-tren-bao-dien-tu",
+   "ecpmedia.vn/bang-gia-dang-bai-viet-pr-tren-bao-ha-noi-moi.html"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
   "loi": "book báo vnexpress",
   "tu": [
    [
@@ -1454,63 +3066,6 @@
   "nguon": "serp-kp43-2026-10-24"
  },
  {
-  "loi": "giá đăng bài trên báo",
-  "tu": [
-   [
-    "giá đăng bài trên báo",
-    20
-   ],
-   [
-    "giá book báo",
-    10
-   ]
-  ],
-  "tong": 30,
-  "dang_trang": {
-   "Trang chủ": 1,
-   "Trang khác": 3,
-   "Bài viết": 4
-  },
-  "dac_diem_tieu_de": {
-   "giá": 8,
-   "câu hỏi": 0,
-   "top/số": 1,
-   "năm": 4,
-   "dịch vụ": 0
-  },
-  "tieu_de": [
-   "Bảng giá Quảng cáo - Quảng cáo",
-   "BẢNG GIÁ - Quảng Cáo Tuổi Trẻ 2026",
-   "Bảng Giá Quảng Cáo Báo Việt Báo 2026 | Booking PR Uy Tín",
-   "Bảng giá đăng bài PR trên báo điện tử Tin Mới",
-   "Bảng Giá Quảng Cáo Báo VNExpress 2026 | Booking PR Chính Thống",
-   "Bảng giá quảng cáo báo điện tử",
-   "Báo giá Đăng bài PR | BRANDS Help Desk",
-   "Bảng Giá Book Báo Điện Tử, bài PR Giá Rẻ【2026】1000+ Báo Đủ Ngành"
-  ],
-  "paa": "",
-  "ai": " Giá đăng bài PR hoặc quảng cáo trên các báo điện tử và báo giấy tại Việt Nam rất khác nhau, phụ thuộc vào tên tuổi của tờ báo, chuyên mục đăng, và vị trí hiển thị (trang chủ hay chuyên mục con). SEODO Hiện thêm Kết quả trên web Bảng giá Quảng cáo - Quảng cáo Báo Thanh Niên https://banggia.thanhnien",
-  "blocks": {
-   "anh": true,
-   "mua_sam": true
-  },
-  "digicom": [],
-  "kho_url": [
-   "post:/book-bao-dan-ong-magazine-dep/"
-  ],
-  "urls": [
-   "banggia.thanhnien.vn",
-   "quangcao.tuoitre.vn/pdf/bang_gia_pr.pdf",
-   "brando.vn/bang-gia-quang-cao-bao-viet-bao",
-   "brandcom.vn/bang-gia-dang-bai-pr-tren-bao-dien-tu-tin-moi",
-   "brando.vn/bang-gia-quang-cao-bao-vnexpress",
-   "baocantho.com.vn/bang-gia-quang-cao-bao-dien-tu.html",
-   "help.brandsvietnam.com/vi/article/bao-gia-dang-bai-pr-7i6lbx",
-   "seovip.vn/dich-vu-book-bao-pr"
-  ],
-  "nguon": "serp-kp43-2026-10-24"
- },
- {
   "loi": "quảng cáo thoái vị pr lên ngôi",
   "tu": [
    [
@@ -1563,6 +3118,57 @@
    "vietbooks.info/threads/quang-cao-thoai-vi-va-pr-len-ngoi-nxb-tre-2005-al-ries-371-trang.77271",
    "bennghe.com.vn/blogs/gioi-thieu-sach-hay-sach-moi/quang-cao-thoai-vi-va-pr-len-ngoi",
    "nguon:facebook · hạnh nguyễn"
+  ],
+  "nguon": "serp-kp43-2026-10-24"
+ },
+ {
+  "loi": "giá đăng bài trên báo",
+  "tu": [
+   [
+    "giá đăng bài trên báo",
+    20
+   ]
+  ],
+  "tong": 20,
+  "dang_trang": {
+   "Trang chủ": 1,
+   "Trang khác": 3,
+   "Bài viết": 4
+  },
+  "dac_diem_tieu_de": {
+   "giá": 8,
+   "câu hỏi": 0,
+   "top/số": 1,
+   "năm": 4,
+   "dịch vụ": 0
+  },
+  "tieu_de": [
+   "Bảng giá Quảng cáo - Quảng cáo",
+   "BẢNG GIÁ - Quảng Cáo Tuổi Trẻ 2026",
+   "Bảng Giá Quảng Cáo Báo Việt Báo 2026 | Booking PR Uy Tín",
+   "Bảng giá đăng bài PR trên báo điện tử Tin Mới",
+   "Bảng Giá Quảng Cáo Báo VNExpress 2026 | Booking PR Chính Thống",
+   "Bảng giá quảng cáo báo điện tử",
+   "Báo giá Đăng bài PR | BRANDS Help Desk",
+   "Bảng Giá Book Báo Điện Tử, bài PR Giá Rẻ【2026】1000+ Báo Đủ Ngành"
+  ],
+  "paa": "",
+  "ai": " Giá đăng bài PR hoặc quảng cáo trên các báo điện tử và báo giấy tại Việt Nam rất khác nhau, phụ thuộc vào tên tuổi của tờ báo, chuyên mục đăng, và vị trí hiển thị (trang chủ hay chuyên mục con). SEODO Hiện thêm Kết quả trên web Bảng giá Quảng cáo - Quảng cáo Báo Thanh Niên https://banggia.thanhnien",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "banggia.thanhnien.vn",
+   "quangcao.tuoitre.vn/pdf/bang_gia_pr.pdf",
+   "brando.vn/bang-gia-quang-cao-bao-viet-bao",
+   "brandcom.vn/bang-gia-dang-bai-pr-tren-bao-dien-tu-tin-moi",
+   "brando.vn/bang-gia-quang-cao-bao-vnexpress",
+   "baocantho.com.vn/bang-gia-quang-cao-bao-dien-tu.html",
+   "help.brandsvietnam.com/vi/article/bao-gia-dang-bai-pr-7i6lbx",
+   "seovip.vn/dich-vu-book-bao-pr"
   ],
   "nguon": "serp-kp43-2026-10-24"
  },
@@ -1875,6 +3481,58 @@
   "nguon": "serp-kp43-2026-10-24"
  },
  {
+  "loi": "booking fanpage",
+  "tu": [
+   [
+    "booking fanpage",
+    10
+   ]
+  ],
+  "tong": 10,
+  "dang_trang": {
+   "Bài viết": 5,
+   "MXH": 2,
+   "Trang khác": 2
+  },
+  "dac_diem_tieu_de": {
+   "giá": 2,
+   "câu hỏi": 0,
+   "top/số": 0,
+   "năm": 2,
+   "dịch vụ": 3
+  },
+  "tieu_de": [
+   "Dịch vụ Booking Fanpage uy tín, tăng độ phủ thương hiệu",
+   "Cần booking fanpage và group cho brand, inbox tư vấn",
+   "Việt Nam Ơi - Booking quảng cáo fanpage, group Việt Nam Ơi",
+   "Dịch vụ Booking báo chí uy tín tại Hà Nội",
+   "Bảng Giá Booking Fanpage Báo Uy Tín 2026 | Cập Nhật Mới Nhất",
+   "Booking bài PR Báo chí , Booking Tiktok Fanpage Zalo ...",
+   "Booking",
+   "Dịch vụ booking fanpage tăng nhận diện và hiệu quả truyền thông"
+  ],
+  "paa": "",
+  "ai": " Booking Fanpage là hình thức doanh nghiệp hợp tác với các trang Facebook (Fanpage) sẵn có để đăng tải bài viết, hình ảnh, video hoặc livestream nhằm quảng bá sản phẩm, dịch vụ và tăng độ phủ thương hiệu. SEODO +1 Hiện thêm Kết quả trên web Dịch vụ Booking Fanpage uy tín, tăng độ phủ thương hiệu SEO",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [],
+  "urls": [
+   "seodo.vn/booking-fanpage",
+   "nguon:facebook · booking kols - tìm agency",
+   "medialabs.asia/listing/viet-nam-oi",
+   "peakagency.vn/book-bao-chuyen-nghiep",
+   "brando.vn/bang-gia-booking-fanpage",
+   "nguon:facebook · booking bài pr báo chí , booking tiktok fanpage zalo 0346000000",
+   "ekcorp.vn/dich-vu/bookinga.html",
+   "wifim.vn/dich-vu-booking-fanpage",
+   "quangbathuonghieu.vn/bao-gia-quang-cao/bao-gia-dang-bai-tren-fanpage-cac-bao-uy-tin-2021.html"
+  ],
+  "nguon": "serp-top10-2026-10-26"
+ },
+ {
   "loi": "làm phóng sự truyền hình doanh nghiệp",
   "tu": [
    [
@@ -1977,5 +3635,58 @@
    "bookingquangcao.com/san-pham/quang-cao-radio"
   ],
   "nguon": "serp-truyen-hinh-phat-thanh-2026-10-24"
+ },
+ {
+  "loi": "backlink quốc tế",
+  "tu": [
+   [
+    "backlink quốc tế",
+    0
+   ]
+  ],
+  "tong": 0,
+  "dang_trang": {
+   "Bài viết": 8,
+   "MXH": 1
+  },
+  "dac_diem_tieu_de": {
+   "giá": 1,
+   "câu hỏi": 7,
+   "top/số": 2,
+   "năm": 0,
+   "dịch vụ": 1
+  },
+  "tieu_de": [
+   "Cách Xây Dựng Tín Hiệu Uy Tín Và Backlink Tại Thị Trường Nước Ngoài - Nguyễn Văn Hảo Blog",
+   "Backlink là gì? Cách xây dựng backlink chất lượng, hiệu quả",
+   "8 CÁCH SEONGON đi backlink + QUY TRÌNH triển khai chi tiết",
+   "Backlink là gì? 5 vai trò [QUAN TRỌNG] của backlink trong SEO",
+   "Tổng hợp 200+ diễn đàn đi backlink chất lượng, DA PA cao",
+   "🔗 5 cách tìm nguồn backlink phổ biến cho \"khối làm SEO\"👇",
+   "Dịch vụ Backlink Giá Rẻ: Mua bán Backlinks CHẤT LƯỢNG, UY TÍN",
+   "Backlink Profile là gì? Cách kiểm tra và tối ưu để tăng sức mạnh SEO"
+  ],
+  "paa": "",
+  "ai": " Backlink quốc tế là các liên kết ngược (backlink) trỏ về website của bạn từ các trang web nằm ngoài lãnh thổ Việt Nam, giúp tăng độ uy tín (Domain Authority/Trust) và cải thiện thứ hạng trên các công cụ tìm kiếm toàn cầu như Google. nguyenvanhao.name.vn +1 Hiện thêm Kết Quả Được Tài Trợ 24 Best Mix",
+  "blocks": {
+   "anh": true,
+   "mua_sam": true
+  },
+  "digicom": [],
+  "kho_url": [
+   "page:/backlink-quoc-te/"
+  ],
+  "urls": [
+   "nguyenvanhao.name.vn/blog/cach-xay-dung-tin-hieu-uy-tin-va-backlink-tai-thi-truong-nuoc-ngoai",
+   "vinuni.edu.vn/vi/backlink-la-gi-cach-xay-dung-backlink-chat-luong-de-tang-thu-hang-seo",
+   "seongon.com/blog/seo/cach-di-backlink.html",
+   "nhanhoa.com/tin-tuc/backlink-la-gi.html",
+   "mona.media/dien-dan-di-backlink",
+   "nguon:facebook · eqvn.net",
+   "seovip.vn/dich-vu-backlink",
+   "light.com.vn/backlink-profile-la-gi",
+   "skillking.fpt.edu.vn/tin-tuc/backlink"
+  ],
+  "nguon": "serp-top10-2026-10-26"
  }
 ]

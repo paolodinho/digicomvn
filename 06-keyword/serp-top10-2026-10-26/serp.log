@@ -629,3 +629,16 @@ Call log:
   - waiting for locator("textarea[name=q], input[name=q]").first
     -
 2026-10-27 10:27:13 | [68/72] allintitle:backlink chất lượng -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-27 10:28:42 | [69/72] allintitle:pbn backlinks -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:29:49 | [70/72] allintitle:báo điện tử giáo dục -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:31:17 | [71/72] allintitle:booking koc kol -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-27 10:32:09 |   [seo offpage là gì] lỗi: TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/?hl=vi&gl=vn", waiting until "d
+2026-10-27 10:32:10 | [72/72] allintitle:seo offpage là gì -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-27 10:32:10 | Engine trình duyệt lượt này: patchright | Chrome THẬT (channel=chrome) — an toàn nhất
+
+Da luu: /Volumes/Extreme SSD/Projects/digicom/06-keyword/serp-top10-2026-10-26/serp.csv (72 tu khoa) | ok=66 captcha=0 khac=6
+Chi tiet loi: /Volumes/Extreme SSD/Projects/ICD/08-tools/keyword-tools/results-scrape/2026-10-27.log
+2026-10-27 10:32:10 | LOOP exit code 0
+2026-10-27 10:32:40 | LOOP_XONG

@@ -1,54 +1,53 @@
-[
- {
-  "loi": "làm phóng sự truyền hình doanh nghiệp",
-  "tu": [
-   [
-    "làm phóng sự truyền hình doanh nghiệp",
-    0
-   ]
+{
+ "loi": "booking kol la gì",
+ "tu": [
+  [
+   "booking kol la gì",
+   70
   ],
-  "tong": 0,
-  "dang_trang": {
-   "Bài viết": 5,
-   "Trang khác": 3,
-   "MXH": 1
-  },
-  "dac_diem_tieu_de": {
-   "giá": 3,
-   "câu hỏi": 0,
-   "top/số": 0,
-   "năm": 0,
-   "dịch vụ": 2
-  },
-  "tieu_de": [
-   "Bảng giá dịch vụ quay phim phóng sự doanh nghiệp",
-   "Báo giá phóng sự truyền hình | WIFIM JSC",
-   "TIN TỨC / PHÓNG SỰ TRUYỀN HÌNH",
-   "KẾT CẤU PHÓNG SỰ NGẮN TRUYỀN HÌNH - TẢI FREE ZALO: 093 457 3149 | PDF",
-   "Một số lưu ý khi làm phóng sự ngắn trong truyền hình",
-   "Trang thông tin điện tử tổng hợp Người làm báo Kiên Giang",
-   "Báo giá phim phóng sự",
-   "Chờ một chút..."
-  ],
-  "paa": "",
-  "ai": " Phóng sự truyền hình doanh nghiệp là một dạng phim tài liệu - báo chí ngắn giúp kể lại câu chuyện về quá trình hình thành, phát triển, thành tựu hoặc các hoạt động nổi bật của một tổ chức một cách trực quan, khách quan và đáng tin cậy. ColorMedia JSC 1. Mục đích và giá trị của phóng sự doanh nghiệp",
-  "blocks": {
-   "anh": true,
-   "mua_sam": true
-  },
-  "digicom": [],
-  "kho_url": [],
-  "urls": [
-   "koolmedia.vn/bang-gia-dich-vu-quay-phim-phong-su-doanh-nghiep",
-   "wifim.vn/bao-gia-phong-su-truyen-hinh",
-   "gmm.vn/tin-tuc-phong-su-truyen-hinh",
-   "slideshare.net/slideshow/kt-cu-phng-s-ngn-truyn-hnh-ti-free-zalo-093-457-3149/251558065",
-   "nguon:youtube · trung tâm bồi dưỡng nghiệp vụ báo chí - vjtc",
-   "nguoilambaokiengiang.vn/m/143/1634/10-yeu-to-can-thiet-trong-san-xuat-phong-su-truyen-hinh.html",
-   "colormedia.vn/phim-phong-su-3425428",
-   "thuvienphapluat.vn/hoi-dap-phap-luat/phong-su-truyen-hinh-la-gi-265425.html",
-   "adcentral.vn/services/san-xuat-phong-su-truyen-hinh"
-  ],
-  "nguon": "serp-truyen-hinh-phat-thanh-2026-10-24"
- }
-]
+  [
+   "booking kol là gì",
+   70
+  ]
+ ],
+ "tong": 140,
+ "dang_trang": {
+  "Bài viết": 8
+ },
+ "dac_diem_tieu_de": {
+  "giá": 0,
+  "câu hỏi": 8,
+  "top/số": 0,
+  "năm": 2,
+  "dịch vụ": 0
+ },
+ "tieu_de": [
+  "Booking KOLs là gì? Tổng quan thông tin bạn cần biết | bởi Ori Marketing Agency | Brands Vietnam",
+  "Book KOL là gì? Tất tần tật thông tin bạn cần biết - CleverAds",
+  "Booking KOLs là gì? Tất tần tật về chiến lược Booking KOLs",
+  "Booking KOLs là gì - Cách liên hệ với KOL",
+  "Doanh nghiệp nên booking KOL như thế nào để chiến dịch marketing hiệu quả? | DYM Việt Nam | Đại lý Digital Marketing Tiêu Chuẩn Nhật Bản",
+  "Booking KOL là gì? Book KOL hiệu quả với checklist 2026",
+  "KOL là gì? Quy trình Booking KOL Chuẩn Cho Doanh Nghiệp 2024",
+  "KOL là gì? Yếu tố quyết định thành công khi booking KOL"
+ ],
+ "paa": "Chi phí booking KOL là bao nhiêu? | Lương của KOL là bao nhiêu? | KOL là gì trong marketing? | KOL khác gì với influencer?",
+ "ai": " Booking KOL (Key Opinion Leader) là hoạt động doanh nghiệp hoặc thương hiệu tìm kiếm, liên hệ, đàm phán và thuê những người có tầm ảnh hưởng lớn trên mạng xã hội (như TikTok, Facebook, YouTube, Instagram) để quảng bá cho sản phẩm, dịch vụ hoặc sự kiện của mình. BrandsVietnam +1 Quy trình Booking KO",
+ "blocks": {
+  "anh": true,
+  "mua_sam": true
+ },
+ "digicom": [],
+ "kho_url": [],
+ "urls": [
+  "brandsvietnam.com/congdong/topic/345466-booking-kols-la-gi-tong-quan-thong-tin-ban-can-biet",
+  "cleverads.vn/blog/book-kol",
+  "vinuni.edu.vn/vi/booking-kols-la-gi-tat-tan-tat-ve-chien-luoc-hop-tac-voi-nguoi-anh-huong",
+  "butvangcorp.com/booking-kols-la-gi-cach-lien-he-voi-kol",
+  "dym-vietnam.com/columns/influencer/doanh-nghiep-nen-booking-kol-nhu-the-nao-de-chien-dich-marketing-hieu-qua",
+  "blog.vn.revu.net/booking-kol-la-gi",
+  "blog.slimcrm.vn/marketing/kol-la-gi-quy-trinh-booking-kol-youtube-step-step-danh-cho-moi-doanh-nghiep",
+  "sapo.vn/blog/kol-la-gi"
+ ],
+ "nguon": "serp-top10-2026-10-26"
+}
