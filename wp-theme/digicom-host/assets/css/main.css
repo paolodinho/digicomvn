@@ -3753,3 +3753,39 @@ body:before{display:none}
 .bbp-body p,.bbp-body li,.svc-body p,.svc-body li{font-size:17px;line-height:1.75;color:var(--ink)}
 /* chi tiet: ten vi tri trung voi the vi tri dau tien -> chi giu the (co nut anh minh hoa) */
 .gd-item-top:has(.spec-chip-pos) .gd-item-name{display:none}
+
+/* ==========================================================================
+   Hieu 27/10/2026: bo hieu ung, chu bai viet de doc + nhin tong quan, landing gon.
+   ========================================================================== */
+/* Tat hieu ung trang tri con lai (3D bang gia, watermark bong benh, nhap nhay) */
+.svc3d-board{transform:none!important;transition:none;will-change:auto}
+.svc3d-chip-a,.svc3d-chip-b{transform:none}
+.svc3d-live:before,.eyebrow-hot::before{animation:none}
+.brand-watermark img,.brand-watermark span{animation:none}
+.press-flash-layer,.svc3d-progress{display:none}
+html{scroll-behavior:auto}
+
+/* Bai blog: cot doc ~760px, chu 16px, tieu de nho lai */
+@media(min-width:1240px){
+  .post-layout-wrap{max-width:1240px}
+  .post-layout{grid-template-columns:260px minmax(0,1fr);gap:40px}
+}
+.single-post .post-main .page-content{max-width:760px}
+.single-post .page-content,.single-post .page-content p,.single-post .page-content li{font-size:16px;line-height:1.7}
+.single-post .page-content h1,.single-post h1{font-size:clamp(26px,3vw,32px);line-height:1.25}
+.single-post .page-content h2{font-size:clamp(20px,2.2vw,23px);line-height:1.35;margin:28px 0 10px}
+.single-post .page-content h3{font-size:18px;line-height:1.4;margin:20px 0 8px}
+.single-post .page-content img{max-width:min(560px,100%)}
+
+/* Trang dich vu: bai kien thuc o cuoi, thu gon */
+.svc-knowledge{border-top:1px solid var(--line);background:var(--surface-2)}
+.svc-knowledge-head{max-width:760px;margin:0 auto 18px}
+.svc-knowledge-head h2{font-size:clamp(22px,2.4vw,28px);margin:6px 0 0}
+.svc-knowledge .page-content{max-width:760px;margin:0 auto}
+.svc-knowledge .page-content p,.svc-knowledge .page-content li{font-size:16px;line-height:1.7}
+.svc-knowledge .page-content h2{font-size:clamp(20px,2.2vw,23px)}
+.svc-knowledge .page-content h3{font-size:18px}
+.svc-knowledge .page-content.is-clamped{max-height:620px;overflow:hidden;position:relative}
+.svc-knowledge .page-content.is-clamped:after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;
+  background:linear-gradient(to bottom,transparent,var(--surface-2));pointer-events:none}
+.svc-knowledge-more{max-width:760px;margin:18px auto 0;text-align:center}

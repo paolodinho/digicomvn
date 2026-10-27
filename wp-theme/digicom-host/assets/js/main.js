@@ -428,7 +428,7 @@
 	(function () {
 		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		var layer = document.querySelector('.press-flash-layer');
-		if (!layer) return;
+		return; /* Hieu 27/10: bo hieu ung den flash */
 		function pop() {
 			var flash = document.createElement('span');
 			flash.className = 'press-flash';
@@ -450,7 +450,7 @@
 	(function () {
 		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		var wm = document.querySelector('[data-brand-watermark]');
-		if (!wm) return;
+		return; /* Hieu 27/10: bo parallax watermark */
 		var ticking = false;
 		function update() {
 			var y = window.scrollY || window.pageYOffset || 0;
@@ -1299,7 +1299,7 @@ document.addEventListener('click', function (e) {
    to tien lam vo position sticky/fixed. Tat het khi prefers-reduced-motion. */
 (function () {
   var hero = document.querySelector('[data-svc3d-hero]');
-  if (!hero) return;
+  return; /* Hieu 27/10: bo toan bo hieu ung 3D/lat the/dem so/thanh tien do tren trang dich vu */
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce || !('IntersectionObserver' in window)) return;
   document.documentElement.classList.add('js-3d');
@@ -1415,4 +1415,33 @@ document.addEventListener('click', function (e) {
 	}
 	window.addEventListener('hashchange', function () { openFor(location.hash); });
 	document.addEventListener('DOMContentLoaded', function () { openFor(location.hash); });
+})();
+
+/* Khoi "Tim hieu them" cuoi trang dich vu: bam de mo/thu bai kien thuc (noi dung van nam trong DOM). */
+(function () {
+  document.querySelectorAll('[data-knowledge-toggle]').forEach(function (b) {
+    var body = document.getElementById(b.getAttribute('aria-controls'));
+    if (!body) return;
+    b.addEventListener('click', function () {
+      var open = body.classList.toggle('is-clamped') === false;
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      b.textContent = open ? 'Thu gọn' : 'Đọc toàn bộ hướng dẫn';
+      if (!open) body.scrollIntoView({ block: 'start' });
+    });
+  });
+})();
+/* Link neo (#...) tro vao doan nam trong khoi dang thu gon -> mo khoi truoc khi nhay toi. */
+(function () {
+  function openFor(hash) {
+    if (!hash || hash.length < 2) return;
+    var t; try { t = document.querySelector(hash); } catch (e) { return; }
+    var body = t && t.closest && t.closest('.is-clamped');
+    if (!body) return;
+    body.classList.remove('is-clamped');
+    var b = document.querySelector('[aria-controls="' + body.id + '"]');
+    if (b) { b.setAttribute('aria-expanded', 'true'); b.textContent = 'Thu gọn'; }
+    setTimeout(function () { t.scrollIntoView({ block: 'start' }); }, 30);
+  }
+  window.addEventListener('hashchange', function () { openFor(location.hash); });
+  document.addEventListener('DOMContentLoaded', function () { openFor(location.hash); });
 })();

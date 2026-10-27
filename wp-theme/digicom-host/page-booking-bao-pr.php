@@ -166,9 +166,6 @@ if ( $nhom ) {
 ?>
 
 <!-- ============ 6. NOI DUNG BAI (post_content) - phan loai bao / chon dau bao / kien thuc / case study / luu y ============ -->
-<?php if ( get_the_content() ) : ?>
-<section class="sec"><div class="wrap page-content bbp-body"><?php the_content(); ?></div></section>
-<?php endif; ?>
 
 <!-- ============ 7. FAQ rieng ============ -->
 <?php include get_template_directory() . '/inc/svc-faq.php'; ?>
@@ -203,5 +200,13 @@ if ( $nhom ) {
 	<div><h2>Bắt đầu chiến dịch booking báo cùng DigicomVN</h2><p>Gửi mục tiêu truyền thông của bạn, nhận danh sách đầu báo và báo giá phù hợp ngân sách.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( $tel ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="#lien-he">Nhận báo giá</a></div>
 </div></div></section>
+
+<?php if ( get_the_content() ) : /* Hieu 27/10: trang dich vu la landing - bai kien thuc dua xuong cuoi, thu gon, bam de doc tiep */ ?>
+<section class="sec svc-knowledge"><div class="wrap">
+	<div class="svc-knowledge-head"><span class="eyebrow">Tìm hiểu thêm</span><h2>Kiến thức về booking báo &amp; PR</h2></div>
+	<div class="page-content bbp-body is-clamped" id="svc-knowledge-body"><?php the_content(); ?></div>
+	<div class="svc-knowledge-more"><button type="button" class="btn btn-ghost" data-knowledge-toggle aria-controls="svc-knowledge-body" aria-expanded="false">Đọc toàn bộ hướng dẫn</button></div>
+</div></section>
+<?php endif; ?>
 
 <?php get_footer(); ?>

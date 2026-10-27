@@ -110,9 +110,6 @@ if ( $nhom ) {
 }
 ?>
 
-<?php if ( get_the_content() ) : ?>
-<section class="sec"><div class="wrap page-content svc-body"><?php the_content(); ?></div></section>
-<?php endif; ?>
 
 <?php /* Trang co bang gia da co "Huong dan dat hang" 4 buoc -> khong lap quy trinh chung nua.
          Chi hien quy trinh chung cho trang dich vu KHONG co bang gia. */ ?>
@@ -162,7 +159,7 @@ include get_template_directory() . '/inc/svc-faq.php';
 		<div class="row" style="gap:30px;align-items:flex-start">
 			<div class="col">
 				<img
-					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-' . ( ( get_the_ID() % 6 ) + 1 ) . '-800.jpg' ); ?>"
+					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-' . ( ( get_the_ID() % 6 ) + 1 ) . '-800.jpg?v=2' ); ?>"
 					alt="Nhóm làm việc tại văn phòng agency truyền thông"
 					width="800" height="533"
 					style="width:100%;height:auto;border-radius:var(--r-md);box-shadow:var(--sh-low);display:block;margin-bottom:22px"
@@ -191,5 +188,13 @@ include get_template_directory() . '/inc/svc-faq.php';
 	<div><h2>Bắt đầu cùng DigicomVN</h2><p>Liên hệ ngay để được tư vấn giải pháp phù hợp doanh nghiệp của bạn.</p></div>
 	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="#lien-he">Nhận báo giá</a></div>
 </div></div></section>
+
+<?php if ( get_the_content() ) : /* Hieu 27/10: trang dich vu la landing - bai kien thuc dua xuong cuoi, thu gon, bam de doc tiep */ ?>
+<section class="sec svc-knowledge"><div class="wrap">
+	<div class="svc-knowledge-head"><span class="eyebrow">Tìm hiểu thêm</span><h2>Kiến thức về <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2></div>
+	<div class="page-content svc-body is-clamped" id="svc-knowledge-body"><?php the_content(); ?></div>
+	<div class="svc-knowledge-more"><button type="button" class="btn btn-ghost" data-knowledge-toggle aria-controls="svc-knowledge-body" aria-expanded="false">Đọc toàn bộ hướng dẫn</button></div>
+</div></section>
+<?php endif; ?>
 
 <?php get_footer(); ?>
