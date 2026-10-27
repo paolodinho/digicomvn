@@ -1,6 +1,9 @@
-# PLAN - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
+# PLAN - 27/10 18:40 Ảnh bài blog: Hiếu chốt dùng minh hoạ Storyset. XONG thay ảnh stock bằng Storyset trên 135 bài digicomvn + credit, gửi lại GSC 156 URL (danh sách: scratchpad edited-urls.tsv). Backup ~/Claude-Workspace/_backups/edits/2026-10-27/digicom-anh-stock/. LOA: 10 agent đang viết lại 98 bài (out/ trong scratchpad loa/), Tiếp theo: kiểm mẫu, đăng qua SSH wp-cli, purge cache, GSC, ghi file tổng quan LOA.
+- digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
+- 27/10 19:30 XONG: thay ảnh stock bằng minh hoạ Storyset 135 bài, GSC 156 URL đã xếp hàng. Danh sách: scratchpad edited-urls.tsv
+- 27/10 17:50 Task: thêm ảnh minh hoạ bài viết. Đã chèn 30 ảnh stock CC0 vào ~158 bài (backup _backups/edits/2026-10-27/digicom-anh/); Hiếu chê xấu, muốn illustration vẽ free. Tiếp theo: CHờ Hiếu chọn thay illustration (Storyset/unDraw) hay gỡ; sau đó LOA (giảm bảng/thẻ, thêm ảnh), GSC submit lại.
 - 27/10 14:xx N11: đã hẹn giờ thêm 6 bài (31/10 pbn-la-gi, backlink-bao-chi; 1/11 gia-booking-kol, booking-kol-la-gi; 2/11 pr-va-quang-cao-khac-nhau, micro-kol-la-gi), Jett đạt. Tiếp theo: tối ưu 16 trang có sẵn (tab KH), viết bao-mang-dien-tu-la-gi + social-entity-la-gi (CHỜ lệnh); CHỜ Hiếu: bảng giá VND gia-booking-kol, byline, nhịp V003. File: content/n11-bai-2026-10-27/da-hen-gio.tsv
 - Task: N11 quy trình từ khoá + viết bài 2 bài/ngày (giao từ phiên điều phối local_6cdadc8b)
 - Đã xong: 8 bài hẹn giờ (giờ VN): 7017 hop-bao-xu-ly-khung-hoang 27/10 08:30; 7018 thong-cao-bao-chi-ra-mat-mv 27/10 15:30; 7019 quang-cao-tren-bao-dien-tu 28/10 08:30; 7031 quang-cao-tvc-la-gi 28/10 15:30; 7032 quang-cao-truyen-hinh 29/10 08:30; 7033 quang-cao-radio 29/10 15:30; 7034 kol-la-gi 30/10 08:30; 7035 quang-cao-thoai-vi-pr-len-ngoi 30/10 15:30. Jett 84-91, render sạch, GSC add, sơ đồ nội dung, tab KH dòng 49-108 theo trang đích.
