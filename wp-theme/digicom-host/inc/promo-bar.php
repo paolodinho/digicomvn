@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 if ( ! dgc_lines( 'promos' ) ) return;
 /* Bam ribbon -> mo popup (#promoPop). Popup bi loai o dat-bai/cam-on -> ribbon cung an
    o do (tranh bam khong ra gi; khach da o buoc chot). */
+// Uu dai chi danh cho booking (2026-10-28: site da nhieu dich vu).
+if ( ! dgc_is_booking_context() ) return;
 foreach ( array( 'dat-bai', 'cam-on' ) as $dgc_pb_skip ) {
 	if ( is_page( $dgc_pb_skip ) ) return;
 }

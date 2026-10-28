@@ -5,13 +5,13 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 ?>
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Đặt bài</nav></div>
+<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Nhận báo giá</nav></div>
 
 <section class="page-hero">
 	<div class="wrap" style="max-width:820px">
-		<span class="eyebrow">Đặt bài</span>
-		<h1><?php echo esc_html( get_the_title() ?: 'Đặt bài Textlink, Backlink, Guest Post, Booking PR' ); ?></h1>
-		<p class="lead">Cho DigicomVN biết bạn cần dịch vụ nào, DigicomVN sẽ tư vấn site/báo phù hợp và gửi báo giá chi tiết trong thời gian sớm nhất.</p>
+		<span class="eyebrow">Nhận báo giá</span>
+		<h1><?php echo esc_html( get_the_title() ?: 'Nhận báo giá dịch vụ' ); ?></h1>
+		<p class="lead">Cho DigicomVN biết bạn cần dịch vụ nào: SEO, booking báo PR, backlink, tên miền, hosting hay phần mềm SEO. Chuyên viên sẽ tư vấn phương án phù hợp và gửi báo giá chi tiết trong thời gian sớm nhất.</p>
 	</div>
 </section>
 
@@ -19,7 +19,7 @@ get_header();
 	<div class="wrap">
 		<div class="row" style="gap:30px;align-items:flex-start">
 			<div class="col"><?php
-				$dgc_form_title = 'Gửi yêu cầu đặt bài';
+				$dgc_form_title = 'Gửi yêu cầu báo giá';
 				$dgc_form_btn   = 'Gửi yêu cầu';
 				include get_template_directory() . '/inc/form-lead.php';
 			?></div>
@@ -28,8 +28,8 @@ get_header();
 					<h3>Quy trình xử lý</h3>
 					<ol class="ci-steps">
 						<li><span class="ci-num">1</span><span>Tiếp nhận yêu cầu, xác nhận dịch vụ và ngân sách</span></li>
-						<li><span class="ci-num">2</span><span>Tư vấn site/báo phù hợp, gửi báo giá chi tiết</span></li>
-						<li><span class="ci-num">3</span><span>Xác nhận, triển khai và bàn giao link/bài kèm báo cáo</span></li>
+						<li><span class="ci-num">2</span><span>Tư vấn phương án phù hợp, gửi báo giá chi tiết</span></li>
+						<li><span class="ci-num">3</span><span>Xác nhận, triển khai và bàn giao kèm báo cáo</span></li>
 					</ol>
 				</div>
 				<div class="contact-info" style="margin-top:16px">

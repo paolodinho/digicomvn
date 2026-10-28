@@ -849,7 +849,7 @@ function dgc_sch_service() {
 		// Buoc tiep theo ro rang cho ca nguoi dung lan tac tu AI: dat bai o dau.
 		'potentialAction'  => array(
 			'@type'  => 'OrderAction',
-			'name'   => 'Đặt bài',
+			'name'   => 'Nhận báo giá',
 			// KHONG dat 'inLanguage' tren EntryPoint - schema.org khong cho phep
 			// (chi hop le tren CreativeWork/Event/BroadcastService...). Da kiem 2026-07-27.
 			'target' => array(

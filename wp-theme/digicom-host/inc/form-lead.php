@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 $dgc_form_title = $dgc_form_title ?? 'Gửi yêu cầu tư vấn';
 $dgc_form_btn   = $dgc_form_btn ?? 'Gửi yêu cầu';
 $dgc_form_service = $dgc_form_service ?? '';
+if ( '' === $dgc_form_service && isset( $_GET['dv'] ) ) $dgc_form_service = sanitize_text_field( wp_unslash( $_GET['dv'] ) );
 $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] ) ) : '';
 ?>
 <div class="form-card" id="lien-he">

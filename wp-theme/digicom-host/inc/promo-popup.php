@@ -15,6 +15,8 @@ $dgc_pp = dgc_lines( 'promos' );
 if ( ! $dgc_pp ) return;
 
 /* Trang da o cuoi phieu chuyen doi -> khong lam phien. */
+// Uu dai chi danh cho booking (2026-10-28: site da nhieu dich vu).
+if ( ! dgc_is_booking_context() ) return;
 foreach ( array( 'dat-bai', 'cam-on' ) as $dgc_pp_skip ) {
 	if ( is_page( $dgc_pp_skip ) ) return;
 }

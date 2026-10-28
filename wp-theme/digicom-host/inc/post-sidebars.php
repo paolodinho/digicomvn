@@ -10,20 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * ve section dich vu tren trang chu (khong con trang tong hop /bang-gia/, 2026-08-09).
  */
 function dgc_cat_service_links( $slug ) {
-	$map = array(
-		'booking-bao-pr'   => array(
-			array( 'label' => 'Booking báo & PR', 'url' => home_url( '/booking-bao-pr/' ) ),
-		),
-		'backlink-offpage'  => array(
-			array( 'label' => 'Mua Textlink', 'url' => home_url( '/mua-textlink/' ) ),
-			array( 'label' => 'Dịch vụ Backlink', 'url' => home_url( '/dich-vu-backlink/' ) ),
-			array( 'label' => 'Guest Post', 'url' => home_url( '/guest-post/' ) ),
-		),
-	);
-	if ( isset( $map[ $slug ] ) ) {
-		return $map[ $slug ];
-	}
-	return array( array( 'label' => 'Xem tất cả dịch vụ', 'url' => home_url( '/#services' ) ) );
+	$s = dgc_cluster_service( $slug );
+	if ( ! $s ) return array( array( 'label' => 'Xem tất cả dịch vụ', 'url' => home_url( '/#services' ) ) );
+	$out = array();
+	foreach ( $s['links'] as $l ) $out[] = array( 'label' => $l[0], 'url' => home_url( $l[1] ) );
+	return $out;
 }
 
 /**

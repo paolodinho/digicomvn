@@ -3982,3 +3982,7 @@ a.t-seo:hover{box-shadow:0 16px 36px -14px rgba(0,92,246,.6)}
 .svc-index-list dd a:hover{color:var(--action);text-decoration:underline}
 .svc-index-list dd span{color:var(--line-2)}
 @media(max-width:700px){.svc-index-list>div{grid-template-columns:1fr}}
+
+/* CTA cuoi bai theo cum dich vu (3.16.4) */
+.cta-band .cta-svc-links{margin-top:10px;font-size:14px}
+.cta-band .cta-svc-links a{color:#fff;text-decoration:underline;text-underline-offset:3px}

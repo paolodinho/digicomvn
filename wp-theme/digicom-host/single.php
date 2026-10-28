@@ -86,9 +86,11 @@ get_header();
 					endif;
 					?>
 
+					<?php $dgc_svc = dgc_post_service( $dgc_post_id ); ?>
 					<div class="cta-band" style="margin-top:8px">
-						<div><h2>Cần triển khai off-page SEO thực tế?</h2><p>DigicomVN hỗ trợ Textlink, Backlink, Guest Post và Booking báo &amp; PR theo đúng kiến thức trong bài này.</p></div>
-						<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu báo giá</a></div>
+						<div><h2><?php echo esc_html( $dgc_svc['h'] ); ?></h2><p><?php echo esc_html( $dgc_svc['p'] ); ?></p>
+							<p class="cta-svc-links"><?php foreach ( $dgc_svc['links'] as $i => $l ) : ?><?php echo $i ? ' · ' : ''; ?><a href="<?php echo esc_url( home_url( $l[1] ) ); ?>"><?php echo esc_html( $l[0] ); ?></a><?php endforeach; ?></p></div>
+						<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( dgc_quote_url( $dgc_svc['label'] ) ); ?>">Nhận báo giá</a></div>
 					</div>
 				</div>
 			</div>

@@ -2,11 +2,10 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: xong (28/10 đợt 2: tốc độ theo PageSpeed thật + 4 logo khách + thumbnail 13 bài)
-- Đã xong: DGC_VER 3.16.3 live. Font tự host (assets/fonts), jQuery footer, gtag Site Kit nạp trễ, bỏ emoji, a11y carousel/promo-bar/tm-svc. Lighthouse devtools trang chủ mobile 76->84, a11y 100, desktop 98. Logo Alpha/Magway/A&P/VPA trong option clients, front-page hiện 18 logo. Thumbnail 13 bài (att 7700-7712).
-- Tiếp theo: CHỜ Hiếu chạy lại PageSpeed thật. Claude: tìm nguồn ghi meta dạng \u (W20).
-- File liên quan: wp-theme/digicom-host/functions.php, front-page.php, assets/css/main.css, assets/js/main.js, tools/blog-thumbnail/render-illus.py
-- Cập nhật lúc: 2026-10-28 09:40
+- Task: xong
+- Đã xong 28/10: CTA/cấu trúc link theo nhiều dịch vụ (DGC_VER 3.16.4) - bảng cụm->dịch vụ dgc_cluster_service() trong functions.php; CTA cuối bài, chuyên mục, sidebar, schema theo cụm; /dat-bai/ = "Nhận báo giá dịch vụ" + ?dv= chọn sẵn; ưu đãi booking chỉ ở trang booking; 19 link bài SEO sửa; menu Blog +9 chuyên mục SEO; slogan mới.
+- Backup: ~/Claude-Workspace/_backups/routines/2026-10-28/cta-structure/ ; host ~/backups/2026-10-28/{cta-structure,relink-seo}
+- Cập nhật lúc: 2026-10-28
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,

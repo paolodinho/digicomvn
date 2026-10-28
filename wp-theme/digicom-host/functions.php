@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.16.3');
+define('DGC_VER','3.16.4');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -309,15 +309,96 @@ function dgc_service_links() {
 	return array_values( $out );
 }
 
-/** Category archive -> money page tuong ung (label | URL). Chi cum co dich vu moi tra ve. */
+/**
+ * Cum bai (category slug) -> dich vu dich (2026-10-28: site lam nhieu dich vu, khong chi booking bao).
+ * Dung chung cho: CTA cuoi bai (single.php), dau trang chuyen muc, cot so do noi dung,
+ * schema Article.about, form bao gia (?dv=). Them cum moi -> them 1 dong o day.
+ * label = ten dich vu (trung ten trong dgc_svc_tree de form chon san), links = dich vu lien quan.
+ */
+function dgc_cluster_service( $slug ) {
+	$seo = array(
+		'label' => 'Dịch vụ SEO tổng thể', 'url' => '/dich-vu-seo/',
+		'h'     => 'Cần một lộ trình SEO cụ thể cho website?',
+		'p'     => 'DigicomVN audit website, lập kế hoạch theo từng hạng mục và báo cáo tiến độ bằng số liệu Google Search Console.',
+		'links' => array( array( 'Dịch vụ SEO tổng thể', '/dich-vu-seo/' ), array( 'Dịch vụ SEO AI', '/dich-vu-seo-ai/' ), array( 'Viết bài chuẩn SEO', '/dich-vu-viet-bai-chuan-seo/' ) ),
+	);
+	$map = array(
+		'booking-bao-pr' => array(
+			'label' => 'Booking báo & PR', 'url' => '/booking-bao-pr/',
+			'h'     => 'Cần đăng bài PR trên báo điện tử?',
+			'p'     => 'DigicomVN báo giá theo từng đầu báo, hỗ trợ viết bài và theo dõi đến khi bài lên trang.',
+			'links' => array( array( 'Booking báo & PR', '/booking-bao-pr/' ), array( 'Booking truyền hình', '/booking-truyen-hinh/' ), array( 'Booking fanpage', '/booking-fanpage/' ), array( 'Booking KOL, KOC', '/booking-kol-koc/' ) ),
+		),
+		'backlink-offpage' => array(
+			'label' => 'Dịch vụ Backlink', 'url' => '/dich-vu-backlink/',
+			'h'     => 'Cần xây dựng backlink cho website?',
+			'p'     => 'DigicomVN chọn site theo chủ đề và chỉ số, đặt textlink, guest post, social entity và bàn giao danh sách link kèm báo cáo.',
+			'links' => array( array( 'Dịch vụ Backlink', '/dich-vu-backlink/' ), array( 'Mua Textlink', '/mua-textlink/' ), array( 'Guest Post', '/guest-post/' ), array( 'Backlink Social Entity', '/backlink-social-entity/' ) ),
+		),
+		'seo-onpage-content' => array(
+			'label' => 'Viết bài chuẩn SEO', 'url' => '/dich-vu-viet-bai-chuan-seo/',
+			'h'     => 'Cần nội dung chuẩn SEO cho website?',
+			'p'     => 'DigicomVN nghiên cứu SERP, lên dàn bài, viết và biên tập, kiểm chứng số liệu trước khi bàn giao.',
+			'links' => array( array( 'Viết bài chuẩn SEO', '/dich-vu-viet-bai-chuan-seo/' ), array( 'Dịch vụ SEO tổng thể', '/dich-vu-seo/' ) ),
+		),
+		'seo-ai-geo' => array(
+			'label' => 'Dịch vụ SEO AI', 'url' => '/dich-vu-seo-ai/',
+			'h'     => 'Muốn thương hiệu được AI Overviews, ChatGPT nhắc tới?',
+			'p'     => 'DigicomVN tối ưu nội dung, thực thể và dữ liệu có cấu trúc để website được các công cụ tìm kiếm AI trích dẫn.',
+			'links' => array( array( 'Dịch vụ SEO AI', '/dich-vu-seo-ai/' ), array( 'Dịch vụ SEO tổng thể', '/dich-vu-seo/' ) ),
+		),
+		'seo-local' => array(
+			'label' => 'Dịch vụ SEO local', 'url' => '/dich-vu-seo-local/',
+			'h'     => 'Muốn khách quanh khu vực tìm thấy bạn trên Google Maps?',
+			'p'     => 'DigicomVN tối ưu Google Business Profile, trang địa điểm và trích dẫn NAP cho doanh nghiệp có cửa hàng, văn phòng.',
+			'links' => array( array( 'Dịch vụ SEO local', '/dich-vu-seo-local/' ), array( 'Dịch vụ SEO tổng thể', '/dich-vu-seo/' ) ),
+		),
+		'seo-cong-cu-do-luong' => array(
+			'label' => 'Phần mềm SEO', 'url' => '/phan-mem-seo/',
+			'h'     => 'Cần công cụ SEO chính hãng hoặc người đọc số liệu giúp?',
+			'p'     => 'DigicomVN tư vấn chọn gói Ahrefs, Semrush, SE Ranking chính hãng và hỗ trợ thiết lập đo lường cho dự án SEO.',
+			'links' => array( array( 'Phần mềm SEO', '/phan-mem-seo/' ), array( 'Dịch vụ SEO tổng thể', '/dich-vu-seo/' ) ),
+		),
+	);
+	foreach ( array( 'seo-tong-quan', 'seo-technical', 'seo-tu-khoa', 'seo-thuat-toan-google', 'seo-ecommerce' ) as $k ) $map[ $k ] = $seo;
+	return isset( $map[ $slug ] ) ? $map[ $slug ] : null;
+}
+
+/** Dich vu cua 1 bai (theo category dau tien co trong bang tren). Mac dinh: SEO tong the. */
+function dgc_post_service( $post_id = 0 ) {
+	foreach ( get_the_category( $post_id ?: get_the_ID() ) as $c ) {
+		$s = dgc_cluster_service( $c->slug );
+		if ( $s ) return $s;
+	}
+	return dgc_cluster_service( 'seo-tong-quan' );
+}
+
+/** Link "Nhan bao gia" chon san dich vu tren form /dat-bai/. */
+function dgc_quote_url( $service_label = '' ) {
+	return $service_label ? add_query_arg( 'dv', rawurlencode( $service_label ), home_url( '/dat-bai/' ) ) : home_url( '/dat-bai/' );
+}
+
+/** Trang thuoc nhom booking (bao PR, truyen hinh, fanpage, KOL) -> hien uu dai booking (ribbon + popup). */
+function dgc_is_booking_context() {
+	if ( is_singular( 'post' ) ) return has_category( 'booking-bao-pr' );
+	if ( is_category() ) return is_category( 'booking-bao-pr' );
+	if ( is_page() ) {
+		$id = get_queried_object_id();
+		$ids = array_merge( array( $id ), get_post_ancestors( $id ) );
+		foreach ( $ids as $i ) {
+			$sl = get_post_field( 'post_name', $i );
+			if ( 0 === strpos( $sl, 'booking' ) || 0 === strpos( $sl, 'book-bao' ) ) return true;
+		}
+	}
+	return false;
+}
+
+/** Category archive -> money page tuong ung (label | URL). */
 function dgc_cat_money_link( $cat ) {
 	if ( ! $cat || empty( $cat->slug ) ) return null;
-	$map = array(
-		'booking-bao-pr'  => array( 'Xem dịch vụ Booking báo & PR và nhận báo giá', '/booking-bao-pr/' ),
-		'backlink-offpage' => array( 'Xem dịch vụ Backlink & Off-page', '/dich-vu-backlink/' ),
-	);
-	if ( empty( $map[ $cat->slug ] ) ) return null;
-	return array( $map[ $cat->slug ][0], home_url( $map[ $cat->slug ][1] ) );
+	$s = dgc_cluster_service( $cat->slug );
+	if ( ! $s ) return null;
+	return array( 'Xem ' . $s['label'] . ' và nhận báo giá', home_url( $s['url'] ) );
 }
 
 /** Icon SVG thuan (thay emoji &#xxxx; - render khac nhau tuy OS, nhin re tien). */
