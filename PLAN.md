@@ -4,7 +4,7 @@
 ## Đang làm dở (checkpoint)
 - Task 1: báo giá PR khách Hannah (EPC điện mặt trời) - ĐÃ SOẠN XONG 28/10. Tiếp theo: CHỜ Hiếu gửi khách; hỏi Goodcom giá Tạp chí Công Thương rồi bổ sung. File: 11-bao-gia-khach/(NOIBO-)Bao-Gia-PR-Tong-Thau-EPC-Dien-Mat-Troi-2026-10-28.xlsx, Sheet khách https://docs.google.com/spreadsheets/d/17s_MMDs4lf6P5tuUrLTpOx-dcjPB3OcOtvtqv9QGNPU/edit
 - Task 2 (W17 file tổng quan): Google giữ tiêu đề rác cờ bạc từ hack 22/10 ("TKP303 Situs Game Online x Guest Post", "RRQ88 ... Backlink quốc tế"). 28/10: web thật sạch (quét 229 URL), đã đẩy 41 URL crawl 22-23/10 qua Indexing API (OK) + sitemap + hàng đợi gsc_index --force. Danh sách: scratchpad hack_urls.txt (cũng trong hàng đợi gsc_index site digicom).
-- Tiếp theo: Claude kiểm lại Google "site:digicomvn.com" (trình duyệt không đăng nhập) sau 3-7 ngày (~01-04/11).
+- Tiếp theo: CHỜ Google crawl lại (3-7 ngày) - từ 01/11 kiểm "site:digicomvn.com" ở trình duyệt không đăng nhập; còn tiêu đề rác thì Hiếu bấm Yêu cầu lập chỉ mục tay 2 trang /guest-post/, /backlink-quoc-te/.
 - Cập nhật lúc: 2026-10-28 22:05
 
 ## Mục tiêu tổng
