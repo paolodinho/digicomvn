@@ -404,6 +404,9 @@
 	// Testimonial carousel (GrowMark-style: item giua highlight)
 	$(function () {
 		var $tm = $('.tm-carousel');
+		function dotLabels() {
+			$tm.find('.owl-dot').each(function (i) { this.setAttribute('aria-label', 'Xem đánh giá ' + (i + 1)); });
+		}
 		if ($tm.length && $.fn.owlCarousel) {
 			$tm.owlCarousel({
 				loop: $tm.children().length > 3,
@@ -418,7 +421,9 @@
 					0: { items: 1 },
 					768: { items: 2 },
 					992: { items: 3 }
-				}
+				},
+				onInitialized: dotLabels,
+				onRefreshed: dotLabels
 			});
 		}
 	});

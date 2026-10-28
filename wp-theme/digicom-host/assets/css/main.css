@@ -506,7 +506,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .tm-avatar--img{background:var(--surface)}
 .tm-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
 .tm-who{font-family:var(--font-display);font-weight:600;color:var(--heading);font-size:14.5px;display:block}
-.tm-svc{font-size:12.5px;color:var(--teal);font-weight:500}
+.tm-svc{font-size:12.5px;color:#00756B;font-weight:500}
 
 /* Testimonial carousel (Owl) - item giua highlight nen primary, kieu GrowMark */
 .tm-carousel{display:flex;gap:20px;flex-wrap:wrap}
@@ -553,6 +553,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 @media(max-width:768px){.cs-grid{grid-template-columns:1fr}}
 .tm-carousel .owl-item.center .tm-avatar{background:var(--surface-2);color:var(--action)}
 .tm-carousel .owl-dots{text-align:center;margin-top:26px}
+.tm-carousel .owl-dot{padding:8px 4px !important;min-width:24px;min-height:24px}
 .tm-carousel .owl-dot span{width:9px;height:9px;margin:0 4px;background:var(--line-2);border-radius:50%;display:block}
 .tm-carousel .owl-dot.active span{background:var(--action)}
 
@@ -3560,7 +3561,7 @@ body:before{display:none}
   --action-l:#EAF2FF; --action-m:#B9D2FF;
   --dr-hi:#00877C; --dr-mid:#005CF6; --dr-lo:#4D74C7; --dr-none:#8A9BBF;
 }
-:root:not([data-theme="dark"]) .promo-bar .promo-count,:root:not([data-theme="dark"]) .promo-bar .promo-count-val{color:#A6F0E8}
+:root:not([data-theme="dark"]) .promo-bar .promo-count,:root:not([data-theme="dark"]) .promo-bar .promo-count-val{color:#C9F7F1}
 :root:not([data-theme="dark"]) .promo-slots{background:var(--action-l);border-color:var(--action-m);color:var(--heading)}
 :root:not([data-theme="dark"]) .promo-slots b{color:var(--action)}
 :root:not([data-theme="dark"]) .price-note{background:var(--action-l);border-color:var(--action-m)}

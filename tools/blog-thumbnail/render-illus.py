@@ -17,7 +17,7 @@ def classify(title):
     if has("guest post"):                        return ("GUEST POST", BLUE, "CONTENT")
     if has("backlink","liên kết","link building","internal link","referring","anchor"):
         return ("BACKLINK", TEAL, "BACKLINK")
-    if has("booking","báo pr","báo chí","đầu báo","vnexpress","kenh14","dân trí","cafef","pr "," pr","press") or re.search(r'\bpr\b', t):
+    if has("booking","báo pr","báo chí","đầu báo","vnexpress","kenh14","dân trí","cafef","pr "," pr","press","họp báo","báo điện tử","thông cáo") or re.search(r'\bpr\b', t):
         return ("BOOKING PR", TEAL, "PR")
     if has("local","địa phương","maps","gbp","google my business","citation","nap"):
         return ("LOCAL SEO", TEAL, "LOCAL")
@@ -27,7 +27,7 @@ def classify(title):
         return ("ANALYTICS", BLUE, "ANALYTICS")
     if has("technical","crawl","sitemap","robots","https","redirect","schema","canonical","core web vitals","tốc độ","mobile","screaming frog","index"):
         return ("TECHNICAL", BLUE, "TECH")
-    if has("content","nội dung","viết bài","title","meta","heading","h1 h2","pillar","topic cluster","thin content","duplicate","e-e-a-t","eeat"):
+    if has("content","nội dung","viết bài","title","meta","heading","h1 h2","pillar","topic cluster","thin content","duplicate","e-e-a-t","eeat","testimonial","công thức","copywriting"):
         return ("CONTENT", BLUE, "CONTENT")
     if has("google","thuật toán","algorithm","panda","penguin","rankbrain","bert","sge","ai overview","update","spambrain","helpful content","geo","featured snippet"):
         return ("SEO", BLUE, "IDEA")

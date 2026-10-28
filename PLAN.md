@@ -2,11 +2,11 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: 28/10 - 301 sau đổi giao diện + onpage + tốc độ: ĐÃ XONG, đã live DGC_VER 3.16.1 (file tổng quan W19-W21).
-- Đã xong: 8 URL 404 cũ -> 301 (mảng $dgc_gop functions.php); /bang-gia/ Draft; tiêu đề >50 ký tự bỏ đuôi tên site; giải mã \u trong 28 meta SEO (bài 7017-7053); font async + Owl CSS inline + bỏ jquery-migrate + ảnh WebP. Lighthouse mobile 94-98, desktop 94-99.
-- Tiếp theo: CHỜ Hiếu - nhờ nhà cung cấp mở tường lửa IP 145.79.26.63 tới máy chủ API đại lý (đuôi .vn tra tên miền). Claude: tìm nguồn ghi meta dạng \u để chặn lặp lại.
-- Backup: ~/Claude-Workspace/_backups/routines/2026-10-28/ (redirect-301/, speed/, tra-ten-mien-live/), manifest.md cùng thư mục.
-- Cập nhật lúc: 2026-10-28
+- Task: xong (28/10 đợt 2: tốc độ theo PageSpeed thật + 4 logo khách + thumbnail 13 bài)
+- Đã xong: DGC_VER 3.16.3 live. Font tự host (assets/fonts), jQuery footer, gtag Site Kit nạp trễ, bỏ emoji, a11y carousel/promo-bar/tm-svc. Lighthouse devtools trang chủ mobile 76->84, a11y 100, desktop 98. Logo Alpha/Magway/A&P/VPA trong option clients, front-page hiện 18 logo. Thumbnail 13 bài (att 7700-7712).
+- Tiếp theo: CHỜ Hiếu chạy lại PageSpeed thật. Claude: tìm nguồn ghi meta dạng \u (W20).
+- File liên quan: wp-theme/digicom-host/functions.php, front-page.php, assets/css/main.css, assets/js/main.js, tools/blog-thumbnail/render-illus.py
+- Cập nhật lúc: 2026-10-28 09:40
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,

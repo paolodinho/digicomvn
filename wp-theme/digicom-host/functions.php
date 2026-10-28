@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.16.1');
+define('DGC_VER','3.16.3');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -30,15 +30,30 @@ add_action( 'after_setup_theme', function () {
  * Toc do (2026-10-28): Google Fonts nap khong chan hien thi (display=swap nen chu hien
  * ngay bang font he thong roi doi), preconnect, bo jquery-migrate o frontend, sizes logo.
  * ------------------------------------------------------------------------- */
-add_filter( 'style_loader_tag', function ( $tag, $handle ) {
-	if ( 'dgc-fonts' !== $handle || is_admin() ) return $tag;
-	$async = str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $tag );
-	return $async . '<noscript>' . $tag . '</noscript>';
-}, 10, 2 );
 add_action( 'wp_head', function () {
-	echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
-	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+	$u = get_template_directory_uri() . '/assets/fonts/';
+	foreach ( array( 'be-vietnam-pro-400-latin', 'be-vietnam-pro-400-vietnamese' ) as $f ) {
+		echo '<link rel="preload" href="' . esc_url( $u . $f . '.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
+	}
 }, 1 );
+/* jQuery xuong cuoi trang (frontend): khong con chan hien thi; theme + Owl deu nap o footer. */
+add_action( 'wp_enqueue_scripts', function () {
+	if ( is_admin() ) return;
+	foreach ( array( 'jquery', 'jquery-core' ) as $h ) wp_script_add_data( $h, 'group', 1 );
+}, 1 );
+/* Google tag (Site Kit) nap sau khi khach tuong tac hoac 3,5s sau khi trang tai xong:
+   lenh gtag() da xep hang trong dataLayer nen khong mat su kien. */
+add_filter( 'script_loader_tag', function ( $tag, $handle ) {
+	if ( 'google_gtagjs' !== $handle || is_admin() ) return $tag;
+	$src = preg_match( '#src=["\']([^"\']+)#', $tag, $m ) ? $m[1] : '';
+	if ( ! $src ) return $tag;
+	return '<script>(function(){var d=0;function l(){if(d)return;d=1;var s=document.createElement("script");s.async=1;s.src=' . wp_json_encode( $src ) . ';document.head.appendChild(s);}'
+		. '["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true});});'
+		. 'addEventListener("load",function(){setTimeout(l,3500);});})();</script>' . "\n";
+}, 10, 2 );
+/* Bo script emoji cua WP o frontend (trinh duyet hien emoji san). */
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
 add_action( 'wp_default_scripts', function ( $scripts ) {
 	if ( is_admin() || empty( $scripts->registered['jquery'] ) ) return;
 	$scripts->registered['jquery']->deps = array_diff( $scripts->registered['jquery']->deps, array( 'jquery-migrate' ) );
@@ -54,14 +69,16 @@ add_filter( 'get_custom_logo_image_attributes', function ( $attr ) {
 add_action( 'wp_enqueue_scripts', function () {
 	// Redesign 2026-07-06 theo giao dien GrowMark: Roboto (display) + Montserrat (body),
 	// ca hai deu co subset vietnamese.
-	wp_enqueue_style(
-		'dgc-fonts',
-		'https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap',
-		array(), null
-	);
 	// Toc do 2026-10-28: CSS Owl (4KB) in thang vao <head> thay vi 2 file CDN chan hien thi.
+	// Font tu host (assets/fonts, tai tu Google Fonts 28/10): bo 2 ket noi fonts.googleapis/gstatic,
+	// @font-face in thang vao <head>, khong chan hien thi.
 	wp_register_style( 'dgc-owl', false, array(), null );
 	wp_enqueue_style( 'dgc-owl' );
+	$dgc_fcss = @file_get_contents( get_template_directory() . '/assets/fonts/fonts.css' );
+	if ( $dgc_fcss ) {
+		$dgc_fcss = preg_replace( '#url\(([a-z0-9-]+\.woff2)\)#', 'url(' . get_template_directory_uri() . '/assets/fonts/$1)', $dgc_fcss );
+		wp_add_inline_style( 'dgc-owl', $dgc_fcss );
+	}
 	foreach ( array( 'owl.carousel.min.css', 'owl.theme.default.min.css' ) as $dgc_owl_f ) {
 		$dgc_owl_css = @file_get_contents( get_template_directory() . '/assets/vendor/' . $dgc_owl_f );
 		if ( $dgc_owl_css ) wp_add_inline_style( 'dgc-owl', $dgc_owl_css );

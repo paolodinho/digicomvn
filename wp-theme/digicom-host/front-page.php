@@ -230,7 +230,7 @@ $dgc_others = array(
 			<h2 class="sg-h">Thương hiệu đã <em>tin tưởng</em> DigicomVN</h2>
 		</div>
 		<div class="sg-logos">
-			<?php foreach ( array_slice( $dgc_clients, 0, 12 ) as $c ) : $c_file = trim( $c[1] ?? '' ); ?>
+			<?php foreach ( array_slice( $dgc_clients, 0, 18 ) as $c ) : $c_file = trim( $c[1] ?? '' ); ?>
 				<div class="sg-logo" title="<?php echo esc_attr( $c[0] ); ?>">
 					<?php if ( $c_file ) : ?><img src="<?php echo esc_url( content_url( 'uploads/client-logos/' . $c_file ) ); ?>" alt="<?php echo esc_attr( $c[0] ); ?>" loading="lazy"><?php else : ?><span><?php echo esc_html( $c[0] ); ?></span><?php endif; ?>
 				</div>
