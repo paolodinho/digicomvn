@@ -2,12 +2,10 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: Ô tra tên miền nhiều đuôi (28/10) - ĐÃ LÊN LIVE, DGC_VER 3.16.0. Giao diện seongon đã live từ trước (3.15.1).
-- Đã xong: khách gõ 1 tên -> tra cùng lúc tối đa 12 đuôi (option tm_suggest, WP Admin > DigicomVN mục 11), mỗi dòng có giá năm đầu + giá gạch (option ten_mien_gia), nút Đăng ký điền sẵn form lead -> email Hiếu. Nguồn tra: API whois đại lý (tra được .vn) qua curl_multi, dự phòng RDAP cho đuôi quốc tế; API không phản hồi thì bỏ qua 15 phút (transient dgc_pa_down). Khoá API trong wp-config live + Local (DGC_PA_USER/DGC_PA_KEY), KHÔNG trong git. Code: wp-theme/digicom-host/inc/domain-hosting.php, inc/order-prefill.php, assets/css/sg.css.
-- Vướng: máy chủ live (145.79.26.63, Hostinger nước ngoài) bị chặn TCP tới máy chủ API đại lý dù IP đã có trong danh sách IP API; từ Mac (IP VN) gọi được. Live hiện tra thật đuôi quốc tế, đuôi .vn hiện "Gửi yêu cầu".
-- Tiếp theo: CHỜ Hiếu - nhờ tổng đài nhà cung cấp mở tường lửa cho IP 145.79.26.63 tới máy chủ API đại lý (cổng 443). Mở xong không cần sửa code, tối đa 15 phút sau tự dùng API. Kiểm: ssh live, curl -4 https://máy chủ API đại lý/ phải trả mã HTTP.
-- Còn lại: /bang-gia/ chuyển Draft (Hiếu); chạy lại tools/schema-vocab-check.py + schema-google-check.py trên live.
-- Backup live trước deploy: ~/Claude-Workspace/_backups/routines/2026-10-28/tra-ten-mien-live/ (gồm wp-config.php gốc)
+- Task: 28/10 - 301 sau đổi giao diện + onpage + tốc độ: ĐÃ XONG, đã live DGC_VER 3.16.1 (file tổng quan W19-W21).
+- Đã xong: 8 URL 404 cũ -> 301 (mảng $dgc_gop functions.php); /bang-gia/ Draft; tiêu đề >50 ký tự bỏ đuôi tên site; giải mã \u trong 28 meta SEO (bài 7017-7053); font async + Owl CSS inline + bỏ jquery-migrate + ảnh WebP. Lighthouse mobile 94-98, desktop 94-99.
+- Tiếp theo: CHỜ Hiếu - nhờ nhà cung cấp mở tường lửa IP 145.79.26.63 tới máy chủ API đại lý (đuôi .vn tra tên miền). Claude: tìm nguồn ghi meta dạng \u để chặn lặp lại.
+- Backup: ~/Claude-Workspace/_backups/routines/2026-10-28/ (redirect-301/, speed/, tra-ten-mien-live/), manifest.md cùng thư mục.
 - Cập nhật lúc: 2026-10-28
 
 ## Mục tiêu tổng
