@@ -50,6 +50,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/pr-phong-van-nhieu-bao.md` | **PR co phong van: 1 goc tiep can, ~20 cau, tach 2 ban gui khach / gui phong vien** |
 | `.claude/rules/gsc-sitemap-submit.md` | Auto-submit sitemap len Google Search Console khi co bai moi |
 | `.claude/rules/mobile-responsive-content.md` | **Bai viet khong duoc tran/vo tren mobile - QA bang tools/mobile-overflow-check.py** |
+| `.claude/rules/lam-sau-co-trong-diem.md` | **Trang chu + landing: lam sau, co trong diem, khong day dac** |
 | `.claude/rules/leads-sheet-sync.md` | Khach dang ky form tu dong vao Google Sheet (dung chung service account GSC) |
 
 ## 7. File quan trong

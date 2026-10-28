@@ -16,7 +16,18 @@
   "backlink-social-entity",
   "backlink-quoc-te",
   "booking-truyen-hinh",
-  "quang-cao-phat-thanh"
+  "quang-cao-phat-thanh",
+  "dich-vu-seo",
+  "dich-vu-seo-quoc-te",
+  "khoa-hoc-seo",
+  "dich-vu-seo-ai",
+  "dich-vu-seo-local",
+  "dich-vu-viet-bai-chuan-seo",
+  "phan-mem-seo",
+  "ten-mien",
+  "hosting",
+  "booking-kol-koc",
+  "booking-fanpage"
  ],
  "money_kind": "Trang dịch vụ",
  "clusters": [
@@ -146,6 +157,7 @@
    "name": "Công cụ & Đo lường SEO",
    "color": "#8A5A00",
    "slugs": [
+    "phan-mem-seo",
     "ahrefs-vs-semrush",
     "ahrefs",
     "bounce-rate-seo",
@@ -165,6 +177,7 @@
    "name": "SEO & AI (GEO)",
    "color": "#7C3AED",
    "slugs": [
+    "dich-vu-seo-ai",
     "ai-overview",
     "geo-generative-engine-optimization",
     "google-sge",
@@ -188,6 +201,9 @@
    "name": "SEO Tổng quan & Lộ trình",
    "color": "#0F766E",
    "slugs": [
+    "khoa-hoc-seo",
+    "dich-vu-seo-quoc-te",
+    "dich-vu-seo",
     "cac-loai-seo",
     "eeat-seo",
     "hoc-seo",
@@ -203,6 +219,8 @@
    "name": "Technical SEO",
    "color": "#BE185D",
    "slugs": [
+    "hosting",
+    "ten-mien",
     "canonical-tag",
     "core-web-vitals",
     "crawl-budget",
@@ -218,6 +236,7 @@
    "name": "On-page & Content SEO",
    "color": "#4D7C0F",
    "slugs": [
+    "dich-vu-viet-bai-chuan-seo",
     "content-gap",
     "content-seo",
     "do-dai-noi-dung-seo",
@@ -239,6 +258,7 @@
    "name": "SEO Local",
    "color": "#5B6675",
    "slugs": [
+    "dich-vu-seo-local",
     "google-maps-seo",
     "google-my-business",
     "local-citations",

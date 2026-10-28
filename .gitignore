@@ -44,3 +44,6 @@ digicom-price-sync-*.json
 
 # API keys allintitle checker
 .claude/secrets/allintitle-keys.json
+
+# File noi bo (gia von, nguon NCC) - repo PUBLIC, khong day len
+**/NOIBO-*

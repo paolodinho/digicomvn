@@ -1,5 +1,8 @@
 # LOG - digicomvn.com
 
+## 2026-10-28 (Redesign phong cách seongon trên Local)
+- sg.css mới, trang chủ SEO-first, tpl-seo.php cho 5 trang SEO, menu Local mới, FAQ trang chủ tập con. QA Local: 0 tràn ngang ở 375/768/1024/1280/1440, menu 1 dòng, 0 chữ mồ côi, dark mode sửa biến chữ. Ảnh: 13-redesign-seongon/shots/. Chưa deploy live.
+
 ## 2026-10-24 (Cô đặc topic: trang chủ + menu + truyền hình/phát thanh)
 - Publish /booking-truyen-hinh/ (2107) và /quang-cao-phat-thanh/ (2440): nội dung mới theo BRIEF (giá thật từ dgc_gia, Luật 75/2025/QH15), 16 ảnh infographic desktop/mobile, 10 FAQ svc_faqs, dgc_seo_desc + excerpt.
 - Trang chủ: hero, số liệu, meta, FAQ (thêm câu truyền hình/phát thanh và SEO), section dịch vụ chia 2 nhóm; footer thêm dòng "Nhận thêm theo yêu cầu: SEO tổng thể, Google Ads, Facebook Ads"; form có lựa chọn "Dịch vụ khác".
@@ -4920,3 +4923,12 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 ## 2026-10-27 09:15 N11
 - Thêm 5 bài hẹn giờ 7031-7035 (28-30/10), Jett 84-91; tab KH 49-108 theo URL; đo top 10 chạy lại 15/72.
+
+## 2026-10-28
+- Thêm menu "Dịch vụ SEO" + Phần mềm SEO; /khoa-hoc/ 301 về /khoa-hoc-seo/.
+- Sửa mobile: nút hero mất chữ, header tràn ở 375px (DGC_VER 3.13.7). Đổi tiêu đề + mô tả trang chủ sang định vị SEO.
+- QA: 0 tràn mobile, 0 lỗi schema 228 URL; meta còn lỗi cũ /bang-gia/. GSC thêm 10 URL; sơ đồ nội dung thêm 11 trang.
+- Hiếu chê GenZ xấu -> đổi sang phong cách sạch tham khảo seongon.com (DGC_VER 3.14.0). Sửa mục lục đè ảnh infographic trong bài.
+- 2026-10-28: Trang chu bo luoi 20 the dich vu, chi giu 4 dich vu chu dao + danh sach chu 'Cac dich vu khac'; landing bo dai CTA lap duoi form (DGC_VER 3.14.1). Dong V023-V028, V052-V058.
+
+## 2026-10-28 - O tra ten mien nhieu duoi len live (DGC_VER 3.16.0). API dai ly chay tu Local, live cho mo tuong lua IP 145.79.26.63.

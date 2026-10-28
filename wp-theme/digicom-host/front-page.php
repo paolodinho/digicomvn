@@ -1,169 +1,118 @@
 <?php
 /**
- * Trang chu DigicomVN - booking truyen thong (bao PR, truyen hinh, phat thanh) + link tu bao.
- * Dinh vi co dac 1 chu de (Hieu duyet 2026-10-24, 03-thiet-ke/tai-cau-truc-2026-10/).
+ * Trang chu DigicomVN - thiet ke lai 2026-10-28 theo phong cach seongon.com.
+ * Dinh vi: SEO la dich vu chu dao; booking bao PR, ten mien + hosting, phan mem SEO la dich vu ho tro.
+ * Moi chu hien thi sua o WP Admin > DigicomVN (muc 2 Hero, 2b Trang chu, 5 FAQ...).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
-?>
 
-<!-- 02. HERO (bo cuc A: cat cheo bat doi xung) -->
-<section class="hero hero-diag" id="dich-vu">
-	<div class="hero-diag-row">
-		<div class="hero-diag-copy">
-			<div class="hero-diag-copy-in">
-				<span class="eyebrow">Booking báo PR &middot; Truyền hình &middot; Phát thanh &middot; Link từ báo</span>
-				<h1><?php echo esc_html( dgc( 'hero_title' ) ); ?></h1>
-				<p class="lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
-				<div class="hero-cta-row">
-					<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận báo giá</a>
-					<a class="btn-text-link" href="#services">Xem dịch vụ &rarr;</a>
+$dgc_img = get_template_directory_uri() . '/assets/images/';
+$dgc_ico = array(
+	'M4 19V10M10 19V5M16 19v-6M20 19H3',
+	'M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z',
+	'M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z',
+	'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z',
+	'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5',
+	'M13.5 6.5L17 3a4 4 0 1 1 5.5 5.5L19 12M10.5 17.5L7 21a4 4 0 1 1-5.5-5.5L5 12M8 16l8-8',
+	'M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5',
+);
+$dgc_svg = function ( $d ) {
+	return '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="' . esc_attr( $d ) . '"/></svg></span>';
+};
+?>
+<div class="sg-home">
+
+<!-- 01. HERO -->
+<section class="sg-hero" id="dich-vu">
+	<div class="wrap">
+		<div class="sg-hero-row">
+			<div>
+				<span class="sg-eyebrow"><?php echo esc_html( dgc( 'hero_kicker' ) ); ?></span>
+				<h1><?php echo dgc_em( dgc( 'hero_title' ) ); // phpcs:ignore ?></h1>
+				<p class="sg-lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
+				<div class="sg-hero-cta">
+					<a class="sg-btn sg-btn--light" href="#lien-he"><?php echo dgc_arrow(); // phpcs:ignore ?>Nhận audit SEO miễn phí</a>
+					<a class="sg-btn sg-btn--line" href="<?php echo esc_url( home_url( '/dich-vu-seo/' ) ); ?>"><?php echo dgc_arrow(); // phpcs:ignore ?>Xem dịch vụ SEO</a>
 				</div>
 			</div>
+			<div class="sg-hero-media">
+				<img
+					src="<?php echo esc_url( $dgc_img . 'hero-team-1280.jpg?v=2' ); ?>"
+					srcset="<?php echo esc_url( $dgc_img . 'hero-team-640.jpg?v=2' ); ?> 640w, <?php echo esc_url( $dgc_img . 'hero-team-960.jpg?v=2' ); ?> 960w, <?php echo esc_url( $dgc_img . 'hero-team-1280.jpg?v=2' ); ?> 1280w"
+					sizes="(max-width: 900px) 100vw, 42vw" width="1280" height="767"
+					alt="Đội ngũ DigicomVN trao đổi kế hoạch SEO tại văn phòng" fetchpriority="high">
+				<div class="sg-float"><b>6 hạng mục</b>mỗi dự án SEO đều có đầu ra bàn giao kiểm tra được</div>
+			</div>
 		</div>
-		<div class="hero-diag-media">
-			<img
-				src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg?v=2' ); ?>"
-				srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-640.jpg?v=2' ); ?> 640w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-960.jpg?v=2' ); ?> 960w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1280.jpg?v=2' ); ?> 1280w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-team-1600.jpg?v=2' ); ?> 1600w"
-				sizes="(max-width: 767px) 100vw, 44vw"
-				width="1600" height="959"
-				alt="Nhóm tư vấn truyền thông trao đổi kế hoạch tại văn phòng"
-				fetchpriority="high"
-			>
-		</div>
-	</div>
-	<div class="hero-diag-strip">
-		<div class="wrap">
-			<?php
-			// Dai so lieu sua tu WP Admin > DigicomVN > Hero. Moi dong: con so | nhan.
-			$dgc_stats = array_filter( dgc_lines( 'hero_stats' ), fn( $st ) => ! empty( $st[0] ) );
-			foreach ( array_slice( $dgc_stats, 0, 5 ) as $st ) :
-				$st_num   = trim( $st[0] );
-				$st_label = trim( $st[1] ?? '' );
-				$is_num   = (bool) preg_match( '/\d/', $st_num );
-				?>
-				<div class="s<?php echo $is_num ? ' stat' : ''; ?>"><b><?php echo esc_html( $st_num ); ?></b><?php echo $st_label ? ' ' . esc_html( $st_label ) : ''; ?></div>
+		<?php $dgc_stats = array_slice( array_filter( dgc_lines( 'hero_stats' ), fn( $st ) => ! empty( $st[0] ) ), 0, 5 ); ?>
+		<?php if ( $dgc_stats ) : ?>
+		<div class="sg-stats">
+			<?php foreach ( $dgc_stats as $st ) : ?>
+				<div class="sg-stat"><b><?php echo esc_html( $st[0] ); ?></b><?php echo esc_html( $st[1] ?? '' ); ?></div>
 			<?php endforeach; ?>
 		</div>
+		<?php endif; ?>
 	</div>
 </section>
 
-<?php /* 02b. Chat AI tu van (DeepSeek) - SECTION 2, ngay duoi hero o trang chu (Hieu 2026-07-15).
-        Chi hien khi da bat + co key (dgc_ai_enabled), nguoc lai khong render gi. */ ?>
 <?php if ( function_exists( 'dgc_ai_chat_box' ) ) dgc_ai_chat_box(); ?>
 
-<?php /* 03. UU DAI: da chuyen thanh pill noi (promo-fab) tren moi trang - khong con khoi to (Hieu 2026-07-15). */ ?>
-
-<!-- 06. DICH VU - 2 nhom: booking truyen thong (loi) + link tu bao (Hieu duyet 2026-10-24) -->
-<?php
-/* Slug co dinh theo sitemap -> link truc tiep. Moi nhom 3 cot de hang cuoi khong le the. */
-$dgc_svc_groups = array(
-	array(
-		'h'     => 'Booking truyền thông',
-		'class' => ' svc-core',
-		'items' => array(
-			array( 'Booking báo &amp; PR',  '/booking-bao-pr/',       'Đặt bài PR trên báo điện tử trong nước và quốc tế, theo từng đầu báo.', 'M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z' ),
-			array( 'Booking truyền hình',   '/booking-truyen-hinh/',  'TVC, phóng sự, tự giới thiệu và talkshow trên VTV, HTV theo khung giờ.', 'M3 6h18v11H3zM8 21h8M12 17v4' ),
-			array( 'Quảng cáo phát thanh',  '/quang-cao-phat-thanh/', 'Spot radio trên VOV, VOV Giao thông, Joy FM và đài tỉnh.',                'M4 10h16v10H4zM8 10l9-6M8 15h3M15 15a1.5 1.5 0 1 0 0 .01' ),
-		),
-	),
-	array(
-		'h'     => 'Booking mạng xã hội',
-		'class' => ' svc-core svc-links-2',
-		'items' => array(
-			array( 'Booking fanpage',   '/booking-fanpage/',  'Đăng bài trên fanpage báo điện tử và fanpage cộng đồng lớn, đúng tệp người theo dõi.', 'M7 10v11M7 10l4-8a3 3 0 0 1 3 3v4h5a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 17.6 21H7M3 10h4v11H3z' ),
-			array( 'Booking KOL, KOC',  '/booking-kol-koc/',  'KOL, KOC, TikToker, YouTuber và livestream bán hàng, có kiểm tra tương tác thật.',      'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0M19 3l2 2-2 2' ),
-		),
-	),
-	array(
-		'h'     => 'Link từ báo &amp; site uy tín',
-		'class' => '',
-		'items' => array(
-			array( 'Mua Textlink',           '/mua-textlink/',           'Chèn link vào bài có sẵn, chọn site theo DR &amp; traffic.',        'M13.5 6.5L17 3a4 4 0 1 1 5.5 5.5L19 12M10.5 17.5L7 21a4 4 0 1 1-5.5-5.5L5 12M8 16l8-8' ),
-			array( 'Guest Post',             '/guest-post/',             'Viết bài &amp; đăng trên site đúng chủ đề, link dofollow.',          'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5' ),
-			array( 'Dịch vụ Backlink',       '/dich-vu-backlink/',       'Hệ thống backlink chất lượng, đa nguồn, an toàn.',                  'M4 19V10M10 19V5M16 19v-6M20 19H3' ),
-			array( 'Backlink Social Entity', '/backlink-social-entity/', 'Hồ sơ social chuẩn NAP, nội dung độc bản, làm thủ công.',           'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0' ),
-			array( 'Backlink quốc tế',       '/backlink-quoc-te/',       'Guest post, niche edit &amp; PR báo quốc tế theo tầng DR/DA.',       'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z' ),
-			array( 'Dịch vụ Toplist',        '/dich-vu-toplist/',        'Đưa thương hiệu vào bài xếp hạng "Top uy tín" đúng lĩnh vực.',       'M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6-5.2-4.4 6.8-.5z' ),
-		),
-	),
-);
-?>
-<section class="sec" id="services" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:40px">
-			<span class="eyebrow">Dịch vụ của DigicomVN</span>
-			<h2>Booking báo PR, truyền hình, mạng xã hội và link từ báo</h2>
-			<p class="muted">Đặt chỗ trên đúng kênh truyền thông doanh nghiệp cần: báo điện tử, sóng truyền hình, phát thanh, fanpage và KOL. Link từ báo và site uy tín hỗ trợ thêm cho SEO.</p>
-		</div>
-		<?php foreach ( $dgc_svc_groups as $g ) : ?>
-		<div class="svc-grp">
-			<h3 class="svc-grp-h"><?php echo wp_kses_post( $g['h'] ); ?></h3>
-			<div class="svc-links svc-links-3<?php echo esc_attr( $g['class'] ); ?>">
-				<?php foreach ( $g['items'] as $s ) : ?>
-					<a class="svc-link" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
-						<span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="<?php echo esc_attr( $s[3] ); ?>"/></svg></span>
-						<h4><?php echo esc_html( html_entity_decode( $s[0], ENT_QUOTES ) ); ?></h4>
-						<p><?php echo wp_kses_post( $s[2] ); ?></p>
-						<span class="svc-more">Xem chi tiết &rarr;</span>
-					</a>
+<!-- 02. VE DIGICOMVN -->
+<section class="sg-sec" id="ve-digicom">
+	<div class="wrap sg-about">
+		<div>
+			<span class="sg-eyebrow">Về DigicomVN</span>
+			<h2 class="sg-h"><?php echo dgc_em( dgc( 'home_about_title' ) ); // phpcs:ignore ?></h2>
+			<p class="sg-lead"><?php echo esc_html( dgc( 'home_about_text' ) ); ?></p>
+			<ul class="sg-checks">
+				<?php foreach ( dgc_lines( 'home_about_points' ) as $pt ) : if ( empty( $pt[0] ) ) continue; ?>
+					<li><b><?php echo esc_html( $pt[0] ); ?></b><?php echo ! empty( $pt[1] ) ? ' ' . esc_html( $pt[1] ) : ''; ?></li>
 				<?php endforeach; ?>
-			</div>
+			</ul>
+			<a class="sg-btn sg-btn--ghost" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>"><?php echo dgc_arrow(); // phpcs:ignore ?>Tìm hiểu về DigicomVN</a>
 		</div>
-		<?php endforeach; ?>
-	</div>
-</section>
-
-<!-- 06b. TAI SAO CHON DIGICOMVN (partial dung chung voi trang dich vu) -->
-<?php include get_template_directory() . '/inc/blk-reasons.php'; ?>
-
-<!-- 07. REASONS + CHUNG TOI LA AI -->
-<section class="sec band-navy whoweare-band" style="--bgimg:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/team-digicom-1400.jpg' ); ?>')">
-	<div class="wrap">
-		<div class="whoweare-hero">
-			<div class="whoweare-hero-in">
-				<span class="eyebrow">Chúng tôi là ai</span>
-				<h2>DigicomVN - đơn vị booking truyền thông của Digito Combat</h2>
-				<p class="lead">DigicomVN là thương hiệu dịch vụ truyền thông trực thuộc Công ty TNHH Dịch vụ Truyền thông Digito Combat. DigicomVN tập trung vào booking truyền thông: đặt bài PR trên báo điện tử, đặt sóng truyền hình và phát thanh, cùng nhóm dịch vụ link từ báo và site uy tín hỗ trợ SEO. Đầu báo, kênh và khung giờ được chọn theo dữ liệu thật, giá niêm yết rõ ràng và bàn giao kèm báo cáo sau khi hoàn thành.</p>
-				<p style="margin-top:18px"><a class="btn-text-link" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>" style="color:#fff">Tìm hiểu về DigicomVN &rarr;</a></p>
-			</div>
+		<div class="sg-about-media">
+			<img src="<?php echo esc_url( $dgc_img . 'team-digicom-1400.jpg' ); ?>" width="1400" height="933" loading="lazy" alt="Đội ngũ DigicomVN">
 		</div>
 	</div>
 </section>
 
-<!-- 07a. DAU BAO CO THE DAT BAI (partial dung chung) -->
-<?php include get_template_directory() . '/inc/blk-press-partners.php'; ?>
-
-<!-- 07b. TESTIMONIALS + CASE STUDY (partial dung chung) -->
-<?php include get_template_directory() . '/inc/blk-testimonials.php'; ?>
-
-<!-- 07c. BAO CHI NOI VE DIGICOMVN -->
-<?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) ); ?>
-<?php if ( $dgc_mentions ) : ?>
-<section class="sec press-mentions-sec" style="background:var(--surface-2);border-top:1px solid var(--line)">
+<!-- 03. GIAI PHAP SEO -->
+<?php
+$dgc_sols = array();
+foreach ( dgc_lines( 'home_solutions' ) as $s ) {
+	if ( empty( $s[0] ) || empty( $s[1] ) || ! dgc_page_live( $s[1] ) ) continue;
+	$dgc_sols[] = $s;
+}
+?>
+<?php if ( $dgc_sols ) : ?>
+<section class="sg-sec sg-sec--cyan" id="services">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:30px">
-			<span class="eyebrow">Đối tác báo chí</span>
-			<h2>Đầu báo DigicomVN hợp tác đăng bài</h2>
-			<p class="muted" style="max-width:600px;margin:8px auto 0">Các đầu báo điện tử DigicomVN làm việc trực tiếp để đặt bài PR, guest post cho khách hàng.</p>
+		<div class="sg-head sg-head--split">
+			<div>
+				<span class="sg-eyebrow">Giải pháp SEO</span>
+				<h2 class="sg-h">Giải pháp SEO <em>toàn diện</em> cho từng mục tiêu</h2>
+			</div>
+			<p class="sg-lead">Website mới cần nền tảng, website đã có lượt truy cập cần đúng nhóm từ mang doanh thu. Chọn hình thức phù hợp, DigicomVN audit miễn phí rồi đề xuất phạm vi cụ thể.</p>
 		</div>
-		<div class="pm-grid">
-			<?php foreach ( $dgc_mentions as $m ) :
-				// Dinh dang: Ten bao | URL bai (co the de trong) | file logo
-				$m_name = $m[0]; $m_url = trim( $m[1] ?? '' ); $m_file = trim( $m[2] ?? '' );
-				$m_logo = $m_file ? content_url( 'uploads/press-logos/' . $m_file ) : '';
-				$m_inner = $m_logo
-					? '<img src="' . esc_url( $m_logo ) . '" alt="' . esc_attr( $m_name ) . '" loading="lazy">'
-					: '<span class="pm-name">' . esc_html( $m_name ) . '</span>';
-				if ( $m_url ) : ?>
-					<a class="pm-item" href="<?php echo esc_url( $m_url ); ?>" target="_blank" rel="nofollow noopener" title="<?php echo esc_attr( $m_name ); ?>">
-						<?php echo $m_inner; // phpcs:ignore ?>
-						<span class="pm-read">Đọc bài &#8599;</span>
+		<div class="sg-sol">
+			<?php foreach ( $dgc_sols as $i => $s ) : ?>
+				<?php if ( 0 === $i ) : ?>
+					<a class="sg-card sg-card--feat" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
+						<?php echo $dgc_svg( $dgc_ico[0] ); // phpcs:ignore ?>
+						<h3><?php echo esc_html( $s[0] ); ?></h3>
+						<p><?php echo esc_html( $s[2] ?? '' ); ?></p>
+						<ul><li>Audit kỹ thuật</li><li>Nghiên cứu từ khoá</li><li>Tối ưu onpage</li><li>Nội dung theo cụm chủ đề</li><li>Off-page từ báo và site cùng ngành</li><li>Báo cáo tháng từ Search Console</li></ul>
+						<span class="sg-more">Xem chi tiết dịch vụ</span>
 					</a>
 				<?php else : ?>
-					<span class="pm-item pm-item--nolink" title="<?php echo esc_attr( $m_name ); ?>">
-						<?php echo $m_inner; // phpcs:ignore ?>
-					</span>
+					<a class="sg-card" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
+						<?php echo $dgc_svg( $dgc_ico[ $i % count( $dgc_ico ) ] ); // phpcs:ignore ?>
+						<h3><?php echo esc_html( $s[0] ); ?></h3>
+						<p><?php echo esc_html( $s[2] ?? '' ); ?></p>
+						<span class="sg-more">Xem chi tiết</span>
+					</a>
 				<?php endif; ?>
 			<?php endforeach; ?>
 		</div>
@@ -171,86 +120,199 @@ $dgc_svc_groups = array(
 </section>
 <?php endif; ?>
 
-<!-- 07d. KHACH HANG / LOGO WALL (ngay duoi Bao chi noi ve) -->
-<?php $dgc_clients = array_filter( dgc_lines( 'clients' ), fn( $c ) => ! empty( $c[0] ) ); ?>
-<?php if ( $dgc_clients ) : ?>
-<section class="sec-tight client-wall">
+<!-- 04. PHUONG TRINH SEO -->
+<?php $dgc_eq = array_values( array_filter( dgc_lines( 'home_formula' ), fn( $x ) => ! empty( $x[0] ) ) ); ?>
+<?php if ( count( $dgc_eq ) >= 4 ) : ?>
+<section class="sg-sec">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:30px">
-			<span class="eyebrow">Khách hàng &amp; đối tác</span>
-			<h2>Thương hiệu đã tin tưởng DigicomVN</h2>
+		<div class="sg-head sg-head--c">
+			<span class="sg-eyebrow">Cách DigicomVN làm SEO</span>
+			<h2 class="sg-h">Thứ hạng bền đến từ <em>ba trụ cột</em> làm cùng lúc</h2>
 		</div>
-		<?php
-		$client_chip = function ( $c ) {
-			$c_name = $c[0]; $c_file = trim( $c[1] ?? '' );
-			$c_url  = $c_file ? content_url( 'uploads/client-logos/' . $c_file ) : ''; ?>
-			<div class="client-logo" title="<?php echo esc_attr( $c_name ); ?>">
-				<?php if ( $c_url ) : ?>
-					<img src="<?php echo esc_url( $c_url ); ?>" alt="<?php echo esc_attr( $c_name ); ?>" loading="lazy">
-				<?php else : ?>
-					<span class="client-ph"><?php echo esc_html( $c_name ); ?></span>
-				<?php endif; ?>
-			</div>
-		<?php };
-		?>
-		<div class="client-marquee">
-			<div class="client-track">
-				<?php for ( $k = 0; $k < 2; $k++ ) : foreach ( $dgc_clients as $c ) : $client_chip( $c ); endforeach; endfor; ?>
-			</div>
+		<div class="sg-eq">
+			<div class="sg-eq-total"><b><?php echo esc_html( $dgc_eq[0][0] ); ?></b><span><?php echo esc_html( $dgc_eq[0][1] ?? '' ); ?></span></div>
+			<?php for ( $k = 1; $k <= 3; $k++ ) : ?>
+				<div class="sg-eq-op" aria-hidden="true"><?php echo 1 === $k ? '=' : '+'; ?></div>
+				<div class="sg-card"><h3><?php echo esc_html( $dgc_eq[ $k ][0] ); ?></h3><p><?php echo esc_html( $dgc_eq[ $k ][1] ?? '' ); ?></p></div>
+			<?php endfor; ?>
 		</div>
 	</div>
 </section>
 <?php endif; ?>
 
-<!-- 08. CTA BAND -->
-<section class="sec-tight">
+<!-- 05. QUY TRINH -->
+<?php $dgc_proc = array_filter( dgc_lines( 'home_process' ), fn( $x ) => ! empty( $x[0] ) ); ?>
+<?php if ( $dgc_proc ) : ?>
+<section class="sg-sec sg-band" id="quy-trinh">
 	<div class="wrap">
-		<div class="cta-band">
+		<div class="sg-head sg-head--split">
 			<div>
-				<h2>Chưa biết chọn kênh nào?</h2>
-				<p>Đội ngũ DigicomVN tư vấn miễn phí: đầu báo, kênh truyền hình, phát thanh hay link từ báo phù hợp với mục tiêu và ngân sách của bạn.</p>
+				<span class="sg-eyebrow">Quy trình</span>
+				<h2 class="sg-h">Quy trình SEO <em><?php echo esc_html( count( $dgc_proc ) ); ?> bước</em> minh bạch</h2>
 			</div>
-			<div class="cta-actions">
-				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-				<a class="btn btn-zalo" href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', dgc( 'zalo' ) ) ); ?>">Chat Zalo</a>
-			</div>
+			<p class="sg-lead">Mỗi bước kết thúc bằng một tài liệu doanh nghiệp duyệt trước khi chuyển sang bước sau. Không có việc nào làm mà doanh nghiệp không biết.</p>
 		</div>
+		<ol class="sg-steps">
+			<?php $n = 0; foreach ( $dgc_proc as $p ) : $n++; ?>
+				<li><span class="sg-num" aria-hidden="true"><?php echo esc_html( sprintf( '%02d', $n ) ); ?></span><h3><?php echo esc_html( $p[0] ); ?></h3><p><?php echo esc_html( $p[1] ?? '' ); ?></p></li>
+			<?php endforeach; ?>
+		</ol>
+	</div>
+</section>
+<?php endif; ?>
+
+<!-- 06. DICH VU HO TRO SEO -->
+<?php
+$dgc_dm_min = dgc_min_price( dgc_ten_mien_rows(), 'gia' );
+$dgc_hg_min = 0;
+foreach ( dgc_hosting_rows() as $dgc_rows ) { $v = dgc_min_price( $dgc_rows, 'thang' ); if ( $v && ( ! $dgc_hg_min || $v < $dgc_hg_min ) ) $dgc_hg_min = $v; }
+$dgc_others = array(
+	array( 'Booking báo &amp; truyền thông', array( array( 'Booking truyền hình', '/booking-truyen-hinh/' ), array( 'Quảng cáo phát thanh', '/quang-cao-phat-thanh/' ), array( 'Booking fanpage', '/booking-fanpage/' ), array( 'Booking KOL, KOC', '/booking-kol-koc/' ) ) ),
+	array( 'Liên kết off-page', array( array( 'Mua Textlink', '/mua-textlink/' ), array( 'Guest Post', '/guest-post/' ), array( 'Backlink Social Entity', '/backlink-social-entity/' ), array( 'Backlink quốc tế', '/backlink-quoc-te/' ), array( 'Dịch vụ Toplist', '/dich-vu-toplist/' ) ) ),
+);
+?>
+<section class="sg-sec sg-sec--grey" id="dich-vu-ho-tro">
+	<div class="wrap">
+		<div class="sg-head sg-head--split">
+			<div>
+				<span class="sg-eyebrow">Dịch vụ hỗ trợ SEO</span>
+				<h2 class="sg-h">Truyền thông và hạ tầng <em>đi cùng SEO</em></h2>
+			</div>
+			<p class="sg-lead">Ba nhóm dịch vụ khách SEO hay cần thêm. Giá niêm yết công khai, đặt riêng hoặc gộp vào dự án SEO đều được.</p>
+		</div>
+		<div class="sg-side">
+			<a class="sg-card" href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>">
+				<span class="sg-tag">Booking báo</span>
+				<h3>Booking báo &amp; PR</h3>
+				<p>Đặt bài PR trên báo điện tử trong nước và quốc tế. Xem giá từng đầu báo, từng vị trí đăng trước khi đặt.</p>
+				<span class="sg-more">Xem bảng giá đầu báo</span>
+			</a>
+			<div class="sg-card">
+				<span class="sg-tag">Hạ tầng</span>
+				<h3>Tên miền &amp; Hosting</h3>
+				<?php if ( $dgc_dm_min || $dgc_hg_min ) : ?>
+					<p class="sg-price"><?php if ( $dgc_dm_min ) : ?>Tên miền&nbsp;từ&nbsp;<b><?php echo esc_html( dgc_vnd( $dgc_dm_min ) ); ?></b><?php endif; ?><?php if ( $dgc_dm_min && $dgc_hg_min ) echo ' &middot; '; ?><?php if ( $dgc_hg_min ) : ?>hosting&nbsp;từ&nbsp;<b><?php echo esc_html( dgc_vnd( $dgc_hg_min ) ); ?></b>/tháng<?php endif; ?></p>
+				<?php endif; ?>
+				<form class="sg-dsearch" action="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>" method="get" role="search">
+					<input type="text" name="d" placeholder="thuonghieu.vn" aria-label="Tên miền cần kiểm tra" required>
+					<button type="submit">Kiểm tra</button>
+				</form>
+				<div class="sg-links2"><a href="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>">Bảng giá tên miền &rarr;</a><a href="<?php echo esc_url( home_url( '/hosting/' ) ); ?>">Bảng giá hosting &rarr;</a></div>
+			</div>
+			<?php if ( dgc_page_live( '/phan-mem-seo/' ) ) : ?>
+			<a class="sg-card" href="<?php echo esc_url( home_url( '/phan-mem-seo/' ) ); ?>">
+				<span class="sg-tag">Công cụ</span>
+				<h3>Phần mềm SEO</h3>
+				<p>Tài khoản Ahrefs, Semrush và công cụ SEO chính hãng, hướng dẫn dùng đúng việc cho đội SEO nội bộ.</p>
+				<span class="sg-more">Xem phần mềm SEO</span>
+			</a>
+			<?php endif; ?>
+		</div>
+		<dl class="sg-others sg-others--light">
+			<?php foreach ( $dgc_others as $g ) : ?>
+				<div><dt><?php echo wp_kses_post( $g[0] ); ?></dt><dd>
+					<?php foreach ( $g[1] as $s ) : if ( ! dgc_page_live( $s[1] ) ) continue; ?><a href="<?php echo esc_url( home_url( $s[1] ) ); ?>"><?php echo esc_html( $s[0] ); ?></a><?php endforeach; ?>
+				</dd></div>
+			<?php endforeach; ?>
+		</dl>
 	</div>
 </section>
 
-<!-- 09. FAQ (partial dung chung + schema FAQPage) -->
-<?php include get_template_directory() . '/inc/blk-faq.php'; ?>
+<!-- 07. KHACH HANG -->
+<?php include get_template_directory() . '/inc/blk-testimonials.php'; ?>
 
-<!-- 10. TIN TUC & SU KIEN -->
-<?php
-$news = new WP_Query( array(
-	'post_type'           => 'post',
-	'post_status'         => 'publish',
-	'posts_per_page'      => 3,
-	'ignore_sticky_posts' => 1,
-) );
-if ( $news->have_posts() ) : ?>
-<section class="sec" id="tin-tuc" style="background:var(--surface-2);border-top:1px solid var(--line)">
+<?php $dgc_clients = array_filter( dgc_lines( 'clients' ), fn( $c ) => ! empty( $c[0] ) ); ?>
+<?php if ( $dgc_clients ) : ?>
+<section class="sg-sec sg-sec--tight">
 	<div class="wrap">
-		<div class="news-head">
-			<div>
-				<span class="eyebrow">Tin tức &amp; sự kiện</span>
-				<h2>Tin mới từ DigicomVN</h2>
-			</div>
-			<a class="btn btn-ghost btn-sm" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>">Xem tất cả</a>
+		<div class="sg-head sg-head--c">
+			<span class="sg-eyebrow">Khách hàng &amp; đối tác</span>
+			<h2 class="sg-h">Thương hiệu đã <em>tin tưởng</em> DigicomVN</h2>
 		</div>
-		<div class="news-grid">
+		<div class="sg-logos">
+			<?php foreach ( array_slice( $dgc_clients, 0, 12 ) as $c ) : $c_file = trim( $c[1] ?? '' ); ?>
+				<div class="sg-logo" title="<?php echo esc_attr( $c[0] ); ?>">
+					<?php if ( $c_file ) : ?><img src="<?php echo esc_url( content_url( 'uploads/client-logos/' . $c_file ) ); ?>" alt="<?php echo esc_attr( $c[0] ); ?>" loading="lazy"><?php else : ?><span><?php echo esc_html( $c[0] ); ?></span><?php endif; ?>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) ); ?>
+<?php if ( $dgc_mentions ) : ?>
+<section class="sg-sec sg-sec--tight sg-sec--cyan">
+	<div class="wrap">
+		<div class="sg-head sg-head--c">
+			<span class="sg-eyebrow">Báo chí</span>
+			<h2 class="sg-h">Báo chí <em>nói về</em> DigicomVN</h2>
+		</div>
+		<div class="sg-press">
+			<?php foreach ( $dgc_mentions as $m ) :
+				$m_url = trim( $m[1] ?? '' ); $m_file = trim( $m[2] ?? '' );
+				$inner = $m_file ? '<img src="' . esc_url( content_url( 'uploads/press-logos/' . $m_file ) ) . '" alt="' . esc_attr( $m[0] ) . '" loading="lazy">' : '<span>' . esc_html( $m[0] ) . '</span>';
+				if ( $m_url ) : ?>
+					<a href="<?php echo esc_url( $m_url ); ?>" target="_blank" rel="nofollow noopener" title="<?php echo esc_attr( $m[0] ); ?>"><?php echo $inner; // phpcs:ignore ?><small>Đọc bài &#8599;</small></a>
+				<?php else : ?>
+					<span title="<?php echo esc_attr( $m[0] ); ?>"><?php echo $inner; // phpcs:ignore ?></span>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<!-- 08. FAQ -->
+<?php $dgc_faqs = dgc_home_faq_items(); ?>
+<?php if ( $dgc_faqs ) : ?>
+<section class="sg-sec" id="faq">
+	<div class="wrap sg-head--split" style="align-items:start">
+		<div>
+			<span class="sg-eyebrow">Hỏi đáp</span>
+			<h2 class="sg-h">Câu hỏi <em>thường gặp</em></h2>
+			<p class="sg-lead">Chưa thấy câu trả lời bạn cần? Gọi <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:var(--sg-blue);font-weight:700"><?php echo esc_html( dgc( 'hotline' ) ); ?></a> hoặc gửi yêu cầu ở cuối trang.</p>
+			<?php $dgc_faq_pg = get_page_by_path( 'cau-hoi-thuong-gap' ); if ( $dgc_faq_pg && 'publish' === $dgc_faq_pg->post_status ) : ?>
+				<a class="sg-btn sg-btn--ghost" href="<?php echo esc_url( get_permalink( $dgc_faq_pg ) ); ?>"><?php echo dgc_arrow(); ?>Xem tất cả câu hỏi</a>
+			<?php endif; ?>
+		</div>
+		<div class="sg-faq">
+			<?php foreach ( $dgc_faqs as $f ) : ?>
+				<details><summary><?php echo esc_html( $f[0] ); ?></summary><div class="a"><?php echo esc_html( $f[1] ); ?></div></details>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<!-- 09. KIEN THUC SEO -->
+<?php
+$news = new WP_Query( array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 3, 'ignore_sticky_posts' => 1 ) );
+if ( $news->have_posts() ) : ?>
+<section class="sg-sec sg-sec--grey" id="tin-tuc">
+	<div class="wrap">
+		<div class="sg-head sg-head--split">
+			<div>
+				<span class="sg-eyebrow">Kiến thức</span>
+				<h2 class="sg-h">Kiến thức <em>SEO và truyền thông</em></h2>
+			</div>
+			<p class="sg-lead"><a class="sg-btn sg-btn--ghost" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>"><?php echo dgc_arrow(); // phpcs:ignore ?>Xem tất cả bài viết</a></p>
+		</div>
+		<div class="sg-news">
 			<?php while ( $news->have_posts() ) : $news->the_post(); ?>
-				<article class="news">
-					<a class="news-thumb" href="<?php the_permalink(); ?>">
-						<?php if ( has_post_thumbnail() ) : the_post_thumbnail( 'medium_large' ); else : ?>
-							<span class="news-thumb-ph">DigicomVN</span>
-						<?php endif; ?>
-					</a>
-					<div class="news-body">
-						<time class="news-date"><?php echo esc_html( get_the_date( 'd/m/Y' ) ); ?></time>
+				<article>
+					<?php
+					$dgc_th = has_post_thumbnail() ? get_the_post_thumbnail( null, 'medium_large', array( 'loading' => 'lazy' ) ) : '';
+					if ( ! $dgc_th && preg_match( '/<img[^>]+src=["\']([^"\']+)["\']/i', get_post_field( 'post_content' ), $dgc_m ) ) {
+						$dgc_th = '<img src="' . esc_url( $dgc_m[1] ) . '" alt="" loading="lazy" decoding="async">';
+					}
+					if ( $dgc_th ) : ?>
+						<a class="th" href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true"><?php echo $dgc_th; // phpcs:ignore ?></a>
+					<?php endif; ?>
+					<div class="bd">
+						<time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date( 'd/m/Y' ) ); ?></time>
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 22 ) ); ?></p>
+						<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></p>
 					</div>
 				</article>
 			<?php endwhile; ?>
@@ -259,4 +321,30 @@ if ( $news->have_posts() ) : ?>
 </section>
 <?php endif; wp_reset_postdata(); ?>
 
+<!-- 10. LIEN HE -->
+<section class="sg-sec">
+	<div class="wrap">
+		<div class="sg-contact">
+			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( $dgc_img . 'agency-team-1-800.jpg' ); ?>')">
+				<span class="sg-eyebrow" style="color:var(--sg-mint)">Liên hệ</span>
+				<h2>Nhận <em>audit SEO</em> miễn phí cho website của bạn</h2>
+				<p>Gửi địa chỉ website và mục tiêu, DigicomVN kiểm tra hiện trạng rồi đề xuất việc nên làm trước, kèm phạm vi và chi phí.</p>
+				<ul>
+					<li>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo esc_html( dgc( 'hotline' ) ); ?></a></li>
+					<li>Email: <a href="mailto:<?php echo esc_attr( dgc( 'email' ) ); ?>"><?php echo esc_html( dgc( 'email' ) ); ?></a></li>
+				</ul>
+			</div>
+			<div class="sg-contact-form">
+				<?php
+				$dgc_form_title   = 'Đăng ký audit SEO miễn phí';
+				$dgc_form_btn     = 'Gửi yêu cầu audit';
+				$dgc_form_service = 'Dịch vụ SEO tổng thể';
+				include get_template_directory() . '/inc/form-lead.php';
+				?>
+			</div>
+		</div>
+	</div>
+</section>
+
+</div>
 <?php get_footer(); ?>

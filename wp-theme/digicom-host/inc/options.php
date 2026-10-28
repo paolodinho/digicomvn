@@ -28,6 +28,16 @@ function dgc_defaults() {
 		// Dai so lieu duoi hero. Moi dong: con so | nhan mo ta. Sua tu WP Admin khi mang luoi thay doi.
 		'hero_stats'    => "500+ | đầu báo trong nước & quốc tế\n2.000+ | site guest post đa ngành\nBáo giá | minh bạch\nHỗ trợ | tư vấn tận tình\nXuất VAT | đầy đủ",
 
+		// Trang chu kieu seongon (2026-10-28): SEO la dich vu chu dao. Dau *chu* trong tieu de = to mau nhan.
+		'hero_kicker'      => 'Dịch vụ SEO tổng thể cho doanh nghiệp',
+		'home_about_title' => 'Đối tác SEO *làm thật, đo được*',
+		'home_about_text'  => 'DigicomVN là thương hiệu dịch vụ của Công ty TNHH Dịch vụ Truyền thông Digito Combat. Chúng tôi làm SEO theo dữ liệu tìm kiếm thật: đọc top 10 Google trước khi viết, gom từ khoá theo ý định tìm kiếm, sửa nền kỹ thuật rồi mới xây nội dung và liên kết.',
+		'home_about_points'=> "Audit miễn phí | trước khi báo giá, biết rõ website đang ở đâu\nPhạm vi rõ ràng | mỗi hạng mục có đầu ra bàn giao kiểm tra được\nBáo cáo số liệu thật | hằng tháng từ Google Search Console và GA4\nKhông hứa top 1 | cam kết những việc kiểm soát được",
+		'home_solutions'   => "Dịch vụ SEO tổng thể | /dich-vu-seo/ | Audit, nghiên cứu từ khoá, tối ưu onpage, nội dung, off-page và đo lường cho toàn website.\nDịch vụ SEO AI (GEO) | /dich-vu-seo-ai/ | Đưa thương hiệu vào câu trả lời của AI Overviews, ChatGPT, Perplexity.\nDịch vụ SEO local | /dich-vu-seo-local/ | Google Business Profile, Google Maps, trang địa phương cho từng chi nhánh.\nDịch vụ SEO quốc tế | /dich-vu-seo-quoc-te/ | Website đa ngôn ngữ, hreflang, nội dung bản địa hoá cho thị trường nước ngoài.\nViết bài chuẩn SEO | /dich-vu-viet-bai-chuan-seo/ | Bài viết theo ý định tìm kiếm thật, có số liệu, nguồn và biên tập viên đọc lại.\nBacklink & off-page | /dich-vu-backlink/ | Liên kết từ báo điện tử, guest post, social entity, giá niêm yết từng vị trí.\nKhoá học SEO | /khoa-hoc-seo/ | Lộ trình SEO thực chiến cho đội marketing nội bộ.",
+		'home_formula'     => "SEO tổng thể | Ba trụ cột làm cùng lúc, đo bằng lượt hiển thị, lượt nhấp và chuyển đổi toàn site\nKỹ thuật | Thu thập dữ liệu, lập chỉ mục, tốc độ, cấu trúc URL, dữ liệu có cấu trúc\nNội dung | Bản đồ từ khoá theo intent, trang đích đúng dạng, cụm bài chủ đề\nLiên kết | Liên kết nội bộ, báo điện tử, guest post, social entity",
+		'home_faq_keys'    => "là đơn vị nào\nnhững dịch vụ nào\nhiệu quả SEO\nChi phí được tính\nan toàn với thuật toán\ngắn link về website\nThanh toán và bàn giao\nhóa đơn VAT",
+		'home_process'     => "Audit miễn phí | Kiểm tra website, Search Console và đối thủ đang đứng top để biết điểm xuất phát.\nNghiên cứu từ khoá | Gom từ theo ý định tìm kiếm, đo top 10 Google thật, chốt mỗi nhóm từ một trang đích.\nĐề xuất và báo giá | Gửi phạm vi công việc, ưu tiên theo tháng và chi phí; doanh nghiệp duyệt trước khi bắt đầu.\nSửa nền kỹ thuật | Xử lý lỗi lập chỉ mục, tốc độ, trùng lặp, dữ liệu có cấu trúc theo mức ưu tiên.\nNội dung và liên kết | Tối ưu trang đích, viết bài theo cụm, xây liên kết nội bộ và off-page khi cần.\nĐo lường, điều chỉnh | Báo cáo tháng từ dữ liệu Google, giữ hướng đang hiệu quả, đổi hướng chỗ chưa có tín hiệu.",
+
 		// Dinh nghia dich vu ("... la gi") - hien ngay duoi hero tung trang dich vu, bat intent
 		// thong tin + giup Google/AI trich dan (GEO). Moi dong: slug | Tieu de | Doan dinh nghia.
 		// Slug phai khop slug trang dich vu (booking-bao-pr, guest-post, mua-textlink...).
@@ -189,11 +199,25 @@ function dgc_settings_page() {
 			<h2>2. Hero (dau trang)</h2>
 			<table class="form-table">
 				<?php
-				dgc_field( 'hero_title', 'Tieu de lon' );
+				dgc_field( 'hero_kicker', 'Dong nho tren tieu de (trang chu)' );
+				dgc_field( 'hero_title', 'Tieu de lon', 'Boc chu can to mau nhan trong dau sao, vd: Dich vu SEO *dua website len top*.' );
 				dgc_field( 'hero_sub', 'Mo ta phu', '', 'textarea' );
 				dgc_field( 'hero_stats', 'Dai so lieu duoi hero', 'Moi dong: con so | nhan mo ta (vd: 500+ | dau bao trong nuoc va quoc te). Toi da 5 dong. Chi ghi so lieu THAT.', 'textarea' );
 				dgc_field( 'svc_intros', 'Dinh nghia dich vu ("... la gi") - hien duoi hero tung trang dich vu', 'Moi dong: slug | Tieu de | Doan dinh nghia (2-4 cau). Slug khop trang dich vu: booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink... De trong 1 slug = trang do khong hien khoi nay. Giup bat intent "... la gi" + AI/Google trich dan.', 'textarea' );
 				dgc_field( 'svc_faqs', 'FAQ rieng tung trang dich vu (truoc form bao gia)', 'Moi dong: slug | Cau hoi | Cau tra loi. MOT slug co the co NHIEU dong = nhieu cau hoi cho trang do. Slug: booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink... De trong 1 slug = trang do khong hien FAQ. Sinh schema FAQPage giup Google/AI trich dan.', 'textarea' );
+				?>
+			</table>
+
+			<h2>2b. Trang chu (SEO chu dao)</h2>
+			<table class="form-table">
+				<?php
+				dgc_field( 'home_about_title', 'Ve DigicomVN - tieu de', 'Boc chu to mau trong dau sao *...*.' );
+				dgc_field( 'home_about_text', 'Ve DigicomVN - doan gioi thieu', '', 'textarea' );
+				dgc_field( 'home_about_points', 'Ve DigicomVN - diem nhan', 'Moi dong: chu dam | phan giai thich.', 'textarea' );
+				dgc_field( 'home_solutions', 'Giai phap SEO (luoi the)', 'Moi dong: ten | duong dan | mo ta. Dong DAU TIEN la the noi bat mau xanh. Trang chua dang thi tu an.', 'textarea' );
+				dgc_field( 'home_formula', 'Phuong trinh SEO', 'Dong 1: ve trai | giai thich. 3 dong sau: tung tru cot | giai thich.', 'textarea' );
+				dgc_field( 'home_process', 'Quy trinh SEO (the danh so)', 'Moi dong: ten buoc | mo ta.', 'textarea' );
+				dgc_field( 'home_faq_keys', 'FAQ hien o trang chu', 'Moi dong 1 doan chu nam trong cau hoi (lay tu muc 5 FAQ). De trong = 8 cau dau. Toan bo FAQ van o trang Cau hoi thuong gap.', 'textarea' );
 				?>
 			</table>
 
@@ -287,6 +311,15 @@ function dgc_settings_page() {
 				<?php
 				dgc_field( 'leads_sheet_on', 'Bat day khach sang Google Sheet (1 = bat, 0 = tat)', 'Dat 1 de bat. Chi hoat dong khi da co Sheet ID + Sheet da share cho service account.' );
 				dgc_field( 'leads_sheet_id', 'Sheet ID', 'VD: 1AbCDefGhIjklmnOPqrsTUVwxyz1234567890abcdEFG' );
+				?>
+			</table>
+
+			<h2>11. Ten mien + Hosting (bang gia, sua truc tiep o day)</h2>
+			<table class="form-table">
+				<?php
+				dgc_field( 'ten_mien_gia', 'Bang gia ten mien', 'Moi dong: duoi | vn hoac qt | gia nam dau | gia goc (gach ngang) | gia han/nam | luu y. Gia ghi so tron, VD: .vn | vn | 450000 | 700000 | 512000 | . KHONG ghi ten nha cung cap.', 'textarea' );
+				dgc_field( 'tm_suggest', 'Duoi goi y khi tra ten mien', 'Cac duoi tra cung luc khi khach go 1 ten (toi da 12), cach nhau dau phay. De trong = .vn, .com.vn, .com, .net, .net.vn, .io.vn, .id.vn, .org, .online, .xyz' );
+				dgc_field( 'hosting_gia', 'Bang gia hosting', 'Moi dong: nhom | ten goi | dung luong | so website | CPU/RAM | gia/thang | gia/thang goc | ky han uu dai (so nam) | gia dang ky 1 nam. VD: Hosting gia re | Starter | 2 GB | 1 | 1 Core / 1 GB RAM | 16000 | 19000 | 3 | 212000', 'textarea' );
 				?>
 			</table>
 

@@ -29,17 +29,16 @@
 				<?php else : ?>
 					<div class="brand" style="color:#fff">DigicomVN<span class="dot" style="color:var(--action)">.</span></div>
 				<?php endif; ?>
-				<p>Booking báo PR, truyền hình, phát thanh và link từ báo cho doanh nghiệp, agency.</p>
+				<p>Dịch vụ SEO, booking báo PR, backlink, tên miền, hosting và phần mềm SEO cho doanh nghiệp, agency.</p>
 				<p style="font-size:13px;color:#8aa0b7">Công ty TNHH DVTT Digito Combat<br>MST: 0109816406</p>
 			</div>
 			<div>
 				<h4>Dịch vụ</h4>
 				<ul>
-					<?php foreach ( array_slice( dgc_service_links(), 0, 6 ) as $sl ) : ?>
+					<?php foreach ( array( array( 'Dịch vụ SEO', '/dich-vu-seo/' ), array( 'Booking báo & PR', '/booking-bao-pr/' ), array( 'Backlink & Off-page', '/dich-vu-backlink/' ), array( 'Tên miền', '/ten-mien/' ), array( 'Hosting', '/hosting/' ), array( 'Phần mềm SEO', '/phan-mem-seo/' ), array( 'Khoá học SEO', '/khoa-hoc-seo/' ) ) as $sl ) : ?>
 					<li><a href="<?php echo esc_url( home_url( $sl[1] ) ); ?>"><?php echo esc_html( $sl[0] ); ?></a></li>
 					<?php endforeach; ?>
 				</ul>
-				<p style="font-size:12.5px;color:#8aa0b7;margin-top:10px">Nhận thêm theo yêu cầu: SEO tổng thể, Google Ads, Facebook Ads.</p>
 			</div>
 			<div>
 				<h4>Hỗ trợ</h4>
@@ -117,8 +116,11 @@ $dgc_cur_url = home_url( add_query_arg( array(), $GLOBALS['wp']->request ?? '' )
 		<button type="button" class="svc-sheet-x" data-svc-sheet-close aria-label="Đóng">&times;</button>
 	</div>
 	<ul class="svc-sheet-list">
-		<?php foreach ( dgc_service_links() as $sl ) : ?>
+		<?php foreach ( dgc_svc_tree() as $g ) : ?>
+			<li class="svc-sheet-group"><?php echo esc_html( $g[0] ); ?></li>
+			<?php foreach ( $g[2] as $sl ) : ?>
 			<li><a href="<?php echo esc_url( home_url( $sl[1] ) ); ?>"><?php echo esc_html( $sl[0] ); ?></a></li>
+			<?php endforeach; ?>
 		<?php endforeach; ?>
 	</ul>
 </div>

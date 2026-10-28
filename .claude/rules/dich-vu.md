@@ -52,6 +52,7 @@ backup-before-edit). Danh mục chi tiết cũ tham khảo trong lịch sử DEC
 
 ## Tên miền + hosting (mở 2026-10-27)
 Nguồn: đại lý P.A Việt Nam - TUYỆT ĐỐI không hiện tên P.A/pavietnam trên site, bảng giá, báo giá, schema (rule bao-gia-khong-lo-gia-von). Khách đặt như dịch vụ của Digicom: bảng giá + form đặt; chưa làm giỏ hàng tự động.
+Ô tra tên miền (28/10): tra nhiều đuôi 1 lần qua API whois đại lý (khoá DGC_PA_USER/DGC_PA_KEY chỉ trong wp-config, không commit), dự phòng RDAP; nút Đăng ký -> form lead -> email Hiếu, Hiếu tự đăng ký + thu tiền. Đuôi gợi ý: option tm_suggest.
 
 ## Phần mềm SEO (mở 2026-10-27)
 Chỉ tài khoản chính hãng: affiliate (rel="sponsored") hoặc mua hộ gói chính hãng. KHÔNG bán tài khoản dùng chung/group buy.

@@ -184,10 +184,7 @@ include get_template_directory() . '/inc/svc-faq.php';
 	</div>
 </section>
 
-<section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Bắt đầu cùng DigicomVN</h2><p>Liên hệ ngay để được tư vấn giải pháp phù hợp doanh nghiệp của bạn.</p></div>
-	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="#lien-he">Nhận báo giá</a></div>
-</div></div></section>
+<?php /* Hieu 28/10 "lam sau, co trong diem": bo dai CTA lap ngay duoi form (nut tro nguoc len chinh form). */ ?>
 
 <?php if ( get_the_content() ) : /* Hieu 27/10: trang dich vu la landing - bai kien thuc dua xuong cuoi, thu gon, bam de doc tiep */ ?>
 <section class="sec svc-knowledge"><div class="wrap">

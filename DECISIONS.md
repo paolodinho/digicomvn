@@ -1,5 +1,13 @@
 # DECISIONS - digicomvn.com
 
+## 2026-10-28 - Thiết kế lại giao diện theo phong cách seongon, SEO là dịch vụ chủ đạo
+- Hiếu: dịch vụ SEO là chủ đạo; booking báo và tên miền/hosting là dịch vụ phụ nhưng vẫn giới thiệu trên trang chủ; làm lại hoàn toàn giao diện theo mẫu seongon; thiết kế ở Local trước.
+- Token: xanh #0D53F0/#0035AC, nhấn xanh bạc hà #07EF9C dùng rất ít (eyebrow trên nền xanh), nền phụ #F0FCFF/#F3F3F6, bo 15px, tiêu đề in hoa hai màu. Lớp CSS riêng assets/css/sg.css nạp sau main.css (rollback = bỏ enqueue).
+- Trang dịch vụ SEO dùng template tpl-seo.php (hero + tóm tắt nhanh, cam kết, nội dung + mục lục dính, FAQ, dịch vụ liên quan, form audit miễn phí). Trang off-page giữ tpl-service.php.
+- FAQ trang chủ chỉ hiện tập con chọn bằng option home_faq_keys, có nút sang /cau-hoi-thuong-gap/.
+- Không nêu tên seongon trên site (khong-link-doi-thu). Không bịa giá gói SEO, không cam kết top 1.
+- Chưa deploy live, chờ Hiếu duyệt.
+
 ## 2026-10-27 (tối) - ĐẢO quyết định 24/10: digicomvn.com làm MỌI dịch vụ liên quan SEO
 - Hiếu chốt: digicomvn.com là domain của nhánh SEO: dịch vụ SEO (tổng thể, từ khoá, audit, onpage, content, local, entity, AI/GEO...), off-page hiện có (textlink, backlink, guest post, booking báo PR, entity, quốc tế, toplist, booking truyền thông), mua bán tên miền, hosting, phần mềm SEO (booking/thuê tài khoản), khoá học.
 - Hệ sinh thái Digicom: web riêng Google Ads, web riêng Facebook Ads, sau này in ấn, OOH; mọi web đều có mục khoá học.
@@ -188,3 +196,19 @@ giờ lỗ, và không quảng cáo 15% sai sự thật. Chi tiết cơ chế: .
 
 ## 2026-10-24 - Bỏ nhóm quay/sản xuất TVC khỏi kế hoạch từ khoá
 Hiếu chốt: chỉ giữ bài kiến thức "TVC là gì" (gộp vào bài quảng cáo truyền hình là gì, dẫn về /booking-truyen-hinh/). Không làm trang/bài cho quay, sản xuất, làm TVC vì Digicom không sản xuất TVC (chỉ booking phát sóng). Đã bỏ 18 từ khỏi hàng đợi đo SERP và dòng N11 tab KH.
+
+## 2026-10-28 - Phong cách giao diện: sạch, 1 màu xanh (tham khảo seongon.com)
+- Hiếu chê bản GenZ (viền đậm, bóng lệch, nhãn sticker nghiêng) là xấu, yêu cầu đơn giản, bắt chước seongon.com.
+- Chốt: nền trắng/xanh rất nhạt, 1 màu xanh chủ đạo (--action), thẻ trắng viền 1px + bóng mềm, thẻ nổi bật nền xanh chữ trắng, nhãn in hoa màu xanh, nút bo tròn. Không viền đậm, không bóng lệch, không xoay chữ, không màu vàng/cam/mint phụ.
+- Menu: thêm "Dịch vụ SEO" (6 mục con), "Tên miền & Hosting" (+ Phần mềm SEO); hamburger dưới 1380px.
+- Ảnh infographic (.dgc-shot) chỉ tràn rộng 1080px ở trang dịch vụ; trong bài viết có mục lục bên trái thì giữ trong cột chữ.
+
+## 2026-10-28 - Trang chu + landing dich vu: lam sau, co trong diem, khong day dac
+- Hieu: "ko de day dac... trang chu quang ba cac dich vu quan trong thoi", "nguyen tac la lam sau, co trong diem", "cac trang landing dich vu cung vay".
+- Trang chu: bo luoi 20 the dich vu; giu 4 dich vu chu dao (SEO, booking bao PR, ten mien + hosting, phan mem SEO) o khoi bento; cac dich vu con lai chi la 1 danh sach chu gon "Cac dich vu khac" (giu link noi bo).
+- Landing dich vu (tpl-service.php, page-booking-bao-pr.php): bo dai CTA lap ngay duoi form; moi trang 1 diem chuyen doi ro (form). Bai kien thuc da thu gon tu 27/10.
+
+## 2026-10-28 - O tra ten mien: tra nhieu duoi qua API dai ly, khach dat -> email Hieu
+- Hieu: tim va mua giong trang nha cung cap, gia = gia niem yet, dang ky xong email Hieu, Hieu tu xu ly thanh toan.
+- Lam: AJAX dgc_domain_check tra toi da 12 duoi/lan, gia tu option ten_mien_gia, nut Dang ky dien san form lead. Khong tu dong dang ky, khong thanh toan online. Khong hien ten nha cung cap.
+- Ky thuat: goi curl truc tiep vi WP Requests giai nen gzip bien body "0" thanh rong (mat ket qua "da co chu"). May chu live chua ket noi duoc toi API (tuong lua phia nha cung cap) -> du phong RDAP cho duoi quoc te, .vn hien "Gui yeu cau".

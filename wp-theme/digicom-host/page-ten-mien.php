@@ -1,75 +1,98 @@
 <?php
 /**
- * Template trang Ten mien (gan tu dong cho page slug "ten-mien").
+ * Template trang Ten mien (page slug "ten-mien"). Viet lai 2026-10-27 khi mo dich vu ten mien.
+ * Gia doc tu option 'ten_mien_gia' (inc/domain-hosting.php). Khach dat qua form lead, khong gio hang.
+ * KHONG hien ten nha cung cap (rule dich-vu.md).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
+$dgc_vn = dgc_ten_mien_rows( 'vn' );
+$dgc_qt = dgc_ten_mien_rows( 'qt' );
+$dgc_tm_table = function ( $rows, $caption ) {
+	?>
+	<div class="tm-table-wrap">
+	<table class="price-table tm-table">
+		<caption class="sr-only"><?php echo esc_html( $caption ); ?></caption>
+		<thead><tr><th>Tên miền</th><th>Đăng ký năm đầu</th><th>Gia hạn/năm</th><th class="col-note">Lưu ý</th><th></th></tr></thead>
+		<tbody>
+		<?php foreach ( $rows as $r ) :
+			$gia = (float) $r['gia']; $goc = (float) $r['goc']; ?>
+			<tr>
+				<td class="tld" data-label="Tên miền"><?php echo esc_html( $r['duoi'] ); ?></td>
+				<td data-label="Năm đầu"><b class="tm-now"><?php echo esc_html( dgc_vnd( $gia ) ); ?></b><?php if ( $goc > $gia ) : ?> <s class="tm-old"><?php echo esc_html( dgc_vnd( $goc ) ); ?></s><?php endif; ?></td>
+				<td data-label="Gia hạn"><?php echo esc_html( dgc_vnd( $r['han'] ) ); ?></td>
+				<td class="col-note" data-label="Lưu ý"><?php echo esc_html( $r['note'] ); ?></td>
+				<td><a class="btn btn-ghost btn-sm" href="#lien-he" data-order="Đăng ký tên miền <?php echo esc_attr( $r['duoi'] ); ?>" data-svc="Tên miền">Đăng ký</a></td>
+			</tr>
+		<?php endforeach; ?>
+		</tbody>
+	</table>
+	</div>
+	<?php
+};
 ?>
 <div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Tên miền</nav></div>
 
 <section class="page-hero">
-	<div class="wrap" style="max-width:820px">
+	<div class="wrap" style="max-width:900px">
 		<span class="eyebrow">Tên miền</span>
-		<h1><?php echo esc_html( get_the_title() ?: 'Đăng ký tên miền giá tốt' ); ?></h1>
-		<p class="lead">Kiểm tra và đăng ký tên miền .com, .vn và nhiều đuôi khác. Quản lý DNS dễ dùng, hỗ trợ chuyển về miễn phí.</p>
-		<div class="search-card" style="margin-top:26px">
-			<form class="search-box" onsubmit="window.open('https://www.pavietnam.vn/','_blank');return false;">
-				<input type="text" placeholder="Nhập tên miền bạn muốn tìm..." aria-label="Tên miền">
+		<h1><?php echo esc_html( get_the_title() ?: 'Đăng ký tên miền' ); ?></h1>
+		<p class="lead">Kiểm tra tên miền còn trống, đăng ký .vn, .com.vn, .com và hơn 40 đuôi khác. DigicomVN tư vấn chọn tên miền phù hợp thương hiệu và kế hoạch SEO, hỗ trợ trỏ DNS, gắn hosting và chuyển tên miền về quản lý.</p>
+		<div class="search-card tm-search" style="margin-top:24px">
+			<form class="search-box" id="tm-check" autocomplete="off">
+				<input type="text" name="d" placeholder="Nhập tên miền, ví dụ: thuonghieu.vn" aria-label="Tên miền cần kiểm tra" required>
 				<button type="submit">Kiểm tra</button>
 			</form>
-			<p class="muted" style="font-size:12.5px;margin:10px 2px 0">Đăng ký qua đối tác PA Việt Nam - DigicomVN hỗ trợ tư vấn và kỹ thuật.</p>
+			<p class="tm-result" id="tm-result" aria-live="polite" hidden></p>
 		</div>
 	</div>
 </section>
 
-<section class="sec">
+<section class="sec" id="bang-gia">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Bảng giá</span><h2>Giá tên miền phổ biến</h2></div>
-		<table class="price-table">
-			<thead><tr><th>Đuôi tên miền</th><th>Đăng ký mới (/năm)</th><th>Đăng ký</th></tr></thead>
-			<tbody>
-			<?php foreach ( dgc_lines( 'domain_tlds' ) as $d ) :
-				$tld = $d[0] ?? ''; $price = $d[1] ?? ''; if ( $tld === '' ) continue; ?>
-				<tr><td class="tld"><?php echo esc_html( $tld ); ?></td>
-					<td class="p"><?php echo esc_html( $price ); ?></td>
-					<td><a class="btn btn-ghost btn-sm" href="https://www.pavietnam.vn/" target="_blank" rel="noopener">Đăng ký</a></td></tr>
-			<?php endforeach; ?>
-			</tbody>
-		</table>
-		<p class="form-note" style="text-align:center;margin-top:14px">Giá đã bao gồm quản lý DNS. Liên hệ để biết giá gia hạn và các đuôi khác.</p>
+		<div class="center" style="margin-bottom:28px"><span class="eyebrow">Bảng giá</span><h2>Giá tên miền Việt Nam</h2>
+			<p class="muted" style="max-width:720px;margin:8px auto 0">Giá đăng ký năm đầu đã gồm lệ phí đăng ký và phí duy trì năm đầu theo quy định nhà nước. Tên miền .vn do Trung tâm Internet Việt Nam (VNNIC) quản lý, chủ thể đăng ký phải khai thông tin chính xác.</p></div>
+		<?php $dgc_tm_table( $dgc_vn, 'Bảng giá tên miền Việt Nam' ); ?>
+
+		<div class="center" style="margin:56px 0 28px"><h2>Giá tên miền quốc tế</h2>
+			<p class="muted" style="max-width:720px;margin:8px auto 0">Giá năm đầu là giá ưu đãi, giá gia hạn từ năm thứ hai theo cột bên cạnh. Giá chưa gồm VAT.</p></div>
+		<?php $dgc_tm_table( $dgc_qt, 'Bảng giá tên miền quốc tế' ); ?>
+		<?php include get_template_directory() . '/inc/price-note.php'; ?>
 	</div>
 </section>
 
 <section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Vì sao chọn DigicomVN</span><h2>Đăng ký tên miền an tâm</h2></div>
-		<div class="feat-row">
-			<div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><h3>Chuyển về miễn phí</h3><p>Hỗ trợ chuyển tên miền từ nhà cung cấp khác, không gián đoạn.</p></div>
-			<div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 8v4l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div><h3>Kích hoạt tức thì</h3><p>Tên miền sẵn sàng ngay sau khi thanh toán.</p></div>
-			<div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z"/></svg></div><h3>Bảo mật DNS</h3><p>Quản lý bản ghi DNS trực quan, hỗ trợ khóa tên miền.</p></div>
-			<div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Hỗ trợ 24/7</h3><p>Đội ngũ kỹ thuật hỗ trợ qua hotline, Zalo, email.</p></div>
+	<div class="wrap" style="max-width:960px">
+		<div class="center" style="margin-bottom:28px"><span class="eyebrow">Tư vấn</span><h2>Chọn tên miền nào cho website làm SEO?</h2></div>
+		<div class="page-content">
+			<p>Tên miền không tự làm website lên top, nhưng chọn sai thì khó sửa về sau. Doanh nghiệp bán hàng trong nước nên ưu tiên <b>.vn</b> hoặc <b>.com.vn</b>: người dùng Việt quen mặt, Google hiểu website hướng tới thị trường Việt Nam. Nếu có kế hoạch ra nước ngoài, đăng ký thêm <b>.com</b> cùng tên để giữ thương hiệu.</p>
+			<p>Tên ngắn, dễ đọc qua điện thoại, không gạch nối thừa. Không cần nhồi từ khoá vào tên miền: từ năm 2012 Google đã giảm ưu tiên cho tên miền chứa đúng từ khoá mà nội dung kém. Nên mua kèm các bản dễ gõ nhầm và đuôi phổ biến để tránh bị người khác chiếm dụng thương hiệu.</p>
+			<p>Mua lại tên miền cũ (đã hết hạn) để lấy backlink là cách DigicomVN không khuyến khích: Google xếp việc dùng tên miền hết hạn để thao túng xếp hạng vào hành vi spam. Muốn có liên kết uy tín, xem dịch vụ <a href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>">booking báo PR</a> hoặc <a href="<?php echo esc_url( home_url( '/guest-post/' ) ); ?>">guest post</a>.</p>
 		</div>
+		<ol class="tm-steps">
+			<li><b>Kiểm tra tên</b><span>Gõ tên miền ở ô phía trên hoặc gửi danh sách tên dự kiến.</span></li>
+			<li><b>Gửi thông tin chủ thể</b><span>Cá nhân: họ tên, CCCD. Doanh nghiệp: tên, mã số thuế, người đại diện.</span></li>
+			<li><b>Thanh toán</b><span>Chuyển khoản vào tài khoản công ty, xuất hoá đơn khi cần.</span></li>
+			<li><b>Bàn giao</b><span>Gửi tài khoản quản trị, hỗ trợ trỏ DNS về hosting.</span></li>
+		</ol>
 	</div>
 </section>
 
-<?php if ( get_the_content() ) : ?>
-<section class="sec"><div class="wrap page-content"><?php the_content(); ?></div></section>
+<?php if ( trim( get_post_field( 'post_content', get_the_ID() ) ) ) : ?>
+<section class="sec"><div class="wrap page-content" style="max-width:960px"><?php the_content(); ?></div></section>
 <?php endif; ?>
 
-<section class="sec" style="background:var(--surface)">
-	<div class="wrap">
-		<div class="center" style="margin-bottom:30px"><span class="eyebrow">Hỗ trợ</span><h2>Câu hỏi thường gặp</h2></div>
-		<div class="faq">
-			<?php foreach ( dgc_lines( 'faqs' ) as $f ) : ?>
-				<details><summary><?php echo esc_html( $f[0] ?? '' ); ?></summary><div class="a"><?php echo esc_html( $f[1] ?? '' ); ?></div></details>
-			<?php endforeach; ?>
-		</div>
+<?php include get_template_directory() . '/inc/svc-faq.php'; ?>
+
+<section class="sec" id="dat-ten-mien">
+	<div class="wrap" style="max-width:720px">
+		<?php
+		$dgc_form_title   = 'Đăng ký tên miền';
+		$dgc_form_btn     = 'Gửi yêu cầu đăng ký';
+		$dgc_form_service = 'Tên miền';
+		include get_template_directory() . '/inc/form-lead.php';
+		?>
 	</div>
 </section>
-
-<section class="sec-tight"><div class="wrap"><div class="cta-band">
-	<div><h2>Cần tư vấn chọn tên miền?</h2><p>DigicomVN hỗ trợ chọn và đăng ký tên miền phù hợp thương hiệu của bạn.</p></div>
-	<div class="cta-actions"><a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a><a class="btn btn-navy" href="<?php echo esc_url( home_url( '/lien-he/' ) ); ?>">Liên hệ</a></div>
-</div></div></section>
-
+<?php include get_template_directory() . '/inc/order-prefill.php'; ?>
 <?php get_footer(); ?>

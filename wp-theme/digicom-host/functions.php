@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGC_VER', '3.11.4' );
+define('DGC_VER','3.16.0');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -34,12 +34,14 @@ add_action( 'wp_enqueue_scripts', function () {
 	// ca hai deu co subset vietnamese.
 	wp_enqueue_style(
 		'dgc-fonts',
-		'https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:wght@600;700&display=swap',
+		'https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap',
 		array(), null
 	);
 	wp_enqueue_style( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', array(), '2.3.4' );
 	wp_enqueue_style( 'owl-theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css', array( 'owl-carousel' ), '2.3.4' );
 	wp_enqueue_style( 'dgc-main', get_template_directory_uri() . '/assets/css/main.css', array( 'dgc-fonts', 'owl-theme' ), DGC_VER );
+	// Lop giao dien seongon (2026-10-28): nap sau main.css, chi ghi de. Rollback = bo dong nay.
+	wp_enqueue_style( 'dgc-sg', get_template_directory_uri() . '/assets/css/sg.css', array( 'dgc-main' ), DGC_VER );
 
 	wp_enqueue_script( 'owl-carousel-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
 	wp_enqueue_script( 'dgc-main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'owl-carousel-js' ), DGC_VER, true );
@@ -107,6 +109,7 @@ require_once get_template_directory() . '/inc/seo-meta.php';
 require_once get_template_directory() . '/inc/faq-page.php';
 require_once get_template_directory() . '/inc/gsc-sitemap-submit.php';
 require_once get_template_directory() . '/inc/leads-sheet-sync.php';
+require_once get_template_directory() . '/inc/domain-hosting.php';
 
 /**
  * Helper doc 1 option.
@@ -129,6 +132,16 @@ function dgc_promo_deadline_ts() {
 	}
 	$ts = strtotime( $raw . ' 23:59:59' );
 	return ( $ts && $ts > $now ) ? $ts : 0;
+}
+
+/** Tieu de co chu to mau: *chu* -> <em>chu</em> (da escape). Dung cho tieu de kieu seongon. */
+function dgc_em( $text ) {
+	return preg_replace( '/\*([^*]+)\*/u', '<em>$1</em>', esc_html( $text ) );
+}
+
+/** Icon SVG nho dang mui ten cho nut .sg-btn */
+function dgc_arrow() {
+	return '<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>';
 }
 
 /**
@@ -202,22 +215,54 @@ function dgc_tel2() {
 
 /** 8 trang dich vu pillar (label | path o goc). Dung cho bottom-sheet "Dich vu" mobile.
  *  Slug co dinh theo sitemap (flatten 2026-07-16). */
-function dgc_service_links() {
-	/* Thu tu theo dinh vi co dac 2026-10-24: booking truyen thong truoc, link tu bao sau.
-	   Loa phuong + man LED van an (quang cao ngoai troi, ngoai chu de). */
+/**
+ * Cay dich vu theo dinh vi 2026-10-27: digicomvn.com lam MOI dich vu lien quan SEO.
+ * Moi nhom: [ten nhom, URL trang chinh cua nhom, [[ten, URL], ...]]. Menu chinh sua o WP Admin > Giao dien > Menu;
+ * cay nay dung cho footer, bottom sheet mobile, form bao gia, schema.
+ */
+function dgc_svc_tree() {
 	return array(
-		array( 'Booking báo & PR',       '/booking-bao-pr/' ),
-		array( 'Booking truyền hình',    '/booking-truyen-hinh/' ),
-		array( 'Quảng cáo phát thanh',   '/quang-cao-phat-thanh/' ),
-		array( 'Booking fanpage',        '/booking-fanpage/' ),
-		array( 'Booking KOL, KOC',       '/booking-kol-koc/' ),
-		array( 'Mua Textlink',           '/mua-textlink/' ),
-		array( 'Guest Post',             '/guest-post/' ),
-		array( 'Dịch vụ Backlink',       '/dich-vu-backlink/' ),
-		array( 'Backlink Social Entity', '/backlink-social-entity/' ),
-		array( 'Backlink quốc tế',       '/backlink-quoc-te/' ),
-		array( 'Dịch vụ Toplist',        '/dich-vu-toplist/' ),
+		array( 'Dịch vụ SEO', '/dich-vu-seo/', array(
+			array( 'Dịch vụ SEO tổng thể',     '/dich-vu-seo/' ),
+			array( 'Dịch vụ SEO AI',            '/dich-vu-seo-ai/' ),
+			array( 'Dịch vụ SEO local',         '/dich-vu-seo-local/' ),
+			array( 'Dịch vụ SEO quốc tế',       '/dich-vu-seo-quoc-te/' ),
+			array( 'Viết bài chuẩn SEO',        '/dich-vu-viet-bai-chuan-seo/' ),
+		) ),
+		array( 'Booking báo & truyền thông', '/booking-bao-pr/', array(
+			array( 'Booking báo & PR',       '/booking-bao-pr/' ),
+			array( 'Booking truyền hình',    '/booking-truyen-hinh/' ),
+			array( 'Quảng cáo phát thanh',   '/quang-cao-phat-thanh/' ),
+			array( 'Booking fanpage',        '/booking-fanpage/' ),
+			array( 'Booking KOL, KOC',       '/booking-kol-koc/' ),
+		) ),
+		array( 'Backlink & Off-page', '/dich-vu-backlink/', array(
+			array( 'Dịch vụ Backlink',       '/dich-vu-backlink/' ),
+			array( 'Mua Textlink',           '/mua-textlink/' ),
+			array( 'Guest Post',             '/guest-post/' ),
+			array( 'Backlink Social Entity', '/backlink-social-entity/' ),
+			array( 'Backlink quốc tế',       '/backlink-quoc-te/' ),
+			array( 'Dịch vụ Toplist',        '/dich-vu-toplist/' ),
+		) ),
+		array( 'Tên miền, hosting & công cụ', '/ten-mien/', array(
+			array( 'Tên miền',      '/ten-mien/' ),
+			array( 'Hosting',       '/hosting/' ),
+			array( 'Phần mềm SEO',  '/phan-mem-seo/' ),
+		) ),
+		array( 'Đào tạo', '/khoa-hoc-seo/', array(
+			array( 'Khoá học SEO', '/khoa-hoc-seo/' ),
+		) ),
 	);
+}
+
+function dgc_service_links() {
+	$out = array();
+	foreach ( dgc_svc_tree() as $g ) {
+		foreach ( $g[2] as $it ) {
+			$out[ $it[1] ] = $it;
+		}
+	}
+	return array_values( $out );
 }
 
 /** Category archive -> money page tuong ung (label | URL). Chi cum co dich vu moi tra ve. */

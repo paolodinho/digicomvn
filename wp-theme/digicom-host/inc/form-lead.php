@@ -39,10 +39,9 @@ $sent = isset( $_GET['sent'] ) ? sanitize_text_field( wp_unslash( $_GET['sent'] 
 		<label class="fl" for="dgc_service">Dịch vụ quan tâm</label>
 		<select id="dgc_service" name="dgc_service">
 			<?php
-			/* Danh sach lay tu dgc_service_links() de khop thu tu menu; dich vu ngoai chu de (SEO, Ads)
-			   chi nhan qua dong "Dich vu khac", khong co trang dich (Hieu chot 2026-10-24). */
+			/* Danh sach lay tu dgc_service_links() (cay dich vu 2026-10-27). Ads chua co trang rieng tren site nay. */
 			$opts = wp_list_pluck( dgc_service_links(), 0 );
-			$opts[] = 'Dịch vụ khác (SEO tổng thể, Google Ads, Facebook Ads)';
+			$opts[] = 'Dịch vụ khác (Google Ads, Facebook Ads)';
 			$opts[] = 'Khác / chưa rõ';
 			foreach ( $opts as $o ) {
 				printf( '<option%s>%s</option>', selected( $dgc_form_service, $o, false ), esc_html( $o ) );

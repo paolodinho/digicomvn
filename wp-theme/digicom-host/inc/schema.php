@@ -357,6 +357,23 @@ function dgc_faq_items() {
 	} ) );
 }
 
+/**
+ * FAQ hien o TRANG CHU: tap con cua 'faqs', chon theo option 'home_faq_keys'
+ * (moi dong 1 doan chu nam trong cau hoi). Trong -> 8 cau dau. Toan bo van o /cau-hoi-thuong-gap/.
+ */
+function dgc_home_faq_items() {
+	$all  = dgc_faq_items();
+	$keys = function_exists( 'dgc' ) ? array_filter( array_map( 'trim', preg_split( '/\r?\n/', (string) dgc( 'home_faq_keys' ) ) ) ) : array();
+	if ( ! $keys ) return array_slice( $all, 0, 8 );
+	$out = array();
+	foreach ( $keys as $k ) {
+		foreach ( $all as $f ) {
+			if ( mb_stripos( $f[0], $k ) !== false && ! in_array( $f, $out, true ) ) { $out[] = $f; break; }
+		}
+	}
+	return $out ?: array_slice( $all, 0, 8 );
+}
+
 /** FAQ rieng cua 1 nhom dich vu (option 'svc_faqs': slug | hoi | dap). */
 function dgc_svc_faq_items( $slug ) {
 	$out = array();
@@ -394,7 +411,7 @@ function dgc_sch_page_faqs() {
 		$own = dgc_post_faq_items();
 		if ( $own ) return $own;
 	}
-	if ( is_front_page() ) return dgc_faq_items();
+	if ( is_front_page() ) return dgc_home_faq_items();
 	if ( is_page() && function_exists( 'dgc_svc_slug' ) ) {
 		$slug = dgc_svc_slug();
 		if ( $slug ) return dgc_svc_faq_items( $slug );
