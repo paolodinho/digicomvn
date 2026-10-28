@@ -2,7 +2,7 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: xong - chuyển 16 landing dịch vụ sang giao diện sg (seongon), DGC_VER 3.16.6
+- Task: xong - 16 landing sang giao diện sg + khối hướng dẫn đặt hàng bỏ số viền rỗng (DGC_VER 3.16.7, commit 3c772c3)
 - Đã xong: tpl-service.php viết lại (13 trang: dich-vu-backlink, mua-textlink, guest-post, backlink-social-entity, backlink-quoc-te, booking-truyen-hinh, dich-vu-toplist, quang-cao-phat-thanh, bat-dong-san, booking-fanpage, booking-kol-koc, phan-mem-seo, khoa-hoc-seo); page-booking-bao-pr.php, page-ten-mien.php, page-hosting.php đổi hero sg-phero + body class sg-legacy (sg.css). Live, 0 overflow mobile 6 URL.
 - Backup: ~/Claude-Workspace/_backups/routines/2026-10-28/svc-landing/ và svc-landing-2/
 - Tiếp theo: không có
