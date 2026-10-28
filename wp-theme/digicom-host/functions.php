@@ -380,6 +380,7 @@ function dgc_quote_url( $service_label = '' ) {
 
 /** Trang thuoc nhom booking (bao PR, truyen hinh, fanpage, KOL) -> hien uu dai booking (ribbon + popup). */
 function dgc_is_booking_context() {
+	if ( is_front_page() ) return true; // Hieu chot 28/10: trang chu van hien uu dai booking
 	if ( is_singular( 'post' ) ) return has_category( 'booking-bao-pr' );
 	if ( is_category() ) return is_category( 'booking-bao-pr' );
 	if ( is_page() ) {
