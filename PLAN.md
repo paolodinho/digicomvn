@@ -6,7 +6,8 @@
 - Task 2 (W17 file tổng quan): Google giữ tiêu đề rác cờ bạc từ hack 22/10 ("TKP303 Situs Game Online x Guest Post", "RRQ88 ... Backlink quốc tế"). 28/10: web thật sạch (quét 229 URL), đã đẩy 41 URL crawl 22-23/10 qua Indexing API (OK) + sitemap + hàng đợi gsc_index --force. Danh sách: scratchpad hack_urls.txt (cũng trong hàng đợi gsc_index site digicom).
 - Tiếp theo: CHỜ Google crawl lại (3-7 ngày) - từ 01/11 kiểm "site:digicomvn.com" ở trình duyệt không đăng nhập; còn tiêu đề rác thì Hiếu bấm Yêu cầu lập chỉ mục tay 2 trang /guest-post/, /backlink-quoc-te/.
 - Task 3 (W28): GA4 traffic tăng - đã xong, phần lớn người thật VN (431 user/28 ngày), nghi bot ~13%. GSC: trang tăng mạnh nhất /thong-cao-bao-chi-xu-ly-khung-hoang/, /case-study/, /chien-dich-pr-an-tuong-viet-nam/; hiển thị tăng chủ yếu do từ cờ bạc (hack). ICD GA4 user ảo đã giao phiên ICD - SEO (fork).
-- Cập nhật lúc: 2026-10-28 22:40
+- Task 4 (N10): 29/10 05:58 chạy nền đo top 10 ẩn danh 170 từ còn thiếu của đợt 24/10 (248 từ, đợt đó dừng ở 13/248; 78 từ đã có SERP ở đợt khác). Thư mục 06-keyword/serp-con-lai-2026-10-29/ (kw.txt, run_loop.sh, serp.log, loop.pid). Dùng IP máy (ALLINTITLE_DIRECT=1), KHÔNG cần key proxy xoay; xếp hàng sau LOA/ICD bằng --wait-lock. Tiếp theo: đo xong gom cụm (mẫu serp-kp43-2026-10-24/gom_cum.py), ghi tab KH, tối ưu 16 trang có sẵn (N11).
+- Cập nhật lúc: 2026-10-29 06:00
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
