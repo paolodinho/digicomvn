@@ -32,55 +32,51 @@ $bbp_ic = function ( $p ) {
 };
 ?>
 
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
-
-<!-- ============ 1. HERO ============ -->
-<section class="bbp-hero svc3d-hero bbp-3d" data-svc3d-hero>
-	<div class="svc3d-glow" aria-hidden="true"></div>
-	<span class="bbp-blob bbp-blob-a" aria-hidden="true"></span>
-	<span class="bbp-blob bbp-blob-b" aria-hidden="true"></span>
-	<div class="wrap bbp-hero-grid">
-		<div class="bbp-hero-copy">
-			<span class="eyebrow">Dịch vụ Booking báo &amp; PR</span>
-			<h1>Booking báo chí: đăng bài PR trên báo điện tử uy tín, bảng giá công khai từng đầu&nbsp;báo</h1>
-			<p class="lead">DigicomVN nhận booking báo chí trọn gói: tư vấn chọn đầu báo theo mục tiêu, viết bài PR đúng văn phong toà soạn, đăng và bàn giao link sau khi bài lên. Giá niêm yết theo từng chuyên mục, không giấu giá.</p>
-			<div class="bbp-hero-actions">
-				<a class="btn btn-primary" href="#bang-gia">Xem bảng giá <?php echo esc_html( $bbp_count ); ?> vị trí</a>
-				<a class="btn btn-ghost" href="#lien-he">Nhận tư vấn &amp; báo giá</a>
+<!-- ============ 1. HERO (giao dien sg, 2026-10-28) ============ -->
+<?php $bbp_h = dgc_svc_hero_data( 'booking-bao-pr' ); ?>
+<section class="sg-phero">
+	<div class="wrap">
+		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <span><?php echo esc_html( $svc_name ); ?></span></nav>
+		<div class="sg-phero-row">
+			<div>
+				<span class="sg-eyebrow">Booking báo &amp; truyền thông</span>
+				<h1>Booking báo chí: đăng bài PR trên báo điện tử uy tín, bảng giá công khai từng đầu&nbsp;báo</h1>
+				<p class="sg-lead">DigicomVN nhận booking báo chí trọn gói: tư vấn chọn đầu báo theo mục tiêu, viết bài PR đúng văn phong toà soạn, đăng và bàn giao link sau khi bài lên. Giá niêm yết theo từng chuyên mục, không giấu giá.</p>
+				<div class="sg-hero-cta">
+					<a class="sg-btn sg-btn--light" href="#bang-gia"><?php echo dgc_arrow(); ?>Xem bảng giá <?php echo esc_html( $bbp_count ); ?> vị trí</a>
+					<a class="sg-btn sg-btn--line" href="#lien-he"><?php echo dgc_arrow(); ?>Nhận tư vấn và báo giá</a>
+				</div>
+				<p class="sg-hero-note"><a href="tel:<?php echo esc_attr( $tel ); ?>">Hoặc gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a> &middot; tư vấn chọn báo miễn phí, không ràng buộc</p>
 			</div>
-			<p class="bbp-hero-sub"><a href="tel:<?php echo esc_attr( $tel ); ?>">Hoặc gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a> &middot; tư vấn chọn báo miễn phí, không ràng buộc</p>
-		</div>
-
-		<?php $bbp_h = dgc_svc_hero_data( 'booking-bao-pr' ); ?>
-		<div class="svc3d-stage" aria-hidden="true">
 			<?php if ( ! empty( $bbp_h['rows'] ) ) : ?>
-			<div class="svc3d-board" data-svc3d-board>
-				<div class="svc3d-board-head"><span>Bảng giá đầu báo</span><span class="svc3d-live">Cập nhật <?php echo esc_html( wp_date( 'd/m/Y' ) ); ?></span></div>
-				<ol class="svc3d-rows">
-					<?php foreach ( $bbp_h['rows'] as $i => $r ) : ?>
-					<li style="--i:<?php echo (int) $i; ?>">
-						<span class="svc3d-name"><?php echo esc_html( $r['name'] ); ?></span>
-						<?php if ( $r['dr'] > 0 ) : ?><span class="svc3d-dr">DR <?php echo (int) $r['dr']; ?></span><?php else : ?><span></span><?php endif; ?>
-						<span class="svc3d-price"><small>từ</small> <?php echo esc_html( number_format( $r['price'], 0, ',', '.' ) ); ?>đ</span>
-					</li>
+			<aside class="sg-phero-card sg-pboard" aria-label="Bảng giá đầu báo">
+				<h2>Bảng giá đầu báo</h2>
+				<dl class="sg-pboard-stats">
+					<div><dt>Đầu báo</dt><dd><?php echo (int) $bbp_outlets; ?>+</dd></div>
+					<div><dt>Vị trí có giá</dt><dd><?php echo (int) $bbp_count; ?></dd></div>
+					<?php if ( ! empty( $bbp_h['min'] ) ) : ?><div><dt>Giá chỉ từ</dt><dd><?php echo esc_html( dgc_svc_money( $bbp_h['min'] ) ); ?></dd></div><?php endif; ?>
+				</dl>
+				<ol class="sg-pboard-rows">
+					<?php foreach ( array_slice( $bbp_h['rows'], 0, 5 ) as $r ) : ?>
+					<li><span class="n"><?php echo esc_html( $r['name'] ); ?></span><?php if ( $r['dr'] > 0 ) : ?><span class="dr">DR <?php echo (int) $r['dr']; ?></span><?php else : ?><span></span><?php endif; ?><span class="p">từ <?php echo esc_html( number_format( $r['price'], 0, ',', '.' ) ); ?>đ</span></li>
 					<?php endforeach; ?>
 				</ol>
-				<div class="svc3d-board-foot">+ <?php echo (int) max( 0, $bbp_h['count'] - count( $bbp_h['rows'] ) ); ?> đầu báo khác trong bảng giá</div>
-				<div class="svc3d-chip svc3d-chip-a"><b>VAT</b> Hợp đồng, hoá đơn đầy đủ</div>
-				<div class="svc3d-chip svc3d-chip-b"><b>Link</b> Bàn giao bài đã đăng</div>
-			</div>
+				<p class="sg-pboard-foot">Cập nhật <?php echo esc_html( wp_date( 'd/m/Y' ) ); ?> &middot; <a href="#bang-gia">Xem đủ bảng giá</a></p>
+			</aside>
 			<?php endif; ?>
 		</div>
 	</div>
+</section>
 
-	<!-- Trust strip -->
+<section class="sg-sec sg-sec--tight sg-sec--cyan">
 	<div class="wrap">
-		<ul class="bbp-trust">
-			<li><b data-count="<?php echo (int) $bbp_outlets; ?>" data-suffix="+"><?php echo esc_html( $bbp_outlets ); ?>+</b><span>đầu báo, tạp chí hợp tác</span></li>
-			<li><b data-count="<?php echo (int) $bbp_count; ?>"><?php echo esc_html( $bbp_count ); ?></b><span>vị trí có giá niêm yết công khai</span></li>
-			<li><b>dofollow</b><span>hoặc nofollow tuỳ chuyên mục</span></li>
-			<li><b>VAT</b><span>xuất hoá đơn, hợp đồng đầy đủ</span></li>
-		</ul>
+		<div class="sg-benefits sg-benefits--4 sg-benefits--light">
+			<?php $bbp_chk = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>'; ?>
+			<div class="sg-card"><?php echo $bbp_chk; // phpcs:ignore ?><h3><?php echo esc_html( $bbp_outlets ); ?>+ đầu báo</h3><p>Báo điện tử, tạp chí hợp tác trên toàn quốc.</p></div>
+			<div class="sg-card"><?php echo $bbp_chk; // phpcs:ignore ?><h3><?php echo esc_html( $bbp_count ); ?> vị trí có giá</h3><p>Giá niêm yết công khai theo từng chuyên mục.</p></div>
+			<div class="sg-card"><?php echo $bbp_chk; // phpcs:ignore ?><h3>Dofollow / nofollow</h3><p>Ghi rõ loại link theo từng chuyên mục.</p></div>
+			<div class="sg-card"><?php echo $bbp_chk; // phpcs:ignore ?><h3>Hoá đơn VAT</h3><p>Hợp đồng, hoá đơn đầy đủ cho doanh nghiệp.</p></div>
+		</div>
 	</div>
 </section>
 

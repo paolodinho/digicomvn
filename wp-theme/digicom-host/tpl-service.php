@@ -1,182 +1,210 @@
 <?php
 /**
  * Template Name: Dich vu (bao gia)
- * Dung cho: Lap trinh website, SEO/GEO, Backlink & PR, Google Ads, Automation.
+ * Landing dich vu (backlink, textlink, guest post, toplist, booking truyen hinh/fanpage/KOL,
+ * phan mem SEO, khoa hoc...). Giao dien sg.css (seongon) dong bo voi tpl-seo.php - 2026-10-28.
+ * Thu tu: hero (the bang gia/cam ket) -> cam ket -> "... la gi" -> bang gia -> huong dan dat /
+ * quy trinh -> FAQ rieng -> dich vu cung nhom -> form -> kien thuc (thu gon).
+ * Noi dung sua o WP Admin (excerpt, noi dung trang, svc_intros, svc_faqs, CPT Bang gia).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 $svc_name = get_the_title();
 $nhom     = dgc_current_nhom();
-?>
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> <?php echo esc_html( $svc_name ); ?></nav></div>
+$dgc_slug = get_post_field( 'post_name', get_the_ID() );
+$dgc_path = trailingslashit( wp_parse_url( get_permalink(), PHP_URL_PATH ) );
 
-<?php
-$dgc_h = $nhom ? dgc_svc_hero_data( $nhom['slug'] ) : array( 'count' => 0, 'rows' => array() );
+$dgc_h     = $nhom ? dgc_svc_hero_data( $nhom['slug'] ) : array( 'count' => 0, 'rows' => array() );
 /* Truyen hinh + phat thanh: don vi la "kenh", ban giao lich phat song thay vi link (2026-10-24). */
 $dgc_media = $nhom && in_array( $nhom['slug'], array( 'booking-truyen-hinh', 'quang-cao-phat-thanh' ), true );
 $dgc_unit  = ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) ? 'đầu báo' : ( $dgc_media ? 'kênh' : 'website' );
-?>
-<section class="page-hero svc3d-hero" data-svc3d-hero>
-	<div class="svc3d-glow" aria-hidden="true"></div>
-	<div class="wrap">
-	<div class="hero-grid">
-	<div class="hero-copy">
-		<span class="eyebrow">Dịch vụ</span>
-		<h1><?php echo esc_html( $svc_name ); ?></h1>
-		<?php if ( has_excerpt() ) : ?><p class="lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
-		<?php /* Toi da 2 nut: 1 chinh + 1 phu (Hieu 2026-07-15). */ ?>
-		<div class="hero-actions">
-			<?php if ( $nhom ) : ?>
-				<a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a>
-			<?php else : ?>
-				<a class="btn btn-primary" href="#lien-he">Nhận báo giá</a>
-			<?php endif; ?>
-			<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-		</div>
-		<?php if ( $nhom && 'booking-bao-pr' === $nhom['slug'] ) : ?>
-			<p style="margin-top:14px"><a href="#lien-he" style="font-size:13.5px;font-weight:600;text-decoration:underline">Hoặc để lại thông tin, DigicomVN tư vấn &amp; báo giá ngay →</a></p>
-		<?php endif; ?>
-		<?php if ( ! empty( $dgc_h['count'] ) ) : ?>
-		<dl class="svc3d-stats">
-			<div><dt><?php echo esc_html( $dgc_unit ); ?> có giá công khai</dt><dd data-count="<?php echo (int) $dgc_h['count']; ?>"><?php echo (int) $dgc_h['count']; ?></dd></div>
-			<?php if ( ! empty( $dgc_h['min'] ) ) : ?><div><dt>Giá chỉ từ</dt><dd><?php echo esc_html( dgc_svc_money( $dgc_h['min'] ) ); ?></dd></div><?php endif; ?>
-			<?php if ( ! empty( $dgc_h['maxdr'] ) ) : ?><div><dt>DR cao nhất (Ahrefs)</dt><dd data-count="<?php echo (int) $dgc_h['maxdr']; ?>"><?php echo (int) $dgc_h['maxdr']; ?></dd></div><?php endif; ?>
-		</dl>
-		<?php endif; ?>
-	</div>
+$dgc_social = in_array( $dgc_slug, array( 'booking-fanpage', 'booking-kol-koc' ), true );
 
-	<div class="svc3d-stage" aria-hidden="<?php echo empty( $dgc_h['rows'] ) ? 'false' : 'true'; ?>">
-		<?php if ( ! empty( $dgc_h['rows'] ) ) : ?>
-		<div class="svc3d-board" data-svc3d-board>
-			<div class="svc3d-board-head"><span>Bảng giá đang áp dụng</span><span class="svc3d-live">Cập nhật <?php echo esc_html( wp_date( 'd/m/Y' ) ); ?></span></div>
-			<ol class="svc3d-rows">
-				<?php foreach ( $dgc_h['rows'] as $i => $r ) : ?>
-				<li style="--i:<?php echo (int) $i; ?>">
-					<span class="svc3d-name"><?php echo esc_html( $r['name'] ); ?></span>
-					<?php if ( $r['dr'] > 0 ) : ?><span class="svc3d-dr">DR <?php echo (int) $r['dr']; ?></span><?php else : ?><span></span><?php endif; ?>
-					<span class="svc3d-price"><small>từ</small> <?php echo esc_html( number_format( $r['price'], 0, ',', '.' ) ); ?>đ</span>
-				</li>
-				<?php endforeach; ?>
-			</ol>
-			<div class="svc3d-board-foot">+ <?php echo (int) max( 0, $dgc_h['count'] - count( $dgc_h['rows'] ) ); ?> <?php echo esc_html( $dgc_unit ); ?> khác trong bảng giá</div>
-			<div class="svc3d-chip svc3d-chip-a"><b>VAT</b> Xuất hoá đơn đầy đủ</div>
-			<?php if ( $dgc_media ) : ?><div class="svc3d-chip svc3d-chip-b"><b>Lịch</b> Bàn giao lịch phát sóng</div><?php else : ?><div class="svc3d-chip svc3d-chip-b"><b>Link</b> Bàn giao bài đã đăng</div><?php endif; ?>
+/* Nhom dich vu (eyebrow + dich vu cung nhom) lay tu cay dich vu dung chung. */
+$dgc_group = 'Dịch vụ';
+$dgc_sibs  = array();
+foreach ( dgc_svc_tree() as $g ) {
+	foreach ( $g[2] as $it ) {
+		if ( $it[1] === $dgc_path ) { $dgc_group = $g[0]; $dgc_sibs = $g[2]; break 2; }
+	}
+}
+$dgc_rel = array();
+foreach ( $dgc_sibs as $it ) {
+	if ( $it[1] !== $dgc_path && dgc_page_live( $it[1] ) ) $dgc_rel[] = $it;
+}
+
+$dgc_trust = array(
+	array( $nhom ? 'Giá công khai' : 'Báo giá rõ ràng', $nhom ? 'Niêm yết theo từng vị trí đăng, không báo giá mập mờ.' : 'Báo giá theo phạm vi công việc trước khi triển khai.' ),
+	array( 'Hoá đơn VAT', 'Xuất hoá đơn đầy đủ cho doanh nghiệp.' ),
+	$dgc_media ? array( 'Lịch phát sóng', 'Gửi lịch phát và file phát sóng để bạn đối chiếu.' )
+		: ( $nhom ? array( 'Bàn giao link', 'Gửi link bài đã lên để bạn tự kiểm tra.' ) : array( 'Cập nhật tiến độ', 'Báo cáo ở từng bước, có đầu mối phụ trách.' ) ),
+	array( 'Tư vấn miễn phí', $nhom ? 'Chọn đúng ' . $dgc_unit . ' theo ngành và ngân sách.' : 'Không ràng buộc, chỉ triển khai khi bạn đồng ý.' ),
+);
+$dgc_faqs  = dgc_svc_faq_items( $nhom ? $nhom['slug'] : ( function_exists( 'dgc_svc_slug' ) ? ( dgc_svc_slug() ?: $dgc_slug ) : $dgc_slug ) );
+$dgc_check = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>';
+
+/* Khoi uu dai (promo-band) khong render lai o footer trang dich vu. */
+$GLOBALS['dgc_promo_done'] = true;
+?>
+
+<!-- HERO -->
+<section class="sg-phero">
+	<div class="wrap">
+		<nav class="sg-crumb" aria-label="Breadcrumb">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> /
+			<?php if ( $dgc_sibs && $dgc_sibs[0][1] !== $dgc_path && dgc_page_live( $dgc_sibs[0][1] ) ) : ?><a href="<?php echo esc_url( home_url( $dgc_sibs[0][1] ) ); ?>"><?php echo esc_html( $dgc_sibs[0][0] ); ?></a> /<?php endif; ?>
+			<span><?php echo esc_html( $svc_name ); ?></span>
+		</nav>
+		<div class="sg-phero-row">
+			<div>
+				<span class="sg-eyebrow"><?php echo esc_html( $dgc_group ); ?></span>
+				<h1><?php echo esc_html( $svc_name ); ?></h1>
+				<?php if ( has_excerpt() ) : ?><p class="sg-lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
+				<div class="sg-hero-cta">
+					<?php if ( $nhom ) : ?>
+						<a class="sg-btn sg-btn--light" href="#bang-gia"><?php echo dgc_arrow(); ?>Xem bảng giá</a>
+					<?php else : ?>
+						<a class="sg-btn sg-btn--light" href="#lien-he"><?php echo dgc_arrow(); ?>Nhận báo giá</a>
+					<?php endif; ?>
+					<a class="sg-btn sg-btn--line" href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo dgc_arrow(); ?>Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+				</div>
+			</div>
+			<?php if ( ! empty( $dgc_h['rows'] ) ) : ?>
+			<aside class="sg-phero-card sg-pboard" aria-label="Bảng giá đang áp dụng">
+				<h2>Bảng giá đang áp dụng</h2>
+				<dl class="sg-pboard-stats">
+					<div><dt><?php echo esc_html( ucfirst( $dgc_unit ) ); ?> có giá</dt><dd><?php echo (int) $dgc_h['count']; ?></dd></div>
+					<?php if ( ! empty( $dgc_h['min'] ) ) : ?><div><dt>Giá chỉ từ</dt><dd><?php echo esc_html( dgc_svc_money( $dgc_h['min'] ) ); ?></dd></div><?php endif; ?>
+					<?php if ( ! empty( $dgc_h['maxdr'] ) ) : ?><div><dt>DR cao nhất</dt><dd><?php echo (int) $dgc_h['maxdr']; ?></dd></div><?php endif; ?>
+				</dl>
+				<ol class="sg-pboard-rows">
+					<?php foreach ( array_slice( $dgc_h['rows'], 0, 5 ) as $r ) : ?>
+					<li><span class="n"><?php echo esc_html( $r['name'] ); ?></span><?php if ( $r['dr'] > 0 ) : ?><span class="dr">DR <?php echo (int) $r['dr']; ?></span><?php else : ?><span></span><?php endif; ?><span class="p">từ <?php echo esc_html( number_format( $r['price'], 0, ',', '.' ) ); ?>đ</span></li>
+					<?php endforeach; ?>
+				</ol>
+				<p class="sg-pboard-foot">Cập nhật <?php echo esc_html( wp_date( 'd/m/Y' ) ); ?> &middot; <a href="#bang-gia">Xem đủ <?php echo (int) $dgc_h['count']; ?> <?php echo esc_html( $dgc_unit ); ?></a></p>
+			</aside>
+			<?php else : ?>
+			<aside class="sg-phero-card" aria-label="Cam kết làm việc">
+				<h2>Cam kết làm việc</h2>
+				<dl>
+					<?php foreach ( $dgc_trust as $t ) : ?><div><dt><?php echo esc_html( $t[0] ); ?></dt><dd><?php echo esc_html( $t[1] ); ?></dd></div><?php endforeach; ?>
+				</dl>
+			</aside>
+			<?php endif; ?>
 		</div>
-		<?php else : ?>
-		<aside class="hero-panel" aria-label="Cam kết làm việc">
-			<h2>Cam kết làm việc</h2>
-			<ul>
-				<li>Báo giá rõ ràng theo phạm vi công việc</li>
-				<li>Xuất hoá đơn VAT đầy đủ</li>
-				<li>Cập nhật tiến độ ở từng bước</li>
-				<li>Tư vấn miễn phí, không ràng buộc</li>
-			</ul>
-		</aside>
-		<?php endif; ?>
-	</div>
-	</div>
 	</div>
 </section>
 
-<?php if ( $nhom ) : ?>
-<section class="svc3d-trust" aria-label="Cam kết làm việc">
+<?php if ( ! empty( $dgc_h['rows'] ) ) : /* the hero da la bang gia -> cam ket dua xuong day */ ?>
+<!-- CAM KET -->
+<section class="sg-sec sg-sec--tight sg-sec--cyan">
 	<div class="wrap">
-		<ul>
-			<li><b>Giá công khai</b><span>Niêm yết trên từng vị trí đăng, không báo giá mập mờ</span></li>
-			<li><b>Hoá đơn VAT</b><span>Xuất đầy đủ cho doanh nghiệp</span></li>
-			<?php if ( $dgc_media ) : ?><li><b>Lịch phát sóng</b><span>Gửi lịch phát và file phát sóng để bạn đối chiếu</span></li><?php else : ?><li><b>Bàn giao link</b><span>Gửi link bài đã lên để bạn tự kiểm tra</span></li><?php endif; ?>
-			<li><b>Tư vấn miễn phí</b><span>Chọn đúng <?php echo esc_html( $dgc_unit ); ?> theo ngành và ngân sách</span></li>
-		</ul>
+		<div class="sg-benefits sg-benefits--4 sg-benefits--light">
+			<?php foreach ( $dgc_trust as $t ) : ?>
+				<div class="sg-card"><?php echo $dgc_check; // phpcs:ignore ?><h3><?php echo esc_html( $t[0] ); ?></h3><p><?php echo esc_html( $t[1] ); ?></p></div>
+			<?php endforeach; ?>
+		</div>
 	</div>
 </section>
 <?php endif; ?>
 
+<div class="sg-inc">
 <?php
-/* Khoi dinh nghia dich vu ("... la gi") ngay duoi hero - bat intent thong tin + GEO.
-   Chi render neu option svc_intros co dong khop slug hien tai (sua o WP Admin). */
+/* "... la gi" (option svc_intros) -> bang gia -> huong dan dat 4 buoc. Cac file inc dung chung
+   voi trang booking; giao dien sg ap qua .sg-inc trong sg.css. */
 include get_template_directory() . '/inc/svc-intro.php';
-
-/* Khoi uu dai (promo-band) DA BO khoi trang dich vu (Hieu 2026-07-15).
-   Bat guard som de footer.php cung KHONG render lai o cuoi trang. Trang chu van hien qua
-   front-page.php; popup uu dai + nut Zalo van con. */
-$GLOBALS['dgc_promo_done'] = true;
-
-/* Bang gia len NGAY DUOI hero, tren moi noi dung khac (Hieu 2026-07-14). */
 if ( $nhom ) {
 	include get_template_directory() . '/inc/service-pricing.php';
-	/* Ngay sau bang gia: 4 buoc dat hang + loi moi goi hotline/Zalo neu chua biet chon bao nao. */
 	$dgc_og_ctx = $svc_name;
 	include get_template_directory() . '/inc/order-guide.php';
 }
 ?>
+</div>
 
-
-<?php /* Trang co bang gia da co "Huong dan dat hang" 4 buoc -> khong lap quy trinh chung nua.
-         Chi hien quy trinh chung cho trang dich vu KHONG co bang gia. */ ?>
 <?php if ( ! $nhom ) :
-	/* Booking mang xa hoi (fanpage, KOL/KOC - mo 2026-10-24) co quy trinh rieng, khong dung ban chung. */
-	$dgc_social = in_array( get_post_field( 'post_name', get_the_ID() ), array( 'booking-fanpage', 'booking-kol-koc' ), true );
-	$dgc_steps  = $dgc_social ? array(
+	$dgc_steps = $dgc_social ? array(
 		array( 'Nhận brief', 'Mục tiêu, sản phẩm, tệp khách và ngân sách dự kiến.' ),
 		array( 'Đề xuất danh sách', 'Gửi danh sách kèm số liệu tương tác để bạn chọn và báo giá.' ),
 		array( 'Duyệt nội dung', 'Kịch bản, bài đăng có nhãn quảng cáo được bạn duyệt trước khi lên.' ),
-		array( 'Đăng &amp; báo cáo', 'Bàn giao link, ảnh chụp và số liệu sau khi đăng.' ),
+		array( 'Đăng và báo cáo', 'Bàn giao link, ảnh chụp và số liệu sau khi đăng.' ),
 	) : array(
 		array( 'Khảo sát', 'Tìm hiểu mục tiêu, hiện trạng và yêu cầu của bạn.' ),
-		array( 'Đề xuất &amp; báo giá', 'Lên phương án, phạm vi công việc và báo giá minh bạch.' ),
+		array( 'Đề xuất và báo giá', 'Lên phương án, phạm vi công việc và báo giá minh bạch.' ),
 		array( 'Triển khai', 'Thực hiện theo kế hoạch, cập nhật tiến độ thường xuyên.' ),
-		array( 'Bàn giao &amp; bảo hành', 'Nghiệm thu, hướng dẫn sử dụng và hỗ trợ sau bàn giao.' ),
+		array( 'Bàn giao và hỗ trợ', 'Nghiệm thu, hướng dẫn sử dụng và hỗ trợ sau bàn giao.' ),
 	);
 ?>
-<section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<!-- QUY TRINH -->
+<section class="sg-sec sg-sec--cyan">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:34px"><span class="eyebrow">Quy trình</span><h2>Cách DigicomVN triển khai</h2></div>
-		<ol class="proc">
-			<?php foreach ( $dgc_steps as $st ) : ?>
-			<li class="step"><h3><?php echo wp_kses_post( $st[0] ); ?></h3><p><?php echo esc_html( $st[1] ); ?></p></li>
+		<div class="sg-head sg-head--c">
+			<span class="sg-eyebrow">Quy trình</span>
+			<h2 class="sg-h">Cách DigicomVN <em>triển khai</em></h2>
+		</div>
+		<ol class="sg-steps sg-steps--4">
+			<?php foreach ( $dgc_steps as $n => $st ) : ?>
+				<li><span class="sg-num" aria-hidden="true"><?php echo esc_html( sprintf( '%02d', $n + 1 ) ); ?></span><h3><?php echo esc_html( $st[0] ); ?></h3><p><?php echo esc_html( $st[1] ); ?></p></li>
 			<?php endforeach; ?>
 		</ol>
 	</div>
 </section>
 <?php endif; ?>
 
-<?php
-/* KHONG cắm cac block dung chung trang chu (vi sao chon / dau bao / testimonials / FAQ) vao day
-   nua (Hieu 2026-07-16): 8 trang dich vu lap y het nhau -> trung lap/boilerplate, loang do doc nhat.
-   Trang dich vu chi giu noi dung RIENG: hero + "... la gi" + bang gia + noi dung bai + form.
-   Cac block dung chung van song o trang chu (front-page.php). */
-?>
+<!-- FAQ -->
+<?php if ( $dgc_faqs ) : ?>
+<section class="sg-sec" id="faq">
+	<div class="wrap sg-head--split" style="align-items:start">
+		<div>
+			<span class="sg-eyebrow">Hỏi đáp</span>
+			<h2 class="sg-h">Câu hỏi <em>thường gặp</em></h2>
+			<p class="sg-lead">Chưa thấy câu trả lời bạn cần? Gọi <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:var(--sg-blue);font-weight:700"><?php echo esc_html( dgc( 'hotline' ) ); ?></a> hoặc gửi yêu cầu ở cuối trang.</p>
+		</div>
+		<div class="sg-faq">
+			<?php foreach ( $dgc_faqs as $f ) : ?>
+				<details><summary><?php echo esc_html( $f[0] ); ?></summary><div class="a"><?php echo esc_html( $f[1] ); ?></div></details>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
 
-<?php
-/* FAQ RIENG cho dich vu nay (option svc_faqs, khop slug hien tai) - dat truoc form bao gia
-   de giai dap ban khoan roi moi moi de lai thong tin. Co schema FAQPage. Trang khong co
-   dong svc_faqs khop slug -> khong render (khong boilerplate). */
-include get_template_directory() . '/inc/svc-faq.php';
-?>
-
-<section class="sec">
+<!-- DICH VU CUNG NHOM -->
+<?php if ( $dgc_rel ) : ?>
+<section class="sg-sec sg-sec--tight sg-sec--grey">
 	<div class="wrap">
-		<div class="row" style="gap:30px;align-items:flex-start">
-			<div class="col">
-				<img
-					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-' . ( ( get_the_ID() % 6 ) + 1 ) . '-800.jpg?v=2' ); ?>"
-					alt="Nhóm làm việc tại văn phòng agency truyền thông"
-					width="800" height="533"
-					style="width:100%;height:auto;border-radius:var(--r-md);box-shadow:var(--sh-low);display:block;margin-bottom:22px"
-					loading="lazy"
-				>
-				<span class="eyebrow">Báo giá</span>
-				<h2>Nhận tư vấn &amp; báo giá <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2>
-				<p class="muted">Mỗi dự án có nhu cầu khác nhau. Để lại thông tin, DigicomVN sẽ tư vấn giải pháp và gửi báo giá phù hợp.</p>
-				<ul class="page-content" style="font-size:15.5px"><li>Tư vấn miễn phí, không ràng buộc.</li><li>Báo giá rõ ràng theo phạm vi công việc.</li><li>Đội ngũ chuyên môn, có cam kết tiến độ.</li></ul>
+		<div class="sg-head">
+			<span class="sg-eyebrow"><?php echo esc_html( $dgc_group ); ?></span>
+			<h2 class="sg-h">Dịch vụ <em>liên quan</em></h2>
+		</div>
+		<div class="sg-related">
+			<?php foreach ( array_slice( $dgc_rel, 0, 4 ) as $s ) : ?>
+				<a class="sg-card" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
+					<h3><?php echo esc_html( $s[0] ); ?></h3>
+					<span class="sg-more">Xem chi tiết <?php echo dgc_arrow(); ?></span>
+				</a>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<!-- LIEN HE -->
+<section class="sg-sec" id="lien-he">
+	<div class="wrap">
+		<div class="sg-contact">
+			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-' . ( ( get_the_ID() % 6 ) + 1 ) . '-800.jpg?v=2' ); ?>')">
+				<span class="sg-eyebrow">Báo giá</span>
+				<h2>Nhận tư vấn và <em>báo giá</em> <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2>
+				<p>Để lại thông tin, DigicomVN tư vấn phương án phù hợp và gửi báo giá chi tiết theo phạm vi công việc. Tư vấn miễn phí, không ràng buộc.</p>
+				<p>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong><?php echo esc_html( dgc( 'hotline' ) ); ?></strong></a></p>
 			</div>
-			<div class="col"><?php
+			<div class="sg-contact-form"><?php
 				$dgc_form_title   = 'Nhận báo giá';
 				$dgc_form_btn     = 'Gửi yêu cầu báo giá';
 				$dgc_form_service = '';
-				$dgc_cur_path = trailingslashit( wp_parse_url( get_permalink(), PHP_URL_PATH ) );
 				foreach ( dgc_service_links() as $sl ) {
-					if ( $sl[1] === $dgc_cur_path ) { $dgc_form_service = $sl[0]; break; }
+					if ( $sl[1] === $dgc_path ) { $dgc_form_service = $sl[0]; break; }
 				}
 				include get_template_directory() . '/inc/form-lead.php';
 			?></div>
@@ -184,12 +212,10 @@ include get_template_directory() . '/inc/svc-faq.php';
 	</div>
 </section>
 
-<?php /* Hieu 28/10 "lam sau, co trong diem": bo dai CTA lap ngay duoi form (nut tro nguoc len chinh form). */ ?>
-
-<?php if ( get_the_content() ) : /* Hieu 27/10: trang dich vu la landing - bai kien thuc dua xuong cuoi, thu gon, bam de doc tiep */ ?>
-<section class="sec svc-knowledge"><div class="wrap">
-	<div class="svc-knowledge-head"><span class="eyebrow">Tìm hiểu thêm</span><h2>Kiến thức về <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2></div>
-	<div class="page-content svc-body is-clamped" id="svc-knowledge-body"><?php the_content(); ?></div>
+<?php if ( get_the_content() ) : /* Hieu 27/10: bai kien thuc dua xuong cuoi, thu gon, bam de doc tiep */ ?>
+<section class="sg-sec sg-sec--cyan svc-knowledge"><div class="wrap">
+	<div class="sg-head"><span class="sg-eyebrow">Tìm hiểu thêm</span><h2 class="sg-h">Kiến thức về <em><?php echo esc_html( mb_strtolower( $svc_name ) ); ?></em></h2></div>
+	<div class="page-content sg-article svc-body is-clamped" id="svc-knowledge-body"><?php the_content(); ?></div>
 	<div class="svc-knowledge-more"><button type="button" class="btn btn-ghost" data-knowledge-toggle aria-controls="svc-knowledge-body" aria-expanded="false">Đọc toàn bộ hướng dẫn</button></div>
 </div></section>
 <?php endif; ?>

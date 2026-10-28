@@ -31,13 +31,12 @@ $dgc_tm_table = function ( $rows, $caption ) {
 	<?php
 };
 ?>
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Tên miền</nav></div>
-
-<section class="page-hero">
-	<div class="wrap" style="max-width:900px">
-		<span class="eyebrow">Tên miền</span>
+<section class="sg-phero sg-phero--solo">
+	<div class="wrap">
+		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <span>Tên miền</span></nav>
+		<span class="sg-eyebrow">Tên miền</span>
 		<h1><?php echo esc_html( get_the_title() ?: 'Đăng ký tên miền' ); ?></h1>
-		<p class="lead">Kiểm tra tên miền còn trống, đăng ký .vn, .com.vn, .com và hơn 40 đuôi khác. DigicomVN tư vấn chọn tên miền phù hợp thương hiệu và kế hoạch SEO, hỗ trợ trỏ DNS, gắn hosting và chuyển tên miền về quản lý.</p>
+		<p class="sg-lead">Kiểm tra tên miền còn trống, đăng ký .vn, .com.vn, .com và hơn 40 đuôi khác. DigicomVN tư vấn chọn tên miền phù hợp thương hiệu và kế hoạch SEO, hỗ trợ trỏ DNS, gắn hosting và chuyển tên miền về quản lý.</p>
 		<div class="search-card tm-search" style="margin-top:24px">
 			<form class="search-box" id="tm-check" autocomplete="off">
 				<input type="text" name="d" placeholder="Nhập tên miền, ví dụ: thuonghieu.vn" aria-label="Tên miền cần kiểm tra" required>

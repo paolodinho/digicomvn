@@ -16,14 +16,13 @@ $dgc_hg_desc = array(
 	'Hosting WordPress hiệu năng cao' => 'Nhiều website WordPress lớn chạy trên cùng một gói tài nguyên mạnh.',
 );
 ?>
-<div class="wrap"><nav class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a><span class="sep">/</span> Hosting</nav></div>
-
-<section class="page-hero">
-	<div class="wrap" style="max-width:900px">
-		<span class="eyebrow">Web Hosting</span>
+<section class="sg-phero sg-phero--solo">
+	<div class="wrap">
+		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <a href="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>">Tên miền, hosting &amp; công cụ</a> / <span>Hosting</span></nav>
+		<span class="sg-eyebrow">Web Hosting</span>
 		<h1><?php echo esc_html( get_the_title() ?: 'Hosting giá rẻ, tốc độ cao' ); ?></h1>
-		<p class="lead">Hosting chạy LiteSpeed, chứng chỉ SSL miễn phí, có sao lưu dữ liệu, giá từ 16.000đ/tháng. DigicomVN tư vấn chọn gói đúng nhu cầu, cài đặt WordPress, trỏ tên miền và cấu hình tốc độ tải trang cho SEO.</p>
-		<div class="cta-actions" style="margin-top:22px"><a class="btn btn-primary" href="#bang-gia">Xem bảng giá hosting</a><a class="btn btn-ghost" href="#lien-he" data-order="Cần tư vấn chọn gói hosting" data-svc="Hosting">Nhờ tư vấn chọn gói</a></div>
+		<p class="sg-lead">Hosting chạy LiteSpeed, chứng chỉ SSL miễn phí, có sao lưu dữ liệu, giá từ 16.000đ/tháng. DigicomVN tư vấn chọn gói đúng nhu cầu, cài đặt WordPress, trỏ tên miền và cấu hình tốc độ tải trang cho SEO.</p>
+		<div class="sg-hero-cta"><a class="sg-btn sg-btn--light" href="#bang-gia"><?php echo dgc_arrow(); ?>Xem bảng giá hosting</a><a class="sg-btn sg-btn--line" href="#lien-he" data-order="Cần tư vấn chọn gói hosting" data-svc="Hosting"><?php echo dgc_arrow(); ?>Nhờ tư vấn chọn gói</a></div>
 	</div>
 </section>
 

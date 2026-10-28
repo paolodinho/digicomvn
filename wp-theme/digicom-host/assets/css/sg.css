@@ -404,3 +404,41 @@ a.sg-card--feat:hover{border-color:transparent}
 .tm-na{font-size:13px;color:var(--ink-soft);text-align:center}
 .tm-note{margin:10px 2px 0;font-size:13px;color:var(--ink-soft)}
 @media(max-width:560px){.tm-row{grid-template-columns:minmax(0,1fr) auto;row-gap:6px;padding:12px 14px}.tm-d{grid-column:1/-1}.tm-price{text-align:left}.tm-row.is-taken{grid-template-columns:1fr}}
+
+/* ---------- Landing dich vu tpl-service (2026-10-28): the bang gia hero + khoi dung chung ---------- */
+.sg-pboard h2{margin-bottom:12px}
+.sg-pboard-stats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px!important;margin:0 0 14px!important}
+.sg-pboard-stats div{display:block!important;border:0!important;padding:12px 10px!important;background:var(--sg-cyan);border-radius:10px;text-align:center}
+.sg-pboard-stats dt{font-size:12px;font-weight:600;color:var(--sg-soft);text-transform:uppercase;letter-spacing:.04em}
+.sg-pboard-stats dd{font-size:20px;font-weight:800;color:var(--sg-blue);margin-top:4px}
+.sg-pboard-rows{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.sg-pboard-rows li{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--sg-line);font-size:14.5px}
+.sg-pboard-rows .n{font-weight:700;color:var(--sg-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sg-pboard-rows .dr{font-size:12px;font-weight:700;color:var(--sg-blue);background:rgba(13,83,240,.08);border-radius:999px;padding:2px 9px}
+.sg-pboard-rows .p{font-weight:700;color:var(--sg-ink);white-space:nowrap}
+.sg-pboard-foot{margin:12px 0 0;font-size:13.5px;color:var(--sg-soft)}
+.sg-pboard-foot a{color:var(--sg-blue);font-weight:700}
+.sg-steps--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sg-inc .sec,.sg-inc .sec-tight{padding:88px 0;background:#fff!important;border:0!important}
+.sg-inc .sec#bang-gia{background:var(--sg-grey)!important}
+.sg-inc .sec-tight{padding:72px 0}
+.sg-inc .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sg-blue);background:none;padding:0;border:0}
+.sg-inc .eyebrow:before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+.sg-inc h2{font-size:clamp(24px,3vw,36px);line-height:1.22;font-weight:800;text-transform:uppercase;color:var(--sg-ink);text-wrap:balance}
+.sg-inc .price-table-cpt,.sg-inc .grid-wrap{border-radius:var(--sg-r)}
+.svc-knowledge .sg-article{max-width:860px}
+@media (max-width:1100px){.sg-steps--4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.sg-steps--4{grid-template-columns:minmax(0,1fr)}.sg-pboard-rows li{grid-template-columns:minmax(0,1fr) auto}.sg-pboard-rows .dr{display:none}.sg-inc .sec,.sg-inc .sec-tight{padding:56px 0}.sg-pboard-stats dd{font-size:17px}}
+/* Landing template rieng: booking-bao-pr, ten-mien, hosting (body.sg-legacy, 2026-10-28) */
+.sg-phero--solo .wrap>*{max-width:980px}
+.sg-phero .sg-hero-cta{margin-bottom:18px}
+.sg-hero-note{margin:0;font-size:14px;color:#C9D6F5}
+.sg-hero-note a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.sg-legacy .sec{padding:88px 0;background:#fff;border:0!important}
+.sg-legacy .sec[style*="surface-2"],.sg-legacy .sec.svc-knowledge{background:var(--sg-cyan)!important}
+.sg-legacy .sec#bang-gia{background:var(--sg-grey)!important}
+.sg-legacy .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sg-blue);background:none;padding:0;border:0}
+.sg-legacy .eyebrow:before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+.sg-legacy main h2,.sg-legacy .sec h2{font-size:clamp(24px,3vw,36px);line-height:1.22;font-weight:800;text-transform:uppercase;color:var(--sg-ink);text-wrap:balance}
+.sg-legacy .sg-phero .tm-search,.sg-legacy .sg-phero form{margin-top:8px}
+@media (max-width:640px){.sg-legacy .sec{padding:56px 0}}

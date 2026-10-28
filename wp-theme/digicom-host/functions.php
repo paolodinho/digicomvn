@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.16.4');
+define('DGC_VER','3.16.6');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -393,6 +393,12 @@ function dgc_is_booking_context() {
 	}
 	return false;
 }
+
+/** Trang dich vu template rieng (booking, ten mien, hosting): ap giao dien sg cho cac section cu (sg.css .sg-legacy). */
+add_filter( 'body_class', function ( $c ) {
+	if ( is_page_template( 'page-booking-bao-pr.php' ) || is_page( array( 'ten-mien', 'hosting' ) ) ) $c[] = 'sg-legacy';
+	return $c;
+} );
 
 /** Category archive -> money page tuong ung (label | URL). */
 function dgc_cat_money_link( $cat ) {

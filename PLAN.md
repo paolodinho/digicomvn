@@ -2,10 +2,11 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: xong
-- Đã xong 28/10: CTA/cấu trúc link theo nhiều dịch vụ (DGC_VER 3.16.4) - bảng cụm->dịch vụ dgc_cluster_service() trong functions.php; CTA cuối bài, chuyên mục, sidebar, schema theo cụm; /dat-bai/ = "Nhận báo giá dịch vụ" + ?dv= chọn sẵn; ưu đãi booking chỉ ở trang booking; 19 link bài SEO sửa; menu Blog +9 chuyên mục SEO; slogan mới.
-- Backup: ~/Claude-Workspace/_backups/routines/2026-10-28/cta-structure/ ; host ~/backups/2026-10-28/{cta-structure,relink-seo}
-- Cập nhật lúc: 2026-10-28
+- Task: xong - chuyển 16 landing dịch vụ sang giao diện sg (seongon), DGC_VER 3.16.6
+- Đã xong: tpl-service.php viết lại (13 trang: dich-vu-backlink, mua-textlink, guest-post, backlink-social-entity, backlink-quoc-te, booking-truyen-hinh, dich-vu-toplist, quang-cao-phat-thanh, bat-dong-san, booking-fanpage, booking-kol-koc, phan-mem-seo, khoa-hoc-seo); page-booking-bao-pr.php, page-ten-mien.php, page-hosting.php đổi hero sg-phero + body class sg-legacy (sg.css). Live, 0 overflow mobile 6 URL.
+- Backup: ~/Claude-Workspace/_backups/routines/2026-10-28/svc-landing/ và svc-landing-2/
+- Tiếp theo: không có
+- Cập nhật lúc: 2026-10-28 09:36
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
