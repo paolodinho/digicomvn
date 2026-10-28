@@ -442,3 +442,12 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-legacy main h2,.sg-legacy .sec h2{font-size:clamp(24px,3vw,36px);line-height:1.22;font-weight:800;text-transform:uppercase;color:var(--sg-ink);text-wrap:balance}
 .sg-legacy .sg-phero .tm-search,.sg-legacy .sg-phero form{margin-top:8px}
 @media (max-width:640px){.sg-legacy .sec{padding:56px 0}}
+/* Huong dan dat hang (inc/order-guide.php) - so dac trong o tron, khong dung so vien rong (Hieu 28/10) */
+.sg-stepno{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:var(--sg-blue);color:#fff;font-size:18px;font-weight:800;line-height:1;margin-bottom:18px}
+.sg-steps--order>li:nth-child(even) .sg-stepno{background:var(--sg-mint);color:#0A2A6B}
+.sg-order-help{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:28px 32px;border-radius:var(--sg-r);background:var(--sg-cyan)}
+.sg-order-help>div:first-child{flex:1 1 440px;min-width:0}
+.sg-order-help h3{font-size:19px;font-weight:800;color:var(--sg-ink);margin:0 0 6px}
+.sg-order-help p{margin:0;color:var(--sg-soft);font-size:15px;line-height:1.65}
+.sg-order-help-cta{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:640px){.sg-order-help{padding:22px 20px}.sg-order-help-cta,.sg-order-help-cta .sg-btn{width:100%}}

@@ -43,34 +43,32 @@ if ( ! empty( $dgc_media ) ) {
 	$dgc_og_help = 'Mỗi sản phẩm, mỗi tệp khách hàng hợp với một kênh và khung giờ khác nhau. Gọi hotline hoặc nhắn Zalo, DigicomVN tư vấn miễn phí phương án phù hợp với ngân sách của bạn.';
 }
 ?>
-<section class="sec" id="huong-dan-dat" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="sg-sec" id="huong-dan-dat">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:26px">
-			<span class="eyebrow">Hướng dẫn đặt hàng</span>
-			<h2>Đặt <?php echo esc_html( $dgc_og_ctx ?: 'dịch vụ' ); ?> tại DigicomVN thế nào?</h2>
-			<p class="muted" style="font-size:14.5px">Bốn bước, không cần hợp đồng dài dòng. Bạn theo dõi được tiến độ ở từng bước.</p>
+		<div class="sg-head">
+			<span class="sg-eyebrow">Hướng dẫn đặt hàng</span>
+			<h2 class="sg-h">Đặt <?php echo esc_html( $dgc_og_ctx ?: 'dịch vụ' ); ?> tại DigicomVN thế&nbsp;nào?</h2>
+			<p class="sg-lead">Bốn bước, không cần hợp đồng dài dòng. Bạn theo dõi được tiến độ ở từng bước.</p>
 		</div>
 
-		<ol class="order-steps">
+		<ol class="sg-steps sg-steps--4 sg-steps--order">
 			<?php foreach ( $dgc_og_steps as $i => $s ) : ?>
-			<li class="order-step">
-				<span class="order-step-num"><?php echo (int) ( $i + 1 ); ?></span>
-				<div>
-					<h3><?php echo $s['title']; // phpcs:ignore - chuoi tinh, co entity &amp; ?></h3>
-					<p><?php echo $s['desc']; // phpcs:ignore ?></p>
-				</div>
+			<li>
+				<span class="sg-stepno" aria-hidden="true"><?php echo (int) ( $i + 1 ); ?></span>
+				<h3><?php echo $s['title']; // phpcs:ignore - chuoi tinh, co entity &amp; ?></h3>
+				<p><?php echo $s['desc']; // phpcs:ignore ?></p>
 			</li>
 			<?php endforeach; ?>
 		</ol>
 
-		<div class="order-help">
-			<div class="order-help-txt">
+		<div class="sg-order-help">
+			<div>
 				<h3><?php echo esc_html( $dgc_og_help_h ); ?></h3>
 				<p><?php echo esc_html( $dgc_og_help ); ?></p>
 			</div>
-			<div class="order-help-actions">
-				<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-				<a class="btn btn-zalo" href="https://zalo.me/<?php echo esc_attr( $dgc_og_zalo ); ?>" target="_blank" rel="noopener">Nhắn Zalo</a>
+			<div class="sg-order-help-cta">
+				<a class="sg-btn sg-btn--ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo dgc_arrow(); ?>Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+				<a class="sg-btn" href="https://zalo.me/<?php echo esc_attr( $dgc_og_zalo ); ?>" target="_blank" rel="noopener"><?php echo dgc_arrow(); ?>Nhắn Zalo</a>
 			</div>
 		</div>
 	</div>
