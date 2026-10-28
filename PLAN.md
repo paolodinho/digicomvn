@@ -2,8 +2,11 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: xong (rà toàn site 28/10: on-page, tốc độ, link nội bộ, báo giá backlink, viết lại /bai-pr-mau/ - file tổng quan W26, W27, N12 Đã xong)
-- Cập nhật lúc: 2026-10-28 11:50
+- Task: báo giá PR cho khách Hannah (tổng thầu EPC điện mặt trời) - ĐÃ SOẠN XONG 28/10
+- Đã xong: 2 file /Volumes/Extreme SSD/Projects/digicom/11-bao-gia-khach/(NOIBO-)Bao-Gia-PR-Tong-Thau-EPC-Dien-Mat-Troi-2026-10-28.xlsx; Google Sheet khách https://docs.google.com/spreadsheets/d/17s_MMDs4lf6P5tuUrLTpOx-dcjPB3OcOtvtqv9QGNPU/edit (ai có link xem được), NOIBO https://docs.google.com/spreadsheets/d/1-3Npm8iXHwhMIpLgXoZA2NSetLbb5Tk9rvQ7zs31t9A/edit; dòng 1 tab Báo giá khách hàng file tổng quan. Nguồn Goodcom tab "Điện Cáp mặt trời_ 28.10.2026" x1,10.
+- Tiếp theo: CHỜ Hiếu - gửi khách; hỏi Goodcom giá Tạp chí Công Thương (khách hỏi dofollow) rồi bổ sung dòng.
+- Script dựng: scratchpad phiên 28/10 build_epc.py (tạm).
+- Cập nhật lúc: 2026-10-28 20:55
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
