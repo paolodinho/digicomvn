@@ -2,11 +2,11 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: xong - 16 landing sang giao diện sg + khối hướng dẫn đặt hàng bỏ số viền rỗng (DGC_VER 3.16.7, commit 3c772c3)
-- Đã xong: tpl-service.php viết lại (13 trang: dich-vu-backlink, mua-textlink, guest-post, backlink-social-entity, backlink-quoc-te, booking-truyen-hinh, dich-vu-toplist, quang-cao-phat-thanh, bat-dong-san, booking-fanpage, booking-kol-koc, phan-mem-seo, khoa-hoc-seo); page-booking-bao-pr.php, page-ten-mien.php, page-hosting.php đổi hero sg-phero + body class sg-legacy (sg.css). Live, 0 overflow mobile 6 URL.
-- Backup: ~/Claude-Workspace/_backups/routines/2026-10-28/svc-landing/ và svc-landing-2/
-- Tiếp theo: không có
-- Cập nhật lúc: 2026-10-28 09:36
+- Task: rà toàn site 28/10 (on-page, tốc độ, link nội bộ, từ khoá, viết bài) - Hiếu giao, ghi file tổng quan W26, W27, N7
+- Đã xong: meta-qa + schema 228 URL 0 lỗi; 41 logo báo + 6 ảnh đội ngũ sang WebP (DGC_VER 3.16.8); 12 link nội bộ về booking-fanpage/kol-koc/truyen-hinh/backlink-quoc-te (backup host ~/backups/2026-10-28/il/); bảng "Báo giá backlink theo loại" trên /dich-vu-backlink/ (inc/backlink-price-overview.php); meta desc page 268, 505. Commit 01d98dc đã push.
+- Đang làm: agent nền viết/tối ưu /bai-pr-mau/ cho "những mẫu bài pr hay" (2.900/tháng), backup ~/Claude-Workspace/_backups/routines/2026-10-28/bai-pr-mau/
+- Tiếp theo: kiểm bài agent đăng (QA mobile, list-semantic), cập nhật dòng N7 file tổng quan sang Đã xong
+- Cập nhật lúc: 2026-10-28 11:23
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
