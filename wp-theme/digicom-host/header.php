@@ -21,7 +21,7 @@
 <?php $dgc_wm_logo = dgc_logo_url(); ?>
 <div class="brand-watermark" aria-hidden="true" data-brand-watermark>
 	<?php if ( $dgc_wm_logo ) : ?>
-		<img src="<?php echo esc_url( $dgc_wm_logo ); ?>" alt="">
+		<img src="<?php echo esc_url( $dgc_wm_logo ); ?>" alt="" loading="lazy" decoding="async">
 	<?php else : ?>
 		<span>DigicomVN</span>
 	<?php endif; ?>

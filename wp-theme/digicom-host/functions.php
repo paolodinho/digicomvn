@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.16.0');
+define('DGC_VER','3.16.1');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -27,6 +27,28 @@ add_action( 'after_setup_theme', function () {
 } );
 
 /* ---------------------------------------------------------------------------
+ * Toc do (2026-10-28): Google Fonts nap khong chan hien thi (display=swap nen chu hien
+ * ngay bang font he thong roi doi), preconnect, bo jquery-migrate o frontend, sizes logo.
+ * ------------------------------------------------------------------------- */
+add_filter( 'style_loader_tag', function ( $tag, $handle ) {
+	if ( 'dgc-fonts' !== $handle || is_admin() ) return $tag;
+	$async = str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $tag );
+	return $async . '<noscript>' . $tag . '</noscript>';
+}, 10, 2 );
+add_action( 'wp_head', function () {
+	echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+}, 1 );
+add_action( 'wp_default_scripts', function ( $scripts ) {
+	if ( is_admin() || empty( $scripts->registered['jquery'] ) ) return;
+	$scripts->registered['jquery']->deps = array_diff( $scripts->registered['jquery']->deps, array( 'jquery-migrate' ) );
+} );
+add_filter( 'get_custom_logo_image_attributes', function ( $attr ) {
+	$attr['sizes'] = '160px';
+	return $attr;
+} );
+
+/* ---------------------------------------------------------------------------
  * Assets
  * ------------------------------------------------------------------------- */
 add_action( 'wp_enqueue_scripts', function () {
@@ -37,9 +59,14 @@ add_action( 'wp_enqueue_scripts', function () {
 		'https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap',
 		array(), null
 	);
-	wp_enqueue_style( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', array(), '2.3.4' );
-	wp_enqueue_style( 'owl-theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css', array( 'owl-carousel' ), '2.3.4' );
-	wp_enqueue_style( 'dgc-main', get_template_directory_uri() . '/assets/css/main.css', array( 'dgc-fonts', 'owl-theme' ), DGC_VER );
+	// Toc do 2026-10-28: CSS Owl (4KB) in thang vao <head> thay vi 2 file CDN chan hien thi.
+	wp_register_style( 'dgc-owl', false, array(), null );
+	wp_enqueue_style( 'dgc-owl' );
+	foreach ( array( 'owl.carousel.min.css', 'owl.theme.default.min.css' ) as $dgc_owl_f ) {
+		$dgc_owl_css = @file_get_contents( get_template_directory() . '/assets/vendor/' . $dgc_owl_f );
+		if ( $dgc_owl_css ) wp_add_inline_style( 'dgc-owl', $dgc_owl_css );
+	}
+	wp_enqueue_style( 'dgc-main', get_template_directory_uri() . '/assets/css/main.css', array( 'dgc-owl' ), DGC_VER );
 	// Lop giao dien seongon (2026-10-28): nap sau main.css, chi ghi de. Rollback = bo dong nay.
 	wp_enqueue_style( 'dgc-sg', get_template_directory_uri() . '/assets/css/sg.css', array( 'dgc-main' ), DGC_VER );
 
@@ -765,6 +792,15 @@ add_action( 'template_redirect', function () {
 		'/dich-vu-entity/'  => '/backlink-social-entity/',
 		'/backlink-social/' => '/backlink-social-entity/',
 		'/dich-vu/dich-vu-backlink/bat-dong-san/' => '/backlink-bat-dong-san/',
+		/* URL site agency cu con luot hien GSC (ra soat 2026-10-28) */
+		'/back-link/backlink-social-2/' => '/backlink-social-entity/',
+		'/back-link/dich-vu-entity-2/'  => '/backlink-social-entity/',
+		'/blog-hub/'                    => '/blog/',
+		'/blog/doi-ngu-giau-kinh-nghiem/' => '/ve-digicom/',
+		'/blog/thiet-ke-website/'       => '/blog/',
+		'/blog/toi-uu-chuan-seo/'       => '/dich-vu-seo/',
+		'/dich-vu-backlink-tong-quan/'  => '/dich-vu-backlink/',
+		'/kim-tu-thap-nguoc-viet-bai-pr-cau-truc-va-cach-ap/' => '/kim-tu-thap-nguoc-trong-viet-bai-pr/',
 	);
 	$dgc_p = untrailingslashit( $path ) . '/';
 	if ( isset( $dgc_gop[ $dgc_p ] ) ) {
@@ -775,7 +811,7 @@ add_action( 'template_redirect', function () {
 	/* Trang con dau bao cu /booking-bao-pr/<bao>/ -> bai blog "book-bao-<bao>" (chuyen doi
 	   2026-07-16: bao gia booking le tung bao chuyen thanh bai blog + shortcode bang gia).
 	   Chi fire khi trang cu da draft (404). Khong co bai -> ve pillar. */
-	if ( preg_match( '#^/booking-bao-pr/([a-z0-9-]+)/?$#', $path, $m ) ) {
+	if ( preg_match( '#^(?:/dich-vu)?/booking-bao-pr/([a-z0-9-]+)/?$#', $path, $m ) && 'publish' !== get_post_status( get_page_by_path( 'booking-bao-pr/' . $m[1] ) ) ) {
 		$dgc_bb_post = get_page_by_path( 'book-bao-' . $m[1], OBJECT, 'post' );
 		if ( $dgc_bb_post && 'publish' === $dgc_bb_post->post_status ) {
 			wp_safe_redirect( get_permalink( $dgc_bb_post ), 301 );

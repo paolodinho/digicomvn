@@ -25,7 +25,7 @@
 			<div>
 				<?php $dgc_logo = dgc_logo_url_light(); ?>
 				<?php if ( $dgc_logo ) : ?>
-					<img class="footer-logo" src="<?php echo esc_url( $dgc_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+					<img class="footer-logo" loading="lazy" decoding="async" src="<?php echo esc_url( $dgc_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 				<?php else : ?>
 					<div class="brand" style="color:#fff">DigicomVN<span class="dot" style="color:var(--action)">.</span></div>
 				<?php endif; ?>

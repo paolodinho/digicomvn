@@ -208,9 +208,14 @@ add_filter( 'wp_sitemaps_posts_query_args', function ( $args, $post_type ) {
  * ========================================================================= */
 
 add_filter( 'document_title_parts', function ( $parts ) {
-	if ( ! is_singular() ) return $parts;
-	$own = trim( (string) get_post_meta( get_queried_object_id(), 'dgc_seo_title', true ) );
-	if ( $own !== '' ) $parts['title'] = $own;
+	if ( is_singular() ) {
+		$own = trim( (string) get_post_meta( get_queried_object_id(), 'dgc_seo_title', true ) );
+		if ( $own !== '' ) $parts['title'] = $own;
+	}
+	/* Tieu de dai > 50 ky tu: bo duoi "- DigicomVN" de Google khong cat ngang (~60 ky tu) */
+	if ( isset( $parts['title'] ) && mb_strlen( wp_strip_all_tags( html_entity_decode( $parts['title'] ) ) ) > 50 ) {
+		unset( $parts['site'], $parts['tagline'] );
+	}
 	return $parts;
 }, 6 );
 

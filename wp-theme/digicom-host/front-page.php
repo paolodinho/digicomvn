@@ -38,8 +38,8 @@ $dgc_svg = function ( $d ) {
 			</div>
 			<div class="sg-hero-media">
 				<img
-					src="<?php echo esc_url( $dgc_img . 'hero-team-1280.jpg?v=2' ); ?>"
-					srcset="<?php echo esc_url( $dgc_img . 'hero-team-640.jpg?v=2' ); ?> 640w, <?php echo esc_url( $dgc_img . 'hero-team-960.jpg?v=2' ); ?> 960w, <?php echo esc_url( $dgc_img . 'hero-team-1280.jpg?v=2' ); ?> 1280w"
+					src="<?php echo esc_url( $dgc_img . 'hero-team-1280.webp' ); ?>"
+					srcset="<?php echo esc_url( $dgc_img . 'hero-team-640.webp' ); ?> 640w, <?php echo esc_url( $dgc_img . 'hero-team-960.webp' ); ?> 960w, <?php echo esc_url( $dgc_img . 'hero-team-1280.webp' ); ?> 1280w"
 					sizes="(max-width: 900px) 100vw, 42vw" width="1280" height="767"
 					alt="Đội ngũ DigicomVN trao đổi kế hoạch SEO tại văn phòng" fetchpriority="high">
 				<div class="sg-float"><b>6 hạng mục</b>mỗi dự án SEO đều có đầu ra bàn giao kiểm tra được</div>
@@ -73,7 +73,7 @@ $dgc_svg = function ( $d ) {
 			<a class="sg-btn sg-btn--ghost" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>"><?php echo dgc_arrow(); // phpcs:ignore ?>Tìm hiểu về DigicomVN</a>
 		</div>
 		<div class="sg-about-media">
-			<img src="<?php echo esc_url( $dgc_img . 'team-digicom-1400.jpg' ); ?>" width="1400" height="933" loading="lazy" alt="Đội ngũ DigicomVN">
+			<img src="<?php echo esc_url( $dgc_img . 'team-digicom-1400.webp' ); ?>" srcset="<?php echo esc_url( $dgc_img . 'team-digicom-700.webp' ); ?> 700w, <?php echo esc_url( $dgc_img . 'team-digicom-1400.webp' ); ?> 1400w" sizes="(max-width: 900px) 100vw, 50vw" width="1400" height="933" loading="lazy" decoding="async" alt="Đội ngũ DigicomVN">
 		</div>
 	</div>
 </section>
