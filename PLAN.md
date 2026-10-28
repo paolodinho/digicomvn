@@ -2,11 +2,8 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: rà toàn site 28/10 (on-page, tốc độ, link nội bộ, từ khoá, viết bài) - Hiếu giao, ghi file tổng quan W26, W27, N7
-- Đã xong: meta-qa + schema 228 URL 0 lỗi; 41 logo báo + 6 ảnh đội ngũ sang WebP (DGC_VER 3.16.8); 12 link nội bộ về booking-fanpage/kol-koc/truyen-hinh/backlink-quoc-te (backup host ~/backups/2026-10-28/il/); bảng "Báo giá backlink theo loại" trên /dich-vu-backlink/ (inc/backlink-price-overview.php); meta desc page 268, 505. Commit 01d98dc đã push.
-- Đang làm: agent nền viết/tối ưu /bai-pr-mau/ cho "những mẫu bài pr hay" (2.900/tháng), backup ~/Claude-Workspace/_backups/routines/2026-10-28/bai-pr-mau/
-- Tiếp theo: kiểm bài agent đăng (QA mobile, list-semantic), cập nhật dòng N7 file tổng quan sang Đã xong
-- Cập nhật lúc: 2026-10-28 11:23
+- Task: xong (rà toàn site 28/10: on-page, tốc độ, link nội bộ, báo giá backlink, viết lại /bai-pr-mau/ - file tổng quan W26, W27, N12 Đã xong)
+- Cập nhật lúc: 2026-10-28 11:50
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
