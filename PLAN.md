@@ -2,11 +2,10 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: báo giá PR cho khách Hannah (tổng thầu EPC điện mặt trời) - ĐÃ SOẠN XONG 28/10
-- Đã xong: 2 file /Volumes/Extreme SSD/Projects/digicom/11-bao-gia-khach/(NOIBO-)Bao-Gia-PR-Tong-Thau-EPC-Dien-Mat-Troi-2026-10-28.xlsx; Google Sheet khách https://docs.google.com/spreadsheets/d/17s_MMDs4lf6P5tuUrLTpOx-dcjPB3OcOtvtqv9QGNPU/edit (ai có link xem được), NOIBO https://docs.google.com/spreadsheets/d/1-3Npm8iXHwhMIpLgXoZA2NSetLbb5Tk9rvQ7zs31t9A/edit; dòng 1 tab Báo giá khách hàng file tổng quan. Nguồn Goodcom tab "Điện Cáp mặt trời_ 28.10.2026" x1,10.
-- Tiếp theo: CHỜ Hiếu - gửi khách; hỏi Goodcom giá Tạp chí Công Thương (khách hỏi dofollow) rồi bổ sung dòng.
-- Script dựng: scratchpad phiên 28/10 build_epc.py (tạm).
-- Cập nhật lúc: 2026-10-28 20:55
+- Task 1: báo giá PR khách Hannah (EPC điện mặt trời) - ĐÃ SOẠN XONG 28/10. Tiếp theo: CHỜ Hiếu gửi khách; hỏi Goodcom giá Tạp chí Công Thương rồi bổ sung. File: 11-bao-gia-khach/(NOIBO-)Bao-Gia-PR-Tong-Thau-EPC-Dien-Mat-Troi-2026-10-28.xlsx, Sheet khách https://docs.google.com/spreadsheets/d/17s_MMDs4lf6P5tuUrLTpOx-dcjPB3OcOtvtqv9QGNPU/edit
+- Task 2 (W17 file tổng quan): Google giữ tiêu đề rác cờ bạc từ hack 22/10 ("TKP303 Situs Game Online x Guest Post", "RRQ88 ... Backlink quốc tế"). 28/10: web thật sạch (quét 229 URL), đã đẩy 41 URL crawl 22-23/10 qua Indexing API (OK) + sitemap + hàng đợi gsc_index --force. Danh sách: scratchpad hack_urls.txt (cũng trong hàng đợi gsc_index site digicom).
+- Tiếp theo: Claude kiểm lại Google "site:digicomvn.com" (trình duyệt không đăng nhập) sau 3-7 ngày (~01-04/11).
+- Cập nhật lúc: 2026-10-28 22:05
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
