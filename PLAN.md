@@ -7,7 +7,8 @@
 - Tiếp theo: CHỜ Google crawl lại (3-7 ngày) - từ 01/11 kiểm "site:digicomvn.com" ở trình duyệt không đăng nhập; còn tiêu đề rác thì Hiếu bấm Yêu cầu lập chỉ mục tay 2 trang /guest-post/, /backlink-quoc-te/.
 - Task 3 (W28): GA4 traffic tăng - đã xong, phần lớn người thật VN (431 user/28 ngày), nghi bot ~13%. GSC: trang tăng mạnh nhất /thong-cao-bao-chi-xu-ly-khung-hoang/, /case-study/, /chien-dich-pr-an-tuong-viet-nam/; hiển thị tăng chủ yếu do từ cờ bạc (hack). ICD GA4 user ảo đã giao phiên ICD - SEO (fork).
 - Task 4 (N10): 29/10 05:58 chạy nền đo top 10 ẩn danh 170 từ còn thiếu của đợt 24/10 (248 từ, đợt đó dừng ở 13/248; 78 từ đã có SERP ở đợt khác). Thư mục 06-keyword/serp-con-lai-2026-10-29/ (kw.txt, run_loop.sh, serp.log, loop.pid). Dùng IP máy (ALLINTITLE_DIRECT=1), KHÔNG cần key proxy xoay; xếp hàng sau LOA/ICD bằng --wait-lock. Tiếp theo: đo xong gom cụm (mẫu serp-kp43-2026-10-24/gom_cum.py), ghi tab KH, tối ưu 16 trang có sẵn (N11).
-- Cập nhật lúc: 2026-10-29 06:00
+- Task 5 (T1-T7 tab KH, Hiếu duyệt 29/10): ĐÃ đổi tiêu đề live 29/10: /booking-bao-pr/ (475 seo title 'Dịch Vụ Book Báo, Booking Báo Chí PR - Bảng Giá 2026'), /bao-gia-dang-bai-pr-theo-dau-bao/ (1261 title+H1 'Báo Giá Đăng Bài PR 2026: Bảng Giá Từng Đầu Báo'), /booking-truyen-hinh/ (2107), /quang-cao-phat-thanh/ (2440); backup host ~/backups/titles-2026-10-29.tsv + post-1261-2026-10-29.html; GSC hàng đợi --force. Tiếp theo: nội dung theo cột J tab KH (T1 H2 book báo là gì, T2 mở bằng bảng giá, T3 H2 phóng sự, T5/T6 bảng giá VOV + H2 hình thức, T4 bài bảng giá QC VTV mới, T7 chờ SERP 'quảng cáo tvc').
+- Cập nhật lúc: 2026-10-29 06:20
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,
