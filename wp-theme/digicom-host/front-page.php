@@ -251,7 +251,7 @@ $dgc_others = array(
 		<div class="sg-press">
 			<?php foreach ( $dgc_mentions as $m ) :
 				$m_url = trim( $m[1] ?? '' ); $m_file = trim( $m[2] ?? '' );
-				$inner = $m_file ? '<img src="' . esc_url( content_url( 'uploads/press-logos/' . $m_file ) ) . '" alt="' . esc_attr( $m[0] ) . '" loading="lazy">' : '<span>' . esc_html( $m[0] ) . '</span>';
+				$inner = $m_file ? '<img src="' . esc_url( dgc_press_logo_url( $m_file ) ) . '" alt="' . esc_attr( $m[0] ) . '" loading="lazy">' : '<span>' . esc_html( $m[0] ) . '</span>';
 				if ( $m_url ) : ?>
 					<a href="<?php echo esc_url( $m_url ); ?>" target="_blank" rel="nofollow noopener" title="<?php echo esc_attr( $m[0] ); ?>"><?php echo $inner; // phpcs:ignore ?><small>Đọc bài &#8599;</small></a>
 				<?php else : ?>
@@ -325,7 +325,7 @@ if ( $news->have_posts() ) : ?>
 <section class="sg-sec">
 	<div class="wrap">
 		<div class="sg-contact">
-			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( $dgc_img . 'agency-team-1-800.jpg' ); ?>')">
+			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( $dgc_img . 'agency-team-1-800.webp' ); ?>')">
 				<span class="sg-eyebrow" style="color:var(--sg-mint)">Liên hệ</span>
 				<h2>Nhận <em>audit SEO</em> miễn phí cho website của bạn</h2>
 				<p>Gửi địa chỉ website và mục tiêu, DigicomVN kiểm tra hiện trạng rồi đề xuất việc nên làm trước, kèm phạm vi và chi phí.</p>

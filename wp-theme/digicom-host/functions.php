@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.16.7');
+define('DGC_VER','3.16.8');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -184,6 +184,15 @@ function dgc_em( $text ) {
 }
 
 /** Icon SVG nho dang mui ten cho nut .sg-btn */
+/** URL logo bao trong uploads/press-logos/: dung ban .webp cung ten neu co (nhe hon ~70%). */
+function dgc_press_logo_url( $file ) {
+	$file = trim( (string) $file );
+	if ( '' === $file ) return '';
+	$webp = preg_replace( '/\.(png|jpe?g)$/i', '.webp', $file );
+	if ( $webp !== $file && file_exists( WP_CONTENT_DIR . '/uploads/press-logos/' . $webp ) ) $file = $webp;
+	return content_url( 'uploads/press-logos/' . $file );
+}
+
 function dgc_arrow() {
 	return '<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>';
 }

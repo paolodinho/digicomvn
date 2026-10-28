@@ -10,7 +10,7 @@ if ( ! $press_list ) return;
 
 $press_chip = function ( $pp ) {
 	$logo_file = trim( $pp[1] ?? '' );
-	$logo_url  = $logo_file ? content_url( 'uploads/press-logos/' . $logo_file ) : '';
+	$logo_url  = $logo_file ? dgc_press_logo_url( $logo_file ) : '';
 	?>
 	<div class="press-chip">
 		<?php if ( $logo_url ) : ?>

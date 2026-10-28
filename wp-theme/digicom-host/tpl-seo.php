@@ -158,7 +158,7 @@ $dgc_check  = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" 
 <section class="sg-sec sg-sec--grey" id="lien-he">
 	<div class="wrap">
 		<div class="sg-contact">
-			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-1-800.jpg' ); ?>')">
+			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-1-800.webp' ); ?>')">
 				<span class="sg-eyebrow">Liên hệ</span>
 				<h2 class="sg-h">Nhận <em>audit SEO</em> miễn phí cho website của bạn</h2>
 				<p>Gửi địa chỉ website và mục tiêu, DigicomVN kiểm tra hiện trạng rồi đề xuất việc nên làm trước, kèm phạm vi và chi phí.</p>

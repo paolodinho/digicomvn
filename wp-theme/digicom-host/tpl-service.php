@@ -114,6 +114,9 @@ $GLOBALS['dgc_promo_done'] = true;
 /* "... la gi" (option svc_intros) -> bang gia -> huong dan dat 4 buoc. Cac file inc dung chung
    voi trang booking; giao dien sg ap qua .sg-inc trong sg.css. */
 include get_template_directory() . '/inc/svc-intro.php';
+if ( '/dich-vu-backlink/' === $dgc_path && empty( $dgc_h['count'] ) ) {
+	include get_template_directory() . '/inc/backlink-price-overview.php';
+}
 if ( $nhom ) {
 	include get_template_directory() . '/inc/service-pricing.php';
 	$dgc_og_ctx = $svc_name;
@@ -193,7 +196,7 @@ if ( $nhom ) {
 <section class="sg-sec" id="lien-he">
 	<div class="wrap">
 		<div class="sg-contact">
-			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-' . ( ( get_the_ID() % 6 ) + 1 ) . '-800.jpg?v=2' ); ?>')">
+			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-' . ( ( get_the_ID() % 6 ) + 1 ) . '-800.webp' ); ?>')">
 				<span class="sg-eyebrow">Báo giá</span>
 				<h2>Nhận tư vấn và <em>báo giá</em> <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2>
 				<p>Để lại thông tin, DigicomVN tư vấn phương án phù hợp và gửi báo giá chi tiết theo phạm vi công việc. Tư vấn miễn phí, không ràng buộc.</p>
