@@ -37,8 +37,11 @@
 
 - **"Giá DanaSEO báo"** = số trong sheet DanaSEO. DanaSEO còn CHIẾT KHẤU THÊM 10% cho Hiếu
   trên số này → **giá vốn thật = giá DanaSEO báo × 0.90**.
-- **Giá bán thật cho khách (nội bộ) = giá DanaSEO báo × 0.95** → lãi đúng 5% trên giá
-  DanaSEO báo (~5,56% trên giá vốn thật). Đây là con số DUY NHẤT cần giữ đúng khi tính toán.
+- **SỬA 2026-10-29 (Hiếu, báo giá Hannah): giá bán thật = GIÁ GỐC DanaSEO báo (không ×0,95)**
+  → lãi = 10% chiết khấu ngầm. **NCC khác (Media Việt Nam, Rise Media, Fame...) = giá họ báo
+  × 1,10.** Mỗi báo chọn phương án RẺ NHẤT cho khách giữa 2 cách tính, cùng quy cách (số link,
+  loại link, số chữ/ảnh). Thay cho dòng ×0,95 cũ bên dưới.
+- (Cũ, không dùng cho báo giá tay nữa) Giá bán = giá DanaSEO báo × 0.95.
 - **Báo giá mới và báo giá cũ (cùng đầu báo/vị trí) không được chênh lệch nhau** - đối chiếu
   lại số cũ trước khi gửi; lệch nhiều phải giải thích lý do, không im lặng đổi số.
 - Không áp dụng mục này cho giá hiển thị trên website (`dgc_gia` CPT) - nơi đó vẫn theo
