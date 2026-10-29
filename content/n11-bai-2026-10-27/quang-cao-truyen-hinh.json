@@ -1,54 +1,52 @@
 {
- "title": "Quảng Cáo Truyền Hình: Hình Thức, Giá VTV Và Quy Định 2026",
- "slug": "quang-cao-truyen-hinh",
- "meta_desc": "Quảng cáo truyền hình gồm 6 hình thức: TVC, tài trợ, phóng sự, logo, pop-up, chạy chữ. Cách tính giá quảng cáo trên VTV theo mã giờ và quy định mới 2026.",
- "excerpt": "6 hình thức quảng cáo truyền hình, cách đọc bảng giá quảng cáo trên VTV theo mã giờ và độ dài spot, ví dụ tính ngân sách, chọn đài trung ương hay địa phương, quy định Luật Quảng cáo sửa đổi từ 01/01/2026 và quy trình 6 bước.",
- "tu_khoa_chinh": "quảng cáo truyền hình",
- "tu_khoa_phu": [
-  "quảng cáo trên truyền hình",
-  "quảng cáo trên vtv",
-  "giá quảng cáo trên vtv",
-  "bảng giá quảng cáo truyền hình"
- ],
- "intent": "Informational + commercial nhẹ: top 10 (đo ẩn danh 24/10/2026) 'quảng cáo truyền hình' 6/8 là bài viết, 5 tiêu đề dạng câu hỏi 'là gì, các hình thức'; cụm 'quảng cáo trên vtv' 3/8 tiêu đề có 'giá/bảng giá', có trang chính thức TVAd. Người tìm muốn biết hình thức, giá VTV, cách triển khai.",
- "gap_doi_thu": [
-  "Bài bảng giá VTV top đầu chỉ đăng ảnh bảng giá, không nêu nguồn/hiệu lực, không giải thích mã giờ và hệ số 10/15/20/30 giây",
-  "Không bài nào cập nhật Điều 22 Luật Quảng cáo sửa đổi bởi Luật 75/2025/QH15 (ngắt quảng cáo mỗi 15 phút, chạy chữ <=10% màn hình, trần 10%/5%); bài có pháp lý còn dẫn Luật 2012 + NĐ 181/2013",
-  "Không có ví dụ tính ngân sách đợt phát sóng",
-  "Không mô tả quy trình duyệt mẫu (chuẩn HD, 16:9, phiếu đề nghị duyệt) và hồ sơ sản phẩm đặc biệt",
-  "Không bài nào nói về thông báo giá thay đổi liên tục và mã giờ không được book ngoài"
- ],
- "info_gain": [
-  "Đơn giá 6 mã giờ VTV1/2/3 x 4 độ dài lấy thẳng từ API bảng giá tvad.com.vn (truy cập 27/10/2026) + phát hiện hệ số 10s=50%, 15s=60%, 20s=75% giá 30s",
-  "Infographic 4 giới hạn mới Điều 22 theo văn bản gốc Luật 75/2025/QH15",
-  "Ví dụ tính ngân sách: VTV3 18h-19h spot 15s x 3 lần/tuần x 4 tuần = 164,16 triệu đồng theo đơn giá tra cứu",
-  "Quy trình 6 bước kèm văn bản kỹ thuật TVAd công bố (HD, 16:9, panel, pop-up, phiếu duyệt)",
-  "Bảng so sánh kênh trung ương / địa phương / trả tiền theo trần thời lượng luật định"
- ],
- "nguon": [
-  "Luật 75/2025/QH15 (PDF cổng TP Hà Nội): https://storage-vnportal.vnpt.vn/gov-hni/7218/VanBan/2025/7/30/LUẬT SỬA ĐỔI BỔ SUNG LUẬT QUẢNG CÁO.pdf",
-  "Luật Quảng cáo 16/2012/QH13: https://caselaw.vn/van-ban-phap-luat/115754-luat-quang-cao-so-16-2012-qh13-ngay-21-06-2012-cua-quoc-hoi",
-  "TVAd bảng giá (API GetChannelPriceList, trang ghi cập nhật 14/02/2025, truy cập 27/10/2026): https://tvad.com.vn/bang-gia",
-  "TVAd thông báo giá (TB104-TB133, 08-09/2026): https://tvad.com.vn/thong-bao-gia",
-  "TVAd quy trình duyệt mẫu: https://tvad.com.vn/quy-trinh-duyet-mau"
- ],
- "link_noi_bo": [
-  "https://digicomvn.com/quang-cao-tvc-la-gi/",
-  "https://digicomvn.com/booking-truyen-hinh/",
-  "https://digicomvn.com/booking-bao-pr/",
-  "https://digicomvn.com/quang-cao-phat-thanh/",
-  "https://digicomvn.com/dat-bai/"
- ],
- "anh": [
-  {
-   "file": "ig-quang-cao-truyen-hinh-gia-vtv.webp",
-   "loai": "infographic số liệu thật bảng giá TVAd truy cập 27/10/2026"
-  },
-  {
-   "file": "ig-quang-cao-truyen-hinh-quy-dinh-2026.webp",
-   "loai": "infographic quy định Điều 22 Luật 75/2025/QH15"
-  }
- ],
- "can_luu_y_qa": "Giá VTV là bảng tra cứu tham khảo của TVAd (trang ghi cập nhật 14/02/2025, dữ liệu API lấy 27/10/2026, 6 mã giờ trong bảng đã đối chiếu đúng); khoảng 4,6-63,7 triệu chỉ đúng cho 6 mã minh hoạ, mã chương trình đặc biệt tới hàng trăm triệu; nếu đăng muộn cần đối chiếu lại. Link quang-cao-tvc-la-gi là bài sắp đăng (MÃ I), phải đăng trước hoặc cùng lúc. Không nêu giá Digicom/NCC. Khoản 3 Điều 22 (cấm QC trong thời sự) xác nhận không bị Luật 75 sửa (chỉ sửa k1,2,4,5,5a,6; bãi bỏ k7,8).",
- "so_tu": 3747
+  "title": "Quảng Cáo Truyền Hình: Hình Thức, Giá VTV Và Quy Định 2026",
+  "slug": "quang-cao-truyen-hinh",
+  "meta_desc": "Quảng cáo truyền hình gồm 6 hình thức: TVC, tài trợ, phóng sự, logo, pop-up, chạy chữ. Cách tính giá quảng cáo trên VTV theo mã giờ và quy định mới 2026.",
+  "excerpt": "6 hình thức quảng cáo truyền hình, cách đọc bảng giá quảng cáo trên VTV theo mã giờ và độ dài spot, ví dụ tính ngân sách, chọn đài trung ương hay địa phương, quy định Luật Quảng cáo sửa đổi từ 01/01/2026 và quy trình 6 bước.",
+  "tu_khoa_chinh": "quảng cáo truyền hình",
+  "tu_khoa_phu": [
+    "quảng cáo trên truyền hình",
+    "quảng cáo trên vtv"
+  ],
+  "intent": "Informational + commercial nhẹ: top 10 (đo ẩn danh 24/10/2026) 'quảng cáo truyền hình' 6/8 là bài viết, 5 tiêu đề dạng câu hỏi 'là gì, các hình thức'; cụm 'quảng cáo trên vtv' 3/8 tiêu đề có 'giá/bảng giá', có trang chính thức TVAd. Người tìm muốn biết hình thức, giá VTV, cách triển khai.",
+  "gap_doi_thu": [
+    "Bài bảng giá VTV top đầu chỉ đăng ảnh bảng giá, không nêu nguồn/hiệu lực, không giải thích mã giờ và hệ số 10/15/20/30 giây",
+    "Không bài nào cập nhật Điều 22 Luật Quảng cáo sửa đổi bởi Luật 75/2025/QH15 (ngắt quảng cáo mỗi 15 phút, chạy chữ <=10% màn hình, trần 10%/5%); bài có pháp lý còn dẫn Luật 2012 + NĐ 181/2013",
+    "Không có ví dụ tính ngân sách đợt phát sóng",
+    "Không mô tả quy trình duyệt mẫu (chuẩn HD, 16:9, phiếu đề nghị duyệt) và hồ sơ sản phẩm đặc biệt",
+    "Không bài nào nói về thông báo giá thay đổi liên tục và mã giờ không được book ngoài"
+  ],
+  "info_gain": [
+    "Đơn giá 6 mã giờ VTV1/2/3 x 4 độ dài lấy thẳng từ API bảng giá tvad.com.vn (truy cập 27/10/2026) + phát hiện hệ số 10s=50%, 15s=60%, 20s=75% giá 30s",
+    "Infographic 4 giới hạn mới Điều 22 theo văn bản gốc Luật 75/2025/QH15",
+    "Ví dụ tính ngân sách: VTV3 18h-19h spot 15s x 3 lần/tuần x 4 tuần = 164,16 triệu đồng theo đơn giá tra cứu",
+    "Quy trình 6 bước kèm văn bản kỹ thuật TVAd công bố (HD, 16:9, panel, pop-up, phiếu duyệt)",
+    "Bảng so sánh kênh trung ương / địa phương / trả tiền theo trần thời lượng luật định"
+  ],
+  "nguon": [
+    "Luật 75/2025/QH15 (PDF cổng TP Hà Nội): https://storage-vnportal.vnpt.vn/gov-hni/7218/VanBan/2025/7/30/LUẬT SỬA ĐỔI BỔ SUNG LUẬT QUẢNG CÁO.pdf",
+    "Luật Quảng cáo 16/2012/QH13: https://caselaw.vn/van-ban-phap-luat/115754-luat-quang-cao-so-16-2012-qh13-ngay-21-06-2012-cua-quoc-hoi",
+    "TVAd bảng giá (API GetChannelPriceList, trang ghi cập nhật 14/02/2025, truy cập 27/10/2026): https://tvad.com.vn/bang-gia",
+    "TVAd thông báo giá (TB104-TB133, 08-09/2026): https://tvad.com.vn/thong-bao-gia",
+    "TVAd quy trình duyệt mẫu: https://tvad.com.vn/quy-trinh-duyet-mau"
+  ],
+  "link_noi_bo": [
+    "https://digicomvn.com/quang-cao-tvc-la-gi/",
+    "https://digicomvn.com/booking-truyen-hinh/",
+    "https://digicomvn.com/booking-bao-pr/",
+    "https://digicomvn.com/quang-cao-phat-thanh/",
+    "https://digicomvn.com/dat-bai/"
+  ],
+  "anh": [
+    {
+      "file": "ig-quang-cao-truyen-hinh-gia-vtv.webp",
+      "loai": "infographic số liệu thật bảng giá TVAd truy cập 27/10/2026"
+    },
+    {
+      "file": "ig-quang-cao-truyen-hinh-quy-dinh-2026.webp",
+      "loai": "infographic quy định Điều 22 Luật 75/2025/QH15"
+    }
+  ],
+  "can_luu_y_qa": "Giá VTV là bảng tra cứu tham khảo của TVAd (trang ghi cập nhật 14/02/2025, dữ liệu API lấy 27/10/2026, 6 mã giờ trong bảng đã đối chiếu đúng); khoảng 4,6-63,7 triệu chỉ đúng cho 6 mã minh hoạ, mã chương trình đặc biệt tới hàng trăm triệu; nếu đăng muộn cần đối chiếu lại. Link quang-cao-tvc-la-gi là bài sắp đăng (MÃ I), phải đăng trước hoặc cùng lúc. Không nêu giá Digicom/NCC. Khoản 3 Điều 22 (cấm QC trong thời sự) xác nhận không bị Luật 75 sửa (chỉ sửa k1,2,4,5,5a,6; bãi bỏ k7,8).",
+  "so_tu": 3747
 }

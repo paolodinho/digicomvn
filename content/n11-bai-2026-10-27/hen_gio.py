@@ -20,10 +20,10 @@ r = subprocess.run(['python3', f'{ROOT}/tools/wp-rest-publish.py', 'create', '--
 print(r.stdout, r.stderr[-500:])
 pid = json.loads(r.stdout.strip().splitlines()[-1])['id']
 cmd = ("cd domains/digicomvn.com/public_html && wp post meta update %d dgc_seo_title %s --allow-root && "
-       "wp post meta update %d dgc_seo_desc %s --allow-root") % (pid, json.dumps(j['title']), pid, json.dumps(j['meta_desc']))
+       "wp post meta update %d dgc_seo_desc %s --allow-root") % (pid, json.dumps(j['title'], ensure_ascii=False), pid, json.dumps(j['meta_desc'], ensure_ascii=False))
 for f in re.findall(r'<!--IMG:([^|]+)\|([^|]*)', h):
     mid = media[f[0].replace('.webp', '')][0]
-    cmd += " && wp post meta update %s _wp_attachment_image_alt %s --allow-root && wp post update %s --post_parent=%d --allow-root" % (mid, json.dumps(f[1].strip()), mid, pid)
+    cmd += " && wp post meta update %s _wp_attachment_image_alt %s --allow-root && wp post update %s --post_parent=%d --allow-root" % (mid, json.dumps(f[1].strip(), ensure_ascii=False), mid, pid)
 print(subprocess.run(['ssh', '-p', '65002', '-i', os.path.expanduser('~/.ssh/id_ed25519'), 'u704250056@145.79.26.63', cmd],
                      capture_output=True, text=True).stdout[-400:])
 open(f'{D}/da-hen-gio.tsv', 'a').write(f'{slug}\t{pid}\t{date}\n')

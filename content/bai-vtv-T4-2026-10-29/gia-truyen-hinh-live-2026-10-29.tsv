@@ -1,0 +1,52 @@
+5415	draft	vtv1	{"vi_tri":"Khung gio vang ~19h55 truoc Thoi su 20h","gia_km":"105050000","so_link":"khong ap dung","yeu_cau":"TVC 30 giay"}
+5416	draft	vtv1	{"vi_tri":"Sau Ban tin Chao buoi sang ~6h20","gia_km":"40040000","so_link":"khong ap dung","yeu_cau":"TVC 30 giay"}
+5417	draft	htv9	{"vi_tri":"Nhip song doanh nghiep (thu Tu) 16h00","gia_km":"24000000","so_link":"khong ap dung","yeu_cau":"Phong su \/ tu gioi thieu 180 giay"}
+5418	draft	htv7	{"vi_tri":"Nhip song tre (thu Bay) 9h45","gia_km":"24000000","so_link":"khong ap dung","yeu_cau":"Phong su \/ tu gioi thieu 180 giay"}
+5419	draft	htv9	{"vi_tri":"Thoi su trua 11h30 - muc Tu gioi thieu","gia_km":"21000000","so_link":"khong ap dung","yeu_cau":"Tu gioi thieu 90 giay"}
+5420	draft	vtv3	{"vi_tri":"Ca phe Sang 6h30-7h15","gia_km":"20020000","so_link":"khong ap dung","yeu_cau":"TVC 30 giay"}
+3748	draft	vtv1	{"vi_tri":"Khung gio vang ~19h55 truoc Thoi su 20h","gia_km":"105050000","so_link":"khong ap dung","yeu_cau":"TVC 30 giay","ma_ncc":"3"}
+3749	draft	vtv3	{"vi_tri":"Ai la trieu phu - trong chuong trinh","gia_km":"91000000","so_link":"khong ap dung","yeu_cau":"TVC 30 giay","ma_ncc":"3"}
+3750	draft	vtv3	{"vi_tri":"Ai la trieu phu - ngoai chuong trinh","gia_km":"81900000","so_link":"khong ap dung","yeu_cau":"TVC 30 giay","ma_ncc":"3"}
+3751	draft	vtv1	{"vi_tri":"Sau Ban tin Chao buoi sang ~6h20","gia_km":"40040000","so_link":"khong ap dung","yeu_cau":"TVC 30 giay","ma_ncc":"3"}
+3752	draft	htv7	{"vi_tri":"Talk Show (thu Bay) 9h45","gia_km":"35000000","so_link":"khong ap dung","yeu_cau":"Talkshow 7-8 phut","ma_ncc":"3"}
+3753	draft	htv9	{"vi_tri":"Thoi su toi 20h - muc Tu gioi thieu","gia_km":"33000000","so_link":"khong ap dung","yeu_cau":"Tu gioi thieu 60 giay","ma_ncc":"3"}
+3754	draft	htv9	{"vi_tri":"Chuong trinh 12h00 - muc Tu gioi thieu","gia_km":"27000000","so_link":"khong ap dung","yeu_cau":"Tu gioi thieu 60 giay","ma_ncc":"3"}
+3755	draft	htv7	{"vi_tri":"Chuong trinh 12h00 - muc Tu gioi thieu","gia_km":"27000000","so_link":"khong ap dung","yeu_cau":"Tu gioi thieu 60 giay","ma_ncc":"3"}
+3756	draft	htv7	{"vi_tri":"Chuong trinh 18h00 - muc Tu gioi thieu","gia_km":"27000000","so_link":"khong ap dung","yeu_cau":"Tu gioi thieu 60 giay","ma_ncc":"3"}
+3757	draft	htv9	{"vi_tri":"Nhip song doảnh nghiep (thu Tu) 16h00","gia_km":"24000000","so_link":"khong ap dung","yeu_cau":"Phong su \/ từ gioi thieu 180 giay","ma_ncc":"3"}
+3758	draft	htv7	{"vi_tri":"Nhip song tre (thu Bay) 9h45","gia_km":"24000000","so_link":"khong ap dung","yeu_cau":"Phong su \/ từ gioi thieu 180 giay","ma_ncc":"3"}
+3759	draft	htv9	{"vi_tri":"Thoi su trua 11h30 - muc Tu gioi thieu","gia_km":"21000000","so_link":"khong ap dung","yeu_cau":"Tu gioi thieu 90 giay","ma_ncc":"3"}
+3760	draft	vtv3	{"vi_tri":"Ca phe Sang 6h30-7h15","gia_km":"20020000","so_link":"khong ap dung","yeu_cau":"TVC 30 giay","ma_ncc":"3"}
+2073	draft	VTV (TVAd)	{"vi_tri":"Chung kết World Cup 2026","gia_km":"2.700.000.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2074	draft	VTV (TVAd)	{"vi_tri":"Chung kết World Cup 2026","gia_km":"1.344.000.000đ","yeu_cau":"TVC 10 giây","url_bao":"https:\/\/vtv.vn\/"}
+2075	publish	HTV7	{"vi_tri":"Trong giờ phát sóng Người Bí Ẩn","gia_km":"240.000.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2076	publish	HTV7	{"vi_tri":"Trước giờ phát sóng Người Bí Ẩn","gia_km":"228.000.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2077	publish	HTV7	{"vi_tri":"Trong giờ phát sóng Người Bí Ẩn","gia_km":"180.000.000đ","yeu_cau":"TVC 20 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2078	draft	VTV3	{"vi_tri":"Fanzone World Cup","gia_km":"156.000.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2079	publish	VTV3	{"vi_tri":"Trước gameshow giờ vàng","gia_km":"152.760.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2080	publish	VTV1	{"vi_tri":"Khung giờ vàng ~19h55, trước Thời sự 20h","gia_km":"126.060.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2081	publish	HTV7	{"vi_tri":"Trong giờ phát sóng Người Bí Ẩn","gia_km":"120.000.000đ","yeu_cau":"TVC 10 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2082	publish	VTV3	{"vi_tri":"Ai là triệu phú - trong chương trình","gia_km":"109.200.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2083	publish	VTV3	{"vi_tri":"Ai là triệu phú - ngoài chương trình","gia_km":"98.280.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2084	publish	VTV1	{"vi_tri":"Phim truyện VN 20h (T2-T6)","gia_km":"98.280.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2085	publish	VTV1	{"vi_tri":"Khung giờ vàng ~19h55, trước Thời sự 20h","gia_km":"75.636.000đ","yeu_cau":"TVC 15 giây","url_bao":"https:\/\/vtv.vn\/"}
+2086	publish	VTV1	{"vi_tri":"Sau Bản tin Chào buổi sáng ~6h20","gia_km":"48.048.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2087	publish	VTV1	{"vi_tri":"Bản tin Thời sự \/ Doanh nghiệp và Thương hiệu","gia_km":"48.000.000đ","yeu_cau":"Phóng sự \/ bản tin 30-120 giây","url_bao":"https:\/\/vtv.vn\/"}
+2088	publish	HTV7	{"vi_tri":"Talk Show (thứ Bảy) 9h45","gia_km":"42.000.000đ","yeu_cau":"Talkshow 7-8 phút","url_bao":"https:\/\/www.htv.com.vn\/"}
+2089	publish	HTV9	{"vi_tri":"Thời sự tối 20h - mục Tự giới thiệu","gia_km":"39.600.000đ","yeu_cau":"Tự giới thiệu 60 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2090	publish	VTV3	{"vi_tri":"Bản tin \/ chuyên mục doanh nghiệp","gia_km":"36.000.000đ","yeu_cau":"Phóng sự \/ bản tin 30-120 giây","url_bao":"https:\/\/vtv.vn\/"}
+2091	publish	VTV3	{"vi_tri":"Khung ban ngày","gia_km":"32.760.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2092	publish	HTV9	{"vi_tri":"Chương trình 12h00 - mục Tự giới thiệu","gia_km":"32.400.000đ","yeu_cau":"Tự giới thiệu 60 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2093	publish	HTV7	{"vi_tri":"Chương trình 12h00 - mục Tự giới thiệu","gia_km":"32.400.000đ","yeu_cau":"Tự giới thiệu 60 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2094	publish	HTV7	{"vi_tri":"Chương trình 18h00 - mục Tự giới thiệu","gia_km":"32.400.000đ","yeu_cau":"Tự giới thiệu 60 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2095	publish	VTV1	{"vi_tri":"Sau Bản tin Chào buổi sáng ~6h20","gia_km":"28.829.000đ","yeu_cau":"TVC 15 giây","url_bao":"https:\/\/vtv.vn\/"}
+2096	publish	HTV9	{"vi_tri":"Nhịp sống doanh nghiệp (thứ Tư) 16h00","gia_km":"28.800.000đ","yeu_cau":"Phóng sự \/ tự giới thiệu 180 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2097	publish	HTV7	{"vi_tri":"Nhịp sống trẻ (thứ Bảy) 9h45","gia_km":"28.800.000đ","yeu_cau":"Phóng sự \/ tự giới thiệu 180 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2098	publish	HTV9	{"vi_tri":"Thời sự trưa 11h30 - mục Tự giới thiệu","gia_km":"25.200.000đ","yeu_cau":"Tự giới thiệu 90 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2099	publish	VTV3	{"vi_tri":"Cà phê Sáng 6h30-7h15","gia_km":"24.024.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2100	publish	HTV9	{"vi_tri":"Nhịp sống doanh nghiệp (thứ Tư) 16h00","gia_km":"23.400.000đ","yeu_cau":"Phóng sự \/ tự giới thiệu 120 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2101	publish	HTV7	{"vi_tri":"Nhịp sống trẻ (thứ Bảy) 9h45","gia_km":"23.400.000đ","yeu_cau":"Phóng sự \/ tự giới thiệu 120 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2102	publish	HTV9	{"vi_tri":"Bản tin \/ chuyên mục doanh nghiệp","gia_km":"16.800.000đ","yeu_cau":"Phóng sự \/ bản tin 30-120 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
+2103	publish	VTV1	{"vi_tri":"Khung sáng 6h00-7h00","gia_km":"16.440.000đ","yeu_cau":"TVC 30 giây","url_bao":"https:\/\/vtv.vn\/"}
+2104	publish	VTV3	{"vi_tri":"Cà phê Sáng 6h30-7h15","gia_km":"14.414.000đ","yeu_cau":"TVC 15 giây","url_bao":"https:\/\/vtv.vn\/"}
+2105	publish	HTV9	{"vi_tri":"Thời sự trưa 11h30 - mục Tự giới thiệu","gia_km":"14.400.000đ","yeu_cau":"Tự giới thiệu 60 giây","url_bao":"https:\/\/www.htv.com.vn\/"}
