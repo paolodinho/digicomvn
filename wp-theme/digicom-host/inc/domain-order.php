@@ -121,16 +121,18 @@ function dgc_tm_order_ajax() {
 	$items = array_slice( $items, 0, 10 );
 
 	$f = array();
-	foreach ( array( 'type', 'name', 'idno', 'dob', 'rep', 'addr', 'city', 'phone', 'email', 'note' ) as $key ) {
+	foreach ( array( 'type', 'name', 'idno', 'dob', 'rep', 'rep_idno', 'rep_dob', 'gender', 'addr', 'ward', 'city', 'phone', 'email', 'note' ) as $key ) {
 		$f[ $key ] = sanitize_text_field( wp_unslash( $_POST[ $key ] ?? '' ) );
 	}
 	$f['type']  = 'org' === $f['type'] ? 'org' : 'person';
 	$f['email'] = sanitize_email( $f['email'] );
-	$need = array( 'name', 'idno', 'addr', 'city', 'phone', 'email' );
-	if ( 'org' === $f['type'] ) $need[] = 'rep'; else $need[] = 'dob';
+	$f['gender'] = 'Nữ' === $f['gender'] ? 'Nữ' : 'Nam';
+	$need = array( 'name', 'idno', 'addr', 'ward', 'city', 'phone', 'email' );
+	if ( 'org' === $f['type'] ) array_push( $need, 'rep', 'rep_idno', 'rep_dob' ); else $need[] = 'dob';
 	foreach ( $need as $key ) {
 		if ( '' === $f[ $key ] ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng điền đủ thông tin chủ thể.' ) );
 	}
+	if ( ! dgc_tm_ward_ok( $f['city'], $f['ward'] ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng chọn lại tỉnh, thành phố và phường, xã.' ) );
 	if ( ! is_email( $f['email'] ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Email chưa đúng định dạng.' ) );
 	if ( ! preg_match( '/^(\+?84|0)\d{9,10}$/', preg_replace( '/[\s.\-]/', '', $f['phone'] ) ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Số điện thoại chưa đúng.' ) );
 	if ( empty( $_POST['agree'] ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng xác nhận thông tin chủ thể là chính xác.' ) );
@@ -227,12 +229,13 @@ add_action( 'rest_api_init', function () {
 
 function dgc_tm_sepay_webhook( WP_REST_Request $req ) {
 	$ok  = new WP_REST_Response( array( 'success' => true ), 200 );
-	$key = defined( 'DGC_SEPAY_KEY' ) ? (string) DGC_SEPAY_KEY : '';
+	$key = defined( 'DGC_SEPAY_KEY' ) ? (string) DGC_SEPAY_KEY : trim( (string) dgc( 'tm_sepay_key', '' ) );
 	$hdr = (string) $req->get_header( 'authorization' );
 	if ( '' === $key || ! hash_equals( 'apikey ' . strtolower( $key ), strtolower( trim( $hdr ) ) ) ) {
 		return new WP_REST_Response( array( 'success' => false ), 401 );
 	}
 	$p = $req->get_json_params();
+	update_option( 'dgc_sepay_last', current_time( 'd/m/Y H:i' ) . ( is_array( $p ) ? ' - ' . ( $p['transferType'] ?? '' ) . ' ' . (int) ( $p['transferAmount'] ?? 0 ) : '' ), false );
 	if ( ! is_array( $p ) || 'in' !== ( $p['transferType'] ?? '' ) ) return $ok;
 	/* SePay gui lai cung id khi thu lai -> bo qua giao dich da xu ly. */
 	$tid  = sanitize_text_field( (string) ( $p['id'] ?? '' ) );
@@ -281,13 +284,19 @@ function dgc_tm_register_order( $id ) {
 		dgc_tm_log( $id, 'Chờ đăng ký tay (chưa bật đăng ký tự động)' );
 		return;
 	}
+	if ( get_transient( 'dgc_tm_reg_' . $id ) ) return; // dang chay o luot khac
+	set_transient( 'dgc_tm_reg_' . $id, 1, 5 * MINUTE_IN_SECONDS );
 	$owner = (array) get_post_meta( $id, '_tm_owner', true );
+	$done  = get_post_meta( $id, '_tm_reg_done', true ) ?: array();
 	$fail  = array();
 	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) {
+		if ( in_array( $l['d'], $done, true ) ) continue; // da dang ky o lan truoc, khong dang ky lai
+		$GLOBALS['dgc_tm_reg_order'] = $id;
 		$r = dgc_tm_pa_register( $l['d'], $l['y'], $owner );
-		if ( true === $r ) dgc_tm_log( $id, 'Đăng ký xong ' . $l['d'] );
+		if ( true === $r ) { $done[] = $l['d']; update_post_meta( $id, '_tm_reg_done', $done ); dgc_tm_log( $id, 'Đăng ký xong ' . $l['d'] ); }
 		else $fail[] = $l['d'] . ' (' . ( is_string( $r ) ? $r : 'lỗi' ) . ')';
 	}
+	delete_transient( 'dgc_tm_reg_' . $id );
 	if ( $fail ) {
 		dgc_tm_set_status( $id, 'loi_dk', implode( '; ', $fail ) );
 		dgc_tm_notify_admin( $id, 'Đơn ' . get_post_meta( $id, '_tm_code', true ) . ' đăng ký lỗi' );
@@ -356,9 +365,12 @@ add_action( 'add_meta_boxes_dgc_don_tm', function () {
 		echo '<pre style="white-space:pre-wrap;font-size:13px">' . esc_html( dgc_tm_order_summary( $id ) ) . '</pre>';
 		echo '<p><b>Đã nhận:</b> ' . esc_html( dgc_vnd( (int) get_post_meta( $id, '_tm_paid', true ) ) ) . '</p>';
 		echo '<table class="widefat striped" style="max-width:640px"><tbody>';
-		$rows = array( 'Loại' => 'org' === ( $o['type'] ?? '' ) ? 'Tổ chức' : 'Cá nhân', 'Tên chủ thể' => $o['name'] ?? '', 'CCCD/MST' => $o['idno'] ?? '', 'Ngày sinh' => $o['dob'] ?? '', 'Người đại diện' => $o['rep'] ?? '', 'Địa chỉ' => trim( ( $o['addr'] ?? '' ) . ', ' . ( $o['city'] ?? '' ), ', ' ), 'Điện thoại' => $o['phone'] ?? '', 'Email' => $o['email'] ?? '', 'Ghi chú' => $o['note'] ?? '' );
+		$rows = array( 'Loại' => 'org' === ( $o['type'] ?? '' ) ? 'Tổ chức' : 'Cá nhân', 'Tên chủ thể' => $o['name'] ?? '', 'CCCD/MST' => $o['idno'] ?? '', 'Ngày sinh' => $o['dob'] ?? '', 'Giới tính' => $o['gender'] ?? '', 'Người đại diện' => trim( ( $o['rep'] ?? '' ) . ' ' . ( ! empty( $o['rep_idno'] ) ? '(CCCD ' . $o['rep_idno'] . ', sinh ' . ( $o['rep_dob'] ?? '' ) . ')' : '' ) ), 'Địa chỉ' => implode( ', ', array_filter( array( $o['addr'] ?? '', $o['ward'] ?? '', $o['city'] ?? '' ) ) ), 'Điện thoại' => $o['phone'] ?? '', 'Email' => $o['email'] ?? '', 'Ghi chú' => $o['note'] ?? '' );
 		foreach ( $rows as $k => $v ) if ( '' !== $v ) echo '<tr><th style="width:150px">' . esc_html( $k ) . '</th><td>' . esc_html( $v ) . '</td></tr>';
 		echo '</tbody></table>';
+		foreach ( ( get_post_meta( $id, '_tm_reg_info', true ) ?: array() ) as $d => $ri ) {
+			echo '<p><b>' . esc_html( $d ) . '</b>' . ( ! empty( $ri['test'] ) ? ' <em>(chạy thử, chưa đăng ký thật)</em>' : '' ) . ': mật khẩu quản trị tên miền <code>' . esc_html( $ri['pw'] ?? '' ) . '</code>, mã giao dịch ' . esc_html( $ri['trans'] ?? '' ) . ', trừ ' . esc_html( (string) ( $ri['money'] ?? '' ) ) . ' lúc ' . esc_html( $ri['time'] ?? '' ) . '</p>';
+		}
 		wp_nonce_field( 'dgc_tm_admin', 'dgc_tm_admin_n' );
 		echo '<p style="margin-top:16px"><label><b>Trạng thái:</b> <select name="dgc_tm_status">';
 		foreach ( dgc_tm_status_labels() as $k => $v ) echo '<option value="' . esc_attr( $k ) . '"' . selected( $s, $k, false ) . '>' . esc_html( $v ) . '</option>';
@@ -377,5 +389,88 @@ add_action( 'save_post_dgc_don_tm', function ( $id ) {
 	if ( ! isset( dgc_tm_status_labels()[ $new ] ) || $new === $old ) return;
 	dgc_tm_set_status( $id, $new, 'đổi tay bởi ' . wp_get_current_user()->user_login );
 	if ( 'da_dk' === $new ) dgc_tm_mail_customer( $id, 'done' );
-	if ( 'da_tt' === $new && 'cho_tt' === $old ) dgc_tm_mail_customer( $id, 'paid' );
+	if ( 'da_tt' === $new && in_array( $old, array( 'cho_tt', 'thieu_tien' ), true ) ) dgc_tm_mail_customer( $id, 'paid' );
+	/* Xac nhan tien tay, hoac chuyen don loi ve "Da thanh toan" de thu dang ky lai -> tu dang ky qua API. */
+	if ( 'da_tt' === $new ) wp_schedule_single_event( time() + 5, 'dgc_tm_register', array( $id ) );
 } );
+
+/** Ten tinh + phuong phai khop danh muc dang ky ten mien (assets/data/dvhc.json, 34 tinh theo dia gioi moi). */
+function dgc_tm_ward_ok( $city, $ward ) {
+	static $m = null;
+	if ( null === $m ) {
+		$m = array();
+		$j = json_decode( (string) file_get_contents( get_template_directory() . '/assets/data/dvhc.json' ), true );
+		foreach ( (array) $j as $p ) $m[ $p[0] ] = array_flip( $p[1] );
+	}
+	return isset( $m[ $city ][ $ward ] );
+}
+
+/**
+ * Dang ky 1 ten mien qua API dai ly. Tra ve true hoac chuoi loi.
+ * DGC_PA_TEST = true -> goi cong chay thu (khong tru tien, ma 900 = thanh cong gia lap).
+ * Mat khau quan tri ten mien luu trong meta don (_tm_reg_info) de ban giao khi khach can.
+ */
+function dgc_tm_pa_register( $domain, $years, $o ) {
+	if ( ! defined( 'DGC_PA_URL' ) || ! defined( 'DGC_PA_USER' ) || ! defined( 'DGC_PA_KEY' ) ) return 'thiếu cấu hình API';
+	$test = defined( 'DGC_PA_TEST' ) && DGC_PA_TEST;
+	$url  = $test ? str_replace( 'interface.php', 'interface_test.php', DGC_PA_URL ) : DGC_PA_URL;
+	$dot  = strpos( $domain, '.' );
+	$name = substr( $domain, 0, $dot ); $ext = substr( $domain, $dot + 1 );
+	$vn   = 'vn' === substr( $ext, -2 );
+	$org  = 'org' === ( $o['type'] ?? '' );
+
+	$pw = str_split( wp_generate_password( 7, false ) . substr( (string) wp_rand( 1000, 9999 ), 0, 4 ) );
+	shuffle( $pw ); $pw = 'D' . implode( '', $pw ) . '7';
+	$ph = preg_replace( '/\D/', '', (string) ( $o['phone'] ?? '' ) );
+	if ( 0 === strpos( $ph, '84' ) ) $ph = '0' . substr( $ph, 2 );
+	$ph_int = '+84-' . substr( $ph, 1 );
+	$dns = array_values( array_filter( array_map( 'trim', explode( ',', dgc( 'tm_dns', 'ns1.dotvndns.vn,ns2.dotvndns.vn,ns3.dotvndns.vn' ) ) ) ) );
+	$addr = array( 'Address' => $o['addr'] ?? '', 'Ward' => $o['ward'] ?? '', 'Province' => $o['city'] ?? '', 'Country' => 'Viet Nam' );
+
+	$q = array(
+		'username' => DGC_PA_USER, 'apikey' => DGC_PA_KEY,
+		'cmd' => $vn ? 'register_domain_vietnam' : 'register_domain_quocte',
+		'domainName' => $name, 'domainExt' => $ext, 'domainYear' => max( 1, (int) $years ), 'passwordDomain' => $pw,
+		'for' => $org ? 'congty' : 'canhan',
+		'domainDNS1' => $dns[0] ?? '', 'domainDNS2' => $dns[1] ?? '',
+		'ownerType' => $org ? 2 : 1, 'ownerName' => $o['name'] ?? '',
+		'ownerEmail1' => $o['email'] ?? '', 'ownerPhone' => $ph,
+		'uiName' => $o['name'] ?? '', 'uiEmail' => $o['email'] ?? '', 'uiPhone' => $vn ? $ph_int : $ph,
+		'sendmail' => 1, 'return_full' => 1, 'responsetype' => 'json',
+	);
+	if ( $vn && ! empty( $dns[2] ) ) $q['domainDNS3'] = $dns[2];
+	foreach ( $addr as $k => $v ) { $q[ 'owner' . $k ] = $v; $q[ 'ui' . $k ] = $v; }
+	if ( $org ) { $q['ownerTaxCode'] = $o['idno'] ?? ''; $q['uiTaxCode'] = $o['idno'] ?? ''; }
+	else { $q['ownerID_Number'] = $o['idno'] ?? ''; $q['uiID_Number'] = $o['idno'] ?? ''; }
+	if ( $vn ) {
+		if ( ! $org ) { $q['uiGender'] = $o['gender'] ?? 'Nam'; $q['uiBirthdate'] = $o['dob'] ?? ''; }
+		/* Nguoi quan ly ten mien .vn phai la ca nhan: chinh chu the (ca nhan) hoac nguoi dai dien (to chuc). */
+		$q += array(
+			'adminName' => $org ? ( $o['rep'] ?? '' ) : ( $o['name'] ?? '' ),
+			'adminID_Number' => $org ? ( $o['rep_idno'] ?? '' ) : ( $o['idno'] ?? '' ),
+			'adminGender' => $o['gender'] ?? 'Nam',
+			'adminBirthdate' => $org ? ( $o['rep_dob'] ?? '' ) : ( $o['dob'] ?? '' ),
+			'adminEmail' => $o['email'] ?? '', 'adminPhone' => $ph_int,
+		);
+		foreach ( $addr as $k => $v ) $q[ 'admin' . $k ] = $v;
+		if ( $org ) { $q['adminCompany'] = $o['name'] ?? ''; $q['adminPosition'] = 'Người đại diện'; }
+	}
+
+	$c = curl_init( $url . '?' . http_build_query( $q ) );
+	curl_setopt_array( $c, array( CURLOPT_RETURNTRANSFER => true, CURLOPT_ENCODING => '', CURLOPT_TIMEOUT => 60, CURLOPT_CONNECTTIMEOUT => 10 ) );
+	$body = (string) curl_exec( $c ); $http = (int) curl_getinfo( $c, CURLINFO_HTTP_CODE ); curl_close( $c );
+	$r = json_decode( trim( $body ), true );
+	if ( ! is_array( $r ) ) return 'không nhận được phản hồi (HTTP ' . $http . '), kiểm tra trên trang đại lý trước khi thử lại';
+	$code = (int) ( $r['ReturnCode'] ?? 0 );
+	if ( 200 === $code || ( $test && 900 === $code ) ) {
+		$id = (int) ( $GLOBALS['dgc_tm_reg_order'] ?? 0 );
+		if ( $id ) {
+			$info = get_post_meta( $id, '_tm_reg_info', true ) ?: array();
+			$info[ $domain ] = array( 'pw' => $pw, 'test' => $test ? 1 : 0, 'trans' => $r['trans_id'] ?? '', 'money' => $r['trans_money'] ?? '', 'time' => current_time( 'mysql' ) );
+			update_post_meta( $id, '_tm_reg_info', $info );
+		}
+		return true;
+	}
+	$msg = array( 101 => 'tên miền đã có người đăng ký', 203 => 'thiếu thông tin chủ thể', 205 => 'DNS không đúng', 208 => 'email không đúng', 303 => 'tên miền đã có trong hệ thống', 309 => 'số điện thoại không hợp lệ', 400 => 'tài khoản đại lý không đủ tiền, cần nạp thêm', 501 => 'IP máy chủ chưa được phép gọi API', 505 => 'không tạo được hồ sơ khách hàng (kiểm tra tỉnh, phường)' );
+	return 'mã ' . $code . ': ' . ( $msg[ $code ] ?? sanitize_text_field( (string) ( $r['ReturnText'] ?? '' ) ) );
+}

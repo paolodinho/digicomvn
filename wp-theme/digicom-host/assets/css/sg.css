@@ -438,8 +438,8 @@ a.sg-card--feat:hover{border-color:transparent}
 .tmc-type label:has(input:checked){border-color:var(--sg-blue);background:var(--sg-cyan);color:var(--sg-blue)}
 .tmc-f{display:block;margin:0 0 12px}
 .tmc-f span{display:block;font-size:13.5px;font-weight:600;color:var(--sg-soft);margin-bottom:5px}
-.tmc-f input{width:100%;padding:11px 13px;border:1px solid var(--sg-line);border-radius:10px;font:inherit;background:var(--sg-card);color:var(--sg-ink)}
-.tmc-f input:focus{outline:2px solid var(--sg-blue);outline-offset:1px;border-color:var(--sg-blue)}
+.tmc-f input,.tmc-f select{width:100%;padding:11px 13px;border:1px solid var(--sg-line);border-radius:10px;font:inherit;background:var(--sg-card);color:var(--sg-ink)}
+.tmc-f input:focus,.tmc-f select:focus{outline:2px solid var(--sg-blue);outline-offset:1px;border-color:var(--sg-blue)}
 .tmc-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
 .tmc-agree{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:6px 0 14px;line-height:1.5}
 .tmc-agree input{margin-top:4px;flex:none}

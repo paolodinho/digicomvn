@@ -98,10 +98,18 @@ $dgc_bank = dgc_tm_bank();
 					<label class="tmc-f" data-only="person"><span>Ngày sinh</span><input name="dob" type="date" required></label>
 					<label class="tmc-f" data-only="org" hidden><span>Người đại diện</span><input name="rep"></label>
 				</div>
-				<label class="tmc-f"><span>Địa chỉ</span><input name="addr" required autocomplete="street-address"></label>
+				<div class="tmc-2" data-only="org" hidden>
+					<label class="tmc-f"><span>Số CCCD người đại diện</span><input name="rep_idno" inputmode="numeric"></label>
+					<label class="tmc-f"><span>Ngày sinh người đại diện</span><input name="rep_dob" type="date"></label>
+				</div>
 				<div class="tmc-2">
-					<label class="tmc-f"><span>Tỉnh, thành phố</span><input name="city" required></label>
+					<label class="tmc-f"><span data-l-person>Giới tính</span><span data-l-org hidden>Giới tính người đại diện</span><select name="gender" required><option value="Nam">Nam</option><option value="Nữ">Nữ</option></select></label>
 					<label class="tmc-f"><span>Điện thoại</span><input name="phone" type="tel" required autocomplete="tel"></label>
+				</div>
+				<label class="tmc-f"><span>Số nhà, tên đường</span><input name="addr" required autocomplete="street-address" placeholder="Ví dụ: 200 Đường 3.1"></label>
+				<div class="tmc-2" data-dvhc="<?php echo esc_url( get_template_directory_uri() . '/assets/data/dvhc.json?ver=' . DGC_VER ); ?>">
+					<label class="tmc-f"><span>Tỉnh, thành phố</span><select name="city" required><option value="">Chọn tỉnh, thành phố</option></select></label>
+					<label class="tmc-f"><span>Phường, xã</span><select name="ward" required disabled><option value="">Chọn phường, xã</option></select></label>
 				</div>
 				<label class="tmc-f"><span>Email nhận thông tin quản trị</span><input name="email" type="email" required autocomplete="email"></label>
 				<label class="tmc-f"><span>Ghi chú (không bắt buộc)</span><input name="note"></label>
@@ -180,9 +188,14 @@ $dgc_bank = dgc_tm_bank();
 		if(e.target.name!=='type') return; var org=e.target.value==='org';
 		form.querySelectorAll('[data-l-person]').forEach(function(n){ n.hidden=org; });
 		form.querySelectorAll('[data-l-org]').forEach(function(n){ n.hidden=!org; });
-		form.querySelector('[data-only="person"]').hidden=org; form.dob.required=!org;
-		form.querySelector('[data-only="org"]').hidden=!org; form.rep.required=org;
+		form.querySelectorAll('[data-only="person"]').forEach(function(n){ n.hidden=org; }); form.dob.required=!org;
+		form.querySelectorAll('[data-only="org"]').forEach(function(n){ n.hidden=!org; }); form.rep.required=org; form.rep_idno.required=org; form.rep_dob.required=org;
 	});
+	/* Tinh, phuong theo dia gioi moi (34 tinh); ten phai khop dung danh muc dang ky ten mien. */
+	var dv=form.querySelector('[data-dvhc]'), selP=form.city, selW=form.ward, dvhc=[];
+	function fillW(){ var p=dvhc.filter(function(x){ return x[0]===selP.value; })[0]; selW.innerHTML='<option value="">Chọn phường, xã</option>'+(p?p[1].map(function(w){ return '<option>'+esc(w)+'</option>'; }).join(''):''); selW.disabled=!p; }
+	fetch(dv.dataset.dvhc).then(function(r){return r.json();}).then(function(j){ dvhc=j; selP.insertAdjacentHTML('beforeend',j.map(function(p){ return '<option>'+esc(p[0])+'</option>'; }).join('')); }).catch(function(){});
+	selP.addEventListener('change',fillW);
 	form.addEventListener('submit',function(e){
 		e.preventDefault(); err.hidden=true;
 		if(!form.reportValidity()) return;

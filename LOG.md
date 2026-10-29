@@ -4961,3 +4961,11 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 - 2026-10-29 12:10: SMTP trang đại lý lưu xong (Lark smtp.larksuite.com:465 SSL, sales@digicomvn.com), gửi thử tới hieudx3107@gmail.com OK. Cổng quanly.digicomvn.com + máy chủ mr.pavietnam.vn không phản hồi (timeout 80/443) - lỗi phía đại lý, chưa bật lại mail gửi khách.
 - 2026-10-29 12:30: đồng bộ giá tên miền/hosting tăng lên 6 giờ/lần (inc/tm-offers.php, cron_schedules dgc_6h), deploy live, backup ~/Claude-Workspace/_backups/routines/2026-10-29/sync-6h/.
+- 2026-10-29 11:56: CNAME quanly -> access.dotvndns.vn, cổng quanly.digicomvn.com chạy. Tải logo/favicon lên cấu hình Control Panel, bật lại gửi mail thông báo khách. Logo cổng vẫn vỡ (lỗi đại lý).
+- 2026-10-29 chiều: đại lý mở IP, API tra tên miền từ live chạy OK (dgc_tm_check_many trả đúng 5/5).
+- 2026-10-29 15:25: SSL free Let's Encrypt cho quanly.digicomvn.com, đã dán vào cổng đại lý, chờ kích hoạt 24h. Logo/favicon cổng đại lý đã sửa OK.
+
+## 2026-10-29 15:40 - Tự động đăng ký tên miền + chuẩn bị SePay
+- inc/domain-order.php: dgc_tm_pa_register() gọi API đại lý (quốc tế/VN), chống đăng ký trùng (_tm_reg_done, khoá 5 phút), lưu mật khẩu + giao dịch (_tm_reg_info); đổi tay sang 'Đã thanh toán' cũng tự đăng ký; ô khoá SePay trong WP Admin (tm_sepay_key), ghi lần nhận webhook gần nhất.
+- Form thanh toán: tỉnh/phường dạng chọn (assets/data/dvhc.json từ danh mục đại lý), giới tính, CCCD/ngày sinh người đại diện.
+- Test: cổng interface_test 4 tên miền OK; webhook giả lập OK. Bật DGC_PA_REG_ON live.
