@@ -2,6 +2,7 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
+- 29/10 21:15 Đo top 10 XONG 170/170 từ (132 + 38 đo bù, file serp-bu.csv trong 06-keyword/serp-con-lai-2026-10-29). Đã báo agent nền pipeline gom cụm đủ 170 từ, viết, Jett QA, hẹn giờ. Tiếp theo: CHỜ agent nền pipeline báo xong; phiên này kiểm URL, lịch, dòng N11 rồi báo Hiếu. Cập nhật lúc: 2026-10-29 21:15
 - 29/10 20:40 Hiếu ok 2 việc: byline Hiếu Đỗ (đã đúng trên mọi bài hẹn giờ), gia-booking-kol để báo giá theo brief (đã đúng). Ghi DECISIONS.
 - 29/10 20:30 Pipeline SEO: vòng đo top 10 dừng ở 132/170 từ (run_loop.sh đếm cả dòng lặp nên báo LOOP_XONG sai). Đang đo bù 38 từ (06-keyword/serp-con-lai-2026-10-29/kw.miss.txt -> serp-bu.csv, xong khi serp.log có BU_XONG). Agent pipeline đã gọi làm tiếp: gom cụm 132 từ, viết 2 bài (bao-mang-dien-tu-la-gi, social-entity-la-gi, hẹn 03/11), lịch tối ưu 11 trang content/toi-uu-2026-10-29/lich.tsv. Tiếp theo: CHỜ agent nền pipeline (đang chạy) và đo bù 38 từ; agent báo xong thì phiên này kiểm URL, lịch, dòng N11.
 - 29/10 Goodcom Social: ĐÃ LƯU báo giá fanpage (11) + TikTok (6) ngày 28/10 vào 10-bang-gia-booking/raw/Goodcom-Social-2026-10-28.csv + ghi nguon.md (nội bộ, không lên web). Phần báo điện tử của file Goodcom chưa nạp. Tiếp theo: CHỜ Hiếu nói có nạp phần báo điện tử/đưa fanpage-TikTok vào trang /booking-fanpage/ không.
