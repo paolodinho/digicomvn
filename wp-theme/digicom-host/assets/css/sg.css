@@ -549,3 +549,20 @@ a.sg-card--feat:hover{border-color:transparent}
 .tmc-gifts li:before{content:"+ ";color:#0B746A;font-weight:700}
 .tmc-sum .tmc-gifts{margin-top:4px}
 .tmc-save td{color:#0B746A;font-weight:700}
+
+/* Hosting: uu dai + tin cay (3.19.0) */
+.hg-offer-sec{background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hg-offer-head{max-width:860px;margin:0 0 20px}
+.hg-offer-head h2{margin:6px 0 8px;text-wrap:balance}
+.hg-offers,.hg-trust{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.hg-offers li,.hg-trust li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 52px;position:relative;display:flex;flex-direction:column;gap:5px}
+.hg-offers li:before{content:"";position:absolute;left:16px;top:17px;width:24px;height:24px;border-radius:7px;background:#FDEBDD url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D9541E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='8' width='18' height='4' rx='1'/%3E%3Cpath d='M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5'/%3E%3C/svg%3E") center/16px no-repeat}
+.hg-trust li:before{content:"";position:absolute;left:16px;top:17px;width:24px;height:24px;border-radius:7px;background:#E3F4F1 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B746A' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E") center/15px no-repeat}
+.hg-offers b,.hg-trust b{color:var(--heading);font-size:15px;line-height:1.4}
+.hg-offers span,.hg-trust span{color:var(--ink-soft);font-size:13.5px;line-height:1.55}
+.hg-offer-note{margin:14px 0 0;font-size:13px;color:var(--ink-soft)}
+.hg-pct{font-style:normal;font-family:var(--font-body,inherit);font-size:11.5px;font-weight:700;color:#B4480B;background:#FDEBDD;border-radius:5px;padding:2px 6px;margin-left:8px;vertical-align:2px;white-space:nowrap}
+[data-theme="dark"] .hg-pct{background:#3A2418;color:#FFB78F}
+[data-theme="dark"] .hg-offers li:before{background-color:#3A2418}
+[data-theme="dark"] .hg-trust li:before{background-color:#173330}
+@media(max-width:700px){.hg-offers,.hg-trust{grid-template-columns:1fr}}

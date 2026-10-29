@@ -4946,3 +4946,6 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - QA: Local du luong (don DGCKHUZUN), mobile 375 khong tran; live: tim ten -> them gio -> trang thanh toan OK, webhook khong key tra 401.
 - 29/10 09:30: Hieu bao o tra ten mien bao 'Chua kiem tra duoc'. Nguyen nhan: nonce trong HTML LiteSpeed cache lech phien dang nhap -> admin-ajax tra -1 403. Bo bat buoc nonce (tra cuu chi doc + rate-limit IP; tao don co honeypot + 10 don/gio/IP). Da live, test nonce sai van tra ket qua.
 - 2026-10-29: Báo giá Hannah EPC báo link dofollow (DanaSEO giữ giá gốc, Goodcom x1,10), 2 Google Sheet khách + NOIBO.
+
+## 2026-10-29 10:00 - /hosting/ uu dai + tin cay + dong bo gia ban le (DGC_VER 3.19.0)
+- inc/hg-offers.php moi, page-hosting.php, sg.css, options.php; them 3 goi WordPress Business vao hosting_gia live. QA 375px khong tran ngang, khong lo ten nha cung cap.

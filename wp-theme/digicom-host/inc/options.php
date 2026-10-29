@@ -327,6 +327,9 @@ function dgc_settings_page() {
 				dgc_field( 'tm_bank_acc', 'So tai khoan nhan tien ten mien', 'De trong = 567898838 (MB Bank). Ma QR va doi soat tu dong dung so nay.' );
 				dgc_field( 'tm_bank_owner', 'Chu tai khoan (khong dau)', 'De trong = CONG TY TNHH DVTT DIGITO COMBAT' );
 				dgc_field( 'hosting_gia', 'Bang gia hosting', 'Moi dong: nhom | ten goi | dung luong | so website | CPU/RAM | gia/thang | gia/thang goc | ky han uu dai (so nam) | gia dang ky 1 nam. VD: Hosting gia re | Starter | 2 GB | 1 | 1 Core / 1 GB RAM | 16000 | 19000 | 3 | 212000', 'textarea' );
+				$dgc_hsync = get_option( 'dgc_hg_sync_last' );
+				echo '<tr><th>Dong bo gia hosting</th><td><p>Chay cung luc 01:15 va nut Dong bo ngay o tren: doi gia/thang, gia goc, ky han theo bang gia ban le (khop theo ten goi). Cot gia dang ky 1 nam KHONG tu doi. Lan gan nhat: ' . esc_html( $dgc_hsync ? $dgc_hsync['time'] . ' - ' . $dgc_hsync['msg'] : 'chua chay' ) . '</p></td></tr>';
+				dgc_field( 'hosting_uu_dai', 'Uu dai hosting', 'Moi dong: tieu de | dieu kien. Hien thanh khoi uu dai tren trang /hosting/. De trong = 4 uu dai mac dinh. Ghi 0 de an. KHONG ghi ten nha cung cap, khong ghi ma khuyen mai.', 'textarea' );
 				?>
 			</table>
 

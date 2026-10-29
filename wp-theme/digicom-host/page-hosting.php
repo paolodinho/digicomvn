@@ -10,6 +10,7 @@ $dgc_hg = dgc_hosting_rows();
 $dgc_hg_desc = array(
 	'Hosting giá rẻ'                  => 'Website giới thiệu, blog cá nhân, landing page ít truy cập.',
 	'Hosting phổ thông (Business)'    => 'Website doanh nghiệp nhỏ, cần nhiều tên miền trên một gói.',
+	'Hosting WordPress Business'      => 'Website WordPress nhỏ, blog, landing page: cài WordPress sẵn, chạy LiteSpeed.',
 	'Hosting WordPress'               => 'Tối ưu riêng cho WordPress: CPU và RAM cao hơn, chạy nhanh với plugin SEO, WooCommerce.',
 	'Hosting doanh nghiệp (Enterprise)' => 'Website bán hàng, tin tức có lượng truy cập trung bình đến lớn.',
 	'Hosting hiệu năng cao (Super)'   => 'Hệ thống nhiều website, lượng truy cập cao, cần tài nguyên riêng mạnh.',
@@ -26,10 +27,23 @@ $dgc_hg_desc = array(
 	</div>
 </section>
 
+<?php $dgc_hof = dgc_hg_offers(); if ( $dgc_hof ) : ?>
+<section class="sec hg-offer-sec">
+	<div class="wrap">
+		<div class="hg-offer-head"><span class="eyebrow">Ưu đãi đang áp dụng</span><h2>Quà tặng khi đăng ký hosting mới</h2>
+			<p class="muted">Giá trên bảng đã là giá ưu đãi. Ngoài ra, mỗi đơn hosting mới còn nhận thêm các quà tặng dưới đây theo điều kiện từng gói.</p></div>
+		<ul class="hg-offers">
+			<?php foreach ( $dgc_hof as $o ) : ?><li><b><?php echo esc_html( $o[0] ); ?></b><?php if ( $o[1] ) : ?><span><?php echo esc_html( $o[1] ); ?></span><?php endif; ?></li><?php endforeach; ?>
+		</ul>
+		<p class="hg-offer-note">Quà tặng áp dụng theo chương trình đang chạy tại thời điểm đăng ký, DigicomVN xác nhận quà cụ thể khi chốt đơn.</p>
+	</div>
+</section>
+<?php endif; ?>
+
 <section class="sec" id="bang-gia">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:24px"><span class="eyebrow">Bảng giá</span><h2>Bảng giá hosting</h2>
-			<p class="muted" style="max-width:720px;margin:8px auto 0">Giá/tháng là giá ưu đãi khi đăng ký theo kỳ dài ghi dưới mỗi gói. Cột "1 năm" là tổng tiền khi đăng ký 12 tháng. Giá chưa gồm VAT.</p></div>
+			<p class="muted" style="max-width:720px;margin:8px auto 0">Giá/tháng là giá ưu đãi khi đăng ký theo kỳ hạn ghi dưới mỗi gói, dòng "Trọn N năm" là tổng tiền của kỳ hạn đó. "Đăng ký 1 năm" là tổng tiền khi chỉ đăng ký 12 tháng. Giá chưa gồm VAT.</p></div>
 		<nav class="hg-tabs" aria-label="Nhóm gói hosting">
 			<?php foreach ( array_keys( $dgc_hg ) as $i => $g ) : ?><a href="#hg-<?php echo (int) $i; ?>"><?php echo esc_html( $g ); ?></a><?php endforeach; ?>
 		</nav>
@@ -40,14 +54,16 @@ $dgc_hg_desc = array(
 			<div class="hg-grid">
 			<?php foreach ( $rows as $r ) : ?>
 				<div class="hg-card">
-					<div class="hg-name"><?php echo esc_html( $r['goi'] ); ?></div>
+					<?php $dgc_pct = ( (float) $r['goc'] > (float) $r['thang'] && (float) $r['goc'] ) ? (int) round( 100 - $r['thang'] * 100 / $r['goc'] ) : 0; ?>
+					<div class="hg-name"><?php echo esc_html( $r['goi'] ); ?><?php if ( $dgc_pct >= 5 ) : ?><em class="hg-pct">Giảm <?php echo (int) $dgc_pct; ?>%</em><?php endif; ?></div>
 					<div class="hg-price"><b><?php echo esc_html( dgc_vnd( $r['thang'] ) ); ?></b><span>/tháng</span></div>
 					<?php if ( (float) $r['goc'] > (float) $r['thang'] ) : ?><div class="hg-old"><s><?php echo esc_html( dgc_vnd( $r['goc'] ) ); ?></s><?php if ( $r['ky'] ) : ?> khi đăng ký <?php echo esc_html( $r['ky'] ); ?> năm<?php endif; ?></div><?php endif; ?>
 					<dl class="hg-spec">
 						<div><dt>Dung lượng SSD</dt><dd><?php echo esc_html( $r['dl'] ); ?></dd></div>
 						<div><dt>Số website</dt><dd><?php echo esc_html( $r['web'] ); ?></dd></div>
 						<?php if ( $r['cpu'] ) : ?><div><dt>CPU / RAM</dt><dd><?php echo esc_html( $r['cpu'] ); ?></dd></div><?php endif; ?>
-						<div><dt>Đăng ký 1 năm</dt><dd><?php echo esc_html( dgc_vnd( $r['nam'] ) ); ?></dd></div>
+						<?php if ( (int) $r['ky'] > 0 && (float) $r['thang'] ) : ?><div><dt>Trọn <?php echo (int) $r['ky']; ?> năm</dt><dd><?php echo esc_html( dgc_vnd( $r['thang'] * 12 * (int) $r['ky'] ) ); ?></dd></div><?php endif; ?>
+						<?php if ( (float) $r['nam'] ) : ?><div><dt>Đăng ký 1 năm</dt><dd><?php echo esc_html( dgc_vnd( $r['nam'] ) ); ?></dd></div><?php endif; ?>
 					</dl>
 					<a class="btn btn-ghost btn-sm" href="#lien-he" data-svc="Hosting" data-order="Đăng ký hosting gói <?php echo esc_attr( $r['goi'] ); ?> (<?php echo esc_attr( $g ); ?>)">Chọn gói này</a>
 				</div>
@@ -57,6 +73,18 @@ $dgc_hg_desc = array(
 		<?php endforeach; ?>
 		<p class="muted" style="text-align:center;margin-top:10px">Mọi gói: băng thông không giới hạn, chứng chỉ SSL miễn phí. Cần cấu hình riêng (VPS, máy chủ riêng): <a href="#lien-he" data-svc="Hosting" data-order="Cần báo giá VPS / cấu hình hosting riêng">gửi yêu cầu báo giá</a>.</p>
 		<?php include get_template_directory() . '/inc/price-note.php'; ?>
+	</div>
+</section>
+
+<section class="sec hg-trust-sec">
+	<div class="wrap">
+		<div class="hg-offer-head"><span class="eyebrow">Đăng ký tại DigicomVN</span><h2>Mua hosting rõ ràng, có người hỗ trợ</h2></div>
+		<ul class="hg-trust">
+			<li><b>Hợp đồng, hoá đơn từ pháp nhân</b><span>Công ty TNHH Dịch vụ Truyền thông Digito Combat, MST 0109816406. Xuất hoá đơn theo thông tin doanh nghiệp của bạn.</span></li>
+			<li><b>Thanh toán vào tài khoản công ty</b><span>Chuyển khoản MB Bank 567898838, chủ tài khoản Công ty TNHH DVTT Digito Combat.</span></li>
+			<li><b>Hạ tầng tốc độ cao</b><span>Ổ NVMe, máy chủ web LiteSpeed bản quyền, chứng chỉ SSL miễn phí và trang quản trị cPanel.</span></li>
+			<li><b>Cài đặt giúp bạn</b><span>Cài WordPress, trỏ tên miền, bật SSL và cấu hình tốc độ tải trang cho SEO. Hỗ trợ qua hotline <a href="tel:0988769317">0988&nbsp;769&nbsp;317</a> và Zalo.</span></li>
+		</ul>
 	</div>
 </section>
 
