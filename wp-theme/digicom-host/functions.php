@@ -157,6 +157,7 @@ require_once get_template_directory() . '/inc/domain-hosting.php';
 require_once get_template_directory() . '/inc/domain-order.php';
 require_once get_template_directory() . '/inc/tm-offers.php';
 require_once get_template_directory() . '/inc/hg-offers.php';
+require_once get_template_directory() . '/inc/handover.php';
 
 /**
  * Helper doc 1 option.

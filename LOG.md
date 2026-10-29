@@ -4949,3 +4949,7 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 ## 2026-10-29 10:00 - /hosting/ uu dai + tin cay + dong bo gia ban le (DGC_VER 3.19.0)
 - inc/hg-offers.php moi, page-hosting.php, sg.css, options.php; them 3 goi WordPress Business vao hosting_gia live. QA 375px khong tran ngang, khong lo ten nha cung cap.
+- 2026-10-29: Hannah - so them nguon nhanh.vn (x1,10): congthuong 9,35tr, diendandoanhnghiep 4,675tr, baodautu 5,72tr, vietnamnet 6,6tr (khong ghi loai link) - khong ben nao re hon, gia khach giu nguyen; cap nhat ghi chu NOIBO (Sheet 1HmWfRah...).
+
+## 2026-10-29 10:40 - Ban giao ten mien/hosting
+- inc/handover.php moi (trang Ban giao dich vu), domain-order.php them huong dan quan tri + nut ban giao. Quy trinh 14-van-hanh-ten-mien-hosting/. Kiem cong khach dai ly: co white-label control panel, chua bat.

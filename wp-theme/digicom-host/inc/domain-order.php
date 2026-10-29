@@ -333,7 +333,8 @@ function dgc_tm_mail_customer( $id, $kind ) {
 	} else {
 		$sub = 'Tên miền đơn ' . $code . ' đã đăng ký xong';
 		$msg = 'Chào ' . $o['name'] . ",\n\nTên miền trong đơn " . $code . " đã được đăng ký:\n" . dgc_tm_order_summary( $id )
-			. "\nCần trỏ tên miền về hosting hoặc nhận thông tin quản trị, vui lòng trả lời email này hoặc gọi " . dgc( 'hotline', '0988 769 317' ) . '.';
+			. "\n" . ( function_exists( 'dgc_hd_domain_guide' ) ? dgc_hd_domain_guide() : '' )
+			. "\nCần trỏ tên miền về hosting, vui lòng trả lời email này hoặc gọi " . dgc( 'hotline', '0988 769 317' ) . '.';
 	}
 	wp_mail( $o['email'], $sub, $msg . "\n\nDigicomVN\nHotline: " . dgc( 'hotline', '0988 769 317' ) . "\nEmail: sales@digicomvn.com" );
 }
@@ -362,6 +363,7 @@ add_action( 'add_meta_boxes_dgc_don_tm', function () {
 		echo '<p style="margin-top:16px"><label><b>Trạng thái:</b> <select name="dgc_tm_status">';
 		foreach ( dgc_tm_status_labels() as $k => $v ) echo '<option value="' . esc_attr( $k ) . '"' . selected( $s, $k, false ) . '>' . esc_html( $v ) . '</option>';
 		echo '</select></label> <span class="description">Chọn "Đã đăng ký xong" rồi bấm Cập nhật: hệ thống gửi email báo khách.</span></p>';
+		echo '<p><a class="button" href="' . esc_url( admin_url( 'edit.php?post_type=dgc_don_tm&page=dgc-ban-giao&don=' . $id ) ) . '">Gửi email bàn giao quản trị</a></p>';
 		$log = (array) get_post_meta( $id, '_tm_log', true );
 		if ( $log ) echo '<p><b>Lịch sử</b></p><ul style="margin:0">' . implode( '', array_map( function ( $l ) { return '<li>' . esc_html( $l ) . '</li>'; }, $log ) ) . '</ul>';
 	}, 'dgc_don_tm', 'normal', 'high' );
