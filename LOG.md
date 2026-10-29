@@ -1,5 +1,8 @@
 # LOG - digicomvn.com
 
+## 2026-10-29 (Trang tên miền kiểu bán lẻ + đồng bộ giá)
+- Kết quả tra cứu: thẻ chính + combo 3 đuôi, nhãn Có ưu đãi, quà tặng, giá theo số năm tối thiểu; giỏ hiện giá gạch, tiết kiệm, quà. Giá gạch = giá gốc năm đầu + gia hạn các năm sau (không thổi phồng). Đồng bộ giá bán lẻ hằng ngày 01:15, lần đầu: giá không đổi (9 đuôi bỏ cột gốc trùng). DGC_VER 3.18.0 live.
+
 ## 2026-10-28 (Redesign phong cách seongon trên Local)
 - sg.css mới, trang chủ SEO-first, tpl-seo.php cho 5 trang SEO, menu Local mới, FAQ trang chủ tập con. QA Local: 0 tràn ngang ở 375/768/1024/1280/1440, menu 1 dòng, 0 chữ mồ côi, dark mode sửa biến chữ. Ảnh: 13-redesign-seongon/shots/. Chưa deploy live.
 
@@ -4942,3 +4945,4 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - Sua: order-prefill.php (nut Them vao gio, thanh gio noi), page-ten-mien.php, options.php (tm_vat, tm_bank_acc, tm_bank_owner), sg.css, functions.php.
 - QA: Local du luong (don DGCKHUZUN), mobile 375 khong tran; live: tim ten -> them gio -> trang thanh toan OK, webhook khong key tra 401.
 - 29/10 09:30: Hieu bao o tra ten mien bao 'Chua kiem tra duoc'. Nguyen nhan: nonce trong HTML LiteSpeed cache lech phien dang nhap -> admin-ajax tra -1 403. Bo bat buoc nonce (tra cuu chi doc + rate-limit IP; tao don co honeypot + 10 don/gio/IP). Da live, test nonce sai van tra ket qua.
+- 2026-10-29: Báo giá Hannah EPC báo link dofollow (DanaSEO giữ giá gốc, Goodcom x1,10), 2 Google Sheet khách + NOIBO.

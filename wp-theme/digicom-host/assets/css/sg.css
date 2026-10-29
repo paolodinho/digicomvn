@@ -510,3 +510,42 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-order-help p{margin:0;color:var(--sg-soft);font-size:15px;line-height:1.65}
 .sg-order-help-cta{display:flex;gap:12px;flex-wrap:wrap}
 @media (max-width:640px){.sg-order-help{padding:22px 20px}.sg-order-help-cta,.sg-order-help-cta .sg-btn{width:100%}}
+/* Ket qua tra ten mien kieu "the chinh + combo" (2026-10-29) */
+.tm-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:16px;margin:0 0 16px}
+.tm-top.is-solo{grid-template-columns:1fr}
+.tm-hero,.tm-combo{border:1px solid var(--sg-line);border-radius:14px;padding:20px 22px;background:var(--sg-card);text-align:left}
+.tm-combo{background:var(--sg-cyan);border-color:transparent}
+.tm-badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:6px;background:#E3F8F1;color:#0B5E52}
+.tm-hero.is-taken .tm-badge{background:#FDECEA;color:#A3271B}.tm-hero.is-manual .tm-badge{background:var(--sg-cyan);color:var(--sg-blue)}
+.tm-combo .tm-badge{background:#fff;color:var(--sg-blue)}
+.tm-hname{margin:10px 0 2px;font-size:clamp(22px,3vw,28px);font-weight:800;color:var(--heading);overflow-wrap:anywhere;line-height:1.2}
+.tm-hname span{color:var(--sg-blue)}
+.tm-hero.is-taken .tm-hname{color:var(--ink-soft)}
+.tm-cname{margin:10px 0 2px;font-size:18px;font-weight:700;color:var(--heading);overflow-wrap:anywhere}
+.tm-cname i{font-style:normal;display:inline-block;padding:2px 7px;margin:0 2px;border:1px solid var(--sg-line);border-radius:6px;background:#fff;font-size:14px}
+.tm-cname em{font-style:normal;color:var(--ink-soft);margin:0 2px}
+.tm-hprice{margin:8px 0 0;color:var(--heading)}
+.tm-hprice b{font-size:24px;color:var(--sg-blue)}
+.tm-hprice small{font-size:13px;color:var(--ink-soft);margin-left:2px}
+.tm-hprice s{font-size:14px;color:#A3271B;margin-left:6px}
+.tm-cond{margin:4px 0 12px;font-size:13px;color:var(--ink-soft)}
+.tm-result .tm-hbtn{display:inline-flex;justify-content:center;padding:10px 18px;font-size:14.5px;border:1.5px solid var(--sg-blue);cursor:pointer;font-family:inherit;color:#fff!important;text-decoration:none}
+.tm-result .tm-hbtn.is-added{background:#fff;color:var(--sg-blue)!important}
+.tm-gifts{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:6px}
+.tm-gifts li{position:relative;padding-left:22px;font-size:13.5px;color:var(--sg-ink);line-height:1.45}
+.tm-gifts li:before{content:"";position:absolute;left:2px;top:4px;width:12px;height:7px;border-left:2px solid #0B746A;border-bottom:2px solid #0B746A;transform:rotate(-45deg)}
+.tm-tag{display:inline-block;margin-left:8px;padding:2px 7px;border-radius:5px;background:#FFF1E6;color:#B4480B;font-size:11px;font-weight:700;vertical-align:2px;white-space:nowrap}
+.tm-gt{background:none;border:0;padding:0;font:inherit;font-size:13px;color:var(--sg-blue);text-decoration:underline;cursor:pointer}
+.tm-rgifts{grid-column:1/-1;display:none;padding:2px 0 4px}
+.tm-row.is-open .tm-rgifts{display:block}
+.tm-rgifts .tm-gifts{margin:0;padding:12px 14px;border-radius:10px;background:var(--sg-cyan)}
+@media(max-width:760px){.tm-top{grid-template-columns:1fr}.tm-hero,.tm-combo{padding:16px}}
+/* Gio hang: tiet kiem + qua tang */
+.tmc-items li{grid-template-columns:minmax(0,1fr) auto}
+.tmc-items span s{font-weight:500;color:var(--sg-soft);font-size:13px;margin-right:6px}
+.tmc-tip{grid-column:1/-1;font-style:normal;font-size:13px;font-weight:600;color:#0B746A}
+.tmc-tip.is-warn{color:#B4480B}
+.tmc-gifts{grid-column:1/-1;list-style:none;margin:2px 0 0;padding:0;font-size:12.5px;color:var(--sg-soft)}
+.tmc-gifts li:before{content:"+ ";color:#0B746A;font-weight:700}
+.tmc-sum .tmc-gifts{margin-top:4px}
+.tmc-save td{color:#0B746A;font-weight:700}

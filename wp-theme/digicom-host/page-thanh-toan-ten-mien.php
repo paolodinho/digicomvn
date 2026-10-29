@@ -45,7 +45,7 @@ $dgc_bank = dgc_tm_bank();
 				<table class="tmc-sum">
 					<tbody>
 					<?php foreach ( $lines as $l ) : ?>
-						<tr><td><?php echo esc_html( $l['d'] ); ?> <small><?php echo (int) $l['y']; ?> năm</small></td><td><?php echo esc_html( dgc_vnd( $l['amount'] ) ); ?></td></tr>
+						<tr><td><?php echo esc_html( $l['d'] ); ?> <small><?php echo (int) $l['y']; ?> năm</small><?php if ( ! empty( $l['gifts'] ) ) : ?><ul class="tmc-gifts"><?php foreach ( $l['gifts'] as $g ) echo '<li>' . esc_html( $g ) . '</li>'; ?></ul><?php endif; ?></td><td><?php echo esc_html( dgc_vnd( $l['amount'] ) ); ?></td></tr>
 					<?php endforeach; ?>
 					<?php if ( $vat ) : ?><tr><td>VAT</td><td><?php echo esc_html( dgc_vnd( $vat ) ); ?></td></tr><?php endif; ?>
 					</tbody>
@@ -63,23 +63,27 @@ $dgc_bank = dgc_tm_bank();
 		</div>
 <?php else :
 	$dgc_prices = array();
+	$dgc_gifts  = dgc_tm_gifts_map();
 	foreach ( dgc_tm_price_map() as $t => $p ) {
 		$f = dgc_tm_num( $p['gia'] );
-		if ( $f ) $dgc_prices[ $t ] = array( $f, dgc_tm_num( $p['han'] ) ?: $f );
+		/* [nam dau, gia han, gia goc, so nam toi thieu, qua tang] */
+		if ( $f ) $dgc_prices[ $t ] = array( $f, dgc_tm_num( $p['han'] ) ?: $f, max( $f, dgc_tm_num( $p['goc'] ) ), dgc_tm_min_years( $p ), $dgc_gifts[ $t ] ?? array() );
 	}
+	$dgc_combo = dgc_tm_combo();
 	?>
-		<div class="tmc-grid" data-tmc-cart data-prices="<?php echo esc_attr( wp_json_encode( $dgc_prices ) ); ?>" data-vat="<?php echo esc_attr( dgc_tm_vat_pct() ); ?>">
+		<div class="tmc-grid" data-tmc-cart data-prices="<?php echo esc_attr( wp_json_encode( $dgc_prices ) ); ?>" data-combo="<?php echo esc_attr( wp_json_encode( $dgc_combo ?: null ) ); ?>" data-vat="<?php echo esc_attr( dgc_tm_vat_pct() ); ?>">
 			<div class="tmc-cart">
 				<h2>Tên miền đã chọn</h2>
 				<ul class="tmc-items" data-tmc-items></ul>
 				<p class="tmc-empty" data-tmc-empty hidden>Giỏ đang trống. <a href="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>">Kiểm tra tên miền</a> để thêm vào giỏ.</p>
 				<table class="tmc-sum" data-tmc-sum>
 					<tfoot>
+						<tr data-tmc-saverow hidden class="tmc-save"><td>Bạn tiết kiệm</td><td data-tmc-save></td></tr>
 						<tr data-tmc-vatrow hidden><td>VAT</td><td data-tmc-vat></td></tr>
 						<tr><td>Tổng thanh toán</td><td data-tmc-total></td></tr>
 					</tfoot>
 				</table>
-				<p class="tmc-note">Giá năm thứ hai trở đi tính theo giá gia hạn. Tên miền được kiểm tra lại lúc tạo đơn.</p>
+				<p class="tmc-note">Đăng ký nhiều năm để giữ giá ưu đãi năm đầu và tiết kiệm hơn. Năm thứ hai trở đi tính theo giá gia hạn. Tên miền được kiểm tra lại lúc tạo đơn.</p>
 			</div>
 			<form class="tmc-form" data-tmc-form novalidate>
 				<h2>Thông tin chủ thể tên miền</h2>
@@ -137,22 +141,36 @@ $dgc_bank = dgc_tm_bank();
 		return;
 	}
 	var box=document.querySelector('[data-tmc-cart]'); if(!box) return;
-	var prices=JSON.parse(box.dataset.prices||'{}'), vatPct=parseFloat(box.dataset.vat)||0;
+	var prices=JSON.parse(box.dataset.prices||'{}'), cmb=JSON.parse(box.dataset.combo||'null'), vatPct=parseFloat(box.dataset.vat)||0;
 	var list=box.querySelector('[data-tmc-items]'), form=box.querySelector('[data-tmc-form]'), err=box.querySelector('[data-tmc-err]');
 	function load(){ try{ return JSON.parse(localStorage.getItem('dgc_tm_cart')||'[]'); }catch(x){ return []; } }
 	function save(c){ try{ localStorage.setItem('dgc_tm_cart',JSON.stringify(c)); }catch(x){} }
 	function tldOf(d){ var best=''; for(var t in prices){ if(d.slice(-t.length)===t && t.length>best.length) best=t; } return best; }
-	function amount(d,y){ var p=prices[tldOf(d)]; return p ? p[0]+(y-1)*p[1] : 0; }
+	/* Gia combo nam dau: chi khi du ca bo cung ten, giong dgc_tm_combo_lines() phia server. */
+	function comboMap(c){
+		var m={}; if(!cmb) return m; var by={}, n=cmb.tlds.length, each=Math.floor(cmb.price/n);
+		c.forEach(function(x){ if(!x.c) return; cmb.tlds.forEach(function(t){ if(x.d.slice(-t.length)===t){ var k=x.d.slice(0,-t.length); (by[k]=by[k]||{})[t]=x.d; } }); });
+		for(var k in by){ if(Object.keys(by[k]).length<n) continue; cmb.tlds.forEach(function(t,i){ m[by[k][t]]= i===n-1 ? cmb.price-each*(n-1) : each; }); }
+		return m;
+	}
+	function quote(x,cm){
+		var p=prices[tldOf(x.d)]; if(!p) return {a:0,l:0,g:[]};
+		var first=x.y<p[3]?p[2]:p[0]; if(cm[x.d]) first=cm[x.d];
+		return {a:first+(x.y-1)*p[1], l:(cm[x.d]?p[0]:p[2])+(x.y-1)*p[1], g:p[4]||[], min:p[3]};
+	}
 	function render(){
 		var c=load().filter(function(x){ return tldOf(x.d); }); save(c);
 		box.querySelector('[data-tmc-empty]').hidden=!!c.length; form.hidden=!c.length; box.querySelector('[data-tmc-sum]').hidden=!c.length;
-		var sub=0;
+		var sub=0, saved=0, cm=comboMap(c);
 		list.innerHTML=c.map(function(x,i){
-			var a=amount(x.d,x.y); sub+=a; var opt='';
+			var q=quote(x,cm); sub+=q.a; saved+=Math.max(0,q.l-q.a); var opt='';
 			for(var y=1;y<=5;y++){ opt+='<option value="'+y+'"'+(y==x.y?' selected':'')+'>'+y+' năm</option>'; }
-			return '<li><b>'+esc(x.d)+'</b><select data-i="'+i+'" aria-label="Số năm đăng ký '+esc(x.d)+'">'+opt+'</select><span>'+vnd(a)+'</span><button type="button" data-rm="'+i+'" aria-label="Bỏ '+esc(x.d)+' khỏi giỏ">Bỏ</button></li>';
+			var tip=cm[x.d] ? '<em class="tmc-tip">Giá combo năm đầu</em>' : (q.min>1 && x.y<q.min ? '<em class="tmc-tip is-warn">Chọn từ '+q.min+' năm để được giá ưu đãi năm đầu</em>' : (q.l>q.a ? '<em class="tmc-tip">Tiết kiệm '+vnd(q.l-q.a)+'</em>' : ''));
+			var gifts=q.g.length ? '<ul class="tmc-gifts">'+q.g.map(function(g){ return '<li>'+esc(g)+'</li>'; }).join('')+'</ul>' : '';
+			return '<li><b>'+esc(x.d)+'</b><span>'+(q.l>q.a?'<s>'+vnd(q.l)+'</s>':'')+vnd(q.a)+'</span><select data-i="'+i+'" aria-label="Số năm đăng ký '+esc(x.d)+'">'+opt+'</select><button type="button" data-rm="'+i+'" aria-label="Bỏ '+esc(x.d)+' khỏi giỏ">Bỏ</button>'+tip+gifts+'</li>';
 		}).join('');
 		var vat=Math.round(sub*vatPct/100);
+		box.querySelector('[data-tmc-saverow]').hidden=!saved; box.querySelector('[data-tmc-save]').textContent=vnd(saved);
 		box.querySelector('[data-tmc-vatrow]').hidden=!vat; box.querySelector('[data-tmc-vat]').textContent=vnd(vat);
 		box.querySelector('[data-tmc-total]').textContent=vnd(sub+vat);
 	}

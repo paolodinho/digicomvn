@@ -63,8 +63,12 @@ add_action( 'wp_head', function () {
 
 function dgc_tm_checkout_url() { return home_url( '/thanh-toan-ten-mien/' ); }
 
-/** Tinh gia 1 ten mien theo so nam. Tra ve false neu duoi chua co trong bang gia. */
-function dgc_tm_quote( $domain, $years ) {
+/**
+ * Tinh gia 1 ten mien theo so nam. Tra ve false neu duoi chua co trong bang gia.
+ * Gia nam dau uu dai chi ap khi dang ky du so nam toi thieu (dgc_tm_min_years), thieu -> nam dau tinh gia goc.
+ * $combo = gia nam dau rieng cho dong thuoc bo combo (0 = khong).
+ */
+function dgc_tm_quote( $domain, $years, $combo = 0 ) {
 	$map = dgc_tm_price_map();
 	$tld = '';
 	foreach ( array_keys( $map ) as $t ) {
@@ -72,11 +76,30 @@ function dgc_tm_quote( $domain, $years ) {
 	}
 	if ( ! $tld ) return false;
 	$p     = $map[ $tld ];
-	$first = dgc_tm_num( $p['gia'] );
+	$first = dgc_tm_num( $p['gia'] ); $gia1 = $first;
 	$renew = dgc_tm_num( $p['han'] ) ?: $first;
+	$list  = max( $first, dgc_tm_num( $p['goc'] ) );
 	if ( ! $first ) return false;
 	$years = max( 1, min( 5, (int) $years ) );
-	return array( 'd' => $domain, 'tld' => $tld, 'y' => $years, 'amount' => $first + ( $years - 1 ) * $renew );
+	if ( $years < dgc_tm_min_years( $p ) ) $first = $list;
+	if ( $combo ) $first = $combo;
+	$gifts = dgc_tm_gifts_map()[ $tld ] ?? array();
+	return array( 'd' => $domain, 'tld' => $tld, 'y' => $years, 'amount' => $first + ( $years - 1 ) * $renew, 'list' => ( $combo ? $gia1 : $list ) + ( $years - 1 ) * $renew, 'gifts' => $gifts, 'combo' => $combo ? 1 : 0 );
+}
+
+/** Gia nam dau moi dong combo: chi khi du ca bo cung ten trong gio. Tra ve domain => gia. */
+function dgc_tm_combo_lines( $doms ) {
+	$c = dgc_tm_combo(); $out = array();
+	if ( ! $c ) return $out;
+	$by = array();
+	foreach ( $doms as $d ) foreach ( $c['tlds'] as $t ) if ( substr( $d, -strlen( $t ) ) === $t ) $by[ substr( $d, 0, -strlen( $t ) ) ][ $t ] = $d;
+	$n = count( $c['tlds'] ); $each = (int) floor( $c['price'] / $n );
+	foreach ( $by as $set ) {
+		if ( count( $set ) < $n ) continue;
+		$i = 0;
+		foreach ( $c['tlds'] as $t ) { $out[ $set[ $t ] ] = ++$i === $n ? $c['price'] - $each * ( $n - 1 ) : $each; }
+	}
+	return $out;
 }
 
 function dgc_tm_clean_domain( $d ) {
@@ -113,10 +136,13 @@ function dgc_tm_order_ajax() {
 	if ( empty( $_POST['agree'] ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng xác nhận thông tin chủ thể là chính xác.' ) );
 
 	$lines = array(); $doms = array();
+	$cdoms = array();
+	foreach ( $items as $it ) { $d = dgc_tm_clean_domain( $it['d'] ?? '' ); if ( $d && ! empty( $it['c'] ) ) $cdoms[] = $d; }
+	$combo = dgc_tm_combo_lines( $cdoms );
 	foreach ( $items as $it ) {
 		$d = dgc_tm_clean_domain( $it['d'] ?? '' );
 		if ( ! $d || isset( $lines[ $d ] ) ) continue;
-		$q = dgc_tm_quote( $d, $it['y'] ?? 1 );
+		$q = dgc_tm_quote( $d, $it['y'] ?? 1, $combo[ $d ] ?? 0 );
 		if ( ! $q ) wp_send_json( array( 'ok' => 0, 'msg' => $d . ' chưa có giá đăng ký trực tuyến, vui lòng gửi yêu cầu tư vấn.' ) );
 		$lines[ $d ] = $q; $doms[] = $d;
 	}
@@ -275,6 +301,8 @@ function dgc_tm_order_summary( $id ) {
 	$out = '';
 	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) {
 		$out .= '- ' . $l['d'] . ' (' . $l['y'] . ' năm): ' . dgc_vnd( $l['amount'] ) . "\n";
+		if ( ! empty( $l['combo'] ) ) $out .= '  (giá combo năm đầu)' . "\n";
+		foreach ( (array) ( $l['gifts'] ?? array() ) as $g ) $out .= '  + ' . $g . "\n";
 	}
 	$vat = (int) get_post_meta( $id, '_tm_vat', true );
 	if ( $vat ) $out .= 'VAT: ' . dgc_vnd( $vat ) . "\n";

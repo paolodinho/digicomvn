@@ -43,7 +43,7 @@ $dgc_tm_table = function ( $rows, $caption ) {
 				<input type="text" name="d" placeholder="Nhập tên miền, ví dụ: thuonghieu.vn" aria-label="Tên miền cần kiểm tra" required>
 				<button type="submit">Kiểm tra</button>
 			</form>
-			<p class="tm-result" id="tm-result" aria-live="polite" hidden></p>
+			<div class="tm-result" id="tm-result" aria-live="polite" hidden></div>
 			<a class="tm-bar" data-tm-bar href="<?php echo esc_url( dgc_tm_checkout_url() ); ?>" hidden>Giỏ tên miền: <b data-tm-n>0</b> <span>Thanh toán &rarr;</span></a>
 		</div>
 	</div>

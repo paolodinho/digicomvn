@@ -157,22 +157,40 @@ function dgc_domain_check_ajax() {
 	$prices = dgc_tm_price_map();
 	$tlds   = dgc_tm_suggest_tlds();
 	if ( $ext ) $tlds = array_values( array_unique( array_merge( array( $ext ), $tlds ) ) );
-	$tlds = array_slice( $tlds, 0, 12 );
-	$doms = array();
-	foreach ( $tlds as $t ) $doms[] = $name . $t;
-	$st  = dgc_tm_check_many( $doms );
-	$out = array();
-	foreach ( $tlds as $i => $t ) {
+	$tlds  = array_slice( $tlds, 0, 12 );
+	$combo = dgc_tm_combo();
+	$all   = $combo ? array_values( array_unique( array_merge( $tlds, $combo['tlds'] ) ) ) : $tlds;
+	$doms  = array();
+	foreach ( $all as $t ) $doms[ $t ] = $name . $t;
+	$st    = dgc_tm_check_many( array_values( $doms ) );
+	$gifts = dgc_tm_gifts_map();
+	$num   = function ( $v ) { return (int) preg_replace( '/\D/', '', (string) $v ); };
+	$item  = function ( $t ) use ( $doms, $st, $prices, $gifts, $num ) {
 		$p = $prices[ $t ] ?? null;
-		$out[] = array(
-			'd'   => $doms[ $i ],
-			's'   => $st[ $doms[ $i ] ],
-			'gia' => $p ? dgc_vnd( $p['gia'] ) : '',
-			'goc' => ( $p && (float) preg_replace( '/\D/', '', $p['goc'] ) > (float) preg_replace( '/\D/', '', $p['gia'] ) ) ? dgc_vnd( $p['goc'] ) : '',
-			'han' => $p && $p['han'] ? dgc_vnd( $p['han'] ) : '',
+		$gia = $p ? $num( $p['gia'] ) : 0; $goc = $p ? $num( $p['goc'] ) : 0; $min = $p ? dgc_tm_min_years( $p ) : 1;
+		return array(
+			'd'     => $doms[ $t ],
+			's'     => $st[ $doms[ $t ] ],
+			'gia'   => $gia ? dgc_vnd( $gia ) : '',
+			'goc'   => $goc > $gia ? dgc_vnd( $goc ) : '',
+			'han'   => $p && $p['han'] ? dgc_vnd( $p['han'] ) : '',
+			'min'   => $min,
+			'gifts' => $gifts[ $t ] ?? array(),
+			'promo' => $goc > $gia || ! empty( $gifts[ $t ] ),
 		);
+	};
+	$out = array();
+	foreach ( $tlds as $t ) $out[] = $item( $t );
+	$cb = null;
+	if ( $combo ) {
+		$free = true; $list = 0; $ds = array();
+		foreach ( $combo['tlds'] as $t ) {
+			if ( 'free' !== $st[ $doms[ $t ] ] || empty( $prices[ $t ] ) ) { $free = false; break; }
+			$list += $num( $prices[ $t ]['gia'] ); $ds[] = $doms[ $t ];
+		}
+		if ( $free && $list > $combo['price'] ) $cb = array( 'name' => $name, 'tlds' => $combo['tlds'], 'doms' => $ds, 'gia' => dgc_vnd( $combo['price'] ), 'goc' => dgc_vnd( $list ), 'pct' => (int) floor( 100 - $combo['price'] * 100 / $list ), 'label' => $combo['label'] );
 	}
-	wp_send_json( array( 's' => 'ok', 'q' => $doms[0], 'list' => $out ) );
+	wp_send_json( array( 's' => 'ok', 'q' => $out[0]['d'], 'list' => $out, 'combo' => $cb ) );
 }
 add_action( 'wp_ajax_dgc_domain_check', 'dgc_domain_check_ajax' );
 add_action( 'wp_ajax_nopriv_dgc_domain_check', 'dgc_domain_check_ajax' );

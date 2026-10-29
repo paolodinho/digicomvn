@@ -1,5 +1,9 @@
 # DECISIONS - digicomvn.com
 
+## 2026-10-29 - Giá tên miền = giá bán lẻ công khai của nhà cung cấp, tự đồng bộ hằng ngày; áp đủ quà tặng
+- Hiếu: "auto để bằng giá trên pavietnam", "đổi giá luôn, không cần khoá", quà "áp đủ". Chấp nhận lỗ năm đầu một số đuôi so với giá vốn đại lý.
+- Không ghi tên nhà cung cấp trên site; nguồn chỉ nằm trong wp-config. % tiết kiệm combo/giỏ so với giá năm đầu thường, không so với giá gia hạn.
+
 ## 2026-10-28 - Thiết kế lại giao diện theo phong cách seongon, SEO là dịch vụ chủ đạo
 - Hiếu: dịch vụ SEO là chủ đạo; booking báo và tên miền/hosting là dịch vụ phụ nhưng vẫn giới thiệu trên trang chủ; làm lại hoàn toàn giao diện theo mẫu seongon; thiết kế ở Local trước.
 - Token: xanh #0D53F0/#0035AC, nhấn xanh bạc hà #07EF9C dùng rất ít (eyebrow trên nền xanh), nền phụ #F0FCFF/#F3F3F6, bo 15px, tiêu đề in hoa hai màu. Lớp CSS riêng assets/css/sg.css nạp sau main.css (rollback = bỏ enqueue).
