@@ -4969,3 +4969,7 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - inc/domain-order.php: dgc_tm_pa_register() gọi API đại lý (quốc tế/VN), chống đăng ký trùng (_tm_reg_done, khoá 5 phút), lưu mật khẩu + giao dịch (_tm_reg_info); đổi tay sang 'Đã thanh toán' cũng tự đăng ký; ô khoá SePay trong WP Admin (tm_sepay_key), ghi lần nhận webhook gần nhất.
 - Form thanh toán: tỉnh/phường dạng chọn (assets/data/dvhc.json từ danh mục đại lý), giới tính, CCCD/ngày sinh người đại diện.
 - Test: cổng interface_test 4 tên miền OK; webhook giả lập OK. Bật DGC_PA_REG_ON live.
+
+## 2026-10-29 20:40
+- SePay: khoá webhook đặt DGC_SEPAY_KEY trong wp-config live, test curl OK; form webhook SePay điền sẵn, chờ Hiếu dán khoá + nối ngân hàng MB.
+- 21:00 SePay: MB đã kết nối API, webhook kích hoạt; chưa thử giao dịch thật.

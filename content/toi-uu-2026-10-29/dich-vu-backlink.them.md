@@ -12,3 +12,6 @@ Số từ thêm: ~432. Link mới: 0. Không đụng khối giá, form, details,
      - "Làm sao kiểm tra backlink sau khi mua?" - PAA "Làm cách nào để kiểm tra backlink của website?".
 Nguồn: chỉ dùng dữ kiện đã có trên trang (5 nhóm nguồn, bàn giao, 4-8 tuần, báo cáo Liên kết Search Console, chính sách link spam của Google trong mục Tài liệu tham khảo).
 Lưu ý: kiểm live 29/10 trang chưa có khối FAQ riêng của theme (chỉ có câu "Chưa biết nên chọn báo hay gói nào?" ở khối CTA), nên không trùng. Nếu sau này bật `svc_faqs` cho trang này cần soát trùng câu.
+
+## Đợt 2 (29/10/2026 tối)
+- **1 câu FAQ H3 "Có nên mua backlink báo hay backlink giá rẻ không?"** (~70 từ) chèn cuối mục `#cau-hoi-thuong-gap-dich-vu-backlink`, sau câu "Làm sao kiểm tra backlink sau khi mua?". Phục vụ: "mua backlink", "mua backlink báo", "mua backlink giá rẻ". Căn cứ rel="sponsored"/nofollow: tài liệu Google "Qualify outbound links" đã có trong Tài liệu tham khảo của trang. Nêu rõ không mua link .gov.vn/.edu.vn vì vi phạm pháp luật. Không link mới.

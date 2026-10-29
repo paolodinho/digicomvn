@@ -137,23 +137,35 @@ function dgc_tm_order_ajax() {
 	if ( ! preg_match( '/^(\+?84|0)\d{9,10}$/', preg_replace( '/[\s.\-]/', '', $f['phone'] ) ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Số điện thoại chưa đúng.' ) );
 	if ( empty( $_POST['agree'] ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng xác nhận thông tin chủ thể là chính xác.' ) );
 
-	$lines = array(); $doms = array();
+	$lines = array(); $doms = array(); $hlines = array();
 	$cdoms = array();
 	foreach ( $items as $it ) { $d = dgc_tm_clean_domain( $it['d'] ?? '' ); if ( $d && ! empty( $it['c'] ) ) $cdoms[] = $d; }
 	$combo = dgc_tm_combo_lines( $cdoms );
 	foreach ( $items as $it ) {
 		$d = dgc_tm_clean_domain( $it['d'] ?? '' );
+		if ( 'h' === ( $it['t'] ?? '' ) ) {
+			if ( ! $d ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng nhập tên miền dùng cho hosting (ví dụ: thuonghieu.vn).' ) );
+			$h = dgc_hg_quote( $it['k'] ?? '', $it['m'] ?? 0, $d );
+			if ( ! $h ) wp_send_json( array( 'ok' => 0, 'msg' => 'Gói hosting đã chọn hiện chưa đăng ký trực tuyến được, vui lòng gửi yêu cầu tư vấn.' ) );
+			if ( isset( $hlines[ $d ] ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Mỗi tên miền chỉ dùng cho một gói hosting: ' . $d . '.' ) );
+			$hlines[ $d ] = $h;
+			continue;
+		}
 		if ( ! $d || isset( $lines[ $d ] ) ) continue;
 		$q = dgc_tm_quote( $d, $it['y'] ?? 1, $combo[ $d ] ?? 0 );
 		if ( ! $q ) wp_send_json( array( 'ok' => 0, 'msg' => $d . ' chưa có giá đăng ký trực tuyến, vui lòng gửi yêu cầu tư vấn.' ) );
 		$lines[ $d ] = $q; $doms[] = $d;
 	}
-	if ( ! $lines ) wp_send_json( array( 'ok' => 0, 'msg' => 'Giỏ hàng đang trống.' ) );
+	if ( ! $lines && ! $hlines ) wp_send_json( array( 'ok' => 0, 'msg' => 'Giỏ hàng đang trống.' ) );
 	/* Kiem tra lai con trong ngay luc tao don (khong dung ket qua cu trong trinh duyet). */
-	foreach ( $doms as $d ) delete_transient( 'dgc_tm_' . md5( $d ) );
-	$st  = dgc_tm_check_many( $doms );
-	$bad = array_keys( array_filter( $st, function ( $s ) { return 'free' !== $s; } ) );
-	if ( $bad ) wp_send_json( array( 'ok' => 0, 'bad' => $bad, 'msg' => 'Không xác nhận được tên miền còn trống: ' . implode( ', ', $bad ) . '. Hãy bỏ khỏi giỏ hoặc gửi yêu cầu để DigicomVN kiểm tra.' ) );
+	if ( $doms ) {
+		foreach ( $doms as $d ) delete_transient( 'dgc_tm_' . md5( $d ) );
+		$st  = dgc_tm_check_many( $doms );
+		$bad = array_keys( array_filter( $st, function ( $s ) { return 'free' !== $s; } ) );
+		if ( $bad ) wp_send_json( array( 'ok' => 0, 'bad' => $bad, 'msg' => 'Không xác nhận được tên miền còn trống: ' . implode( ', ', $bad ) . '. Hãy bỏ khỏi giỏ hoặc gửi yêu cầu để DigicomVN kiểm tra.' ) );
+	}
+	/* Ten mien dang ky truoc, hosting sau (hosting can ten mien da ton tai). */
+	foreach ( $hlines as $d => $h ) { $lines[ 'h:' . $d ] = $h; $doms[] = 'hosting ' . $h['n'] . ' (' . $d . ')'; }
 
 	$sub   = array_sum( wp_list_pluck( $lines, 'amount' ) );
 	$vat   = (int) round( $sub * dgc_tm_vat_pct() / 100 );
@@ -290,11 +302,14 @@ function dgc_tm_register_order( $id ) {
 	$done  = get_post_meta( $id, '_tm_reg_done', true ) ?: array();
 	$fail  = array();
 	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) {
-		if ( in_array( $l['d'], $done, true ) ) continue; // da dang ky o lan truoc, khong dang ky lai
+		$is_h = 'h' === ( $l['t'] ?? '' );
+		$key  = $is_h ? 'h:' . $l['d'] : $l['d'];
+		if ( in_array( $key, $done, true ) ) continue; // da dang ky o lan truoc, khong dang ky lai
 		$GLOBALS['dgc_tm_reg_order'] = $id;
-		$r = dgc_tm_pa_register( $l['d'], $l['y'], $owner );
-		if ( true === $r ) { $done[] = $l['d']; update_post_meta( $id, '_tm_reg_done', $done ); dgc_tm_log( $id, 'Đăng ký xong ' . $l['d'] ); }
-		else $fail[] = $l['d'] . ' (' . ( is_string( $r ) ? $r : 'lỗi' ) . ')';
+		$r = $is_h ? dgc_tm_pa_register_hosting( $l, $owner ) : dgc_tm_pa_register( $l['d'], $l['y'], $owner );
+		$lbl = $is_h ? 'hosting ' . $l['n'] . ' cho ' . $l['d'] : $l['d'];
+		if ( true === $r ) { $done[] = $key; update_post_meta( $id, '_tm_reg_done', $done ); dgc_tm_log( $id, 'Đăng ký xong ' . $lbl ); }
+		else $fail[] = $lbl . ' (' . ( is_string( $r ) ? $r : 'lỗi' ) . ')';
 	}
 	delete_transient( 'dgc_tm_reg_' . $id );
 	if ( $fail ) {
@@ -309,6 +324,7 @@ function dgc_tm_register_order( $id ) {
 function dgc_tm_order_summary( $id ) {
 	$out = '';
 	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) {
+		if ( 'h' === ( $l['t'] ?? '' ) ) { $out .= '- Hosting ' . $l['n'] . ' cho ' . $l['d'] . ' (' . $l['m'] . ' tháng): ' . dgc_vnd( $l['amount'] ) . "\n"; continue; }
 		$out .= '- ' . $l['d'] . ' (' . $l['y'] . ' năm): ' . dgc_vnd( $l['amount'] ) . "\n";
 		if ( ! empty( $l['combo'] ) ) $out .= '  (giá combo năm đầu)' . "\n";
 		foreach ( (array) ( $l['gifts'] ?? array() ) as $g ) $out .= '  + ' . $g . "\n";
@@ -338,12 +354,15 @@ function dgc_tm_mail_customer( $id, $kind ) {
 	if ( 'paid' === $kind ) {
 		$sub = 'DigicomVN đã nhận thanh toán đơn ' . $code;
 		$msg = 'Chào ' . $o['name'] . ",\n\nDigicomVN đã nhận thanh toán cho đơn " . $code . ":\n" . dgc_tm_order_summary( $id )
-			. "\nTên miền đang được đăng ký. DigicomVN sẽ gửi email xác nhận và thông tin quản trị khi hoàn tất, thường trong ngày làm việc.";
+			. "\nDịch vụ đang được đăng ký. DigicomVN sẽ gửi email xác nhận và thông tin đăng nhập khi hoàn tất, thường trong ngày làm việc.";
 	} else {
-		$sub = 'Tên miền đơn ' . $code . ' đã đăng ký xong';
-		$msg = 'Chào ' . $o['name'] . ",\n\nTên miền trong đơn " . $code . " đã được đăng ký:\n" . dgc_tm_order_summary( $id )
-			. "\n" . ( function_exists( 'dgc_hd_domain_guide' ) ? dgc_hd_domain_guide() : '' )
-			. "\nCần trỏ tên miền về hosting, vui lòng trả lời email này hoặc gọi " . dgc( 'hotline', '0988 769 317' ) . '.';
+		$has_d = false;
+		foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) if ( 'h' !== ( $l['t'] ?? '' ) ) $has_d = true;
+		$sub = 'Đơn ' . $code . ' đã đăng ký xong - thông tin đăng nhập';
+		$msg = 'Chào ' . $o['name'] . ",\n\nDịch vụ trong đơn " . $code . " đã được đăng ký:\n" . dgc_tm_order_summary( $id )
+			. ( function_exists( 'dgc_hg_login_text' ) ? dgc_hg_login_text( $id ) : '' )
+			. ( $has_d && function_exists( 'dgc_hd_domain_guide' ) ? "\n" . dgc_hd_domain_guide() : '' )
+			. "\nCần trỏ tên miền về hosting hoặc cài đặt website, vui lòng trả lời email này hoặc gọi " . dgc( 'hotline', '0988 769 317' ) . '.';
 	}
 	wp_mail( $o['email'], $sub, $msg . "\n\nDigicomVN\nHotline: " . dgc( 'hotline', '0988 769 317' ) . "\nEmail: sales@digicomvn.com" );
 }
@@ -369,7 +388,7 @@ add_action( 'add_meta_boxes_dgc_don_tm', function () {
 		foreach ( $rows as $k => $v ) if ( '' !== $v ) echo '<tr><th style="width:150px">' . esc_html( $k ) . '</th><td>' . esc_html( $v ) . '</td></tr>';
 		echo '</tbody></table>';
 		foreach ( ( get_post_meta( $id, '_tm_reg_info', true ) ?: array() ) as $d => $ri ) {
-			echo '<p><b>' . esc_html( $d ) . '</b>' . ( ! empty( $ri['test'] ) ? ' <em>(chạy thử, chưa đăng ký thật)</em>' : '' ) . ': mật khẩu quản trị tên miền <code>' . esc_html( $ri['pw'] ?? '' ) . '</code>, mã giao dịch ' . esc_html( $ri['trans'] ?? '' ) . ', trừ ' . esc_html( (string) ( $ri['money'] ?? '' ) ) . ' lúc ' . esc_html( $ri['time'] ?? '' ) . '</p>';
+			echo '<p><b>' . esc_html( $d ) . '</b>' . ( ! empty( $ri['test'] ) ? ' <em>(chạy thử, chưa đăng ký thật)</em>' : '' ) . ': ' . ( ! empty( $ri['host'] ) ? 'gói ' . esc_html( $ri['plan'] ?? '' ) . ', mật khẩu hosting' : 'mật khẩu quản trị tên miền' ) . ' <code>' . esc_html( $ri['pw'] ?? '' ) . '</code>, mã giao dịch ' . esc_html( $ri['trans'] ?? '' ) . ', trừ ' . esc_html( (string) ( $ri['money'] ?? '' ) ) . ' lúc ' . esc_html( $ri['time'] ?? '' ) . '</p>';
 		}
 		wp_nonce_field( 'dgc_tm_admin', 'dgc_tm_admin_n' );
 		echo '<p style="margin-top:16px"><label><b>Trạng thái:</b> <select name="dgc_tm_status">';

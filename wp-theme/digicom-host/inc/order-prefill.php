@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	function paintBar(){ if(!bar) return; var n=cart().length; bar.hidden=!n; bar.querySelector('[data-tm-n]').textContent=n; }
 	document.addEventListener('click',function(e){
 		var b=e.target.closest('[data-add]'); if(b){
-			var d=b.getAttribute('data-add'), y=+(b.getAttribute('data-y')||1), c=cart(), i=c.findIndex(function(x){ return x.d===d; });
+			var d=b.getAttribute('data-add'), y=+(b.getAttribute('data-y')||1), c=cart(), i=c.findIndex(function(x){ return x.t!=='h'&&x.d===d; });
 			if(i<0){ c.push({d:d,y:y}); } else { c.splice(i,1); }
 			setCart(c); syncBtns(); return;
 		}
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	});
 	paintBar();
 	function esc(t){ return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
-	function inCart(d){ return cart().some(function(c){ return c.d===d; }); }
+	function inCart(d){ return cart().some(function(c){ return c.t!=='h'&&c.d===d; }); }
 	function syncBtns(){
 		out.querySelectorAll('[data-add]').forEach(function(b){ var on=inCart(b.getAttribute('data-add')); b.classList.toggle('is-added',on); b.textContent=on?'Đã thêm vào giỏ':'Thêm vào giỏ'; });
 		out.querySelectorAll('[data-combo]').forEach(function(b){ var c=cart(), on=b.getAttribute('data-combo').split(',').every(function(d){ return c.some(function(x){ return x.d===d&&x.c; }); }); b.classList.toggle('is-added',on); b.textContent=on?'Đã thêm cả bộ':'Thêm cả bộ vào giỏ'; });

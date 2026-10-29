@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.19.1');
+define('DGC_VER','3.20.1');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -155,6 +155,7 @@ require_once get_template_directory() . '/inc/gsc-sitemap-submit.php';
 require_once get_template_directory() . '/inc/leads-sheet-sync.php';
 require_once get_template_directory() . '/inc/domain-hosting.php';
 require_once get_template_directory() . '/inc/domain-order.php';
+require_once get_template_directory() . '/inc/hosting-order.php';
 require_once get_template_directory() . '/inc/tm-offers.php';
 require_once get_template_directory() . '/inc/hg-offers.php';
 require_once get_template_directory() . '/inc/handover.php';

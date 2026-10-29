@@ -1,0 +1,67 @@
+{
+ "title": "Influencer Là Gì? Phân Loại Và Influencer Marketing",
+ "slug": "influencer-la-gi",
+ "meta_desc": "Influencer là gì? Nghĩa và gốc từ, phân loại nano, micro, macro, mega, khác KOL, KOC, 5 bước làm influencer marketing và nghĩa vụ ghi nhãn quảng cáo 2026.",
+ "excerpt": "Influencer là người có tầm ảnh hưởng trên mạng xã hội. Bài giải thích nghĩa và gốc từ, 4 tầng nano, micro, macro, mega cùng các ngưỡng khác nhau giữa các nguồn, khác biệt với KOL, KOC, 5 bước làm influencer marketing, cách nhận diện tương tác ảo và nghĩa vụ ghi nhãn quảng cáo từ 01/01/2026.",
+ "tu_khoa_chinh": "influencer",
+ "tu_khoa_phu": [
+  "influencer là gì",
+  "influencer marketing",
+  "influencer marketing là gì",
+  "influencer kol",
+  "người có ảnh hưởng",
+  "nano influencer",
+  "micro influencer",
+  "macro influencer",
+  "mega influencer"
+ ],
+ "intent": "Informational/định nghĩa: serp-influencer.json (đo ẩn danh 29/10/2026) từ 'influencer' 5 bài viết + 2 MXH + 2 trang khác, 5/8 tiêu đề dạng câu hỏi 'là gì', AI Overview định nghĩa influencer là người có tầm ảnh hưởng trên MXH; 'influencer marketing' 6 bài viết, 5 tiêu đề câu hỏi; 'influencer kol' 5 bài viết phân biệt KOL/KOC/influencer. Không có PAA.",
+ "gap_doi_thu": [
+  "Đọc 3 bài top (blog.abcdigi, pvm.com.vn, Wikipedia EN): ngưỡng phân loại mâu thuẫn nhau (macro từ 100.000, 250.000 hoặc 500.000; có bài thêm mid-tier) mà không bài nào nói rõ là quy ước, không chuẩn",
+  "Không bài nào đọc được nhắc nghĩa vụ ghi nhãn quảng cáo hay Luật Quảng cáo sửa đổi 2026, Luật BVQLNTD 2023",
+  "Không bài nào nêu cách nhận diện follower/tương tác ảo bằng dấu hiệu cụ thể; một bài nêu 'đóng góp 50% thành công chiến dịch' không nguồn",
+  "Thiếu gốc từ influencer có nguồn; thiếu khái niệm 'người có ảnh hưởng' theo NĐ 55/2024",
+  "thuvienphapluat.vn trả 403, không đọc được"
+ ],
+ "info_gain": [
+  "Bảng 4 tầng kèm cột 'biến thể gặp ở nguồn khác' + infographic thang phân loại, nêu rõ pháp luật VN chỉ dùng 'đáng kể'",
+  "3 nhóm người có ảnh hưởng theo NĐ 55/2024 (qua UBCTQG trên moit.gov.vn) ánh xạ sang influencer",
+  "Đọc văn bản gốc Luật 75/2025/QH15: khoản 8 Điều 2, Điều 15a khoản 2-3, Điều 23 khoản 2 điểm đ, hiệu lực 01/01/2026 (Điều 3)",
+  "Bảng đối chiếu ghi nhãn: luật VN và hướng dẫn FTC Disclosures 101 (quà tặng, vị trí nhãn, từ mơ hồ, công cụ nền tảng)",
+  "Rủi ro tương tác ảo: quy định FTC 14/08/2024 cấm mua bán chỉ số ảnh hưởng giả (điều kiện biết hoặc lẽ ra phải biết), 5 dấu hiệu nhận diện + điều khoản hợp đồng",
+  "Bảng chỉ số theo mục tiêu + nguyên tắc mỗi influencer một link/mã riêng; 6 hình thức hợp tác; quy trình 5 bước + infographic"
+ ],
+ "nguon": [
+  "https://storage-vnportal.vnpt.vn/gov-hni/7218/VanBan/2025/7/30/LU%E1%BA%ACT%20S%E1%BB%ACA%20%C4%90%E1%BB%94I%20B%E1%BB%94%20SUNG%20LU%E1%BA%ACT%20QU%E1%BA%A2NG%20C%C3%81O.pdf",
+  "https://moit.gov.vn/tin-tuc/bao-chi-voi-nguoi-dan/hoat-dong-quang-cao-cua-nguoi-co-anh-huong-duoi-goc-do-bao-ve-quyen-loi-nguoi-tieu-dung-kinh-nghiem-quoc-te-va-giai-phap.html",
+  "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+  "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+  "https://en.wikipedia.org/wiki/Influencer",
+  "https://en.wikipedia.org/wiki/Influencer_marketing",
+  "https://vi.wikipedia.org/wiki/Marketing_ng%C6%B0%E1%BB%9Di_c%C3%B3_%E1%BA%A3nh_h%C6%B0%E1%BB%9Fng"
+ ],
+ "link_noi_bo": [
+  "https://digicomvn.com/booking-kol-koc/",
+  "https://digicomvn.com/micro-kol-la-gi/",
+  "https://digicomvn.com/kol-la-gi/",
+  "https://digicomvn.com/gia-booking-kol/"
+ ],
+ "so_tu": 3842,
+ "anh": [
+  "ig-influencer-la-gi-thang-phan-loai.webp",
+  "ig-influencer-la-gi-quy-trinh-5-buoc.webp"
+ ],
+ "jett_qa": {
+  "ngay": "2026-10-29",
+  "diem": 86,
+  "ket_luan": "ĐẠT - ĐĂNG ĐƯỢC (sau sửa)",
+  "da_kiem": [
+   "Luật 75/2025/QH15 PDF gốc: khoản 8 Điều 2, Điều 15a khoản 2-3, Điều 23 khoản 2 điểm a/d/đ, Điều 3 hiệu lực 01/01/2026 - khớp",
+   "NĐ 55/2024 định nghĩa người có ảnh hưởng: chưa đọc được văn bản gốc (thuvienphapluat/luatvietnam 403, vbpl không tải); dùng trích nguyên văn của UBCTQG trên moit.gov.vn 26/05/2025, đã bổ sung yếu tố 'được tài trợ dưới mọi hình thức'",
+   "Luật BVQLNTD 2023 điểm b khoản 3 Điều 22 và mức phạt 20-30 triệu (NĐ 98/2020 sửa bởi NĐ 24/2025): theo UBCTQG",
+   "FTC Disclosures 101 (11/2019) và Final Rule 14/08/2024: đọc trang gốc, khớp",
+   "Wikipedia EN Influencer: ngưỡng nano 1.000-10.000 (mục 2020s), mega >500k (Categorization), câu OED 1664 Henry More - khớp Wikipedia; OED gốc không truy cập được, giữ ghi 'theo Wikipedia'",
+   "Số 12% (PRWeek 2018 qua Wikipedia Influencer marketing): nguồn gốc 403, đã bỏ"
+  ]
+ }
+}

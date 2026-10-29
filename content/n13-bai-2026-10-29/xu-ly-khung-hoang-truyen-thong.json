@@ -1,0 +1,57 @@
+{
+ "title": "Xử Lý Khủng Hoảng Truyền Thông: Quy Trình 7 Bước",
+ "slug": "xu-ly-khung-hoang-truyen-thong",
+ "meta_desc": "Xử lý khủng hoảng truyền thông theo quy trình 7 bước, 4 mức độ, nguyên tắc nên và không nên, quyền phản hồi báo chí và mốc 72 giờ theo luật 2025. Xem ngay.",
+ "excerpt": "Xử lý khủng hoảng truyền thông là chuỗi việc từ phát hiện, xác minh, chốt thông điệp, phát ngôn đúng kênh đến phục hồi uy tín. Bài nêu 4 mức độ khủng hoảng, quy trình 7 bước theo mốc thời gian, 6 nguyên tắc CERC, các điều khoản Luật Báo chí 2025 và Luật Bảo vệ dữ liệu cá nhân 2025 cần biết, cùng phần chuẩn bị trước.",
+ "tu_khoa_chinh": "xử lý khủng hoảng truyền thông",
+ "tu_khoa_phu": [
+  "quy trình xử lý khủng hoảng truyền thông",
+  "xử lý khủng hoảng",
+  "khủng hoảng truyền thông là gì",
+  "nguyên tắc xử lý khủng hoảng truyền thông",
+  "các mức độ khủng hoảng truyền thông"
+ ],
+ "intent": "Informational/hướng dẫn quy trình: serp-xu-ly-khung-hoang.json (đo ẩn danh 29/10/2026) 7/9 kết quả là bài viết hướng dẫn quy trình + nguyên tắc (Brands Vietnam, VinUni, OCD, trường đại học, công ty luật), 1 MXH, 1 tài liệu; tiêu đề không dùng số đếm (0/8), 1 tiêu đề dạng câu hỏi; AI Overview định nghĩa xử lý khủng hoảng là quá trình thu thập, phân tích, lan toả thông tin để giảm tổn hại uy tín; không có PAA.",
+ "gap_doi_thu": [
+  "Đọc ocd.vn và gvlawyers.com.vn (brandsvietnam, vinuni chặn 403): không bài nào dẫn điều khoản Luật Báo chí 2025 về cải chính, phản hồi, quyền xem lại câu trả lời phỏng vấn",
+  "Bài pháp lý (gvlawyers) nhắc cải chính, dữ liệu cá nhân nhưng không nêu số luật, số điều, không có mốc 72 giờ theo Luật Bảo vệ dữ liệu cá nhân 2025",
+  "Không bài nào có khung phân mức độ gắn với người xử lý và thời gian phản hồi; mốc '24 giờ' nêu không nguồn",
+  "Không bài nào dẫn bộ nguyên tắc truyền thông khủng hoảng của cơ quan nhà nước (CDC CERC)",
+  "Không bài nào hướng dẫn chọn giữa thông cáo, họp báo, trả lời phỏng vấn và cách phục hồi bằng thông tin khắc phục trên báo"
+ ],
+ "info_gain": [
+  "Bảng điều khoản Luật Báo chí 126/2025/QH15 (Điều 31, 33, 34, 36, 37) và Luật BVDLCN 91/2025/QH15 Điều 23 (72 giờ) kèm ý nghĩa thực tế với doanh nghiệp",
+  "Quyền xem lại nội dung trả lời phỏng vấn trước khi đăng (khoản 2 Điều 33) áp dụng khi xử lý khủng hoảng",
+  "Khung 4 mức độ (sự cố, cảnh báo, khủng hoảng, nghiêm trọng) gắn người xử lý và thời gian phản hồi, ghi rõ là khung tham khảo",
+  "Quy trình 7 bước theo mốc thời gian, nối với 6 nguyên tắc CERC của CDC",
+  "Bảng chọn công cụ báo chí (thông cáo, họp báo, phỏng vấn) và thứ tự ưu tiên: phản hồi văn bản theo Điều 36 trước khi phản bác trên MXH; pháp chế vào nhóm từ bước 2 vì mốc 72 giờ",
+  "Checklist chuẩn bị 6 mục và giai đoạn phục hồi 3 bước, nói rõ bài PR trả phí phải gắn nhãn, không dùng để đè tin"
+ ],
+ "nguon": [
+  "Luật Báo chí 126/2025/QH15: đối chiếu 2 bản độc lập 29/10/2026 - file .doc https://ketoananpha.vn/uploads/files/Van-ban-luat/Linh-vuc-khac/Luat-bao-chi-2025.doc và https://hethongphapluat.com/luat-bao-chi-2025 (khớp số luật, ngày thông qua 10/12/2025, hiệu lực 01/07/2026 Điều 50); Jett đọc nguyên văn Điều 31 k1, 33 k2, 34 k1-3, 36 k1-2, 37 k1-2. thuvienphapluat chặn 403 nên không dùng làm tài liệu tham khảo",
+  "https://bvhttdl.gov.vn/luat-bao-chi-2025-tao-hanh-lang-phap-ly-day-du-gop-phan-thao-go-cac-diem-nghen-khoi-thong-nguon-luc-cho-nen-bao-chi-cach-mang-viet-nam-tiep-tuc-phat-trien-20260107111111286.htm",
+  "Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 Điều 23 khoản 1 (72 giờ, chủ thể: bên kiểm soát/kiểm soát và xử lý/bên thứ ba), Jett đọc nguyên văn 29/10/2026 tại https://hethongphapluat.com/luat-bao-ve-du-lieu-ca-nhan-2025/dieu-23 (trang luật xác nhận số 91/2025/QH15, ký 26/06/2025, hiệu lực 01/01/2026); hiệu lực xác nhận thêm qua https://pbgdpl.cantho.gov.vn/luat-bao-ve-du-lieu-ca-nhan-nam-2025-bao-dam-quyen-rieng-tu-trong-ky-nguyen-so. Chưa đối chiếu được bản Công báo",
+  "https://www.cdc.gov/overdose-resources/php/files/overdose-event-response.html (chỉ liệt kê tên 6 nguyên tắc CERC: Be first, Be right, Be credible, Express empathy, Promote action, Show respect; phần diễn giải trong bài là của DigicomVN), đọc 29/10/2026",
+  "https://www.cdc.gov/cerc/php/cerc-manual/index.html",
+  "https://en.wikipedia.org/wiki/Crisis_communication"
+ ],
+ "link_noi_bo": [
+  "https://digicomvn.com/booking-bao-pr/",
+  "https://digicomvn.com/thong-cao-bao-chi-xu-ly-khung-hoang/",
+  "https://digicomvn.com/hop-bao-xu-ly-khung-hoang/",
+  "https://digicomvn.com/pr-la-gi/"
+ ],
+ "so_tu": 3857,
+ "anh": [
+  "ig-xu-ly-khung-hoang-truyen-thong-ma-tran-muc-do.webp",
+  "ig-xu-ly-khung-hoang-truyen-thong-quy-trinh-moc-thoi-gian.webp"
+ ],
+ "can_jett_soi": [
+  "Trích Luật Báo chí 2025 Điều 33, 34, 36, 37 lấy từ file .doc bên thứ ba (ketoananpha), nên đối chiếu bản Công báo trước khi đăng",
+  "Điều 23 Luật BVDLCN đọc qua hethongphapluat.com, thuvienphapluat chặn; kiểm lại câu chữ 72 giờ và điều kiện áp dụng",
+  "Khung 4 mức độ và mốc phản hồi là khuyến nghị của DigicomVN, đã ghi rõ không phải chuẩn",
+  "Money link booking-bao-pr chỉ đặt ở phần phục hồi (không ở sapo) để tránh gợi ý dùng PR trả phí dập tin; cân nhắc có cần đặt sớm hơn",
+  "Tài liệu tham khảo dùng thuvienphapluat (CSDL thương mại) cho 2 luật vì chưa tìm được link văn bản trên cổng chính phủ"
+ ],
+ "jett_qa": "29/10/2026: Jett chấm 78 -> 87, ĐẠT sau sửa. Đã sửa: Điều 34 k3 (chỉ trang có thoả thuận sử dụng tin), Điều 36 k2 (ngoại lệ không đăng), Điều 37 (bỏ suy diễn, thêm k2 đình chỉ), Điều 23 (chủ thể + phạm vi), bỏ câu 'nguồn lên tiếng sớm thường được tin' không có trong trang CDC đã đọc, thay link thuvienphapluat (403) bằng hethongphapluat, sapo bỏ câu mục lục"
+}

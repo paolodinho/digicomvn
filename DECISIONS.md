@@ -225,3 +225,6 @@ Hiếu chốt: chỉ giữ bài kiến thức "TVC là gì" (gộp vào bài qu�
 
 ## 2026-10-29 - Giu nguyen gia booking VTV tren web
 Hieu chot giu gia booking VTV (CPT dgc_gia booking-truyen-hinh) du cao hon don gia niem yet cua dai o bai /quang-cao-truyen-hinh/. Ly do: bai cu ghi ro bang do la gia niem yet cua dai va dan sang bai bang gia booking /bang-gia-quang-cao-vtv/.
+
+## 2026-10-29 - Byline tac gia + gia-booking-kol
+Hieu ok 29/10: byline moi bai dung ten Hieu Do (user 1, da dung san tren toan bo bai hen gio); /gia-booking-kol/ khong niem yet bang gia VND, de bao gia theo brief (dung nhu noi dung bai hien tai).

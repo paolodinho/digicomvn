@@ -40,6 +40,7 @@ $dgc_hg_desc = array(
 </section>
 <?php endif; ?>
 
+<?php $dgc_hg_on = function_exists( 'dgc_hg_online' ) ? dgc_hg_online() : array(); ?>
 <section class="sec" id="bang-gia">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:24px"><span class="eyebrow">Bảng giá</span><h2>Bảng giá hosting</h2>
@@ -65,7 +66,12 @@ $dgc_hg_desc = array(
 						<?php if ( (int) $r['ky'] > 0 && (float) $r['thang'] ) : ?><div><dt>Trọn <?php echo (int) $r['ky']; ?> năm</dt><dd><?php echo esc_html( dgc_vnd( $r['thang'] * 12 * (int) $r['ky'] ) ); ?></dd></div><?php endif; ?>
 						<?php if ( (float) $r['nam'] ) : ?><div><dt>Đăng ký 1 năm</dt><dd><?php echo esc_html( dgc_vnd( $r['nam'] ) ); ?></dd></div><?php endif; ?>
 					</dl>
+					<?php $dgc_hk = dgc_hg_key( $r['goi'] ); $dgc_ho = $dgc_hg_on[ $dgc_hk ] ?? null; ?>
+					<?php if ( $dgc_ho ) : $dgc_hm = max( array_keys( $dgc_ho['p'] ) ); ?>
+					<div class="hg-buy"><button type="button" class="btn btn-primary btn-sm" data-hg-add="<?php echo esc_attr( $dgc_hk ); ?>" data-m="<?php echo (int) $dgc_hm; ?>">Mua ngay</button><a class="hg-ask" href="#lien-he" data-svc="Hosting" data-order="Tư vấn hosting gói <?php echo esc_attr( $r['goi'] ); ?> (<?php echo esc_attr( $g ); ?>)">Cần tư vấn</a></div>
+					<?php else : ?>
 					<a class="btn btn-ghost btn-sm" href="#lien-he" data-svc="Hosting" data-order="Đăng ký hosting gói <?php echo esc_attr( $r['goi'] ); ?> (<?php echo esc_attr( $g ); ?>)">Chọn gói này</a>
+					<?php endif; ?>
 				</div>
 			<?php endforeach; ?>
 			</div>
@@ -97,10 +103,10 @@ $dgc_hg_desc = array(
 			<p>Tham khảo thêm: <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener">tài liệu Page Experience của Google</a>. Cần làm SEO trọn gói cho website mới: xem <a href="<?php echo esc_url( home_url( '/dich-vu-seo/' ) ); ?>">dịch vụ SEO</a>; chưa có tên miền: <a href="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>">đăng ký tên miền</a>.</p>
 		</div>
 		<ol class="tm-steps">
-			<li><b>Chọn gói</b><span>Bấm "Chọn gói này" hoặc nhờ tư vấn theo loại website.</span></li>
-			<li><b>Xác nhận</b><span>DigicomVN gọi lại xác nhận gói, kỳ hạn và thông tin xuất hoá đơn.</span></li>
-			<li><b>Thanh toán</b><span>Chuyển khoản vào tài khoản công ty.</span></li>
-			<li><b>Kích hoạt</b><span>Bàn giao tài khoản quản trị, hỗ trợ cài WordPress và trỏ tên miền.</span></li>
+			<li><b>Chọn gói</b><span>Bấm "Mua ngay" ở gói phù hợp, chọn thời hạn và tên miền dùng cho hosting.</span></li>
+			<li><b>Điền thông tin</b><span>Nhập thông tin chủ thể dịch vụ trong giỏ hàng, hệ thống tạo đơn ngay.</span></li>
+			<li><b>Thanh toán</b><span>Quét mã QR chuyển khoản, hệ thống tự xác nhận khi tiền về.</span></li>
+			<li><b>Kích hoạt</b><span>Hosting tự khởi tạo, thông tin đăng nhập quản trị gửi qua email. DigicomVN hỗ trợ cài WordPress và trỏ tên miền.</span></li>
 		</ol>
 	</div>
 </section>
@@ -122,4 +128,14 @@ $dgc_hg_desc = array(
 	</div>
 </section>
 <?php include get_template_directory() . '/inc/order-prefill.php'; ?>
+<script>
+document.addEventListener('click',function(e){
+	var b=e.target.closest('[data-hg-add]'); if(!b) return;
+	var c=[]; try{ c=JSON.parse(localStorage.getItem('dgc_tm_cart')||'[]'); }catch(x){}
+	var k=b.getAttribute('data-hg-add'), i=c.findIndex(function(x){ return x.t==='h' && x.k===k && !x.d; });
+	if(i<0) c.push({t:'h',k:k,m:+b.getAttribute('data-m'),d:''});
+	try{ localStorage.setItem('dgc_tm_cart',JSON.stringify(c)); }catch(x){}
+	location.href='<?php echo esc_js( home_url( '/thanh-toan-ten-mien/' ) ); ?>';
+});
+</script>
 <?php get_footer(); ?>

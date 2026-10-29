@@ -26,7 +26,7 @@ def nu(u):
 S = {}
 for f in [K + "/serp-top10-2026-10-26/serp.csv.partial.jsonl", K + "/serp-kp43-2026-10-24/serp.csv.partial.jsonl",
           K + '/serp-truyen-hinh-phat-thanh-2026-10-24/serp.csv.partial.jsonl',
-          B + '/serp.csv.partial.jsonl']:
+          B + '/serp.csv.partial.jsonl', B + '/serp-bu.csv.partial.jsonl']:
     if not os.path.exists(f): continue
     for l in open(f):
         try: d = json.loads(l)

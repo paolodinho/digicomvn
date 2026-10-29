@@ -566,3 +566,10 @@ a.sg-card--feat:hover{border-color:transparent}
 [data-theme="dark"] .hg-offers li:before{background-color:#3A2418}
 [data-theme="dark"] .hg-trust li:before{background-color:#173330}
 @media(max-width:700px){.hg-offers,.hg-trust{grid-template-columns:1fr}}
+/* Gio hang: dong hosting (2026-10-29) */
+.tmc-hd{grid-column:1/-1;display:block;font-size:13px;color:var(--sg-soft)}
+.tmc-hd input{display:block;width:100%;margin-top:4px;padding:9px 12px;border:1px solid var(--sg-line);border-radius:10px;font:inherit;background:var(--sg-card);color:var(--sg-ink)}
+.tmc-hd input:focus{outline:2px solid var(--sg-blue);outline-offset:1px;border-color:var(--sg-blue)}
+.hg-buy{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.hg-buy .btn{white-space:nowrap}
+.hg-buy .hg-ask{font-size:13px;color:var(--sg-soft)}
