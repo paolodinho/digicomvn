@@ -4958,3 +4958,6 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 ## 2026-10-29 11:05 - Cong dai ly white-label
 - Trang dai ly: tat mail thong bao gui khach, footer + ten Control Panel = DigicomVN. SMTP dien san (Lark 465 SSL), cho Hieu nhap mat khau. 16 mau email: mau ten mien/hosting sach, giu mac dinh. Cho Hieu tao CNAME quanly -> mr.pavietnam.vn (Namecheap).
 - 2026-10-29 11:35: bat Control Panel rieng quanly.digicomvn.com (logo, tieu de DigicomVN, NS dotvndns.vn). Cho kiem trang cong + mat khau SMTP.
+
+- 2026-10-29 12:10: SMTP trang đại lý lưu xong (Lark smtp.larksuite.com:465 SSL, sales@digicomvn.com), gửi thử tới hieudx3107@gmail.com OK. Cổng quanly.digicomvn.com + máy chủ mr.pavietnam.vn không phản hồi (timeout 80/443) - lỗi phía đại lý, chưa bật lại mail gửi khách.
+- 2026-10-29 12:30: đồng bộ giá tên miền/hosting tăng lên 6 giờ/lần (inc/tm-offers.php, cron_schedules dgc_6h), deploy live, backup ~/Claude-Workspace/_backups/routines/2026-10-29/sync-6h/.

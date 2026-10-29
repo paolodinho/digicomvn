@@ -5,7 +5,7 @@
  *  - tm_combo : 1 dong "duoi1, duoi2, duoi3 | gia nam dau ca bo | nhan". Khach them ca bo cung ten -> gia combo nam dau.
  *  - So nam toi thieu de huong gia nam dau: doc tu cot "luu y" cua ten_mien_gia, mau "tu 3 nam".
  *    Dang ky it hon so nam do -> nam dau tinh theo gia goc (giong cach ban le).
- *  - Dong bo gia: WP-Cron hang ngay doc bang gia ban le cong khai, chi cap nhat gia cac duoi DA CO trong ten_mien_gia.
+ *  - Dong bo gia: WP-Cron 6 gio/lan doc bang gia ban le cong khai, chi cap nhat gia cac duoi DA CO trong ten_mien_gia.
  *    Nguon bang gia dat trong wp-config: define('DGC_TM_SYNC_URL','...'); (khong ghi ten nha cung cap trong ma/giao dien).
  *    Doc loi / qua it dong -> giu nguyen gia cu. Ban truoc luu option dgc_tm_gia_bak de khoi phuc.
  */
@@ -136,8 +136,16 @@ function dgc_tm_sync_prices( $force = false ) {
 	return $log;
 }
 add_action( 'dgc_tm_sync_daily', 'dgc_tm_sync_prices' );
+// 6 gio/lan (Hieu 29/10): ten hook giu nguyen de khong vo cac noi goi; lich cu 'daily' tu doi sang 'dgc_6h'.
+add_filter( 'cron_schedules', function ( $s ) {
+	$s['dgc_6h'] = array( 'interval' => 6 * HOUR_IN_SECONDS, 'display' => '6 giờ/lần' );
+	return $s;
+} );
 add_action( 'init', function () {
-	if ( ! wp_next_scheduled( 'dgc_tm_sync_daily' ) ) wp_schedule_event( strtotime( 'tomorrow 01:15' ) - (int) ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS ), 'daily', 'dgc_tm_sync_daily' );
+	if ( 'dgc_6h' !== wp_get_schedule( 'dgc_tm_sync_daily' ) ) {
+		wp_clear_scheduled_hook( 'dgc_tm_sync_daily' );
+		wp_schedule_event( time() + 10 * MINUTE_IN_SECONDS, 'dgc_6h', 'dgc_tm_sync_daily' );
+	}
 } );
 add_action( 'admin_post_dgc_tm_sync', function () {
 	if ( ! current_user_can( 'manage_options' ) ) wp_die( 'Không có quyền.' );
