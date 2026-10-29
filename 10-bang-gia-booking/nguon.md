@@ -247,3 +247,8 @@ quy trình `build_master.py`/`gan-nganh.py` nếu Hiếu muốn đưa vào kho d
   570329285 textlink gói Brando) đã kết luận LOẠI theo rule "không rõ nơi đăng" - không làm lại.
 - **goi_sites**: vẫn 0 NCC nào công bố list site trong gói (quét lại Solann 2026-07-20 đã kết luận).
   Chưa điền được dòng nào tuần này.
+
+## Goodcom Việt Nam - Booking PR + Social (nạp 2026-10-29)
+Nguồn: Google Drive `Báo giá booking Combat_ 2026.xlsx` (https://drive.google.com/file/d/1n_CBWN_3wYF6JZ35qhkMb2dSaOSMgDpV/view), đầu mối Ms Thu 0988866152, Thult@goodcomvietnam.com. Giá trước VAT và phí edit, hiệu lực 10-15 ngày từ ngày báo giá.
+- Đã lưu: phần Social (11 fanpage + 6 TikTok, báo giá 28/10/2026) tại `raw/Goodcom-Social-2026-10-28.csv`. Là giá NỘI BỘ (NCC), KHÔNG lên web. Chưa vào `bang-gia-master.csv` (chỉ DanaSEO; chưa có nhóm fanpage/TikTok trên web, trang /booking-fanpage/ báo giá theo yêu cầu).
+- Phần báo điện tử của file (Cafef, Cafebiz, VnExpress, Thanh Niên... nhiều tab tháng 10) chưa nạp.

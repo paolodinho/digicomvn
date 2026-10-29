@@ -224,3 +224,60 @@ Call log:
 2026-10-29 15:37:17 | [59/170] allintitle:book viết báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
 2026-10-29 15:38:30 | [60/170] allintitle:họp báo giải quyết khủng hoảng -> None (unknown) | status=ok | IP=IP-thật (IP may)
 2026-10-29 15:40:27 | [61/170] allintitle:họp báo khủng hoảng -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:41:32 |   [họp báo xử lý khủng hoảng gần đây] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-29 15:41:40 |   [họp báo xử lý khủng hoảng gần đây] lỗi: TimeoutError: Locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator("textarea[name=q], input[name=q]").first
+    -
+2026-10-29 15:41:40 | [62/170] allintitle:họp báo xử lý khủng hoảng gần đây -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-29 15:43:16 | [63/170] allintitle:kịch bản họp báo xử lý khủng hoảng truyền thông -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:44:08 |   [backlink] lỗi: TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/?hl=vi&gl=vn", waiting until "d
+2026-10-29 15:44:09 | [64/170] allintitle:backlink -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-29 15:45:57 | [65/170] allintitle:pr -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:46:27 |   [kol] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 15:46:28 |   [kol] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 15:48:05 | [66/170] allintitle:pr public relations -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:49:11 | [67/170] allintitle:influencer -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:50:15 | [68/170] allintitle:tvc là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:51:39 | [69/170] allintitle:tv commercial là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:52:53 | [70/170] allintitle:quan hệ công chúng -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:53:58 | [71/170] allintitle:koc -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:54:30 |   [dịch vụ entity] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 15:54:31 |   [dịch vụ entity] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 15:55:18 | [72/170] allintitle:toplist -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:56:20 | [73/170] allintitle:kol koc -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:57:29 | [74/170] allintitle:koc là gi -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:58:51 | [75/170] allintitle:influencer marketing -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:00:24 | [76/170] allintitle:tvc quảng cáo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:01:41 | [77/170] allintitle:báo chí truyền thông -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:02:32 |   [booking kol] lỗi: TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/?hl=vi&gl=vn", waiting until "d
+2026-10-29 16:02:38 | [78/170] allintitle:booking kol -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-29 16:04:12 | [79/170] allintitle:mẫu thông cáo báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:05:26 | [80/170] allintitle:booking koc -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:05:59 |   [xử lý khủng hoảng truyền thông] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 16:05:59 |   [xử lý khủng hoảng truyền thông] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 16:07:14 | [81/170] allintitle:quan hệ công chúng là -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:08:23 | [82/170] allintitle:mua guest post -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:09:22 | [83/170] allintitle:koc kol -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:10:35 | [84/170] allintitle:guest post la gi -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:12:32 | [85/170] allintitle:truyền thông báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:13:36 | [86/170] allintitle:quảng cáo vtv -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:14:51 | [87/170] allintitle:mua backlink báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:16:34 | [88/170] allintitle:kols media -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:17:46 | [89/170] allintitle:dịch vụ backlink báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:19:38 | [90/170] allintitle:tvc quảng cáo là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:20:53 | [91/170] allintitle:truyền thông doanh nghiệp -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:22:24 | [92/170] allintitle:kols livestream -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:23:49 | [93/170] allintitle:kol livestream -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:25:04 | [94/170] allintitle:kol tiktok -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:26:36 | [95/170] allintitle:influencer kol -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:28:36 |   [dịch vụ viết bài quảng cáo] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-29 16:28:36 | [96/170] allintitle:dịch vụ viết bài quảng cáo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:29:59 | [97/170] allintitle:dịch vụ backlink entity -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:31:02 | [98/170] allintitle:video tvc là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:32:35 | [99/170] allintitle:báo chí và truyền thông -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 16:33:47 | [100/170] allintitle:bài pr -> None (unknown) | status=ok | IP=IP-thật (IP may)

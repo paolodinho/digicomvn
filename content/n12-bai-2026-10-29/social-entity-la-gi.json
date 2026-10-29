@@ -1,0 +1,61 @@
+{
+ "title": "Social Entity Là Gì? Thực Thể Google Và Cách Xây Đúng",
+ "slug": "social-entity-la-gi",
+ "meta_desc": "Social entity là gì? Hiểu thực thể theo tài liệu Google, sameAs, NAP, phần có căn cứ và phần chưa, 6 bước tự xây bộ hồ sơ thương hiệu và cách đo. Xem ngay.",
+ "excerpt": "Social entity là bộ hồ sơ chính chủ của thương hiệu trên mạng xã hội và nền tảng công khai, cùng NAP và liên kết hai chiều với website qua sameAs. Bài giải thích entity theo tài liệu Google, tách phần có căn cứ khỏi quan sát ngành, nêu 6 bước tự xây, lỗi hay gặp và 4 cách đo kết quả.",
+ "tu_khoa_chinh": "social entity là gì",
+ "tu_khoa_phu": [
+  "social entity",
+  "entity là gì",
+  "entity có nghĩa là gì",
+  "entity là gì trong kinh doanh",
+  "thực thể trong seo",
+  "xây dựng social entity",
+  "sameAs schema"
+ ],
+ "intent": "Informational/định nghĩa: serp-social-entity.json (đo ẩn danh 26/10/2026) 9/9 kết quả là bài viết định nghĩa + list link + quy trình chăm sóc; AI Overview định nghĩa social entity là tập hồ sơ MXH chính thức nhất quán NAP giúp Google định danh thực thể; PAA: Entity có nghĩa là gì, Entity là gì trong kinh doanh.",
+ "gap_doi_thu": [
+  "Đọc 3 bài top: không bài nào dẫn tài liệu Google chính thức về Knowledge Graph, Organization hay sameAs; khẳng định 'thoát sandbox', 'tăng tốc index', 'tăng điểm E-E-A-T' không nguồn",
+  "Không bài nào nói rõ link trong hồ sơ MXH thường nofollow/ugc hoặc qua trang chuyển hướng",
+  "Không bài nào dẫn chính sách spam của Google về tạo link tự động; một bài còn gợi ý dùng tài khoản clone",
+  "Không có cách đo cụ thể (chỉ DR/DA bên thứ ba), không có ví dụ khai báo sameAs, không nói giới hạn Knowledge Panel",
+  "Không trả lời PAA 'Entity là gì trong kinh doanh' bằng căn cứ pháp lý"
+ ],
+ "info_gain": [
+  "Bảng tách nhận định về social entity theo mức căn cứ (văn bản Google / quan sát / không có căn cứ)",
+  "Kiểm tra thực tế 29/10/2026: link website trên trang tổ chức GitHub mang rel=nofollow, link ngoài trên YouTube đi qua trang chuyển hướng",
+  "Số liệu gốc Knowledge Graph 2012 (500 triệu đối tượng, 3,5 tỷ dữ kiện) và cấu trúc thực thể theo Knowledge Graph Search API (mã kg:/m/, kiểu schema.org)",
+  "Cách đo bằng Knowledge Graph Search API kèm giới hạn Google ghi rõ; bảng 4 cách đo và giới hạn",
+  "Bước quyền sở hữu tài khoản (email doanh nghiệp, 2 quản trị viên) và lỗi sameAs quá tay; mẫu JSON-LD Organization tối thiểu",
+  "Trả lời PAA 'entity trong kinh doanh' bằng khoản 10 Điều 4 Luật Doanh nghiệp 59/2020/QH14 (đối chiếu văn bản hợp nhất 67/VBHN-VPQH 2025)"
+ ],
+ "nguon": [
+  "https://blog.google/products/search/introducing-knowledge-graph-things-not/",
+  "https://developers.google.com/knowledge-graph",
+  "https://developers.google.com/search/docs/appearance/structured-data/organization",
+  "https://schema.org/sameAs",
+  "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
+  "https://developers.google.com/search/docs/essentials/spam-policies",
+  "https://support.google.com/knowledgepanel/answer/9163198?hl=vi",
+  "https://vbpl.moj.gov.vn/TW/Lists/vbpq/Attachments/142881/Lu%E1%BA%ADt%20Doanh%20nghi%E1%BB%87p%202020.doc",
+  "Kiểm tra thực tế 29/10/2026: https://github.com/google (rel=nofollow), https://www.youtube.com/@Google/about (youtube.com/redirect)"
+ ],
+ "link_noi_bo": [
+  "https://digicomvn.com/backlink-social-entity/",
+  "https://digicomvn.com/backlink-dofollow-va-nofollow/",
+  "https://digicomvn.com/cac-loai-backlink/",
+  "https://digicomvn.com/seo-offpage-la-gi/"
+ ],
+ "so_tu": 3613,
+ "anh": [
+  "ig-social-entity-la-gi-mo-hinh-ve-tinh.webp",
+  "ig-social-entity-la-gi-quy-trinh-6-buoc.webp"
+ ],
+ "can_jett_soi": [
+  "Quan sát GitHub nofollow / YouTube redirect đo tay 29/10/2026, nên kiểm lại trước khi đăng",
+  "Câu về Knowledge Graph Search API (chỉ đọc, không dành cho dịch vụ quan trọng, đang chuyển sang Enterprise KG) có đúng tài liệu hiện hành",
+  "Cách diễn đạt bảng mức căn cứ, đặc biệt dòng sandbox/E-E-A-T",
+  "Gợi ý 8-15 hồ sơ cốt lõi là khuyến nghị thực hành, đã ghi rõ không phải ngưỡng Google",
+  "Thẻ wp:code JSON-LD mẫu trong thân bài có bị theme/toc xử lý lệch không"
+ ]
+}

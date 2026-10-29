@@ -1,0 +1,210 @@
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Social Entity Là Gì? Thực Thể Theo Cách Google Hiểu Và Cách Xây Bộ Hồ Sơ Thương Hiệu Đúng</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1em"}}} -->
+<p style="font-size: 1.1em; line-height: 1.6;">Social entity là bộ hồ sơ chính thức của một doanh nghiệp hoặc một cá nhân trên các nền tảng mạng xã hội và nền tảng công khai, cùng khai báo một bộ thông tin thống nhất và cùng trỏ về website. Mục đích là giúp công cụ tìm kiếm nối các nguồn rời rạc thành một <strong>thực thể</strong> rõ ràng. Bài này giải thích entity là gì theo tài liệu của Google, social entity giúp được gì và phần nào chỉ là quan sát của ngành, các nhóm nền tảng nên có, 6 bước tự xây và cách đo kết quả mà không hứa hẹn thứ hạng.</p>
+<!-- /wp:paragraph -->
+<!-- wp:group {"className":"summary"} -->
+<div class="wp-block-group summary"><!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item --><li><strong>Entity (thực thể)</strong>: một sự vật có thật và phân biệt được, như một người, một công ty, một địa điểm. Google gọi tinh thần này là "things, not strings" từ năm 2012.</li><!-- /wp:list-item --><!-- wp:list-item --><li><strong>Social entity là gì</strong>: bộ hồ sơ chính chủ trên mạng xã hội và nền tảng công khai, cùng NAP (tên, địa chỉ, số điện thoại), liên kết hai chiều với website qua thuộc tính sameAs.</li><!-- /wp:list-item --><!-- wp:list-item --><li><strong>Có căn cứ</strong>: Google dùng dữ liệu có cấu trúc Organization và sameAs để hiểu tổ chức. <strong>Chưa có căn cứ</strong>: Google không công bố social entity là tín hiệu xếp hạng.</li><!-- /wp:list-item --><!-- wp:list-item --><li><strong>Link trong hồ sơ</strong> thường mang nofollow hoặc đi qua trang chuyển hướng; giá trị chính nằm ở nhận diện thương hiệu, không phải sức mạnh liên kết.</li><!-- /wp:list-item --><!-- wp:list-item --><li><strong>Rủi ro</strong>: tạo hàng loạt hồ sơ bằng công cụ tự động thuộc nhóm spam liên kết trong chính sách của Google.</li><!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Entity là gì? Thực thể theo cách Google hiểu</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Entity là một sự vật có thật, đứng độc lập và phân biệt được với sự vật khác: một người, một tổ chức, một địa điểm, một sản phẩm, một khái niệm. Điểm quan trọng không nằm ở cái tên mà ở chỗ máy tính biết chắc đang nói về <em>cái gì</em>. Hai công ty trùng tên ở hai tỉnh là hai thực thể khác nhau; một công ty có ba cách viết tên vẫn là một thực thể.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Google đưa cách hiểu này vào tìm kiếm khi công bố Knowledge Graph ngày 16/05/2012. Theo bài công bố trên blog chính thức của Google, lúc ra mắt Knowledge Graph đã có <strong>hơn 500 triệu đối tượng</strong> và <strong>hơn 3,5 tỷ dữ kiện</strong> về các đối tượng đó cùng quan hệ giữa chúng. Bài viết tóm tắt tinh thần bằng cụm "things, not strings": hiểu sự vật, không chỉ so khớp chuỗi ký tự.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Tài liệu Knowledge Graph Search API của Google cho thấy rõ hơn một thực thể trông như thế nào trong hệ thống. Mỗi kết quả có một mã định danh dạng <code>kg:/m/...</code>, một hoặc nhiều kiểu theo từ vựng schema.org (Thing, Person, Organization...), kèm tên, mô tả, ảnh và URL. Nói cách khác, với Google, thực thể là một nút có mã riêng, có thuộc tính và có quan hệ với các nút khác.</p>
+<!-- /wp:paragraph -->
+<!-- wp:html -->
+<ul style="display:flex;flex-wrap:wrap;gap:14px;margin:20px 0;list-style:none;padding:0"><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Định danh</dt><dd style="font-size:13.5px;margin:0">Mỗi thực thể có một mã riêng trong Knowledge Graph, tách biệt với những thực thể trùng tên.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Thuộc tính</dt><dd style="font-size:13.5px;margin:0">Tên, loại, địa chỉ, logo, người sáng lập, lĩnh vực: những dữ kiện mô tả thực thể.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Quan hệ</dt><dd style="font-size:13.5px;margin:0">Liên kết với thực thể khác: công ty thuộc ngành nào, ai điều hành, có mặt ở nền tảng nào.</dd></dl></li></ul>
+<!-- /wp:html -->
+<!-- wp:paragraph -->
+<p>Trong tiếng Anh kinh doanh, "entity" hay "business entity" lại mang nghĩa khác: chủ thể kinh doanh hoặc pháp nhân. Ở Việt Nam, khái niệm gần nhất là doanh nghiệp theo khoản 10 Điều 4 Luật Doanh nghiệp số 59/2020/QH14: tổ chức có tên riêng, có tài sản, có trụ sở giao dịch, được thành lập hoặc đăng ký theo quy định nhằm mục đích kinh doanh. Khi nói social entity trong SEO, ta dùng nghĩa thực thể của Google, nhưng dữ liệu pháp lý thật của doanh nghiệp chính là nguyên liệu tốt nhất để khai báo thực thể đó.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Social entity là gì?</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Social entity là tập hồ sơ chính chủ của một thương hiệu trên các nền tảng công khai, được dựng đầy đủ và nhất quán để mọi nguồn cùng mô tả một thực thể duy nhất. Mỗi hồ sơ ghi cùng tên, cùng địa chỉ, cùng số điện thoại, cùng website, cùng logo; website khai báo ngược lại danh sách hồ sơ đó. Nếu doanh nghiệp cần đơn vị làm hộ phần việc này theo gói, có thể xem <a href="https://digicomvn.com/backlink-social-entity/">dịch vụ backlink social entity</a> của DigicomVN.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Cơ chế liên kết ngược dựa trên thuộc tính <strong>sameAs</strong>. Từ vựng schema.org định nghĩa sameAs là URL của một trang tham chiếu cho biết rõ ràng danh tính của đối tượng. Tài liệu dữ liệu có cấu trúc Organization của Google Search Central (cập nhật 08/09/2026) mô tả sameAs là URL của một trang trên website khác có thêm thông tin về tổ chức của bạn, và cho phép khai báo nhiều URL. Google không đặt thuộc tính bắt buộc nào cho Organization, chỉ khuyến nghị điền càng nhiều thuộc tính phù hợp càng tốt.</p>
+<!-- /wp:paragraph -->
+<!-- wp:html -->
+<figure class="dgc-shot"><img src="https://digicomvn.com/wp-content/uploads/2026/10/ig-social-entity-la-gi-mo-hinh-ve-tinh.webp" alt="Mô hình social entity: website ở trung tâm khai báo sameAs, các nhóm hồ sơ mạng xã hội, nền tảng nghề nghiệp, bản đồ, chia sẻ nội dung, ảnh video, mã nguồn liên kết hai chiều" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Mô hình website trung tâm và các hồ sơ vệ tinh liên kết hai chiều qua sameAs</figcaption></figure>
+<!-- /wp:html -->
+<!-- wp:paragraph -->
+<p>Cần tách social entity khỏi ba thứ hay bị nhầm. Nó không phải một danh sách vài trăm link profile mua theo lô; không phải hệ thống blog vệ tinh để đẩy anchor text; cũng không phải nhiều tài khoản ảo đóng vai người dùng. Một hồ sơ chỉ có giá trị thực thể khi nó là kênh thật của doanh nghiệp thật, với thông tin đúng và người quản trị thật.</p>
+<!-- /wp:paragraph -->
+<!-- wp:html -->
+<ul style="display:flex;flex-wrap:wrap;gap:14px;margin:20px 0;list-style:none;padding:0"><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Là social entity</dt><dd style="font-size:13.5px;margin:0">Hồ sơ chính chủ, đủ thông tin, cùng NAP, có ảnh và nội dung thật, website khai báo lại bằng sameAs.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Không phải social entity</dt><dd style="font-size:13.5px;margin:0">Lô hồ sơ tạo bằng công cụ, mô tả sao chép, bỏ trống sau khi tạo, hoặc tài khoản ảo đóng vai khách hàng.</dd></dl></li></ul>
+<!-- /wp:html -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Social entity giúp được gì: phần có căn cứ và phần chỉ là quan sát ngành</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Social entity giúp Google và người tìm kiếm nhận ra đúng thương hiệu của bạn, nhưng không có tài liệu chính thức nào của Google xác nhận nó là tín hiệu xếp hạng. Nhiều bài viết trong ngành khẳng định social entity giúp "thoát sandbox", "tăng tốc index" hay "tăng điểm E-E-A-T" mà không dẫn nguồn. Bảng dưới tách rõ đâu là điều Google viết thành văn, đâu là quan sát của người làm SEO, để bạn đặt kỳ vọng đúng.</p>
+<!-- /wp:paragraph -->
+<!-- wp:table -->
+<figure class="wp-block-table dgc-data-table"><table><caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Tách các nhận định về social entity theo mức độ căn cứ</caption><thead><tr><th>Nhận định</th><th>Căn cứ</th><th>Mức độ tin cậy</th></tr></thead><tbody><tr><td data-label="Nhận định">Dữ liệu Organization giúp Google hiểu thông tin hành chính và phân biệt tổ chức với tổ chức khác</td><td data-label="Căn cứ">Tài liệu Organization, Google Search Central</td><td data-label="Mức độ tin cậy">Có văn bản chính thức</td></tr><tr><td data-label="Nhận định">sameAs dùng để khai báo các trang khác mô tả cùng tổ chức</td><td data-label="Căn cứ">schema.org/sameAs và tài liệu Organization</td><td data-label="Mức độ tin cậy">Có văn bản chính thức</td></tr><tr><td data-label="Nhận định">Knowledge Panel được tạo tự động từ nhiều nguồn trên web, không có cơ chế xin cấp</td><td data-label="Căn cứ">Trợ giúp Bảng tri thức của Google</td><td data-label="Mức độ tin cậy">Có văn bản chính thức</td></tr><tr><td data-label="Nhận định">Hồ sơ nhất quán giúp kết quả tìm tên thương hiệu gọn và đúng hơn</td><td data-label="Căn cứ">Quan sát thực tế trang kết quả tên thương hiệu</td><td data-label="Mức độ tin cậy">Quan sát, không phải cam kết</td></tr><tr><td data-label="Nhận định">Social entity giúp thoát sandbox, tăng điểm E-E-A-T</td><td data-label="Căn cứ">Không có tài liệu Google nào xác nhận; E-E-A-T không phải một điểm số</td><td data-label="Mức độ tin cậy">Không có căn cứ</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:paragraph -->
+<p>Về giá trị liên kết, cần nói thẳng: link trong hồ sơ mạng xã hội phần lớn không truyền sức mạnh như link trong bài viết. Google Search Central khuyến nghị gắn <code>rel="ugc"</code> cho nội dung do người dùng tạo và <code>rel="nofollow"</code> khi không muốn liên kết website với trang được trỏ tới; các link này nhìn chung không được theo. Kiểm tra ngày 29/10/2026 cho thấy link website trên trang tổ chức GitHub mang <code>rel="nofollow"</code>, còn link ngoài trên kênh YouTube đi qua trang chuyển hướng của YouTube. Phân biệt chi tiết hai loại thuộc tính này có trong bài <a href="https://digicomvn.com/backlink-dofollow-va-nofollow/">backlink dofollow và nofollow</a>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Vì vậy, hãy coi social entity là lớp nhận diện thương hiệu và lớp dữ liệu nhất quán, không phải lớp backlink chính. Nó nằm cạnh guest post, bài PR trên báo và liên kết từ trang cùng chủ đề, không thay thế chúng. Bức tranh đầy đủ về vị trí của từng loại có trong bài <a href="https://digicomvn.com/cac-loai-backlink/">các loại backlink</a>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Các nhóm nền tảng thường dùng để xây social entity</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Không cần có mặt ở mọi nền tảng; cần có mặt ở nơi khách hàng và công cụ tìm kiếm thật sự nhìn thấy, với hồ sơ đầy đủ. Chọn theo nhóm giúp bạn cân bằng giữa độ phủ và sức duy trì. Một doanh nghiệp nhỏ quản lý tốt 8 đến 12 hồ sơ cốt lõi thường có lợi hơn 200 hồ sơ bỏ trống, vì hồ sơ bỏ trống không mô tả được gì về thực thể. Con số này là gợi ý thực hành, không phải ngưỡng do Google đặt.</p>
+<!-- /wp:paragraph -->
+<!-- wp:table -->
+<figure class="wp-block-table dgc-data-table"><table><caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Các nhóm nền tảng phổ biến cho social entity và thông tin nên điền</caption><thead><tr><th>Nhóm nền tảng</th><th>Ví dụ</th><th>Nên điền</th><th>Lưu ý</th></tr></thead><tbody><tr><td data-label="Nhóm nền tảng">Bản đồ, doanh nghiệp</td><td data-label="Ví dụ">Google Business Profile, danh bạ doanh nghiệp</td><td data-label="Nên điền">Tên, địa chỉ, giờ mở cửa, danh mục, website</td><td data-label="Lưu ý">Chỉ dành cho doanh nghiệp có địa điểm hoặc khu vực phục vụ thật; là nguồn NAP chuẩn để các hồ sơ khác khớp theo</td></tr><tr><td data-label="Nhóm nền tảng">Mạng xã hội lớn</td><td data-label="Ví dụ">Facebook, YouTube, X, TikTok, Instagram</td><td data-label="Nên điền">Tên, mô tả, website, liên hệ, ảnh đại diện, ảnh bìa</td><td data-label="Lưu ý">Cần đăng nội dung thật định kỳ, hồ sơ trống dễ bị coi là bỏ hoang</td></tr><tr><td data-label="Nhóm nền tảng">Nghề nghiệp, tuyển dụng</td><td data-label="Ví dụ">LinkedIn, trang tuyển dụng, hồ sơ hiệp hội ngành</td><td data-label="Nên điền">Ngành nghề, quy mô, năm thành lập, nhân sự chủ chốt</td><td data-label="Lưu ý">Nối được người với doanh nghiệp, hữu ích cho thực thể cá nhân</td></tr><tr><td data-label="Nhóm nền tảng">Chia sẻ nội dung</td><td data-label="Ví dụ">Medium, SlideShare, Issuu, Behance</td><td data-label="Nên điền">Tài liệu, hồ sơ năng lực, bài chuyên môn</td><td data-label="Lưu ý">Đăng nội dung riêng, không chép nguyên bài trên website</td></tr><tr><td data-label="Nhóm nền tảng">Ảnh và video</td><td data-label="Ví dụ">Pinterest, Flickr, Vimeo</td><td data-label="Nên điền">Ảnh sản phẩm, video giới thiệu có mô tả</td><td data-label="Lưu ý">Ảnh thật của doanh nghiệp, đặt tên và mô tả rõ</td></tr><tr><td data-label="Nhóm nền tảng">Cộng đồng, mã nguồn</td><td data-label="Ví dụ">GitHub, diễn đàn chuyên ngành</td><td data-label="Nên điền">Hồ sơ tổ chức, website, mô tả</td><td data-label="Lưu ý">Chỉ dùng khi doanh nghiệp thật sự tham gia cộng đồng đó</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:paragraph -->
+<p>Nhóm bản đồ và doanh nghiệp nên làm đầu tiên nếu bạn có địa điểm phục vụ khách, vì đó là nguồn dữ liệu do chính Google quản lý. Nhóm chia sẻ nội dung và cộng đồng chỉ có ý nghĩa khi bạn có thứ thật để chia sẻ; một hồ sơ GitHub không có kho mã nào hay một tài khoản SlideShare không có tài liệu nào gần như không mô tả thêm gì về doanh nghiệp.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Cách xây social entity: 6 bước tự làm</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Tự xây social entity đúng cách gồm 6 bước theo thứ tự: chốt dữ liệu gốc, chuẩn bị tài khoản, tạo hồ sơ cốt lõi, mở rộng dần, khai báo sameAs và kiểm tra định kỳ. Thứ tự này quan trọng: sửa NAP sau khi đã có 30 hồ sơ tốn công gấp nhiều lần chốt đúng từ đầu.</p>
+<!-- /wp:paragraph -->
+<!-- wp:html -->
+<ol style="display:flex;flex-wrap:wrap;gap:14px;margin:20px 0;list-style:none;padding:0"><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><div aria-hidden="true" style="width:32px;height:32px;border-radius:50%;background:#0E8C7F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px">1</div><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Chốt bộ hồ sơ gốc</dt><dd style="font-size:13.5px;margin:0">Viết một lần tên giao dịch, tên pháp lý, địa chỉ, hotline, email, website, mô tả 50 và 250 ký tự, logo, ảnh bìa. Mọi hồ sơ chép từ đây.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><div aria-hidden="true" style="width:32px;height:32px;border-radius:50%;background:#0E8C7F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px">2</div><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Chuẩn bị tài khoản</dt><dd style="font-size:13.5px;margin:0">Đăng ký bằng email doanh nghiệp, có ít nhất 2 quản trị viên, lưu mật khẩu trong trình quản lý mật khẩu của công ty.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><div aria-hidden="true" style="width:32px;height:32px;border-radius:50%;background:#0E8C7F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px">3</div><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Tạo hồ sơ cốt lõi</dt><dd style="font-size:13.5px;margin:0">Trang doanh nghiệp Google (nếu có địa điểm), Facebook, LinkedIn, YouTube. Điền đủ mọi trường, gắn logo và ảnh thật.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><div aria-hidden="true" style="width:32px;height:32px;border-radius:50%;background:#0E8C7F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px">4</div><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Mở rộng dần</dt><dd style="font-size:13.5px;margin:0">Thêm nền tảng ngành, chia sẻ nội dung, ảnh, video theo đợt. Mỗi hồ sơ một mô tả viết riêng, không tạo hàng loạt trong một ngày.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><div aria-hidden="true" style="width:32px;height:32px;border-radius:50%;background:#0E8C7F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px">5</div><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Khai báo sameAs</dt><dd style="font-size:13.5px;margin:0">Thêm dữ liệu có cấu trúc Organization trên website, liệt kê URL các hồ sơ chính chủ trong sameAs, kiểm bằng công cụ kiểm tra kết quả nhiều định dạng.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><div aria-hidden="true" style="width:32px;height:32px;border-radius:50%;background:#0E8C7F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px">6</div><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Kiểm tra và duy trì</dt><dd style="font-size:13.5px;margin:0">Mỗi tháng mở lại hồ sơ, kiểm NAP, link, nội dung mới. Đổi địa chỉ hay hotline thì sửa đồng loạt trong một ngày.</dd></dl></li></ol>
+<!-- /wp:html -->
+<!-- wp:html -->
+<figure class="dgc-shot"><img src="https://digicomvn.com/wp-content/uploads/2026/10/ig-social-entity-la-gi-quy-trinh-6-buoc.webp" alt="Quy trình 6 bước xây social entity: chốt bộ hồ sơ gốc, chuẩn bị tài khoản, hồ sơ cốt lõi, hồ sơ mở rộng, khai báo sameAs, kiểm tra và duy trì" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Quy trình 6 bước tự xây bộ hồ sơ thương hiệu</figcaption></figure>
+<!-- /wp:html -->
+<!-- wp:paragraph -->
+<p>Bước 2 là chỗ ít bài hướng dẫn nhắc tới nhưng gây hậu quả lâu dài nhất. Nhiều doanh nghiệp để nhân viên tạo hồ sơ bằng email cá nhân; khi người đó nghỉ việc, công ty mất quyền quản trị và không sửa được thông tin cũ. Hồ sơ mang NAP lỗi thời mà không ai sửa được chính là nguồn gây lệch dữ liệu thực thể.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Ở bước 5, đoạn khai báo tối thiểu trên website có dạng dưới đây. Chỉ đưa vào sameAs những hồ sơ bạn thật sự sở hữu và còn hoạt động; liệt kê hồ sơ của bên khác hoặc hồ sơ đã chết là khai báo sai.</p>
+<!-- /wp:paragraph -->
+<!-- wp:code -->
+<pre class="wp-block-code" style="overflow-x:auto;max-width:100%"><code>{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Tên thương hiệu",
+  "url": "https://websitecuaban.vn/",
+  "logo": "https://websitecuaban.vn/logo.png",
+  "telephone": "+84 xxx xxx xxx",
+  "sameAs": [
+    "https://www.facebook.com/...",
+    "https://www.linkedin.com/company/...",
+    "https://www.youtube.com/@..."
+  ]
+}</code></pre>
+<!-- /wp:code -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lỗi hay gặp khi xây social entity</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Lỗi nặng nhất là tạo hồ sơ hàng loạt bằng công cụ tự động. Chính sách spam của Google (cập nhật 28/08/2026) liệt kê "dùng chương trình hoặc dịch vụ tự động để tạo liên kết tới trang của bạn" và "liên kết từ thư mục hoặc trang bookmark chất lượng thấp" là ví dụ của spam liên kết; mục spam do người dùng tạo cũng nêu các tài khoản spam trên dịch vụ ai cũng đăng ký được. Bốn lỗi còn lại ít nguy hiểm hơn nhưng làm hỏng chính mục tiêu nhận diện thực thể.</p>
+<!-- /wp:paragraph -->
+<!-- wp:html -->
+<ul style="display:flex;flex-wrap:wrap;gap:14px;margin:20px 0;list-style:none;padding:0"><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Tạo hàng loạt bằng công cụ</dt><dd style="font-size:13.5px;margin:0">Hàng trăm hồ sơ trong một đêm, mô tả giống nhau: thuộc nhóm hành vi chính sách spam của Google nêu tên, nền tảng cũng hay dọn.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">NAP lệch giữa các hồ sơ</dt><dd style="font-size:13.5px;margin:0">"Quận 1" ở nơi này, "Q.1" ở nơi khác; số hotline cũ còn sót. Dữ liệu không khớp làm việc nối nguồn kém chắc chắn.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Mô tả sao chép</dt><dd style="font-size:13.5px;margin:0">Một đoạn giới thiệu dán vào mọi hồ sơ, hoặc chép nguyên từ website. Hồ sơ không thêm thông tin mới nào.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Tài khoản cá nhân giữ hồ sơ</dt><dd style="font-size:13.5px;margin:0">Nhân viên nghỉ việc mang theo quyền quản trị, công ty không cập nhật được hồ sơ khi đổi thông tin.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Bỏ hoang sau khi tạo</dt><dd style="font-size:13.5px;margin:0">Không ảnh, không bài, không trả lời tin nhắn. Hồ sơ bỏ hoang gây hại cho uy tín khi khách hàng tìm thấy.</dd></dl></li></ul>
+<!-- /wp:html -->
+<!-- wp:paragraph -->
+<p>Một lỗi tinh vi hơn là khai báo sameAs quá tay: đưa cả link bài báo nhắc tới công ty, link trang danh bạ bên thứ ba hay hồ sơ của nhân viên vào sameAs của tổ chức. Theo định nghĩa của schema.org, sameAs phải là trang xác định rõ danh tính của chính đối tượng, nên chỉ đưa vào các hồ sơ chính thức mô tả đúng tổ chức đó.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Đo kết quả social entity thế nào?</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Đo social entity bằng tín hiệu nhận diện thương hiệu, không bằng thứ hạng từ khoá. Có bốn cách kiểm tra cụ thể, mỗi cách có giới hạn riêng. Điểm chung là không cách nào cho ra một "điểm entity": Google không công bố chỉ số như vậy, và các điểm số do công cụ bên thứ ba đặt ra chỉ phản ánh cách tính của họ.</p>
+<!-- /wp:paragraph -->
+<!-- wp:table -->
+<figure class="wp-block-table dgc-data-table"><table><caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Bốn cách đo kết quả social entity và giới hạn của từng cách</caption><thead><tr><th>Cách đo</th><th>Làm thế nào</th><th>Giới hạn</th></tr></thead><tbody><tr><td data-label="Cách đo">Trang kết quả tên thương hiệu</td><td data-label="Làm thế nào">Tìm chính xác tên thương hiệu ở cửa sổ ẩn danh, đếm bao nhiêu kết quả trang 1 là kênh chính chủ, thông tin có đúng không</td><td data-label="Giới hạn">Kết quả thay đổi theo vị trí, thiết bị, thời điểm</td></tr><tr><td data-label="Cách đo">Hồ sơ đã được index</td><td data-label="Làm thế nào">Tìm đúng URL từng hồ sơ trên Google</td><td data-label="Giới hạn">Toán tử site: không phải lúc nào cũng trả đủ kết quả</td></tr><tr><td data-label="Cách đo">Thực thể trong Knowledge Graph</td><td data-label="Làm thế nào">Gọi Knowledge Graph Search API với tên thương hiệu, xem có mã kg:/m/... và kiểu Organization không</td><td data-label="Giới hạn">Google ghi rõ API không dành cho dịch vụ quan trọng; có kết quả cũng không bảo đảm có Bảng tri thức</td></tr><tr><td data-label="Cách đo">Bảng tri thức</td><td data-label="Làm thế nào">Nếu đã xuất hiện, người đại diện chính thức xác minh quyền và đề xuất sửa</td><td data-label="Giới hạn">Bảng được tạo tự động, không có cách đăng ký xin cấp</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:paragraph -->
+<p>Cách thứ ba ít được nhắc tới nhưng hữu ích để kiểm chứng. Knowledge Graph Search API là API chỉ đọc, trả về các thực thể khớp truy vấn kèm mã định danh, kiểu schema.org và điểm khớp; Google cũng ghi rõ đang chuyển API này sang sản phẩm Enterprise Knowledge Graph trên Google Cloud và khuyên người dùng mới dùng sản phẩm đó. Nếu thương hiệu chưa có trong kết quả, điều đó không có nghĩa social entity thất bại; nhiều doanh nghiệp vừa và nhỏ không bao giờ có nút riêng trong Knowledge Graph mà vẫn được hiển thị đúng khi tìm tên. Hãy dùng nó như một phép thử bổ sung, không phải mục tiêu.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Khi nào nên tự làm, khi nào nên thuê dịch vụ social entity?</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Tự làm phù hợp khi doanh nghiệp chỉ cần 8 đến 15 hồ sơ cốt lõi và có người nội bộ duy trì được hằng tháng. Thuê dịch vụ hợp lý khi cần phủ nhiều nền tảng ngành trong thời gian ngắn, khi đội ngũ không có người am hiểu dữ liệu có cấu trúc, hoặc khi đang chuẩn bị một chiến dịch <a href="https://digicomvn.com/seo-offpage-la-gi/">SEO offpage</a> lớn và muốn có lớp nhận diện thương hiệu trước.</p>
+<!-- /wp:paragraph -->
+<!-- wp:html -->
+<ul style="display:flex;flex-wrap:wrap;gap:14px;margin:20px 0;list-style:none;padding:0"><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Nên tự làm</dt><dd style="font-size:13.5px;margin:0">Số hồ sơ cốt lõi ít, có người nội bộ quản trị, thông tin doanh nghiệp ổn định, ngân sách hạn chế.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Nên thuê dịch vụ</dt><dd style="font-size:13.5px;margin:0">Cần phủ nhiều nền tảng, cần viết mô tả riêng cho từng hồ sơ, cần bàn giao danh sách kèm trạng thái index để kiểm chứng.</dd></dl></li><li style="flex:1 1 240px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Câu hỏi trước khi thuê</dt><dd style="font-size:13.5px;margin:0">Làm thủ công hay bằng công cụ? Có bàn giao tài khoản về email của bạn không? Có danh sách URL kèm trạng thái index không?</dd></dl></li></ul>
+<!-- /wp:html -->
+<!-- wp:paragraph -->
+<p>Dù tự làm hay thuê ngoài, ba điều không đổi: hồ sơ phải là của doanh nghiệp thật với thông tin thật, quyền quản trị phải thuộc về doanh nghiệp, và không ai cam kết được thứ hạng hay Bảng tri thức. Nếu bạn muốn một đơn vị chốt bộ NAP, viết mô tả riêng và dựng hồ sơ thủ công, tham khảo <a href="https://digicomvn.com/backlink-social-entity/">gói social entity tại DigicomVN</a> hoặc gọi hotline 0988 769 317 để được tư vấn số hồ sơ phù hợp với ngành.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Câu hỏi thường gặp</h2>
+<!-- /wp:heading -->
+<!-- wp:html -->
+<ul style="display:flex;flex-wrap:wrap;gap:14px;margin:20px 0;list-style:none;padding:0"><li style="flex:1 1 200px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Entity</dt><dd style="font-size:13.5px;margin:0">Thực thể có thật, có mã riêng trong Knowledge Graph.</dd></dl></li><li style="flex:1 1 200px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Social entity</dt><dd style="font-size:13.5px;margin:0">Bộ hồ sơ chính chủ, cùng NAP, khai báo lại bằng sameAs.</dd></dl></li><li style="flex:1 1 200px;background:#F1FAF8;border:1px solid rgba(14,140,127,.22);border-radius:12px;padding:16px 18px;color:#1C2035"><dl class="dl-card" style="margin:0"><dt style="font-weight:700;margin-bottom:4px">Kỳ vọng đúng</dt><dd style="font-size:13.5px;margin:0">Nhận diện thương hiệu, không cam kết thứ hạng hay Bảng tri thức.</dd></dl></li></ul>
+<!-- /wp:html -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Entity có nghĩa là gì?</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Entity nghĩa là thực thể: một sự vật có thật và phân biệt được, như một người, một công ty, một địa điểm hay một khái niệm. Trong tìm kiếm, Google lưu thực thể trong Knowledge Graph, mỗi thực thể có mã định danh, thuộc tính và quan hệ, thay vì chỉ so khớp từ khoá.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Entity là gì trong kinh doanh?</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Trong kinh doanh, entity hay business entity là chủ thể kinh doanh, thường là pháp nhân như công ty. Luật Doanh nghiệp 2020 định nghĩa doanh nghiệp là tổ chức có tên riêng, tài sản, trụ sở giao dịch, được thành lập hoặc đăng ký nhằm mục đích kinh doanh. Nghĩa này khác với thực thể trong SEO.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Social entity có phải là backlink không?</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Social entity có tạo ra link trỏ về website, nhưng không nên coi là backlink chính. Link trong hồ sơ mạng xã hội thường mang nofollow hoặc đi qua trang chuyển hướng, nên giá trị chủ yếu nằm ở nhận diện thương hiệu và dữ liệu nhất quán, không phải ở việc truyền sức mạnh liên kết.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Cần bao nhiêu hồ sơ social entity là đủ?</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Không có con số chuẩn nào do Google đặt ra. Với doanh nghiệp vừa và nhỏ, 8 đến 15 hồ sơ cốt lõi đầy đủ thông tin, có nội dung thật và được duy trì thường hữu ích hơn hàng trăm hồ sơ bỏ trống. Ngành cạnh tranh có thể mở rộng theo đợt.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Social entity có giúp có Knowledge Panel không?</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Không đảm bảo. Theo trợ giúp của Google, Bảng tri thức được tạo tự động từ nhiều nguồn trên web và không có cách đăng ký xin cấp. Dữ liệu nhất quán giúp mô tả đúng thương hiệu nếu bảng xuất hiện; khi đã có bảng, người đại diện chính thức có thể xác minh và đề xuất chỉnh sửa.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Tài liệu tham khảo</h2>
+<!-- /wp:heading -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item -->
+<li>Introducing the Knowledge Graph: things, not strings, Google (Amit Singhal, 16/05/2012): <a href="https://blog.google/products/search/introducing-knowledge-graph-things-not/" target="_blank" rel="noopener">blog.google</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Knowledge Graph Search API, Google for Developers: <a href="https://developers.google.com/knowledge-graph" target="_blank" rel="noopener">developers.google.com</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Dữ liệu có cấu trúc Organization, Google Search Central (cập nhật 08/09/2026): <a href="https://developers.google.com/search/docs/appearance/structured-data/organization" target="_blank" rel="noopener">developers.google.com</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Thuộc tính sameAs, schema.org: <a href="https://schema.org/sameAs" target="_blank" rel="noopener">schema.org</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Qualify your outbound links to Google, Google Search Central (cập nhật 10/12/2025): <a href="https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links" target="_blank" rel="noopener">developers.google.com</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Chính sách về spam cho Google Tìm kiếm, Google Search Central (cập nhật 28/08/2026): <a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="noopener">developers.google.com</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Về Bảng tri thức, Trợ giúp Google: <a href="https://support.google.com/knowledgepanel/answer/9163198?hl=vi" target="_blank" rel="noopener">support.google.com</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Luật Doanh nghiệp số 59/2020/QH14, Cơ sở dữ liệu quốc gia về văn bản pháp luật, Bộ Tư pháp: <a href="https://vbpl.moj.gov.vn/TW/Lists/vbpq/Attachments/142881/Lu%E1%BA%ADt%20Doanh%20nghi%E1%BB%87p%202020.doc" target="_blank" rel="noopener">vbpl.moj.gov.vn</a></li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
