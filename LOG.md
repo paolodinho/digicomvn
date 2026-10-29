@@ -4932,3 +4932,13 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - 2026-10-28: Trang chu bo luoi 20 the dich vu, chi giu 4 dich vu chu dao + danh sach chu 'Cac dich vu khac'; landing bo dai CTA lap duoi form (DGC_VER 3.14.1). Dong V023-V028, V052-V058.
 
 ## 2026-10-28 - O tra ten mien nhieu duoi len live (DGC_VER 3.16.0). API dai ly chay tu Local, live cho mo tuong lua IP 145.79.26.63.
+- 2026-10-29 07:10: noi dung T1-T3,T5,T6 len live (475,1261,2107,2440), bang gia 1261 cap nhat theo gia live 29/10.
+
+## 2026-10-29 - Fix nut trang case study
+- Nut "Nhan tu van cho du an cua ban" (btn-primary) trong single-dgc_case.php bi CSS link than bai (.page-content p a) de mau chu xanh len nen xanh -> chu tang hinh. Them :not(.btn) vao 3 rule link than bai trong main.css, bump DGC_VER 3.16.9, deploy live, kiem computed style: chu trang tren nen xanh.
+
+## 2026-10-29 - Gio + thanh toan QR ten mien (live, DGC_VER 3.17.0)
+- Moi: inc/domain-order.php (CPT dgc_don_tm, AJAX tao don, REST dgc/v1/sepay, email, meta box admin), page-thanh-toan-ten-mien.php.
+- Sua: order-prefill.php (nut Them vao gio, thanh gio noi), page-ten-mien.php, options.php (tm_vat, tm_bank_acc, tm_bank_owner), sg.css, functions.php.
+- QA: Local du luong (don DGCKHUZUN), mobile 375 khong tran; live: tim ten -> them gio -> trang thanh toan OK, webhook khong key tra 401.
+- 29/10 09:30: Hieu bao o tra ten mien bao 'Chua kiem tra duoc'. Nguyen nhan: nonce trong HTML LiteSpeed cache lech phien dang nhap -> admin-ajax tra -1 403. Bo bat buoc nonce (tra cuu chi doc + rate-limit IP; tao don co honeypot + 10 don/gio/IP). Da live, test nonce sai van tra ket qua.

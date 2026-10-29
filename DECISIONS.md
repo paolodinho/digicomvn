@@ -212,3 +212,9 @@ Hiếu chốt: chỉ giữ bài kiến thức "TVC là gì" (gộp vào bài qu�
 - Hieu: tim va mua giong trang nha cung cap, gia = gia niem yet, dang ky xong email Hieu, Hieu tu xu ly thanh toan.
 - Lam: AJAX dgc_domain_check tra toi da 12 duoi/lan, gia tu option ten_mien_gia, nut Dang ky dien san form lead. Khong tu dong dang ky, khong thanh toan online. Khong hien ten nha cung cap.
 - Ky thuat: goi curl truc tiep vi WP Requests giai nen gzip bien body "0" thanh rong (mat ket qua "da co chu"). May chu live chua ket noi duoc toi API (tuong lua phia nha cung cap) -> du phong RDAP cho duoi quoc te, .vn hien "Gui yeu cau".
+
+## 2026-10-29 - Ten mien: gio hang + thanh toan QR tu xac nhan ngay tren trang
+- Hieu chon: thanh toan QR chuyen khoan tu xac nhan (VietQR MB 567898838 + SePay webhook), dang ky tu dong qua API dai ly.
+- Ly do QR thay cong the: khong can hop dong cong thanh toan, phi gan 0, khach VN quen quet QR.
+- Gia tinh lai tren may chu tu option ten_mien_gia (khong tin gia tu trinh duyet); kiem tra con trong lai luc tao don.
+- Dang ky tu dong CHUA bat: thieu tai lieu lenh dang ky cua API dai ly + IP live chua duoc whitelist. Don da thanh toan -> email Hieu dang ky tay.

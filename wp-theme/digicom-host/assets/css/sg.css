@@ -405,6 +405,65 @@ a.sg-card--feat:hover{border-color:transparent}
 .tm-note{margin:10px 2px 0;font-size:13px;color:var(--ink-soft)}
 @media(max-width:560px){.tm-row{grid-template-columns:minmax(0,1fr) auto;row-gap:6px;padding:12px 14px}.tm-d{grid-column:1/-1}.tm-price{text-align:left}.tm-row.is-taken{grid-template-columns:1fr}}
 
+/* Gio ten mien + thanh toan QR (2026-10-29, inc/domain-order.php) */
+.tm-result .tm-row .tm-buy{border:1.5px solid var(--sg-blue);cursor:pointer;font-family:inherit}
+.tm-result .tm-row .tm-buy.is-added{background:#fff;color:var(--sg-blue)!important}
+.tmc [hidden],.tm-bar[hidden]{display:none!important}
+.tm-bar{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:85;display:inline-flex;align-items:center;gap:10px;
+  padding:12px 14px 12px 20px;border-radius:999px;background:var(--sg-blue-2);color:#fff!important;font-weight:600;text-decoration:none!important;
+  box-shadow:var(--sg-sh-2);white-space:nowrap}
+.tm-bar b{display:inline-flex;min-width:24px;height:24px;border-radius:12px;background:var(--sg-mint);color:#0A2A6B;align-items:center;justify-content:center;font-size:13px}
+.tm-bar span{background:#fff;color:var(--sg-blue);padding:7px 14px;border-radius:999px;font-weight:700}
+.tm-bar:hover span{background:var(--sg-mint);color:#0A2A6B}
+@media(max-width:768px){.tm-bar{bottom:calc(var(--bn-h,0px) + 14px)}}
+.tmc-hero{padding-bottom:40px!important}
+.tmc-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;align-items:start}
+.tmc-cart,.tmc-form,.tmc-pay{background:var(--sg-card);border:1px solid var(--sg-line);border-radius:var(--sg-r);padding:24px;box-shadow:var(--sg-sh)}
+.tmc h2{font-size:20px;margin:0 0 14px}
+.tmc-items{list-style:none;margin:0 0 6px;padding:0}
+.tmc-items li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--sg-line)}
+.tmc-items b{overflow-wrap:anywhere;color:var(--heading)}
+.tmc-items select{grid-row:2;justify-self:start;padding:5px 8px;border:1px solid var(--sg-line);border-radius:8px;background:var(--sg-card);color:var(--sg-ink);font:inherit;font-size:14px}
+.tmc-items span{text-align:right;font-weight:700;color:var(--heading);white-space:nowrap}
+.tmc-items button{grid-row:2;grid-column:2;justify-self:end;background:none;border:0;color:#A3271B;font:inherit;font-size:13.5px;cursor:pointer;text-decoration:underline}
+.tmc-sum{width:100%;border-collapse:collapse;margin-top:6px}
+.tmc-sum td{padding:8px 0;font-size:15px}
+.tmc-sum td:last-child{text-align:right;white-space:nowrap}
+.tmc-sum td small{color:var(--sg-soft);margin-left:6px}
+.tmc-sum tbody td{border-bottom:1px solid var(--sg-line)}
+.tmc-sum tfoot tr:last-child td{font-weight:800;font-size:18px;color:var(--sg-blue);padding-top:12px}
+.tmc-note{font-size:13.5px;color:var(--sg-soft);margin:10px 0 0}
+.tmc-type{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.tmc-type label{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1.5px solid var(--sg-line);border-radius:10px;cursor:pointer;font-weight:600}
+.tmc-type label:has(input:checked){border-color:var(--sg-blue);background:var(--sg-cyan);color:var(--sg-blue)}
+.tmc-f{display:block;margin:0 0 12px}
+.tmc-f span{display:block;font-size:13.5px;font-weight:600;color:var(--sg-soft);margin-bottom:5px}
+.tmc-f input{width:100%;padding:11px 13px;border:1px solid var(--sg-line);border-radius:10px;font:inherit;background:var(--sg-card);color:var(--sg-ink)}
+.tmc-f input:focus{outline:2px solid var(--sg-blue);outline-offset:1px;border-color:var(--sg-blue)}
+.tmc-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+.tmc-agree{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:6px 0 14px;line-height:1.5}
+.tmc-agree input{margin-top:4px;flex:none}
+.tmc-err{color:#A3271B;font-weight:600;margin:0 0 12px}
+.tmc-submit{width:100%;justify-content:center;padding:13px 22px;border:0;cursor:pointer;font-family:inherit}
+.tmc-submit:disabled{opacity:.6;cursor:wait}
+.tmc-pay{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;align-items:start}
+.tmc-qr{text-align:center}
+.tmc-qr img{width:100%;max-width:320px;height:auto;border-radius:12px;border:1px solid var(--sg-line);background:#fff}
+.tmc-hint{font-size:14px;color:var(--sg-soft);margin:10px 0 0}
+.tmc-live{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--sg-blue);margin:12px 0 0}
+.tmc-dot{width:9px;height:9px;border-radius:50%;background:var(--sg-blue);animation:tmcPulse 1.4s infinite}
+@keyframes tmcPulse{50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.tmc-dot{animation:none}}
+.tmc-paid{padding:28px 18px;border-radius:12px;background:#E3F8F1;color:#0B5E52}
+.tmc-paid b{display:block;font-size:20px;margin-bottom:6px}
+.tmc-paid p{margin:0}
+.tmc-bank{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;margin:18px 0 0;padding:16px;border-radius:12px;background:var(--sg-cyan)}
+.tmc-bank dt{font-size:13.5px;color:var(--sg-soft)}
+.tmc-bank dd{margin:0;overflow-wrap:anywhere}
+.tmc-copy{margin-left:6px;padding:2px 9px;border:1px solid var(--sg-blue);border-radius:999px;background:transparent;color:var(--sg-blue);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}
+@media(max-width:860px){.tmc-grid,.tmc-pay{grid-template-columns:1fr}}
+@media(max-width:520px){.tmc-2{grid-template-columns:1fr}.tmc-cart,.tmc-form,.tmc-pay{padding:18px}}
+
 /* ---------- Landing dich vu tpl-service (2026-10-28): the bang gia hero + khoi dung chung ---------- */
 .sg-pboard h2{margin-bottom:12px}
 .sg-pboard-stats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px!important;margin:0 0 14px!important}

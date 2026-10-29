@@ -228,13 +228,19 @@ add_action( 'dgc_seo_box_fields', function ( $post ) {
 	$d = (string) get_post_meta( $post->ID, 'dgc_seo_desc', true );
 	echo '<p><label for="dgc_seo_title"><strong>Tiêu đề SEO</strong> (thẻ &lt;title&gt; trên Google - để trống = dùng tiêu đề bài)</label><br>';
 	echo '<input type="text" id="dgc_seo_title" name="dgc_seo_title" value="' . esc_attr( $t ) . '" class="large-text" maxlength="120"></p>';
+	if ( get_post_meta( $post->ID, '_wp_page_template', true ) === 'tpl-service.php' ) {
+		$h = (string) get_post_meta( $post->ID, 'dgc_h1', true );
+		echo '<p><label for="dgc_h1"><strong>Tiêu đề lớn (H1) trang dịch vụ</strong> (để trống = dùng tiêu đề trang; tiêu đề trang nên giữ ngắn vì còn dùng làm tên dịch vụ trong các mục tự sinh)</label><br>';
+		echo '<input type="text" id="dgc_h1" name="dgc_h1" value="' . esc_attr( $h ) . '" class="large-text" maxlength="120"></p>';
+	}
 	echo '<p><label for="dgc_seo_desc"><strong>Mô tả SEO</strong> (đoạn mô tả dưới tiêu đề trên Google + khi share Facebook/Zalo - để trống = tự lấy từ đầu bài, nên ~150 ký tự)</label><br>';
 	echo '<textarea id="dgc_seo_desc" name="dgc_seo_desc" rows="3" class="large-text">' . esc_textarea( $d ) . '</textarea></p>';
 	echo '<hr>';
 } );
 
 add_action( 'dgc_seo_box_save', function ( $post_id ) {
-	foreach ( array( 'dgc_seo_title', 'dgc_seo_desc' ) as $k ) {
+	foreach ( array( 'dgc_seo_title', 'dgc_seo_desc', 'dgc_h1' ) as $k ) {
+		if ( $k === 'dgc_h1' && ! isset( $_POST[ $k ] ) ) continue;
 		$v = isset( $_POST[ $k ] ) ? sanitize_text_field( wp_unslash( $_POST[ $k ] ) ) : '';
 		if ( $v !== '' ) update_post_meta( $post_id, $k, $v );
 		else delete_post_meta( $post_id, $k );

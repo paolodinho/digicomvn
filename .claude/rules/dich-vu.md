@@ -51,7 +51,7 @@ backup-before-edit). Danh mục chi tiết cũ tham khảo trong lịch sử DEC
 - **Booking KOL/KOC** `/booking-kol-koc/` - KOL, KOC, TikToker, YouTuber, livestream, nghệ sĩ. Bắt buộc nêu nghĩa vụ theo Luật Quảng cáo 75/2025/QH15. Không làm seeding/buff tương tác.
 
 ## Tên miền + hosting (mở 2026-10-27)
-Nguồn: đại lý P.A Việt Nam - TUYỆT ĐỐI không hiện tên P.A/pavietnam trên site, bảng giá, báo giá, schema (rule bao-gia-khong-lo-gia-von). Khách đặt như dịch vụ của Digicom: bảng giá + form đặt; chưa làm giỏ hàng tự động.
+Nguồn: đại lý P.A Việt Nam - TUYỆT ĐỐI không hiện tên P.A/pavietnam trên site, bảng giá, báo giá, schema (rule bao-gia-khong-lo-gia-von). Khách đặt như dịch vụ của Digicom. Từ 29/10: giỏ + thanh toán QR ngay trên trang (/thanh-toan-ten-mien/, inc/domain-order.php), SePay webhook tự xác nhận (key DGC_SEPAY_KEY trong wp-config), đăng ký tự động qua API đại lý chỉ bật khi có DGC_PA_REG_ON + hàm dgc_tm_pa_register; chưa có thì email Hiếu đăng ký tay.
 Ô tra tên miền (28/10): tra nhiều đuôi 1 lần qua API whois đại lý (khoá DGC_PA_USER/DGC_PA_KEY chỉ trong wp-config, không commit), dự phòng RDAP; nút Đăng ký -> form lead -> email Hiếu, Hiếu tự đăng ký + thu tiền. Đuôi gợi ý: option tm_suggest.
 
 ## Phần mềm SEO (mở 2026-10-27)

@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.16.8');
+define('DGC_VER','3.17.0');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -154,6 +154,7 @@ require_once get_template_directory() . '/inc/faq-page.php';
 require_once get_template_directory() . '/inc/gsc-sitemap-submit.php';
 require_once get_template_directory() . '/inc/leads-sheet-sync.php';
 require_once get_template_directory() . '/inc/domain-hosting.php';
+require_once get_template_directory() . '/inc/domain-order.php';
 
 /**
  * Helper doc 1 option.
@@ -405,7 +406,7 @@ function dgc_is_booking_context() {
 
 /** Trang dich vu template rieng (booking, ten mien, hosting): ap giao dien sg cho cac section cu (sg.css .sg-legacy). */
 add_filter( 'body_class', function ( $c ) {
-	if ( is_page_template( 'page-booking-bao-pr.php' ) || is_page( array( 'ten-mien', 'hosting' ) ) ) $c[] = 'sg-legacy';
+	if ( is_page_template( 'page-booking-bao-pr.php' ) || is_page( array( 'ten-mien', 'hosting', 'thanh-toan-ten-mien' ) ) ) $c[] = 'sg-legacy';
 	return $c;
 } );
 

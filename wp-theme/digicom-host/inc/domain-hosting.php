@@ -138,7 +138,8 @@ function dgc_tm_check_many( $domains ) {
 }
 
 function dgc_domain_check_ajax() {
-	check_ajax_referer( 'dgc_dc', 'n' );
+	// Khong bat buoc nonce: trang /ten-mien/ duoc LiteSpeed cache, nonce trong HTML cache lech phien dang nhap -> 403.
+	// Tra cuu chi doc, da gioi han 40 luot/gio/IP ben duoi.
 	$q = strtolower( trim( sanitize_text_field( wp_unslash( $_POST['d'] ?? '' ) ) ) );
 	$q = preg_replace( '#^https?://|^www\.|/.*$#', '', $q );
 	$q = preg_replace( '/\s+/', '', $q );

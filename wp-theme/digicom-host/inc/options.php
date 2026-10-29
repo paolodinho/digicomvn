@@ -319,6 +319,9 @@ function dgc_settings_page() {
 				<?php
 				dgc_field( 'ten_mien_gia', 'Bang gia ten mien', 'Moi dong: duoi | vn hoac qt | gia nam dau | gia goc (gach ngang) | gia han/nam | luu y. Gia ghi so tron, VD: .vn | vn | 450000 | 700000 | 512000 | . KHONG ghi ten nha cung cap.', 'textarea' );
 				dgc_field( 'tm_suggest', 'Duoi goi y khi tra ten mien', 'Cac duoi tra cung luc khi khach go 1 ten (toi da 12), cach nhau dau phay. De trong = .vn, .com.vn, .com, .net, .net.vn, .io.vn, .id.vn, .org, .online, .xyz' );
+				dgc_field( 'tm_vat', 'VAT tinh them khi thanh toan ten mien (%)', 'De trong hoac 0 = khong cong VAT vao tong thanh toan. VD: 10.' );
+				dgc_field( 'tm_bank_acc', 'So tai khoan nhan tien ten mien', 'De trong = 567898838 (MB Bank). Ma QR va doi soat tu dong dung so nay.' );
+				dgc_field( 'tm_bank_owner', 'Chu tai khoan (khong dau)', 'De trong = CONG TY TNHH DVTT DIGITO COMBAT' );
 				dgc_field( 'hosting_gia', 'Bang gia hosting', 'Moi dong: nhom | ten goi | dung luong | so website | CPU/RAM | gia/thang | gia/thang goc | ky han uu dai (so nam) | gia dang ky 1 nam. VD: Hosting gia re | Starter | 2 GB | 1 | 1 Core / 1 GB RAM | 16000 | 19000 | 3 | 212000', 'textarea' );
 				?>
 			</table>

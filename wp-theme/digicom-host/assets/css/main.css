@@ -2450,7 +2450,7 @@ body.single-post .brand-watermark{display:none}
 [data-theme="dark"] .page-content h2{border-bottom-color:var(--line-2,#2A3340)}
 
 /* Link trong than bai - noi bat, de nhan ra la link (2026-07-17) */
-.page-content p a,.page-content li a{
+.page-content p a:not(.btn),.page-content li a:not(.btn){
   color:var(--action,#2456E6);
   font-weight:600;
   text-decoration:underline;
@@ -2458,11 +2458,11 @@ body.single-post .brand-watermark{display:none}
   text-underline-offset:2px;
   text-decoration-color:rgba(36,86,230,.4);
 }
-.page-content p a:hover,.page-content li a:hover{
+.page-content p a:not(.btn):hover,.page-content li a:not(.btn):hover{
   text-decoration-thickness:2px;
   text-decoration-color:currentColor;
 }
-[data-theme="dark"] .page-content p a,[data-theme="dark"] .page-content li a{color:#8FB0FF;text-decoration-color:rgba(143,176,255,.45)}
+[data-theme="dark"] .page-content p a:not(.btn),[data-theme="dark"] .page-content li a:not(.btn){color:#8FB0FF;text-decoration-color:rgba(143,176,255,.45)}
 
 /* Muc luc bai viet (TOC) - hop dau bai + nut noi theo khi cuon (2026-07-19) */
 .page-content h2,.page-content h3{scroll-margin-top:calc(72px + var(--ribbon-h,0px) + 16px)}

@@ -1,7 +1,8 @@
 <?php
 /**
  * Template trang Ten mien (page slug "ten-mien"). Viet lai 2026-10-27 khi mo dich vu ten mien.
- * Gia doc tu option 'ten_mien_gia' (inc/domain-hosting.php). Khach dat qua form lead, khong gio hang.
+ * Gia doc tu option 'ten_mien_gia' (inc/domain-hosting.php). Tu 2026-10-29: gio hang + thanh toan QR (inc/domain-order.php),
+ * form lead chi con cho ten mien chua co gia/kiem tra thu cong.
  * KHONG hien ten nha cung cap (rule dich-vu.md).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -22,7 +23,7 @@ $dgc_tm_table = function ( $rows, $caption ) {
 				<td data-label="Năm đầu"><b class="tm-now"><?php echo esc_html( dgc_vnd( $gia ) ); ?></b><?php if ( $goc > $gia ) : ?> <s class="tm-old"><?php echo esc_html( dgc_vnd( $goc ) ); ?></s><?php endif; ?></td>
 				<td data-label="Gia hạn"><?php echo esc_html( dgc_vnd( $r['han'] ) ); ?></td>
 				<td class="col-note" data-label="Lưu ý"><?php echo esc_html( $r['note'] ); ?></td>
-				<td><a class="btn btn-ghost btn-sm" href="#lien-he" data-order="Đăng ký tên miền <?php echo esc_attr( $r['duoi'] ); ?>" data-svc="Tên miền">Đăng ký</a></td>
+				<td><a class="btn btn-ghost btn-sm" href="#tm-check" data-tld="<?php echo esc_attr( $r['duoi'] ); ?>">Đăng ký</a></td>
 			</tr>
 		<?php endforeach; ?>
 		</tbody>
@@ -43,6 +44,7 @@ $dgc_tm_table = function ( $rows, $caption ) {
 				<button type="submit">Kiểm tra</button>
 			</form>
 			<p class="tm-result" id="tm-result" aria-live="polite" hidden></p>
+			<a class="tm-bar" data-tm-bar href="<?php echo esc_url( dgc_tm_checkout_url() ); ?>" hidden>Giỏ tên miền: <b data-tm-n>0</b> <span>Thanh toán &rarr;</span></a>
 		</div>
 	</div>
 </section>
@@ -69,9 +71,9 @@ $dgc_tm_table = function ( $rows, $caption ) {
 			<p>Mua lại tên miền cũ (đã hết hạn) để lấy backlink là cách DigicomVN không khuyến khích: Google xếp việc dùng tên miền hết hạn để thao túng xếp hạng vào hành vi spam. Muốn có liên kết uy tín, xem dịch vụ <a href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>">booking báo PR</a> hoặc <a href="<?php echo esc_url( home_url( '/guest-post/' ) ); ?>">guest post</a>.</p>
 		</div>
 		<ol class="tm-steps">
-			<li><b>Kiểm tra tên</b><span>Gõ tên miền ở ô phía trên hoặc gửi danh sách tên dự kiến.</span></li>
+			<li><b>Kiểm tra tên</b><span>Gõ tên miền ở ô phía trên, thêm tên còn trống vào giỏ.</span></li>
 			<li><b>Gửi thông tin chủ thể</b><span>Cá nhân: họ tên, CCCD. Doanh nghiệp: tên, mã số thuế, người đại diện.</span></li>
-			<li><b>Thanh toán</b><span>Chuyển khoản vào tài khoản công ty, xuất hoá đơn khi cần.</span></li>
+			<li><b>Thanh toán</b><span>Quét mã QR ngay trên trang, hệ thống tự xác nhận khi tiền về. Xuất hoá đơn khi cần.</span></li>
 			<li><b>Bàn giao</b><span>Gửi tài khoản quản trị, hỗ trợ trỏ DNS về hosting.</span></li>
 		</ol>
 	</div>

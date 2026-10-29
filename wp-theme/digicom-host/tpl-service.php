@@ -58,7 +58,7 @@ $GLOBALS['dgc_promo_done'] = true;
 		<div class="sg-phero-row">
 			<div>
 				<span class="sg-eyebrow"><?php echo esc_html( $dgc_group ); ?></span>
-				<h1><?php echo esc_html( $svc_name ); ?></h1>
+				<h1><?php $dgc_h1 = trim( (string) get_post_meta( get_the_ID(), 'dgc_h1', true ) ); echo esc_html( $dgc_h1 !== '' ? $dgc_h1 : $svc_name ); ?></h1>
 				<?php if ( has_excerpt() ) : ?><p class="sg-lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
 				<div class="sg-hero-cta">
 					<?php if ( $nhom ) : ?>
