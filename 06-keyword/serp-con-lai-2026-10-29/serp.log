@@ -129,3 +129,96 @@
 2026-10-29 08:08:17 | [91/170] allintitle:dịch vụ backlink báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
 2026-10-29 08:09:22 | [92/170] allintitle:tvc quảng cáo là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
 2026-10-29 08:10:50 | [93/170] allintitle:truyền thông doanh nghiệp -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:15:25 | LOOP lần 1, đã đo 101/170
+2026-10-29 14:15:26 | Engine: patchright | 1 key xoay homeproxy.vn | 170 từ khoá | tối đa 2 lần thử lại nếu dính chặn
+2026-10-29 14:16:34 | [1/170] allintitle:book bài pr báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:17:42 | [2/170] allintitle:book báo giá rẻ -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:18:43 |   [book báo điện tử] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-29 14:18:51 |   [book báo điện tử] lỗi: TimeoutError: Locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator("textarea[name=q], input[name=q]").first
+    -
+2026-10-29 14:18:52 | [3/170] allintitle:book báo điện tử -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-29 14:19:58 | [4/170] allintitle:chi phí book bài báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:21:10 | [5/170] allintitle:dịch vụ book báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:21:42 |   [dịch vụ book báo pr] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 14:21:42 |   [dịch vụ book báo pr] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 14:22:58 | [6/170] allintitle:book báo nước ngoài -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:24:09 | [7/170] allintitle:viết bài pr báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:26:06 | [8/170] allintitle:cách viết thông cáo báo chí sự kiện -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:27:41 | [9/170] allintitle:khi nào nên gửi thông cáo báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:29:36 | [10/170] allintitle:mẫu email gửi thông cáo báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:30:48 | [11/170] allintitle:booking quảng cáo báo chí -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:32:01 | [12/170] allintitle:giá quảng cáo trên báo điện tử -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:33:40 | [13/170] allintitle:pr có phải quảng cáo không -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:35:18 | [14/170] allintitle:pr quảng cáo và marketing -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:36:39 | [15/170] allintitle:quảng cáo báo mạng -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:38:12 | [16/170] allintitle:quảng cáo báo điện tử -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:39:26 | [17/170] allintitle:quảng cáo khác pr -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:41:16 | [18/170] allintitle:quảng cáo pr sản phẩm -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:42:58 | [19/170] allintitle:so sánh quảng cáo và pr -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:44:06 | [20/170] allintitle:1 phút quảng cáo trên truyền hình bao nhiêu tiền -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:45:26 | [21/170] allintitle:book quảng cáo truyền hình -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:46:56 | [22/170] allintitle:báo giá quảng cáo truyền hình -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:48:05 | [23/170] allintitle:báo giá tvc quảng cáo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:49:16 | [24/170] allintitle:bảng giá quảng cáo trên vtv -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:50:33 | [25/170] allintitle:chi phí quảng cáo truyền hình -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:51:50 | [26/170] allintitle:chi phí quảng cáo trên truyền hình htv -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:52:26 |   [chi phí quảng cáo trên truyền hình vtv] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 14:52:26 |   [chi phí quảng cáo trên truyền hình vtv] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 14:53:32 | [27/170] allintitle:chi phí quảng cáo trên vtv -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:55:03 | [28/170] allintitle:chi phí quảng cáo trên vtv3 -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:56:35 | [29/170] allintitle:dịch vụ quảng cáo truyền hình -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:57:46 | [30/170] allintitle:giá quảng cáo giờ vàng trên vtv -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 14:58:57 | [31/170] allintitle:giá quảng cáo truyền hình -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:00:14 | [32/170] allintitle:giá quảng cáo trên truyền hình vtv3 -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:00:48 |   [giá quảng cáo trên vtv1] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 15:00:48 |   [giá quảng cáo trên vtv1] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 15:01:57 | [33/170] allintitle:giá quảng cáo trên vtv3 -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:02:33 |   [giá quảng cáo trên vtv3 giờ vàng] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 15:02:33 |   [giá quảng cáo trên vtv3 giờ vàng] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 15:03:07 |   [giấy phép quảng cáo truyền hình] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 15:03:07 |   [giấy phép quảng cáo truyền hình] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 15:04:39 | [34/170] allintitle:kịch bản tvc quảng cáo mỹ phẩm -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:05:55 | [35/170] allintitle:một quảng cáo trên truyền hình kéo dài khoảng -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:07:05 | [36/170] allintitle:phí quảng cáo trên vtv -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:08:12 | [37/170] allintitle:quay quảng cáo tvc -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:09:39 | [38/170] allintitle:quảng cáo sản phẩm trên truyền hình -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:10:49 | [39/170] allintitle:quảng cáo sản phẩm trên truyền hình là một -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:11:22 |   [quảng cáo truyền hình là gì] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 15:11:22 |   [quảng cáo truyền hình là gì] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 15:12:43 | [40/170] allintitle:quảng cáo truyền hình vtv -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:13:58 | [41/170] allintitle:quảng cáo truyền hình vĩnh long -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:14:52 |   [quảng cáo trên truyền hình giá bao nhiêu] lỗi: TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/?hl=vi&gl=vn", waiting until "d
+2026-10-29 15:14:52 | [42/170] allintitle:quảng cáo trên truyền hình giá bao nhiêu -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-29 15:16:17 | [43/170] allintitle:quảng cáo trên truyền hình là gì -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:17:44 | [44/170] allintitle:quảng cáo trên truyền hình ở việt nam -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:19:07 | [45/170] allintitle:quảng cáo trên vtv bao nhiêu tiền -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:19:40 |   [quảng cáo trên vtv1] CAPTCHA ngay ở câu warm-up qua IP IP-thật (IP may) -> bỏ qua từ khoá này.
+2026-10-29 15:19:40 |   [quảng cáo trên vtv1] xếp lại cuối hàng chờ để thử lần 2/3.
+2026-10-29 15:20:37 | [46/170] allintitle:quảng cáo trên vtv3 -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:21:36 | [47/170] allintitle:trung tâm quảng cáo và dịch vụ truyền hình tvad -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:23:10 | [48/170] allintitle:trung tâm quảng cáo đài truyền hình việt nam -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:24:19 | [49/170] allintitle:tvc quảng cáo doanh nghiệp -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:25:36 | [50/170] allintitle:báo giá quảng cáo vov -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:26:51 | [51/170] allintitle:báo giá quảng cáo vov giao thông -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:27:57 |   [chi phí quảng cáo trên vov giao thông] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-29 15:28:05 |   [chi phí quảng cáo trên vov giao thông] lỗi: TimeoutError: Locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator("textarea[name=q], input[name=q]").first
+    -
+2026-10-29 15:28:05 | [52/170] allintitle:chi phí quảng cáo trên vov giao thông -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-29 15:29:28 | [53/170] allintitle:các hình thức quảng cáo trên radio -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:30:32 |   [giá quảng cáo trên radio] warm-up lỗi nhẹ (TimeoutError), bỏ qua warm-up, chạy tiếp.
+2026-10-29 15:30:40 |   [giá quảng cáo trên radio] lỗi: TimeoutError: Locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator("textarea[name=q], input[name=q]").first
+    -
+2026-10-29 15:30:40 | [54/170] allintitle:giá quảng cáo trên radio -> None (unknown) | status=error:TimeoutError | IP=IP-thật (IP may)
+2026-10-29 15:32:00 | [55/170] allintitle:giá quảng cáo trên vov giao thông -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:33:14 | [56/170] allintitle:quảng cáo trên vov -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:34:32 | [57/170] allintitle:quảng cáo trên vov giao thông -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:36:14 | [58/170] allintitle:radio không quảng cáo -> None (unknown) | status=ok | IP=IP-thật (IP may)
+2026-10-29 15:37:17 | [59/170] allintitle:book viết báo -> None (unknown) | status=ok | IP=IP-thật (IP may)
