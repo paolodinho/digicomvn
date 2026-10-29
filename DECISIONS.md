@@ -222,3 +222,6 @@ Hiếu chốt: chỉ giữ bài kiến thức "TVC là gì" (gộp vào bài qu�
 - Ly do QR thay cong the: khong can hop dong cong thanh toan, phi gan 0, khach VN quen quet QR.
 - Gia tinh lai tren may chu tu option ten_mien_gia (khong tin gia tu trinh duyet); kiem tra con trong lai luc tao don.
 - Dang ky tu dong CHUA bat: thieu tai lieu lenh dang ky cua API dai ly + IP live chua duoc whitelist. Don da thanh toan -> email Hieu dang ky tay.
+
+## 2026-10-29 - Giu nguyen gia booking VTV tren web
+Hieu chot giu gia booking VTV (CPT dgc_gia booking-truyen-hinh) du cao hon don gia niem yet cua dai o bai /quang-cao-truyen-hinh/. Ly do: bai cu ghi ro bang do la gia niem yet cua dai va dan sang bai bang gia booking /bang-gia-quang-cao-vtv/.
