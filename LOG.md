@@ -4973,3 +4973,7 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 ## 2026-10-29 20:40
 - SePay: khoá webhook đặt DGC_SEPAY_KEY trong wp-config live, test curl OK; form webhook SePay điền sẵn, chờ Hiếu dán khoá + nối ngân hàng MB.
 - 21:00 SePay: MB đã kết nối API, webhook kích hoạt; chưa thử giao dịch thật.
+
+## 2026-10-29 22:00 - Hosting mua online
+- inc/hosting-order.php mới: giá vốn từ hosting_list (cache 12h), chỉ bán kỳ hạn giá >= vốn, register_hosting tự động khi đơn đã thanh toán, email cPanel + quản lý tên miền.
+- domain-order.php nhận dòng hosting (tên miền trước, hosting sau); page-hosting.php nút Mua ngay; giỏ chung; DGC_VER 3.20.1. Test cổng thử đại lý OK.

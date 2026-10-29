@@ -105,7 +105,7 @@ function dgc_tm_pa_register_hosting( $l, $o ) {
 		'uiName' => $o['name'] ?? '', 'uiEmail' => $o['email'] ?? '', 'uiPhone' => $ph,
 		'sendmail' => 1, 'responsetype' => 'json',
 	);
-	foreach ( array( 'Address' => $o['addr'] ?? '', 'Ward' => $o['ward'] ?? '', 'Province' => $o['city'] ?? '', 'Country' => 'Viet Nam' ) as $k => $v ) { $q[ 'owner' . $k ] = $v; $q[ 'ui' . $k ] = $v; }
+	foreach ( array( 'Address' => $o['addr'] ?? '', 'Ward' => $o['ward'] ?? '', 'District' => $o['ward'] ?? '', 'Province' => $o['city'] ?? '', 'Country' => 'Viet Nam' ) as $k => $v ) { $q[ 'owner' . $k ] = $v; $q[ 'ui' . $k ] = $v; } // dia gioi moi khong con quan/huyen, API van bat buoc -> dien ten phuong
 	if ( $org ) { $q['ownerTaxCode'] = $o['idno'] ?? ''; $q['uiTaxCode'] = $o['idno'] ?? ''; }
 	else { $q['ownerID_Number'] = $o['idno'] ?? ''; $q['uiID_Number'] = $o['idno'] ?? ''; }
 
