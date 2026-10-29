@@ -4953,3 +4953,8 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 ## 2026-10-29 10:40 - Ban giao ten mien/hosting
 - inc/handover.php moi (trang Ban giao dich vu), domain-order.php them huong dan quan tri + nut ban giao. Quy trinh 14-van-hanh-ten-mien-hosting/. Kiem cong khach dai ly: co white-label control panel, chua bat.
+- 2026-10-29: Hannah - them nhom BAO LON TOAN QUOC 19 vi tri (Goodcom tab dien mat troi + tab 2026) + Doanhnghiepvn dof (DanaSEO 3,15tr) + 2 addon link (Dan Tri 500k, VietNamNet 3 thang 5tr); so Goodcom x1,10 vs kho DanaSEO 29/07, lay re hon. Do lai 2 Sheet giu link cu, kiem file khach khong lo NCC.
+
+## 2026-10-29 11:05 - Cong dai ly white-label
+- Trang dai ly: tat mail thong bao gui khach, footer + ten Control Panel = DigicomVN. SMTP dien san (Lark 465 SSL), cho Hieu nhap mat khau. 16 mau email: mau ten mien/hosting sach, giu mac dinh. Cho Hieu tao CNAME quanly -> mr.pavietnam.vn (Namecheap).
+- 2026-10-29 11:35: bat Control Panel rieng quanly.digicomvn.com (logo, tieu de DigicomVN, NS dotvndns.vn). Cho kiem trang cong + mat khau SMTP.
