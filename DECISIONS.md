@@ -228,3 +228,6 @@ Hieu chot giu gia booking VTV (CPT dgc_gia booking-truyen-hinh) du cao hon don g
 
 ## 2026-10-29 - Byline tac gia + gia-booking-kol
 Hieu ok 29/10: byline moi bai dung ten Hieu Do (user 1, da dung san tren toan bo bai hen gio); /gia-booking-kol/ khong niem yet bang gia VND, de bao gia theo brief (dung nhu noi dung bai hien tai).
+
+## 2026-10-30 - Giá hosting bán online = giá bán lẻ thị trường, kể cả kỳ hạn lỗ
+Hiếu: "cho bằng giá pa vietnam". Bỏ chặn lỗ: 31 gói bán online, 14 kỳ hạn thấp hơn giá vốn đại lý (lỗ 177k-3,3tr/đơn, nặng nhất kỳ 3 năm Super). Lý do: giữ giá cạnh tranh ngang thị trường.
