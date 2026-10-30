@@ -252,5 +252,5 @@ Hiếu từ chối câu kiểu "Đo tốc độ trước khi bàn giao, không h
 ## 2026-10-30 - Chống dấu hiệu AI trên toàn site
 Hiếu yêu cầu research và rà toàn site. Quy tắc chốt ở .claude/rules/chong-ai-slop.md (giao diện + câu chữ). Câu "X, không phải Y" chỉ giữ khi là phân biệt kỹ thuật thật; lời khách hàng và dữ liệu khách không tự sửa/xoá, chờ Hiếu xác nhận.
 
-## 2026-10-30 - Khối Báo chí chỉ hiện báo có bài thật
-Hiếu chọn giữ 4 logo có link bài. Logo không có bài không hiển thị (dữ liệu giữ trong WP Admin, thêm link là tự hiện lại).
+## 2026-10-30 - Khối Báo chí trang chủ giữ đủ 12 logo
+Hiếu thử chỉ hiện 4 báo có link rồi đổi lại: hiện đủ 12 logo (báo có bài thì có link Đọc bài). Giữ 3 lời khách Kiến Vàng, Hồng Phát, Nha Khoa Thịnh An (Hiếu xác nhận).

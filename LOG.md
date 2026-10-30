@@ -4998,3 +4998,4 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - Bài blog: 5 agent sửa 129/176 URL (thay thế chuỗi tối thiểu, validate.py kiểm thẻ/link/số giữ nguyên), bỏ ô icon rỗng ở 3 bài (4732, 4297, 6359). Backup: ~/Claude-Workspace/_backups/routines/2026-10-30/de-slop-posts/.
 - Quét lại 228 URL (slopscan.py): không chỉ...mà còn 51->1, không phải...mà là 90->17, emoji 71->6, từ sáo 463->293, kết bài máy 21->16. Phần còn lại phần lớn là phân biệt thật ("301, không phải 302") hoặc từ bị trích làm ví dụ cần tránh.
 - Hiếu chốt giữ 4 logo có link: front-page.php lọc press_mentions chỉ hiện dòng có URL (An Giang TV, Báo Đồng Nai, Báo Đà Nẵng, Vietnam.vn). 8 logo không bài (VnExpress, Dân Trí...) vẫn còn trong WP Admin, chỉ không hiển thị.
+- Hiếu đổi ý: hiện lại đủ 12 logo báo trên trang chủ (bỏ bộ lọc chỉ báo có link). Giữ 3 lời khách Kiến Vàng, Hồng Phát, Nha Khoa Thịnh An.
