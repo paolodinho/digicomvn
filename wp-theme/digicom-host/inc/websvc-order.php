@@ -67,7 +67,7 @@ function dgc_ws_pid( $v, $m, $amount ) {
 	if ( 'email-doanh-nghiep' !== $v['s'] || $v['per'] ) return 0;
 	$k = strtolower( preg_replace( '/\s+/', ' ', trim( $v['n'] ) ) );
 	$c = dgc_ws_mail_cost()[ $k ][ $m ] ?? null;
-	return ( $c && $amount >= $c[1] * 1.1 ) ? (int) $c[0] : 0;
+	return ( $c && $amount >= $c[1] * 1.21 ) ? (int) $c[0] : 0;
 }
 
 function dgc_ws_public() {

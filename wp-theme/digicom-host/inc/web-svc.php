@@ -4,8 +4,8 @@
  * cua nguon dai ly co gi thi be ve"). Dung chung template tpl-web.php.
  * - Bang gia: option 'web_gia_<slug>' (WP Admin > DigicomVN > muc 12). De trong = bang mac dinh duoi day.
  *   Moi dong: nhom | ten goi | gia | don vi (vd /thang, /nam, /user/thang, /website) | gia goc gach ngang | thong so 1; thong so 2; ...
- * - Gia mac dinh tinh theo san lai 10% (Hieu 30/10): nhom dai ly chiet khau >= 10% ban bang gia niem yet ban le (+2% dem),
- *   nhom chiet khau 2-3% (cloud, Google Workspace, Microsoft 365, cham soc web, Bo Cong Thuong) = gia niem yet x 1,08.
+ * - Gia mac dinh (Hieu 31/10, moi san pham lai >= 10% tren so tien thuc tra dai ly, da gom VAT 10%):
+ *   gia ban >= gia dai ly x 1,1 (VAT) x 1,1. Doi chieu: file NOIBO noi bo (khong commit). Doi gia o WP Admin phai giu san nay.
  * - KHONG ghi ten nha cung cap o bat ky dau (rule bao-gia-khong-lo-gia-von).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -33,21 +33,21 @@ function dgc_web_default_rows( $slug ) {
 			. "Email theo tên miền riêng | Email Pro 8 | 815000 | /tháng | | 350 GB SSD; 700 hộp thư; 20 tên miền phụ\n"
 			. "Email theo tên miền riêng | Email Pro 9 | 2040000 | /tháng | | 500 GB SSD; không giới hạn hộp thư; 40 tên miền phụ\n"
 			. "Email theo tên miền riêng | Email Pro 10 | 3570000 | /tháng | | 1 TB SSD; không giới hạn hộp thư; 60 tên miền phụ\n"
-			. "Google Workspace | Business Starter | 90000 | /user/tháng | | 30 GB/user; Gmail, Lịch, Meet 100 người; Docs, Sheets\n"
-			. "Google Workspace | Business Standard | 238000 | /user/tháng | | 2 TB/user; Meet 150 người, ghi hình; Gemini trong Gmail, Docs\n"
-			. "Microsoft 365 | Exchange Online Plan 1 | 146000 | /user/tháng | | Chỉ email Outlook; hộp thư 50 GB\n"
-			. "Microsoft 365 | Business Basic | 107000 | /user/tháng | | Outlook, Teams; Word, Excel bản web; OneDrive 1 TB\n"
-			. "Microsoft 365 | Business Standard | 302000 | /user/tháng | | Office cài máy tính; Outlook, Teams; OneDrive 1 TB\n"
-			. "Microsoft 365 | Business Premium | 593000 | /user/tháng | | Như Standard; thêm bảo mật nâng cao, quản lý thiết bị",
-		'chung-chi-ssl' => "SSL xác thực tên miền (DV) | Positive SSL | 221000 | /năm | | 1 tên miền; cấp trong vài phút; khoá bảo mật trên trình duyệt\n"
-			. "SSL xác thực tên miền (DV) | Essential SSL | 551000 | /năm | | 1 tên miền; bảo hiểm cao hơn Positive\n"
-			. "SSL xác thực tên miền (DV) | Positive SSL Multi Domain | 1359000 | /năm | | Nhiều tên miền trên 1 chứng chỉ\n"
-			. "SSL xác thực tên miền (DV) | Positive SSL Wildcard | 2228000 | /năm | | Tên miền chính và mọi tên miền phụ *.tenmien\n"
-			. "SSL xác thực tên miền (DV) | Essential SSL Wildcard | 3672000 | /năm | | Mọi tên miền phụ; bảo hiểm cao\n"
-			. "SSL xác thực doanh nghiệp (OV, EV) | Instant SSL (OV) | 1922000 | /năm | | Xác thực pháp nhân; hiện tên công ty trong chi tiết chứng chỉ\n"
-			. "SSL xác thực doanh nghiệp (OV, EV) | Premium SSL Wildcard (OV) | 5202000 | /năm | | Xác thực pháp nhân; mọi tên miền phụ\n"
-			. "SSL xác thực doanh nghiệp (OV, EV) | EV SSL | 3733000 | /năm | | Xác thực mở rộng, mức tin cậy cao nhất cho website thanh toán\n"
-			. "SSL xác thực doanh nghiệp (OV, EV) | EV SSL Multi Domain | 7344000 | /năm | | Xác thực mở rộng cho nhiều tên miền",
+			. "Google Workspace | Business Starter | 99000 | /user/tháng | | 30 GB/user; Gmail, Lịch, Meet 100 người; Docs, Sheets\n"
+			. "Google Workspace | Business Standard | 261000 | /user/tháng | | 2 TB/user; Meet 150 người, ghi hình; Gemini trong Gmail, Docs\n"
+			. "Microsoft 365 | Exchange Online Plan 1 | 159000 | /user/tháng | | Chỉ email Outlook; hộp thư 50 GB\n"
+			. "Microsoft 365 | Business Basic | 118000 | /user/tháng | | Outlook, Teams; Word, Excel bản web; OneDrive 1 TB\n"
+			. "Microsoft 365 | Business Standard | 331000 | /user/tháng | | Office cài máy tính; Outlook, Teams; OneDrive 1 TB\n"
+			. "Microsoft 365 | Business Premium | 651000 | /user/tháng | | Như Standard; thêm bảo mật nâng cao, quản lý thiết bị",
+		'chung-chi-ssl' => "SSL xác thực tên miền (DV) | Positive SSL | 236000 | /năm | | 1 tên miền; cấp trong vài phút; khoá bảo mật trên trình duyệt\n"
+			. "SSL xác thực tên miền (DV) | Essential SSL | 589000 | /năm | | 1 tên miền; bảo hiểm cao hơn Positive\n"
+			. "SSL xác thực tên miền (DV) | Positive SSL Multi Domain | 1451000 | /năm | | Nhiều tên miền trên 1 chứng chỉ\n"
+			. "SSL xác thực tên miền (DV) | Positive SSL Wildcard | 2379000 | /năm | | Tên miền chính và mọi tên miền phụ *.tenmien\n"
+			. "SSL xác thực tên miền (DV) | Essential SSL Wildcard | 3921000 | /năm | | Mọi tên miền phụ; bảo hiểm cao\n"
+			. "SSL xác thực doanh nghiệp (OV, EV) | Instant SSL (OV) | 2053000 | /năm | | Xác thực pháp nhân; hiện tên công ty trong chi tiết chứng chỉ\n"
+			. "SSL xác thực doanh nghiệp (OV, EV) | Premium SSL Wildcard (OV) | 5554000 | /năm | | Xác thực pháp nhân; mọi tên miền phụ\n"
+			. "SSL xác thực doanh nghiệp (OV, EV) | EV SSL | 3986000 | /năm | | Xác thực mở rộng, mức tin cậy cao nhất cho website thanh toán\n"
+			. "SSL xác thực doanh nghiệp (OV, EV) | EV SSL Multi Domain | 7841000 | /năm | | Xác thực mở rộng cho nhiều tên miền",
 		'cloud-server' => "Cloud server | Cloud 0 | 98000 | /tháng | | 1 vCPU; 1 GB RAM; 20 GB SSD; băng thông không giới hạn; 1 IP riêng\n"
 			. "Cloud server | Cloud 1 | 184000 | /tháng | | 2 vCPU; 1,5 GB RAM; 40 GB SSD; 1 IP riêng\n"
 			. "Cloud server | Cloud 2 | 346000 | /tháng | | 4 vCPU; 4 GB RAM; 60 GB SSD; 1 IP riêng\n"
@@ -56,10 +56,10 @@ function dgc_web_default_rows( $slug ) {
 			. "Cloud server | Cloud 5 | 940000 | /tháng | | 9 vCPU; 10 GB RAM; 200 GB SSD; 1 IP riêng\n"
 			. "Cloud server | Cloud 6 | 1232000 | /tháng | | 10 vCPU; 12 GB RAM; 300 GB SSD; 1 IP riêng\n"
 			. "Cloud server | Cloud 7 | 1523000 | /tháng | | 11 vCPU; 14 GB RAM; 400 GB SSD; 1 IP riêng",
-		'cham-soc-website' => "Gói chăm sóc website | Cơ bản | 1620000 | /tháng | | Cập nhật nội dung 10 lần/tháng; 3 banner/tháng; tối ưu SEO cơ bản; giám sát bảo mật, tốc độ hằng tháng\n"
-			. "Gói chăm sóc website | Nâng cao | 2700000 | /tháng | | Cập nhật nội dung 15 lần/tháng; quản lý 100 sản phẩm/tháng; 5 banner/tháng; kiểm tra SEO, bảo mật chuyên sâu\n"
-			. "Gói chăm sóc website | Toàn diện | 4320000 | /tháng | | Cập nhật nội dung 20 lần/tháng; quản lý 250 sản phẩm/tháng; 9 banner/tháng; tối ưu SEO, bảo mật hằng tuần",
-		'dang-ky-website-bo-cong-thuong' => "Thủ tục website thương mại điện tử | Thông báo website bán hàng (UBND tỉnh xác nhận) | 2160000 | /website | | Rà website, sửa chân trang và trang chính sách; soạn Tờ khai Mẫu số 01; nộp trên Cổng Dịch vụ công quốc gia; xử lý yêu cầu làm rõ; gắn biểu tượng xác nhận\n"
+		'cham-soc-website' => "Gói chăm sóc website | Cơ bản | 1761000 | /tháng | | Cập nhật nội dung 10 lần/tháng; 3 banner/tháng; tối ưu SEO cơ bản; giám sát bảo mật, tốc độ hằng tháng\n"
+			. "Gói chăm sóc website | Nâng cao | 2935000 | /tháng | | Cập nhật nội dung 15 lần/tháng; quản lý 100 sản phẩm/tháng; 5 banner/tháng; kiểm tra SEO, bảo mật chuyên sâu\n"
+			. "Gói chăm sóc website | Toàn diện | 4695000 | /tháng | | Cập nhật nội dung 20 lần/tháng; quản lý 250 sản phẩm/tháng; 9 banner/tháng; tối ưu SEO, bảo mật hằng tuần",
+		'dang-ky-website-bo-cong-thuong' => "Thủ tục website thương mại điện tử | Thông báo website bán hàng (UBND tỉnh xác nhận) | 2348000 | /website | | Rà website, sửa chân trang và trang chính sách; soạn Tờ khai Mẫu số 01; nộp trên Cổng Dịch vụ công quốc gia; xử lý yêu cầu làm rõ; gắn biểu tượng xác nhận\n"
 			. "Thủ tục website thương mại điện tử | Đăng ký sàn, nền tảng trung gian với Bộ Công Thương | | | | Sàn giao dịch, nền tảng cho người khác bán hàng; báo giá theo hồ sơ",
 		'thiet-ke-website' => '',
 	);

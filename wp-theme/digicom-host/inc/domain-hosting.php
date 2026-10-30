@@ -62,11 +62,11 @@ function dgc_ten_mien_rows( $nhom = '' ) {
 		$r['han'] = dgc_floor10( $r['han'], dgc_tm_renew_cost( $r['duoi'] ) );
 		/* Hieu 31/10: khong ban lo ca nam dau -> gia nam dau >= von dang ky x 1,1. Bi nang san thi bo dieu kien "tu N nam" va gia gach. */
 		$g0 = $r['gia'];
-		$r['gia'] = dgc_floor10( $r['gia'], dgc_tm_reg_cost( $r['duoi'] ), 1.0 ); // Hieu 31/10: nam dau hoa von (gia von da la so tien thuc tra gom VAT), lai o gia han
+		$r['gia'] = dgc_floor10( $r['gia'], dgc_tm_reg_cost( $r['duoi'] ) ); // Hieu 31/10: nam dau cung lai >=10% tren so tien thuc tra dai ly
 		if ( $r['gia'] !== $g0 ) $r['note'] = trim( preg_replace( '/Giá năm đầu (áp dụng )?khi đăng ký từ \d+ năm\.?\s*/u', '', $r['note'] ) );
 		/* Khong dat hon thi truong: ha ve gia thap nhat doi thu (option dgc_tm_market, tu do tay) nhung khong duoi san von x1,1. */
 		$mk = dgc_tm_market( $r['duoi'] );
-		if ( $mk[0] && dgc_tm_reg_cost( $r['duoi'] ) ) $r['gia'] = (string) max( (int) ceil( round( dgc_tm_reg_cost( $r['duoi'] ) ) / 1000 ) * 1000, min( (int) preg_replace( '/\D/', '', (string) $r['gia'] ), $mk[0] ) );
+		if ( $mk[0] && dgc_tm_reg_cost( $r['duoi'] ) ) $r['gia'] = (string) max( (int) ceil( round( dgc_tm_reg_cost( $r['duoi'] ) * 1.1 ) / 1000 ) * 1000, min( (int) preg_replace( '/\D/', '', (string) $r['gia'] ), $mk[0] ) );
 		if ( $mk[1] && dgc_tm_renew_cost( $r['duoi'] ) ) $r['han'] = (string) max( (int) ceil( dgc_tm_renew_cost( $r['duoi'] ) * 1.1 / 1000 ) * 1000, min( (int) preg_replace( '/\D/', '', (string) $r['han'] ), $mk[1] ) );
 		if ( (int) preg_replace( '/\D/', '', (string) $r['goc'] ) <= (int) preg_replace( '/\D/', '', (string) $r['gia'] ) ) $r['goc'] = '';
 		if ( $nhom && $r['nhom'] !== $nhom ) continue;
@@ -80,11 +80,11 @@ function dgc_hosting_rows() {
 	foreach ( dgc_lines( 'hosting_gia' ) as $l ) {
 		if ( empty( $l[1] ) ) continue;
 		$r = array( 'goi' => $l[1], 'dl' => $l[2] ?? '', 'web' => $l[3] ?? '', 'cpu' => $l[4] ?? '', 'thang' => $l[5] ?? '', 'goc' => $l[6] ?? '', 'ky' => $l[7] ?? '', 'nam' => $l[8] ?? '' );
-		/* San lai 10% (Hieu 30/10): gia ban moi ky han >= gia von dai ly x 1,1. */
+		/* San lai 10% (Hieu 31/10): gia ban moi ky han >= gia dai ly (chua VAT) x 1,1 VAT x 1,1 = x1,21. */
 		$c = function_exists( 'dgc_hg_cost_list' ) ? ( dgc_hg_cost_list()[ dgc_hg_key( $r['goi'] ) ] ?? array() ) : array();
-		if ( '' !== $r['nam'] && ! empty( $c[12][1] ) ) $r['nam'] = dgc_floor10( $r['nam'], $c[12][1] );
+		if ( '' !== $r['nam'] && ! empty( $c[12][1] ) ) $r['nam'] = dgc_floor10( $r['nam'], $c[12][1], 1.21 );
 		$ky = (int) $r['ky'];
-		if ( $ky >= 1 && '' !== $r['thang'] && ! empty( $c[ $ky * 12 ][1] ) ) $r['thang'] = dgc_floor10( $r['thang'], $c[ $ky * 12 ][1] / ( 12 * $ky ) );
+		if ( $ky >= 1 && '' !== $r['thang'] && ! empty( $c[ $ky * 12 ][1] ) ) $r['thang'] = dgc_floor10( $r['thang'], $c[ $ky * 12 ][1] / ( 12 * $ky ), 1.21 );
 		$out[ $l[0] ][] = $r;
 	}
 	return $out;
