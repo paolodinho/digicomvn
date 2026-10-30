@@ -4,7 +4,7 @@
 ## Đang làm dở (checkpoint)
 - Task: Rà toàn site bỏ dấu hiệu AI (giao diện + câu chữ) - xong 30/10
 - Đã xong: theme (tiêu đề hết viết hoa, bỏ eyebrow lặp, dải số liệu, huy hiệu nổi, công thức SEO, 5 sao; trang chủ + /ve-digicom/ viết lại) deploy DGC_VER 3.23.0, commit 3ddbd00. 129/176 bài blog sửa câu đối/sáo/emoji trên live (backup ~/Claude-Workspace/_backups/routines/2026-10-30/de-slop-posts/). Quét lại: không chỉ...mà còn 51->1, không phải...mà là 90->17, emoji 71->6, từ sáo 463->293.
-- Tiếp theo: CHỜ Hiếu - (1) 3 lời khách không ảnh (Kiến Vàng, Hồng Phát, Nha Khoa Thịnh An) có thật không; (2) khối "Báo chí nói về DigicomVN" chỉ 4 logo có bài thật - đề xuất chỉ giữ logo có link
+- Tiếp theo: CHỜ Hiếu - (1) 3 lời khách không ảnh (Kiến Vàng, Hồng Phát, Nha Khoa Thịnh An) có thật không; (2) XONG 30/10: khối Báo chí chỉ hiện 4 báo có bài thật (An Giang TV, Báo Đồng Nai, Báo Đà Nẵng, Vietnam.vn)
 - File liên quan: .claude/rules/chong-ai-slop.md, wp-theme/digicom-host/front-page.php, assets/css/sg.css
 - Cập nhật lúc: 2026-10-30 13:00
 

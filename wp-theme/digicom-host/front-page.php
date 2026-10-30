@@ -204,7 +204,7 @@ $dgc_others = array(
 </section>
 <?php endif; ?>
 
-<?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) ); ?>
+<?php $dgc_mentions = array_filter( dgc_lines( 'press_mentions' ), fn( $m ) => ! empty( $m[0] ) && '' !== trim( $m[1] ?? '' ) ); // chi hien bao co bai that (Hieu 30/10) ?>
 <?php if ( $dgc_mentions ) : ?>
 <section class="sg-sec sg-sec--tight sg-sec--cyan">
 	<div class="wrap">
