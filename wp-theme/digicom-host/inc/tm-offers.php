@@ -18,8 +18,10 @@ function dgc_tm_default_gifts() {
 
 /** duoi => mang qua tang. */
 function dgc_tm_gifts_map() {
+	/* Hieu 31/10 (khong ban lo): bo qua tang mac dinh (email, .cloud, bao mat) vi dai ly khong tang kem, Digicom phai tu tra.
+	   Chi hien qua ghi tay o WP Admin (tm_uu_dai) khi da tinh vao gia. */
 	$raw = trim( (string) dgc( 'tm_uu_dai' ) );
-	if ( '' === $raw ) $raw = dgc_tm_default_gifts();
+	if ( '0' === $raw ) $raw = '';
 	$m = array();
 	foreach ( preg_split( '/\r\n|\r|\n/', $raw ) as $line ) {
 		$p = array_map( 'trim', explode( '|', $line, 2 ) );
@@ -39,6 +41,10 @@ function dgc_tm_combo() {
 	foreach ( preg_split( '/[\s,]+/', $p[0] ) as $x ) { $x = strtolower( trim( $x ) ); if ( $x ) $t[] = '.' . ltrim( $x, '.' ); }
 	$price = (int) preg_replace( '/\D/', '', $p[1] ?? '' );
 	if ( count( $t ) < 2 || ! $price ) return false;
+	/* Hieu 31/10: combo chi chay khi gia ca bo >= tong von dang ky x 1,1, thieu von 1 duoi -> tat. */
+	$von = 0;
+	foreach ( $t as $x ) { $v = function_exists( 'dgc_tm_reg_cost' ) ? dgc_tm_reg_cost( $x ) : 0; if ( ! $v ) return false; $von += $v; }
+	if ( $price < $von * 1.1 ) return false;
 	return array( 'tlds' => array_values( array_unique( $t ) ), 'price' => $price, 'label' => $p[2] ?? 'Kết hợp và tiết kiệm' );
 }
 

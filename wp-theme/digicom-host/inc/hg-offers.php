@@ -9,9 +9,8 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 function dgc_hg_default_offers() {
-	return "Tặng 1 năm tên miền .vn, .com.vn, .net hoặc .com (hoặc chứng chỉ SSL trả phí trị giá 219k) | Đăng ký mới gói Enterprise, Super, WordPress Pro hoặc WordPress Super từ 1 năm\n"
-		. "Tặng combo 1 năm tên miền .cloud, .online, .store, .one (trị giá đến 3,4 triệu) | Đăng ký mới gói hosting bất kỳ\n"
-		. "Chuyển dữ liệu website cũ sang hosting mới miễn phí (trị giá 949k) | Đăng ký mới hosting, trừ nhóm giá rẻ Unlimited\n"
+	/* Hieu 31/10 (khong ban lo): bo 2 dong tang ten mien/SSL kem hosting vi dai ly khong tang, Digicom phai tu tra von. */
+	return "Chuyển dữ liệu website cũ sang hosting mới miễn phí (trị giá 949k) | Đăng ký mới hosting, trừ nhóm giá rẻ Unlimited\n"
 		. "Hơn 1.000 giao diện WordPress có bản quyền | Đăng ký gói hosting WordPress bất kỳ";
 }
 

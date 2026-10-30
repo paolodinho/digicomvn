@@ -5,8 +5,7 @@
  * -> /thanh-toan-ten-mien/ (nhap ten mien dung cho hosting) -> don dgc_don_tm -> QR -> SePay
  * -> dgc_tm_register_order() goi dgc_tm_pa_register_hosting() (lenh register_hosting cua dai ly).
  *
- * GIA = gia ban le (hosting_gia, dong bo hang ngay). Hieu 30/10: ban moi ky han co ma goi dai ly (hosting_list,
- * cache 12 gio), KE CA ky han gia ban le thap hon gia von dai ly (chap nhan lo theo gia thi truong).
+ * GIA = gia ban le (hosting_gia, dong bo hang ngay), da nang san >= von dai ly x 1,1 trong dgc_hosting_rows (Hieu 30-31/10).
  * KHONG hien ten nha cung cap o bat ky dau (rule dich-vu.md).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -50,7 +49,7 @@ function dgc_hg_online() {
 			if ( $ky >= 1 && dgc_tm_num( $r['thang'] ) ) $opt[ $ky * 12 ] = array( dgc_tm_num( $r['thang'] ) * 12 * $ky, max( dgc_tm_num( $r['thang'] ), dgc_tm_num( $r['goc'] ) ) * 12 * $ky );
 			$p = $l = $id = array();
 			foreach ( $opt as $mo => $v ) {
-				if ( empty( $cost[ $k ][ $mo ] ) ) continue; // Hieu 30/10: ban bang gia ban le, ke ca ky han gia ban < gia von dai ly
+				if ( empty( $cost[ $k ][ $mo ] ) ) continue; // ky han khong co ma goi dai ly -> khong ban online
 				$p[ $mo ] = $v[0]; $l[ $mo ] = $v[1]; $id[ $mo ] = $cost[ $k ][ $mo ][0];
 			}
 			if ( $p ) { ksort( $p ); ksort( $l ); $out[ $k ] = array( 'n' => $r['goi'], 'g' => $g, 'p' => $p, 'l' => $l, 'id' => $id ); }

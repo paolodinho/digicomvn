@@ -319,8 +319,8 @@ function dgc_settings_page() {
 				<?php
 				dgc_field( 'ten_mien_gia', 'Bang gia ten mien', 'Moi dong: duoi | vn hoac qt | gia nam dau | gia goc (gach ngang) | gia han/nam | luu y. Gia ghi so tron, VD: .vn | vn | 450000 | 700000 | 512000 | . KHONG ghi ten nha cung cap.', 'textarea' );
 				$dgc_sync = get_option( 'dgc_tm_sync_last' );
-				dgc_field( 'tm_uu_dai', 'Qua tang theo duoi ten mien', 'Moi dong: duoi | qua 1; qua 2. Hien o ket qua tra cuu, gio hang va email don. De trong = qua mac dinh cho .vn va .com. KHONG ghi ten nha cung cap.', 'textarea' );
-				dgc_field( 'tm_combo', 'Combo nhieu duoi', 'duoi1, duoi2, duoi3 | gia nam dau ca bo | nhan. De trong = .xyz, .site, .click | 30000. Ghi 0 de tat.' );
+				dgc_field( 'tm_uu_dai', 'Qua tang theo duoi ten mien', 'Moi dong: duoi | qua 1; qua 2. Hien o ket qua tra cuu, gio hang va email don. De trong hoac 0 = khong tang. Qua tang Digicom tu tra von: chi ghi khi gia da du bu. KHONG ghi ten nha cung cap.', 'textarea' );
+				dgc_field( 'tm_combo', 'Combo nhieu duoi', 'duoi1, duoi2, duoi3 | gia nam dau ca bo | nhan. De trong = .xyz, .site, .click | 30000. Ghi 0 de tat. Gia ca bo < tong von x1,1 thi tu tat.' );
 				echo '<tr><th>Dong bo gia tu dong</th><td><p>Moi ngay 01:15 tu doi gia nam dau, gia goc, gia han theo bang gia ban le (chi cac duoi da co o bang tren). Lan gan nhat: ' . esc_html( $dgc_sync ? $dgc_sync['time'] . ' - ' . $dgc_sync['msg'] : 'chua chay' ) . '</p><p><a class="button" href="' . esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=dgc_tm_sync' ), 'dgc_tm_sync' ) ) . '">Dong bo ngay</a></p></td></tr>';
 				dgc_field( 'tm_suggest', 'Duoi goi y khi tra ten mien', 'Cac duoi tra cung luc khi khach go 1 ten (toi da 12), cach nhau dau phay. De trong = .vn, .com.vn, .com, .net, .net.vn, .io.vn, .id.vn, .org, .online, .xyz' );
 				dgc_field( 'tm_vat', 'VAT tinh them khi thanh toan ten mien (%)', 'De trong hoac 0 = khong cong VAT vao tong thanh toan. VD: 10.' );

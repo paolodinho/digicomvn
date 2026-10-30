@@ -40,12 +40,23 @@ function dgc_tm_renew_cost( $tld ) {
 	return (int) ( $m[ strtolower( trim( $tld ) ) ][1] ?? 0 );
 }
 
+/** Gia von dang ky nam dau theo duoi (option dgc_tm_cost cot 0). */
+function dgc_tm_reg_cost( $tld ) {
+	$m = (array) get_option( 'dgc_tm_cost', array() );
+	return (int) ( $m[ strtolower( trim( $tld ) ) ][0] ?? 0 );
+}
+
 function dgc_ten_mien_rows( $nhom = '' ) {
 	$out = array();
 	foreach ( dgc_lines( 'ten_mien_gia' ) as $l ) {
 		if ( empty( $l[0] ) ) continue;
 		$r = array( 'duoi' => $l[0], 'nhom' => $l[1] ?? '', 'gia' => $l[2] ?? '', 'goc' => $l[3] ?? '', 'han' => $l[4] ?? '', 'note' => $l[5] ?? '' );
 		$r['han'] = dgc_floor10( $r['han'], dgc_tm_renew_cost( $r['duoi'] ) );
+		/* Hieu 31/10: khong ban lo ca nam dau -> gia nam dau >= von dang ky x 1,1. Bi nang san thi bo dieu kien "tu N nam" va gia gach. */
+		$g0 = $r['gia'];
+		$r['gia'] = dgc_floor10( $r['gia'], dgc_tm_reg_cost( $r['duoi'] ) );
+		if ( $r['gia'] !== $g0 ) $r['note'] = trim( preg_replace( '/Giá năm đầu (áp dụng )?khi đăng ký từ \d+ năm\.?\s*/u', '', $r['note'] ) );
+		if ( (int) preg_replace( '/\D/', '', (string) $r['goc'] ) <= (int) preg_replace( '/\D/', '', (string) $r['gia'] ) ) $r['goc'] = '';
 		if ( $nhom && $r['nhom'] !== $nhom ) continue;
 		$out[] = $r;
 	}
