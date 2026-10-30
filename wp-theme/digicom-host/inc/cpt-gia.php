@@ -1275,7 +1275,7 @@ function dgc_svc_noprice_slugs() {
 	return array(
 		'booking-fanpage' => 'Booking fanpage',
 		'booking-kol-koc' => 'Booking KOL, KOC',
-	);
+	) + ( function_exists( 'dgc_web_svc_list' ) ? dgc_web_svc_list() : array() );
 }
 
 /** Slug dich vu cua trang hien tai: nhom co bang gia hoac dich vu khong bang gia; khong phai -> ''. */

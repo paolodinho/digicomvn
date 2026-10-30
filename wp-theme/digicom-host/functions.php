@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.20.1');
+define('DGC_VER','3.21.0');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -159,6 +159,7 @@ require_once get_template_directory() . '/inc/hosting-order.php';
 require_once get_template_directory() . '/inc/tm-offers.php';
 require_once get_template_directory() . '/inc/hg-offers.php';
 require_once get_template_directory() . '/inc/handover.php';
+require_once get_template_directory() . '/inc/web-svc.php';
 
 /**
  * Helper doc 1 option.

@@ -235,3 +235,6 @@ Hieu ok 29/10: byline moi bai dung ten Hieu Do (user 1, da dung san tren toan bo
 
 ## 2026-10-30 - Giá hosting bán online = giá bán lẻ thị trường, kể cả kỳ hạn lỗ
 Hiếu: "cho bằng giá pa vietnam". Bỏ chặn lỗ: 31 gói bán online, 14 kỳ hạn thấp hơn giá vốn đại lý (lỗ 177k-3,3tr/đơn, nặng nhất kỳ 3 năm Super). Lý do: giữ giá cạnh tranh ngang thị trường.
+
+## 2026-10-30 - Mở nhóm dịch vụ website (Hiếu: dịch vụ web/SEO của nguồn đại lý có gì thì bê về)
+Mở 6 trang: thiết kế website (Digicom tự làm, báo giá theo yêu cầu), chăm sóc website, đăng ký Bộ Công Thương, email doanh nghiệp (Email Pro, Google Workspace, Microsoft 365), chứng chỉ SSL, cloud server. Bỏ: Web30s (lộ panel đại lý), logo, banner, quảng cáo, AI content. Giá theo sàn lãi 10%: nhóm đại lý chiết khấu >=10% bán giá niêm yết (+2%), nhóm chiết khấu 2-3% = niêm yết x1,08. Đặt qua form lead, chưa bán online. Không hiện tên nhà cung cấp.

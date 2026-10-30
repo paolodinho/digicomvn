@@ -57,3 +57,6 @@ Hosting mua online (29/10, inc/hosting-order.php): nút "Mua ngay" ở /hosting/
 
 ## Phần mềm SEO (mở 2026-10-27)
 Chỉ tài khoản chính hãng: affiliate (rel="sponsored") hoặc mua hộ gói chính hãng. KHÔNG bán tài khoản dùng chung/group buy.
+
+## Dịch vụ website (mở 2026-10-30)
+6 trang mẫu tpl-web.php (nội dung + giá mặc định ở inc/web-svc.php, giá sửa WP Admin > DigicomVN mục 12): /thiet-ke-website/ (Digicom tự làm, báo giá theo yêu cầu), /cham-soc-website/, /dang-ky-website-bo-cong-thuong/, /email-doanh-nghiep/, /chung-chi-ssl/, /cloud-server/. Nguồn đại lý (không hiện tên), đặt qua form lead. Giá vốn nội bộ: 10-bang-gia-booking/NOIBO-gia-von-dich-vu-web-2026-10-30.csv.

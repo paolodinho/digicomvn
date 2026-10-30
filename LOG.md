@@ -4978,3 +4978,8 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - inc/hosting-order.php mới: giá vốn từ hosting_list (cache 12h), chỉ bán kỳ hạn giá >= vốn, register_hosting tự động khi đơn đã thanh toán, email cPanel + quản lý tên miền.
 - domain-order.php nhận dòng hosting (tên miền trước, hosting sau); page-hosting.php nút Mua ngay; giỏ chung; DGC_VER 3.20.1. Test cổng thử đại lý OK.
 | 2026-10-30 | Lãi 10%: sàn giá vốn x1,1 hosting + gia hạn tên miền | dgc_floor10 trong inc/domain-hosting.php, option dgc_tm_cost (giá vốn gia hạn, chỉ trong DB). 21 kỳ hạn hosting tăng giá. Giữ KM năm đầu tên miền. |
+
+## 2026-10-30 - Dịch vụ website
+- tpl-web.php + inc/web-svc.php (6 slug, giá mặc định + option web_gia_*), options mục 12, cpt-gia dgc_svc_noprice_slugs + 6 slug (FAQ + schema Service), sg.css .ws-spec/.ws-links, DGC_VER 3.21.0.
+- Live: 6 trang publish (218 dùng lại, 7789-7793 mới), menu 7794-7799, gỡ Redirect 301 /thiet-ke-website/, /cham-soc-website/ trong .htaccess, 15 FAQ, trang chủ + footer.
+- Sự cố: scp lỗi cờ trong zsh, cp chép bản cũ ~/tmp-hg/functions.php + sg.css (29/10) lên live ~2 phút, đã đè lại bản đúng; trang vẫn 200.

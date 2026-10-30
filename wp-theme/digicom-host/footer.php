@@ -35,7 +35,7 @@
 			<div>
 				<h4>Dịch vụ</h4>
 				<ul>
-					<?php foreach ( array( array( 'Dịch vụ SEO', '/dich-vu-seo/' ), array( 'Booking báo & PR', '/booking-bao-pr/' ), array( 'Backlink & Off-page', '/dich-vu-backlink/' ), array( 'Tên miền', '/ten-mien/' ), array( 'Hosting', '/hosting/' ), array( 'Phần mềm SEO', '/phan-mem-seo/' ), array( 'Khoá học SEO', '/khoa-hoc-seo/' ) ) as $sl ) : ?>
+					<?php foreach ( array( array( 'Dịch vụ SEO', '/dich-vu-seo/' ), array( 'Booking báo & PR', '/booking-bao-pr/' ), array( 'Backlink & Off-page', '/dich-vu-backlink/' ), array( 'Tên miền', '/ten-mien/' ), array( 'Hosting', '/hosting/' ), array( 'Thiết kế website', '/thiet-ke-website/' ), array( 'Email doanh nghiệp', '/email-doanh-nghiep/' ), array( 'Phần mềm SEO', '/phan-mem-seo/' ), array( 'Khoá học SEO', '/khoa-hoc-seo/' ) ) as $sl ) : ?>
 					<li><a href="<?php echo esc_url( home_url( $sl[1] ) ); ?>"><?php echo esc_html( $sl[0] ); ?></a></li>
 					<?php endforeach; ?>
 				</ul>

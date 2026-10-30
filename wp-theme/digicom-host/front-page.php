@@ -169,6 +169,7 @@ foreach ( dgc_hosting_rows() as $dgc_rows ) { $v = dgc_min_price( $dgc_rows, 'th
 $dgc_others = array(
 	array( 'Booking báo &amp; truyền thông', array( array( 'Booking truyền hình', '/booking-truyen-hinh/' ), array( 'Quảng cáo phát thanh', '/quang-cao-phat-thanh/' ), array( 'Booking fanpage', '/booking-fanpage/' ), array( 'Booking KOL, KOC', '/booking-kol-koc/' ) ) ),
 	array( 'Liên kết off-page', array( array( 'Mua Textlink', '/mua-textlink/' ), array( 'Guest Post', '/guest-post/' ), array( 'Backlink Social Entity', '/backlink-social-entity/' ), array( 'Backlink quốc tế', '/backlink-quoc-te/' ), array( 'Dịch vụ Toplist', '/dich-vu-toplist/' ) ) ),
+	array( 'Website', array( array( 'Thiết kế website', '/thiet-ke-website/' ), array( 'Chăm sóc website', '/cham-soc-website/' ), array( 'Email doanh nghiệp', '/email-doanh-nghiep/' ), array( 'Chứng chỉ SSL', '/chung-chi-ssl/' ), array( 'Cloud server', '/cloud-server/' ), array( 'Đăng ký Bộ Công Thương', '/dang-ky-website-bo-cong-thuong/' ) ) ),
 );
 ?>
 <section class="sg-sec sg-sec--grey" id="dich-vu-ho-tro">

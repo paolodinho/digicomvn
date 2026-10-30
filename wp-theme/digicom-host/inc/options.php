@@ -334,6 +334,16 @@ function dgc_settings_page() {
 				?>
 			</table>
 
+			<h2>12. Dich vu website (thiet ke, cham soc, Bo Cong Thuong, email, SSL, cloud)</h2>
+			<table class="form-table">
+				<?php
+				if ( function_exists( 'dgc_web_svc_list' ) ) foreach ( dgc_web_svc_list() as $s => $n ) {
+					if ( 'thiet-ke-website' === $s ) continue;
+					dgc_field( 'web_gia_' . str_replace( '-', '_', $s ), 'Bang gia: ' . $n, 'Moi dong: nhom | ten goi | gia | don vi (/thang, /nam, /user/thang) | gia goc gach ngang (de trong neu khong) | thong so 1; thong so 2. Gia de trong = "Bao gia theo ho so". De trong ca o = bang mac dinh. Ghi 0 = an bang gia. KHONG ghi ten nha cung cap.', 'textarea' );
+				}
+				?>
+			</table>
+
 			<?php submit_button( 'Luu thay doi' ); ?>
 		</form>
 	</div>
