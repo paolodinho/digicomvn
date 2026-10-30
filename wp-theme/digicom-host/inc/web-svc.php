@@ -95,12 +95,12 @@ function dgc_web_svc_conf( $slug ) {
 	$c = array(
 		'thiet-ke-website' => array(
 			'eyebrow' => 'Thiết kế website',
-			'lead'    => 'Website WordPress dựng riêng theo thương hiệu, sơ đồ trang lập từ nghiên cứu từ khoá, đo tốc độ trên điện thoại trước khi bàn giao. Mọi nội dung sửa được trong trang quản trị, tên miền đứng tên doanh nghiệp.',
+			'lead'    => 'Website WordPress dựng riêng theo thương hiệu, sơ đồ trang lập từ nghiên cứu từ khoá, đo tốc độ trên điện thoại khi bàn giao. Mọi nội dung sửa được trong trang quản trị, tên miền đứng tên doanh nghiệp.',
 			'price_h' => '',
-			'story_eyebrow' => 'Cách chúng tôi làm',
-			'story_h' => 'Đo tốc độ trước khi bàn giao, không hứa bằng lời',
-			'story'   => '<p>Trước ngày bàn giao, chúng tôi đo website trên điện thoại theo ba chỉ số Google dùng để chấm trải nghiệm trang: nội dung chính hiện ra trong 2,5 giây (LCP), bố cục không xô lệch quá 0,1 (CLS), phản hồi thao tác bấm dưới 200 mili giây (INP). Chưa đạt thì chưa giao. Thẻ bên cạnh là số đo chính trang chủ digicomvn.com, website do chúng tôi tự dựng và vận hành.</p>'
-				. '<p>Phần quyết định khách có tìm thấy bạn trên Google lại nằm ở chỗ người xem không thấy. Chúng tôi làm ngược thứ tự quen thuộc: xem các trang đang đứng top cho nhóm từ khoá của bạn trước, dựng sơ đồ trang theo đó, rồi mới vẽ giao diện. Website ra mắt đã có chỗ cho từng nhóm từ khoá, không phải đập đi làm lại sau vài tháng.</p>'
+			'story_eyebrow' => 'Tốc độ và SEO',
+			'story_h' => 'Số đo tốc độ trên điện thoại kèm theo bàn giao',
+			'story'   => '<p>Khi bàn giao, chúng tôi gửi kèm bảng số đo website trên điện thoại theo ba chỉ số Core Web Vitals của Google: LCP (thời gian nội dung chính hiện ra, ngưỡng tốt 2,5 giây), CLS (độ xô lệch bố cục, ngưỡng 0,1) và INP (độ trễ khi bấm, ngưỡng 200 mili giây). Ảnh bên cạnh là số đo trang chủ digicomvn.com, website do chúng tôi dựng và đang vận hành.</p>'
+				. '<p>Sơ đồ trang được lập trước khi thiết kế giao diện. Chúng tôi xem các trang đang đứng top Google cho từng nhóm từ khoá của bạn, xếp mỗi nhóm vào một trang, rồi mới dựng giao diện theo sơ đồ đó. Nhờ vậy, sau khi website chạy ít phải thêm trang hay đổi đường dẫn.</p>'
 				. '<p>Ngưỡng các chỉ số theo <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">tài liệu Core Web Vitals của Google</a>.</p>',
 			'img' => array( 'src' => 'ws-toc-do-digicomvn.webp', 'w' => 1600, 'h' => 853, 'alt' => 'Số đo tốc độ trang chủ digicomvn.com trên điện thoại: LCP 0,62 giây, CLS 0,003, phản hồi máy chủ 0,23 giây', 'cap' => 'Số đo thật trang chủ digicomvn.com trên điện thoại (khung 390px), trung vị 3 lần đo, ngày 30/10/2026.' ),
 			'extra_eyebrow' => 'Lịch làm việc',
@@ -118,10 +118,10 @@ function dgc_web_svc_conf( $slug ) {
 			'lead'    => 'Một đầu mối nhận yêu cầu qua Zalo, cập nhật nội dung, sản phẩm, banner, giữ WordPress và plugin luôn mới, sao lưu định kỳ, gửi báo cáo cuối tháng. Nhận cả website WordPress do đơn vị khác làm.',
 			'price_h' => 'Bảng giá chăm sóc website',
 			'story_eyebrow' => 'Một tháng chăm sóc gồm gì',
-			'story_h' => 'Phần lớn việc chăm sóc là việc nhỏ, nhưng phải làm đều',
-			'story'   => '<p>Website doanh nghiệp hay đứng yên sau ngày ra mắt: tin tức dừng ở năm khai trương, giá cũ, plugin báo cập nhật hàng chục bản. Khách vào thấy vậy thường nghĩ công ty không còn hoạt động. Plugin lỗi thời cũng là cửa ngõ phổ biến để website WordPress bị chèn mã độc.</p>'
-				. '<p>Trong tháng, bạn chỉ cần nhắn nội dung cần đổi. Chúng tôi đăng tin, sửa giá, thay banner, cập nhật WordPress và plugin sau khi đã sao lưu, kiểm tra tốc độ trang và chứng chỉ SSL. Cuối tháng có báo cáo liệt kê từng việc đã làm, lượt truy cập, lỗi phát hiện và đề xuất cho tháng sau, để bạn biết khoản phí đổi lấy việc gì.</p>'
-				. '<p>Website đang chạy trên WordPress do đơn vị khác làm, chúng tôi vẫn nhận: tháng đầu dành thời gian rà mã nguồn, plugin và quyền truy cập trước khi bắt đầu cập nhật.</p>',
+			'story_h' => 'Công việc chăm sóc website trong một tháng',
+			'story'   => '<p>Nhiều website doanh nghiệp không được cập nhật sau ngày ra mắt: tin tức cũ, giá cũ, WordPress và plugin chậm nhiều phiên bản. Plugin không được cập nhật cũng là nguyên nhân thường gặp khiến website WordPress bị chèn mã độc.</p>'
+				. '<p>Trong tháng, bạn chỉ cần nhắn nội dung cần đổi. Chúng tôi đăng tin, sửa giá, thay banner, cập nhật WordPress và plugin sau khi đã sao lưu, kiểm tra tốc độ trang và chứng chỉ SSL. Cuối tháng có báo cáo liệt kê việc đã làm, lượt truy cập, lỗi phát hiện và đề xuất cho tháng sau.</p>'
+				. '<p>Website WordPress do đơn vị khác làm cũng nhận chăm sóc. Tháng đầu dành thời gian rà mã nguồn, plugin và quyền truy cập trước khi bắt đầu cập nhật.</p>',
 			'img' => array( 'src' => 'agency-team-5-800.webp', 'w' => 800, 'h' => 533, 'alt' => 'Hai người trao đổi kế hoạch công việc bên bảng trắng', 'cap' => '' ),
 			'extra_eyebrow' => 'Chọn gói',
 			'extra_h' => 'Gói nào hợp với website của bạn?',
@@ -142,9 +142,9 @@ function dgc_web_svc_conf( $slug ) {
 				. '<p>Website đã được xác nhận trước 01/7/2026 vẫn hoạt động tới 30/6/2027 nhưng phải cập nhật hồ sơ theo quy định mới trong khoảng đó. Sàn giao dịch và nền tảng trung gian vẫn đăng ký với Bộ Công Thương. Website chỉ giới thiệu, không có chức năng đặt hàng thì không thuộc diện thông báo.</p>'
 				. '<p>Văn bản gốc: <a href="https://vanban.chinhphu.vn/?pageid=27160&amp;docid=218747" target="_blank" rel="noopener">Nghị định 248/2026/NĐ-CP</a> (Điều 24, 25, 53).</p>',
 			'img' => array( 'src' => 'ws-online-gov-vn.webp', 'w' => 1600, 'h' => 950, 'alt' => 'Trang chủ Cổng thông tin quản lý hoạt động thương mại điện tử online.gov.vn', 'cap' => 'Cổng online.gov.vn ngày 30/10/2026 ghi nhận 55.234 nền tảng đã thông báo và 1.111 nền tảng đã đăng ký, trước khi chuyển sang cơ chế mới.' ),
-			'extra_eyebrow' => 'Kinh nghiệm hồ sơ',
-			'extra_h' => 'Những lỗi khiến hồ sơ bị yêu cầu làm rõ',
-			'extra'   => '<p>Phần lớn hồ sơ bị trả lại không phải vì giấy tờ, mà vì chính website chưa khớp với những gì khai trong tờ khai. Trước khi nộp, chúng tôi rà website theo danh sách dưới đây và sửa cùng bạn:</p>'
+			'extra_eyebrow' => 'Trước khi nộp',
+			'extra_h' => 'Các điểm cần rà trên website trước khi nộp hồ sơ',
+			'extra'   => '<p>Thông tin trên website cần khớp với tờ khai và giấy đăng ký kinh doanh. Trước khi nộp, chúng tôi rà website theo các điểm dưới đây và sửa cùng bạn:</p>'
 				. '<ul><li>Tên công ty, mã số thuế, địa chỉ ở chân trang không khớp giấy đăng ký kinh doanh.</li>'
 				. '<li>Còn nội dung mẫu của giao diện (sản phẩm demo, chữ tiếng Anh, số điện thoại giả).</li>'
 				. '<li>Thiếu trang chính sách đổi trả, vận chuyển, thanh toán, bảo mật thông tin.</li>'
@@ -156,10 +156,10 @@ function dgc_web_svc_conf( $slug ) {
 			'eyebrow' => 'Email doanh nghiệp',
 			'lead'    => 'Email theo tên miền riêng (ten@congty.vn) trên máy chủ email, hoặc Google Workspace, Microsoft 365 chính hãng. Chúng tôi tạo hộp thư, trỏ bản ghi DNS và cấu hình xác thực để thư không rơi vào mục spam.',
 			'price_h' => 'Bảng giá email doanh nghiệp',
-			'story_eyebrow' => 'Vì sao thư vào spam',
-			'story_h' => 'Gmail đã đặt luật, thiếu bản ghi là thư bị chặn',
+			'story_eyebrow' => 'Xác thực email',
+			'story_h' => 'Yêu cầu xác thực của Gmail với người gửi thư',
 			'story'   => '<p>Google yêu cầu mọi người gửi thư tới tài khoản Gmail phải có xác thực SPF hoặc DKIM, máy chủ gửi có bản ghi ngược hợp lệ, dùng kết nối mã hoá và giữ tỉ lệ bị báo spam dưới 0,3%. Doanh nghiệp gửi trên 5.000 thư mỗi ngày tới Gmail phải có đủ cả SPF, DKIM và DMARC. Thư thiếu xác thực sẽ bị đẩy vào spam hoặc trả về.</p>'
-				. '<p>Nhiều doanh nghiệp mua email xong vẫn để trống các bản ghi này vì không ai hướng dẫn. Khi bàn giao, chúng tôi trỏ đủ bốn bản ghi trong thẻ bên cạnh, kiểm tra bằng thư gửi thử tới Gmail và Outlook, rồi mới gửi thông tin đăng nhập. Hộp thư thuộc tài khoản doanh nghiệp, nhân sự nghỉ việc thì công ty vẫn giữ dữ liệu.</p>'
+				. '<p>Khi tạo hộp thư, chúng tôi thêm bốn bản ghi MX, SPF, DKIM, DMARC như ví dụ bên cạnh và gửi thư thử tới Gmail, Outlook để kiểm tra. Hộp thư thuộc tài khoản doanh nghiệp, nhân sự nghỉ việc thì công ty vẫn giữ dữ liệu.</p>'
 				. '<p>Nguồn: <a href="https://support.google.com/mail/answer/81126?hl=vi" target="_blank" rel="noopener">Nguyên tắc dành cho người gửi email của Google</a>.</p>',
 			'img' => array( 'src' => 'ws-email-dns.webp', 'w' => 1600, 'h' => 853, 'alt' => 'Ví dụ 4 bản ghi DNS cho email doanh nghiệp: MX, SPF, DKIM, DMARC', 'cap' => 'Ví dụ minh hoạ cho tên miền congty.vn. Giá trị thật lấy từ nhà cung cấp email bạn chọn.' ),
 			'extra_eyebrow' => 'So sánh',
@@ -176,14 +176,14 @@ function dgc_web_svc_conf( $slug ) {
 			'eyebrow' => 'Chứng chỉ SSL',
 			'lead'    => 'Chứng chỉ SSL trả phí xác thực tên miền (DV), xác thực doanh nghiệp (OV) và xác thực mở rộng (EV). Chúng tôi tạo CSR, xác minh, cài lên máy chủ và cấp lại chứng chỉ mỗi khi tới hạn trong suốt kỳ đăng ký.',
 			'price_h' => 'Bảng giá chứng chỉ SSL',
-			'story_eyebrow' => 'Điều ít ai nói',
-			'story_h' => 'Chứng chỉ SSL đang ngắn dần, việc cài lại mới là phần tốn công',
+			'story_eyebrow' => 'Thời hạn chứng chỉ',
+			'story_h' => 'Thời hạn chứng chỉ SSL rút ngắn dần từ 2026 đến 2029',
 			'story'   => '<p>Các tổ chức cấp phát và trình duyệt đã thống nhất rút ngắn thời hạn tối đa của một chứng chỉ: 398 ngày trước 15/3/2026, còn 200 ngày từ 15/3/2026, 100 ngày từ 15/3/2027 và 47 ngày từ 15/3/2029. Gói SSL mua theo năm vì thế là một kỳ đăng ký, trong đó chứng chỉ phải được cấp lại và cài lại nhiều lần.</p>'
-				. '<p>Website quên cài lại sẽ hiện cảnh báo "Kết nối không riêng tư" và khách bỏ đi ngay. Chúng tôi theo dõi ngày hết hạn của từng chứng chỉ, cấp lại và cài trước hạn. Thẻ bên cạnh là thông tin chứng chỉ đang chạy trên chính digicomvn.com: loại miễn phí, 90 ngày, không có tên tổ chức, đủ cho website giới thiệu nhưng không đáp ứng được đối tác yêu cầu chứng chỉ ghi tên doanh nghiệp.</p>'
+				. '<p>Chứng chỉ hết hạn mà chưa cài lại thì trình duyệt hiện cảnh báo "Kết nối không riêng tư". Chúng tôi theo dõi ngày hết hạn của từng chứng chỉ, cấp lại và cài trước hạn. Thẻ bên cạnh là thông tin chứng chỉ đang chạy trên chính digicomvn.com: loại miễn phí, 90 ngày, không có tên tổ chức, đủ cho website giới thiệu nhưng không đáp ứng được đối tác yêu cầu chứng chỉ ghi tên doanh nghiệp.</p>'
 				. '<p>Nguồn: <a href="https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/" target="_blank" rel="noopener">nghị quyết SC-081v3 của CA/Browser Forum</a>.</p>',
 			'img' => array( 'src' => 'ws-ssl-digicomvn.webp', 'w' => 1600, 'h' => 853, 'alt' => 'Thông tin chứng chỉ SSL của digicomvn.com: loại DV, hiệu lực 90 ngày', 'cap' => 'Chứng chỉ thật của digicomvn.com, kiểm tra ngày 30/10/2026: DV, hiệu lực 06/9 đến 05/12/2026.' ),
 			'extra_eyebrow' => 'So sánh',
-			'extra_h' => 'DV, OV hay EV: chọn theo việc website phải chứng minh',
+			'extra_h' => 'So sánh chứng chỉ DV, OV và EV',
 			'extra'   => '<div class="ws-scroll"><table><thead><tr><th>Loại</th><th>Xác minh gì</th><th>Thời gian cấp thường gặp</th><th>Hợp với</th></tr></thead><tbody>'
 				. '<tr><td>DV</td><td>Quyền quản lý tên miền (email, bản ghi DNS hoặc tệp trên website)</td><td>Khoảng 15 phút</td><td>Website giới thiệu, blog, cần chứng chỉ Wildcard cho nhiều tên miền phụ</td></tr>'
 				. '<tr><td>OV</td><td>Tên miền và pháp nhân (giấy đăng ký kinh doanh, cuộc gọi xác minh)</td><td>1 đến 3 ngày làm việc</td><td>Website nhận thanh toán, thu thông tin cá nhân, đối tác yêu cầu tên doanh nghiệp trong chứng chỉ</td></tr>'
@@ -196,9 +196,9 @@ function dgc_web_svc_conf( $slug ) {
 			'lead'    => 'Máy chủ ảo với CPU, RAM, ổ SSD và IP riêng, toàn quyền quản trị. Hợp website lớn, nhiều website vệ tinh, công cụ tự động hoá như n8n, Docker, bot thu thập dữ liệu.',
 			'price_h' => 'Bảng giá cloud server',
 			'story_eyebrow' => 'Trước khi chuyển',
-			'story_h' => 'Khi nào hosting không còn đủ, và cái giá của toàn quyền',
+			'story_h' => 'Khi nào nên chuyển từ hosting sang cloud server',
 			'story'   => '<p>Hosting dùng chung máy chủ với nhiều khách nên bị giới hạn CPU, RAM và số tiến trình. Dấu hiệu nên chuyển: website hay báo lỗi vượt tài nguyên vào giờ cao điểm, bạn cần IP riêng cho nhiều website vệ tinh, hoặc cần cài phần mềm hosting không cho phép như Docker, n8n, Node.js chạy nền.</p>'
-				. '<p>Toàn quyền đi kèm toàn trách nhiệm. Trên cloud server không ai tự cập nhật hệ điều hành, dựng tường lửa hay sao lưu giúp bạn. Cũng nên hiểu đúng cam kết hoạt động: 99,9% nghe rất cao nhưng vẫn cho phép khoảng 8,8 giờ gián đoạn mỗi năm, 99,99% là khoảng 53 phút. Nếu đội của bạn chưa có người quản trị máy chủ, chúng tôi nhận cài đặt ban đầu: hệ điều hành, bảng điều khiển, website, SSL, tường lửa, lịch sao lưu.</p>',
+				. '<p>Trên cloud server, việc cập nhật hệ điều hành, dựng tường lửa và sao lưu do người quản trị máy chủ tự làm. Cam kết hoạt động 99,9% tương đương khoảng 8,8 giờ gián đoạn mỗi năm, 99,99% khoảng 53 phút. Nếu đội của bạn chưa có người quản trị máy chủ, chúng tôi nhận cài đặt ban đầu: hệ điều hành, bảng điều khiển, website, SSL, tường lửa, lịch sao lưu.</p>',
 			'img' => array( 'src' => 'agency-team-4-800.webp', 'w' => 800, 'h' => 533, 'alt' => 'Nhóm làm việc quanh bàn, xem kế hoạch triển khai trên máy tính', 'cap' => '' ),
 			'extra_eyebrow' => 'So sánh',
 			'extra_h' => 'Hosting hay cloud server?',

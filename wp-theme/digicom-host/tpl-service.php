@@ -34,11 +34,11 @@ foreach ( $dgc_sibs as $it ) {
 }
 
 $dgc_trust = array(
-	array( $nhom ? 'Giá công khai' : 'Báo giá rõ ràng', $nhom ? 'Niêm yết theo từng vị trí đăng, không báo giá mập mờ.' : 'Báo giá theo phạm vi công việc trước khi triển khai.' ),
+	array( $nhom ? 'Giá công khai' : 'Báo giá rõ ràng', $nhom ? 'Giá niêm yết theo từng vị trí đăng.' : 'Báo giá theo phạm vi công việc trước khi triển khai.' ),
 	array( 'Hoá đơn VAT', 'Xuất hoá đơn đầy đủ cho doanh nghiệp.' ),
 	$dgc_media ? array( 'Lịch phát sóng', 'Gửi lịch phát và file phát sóng để bạn đối chiếu.' )
 		: ( $nhom ? array( 'Bàn giao link', 'Gửi link bài đã lên để bạn tự kiểm tra.' ) : array( 'Cập nhật tiến độ', 'Báo cáo ở từng bước, có đầu mối phụ trách.' ) ),
-	array( 'Tư vấn miễn phí', $nhom ? 'Chọn đúng ' . $dgc_unit . ' theo ngành và ngân sách.' : 'Không ràng buộc, chỉ triển khai khi bạn đồng ý.' ),
+	array( 'Tư vấn miễn phí', $nhom ? 'Chọn đúng ' . $dgc_unit . ' theo ngành và ngân sách.' : 'Chỉ triển khai sau khi bạn đồng ý báo giá.' ),
 );
 $dgc_faqs  = dgc_svc_faq_items( $nhom ? $nhom['slug'] : ( function_exists( 'dgc_svc_slug' ) ? ( dgc_svc_slug() ?: $dgc_slug ) : $dgc_slug ) );
 $dgc_check = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>';
@@ -96,7 +96,35 @@ $GLOBALS['dgc_promo_done'] = true;
 	</div>
 </section>
 
-<?php if ( ! empty( $dgc_h['rows'] ) ) : /* the hero da la bang gia -> cam ket dua xuong day */ ?>
+<?php
+require_once get_template_directory() . '/inc/svc-story.php';
+$dgc_wc = dgc_svc_story_conf( $dgc_path );
+if ( $dgc_wc ) : /* Hieu 30/10: thay 4 the cam ket bang doan giai thich tu bang gia that */
+	$dgc_im = $dgc_wc['img'] ?? array(); ?>
+<section class="sec ws-story-sec">
+	<div class="wrap ws-story<?php echo empty( $dgc_im ) ? ' ws-story--solo' : ''; ?>">
+		<div class="ws-story-text">
+			<span class="eyebrow"><?php echo esc_html( $dgc_wc['story_eyebrow'] ?? '' ); ?></span>
+			<h2><?php echo esc_html( $dgc_wc['story_h'] ); ?></h2>
+			<div class="page-content"><?php echo wp_kses_post( $dgc_wc['story'] ); ?></div>
+		</div>
+		<?php if ( $dgc_im ) : ?>
+		<figure class="ws-story-fig">
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $dgc_im['src'] ); ?>" width="<?php echo (int) $dgc_im['w']; ?>" height="<?php echo (int) $dgc_im['h']; ?>" alt="<?php echo esc_attr( $dgc_im['alt'] ); ?>" loading="lazy" decoding="async">
+			<?php if ( ! empty( $dgc_im['cap'] ) ) : ?><figcaption><?php echo esc_html( $dgc_im['cap'] ); ?></figcaption><?php endif; ?>
+		</figure>
+		<?php endif; ?>
+	</div>
+</section>
+<?php if ( ! empty( $dgc_wc['extra'] ) ) : ?>
+<section class="sec ws-extra-sec">
+	<div class="wrap" style="max-width:1000px">
+		<div class="ws-extra-head"><span class="eyebrow"><?php echo esc_html( $dgc_wc['extra_eyebrow'] ?? '' ); ?></span><h2><?php echo esc_html( $dgc_wc['extra_h'] ); ?></h2></div>
+		<div class="page-content ws-extra"><?php echo wp_kses_post( $dgc_wc['extra'] ); ?></div>
+	</div>
+</section>
+<?php endif; ?>
+<?php elseif ( ! empty( $dgc_h['rows'] ) ) : /* the hero da la bang gia -> cam ket dua xuong day */ ?>
 <!-- CAM KET -->
 <section class="sg-sec sg-sec--tight sg-sec--cyan">
 	<div class="wrap">

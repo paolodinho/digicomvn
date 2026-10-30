@@ -62,3 +62,10 @@ Mục tiêu: đáp ứng truy vấn tốt hơn top 10 hiện tại, không chỉ
   thành toplist - chỉ áp dụng khi danh sách đó là lý do chính người đọc tìm đến bài.
 - Pattern tham khảo đã áp dụng đúng trên site: `top-ngay-hoi-sach-lon-nhat-viet-nam` (Top 7),
   `case-study-chien-dich-pr` (7 Case Study), `chien-dich-pr-an-tuong-viet-nam` (6 Case Study).
+
+## ❌ DON'T - Câu chữ kiểu "văn AI" trên trang (Hiếu 30/10/2026)
+> Sự cố: tiêu đề "Đo tốc độ trước khi bàn giao, không hứa bằng lời" - Hiếu: "rất AI, không chấp nhận được".
+- Không viết câu đối "X, không Y", "không phải... mà là...", "Chưa đạt thì chưa giao", khẩu hiệu, lời hứa suông.
+- Không dùng nhãn kiểu "Nói thẳng", "Điều ít ai nói", "Kinh nghiệm hồ sơ"; eyebrow chỉ ghi chủ đề (vd "Bảng giá textlink").
+- Tiêu đề H2 mô tả đúng nội dung bên dưới ("Giá thuê textlink theo vị trí và kỳ hạn"), không giật, không đặt vấn đề bằng phép đối.
+- Thân bài: câu khẳng định thẳng, có số liệu/ngày/nguồn; bỏ từ cảm xúc ("thấy rõ", "cửa ngõ", "nghe rất cao nhưng").

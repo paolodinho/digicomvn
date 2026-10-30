@@ -30,7 +30,7 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 <section class="sec ws-story-sec">
 	<div class="wrap ws-story<?php echo empty( $dgc_im ) ? ' ws-story--solo' : ''; ?>">
 		<div class="ws-story-text">
-			<span class="eyebrow"><?php echo esc_html( $dgc_wc['story_eyebrow'] ?? 'Nói thẳng' ); ?></span>
+			<span class="eyebrow"><?php echo esc_html( $dgc_wc['story_eyebrow'] ?? '' ); ?></span>
 			<h2><?php echo esc_html( $dgc_wc['story_h'] ); ?></h2>
 			<div class="page-content"><?php echo wp_kses_post( $dgc_wc['story'] ); ?></div>
 		</div>

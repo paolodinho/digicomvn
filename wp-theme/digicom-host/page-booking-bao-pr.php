@@ -68,17 +68,7 @@ $bbp_ic = function ( $p ) {
 	</div>
 </section>
 
-<section class="sg-sec sg-sec--tight sg-sec--cyan">
-	<div class="wrap">
-		<div class="sg-benefits sg-benefits--4 sg-benefits--light">
-			<?php $bbp_chk = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>'; ?>
-			<div class="sg-card"><?php echo $bbp_chk; // phpcs:ignore ?><h3><?php echo esc_html( $bbp_outlets ); ?>+ đầu báo</h3><p>Báo điện tử, tạp chí hợp tác trên toàn quốc.</p></div>
-			<div class="sg-card"><?php echo $bbp_chk; // phpcs:ignore ?><h3><?php echo esc_html( $bbp_count ); ?> vị trí có giá</h3><p>Giá niêm yết công khai theo từng chuyên mục.</p></div>
-			<div class="sg-card"><?php echo $bbp_chk; // phpcs:ignore ?><h3>Dofollow / nofollow</h3><p>Ghi rõ loại link theo từng chuyên mục.</p></div>
-			<div class="sg-card"><?php echo $bbp_chk; // phpcs:ignore ?><h3>Hoá đơn VAT</h3><p>Hợp đồng, hoá đơn đầy đủ cho doanh nghiệp.</p></div>
-		</div>
-	</div>
-</section>
+<?php /* 4 the dau tich da bo 30/10/2026 (van mau AI) - thay bang muc phan tich gia that ben duoi */ ?>
 
 <!-- ============ 2. DAI LOGO DAU BAO THAT ============ -->
 <?php include get_template_directory() . '/inc/blk-press-partners.php'; ?>
@@ -90,7 +80,7 @@ $bbp_ic = function ( $p ) {
 			<span class="eyebrow">Khái niệm</span>
 			<h2>Booking báo chí là gì?</h2>
 			<p><b>Booking báo chí</b> (đặt bài PR trên báo) là hình thức trả phí để đăng một bài viết mang thông điệp thương hiệu lên báo điện tử, tạp chí hoặc trang tin đã được cấp phép. Bài nằm trong <b>chuyên mục</b> hoặc <b>tiểu mục</b> phù hợp, mang tên tác giả toà soạn, và thường được gắn <b>link dofollow</b> hoặc nofollow trỏ về website của doanh nghiệp.</p>
-			<p>Khác với <b>quảng cáo hiển thị</b> (banner biến mất khi hết ngân sách) hay bài đăng fanpage, một bài <b>advertorial</b> đặt trên báo tồn tại lâu dài, được Google lập chỉ mục và trở thành tài sản truyền thông - nguồn dẫn khi báo chí, AI Overview hay ChatGPT trích dẫn về thương hiệu (tín hiệu E-E-A-T, GEO).</p>
+			<p>Bài PR trên báo được giữ trên trang báo sau khi đăng và được Google lập chỉ mục, nên có thể được báo chí khác, AI Overview hay ChatGPT dẫn lại khi nói về thương hiệu. Quảng cáo banner thì dừng hiển thị khi hết ngân sách.</p>
 			<p class="bbp-concept-links">
 				Đọc thêm:
 				<a href="/booking-bao-la-gi/">Tổng quan booking báo &amp; các hình thức</a> &middot;
@@ -115,40 +105,45 @@ $bbp_ic = function ( $p ) {
 	</div>
 </section>
 
-<!-- ============ 4. VI SAO CHON DIGICOM ============ -->
-<section class="sec bbp-benefits" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap bbp-why">
-		<div class="center bbp-why-head">
-			<span class="eyebrow">Vì sao chọn DigicomVN</span>
-			<h2>Booking báo &amp; PR trọn gói, minh bạch từ giá tới link bàn giao</h2>
-			<p class="muted">Một đầu mối cho toàn bộ mạng lưới báo điện tử - thay vì liên hệ, thương lượng và theo dõi từng toà soạn riêng lẻ.</p>
+<!-- ============ 4. GIA DO DAU MA CHENH (so lieu bang gia that 30/10/2026, thay luoi "Vi sao chon" van mau) ============ -->
+<section class="sec ws-story-sec">
+	<div class="wrap ws-story">
+		<div class="ws-story-text">
+			<span class="eyebrow">Bảng giá booking báo</span>
+			<h2>Giá một bài PR phụ thuộc vào tên báo, vị trí và điều kiện link</h2>
+			<div class="page-content">
+				<p>Ngày 30/10/2026, bảng giá trên trang này có 519 vị trí đăng của 319 đầu báo. Bài rẻ nhất 440.000đ, bài đắt nhất 183,86 triệu đồng, và một nửa số vị trí có giá dưới 1,5 triệu.</p>
+				<p><b>Tên báo.</b> Nhóm báo lớn như VnExpress, Dân Trí, Tuổi Trẻ, Thanh Niên, Lao Động có giá trung vị khoảng 8,6 triệu một bài, báo tỉnh quanh 1,4 triệu. Báo lớn có lượng đọc và độ tin cậy với Google cao hơn, nhưng nếu khách hàng của bạn tập trung ở một tỉnh, bài trên báo của chính tỉnh đó thường đến đúng người đọc hơn.</p>
+				<p><b>Vị trí trên báo.</b> Cùng một đầu báo, bài ở tiểu mục rẻ hơn nhiều so với bài lên trang chủ: Kênh14 tiểu mục 3,52 triệu, trang chủ 9,69 triệu; Lao Động mục Thông tin doanh nghiệp 5,7 triệu, gói kết hợp trang chủ 48,15 triệu. Bài trên trang chủ chỉ nằm ở đó một thời gian rồi trôi về chuyên mục, nên nếu mục tiêu chính là SEO, có thể chọn tiểu mục đúng chủ đề để tiết kiệm chi phí.</p>
+			</div>
 		</div>
-		<dl class="bbp-why-list">
-				<div class="bbp-why-row">
-					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M4 7h16M4 12h16M4 17h10"/>' ); ?></span>Bảng giá công khai từng đầu báo</dt>
-					<dd><?php echo esc_html( $bbp_count ); ?> vị trí niêm yết theo chuyên mục, DR và loại link - lọc theo ngành, khoảng giá, so sánh ngay không cần chờ báo giá.</dd>
-				</div>
-				<div class="bbp-why-row">
-					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M12 20V10M6 20V4M18 20v-7"/>' ); ?></span>Chọn báo theo mục tiêu</dt>
-					<dd>Đẩy top từ khoá, ra mắt sản phẩm, tuyển dụng hay xử lý khủng hoảng truyền thông - mỗi mục tiêu cần bộ đầu báo và chuyên mục khác nhau.</dd>
-				</div>
-				<div class="bbp-why-row">
-					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 12h8M8 16h6"/>' ); ?></span>Viết bài đúng văn phong toà soạn</dt>
-					<dd>Đội biên tập viết theo chuẩn từng báo (tiêu đề, sapo, độ dài, cách nhắc thương hiệu) để bài được duyệt nhanh và đọc tự nhiên.</dd>
-				</div>
-				<div class="bbp-why-row">
-					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M20 6 9 17l-5-5"/>' ); ?></span>Bàn giao link, theo dõi tiến độ</dt>
-					<dd>Xác nhận báo còn nhận bài trước khi chốt, cập nhật trạng thái từng bước, bàn giao đường link bài đã lên kèm ảnh chụp vị trí.</dd>
-				</div>
-				<div class="bbp-why-row">
-					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>' ); ?></span>Tài sản truyền thông lâu dài</dt>
-					<dd>Bài PR trên báo còn index nhiều năm, tạo backlink từ tên miền uy tín và nguồn dẫn khi AI, báo chí nói về thương hiệu.</dd>
-				</div>
-				<div class="bbp-why-row">
-					<dt><span class="bbp-why-ic"><?php echo $bbp_ic( '<path d="M9 12h6m-6 4h6M6 4h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>' ); ?></span>Hoá đơn VAT, hợp đồng rõ ràng</dt>
-					<dd>Xuất hoá đơn đầy đủ, hợp đồng dịch vụ minh bạch - phù hợp doanh nghiệp cần chứng từ cho ngân sách marketing.</dd>
-				</div>
-		</dl>
+		<figure class="ws-story-fig">
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/bbp-gia-pr.webp' ); ?>" width="1600" height="853" alt="Biểu đồ giá trung vị một bài PR theo loại vị trí: báo tỉnh 1,43 triệu, báo lớn chuyên mục 6,94 triệu, báo lớn trang chủ 30 triệu" loading="lazy" decoding="async">
+			<figcaption>Tính từ bảng giá DigicomVN ngày 30/10/2026, giá chưa VAT. Giá từng báo có thể đổi theo toà soạn.</figcaption>
+		</figure>
+	</div>
+</section>
+
+<section class="sec ws-extra-sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+	<div class="wrap" style="max-width:1000px">
+		<div class="ws-extra-head"><span class="eyebrow">Điều kiện đi kèm</span><h2>Loại link và điều kiện đăng ở một số báo lớn</h2></div>
+		<div class="page-content ws-extra">
+			<p>Phần lớn báo lớn chỉ cho link nofollow, một số mục không cho chèn link, và có báo chỉ giữ link trong một thời hạn. Trong 519 vị trí đang niêm yết, 35 vị trí ghi rõ link dofollow, 18 ghi nofollow, 20 không chèn link; vị trí chưa ghi loại link thì nên hỏi lại trước khi chốt. Bảng dưới là điều kiện của một số báo lớn.</p>
+			<div class="ws-scroll">
+				<table>
+					<caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Giá và điều kiện link theo vị trí của một số đầu báo lớn, ngày 30/10/2026</caption>
+					<thead><tr><th>Đầu báo</th><th>Vị trí</th><th>Giá (chưa VAT)</th><th>Link và điều kiện</th></tr></thead>
+					<tbody>
+						<tr><td data-label="Đầu báo">Kênh14</td><td data-label="Vị trí">Tiểu mục / Trang chủ</td><td data-label="Giá">3,52 / 9,69 triệu</td><td data-label="Link">1 link nofollow, thêm link 300.000đ</td></tr>
+						<tr><td data-label="Đầu báo">Lao Động</td><td data-label="Vị trí">Thông tin doanh nghiệp / Top 1-4 Kinh doanh</td><td data-label="Giá">5,7 / 21,89 triệu</td><td data-label="Link">Link tính thêm 1-3 triệu mỗi link, bài dưới 600-700 từ</td></tr>
+						<tr><td data-label="Đầu báo">VnExpress</td><td data-label="Vị trí">Doanh nghiệp viết</td><td data-label="Giá">7,41 triệu</td><td data-label="Link">2 link nofollow, bài tồn tại 6 tháng</td></tr>
+						<tr><td data-label="Đầu báo">VietNamNet</td><td data-label="Vị trí">Tiểu mục</td><td data-label="Giá">4,75 triệu</td><td data-label="Link">Link nofollow tính 5 triệu mỗi link, giữ 3 tháng</td></tr>
+						<tr><td data-label="Đầu báo">Tuổi Trẻ</td><td data-label="Vị trí">Cần biết</td><td data-label="Giá">6,18 triệu</td><td data-label="Link">Không chèn link</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<p>Bài PR mua để xây thương hiệu và để AI, báo chí khác có nguồn trích dẫn thì link nofollow vẫn dùng được. Bài mua để đẩy thứ hạng từ khoá thì nên ưu tiên vị trí dofollow, hoặc kết hợp với <a href="/guest-post/">guest post</a> và <a href="/mua-textlink/">textlink</a> trên site cùng ngành, chi phí thấp hơn nhiều.</p>
+		</div>
 	</div>
 </section>
 

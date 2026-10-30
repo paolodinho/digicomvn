@@ -245,3 +245,6 @@ Mở 6 trang: thiết kế website (Digicom tự làm, báo giá theo yêu cầu
 
 ## 2026-10-30 - Thiết kế website không niêm yết giá
 Hiếu chọn (A): /thiet-ke-website/ giữ báo giá theo yêu cầu, không ghi 'giá từ'.
+
+## 2026-10-30 - Không dùng văn mẫu AI trên trang
+Hiếu từ chối câu kiểu "Đo tốc độ trước khi bàn giao, không hứa bằng lời". Quy tắc ghi ở .claude/rules/do-dont.md mục "Câu chữ kiểu văn AI". Trang dịch vụ thay thẻ cam kết bằng đoạn giải thích dựa trên bảng giá thật có ngày.

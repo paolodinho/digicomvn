@@ -4986,3 +4986,8 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - tpl-web.php + inc/web-svc.php (6 slug, giá mặc định + option web_gia_*), options mục 12, cpt-gia dgc_svc_noprice_slugs + 6 slug (FAQ + schema Service), sg.css .ws-spec/.ws-links, DGC_VER 3.21.0.
 - Live: 6 trang publish (218 dùng lại, 7789-7793 mới), menu 7794-7799, gỡ Redirect 301 /thiet-ke-website/, /cham-soc-website/ trong .htaccess, 15 FAQ, trang chủ + footer.
 - Sự cố: scp lỗi cờ trong zsh, cp chép bản cũ ~/tmp-hg/functions.php + sg.css (29/10) lên live ~2 phút, đã đè lại bản đúng; trang vẫn 200.
+
+## 2026-10-30 - Bỏ văn AI trang dịch vụ (Hiếu: "soát lại hết")
+- Viết lại tiêu đề/eyebrow/đoạn kiểu đối ngữ, khẩu hiệu ở 6 trang website (inc/web-svc.php) + tpl-web.php (bỏ eyebrow mặc định "Nói thẳng").
+- /booking-bao-pr/, /mua-textlink/, /guest-post/, /dich-vu-backlink/: bỏ 4 thẻ "cam kết", thay bằng đoạn giải thích từ bảng giá thật 30/10 (inc/svc-story.php mới, gắn trong tpl-service.php) + 3 ảnh dữ liệu (bbp-gia-pr, svc-textlink-gia, svc-guestpost-gia) + bảng so sánh.
+- QA 10 trang ở 375/1440: không tràn ngang. Backup live: ~/Claude-Workspace/_backups/routines/2026-10-30/de-slop-copy/live-before.tgz
