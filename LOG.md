@@ -5003,3 +5003,6 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 ## 2026-10-30 - Báo giá PR quốc tế (IAC Digital)
 - File khách + NOIBO (Google Sheet + xlsx 11-bao-gia-khach/), giá = đúng file IAC, lãi 10% từ CK đại lý.
 - Web: thêm 61 dòng backlink-quoc-te (ID 7930-7990), mã NCC 5. Backup ~/Claude-Workspace/_backups/routines/2026-10-30/pr-quoc-te-iac/.
+
+## 2026-10-30 - Mua online email/SSL/cloud
+- Thêm item giỏ 't:w' (inc/websvc-order.php), nút Mua ngay ở /email-doanh-nghiep/, /chung-chi-ssl/, /cloud-server/; giá tính lại ở server từ dgc_web_rows. Thanh toán QR/SePay dùng chung; kích hoạt tay (API đại lý chưa có lệnh). Đơn thử DGCMBFBHW tạo + giả lập đã thanh toán -> mail kích hoạt tay đúng, đã huỷ.

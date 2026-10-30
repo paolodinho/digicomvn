@@ -2,10 +2,11 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: xong - Báo giá PR quốc tế (nguồn IAC Digital) cho khách nha khoa + đưa lên web 30/10/2026
-- Đã xong: 2 Google Sheet (khách 1w6DCBCUpR2SX84DxmmW7E1ekX36utQct88eEaC5EWMg, NOIBO 1JqGgX9Tr2ByE94pT7yD_7MwCDVdwOyWawtXnJT5VIf0); xlsx tại 11-bao-gia-khach/*Quoc-Te-Nha-Khoa-2026-10-30.xlsx; 61 dòng dgc_gia backlink-quoc-te (ID 7930-7990) live; mã NCC 5 IAC trong inc/cpt-gia.php (live); dòng báo giá ở tab Báo giá khách hàng file tổng quan.
-- Tiếp theo: CHỜ Hiếu gửi file khách cho khách nha khoa.
-- Cập nhật lúc: 2026-10-30 15:50
+- Task: xong - Mua online email doanh nghiệp/SSL/cloud server qua giỏ + QR (30/10/2026)
+- Đã xong: inc/websvc-order.php mới + sửa inc/domain-order.php, tpl-web.php, page-thanh-toan-ten-mien.php, functions.php; live (email 16, SSL 9, cloud 8 nút Mua ngay). Đơn thử DGCMBFBHW đã huỷ. Tiền về -> mail Hiếu "[Đơn hàng] ... cần kích hoạt tay".
+- Trước đó: báo giá PR quốc tế IAC (2 Sheet khách/NOIBO, 61 dòng dgc_gia 7930-7990) - CHỜ Hiếu gửi khách nha khoa.
+- Tiếp theo: CHỜ Hiếu gửi tài liệu API đại lý (lệnh đăng ký email/SSL/cloud) để tự kích hoạt.
+- Cập nhật lúc: 2026-10-30 16:40
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,

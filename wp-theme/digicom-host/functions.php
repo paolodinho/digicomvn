@@ -160,6 +160,7 @@ require_once get_template_directory() . '/inc/tm-offers.php';
 require_once get_template_directory() . '/inc/hg-offers.php';
 require_once get_template_directory() . '/inc/handover.php';
 require_once get_template_directory() . '/inc/web-svc.php';
+require_once get_template_directory() . '/inc/websvc-order.php';
 
 /**
  * Helper doc 1 option.

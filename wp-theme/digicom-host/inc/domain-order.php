@@ -137,12 +137,21 @@ function dgc_tm_order_ajax() {
 	if ( ! preg_match( '/^(\+?84|0)\d{9,10}$/', preg_replace( '/[\s.\-]/', '', $f['phone'] ) ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Số điện thoại chưa đúng.' ) );
 	if ( empty( $_POST['agree'] ) ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng xác nhận thông tin chủ thể là chính xác.' ) );
 
-	$lines = array(); $doms = array(); $hlines = array();
+	$lines = array(); $doms = array(); $hlines = array(); $wlines = array();
 	$cdoms = array();
 	foreach ( $items as $it ) { $d = dgc_tm_clean_domain( $it['d'] ?? '' ); if ( $d && ! empty( $it['c'] ) ) $cdoms[] = $d; }
 	$combo = dgc_tm_combo_lines( $cdoms );
 	foreach ( $items as $it ) {
 		$d = dgc_tm_clean_domain( $it['d'] ?? '' );
+		if ( 'w' === ( $it['t'] ?? '' ) && function_exists( 'dgc_ws_quote' ) ) {
+			$w = dgc_ws_quote( $it['s'] ?? '', $it['k'] ?? '', $it['m'] ?? 0, $it['u'] ?? 1, $d );
+			if ( ! $w ) wp_send_json( array( 'ok' => 0, 'msg' => 'Gói dịch vụ đã chọn hiện chưa mua trực tuyến được, vui lòng gửi yêu cầu tư vấn.' ) );
+			if ( 'cloud-server' !== $w['s'] && ! $d ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng nhập tên miền dùng cho ' . $w['n'] . ' (ví dụ: thuonghieu.vn).' ) );
+			$wk = 'w:' . $w['s'] . ':' . $w['k'] . ':' . $d;
+			if ( isset( $wlines[ $wk ] ) ) $wk .= ':' . count( $wlines );
+			$wlines[ $wk ] = $w;
+			continue;
+		}
 		if ( 'h' === ( $it['t'] ?? '' ) ) {
 			if ( ! $d ) wp_send_json( array( 'ok' => 0, 'msg' => 'Vui lòng nhập tên miền dùng cho hosting (ví dụ: thuonghieu.vn).' ) );
 			$h = dgc_hg_quote( $it['k'] ?? '', $it['m'] ?? 0, $d );
@@ -156,7 +165,7 @@ function dgc_tm_order_ajax() {
 		if ( ! $q ) wp_send_json( array( 'ok' => 0, 'msg' => $d . ' chưa có giá đăng ký trực tuyến, vui lòng gửi yêu cầu tư vấn.' ) );
 		$lines[ $d ] = $q; $doms[] = $d;
 	}
-	if ( ! $lines && ! $hlines ) wp_send_json( array( 'ok' => 0, 'msg' => 'Giỏ hàng đang trống.' ) );
+	if ( ! $lines && ! $hlines && ! $wlines ) wp_send_json( array( 'ok' => 0, 'msg' => 'Giỏ hàng đang trống.' ) );
 	/* Kiem tra lai con trong ngay luc tao don (khong dung ket qua cu trong trinh duyet). */
 	if ( $doms ) {
 		foreach ( $doms as $d ) delete_transient( 'dgc_tm_' . md5( $d ) );
@@ -166,6 +175,7 @@ function dgc_tm_order_ajax() {
 	}
 	/* Ten mien dang ky truoc, hosting sau (hosting can ten mien da ton tai). */
 	foreach ( $hlines as $d => $h ) { $lines[ 'h:' . $d ] = $h; $doms[] = 'hosting ' . $h['n'] . ' (' . $d . ')'; }
+	foreach ( $wlines as $wk => $w ) { $lines[ $wk ] = $w; $doms[] = $w['n'] . ( $w['d'] ? ' (' . $w['d'] . ')' : '' ); }
 
 	$sub   = array_sum( wp_list_pluck( $lines, 'amount' ) );
 	$vat   = (int) round( $sub * dgc_tm_vat_pct() / 100 );
@@ -292,6 +302,15 @@ function dgc_tm_sepay_webhook( WP_REST_Request $req ) {
 add_action( 'dgc_tm_register', 'dgc_tm_register_order' );
 function dgc_tm_register_order( $id ) {
 	if ( 'da_tt' !== get_post_meta( $id, '_tm_status', true ) ) return;
+	$manual = array();
+	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) if ( 'w' === ( $l['t'] ?? '' ) ) $manual[] = dgc_ws_line_text( $l );
+	$auto_n = count( (array) get_post_meta( $id, '_tm_lines', true ) ) - count( $manual );
+	if ( $manual && ! get_post_meta( $id, '_tm_manual_sent', true ) ) {
+		update_post_meta( $id, '_tm_manual_sent', 1 );
+		dgc_tm_log( $id, 'Chờ kích hoạt tay: ' . implode( '; ', $manual ) );
+		dgc_tm_notify_admin( $id, 'Đơn ' . get_post_meta( $id, '_tm_code', true ) . ' cần kích hoạt tay: ' . implode( ', ', $manual ) );
+	}
+	if ( ! $auto_n ) return;
 	if ( ! ( defined( 'DGC_PA_REG_ON' ) && DGC_PA_REG_ON && function_exists( 'dgc_tm_pa_register' ) ) ) {
 		dgc_tm_log( $id, 'Chờ đăng ký tay (chưa bật đăng ký tự động)' );
 		return;
@@ -302,6 +321,7 @@ function dgc_tm_register_order( $id ) {
 	$done  = get_post_meta( $id, '_tm_reg_done', true ) ?: array();
 	$fail  = array();
 	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) {
+		if ( 'w' === ( $l['t'] ?? '' ) ) continue; // kich hoat tay
 		$is_h = 'h' === ( $l['t'] ?? '' );
 		$key  = $is_h ? 'h:' . $l['d'] : $l['d'];
 		if ( in_array( $key, $done, true ) ) continue; // da dang ky o lan truoc, khong dang ky lai
@@ -317,6 +337,7 @@ function dgc_tm_register_order( $id ) {
 		dgc_tm_notify_admin( $id, 'Đơn ' . get_post_meta( $id, '_tm_code', true ) . ' đăng ký lỗi' );
 		return;
 	}
+	if ( $manual ) { dgc_tm_log( $id, 'Tên miền, hosting đã xong; còn chờ kích hoạt tay dịch vụ khác' ); return; }
 	dgc_tm_set_status( $id, 'da_dk' );
 	dgc_tm_mail_customer( $id, 'done' );
 }
@@ -324,6 +345,7 @@ function dgc_tm_register_order( $id ) {
 function dgc_tm_order_summary( $id ) {
 	$out = '';
 	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) {
+		if ( 'w' === ( $l['t'] ?? '' ) ) { $out .= '- ' . dgc_ws_line_text( $l ) . ': ' . dgc_vnd( $l['amount'] ) . "\n"; continue; }
 		if ( 'h' === ( $l['t'] ?? '' ) ) { $out .= '- Hosting ' . $l['n'] . ' cho ' . $l['d'] . ' (' . $l['m'] . ' tháng): ' . dgc_vnd( $l['amount'] ) . "\n"; continue; }
 		$out .= '- ' . $l['d'] . ' (' . $l['y'] . ' năm): ' . dgc_vnd( $l['amount'] ) . "\n";
 		if ( ! empty( $l['combo'] ) ) $out .= '  (giá combo năm đầu)' . "\n";
@@ -344,7 +366,7 @@ function dgc_tm_notify_admin( $id, $subject ) {
 		. "\nĐịa chỉ: " . ( $o['addr'] ?? '' ) . ', ' . ( $o['city'] ?? '' ) . "\nĐiện thoại: " . ( $o['phone'] ?? '' ) . "\nEmail: " . ( $o['email'] ?? '' )
 		. ( ! empty( $o['note'] ) ? "\nGhi chú: " . $o['note'] : '' )
 		. "\n\nXem đơn: " . admin_url( 'post.php?post=' . $id . '&action=edit' );
-	wp_mail( dgc( 'lead_email', get_option( 'admin_email' ) ), '[Tên miền] ' . $subject, $msg );
+	wp_mail( dgc( 'lead_email', get_option( 'admin_email' ) ), '[Đơn hàng] ' . $subject, $msg );
 }
 
 function dgc_tm_mail_customer( $id, $kind ) {
@@ -357,7 +379,7 @@ function dgc_tm_mail_customer( $id, $kind ) {
 			. "\nDịch vụ đang được đăng ký. DigicomVN sẽ gửi email xác nhận và thông tin đăng nhập khi hoàn tất, thường trong ngày làm việc.";
 	} else {
 		$has_d = false;
-		foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) if ( 'h' !== ( $l['t'] ?? '' ) ) $has_d = true;
+		foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) if ( empty( $l['t'] ) ) $has_d = true;
 		$sub = 'Đơn ' . $code . ' đã đăng ký xong - thông tin đăng nhập';
 		$msg = 'Chào ' . $o['name'] . ",\n\nDịch vụ trong đơn " . $code . " đã được đăng ký:\n" . dgc_tm_order_summary( $id )
 			. ( function_exists( 'dgc_hg_login_text' ) ? dgc_hg_login_text( $id ) : '' )

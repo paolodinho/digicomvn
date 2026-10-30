@@ -76,7 +76,11 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 					<div class="hg-price"><b style="font-size:20px">Báo giá theo hồ sơ</b></div>
 					<?php endif; ?>
 					<?php if ( $r['spec'] ) : ?><ul class="ws-spec"><?php foreach ( $r['spec'] as $s ) : ?><li><?php echo esc_html( $s ); ?></li><?php endforeach; ?></ul><?php endif; ?>
+					<?php $dgc_wsk = $dgc_ws . ':' . sanitize_title( $g . '-' . $r['goi'] ); $dgc_wsc = function_exists( 'dgc_ws_catalog' ) ? dgc_ws_catalog() : array(); if ( isset( $dgc_wsc[ $dgc_wsk ] ) ) : ?>
+					<div class="hg-buy"><button type="button" class="btn btn-primary btn-sm" data-ws-add="<?php echo esc_attr( $dgc_wsk ); ?>" data-m="<?php echo (int) array_keys( $dgc_wsc[ $dgc_wsk ]['p'] )[0]; ?>">Mua ngay</button><a class="hg-ask" href="#lien-he" data-svc="<?php echo esc_attr( $dgc_wn ); ?>" data-order="Tư vấn <?php echo esc_attr( $r['goi'] ); ?> (<?php echo esc_attr( $g ); ?>)">Cần tư vấn</a></div>
+					<?php else : ?>
 					<a class="btn btn-ghost btn-sm" href="#lien-he" data-svc="<?php echo esc_attr( $dgc_wn ); ?>" data-order="Đăng ký <?php echo esc_attr( $r['goi'] ); ?> (<?php echo esc_attr( $g ); ?>)">Chọn gói này</a>
+					<?php endif; ?>
 				</div>
 			<?php endforeach; ?>
 			</div>
@@ -115,4 +119,14 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 	</div>
 </section>
 <?php include get_template_directory() . '/inc/order-prefill.php'; ?>
+<script>
+document.addEventListener('click',function(e){
+	var b=e.target.closest('[data-ws-add]'); if(!b) return;
+	var c=[]; try{ c=JSON.parse(localStorage.getItem('dgc_tm_cart')||'[]'); }catch(x){}
+	var id=b.getAttribute('data-ws-add').split(':'), i=c.findIndex(function(x){ return x.t==='w' && x.s===id[0] && x.k===id[1] && !x.d; });
+	if(i<0) c.push({t:'w',s:id[0],k:id[1],m:+b.getAttribute('data-m'),u:1,d:''});
+	try{ localStorage.setItem('dgc_tm_cart',JSON.stringify(c)); }catch(x){}
+	location.href='<?php echo esc_js( home_url( '/thanh-toan-ten-mien/' ) ); ?>';
+});
+</script>
 <?php get_footer(); ?>

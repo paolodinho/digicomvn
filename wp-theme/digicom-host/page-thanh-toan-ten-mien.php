@@ -32,7 +32,7 @@ $dgc_bank = dgc_tm_bank();
 			<div class="tmc-qr">
 				<div class="tmc-paid"<?php echo $paid ? '' : ' hidden'; ?>>
 					<b>Đã nhận thanh toán</b>
-					<p>DigicomVN đang đăng ký tên miền và sẽ gửi email xác nhận cho bạn. Có thể đóng trang này.</p>
+					<p>DigicomVN đang đăng ký dịch vụ và sẽ gửi email xác nhận cho bạn. Có thể đóng trang này.</p>
 				</div>
 				<div class="tmc-wait"<?php echo $paid ? ' hidden' : ''; ?>>
 					<img src="<?php echo esc_url( $qr ); ?>" width="320" height="380" alt="Mã QR chuyển khoản <?php echo esc_attr( dgc_vnd( $total ) ); ?> cho đơn <?php echo esc_attr( $code ); ?>">
@@ -45,7 +45,7 @@ $dgc_bank = dgc_tm_bank();
 				<table class="tmc-sum">
 					<tbody>
 					<?php foreach ( $lines as $l ) : ?>
-						<tr><td><?php if ( 'h' === ( $l['t'] ?? '' ) ) : ?>Hosting <?php echo esc_html( $l['n'] ); ?> <small><?php echo esc_html( $l['d'] ); ?>, <?php echo (int) $l['m']; ?> tháng</small><?php else : ?><?php echo esc_html( $l['d'] ); ?> <small><?php echo (int) $l['y']; ?> năm</small><?php endif; ?><?php if ( ! empty( $l['gifts'] ) ) : ?><ul class="tmc-gifts"><?php foreach ( $l['gifts'] as $g ) echo '<li>' . esc_html( $g ) . '</li>'; ?></ul><?php endif; ?></td><td><?php echo esc_html( dgc_vnd( $l['amount'] ) ); ?></td></tr>
+						<tr><td><?php if ( 'w' === ( $l['t'] ?? '' ) ) : ?><?php echo esc_html( $l['n'] ); ?> <small><?php echo esc_html( trim( str_replace( $l['n'], '', dgc_ws_line_text( $l ) ) ) ); ?></small><?php elseif ( 'h' === ( $l['t'] ?? '' ) ) : ?>Hosting <?php echo esc_html( $l['n'] ); ?> <small><?php echo esc_html( $l['d'] ); ?>, <?php echo (int) $l['m']; ?> tháng</small><?php else : ?><?php echo esc_html( $l['d'] ); ?> <small><?php echo (int) $l['y']; ?> năm</small><?php endif; ?><?php if ( ! empty( $l['gifts'] ) ) : ?><ul class="tmc-gifts"><?php foreach ( $l['gifts'] as $g ) echo '<li>' . esc_html( $g ) . '</li>'; ?></ul><?php endif; ?></td><td><?php echo esc_html( dgc_vnd( $l['amount'] ) ); ?></td></tr>
 					<?php endforeach; ?>
 					<?php if ( $vat ) : ?><tr><td>VAT</td><td><?php echo esc_html( dgc_vnd( $vat ) ); ?></td></tr><?php endif; ?>
 					</tbody>
@@ -71,7 +71,7 @@ $dgc_bank = dgc_tm_bank();
 	}
 	$dgc_combo = dgc_tm_combo();
 	?>
-		<div class="tmc-grid" data-tmc-cart data-prices="<?php echo esc_attr( wp_json_encode( $dgc_prices ) ); ?>" data-combo="<?php echo esc_attr( wp_json_encode( $dgc_combo ?: null ) ); ?>" data-vat="<?php echo esc_attr( dgc_tm_vat_pct() ); ?>" data-hosting="<?php echo esc_attr( wp_json_encode( function_exists( 'dgc_hg_online_public' ) ? dgc_hg_online_public() : array() ) ); ?>">
+		<div class="tmc-grid" data-tmc-cart data-prices="<?php echo esc_attr( wp_json_encode( $dgc_prices ) ); ?>" data-combo="<?php echo esc_attr( wp_json_encode( $dgc_combo ?: null ) ); ?>" data-vat="<?php echo esc_attr( dgc_tm_vat_pct() ); ?>" data-hosting="<?php echo esc_attr( wp_json_encode( function_exists( 'dgc_hg_online_public' ) ? dgc_hg_online_public() : array() ) ); ?>" data-websvc="<?php echo esc_attr( wp_json_encode( function_exists( 'dgc_ws_public' ) ? dgc_ws_public() : array() ) ); ?>">
 			<div class="tmc-cart">
 				<h2>Dịch vụ đã chọn</h2>
 				<ul class="tmc-items" data-tmc-items></ul>
@@ -86,7 +86,7 @@ $dgc_bank = dgc_tm_bank();
 				<p class="tmc-note">Đăng ký nhiều năm để giữ giá ưu đãi năm đầu và tiết kiệm hơn. Năm thứ hai trở đi tính theo giá gia hạn. Tên miền được kiểm tra lại lúc tạo đơn.</p>
 			</div>
 			<form class="tmc-form" data-tmc-form novalidate>
-				<h2>Thông tin chủ thể tên miền</h2>
+				<h2>Thông tin người đăng ký dịch vụ</h2>
 				<p class="tmc-note">Theo quy định của VNNIC, thông tin chủ thể phải chính xác và trùng giấy tờ. Tên miền sẽ đứng tên chủ thể này.</p>
 				<div class="tmc-type" role="radiogroup" aria-label="Loại chủ thể">
 					<label><input type="radio" name="type" value="person" checked> Cá nhân</label>
@@ -114,7 +114,7 @@ $dgc_bank = dgc_tm_bank();
 				<label class="tmc-f"><span>Email nhận thông tin quản trị</span><input name="email" type="email" required autocomplete="email"></label>
 				<label class="tmc-f"><span>Ghi chú (không bắt buộc)</span><input name="note"></label>
 				<input type="text" name="website" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
-				<label class="tmc-agree"><input type="checkbox" name="agree" value="1" required> Tôi xác nhận thông tin chủ thể là chính xác và đồng ý để DigicomVN đăng ký tên miền theo thông tin này.</label>
+				<label class="tmc-agree"><input type="checkbox" name="agree" value="1" required> Tôi xác nhận thông tin chủ thể là chính xác và đồng ý để DigicomVN đăng ký dịch vụ theo thông tin này.</label>
 				<p class="tmc-err" data-tmc-err role="alert" hidden></p>
 				<button type="submit" class="sg-btn tmc-submit">Tạo đơn và thanh toán</button>
 			</form>
@@ -149,7 +149,7 @@ $dgc_bank = dgc_tm_bank();
 		return;
 	}
 	var box=document.querySelector('[data-tmc-cart]'); if(!box) return;
-	var prices=JSON.parse(box.dataset.prices||'{}'), hosting=JSON.parse(box.dataset.hosting||'{}'), cmb=JSON.parse(box.dataset.combo||'null'), vatPct=parseFloat(box.dataset.vat)||0;
+	var prices=JSON.parse(box.dataset.prices||'{}'), hosting=JSON.parse(box.dataset.hosting||'{}'), websvc=JSON.parse(box.dataset.websvc||'{}'), cmb=JSON.parse(box.dataset.combo||'null'), vatPct=parseFloat(box.dataset.vat)||0;
 	var list=box.querySelector('[data-tmc-items]'), form=box.querySelector('[data-tmc-form]'), err=box.querySelector('[data-tmc-err]');
 	function load(){ try{ return JSON.parse(localStorage.getItem('dgc_tm_cart')||'[]'); }catch(x){ return []; } }
 	function save(c){ try{ localStorage.setItem('dgc_tm_cart',JSON.stringify(c)); }catch(x){} }
@@ -167,19 +167,29 @@ $dgc_bank = dgc_tm_bank();
 		return {a:first+(x.y-1)*p[1], l:(cm[x.d]?p[0]:p[2])+(x.y-1)*p[1], g:p[4]||[], min:p[3]};
 	}
 	function render(){
-		var c=load().filter(function(x){ return x.t==='h' ? !!hosting[x.k] : tldOf(x.d); }); save(c);
+		var c=load().filter(function(x){ return x.t==='h' ? !!hosting[x.k] : (x.t==='w' ? !!websvc[x.s+':'+x.k] : tldOf(x.d)); }); save(c);
 		box.querySelector('[data-tmc-empty]').hidden=!!c.length; form.hidden=!c.length; box.querySelector('[data-tmc-sum]').hidden=!c.length;
 		var sub=0, saved=0, cm=comboMap(c);
 		function hostLi(x,i,c){
 			var h=hosting[x.k], ms=Object.keys(h.p); if(!h.p[x.m]){ x.m=+ms[0]; save(c); }
 			var a=h.p[x.m], l=h.l[x.m]||a; sub+=a; saved+=Math.max(0,l-a);
-			if(!x.d){ var dd=c.filter(function(y){ return y.t!=='h'; })[0]; if(dd){ x.d=dd.d; save(c); } }
+			if(!x.d){ var dd=c.filter(function(y){ return !y.t; })[0]; if(dd){ x.d=dd.d; save(c); } }
 			var opt=ms.map(function(m){ return '<option value="'+m+'"'+(m==x.m?' selected':'')+'>'+(m%12?m+' tháng':(m/12)+' năm')+'</option>'; }).join('');
 			return '<li class="tmc-host"><b>Hosting '+esc(h.n)+'</b><span>'+(l>a?'<s>'+vnd(l)+'</s>':'')+vnd(a)+'</span><select data-i="'+i+'" data-hm aria-label="Thời hạn hosting">'+opt+'</select><button type="button" data-rm="'+i+'" aria-label="Bỏ hosting khỏi giỏ">Bỏ</button>'
 				+'<label class="tmc-hd">Tên miền dùng cho hosting<input data-hd="'+i+'" value="'+esc(x.d||'')+'" placeholder="vidu.vn" autocomplete="off" spellcheck="false"></label></li>';
 		}
+		function wsLi(x,i,c){
+			var w=websvc[x.s+':'+x.k], ms=Object.keys(w.p); if(!w.p[x.m]){ x.m=+ms[0]; save(c); }
+			var u=w.per?Math.max(1,Math.min(300,+x.u||1)):1, a=w.p[x.m]*u; sub+=a;
+			if(w.nd && !x.d){ var dd=c.filter(function(y){ return !y.t; })[0]; if(dd){ x.d=dd.d; save(c); } }
+			var opt=ms.map(function(m){ return '<option value="'+m+'"'+(m==x.m?' selected':'')+'>'+(m%12?m+' tháng':(m/12)+' năm')+'</option>'; }).join('');
+			return '<li class="tmc-host"><b>'+esc(w.n)+'</b><span>'+vnd(a)+'</span><select data-i="'+i+'" data-hm aria-label="Thời hạn">'+opt+'</select><button type="button" data-rm="'+i+'" aria-label="Bỏ khỏi giỏ">Bỏ</button>'
+				+(w.per?'<label class="tmc-hd">Số người dùng<input type="number" min="1" max="300" data-wu="'+i+'" value="'+u+'"></label>':'')
+				+'<label class="tmc-hd">'+(w.nd?'Tên miền dùng cho dịch vụ':'Tên miền gắn với máy chủ (không bắt buộc)')+'<input data-hd="'+i+'" value="'+esc(x.d||'')+'" placeholder="vidu.vn" autocomplete="off" spellcheck="false"></label></li>';
+		}
 		list.innerHTML=c.map(function(x,i){
 			if(x.t==='h') return hostLi(x,i,c);
+			if(x.t==='w') return wsLi(x,i,c);
 			var q=quote(x,cm); sub+=q.a; saved+=Math.max(0,q.l-q.a); var opt='';
 			for(var y=1;y<=5;y++){ opt+='<option value="'+y+'"'+(y==x.y?' selected':'')+'>'+y+' năm</option>'; }
 			var tip=cm[x.d] ? '<em class="tmc-tip">Giá combo năm đầu</em>' : (q.min>1 && x.y<q.min ? '<em class="tmc-tip is-warn">Chọn từ '+q.min+' năm để được giá ưu đãi năm đầu</em>' : (q.l>q.a ? '<em class="tmc-tip">Tiết kiệm '+vnd(q.l-q.a)+'</em>' : ''));
@@ -192,6 +202,7 @@ $dgc_bank = dgc_tm_bank();
 		box.querySelector('[data-tmc-total]').textContent=vnd(sub+vat);
 	}
 	list.addEventListener('change',function(e){
+		var wu=e.target.closest('[data-wu]'); if(wu){ var c1=load(); c1[+wu.dataset.wu].u=Math.max(1,Math.min(300,parseInt(wu.value,10)||1)); save(c1); render(); return; }
 		var hd=e.target.closest('[data-hd]'); if(hd){ var c0=load(); c0[+hd.dataset.hd].d=hd.value.trim().toLowerCase().replace(/^https?:\/\//,'').replace(/^www\./,'').replace(/\/.*$/,''); save(c0); return; }
 		var s=e.target.closest('select'); if(!s) return; var c=load(); if(s.hasAttribute('data-hm')) c[+s.dataset.i].m=+s.value; else c[+s.dataset.i].y=+s.value; save(c); render(); });
 	list.addEventListener('click',function(e){ var b=e.target.closest('[data-rm]'); if(!b) return; var c=load(); c.splice(+b.dataset.rm,1); save(c); render(); });
