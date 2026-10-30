@@ -53,7 +53,6 @@ $dgc_check  = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" 
 		</nav>
 		<div class="sg-phero-row">
 			<div>
-				<span class="sg-eyebrow">Dịch vụ SEO</span>
 				<h1><?php the_title(); ?></h1>
 				<?php if ( has_excerpt() ) : ?><p class="sg-lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
 				<div class="sg-hero-cta">
@@ -75,22 +74,6 @@ $dgc_check  = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" 
 	</div>
 </section>
 
-<!-- CAM KET -->
-<?php if ( $dgc_points ) : ?>
-<section class="sg-sec sg-sec--tight sg-sec--cyan">
-	<div class="wrap">
-		<div class="sg-head sg-head--c">
-			<span class="sg-eyebrow">Cam kết</span>
-			<h2 class="sg-h">Làm SEO <em>minh bạch</em>, đo được bằng số liệu</h2>
-		</div>
-		<div class="sg-benefits sg-benefits--4 sg-benefits--light">
-			<?php foreach ( $dgc_points as $p ) : ?>
-				<div class="sg-card"><?php echo $dgc_check; // phpcs:ignore ?><h3><?php echo esc_html( $p[0] ); ?></h3><?php if ( ! empty( $p[1] ) ) : ?><p><?php echo esc_html( ucfirst( $p[1] ) ); ?></p><?php endif; ?></div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
-<?php endif; ?>
 
 <!-- NOI DUNG CHI TIET -->
 <section class="sg-sec">
@@ -120,8 +103,7 @@ $dgc_check  = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" 
 <section class="sg-sec sg-sec--cyan" id="faq">
 	<div class="wrap sg-head--split" style="align-items:start">
 		<div>
-			<span class="sg-eyebrow">Hỏi đáp</span>
-			<h2 class="sg-h">Câu hỏi <em>thường gặp</em></h2>
+			<h2 class="sg-h">Câu hỏi thường gặp</h2>
 			<p class="sg-lead">Chưa thấy câu trả lời bạn cần? Gọi <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:var(--sg-blue);font-weight:700"><?php echo esc_html( dgc( 'hotline' ) ); ?></a> hoặc gửi yêu cầu ở cuối trang.</p>
 		</div>
 		<div class="sg-faq">
@@ -138,8 +120,7 @@ $dgc_check  = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" 
 <section class="sg-sec">
 	<div class="wrap">
 		<div class="sg-head">
-			<span class="sg-eyebrow">Giải pháp khác</span>
-			<h2 class="sg-h">Dịch vụ SEO <em>liên quan</em></h2>
+			<h2 class="sg-h">Dịch vụ SEO liên quan</h2>
 		</div>
 		<div class="sg-related">
 			<?php foreach ( array_slice( $dgc_rel, 0, 4 ) as $s ) : ?>
@@ -159,8 +140,7 @@ $dgc_check  = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" 
 	<div class="wrap">
 		<div class="sg-contact">
 			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-1-800.webp' ); ?>')">
-				<span class="sg-eyebrow">Liên hệ</span>
-				<h2 class="sg-h">Nhận <em>audit SEO</em> miễn phí cho website của bạn</h2>
+				<h2 class="sg-h">Gửi website để nhận bản audit SEO miễn phí</h2>
 				<p>Gửi địa chỉ website và mục tiêu, DigicomVN kiểm tra hiện trạng rồi đề xuất việc nên làm trước, kèm phạm vi và chi phí.</p>
 				<p>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong><?php echo esc_html( dgc( 'hotline' ) ); ?></strong></a></p>
 			</div>

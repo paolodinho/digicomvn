@@ -57,7 +57,6 @@ $GLOBALS['dgc_promo_done'] = true;
 		</nav>
 		<div class="sg-phero-row">
 			<div>
-				<span class="sg-eyebrow"><?php echo esc_html( $dgc_group ); ?></span>
 				<h1><?php $dgc_h1 = trim( (string) get_post_meta( get_the_ID(), 'dgc_h1', true ) ); echo esc_html( $dgc_h1 !== '' ? $dgc_h1 : $svc_name ); ?></h1>
 				<?php if ( has_excerpt() ) : ?><p class="sg-lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
 				<div class="sg-hero-cta">
@@ -85,8 +84,8 @@ $GLOBALS['dgc_promo_done'] = true;
 				<p class="sg-pboard-foot">Cập nhật <?php echo esc_html( wp_date( 'd/m/Y' ) ); ?> &middot; <a href="#bang-gia">Xem đủ <?php echo (int) $dgc_h['count']; ?> <?php echo esc_html( $dgc_unit ); ?></a></p>
 			</aside>
 			<?php else : ?>
-			<aside class="sg-phero-card" aria-label="Cam kết làm việc">
-				<h2>Cam kết làm việc</h2>
+			<aside class="sg-phero-card" aria-label="Điều kiện làm việc">
+				<h2>Điều kiện làm việc</h2>
 				<dl>
 					<?php foreach ( $dgc_trust as $t ) : ?><div><dt><?php echo esc_html( $t[0] ); ?></dt><dd><?php echo esc_html( $t[1] ); ?></dd></div><?php endforeach; ?>
 				</dl>
@@ -161,8 +160,8 @@ if ( $nhom ) {
 		array( 'Đăng và báo cáo', 'Bàn giao link, ảnh chụp và số liệu sau khi đăng.' ),
 	) : array(
 		array( 'Khảo sát', 'Tìm hiểu mục tiêu, hiện trạng và yêu cầu của bạn.' ),
-		array( 'Đề xuất và báo giá', 'Lên phương án, phạm vi công việc và báo giá minh bạch.' ),
-		array( 'Triển khai', 'Thực hiện theo kế hoạch, cập nhật tiến độ thường xuyên.' ),
+		array( 'Đề xuất và báo giá', 'Gửi phương án, phạm vi công việc và báo giá để bạn duyệt.' ),
+		array( 'Triển khai', 'Làm theo kế hoạch đã duyệt, báo tiến độ sau từng bước.' ),
 		array( 'Bàn giao và hỗ trợ', 'Nghiệm thu, hướng dẫn sử dụng và hỗ trợ sau bàn giao.' ),
 	);
 ?>
@@ -170,8 +169,7 @@ if ( $nhom ) {
 <section class="sg-sec sg-sec--cyan">
 	<div class="wrap">
 		<div class="sg-head sg-head--c">
-			<span class="sg-eyebrow">Quy trình</span>
-			<h2 class="sg-h">Cách DigicomVN <em>triển khai</em></h2>
+			<h2 class="sg-h">Các bước làm việc</h2>
 		</div>
 		<ol class="sg-steps sg-steps--4">
 			<?php foreach ( $dgc_steps as $n => $st ) : ?>
@@ -187,8 +185,7 @@ if ( $nhom ) {
 <section class="sg-sec" id="faq">
 	<div class="wrap sg-head--split" style="align-items:start">
 		<div>
-			<span class="sg-eyebrow">Hỏi đáp</span>
-			<h2 class="sg-h">Câu hỏi <em>thường gặp</em></h2>
+			<h2 class="sg-h">Câu hỏi thường gặp</h2>
 			<p class="sg-lead">Chưa thấy câu trả lời bạn cần? Gọi <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:var(--sg-blue);font-weight:700"><?php echo esc_html( dgc( 'hotline' ) ); ?></a> hoặc gửi yêu cầu ở cuối trang.</p>
 		</div>
 		<div class="sg-faq">
@@ -205,8 +202,7 @@ if ( $nhom ) {
 <section class="sg-sec sg-sec--tight sg-sec--grey">
 	<div class="wrap">
 		<div class="sg-head">
-			<span class="sg-eyebrow"><?php echo esc_html( $dgc_group ); ?></span>
-			<h2 class="sg-h">Dịch vụ <em>liên quan</em></h2>
+			<h2 class="sg-h">Dịch vụ liên quan</h2>
 		</div>
 		<div class="sg-related">
 			<?php foreach ( array_slice( $dgc_rel, 0, 4 ) as $s ) : ?>
@@ -225,8 +221,7 @@ if ( $nhom ) {
 	<div class="wrap">
 		<div class="sg-contact">
 			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/agency-team-' . ( ( get_the_ID() % 6 ) + 1 ) . '-800.webp' ); ?>')">
-				<span class="sg-eyebrow">Báo giá</span>
-				<h2>Nhận tư vấn và <em>báo giá</em> <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2>
+				<h2>Nhận tư vấn và báo giá <?php echo esc_html( mb_strtolower( $svc_name ) ); ?></h2>
 				<p>Để lại thông tin, DigicomVN tư vấn phương án phù hợp và gửi báo giá chi tiết theo phạm vi công việc. Tư vấn miễn phí, không ràng buộc.</p>
 				<p>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><strong><?php echo esc_html( dgc( 'hotline' ) ); ?></strong></a></p>
 			</div>
@@ -245,7 +240,7 @@ if ( $nhom ) {
 
 <?php if ( get_the_content() ) : /* Hieu 27/10: bai kien thuc dua xuong cuoi, thu gon, bam de doc tiep */ ?>
 <section class="sg-sec sg-sec--cyan svc-knowledge"><div class="wrap">
-	<div class="sg-head"><span class="sg-eyebrow">Tìm hiểu thêm</span><h2 class="sg-h">Kiến thức về <em><?php echo esc_html( mb_strtolower( $svc_name ) ); ?></em></h2></div>
+	<div class="sg-head"><h2 class="sg-h">Kiến thức về <em><?php echo esc_html( mb_strtolower( $svc_name ) ); ?></em></h2></div>
 	<div class="page-content sg-article svc-body is-clamped" id="svc-knowledge-body"><?php the_content(); ?></div>
 	<div class="svc-knowledge-more"><button type="button" class="btn btn-ghost" data-knowledge-toggle aria-controls="svc-knowledge-body" aria-expanded="false">Đọc toàn bộ hướng dẫn</button></div>
 </div></section>

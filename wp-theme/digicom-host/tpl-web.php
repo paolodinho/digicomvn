@@ -16,7 +16,6 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 <section class="sg-phero sg-phero--solo">
 	<div class="wrap">
 		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <a href="<?php echo esc_url( home_url( '/thiet-ke-website/' ) ); ?>">Website</a> / <span><?php echo esc_html( $dgc_wn ); ?></span></nav>
-		<span class="sg-eyebrow"><?php echo esc_html( $dgc_wc['eyebrow'] ?? 'Website' ); ?></span>
 		<h1><?php echo esc_html( get_the_title() ); ?></h1>
 		<?php if ( ! empty( $dgc_wc['lead'] ) ) : ?><p class="sg-lead"><?php echo esc_html( $dgc_wc['lead'] ); ?></p><?php endif; ?>
 		<div class="sg-hero-cta">

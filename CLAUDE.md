@@ -51,6 +51,7 @@ danh sach dau bao that, M5 QA + demo).
 | `.claude/rules/gsc-sitemap-submit.md` | Auto-submit sitemap len Google Search Console khi co bai moi |
 | `.claude/rules/mobile-responsive-content.md` | **Bai viet khong duoc tran/vo tren mobile - QA bang tools/mobile-overflow-check.py** |
 | `.claude/rules/lam-sau-co-trong-diem.md` | **Trang chu + landing: lam sau, co trong diem, khong day dac** |
+| `.claude/rules/chong-ai-slop.md` | **Dau hieu AI lam (giao dien + cau chu) can tranh, nguon research 30/10** |
 | `.claude/rules/leads-sheet-sync.md` | Khach dang ky form tu dong vao Google Sheet (dung chung service account GSC) |
 
 ## 7. File quan trong

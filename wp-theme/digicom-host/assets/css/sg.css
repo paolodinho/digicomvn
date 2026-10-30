@@ -73,20 +73,18 @@ h1,h2,h3,h4{font-family:var(--font-body);letter-spacing:-.01em}
 .sg-sec--cyan{background:var(--sg-cyan)}
 .sg-sec--grey{background:var(--sg-grey)}
 .sg-band{background:var(--sg-grad);color:#fff;position:relative;overflow:hidden}
-.sg-band:before{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border-radius:50%;
-  border:70px solid rgba(255,255,255,.05);pointer-events:none}
-.sg-band:after{content:"";position:absolute;left:-120px;bottom:-200px;width:420px;height:420px;border-radius:50%;
-  background:radial-gradient(circle,rgba(7,239,156,.16),transparent 70%);pointer-events:none}
+
+
 .sg-band .wrap{position:relative;z-index:1}
 .sg-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;
   text-transform:uppercase;color:var(--sg-blue);margin-bottom:14px}
 .sg-eyebrow:before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
 .sg-band .sg-eyebrow,.sg-hero .sg-eyebrow,.sg-phero .sg-eyebrow,.sg-contact-media .sg-eyebrow{color:var(--sg-mint)}
-.sg-h{font-size:clamp(26px,3.3vw,38px);line-height:1.22;font-weight:800;text-transform:uppercase;letter-spacing:-.005em;
+.sg-h{font-size:clamp(26px,3.3vw,38px);line-height:1.22;font-weight:800;letter-spacing:-.005em;
   color:var(--sg-ink);margin:0 0 18px;text-wrap:balance}
-.sg-h em{font-style:normal;color:var(--sg-blue)}
+.sg-h em{font-style:normal;color:inherit}
 .sg-band .sg-h{color:#fff}
-.sg-band .sg-h em{color:var(--sg-mint)}
+.sg-band .sg-h em{color:inherit}
 .sg-lead{font-size:17.5px;line-height:1.7;color:var(--sg-soft);max-width:860px}
 .sg-band .sg-lead{color:#DCE6FF}
 .sg-head{margin-bottom:46px}
@@ -97,17 +95,15 @@ h1,h2,h3,h4{font-family:var(--font-body);letter-spacing:-.01em}
 
 /* ---------- Hero trang chu ---------- */
 .sg-hero{background:var(--sg-grad);color:#fff;position:relative;overflow:hidden;padding:84px 0 0}
-.sg-hero:before{content:"";position:absolute;inset:0;
-  background-image:radial-gradient(rgba(255,255,255,.10) 1px,transparent 1px);background-size:22px 22px;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 60%);mask-image:linear-gradient(90deg,transparent 0,#000 60%)}
+
 .sg-hero-row{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center;position:relative;z-index:1}
-.sg-hero h1{color:#fff;font-size:clamp(30px,4.1vw,52px);line-height:1.14;font-weight:800;text-transform:uppercase;margin:0 0 20px;letter-spacing:-.01em}
-.sg-hero h1 em{font-style:normal;color:var(--sg-mint)}
+.sg-hero h1{color:#fff;font-size:clamp(30px,4.1vw,52px);line-height:1.14;font-weight:800;margin:0 0 20px;letter-spacing:-.01em}
+.sg-hero h1 em{font-style:normal;color:inherit}
 .sg-hero .sg-lead{color:#DCE6FF;font-size:18px;margin-bottom:30px}
 .sg-hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:56px}
 .sg-hero-media{position:relative;align-self:end}
 .sg-hero-media img{width:100%;border-radius:22px 22px 0 0;box-shadow:var(--sg-sh-2);aspect-ratio:4/3;object-fit:cover}
-.sg-hero-media:before{content:"";position:absolute;left:-26px;top:34px;width:90px;height:90px;border-radius:18px;background:var(--sg-mint);transform:rotate(-8deg);z-index:-1}
+
 .sg-float{position:absolute;left:-34px;bottom:34px;background:#fff;color:var(--sg-ink);border-radius:var(--sg-r);
   padding:16px 18px;box-shadow:var(--sg-sh-2);max-width:250px;font-size:14px;line-height:1.45}
 .sg-float b{display:block;font-size:26px;line-height:1.1;color:var(--sg-blue);margin-bottom:4px}
@@ -120,8 +116,8 @@ h1,h2,h3,h4{font-family:var(--font-body);letter-spacing:-.01em}
 
 /* ---------- Ve chung toi: chu + anh co khoi xanh phia sau ---------- */
 .sg-about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
-.sg-about-media{position:relative;padding:0 26px 26px 0}
-.sg-about-media:before{content:"";position:absolute;right:0;bottom:0;width:78%;height:82%;border-radius:22px;background:var(--sg-grad)}
+.sg-about-media{position:relative}
+
 .sg-about-media img{position:relative;border-radius:18px;box-shadow:var(--sg-sh-2);aspect-ratio:3/2;object-fit:cover;width:100%}
 .sg-checks{list-style:none;margin:22px 0 30px;padding:0;display:grid;gap:12px}
 .sg-checks li{position:relative;padding-left:34px;color:var(--sg-soft);line-height:1.6}
@@ -148,7 +144,7 @@ a.sg-card:hover .sg-more:after{transform:translateX(4px)}
 /* Luoi giai phap SEO: 1 the noi bat cao + 6 the */
 .sg-sol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .sg-sol .sg-card--feat{grid-row:span 2;background:var(--sg-grad);border:0;color:#fff;padding:36px 32px;overflow:hidden}
-.sg-sol .sg-card--feat:after{content:"";position:absolute;right:-70px;bottom:-70px;width:220px;height:220px;border-radius:50%;border:40px solid rgba(255,255,255,.07)}
+
 .sg-card--feat h3{color:#fff;font-size:24px}
 .sg-card--feat p{color:#DCE6FF}
 .sg-card--feat .sg-ico{background:rgba(255,255,255,.14);color:var(--sg-mint)}
@@ -169,14 +165,13 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-eq .sg-card p{font-size:14.5px;margin:0}
 
 /* The danh so 01..06 */
-.sg-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:sgs;list-style:none;margin:0;padding:0}
-.sg-steps>li{position:relative;border-radius:var(--sg-r);padding:28px 26px 26px;background:var(--sg-card);border:1px solid var(--sg-line);box-shadow:var(--sg-sh)}
-.sg-num{display:block;font-size:44px;line-height:1;font-weight:800;color:var(--sg-mint);margin-bottom:14px;
-  -webkit-text-stroke:1.5px #05C982;letter-spacing:-.02em}
+.sg-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;counter-reset:sgs;list-style:none;margin:0;padding:0}
+.sg-steps>li{position:relative;padding:22px 0 20px 56px;border-top:1px solid var(--sg-line)}
+.sg-num{position:absolute;left:0;top:22px;font-size:20px;line-height:1.3;font-weight:800;color:var(--sg-blue)}
 .sg-steps h3{font-size:19px;margin:0 0 8px;color:var(--sg-ink);font-weight:800}
 .sg-steps p{margin:0;color:var(--sg-soft);font-size:15px;line-height:1.65}
 .sg-steps .sg-out{display:block;margin-top:12px;padding-top:12px;border-top:1px dashed var(--sg-line);font-size:14px;color:var(--sg-blue);font-weight:600}
-.sg-band .sg-steps>li{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16);box-shadow:none}
+.sg-band .sg-steps>li{border-color:rgba(255,255,255,.2)}
 .sg-band .sg-steps h3{color:#fff}
 .sg-band .sg-steps p{color:#DCE6FF}
 .sg-band .sg-num{-webkit-text-stroke:0}
@@ -208,7 +203,7 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-others--light a{color:var(--sg-blue);border-bottom-color:rgba(13,83,240,.3)}
 .sg-others--light a:hover{color:var(--sg-blue-2);border-color:var(--sg-blue-2)}
 .sg-home #danh-gia{background:var(--sg-cyan)}
-.sg-home #danh-gia h2{text-transform:uppercase;font-weight:800}
+.sg-home #danh-gia h2{font-weight:800}
 .sg-home #danh-gia .eyebrow{color:var(--sg-blue)}
 
 /* Logo khach hang */
@@ -252,13 +247,13 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-contact-media{position:relative;background:var(--sg-blue-2) center/cover no-repeat;color:#fff;padding:44px 40px;display:flex;flex-direction:column;justify-content:flex-end;min-height:520px}
 .sg-contact-media:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,53,172,.35) 0%,rgba(0,40,140,.92) 70%)}
 .sg-contact-media>*{position:relative}
-.sg-contact-media h2{color:#fff;font-size:clamp(24px,2.6vw,32px);text-transform:uppercase;font-weight:800;line-height:1.25}
+.sg-contact-media h2{color:#fff;font-size:clamp(24px,2.6vw,32px);font-weight:800;line-height:1.25}
 .sg-contact-media h2 em{font-style:normal;color:var(--sg-mint)}
 .sg-contact-media p{color:#DCE6FF}
 .sg-contact-media ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
 .sg-contact-media a{color:#fff;font-weight:700}
 .sg-contact-form .form-card{box-shadow:none;border:0;border-radius:0;margin:0;padding:40px;background:transparent}
-.sg-contact-form .form-card h3{font-size:22px;text-transform:uppercase;font-weight:800}
+.sg-contact-form .form-card h3{font-size:22px;font-weight:800}
 .sg-contact-form .form-card button[type=submit],.sg-contact-form .form-card .btn-primary{border-radius:999px;background:var(--sg-blue)}
 
 /* Footer */
@@ -275,7 +270,7 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-crumb{font-size:13.5px;color:#B9CCFF;margin-bottom:18px}
 .sg-crumb a{color:#fff}
 .sg-phero-row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:center}
-.sg-phero h1{color:#fff;font-size:clamp(28px,3.6vw,46px);line-height:1.18;text-transform:uppercase;font-weight:800;margin:0 0 18px}
+.sg-phero h1{color:#fff;font-size:clamp(28px,3.6vw,46px);line-height:1.18;font-weight:800;margin:0 0 18px}
 .sg-phero h1 em{font-style:normal;color:var(--sg-mint)}
 .sg-phero .sg-lead{color:#DCE6FF;margin-bottom:28px}
 .sg-phero-card{background:#fff;color:var(--sg-ink);border-radius:var(--sg-r);padding:26px 26px 22px;box-shadow:var(--sg-sh-2)}
@@ -292,7 +287,7 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-benefits .sg-card p{color:#DCE6FF;margin:0}
 .sg-benefits .sg-ico{background:rgba(7,239,156,.14);color:var(--sg-mint)}
 .sg-pk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-.sg-pk .sg-card h3{font-size:22px;text-transform:uppercase}
+.sg-pk .sg-card h3{font-size:22px}
 .sg-pk ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:10px}
 .sg-pk li{position:relative;padding-left:28px;color:var(--sg-soft);font-size:15.5px;line-height:1.55}
 .sg-pk li:before{content:"";position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:rgba(13,83,240,.1) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230D53F0' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l5 5 9-10'/></svg>") center/11px no-repeat}
@@ -331,7 +326,7 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-toc a:before{content:counter(toc,decimal-leading-zero);color:var(--sg-blue);font-weight:700;font-size:13px}
 .sg-toc a:hover,.sg-toc a:focus-visible{color:var(--sg-blue)}
 .sg-aside-cta{background:var(--sg-grad);color:#fff;border-radius:var(--sg-r);padding:26px 24px}
-.sg-aside-h{font-size:20px;font-weight:800;text-transform:uppercase;margin:0 0 8px;color:#fff}
+.sg-aside-h{font-size:20px;font-weight:800;margin:0 0 8px;color:#fff}
 .sg-aside-cta p{color:#DCE6FF;font-size:14.5px;line-height:1.6;margin:0 0 18px}
 .sg-aside-cta .sg-btn{width:100%}
 .sg-aside-tel{display:block;margin-top:12px;color:#fff;font-size:14px;font-weight:600;text-align:center}
@@ -354,7 +349,7 @@ a.sg-card--feat:hover{border-color:transparent}
   .sg-hero{padding-top:52px}
   .sg-hero-row,.sg-about,.sg-phero-row,.sg-head--split,.sg-svc-form{grid-template-columns:minmax(0,1fr);gap:34px}
   .sg-float{left:12px;bottom:18px}
-  .sg-hero-media:before{left:-8px}
+  
   .sg-stats{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:var(--sg-r) var(--sg-r) 0 0}
   .sg-stat{border-left:0;border-top:1px solid var(--sg-line)}
   .sg-stat:nth-child(-n+2){border-top:0}
@@ -483,7 +478,7 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-inc .sec-tight{padding:72px 0}
 .sg-inc .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sg-blue);background:none;padding:0;border:0}
 .sg-inc .eyebrow:before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
-.sg-inc h2{font-size:clamp(24px,3vw,36px);line-height:1.22;font-weight:800;text-transform:uppercase;color:var(--sg-ink);text-wrap:balance}
+.sg-inc h2{font-size:clamp(24px,3vw,36px);line-height:1.22;font-weight:800;color:var(--sg-ink);text-wrap:balance}
 .sg-inc .price-table-cpt,.sg-inc .grid-wrap{border-radius:var(--sg-r)}
 .svc-knowledge .sg-article{max-width:860px}
 @media (max-width:1100px){.sg-steps--4{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -498,7 +493,7 @@ a.sg-card--feat:hover{border-color:transparent}
 .sg-legacy .sec#bang-gia{background:var(--sg-grey)!important}
 .sg-legacy .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sg-blue);background:none;padding:0;border:0}
 .sg-legacy .eyebrow:before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
-.sg-legacy main h2,.sg-legacy .sec h2{font-size:clamp(24px,3vw,36px);line-height:1.22;font-weight:800;text-transform:uppercase;color:var(--sg-ink);text-wrap:balance}
+.sg-legacy main h2,.sg-legacy .sec h2{font-size:clamp(24px,3vw,36px);line-height:1.22;font-weight:800;color:var(--sg-ink);text-wrap:balance}
 .sg-legacy .sg-phero .tm-search,.sg-legacy .sg-phero form{margin-top:8px}
 @media (max-width:640px){.sg-legacy .sec{padding:56px 0}}
 /* Huong dan dat hang (inc/order-guide.php) - so dac trong o tron, khong dung so vien rong (Hieu 28/10) */

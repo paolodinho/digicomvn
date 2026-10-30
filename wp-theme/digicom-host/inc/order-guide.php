@@ -46,7 +46,6 @@ if ( ! empty( $dgc_media ) ) {
 <section class="sg-sec" id="huong-dan-dat">
 	<div class="wrap">
 		<div class="sg-head">
-			<span class="sg-eyebrow">Hướng dẫn đặt hàng</span>
 			<h2 class="sg-h">Đặt <?php echo esc_html( $dgc_og_ctx ?: 'dịch vụ' ); ?> tại DigicomVN thế&nbsp;nào?</h2>
 			<p class="sg-lead">Bốn bước, không cần hợp đồng dài dòng. Bạn theo dõi được tiến độ ở từng bước.</p>
 		</div>

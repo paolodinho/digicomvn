@@ -28,7 +28,6 @@ $dgc_svg = function ( $d ) {
 	<div class="wrap">
 		<div class="sg-hero-row">
 			<div>
-				<span class="sg-eyebrow"><?php echo esc_html( dgc( 'hero_kicker' ) ); ?></span>
 				<h1><?php echo dgc_em( dgc( 'hero_title' ) ); // phpcs:ignore ?></h1>
 				<p class="sg-lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 				<div class="sg-hero-cta">
@@ -41,18 +40,9 @@ $dgc_svg = function ( $d ) {
 					src="<?php echo esc_url( $dgc_img . 'hero-team-1280.webp' ); ?>"
 					srcset="<?php echo esc_url( $dgc_img . 'hero-team-640.webp' ); ?> 640w, <?php echo esc_url( $dgc_img . 'hero-team-960.webp' ); ?> 960w, <?php echo esc_url( $dgc_img . 'hero-team-1280.webp' ); ?> 1280w"
 					sizes="(max-width: 900px) 100vw, 42vw" width="1280" height="767"
-					alt="Đội ngũ DigicomVN trao đổi kế hoạch SEO tại văn phòng" fetchpriority="high">
-				<div class="sg-float"><b>6 hạng mục</b>mỗi dự án SEO đều có đầu ra bàn giao kiểm tra được</div>
+					alt="Nhóm làm việc trao đổi kế hoạch bên bàn họp" fetchpriority="high">
 			</div>
 		</div>
-		<?php $dgc_stats = array_slice( array_filter( dgc_lines( 'hero_stats' ), fn( $st ) => ! empty( $st[0] ) ), 0, 5 ); ?>
-		<?php if ( $dgc_stats ) : ?>
-		<div class="sg-stats">
-			<?php foreach ( $dgc_stats as $st ) : ?>
-				<div class="sg-stat"><b><?php echo esc_html( $st[0] ); ?></b><?php echo esc_html( $st[1] ?? '' ); ?></div>
-			<?php endforeach; ?>
-		</div>
-		<?php endif; ?>
 	</div>
 </section>
 
@@ -62,12 +52,11 @@ $dgc_svg = function ( $d ) {
 <section class="sg-sec" id="ve-digicom">
 	<div class="wrap sg-about">
 		<div>
-			<span class="sg-eyebrow">Về DigicomVN</span>
 			<h2 class="sg-h"><?php echo dgc_em( dgc( 'home_about_title' ) ); // phpcs:ignore ?></h2>
 			<p class="sg-lead"><?php echo esc_html( dgc( 'home_about_text' ) ); ?></p>
 			<ul class="sg-checks">
 				<?php foreach ( dgc_lines( 'home_about_points' ) as $pt ) : if ( empty( $pt[0] ) ) continue; ?>
-					<li><b><?php echo esc_html( $pt[0] ); ?></b><?php echo ! empty( $pt[1] ) ? ' ' . esc_html( $pt[1] ) : ''; ?></li>
+					<li><?php echo esc_html( $pt[0] ); ?><?php echo ! empty( $pt[1] ) ? ' ' . esc_html( $pt[1] ) : ''; ?></li>
 				<?php endforeach; ?>
 			</ul>
 			<a class="sg-btn sg-btn--ghost" href="<?php echo esc_url( home_url( '/ve-digicom/' ) ); ?>"><?php echo dgc_arrow(); // phpcs:ignore ?>Tìm hiểu về DigicomVN</a>
@@ -91,8 +80,7 @@ foreach ( dgc_lines( 'home_solutions' ) as $s ) {
 	<div class="wrap">
 		<div class="sg-head sg-head--split">
 			<div>
-				<span class="sg-eyebrow">Giải pháp SEO</span>
-				<h2 class="sg-h">Giải pháp SEO <em>toàn diện</em> cho từng mục tiêu</h2>
+				<h2 class="sg-h">Các dịch vụ SEO</h2>
 			</div>
 			<p class="sg-lead">Website mới cần nền tảng, website đã có lượt truy cập cần đúng nhóm từ mang doanh thu. Chọn hình thức phù hợp, DigicomVN audit miễn phí rồi đề xuất phạm vi cụ thể.</p>
 		</div>
@@ -100,7 +88,6 @@ foreach ( dgc_lines( 'home_solutions' ) as $s ) {
 			<?php foreach ( $dgc_sols as $i => $s ) : ?>
 				<?php if ( 0 === $i ) : ?>
 					<a class="sg-card sg-card--feat" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
-						<?php echo $dgc_svg( $dgc_ico[0] ); // phpcs:ignore ?>
 						<h3><?php echo esc_html( $s[0] ); ?></h3>
 						<p><?php echo esc_html( $s[2] ?? '' ); ?></p>
 						<ul><li>Audit kỹ thuật</li><li>Nghiên cứu từ khoá</li><li>Tối ưu onpage</li><li>Nội dung theo cụm chủ đề</li><li>Off-page từ báo và site cùng ngành</li><li>Báo cáo tháng từ Search Console</li></ul>
@@ -108,7 +95,6 @@ foreach ( dgc_lines( 'home_solutions' ) as $s ) {
 					</a>
 				<?php else : ?>
 					<a class="sg-card" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
-						<?php echo $dgc_svg( $dgc_ico[ $i % count( $dgc_ico ) ] ); // phpcs:ignore ?>
 						<h3><?php echo esc_html( $s[0] ); ?></h3>
 						<p><?php echo esc_html( $s[2] ?? '' ); ?></p>
 						<span class="sg-more">Xem chi tiết</span>
@@ -120,37 +106,16 @@ foreach ( dgc_lines( 'home_solutions' ) as $s ) {
 </section>
 <?php endif; ?>
 
-<!-- 04. PHUONG TRINH SEO -->
-<?php $dgc_eq = array_values( array_filter( dgc_lines( 'home_formula' ), fn( $x ) => ! empty( $x[0] ) ) ); ?>
-<?php if ( count( $dgc_eq ) >= 4 ) : ?>
-<section class="sg-sec">
-	<div class="wrap">
-		<div class="sg-head sg-head--c">
-			<span class="sg-eyebrow">Cách DigicomVN làm SEO</span>
-			<h2 class="sg-h">Thứ hạng bền đến từ <em>ba trụ cột</em> làm cùng lúc</h2>
-		</div>
-		<div class="sg-eq">
-			<div class="sg-eq-total"><b><?php echo esc_html( $dgc_eq[0][0] ); ?></b><span><?php echo esc_html( $dgc_eq[0][1] ?? '' ); ?></span></div>
-			<?php for ( $k = 1; $k <= 3; $k++ ) : ?>
-				<div class="sg-eq-op" aria-hidden="true"><?php echo 1 === $k ? '=' : '+'; ?></div>
-				<div class="sg-card"><h3><?php echo esc_html( $dgc_eq[ $k ][0] ); ?></h3><p><?php echo esc_html( $dgc_eq[ $k ][1] ?? '' ); ?></p></div>
-			<?php endfor; ?>
-		</div>
-	</div>
-</section>
-<?php endif; ?>
-
 <!-- 05. QUY TRINH -->
 <?php $dgc_proc = array_filter( dgc_lines( 'home_process' ), fn( $x ) => ! empty( $x[0] ) ); ?>
 <?php if ( $dgc_proc ) : ?>
-<section class="sg-sec sg-band" id="quy-trinh">
+<section class="sg-sec" id="quy-trinh">
 	<div class="wrap">
 		<div class="sg-head sg-head--split">
 			<div>
-				<span class="sg-eyebrow">Quy trình</span>
-				<h2 class="sg-h">Quy trình SEO <em><?php echo esc_html( count( $dgc_proc ) ); ?> bước</em> minh bạch</h2>
+				<h2 class="sg-h">Các bước trong một dự án SEO</h2>
 			</div>
-			<p class="sg-lead">Mỗi bước kết thúc bằng một tài liệu doanh nghiệp duyệt trước khi chuyển sang bước sau. Không có việc nào làm mà doanh nghiệp không biết.</p>
+			<p class="sg-lead">Mỗi bước kết thúc bằng một tài liệu để doanh nghiệp duyệt trước khi sang bước sau.</p>
 		</div>
 		<ol class="sg-steps">
 			<?php $n = 0; foreach ( $dgc_proc as $p ) : $n++; ?>
@@ -176,10 +141,9 @@ $dgc_others = array(
 	<div class="wrap">
 		<div class="sg-head sg-head--split">
 			<div>
-				<span class="sg-eyebrow">Dịch vụ hỗ trợ SEO</span>
-				<h2 class="sg-h">Truyền thông và hạ tầng <em>đi cùng SEO</em></h2>
+				<h2 class="sg-h">Booking báo, tên miền, hosting và phần mềm SEO</h2>
 			</div>
-			<p class="sg-lead">Ba nhóm dịch vụ khách SEO hay cần thêm. Giá niêm yết công khai, đặt riêng hoặc gộp vào dự án SEO đều được.</p>
+			<p class="sg-lead">Khách làm SEO thường đặt thêm các dịch vụ này. Giá ghi trên từng trang, có thể đặt riêng hoặc gộp vào hợp đồng SEO.</p>
 		</div>
 		<div class="sg-side">
 			<a class="sg-card" href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>">
@@ -227,8 +191,7 @@ $dgc_others = array(
 <section class="sg-sec sg-sec--tight">
 	<div class="wrap">
 		<div class="sg-head sg-head--c">
-			<span class="sg-eyebrow">Khách hàng &amp; đối tác</span>
-			<h2 class="sg-h">Thương hiệu đã <em>tin tưởng</em> DigicomVN</h2>
+			<h2 class="sg-h">Khách hàng của DigicomVN</h2>
 		</div>
 		<div class="sg-logos">
 			<?php foreach ( array_slice( $dgc_clients, 0, 18 ) as $c ) : $c_file = trim( $c[1] ?? '' ); ?>
@@ -246,8 +209,7 @@ $dgc_others = array(
 <section class="sg-sec sg-sec--tight sg-sec--cyan">
 	<div class="wrap">
 		<div class="sg-head sg-head--c">
-			<span class="sg-eyebrow">Báo chí</span>
-			<h2 class="sg-h">Báo chí <em>nói về</em> DigicomVN</h2>
+			<h2 class="sg-h">Báo chí nói về DigicomVN</h2>
 		</div>
 		<div class="sg-press">
 			<?php foreach ( $dgc_mentions as $m ) :
@@ -270,8 +232,7 @@ $dgc_others = array(
 <section class="sg-sec" id="faq">
 	<div class="wrap sg-head--split" style="align-items:start">
 		<div>
-			<span class="sg-eyebrow">Hỏi đáp</span>
-			<h2 class="sg-h">Câu hỏi <em>thường gặp</em></h2>
+			<h2 class="sg-h">Câu hỏi thường gặp</h2>
 			<p class="sg-lead">Chưa thấy câu trả lời bạn cần? Gọi <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="color:var(--sg-blue);font-weight:700"><?php echo esc_html( dgc( 'hotline' ) ); ?></a> hoặc gửi yêu cầu ở cuối trang.</p>
 			<?php $dgc_faq_pg = get_page_by_path( 'cau-hoi-thuong-gap' ); if ( $dgc_faq_pg && 'publish' === $dgc_faq_pg->post_status ) : ?>
 				<a class="sg-btn sg-btn--ghost" href="<?php echo esc_url( get_permalink( $dgc_faq_pg ) ); ?>"><?php echo dgc_arrow(); ?>Xem tất cả câu hỏi</a>
@@ -294,8 +255,7 @@ if ( $news->have_posts() ) : ?>
 	<div class="wrap">
 		<div class="sg-head sg-head--split">
 			<div>
-				<span class="sg-eyebrow">Kiến thức</span>
-				<h2 class="sg-h">Kiến thức <em>SEO và truyền thông</em></h2>
+				<h2 class="sg-h">Bài viết mới trên blog</h2>
 			</div>
 			<p class="sg-lead"><a class="sg-btn sg-btn--ghost" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>"><?php echo dgc_arrow(); // phpcs:ignore ?>Xem tất cả bài viết</a></p>
 		</div>
@@ -327,8 +287,7 @@ if ( $news->have_posts() ) : ?>
 	<div class="wrap">
 		<div class="sg-contact">
 			<div class="sg-contact-media" style="background-image:url('<?php echo esc_url( $dgc_img . 'agency-team-1-800.webp' ); ?>')">
-				<span class="sg-eyebrow" style="color:var(--sg-mint)">Liên hệ</span>
-				<h2>Nhận <em>audit SEO</em> miễn phí cho website của bạn</h2>
+				<h2>Gửi website để nhận bản audit SEO miễn phí</h2>
 				<p>Gửi địa chỉ website và mục tiêu, DigicomVN kiểm tra hiện trạng rồi đề xuất việc nên làm trước, kèm phạm vi và chi phí.</p>
 				<ul>
 					<li>Hotline: <a href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo esc_html( dgc( 'hotline' ) ); ?></a></li>

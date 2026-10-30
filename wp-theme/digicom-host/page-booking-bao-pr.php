@@ -39,7 +39,6 @@ $bbp_ic = function ( $p ) {
 		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <span><?php echo esc_html( $svc_name ); ?></span></nav>
 		<div class="sg-phero-row">
 			<div>
-				<span class="sg-eyebrow">Booking báo &amp; truyền thông</span>
 				<h1>Booking báo chí: đăng bài PR trên báo điện tử uy tín, bảng giá công khai từng đầu&nbsp;báo</h1>
 				<p class="sg-lead">DigicomVN nhận booking báo chí trọn gói: tư vấn chọn đầu báo theo mục tiêu, viết bài PR đúng văn phong toà soạn, đăng và bàn giao link sau khi bài lên. Giá niêm yết theo từng chuyên mục, không giấu giá.</p>
 				<div class="sg-hero-cta">

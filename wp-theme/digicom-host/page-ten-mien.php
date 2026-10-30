@@ -35,7 +35,6 @@ $dgc_tm_table = function ( $rows, $caption ) {
 <section class="sg-phero sg-phero--solo">
 	<div class="wrap">
 		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <span>Tên miền</span></nav>
-		<span class="sg-eyebrow">Tên miền</span>
 		<h1><?php echo esc_html( get_the_title() ?: 'Đăng ký tên miền' ); ?></h1>
 		<p class="sg-lead">Kiểm tra tên miền còn trống, đăng ký .vn, .com.vn, .com và hơn 40 đuôi khác. DigicomVN tư vấn chọn tên miền phù hợp thương hiệu và kế hoạch SEO, hỗ trợ trỏ DNS, gắn hosting và chuyển tên miền về quản lý.</p>
 		<div class="search-card tm-search" style="margin-top:24px">

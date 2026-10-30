@@ -6,9 +6,8 @@
 	<section class="footer-illus">
 		<div class="wrap footer-illus-in">
 			<div class="footer-illus-text">
-				<span class="eyebrow">Đội ngũ</span>
-				<h2>Đội ngũ đứng sau DigicomVN</h2>
-				<p>Con người thật, làm việc thật - phía sau mỗi báo cáo và mỗi kết quả bàn giao.</p>
+				<h2>Đội ngũ DigicomVN</h2>
+				<p>Văn phòng tại khu đô thị Gamuda Garden, Hoàng Mai, Hà Nội. Làm việc <?php echo esc_html( dgc( 'working_hours' ) ); ?>.</p>
 			</div>
 			<div class="footer-illus-img">
 				<img

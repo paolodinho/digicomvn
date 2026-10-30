@@ -25,7 +25,6 @@ if ( ! $dgc_bpo_rows ) return;
 <section class="sg-sec" id="bang-gia">
 	<div class="wrap">
 		<div class="sg-head">
-			<span class="sg-eyebrow">Báo giá backlink</span>
 			<h2 class="sg-h">Báo giá backlink theo từng loại</h2>
 			<p class="sg-lead">Giá thấp nhất đang niêm yết cho mỗi loại backlink, cập nhật <?php echo esc_html( wp_date( 'd/m/Y' ) ); ?>. Bấm vào từng loại để xem giá chi tiết theo từng site, báo.</p>
 		</div>

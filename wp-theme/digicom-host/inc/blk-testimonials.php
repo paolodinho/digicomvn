@@ -11,7 +11,6 @@ if ( ! $dgc_tms ) return;
 <section class="sec" id="danh-gia">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:26px">
-			<span class="eyebrow">Khách hàng</span>
 			<h2>Khách hàng nói về DigicomVN</h2>
 		</div>
 		<div class="tm-carousel owl-carousel">
@@ -21,7 +20,6 @@ if ( ! $dgc_tms ) return;
 				$who_clean = preg_replace( '/^(Ông|Bà|Anh|Chị|Cô|Chú|Mr|Ms|Mrs)\.?\s+/u', '', $who );
 				$initial = function_exists( 'mb_substr' ) ? mb_strtoupper( mb_substr( $who_clean, 0, 1 ) ) : strtoupper( substr( $who_clean, 0, 1 ) ); ?>
 				<figure class="tm">
-					<div class="tm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
 					<blockquote><?php echo esc_html( $quote ); ?></blockquote>
 					<figcaption>
 						<span class="tm-avatar<?php echo $photo ? ' tm-avatar--img' : ''; ?>" aria-hidden="true"><?php
