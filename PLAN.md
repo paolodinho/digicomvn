@@ -2,11 +2,11 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: Bỏ văn AI + thẻ cam kết ở trang dịch vụ - xong 30/10
-- Đã xong: 6 trang website + booking-bao-pr, mua-textlink, guest-post, dich-vu-backlink đã viết lại và deploy live, QA 375/1440 không tràn
-- Tiếp theo: CHỜ Hiếu - xem lại câu chữ trên 10 trang; còn mở: ảnh đội ngũ thật, bản ghi DMARC, đo SERP từ khoá web
-- File liên quan: wp-theme/digicom-host/inc/svc-story.php, inc/web-svc.php, tpl-service.php, page-booking-bao-pr.php
-- Cập nhật lúc: 2026-10-30 11:13
+- Task: Rà toàn site bỏ dấu hiệu AI (giao diện + câu chữ) - xong 30/10
+- Đã xong: theme (tiêu đề hết viết hoa, bỏ eyebrow lặp, dải số liệu, huy hiệu nổi, công thức SEO, 5 sao; trang chủ + /ve-digicom/ viết lại) deploy DGC_VER 3.23.0, commit 3ddbd00. 129/176 bài blog sửa câu đối/sáo/emoji trên live (backup ~/Claude-Workspace/_backups/routines/2026-10-30/de-slop-posts/). Quét lại: không chỉ...mà còn 51->1, không phải...mà là 90->17, emoji 71->6, từ sáo 463->293.
+- Tiếp theo: CHỜ Hiếu - (1) 3 lời khách không ảnh (Kiến Vàng, Hồng Phát, Nha Khoa Thịnh An) có thật không; (2) khối "Báo chí nói về DigicomVN" chỉ 4 logo có bài thật - đề xuất chỉ giữ logo có link
+- File liên quan: .claude/rules/chong-ai-slop.md, wp-theme/digicom-host/front-page.php, assets/css/sg.css
+- Cập nhật lúc: 2026-10-30 13:00
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,

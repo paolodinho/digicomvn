@@ -4991,3 +4991,9 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - Viết lại tiêu đề/eyebrow/đoạn kiểu đối ngữ, khẩu hiệu ở 6 trang website (inc/web-svc.php) + tpl-web.php (bỏ eyebrow mặc định "Nói thẳng").
 - /booking-bao-pr/, /mua-textlink/, /guest-post/, /dich-vu-backlink/: bỏ 4 thẻ "cam kết", thay bằng đoạn giải thích từ bảng giá thật 30/10 (inc/svc-story.php mới, gắn trong tpl-service.php) + 3 ảnh dữ liệu (bbp-gia-pr, svc-textlink-gia, svc-guestpost-gia) + bảng so sánh.
 - QA 10 trang ở 375/1440: không tràn ngang. Backup live: ~/Claude-Workspace/_backups/routines/2026-10-30/de-slop-copy/live-before.tgz
+
+## 2026-10-30 - Rà toàn site bỏ dấu hiệu AI (Hiếu: "Research xem... làm kĩ", "Rà toàn trang")
+- Research: Wikipedia "Signs of AI writing", Anti-AI-slop ban list, FindSkill (tiếng Việt). Ghi thành .claude/rules/chong-ai-slop.md.
+- Giao diện (DGC_VER 3.23.0, commit 3ddbd00): bỏ text-transform uppercase ở tiêu đề, bỏ <em> tô màu, bỏ eyebrow lặp, dải số liệu hero, huy hiệu nổi, khối trang trí xoay, mục công thức SEO, icon thẻ, sao đánh giá; trang chủ, /ve-digicom/, footer viết lại câu chữ theo sự thật (MST, năm 2021, Gamuda Garden).
+- Bài blog: 5 agent sửa 129/176 URL (thay thế chuỗi tối thiểu, validate.py kiểm thẻ/link/số giữ nguyên), bỏ ô icon rỗng ở 3 bài (4732, 4297, 6359). Backup: ~/Claude-Workspace/_backups/routines/2026-10-30/de-slop-posts/.
+- Quét lại 228 URL (slopscan.py): không chỉ...mà còn 51->1, không phải...mà là 90->17, emoji 71->6, từ sáo 463->293, kết bài máy 21->16. Phần còn lại phần lớn là phân biệt thật ("301, không phải 302") hoặc từ bị trích làm ví dụ cần tránh.

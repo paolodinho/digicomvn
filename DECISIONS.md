@@ -248,3 +248,6 @@ Hiếu chọn (A): /thiet-ke-website/ giữ báo giá theo yêu cầu, không gh
 
 ## 2026-10-30 - Không dùng văn mẫu AI trên trang
 Hiếu từ chối câu kiểu "Đo tốc độ trước khi bàn giao, không hứa bằng lời". Quy tắc ghi ở .claude/rules/do-dont.md mục "Câu chữ kiểu văn AI". Trang dịch vụ thay thẻ cam kết bằng đoạn giải thích dựa trên bảng giá thật có ngày.
+
+## 2026-10-30 - Chống dấu hiệu AI trên toàn site
+Hiếu yêu cầu research và rà toàn site. Quy tắc chốt ở .claude/rules/chong-ai-slop.md (giao diện + câu chữ). Câu "X, không phải Y" chỉ giữ khi là phân biệt kỹ thuật thật; lời khách hàng và dữ liệu khách không tự sửa/xoá, chờ Hiếu xác nhận.
