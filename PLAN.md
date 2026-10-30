@@ -2,11 +2,12 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: xong - Mua online email doanh nghiệp/SSL/cloud server qua giỏ + QR (30/10/2026)
+- Task: xong - Mua online email/SSL/cloud qua giỏ + QR; Email Pro 1-10 tự đăng ký qua API đại lý (30/10/2026)
 - Đã xong: inc/websvc-order.php mới + sửa inc/domain-order.php, tpl-web.php, page-thanh-toan-ten-mien.php, functions.php; live (email 16, SSL 9, cloud 8 nút Mua ngay). Đơn thử DGCMBFBHW đã huỷ. Tiền về -> mail Hiếu "[Đơn hàng] ... cần kích hoạt tay".
 - Trước đó: báo giá PR quốc tế IAC (2 Sheet khách/NOIBO, 61 dòng dgc_gia 7930-7990) - CHỜ Hiếu gửi khách nha khoa.
-- Tiếp theo: CHỜ Hiếu gửi tài liệu API đại lý (lệnh đăng ký email/SSL/cloud) để tự kích hoạt.
-- Cập nhật lúc: 2026-10-30 16:40
+- Thêm 17:05: đọc tài liệu API đại lý (api_pavietnam.zip): chỉ có register_mailserver/mailserver_list cho email. Đã nối Email Pro 1-10 tự đăng ký (inc/websvc-order.php dgc_ws_pid, hosting-order.php tham số $cmd, domain-order.php), test cổng interface_test trả thành công. Workspace/M365/SSL/cloud vẫn kích hoạt tay. Số dư đại lý 890.280đ.
+- Tiếp theo: CHỜ Hiếu nạp thêm số dư đại lý (đơn email lớn sẽ lỗi mã 400). Không còn việc Claude.
+- Cập nhật lúc: 2026-10-30 17:05
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,

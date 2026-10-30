@@ -5006,3 +5006,8 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 ## 2026-10-30 - Mua online email/SSL/cloud
 - Thêm item giỏ 't:w' (inc/websvc-order.php), nút Mua ngay ở /email-doanh-nghiep/, /chung-chi-ssl/, /cloud-server/; giá tính lại ở server từ dgc_web_rows. Thanh toán QR/SePay dùng chung; kích hoạt tay (API đại lý chưa có lệnh). Đơn thử DGCMBFBHW tạo + giả lập đã thanh toán -> mail kích hoạt tay đúng, đã huỷ.
+
+## 2026-10-30 17:05 - Email Pro tự đăng ký qua API đại lý
+- Tài liệu API (cổng đại lý > API Reseller > api_pavietnam.zip): có register_mailserver, mailserver_list, renew_mailserver; KHÔNG có SSL, cloud, Workspace, M365.
+- Email Pro 1-10 (12/24/36 tháng) tự đăng ký khi tiền về; key '_tm_reg_info' 'email <domain>' lưu mật khẩu, mail khách có khối EMAIL. Test interface_test: thành công.
+- Backup: ~/Claude-Workspace/_backups/routines/2026-10-30/mail-auto/
