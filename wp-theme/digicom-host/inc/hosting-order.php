@@ -90,7 +90,8 @@ function dgc_hg_password() {
  * Dang ky 1 hosting qua API dai ly. Tra ve true hoac chuoi loi.
  * DGC_PA_TEST = true -> cong chay thu (khong tru tien, ma 900 = thanh cong gia lap).
  */
-function dgc_tm_pa_register_hosting( $l, $o ) {
+function dgc_tm_pa_register_hosting( $l, $o, $cmd = 'register_hosting' ) {
+	$mail = 'register_mailserver' === $cmd;
 	if ( ! defined( 'DGC_PA_URL' ) || ! defined( 'DGC_PA_USER' ) || ! defined( 'DGC_PA_KEY' ) ) return 'thiếu cấu hình API';
 	$test = defined( 'DGC_PA_TEST' ) && DGC_PA_TEST;
 	$url  = $test ? str_replace( 'interface.php', 'interface_test.php', DGC_PA_URL ) : DGC_PA_URL;
@@ -99,12 +100,13 @@ function dgc_tm_pa_register_hosting( $l, $o ) {
 	$ph   = preg_replace( '/\D/', '', (string) ( $o['phone'] ?? '' ) );
 	if ( 0 === strpos( $ph, '84' ) ) $ph = '0' . substr( $ph, 2 );
 	$q = array(
-		'username' => DGC_PA_USER, 'apikey' => DGC_PA_KEY, 'cmd' => 'register_hosting',
-		'hosting' => (int) $l['pid'], 'os' => 1, 'domain' => $l['d'], 'amount' => 1, 'pwd' => $pw,
+		'username' => DGC_PA_USER, 'apikey' => DGC_PA_KEY, 'cmd' => $cmd,
+		'hosting' => (int) $l['pid'], 'domain' => $l['d'], 'amount' => 1, 'pwd' => $pw,
 		'ownerType' => $org ? 2 : 1, 'ownerName' => $o['name'] ?? '', 'ownerEmail1' => $o['email'] ?? '', 'ownerPhone' => $ph,
 		'uiName' => $o['name'] ?? '', 'uiEmail' => $o['email'] ?? '', 'uiPhone' => $ph,
 		'sendmail' => 1, 'responsetype' => 'json',
 	);
+	if ( ! $mail ) $q['os'] = 1;
 	foreach ( array( 'Address' => $o['addr'] ?? '', 'Ward' => $o['ward'] ?? '', 'District' => $o['ward'] ?? '', 'Province' => $o['city'] ?? '', 'Country' => 'Viet Nam' ) as $k => $v ) { $q[ 'owner' . $k ] = $v; $q[ 'ui' . $k ] = $v; } // dia gioi moi khong con quan/huyen, API van bat buoc -> dien ten phuong
 	if ( $org ) { $q['ownerTaxCode'] = $o['idno'] ?? ''; $q['uiTaxCode'] = $o['idno'] ?? ''; }
 	else { $q['ownerID_Number'] = $o['idno'] ?? ''; $q['uiID_Number'] = $o['idno'] ?? ''; }
@@ -119,12 +121,12 @@ function dgc_tm_pa_register_hosting( $l, $o ) {
 		$id = (int) ( $GLOBALS['dgc_tm_reg_order'] ?? 0 );
 		if ( $id ) {
 			$info = get_post_meta( $id, '_tm_reg_info', true ) ?: array();
-			$info[ 'hosting ' . $l['d'] ] = array( 'pw' => $pw, 'host' => 1, 'plan' => $l['n'], 'test' => $test ? 1 : 0, 'trans' => $r['trans_id'] ?? '', 'money' => $r['trans_money'] ?? '', 'note' => $r['trans_note'] ?? '', 'time' => current_time( 'mysql' ) );
+			$info[ ( $mail ? 'email ' : 'hosting ' ) . $l['d'] ] = array( 'pw' => $pw, 'host' => $mail ? 0 : 1, 'mail' => $mail ? 1 : 0, 'plan' => $l['n'], 'test' => $test ? 1 : 0, 'trans' => $r['trans_id'] ?? '', 'money' => $r['trans_money'] ?? '', 'note' => $r['trans_note'] ?? '', 'time' => current_time( 'mysql' ) );
 			update_post_meta( $id, '_tm_reg_info', $info );
 		}
 		return true;
 	}
-	$msg = array( 203 => 'thiếu thông tin chủ thể', 208 => 'email không đúng', 309 => 'số điện thoại không hợp lệ', 400 => 'tài khoản đại lý không đủ tiền, cần nạp thêm', 501 => 'IP máy chủ chưa được phép gọi API', 505 => 'không tạo được hồ sơ khách hàng (kiểm tra tỉnh, phường)', 3055 => 'mã gói hosting không còn, cần cập nhật bảng giá' );
+	$msg = array( 203 => 'thiếu thông tin chủ thể', 208 => 'email không đúng', 309 => 'số điện thoại không hợp lệ', 400 => 'tài khoản đại lý không đủ tiền, cần nạp thêm', 501 => 'IP máy chủ chưa được phép gọi API', 505 => 'không tạo được hồ sơ khách hàng (kiểm tra tỉnh, phường)', 3055 => 'mã gói không còn, cần cập nhật bảng giá' );
 	return 'mã ' . $code . ': ' . ( $msg[ $code ] ?? sanitize_text_field( (string) ( $r['ReturnText'] ?? '' ) ) );
 }
 
@@ -145,7 +147,14 @@ function dgc_hg_login_text( $id ) {
 			. "- Trong cPanel có sẵn: cài WordPress, tạo email theo tên miền, sao lưu, quản lý SSL. Cần DigicomVN cài đặt giúp, trả lời email này.\n";
 	}
 	foreach ( $info as $k => $ri ) {
-		if ( ! empty( $ri['host'] ) || empty( $ri['pw'] ) ) continue;
+		if ( empty( $ri['mail'] ) ) continue;
+		$out .= "\nEMAIL " . ( $ri['plan'] ?? '' ) . ' - ' . substr( $k, 6 ) . "\n"
+			. "- Địa chỉ trang quản trị email và tên đăng nhập: xem email kích hoạt dịch vụ email gửi riêng\n"
+			. '- Mật khẩu: ' . ( $ri['pw'] ?? '' ) . "\n"
+			. "- Để nhận thư, cần trỏ bản ghi MX của tên miền theo hướng dẫn trong email kích hoạt (DigicomVN làm giúp nếu tên miền quản lý tại đây).\n";
+	}
+	foreach ( $info as $k => $ri ) {
+		if ( ! empty( $ri['host'] ) || ! empty( $ri['mail'] ) || empty( $ri['pw'] ) ) continue;
 		$out .= "\nQUẢN LÝ TÊN MIỀN " . $k . "\n- Trang quản lý: quanly.digicomvn.com/dang-nhap\n- Tên đăng nhập: " . $k . "\n- Mật khẩu: " . $ri['pw'] . "\n";
 	}
 	return $out;

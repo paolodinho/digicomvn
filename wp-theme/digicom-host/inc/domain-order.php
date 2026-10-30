@@ -303,7 +303,7 @@ add_action( 'dgc_tm_register', 'dgc_tm_register_order' );
 function dgc_tm_register_order( $id ) {
 	if ( 'da_tt' !== get_post_meta( $id, '_tm_status', true ) ) return;
 	$manual = array();
-	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) if ( 'w' === ( $l['t'] ?? '' ) ) $manual[] = dgc_ws_line_text( $l );
+	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) if ( 'w' === ( $l['t'] ?? '' ) && empty( $l['pid'] ) ) $manual[] = dgc_ws_line_text( $l );
 	$auto_n = count( (array) get_post_meta( $id, '_tm_lines', true ) ) - count( $manual );
 	if ( $manual && ! get_post_meta( $id, '_tm_manual_sent', true ) ) {
 		update_post_meta( $id, '_tm_manual_sent', 1 );
@@ -321,13 +321,14 @@ function dgc_tm_register_order( $id ) {
 	$done  = get_post_meta( $id, '_tm_reg_done', true ) ?: array();
 	$fail  = array();
 	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) {
-		if ( 'w' === ( $l['t'] ?? '' ) ) continue; // kich hoat tay
+		$is_w = 'w' === ( $l['t'] ?? '' );
+		if ( $is_w && empty( $l['pid'] ) ) continue; // kich hoat tay
 		$is_h = 'h' === ( $l['t'] ?? '' );
-		$key  = $is_h ? 'h:' . $l['d'] : $l['d'];
+		$key  = $is_w ? 'w:' . $l['k'] . ':' . $l['d'] : ( $is_h ? 'h:' . $l['d'] : $l['d'] );
 		if ( in_array( $key, $done, true ) ) continue; // da dang ky o lan truoc, khong dang ky lai
 		$GLOBALS['dgc_tm_reg_order'] = $id;
-		$r = $is_h ? dgc_tm_pa_register_hosting( $l, $owner ) : dgc_tm_pa_register( $l['d'], $l['y'], $owner );
-		$lbl = $is_h ? 'hosting ' . $l['n'] . ' cho ' . $l['d'] : $l['d'];
+		$r = $is_w ? dgc_tm_pa_register_hosting( $l, $owner, 'register_mailserver' ) : ( $is_h ? dgc_tm_pa_register_hosting( $l, $owner ) : dgc_tm_pa_register( $l['d'], $l['y'], $owner ) );
+		$lbl = $is_w ? $l['n'] . ' cho ' . $l['d'] : ( $is_h ? 'hosting ' . $l['n'] . ' cho ' . $l['d'] : $l['d'] );
 		if ( true === $r ) { $done[] = $key; update_post_meta( $id, '_tm_reg_done', $done ); dgc_tm_log( $id, 'Đăng ký xong ' . $lbl ); }
 		else $fail[] = $lbl . ' (' . ( is_string( $r ) ? $r : 'lỗi' ) . ')';
 	}
@@ -337,7 +338,7 @@ function dgc_tm_register_order( $id ) {
 		dgc_tm_notify_admin( $id, 'Đơn ' . get_post_meta( $id, '_tm_code', true ) . ' đăng ký lỗi' );
 		return;
 	}
-	if ( $manual ) { dgc_tm_log( $id, 'Tên miền, hosting đã xong; còn chờ kích hoạt tay dịch vụ khác' ); return; }
+	if ( $manual ) { dgc_tm_log( $id, 'Phần đăng ký tự động đã xong; còn chờ kích hoạt tay dịch vụ khác' ); return; }
 	dgc_tm_set_status( $id, 'da_dk' );
 	dgc_tm_mail_customer( $id, 'done' );
 }
