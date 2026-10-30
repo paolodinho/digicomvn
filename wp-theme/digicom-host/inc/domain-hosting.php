@@ -46,6 +46,14 @@ function dgc_tm_reg_cost( $tld ) {
 	return (int) ( $m[ strtolower( trim( $tld ) ) ][0] ?? 0 );
 }
 
+/** Gia thap nhat thi truong theo duoi: array(nam dau, gia han), 0 = khong co so lieu. Option dgc_tm_market (Hieu 31/10). */
+function dgc_tm_market( $tld ) {
+	static $m = null;
+	if ( null === $m ) $m = (array) get_option( 'dgc_tm_market', array() );
+	$v = $m[ strtolower( trim( $tld ) ) ] ?? array( 0, 0 );
+	return array( (int) ( $v[0] ?? 0 ), (int) ( $v[1] ?? 0 ) );
+}
+
 function dgc_ten_mien_rows( $nhom = '' ) {
 	$out = array();
 	foreach ( dgc_lines( 'ten_mien_gia' ) as $l ) {
@@ -56,6 +64,10 @@ function dgc_ten_mien_rows( $nhom = '' ) {
 		$g0 = $r['gia'];
 		$r['gia'] = dgc_floor10( $r['gia'], dgc_tm_reg_cost( $r['duoi'] ) );
 		if ( $r['gia'] !== $g0 ) $r['note'] = trim( preg_replace( '/Giá năm đầu (áp dụng )?khi đăng ký từ \d+ năm\.?\s*/u', '', $r['note'] ) );
+		/* Khong dat hon thi truong: ha ve gia thap nhat doi thu (option dgc_tm_market, tu do tay) nhung khong duoi san von x1,1. */
+		$mk = dgc_tm_market( $r['duoi'] );
+		if ( $mk[0] && dgc_tm_reg_cost( $r['duoi'] ) ) $r['gia'] = (string) max( (int) ceil( dgc_tm_reg_cost( $r['duoi'] ) * 1.1 / 1000 ) * 1000, min( (int) preg_replace( '/\D/', '', (string) $r['gia'] ), $mk[0] ) );
+		if ( $mk[1] && dgc_tm_renew_cost( $r['duoi'] ) ) $r['han'] = (string) max( (int) ceil( dgc_tm_renew_cost( $r['duoi'] ) * 1.1 / 1000 ) * 1000, min( (int) preg_replace( '/\D/', '', (string) $r['han'] ), $mk[1] ) );
 		if ( (int) preg_replace( '/\D/', '', (string) $r['goc'] ) <= (int) preg_replace( '/\D/', '', (string) $r['gia'] ) ) $r['goc'] = '';
 		if ( $nhom && $r['nhom'] !== $nhom ) continue;
 		$out[] = $r;

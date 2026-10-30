@@ -4,7 +4,7 @@
 ## Đang làm dở (checkpoint)
 - Task: (1) W35 giá tên miền/hosting không lỗ, lãi >=10%, không đắt hơn thị trường; (2) W34 SSL quanly qua Cloudflare
 - Đã xong W35: live 31/10 sàn giá năm đầu tên miền = vốn x1,1 (inc/domain-hosting.php dgc_tm_reg_cost), tắt combo lỗ + quà tặng (tm-offers.php, hg-offers.php). Backup live: ~/Claude-Workspace/_backups/routines/2026-10-31/gia-san-von-live/
-- Đang làm W35: agent lấy giá thị trường -> scratchpad gia-thi-truong.csv; so với giá mới, báo đuôi nào sàn vốn > thị trường (không hạ dưới sàn được).
+- W35 xong live; CHỜ Hiếu quyết: chấp nhận năm đầu tên miền đắt hơn đối thủ hay xin đại lý giá tốt hơn.
 - Tiếp theo W34: CHỜ Hiếu đổi nameserver sang Cloudflare; Claude kiểm DNS, chỉ quanly proxy, SSL Full cho quanly.
 - Cập nhật lúc: 2026-10-31
 
