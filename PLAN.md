@@ -2,9 +2,10 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: Sửa "Not Secure" ở quanly.digicomvn.com bằng Cloudflare (W34 file tổng quan)
-- Đã xong: chẩn đoán (CNAME quanly -> access.dotvndns.vn, cert chỉ có access.dotvndns.vn); lưu DNS cũ ~/Claude-Workspace/_backups/routines/2026-10-31/dns-digicomvn/dns-truoc-cloudflare.txt
-- Tiếp theo: CHỜ Hiếu - tạo Cloudflare, thêm zone, đổi NS ở Namecheap. Sau đó Claude: đối chiếu DNS, chỉ quanly proxy (cam), còn lại DNS only, Configuration Rule SSL=Full cho quanly, kiểm https.
+- Task: (1) W35 giá tên miền/hosting không lỗ, lãi >=10%, không đắt hơn thị trường; (2) W34 SSL quanly qua Cloudflare
+- Đã xong W35: live 31/10 sàn giá năm đầu tên miền = vốn x1,1 (inc/domain-hosting.php dgc_tm_reg_cost), tắt combo lỗ + quà tặng (tm-offers.php, hg-offers.php). Backup live: ~/Claude-Workspace/_backups/routines/2026-10-31/gia-san-von-live/
+- Đang làm W35: agent lấy giá thị trường -> scratchpad gia-thi-truong.csv; so với giá mới, báo đuôi nào sàn vốn > thị trường (không hạ dưới sàn được).
+- Tiếp theo W34: CHỜ Hiếu đổi nameserver sang Cloudflare; Claude kiểm DNS, chỉ quanly proxy, SSL Full cho quanly.
 - Cập nhật lúc: 2026-10-31
 
 ## Mục tiêu tổng
