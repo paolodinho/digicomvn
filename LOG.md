@@ -4977,3 +4977,4 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 ## 2026-10-29 22:00 - Hosting mua online
 - inc/hosting-order.php mới: giá vốn từ hosting_list (cache 12h), chỉ bán kỳ hạn giá >= vốn, register_hosting tự động khi đơn đã thanh toán, email cPanel + quản lý tên miền.
 - domain-order.php nhận dòng hosting (tên miền trước, hosting sau); page-hosting.php nút Mua ngay; giỏ chung; DGC_VER 3.20.1. Test cổng thử đại lý OK.
+| 2026-10-30 | Lãi 10%: sàn giá vốn x1,1 hosting + gia hạn tên miền | dgc_floor10 trong inc/domain-hosting.php, option dgc_tm_cost (giá vốn gia hạn, chỉ trong DB). 21 kỳ hạn hosting tăng giá. Giữ KM năm đầu tên miền. |

@@ -1,5 +1,9 @@
 # DECISIONS - digicomvn.com
 
+## 2026-10-30 - Lãi tối thiểu 10%: hosting + gia hạn tên miền; giữ KM năm đầu tên miền
+- Hiếu: "nhìn chung tôi cần lãi 10%", chọn "Giữ KM năm đầu". Thay quyết định sáng 30/10 (bán đúng giá bán lẻ kể cả kỳ hạn lỗ).
+- Giá bán = max(giá bán lẻ, giá vốn đại lý x 1,1) cho mọi kỳ hạn hosting và giá gia hạn tên miền. Năm đầu tên miền vẫn theo giá KM bán lẻ (đa số đuôi thấp hơn vốn, ví dụ .com 25k/vốn 326k), bù bằng gia hạn.
+
 ## 2026-10-29 - Giá tên miền = giá bán lẻ công khai của nhà cung cấp, tự đồng bộ hằng ngày; áp đủ quà tặng
 - Hiếu: "auto để bằng giá trên pavietnam", "đổi giá luôn, không cần khoá", quà "áp đủ". Chấp nhận lỗ năm đầu một số đuôi so với giá vốn đại lý.
 - Không ghi tên nhà cung cấp trên site; nguồn chỉ nằm trong wp-config. % tiết kiệm combo/giỏ so với giá năm đầu thường, không so với giá gia hạn.

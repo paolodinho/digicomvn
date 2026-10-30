@@ -25,11 +25,27 @@ function dgc_min_price( $rows, $key ) {
 	return $m;
 }
 
+/** Gia >= von x 1,1, lam tron len nghin. Von 0 -> giu nguyen. */
+function dgc_floor10( $price, $cost ) {
+	$p = (int) preg_replace( '/\D/', '', (string) $price );
+	if ( ! $cost || ! $p ) return $price;
+	$f = (int) ( ceil( $cost * 1.1 / 1000 ) * 1000 );
+	return $p >= $f ? $price : (string) $f;
+}
+
+/** Gia von gia han 1 nam theo duoi (option dgc_tm_cost, nhap tu bang gia dai ly; KHONG ghi vao code vi repo cong khai). */
+function dgc_tm_renew_cost( $tld ) {
+	static $m = null;
+	if ( null === $m ) $m = (array) get_option( 'dgc_tm_cost', array() );
+	return (int) ( $m[ strtolower( trim( $tld ) ) ][1] ?? 0 );
+}
+
 function dgc_ten_mien_rows( $nhom = '' ) {
 	$out = array();
 	foreach ( dgc_lines( 'ten_mien_gia' ) as $l ) {
 		if ( empty( $l[0] ) ) continue;
 		$r = array( 'duoi' => $l[0], 'nhom' => $l[1] ?? '', 'gia' => $l[2] ?? '', 'goc' => $l[3] ?? '', 'han' => $l[4] ?? '', 'note' => $l[5] ?? '' );
+		$r['han'] = dgc_floor10( $r['han'], dgc_tm_renew_cost( $r['duoi'] ) );
 		if ( $nhom && $r['nhom'] !== $nhom ) continue;
 		$out[] = $r;
 	}
@@ -40,7 +56,13 @@ function dgc_hosting_rows() {
 	$out = array();
 	foreach ( dgc_lines( 'hosting_gia' ) as $l ) {
 		if ( empty( $l[1] ) ) continue;
-		$out[ $l[0] ][] = array( 'goi' => $l[1], 'dl' => $l[2] ?? '', 'web' => $l[3] ?? '', 'cpu' => $l[4] ?? '', 'thang' => $l[5] ?? '', 'goc' => $l[6] ?? '', 'ky' => $l[7] ?? '', 'nam' => $l[8] ?? '' );
+		$r = array( 'goi' => $l[1], 'dl' => $l[2] ?? '', 'web' => $l[3] ?? '', 'cpu' => $l[4] ?? '', 'thang' => $l[5] ?? '', 'goc' => $l[6] ?? '', 'ky' => $l[7] ?? '', 'nam' => $l[8] ?? '' );
+		/* San lai 10% (Hieu 30/10): gia ban moi ky han >= gia von dai ly x 1,1. */
+		$c = function_exists( 'dgc_hg_cost_list' ) ? ( dgc_hg_cost_list()[ dgc_hg_key( $r['goi'] ) ] ?? array() ) : array();
+		if ( '' !== $r['nam'] && ! empty( $c[12][1] ) ) $r['nam'] = dgc_floor10( $r['nam'], $c[12][1] );
+		$ky = (int) $r['ky'];
+		if ( $ky >= 1 && '' !== $r['thang'] && ! empty( $c[ $ky * 12 ][1] ) ) $r['thang'] = dgc_floor10( $r['thang'], $c[ $ky * 12 ][1] / ( 12 * $ky ) );
+		$out[ $l[0] ][] = $r;
 	}
 	return $out;
 }
