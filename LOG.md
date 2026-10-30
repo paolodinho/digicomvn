@@ -1,5 +1,8 @@
 # LOG - digicomvn.com
 
+## 2026-10-30 (De-slop 6 trang dịch vụ website)
+- Bỏ lưới 4 lợi ích + 4 bước đều nhau; mỗi trang có đoạn văn xuôi số liệu có nguồn (web.dev, Gmail sender guidelines, CA/B Forum SC-081v3, Nghị định 248/2026) + ảnh/thẻ số đo thật của chính digicomvn.com, và 1 bảng/mốc thời gian riêng. Trang Bộ Công Thương cập nhật quy định mới 01/7/2026. Link moit.gov.vn cũ 404 phát hiện khi kiểm nguồn, đã thay bằng bài tổng hợp xử phạt còn sống; bỏ con số phạt 20 triệu vì nguồn chính thống không ghi rõ cho đúng lỗi này. DGC_VER 3.22.1, QA 375/1440: 0 tràn ngang.
+
 ## 2026-10-29 (Trang tên miền kiểu bán lẻ + đồng bộ giá)
 - Kết quả tra cứu: thẻ chính + combo 3 đuôi, nhãn Có ưu đãi, quà tặng, giá theo số năm tối thiểu; giỏ hiện giá gạch, tiết kiệm, quà. Giá gạch = giá gốc năm đầu + gia hạn các năm sau (không thổi phồng). Đồng bộ giá bán lẻ hằng ngày 01:15, lần đầu: giá không đổi (9 đuôi bỏ cột gốc trùng). DGC_VER 3.18.0 live.
 

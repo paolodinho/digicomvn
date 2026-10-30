@@ -603,3 +603,4 @@ a.sg-card--feat:hover{border-color:transparent}
 .ws-extra ol.ws-time em{font-style:normal;font-size:13px;color:var(--teal,#0E8C7F);font-weight:700}
 @media(max-width:900px){.ws-story{grid-template-columns:minmax(0,1fr);gap:28px}.ws-story-fig--photo{transform:none}}
 @media(max-width:640px){.ws-extra th,.ws-extra td{padding:10px;font-size:13.5px}.ws-extra table{min-width:520px}}
+.ws-extra .ws-scroll+p,.ws-extra ol.ws-time+p,.ws-extra ul+p{margin-top:16px}

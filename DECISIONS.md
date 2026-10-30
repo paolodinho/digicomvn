@@ -1,5 +1,9 @@
 # DECISIONS - digicomvn.com
 
+## 2026-10-30 - Trang website dịch vụ: căn cứ pháp lý thông báo website = Nghị định 248/2026/NĐ-CP
+- Từ 01/7/2026 website bán hàng thông báo với UBND cấp tỉnh qua Cổng Dịch vụ công quốc gia (Đ24 khoản 5), Bộ Công Thương chỉ còn đăng ký sàn/nền tảng trung gian (Đ25); Nghị định 52/2013 và 85/2021 hết hiệu lực (Đ52); website xác nhận trước 01/7/2026 được hoạt động tới 30/6/2027 (Đ53). Nguồn vanban.chinhphu.vn docid=218747. Giữ slug /dang-ky-website-bo-cong-thuong/ vì đó là từ khoá người tìm.
+- Hiếu 30/10 'Web đang bị AI slop quá': trang dịch vụ website dùng văn xuôi + số liệu thật, ảnh chụp người là ảnh minh hoạ không chú thích, không ghi là đội ngũ DigicomVN.
+
 ## 2026-10-30 - Lãi tối thiểu 10%: hosting + gia hạn tên miền; giữ KM năm đầu tên miền
 - Hiếu: "nhìn chung tôi cần lãi 10%", chọn "Giữ KM năm đầu". Thay quyết định sáng 30/10 (bán đúng giá bán lẻ kể cả kỳ hạn lỗ).
 - Giá bán = max(giá bán lẻ, giá vốn đại lý x 1,1) cho mọi kỳ hạn hosting và giá gia hạn tên miền. Năm đầu tên miền vẫn theo giá KM bán lẻ (đa số đuôi thấp hơn vốn, ví dụ .com 25k/vốn 326k), bù bằng gia hạn.
