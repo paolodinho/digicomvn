@@ -514,3 +514,11 @@ dòng được gán bao-tinh, 2 dòng gỡ bao-lon) + áp dụng tự động ch
 
 **Bài học:** đừng tin nhãn phân loại thô từ NCC khi có tín hiệu đáng tin hơn (tên miền) để tự
 suy luận - đặc biệt với dữ liệu nhập từ nhiều nguồn không đồng nhất.
+
+## NCC IAC Digital - PR quốc tế (chốt Hiếu 2026-10-30)
+- IAC Digital Marketing (Hải Phòng), đầu mối Nguyễn Tất Thắng. Mã NCC nội bộ **5** (`dgc_ncc_ma_options()`).
+- Nguồn giá: Sheet "Bảng giá ALL Dịch Vụ IAC Digital", tab "Bảng Giá PR Quốc Tế" (id 1n5QUkXQSUosCktg1IHPryUSk654vEMKCTS05TrlASx0, gid 202603090).
+- **Giá bán = đúng giá VNĐ trong file IAC** (27.000đ/USD). IAC chiết khấu đại lý 10% -> giá vốn thật = x0,9, lãi 10%.
+- Mỗi site 1 bài riêng (gói Starter 5 site = 5 bài), 2 link/bài, content miễn phí 900-1.200 từ + 3 ảnh, sửa tối đa 3 lần; hoàn thiện 21-25 ngày, lên bài 1-2 ngày sau duyệt. Đơn nước ngoài: KHÔNG xuất VAT, phải nói rõ với khách trước.
+- Gói không chọn site; site đều là trang tổng hợp, không chia ngành.
+- Web: 61 dòng nhóm `backlink-quoc-te` (ID 7930-7990: 3 gói + 58 site lẻ), tạo 30/10/2026. Rollback: draft các ID này.

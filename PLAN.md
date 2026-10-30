@@ -2,11 +2,10 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
-- Task: xong - Rà toàn site bỏ dấu hiệu AI (giao diện + câu chữ) 30/10
-- Đã xong: theme (tiêu đề hết viết hoa, bỏ eyebrow lặp, dải số liệu, huy hiệu nổi, công thức SEO, 5 sao; trang chủ + /ve-digicom/ viết lại) deploy DGC_VER 3.23.0, commit 3ddbd00. 129/176 bài blog sửa câu đối/sáo/emoji trên live (backup ~/Claude-Workspace/_backups/routines/2026-10-30/de-slop-posts/). Quét lại: không chỉ...mà còn 51->1, không phải...mà là 90->17, emoji 71->6, từ sáo 463->293.
-- Tiếp theo: không còn. Hiếu chốt 30/10: giữ 3 lời khách, hiện lại đủ 12 logo báo.
-- File liên quan: .claude/rules/chong-ai-slop.md, wp-theme/digicom-host/front-page.php, assets/css/sg.css
-- Cập nhật lúc: 2026-10-30 13:00
+- Task: xong - Báo giá PR quốc tế (nguồn IAC Digital) cho khách nha khoa + đưa lên web 30/10/2026
+- Đã xong: 2 Google Sheet (khách 1w6DCBCUpR2SX84DxmmW7E1ekX36utQct88eEaC5EWMg, NOIBO 1JqGgX9Tr2ByE94pT7yD_7MwCDVdwOyWawtXnJT5VIf0); xlsx tại 11-bao-gia-khach/*Quoc-Te-Nha-Khoa-2026-10-30.xlsx; 61 dòng dgc_gia backlink-quoc-te (ID 7930-7990) live; mã NCC 5 IAC trong inc/cpt-gia.php (live); dòng báo giá ở tab Báo giá khách hàng file tổng quan.
+- Tiếp theo: CHỜ Hiếu gửi file khách cho khách nha khoa.
+- Cập nhật lúc: 2026-10-30 15:50
 
 ## Mục tiêu tổng
 Website digicomvn.com tập trung 4 dịch vụ off-page SEO (Mua Textlink, Dịch vụ Backlink,

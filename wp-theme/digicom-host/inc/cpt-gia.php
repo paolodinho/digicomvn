@@ -157,6 +157,7 @@ function dgc_ncc_ma_options() {
 		'1' => '1 - DanaSEO',
 		'2' => '2 - Media Việt Nam',
 		'3' => '3 - Fame Media',
+		'5' => '5 - IAC Digital (PR quốc tế)',
 		'9' => '9 - Khác / tham khảo',
 	);
 }
