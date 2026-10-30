@@ -26,13 +26,29 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 	</div>
 </section>
 
-<?php if ( ! empty( $dgc_wc['benefits'] ) ) : ?>
-<section class="sec hg-trust-sec">
-	<div class="wrap">
-		<div class="hg-offer-head"><span class="eyebrow">Bạn nhận được gì</span><h2><?php echo esc_html( $dgc_wn ); ?> tại DigicomVN</h2></div>
-		<ul class="hg-trust">
-			<?php foreach ( $dgc_wc['benefits'] as $b ) : ?><li><b><?php echo esc_html( $b[0] ); ?></b><span><?php echo esc_html( $b[1] ); ?></span></li><?php endforeach; ?>
-		</ul>
+<?php if ( ! empty( $dgc_wc['story'] ) ) : $dgc_im = $dgc_wc['img'] ?? array(); ?>
+<section class="sec ws-story-sec">
+	<div class="wrap ws-story<?php echo empty( $dgc_im ) ? ' ws-story--solo' : ''; ?>">
+		<div class="ws-story-text">
+			<span class="eyebrow"><?php echo esc_html( $dgc_wc['story_eyebrow'] ?? 'Nói thẳng' ); ?></span>
+			<h2><?php echo esc_html( $dgc_wc['story_h'] ); ?></h2>
+			<div class="page-content"><?php echo wp_kses_post( $dgc_wc['story'] ); ?></div>
+		</div>
+		<?php if ( $dgc_im ) : ?>
+		<figure class="ws-story-fig<?php echo empty( $dgc_im['cap'] ) ? ' ws-story-fig--photo' : ''; ?>">
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $dgc_im['src'] ); ?>" width="<?php echo (int) $dgc_im['w']; ?>" height="<?php echo (int) $dgc_im['h']; ?>" alt="<?php echo esc_attr( $dgc_im['alt'] ); ?>" loading="lazy" decoding="async">
+			<?php if ( ! empty( $dgc_im['cap'] ) ) : ?><figcaption><?php echo esc_html( $dgc_im['cap'] ); ?></figcaption><?php endif; ?>
+		</figure>
+		<?php endif; ?>
+	</div>
+</section>
+<?php endif; ?>
+
+<?php if ( ! empty( $dgc_wc['extra'] ) ) : ?>
+<section class="sec ws-extra-sec">
+	<div class="wrap" style="max-width:1000px">
+		<div class="ws-extra-head"><span class="eyebrow"><?php echo esc_html( $dgc_wc['extra_eyebrow'] ?? '' ); ?></span><h2><?php echo esc_html( $dgc_wc['extra_h'] ); ?></h2></div>
+		<div class="page-content ws-extra"><?php echo wp_kses_post( $dgc_wc['extra'] ); ?></div>
 	</div>
 </section>
 <?php endif; ?>
@@ -68,20 +84,6 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 		</div>
 		<?php endforeach; ?>
 		<?php include get_template_directory() . '/inc/price-note.php'; ?>
-	</div>
-</section>
-<?php endif; ?>
-
-<?php if ( ! empty( $dgc_wc['body'] ) ) : ?>
-<section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-	<div class="wrap" style="max-width:960px">
-		<div class="center" style="margin-bottom:28px"><span class="eyebrow">Tư vấn</span><h2><?php echo esc_html( $dgc_wc['h2'] ); ?></h2></div>
-		<div class="page-content"><?php echo wp_kses_post( $dgc_wc['body'] ); ?></div>
-		<?php if ( ! empty( $dgc_wc['steps'] ) ) : ?>
-		<ol class="tm-steps">
-			<?php foreach ( $dgc_wc['steps'] as $s ) : ?><li><b><?php echo esc_html( $s[0] ); ?></b><span><?php echo esc_html( $s[1] ); ?></span></li><?php endforeach; ?>
-		</ol>
-		<?php endif; ?>
 	</div>
 </section>
 <?php endif; ?>

@@ -580,3 +580,26 @@ a.sg-card--feat:hover{border-color:transparent}
 .ws-links{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
 .ws-links a{display:inline-block;padding:9px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);color:var(--heading);font-size:14.5px;font-weight:600;text-decoration:none;white-space:nowrap}
 .ws-links a:hover{border-color:var(--teal,#0E8C7F);color:var(--teal,#0E8C7F)}
+/* Dich vu website: bo cuc rieng tung trang (2026-10-30) */
+.ws-story{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:center}
+.ws-story--solo{grid-template-columns:minmax(0,1fr);max-width:860px}
+.ws-story-text h2{margin:6px 0 16px;letter-spacing:-.02em}
+.ws-story-text .page-content p{margin:0 0 14px}
+.ws-story-fig{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface-2);box-shadow:0 10px 30px rgba(20,30,60,.08)}
+.ws-story-fig img{display:block;width:100%;height:auto}
+.ws-story-fig figcaption{font-size:13px;line-height:1.5;color:var(--ink-soft);padding:10px 14px;border-top:1px solid var(--line)}
+.ws-story-fig--photo{transform:rotate(1.2deg)}
+.ws-extra-sec{background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ws-extra-head{margin-bottom:22px}
+.ws-extra-head h2{margin-top:6px}
+.ws-extra table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14.5px}
+.ws-extra th,.ws-extra td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.5}
+.ws-extra th{background:var(--surface-2);color:var(--heading);font-weight:700}
+.ws-extra .ws-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.ws-extra ol.ws-time{list-style:none;margin:0;padding:0;border-left:2px solid var(--teal,#0E8C7F)}
+.ws-extra ol.ws-time li{position:relative;padding:0 0 18px 22px}
+.ws-extra ol.ws-time li:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--teal,#0E8C7F)}
+.ws-extra ol.ws-time b{display:block;color:var(--heading)}
+.ws-extra ol.ws-time em{font-style:normal;font-size:13px;color:var(--teal,#0E8C7F);font-weight:700}
+@media(max-width:900px){.ws-story{grid-template-columns:minmax(0,1fr);gap:28px}.ws-story-fig--photo{transform:none}}
+@media(max-width:640px){.ws-extra th,.ws-extra td{padding:10px;font-size:13.5px}.ws-extra table{min-width:520px}}
