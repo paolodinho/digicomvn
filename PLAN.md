@@ -6,6 +6,8 @@
 - Đã xong W35: live 31/10 sàn giá năm đầu tên miền = vốn x1,1 (inc/domain-hosting.php dgc_tm_reg_cost), tắt combo lỗ + quà tặng (tm-offers.php, hg-offers.php). Backup live: ~/Claude-Workspace/_backups/routines/2026-10-31/gia-san-von-live/
 - W35 xong live: dgc_tm_cost = số tiền thực trả đại lý (.vn đăng ký 450k, quốc tế x1,08 VAT); 31/10 tối: MỌI sản phẩm lãi >=10% trên thực trả gồm VAT: tên miền năm đầu + gia hạn = thực trả x1,1 (.vn 495k); hosting/email/SSL/cloud/M365/Workspace/chăm sóc/BCT >= giá đại lý x1,21 (giá cổng đại lý chưa VAT 10%). Đã nâng: Workspace 99k/261k, M365 159k/118k/331k/651k, SSL +6,8%, chăm sóc 1,761/2,935/4,695tr, BCT 2,348tr; hosting tự sàn x1,21. Task: xong (chờ Hiếu xem).
 - Tiếp theo W34: CHỜ Hiếu đổi nameserver sang Cloudflare; Claude kiểm DNS, chỉ quanly proxy, SSL Full cho quanly.
+- Báo giá PR 28 đầu báo (K18) đã GỘP vào báo giá A&P K19 (31/10); Sheet/Doc K18 cũ đã vào thùng rác Drive, file local ở 11-bao-gia-khach/_backup/.
+- Báo giá A&P K19 làm lại 31/10 theo yêu cầu: báo lớn mảng DN/kinh doanh/giáo dục, ngân sách 15tr gồm VAT, danh sách 15 báo (không chia phương án, khách tự chọn); Sheet khách 1UlkcUzWai4YuZ3zwwZZusKdHCwlNQoG0JAW5DDknU6I, NOIBO 1blAL37rcIAVaHjEvFlTioWZPpX7js0hZpPeDQSnDggg; builder scratchpad bgap/build15.py; CHỜ Hiếu gửi khách.
 - Cập nhật lúc: 2026-10-31
 
 ## Mục tiêu tổng

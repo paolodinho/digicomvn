@@ -523,3 +523,8 @@ suy luận - đặc biệt với dữ liệu nhập từ nhiều nguồn không 
 - Gói không chọn site; site đều là trang tổng hợp, không chia ngành. Khách cần dưới 5 site -> đặt site lẻ (vẫn được viết bài miễn phí).
 - Bảo hành 3 tháng: bài mất thì IAC đăng lại; sau đó bài tồn tại tới khi site ngừng hoạt động.
 - Web: 61 dòng nhóm `backlink-quoc-te` (ID 7930-7990: 3 gói + 58 site lẻ), tạo 30/10/2026. Rollback: draft các ID này.
+
+## NCC Goodcom Việt Nam - booking báo lớn (ghi nhận 31/10/2026)
+- CÔNG TY TNHH TRUYỀN THÔNG GOODCOM VIỆT NAM (Cầu Giấy, Hà Nội), đầu mối Ms Thu 0988866152. File báo giá gửi Combat: Drive xlsx 1n_CBWN_3wYF6JZ35qhkMb2dSaOSMgDpV, mỗi đợt 1 tab (theo khách/ngày).
+- Giá cột "Thành tiền" đã trừ CK, chưa VAT, chưa phí edit, hiệu lực 10 ngày. Báo giá tay: giá bán = thành tiền x1,1; so với DanaSEO chọn rẻ hơn cho khách cùng quy cách (giữ DanaSEO khi nhiều link hơn).
+- Có các báo DanaSEO không có: Hoahoctro, Dulichvietnam, Dulichtoday, Vneconomy, Congthuong, fanpage/TikTok báo.

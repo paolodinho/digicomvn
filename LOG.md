@@ -5011,3 +5011,15 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - Tài liệu API (cổng đại lý > API Reseller > api_pavietnam.zip): có register_mailserver, mailserver_list, renew_mailserver; KHÔNG có SSL, cloud, Workspace, M365.
 - Email Pro 1-10 (12/24/36 tháng) tự đăng ký khi tiền về; key '_tm_reg_info' 'email <domain>' lưu mật khẩu, mail khách có khối EMAIL. Test interface_test: thành công.
 - Backup: ~/Claude-Workspace/_backups/routines/2026-10-30/mail-auto/
+
+## 2026-10-31 - Bao gia PR 28 dau bao
+- 28 bai theo tab 10/26 file khach; moi dong chon re hon giua DanaSEO (gia goc) va Goodcom (thanh tien x1,1). Tong 88.583.000 chua VAT, lai 8.488.000. File 11-bao-gia-khach/*28-Dau-Bao-2026-10-31.xlsx + 2 Google Sheet.
+
+## 2026-10-31 - Báo giá booking PR A&P
+- Nguồn: Goodcom tab 'Điện Cáp mặt trời_ 28.10.2026' (44 lựa chọn báo + fanpage/TikTok). Mỗi dòng rẻ hơn giữa DanaSEO và Goodcom x1,1 (16 D, 28 G). Bỏ Tạp chí Công Thương (chưa có giá).
+- File: 11-bao-gia-khach/Bao-Gia-Booking-PR-AP-2026-10-31.xlsx + NOIBO; Google Sheet khách 1UlkcUzW..., NOIBO 1blAL37r...; file tổng quan K19 + tab Báo giá khách hàng dòng 1.
+
+## 2026-10-31 - Gộp báo giá 28 bài vào A&P
+- Gộp 28 bài (tab 10/26) vào báo giá A&P: Phần A 28 bài 88.219.000đ chưa VAT (lãi 8.381.408đ), Phần B 36 lựa chọn Goodcom. DanaSEO giữ giá, Goodcom x1,1. Ghi đè 2 Sheet A&P giữ link; file K18 cũ vào _backup/.
+- Làm lại A&P theo yêu cầu: báo lớn DN/kinh doanh/giáo dục, ngân sách 15tr gồm VAT; 3 phương án (13,70 / 13,81 / 12,46tr gồm VAT) + danh mục 15 báo. Ghi đè 2 Sheet giữ link.
+- A&P sửa lần 2: bỏ 3 phương án, chỉ liệt kê 15 báo lớn DN/kinh doanh/giáo dục để khách tự chọn.
