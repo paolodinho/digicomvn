@@ -523,6 +523,8 @@ suy luận - đặc biệt với dữ liệu nhập từ nhiều nguồn không 
 - Gói không chọn site; site đều là trang tổng hợp, không chia ngành. Khách cần dưới 5 site -> đặt site lẻ (vẫn được viết bài miễn phí).
 - Bảo hành 3 tháng: bài mất thì IAC đăng lại; sau đó bài tồn tại tới khi site ngừng hoạt động.
 - Web: 61 dòng nhóm `backlink-quoc-te` (ID 7930-7990: 3 gói + 58 site lẻ), tạo 30/10/2026. Rollback: draft các ID này.
+- **Báo/PR nước ngoài CHỈ lấy nguồn IAC Digital** (Hiếu chốt 02/11/2026). KHÔNG dùng Rankifyer, newswire (PR Newswire, EIN, ACCESS, King Newswire...) hay NCC quốc tế khác trong `bang-gia-master.csv` cho báo giá khách. Mẫu báo giá: `11-bao-gia-khach/Bao-Gia-Booking-Bao-Nuoc-Ngoai-Thuy-Duong-2026-11-02.xlsx` (lọc 19/58 site IAC là trang tin/tạp chí khi khách hỏi "báo").
+- **Ngoại lệ (Hiếu 02/11/2026): báo VIỆT NAM bản tiếng Anh** (e.vnexpress.net, news.tuoitre.vn, english.vtv.vn, dtinews.dantri.com.vn, vietnamnews.vn, vir.com.vn) lấy nguồn Goodcom, giá bán = thành tiền Goodcom x1,1. Gộp chung 1 file báo giá với báo nước ngoài (IAC) + báo tiếng Việt khi khách cần, mỗi nhóm 1 tab; nhóm báo VN ghi chưa VAT 8%, có xuất hoá đơn.
 
 ## NCC Goodcom Việt Nam - booking báo lớn (ghi nhận 31/10/2026)
 - CÔNG TY TNHH TRUYỀN THÔNG GOODCOM VIỆT NAM (Cầu Giấy, Hà Nội), đầu mối Ms Thu 0988866152. File báo giá gửi Combat: Drive xlsx 1n_CBWN_3wYF6JZ35qhkMb2dSaOSMgDpV, mỗi đợt 1 tab (theo khách/ngày).

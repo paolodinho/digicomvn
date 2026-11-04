@@ -3,12 +3,12 @@
  * Pill uu dai NOI (floating) tren moi trang (Hieu 2026-07-15) - thay khoi uu dai to.
  * Hien "Uu dai den <so tien>" + dem nguoc; bam -> mo popup (#promoPop); tu popup bam tiep -> bang gia.
  * So tien (promo_saving) va dem nguoc (promo_deadline) TU tinh tuy thoi diem - sua o WP Admin.
- * KHONG hien tren bang-gia / dat-bai / cam-on (khach da o buoc chuyen doi).
+ * KHONG hien tren bang-gia / nhan-bao-gia / cam-on (khach da o buoc chuyen doi).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 if ( ! dgc_lines( 'promos' ) ) return;
-foreach ( array( 'bang-gia', 'dat-bai', 'cam-on' ) as $dgc_fab_skip ) {
+foreach ( array( 'bang-gia', 'nhan-bao-gia', 'cam-on' ) as $dgc_fab_skip ) {
 	if ( is_page( $dgc_fab_skip ) ) return;
 }
 

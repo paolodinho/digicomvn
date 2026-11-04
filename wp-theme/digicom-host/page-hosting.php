@@ -20,8 +20,10 @@ $dgc_hg_desc = array(
 <section class="sg-phero sg-phero--solo">
 	<div class="wrap">
 		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <a href="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>">Tên miền, hosting &amp; công cụ</a> / <span>Hosting</span></nav>
-		<h1><?php echo esc_html( get_the_title() ?: 'Hosting giá rẻ, tốc độ cao' ); ?></h1>
-		<p class="sg-lead">Hosting chạy LiteSpeed, chứng chỉ SSL miễn phí, có sao lưu dữ liệu, giá từ 16.000đ/tháng. DigicomVN tư vấn chọn gói đúng nhu cầu, cài đặt WordPress, trỏ tên miền và cấu hình tốc độ tải trang cho SEO.</p>
+		<h1><?php $dgc_pp = dgc_pp(); echo esc_html( $dgc_pp['h1'] !== '' ? $dgc_pp['h1'] : ( get_the_title() ?: 'Hosting giá rẻ, tốc độ cao' ) ); ?></h1>
+		<?php if ( $dgc_pp['lead'] !== '' ) : ?><p class="sg-lead"><?php echo esc_html( $dgc_pp['lead'] ); ?></p><?php else : ?>
+		<p class="sg-lead">Hosting chạy LiteSpeed, chứng chỉ SSL miễn phí, có sao lưu dữ liệu<?php $dgc_hg_min = 0; foreach ( $dgc_hg as $dgc_rs ) { foreach ( $dgc_rs as $dgc_r ) { $dgc_v = (float) $dgc_r['thang']; if ( $dgc_v > 0 && ( ! $dgc_hg_min || $dgc_v < $dgc_hg_min ) ) $dgc_hg_min = $dgc_v; } } echo $dgc_hg_min ? ', giá từ ' . esc_html( dgc_vnd( $dgc_hg_min ) ) . '/tháng' : ''; ?>. DigicomVN tư vấn chọn gói đúng nhu cầu, cài đặt WordPress, trỏ tên miền và cấu hình tốc độ tải trang cho SEO.</p>
+		<?php endif; ?>
 		<div class="sg-hero-cta"><a class="sg-btn sg-btn--light" href="#bang-gia"><?php echo dgc_arrow(); ?>Xem bảng giá hosting</a><a class="sg-btn sg-btn--line" href="#lien-he" data-order="Cần tư vấn chọn gói hosting" data-svc="Hosting"><?php echo dgc_arrow(); ?>Nhờ tư vấn chọn gói</a></div>
 	</div>
 </section>
@@ -39,11 +41,12 @@ $dgc_hg_desc = array(
 </section>
 <?php endif; ?>
 
+<?php dgc_pp_section( $dgc_pp['before'] ); ?>
 <?php $dgc_hg_on = function_exists( 'dgc_hg_online' ) ? dgc_hg_online() : array(); ?>
 <section class="sec" id="bang-gia">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:24px"><span class="eyebrow">Bảng giá</span><h2>Bảng giá hosting</h2>
-			<p class="muted" style="max-width:720px;margin:8px auto 0">Giá/tháng là giá ưu đãi khi đăng ký theo kỳ hạn ghi dưới mỗi gói, dòng "Trọn N năm" là tổng tiền của kỳ hạn đó. "Đăng ký 1 năm" là tổng tiền khi chỉ đăng ký 12 tháng. Giá chưa gồm VAT.</p></div>
+		<div class="center" style="margin-bottom:24px"><span class="eyebrow">Bảng giá</span><h2><?php echo esc_html( $dgc_pp['price_h'] ?: 'Bảng giá hosting' ); ?></h2>
+			<p class="muted" style="max-width:720px;margin:8px auto 0"><?php if ( $dgc_pp['price_intro'] !== '' ) echo esc_html( $dgc_pp['price_intro'] ) . ' '; ?>Giá/tháng là giá ưu đãi khi đăng ký theo kỳ hạn ghi dưới mỗi gói, dòng "Trọn N năm" là tổng tiền của kỳ hạn đó. "Đăng ký 1 năm" là tổng tiền khi chỉ đăng ký 12 tháng. Giá chưa gồm VAT.</p></div>
 		<nav class="hg-tabs" aria-label="Nhóm gói hosting">
 			<?php foreach ( array_keys( $dgc_hg ) as $i => $g ) : ?><a href="#hg-<?php echo (int) $i; ?>"><?php echo esc_html( $g ); ?></a><?php endforeach; ?>
 		</nav>
@@ -93,6 +96,7 @@ $dgc_hg_desc = array(
 	</div>
 </section>
 
+<?php if ( ! $dgc_pp['on'] ) : ?>
 <section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap" style="max-width:960px">
 		<div class="center" style="margin-bottom:28px"><span class="eyebrow">Tư vấn</span><h2>Hosting ảnh hưởng tới SEO thế nào?</h2></div>
@@ -109,10 +113,9 @@ $dgc_hg_desc = array(
 		</ol>
 	</div>
 </section>
-
-<?php if ( trim( get_post_field( 'post_content', get_the_ID() ) ) ) : ?>
-<section class="sec"><div class="wrap page-content" style="max-width:960px"><?php the_content(); ?></div></section>
 <?php endif; ?>
+
+<?php dgc_pp_section( $dgc_pp['after'] ); ?>
 
 <?php include get_template_directory() . '/inc/svc-faq.php'; ?>
 

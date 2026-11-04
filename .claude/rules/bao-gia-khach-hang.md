@@ -139,3 +139,8 @@ khối/sheet riêng (đặt cuối file, hoặc trang riêng nếu docx) gồm �
 Không dừng ở xlsx/docx local. Upload + convert sang Google Sheet/Doc, báo link Google đầu tiên.
 Luôn 2 link Google: 1 gửi khách + 1 NOIBO gửi Hiếu; cập nhật thì giữ link cũ; điền cả 2 link vào cột E/F tab "Báo giá khách hàng".
 Chi tiết: skill `bao-gia-khach-hang` mục "FILE GỬI KHÁCH = GOOGLE SHEET/DOC".
+
+## 10. Link trong báo giá: kiểm Safe Browsing trước khi upload (sự cố 02/11/2026)
+- Google Sheet báo giá bị khoá "Google sẽ xem xét tệp của bạn" (Trust & Safety) vì có link tới theinscribermag.com, domain bị Google Safe Browsing đánh dấu có trang không an toàn (hosting bị treo/nhiễm). Drive quét mọi hyperlink trong file; 1 link xấu là đủ khoá file.
+- Trước MỖI lần upload/cập nhật file có link (bài mẫu, site NCC): `python3 tools/check-links-safebrowsing.py <file.xlsx|sheet_id>`. Domain status khác 1 -> bỏ link (ghi chữ trơn) hoặc bỏ site khỏi báo giá. Site nhà cung cấp đang lỗi thì không chào khách.
+- File đã bị khoá: sửa xong link, chủ file (hieudx3107) bấm "Yêu cầu xem xét" trên trang cảnh báo để Google mở lại.

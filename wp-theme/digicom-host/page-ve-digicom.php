@@ -10,7 +10,7 @@ get_header();
 <section class="page-hero">
 	<div class="wrap" style="max-width:820px">
 		<h1>Về DigicomVN</h1>
-		<p class="lead">DigicomVN là thương hiệu dịch vụ của Công ty TNHH Dịch vụ Truyền thông Digito Combat, hoạt động từ tháng 11/2021 tại Hà Nội.</p>
+		<p class="lead"><?php $dgc_vd_lead = trim( (string) get_post_field( 'post_excerpt', get_the_ID() ) ); /* sua o "Tom tat" cua trang (02/11/2026) */ echo $dgc_vd_lead !== '' ? esc_html( $dgc_vd_lead ) : 'DigicomVN là thương hiệu dịch vụ của Công ty TNHH Dịch vụ Truyền thông Digito Combat, hoạt động từ tháng 11/2021 tại Hà Nội.'; ?></p>
 	</div>
 </section>
 
@@ -46,6 +46,7 @@ get_header();
 	</div>
 </section>
 
+<?php if ( ! get_the_content() ) : /* noi dung trang da co bang phap nhan (02/11/2026) */ ?>
 <section class="sec">
 	<div class="wrap">
 		<div class="row" style="gap:24px;align-items:stretch">
@@ -69,6 +70,7 @@ get_header();
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 
 <section class="sec-tight"><div class="wrap"><div class="cta-band">
 	<div><h2>Liên hệ DigicomVN</h2><p>Gọi hotline hoặc gửi yêu cầu, chúng tôi trả lời trong giờ làm việc.</p></div>

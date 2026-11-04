@@ -5,7 +5,7 @@
  *                  "thanh niên", "thanhnien.vn" deu ra cung ket qua - xem dgc_gia_search_terms()).
  *   2. BAI VIET  - post/page thuong, dung ket qua WP mac dinh.
  *
- * Gia hien o day chi de tham khao; bam vao dong se sang thang trang /dat-bai/ (da chon san
+ * Gia hien o day chi de tham khao; bam vao dong se sang thang trang /nhan-bao-gia/ (da chon san
  * dong do) de gui yeu cau bao gia - khong con trang tong hop /bang-gia/ nua (2026-08-09).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;

@@ -25,3 +25,9 @@ chuyên mục -> Google coi là bản sao, không giúp xây thương hiệu cá
 
 ## Việc còn lại của Hiếu
 Điền ảnh chân dung thật (`dgc_avatar_id`), năm bắt đầu nghề, các cột mốc thật khác.
+
+## Hồ sơ Hiếu (Hiếu chốt 03/11/2026)
+- Chỉ nói quá trình làm việc, KHÔNG nêu học hành/bằng cấp (`dgc_credentials` để trống, mục tự ẩn), KHÔNG nêu tên đơn vị từng làm (vd cơ quan báo chí, công ty cũ), chỉ ghi vai trò + ngành. Viết gọn.
+- Diễn đạt chốt: làm trong ngành truyền thông, quảng cáo, sau đó tập trung vào digital marketing. KHÔNG nói "phóng viên", "làm báo".
+- Tiểu sử dài (`dgc_bio_long`) đã XOÁ theo Hiếu 03/11, chỉ giữ tiểu sử ngắn; không tự viết lại.
+- Ảnh chân dung: attachment 8036 (hieu-do.jpg). Byline bài viết hiện ảnh + nút Facebook/LinkedIn từ `dgc_facebook`/`dgc_linkedin`.

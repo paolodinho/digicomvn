@@ -53,7 +53,7 @@ $dgc_check  = '<span class="sg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" 
 		</nav>
 		<div class="sg-phero-row">
 			<div>
-				<h1><?php the_title(); ?></h1>
+				<h1><?php $dgc_h1 = trim( (string) get_post_meta( get_the_ID(), 'dgc_h1', true ) ); echo $dgc_h1 !== '' ? esc_html( $dgc_h1 ) : esc_html( get_the_title() ); ?></h1>
 				<?php if ( has_excerpt() ) : ?><p class="sg-lead"><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?>
 				<div class="sg-hero-cta">
 					<a class="sg-btn sg-btn--light" href="#lien-he"><?php echo dgc_arrow(); ?>Nhận audit SEO miễn phí</a>

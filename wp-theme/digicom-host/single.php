@@ -46,6 +46,18 @@ get_header();
 							<span class="post-byline__avatar post-byline__avatar--fallback"><?php echo esc_html( dgc_author_initials( get_the_author() ) ); ?></span>
 						<?php endif; ?>
 						<span>Tác giả <a href="<?php echo esc_url( get_author_posts_url( $dgc_author_id ) ); ?>"><?php the_author(); ?></a> · <?php echo esc_html( get_the_date( 'd/m/Y' ) ); ?></span>
+						<?php
+						$dgc_social = array_filter( array(
+							'facebook' => get_user_meta( $dgc_author_id, 'dgc_facebook', true ),
+							'linkedin' => get_user_meta( $dgc_author_id, 'dgc_linkedin', true ),
+						) );
+						if ( $dgc_social ) : ?>
+							<span class="post-byline__social">
+								<?php foreach ( $dgc_social as $dgc_net => $dgc_url ) : ?>
+									<a href="<?php echo esc_url( $dgc_url ); ?>" target="_blank" rel="noopener me" aria-label="<?php echo esc_attr( get_the_author() . ' trên ' . ( 'facebook' === $dgc_net ? 'Facebook' : 'LinkedIn' ) ); ?>"><?php echo dgc_icon( $dgc_net ); ?></a>
+								<?php endforeach; ?>
+							</span>
+						<?php endif; ?>
 					</div>
 
 					<article class="page-content" style="margin:0 0 40px">

@@ -25,6 +25,26 @@ function dgc_defaults() {
 		'hero_title'    => 'Backlink, Guest Post, Textlink và Booking báo PR uy tín',
 		'hero_sub'      => 'DigicomVN cung cấp trọn gói off-page SEO: mua textlink chất lượng, dịch vụ backlink an toàn, guest post đúng chủ đề và booking đăng bài PR trên các đầu báo lớn.',
 
+		// Hero trang chu = slider chuong trinh uu dai (inc/hero-promo.php). Gia lay tu bang gia that, khong nhap tay.
+		'hero_promo_on'    => '1',
+		'hero_promo_label' => 'Chương trình ưu đãi đang áp dụng',
+		'hero_promo_plans' => "Cloud 0 | bot, API nhỏ\nCloud 1 | web app nhỏ | 1\nCloud 2 | nhiều dịch vụ",
+		'hero_slides'      => "Cloud server (VPS) | VPS chạy app bạn vừa dựng bằng AI | Cloud server toàn quyền quản trị, IP riêng, ổ SSD. Đủ cho bot, API, web app nhỏ chạy 24/7. | cloud | /tháng | /cloud-server/#bang-gia | Chọn gói cloud\n"
+			. "Hosting | Hosting cho website giới thiệu, blog, landing page | Mua online, thanh toán bằng mã QR. Thông tin đăng nhập cPanel gửi qua email sau khi thanh toán xong. | hosting | /tháng | /hosting/#bang-gia | Xem gói hosting\n"
+			. "Booking báo PR | Viết bài PR miễn phí khi đặt từ 3 đầu báo | Giá niêm yết từng đầu báo, từng chuyên mục. Bạn chọn báo theo ngân sách, DigicomVN viết bài để bạn duyệt trước khi đăng. | booking | /bài | /booking-bao-pr/#bang-gia | Xem bảng giá đầu báo\n"
+			. "Dịch vụ SEO | Audit SEO website miễn phí | Gửi địa chỉ website, DigicomVN kiểm tra kỹ thuật, nội dung, liên kết rồi đề xuất việc nên làm trước, kèm phạm vi và chi phí. | Miễn phí | | #lien-he | Đăng ký audit",
+		'home_groups'      => "SEO | /dich-vu-seo/ | Đưa website lên Google bằng audit kỹ thuật, nghiên cứu từ khoá, nội dung theo cụm chủ đề và liên kết từ báo, site cùng ngành. Báo cáo hằng tháng từ Search Console. | Audit miễn phí | Xem dịch vụ SEO\n"
+			. "Booking báo PR | /booking-bao-pr/ | Đặt bài PR trên báo điện tử, truyền hình, fanpage và KOL. Giá niêm yết từng đầu báo, từng chuyên mục, có thể đặt riêng hoặc gộp vào hợp đồng SEO. | booking | Xem bảng giá đầu báo\n"
+			. "Website & Hosting | /ten-mien/ | Tên miền, hosting, cloud server, email và SSL mua online, thanh toán bằng mã QR. Thiết kế và chăm sóc website do đội DigicomVN thực hiện. | tenmien+hosting | Xem tên miền và hosting",
+		'home_group_links' => "SEO | SEO website | Dịch vụ SEO tổng thể | /dich-vu-seo/\nSEO | SEO website | SEO AI (GEO) | /dich-vu-seo-ai/\nSEO | SEO website | SEO local | /dich-vu-seo-local/\nSEO | SEO website | SEO quốc tế | /dich-vu-seo-quoc-te/\nSEO | SEO website | Viết bài chuẩn SEO | /dich-vu-viet-bai-chuan-seo/\nSEO | SEO website | Audit SEO miễn phí | #lien-he\n"
+			. "SEO | Backlink | Dịch vụ backlink | /dich-vu-backlink/\nSEO | Backlink | Mua textlink | /mua-textlink/\nSEO | Backlink | Guest post | /guest-post/\nSEO | Backlink | Backlink social entity | /backlink-social-entity/\nSEO | Backlink | Backlink quốc tế | /backlink-quoc-te/\nSEO | Backlink | Dịch vụ toplist | /dich-vu-toplist/\n"
+			. "SEO | Công cụ và đào tạo | Phần mềm SEO | /phan-mem-seo/\nSEO | Công cụ và đào tạo | Khoá học SEO | /khoa-hoc-seo/\n"
+			. "Booking báo PR | Báo điện tử | Booking báo PR | /booking-bao-pr/\nBooking báo PR | Báo điện tử | Booking báo tỉnh | /booking-bao-tinh/\nBooking báo PR | Báo điện tử | Booking báo quốc tế | /booking-bao-quoc-te/\nBooking báo PR | Báo điện tử | Báo giá theo đầu báo | /bao-gia-dang-bai-pr-theo-dau-bao/\n"
+			. "Booking báo PR | Truyền hình và mạng xã hội | Booking truyền hình | /booking-truyen-hinh/\nBooking báo PR | Truyền hình và mạng xã hội | Quảng cáo phát thanh | /quang-cao-phat-thanh/\nBooking báo PR | Truyền hình và mạng xã hội | Booking fanpage | /booking-fanpage/\nBooking báo PR | Truyền hình và mạng xã hội | Booking KOL, KOC | /booking-kol-koc/\n"
+			. "Website & Hosting | Tên miền và hosting | Đăng ký tên miền | /ten-mien/\nWebsite & Hosting | Tên miền và hosting | Hosting | /hosting/\nWebsite & Hosting | Tên miền và hosting | Cloud server (VPS) | /cloud-server/\nWebsite & Hosting | Tên miền và hosting | Email doanh nghiệp | /email-doanh-nghiep/\nWebsite & Hosting | Tên miền và hosting | Chứng chỉ SSL | /chung-chi-ssl/\n"
+			. "Website & Hosting | Website | Thiết kế website | /thiet-ke-website/\nWebsite & Hosting | Website | Chăm sóc website | /cham-soc-website/\nWebsite & Hosting | Website | Đăng ký Bộ Công Thương | /dang-ky-website-bo-cong-thuong/",
+		'hero_promo_note'  => 'Giá chưa gồm VAT, cập nhật tự động theo bảng giá trên từng trang.',
+
 		// Dai so lieu duoi hero. Moi dong: con so | nhan mo ta. Sua tu WP Admin khi mang luoi thay doi.
 		'hero_stats'    => "500+ | đầu báo trong nước & quốc tế\n2.000+ | site guest post đa ngành\nBáo giá | minh bạch\nHỗ trợ | tư vấn tận tình\nXuất VAT | đầy đủ",
 
@@ -202,7 +222,12 @@ function dgc_settings_page() {
 				dgc_field( 'hero_kicker', 'Dong nho tren tieu de (trang chu)' );
 				dgc_field( 'hero_title', 'Tieu de lon', 'Boc chu can to mau nhan trong dau sao, vd: Dich vu SEO *dua website len top*.' );
 				dgc_field( 'hero_sub', 'Mo ta phu', '', 'textarea' );
-				dgc_field( 'hero_stats', 'Dai so lieu duoi hero', 'Moi dong: con so | nhan mo ta (vd: 500+ | dau bao trong nuoc va quoc te). Toi da 5 dong. Chi ghi so lieu THAT.', 'textarea' );
+				dgc_field( 'hero_promo_on', 'Trang chu: bat slider chuong trinh uu dai o dau trang', '1 = hien, 0 = tat (tieu de H1 + mo ta van hien o khoi duoi).' );
+				dgc_field( 'hero_slides', 'Slider chuong trinh uu dai (trang chu)', 'Moi dong 1 slide: nhan | tieu de | mo ta 1-2 dong | nguon gia | don vi | duong dan | chu tren nut. Nguon gia: cloud (hien cac goi cloud ben duoi), hosting, booking, tenmien, email, so cu the, hoac chu (vd Mien phi). Gia tu lay tu bang gia that. Chi ghi chuong trinh dang ap dung that, khong bia % giam.', 'textarea' );
+				dgc_field( 'hero_promo_plans', 'Slide cloud: goi hien thi', 'Moi dong: Ten goi (dung ten o bang gia cloud server, muc 12) | dung cho | 1 neu muon to dam.', 'textarea' );
+				dgc_field( 'hero_promo_label', 'Slider: nhan cho trinh doc man hinh' );
+				dgc_field( 'hero_promo_note', 'Slider: ghi chu nho duoi slider' );
+				dgc_field( 'hero_stats','Dai so lieu duoi hero', 'Moi dong: con so | nhan mo ta (vd: 500+ | dau bao trong nuoc va quoc te). Toi da 5 dong. Chi ghi so lieu THAT.', 'textarea' );
 				dgc_field( 'svc_intros', 'Dinh nghia dich vu ("... la gi") - hien duoi hero tung trang dich vu', 'Moi dong: slug | Tieu de | Doan dinh nghia (2-4 cau). Slug khop trang dich vu: booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink... De trong 1 slug = trang do khong hien khoi nay. Giup bat intent "... la gi" + AI/Google trich dan.', 'textarea' );
 				dgc_field( 'svc_faqs', 'FAQ rieng tung trang dich vu (truoc form bao gia)', 'Moi dong: slug | Cau hoi | Cau tra loi. MOT slug co the co NHIEU dong = nhieu cau hoi cho trang do. Slug: booking-bao-pr, guest-post, mua-textlink, dich-vu-backlink... De trong 1 slug = trang do khong hien FAQ. Sinh schema FAQPage giup Google/AI trich dan.', 'textarea' );
 				?>
@@ -214,7 +239,9 @@ function dgc_settings_page() {
 				dgc_field( 'home_about_title', 'Ve DigicomVN - tieu de', 'Boc chu to mau trong dau sao *...*.' );
 				dgc_field( 'home_about_text', 'Ve DigicomVN - doan gioi thieu', '', 'textarea' );
 				dgc_field( 'home_about_points', 'Ve DigicomVN - diem nhan', 'Moi dong: chu dam | phan giai thich.', 'textarea' );
-				dgc_field( 'home_solutions', 'Giai phap SEO (luoi the)', 'Moi dong: ten | duong dan | mo ta. Dong DAU TIEN la the noi bat mau xanh. Trang chua dang thi tu an.', 'textarea' );
+				dgc_field( 'home_groups', 'Nhom dich vu (duoi hero)', 'Moi dong 1 nhom, theo thu tu menu: Ten nhom | duong dan chinh | mo ta | gia (booking, tenmien+hosting, email, cloud hoac chu) | chu tren nut.', 'textarea' );
+				dgc_field( 'home_group_links', 'Nhom dich vu: danh sach link', 'Moi dong: Ten nhom (khop o tren) | tieu de muc con | ten dich vu | duong dan. Trang chua dang thi tu an.', 'textarea' );
+				dgc_field( 'home_solutions', 'Giai phap SEO (luoi the) - KHONG con hien o trang chu tu 02/11/2026', 'Moi dong: ten | duong dan | mo ta. Dong DAU TIEN la the noi bat mau xanh. Trang chua dang thi tu an.', 'textarea' );
 				dgc_field( 'home_formula', 'Phuong trinh SEO', 'Dong 1: ve trai | giai thich. 3 dong sau: tung tru cot | giai thich.', 'textarea' );
 				dgc_field( 'home_process', 'Quy trinh SEO (the danh so)', 'Moi dong: ten buoc | mo ta.', 'textarea' );
 				dgc_field( 'home_faq_keys', 'FAQ hien o trang chu', 'Moi dong 1 doan chu nam trong cau hoi (lay tu muc 5 FAQ). De trong = 8 cau dau. Toan bo FAQ van o trang Cau hoi thuong gap.', 'textarea' );

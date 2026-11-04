@@ -12,12 +12,13 @@ $dgc_wc   = dgc_web_svc_conf( $dgc_ws );
 $dgc_wl   = dgc_web_svc_list();
 $dgc_wn   = $dgc_wl[ $dgc_ws ] ?? get_the_title();
 $dgc_wr   = dgc_web_rows( $dgc_ws );
+$dgc_pp   = dgc_pp();
 ?>
 <section class="sg-phero sg-phero--solo">
 	<div class="wrap">
 		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <a href="<?php echo esc_url( home_url( '/thiet-ke-website/' ) ); ?>">Website</a> / <span><?php echo esc_html( $dgc_wn ); ?></span></nav>
-		<h1><?php echo esc_html( get_the_title() ); ?></h1>
-		<?php if ( ! empty( $dgc_wc['lead'] ) ) : ?><p class="sg-lead"><?php echo esc_html( $dgc_wc['lead'] ); ?></p><?php endif; ?>
+		<h1><?php echo esc_html( $dgc_pp['h1'] !== '' ? $dgc_pp['h1'] : get_the_title() ); ?></h1>
+		<?php $dgc_wlead = $dgc_pp['lead'] !== '' ? $dgc_pp['lead'] : ( $dgc_wc['lead'] ?? '' ); if ( $dgc_wlead !== '' ) : ?><p class="sg-lead"><?php echo esc_html( $dgc_wlead ); ?></p><?php endif; ?>
 		<div class="sg-hero-cta">
 			<?php if ( $dgc_wr ) : ?><a class="sg-btn sg-btn--light" href="#bang-gia"><?php echo dgc_arrow(); ?>Xem bảng giá</a><?php endif; ?>
 			<a class="sg-btn <?php echo $dgc_wr ? 'sg-btn--line' : 'sg-btn--light'; ?>" href="#lien-he" data-svc="<?php echo esc_attr( $dgc_wn ); ?>" data-order="Cần tư vấn: <?php echo esc_attr( $dgc_wn ); ?>"><?php echo dgc_arrow(); ?><?php echo $dgc_wr ? 'Nhờ tư vấn chọn gói' : 'Nhận báo giá'; ?></a>
@@ -25,7 +26,7 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 	</div>
 </section>
 
-<?php if ( ! empty( $dgc_wc['story'] ) ) : $dgc_im = $dgc_wc['img'] ?? array(); ?>
+<?php if ( ! $dgc_pp['on'] && ! empty( $dgc_wc['story'] ) ) : $dgc_im = $dgc_wc['img'] ?? array(); ?>
 <section class="sec ws-story-sec">
 	<div class="wrap ws-story<?php echo empty( $dgc_im ) ? ' ws-story--solo' : ''; ?>">
 		<div class="ws-story-text">
@@ -43,7 +44,8 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 </section>
 <?php endif; ?>
 
-<?php if ( ! empty( $dgc_wc['extra'] ) ) : ?>
+<?php dgc_pp_section( $dgc_pp['before'] ); ?>
+<?php if ( ! $dgc_pp['on'] && ! empty( $dgc_wc['extra'] ) ) : ?>
 <section class="sec ws-extra-sec">
 	<div class="wrap" style="max-width:1000px">
 		<div class="ws-extra-head"><span class="eyebrow"><?php echo esc_html( $dgc_wc['extra_eyebrow'] ?? '' ); ?></span><h2><?php echo esc_html( $dgc_wc['extra_h'] ); ?></h2></div>
@@ -55,8 +57,8 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 <?php if ( $dgc_wr ) : ?>
 <section class="sec" id="bang-gia">
 	<div class="wrap">
-		<div class="center" style="margin-bottom:24px"><span class="eyebrow">Bảng giá</span><h2><?php echo esc_html( $dgc_wc['price_h'] ?: 'Bảng giá' ); ?></h2>
-			<p class="muted" style="max-width:720px;margin:8px auto 0">Giá chưa gồm VAT. Đăng ký kỳ hạn dài hoặc nhiều người dùng: gửi yêu cầu để nhận báo giá trọn kỳ.</p></div>
+		<div class="center" style="margin-bottom:24px"><span class="eyebrow">Bảng giá</span><h2><?php echo esc_html( $dgc_pp['price_h'] ?: ( $dgc_wc['price_h'] ?: 'Bảng giá' ) ); ?></h2>
+			<p class="muted" style="max-width:720px;margin:8px auto 0"><?php echo esc_html( $dgc_pp['price_intro'] ?: 'Giá chưa gồm VAT. Đăng ký kỳ hạn dài hoặc nhiều người dùng: gửi yêu cầu để nhận báo giá trọn kỳ.' ); ?></p></div>
 		<?php if ( count( $dgc_wr ) > 1 ) : ?>
 		<nav class="hg-tabs" aria-label="Nhóm gói">
 			<?php $i = 0; foreach ( array_keys( $dgc_wr ) as $g ) : ?><a href="#wg-<?php echo (int) $i++; ?>"><?php echo esc_html( $g ); ?></a><?php endforeach; ?>
@@ -91,9 +93,7 @@ $dgc_wr   = dgc_web_rows( $dgc_ws );
 </section>
 <?php endif; ?>
 
-<?php if ( trim( get_post_field( 'post_content', get_the_ID() ) ) ) : ?>
-<section class="sec"><div class="wrap page-content" style="max-width:960px"><?php the_content(); ?></div></section>
-<?php endif; ?>
+<?php dgc_pp_section( $dgc_pp['after'] ); ?>
 
 <section class="sec">
 	<div class="wrap">

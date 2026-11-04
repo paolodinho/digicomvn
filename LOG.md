@@ -1,5 +1,8 @@
 # LOG - digicomvn.com
 
+## 2026-11-02 (Báo giá Thùy Dương: gộp báo nước ngoài + báo VN tiếng Anh + tiếng Việt)
+- Thêm tab "Báo VN tiếng Anh" (VnExpress International, Tuoi Tre News, VTV News, Dân trí International, Viet Nam News 2 vị trí, VIR; Goodcom tab 02.11.2026 x1,1) và "Báo tiếng Việt" (21 báo chia 3 nhóm lĩnh vực, giá như báo giá A&P 31/10; 24h đổi mục Kinh doanh 4,5tr). Mục lục + hoá đơn: nước ngoài không VAT, báo VN chưa VAT 8% có hoá đơn. Kiểm 45 domain Safe Browsing sạch; upload đè 2 Sheet giữ link. Rule bang-gia-booking.md thêm ngoại lệ Goodcom cho báo VN tiếng Anh.
+
 ## 2026-10-30 (De-slop 6 trang dịch vụ website)
 - Bỏ lưới 4 lợi ích + 4 bước đều nhau; mỗi trang có đoạn văn xuôi số liệu có nguồn (web.dev, Gmail sender guidelines, CA/B Forum SC-081v3, Nghị định 248/2026) + ảnh/thẻ số đo thật của chính digicomvn.com, và 1 bảng/mốc thời gian riêng. Trang Bộ Công Thương cập nhật quy định mới 01/7/2026. Link moit.gov.vn cũ 404 phát hiện khi kiểm nguồn, đã thay bằng bài tổng hợp xử phạt còn sống; bỏ con số phạt 20 triệu vì nguồn chính thống không ghi rõ cho đúng lỗi này. DGC_VER 3.22.1, QA 375/1440: 0 tràn ngang.
 
@@ -5023,3 +5026,28 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - Gộp 28 bài (tab 10/26) vào báo giá A&P: Phần A 28 bài 88.219.000đ chưa VAT (lãi 8.381.408đ), Phần B 36 lựa chọn Goodcom. DanaSEO giữ giá, Goodcom x1,1. Ghi đè 2 Sheet A&P giữ link; file K18 cũ vào _backup/.
 - Làm lại A&P theo yêu cầu: báo lớn DN/kinh doanh/giáo dục, ngân sách 15tr gồm VAT; 3 phương án (13,70 / 13,81 / 12,46tr gồm VAT) + danh mục 15 báo. Ghi đè 2 Sheet giữ link.
 - A&P sửa lần 2: bỏ 3 phương án, chỉ liệt kê 15 báo lớn DN/kinh doanh/giáo dục để khách tự chọn.
+- A&P: bỏ Cafebiz theo Hiếu, còn 14 báo.
+- A&P bản cuối: gộp 28 bài + Goodcom điện mặt trời, bỏ fanpage/TikTok (Phần B còn 19 lựa chọn). Bản 14 báo lưu _backup.
+
+## 2026-10-31 - A&P K19 bỏ trùng
+- Hiếu xoá bớt dòng trên Sheet; bỏ trùng còn 21 báo (1 dòng/báo), bỏ Phần A/B + tổng/VAT. Ghi đè 2 Sheet giữ link. Backup 11-bao-gia-khach/_backup/*truoc-bo-trung*.
+
+## 2026-11-02 - Viết lại 29 trang đích + trang chủ slider
+- Đăng đủ 4 nhóm nháp 14-viet-lai-trang-dich-2026-11/nhap/ (29 trang), sửa giá lệch meta, GSC add.
+- Trang chủ: hero thành slider ưu đãi 4 chương trình (giá từ bảng giá live), dưới là H1 mới "DigicomVN: dịch vụ SEO, booking báo PR, website và hosting" + 3 nhóm dịch vụ. DGC_VER 3.24.4. Brian: sửa tương phản dark/slider, nút 44px, chuyển slide tuần tự. Jett ĐẠT; meta_desc_home đổi theo phạm vi mới (155 ký tự).
+- Đo: overflow 0 ở 375/768/1440, slider 564/473/445px không đổi giữa slide, menu 1 dòng, orphan [].
+
+## 2026-11-02 - Báo giá booking báo nước ngoài (Thùy Dương)
+- Hiếu chốt: báo nước ngoài CHỈ lấy nguồn IAC Digital (ghi rule bang-gia-booking.md). Lọc 19/58 site IAC là trang tin/tạp chí, bỏ blog + 3 gói. Giá = đúng giá IAC (4,59-7,56tr/bài), lãi 10%, không VAT.
+- Sheet khách 1Z8NSocYcQN_9IcgFFQZ4PxgpEvo15NDV_byXhBBZKIA, NOIBO 16ty2x62ZqmlBr5nAIABQmZmzWtkLEcpf0F-o4GTT0tE.
+
+- 02/11/2026: Thêm cột "Đơn vị chủ quản / xuất bản" (cột C) vào báo giá Thùy Dương cả 2 file + 2 Google Sheet; nguồn: chân trang/trang giới thiệu từng site, 10/19 trang tin độc lập không công bố pháp nhân.
+
+- 02/11/2026: Báo giá Thùy Dương 18 site (bỏ theinscribermag), cột giới thiệu chi tiết; nguyên nhân Drive khoá file = link tới domain bị Google Safe Browsing đánh dấu (theinscribermag.com), quét 26 file báo giá/56 domain chỉ domain này lỗi; gỡ link ở 2 file; thêm tools/check-links-safebrowsing.py.
+
+## 2026-11-02 - Báo giá Zalo OA + Zalo Ads (chị Thảo)
+- Research giá chính thức gói OA (zalo.solutions/oa/pricing) + 15 đơn vị đối thủ; định giá Digicom thấp hơn. 2 Google Sheet (khách + NOIBO), ghi tab Báo giá khách hàng.
+
+- 03/11/2026: Báo giá booking báo mẹ và bé chị Diệu Liên (17 vị trí, Goodcom còn hạn, x1,1), 2 Google Sheet + dòng tab Báo giá khách hàng.
+
+- 04/11/2026: Báo giá booking báo khai trương Dailyve (chị Thục Quyên), 2 phương án 20tr/10tr, Goodcom còn hạn x1,1, 2 Google Sheet + dòng tab Báo giá khách hàng.

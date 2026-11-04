@@ -11,8 +11,9 @@
   --navy-2:#262B45;
   --action:#4761FF;         /* primary xanh duong GrowMark, KHONG purple/indigo */
   --action-2:#3450E0;       /* CTA hover */
-  --teal:#0E8C7F;           /* accent phu (badge/icon), giu rieng biet voi primary */
-  --dr-hi:#0E8C7F;   /* badge DR>=70 (price-grid.js drColor()) */
+  --teal:#00827A;           /* accent phu (badge/icon), giu rieng biet voi primary */
+  --teal-text:#00776F;      /* chu teal tren nen F3F7FF/F3F3F6/F0FCFF - dam hon --teal de dat >=4.5:1 (BBNT 2026-11-01) */
+  --dr-hi:#00827A;   /* badge DR>=70 (price-grid.js drColor()) */
   --dr-mid:#2563EB;  /* badge DR>=40 */
   --dr-lo:#5B6675;   /* badge DR>=25 */
   --dr-none:#8B93A7; /* badge DR<25 / chua co du lieu */
@@ -99,10 +100,13 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
    Topbar + Header
    ========================================================================== */
 .topbar{background:var(--navy);color:#cfdcea;font-size:13px}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:18px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:44px;gap:18px}
 .topbar a{color:#cfdcea}.topbar a:hover{color:#fff}
 .topbar .tb-right{display:flex;gap:16px;align-items:center}
 .topbar .sep{opacity:.4}
+.topbar .tb-left a[href^="tel:"]{display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;min-width:44px;padding:0 6px;box-sizing:border-box;vertical-align:middle}
+.topbar .tb-right a[href*="zalo.me"]{display:inline-flex;align-items:center;min-height:24px;box-sizing:border-box}
 
 .site-header{position:sticky;top:var(--ribbon-h,0px);z-index:50;background:rgba(247,245,241,.92);
   backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
@@ -133,7 +137,8 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .nav>ul>li>a[href*="/bang-gia"]:after{display:block;right:0}
 .nav>ul>li>a[href*="/bang-gia"]:hover{color:var(--action-2);background:none}
 .header-cta{margin-left:auto;display:flex;align-items:center;gap:12px}
-.header-cta .phone{font-family:var(--font-display);font-weight:700;color:var(--heading);white-space:nowrap}
+.header-cta .phone{font-family:var(--font-display);font-weight:700;color:var(--heading);white-space:nowrap;
+  display:inline-flex;align-items:center;padding:9px 6px;min-height:44px;box-sizing:border-box}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
 .burger span{width:24px;height:2px;background:var(--navy);display:block}
 
@@ -218,7 +223,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .promo-head h2{margin:0}
 .promo-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px}
 .promo-slots,.promo-count{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
-  padding:7px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface-2);
+  padding:7px 12px;border-radius:4px;border:1px solid var(--line-2);background:var(--surface-2);
   color:var(--ink-soft)}
 .promo-slots b,.promo-count b{color:var(--heading);font-weight:700}
 .promo-slots{border-color:#f2c9a8;background:#fff6ee;color:#8a4b12}
@@ -228,7 +233,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 /* Nhan uu dai trong tung o (VD "Mien phi tron goi") - dat duoi mo ta, khong doi layout o. */
 .promo-tag{display:inline-block;margin-top:13px;font-size:11px;font-weight:700;
   letter-spacing:.03em;text-transform:uppercase;color:var(--action);
-  background:rgba(71,97,255,.1);border:0;border-radius:999px;padding:5px 12px;line-height:1.25}
+  background:rgba(71,97,255,.1);border:0;border-radius:4px;padding:5px 12px;line-height:1.25}
 .promo:nth-child(even) .promo-tag{color:var(--teal);background:rgba(14,140,127,.1)}
 .promo-foot{margin:0;font-size:13px;color:var(--ink-soft);flex:1;min-width:min(100%,320px)}
 @media(max-width:640px){.promo-head{align-items:flex-start}.promo-meta{font-size:12.5px}}
@@ -533,7 +538,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 .cs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px}
 .cs-card{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:24px 22px;display:flex;flex-direction:column}
 .cs-tag{align-self:flex-start;font-family:var(--font-display);font-size:11.5px;font-weight:700;letter-spacing:.06em;
-  text-transform:uppercase;color:var(--action);background:rgba(71,97,255,.10);padding:5px 11px;border-radius:999px;margin-bottom:12px}
+  text-transform:uppercase;color:var(--action);background:rgba(71,97,255,.10);padding:5px 11px;border-radius:4px;margin-bottom:12px}
 .cs-card h3{font-size:17.5px;line-height:1.32;margin:0 0 10px}
 .cs-result{color:var(--ink-soft);font-size:14.5px;line-height:1.6;margin:0 0 14px}
 .cs-client{font-family:var(--font-display);font-weight:600;color:var(--heading);font-size:13.5px;margin-bottom:14px}
@@ -599,7 +604,7 @@ p,li,.lede,.desc,figcaption{text-wrap:pretty}
 /* Pill uu dai NOI (DA BO 2026-07-15 - thay bang ribbon tren cung; giu style phong khi rollback). */
 .promo-fab{position:fixed;right:20px;left:auto;bottom:150px;z-index:81;display:inline-flex;align-items:center;gap:7px;
   background:linear-gradient(135deg,#FF7A3D,#F0492E);color:#fff;border:0;cursor:pointer;
-  padding:5px 14px 5px 6px;border-radius:999px;font-family:var(--font-body);
+  padding:5px 14px 5px 6px;border-radius:8px;font-family:var(--font-body);
   box-shadow:0 8px 20px rgba(240,73,46,.4),0 2px 6px rgba(28,32,53,.12);
   transform:translateZ(0);transition:box-shadow .18s,transform .18s;animation:promoFabIn .5s ease both}
 .promo-fab:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(240,73,46,.5)}
@@ -1054,7 +1059,7 @@ body.mnav-open{overflow:hidden}
 .filter-sel select:focus{outline:2px solid var(--action);outline-offset:1px}
 .filter-chips{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
 .filter-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;
-  color:#fff;background:var(--action);border:0;border-radius:999px;padding:5px 9px;cursor:pointer}
+  color:#fff;background:var(--action);border:0;border-radius:4px;padding:5px 9px;cursor:pointer}
 .filter-chip span{font-size:13px;line-height:1;opacity:.8}
 .filter-chip:hover span{opacity:1}
 .filter-clear{font-size:12px;color:var(--ink-soft);background:none;border:0;
@@ -1226,7 +1231,7 @@ body.mnav-open{overflow:hidden}
 .sel-bar-disc .sel-bar-line-num{color:var(--teal)}
 .sel-bar-nudge{flex-basis:100%;margin:8px 0 0;font-size:12.5px;color:var(--action);font-weight:600}
 .sel-bar-combo-note{font-size:12.5px;color:var(--ink-soft);margin:8px 2px 0}
-.order-summary-disc{font-size:13.5px;color:var(--teal);font-weight:600;margin-bottom:4px}
+.order-summary-disc{font-size:13.5px;color:var(--teal-text,#00776F);font-weight:600;margin-bottom:4px}
 
 /* Nut toggle "Chon bao nay" - chi dung o mobile (desktop dung checkbox + nut order-now) */
 .pick-btn{display:none}
@@ -1437,7 +1442,7 @@ tr:has(.row-check:checked) .order-picked{display:inline}
 .related-list a:hover{color:var(--action)}
 @media(max-width:640px){.related-list{grid-template-columns:1fr}}
 .related-more{margin-top:10px}
-.related-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--action);padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface-2);user-select:none;transition:background .15s}
+.related-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--action);padding:7px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);user-select:none;transition:background .15s}
 .related-more>summary::-webkit-details-marker{display:none}
 .related-more>summary:after{content:"▾";font-size:12px}
 .related-more[open]>summary:after{content:"▴"}
@@ -1445,7 +1450,7 @@ tr:has(.row-check:checked) .order-picked{display:inline}
 .related-more .related-list{margin-top:14px}
 [data-theme="dark"] .related-more>summary{background:#1B2330;border-color:var(--line-2,#2A3340);color:#8FB0FF}
 .cat-money-link{margin-top:14px}
-.cat-money-link a{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--action);padding:9px 18px;border:1px solid var(--action);border-radius:999px;text-decoration:none;transition:background .15s,color .15s}
+.cat-money-link a{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--action);padding:9px 18px;border:1px solid var(--action);border-radius:8px;text-decoration:none;transition:background .15s,color .15s}
 .cat-money-link a:hover{background:var(--action);color:#fff}
 
 @media(max-width:1024px){
@@ -1546,6 +1551,10 @@ body.single-post .brand-watermark{display:none}
 .post-byline__avatar--fallback{display:flex;align-items:center;justify-content:center;
   background:var(--navy);color:#fff;font-family:var(--font-display);font-weight:700;
   font-size:13px}
+.post-byline__social{display:inline-flex;gap:8px;margin-left:2px}
+.post-byline__social a{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;border:1px solid var(--line-2);border-radius:50%;color:var(--ink-soft)}
+.post-byline__social a:hover{color:var(--action);border-color:var(--action)}
+.post-byline__social svg{width:14px;height:14px}
 /* So lieu thuc te duoi ho so tac gia */
 .author-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
 .author-stat{flex:1 1 150px;background:var(--surface-2);border:1px solid var(--line);
@@ -1594,7 +1603,7 @@ body.single-post .brand-watermark{display:none}
 .author-topics__label{font-size:14px;color:var(--ink-soft);margin:0 0 12px}
 .author-topics__list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .author-topic-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;
-  border-radius:999px;background:var(--surface);border:1px solid var(--line);
+  border-radius:4px;background:var(--surface);border:1px solid var(--line);
   font-size:13.5px;font-weight:600;color:var(--heading);text-decoration:none}
 .author-topic-chip em{font-style:normal;font-size:12px;color:var(--ink-soft)}
 .author-topic-chip:hover{border-color:var(--teal);color:var(--teal)}
@@ -1691,6 +1700,7 @@ body.single-post .brand-watermark{display:none}
   --action:#6B81FF;         /* sang hon 1 bac de du tuong phan tren nen toi */
   --action-2:#8496FF;
   --teal:#25B5A3;
+  --teal-text:#25B5A3;      /* dark mode: giu nguyen, khong anh huong boi fix tuong phan light mode */
   --sh-low:0 2px 8px rgba(0,0,0,.35);
   --sh-mid:0 10px 30px rgba(0,0,0,.45);
   --sh-high:0 24px 60px rgba(0,0,0,.6);
@@ -2067,7 +2077,7 @@ body.single-post .brand-watermark{display:none}
   padding-bottom:12px;margin-bottom:18px;border-bottom:2px solid var(--line)}
 .srch-group-head h2{margin:0;font-size:22px;display:flex;align-items:center;gap:10px}
 .srch-count{font-family:var(--font-body);font-size:12.5px;font-weight:700;color:#fff;background:var(--action);
-  border-radius:999px;padding:2px 9px;line-height:1.6}
+  border-radius:4px;padding:2px 9px;line-height:1.6}
 .srch-gia,.srch-posts{list-style:none;margin:0;padding:0}
 .srch-gia li{border-bottom:1px solid var(--line)}
 .srch-gia a{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 4px;text-decoration:none}
@@ -2152,7 +2162,7 @@ body.single-post .brand-watermark{display:none}
    Nut so ra "Goi gom nhung gi" (Hieu 2026-07-15)
    ========================================================================== */
 .pkg-toggle{display:inline-flex;align-items:center;gap:6px;margin-top:8px;
-  background:transparent;border:1px solid var(--line-2);border-radius:999px;
+  background:transparent;border:1px solid var(--line-2);border-radius:8px;
   padding:5px 12px;font-size:12.5px;font-weight:600;color:var(--action);cursor:pointer;
   font-family:var(--font-body);transition:.16s}
 .pkg-toggle:hover{border-color:var(--action);background:var(--surface)}
@@ -2294,7 +2304,7 @@ body.single-post .brand-watermark{display:none}
 @keyframes ai-blink{0%,60%,100%{opacity:.25}30%{opacity:.9}}
 .ai-chat-sugg{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
 .ai-sugg-btn{border:1px solid var(--line-2);background:var(--surface);color:var(--ink);
-  border-radius:999px;padding:7px 13px;font-size:13px;cursor:pointer;transition:.15s;font-family:var(--font-body)}
+  border-radius:8px;padding:7px 13px;font-size:13px;cursor:pointer;transition:.15s;font-family:var(--font-body)}
 .ai-sugg-btn:hover{border-color:var(--teal);color:var(--teal)}
 .ai-chat-form{display:flex;gap:8px;margin-top:12px}
 .ai-chat-input{flex:1;min-width:0;border:1.5px solid var(--line-2);border-radius:12px;padding:11px 14px;
@@ -2339,18 +2349,18 @@ body.single-post .brand-watermark{display:none}
 .dr-row-name{flex:0 0 108px;font-size:13.5px;font-weight:600;color:var(--heading);
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dr-row-badge{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--teal,#0E8C7F);
-  border-radius:999px;padding:2px 7px;vertical-align:1px}
+  text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--teal,#00827A);
+  border-radius:4px;padding:2px 7px;vertical-align:1px}
 .dr-row-track{flex:1 1 auto;height:12px;background:var(--line);border-radius:999px;overflow:hidden}
 .dr-row-bar{display:block;height:100%;width:0;border-radius:999px;
   background:linear-gradient(90deg,#7C93F5,var(--action,#4761FF));
   transition:width .8s cubic-bezier(.2,.7,.3,1)}
-.dr-row.is-current .dr-row-bar{background:linear-gradient(90deg,#2FB39F,var(--teal,#0E8C7F))}
-.dr-row.is-current .dr-row-name{color:var(--teal,#0E8C7F)}
+.dr-row.is-current .dr-row-bar{background:linear-gradient(90deg,#2FB39F,var(--teal,#00827A))}
+.dr-row.is-current .dr-row-name{color:var(--teal,#00827A)}
 .dr-chart.in-view .dr-row-bar{width:var(--dr-w)}
 .dr-row-val{flex:0 0 52px;text-align:right;font-size:12.5px;font-weight:700;
   color:var(--ink-soft);font-variant-numeric:tabular-nums}
-.dr-row.is-current .dr-row-val{color:var(--teal,#0E8C7F)}
+.dr-row.is-current .dr-row-val{color:var(--teal,#00827A)}
 .dr-chart-note{font-size:12px;color:var(--ink-soft);margin:12px 2px 0}
 [data-theme="dark"] .dr-chart{background:#1B2330}
 [data-theme="dark"] .dr-row:hover{background:rgba(124,147,245,.12)}
@@ -2390,9 +2400,9 @@ body.single-post .brand-watermark{display:none}
 .oquiz-q-btns{display:flex;gap:6px;flex:0 0 auto}
 .oquiz-q-btns button{font-family:var(--font-body);font-size:12.5px;font-weight:600;
   color:var(--ink-soft);background:var(--surface);border:1px solid var(--line-2);
-  border-radius:999px;padding:5px 14px;cursor:pointer;transition:all .15s}
+  border-radius:8px;padding:5px 14px;cursor:pointer;transition:all .15s}
 .oquiz-q-btns button:hover{border-color:var(--action);color:var(--action)}
-.oquiz-q-btns .oquiz-yes.on{background:var(--teal,#0E8C7F);border-color:var(--teal,#0E8C7F);color:#fff}
+.oquiz-q-btns .oquiz-yes.on{background:var(--teal,#00827A);border-color:var(--teal,#00827A);color:#fff}
 .oquiz-q-btns .oquiz-no.on{background:var(--ink-soft);border-color:var(--ink-soft);color:#fff}
 .oquiz-result{margin-top:14px;padding:14px 16px;font-size:14px;line-height:1.6;color:var(--ink);
   background:var(--surface);border:1px solid rgba(14,140,127,.35);border-radius:10px}
@@ -2411,10 +2421,10 @@ body.single-post .brand-watermark{display:none}
 .acheck-sub{font-size:13.5px;color:var(--ink-soft,#5A6472);margin:0 0 14px}
 .acheck-list{display:flex;flex-direction:column;gap:8px}
 .acheck-item{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink,#2A3240);cursor:pointer;padding:9px 12px;border:1px solid var(--line-2,#E4E8EF);border-radius:9px;background:var(--surface,#FAFBFC)}
-.acheck-item input{margin-top:3px;accent-color:#0E8C7F}
+.acheck-item input{margin-top:3px;accent-color:#00827A}
 .acheck-item:has(input:checked){border-color:rgba(14,140,127,.45);background:#F1FAF8}
 .acheck-result{margin-top:14px;font-size:14.5px;color:var(--ink,#2A3240);line-height:1.55}
-.acheck-result b{color:#0E8C7F}
+.acheck-result b{color:#00827A}
 .acheck-result a{color:var(--action,#2456E6)}
 [data-theme="dark"] .acheck{background:#1B2330}
 [data-theme="dark"] .acheck-item{background:#141B26;color:#C9D2DE}
@@ -2560,7 +2570,7 @@ body.single-post .brand-watermark{display:none}
 .post-entities__head .post-toc__icon{color:var(--action,#2456E6)}
 .post-entities__hint{font-weight:600;font-size:12.5px;color:var(--teal);margin-left:2px}
 .ent-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.ent-item{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;line-height:1.3}
+.ent-item{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:4px;font-size:13px;font-weight:600;line-height:1.3}
 .ent-item--found{background:rgba(14,140,127,.1);border:1px solid rgba(14,140,127,.28);color:var(--heading)}
 .ent-item--found .ent-check{color:var(--teal)}
 .ent-item--missing{background:transparent;border:1px dashed var(--line-2);color:var(--ink-soft)}
@@ -2570,7 +2580,7 @@ body.single-post .brand-watermark{display:none}
 [data-theme="dark"] .post-entities{box-shadow:0 2px 10px rgba(0,0,0,.25)}
 
 .toc-fab{position:fixed;left:18px;bottom:82px;z-index:81;display:inline-flex;align-items:center;gap:7px;
-  background:var(--surface-2);border:1.5px solid var(--line-2);color:var(--heading);border-radius:999px;
+  background:var(--surface-2);border:1.5px solid var(--line-2);color:var(--heading);border-radius:8px;
   padding:9px 15px 9px 12px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(15,23,42,.14);
   cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s}
 .toc-fab.show{opacity:1;pointer-events:auto;transform:translateY(0)}
@@ -2683,14 +2693,16 @@ body.single-post .brand-watermark{display:none}
   .dgc-data-table tbody tr{background:var(--surface-2);border:1px solid var(--line);
     border-radius:var(--r-md);padding:12px 14px;margin-bottom:10px}
   .dgc-data-table tbody tr:nth-child(even),.dgc-data-table tbody tr:hover{background:var(--surface-2)}
-  .dgc-data-table tbody td{border:0;padding:5px 0;display:flex;align-items:center;gap:10px;
-    justify-content:space-between;text-align:right;white-space:normal}
-  .dgc-data-table tbody td:before{content:attr(data-label);flex:0 0 auto;font-size:11px;
-    text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);font-weight:700;text-align:left}
+  /* 2026-11-01: doi tu hang ngang (label trai/gia tri phai) sang xep doc (label tren,
+     gia tri duoi) - hang ngang bop chu khi gia tri la cau dai (vd mo ta cong viec),
+     xep doc dung tot cho ca gia tri ngan (DR, gia...) lan cau dai (Hieu 01/11/2026). */
+  .dgc-data-table tbody td{border:0;padding:6px 0;display:block;text-align:left;white-space:normal}
+  .dgc-data-table tbody td:before{content:attr(data-label);display:block;font-size:11px;
+    text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);font-weight:700;margin-bottom:3px}
   .dgc-data-table td:first-child{font-size:15.5px;padding-bottom:9px;margin-bottom:4px;
-    border-bottom:1px solid var(--line);justify-content:flex-start;white-space:normal}
+    border-bottom:1px solid var(--line);white-space:normal}
   .dgc-data-table td:first-child:before{display:none}
-  .dgc-data-table td.col-dr{width:auto;text-align:right}
+  .dgc-data-table td.col-dr{width:auto}
 }
 [data-theme="dark"] .dgc-data-table tbody tr:nth-child(even){background:rgba(95,203,190,.05)}
 [data-theme="dark"] .dgc-data-table tbody tr:hover{background:rgba(95,203,190,.09)}
@@ -2722,7 +2734,7 @@ body.single-post .brand-watermark{display:none}
 .price-table-cpt td.cell-price .price-now{font-size:21px;font-weight:800}
 .price-table-cpt .price-range{font-size:17px}
 .price-table-cpt .bao-head-note{font-size:13px;display:block;margin-top:2px}
-.bao-group-toggle{padding:7px 16px 7px 14px;font-size:12.5px;border-radius:999px;gap:5px}
+.bao-group-toggle{padding:7px 16px 7px 14px;font-size:12.5px;border-radius:8px;gap:5px}
 .bao-tree-head.is-collapsed .bao-group-toggle{background:var(--action);border-color:var(--action);color:#fff}
 .bao-tree-head.is-collapsed .bao-group-toggle:hover{background:var(--action-2,var(--action));border-color:var(--action-2,var(--action));color:#fff}
 [data-theme="dark"] .bao-tree-head.is-collapsed .bao-group-toggle{background:var(--action);border-color:var(--action);color:#fff}
@@ -2835,9 +2847,9 @@ body.single-post .brand-watermark{display:none}
 .r-logo-fb{display:flex;align-items:center;justify-content:center;color:#fff;font-size:10.5px;font-weight:800}
 .r-name-txt{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .r-count{font-size:10px;font-weight:700;color:var(--ink-soft);background:var(--surface);
-  padding:1px 7px;border-radius:999px;margin-left:8px;flex:none}
+  padding:1px 7px;border-radius:4px;margin-left:8px;flex:none}
 .r-hot{font-size:10px;font-weight:700;color:#B7791F;background:#FCF3E0;padding:1px 7px;
-  border-radius:999px;margin-left:6px;flex:none}
+  border-radius:4px;margin-left:6px;flex:none}
 [data-theme="dark"] .r-hot{background:#332A16;color:#E0A94B}
 
 .r-dr{justify-content:center}
@@ -3013,7 +3025,7 @@ body.single-post .brand-watermark{display:none}
 .bbp-form-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:14.5px;color:var(--ink-soft)}
 .bbp-form-list li:before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;
   background:rgba(14,140,127,.15);
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E8C7F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>");
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300827A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>");
   background-size:10px;background-repeat:no-repeat;background-position:center}
 .bbp-form-alt{margin-top:16px;font-size:14px;color:var(--ink-soft)}
 .bbp-form-alt a{color:var(--action);font-weight:600}
@@ -3232,14 +3244,14 @@ body:before{display:none}
   box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 40px 80px -20px rgba(0,0,0,.55),0 18px 30px -18px rgba(0,0,0,.5);
   transition:transform .25s cubic-bezier(.2,.7,.2,1);will-change:transform}
 .svc3d-board-head{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#5A6680;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.svc3d-live{display:inline-flex;align-items:center;gap:7px;text-transform:none;letter-spacing:0;font-weight:500;color:#0E8C7F}
-.svc3d-live:before{content:"";width:7px;height:7px;border-radius:50%;background:#0E8C7F;box-shadow:0 0 0 4px rgba(14,140,127,.18);animation:svc3dPulse 2s infinite}
+.svc3d-live{display:inline-flex;align-items:center;gap:7px;text-transform:none;letter-spacing:0;font-weight:500;color:#00827A}
+.svc3d-live:before{content:"";width:7px;height:7px;border-radius:50%;background:#00827A;box-shadow:0 0 0 4px rgba(14,140,127,.18);animation:svc3dPulse 2s infinite}
 @keyframes svc3dPulse{50%{box-shadow:0 0 0 7px rgba(14,140,127,0)}}
 .svc3d-rows{list-style:none;margin:0;padding:0}
 .svc3d-rows li{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);
   transform:translateZ(calc(18px + var(--i) * 10px));background:#fff}
 .svc3d-name{font-weight:600;font-size:15.5px;color:var(--heading);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.svc3d-dr{font-size:12px;font-weight:700;color:#fff;background:#0E8C7F;border-radius:4px;padding:3px 7px;white-space:nowrap}
+.svc3d-dr{font-size:12px;font-weight:700;color:#fff;background:#00827A;border-radius:4px;padding:3px 7px;white-space:nowrap}
 .svc3d-price{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--action);white-space:nowrap;min-width:100px;text-align:right}
 .svc3d-board-foot{font-size:13px;color:#5A6680;padding-top:12px}
 .svc3d-chip{position:absolute;display:flex;gap:8px;align-items:center;background:#0F1B33;color:#E6ECF7;font-size:13px;border:1px solid rgba(255,255,255,.14);
@@ -3350,14 +3362,14 @@ body:before{display:none}
 .page-content .dgc-dd>div{padding:24px 28px}
 .page-content .dgc-dd>div+div{border-left:1px solid var(--line);background:#FBF7F6}
 .page-content .dgc-dd h3{margin:0 0 12px;font-size:17px}
-.page-content .dgc-dd>div:first-child h3{color:#0E8C7F}
+.page-content .dgc-dd>div:first-child h3{color:#00827A}
 .page-content .dgc-dd>div+div h3{color:#B3402B}
 .page-content .dgc-dd ul{margin:0;padding-left:18px}
 .page-content .dgc-dd li{margin:6px 0;font-size:15.5px}
 
 .page-content .dgc-check{list-style:none;margin:24px 0;padding:0;columns:2;column-gap:40px;max-width:none}
 .page-content .dgc-check li{break-inside:avoid;position:relative;padding:0 0 14px 30px;margin:0}
-.page-content .dgc-check li:before{content:"";position:absolute;left:2px;top:7px;width:13px;height:7px;border-left:2px solid #0E8C7F;border-bottom:2px solid #0E8C7F;transform:rotate(-45deg)}
+.page-content .dgc-check li:before{content:"";position:absolute;left:2px;top:7px;width:13px;height:7px;border-left:2px solid #00827A;border-bottom:2px solid #00827A;transform:rotate(-45deg)}
 
 .page-content .dgc-quote{margin:40px 0;padding:6px 0 6px 28px;border-left:4px solid var(--action);font-family:var(--font-display);font-size:clamp(20px,2vw,26px);line-height:1.4;color:var(--heading);letter-spacing:-.01em;max-width:900px}
 .page-content .dgc-quote cite{display:block;margin-top:10px;font:500 14px var(--font-body);color:var(--ink-soft);font-style:normal}
@@ -3489,7 +3501,7 @@ body:before{display:none}
    ========================================================================== */
 :root:not([data-theme="dark"]){
   --action:#005CF6; --action-2:#004AD0;
-  --teal:#00877C; --aqua:#00C4B8; --sky:#EAF2FF; --aqua-l:#E3F8F6;
+  --teal:#00827A; --aqua:#00C4B8; --sky:#EAF2FF; --aqua-l:#E3F8F6;
   --heading:#0E1B3D; --ink:#16213A; --ink-soft:#3E4A63;
   --surface:#F3F7FF; --line:#DCE6F7; --line-2:#C9D7F0;
 }
@@ -3544,7 +3556,7 @@ body:before{display:none}
 :root:not([data-theme="dark"]) .page-content .dgc-stat>div{border-left-color:rgba(255,255,255,.22)}
 
 /* Diem nhan aqua nho: eyebrow, so buoc, icon the dich vu */
-:root:not([data-theme="dark"]) .eyebrow{color:var(--teal)}
+:root:not([data-theme="dark"]) .eyebrow{color:var(--teal-text,#00776F)}
 :root:not([data-theme="dark"]) .page-template-tpl-service .order-step-num,:root:not([data-theme="dark"]) .page-template-page-booking-bao-pr .order-step-num{-webkit-text-stroke-color:var(--action)}
 :root:not([data-theme="dark"]) .svc-intro{border-top-color:var(--aqua)}
 
@@ -3553,13 +3565,13 @@ body:before{display:none}
 
 /* ==========================================================================
    3.5.0 PALETTE 3 MAU (Hieu 14/10: "dang qua 3 mau tren trang, dung mau thuong hieu va it mau
-   hon, bien the cung tu mau thuong hieu"). CHI dung: xanh brand #005CF6, xanh ngoc (#00877C chu /
+   hon, bien the cung tu mau thuong hieu"). CHI dung: xanh brand #005CF6, xanh ngoc (#00827A chu /
    #00C4B8 nen), navy chu #0E1B3D + tint/shade cua 3 mau nay. Bo cam, do, vang, tim.
    Ngoai le: thong bao LOI form (chi hien khi nhap sai) giu do de nguoi dung nhan ra.
    ========================================================================== */
 :root:not([data-theme="dark"]){
   --action-l:#EAF2FF; --action-m:#B9D2FF;
-  --dr-hi:#00877C; --dr-mid:#005CF6; --dr-lo:#4D74C7; --dr-none:#8A9BBF;
+  --dr-hi:#00827A; --dr-mid:#005CF6; --dr-lo:#4D74C7; --dr-none:#8A9BBF;
 }
 :root:not([data-theme="dark"]) .promo-bar .promo-count,:root:not([data-theme="dark"]) .promo-bar .promo-count-val{color:#C9F7F1}
 :root:not([data-theme="dark"]) .promo-slots{background:var(--action-l);border-color:var(--action-m);color:var(--heading)}
@@ -3843,7 +3855,7 @@ html{scroll-behavior:auto}
 .tm-table td:last-child{text-align:right;white-space:nowrap}
 .tm-steps{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;counter-reset:tm}
 .tm-steps li{counter-increment:tm;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-.tm-steps li:before{content:counter(tm);display:inline-flex;width:28px;height:28px;border-radius:50%;background:#0E8C7F;color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
+.tm-steps li:before{content:counter(tm);display:inline-flex;width:28px;height:28px;border-radius:50%;background:#00827A;color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
 .tm-steps b{display:block;color:var(--heading);margin-bottom:4px}.tm-steps span{font-size:14px;color:var(--ink-soft)}
 .hg-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 30px}
 .hg-tabs a{padding:8px 14px;border:1px solid var(--line-2);border-radius:8px;font-size:14px;color:var(--heading);background:var(--surface-2)}
@@ -3852,7 +3864,7 @@ html{scroll-behavior:auto}
 .hg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
 .hg-card{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px}
 .hg-name{font-family:var(--font-display);font-weight:700;color:var(--heading);font-size:17px}
-.hg-price b{font-size:24px;color:#0E8C7F}.hg-price span{font-size:13px;color:var(--ink-soft)}
+.hg-price b{font-size:24px;color:#00827A}.hg-price span{font-size:13px;color:var(--ink-soft)}
 .hg-old{font-size:12.5px;color:var(--ink-soft)}
 .hg-spec{margin:8px 0 12px;font-size:13.5px}.hg-spec div{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-top:1px dashed var(--line)}
 .hg-spec dt{color:var(--ink-soft)}.hg-spec dd{margin:0;color:var(--heading);font-weight:600;text-align:right}
@@ -3865,7 +3877,7 @@ html{scroll-behavior:auto}
   .tm-table td:last-child{text-align:left;padding-top:8px}.tm-table .col-note{max-width:none}
   .tm-steps{grid-template-columns:1fr}
 }
-.svc-sheet-list li.svc-sheet-group{border-top:0;padding:14px 4px 4px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#0E8C7F}
+.svc-sheet-list li.svc-sheet-group{border-top:0;padding:14px 4px 4px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00827A}
 .svc-links-3.svc-links-5{grid-template-columns:repeat(5,minmax(0,1fr))}
 .svc-links-3.svc-links-4{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:1100px){.svc-links-3.svc-links-5{grid-template-columns:repeat(3,minmax(0,1fr))}.svc-links-3.svc-links-5>:nth-child(4){grid-column:span 1}}
@@ -3878,7 +3890,7 @@ html{scroll-behavior:auto}
    nhan in hoa xanh, nut bo tron. Thay khoi GENZ (vien dam, bong lech, sticker). ===== */
 :root{--soft-blue:#EEF3FF;--card-shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px -12px rgba(16,24,40,.14)}
 .sticker{display:inline-block;font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--action);background:none;border:0;padding:0;transform:none;box-shadow:none}
-.btn{border-radius:999px}
+.btn{border-radius:8px}
 .btn-primary{border:0;box-shadow:0 6px 16px -8px rgba(0,92,246,.55)}
 .btn-primary:hover{transform:translateY(-1px)}
 .btn-ghost{border:1px solid var(--line-2)}
@@ -3902,7 +3914,7 @@ a.bento-tile:hover{transform:translateY(-3px);border-color:rgba(0,92,246,.35);bo
 .bento-tile p{margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);max-width:52ch}
 .bento-tag{align-self:flex-start;font-family:var(--font-display);font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--action)}
 .bento-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:2px 0 0;padding:0}
-.bento-chips li{font-size:13.5px;font-weight:600;background:var(--soft-blue);color:var(--action);border-radius:999px;padding:4px 12px}
+.bento-chips li{font-size:13.5px;font-weight:600;background:var(--soft-blue);color:var(--action);border-radius:4px;padding:4px 12px}
 .bento-go{margin-top:auto;padding-top:6px;font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--action)}
 .bento-go i{display:inline-block;font-style:normal;transition:transform .18s}
 a.bento-tile:hover .bento-go i{transform:translateX(4px)}
@@ -3915,9 +3927,9 @@ a.bento-tile:hover .bento-go i{transform:translateX(4px)}
 a.t-seo:hover{box-shadow:0 16px 36px -14px rgba(0,92,246,.6)}
 .t-tool{grid-column:1/-1;display:grid;grid-template-columns:auto auto 1fr auto;align-items:center;gap:10px 28px;background:var(--soft-blue);border-color:transparent;box-shadow:none}
 .t-tool .bento-go{margin:0;padding:0}
-.bento-search{display:flex;border:1px solid var(--line-2);border-radius:999px;overflow:hidden;background:#fff;padding:4px}
+.bento-search{display:flex;border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:#fff;padding:4px}
 .bento-search input{flex:1;min-width:0;border:0;padding:10px 14px;font-size:16px;font-family:var(--font-body);outline:none;background:#fff;color:var(--heading)}
-.bento-search button{border:0;border-radius:999px;background:var(--action);color:#fff;font-family:var(--font-display);font-weight:700;padding:0 20px;cursor:pointer;font-size:15px}
+.bento-search button{border:0;border-radius:8px;background:var(--action);color:#fff;font-family:var(--font-display);font-weight:700;padding:0 20px;cursor:pointer;font-size:15px}
 .bento-search button:hover{background:var(--action-2)}
 .bento-sub{font-size:14.5px !important}
 .bento-links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:auto}
@@ -3986,3 +3998,43 @@ a.t-seo:hover{box-shadow:0 16px 36px -14px rgba(0,92,246,.6)}
 /* CTA cuoi bai theo cum dich vu (3.16.4) */
 .cta-band .cta-svc-links{margin-top:10px;font-size:14px}
 .cta-band .cta-svc-links a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+
+/* Chon phong + co chu (03/11/2026, ban 2): nut "Aa" header moi trang, ap toan site */
+.rd-tools{position:relative}
+.rd-btn{width:40px;height:40px;flex:0 0 40px;border-radius:50%;border:1.5px solid var(--line-2);background:var(--surface-2);color:var(--heading);font-family:'Lora',Georgia,serif;font-weight:700;font-size:15px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}
+.rd-btn:hover,.rd-btn[aria-expanded="true"]{border-color:var(--action);color:var(--action)}
+.rd-panel{position:absolute;right:0;top:calc(100% + 10px);z-index:120;width:320px;max-width:calc(100vw - 24px);background:var(--surface-2);border:1px solid var(--line-2);border-radius:14px;box-shadow:0 14px 40px rgba(20,30,50,.18);padding:16px;text-align:left}
+.rd-panel[hidden]{display:none}
+.rd-title{margin:0 0 12px;font-size:15px;font-weight:700;color:var(--heading);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.rd-title span{font-size:12px;font-weight:500;color:var(--ink-soft)}
+.rd-lab{display:block;font-size:12.5px;font-weight:600;color:var(--ink-soft);margin:0 0 6px}
+.rd-opts{display:grid;gap:6px;margin-bottom:14px}
+.rd-fonts{grid-template-columns:repeat(3,1fr)}
+.rd-sizes{grid-template-columns:repeat(4,1fr)}
+.rd-opts button{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;min-height:62px;padding:8px 4px;border:1.5px solid var(--line-2);border-radius:10px;background:transparent;color:var(--ink);font-size:12.5px;line-height:1.2;white-space:nowrap;cursor:pointer}
+.rd-opts button b{font-size:20px;line-height:1;color:var(--heading);font-weight:700}
+.rd-opts button:hover{border-color:var(--action)}
+.rd-opts button.is-on{border-color:var(--action);background:rgba(37,99,235,.07);color:var(--action);font-weight:600}
+.rd-opts button.is-on b{color:var(--action)}
+.rd-reset{border:0;background:none;color:var(--ink-soft);font-size:13px;text-decoration:underline;cursor:pointer;padding:0}
+.rd-btn:focus-visible,.rd-opts button:focus-visible,.rd-reset:focus-visible{outline:2px solid var(--action);outline-offset:2px}
+.mnav-foot-row .rd-btn{width:44px;height:44px;flex-basis:44px}
+.mnav-foot-row .rd-panel{top:auto;bottom:calc(100% + 10px)}
+@media(max-width:480px){.header-cta .rd-tools{display:block}.header-cta .rd-btn{width:34px;height:34px;flex-basis:34px;font-size:13.5px}.header-cta .rd-panel{position:fixed;top:72px;right:12px;left:12px;width:auto}}
+/* Ap phong toan site (tru code) */
+html[data-rfont="serif"] body :not(code,pre,kbd,samp,.rd-opts b){font-family:'Lora',Georgia,serif}
+html[data-rfont="system"] body :not(code,pre,kbd,samp,.rd-opts b){font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+/* Co chu: phong to/thu nho noi dung giua header va footer, giu ti le tieu de/than bai */
+html[data-rsize="-1"] body>:not(.site-header,.promo-bar,.mnav,.hdr-search,.topbar,script,style,link){zoom:.92}
+html[data-rsize="1"] body>:not(.site-header,.promo-bar,.mnav,.hdr-search,.topbar,script,style,link){zoom:1.12}
+html[data-rsize="2"] body>:not(.site-header,.promo-bar,.mnav,.hdr-search,.topbar,script,style,link){zoom:1.25}
+/* Khi phong to/thu nho: khoi tran vien dung 100vw tinh sai theo zoom -> ve vua khung */
+html[data-rsize] .press-rows--full{width:auto;margin-left:0}
+html[data-rsize] body{overflow-x:clip}
+/* Header 360px: CTA + logo vua 1 hang (tran 13px truoc do) */
+@media(max-width:380px){.header-cta{gap:4px}.header-cta .btn{padding-left:10px;padding-right:10px;font-size:12.5px}.custom-logo,.custom-logo-link img{max-width:100px}}
+/* Nut Aa hien o header mobile (Hieu 03/11): o 360-380px thu gon CTA de du 1 hang */
+@media(max-width:380px){.site-header .header-cta .btn.btn-sm{padding-left:9px;padding-right:9px;font-size:12px}.custom-logo,.custom-logo-link img{max-width:92px}.header-cta .rd-btn,.header-cta .hdr-search-btn{width:32px;height:32px;flex-basis:32px}}
+@media(max-width:345px){.header-cta .hdr-search-btn{display:none}.site-header .header-cta .btn.btn-sm{padding-left:8px;padding-right:8px;font-size:11.5px}}
+@media(max-width:480px){.site-header .wrap{gap:10px;padding-left:14px;padding-right:14px}.header-cta{gap:6px}.site-header .header-cta .btn.btn-sm{padding-left:11px;padding-right:11px;font-size:12.5px}}

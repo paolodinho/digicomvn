@@ -17,7 +17,7 @@ if ( ! $dgc_pp ) return;
 /* Trang da o cuoi phieu chuyen doi -> khong lam phien. */
 // Uu dai chi danh cho booking (2026-10-28: site da nhieu dich vu).
 if ( ! dgc_is_booking_context() ) return;
-foreach ( array( 'dat-bai', 'cam-on' ) as $dgc_pp_skip ) {
+foreach ( array( 'nhan-bao-gia', 'cam-on' ) as $dgc_pp_skip ) {
 	if ( is_page( $dgc_pp_skip ) ) return;
 }
 
@@ -55,7 +55,7 @@ $dgc_pp_days  = $dgc_pp_end ? max( 0, (int) ceil( ( $dgc_pp_end - current_time( 
 		<?php endif; ?>
 
 		<div class="promo-pop-actions">
-			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận ưu đãi ngay</a>
+			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/nhan-bao-gia/' ) ); ?>">Nhận ưu đãi ngay</a>
 			<button type="button" class="promo-pop-later" data-pop-close>Để sau</button>
 		</div>
 	</div>

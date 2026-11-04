@@ -7,7 +7,8 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-$dgc_pn = trim( (string) dgc( 'price_note' ) );
+$dgc_pn = is_page() ? trim( (string) get_post_meta( get_the_ID(), 'dgc_price_note', true ) ) : '';
+if ( '' === $dgc_pn ) $dgc_pn = trim( (string) dgc( 'price_note' ) );
 if ( '' === $dgc_pn ) return;
 ?>
 <p class="price-foot-note"><?php echo esc_html( $dgc_pn ); ?></p>

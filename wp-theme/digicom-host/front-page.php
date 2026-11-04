@@ -1,7 +1,7 @@
 <?php
 /**
- * Trang chu DigicomVN - thiet ke lai 2026-10-28 theo phong cach seongon.com.
- * Dinh vi: SEO la dich vu chu dao; booking bao PR, ten mien + hosting, phan mem SEO la dich vu ho tro.
+ * Trang chu DigicomVN - thiet ke lai 2026-10-28 theo phong cach seongon.com; 02/11/2026: hero = slider chuong trinh
+ * uu dai, duoi hero = 3 nhom dich vu tach bach (SEO | Booking bao PR | Website & Hosting), thu tu theo menu.
  * Moi chu hien thi sua o WP Admin > DigicomVN (muc 2 Hero, 2b Trang chu, 5 FAQ...).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -23,32 +23,51 @@ $dgc_svg = function ( $d ) {
 ?>
 <div class="sg-home">
 
-<!-- 01. HERO -->
-<section class="sg-hero" id="dich-vu">
+<!-- 01. HERO: slider chuong trinh uu dai (inc/hero-promo.php, option hero_slides) -->
+<?php if ( function_exists( 'dgc_hero_slider' ) ) dgc_hero_slider(); ?>
+
+<!-- 02. GIOI THIEU + NHOM DICH VU (option hero_title, hero_sub, home_groups, home_group_links) -->
+<?php $dgc_groups = function_exists( 'dgc_home_groups' ) ? dgc_home_groups() : array(); ?>
+<section class="sg-sec sg-intro" id="services">
 	<div class="wrap">
-		<div class="sg-hero-row">
-			<div>
-				<h1><?php echo dgc_em( dgc( 'hero_title' ) ); // phpcs:ignore ?></h1>
-				<p class="sg-lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
-				<div class="sg-hero-cta">
-					<a class="sg-btn sg-btn--light" href="#lien-he"><?php echo dgc_arrow(); // phpcs:ignore ?>Nhận audit SEO miễn phí</a>
-					<a class="sg-btn sg-btn--line" href="<?php echo esc_url( home_url( '/dich-vu-seo/' ) ); ?>"><?php echo dgc_arrow(); // phpcs:ignore ?>Xem dịch vụ SEO</a>
-				</div>
-			</div>
-			<div class="sg-hero-media">
-				<img
-					src="<?php echo esc_url( $dgc_img . 'hero-team-1280.webp' ); ?>"
-					srcset="<?php echo esc_url( $dgc_img . 'hero-team-640.webp' ); ?> 640w, <?php echo esc_url( $dgc_img . 'hero-team-960.webp' ); ?> 960w, <?php echo esc_url( $dgc_img . 'hero-team-1280.webp' ); ?> 1280w"
-					sizes="(max-width: 900px) 100vw, 42vw" width="1280" height="767"
-					alt="Nhóm làm việc trao đổi kế hoạch bên bàn họp" fetchpriority="high">
-			</div>
+		<div class="sg-intro-head">
+			<h1><?php echo dgc_em( dgc( 'hero_title' ) ); // phpcs:ignore ?></h1>
+			<p class="sg-lead"><?php echo esc_html( dgc( 'hero_sub' ) ); ?></p>
 		</div>
+		<?php if ( $dgc_groups ) : ?>
+		<div class="sg-groups">
+			<?php foreach ( $dgc_groups as $gi => $g ) : ?>
+			<article class="sg-group">
+				<div class="sg-group-main">
+					<h2><?php echo esc_html( $g['name'] ); ?></h2>
+					<?php if ( $g['desc'] ) : ?><p class="sg-group-desc"><?php echo esc_html( $g['desc'] ); ?></p><?php endif; ?>
+					<?php if ( $g['price'] ) : ?><p class="sg-price"><?php echo wp_kses( $g['price'], array( 'b' => array(), 'br' => array() ) ); ?></p><?php endif; ?>
+					<?php if ( $g['url'] ) : ?><a class="sg-btn sg-btn--ghost" href="<?php echo esc_url( home_url( $g['url'] ) ); ?>"><?php echo dgc_arrow(); // phpcs:ignore ?><?php echo esc_html( $g['btn'] ); ?></a><?php endif; ?>
+				</div>
+				<div class="sg-group-links">
+					<?php foreach ( $g['subs'] as $sub => $items ) : ?>
+					<div class="sg-group-sub">
+						<h3><?php echo esc_html( $sub ); ?></h3>
+						<ul><?php foreach ( $items as $it ) : ?><li><a href="<?php echo esc_url( 0 === strpos( $it[1], '#' ) ? $it[1] : home_url( $it[1] ) ); ?>"><?php echo esc_html( $it[0] ); ?></a></li><?php endforeach; ?></ul>
+					</div>
+					<?php endforeach; ?>
+					<?php if ( false !== strpos( $g['url'], 'ten-mien' ) ) : ?>
+					<form class="sg-dsearch" action="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>" method="get" role="search">
+						<input type="text" name="d" placeholder="thuonghieu.vn" aria-label="Tên miền cần kiểm tra" required>
+						<button type="submit">Kiểm tra tên miền</button>
+					</form>
+					<?php endif; ?>
+				</div>
+			</article>
+			<?php endforeach; ?>
+		</div>
+		<?php endif; ?>
 	</div>
 </section>
 
 <?php if ( function_exists( 'dgc_ai_chat_box' ) ) dgc_ai_chat_box(); ?>
 
-<!-- 02. VE DIGICOMVN -->
+<!-- 03. VE DIGICOMVN -->
 <section class="sg-sec" id="ve-digicom">
 	<div class="wrap sg-about">
 		<div>
@@ -66,45 +85,6 @@ $dgc_svg = function ( $d ) {
 		</div>
 	</div>
 </section>
-
-<!-- 03. GIAI PHAP SEO -->
-<?php
-$dgc_sols = array();
-foreach ( dgc_lines( 'home_solutions' ) as $s ) {
-	if ( empty( $s[0] ) || empty( $s[1] ) || ! dgc_page_live( $s[1] ) ) continue;
-	$dgc_sols[] = $s;
-}
-?>
-<?php if ( $dgc_sols ) : ?>
-<section class="sg-sec sg-sec--cyan" id="services">
-	<div class="wrap">
-		<div class="sg-head sg-head--split">
-			<div>
-				<h2 class="sg-h">Các dịch vụ SEO</h2>
-			</div>
-			<p class="sg-lead">Website mới cần nền tảng, website đã có lượt truy cập cần đúng nhóm từ mang doanh thu. Chọn hình thức phù hợp, DigicomVN audit miễn phí rồi đề xuất phạm vi cụ thể.</p>
-		</div>
-		<div class="sg-sol">
-			<?php foreach ( $dgc_sols as $i => $s ) : ?>
-				<?php if ( 0 === $i ) : ?>
-					<a class="sg-card sg-card--feat" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
-						<h3><?php echo esc_html( $s[0] ); ?></h3>
-						<p><?php echo esc_html( $s[2] ?? '' ); ?></p>
-						<ul><li>Audit kỹ thuật</li><li>Nghiên cứu từ khoá</li><li>Tối ưu onpage</li><li>Nội dung theo cụm chủ đề</li><li>Off-page từ báo và site cùng ngành</li><li>Báo cáo tháng từ Search Console</li></ul>
-						<span class="sg-more">Xem chi tiết dịch vụ</span>
-					</a>
-				<?php else : ?>
-					<a class="sg-card" href="<?php echo esc_url( home_url( $s[1] ) ); ?>">
-						<h3><?php echo esc_html( $s[0] ); ?></h3>
-						<p><?php echo esc_html( $s[2] ?? '' ); ?></p>
-						<span class="sg-more">Xem chi tiết</span>
-					</a>
-				<?php endif; ?>
-			<?php endforeach; ?>
-		</div>
-	</div>
-</section>
-<?php endif; ?>
 
 <!-- 05. QUY TRINH -->
 <?php $dgc_proc = array_filter( dgc_lines( 'home_process' ), fn( $x ) => ! empty( $x[0] ) ); ?>
@@ -125,63 +105,6 @@ foreach ( dgc_lines( 'home_solutions' ) as $s ) {
 	</div>
 </section>
 <?php endif; ?>
-
-<!-- 06. DICH VU HO TRO SEO -->
-<?php
-$dgc_dm_min = dgc_min_price( dgc_ten_mien_rows(), 'gia' );
-$dgc_hg_min = 0;
-foreach ( dgc_hosting_rows() as $dgc_rows ) { $v = dgc_min_price( $dgc_rows, 'thang' ); if ( $v && ( ! $dgc_hg_min || $v < $dgc_hg_min ) ) $dgc_hg_min = $v; }
-$dgc_others = array(
-	array( 'Booking báo &amp; truyền thông', array( array( 'Booking truyền hình', '/booking-truyen-hinh/' ), array( 'Quảng cáo phát thanh', '/quang-cao-phat-thanh/' ), array( 'Booking fanpage', '/booking-fanpage/' ), array( 'Booking KOL, KOC', '/booking-kol-koc/' ) ) ),
-	array( 'Liên kết off-page', array( array( 'Mua Textlink', '/mua-textlink/' ), array( 'Guest Post', '/guest-post/' ), array( 'Backlink Social Entity', '/backlink-social-entity/' ), array( 'Backlink quốc tế', '/backlink-quoc-te/' ), array( 'Dịch vụ Toplist', '/dich-vu-toplist/' ) ) ),
-	array( 'Website', array( array( 'Thiết kế website', '/thiet-ke-website/' ), array( 'Chăm sóc website', '/cham-soc-website/' ), array( 'Email doanh nghiệp', '/email-doanh-nghiep/' ), array( 'Chứng chỉ SSL', '/chung-chi-ssl/' ), array( 'Cloud server', '/cloud-server/' ), array( 'Đăng ký Bộ Công Thương', '/dang-ky-website-bo-cong-thuong/' ) ) ),
-);
-?>
-<section class="sg-sec sg-sec--grey" id="dich-vu-ho-tro">
-	<div class="wrap">
-		<div class="sg-head sg-head--split">
-			<div>
-				<h2 class="sg-h">Booking báo, tên miền, hosting và phần mềm SEO</h2>
-			</div>
-			<p class="sg-lead">Khách làm SEO thường đặt thêm các dịch vụ này. Giá ghi trên từng trang, có thể đặt riêng hoặc gộp vào hợp đồng SEO.</p>
-		</div>
-		<div class="sg-side">
-			<a class="sg-card" href="<?php echo esc_url( home_url( '/booking-bao-pr/' ) ); ?>">
-				<span class="sg-tag">Booking báo</span>
-				<h3>Booking báo &amp; PR</h3>
-				<p>Đặt bài PR trên báo điện tử trong nước và quốc tế. Xem giá từng đầu báo, từng vị trí đăng trước khi đặt.</p>
-				<span class="sg-more">Xem bảng giá đầu báo</span>
-			</a>
-			<div class="sg-card">
-				<span class="sg-tag">Hạ tầng</span>
-				<h3>Tên miền &amp; Hosting</h3>
-				<?php if ( $dgc_dm_min || $dgc_hg_min ) : ?>
-					<p class="sg-price"><?php if ( $dgc_dm_min ) : ?>Tên miền&nbsp;từ&nbsp;<b><?php echo esc_html( dgc_vnd( $dgc_dm_min ) ); ?></b><?php endif; ?><?php if ( $dgc_dm_min && $dgc_hg_min ) echo ' &middot; '; ?><?php if ( $dgc_hg_min ) : ?>hosting&nbsp;từ&nbsp;<b><?php echo esc_html( dgc_vnd( $dgc_hg_min ) ); ?></b>/tháng<?php endif; ?></p>
-				<?php endif; ?>
-				<form class="sg-dsearch" action="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>" method="get" role="search">
-					<input type="text" name="d" placeholder="thuonghieu.vn" aria-label="Tên miền cần kiểm tra" required>
-					<button type="submit">Kiểm tra</button>
-				</form>
-				<div class="sg-links2"><a href="<?php echo esc_url( home_url( '/ten-mien/' ) ); ?>">Bảng giá tên miền &rarr;</a><a href="<?php echo esc_url( home_url( '/hosting/' ) ); ?>">Bảng giá hosting &rarr;</a></div>
-			</div>
-			<?php if ( dgc_page_live( '/phan-mem-seo/' ) ) : ?>
-			<a class="sg-card" href="<?php echo esc_url( home_url( '/phan-mem-seo/' ) ); ?>">
-				<span class="sg-tag">Công cụ</span>
-				<h3>Phần mềm SEO</h3>
-				<p>Tài khoản Ahrefs, Semrush và công cụ SEO chính hãng, hướng dẫn dùng đúng việc cho đội SEO nội bộ.</p>
-				<span class="sg-more">Xem phần mềm SEO</span>
-			</a>
-			<?php endif; ?>
-		</div>
-		<dl class="sg-others sg-others--light">
-			<?php foreach ( $dgc_others as $g ) : ?>
-				<div><dt><?php echo wp_kses_post( $g[0] ); ?></dt><dd>
-					<?php foreach ( $g[1] as $s ) : if ( ! dgc_page_live( $s[1] ) ) continue; ?><a href="<?php echo esc_url( home_url( $s[1] ) ); ?>"><?php echo esc_html( $s[0] ); ?></a><?php endforeach; ?>
-				</dd></div>
-			<?php endforeach; ?>
-		</dl>
-	</div>
-</section>
 
 <!-- 07. KHACH HANG -->
 <?php include get_template_directory() . '/inc/blk-testimonials.php'; ?>

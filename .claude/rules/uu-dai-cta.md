@@ -140,3 +140,6 @@ lists chỉ còn loại trừ `dat-bai`, `cam-on` (bỏ `bang-gia` khỏi mọi 
 
 CPT `dgc_gia` và bảng giá THẬT vẫn còn nguyên - chỉ bỏ TRANG TỔNG HỢP đứng riêng, giá vẫn hiển
 thị đầy đủ ngay trong từng trang dịch vụ pillar (`inc/service-pricing.php`, section `#bang-gia`).
+
+## Trang nhận báo giá đổi slug /dat-bai/ -> /nhan-bao-gia/ (03/11/2026)
+Hiếu: site nhiều dịch vụ, 'đặt bài' chỉ hợp booking báo. Trang 532 slug `nhan-bao-gia`, template `page-nhan-bao-gia.php`; `/dat-bai/` 301 trong functions.php (giữ query ?dv=). Mọi chỗ ghi `/dat-bai/` trong rule cũ hiểu là `/nhan-bao-gia/`. Link mới viết thẳng `/nhan-bao-gia/` hoặc `dgc_quote_url()`.

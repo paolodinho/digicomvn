@@ -854,7 +854,7 @@ function dgc_sch_service() {
 			// (chi hop le tren CreativeWork/Event/BroadcastService...). Da kiem 2026-07-27.
 			'target' => array(
 				'@type'       => 'EntryPoint',
-				'urlTemplate' => home_url( '/dat-bai/' ),
+				'urlTemplate' => home_url( '/nhan-bao-gia/' ),
 			),
 		),
 	);

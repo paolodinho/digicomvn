@@ -1,6 +1,6 @@
 <?php
 /**
- * Template trang Dat bai (page slug "dat-bai") - form dat hang/tu van tap trung.
+ * Template trang Dat bai (page slug "nhan-bao-gia", 301 tu /dat-bai/ 03/11/2026) - form dat hang/tu van tap trung.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();

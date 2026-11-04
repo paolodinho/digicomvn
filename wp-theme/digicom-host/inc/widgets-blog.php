@@ -85,7 +85,7 @@ add_shortcode( 'dgc_budget_calc', function () {
 		<span class="bcalc-result-note">Giá tham khảo chưa gồm VAT, tính theo dải giá đang bán (không phải cam kết). Đặt nhiều mục có ưu đãi combo.</span>
 	</div>
 	<div class="bcalc-cta">
-		<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu báo giá</a>
+		<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/nhan-bao-gia/' ) ); ?>">Gửi yêu cầu báo giá</a>
 	</div>
 </div>
 <?php
@@ -118,7 +118,7 @@ add_shortcode( 'dgc_agency_check', function () {
 	<div class="acheck-result" aria-live="polite"
 		data-urls="<?php echo esc_attr( wp_json_encode( array(
 			'booking' => home_url( '/booking-bao-pr/' ),
-			'datbai'  => home_url( '/dat-bai/' ),
+			'datbai'  => home_url( '/nhan-bao-gia/' ),
 		) ) ); ?>"></div>
 </div>
 <?php
@@ -156,7 +156,7 @@ add_shortcode( 'dgc_offpage_quiz', function () {
 			'guest'    => home_url( '/guest-post/' ),
 			'entity'   => home_url( '/backlink-social-entity/' ),
 			'textlink' => home_url( '/mua-textlink/' ),
-			'datbai'   => home_url( '/dat-bai/' ),
+			'datbai'   => home_url( '/nhan-bao-gia/' ),
 		) ) ); ?>"></div>
 </div>
 <?php
@@ -188,7 +188,7 @@ add_shortcode( 'dgc_pr_checklist', function () {
 	<div class="acheck-result" aria-live="polite"
 		data-urls="<?php echo esc_attr( wp_json_encode( array(
 			'booking' => home_url( '/booking-bao-pr/' ),
-			'datbai'  => home_url( '/dat-bai/' ),
+			'datbai'  => home_url( '/nhan-bao-gia/' ),
 		) ) ); ?>"></div>
 </div>
 <?php

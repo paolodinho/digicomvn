@@ -35,8 +35,10 @@ $dgc_tm_table = function ( $rows, $caption ) {
 <section class="sg-phero sg-phero--solo">
 	<div class="wrap">
 		<nav class="sg-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Trang chủ</a> / <span>Tên miền</span></nav>
-		<h1><?php echo esc_html( get_the_title() ?: 'Đăng ký tên miền' ); ?></h1>
+		<h1><?php $dgc_pp = dgc_pp(); echo esc_html( $dgc_pp['h1'] !== '' ? $dgc_pp['h1'] : ( get_the_title() ?: 'Đăng ký tên miền' ) ); ?></h1>
+		<?php if ( $dgc_pp['lead'] !== '' ) : ?><p class="sg-lead"><?php echo esc_html( $dgc_pp['lead'] ); ?></p><?php else : ?>
 		<p class="sg-lead">Kiểm tra tên miền còn trống, đăng ký .vn, .com.vn, .com và hơn 40 đuôi khác. DigicomVN tư vấn chọn tên miền phù hợp thương hiệu và kế hoạch SEO, hỗ trợ trỏ DNS, gắn hosting và chuyển tên miền về quản lý.</p>
+		<?php endif; ?>
 		<div class="search-card tm-search" style="margin-top:24px">
 			<form class="search-box" id="tm-check" autocomplete="off">
 				<input type="text" name="d" placeholder="Nhập tên miền, ví dụ: thuonghieu.vn" aria-label="Tên miền cần kiểm tra" required>
@@ -48,10 +50,11 @@ $dgc_tm_table = function ( $rows, $caption ) {
 	</div>
 </section>
 
+<?php dgc_pp_section( $dgc_pp['before'] ); ?>
 <section class="sec" id="bang-gia">
 	<div class="wrap">
 		<div class="center" style="margin-bottom:28px"><span class="eyebrow">Bảng giá</span><h2>Giá tên miền Việt Nam</h2>
-			<p class="muted" style="max-width:720px;margin:8px auto 0">Giá đăng ký năm đầu đã gồm lệ phí đăng ký và phí duy trì năm đầu theo quy định nhà nước. Tên miền .vn do Trung tâm Internet Việt Nam (VNNIC) quản lý, chủ thể đăng ký phải khai thông tin chính xác.</p></div>
+			<p class="muted" style="max-width:720px;margin:8px auto 0"><?php if ( $dgc_pp['price_intro'] !== '' ) echo esc_html( $dgc_pp['price_intro'] ) . ' '; ?>Giá đăng ký năm đầu đã gồm lệ phí đăng ký và phí duy trì năm đầu theo quy định nhà nước. Tên miền .vn do Trung tâm Internet Việt Nam (VNNIC) quản lý, chủ thể đăng ký phải khai thông tin chính xác.</p></div>
 		<?php $dgc_tm_table( $dgc_vn, 'Bảng giá tên miền Việt Nam' ); ?>
 
 		<div class="center" style="margin:56px 0 28px"><h2>Giá tên miền quốc tế</h2>
@@ -61,6 +64,7 @@ $dgc_tm_table = function ( $rows, $caption ) {
 	</div>
 </section>
 
+<?php if ( ! $dgc_pp['on'] ) : ?>
 <section class="sec" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 	<div class="wrap" style="max-width:960px">
 		<div class="center" style="margin-bottom:28px"><span class="eyebrow">Tư vấn</span><h2>Chọn tên miền nào cho website làm SEO?</h2></div>
@@ -77,10 +81,9 @@ $dgc_tm_table = function ( $rows, $caption ) {
 		</ol>
 	</div>
 </section>
-
-<?php if ( trim( get_post_field( 'post_content', get_the_ID() ) ) ) : ?>
-<section class="sec"><div class="wrap page-content" style="max-width:960px"><?php the_content(); ?></div></section>
 <?php endif; ?>
+
+<?php dgc_pp_section( $dgc_pp['after'] ); ?>
 
 <?php include get_template_directory() . '/inc/svc-faq.php'; ?>
 

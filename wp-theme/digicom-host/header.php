@@ -11,6 +11,7 @@
 	// sang, KHONG theo cai dat he dieu hanh nua. Chi khi khach tu chon dark moi nho lua chon do.
 	?>
 	<script>(function(){try{var t=localStorage.getItem('dgc-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+	<script>(function(){try{var d=document.documentElement,f=localStorage.getItem('dgc-rfont'),z=localStorage.getItem('dgc-rsize');if(f)d.setAttribute('data-rfont',f);if(z)d.setAttribute('data-rsize',z);}catch(e){}})();</script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -59,7 +60,8 @@
 				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
 			</button>
 			<a class="phone" href="tel:<?php echo esc_attr( dgc_tel() ); ?>"><?php echo esc_html( dgc( 'hotline' ) ); ?></a>
-			<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Nhận báo giá</a>
+			<a class="btn btn-primary btn-sm" href="<?php echo esc_url( home_url( '/nhan-bao-gia/' ) ); ?>">Nhận báo giá</a>
+			<?php dgc_reader_tools( 'rdPanel' ); ?>
 			<?php dgc_theme_toggle(); ?>
 			<button class="burger" aria-label="Mở menu" aria-expanded="false" onclick="document.getElementById('mnav').classList.toggle('open');document.body.classList.toggle('mnav-open');this.setAttribute('aria-expanded',document.getElementById('mnav').classList.contains('open'))"><span></span><span></span><span></span></button>
 		</div>
@@ -94,6 +96,7 @@
 	</div>
 	<div class="mnav-foot-row">
 		<a class="mnav-cta" href="tel:<?php echo esc_attr( dgc_tel() ); ?>" style="flex:1 1 auto">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
+		<?php dgc_reader_tools( 'rdPanelM' ); ?>
 		<?php dgc_theme_toggle(); ?>
 	</div>
 </div>

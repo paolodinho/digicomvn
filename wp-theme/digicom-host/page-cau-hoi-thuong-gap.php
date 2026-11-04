@@ -69,7 +69,7 @@ $dgc_faq_total  = dgc_faq_page_count();
 		<h2>Vẫn còn thắc mắc?</h2>
 		<p class="muted" style="max-width:560px;margin:8px auto 20px">Gọi hotline, nhắn Zalo hoặc gửi yêu cầu để đội ngũ DigicomVN tư vấn chọn dịch vụ và báo giá phù&nbsp;hợp.</p>
 		<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu tư vấn</a>
+			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/nhan-bao-gia/' ) ); ?>">Gửi yêu cầu tư vấn</a>
 			<a class="btn btn-ghost" href="tel:<?php echo esc_attr( dgc_tel() ); ?>">Gọi <?php echo esc_html( dgc( 'hotline' ) ); ?></a>
 		</div>
 	</div>

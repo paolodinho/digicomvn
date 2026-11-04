@@ -748,7 +748,7 @@ function dgc_search_key( $s ) {
 /**
  * Tim trong BANG GIA (CPT dgc_gia) theo tu khoa - phuc vu trang tim kiem toan site.
  * Khop ca dang co dau, khong dau va dang ten mien ("Báo Thanh Niên" = "thanhnien.vn").
- * Tra ve mang phang: title, vi_tri, gia, nhom_label, url (tro thang toi /dat-bai/, da chon san dong nay).
+ * Tra ve mang phang: title, vi_tri, gia, nhom_label, url (tro thang toi /nhan-bao-gia/, da chon san dong nay).
  */
 function dgc_search_gia( $q ) {
 	$q = trim( (string) $q );
@@ -782,7 +782,7 @@ function dgc_search_gia( $q ) {
 				|| ( $qFold && false !== strpos( $st['name'], $qFold ) );
 			if ( ! $hit ) continue;
 
-			// Bam ket qua tim kiem -> AUTO CHON dong do va sang thang trang gui yeu cau (/dat-bai/),
+			// Bam ket qua tim kiem -> AUTO CHON dong do va sang thang trang gui yeu cau (/nhan-bao-gia/),
 			// khong nhay ve bang gia (Hieu 2026-07-15). Nhan "selected" khop format order-now.
 			$price_num = dgc_gia_to_number( $it->meta['gia_km'] ?? '' );
 			$sel_label = $it->post_title . ( $vi_tri !== '' ? ' - ' . $vi_tri : '' ) . ' (' . $label . ')';
@@ -792,7 +792,7 @@ function dgc_search_gia( $q ) {
 					'subtotal' => $price_num > 0 ? (int) $price_num : null,
 					'total'    => $price_num > 0 ? (int) $price_num : null,
 				) ),
-				home_url( '/dat-bai/' )
+				home_url( '/nhan-bao-gia/' )
 			);
 
 			$out[] = array(
@@ -1098,7 +1098,7 @@ function dgc_gia_row_html( $it, $args ) {
 		<td data-label="" class="cell-action">
 			<?php
 			/* "Chon ... nay" = nut TICK (them vao gio hang o thanh chon phia duoi), KHONG con
-			   nhay thang sang /dat-bai/ nua (Hieu 2026-07-30: "bam chon bao nay thi phai cho
+			   nhay thang sang /nhan-bao-gia/ nua (Hieu 2026-07-30: "bam chon bao nay thi phai cho
 			   chon nhieu chu ko thi da nhay ra bao gia luon roi" - truoc day 1 cai la nhay trang
 			   ngay, khong gom duoc nhieu bao). Doi tu <a href> sang <button> vi khong con dieu
 			   huong; JS (.order-now click) chi toggle checkbox an + goi update(), KHONG con
@@ -1285,7 +1285,8 @@ function dgc_svc_slug( $post_id = 0 ) {
 	if ( $n ) return $n['slug'];
 	$s = get_post_field( 'post_name', $post_id ?: get_the_ID() );
 	$np = dgc_svc_noprice_slugs();
-	return isset( $np[ $s ] ) ? $s : '';
+	/* Trang ten mien, hosting (template rieng) chi can FAQ rieng theo slug (02/11/2026). */
+	return ( isset( $np[ $s ] ) || in_array( $s, array( 'ten-mien', 'hosting' ), true ) ) ? $s : '';
 }
 
 function dgc_current_nhom( $post_id = 0 ) {

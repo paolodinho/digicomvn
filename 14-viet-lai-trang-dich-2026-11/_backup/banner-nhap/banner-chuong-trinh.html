@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banner chương trình DigicomVN (bản nháp)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+/* Bản nháp banner chương trình bán hàng, đặt ngay dưới hero trang chủ.
+   Token lấy từ wp-theme/digicom-host/assets/css/main.css. Chữ là HTML thật, không nung vào ảnh.
+   Số liệu: giá cloud + hosting đọc từ trang live 02/11/2026 (chưa VAT); booking báo từ /booking-bao-pr/ 30/10/2026. */
+:root{
+  --ink:#14182B; --ink-soft:#333A4D; --heading:#1C2035; --navy:#1C2035;
+  --action:#4761FF; --action-2:#3450E0; --teal:#0E8C7F; --teal-2:#0B746A;
+  --surface:#F1F3FA; --surface-2:#FFFFFF; --line:#E1E6F5; --line-2:#D8E0E8;
+  --tint-blue:#EEF1FF; --tint-teal:#E9F6F3;
+  --font-display:'Roboto',system-ui,sans-serif; --font-body:'Be Vietnam Pro',system-ui,sans-serif;
+  --r:12px; --sh-1:0 1px 2px rgba(20,24,43,.06); --sh-2:0 6px 18px rgba(20,24,43,.08); --sh-3:0 14px 36px rgba(20,24,43,.12);
+}
+[data-theme="dark"]{
+  --ink:#E7EAF5; --ink-soft:#B9C0D6; --heading:#F2F4FB; --surface:#141827; --surface-2:#1B2133;
+  --line:#2A3148; --line-2:#2A3148; --tint-blue:#1E2650; --tint-teal:#123A35;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--font-body);line-height:1.6}
+.demo-note{max-width:1200px;margin:16px auto 0;padding:0 16px;font-size:13px;color:var(--ink-soft)}
+.promo-strip{max-width:1200px;margin:24px auto 48px;padding:0 16px;display:grid;grid-template-columns:7fr 5fr;gap:20px}
+.pz{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh-1);transition:box-shadow .2s,border-color .2s}
+.pz:hover{box-shadow:var(--sh-2);border-color:var(--line-2)}
+.pz h2,.pz h3{font-family:var(--font-display);color:var(--heading);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.pz p{margin:0;text-wrap:pretty}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:10px 18px;border-radius:8px;font-family:var(--font-body);font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn:focus-visible{outline:3px solid #9FB0FF;outline-offset:2px}
+.btn-primary{background:var(--action);color:#fff;border:1px solid var(--action)}
+.btn-primary:hover{background:var(--action-2)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-ghost{background:transparent;color:var(--action);border:1px solid var(--line-2)}
+.btn-ghost:hover{border-color:var(--action)}
+/* Khối chính: VPS */
+.pz-vps{padding:28px;display:grid;grid-template-columns:1fr minmax(0,300px);gap:24px;align-items:start}
+.pz-vps h2{font-size:clamp(24px,2.6vw,32px);line-height:1.15;margin-bottom:10px}
+.pz-vps .lead{color:var(--ink-soft);font-size:15.5px;margin-bottom:18px;max-width:60ch}
+.plans{list-style:none;margin:0 0 18px;padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.plans li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:10px 14px;border-top:1px solid var(--line);align-items:baseline}
+.plans li:first-child{border-top:0}
+.plans li.is-pick{background:var(--tint-blue)}
+.plans .nm{font-weight:600;color:var(--heading)}
+.plans .spec{grid-column:1/-1;font-size:13px;color:var(--ink-soft)}
+.plans .pr{font-family:var(--font-display);font-weight:700;color:var(--heading);white-space:nowrap}
+.plans .pr small{font-family:var(--font-body);font-weight:400;font-size:12px;color:var(--ink-soft)}
+.plans .fit{font-size:12px;font-weight:600;color:var(--action);margin-left:6px}
+.note{font-size:12.5px;color:var(--ink-soft);margin-top:10px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+/* "terminal" minh hoạ bằng chữ thật */
+.term{background:#151A2C;color:#D7DEF5;border-radius:10px;padding:14px 16px;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;box-shadow:var(--sh-3);transform:rotate(-1.2deg);margin-top:6px;overflow:hidden}
+.term .bar{display:flex;gap:6px;margin-bottom:10px}
+.term .bar i{width:9px;height:9px;border-radius:50%;background:#3A425E;display:block}
+.term .p{color:#7EE0C9}
+.term .c{color:#8C96B8}
+.term code{white-space:pre-wrap;word-break:break-word}
+/* Cột phải: 2 chương trình */
+.side{display:grid;grid-template-rows:auto auto;gap:20px}
+.pz-small{padding:22px}
+.pz-small h3{font-size:clamp(19px,1.8vw,22px);line-height:1.25;margin-bottom:8px}
+.pz-small p{color:var(--ink-soft);font-size:14.5px;margin-bottom:14px}
+.price-big{font-family:var(--font-display);font-weight:900;font-size:clamp(26px,2.6vw,32px);color:var(--heading);letter-spacing:-.03em;line-height:1}
+.price-big small{font-family:var(--font-body);font-weight:500;font-size:13px;color:var(--ink-soft);letter-spacing:0}
+.row-end{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+.pz-pr{background:linear-gradient(180deg,var(--tint-teal),var(--surface-2) 70%)}
+.pz-pr .tag{color:var(--teal-2)}
+@media (max-width:1024px){.promo-strip{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr;grid-template-rows:none}}
+@media (max-width:760px){.pz-vps{grid-template-columns:1fr;padding:22px}.term{transform:none}.side{grid-template-columns:1fr}}
+@media (max-width:420px){.btn{width:100%}.pz-small,.pz-vps{padding:18px}}
+</style>
+</head>
+<body>
+<p class="demo-note">Bản nháp xem trước - chưa đăng. Đặt ngay dưới hero trang chủ (thay comment &lt;!-- BANNER CHUONG TRINH --&gt;). Chữ, giá, link sửa được trong WP Admin khi dựng thật.</p>
+
+<section class="promo-strip" aria-label="Chương trình đang mở bán">
+  <article class="pz pz-vps">
+    <div>
+      <span class="tag">Cho dân vibe code</span>
+      <h2>VPS để chạy app bạn vừa dựng bằng AI</h2>
+      <p class="lead">Dựng xong bản demo bằng Cursor hay Claude Code thì cần một máy chạy 24/7. Cloud server có quyền root và IP riêng, cài được Docker, Node.js, n8n hay bot Telegram, nâng cấu hình sau mà không phải cài lại dữ liệu.</p>
+      <ul class="plans" aria-label="Ba gói cloud server phù hợp">
+        <li><span class="nm">Cloud 0<span class="fit">bot, API nhỏ</span></span><span class="pr">98.000đ <small>/tháng</small></span><span class="spec">1 vCPU, 1 GB RAM, 20 GB SSD, 1 IP riêng</span></li>
+        <li class="is-pick"><span class="nm">Cloud 1<span class="fit">n8n, web app nhỏ</span></span><span class="pr">184.000đ <small>/tháng</small></span><span class="spec">2 vCPU, 1,5 GB RAM, 40 GB SSD, 1 IP riêng</span></li>
+        <li><span class="nm">Cloud 2<span class="fit">Docker nhiều dịch vụ</span></span><span class="pr">346.000đ <small>/tháng</small></span><span class="spec">4 vCPU, 4 GB RAM, 60 GB SSD, 1 IP riêng</span></li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://digicomvn.com/cloud-server/#bang-gia">Chọn gói cloud</a>
+        <a class="btn btn-ghost" href="https://zalo.me/2806292509481772964">Hỏi cấu hình qua Zalo</a>
+      </div>
+      <p class="note">Giá chưa gồm VAT, theo bảng giá trên digicomvn.com ngày 02/11/2026. Thanh toán QR ngay trên trang.</p>
+    </div>
+    <div class="term" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <code><span class="p">root@cloud-1:~#</span> git clone app-cua-ban
+<span class="p">root@cloud-1:~#</span> docker compose up -d
+<span class="c">[+] Running 3/3</span>
+<span class="c"> web    Started</span>
+<span class="c"> n8n    Started</span>
+<span class="c"> db     Started</span>
+<span class="p">root@cloud-1:~#</span> _</code>
+    </div>
+  </article>
+
+  <div class="side">
+    <article class="pz pz-small">
+      <span class="tag">Hosting WordPress</span>
+      <h3>Website giới thiệu, blog, landing page</h3>
+      <p>LiteSpeed, SSL miễn phí, có sao lưu. Mua xong là nhận tài khoản cPanel qua email.</p>
+      <div class="row-end">
+        <div class="price-big">18.000đ <small>/tháng, gói 3 năm</small></div>
+        <a class="btn btn-ghost" href="https://digicomvn.com/hosting/">Xem gói hosting</a>
+      </div>
+    </article>
+    <article class="pz pz-small pz-pr">
+      <span class="tag">Booking báo PR</span>
+      <h3>Đặt từ 3 đầu báo, viết bài PR miễn phí</h3>
+      <p>319 đầu báo có giá công khai từng vị trí. Chọn báo theo ngành, đặt cùng lúc nhiều báo trong một yêu cầu.</p>
+      <div class="row-end">
+        <div class="price-big">440.000đ <small>/bài, mức thấp nhất</small></div>
+        <a class="btn btn-ghost" href="https://digicomvn.com/booking-bao-pr/">Xem bảng giá báo</a>
+      </div>
+    </article>
+  </div>
+</section>
+</body>
+</html>

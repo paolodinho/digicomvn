@@ -322,7 +322,7 @@
 		});
 
 		// "Chon ... nay" tren 1 dong -> CHI toggle tick (them/bo khoi thanh chon phia duoi),
-		// KHONG con nhay thang sang /dat-bai/ nua (Hieu 2026-07-30: "bam chon 1 cai da nhay ra
+		// KHONG con nhay thang sang /nhan-bao-gia/ nua (Hieu 2026-07-30: "bam chon 1 cai da nhay ra
 		// bao gia luon" - phai cho chon NHIEU truoc, roi tu bam nut o thanh chon de gui yeu cau).
 		document.addEventListener('click', function (e) {
 			var btn = e.target.closest ? e.target.closest('.order-now') : null;
@@ -1450,3 +1450,73 @@ document.addEventListener('click', function (e) {
   window.addEventListener('hashchange', function () { openFor(location.hash); });
   document.addEventListener('DOMContentLoaded', function () { openFor(location.hash); });
 })();
+
+/* Slider chuong trinh uu dai trang chu (inc/hero-promo.php, 02/11/2026): tu chuyen 6 giay, dung khi re chuot/focus,
+   nut truoc/sau, cham, tam dung; tat tu chuyen khi prefers-reduced-motion. Slide xep chong 1 o luoi -> khong nhay layout. */
+(function(){
+	var hs=document.querySelector('[data-hs]'); if(!hs) return;
+	var sl=hs.querySelectorAll('.sg-hs-slide'), dots=hs.querySelectorAll('[data-hs-go]'), n=sl.length, cur=0, t=null, hold=false;
+	var user=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	var pb=hs.querySelector('[data-hs-pause]');
+	function show(i){
+		cur=(i+n)%n;
+		for(var k=0;k<n;k++){
+			var on=k===cur; sl[k].classList.toggle('is-on',on);
+			if(on) sl[k].removeAttribute('aria-hidden'); else sl[k].setAttribute('aria-hidden','true');
+			var a=sl[k].querySelectorAll('a,button'); for(var j=0;j<a.length;j++){ if(on) a[j].removeAttribute('tabindex'); else a[j].setAttribute('tabindex','-1'); }
+			if(dots[k]){ if(on) dots[k].setAttribute('aria-current','true'); else dots[k].removeAttribute('aria-current'); }
+		}
+	}
+	function stop(){ if(t){ clearInterval(t); t=null; } }
+	function play(){ stop(); if(user||hold) return; t=setInterval(function(){ show(cur+1); },6000); }
+	function setUser(p){ user=p; hs.classList.toggle('is-paused',p); if(pb) pb.setAttribute('aria-label',p?'Tiếp tục tự chuyển':'Tạm dừng tự chuyển'); p?stop():play(); }
+	hs.addEventListener('click',function(e){
+		var b=e.target.closest('[data-hs-prev],[data-hs-next],[data-hs-go],[data-hs-pause]'); if(!b) return;
+		if(b.hasAttribute('data-hs-pause')){ setUser(!user); return; }
+		if(b.hasAttribute('data-hs-prev')) show(cur-1); else if(b.hasAttribute('data-hs-next')) show(cur+1); else show(+b.getAttribute('data-hs-go'));
+		play();
+	});
+	hs.addEventListener('mouseenter',function(){ hold=true; stop(); });
+	hs.addEventListener('mouseleave',function(){ hold=false; play(); });
+	hs.addEventListener('focusin',function(){ hold=true; stop(); });
+	hs.addEventListener('focusout',function(e){ if(!hs.contains(e.relatedTarget)){ hold=false; play(); } });
+	hs.addEventListener('keydown',function(e){ if(e.key==='ArrowLeft'){ show(cur-1); } else if(e.key==='ArrowRight'){ show(cur+1); } });
+	var sx=null; hs.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX; },{passive:true});
+	hs.addEventListener('touchend',function(e){ if(sx===null) return; var dx=e.changedTouches[0].clientX-sx; sx=null; if(Math.abs(dx)>50){ show(cur+(dx<0?1:-1)); play(); } },{passive:true});
+	document.addEventListener('visibilitychange',function(){ document.hidden?stop():play(); });
+	if(user) setUser(true);
+	play();
+})();
+
+/* Chon phong chu + co chu (03/11/2026, ban 2): moi nut "Aa" (header + menu mobile), ap toan site */
+(function(){
+	var boxes=document.querySelectorAll('.rd-tools'); if(!boxes.length) return;
+	var d=document.documentElement;
+	function set(k,v){ try{ v?localStorage.setItem(k,v):localStorage.removeItem(k); }catch(e){} }
+	function sync(){
+		var f=d.getAttribute('data-rfont')||'', z=d.getAttribute('data-rsize')||'0';
+		document.querySelectorAll('.rd-panel [data-rfont]').forEach(function(b){ var on=b.getAttribute('data-rfont')===f; b.classList.toggle('is-on',on); b.setAttribute('aria-pressed',on); });
+		document.querySelectorAll('.rd-panel [data-rsize]').forEach(function(b){ var on=b.getAttribute('data-rsize')===z; b.classList.toggle('is-on',on); b.setAttribute('aria-pressed',on); });
+	}
+	function apply(f,z){
+		f?d.setAttribute('data-rfont',f):d.removeAttribute('data-rfont'); set('dgc-rfont',f);
+		z&&z!=='0'?d.setAttribute('data-rsize',z):d.removeAttribute('data-rsize'); set('dgc-rsize',z&&z!=='0'?z:'');
+		sync();
+	}
+	function closeAll(except){ boxes.forEach(function(x){ if(x===except) return; x.querySelector('.rd-panel').hidden=true; x.querySelector('.rd-btn').setAttribute('aria-expanded','false'); }); }
+	boxes.forEach(function(box){
+		var btn=box.querySelector('.rd-btn'), pn=box.querySelector('.rd-panel');
+		btn.addEventListener('click',function(e){ e.stopPropagation(); var o=pn.hidden; closeAll(); pn.hidden=!o; btn.setAttribute('aria-expanded',o); });
+		pn.addEventListener('click',function(e){
+			e.stopPropagation();
+			var t=e.target.closest('button'); if(!t) return;
+			if(t.hasAttribute('data-rfont')) apply(t.getAttribute('data-rfont'),d.getAttribute('data-rsize')||'0');
+			else if(t.hasAttribute('data-rsize')) apply(d.getAttribute('data-rfont')||'',t.getAttribute('data-rsize'));
+			else if(t.classList.contains('rd-reset')) apply('','0');
+		});
+	});
+	document.addEventListener('click',function(){ closeAll(); });
+	document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeAll(); });
+	sync();
+})();
+

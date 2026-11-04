@@ -86,7 +86,7 @@ $dgc_dich_vu_list = array(
 		<h2>Chưa rõ nên chọn dịch vụ nào?</h2>
 		<p class="muted" style="max-width:520px;margin:0 auto 20px">Xem bảng giá chi tiết ngay trong trang dịch vụ bạn quan tâm, hoặc gửi yêu cầu để DigicomVN tư vấn trực tiếp.</p>
 		<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/dat-bai/' ) ); ?>">Gửi yêu cầu tư vấn</a>
+			<a class="btn btn-primary" href="<?php echo esc_url( home_url( '/nhan-bao-gia/' ) ); ?>">Gửi yêu cầu tư vấn</a>
 		</div>
 	</div>
 </section>

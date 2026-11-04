@@ -5,7 +5,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('DGC_VER','3.23.0');
+define('DGC_VER','3.26.3');
 
 /* ---------------------------------------------------------------------------
  * Theme setup
@@ -158,9 +158,11 @@ require_once get_template_directory() . '/inc/domain-order.php';
 require_once get_template_directory() . '/inc/hosting-order.php';
 require_once get_template_directory() . '/inc/tm-offers.php';
 require_once get_template_directory() . '/inc/hg-offers.php';
+require_once get_template_directory() . '/inc/hero-promo.php';
 require_once get_template_directory() . '/inc/handover.php';
 require_once get_template_directory() . '/inc/web-svc.php';
 require_once get_template_directory() . '/inc/websvc-order.php';
+require_once get_template_directory() . '/inc/page-parts.php';
 
 /**
  * Helper doc 1 option.
@@ -389,9 +391,21 @@ function dgc_post_service( $post_id = 0 ) {
 	return dgc_cluster_service( 'seo-tong-quan' );
 }
 
-/** Link "Nhan bao gia" chon san dich vu tren form /dat-bai/. */
+/**
+ * 301 /dat-bai/ -> /nhan-bao-gia/ (03/11/2026, Hieu: site nay nhieu dich vu, "dat bai"
+ * chi hop booking bao). Giu query (?dv=...) de form van chon san dich vu.
+ */
+add_action( 'template_redirect', function () {
+	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+	if ( 'dat-bai' !== strtolower( $path ) ) return;
+	$q = (string) wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_QUERY );
+	wp_safe_redirect( home_url( '/nhan-bao-gia/' ) . ( $q ? '?' . $q : '' ), 301 );
+	exit;
+}, 0 );
+
+/** Link "Nhan bao gia" chon san dich vu tren form /nhan-bao-gia/. */
 function dgc_quote_url( $service_label = '' ) {
-	return $service_label ? add_query_arg( 'dv', rawurlencode( $service_label ), home_url( '/dat-bai/' ) ) : home_url( '/dat-bai/' );
+	return $service_label ? add_query_arg( 'dv', rawurlencode( $service_label ), home_url( '/nhan-bao-gia/' ) ) : home_url( '/nhan-bao-gia/' );
 }
 
 /** Trang thuoc nhom booking (bao PR, truyen hinh, fanpage, KOL) -> hien uu dai booking (ribbon + popup). */
@@ -413,6 +427,8 @@ function dgc_is_booking_context() {
 /** Trang dich vu template rieng (booking, ten mien, hosting): ap giao dien sg cho cac section cu (sg.css .sg-legacy). */
 add_filter( 'body_class', function ( $c ) {
 	if ( is_page_template( 'page-booking-bao-pr.php' ) || is_page( array( 'ten-mien', 'hosting', 'thanh-toan-ten-mien' ) ) ) $c[] = 'sg-legacy';
+	// Anh chim banner sg-phero: moi trang 1 anh nhom agency (theo ID, co dinh).
+	if ( is_page() ) $c[] = 'phero-img-' . ( ( get_queried_object_id() % 6 ) + 1 );
 	return $c;
 } );
 
@@ -958,6 +974,33 @@ add_action( 'template_redirect', function () {
  * Mac dinh site la giao dien SANG (header.php). Khach bam nut moi doi sang toi, lua chon luu
  * trong localStorage cho lan sau.
  */
+/** Chon phong chu + co chu cho nguoi doc (03/11/2026). Nut "Aa" o header (moi trang) va trong menu mobile; luu localStorage, ap moi trang. */
+function dgc_reader_tools( $id = 'rdPanel' ) {
+	$fonts = array( '' => array( 'Mặc định', 'inherit' ), 'serif' => array( 'Có chân', "'Lora',Georgia,serif" ), 'system' => array( 'Hệ thống', 'system-ui,-apple-system,sans-serif' ) );
+	$sizes = array( '-1' => array( 'Nhỏ', 13 ), '0' => array( 'Vừa', 16 ), '1' => array( 'Lớn', 19 ), '2' => array( 'Rất lớn', 22 ) );
+	?>
+	<div class="rd-tools">
+		<button type="button" class="rd-btn" aria-expanded="false" aria-controls="<?php echo esc_attr( $id ); ?>" aria-label="Chỉnh phông chữ và cỡ chữ" title="Chỉnh phông chữ và cỡ chữ">Aa</button>
+		<div class="rd-panel" id="<?php echo esc_attr( $id ); ?>" role="dialog" aria-label="Phông chữ và cỡ chữ" hidden>
+			<p class="rd-title">Phông và cỡ chữ <span>Áp dụng cho mọi trang</span></p>
+			<span class="rd-lab">Phông chữ</span>
+			<div class="rd-opts rd-fonts" role="group" aria-label="Phông chữ">
+				<?php foreach ( $fonts as $k => $f ) : ?>
+					<button type="button" data-rfont="<?php echo esc_attr( $k ); ?>"><b style="font-family:<?php echo esc_attr( $f[1] ); ?>">Aa</b><?php echo esc_html( $f[0] ); ?></button>
+				<?php endforeach; ?>
+			</div>
+			<span class="rd-lab">Cỡ chữ</span>
+			<div class="rd-opts rd-sizes" role="group" aria-label="Cỡ chữ">
+				<?php foreach ( $sizes as $k => $z ) : ?>
+					<button type="button" data-rsize="<?php echo esc_attr( $k ); ?>"><b style="font-size:<?php echo (int) $z[1]; ?>px">A</b><?php echo esc_html( $z[0] ); ?></button>
+				<?php endforeach; ?>
+			</div>
+			<button type="button" class="rd-reset">Đặt lại mặc định</button>
+		</div>
+	</div>
+	<?php
+}
+
 function dgc_theme_toggle() {
 	?>
 	<button class="theme-toggle" type="button" aria-label="Chuyển chế độ ban ngày / ban đêm" title="Chuyển chế độ sáng / tối" onclick="dgcToggleTheme(this)">

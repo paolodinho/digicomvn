@@ -92,3 +92,9 @@ Không mặc định `btn-primary`.
 ## Nút Zalo - đơn giản chỉ chữ (2026-07-15, chốt)
 `.fab-zalo` cuối cùng: **chỉ chữ "Zalo" màu xanh #0068FF**, KHÔNG bong bóng, KHÔNG nền/viền/bóng tròn
 (nền `none`, border 0, box-shadow none). SVG chỉ còn `<text>Zalo</text>`. Đây là bản Hiếu chốt.
+
+## Nút chỉnh phông + cỡ chữ "Aa" (Hiếu chốt 03/11/2026)
+- Có ở MỌI trang: header desktop (cạnh nút sáng/tối) + menu mobile (cạnh nút sáng/tối; <=480px nút header ẩn). Hàm `dgc_reader_tools()` trong functions.php, JS cuối main.js.
+- Bảng chọn: 3 phông (Mặc định / Có chân Lora / Hệ thống) + 4 cỡ (Nhỏ / Vừa / Lớn / Rất lớn) bấm 1 lần, có Đặt lại. Lưu localStorage `dgc-rfont`/`dgc-rsize`, áp TOÀN SITE.
+- Cỡ chữ dùng `zoom` (.92/1.12/1.25) cho mọi khối giữa header và footer (site dùng px nên không đổi được bằng rem). Thêm khối body cấp 1 mới không muốn bị phóng thì thêm vào danh sách :not() trong main.css.
+- Mobile (03/11, Hiếu: "bản di động chưa có nút chỉnh font"): nút "Aa" luôn hiện ở header mobile (32-34px), bảng chọn mở fixed full ngang dưới header. Header <=480px gọn lại (gap 10/6px, lề 14px, nút "Nhận báo giá" padding 11px, selector `.site-header .header-cta .btn.btn-sm` vì `.btn-sm` đè); <=345px ẩn kính lúp (có ô tìm trong menu). QA 320-480px: 0px tràn ngang.
