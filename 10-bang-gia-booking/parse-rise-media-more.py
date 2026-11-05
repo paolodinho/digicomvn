@@ -13,7 +13,7 @@ import csv, re, os
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(BASE, "raw", "Rise-Media.csv")
-MARKUP = 1.1
+MARKUP = 1.0  # 2026-11-05: master luu GIA VON; bao gia tay nhan 1,1 (xem bao-gia-khach-hang.md)
 
 def num(s):
     if not s: return None

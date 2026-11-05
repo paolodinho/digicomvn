@@ -144,3 +144,7 @@ Chi tiết: skill `bao-gia-khach-hang` mục "FILE GỬI KHÁCH = GOOGLE SHEET/D
 - Google Sheet báo giá bị khoá "Google sẽ xem xét tệp của bạn" (Trust & Safety) vì có link tới theinscribermag.com, domain bị Google Safe Browsing đánh dấu có trang không an toàn (hosting bị treo/nhiễm). Drive quét mọi hyperlink trong file; 1 link xấu là đủ khoá file.
 - Trước MỖI lần upload/cập nhật file có link (bài mẫu, site NCC): `python3 tools/check-links-safebrowsing.py <file.xlsx|sheet_id>`. Domain status khác 1 -> bỏ link (ghi chữ trơn) hoặc bỏ site khỏi báo giá. Site nhà cung cấp đang lỗi thì không chào khách.
 - File đã bị khoá: sửa xong link, chủ file (hieudx3107) bấm "Yêu cầu xem xét" trên trang cảnh báo để Google mở lại.
+
+## 11. Sửa báo giá đã gửi: không ghi đè phần khách đã sửa (Hiếu chốt 04/11/2026)
+- Báo giá đã có link Google Sheet: thêm/sửa bằng Sheets API ĐÚNG ô/dòng cần đổi (insertDimension + copyPaste format + values.update). KHÔNG upload lại cả xlsx (`files().update`) vì sẽ xoá thay đổi khách tự ghi trên Sheet.
+- Khách đã thay đổi gì trên Sheet thì để nguyên, không sửa lại.

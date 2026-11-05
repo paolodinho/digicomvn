@@ -252,3 +252,8 @@ quy trình `build_master.py`/`gan-nganh.py` nếu Hiếu muốn đưa vào kho d
 Nguồn: Google Drive `Báo giá booking Combat_ 2026.xlsx` (https://drive.google.com/file/d/1n_CBWN_3wYF6JZ35qhkMb2dSaOSMgDpV/view), đầu mối Ms Thu 0988866152, Thult@goodcomvietnam.com. Giá trước VAT và phí edit, hiệu lực 10-15 ngày từ ngày báo giá.
 - Đã lưu: phần Social (11 fanpage + 6 TikTok, báo giá 28/10/2026) tại `raw/Goodcom-Social-2026-10-28.csv`. Là giá NỘI BỘ (NCC), KHÔNG lên web. Chưa vào `bang-gia-master.csv` (chỉ DanaSEO; chưa có nhóm fanpage/TikTok trên web, trang /booking-fanpage/ báo giá theo yêu cầu).
 - Phần báo điện tử của file (Cafef, Cafebiz, VnExpress, Thanh Niên... nhiều tab tháng 10) chưa nạp.
+
+## Cập nhật 2026-11-05
+- Rise Media: nạp lại cả 4 tab (257 + 260 dòng), lưu giá vốn; báo giá + web = x1,1.
+- LuatVietnam.vn (chính chủ, rate card 01/01/2025): `raw/luatvietnam-chinh-chu/LuatVietnam-bao-gia-PR-2025.pdf`, 4 loại bài 3-5 triệu (chưa VAT), cộng thêm: viết bài +1tr, thêm link +1tr, layout +5tr, bài đánh giá/top +2tr. Giá bán x1,1.
+- Global Book Corp (báo quốc tế hạng top): PDF chuyển về `raw/globalbook-quoc-te/GlobalBook-truyen-thong-quoc-te-2026-11.pdf`.

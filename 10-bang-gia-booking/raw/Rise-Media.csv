@@ -1,285 +1,521 @@
 # Bang gia Rise Media (Pinnexa Rise Media) - nap 2026-07-24.
 # Nguon: Google Sheet cong khai (gviz export). Gia = THANH TIEN (da chiet khau) x 1.1 (yeu cau Hieu).
 # Cot: nha_cung_cap|dich_vu|dau_bao|nhom|vi_tri|gia_vnd|so_link|quy_cach|ghi_chu|nguon_url
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Doanh nghiệp viết - tổn tại 6 tháng|6600000|2-3 link||Gia goc niem yet NCC: 10.000.000 d - CK 34.0% - gia von sau CK: 6.600.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh; 2-3 link Kèm tối đa 3 ảnh minh họa, yêu cầu ảnh không thiết kế, không logo, không bắn chữ Title 13-14 từ|https://vnexpress.net/
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Doanh nghiệp viết - tổn tại 2 năm|9900000|||Gia goc niem yet NCC: 15.000.000 d - CK 34.0% - gia von sau CK: 9.900.000 d|https://vnexpress.net/
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Doanh nghiệp viết - không giới hạn thời hạn|13200000|||Gia goc niem yet NCC: 20.000.000 d - CK 34.0% - gia von sau CK: 13.200.000 d|https://vnexpress.net/
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Tiểu mục (du lịch, số hoá, ý kiến, tâm sự, xe)|6600000|||Gia goc niem yet NCC: 10.000.000 d - CK 34.0% - gia von sau CK: 6.600.000 d|https://vnexpress.net/
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Tiểu mục (giáo dục, khoa học)|7920000|||Gia goc niem yet NCC: 12.000.000 d - CK 34.0% - gia von sau CK: 7.920.000 d|https://vnexpress.net/
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Thông tin doanh nghiệp|9900000|||Gia goc niem yet NCC: 15.000.000 d - CK 34.0% - gia von sau CK: 9.900.000 d|https://vnexpress.net/
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Tiểu mục (thể thao, giải trí, sức khoẻ, đời sống)|9900000|||Gia goc niem yet NCC: 15.000.000 d - CK 34.0% - gia von sau CK: 9.900.000 d|https://vnexpress.net/
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Top 3,4,5 chuyên mục trên trang chủ Bất động sản|26400000|||Gia goc niem yet NCC: 40.000.000 d - CK 34.0% - gia von sau CK: 26.400.000 d|https://vnexpress.net/
-Rise Media|booking-pr|Vnexpress|PR bao dien tu|Top 3,4,5 chuyên mục trên trang chủ kinh doanh|33000000|||Gia goc niem yet NCC: 50.000.000 d - CK 34.0% - gia von sau CK: 33.000.000 d|https://vnexpress.net/
-Rise Media|booking-pr|Ngoisao.net|PR bao dien tu|Mục phù hợp|4620000|2 link||Gia goc niem yet NCC: 7.000.000 d - CK 34.0% - gia von sau CK: 4.620.000 d - 1000 chữ, 3 ảnh sạch (ảnh không thiết kế, không bắn text logo lên ảnh, k ghép), đc 2 link|https://ngoisao.vnexpress.net/
-Rise Media|booking-pr|Ngoisao.net|PR bao dien tu|Trang chủ|7920000|||Gia goc niem yet NCC: 12.000.000 d - CK 34.0% - gia von sau CK: 7.920.000 d|https://ngoisao.vnexpress.net/
-Rise Media|booking-pr|Dân trí (Giá mới 2026)|PR bao dien tu|Tiểu mục nhóm 2: Nội vụ, Du lịch, Giáo dục, Lao động - Việc làm, Pháp luật, Tình yêu giới tính, Khoa học|7670000|0 free||Gia goc niem yet NCC: 13.000.000 d - CK 41.0% - gia von sau CK: 7.670.000 d - Bài PR dưới 1000 từ, 6 ảnh Tiêu đề của bài không quá 11 từ, sapo không quá 45 từ 0 free link -Thêm link: 500K/1link|https://dantri.com.vn/
-Rise Media|booking-pr|Dân trí (Giá mới 2026)|PR bao dien tu|Tiểu mục nhóm 1: Kinh doanh, Thời sự, Sức khỏe, Bất động sản, Thể thao, Giải trí, Thế giới, Ô tô - Xe máy, Công nghệ, Đời sống|8850000|||Gia goc niem yet NCC: 15.000.000 d - CK 41.0% - gia von sau CK: 8.850.000 d|https://dantri.com.vn/
-Rise Media|booking-pr|Dân trí (Giá mới 2026)|PR bao dien tu|Link 6,7,8,9 Chuyên mục nhóm 2|8850000|||Gia goc niem yet NCC: 15.000.000 d - CK 41.0% - gia von sau CK: 8.850.000 d|https://dantri.com.vn/
-Rise Media|booking-pr|Dân trí (Giá mới 2026)|PR bao dien tu|Link 7,8,9 Chuyên mục nhóm 1|11800000|||Gia goc niem yet NCC: 20.000.000 d - CK 41.0% - gia von sau CK: 11.800.000 d|https://dantri.com.vn/
-Rise Media|booking-pr|Dân trí (Giá mới 2026)|PR bao dien tu|Link 3,4,5 Nhóm 2|11800000|||Gia goc niem yet NCC: 20.000.000 d - CK 41.0% - gia von sau CK: 11.800.000 d|https://dantri.com.vn/
-Rise Media|booking-pr|Dân trí (Giá mới 2026)|PR bao dien tu|Link 5,6 Nhóm 1|17700000|||Gia goc niem yet NCC: 30.000.000 d - CK 41.0% - gia von sau CK: 17.700.000 d|https://dantri.com.vn/
-Rise Media|booking-pr|Dân trí (Giá mới 2026)|PR bao dien tu|Link 3,4 Nhóm 1|20650000|||Gia goc niem yet NCC: 35.000.000 d - CK 41.0% - gia von sau CK: 20.650.000 d|https://dantri.com.vn/
-Rise Media|booking-pr|CafeF.vn (Giá mới 2026)|PR bao dien tu|Bài loại 9 -Thông cáo báo chí|4680000|1 link||Gia goc niem yet NCC: 6.000.000 d - CK 22.0% - gia von sau CK: 4.680.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh Tiêu đề của bài không quá 11 từ, sapo không quá 45 từ Thêm link: 500K/1link|https://cafef.vn/
-Rise Media|booking-pr|CafeF.vn (Giá mới 2026)|PR bao dien tu|Bài loại 8 - Tin doanh nghiệp|5850000|||Gia goc niem yet NCC: 7.500.000 d - CK 22.0% - gia von sau CK: 5.850.000 d|https://cafef.vn/
-Rise Media|booking-pr|CafeF.vn (Giá mới 2026)|PR bao dien tu|Bài loại 7 Chuyên mục|7800000|||Gia goc niem yet NCC: 10.000.000 d - CK 22.0% - gia von sau CK: 7.800.000 d|https://cafef.vn/
-Rise Media|booking-pr|CafeF.vn (Giá mới 2026)|PR bao dien tu|Bài loại 6 - Bài số 2, 3 Chuyên mục|9360000|||Gia goc niem yet NCC: 12.000.000 d - CK 22.0% - gia von sau CK: 9.360.000 d|https://cafef.vn/
-Rise Media|booking-pr|CafeF.vn (Giá mới 2026)|PR bao dien tu|Bài loại 5 nổi bật chuyên mục|11700000|||Gia goc niem yet NCC: 15.000.000 d - CK 22.0% - gia von sau CK: 11.700.000 d|https://cafef.vn/
-Rise Media|booking-pr|CafeBiz.vn (Giá mới 2026)|PR bao dien tu|Loại 4 Chuyên mục|3900000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 22.0% - gia von sau CK: 3.900.000 d - 1000 chữ, 5 ảnh, đc 1 link (mua thêm 500k)|https://cafebiz.vn/
-Rise Media|booking-pr|CafeBiz.vn (Giá mới 2026)|PR bao dien tu|Trang chủ loại 3|6240000|||Gia goc niem yet NCC: 8.000.000 d - CK 22.0% - gia von sau CK: 6.240.000 d|https://cafebiz.vn/
-Rise Media|booking-pr|CafeBiz.vn (Giá mới 2026)|PR bao dien tu|Trang chủ loạ̣i 2|8580000|||Gia goc niem yet NCC: 11.000.000 d - CK 22.0% - gia von sau CK: 8.580.000 d|https://cafebiz.vn/
-Rise Media|booking-pr|Afamily (Giá mới 2026)|PR bao dien tu|Bài loại 5 Chuyên mục / Loại 4 XAC|3120000|1 link link đuôi.vn||Gia goc niem yet NCC: 4.000.000 d - CK 22.0% - gia von sau CK: 3.120.000 d - Độ dài tất cả các tin bài không quá 1000 từ và 5 ảnh minh họa (trừ bài phóng sự ảnh, bài tương đương 1 trang A4) Thêm link: 500K/1link|https://afamily.vn/
-Rise Media|booking-pr|Afamily (Giá mới 2026)|PR bao dien tu|Bài loại 3 Box Chuyên mục / Stream 2|5460000|||Gia goc niem yet NCC: 7.000.000 d - CK 22.0% - gia von sau CK: 5.460.000 d|https://afamily.vn/
-Rise Media|booking-pr|Afamily (Giá mới 2026)|PR bao dien tu|Bài loại 2 nổi bật mục|9360000|||Gia goc niem yet NCC: 12.000.000 d - CK 22.0% - gia von sau CK: 9.360.000 d|https://afamily.vn/
-Rise Media|booking-pr|Kenh 14|PR bao dien tu|Bài loại 5 Tiểu mục (Sao Việt (Star); Phim Việt, phim Âu Mỹ, phim Châu Á (Cine), tiểu mục của Musik; Tiểu mục Du học, 46 News (Học Đường), 2tek vui (2tek)|3900000|1 link link đuôi.vn||Gia goc niem yet NCC: 5.000.000 d - CK 22.0% - gia von sau CK: 3.900.000 d - 1000 chữ, 5 ảnh, đc 1 link (mua thêm 500k)|https://kenh14.vn/
-Rise Media|booking-pr|Kenh 14|PR bao dien tu|Bài loại 4 Xem ăn chơi|6240000|||Gia goc niem yet NCC: 8.000.000 d - CK 22.0% - gia von sau CK: 6.240.000 d|https://kenh14.vn/
-Rise Media|booking-pr|Kenh 14|PR bao dien tu|Bài Loại 3 STREAM 3 PC|7800000|||Gia goc niem yet NCC: 10.000.000 d - CK 22.0% - gia von sau CK: 7.800.000 d|https://kenh14.vn/
-Rise Media|booking-pr|Kenh 14|PR bao dien tu|Bài loại 2 HOME MOBILE STREAM 2|11700000|||Gia goc niem yet NCC: 15.000.000 d - CK 22.0% - gia von sau CK: 11.700.000 d|https://kenh14.vn/
-Rise Media|booking-pr|Soha|PR bao dien tu|Chuyên mục|3900000|1 link link đuôi.vn||Gia goc niem yet NCC: 5.000.000 d - CK 22.0% - gia von sau CK: 3.900.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh Tiêu đề dài khong quá 90 ký tự, sapp không quá 180 ký tự; Thêm link: 500K/1link|https://soha.vn/
-Rise Media|booking-pr|Soha|PR bao dien tu|Trang chủ streaming 3|5460000|||Gia goc niem yet NCC: 7.000.000 d - CK 22.0% - gia von sau CK: 5.460.000 d|https://soha.vn/
-Rise Media|booking-pr|GenK.vn|PR bao dien tu|Chuyên mục|3900000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 22.0% - gia von sau CK: 3.900.000 d - Bài PR dưới 1000 từ, 5 ảnh (trừ bài phóng sự ảnh, bài tương đương 1 trang A4); Tiêu đề không quá 11 từ, sapo không quá 45 tử) Thêm link: 500K/1link|https://genk.vn/
-Rise Media|booking-pr|GenK.vn|PR bao dien tu|Trang chủ stream 2|6240000|||Gia goc niem yet NCC: 8.000.000 d - CK 22.0% - gia von sau CK: 6.240.000 d|https://genk.vn/
-Rise Media|booking-pr|Autopro.com.vn (Giá mới 2026)|PR bao dien tu|Bài loại 4 chuyên mục|4680000|1 link||Gia goc niem yet NCC: 6.000.000 d - CK 22.0% - gia von sau CK: 4.680.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh Tiêu đề không quá 11 từ, sapo không quá 45 từ Thêm link: 500K/1link|https://autopro.com.vn/
-Rise Media|booking-pr|Autopro.com.vn (Giá mới 2026)|PR bao dien tu|Bài loại 3 trang chủ|7800000|||Gia goc niem yet NCC: 10.000.000 d - CK 22.0% - gia von sau CK: 7.800.000 d|https://autopro.com.vn/
-Rise Media|booking-pr|Autopro.com.vn (Giá mới 2026)|PR bao dien tu|Bài loại 2 trang chủ|11700000|||Gia goc niem yet NCC: 15.000.000 d - CK 22.0% - gia von sau CK: 11.700.000 d|https://autopro.com.vn/
-Rise Media|booking-pr|GameK|PR bao dien tu|Trang chủ|7800000|1 link||Gia goc niem yet NCC: 10.000.000 d - CK 22.0% - gia von sau CK: 7.800.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 300K/1link|https://gamek.vn/
-Rise Media|booking-pr|GameK|PR bao dien tu|Mục phù hợp|4680000|||Gia goc niem yet NCC: 6.000.000 d - CK 22.0% - gia von sau CK: 4.680.000 d|https://gamek.vn/
-Rise Media|booking-pr|VTV (Giá mới 2026)|PR bao dien tu|Loại 7 Chuyên mục|4860000|0 free||Gia goc niem yet NCC: 6.000.000 d - CK 19.0% - gia von sau CK: 4.860.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh (trừ bài phóng sự ảnh), bài tương đương 1 trang A4, Tiêu đề, sapo (tóm tắt tin): Tiêu đề của bài không quá 11 từ, sapo không quá 40 từ Thêm link: 3tr/1link|https://vtv.vn/
-Rise Media|booking-pr|VTV (Giá mới 2026)|PR bao dien tu|Loại 6 nổi bật chuyên mục|9720000|||Gia goc niem yet NCC: 12.000.000 d - CK 19.0% - gia von sau CK: 9.720.000 d|https://vtv.vn/
-Rise Media|booking-pr|Tuổi trẻ (Giá mới 2026)|PR bao dien tu|Trang chuyên mục Cần biết|4690000|không chèn link||Gia goc niem yet NCC: 7.000.000 d - CK 33.0% - gia von sau CK: 4.690.000 d - Bài 1000 chữ, 5 ảnh, không gắn link (tùy link bbt có thể cho để link tĩnh, hoặc phải xóa)|https://tuoitre.vn/
-Rise Media|booking-pr|Tuổi trẻ (Giá mới 2026)|PR bao dien tu|Hiển thị trang chủ|7800000|||Gia goc niem yet NCC: 10.000.000 d - CK 22.0% - gia von sau CK: 7.800.000 d|https://tuoitre.vn/
-Rise Media|booking-pr|Tuổi trẻ (Giá mới 2026)|PR bao dien tu|Trang chuyên mục Nhóm 3: Trang cấp 2 của các chuyên mục Nhóm 1 và 2, Việc làm, Tuổi Trẻ Cười, Giả - Thật|11700000|||Gia goc niem yet NCC: 15.000.000 d - CK 22.0% - gia von sau CK: 11.700.000 d|https://tuoitre.vn/
-Rise Media|booking-pr|Tuổi trẻ (Giá mới 2026)|PR bao dien tu|Trang chuyên mục Nhóm 2: Video, Xe, Du lịch, Văn hóa, Giải trí, Nhịp sống trẻ, Bạn đọc, Doanh nghiệp, Khoa học|15600000|||Gia goc niem yet NCC: 20.000.000 d - CK 22.0% - gia von sau CK: 15.600.000 d|https://tuoitre.vn/
-Rise Media|booking-pr|Thanh niên (Giá mới 2026)|PR bao dien tu|PR Cần biết - Tin ngắn|3200000|2 link, tin ngắn free 1 link||Gia goc niem yet NCC: 4.000.000 d - CK 20.0% - gia von sau CK: 3.200.000 d - 300 chữ + 1 ảnh + 1link - thêm chữ: 8k/1 chữ Thêm link: 500K/1link|https://thanhnien.vn/
-Rise Media|booking-pr|Thanh niên (Giá mới 2026)|PR bao dien tu|Tin chuyên mục con Nhóm 2: Giáo dục, Du lịch, Giải trí, Giới trẻ, Văn hóa.|4000000|||Gia goc niem yet NCC: 5.000.000 d - CK 20.0% - gia von sau CK: 4.000.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh, 2 link Title không quá 17 chữ, sapo không quá 48 chữ, Bài/Tin PR để chữ: "Nguồn:,,,", "Thông tin dịch vụ", "Thông tin doanh nghiệp Thêm link: 500K/1link|https://thanhnien.vn/
-Rise Media|booking-pr|Thanh niên (Giá mới 2026)|PR bao dien tu|Tin chuyên mục con Nhóm 1: Kinh tế, Tiêu dùng, Công nghệ-Game, Đời sống, Sức khỏe, Thể thao, Emagazine, Xe.|4800000|||Gia goc niem yet NCC: 6.000.000 d - CK 20.0% - gia von sau CK: 4.800.000 d|https://thanhnien.vn/
-Rise Media|booking-pr|Thanh niên (Giá mới 2026)|PR bao dien tu|Chuyên mục con nhóm 1|12000000|||Gia goc niem yet NCC: 15.000.000 d - CK 20.0% - gia von sau CK: 12.000.000 d|https://thanhnien.vn/
-Rise Media|booking-pr|24h.com.vn|PR bao dien tu|PR loại 2 nhóm 2 (giáo dục, giải trí, thời trang đời sống, xe….)|3350000|3 link, pr cá nhân 1 link||Gia goc niem yet NCC: 5.000.000 d - CK 33.0% - gia von sau CK: 3.350.000 d - Bài PR dưới 1000 từ, dưới 5 ảnh Thêm link: 1tr/1link|https://www.24h.com.vn/
-Rise Media|booking-pr|24h.com.vn|PR bao dien tu|PR loại 2 nhóm 1 (kinh doanh, TTTD,…)|4020000|||Gia goc niem yet NCC: 6.000.000 d - CK 33.0% - gia von sau CK: 4.020.000 d|https://www.24h.com.vn/
-Rise Media|booking-pr|Tiền phong|PR bao dien tu|Trang chuyên mục (xã hội, kinh tế, giải trí, sức khoẻ…)|3900000|1 link đuôi.vn||Gia goc niem yet NCC: 6.000.000 d - CK 35.0% - gia von sau CK: 3.900.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh Thêm link: 2tr/1link|https://tienphong.vn/
-Rise Media|booking-pr|Tiền phong|PR bao dien tu|Top 2,3,4 trên trang chủ (thể thao, giáo dục, sức khoẻ...)|6500000|||Gia goc niem yet NCC: 10.000.000 d - CK 35.0% - gia von sau CK: 6.500.000 d|https://tienphong.vn/
-Rise Media|booking-pr|Tiền phong|PR bao dien tu|Top 1 trang chủ (giáo dục, giải trí, thể thao….)|7800000|||Gia goc niem yet NCC: 12.000.000 d - CK 35.0% - gia von sau CK: 7.800.000 d|https://tienphong.vn/
-Rise Media|booking-pr|Vtcnews (Giá mới 2026)|PR bao dien tu|Từ top 6 trở xuống Chuyên mục nhóm 1 (Thời sự; Kinh tế)|2850000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 43.0% - gia von sau CK: 2.850.000 d - 1000 chữ, 3 ảnh, đc 1 link web (có thể yêu cầu.vn) mua thêm link 500k/ 1 link|https://vtc.vn/
-Rise Media|booking-pr|Vtcnews (Giá mới 2026)|PR bao dien tu|Từ Top 4 trở xuống - Chuyên mục nhóm 2 (Các chuyên mục còn lại (trừ chuyên mục Doanh nghiệp - Doanh nhân; Trẻ).|2850000|||Gia goc niem yet NCC: 5.000.000 d - CK 43.0% - gia von sau CK: 2.850.000 d|https://vtc.vn/
-Rise Media|booking-pr|Vtcnews (Giá mới 2026)|PR bao dien tu|Chuyên mục Doanh nghiệp - Doanh nhân; Trẻ|2850000|||Gia goc niem yet NCC: 5.000.000 d - CK 43.0% - gia von sau CK: 2.850.000 d|https://vtc.vn/
-Rise Media|booking-pr|Vtcnews (Giá mới 2026)|PR bao dien tu|Top 2-3 chuyên mục nhóm 2|4560000|||Gia goc niem yet NCC: 8.000.000 d - CK 43.0% - gia von sau CK: 4.560.000 d|https://vtc.vn/
-Rise Media|booking-pr|Vtcnews (Giá mới 2026)|PR bao dien tu|Top 2-5 chuyên mục nhóm 1|8550000|||Gia goc niem yet NCC: 15.000.000 d - CK 43.0% - gia von sau CK: 8.550.000 d|https://vtc.vn/
-Rise Media|booking-pr|Zingnews|PR bao dien tu|Mục Thông tin doanh nghiệp/Tiểu mục|6900000|1-2 link||Gia goc niem yet NCC: 10.000.000 d - CK 31.0% - gia von sau CK: 6.900.000 d - quy định chữ như znew 1000 chữ 5 ảnh, 2 link, bài chỉ tồn tại 6 tháng|https://znews.vn/
-Rise Media|booking-pr|Báo Mới|PR bao dien tu|Tiểu mục phù hợp|5520000|||Gia goc niem yet NCC: 8.000.000 d - CK 31.0% - gia von sau CK: 5.520.000 d - quy định chữ như znew 1000 chữ 5 ảnh, 2 link, bài chỉ tồn tại 6 tháng|https://baomoi.com/
-Rise Media|booking-pr|Vietnamnet (Giá mới 2026)|PR bao dien tu|Tiểu mục từ Top 6 trở xuống|4140000|0 link||Gia goc niem yet NCC: 6.000.000 d - CK 31.0% - gia von sau CK: 4.140.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh, tiêu đề không quá 12 chữ 5tr/link, chỉ chèn trong 3 tháng mất link|https://vietnamnet.vn/
-Rise Media|booking-pr|Vietnamnet (Giá mới 2026)|PR bao dien tu|Top 2-5 Tiểu mục|5520000|||Gia goc niem yet NCC: 8.000.000 d - CK 31.0% - gia von sau CK: 5.520.000 d|https://vietnamnet.vn/
-Rise Media|booking-pr|Vietnamnet (Giá mới 2026)|PR bao dien tu|Top 1 Tiểu mục|6900000|||Gia goc niem yet NCC: 10.000.000 d - CK 31.0% - gia von sau CK: 6.900.000 d|https://vietnamnet.vn/
-Rise Media|booking-pr|Vietnamnet (Giá mới 2026)|PR bao dien tu|Top 9 trở xuống|8280000|||Gia goc niem yet NCC: 12.000.000 d - CK 31.0% - gia von sau CK: 8.280.000 d|https://vietnamnet.vn/
-Rise Media|booking-pr|Vietnambiz|PR bao dien tu|Chuyên mục|1860000|0 free link||Gia goc niem yet NCC: 3.000.000 d - CK 38.0% - gia von sau CK: 1.860.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 500k/link|https://vietnambiz.vn/
+Rise Media|booking-pr|Vnexpress|PR bao dien tu|Mục doanh nghiệp viết (bài tồn tại 6 tháng)|6600000|2-3 link||Gia goc niem yet NCC: 10.000.000 d - CK 34.0% - gia von sau CK: 6.600.000 d - 1000 từ, 3 ảnh, 2-3 link No, tiêu đề 14 từ, sapo 32 từ. Chèn video 2 triệu/video. - Ảnh không thiết kế, không bắn chữ, logo, không ảnh ghép và làm mờ thương hiệu rượu (nếu có chai rượu) - Lưu ý: KH đã confirm hướng edit nhận bài edit mà không đăng báo sẽ tính phí 1tr/ bài edit (tuỳ bài)|https://vnexpress.net/
+Rise Media|booking-pr|Vnexpress|PR bao dien tu|Mục doanh nghiệp viết (bài tồn tại 2 năm)|9900000|||Gia goc niem yet NCC: 15.000.000 d - CK 34.0% - gia von sau CK: 9.900.000 d|https://vnexpress.net/
+Rise Media|booking-pr|Vnexpress|PR bao dien tu|Mục doanh nghiệp viết (không thời hạn)|13200000|||Gia goc niem yet NCC: 20.000.000 d - CK 34.0% - gia von sau CK: 13.200.000 d|https://vnexpress.net/
+Rise Media|booking-pr|Vnexpress|PR bao dien tu|Tiểu mục Kinh doanh|13200000|||Gia goc niem yet NCC: 20.000.000 d - CK 34.0% - gia von sau CK: 13.200.000 d|https://vnexpress.net/
+Rise Media|booking-pr|Vnexpress|PR bao dien tu|Tiểu mục còn lại (sức khỏe, đời sống, bđs…)|9900000|||Gia goc niem yet NCC: 15.000.000 d - CK 34.0% - gia von sau CK: 9.900.000 d|https://vnexpress.net/
+Rise Media|booking-pr|Vnexpress|PR bao dien tu|Tiểu mục khoa học công nghệ, xe|7920000|||Gia goc niem yet NCC: 12.000.000 d - CK 34.0% - gia von sau CK: 7.920.000 d|https://vnexpress.net/
+Rise Media|booking-pr|Vnexpress|PR bao dien tu|Tiểu mục (giáo dục, du lịch)|6600000|||Gia goc niem yet NCC: 10.000.000 d - CK 34.0% - gia von sau CK: 6.600.000 d|https://vnexpress.net/
+Rise Media|booking-pr|Ngoisao.net|PR bao dien tu|Mục phù hợp|4760000|2 link||Gia goc niem yet NCC: 7.000.000 d - CK 32.0% - gia von sau CK: 4.760.000 d - Không quá 1000 từ, 3 ảnh, 2-3 link No. (Ảnh không thiết kế, không logo, không bắn tex. Sapo 250 ký tự. Title 13-14 từ. Hiển thị 02 tiếng tại vị trí cam kết|https://ngoisao.vnexpress.net/
+Rise Media|booking-pr|Ngoisao.net|PR bao dien tu|Trang chủ|8160000|||Gia goc niem yet NCC: 12.000.000 d - CK 32.0% - gia von sau CK: 8.160.000 d|https://ngoisao.vnexpress.net/
+Rise Media|booking-pr|Dân trí|PR bao dien tu|Tiểu mục nhóm 1: Kinh doanh, Thời sự, Sức khỏe, Bất động sản, Thể thao, Giải trí, Thế giới, Ô tô - Xe máy, Công nghệ, Đời sống|8850000|||Gia goc niem yet NCC: 15.000.000 d - CK 41.0% - gia von sau CK: 8.850.000 d - "- Không quá 1000 từ + 5 ảnh + 0 Free link. (Ảnh thumb không ghép, không text hay logo) - Chèn link out + nofollow: 500,000 VNĐ/ 1 link, hoặc 1,000,000 VNĐ/ 3 link (ko chèn link mạng xã hội như fb, tiktok, youtube...) - Tiêu đề 11 từ, sapo 45 từ . " Thumb ngang KT 700x467 px hoặc: 981x654|https://dantri.com.vn/
+Rise Media|booking-pr|Dân trí|PR bao dien tu|Tiểu mục nhóm 2: Nội vụ, Du lịch, Giáo dục, Lao động - Việc làm, Pháp luật, Tình yêu giới tính, Khoa học|7670000|||Gia goc niem yet NCC: 13.000.000 d - CK 41.0% - gia von sau CK: 7.670.000 d|https://dantri.com.vn/
+Rise Media|booking-pr|CafeF.vn|PR bao dien tu|Bài loại 9 -Thông cáo báo chí|4560000|1 link||Gia goc niem yet NCC: 6.000.000 d - CK 24.0% - gia von sau CK: 4.560.000 d - Tất cả các tin bài có độ dài không quá 1500 từ và 5 ảnh minh họa (trừ bài phóng sự ảnh, bài tương đương 1 trang A4). (thể hiện dưới dạng : http//www..., ko gắn link FB). Tiêu đề của bài không quá 11 từ, sapo không quá 45 từ. Phí mua thêm link: 500k/link / video 2 triệu<50Mb (Nhận Pr cá nhân)|https://cafef.vn/
+Rise Media|booking-pr|CafeF.vn|PR bao dien tu|Bài loại 8 - Tin doanh nghiệp|5700000|||Gia goc niem yet NCC: 7.500.000 d - CK 24.0% - gia von sau CK: 5.700.000 d|https://cafef.vn/
+Rise Media|booking-pr|CafeBiz.vn|PR bao dien tu|Loại 4 Chuyên mục|3800000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 24.0% - gia von sau CK: 3.800.000 d - "1000 từ, 5 ảnh, 1 link Nof. Phí mua thêm link: 500k/link / video 2 triệu<50Mb. - Tiêu đề không quá 11 từ, sapo không quá 45 từ"|https://cafebiz.vn/
+Rise Media|booking-pr|CafeBiz.vn|PR bao dien tu|Trang chủ loại 3|6080000|||Gia goc niem yet NCC: 8.000.000 d - CK 24.0% - gia von sau CK: 6.080.000 d|https://cafebiz.vn/
+Rise Media|booking-pr|Afamily|PR bao dien tu|Bài loại 5 Chuyên mục / Loại 4 XAC|3040000|1 link||Gia goc niem yet NCC: 4.000.000 d - CK 24.0% - gia von sau CK: 3.040.000 d - 1000 từ, 5 ảnh, 1 No link (đc gắn link FB). Mua link 500k/link. Tiêu đề không quá 11 từ, sapo không quá 45 từ|https://afamily.vn/
+Rise Media|booking-pr|Afamily|PR bao dien tu|Bài loại 3 Box Chuyên mục / Stream 2|5320000|||Gia goc niem yet NCC: 7.000.000 d - CK 24.0% - gia von sau CK: 5.320.000 d|https://afamily.vn/
+Rise Media|booking-pr|Afamily|PR bao dien tu|Bài loại 2 nổi bật mục|9120000|||Gia goc niem yet NCC: 12.000.000 d - CK 24.0% - gia von sau CK: 9.120.000 d|https://afamily.vn/
+Rise Media|booking-pr|Kenh 14|PR bao dien tu|Bài loại 5 Tiểu mục (Sao Việt (Star); Phim Việt, phim Âu Mỹ, phim Châu Á (Cine), tiểu mục của Musik; Tiểu mục Du học, 46 News (Học Đường), 2tek vui (2tek)|3800000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 24.0% - gia von sau CK: 3.800.000 d - "1000 từ, 5 ảnh, 1 link No (đc gắn link FB). Phí mua thêm link: 500k/link . Thêm video 2tr (không quá 5 phút, tối đa 50Mb). - Tiêu đề không quá 11 từ, sapo không quá 45 từ"|https://kenh14.vn/
+Rise Media|booking-pr|Kenh 14|PR bao dien tu|Bài loại 4 Xem ăn chơi|6080000|||Gia goc niem yet NCC: 8.000.000 d - CK 24.0% - gia von sau CK: 6.080.000 d|https://kenh14.vn/
+Rise Media|booking-pr|Kenh 14|PR bao dien tu|Bài Loại 3 STREAM 3 PC|7600000|||Gia goc niem yet NCC: 10.000.000 d - CK 24.0% - gia von sau CK: 7.600.000 d|https://kenh14.vn/
+Rise Media|booking-pr|Kenh 14|PR bao dien tu|Bài loại 2 HOME MOBILE STREAM 2|11400000|||Gia goc niem yet NCC: 15.000.000 d - CK 24.0% - gia von sau CK: 11.400.000 d|https://kenh14.vn/
+Rise Media|booking-pr|Soha|PR bao dien tu|Chuyên mục|3800000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 24.0% - gia von sau CK: 3.800.000 d - 1000 từ, tối đa 5 ảnh Tiêu đề dài khong quá 90 ký tự, sapp không quá 180 ký tự; Thêm link: 500K/1link|https://soha.vn/
+Rise Media|booking-pr|Soha|PR bao dien tu|Trang chủ streaming 3|5320000|||Gia goc niem yet NCC: 7.000.000 d - CK 24.0% - gia von sau CK: 5.320.000 d|https://soha.vn/
+Rise Media|booking-pr|GenK.vn|PR bao dien tu|Chuyên mục|3800000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 24.0% - gia von sau CK: 3.800.000 d - 1000 từ, 5 ảnh (trừ bài phóng sự ảnh, bài tương đương 1 trang A4); Tiêu đề không quá 11 từ, sapo không quá 45 tử) Thêm link: 500K/1link|https://genk.vn/
+Rise Media|booking-pr|GenK.vn|PR bao dien tu|BÀI LOẠI 3 STREAM 2|6080000|||Gia goc niem yet NCC: 8.000.000 d - CK 24.0% - gia von sau CK: 6.080.000 d|https://genk.vn/
+Rise Media|booking-pr|Autopro.com.vn|PR bao dien tu|Bài loại 4 chuyên mục|4560000|1 link||Gia goc niem yet NCC: 6.000.000 d - CK 24.0% - gia von sau CK: 4.560.000 d - 1000 từ, tối đa 5 ảnh Tiêu đề không quá 11 từ, sapo không quá 45 từ Thêm link: 500K/1link|https://autopro.com.vn/
+Rise Media|booking-pr|Autopro.com.vn|PR bao dien tu|Bài loại 3 trang chủ|7600000|||Gia goc niem yet NCC: 10.000.000 d - CK 24.0% - gia von sau CK: 7.600.000 d|https://autopro.com.vn/
+Rise Media|booking-pr|Autopro.com.vn|PR bao dien tu|Bài loại 2 trang chủ|11400000|||Gia goc niem yet NCC: 15.000.000 d - CK 24.0% - gia von sau CK: 11.400.000 d|https://autopro.com.vn/
+Rise Media|booking-pr|GameK|PR bao dien tu|Trang chủ|7600000|1 link||Gia goc niem yet NCC: 10.000.000 d - CK 24.0% - gia von sau CK: 7.600.000 d - 1000 từ, 5 ảnh Thêm link: 300K/1link|https://gamek.vn/
+Rise Media|booking-pr|GameK|PR bao dien tu|Mục phù hợp|4560000|||Gia goc niem yet NCC: 6.000.000 d - CK 24.0% - gia von sau CK: 4.560.000 d|https://gamek.vn/
+Rise Media|booking-pr|VTV|PR bao dien tu|Loại 7 Chuyên mục|4740000|0 free||Gia goc niem yet NCC: 6.000.000 d - CK 21.0% - gia von sau CK: 4.740.000 d - 1000 từ, tối đa 5 ảnh (trừ bài phóng sự ảnh), bài tương đương 1 trang A4, Tiêu đề, sapo (tóm tắt tin): Tiêu đề của bài không quá 11 từ, sapo không quá 40 từ Thêm link: 3tr/1link|https://vtv.vn/
+Rise Media|booking-pr|VTV|PR bao dien tu|Loại 6 nổi bật chuyên mục|9480000|||Gia goc niem yet NCC: 12.000.000 d - CK 21.0% - gia von sau CK: 9.480.000 d|https://vtv.vn/
+Rise Media|booking-pr|Tuổi trẻ|PR bao dien tu|Trang chuyên mục Cần biết|4690000|không chèn link||Gia goc niem yet NCC: 7.000.000 d - CK 33.0% - gia von sau CK: 4.690.000 d - 1000 chữ, 5 ảnh, không gắn link (tùy link bbt có thể cho để link tĩnh, hoặc phải xóa) Chỉ nhận PR thuần DN, không nhận PR cá nhân|https://tuoitre.vn/
+Rise Media|booking-pr|Tuổi trẻ|PR bao dien tu|Hiển thị trang chủ|7700000|||Gia goc niem yet NCC: 10.000.000 d - CK 23.0% - gia von sau CK: 7.700.000 d|https://tuoitre.vn/
+Rise Media|booking-pr|Tuổi trẻ|PR bao dien tu|Trang chuyên mục Nhóm 3: Trang cấp 2 của các chuyên mục Nhóm 1 và 2, Việc làm, Tuổi Trẻ Cười, Giả - Thật|11550000|||Gia goc niem yet NCC: 15.000.000 d - CK 23.0% - gia von sau CK: 11.550.000 d|https://tuoitre.vn/
+Rise Media|booking-pr|Tuổi trẻ|PR bao dien tu|Trang chuyên mục Nhóm 2: Video, Xe, Du lịch, Văn hóa, Giải trí, Nhịp sống trẻ, Bạn đọc, Doanh nghiệp, Khoa học|15400000|||Gia goc niem yet NCC: 20.000.000 d - CK 23.0% - gia von sau CK: 15.400.000 d|https://tuoitre.vn/
+Rise Media|booking-pr|Thanh niên|PR bao dien tu|PR Cần biết - Tin ngắn|3120000|2 link, tin ngắn free 1 link||Gia goc niem yet NCC: 4.000.000 d - CK 22.0% - gia von sau CK: 3.120.000 d - 300 chữ + 1 ảnh + 1link - thêm chữ: 8k/1 chữ Thêm link: 500K/1link|https://thanhnien.vn/
+Rise Media|booking-pr|Thanh niên|PR bao dien tu|Tin chuyên mục con Nhóm 2: Giáo dục, Du lịch, Giải trí, Giới trẻ, Văn hóa.|3900000|||Gia goc niem yet NCC: 5.000.000 d - CK 22.0% - gia von sau CK: 3.900.000 d - 1000 từ, tối đa 5 ảnh, 2 link Title không quá 17 chữ, sapo không quá 48 chữ, Bài/Tin PR để chữ: "Nguồn:,,,", "Thông tin dịch vụ", "Thông tin doanh nghiệp Thêm link: 500K/1link|https://thanhnien.vn/
+Rise Media|booking-pr|Thanh niên|PR bao dien tu|Tin chuyên mục con Nhóm 1: Kinh tế, Tiêu dùng, Công nghệ-Game, Đời sống, Sức khỏe, Thể thao, Emagazine, Xe.|4680000|||Gia goc niem yet NCC: 6.000.000 d - CK 22.0% - gia von sau CK: 4.680.000 d|https://thanhnien.vn/
+Rise Media|booking-pr|Thanh niên|PR bao dien tu|Chuyên mục con nhóm 1|11700000|||Gia goc niem yet NCC: 15.000.000 d - CK 22.0% - gia von sau CK: 11.700.000 d|https://thanhnien.vn/
+Rise Media|booking-pr|24h.com.vn|PR bao dien tu|PR loại 2 nhóm 2 (giáo dục, giải trí, thời trang đời sống, xe….)|3050000|3 link, pr cá nhân 1 link||Gia goc niem yet NCC: 5.000.000 d - CK 39.0% - gia von sau CK: 3.050.000 d - 1000 từ, 5 ảnh, 3 link No, tiêu đề 11 từ, sapo 45 từ. Chèn video 2 triệu<10MB, 3,5tr>10MB (Nhận Pr cá nhân)|https://www.24h.com.vn/
+Rise Media|booking-pr|24h.com.vn|PR bao dien tu|PR loại 2 nhóm 1 (kinh doanh, TTTD,…)|3660000|||Gia goc niem yet NCC: 6.000.000 d - CK 39.0% - gia von sau CK: 3.660.000 d|https://www.24h.com.vn/
+Rise Media|booking-pr|Tiền phong|PR bao dien tu|Trang chuyên mục (xã hội, kinh tế, giải trí, sức khoẻ…)|3600000|1 link đuôi.vn||Gia goc niem yet NCC: 6.000.000 d - CK 40.0% - gia von sau CK: 3.600.000 d - 1000 từ, dưới 3 ảnh Thêm link: 2tr/1link KT ảnh Thumb 500*300 Tít viết dưới 80 ký tự Sapo viết 1 câu, dưới 160 ký tự|https://tienphong.vn/
+Rise Media|booking-pr|Tiền phong|PR bao dien tu|Top 2,3,4 trên trang chủ (thể thao, giáo dục, sức khoẻ...)|6000000|||Gia goc niem yet NCC: 10.000.000 d - CK 40.0% - gia von sau CK: 6.000.000 d|https://tienphong.vn/
+Rise Media|booking-pr|Tiền phong|PR bao dien tu|Top 1 trang chủ (giáo dục, giải trí, thể thao….)|7200000|||Gia goc niem yet NCC: 12.000.000 d - CK 40.0% - gia von sau CK: 7.200.000 d|https://tienphong.vn/
+Rise Media|booking-pr|Vtcnews|PR bao dien tu|Chuyên mục Doanh nghiệp - Doanh nhân; Trẻ|2800000|||Gia goc niem yet NCC: 5.000.000 d - CK 44.0% - gia von sau CK: 2.800.000 d - "Bài PR dưới 1000 từ, 3 ảnh, 1 link Nofollow đuôi (.vn) - ( Không bán thêm link) Tít viết ngắn dưới 80 ký tự - Sapo viết thành 1 câu, dưới 160 ký tự. Tít phụ viết ngắn nửa dòng. Viết các đoạn thành văn xuôi, không dùng các gạch đầu dòng mua thêm link 500k/ 1 link|https://vtcnews.vn
+Rise Media|booking-pr|Zingnews|PR bao dien tu|Mục Thông tin doanh nghiệp/Tiểu mục|6600000|1-2 link||Gia goc niem yet NCC: 10.000.000 d - CK 34.0% - gia von sau CK: 6.600.000 d - quy định chữ như znew 1000 chữ 5 ảnh, 2 link, bài chỉ tồn tại 6 tháng KT thumb tỷ lệ 3:2|https://znews.vn/
+Rise Media|booking-pr|Báo Mới|PR bao dien tu|Tiểu mục phù hợp|5280000|||Gia goc niem yet NCC: 8.000.000 d - CK 34.0% - gia von sau CK: 5.280.000 d - quy định chữ như znew 1000 chữ 5 ảnh, 2 link, bài chỉ tồn tại 6 tháng|https://baomoi.com/
+Rise Media|booking-pr|Vietnamnet|PR bao dien tu|Tiểu mục từ Top 6 trở xuống|4020000|0 link||Gia goc niem yet NCC: 6.000.000 d - CK 33.0% - gia von sau CK: 4.020.000 d - 1000 từ, tối đa 5 ảnh, tiêu đề không quá 12 chữ 5tr/link, chỉ chèn trong 3 tháng mất link ảnh thumb KT : 800*533|https://vietnamnet.vn/
+Rise Media|booking-pr|Vietnamnet|PR bao dien tu|Top 2-5 Tiểu mục|5360000|||Gia goc niem yet NCC: 8.000.000 d - CK 33.0% - gia von sau CK: 5.360.000 d|https://vietnamnet.vn/
+Rise Media|booking-pr|Vietnambiz|PR bao dien tu|Chuyên mục|1860000|0 free link||Gia goc niem yet NCC: 3.000.000 d - CK 38.0% - gia von sau CK: 1.860.000 d - 1000 từ, 5 ảnh, Không free link. Mua link 500k/link No. Sapo: 70 từ, Ảnh phải có chú thích ảnh + nguồn ảnh|https://vietnambiz.vn/
 Rise Media|booking-pr|Vietnambiz|PR bao dien tu|Chuyên mục có title ở trang chủ|3100000|||Gia goc niem yet NCC: 5.000.000 d - CK 38.0% - gia von sau CK: 3.100.000 d|https://vietnambiz.vn/
 Rise Media|booking-pr|Vietnambiz|PR bao dien tu|Nổi bật chuyên mục có title ở trang chủ|6200000|||Gia goc niem yet NCC: 10.000.000 d - CK 38.0% - gia von sau CK: 6.200.000 d|https://vietnambiz.vn/
-Rise Media|booking-pr|Vietnammoi|PR bao dien tu|Chuyên mục cần biết|1860000|0 free link||Gia goc niem yet NCC: 3.000.000 d - CK 38.0% - gia von sau CK: 1.860.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 500k/link|https://vietnammoi.vn/
+Rise Media|booking-pr|Vietnammoi|PR bao dien tu|Chuyên mục cần biết|1860000|0 free link||Gia goc niem yet NCC: 3.000.000 d - CK 38.0% - gia von sau CK: 1.860.000 d - 1000 từ, 5 ảnh, Không free link. Mua link 500k/link No. Sapo: 70 từ, Ảnh phải có chú thích ảnh + nguồn ảnh|https://vietnammoi.vn/
 Rise Media|booking-pr|Vietnammoi|PR bao dien tu|Chuyên mục|3100000|||Gia goc niem yet NCC: 5.000.000 d - CK 38.0% - gia von sau CK: 3.100.000 d|https://vietnammoi.vn/
 Rise Media|booking-pr|Vietnammoi|PR bao dien tu|Tiêu điểm chuyên mục|4340000|||Gia goc niem yet NCC: 7.000.000 d - CK 38.0% - gia von sau CK: 4.340.000 d|https://vietnammoi.vn/
-Rise Media|booking-pr|Lao động|PR bao dien tu|Thông tin doanh nghiệp|5250000|0 free link||Gia goc niem yet NCC: 7.000.000 d - CK 25.0% - gia von sau CK: 5.250.000 d - Bài PR dưới 800 từ, 3 ảnh Để link mất phí 3tr/1 link No|https://laodong.vn/
-Rise Media|booking-pr|Tinnhanhchungkhoan.vn (Giá mới 2026)|PR bao dien tu|Loại 6 - Thông báo - Bố cáo|3200000|||Gia goc niem yet NCC: 5.000.000 d - CK 36.0% - gia von sau CK: 3.200.000 d - Bài PR dưới 900 từ, 2 ảnh|https://www.tinnhanhchungkhoan.vn/
-Rise Media|booking-pr|Tinnhanhchungkhoan.vn (Giá mới 2026)|PR bao dien tu|Loại 5 - Bài hiển thị trang chủ, mục chuyển động doanh nghiệp|3200000|||Gia goc niem yet NCC: 5.000.000 d - CK 36.0% - gia von sau CK: 3.200.000 d|https://www.tinnhanhchungkhoan.vn/
-Rise Media|booking-pr|Tinnhanhchungkhoan.vn (Giá mới 2026)|PR bao dien tu|Loại 4 - Bài hiển thị trang chủ, vị trí tiêu điểm 1 chuyên mục (2h)|5760000|||Gia goc niem yet NCC: 9.000.000 d - CK 36.0% - gia von sau CK: 5.760.000 d|https://www.tinnhanhchungkhoan.vn/
-Rise Media|booking-pr|Baodautu.vn (Giá mới 2026)|PR bao dien tu|TT doanh nghiệp|3100000|không chèn link||Gia goc niem yet NCC: 5.000.000 d - CK 38.0% - gia von sau CK: 3.100.000 d - 1000 chữ 3 ảnh, 1 triệu/link|https://baodautu.vn/
-Rise Media|booking-pr|Baodautu.vn (Giá mới 2026)|PR bao dien tu|Bài thường Chuyên mục|4960000|||Gia goc niem yet NCC: 8.000.000 d - CK 38.0% - gia von sau CK: 4.960.000 d|https://baodautu.vn/
-Rise Media|booking-pr|Baodautu.vn (Giá mới 2026)|PR bao dien tu|Bài chính chuyên mục|6820000|||Gia goc niem yet NCC: 11.000.000 d - CK 38.0% - gia von sau CK: 6.820.000 d|https://baodautu.vn/
-Rise Media|booking-pr|VIR.com.vn|PR bao dien tu|Bài chuyên mục|4410000|||Gia goc niem yet NCC: 7.000.000 d - CK 37.0% - gia von sau CK: 4.410.000 d - Dưới 1000 từ, 5 ảnh, không gắn link Thêm link: 3tr3/link|https://vir.com.vn/
-Rise Media|booking-pr|VIR.com.vn|PR bao dien tu|Bài chính chuyên mục|6300000|||Gia goc niem yet NCC: 10.000.000 d - CK 37.0% - gia von sau CK: 6.300.000 d|https://vir.com.vn/
+Rise Media|booking-pr|Lao động|PR bao dien tu|Thông tin doanh nghiệp|5250000|0 free link||Gia goc niem yet NCC: 7.000.000 d - CK 25.0% - gia von sau CK: 5.250.000 d - Dưới 800 từ, 3 ảnh, Không free link/ Phí mua link: 3tr/link Nof. Sapo dưới 160 kí tự, có ghi nguồn ảnh Thêm ảnh: 30% giá trị bài ( tối đa 5 ảnh)|https://laodong.vn/
+Rise Media|booking-pr|Tinnhanhchungkhoan.vn|PR bao dien tu|Loại 6 - Thông báo - Bố cáo|3200000|||Gia goc niem yet NCC: 5.000.000 d - CK 36.0% - gia von sau CK: 3.200.000 d - Dưới 900 từ, 2 ảnh, không gắn link. Phí mua link 1tr/1link.|https://www.tinnhanhchungkhoan.vn/
+Rise Media|booking-pr|Tinnhanhchungkhoan.vn|PR bao dien tu|Loại 5 - Bài hiển thị trang chủ, mục chuyển động doanh nghiệp|3200000|||Gia goc niem yet NCC: 5.000.000 d - CK 36.0% - gia von sau CK: 3.200.000 d|https://www.tinnhanhchungkhoan.vn/
+Rise Media|booking-pr|Tinnhanhchungkhoan.vn|PR bao dien tu|Loại 4 - Bài hiển thị trang chủ, vị trí tiêu điểm 1 chuyên mục (2h)|5760000|||Gia goc niem yet NCC: 9.000.000 d - CK 36.0% - gia von sau CK: 5.760.000 d|https://www.tinnhanhchungkhoan.vn/
+Rise Media|booking-pr|Baodautu.vn|PR bao dien tu|TT doanh nghiệp|3000000|không chèn link||Gia goc niem yet NCC: 5.000.000 d - CK 40.0% - gia von sau CK: 3.000.000 d - 1000 chữ 3 ảnh, 1 triệu/link|https://baodautu.vn/
+Rise Media|booking-pr|VIR.com.vn|PR bao dien tu|Bài chuyên mục|4690000|||Gia goc niem yet NCC: 7.000.000 d - CK 33.0% - gia von sau CK: 4.690.000 d - Dưới 1000 từ, 5 ảnh, không gắn link Thêm link: 3tr3/link|https://vir.com.vn/
+Rise Media|booking-pr|VIR.com.vn|PR bao dien tu|Bài chính chuyên mục|6700000|||Gia goc niem yet NCC: 10.000.000 d - CK 33.0% - gia von sau CK: 6.700.000 d|https://vir.com.vn/
 Rise Media|booking-pr|Batdongsan|PR bao dien tu|Hiển thị trang chủ|18750000|2 link||Gia goc niem yet NCC: 25.000.000 d - CK 25.0% - gia von sau CK: 18.750.000 d - 1000 chữ, 5 ảnh, đc 1-2 link|https://batdongsan.com.vn/
-Rise Media|booking-pr|Vietstock|PR bao dien tu|Bạn cần biết|1700000|2 link||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - Bài PR dưới 1000 từ, tối đa 3 ảnh Thêm link: 500k/link|https://vietstock.vn/
+Rise Media|booking-pr|EVA|PR bao dien tu|Mục phù hợp|3750000|2 link, pr cá nhân 1 link||Gia goc niem yet NCC: 5.000.000 d - CK 25.0% - gia von sau CK: 3.750.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh Thêm link: 1tr/link|https://eva.vn/
+Rise Media|booking-pr|EVA|PR bao dien tu|Tin tức thị trường|5360000|||Gia goc niem yet NCC: 8.000.000 d - CK 33% - gia von sau CK: 5.360.000 d|https://eva.vn/
+Rise Media|booking-pr|Vietstock|PR bao dien tu|Bạn cần biết|1700000|2 link||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 từ, tối đa 3 ảnh Thêm link: 500k/link|https://vietstock.vn/
 Rise Media|booking-pr|Vietstock|PR bao dien tu|Tin chính 2 Chứng khoán/ Doanh nghiệp/ BĐS/ Tài chính (giờ thường)|7650000|||Gia goc niem yet NCC: 9.000.000 d - CK 15.0% - gia von sau CK: 7.650.000 d|https://vietstock.vn/
 Rise Media|booking-pr|Vietstock|PR bao dien tu|Tin chính 2 chuyên mục khác|3825000|||Gia goc niem yet NCC: 4.500.000 d - CK 15.0% - gia von sau CK: 3.825.000 d|https://vietstock.vn/
 Rise Media|booking-pr|Vietstock|PR bao dien tu|Tin chính chuyên mục khác|5950000|||Gia goc niem yet NCC: 7.000.000 d - CK 15.0% - gia von sau CK: 5.950.000 d|https://vietstock.vn/
-Rise Media|booking-pr|Cafeland (Giá mới 2026)|PR bao dien tu|Tin ngắn/Sự kiện|4300000|||Gia goc niem yet NCC: 5.000.000 d - CK 14.0% - gia von sau CK: 4.300.000 d - Bài PR 400 chữ, 1 ảnh|https://cafeland.vn/
-Rise Media|booking-pr|Cafeland (Giá mới 2026)|PR bao dien tu|PR Trang chủ Tiêu chuẩn|10320000|1 link||Gia goc niem yet NCC: 12.000.000 d - CK 14.0% - gia von sau CK: 10.320.000 d - Bài PR dưới 800 từ, 2 ảnh|https://cafeland.vn/
-Rise Media|booking-pr|Cafeland (Giá mới 2026)|PR bao dien tu|PR Trang chủ Nổi bật|15480000|1 link||Gia goc niem yet NCC: 18.000.000 d - CK 14.0% - gia von sau CK: 15.480.000 d - Bài PR 1000 chữ, 3 ảnh|https://cafeland.vn/
-Rise Media|booking-pr|Nhipcaudautu|PR bao dien tu|Tin ngắn 300 chữ|3350000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 33.0% - gia von sau CK: 3.350.000 d - Bài PR dưới 1000 từ, 3 ảnh, Tiêu đề không quá 10-13 từ, Sapo tối đa 32 từ,|https://nhipcaudautu.vn/
-Rise Media|booking-pr|Nhipcaudautu|PR bao dien tu|Chuyên mục|8040000|||Gia goc niem yet NCC: 12.000.000 d - CK 33.0% - gia von sau CK: 8.040.000 d|https://nhipcaudautu.vn/
-Rise Media|booking-pr|2Sao|PR bao dien tu|Top 12 trang chuyên mục trở xuống|1875000|0 free link||Gia goc niem yet NCC: 2.500.000 d - CK 25.0% - gia von sau CK: 1.875.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 6tr/link|https://2sao.vn//
-Rise Media|booking-pr|2Sao|PR bao dien tu|Top 6-11 trang chuyên mục|2250000|||Gia goc niem yet NCC: 3.000.000 d - CK 25.0% - gia von sau CK: 2.250.000 d|https://2sao.vn//
-Rise Media|booking-pr|2Sao|PR bao dien tu|Top 1 box chuyên mục tại trang chủ|4500000|||Gia goc niem yet NCC: 6.000.000 d - CK 25.0% - gia von sau CK: 4.500.000 d|https://2sao.vn//
-Rise Media|booking-pr|Alobacsi|PR bao dien tu|Mục phù hợp|1600000|1 link||Gia goc niem yet NCC: 2.000.000 d - CK 20.0% - gia von sau CK: 1.600.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 500k/link|https://alobacsi.com/
-Rise Media|booking-pr|Alobacsi|PR bao dien tu|Trang chủ|5600000|||Gia goc niem yet NCC: 7.000.000 d - CK 20.0% - gia von sau CK: 5.600.000 d|https://alobacsi.com/
-Rise Media|booking-pr|Sức khoẻ đời sống (Giá mới 2026)|PR bao dien tu|Bài PR loại 6 - Hiển thị CM trang trong 2h|3450000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 31.0% - gia von sau CK: 3.450.000 d - 1000 chữ, 3 ảnh ( mua thêm 300k), đc 1 link (mua thêm 500k)|https://suckhoedoisong.vn/
-Rise Media|booking-pr|Sức khoẻ đời sống (Giá mới 2026)|PR bao dien tu|Bài PR loại 5 - Hiển thị 3,4,5 CM trang chủ|6900000|||Gia goc niem yet NCC: 10.000.000 d - CK 31.0% - gia von sau CK: 6.900.000 d|https://suckhoedoisong.vn/
-Rise Media|booking-pr|Giadinh.suckhoedoisong|PR bao dien tu|Hiển thị trong chuyên mục|2250000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 25.0% - gia von sau CK: 2.250.000 d - Bài PR dưới 1000 ừ, dưới 3 ảnh Tiêu đề của bài không quá 11 từ, sapo không quá 45 từ Thêm link: 500k/link|https://giadinh.suckhoedoisong.vn/
+Rise Media|booking-pr|Cafeland|PR bao dien tu|Tin ngắn/Sự kiện|4300000|||Gia goc niem yet NCC: 5.000.000 d - CK 14.0% - gia von sau CK: 4.300.000 d - 400 chữ, 1 ảnh|https://cafeland.vn/
+Rise Media|booking-pr|Cafeland|PR bao dien tu|PR Trang chủ Tiêu chuẩn|10320000|1 link||Gia goc niem yet NCC: 12.000.000 d - CK 14.0% - gia von sau CK: 10.320.000 d - 800 từ, 2 ảnh|https://cafeland.vn/
+Rise Media|booking-pr|Cafeland|PR bao dien tu|PR Trang chủ Nổi bật|15480000|1 link||Gia goc niem yet NCC: 18.000.000 d - CK 14.0% - gia von sau CK: 15.480.000 d - 1000 chữ, 3 ảnh|https://cafeland.vn/
+Rise Media|booking-pr|Nhipcaudautu|PR bao dien tu|Tin ngắn 300 chữ|7000000|1 link||Gia goc niem yet NCC: 7.000.000 d - CK 0.0% - gia von sau CK: 7.000.000 d|https://nhipcaudautu.vn/
+Rise Media|booking-pr|Nhipcaudautu|PR bao dien tu|Chuyên mục|11550000|||Gia goc niem yet NCC: 15.000.000 d - CK 23.0% - gia von sau CK: 11.550.000 d - 1000 từ, 3 ảnh, Tiêu đề không quá 10-13 từ, Sapo tối đa 32 từ,|https://nhipcaudautu.vn/
+Rise Media|booking-pr|2Sao|PR bao dien tu|Top 12 trang chuyên mục trở xuống|1675000|0 free link||Gia goc niem yet NCC: 2.500.000 d - CK 33.0% - gia von sau CK: 1.675.000 d - 1000 từ, 5 ảnh Thêm link: 6tr/link|https://2sao.vn//
+Rise Media|booking-pr|2Sao|PR bao dien tu|Top 6-11 trang chuyên mục|2010000|||Gia goc niem yet NCC: 3.000.000 d - CK 33.0% - gia von sau CK: 2.010.000 d|https://2sao.vn//
+Rise Media|booking-pr|2Sao|PR bao dien tu|Top 1 box chuyên mục tại trang chủ|4020000|||Gia goc niem yet NCC: 6.000.000 d - CK 33.0% - gia von sau CK: 4.020.000 d|https://2sao.vn//
+Rise Media|booking-pr|Alobacsi|PR bao dien tu|Mục phù hợp|1440000|1 link||Gia goc niem yet NCC: 2.000.000 d - CK 28.0% - gia von sau CK: 1.440.000 d - 1000 từ, 5 ảnh Thêm link: 500k/link|https://alobacsi.com/
+Rise Media|booking-pr|Alobacsi|PR bao dien tu|Trang chủ|5040000|||Gia goc niem yet NCC: 7.000.000 d - CK 28.0% - gia von sau CK: 5.040.000 d|https://alobacsi.com/
+Rise Media|booking-pr|Sức khoẻ đời sống|PR bao dien tu|Bài PR loại 6 - Hiển thị CM trang trong 2h|3500000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 30.0% - gia von sau CK: 3.500.000 d - 1000 chữ, 3 ảnh ( mua thêm 300k), đc 1 link (mua thêm 500k)|https://suckhoedoisong.vn/
+Rise Media|booking-pr|Sức khoẻ đời sống|PR bao dien tu|Bài PR loại 5 - Hiển thị 3,4,5 CM trang chủ|7000000|||Gia goc niem yet NCC: 10.000.000 d - CK 30.0% - gia von sau CK: 7.000.000 d|https://suckhoedoisong.vn/
+Rise Media|booking-pr|Giadinh.suckhoedoisong|PR bao dien tu|Hiển thị trong chuyên mục|2250000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 25.0% - gia von sau CK: 2.250.000 d - 1000 ừ, dưới 3 ảnh Tiêu đề của bài không quá 11 từ, sapo không quá 45 từ Thêm link: 500k/link|https://giadinh.suckhoedoisong.vn/
 Rise Media|booking-pr|Giadinh.suckhoedoisong|PR bao dien tu|Trang chủ|4500000|||Gia goc niem yet NCC: 6.000.000 d - CK 25.0% - gia von sau CK: 4.500.000 d|https://giadinh.suckhoedoisong.vn/
-Rise Media|booking-pr|Saostar|PR bao dien tu|Mục phù hợp|2760000|2 link||Gia goc niem yet NCC: 4.000.000 d - CK 31.0% - gia von sau CK: 2.760.000 d - Bài PR dưới 1000 từ, 5 ảnh Tiêu đề không quá 20 từ Thêm link:1tr/link|https://www.saostar.vn/
-Rise Media|booking-pr|Yeah1 (Giá mới 2026)|PR bao dien tu|Tin chuyên mục|2850000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 43.0% - gia von sau CK: 2.850.000 d - Tối đa 1200 từ +6 ảnh (Bài thường) và không quá 350 từ + 10 ảnh(bài tin ảnh)Tiêu đề của bài không quá 11 từ, sapo không quá 45 từ Thêm link: 300k/link|https://yeah1.com/
-Rise Media|booking-pr|Yeah1 (Giá mới 2026)|PR bao dien tu|Tin đặc biệt chuyên mục|5200000|||Gia goc niem yet NCC: 8.000.000 d - CK 35.0% - gia von sau CK: 5.200.000 d|https://yeah1.com/
-Rise Media|booking-pr|Yeah1 (Giá mới 2026)|PR bao dien tu|Tiêu điểm chuyên mục|6500000|||Gia goc niem yet NCC: 10.000.000 d - CK 35.0% - gia von sau CK: 6.500.000 d|https://yeah1.com/
-Rise Media|booking-pr|Tinmoi.vn|PR bao dien tu|Tiểu mục|2000000|1 link||Gia goc niem yet NCC: 2.000.000 d - CK 0.0% - gia von sau CK: 2.000.000 d - Bài PR dưới 1000 từ, dưới 5 ảnh Thêm link: 300k/link|https://tinmoi.vn/
-Rise Media|booking-pr|Tiin|PR bao dien tu|Mục phù hợp|2310000|||Gia goc niem yet NCC: 3.000.000 d - CK 23.0% - gia von sau CK: 2.310.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh Tối đa 10 ảnh/bài viết , gắn link 300k/link|https://tiin.vn/
-Rise Media|booking-pr|Reatimes|PR bao dien tu|Loại 4 Chuyên mục|5040000|||Gia goc niem yet NCC: 7.000.000 d - CK 28.0% - gia von sau CK: 5.040.000 d - Độ dài không quá 1,200 từ và 6 ảnh minh họa (Trừ bài phóng sự ảnh)Chỉ được gắn 1 link trong bài viết, thể hiện dưới dạng http:/www,,,|https://reatimes.vn/
-Rise Media|booking-pr|Reatimes|PR bao dien tu|Loại 3 Top 1 chuyên mục trên trang chủ|7200000|||Gia goc niem yet NCC: 10.000.000 d - CK 28.0% - gia von sau CK: 7.200.000 d|https://reatimes.vn/
-Rise Media|booking-pr|Vneconomy (Giá mới 2026)|PR bao dien tu|Vị trí 4 - Chuyên mục|8040000|||Gia goc niem yet NCC: 12.000.000 d - CK 33.0% - gia von sau CK: 8.040.000 d - 1000 chữ, 3 ảnh, gắn link 5tr/1 link|https://vneconomy.vn/
-Rise Media|booking-pr|Vneconomy (Giá mới 2026)|PR bao dien tu|Vị trí 5 - Mục sự kiện - hiển thị ảnh và tiêu đề về sự kiện tại trang chủ|10050000|||Gia goc niem yet NCC: 15.000.000 d - CK 33.0% - gia von sau CK: 10.050.000 d|https://vneconomy.vn/
-Rise Media|booking-pr|Ngoisao.vn|PR bao dien tu|Mục phù hợp|2280000|2 link||Gia goc niem yet NCC: 4.000.000 d - CK 43.0% - gia von sau CK: 2.280.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 300k/link|https://ngoisao.vn/
+Rise Media|booking-pr|Saostar|PR bao dien tu|Mục phù hợp|2800000|2 link||Gia goc niem yet NCC: 4.000.000 d - CK 30.0% - gia von sau CK: 2.800.000 d - 1000 từ, 5 ảnh Tiêu đề không quá 20 từ Thêm link:1tr/link|https://www.saostar.vn/
+Rise Media|booking-pr|Yeah1|PR bao dien tu|Tin chuyên mục|2800000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 44.0% - gia von sau CK: 2.800.000 d - Tối đa 1200 từ +6 ảnh (Bài thường) và không quá 350 từ + 10 ảnh(bài tin ảnh)Tiêu đề của bài không quá 11 từ, sapo không quá 45 từ Thêm link: 300k/link|https://yeah1.com/
+Rise Media|booking-pr|Yeah1|PR bao dien tu|Tin đặc biệt chuyên mục|4480000|||Gia goc niem yet NCC: 8.000.000 d - CK 44.0% - gia von sau CK: 4.480.000 d|https://yeah1.com/
+Rise Media|booking-pr|Yeah1|PR bao dien tu|Tiêu điểm chuyên mục|5600000|||Gia goc niem yet NCC: 10.000.000 d - CK 44.0% - gia von sau CK: 5.600.000 d|https://yeah1.com/
+Rise Media|booking-pr|Tiin|PR bao dien tu|Mục phù hợp|2310000|||Gia goc niem yet NCC: 3.000.000 d - CK 23.0% - gia von sau CK: 2.310.000 d - 1000 từ, tối đa 5 ảnh Tối đa 10 ảnh/bài viết , gắn link 300k/link|https://tiin.vn/
+Rise Media|booking-pr|Reatimes|PR bao dien tu|Loại 3 Top 1 chuyên mục trên trang chủ|6600000|||Gia goc niem yet NCC: 10.000.000 d - CK 34.0% - gia von sau CK: 6.600.000 d - Độ dài không quá 1,200 từ và 6 ảnh minh họa (Trừ bài phóng sự ảnh)Chỉ được gắn 1 link trong bài viết, thể hiện dưới dạng http:/www,,,|https://reatimes.vn/
+Rise Media|booking-pr|Vneconomy|PR bao dien tu|Vị trí 4 - Chuyên mục|7920000|||Gia goc niem yet NCC: 12.000.000 d - CK 34.0% - gia von sau CK: 7.920.000 d - 1000 chữ, 3 ảnh, gắn link 5tr/1 link|https://vneconomy.vn/
+Rise Media|booking-pr|Vneconomy|PR bao dien tu|Vị trí 5 - Mục sự kiện - hiển thị ảnh và tiêu đề về sự kiện tại trang chủ|9900000|||Gia goc niem yet NCC: 15.000.000 d - CK 34.0% - gia von sau CK: 9.900.000 d|https://vneconomy.vn/
+Rise Media|booking-pr|Ngoisao.vn|PR bao dien tu|Mục phù hợp|2280000|2 link||Gia goc niem yet NCC: 4.000.000 d - CK 43.0% - gia von sau CK: 2.280.000 d - 1000 từ, 5 ảnh Thêm link: 300k/link|https://ngoisao.vn/
 Rise Media|booking-pr|Ngoisao.vn|PR bao dien tu|Chuyên mục|3420000|||Gia goc niem yet NCC: 6.000.000 d - CK 43.0% - gia von sau CK: 3.420.000 d|https://ngoisao.vn/
 Rise Media|booking-pr|Ngoisao.vn|PR bao dien tu|Trang chủ|5700000|||Gia goc niem yet NCC: 10.000.000 d - CK 43.0% - gia von sau CK: 5.700.000 d|https://ngoisao.vn/
 Rise Media|booking-pr|Phunutoday|PR bao dien tu|PR Trang trong|3300000|||Gia goc niem yet NCC: 3.300.000 d - CK 0.0% - gia von sau CK: 3.300.000 d - 1000 chữ, 3-5 ảnh, 1 link|https://phunutoday.vn/
 Rise Media|booking-pr|Phunutoday|PR bao dien tu|Bài PR ở top chuyên mục|4785000|||Gia goc niem yet NCC: 5.500.000 d - CK 13.0% - gia von sau CK: 4.785.000 d|https://phunutoday.vn/
-Rise Media|booking-pr|Phunuonline|PR bao dien tu|Top 2,3,4 chuyên mục|4345000|||Gia goc niem yet NCC: 5.500.000 d - CK 21.0% - gia von sau CK: 4.345.000 d|https://www.phunuonline.com.vn/
-Rise Media|booking-pr|Phunuonline|PR bao dien tu|Top 1 chuyên mục|6083000|||Gia goc niem yet NCC: 7.700.000 d - CK 21.0% - gia von sau CK: 6.083.000 d|https://www.phunuonline.com.vn/
-Rise Media|booking-pr|Phunuonline|PR bao dien tu|Box 3 - Vị trí 2,3,4|7821000|||Gia goc niem yet NCC: 9.900.000 d - CK 21.0% - gia von sau CK: 7.821.000 d|https://www.phunuonline.com.vn/
 Rise Media|booking-pr|PhunuVietNam|PR bao dien tu|Trong chuyên mục|3040000|||Gia goc niem yet NCC: 4.000.000 d - CK 24.0% - gia von sau CK: 3.040.000 d - Title dưới 11 từ, sapo dưới 45 từ 1000 chữ, 3 ảnh, 500k/link|https://phunuvietnam.vn/
-Rise Media|booking-pr|Eva|PR bao dien tu|Tiểu mục|3350000|2 link, pr cá nhân 1 link||Gia goc niem yet NCC: 5.000.000 d - CK 33.0% - gia von sau CK: 3.350.000 d - Bài PR dưới 1000 từ, tối đa 5 ảnh Thêm link: 1tr/link|https://eva.vn/
-Rise Media|booking-pr|Dân việt|PR bao dien tu|Bài thường trả link|2700000|0 link||Gia goc niem yet NCC: 3.000.000 d - CK 10.0% - gia von sau CK: 2.700.000 d - Bài PR dưới 1000 từ, dưới 5 ảnh Thêm link: 1tr5/link|https://danviet.vn/
-Rise Media|booking-pr|Dân việt|PR bao dien tu|Top 2 Mục Doanh nghiệp – Trang chủ|4500000|||Gia goc niem yet NCC: 5.000.000 d - CK 10.0% - gia von sau CK: 4.500.000 d|https://danviet.vn/
-Rise Media|booking-pr|Dân việt|PR bao dien tu|Top 3 Tiểu mục|7200000|||Gia goc niem yet NCC: 8.000.000 d - CK 10.0% - gia von sau CK: 7.200.000 d|https://danviet.vn/
-Rise Media|booking-pr|Saigongiaiphong|PR bao dien tu|Tin ngắn Chuyên mục phụ|4300000|||Gia goc niem yet NCC: 5.000.000 d - CK 14.0% - gia von sau CK: 4.300.000 d - Tiểu mục 800 chữ 2 ảnh|https://www.sggp.org.vn/
-Rise Media|booking-pr|Saigongiaiphong|PR bao dien tu|Tin ngắn Chuyên mục chính|5160000|||Gia goc niem yet NCC: 6.000.000 d - CK 14.0% - gia von sau CK: 5.160.000 d - Tin ngắn tiểu mục 250 chữ 1 ảnh|https://www.sggp.org.vn/
-Rise Media|booking-pr|Vov|PR bao dien tu|Trang chuyên mục|3750000|0 free link||Gia goc niem yet NCC: 5.000.000 d - CK 25.0% - gia von sau CK: 3.750.000 d - Bài PR dưới 1000 từ, 2 ảnh, dư ảnh phí 300k/ảnh 1tr/link, đang tạm ngừng bán link. Bài tồn tại 9 tháng|https://vov.vn/
-Rise Media|booking-pr|Tinhte|PR bao dien tu|Chuyên mục phù hợp|9960000|01 link||Gia goc niem yet NCC: 12.000.000 d - CK 17.0% - gia von sau CK: 9.960.000 d - Bài < 1000 chữ, có chữ [QC] ở đầu tiêu đề, Bài được chèn tối đa 01 link video dẫn từ YouTube của Nhãn hàng, 5 ảnh, được 1-2 link|https://tinhte.vn/
-Rise Media|booking-pr|Tinhte|PR bao dien tu|Hiển thị trang chủ|16600000|||Gia goc niem yet NCC: 20.000.000 d - CK 17.0% - gia von sau CK: 16.600.000 d|https://tinhte.vn/
+Rise Media|booking-pr|Phunumoi.net.vn|PR bao dien tu|Chuyên mục|1600000|||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.600.000 d - 1000 chữ, 3 ảnh, free 2 link|Phunumoi.net.vn
+Rise Media|booking-pr|Dân việt|PR bao dien tu|Bài thường trả link|2790000|0 link||Gia goc niem yet NCC: 3.000.000 d - CK 7.0% - gia von sau CK: 2.790.000 d - 1000 từ, dưới 5 ảnh Thêm link: 1tr5/link|https://danviet.vn/
+Rise Media|booking-pr|Dân việt|PR bao dien tu|Top 2 Mục Doanh nghiệp – Trang chủ|4650000|||Gia goc niem yet NCC: 5.000.000 d - CK 7.0% - gia von sau CK: 4.650.000 d|https://danviet.vn/
+Rise Media|booking-pr|Dân việt|PR bao dien tu|Top 3 Tiểu mục|7440000|||Gia goc niem yet NCC: 8.000.000 d - CK 7.0% - gia von sau CK: 7.440.000 d|https://danviet.vn/
+Rise Media|booking-pr|Saigongiaiphong|PR bao dien tu|Chuyên mục phụ|12900000|||Gia goc niem yet NCC: 15.000.000 d - CK 14.0% - gia von sau CK: 12.900.000 d - 800 chữ 2 ảnh, 2tr/link|https://www.sggp.org.vn/
+Rise Media|booking-pr|Saigongiaiphong|PR bao dien tu|Chuyên mục chính|10320000|||Gia goc niem yet NCC: 12.000.000 d - CK 14.0% - gia von sau CK: 10.320.000 d - 250 chữ, 1 ảnh, 2tr/link|https://www.sggp.org.vn/
+Rise Media|booking-pr|Vov|PR bao dien tu|Trang chuyên mục|3650000|0 free link||Gia goc niem yet NCC: 5.000.000 d - CK 27.0% - gia von sau CK: 3.650.000 d - 1000 từ, 2 ảnh, dư ảnh phí 300k/ảnh 1tr/link, đang tạm ngừng bán link. Bài tồn tại 9 tháng|https://vov.vn/
+Rise Media|booking-pr|Tinhte|PR bao dien tu|Chuyên mục phù hợp|9600000|01 link||Gia goc niem yet NCC: 12.000.000 d - CK 20.0% - gia von sau CK: 9.600.000 d - Bài < 1000 chữ, có chữ [QC] ở đầu tiêu đề, Bài được chèn tối đa 01 link video dẫn từ YouTube của Nhãn hàng, 5 ảnh, được 1-2 link|https://tinhte.vn/
+Rise Media|booking-pr|Tinhte|PR bao dien tu|Hiển thị trang chủ|16000000|||Gia goc niem yet NCC: 20.000.000 d - CK 20.0% - gia von sau CK: 16.000.000 d|https://tinhte.vn/
 Rise Media|booking-pr|Webtretho|PR bao dien tu|Mục phù hợp|4980000|1 link||Gia goc niem yet NCC: 6.000.000 d - CK 17.0% - gia von sau CK: 4.980.000 d - 1000 chữ, 5 ảnh, đc 1-2 link|https://www.webtretho.com/
-Rise Media|booking-pr|Webtretho|PR bao dien tu|Trang chủ|12750000|||Gia goc niem yet NCC: 17.000.000 d - CK 25.0% - gia von sau CK: 12.750.000 d|https://www.webtretho.com/
-Rise Media|booking-pr|Vietnamnews|PR bao dien tu|Đặt tại các trang chuyên mục economy, society, lifestyle, sport|8200000|||Gia goc niem yet NCC: 10.000.000 d - CK 18.0% - gia von sau CK: 8.200.000 d - 400-600 từ, 1-2 ảnh, Không gắn link, Phí mua link 500K/link No|https://vietnamnews.vn/
-Rise Media|booking-pr|Diễn đàn doanh nghiệp|PR bao dien tu|Mục doanh nghiệp - thị trường / TTDN/ SP- thị trường|2700000|1 link||Gia goc niem yet NCC: 2.700.000 d - CK 0.0% - gia von sau CK: 2.700.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://diendandoanhnghiep.vn/
-Rise Media|booking-pr|Diễn đàn doanh nghiệp|PR bao dien tu|Top 3 Bài nổi bật chuyên mục trên trang chủ|5840000|||Gia goc niem yet NCC: 8.000.000 d - CK 27.0% - gia von sau CK: 5.840.000 d|https://diendandoanhnghiep.vn/
-Rise Media|booking-pr|Diễn đàn doanh nghiệp|PR bao dien tu|Top 2 Bài nổi bật chuyên mục trên trang chủ|7300000|||Gia goc niem yet NCC: 10.000.000 d - CK 27.0% - gia von sau CK: 7.300.000 d|https://diendandoanhnghiep.vn/
-Rise Media|booking-pr|TechZ|PR bao dien tu|Hiển thị trong chuyên mục|2500000|1 link||Gia goc niem yet NCC: 2.500.000 d - CK 0.0% - gia von sau CK: 2.500.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 500k/link|https://www.techz.vn/
-Rise Media|booking-pr|Doanhnhansaigon|PR bao dien tu|Tin ngắn (400 chữ, 2 ảnh)|2610000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 13.0% - gia von sau CK: 2.610.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://doanhnhansaigon.vn/
-Rise Media|booking-pr|Doanhnhansaigon|PR bao dien tu|Chuyên mục SKDN|6960000|||Gia goc niem yet NCC: 8.000.000 d - CK 13.0% - gia von sau CK: 6.960.000 d|https://doanhnhansaigon.vn/
+Rise Media|booking-pr|Webtretho|PR bao dien tu|Trang chủ|13260000|||Gia goc niem yet NCC: 17.000.000 d - CK 22.0% - gia von sau CK: 13.260.000 d|https://www.webtretho.com/
+Rise Media|booking-pr|Vietnamnews|PR bao dien tu|Đặt tại các trang chuyên mục economy, society, lifestyle, sport|8100000|||Gia goc niem yet NCC: 10.000.000 d - CK 19.0% - gia von sau CK: 8.100.000 d - 400-600 từ, 1-2 ảnh, Không gắn link, Phí mua link 500K/link No|https://vietnamnews.vn/
+Rise Media|booking-pr|Diễn đàn doanh nghiệp|PR bao dien tu|Mục doanh nghiệp - thị trường / TTDN/ SP- thị trường|2500000|1 link||Gia goc niem yet NCC: 2.500.000 d - CK 0.0% - gia von sau CK: 2.500.000 d - 1000 từ, 5 ảnh|https://diendandoanhnghiep.vn/
+Rise Media|booking-pr|Diễn đàn doanh nghiệp|PR bao dien tu|Top 3 Bài nổi bật chuyên mục trên trang chủ|5680000|||Gia goc niem yet NCC: 8.000.000 d - CK 29.0% - gia von sau CK: 5.680.000 d|https://diendandoanhnghiep.vn/
+Rise Media|booking-pr|Diễn đàn doanh nghiệp|PR bao dien tu|Top 2 Bài nổi bật chuyên mục trên trang chủ|7100000|||Gia goc niem yet NCC: 10.000.000 d - CK 29.0% - gia von sau CK: 7.100.000 d|https://diendandoanhnghiep.vn/
+Rise Media|booking-pr|TechZ|PR bao dien tu|Hiển thị trong chuyên mục|2500000|1 link||Gia goc niem yet NCC: 2.500.000 d - CK 0.0% - gia von sau CK: 2.500.000 d - 1000 từ, 5 ảnh Thêm link: 500k/link|https://www.techz.vn/
 Rise Media|booking-pr|Làm cha mẹ|PR bao dien tu|Chuyên mục|1500000|1 link||Gia goc niem yet NCC: 2.000.000 d - CK 25.0% - gia von sau CK: 1.500.000 d - 1000 chữ, 5 ảnh, đc 2 link|https://lamchame.vn/
-Rise Media|booking-pr|Đời sống pháp luật|PR bao dien tu|Mục cần biết|1500000|0 gắn link||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.500.000 d - Bài PR dưới 1200 từ, 6 ảnh|https://www.doisongphapluat.com/
-Rise Media|booking-pr|Người đưa tin|PR bao dien tu|Mục cần biết|1500000|0 gắn link||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.500.000 d - 1000 chữ, 5 ảnh, k gắn link|https://www.nguoiduatin.vn/
+Rise Media|booking-pr|Đời sống pháp luật|PR bao dien tu|Mục cần biết|1500000|0 gắn link||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.500.000 d - 1200 từ, 6 ảnh|https://www.doisongphapluat.com/
+Rise Media|booking-pr|Người đưa tin|PR bao dien tu|Mục cần biết|1600000|0 gắn link||Gia goc niem yet NCC: 1.600.000 d - CK 0.0% - gia von sau CK: 1.600.000 d - 1000 chữ, 5 ảnh, k gắn link|https://www.nguoiduatin.vn/
 Rise Media|booking-pr|Người đưa tin|PR bao dien tu|Chuyên mục phù hợp|2100000|||Gia goc niem yet NCC: 3.000.000 d - CK 30.0% - gia von sau CK: 2.100.000 d|https://www.nguoiduatin.vn/
-Rise Media|booking-pr|Elle|PR bao dien tu|Hiên thị trong chuyên mục|29600000|1 link||Gia goc niem yet NCC: 40.000.000 d - CK 26.0% - gia von sau CK: 29.600.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://www.elle.vn/
-Rise Media|booking-pr|Elle|PR bao dien tu|Trang chủ|44400000|||Gia goc niem yet NCC: 60.000.000 d - CK 26.0% - gia von sau CK: 44.400.000 d|https://www.elle.vn/
-Rise Media|booking-pr|Dep.com.vn|PR bao dien tu|Mục phù hợp|6000000|0 free link||Gia goc niem yet NCC: 8.000.000 d - CK 25.0% - gia von sau CK: 6.000.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh Thêm link:1tr/link|https://dep.com.vn/
-Rise Media|booking-pr|Dep.com.vn|PR bao dien tu|Trang chủ|9000000|||Gia goc niem yet NCC: 12.000.000 d - CK 25.0% - gia von sau CK: 9.000.000 d|https://dep.com.vn/
-Rise Media|booking-pr|Yan|PR bao dien tu|Tiểu mụ̣c|3150000|0 free link||Gia goc niem yet NCC: 4.500.000 d - CK 30.0% - gia von sau CK: 3.150.000 d - Bài PR dưới 1000 từ, 5 ảnh không bán link|https://www.yan.vn/
-Rise Media|booking-pr|Vnreview.vn|PR bao dien tu|Mục phù hợp|1800000|||Gia goc niem yet NCC: 1.800.000 d - CK 0.0% - gia von sau CK: 1.800.000 d - 1000 chữ, 5 ảnh, đc 2 link|https://vnreview.vn/
-Rise Media|booking-pr|Thethao247|PR bao dien tu|Mục phù hợp|3650000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 27.0% - gia von sau CK: 3.650.000 d - 1000 chữ, 5 ảnh, đc 1 link, mua thêm link giá 1tr|https://thethao247.vn/
-Rise Media|booking-pr|Thethao247|PR bao dien tu|Trang chủ|7300000|||Gia goc niem yet NCC: 10.000.000 d - CK 27.0% - gia von sau CK: 7.300.000 d|https://thethao247.vn/
-Rise Media|booking-pr|Giaoducthoidai.vn|PR bao dien tu|Mục phù hợp|4830000|1 link||Gia goc niem yet NCC: 7.000.000 d - CK 31.0% - gia von sau CK: 4.830.000 d - 1000 chữ 3 ảnh đc 1 link, mua thêm 500k|https://giaoducthoidai.vn/
-Rise Media|booking-pr|Thoidai.com.vn|PR bao dien tu|Chuyên mục|1700000|||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 chữ, 3-5 ảnh, mua link 300k link NO, 500k link DO|Thoidai.com.vn
+Rise Media|booking-pr|Elle|PR bao dien tu|Hiên thị trong chuyên mục|29200000|1 link||Gia goc niem yet NCC: 40.000.000 d - CK 27.0% - gia von sau CK: 29.200.000 d - 1000 từ, 5 ảnh|https://www.elle.vn/
+Rise Media|booking-pr|Elle|PR bao dien tu|Trang chủ|43800000|||Gia goc niem yet NCC: 60.000.000 d - CK 27.0% - gia von sau CK: 43.800.000 d|https://www.elle.vn/
+Rise Media|booking-pr|Dep.com.vn|PR bao dien tu|Chuyên mục|13680000|||Gia goc niem yet NCC: 18.000.000 d - CK 24.0% - gia von sau CK: 13.680.000 d|https://dep.com.vn/
+Rise Media|booking-pr|Vnreview.vn|PR bao dien tu|Mục phù hợp|1700000|||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - Dưới 1000 từ, 5 ảnh, 1 link Do. Title viết thành 1 câu.|https://vnreview.vn/
+Rise Media|booking-pr|Thethao247|PR bao dien tu|Mục phù hợp|3600000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 28.0% - gia von sau CK: 3.600.000 d - 1000 chữ, 5 ảnh, đc 1 link, mua thêm link giá 1tr KT ảnh Thumb 750x500|https://thethao247.vn/
+Rise Media|booking-pr|Thethao247|PR bao dien tu|Trang chủ|7200000|||Gia goc niem yet NCC: 10.000.000 d - CK 28.0% - gia von sau CK: 7.200.000 d|https://thethao247.vn/
+Rise Media|booking-pr|Giaoducthoidai.vn|PR bao dien tu|Mục phù hợp|4440000|1 link||Gia goc niem yet NCC: 6.000.000 d - CK 26.0% - gia von sau CK: 4.440.000 d - 1000 chữ 3 ảnh đc 1 link, mua thêm 500k|https://giaoducthoidai.vn/
 Rise Media|booking-pr|Theleader|PR bao dien tu|Nhịp cầu kinh doanh|5390000|||Gia goc niem yet NCC: 7.000.000 d - CK 23.0% - gia von sau CK: 5.390.000 d|https://theleader.vn/
 Rise Media|booking-pr|Theleader|PR bao dien tu|Bài số 2,3,4,5 Chuyên mục|7700000|||Gia goc niem yet NCC: 10.000.000 d - CK 23.0% - gia von sau CK: 7.700.000 d - Bài viết có nội dung dưới 1,000 chữ và tối đa 3 ảnh minh họa|https://theleader.vn/
-Rise Media|booking-pr|Baoxaydung|PR bao dien tu|Mục cần biết|1620000|0 link||Gia goc niem yet NCC: 2.000.000 d - CK 19.0% - gia von sau CK: 1.620.000 d - 800-1000 chữ, 2 ảnh, gắn link NO 1 triệu, gắn link tĩnh 500k|https://baoxaydung.vn/
-Rise Media|booking-pr|Baoxaydung|PR bao dien tu|Chuyên mục|4860000|||Gia goc niem yet NCC: 6.000.000 d - CK 19.0% - gia von sau CK: 4.860.000 d|https://baoxaydung.vn/
-Rise Media|booking-pr|Baoxaydung|PR bao dien tu|Trang chủ|13770000|||Gia goc niem yet NCC: 17.000.000 d - CK 19.0% - gia von sau CK: 13.770.000 d|https://baoxaydung.vn/
-Rise Media|booking-pr|Hanoimoi|PR bao dien tu|Chuyên mục|4920000|||Gia goc niem yet NCC: 6.000.000 d - CK 18.0% - gia von sau CK: 4.920.000 d - 1000 chữ, 3 ảnh, k gắn link|http://www.hanoimoi.com.vn/
-Rise Media|booking-pr|Hanoimoi|PR bao dien tu|Chuyên mục - Trang chủ|9840000|||Gia goc niem yet NCC: 12.000.000 d - CK 18.0% - gia von sau CK: 9.840.000 d|http://www.hanoimoi.com.vn/
-Rise Media|booking-pr|Bongdaplus|PR bao dien tu|Chuyên mục|9400000|||Gia goc niem yet NCC: 10.000.000 d - CK 6.0% - gia von sau CK: 9.400.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://bongdaplus.vn/
+Rise Media|booking-pr|Baoxaydung|PR bao dien tu|Mục cần biết|2000000|0 link||Gia goc niem yet NCC: 2.000.000 d - CK 0.0% - gia von sau CK: 2.000.000 d - 800-1000 chữ, 2 ảnh, gắn link NO 1 triệu, gắn link tĩnh 500k|https://baoxaydung.vn/
+Rise Media|booking-pr|Baoxaydung|PR bao dien tu|Chuyên mục|5100000|||Gia goc niem yet NCC: 6.000.000 d - CK 15.0% - gia von sau CK: 5.100.000 d|https://baoxaydung.vn/
+Rise Media|booking-pr|Baoxaydung|PR bao dien tu|Trang chủ|14450000|||Gia goc niem yet NCC: 17.000.000 d - CK 15.0% - gia von sau CK: 14.450.000 d|https://baoxaydung.vn/
+Rise Media|booking-pr|Hanoimoi|PR bao dien tu|Chuyên mục|5100000|||Gia goc niem yet NCC: 6.000.000 d - CK 15.0% - gia von sau CK: 5.100.000 d - 1000 chữ, 3 ảnh, k gắn link|http://www.hanoimoi.com.vn/
+Rise Media|booking-pr|Bongdaplus|PR bao dien tu|Chuyên mục|9400000|||Gia goc niem yet NCC: 10.000.000 d - CK 6.0% - gia von sau CK: 9.400.000 d - 1000 từ, 5 ảnh|https://bongdaplus.vn/
 Rise Media|booking-pr|Bongdaplus|PR bao dien tu|Trang chủ|18800000|||Gia goc niem yet NCC: 20.000.000 d - CK 6.0% - gia von sau CK: 18.800.000 d|https://bongdaplus.vn/
-Rise Media|booking-pr|Emdep.vn|PR bao dien tu|Giữa mục|1700000|1 link||Gia goc niem yet NCC: 2.000.000 d - CK 15.0% - gia von sau CK: 1.700.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link:500K/link|https://emdep.vn/
-Rise Media|booking-pr|Emdep.vn|PR bao dien tu|Đầu mục|2550000|||Gia goc niem yet NCC: 3.000.000 d - CK 15.0% - gia von sau CK: 2.550.000 d|https://emdep.vn/
-Rise Media|booking-pr|Plo.vn - Pháp luật TpHCM|PR bao dien tu|Tiểu mục|3000000|2 link||Gia goc niem yet NCC: 3.000.000 d - CK 0.0% - gia von sau CK: 3.000.000 d - 800 chữ, 2 ảnh, đc 2 link|https://plo.vn/
-Rise Media|booking-pr|Bazaarvietnam (Giá mới 2026)|PR bao dien tu|Tiểu mục phù hợp|25272000|||Gia goc niem yet NCC: 31.200.000 d - CK 19.0% - gia von sau CK: 25.272.000 d|
-Rise Media|booking-pr|Congthuong.vn|PR bao dien tu|Mục phù hợp|4600000|0 link||Gia goc niem yet NCC: 5.000.000 d - CK 8.0% - gia von sau CK: 4.600.000 d - 800 chữ 3 ảnh, k gắn link|https://congthuong.vn/
-Rise Media|booking-pr|Phunumoi.net.vn|PR bao dien tu|Mục phù hợp|2550000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 15.0% - gia von sau CK: 2.550.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://phunumoi.net.vn/
-Rise Media|booking-pr|Vietgiaitri.com|PR bao dien tu|Mục phù hợp|2460000|0 link||Gia goc niem yet NCC: 3.000.000 d - CK 18.0% - gia von sau CK: 2.460.000 d - Bài PR dưới 1000 từ, 3 ảnh Thêm link: 1tr/link|https://vietgiaitri.com/
+Rise Media|booking-pr|Emdep.vn|PR bao dien tu|Lấy bài k hiển thị|1000000|1 link||Gia goc niem yet NCC: 1.000.000 d - CK 0.0% - gia von sau CK: 1.000.000 d - 1000 từ, 5 ảnh Thêm link:500K/link|https://emdep.vn/
+Rise Media|booking-pr|Emdep.vn|PR bao dien tu|Chuyên mục|1840000|||Gia goc niem yet NCC: 2.000.000 d - CK 8.0% - gia von sau CK: 1.840.000 d|https://emdep.vn/
+Rise Media|booking-pr|Bazaarvietnam|PR bao dien tu|Tiểu mục phù hợp|25272000|||Gia goc niem yet NCC: 31.200.000 d - CK 19.0% - gia von sau CK: 25.272.000 d|
+Rise Media|booking-pr|Congthuong.vn|PR bao dien tu|Tin|4400000|0 link||Gia goc niem yet NCC: 5.000.000 d - CK 12.0% - gia von sau CK: 4.400.000 d - Dưới 700 từ, dưới 3 ảnh, Mua thêm link 3triệu/ link. Title không quá 15 từ, sapo: 30-35 từ. Báo có edit nhưng sẽ ko gửi lại bài. Kh muốn giữ thông tin nào thì note vàng trog bài để báo cân nhắc giữ/ Bài lên chậm 1-3 ngày. / Ảnh Ava - Ảnh ngang.|https://congthuong.vn/
 Rise Media|booking-pr|Otofun|PR bao dien tu|Bài PR 4|5950000|1 link||Gia goc niem yet NCC: 7.000.000 d - CK 15.0% - gia von sau CK: 5.950.000 d - Bài PR dưới 800 từ, 3 ảnh|https://www.otofun.net/
 Rise Media|booking-pr|Otofun|PR bao dien tu|Bài PR 3|12750000|||Gia goc niem yet NCC: 15.000.000 d - CK 15.0% - gia von sau CK: 12.750.000 d|https://www.otofun.net/
-Rise Media|booking-pr|Bestie.vn|PR bao dien tu|Tiểu mục|2220000|0 free link||Gia goc niem yet NCC: 3.000.000 d - CK 26.0% - gia von sau CK: 2.220.000 d - Bài PR dưới 1000 từ, 5 - 8 ảnh Thêm link: 300K/link|https://www.bestie.vn/
+Rise Media|booking-pr|Bestie.vn|PR bao dien tu|Tiểu mục|2220000|0 free link||Gia goc niem yet NCC: 3.000.000 d - CK 26.0% - gia von sau CK: 2.220.000 d - 1000 từ, 5 - 8 ảnh Thêm link: 300K/link|https://www.bestie.vn/
 Rise Media|booking-pr|Bestie.vn|PR bao dien tu|Chuyên mục|5920000|||Gia goc niem yet NCC: 8.000.000 d - CK 26.0% - gia von sau CK: 5.920.000 d|https://www.bestie.vn/
 Rise Media|booking-pr|Bestie.vn|PR bao dien tu|Trang chủ|11100000|||Gia goc niem yet NCC: 15.000.000 d - CK 26.0% - gia von sau CK: 11.100.000 d|https://www.bestie.vn/
-Rise Media|booking-pr|Bongda24h.vn|PR bao dien tu|Chuyên mục|3150000|1 link||Gia goc niem yet NCC: 3.500.000 d - CK 10.0% - gia von sau CK: 3.150.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link:500K/link|https://bongda24h.vn/
-Rise Media|booking-pr|Bongda24h.vn|PR bao dien tu|Trang chủ|4950000|||Gia goc niem yet NCC: 5.500.000 d - CK 10.0% - gia von sau CK: 4.950.000 d|https://bongda24h.vn/
-Rise Media|booking-pr|Bongda.com.vn|PR bao dien tu|Chuyên mục|4100000|||Gia goc niem yet NCC: 5.000.000 d - CK 18.0% - gia von sau CK: 4.100.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://www.bongda.com.vn/
+Rise Media|booking-pr|Bongda24h.vn|PR bao dien tu|Chuyên mục|3220000|1 link||Gia goc niem yet NCC: 3.500.000 d - CK 8.0% - gia von sau CK: 3.220.000 d - 1000 từ, 5 ảnh Thêm link:500K/link|https://bongda24h.vn/
+Rise Media|booking-pr|Bongda24h.vn|PR bao dien tu|Trang chủ|5060000|||Gia goc niem yet NCC: 5.500.000 d - CK 8.0% - gia von sau CK: 5.060.000 d|https://bongda24h.vn/
+Rise Media|booking-pr|Bongda.com.vn|PR bao dien tu|Chuyên mục|4100000|||Gia goc niem yet NCC: 5.000.000 d - CK 18.0% - gia von sau CK: 4.100.000 d - Dưới 800 từ, 3 ảnh, 1 link Do. Mua link 500k/link|https://www.bongda.com.vn/
 Rise Media|booking-pr|Bongda.com.vn|PR bao dien tu|Trang chủ|8200000|||Gia goc niem yet NCC: 10.000.000 d - CK 18.0% - gia von sau CK: 8.200.000 d|https://www.bongda.com.vn/
-Rise Media|booking-pr|Doanhnhanvn.vn|PR bao dien tu|Chuyên mục|2280000|0 free link||Gia goc niem yet NCC: 3.000.000 d - CK 24.0% - gia von sau CK: 2.280.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link:500K/link|https://doanhnhanvn.vn/
+Rise Media|booking-pr|Doanhnhanvn.vn|PR bao dien tu|Chuyên mục|2280000|0 free link||Gia goc niem yet NCC: 3.000.000 d - CK 24.0% - gia von sau CK: 2.280.000 d - 1000 từ, 5 ảnh Thêm link:500K/link|https://doanhnhanvn.vn/
 Rise Media|booking-pr|Doanhnhanvn.vn|PR bao dien tu|Trang chủ loại 1|6080000|||Gia goc niem yet NCC: 8.000.000 d - CK 24.0% - gia von sau CK: 6.080.000 d|https://doanhnhanvn.vn/
 Rise Media|booking-pr|Doanhnhanvn.vn|PR bao dien tu|Trang chủ loại 2|9120000|||Gia goc niem yet NCC: 12.000.000 d - CK 24.0% - gia von sau CK: 9.120.000 d|https://doanhnhanvn.vn/
-Rise Media|booking-pr|Cungcau.vn|PR bao dien tu|Mục phù hợp|4100000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 18.0% - gia von sau CK: 4.100.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh|https://cungcau.vn/
-Rise Media|booking-pr|Baodansinh.vn|PR bao dien tu|Mục phù hợp|2460000|2 link||Gia goc niem yet NCC: 3.000.000 d - CK 18.0% - gia von sau CK: 2.460.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh|https://baodansinh.vn/
-Rise Media|booking-pr|Congluan|PR bao dien tu|Mục phù hợp|13650000|1 link||Gia goc niem yet NCC: 15.000.000 d - CK 9.0% - gia von sau CK: 13.650.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh|https://www.congluan.vn/
-Rise Media|booking-pr|Congluan|PR bao dien tu|Trang chủ|18200000|||Gia goc niem yet NCC: 20.000.000 d - CK 9.0% - gia von sau CK: 18.200.000 d|https://www.congluan.vn/
+Rise Media|booking-pr|Congluan|PR bao dien tu|Mục phù hợp|3300000|1 link||Gia goc niem yet NCC: 3.300.000 d - CK 0.0% - gia von sau CK: 3.300.000 d - 1000 chữ 3 ảnh, link gắn 1 link để xin thử lúc duyệt ạ|https://www.congluan.vn/
 Rise Media|booking-pr|Viez|PR bao dien tu|Chuyên mục|2880000|0 link||Gia goc niem yet NCC: 3.000.000 d - CK 4.0% - gia von sau CK: 2.880.000 d - 1000 chữ, 5 ảnh, k gắn link|https://viez.vn/
 Rise Media|booking-pr|Molistar|PR bao dien tu|Chuyên mục|2024000|1 link||Gia goc niem yet NCC: 2.200.000 d - CK 8.0% - gia von sau CK: 2.024.000 d - Thêm link:500K/link|https://molistar.com/
 Rise Media|booking-pr|Vietcetera|PR bao dien tu|1 ngôn ngữ|24250000|2 - 3 link||Gia goc niem yet NCC: 25.000.000 d - CK 3.0% - gia von sau CK: 24.250.000 d|https://vietcetera.com/
 Rise Media|booking-pr|Vietcetera|PR bao dien tu|Song Ngữ|29100000|||Gia goc niem yet NCC: 30.000.000 d - CK 3.0% - gia von sau CK: 29.100.000 d|https://vietcetera.com/
-Rise Media|booking-pr|Nhandan|PR bao dien tu|Chuyên mục|9200000|0 link||Gia goc niem yet NCC: 10.000.000 d - CK 8.0% - gia von sau CK: 9.200.000 d|https://nhandan.vn/
+Rise Media|booking-pr|Nhandan|PR bao dien tu|Chuyên mục|10000000|0 link||Gia goc niem yet NCC: 10.000.000 d - CK 0.0% - gia von sau CK: 10.000.000 d - k gắn link, giá nét từ 10-12tr tùy bài khi check|https://nhandan.vn/
 Rise Media|booking-pr|Kienviet|PR bao dien tu|Chuyên mục|6570000|0 free link||Gia goc niem yet NCC: 9.000.000 d - CK 27.0% - gia von sau CK: 6.570.000 d - 800 chữ, 3 ảnh, đc 1 link Thêm link:500K/link|https://kienviet.net/
-Rise Media|booking-pr|Baophapluat|PR bao dien tu|Chuyên mục|7500000|không chèn link||Gia goc niem yet NCC: 10.000.000 d - CK 25.0% - gia von sau CK: 7.500.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh|https://baophapluat.vn/
-Rise Media|booking-pr|Baophapluat|PR bao dien tu|Trang chủ|9000000|||Gia goc niem yet NCC: 12.000.000 d - CK 25.0% - gia von sau CK: 9.000.000 d|https://baophapluat.vn/
-Rise Media|booking-pr|Thethaovanhoa.vn|PR bao dien tu|pr doanh nghiêp|2220000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 26.0% - gia von sau CK: 2.220.000 d - Bài PR dưới 1000 từ, 3 ảnh Thêm link: 500K/link|https://thethaovanhoa.vn/
-Rise Media|booking-pr|Thethaovanhoa.vn|PR bao dien tu|pr cá nhân|3700000|||Gia goc niem yet NCC: 5.000.000 d - CK 26.0% - gia von sau CK: 3.700.000 d|https://thethaovanhoa.vn/
-Rise Media|booking-pr|Tuoitrethudo|PR bao dien tu|Tin ngắn|2520000|2 link||Gia goc niem yet NCC: 3.000.000 d - CK 16.0% - gia von sau CK: 2.520.000 d - Bài PR 300 chữ, 2 ảnh|https://tuoitrethudo.com.vn/
-Rise Media|booking-pr|Tuoitrethudo|PR bao dien tu|Bài PR trang nội dung|4200000|||Gia goc niem yet NCC: 5.000.000 d - CK 16.0% - gia von sau CK: 4.200.000 d - 800 chữ, 3 ảnh, đc 2 link gắn trong từ khóa, không gắn link cuối bài|https://tuoitrethudo.com.vn/
+Rise Media|booking-pr|Baophapluat|PR bao dien tu|Chuyên mục|7000000|không chèn link||Gia goc niem yet NCC: 10.000.000 d - CK 30.0% - gia von sau CK: 7.000.000 d - 1000 từ, dưới 3 ảnh|https://baophapluat.vn/
+Rise Media|booking-pr|Thethaovanhoa.vn|PR bao dien tu|pr doanh nghiêp|2160000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 28.0% - gia von sau CK: 2.160.000 d - 1000 từ, 3 ảnh Thêm link: 500K/link|https://thethaovanhoa.vn/
+Rise Media|booking-pr|Thethaovanhoa.vn|PR bao dien tu|pr cá nhân|3600000|||Gia goc niem yet NCC: 5.000.000 d - CK 28.0% - gia von sau CK: 3.600.000 d|https://thethaovanhoa.vn/
 Rise Media|booking-pr|Phunuvagiadinh|PR bao dien tu|Top 5 trở xuống|2880000|1 link||Gia goc niem yet NCC: 4.000.000 d - CK 28.0% - gia von sau CK: 2.880.000 d - Bài PR dưới 700 từ, dưới 3 ảnh Thêm link: 500K/link|https://www.phunuvagiadinh.vn/
-Rise Media|booking-pr|Brandsvietnam.com|PR bao dien tu|Trang chủ|15300000|1 link||Gia goc niem yet NCC: 18.000.000 d - CK 15.0% - gia von sau CK: 15.300.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://www.brandsvietnam.com/
-Rise Media|booking-pr|Congan|PR bao dien tu|Tiểu mục phù hợp|4350000|||Gia goc niem yet NCC: 5.000.000 d - CK 13.0% - gia von sau CK: 4.350.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh|https://congan.com.vn/
-Rise Media|booking-pr|Anninhthudo|PR bao dien tu|Mục phù hợp|3350000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 33.0% - gia von sau CK: 3.350.000 d - Bài PR dưới 1000 từ, dưới 2 ảnh Thêm link: 500K/link|https://www.anninhthudo.vn/
+Rise Media|booking-pr|Brandsvietnam.com|PR bao dien tu|Trang chủ|15300000|1 link||Gia goc niem yet NCC: 18.000.000 d - CK 15.0% - gia von sau CK: 15.300.000 d - 1000 từ, 5 ảnh|https://www.brandsvietnam.com/
+Rise Media|booking-pr|Congan|PR bao dien tu|Tiểu mục phù hợp|4150000|||Gia goc niem yet NCC: 5.000.000 d - CK 17.0% - gia von sau CK: 4.150.000 d - 1000 chữ 3 ảnh, đc 2 link, mua thêm 300k|https://congan.com.vn/
+Rise Media|booking-pr|https://www.qdnd.vn|PR bao dien tu|Mục phù hợp|9000000|||Gia goc niem yet NCC: 10.000.000 d - CK 10.0% - gia von sau CK: 9.000.000 d|https://www.qdnd.vn
+Rise Media|booking-pr|Anninhthudo|PR bao dien tu|Mục phù hợp|3350000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 33.0% - gia von sau CK: 3.350.000 d - 1000 từ, dưới 2 ảnh Thêm link: 500K/link|https://www.anninhthudo.vn/
 Rise Media|booking-pr|Anninhthudo|PR bao dien tu|Trang chủ|6700000|||Gia goc niem yet NCC: 10.000.000 d - CK 33.0% - gia von sau CK: 6.700.000 d|https://www.anninhthudo.vn/
-Rise Media|booking-pr|Vietbao|PR bao dien tu|Mục phù hợp|1700000|2 link||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 300K/link|https://vietbao.vn/
-Rise Media|booking-pr|Vnmedia- tạm dừng|PR bao dien tu|Mục phù hợp|4000000|0 free||Gia goc niem yet NCC: 4.000.000 d - CK  - gia von sau CK: 4.000.000 d - Bài PR dưới 1000 từ, 3 ảnh Thêm link: 300K/link|https://vnmedia.vn/
-Rise Media|booking-pr|Vnmedia- tạm dừng|PR bao dien tu|Trang chủ|10000000|||Gia goc niem yet NCC: 10.000.000 d - CK  - gia von sau CK: 10.000.000 d|https://vnmedia.vn/
-Rise Media|booking-pr|Baogiaothong|PR bao dien tu|Cần biết|1600000|1 link||Gia goc niem yet NCC: 2.000.000 d - CK 20.0% - gia von sau CK: 1.600.000 d|https://www.baogiaothong.vn/
-Rise Media|booking-pr|Baogiaothong|PR bao dien tu|Tiểu mục phù hợp|3200000|||Gia goc niem yet NCC: 4.000.000 d - CK 20.0% - gia von sau CK: 3.200.000 d|https://www.baogiaothong.vn/
-Rise Media|booking-pr|Bienphong|PR bao dien tu|Mục phù hợp|1750000|2 link||Gia goc niem yet NCC: 1.750.000 d - CK 0.0% - gia von sau CK: 1.750.000 d - 1000 chữ, 3 ảnh, đc 2 link|https://www.bienphong.com.vn/
-Rise Media|booking-pr|Giadinhvaphapluat|PR bao dien tu|Mục phù hợp|1350000|2 link||Gia goc niem yet NCC: 1.350.000 d - CK 0.0% - gia von sau CK: 1.350.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://giadinhvaphapluat.vn/
-Rise Media|booking-pr|Doanhnghiepvn|PR bao dien tu|Mục phù hợp|3040000|1 link||Gia goc niem yet NCC: 4.000.000 d - CK 24.0% - gia von sau CK: 3.040.000 d - Bài PR dưới 1000 từ, 3 ảnh|http://doanhnghiepvn.vn/
-Rise Media|booking-pr|Doanhnghiepvn|PR bao dien tu|Trang chủ|4560000|||Gia goc niem yet NCC: 6.000.000 d - CK 24.0% - gia von sau CK: 4.560.000 d|http://doanhnghiepvn.vn/
-Rise Media|booking-pr|Cafedautu|PR bao dien tu|Mục phù hợp|1300000|2 free link||Gia goc niem yet NCC: 1.300.000 d - CK 0.0% - gia von sau CK: 1.300.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 300K/link|https://cafedautu.vn/
-Rise Media|booking-pr|Sohuutritue.net.vn|PR bao dien tu|Mục phù hợp|1700000|2 link||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - Bài PR dưới 1000 từ, dưới 5 ảnh|https://sohuutritue.net.vn/
-Rise Media|booking-pr|Baovanhoa.vn|PR bao dien tu|Mục phù hợp|4620000|1 link||Gia goc niem yet NCC: 6.000.000 d - CK 23.0% - gia von sau CK: 4.620.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh|http://baovanhoa.vn/
-Rise Media|booking-pr|Doanhnhan|PR bao dien tu|Tiểu mục|4350000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 13.0% - gia von sau CK: 4.350.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 500K/link|https://doanhnhan.vn/
-Rise Media|booking-pr|Doanhnhan|PR bao dien tu|Chuyên mục|6960000|||Gia goc niem yet NCC: 8.000.000 d - CK 13.0% - gia von sau CK: 6.960.000 d|https://doanhnhan.vn/
-Rise Media|booking-pr|Nhipsongdothi|PR bao dien tu|Mục phù hợp|1640000|2 link||Gia goc niem yet NCC: 2.000.000 d - CK 18.0% - gia von sau CK: 1.640.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://nhipsongdothi.vn/
-Rise Media|booking-pr|Phunusuckhoe|PR bao dien tu|Mục phù hợp|2880000|2 link||Gia goc niem yet NCC: 4.000.000 d - CK 28.0% - gia von sau CK: 2.880.000 d - Bài PR dưới 700 từ, dưới 3 ảnh Thêm link: 500K/link|https://phunusuckhoe.vn/
+Rise Media|booking-pr|Vietbao|PR bao dien tu|Mục phù hợp|1700000|2 link||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 từ, 5 ảnh Thêm link: 300K/link|https://vietbao.vn/
+Rise Media|booking-pr|Bienphong|PR bao dien tu|Mục phù hợp|1700000|||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 chữ, 3 ảnh, đc 2 link|https://www.bienphong.com.vn/
+Rise Media|booking-pr|Doanhnghiepvn|PR bao dien tu|Mục phù hợp|2800000|1 link||Gia goc niem yet NCC: 2.800.000 d - CK 0.0% - gia von sau CK: 2.800.000 d|http://doanhnghiepvn.vn/
+Rise Media|booking-pr|Cafedautu|PR bao dien tu|Mục phù hợp|1300000|2 free link||Gia goc niem yet NCC: 1.300.000 d - CK 0.0% - gia von sau CK: 1.300.000 d - 1000 từ, 5 ảnh Thêm link: 300K/link|https://cafedautu.vn/
+Rise Media|booking-pr|Sohuutritue.net.vn|PR bao dien tu|Mục phù hợp|1700000|2 link||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 từ, dưới 5 ảnh|https://sohuutritue.net.vn/
+Rise Media|booking-pr|Baovanhoa.vn|PR bao dien tu|Mục phù hợp|4620000|1 link||Gia goc niem yet NCC: 6.000.000 d - CK 23.0% - gia von sau CK: 4.620.000 d - 1000 từ, dưới 5 ảnh|http://baovanhoa.vn/
+Rise Media|booking-pr|Doanhnhan - sáp nhập|PR bao dien tu|Mục phù hợp|4000000|||Gia goc niem yet NCC: 5.000.000 d - CK 20.0% - gia von sau CK: 4.000.000 d - 900 từ 3 ảnh link để dạng text|https://doanhnhan.baophapluat.vn/
+Rise Media|booking-pr|Nhipsongdothi|PR bao dien tu|Mục phù hợp|1640000|2 link||Gia goc niem yet NCC: 2.000.000 d - CK 18.0% - gia von sau CK: 1.640.000 d - 1000 từ, 5 ảnh|https://nhipsongdothi.vn/
+Rise Media|booking-pr|Phunusuckhoe|PR bao dien tu|Mục phù hợp|2880000|2 link||Gia goc niem yet NCC: 4.000.000 d - CK 28.0% - gia von sau CK: 2.880.000 d - 700 từ, dưới 3 ảnh Thêm link: 500K/link|https://phunusuckhoe.vn/
 Rise Media|booking-pr|Tapchikientruc|PR bao dien tu|Chuyên mục|6320000|||Gia goc niem yet NCC: 8.000.000 d - CK 21.0% - gia von sau CK: 6.320.000 d - 1000 chữ, 5 ảnh, đc 1 link|https://www.tapchikientruc.com.vn/
-Rise Media|booking-pr|Phunuhiendai|PR bao dien tu|Mục phù hợp|1350000|2 link||Gia goc niem yet NCC: 1.350.000 d - CK 0.0% - gia von sau CK: 1.350.000 d - Bài PR dưới 1000 từ, dưới 3 ảnh|https://phunuhiendai.vn/
-Rise Media|booking-pr|Congly|PR bao dien tu|Mục phù hợp|3200000|0 free||Gia goc niem yet NCC: 3.200.000 d - CK 0.0% - gia von sau CK: 3.200.000 d - 1000 chữ , 5 ảnh, 500k/link|https://congly.vn/
-Rise Media|booking-pr|Doisongvietnam|PR bao dien tu|Mục phù hợp|2100000|0 free||Gia goc niem yet NCC: 2.100.000 d - CK 0.0% - gia von sau CK: 2.100.000 d - Bài PR dưới 1000 từ, dưới 5 ảnh Thêm link: 300K/link|https://doisongvietnam.vn/
-Rise Media|booking-pr|Songdep|PR bao dien tu|Mục phù hợp|1640000|2 link||Gia goc niem yet NCC: 2.000.000 d - CK 18.0% - gia von sau CK: 1.640.000 d - Bài PR dưới 1000 từ, 3 ảnh Thêm link: 300K/link|https://songdep.com.vn/
-Rise Media|booking-pr|Ictvietnam|PR bao dien tu|Hiển thị trong tiểu mục|2190000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 27.0% - gia von sau CK: 2.190.000 d - Dưới 1000 từ, 3 ảnh|
-Rise Media|booking-pr|Ictvietnam|PR bao dien tu|Chọn lọc trang chủ|7300000|||Gia goc niem yet NCC: 10.000.000 d - CK 27.0% - gia von sau CK: 7.300.000 d|
-Rise Media|booking-pr|Xehay|PR bao dien tu|Tiểu mục phù hợp|13000000|||Gia goc niem yet NCC: 13.000.000 d - CK 0.0% - gia von sau CK: 13.000.000 d - Độ dài không quá 1200 từ, 06 - 10 ảnh minh họa|
+Rise Media|booking-pr|Phunuhiendai|PR bao dien tu|Mục phù hợp|1200000|||Gia goc niem yet NCC: 1.200.000 d - CK 0.0% - gia von sau CK: 1.200.000 d - 1000 chữ, 3 ảnh, đc 2 link|https://phunuhiendai.vn/
+Rise Media|booking-pr|Congly|PR bao dien tu|Mục phù hợp|3200000|0 free||Gia goc niem yet NCC: 3.200.000 d - CK 0.0% - gia von sau CK: 3.200.000 d - 1000 chữ , 3 ảnh, 500k/link|https://congly.vn/
+Rise Media|booking-pr|Doisongvietnam|PR bao dien tu|Mục phù hợp|1800000|2 link||Gia goc niem yet NCC: 1.800.000 d - CK 0.0% - gia von sau CK: 1.800.000 d - 1000 từ, dưới 5 ảnh Thêm link: 300K/link|https://doisongvietnam.vn/
+Rise Media|booking-pr|Songdep|PR bao dien tu|Mục phù hợp|1300000|2 link||Gia goc niem yet NCC: 1.300.000 d - CK 0.0% - gia von sau CK: 1.300.000 d - 1000 từ, 3 ảnh Thêm link: 300K/link|https://songdep.com.vn/
+Rise Media|booking-pr|Xehay|PR bao dien tu|Tiểu mục phù hợp|13000000|||Gia goc niem yet NCC: 13.000.000 d - CK 0.0% - gia von sau CK: 13.000.000 d - Độ dài không quá 1200 từ, 06 - 10 ảnh minh họa|https://xehay.vn/
 Rise Media|booking-pr|Guu|PR bao dien tu|Mục phù hợp|2300000|||Gia goc niem yet NCC: 2.300.000 d - CK 0.0% - gia von sau CK: 2.300.000 d - 1000 từ, 3 ảnh, 2 Link Dofollow|
-Rise Media|booking-pr|Advertisingvietnam|PR bao dien tu|Trang chủ|14620000|2 link||Gia goc niem yet NCC: 17.000.000 d - CK 14.0% - gia von sau CK: 14.620.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://advertisingvietnam.com/
-Rise Media|booking-pr|Giadinhmoi|PR bao dien tu|Top 2,3,4|1400000|2 link||Gia goc niem yet NCC: 2.000.000 d - CK 30.0% - gia von sau CK: 1.400.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 500K/link|https://giadinhmoi.vn/
+Rise Media|booking-pr|Advertisingvietnam|PR bao dien tu|Trang chủ|14620000|||Gia goc niem yet NCC: 17.000.000 d - CK 14.0% - gia von sau CK: 14.620.000 d - 1000 chữ, 5 ảnh, đc 2 link|https://advertisingvietnam.com/
+Rise Media|booking-pr|Giadinhmoi|PR bao dien tu|Top 2,3,4|1400000|2 link||Gia goc niem yet NCC: 2.000.000 d - CK 30.0% - gia von sau CK: 1.400.000 d - 1000 từ, 5 ảnh Thêm link: 500K/link|https://giadinhmoi.vn/
 Rise Media|booking-pr|Giadinhmoi|PR bao dien tu|Top 1 chuyên mục|2100000|||Gia goc niem yet NCC: 3.000.000 d - CK 30.0% - gia von sau CK: 2.100.000 d|https://giadinhmoi.vn/
 Rise Media|booking-pr|Giadinhmoi|PR bao dien tu|Top 1,2,3 trang chủ|3500000|||Gia goc niem yet NCC: 5.000.000 d - CK 30.0% - gia von sau CK: 3.500.000 d|https://giadinhmoi.vn/
-Rise Media|booking-pr|Megafun|PR bao dien tu|Mục phù hợp|1500000|2 link||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.500.000 d - Bài PR dưới 1000 từ, 3 ảnh Thêm link: 300K/link|http://megafun.vn/
-Rise Media|booking-pr|Tuoitrexahoi|PR bao dien tu|Mục phù hợp|1150000|2 link||Gia goc niem yet NCC: 1.150.000 d - CK 0.0% - gia von sau CK: 1.150.000 d - Bài PR dưới 1000 từ, dưới 5 ảnh|https://tuoitrexahoi.vn/
+Rise Media|booking-pr|Megafun|PR bao dien tu|Mục phù hợp|1500000|2 link||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.500.000 d - 1000 từ, 3 ảnh Thêm link: 300K/link|http://megafun.vn/
+Rise Media|booking-pr|Tuoitrexahoi|PR bao dien tu|Mục phù hợp|1150000|||Gia goc niem yet NCC: 1.150.000 d - CK 0.0% - gia von sau CK: 1.150.000 d - 1000 chữ, 5 ảnh, đc 2 link|https://tuoitrexahoi.vn/
 Rise Media|booking-pr|Xaluannews|PR bao dien tu|Mục phù hợp|1350000|1 link||Gia goc niem yet NCC: 1.350.000 d - CK 0.0% - gia von sau CK: 1.350.000 d - 1000 chữ, 5 ảnh, đc 1 link, mua thêm 300k|https://www.xaluannews.com/
-Rise Media|booking-pr|Xahoi.com.vn|PR bao dien tu|Chuyên mục|1900000|2 link||Gia goc niem yet NCC: 1.900.000 d - CK 0.0% - gia von sau CK: 1.900.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://xahoi.com.vn/
-Rise Media|booking-pr|Hoahoctro.tienphong.vn|PR bao dien tu|Chuyên mục|2160000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 28.0% - gia von sau CK: 2.160.000 d - Bài PR dưới 800 từ, 4 ảnh|https://hoahoctro.tienphong.vn/
+Rise Media|booking-pr|Xahoi.com.vn|PR bao dien tu|Chuyên mục|1900000|2 link||Gia goc niem yet NCC: 1.900.000 d - CK 0.0% - gia von sau CK: 1.900.000 d - 1000 từ, 5 ảnh|https://xahoi.com.vn/
+Rise Media|booking-pr|Hoahoctro.tienphong.vn|PR bao dien tu|Chuyên mục|2160000|1 link||Gia goc niem yet NCC: 3.000.000 d - CK 28.0% - gia von sau CK: 2.160.000 d - 800 từ, 4 ảnh|https://hoahoctro.tienphong.vn/
 Rise Media|booking-pr|Hoahoctro.tienphong.vn|PR bao dien tu|Trang chủ Tiêu điểm top 2 xuống|3600000|||Gia goc niem yet NCC: 5.000.000 d - CK 28.0% - gia von sau CK: 3.600.000 d|https://hoahoctro.tienphong.vn/
-Rise Media|booking-pr|Giaoduc.edu.vn (giaoduc Tp HCM)|PR bao dien tu|Tiểu mục phù hợp|2550000|2 link||Gia goc niem yet NCC: 3.000.000 d - CK 15.0% - gia von sau CK: 2.550.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://giaoduc.edu.vn/
-Rise Media|booking-pr|Vietnamplus.vn|PR bao dien tu|Chuyên mục|12900000|0 free||Gia goc niem yet NCC: 15.000.000 d - CK 14.0% - gia von sau CK: 12.900.000 d - Bài PR dưới 800 từ, 3 ảnh|https://www.vietnamplus.vn/
-Rise Media|booking-pr|Vietnamplus.vn|PR bao dien tu|Trang chủ|17200000|||Gia goc niem yet NCC: 20.000.000 d - CK 14.0% - gia von sau CK: 17.200.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://www.vietnamplus.vn/
-Rise Media|booking-pr|Vietnamfinance|PR bao dien tu|Chuyên mục|8280000|||Gia goc niem yet NCC: 12.000.000 d - CK 31.0% - gia von sau CK: 8.280.000 d|https://vietnamfinance.vn/
+Rise Media|booking-pr|Vietnamplus.vn|PR bao dien tu|Chuyên mục|12900000|0 free||Gia goc niem yet NCC: 15.000.000 d - CK 14.0% - gia von sau CK: 12.900.000 d - 800 từ, 3 ảnh|https://www.vietnamplus.vn/
+Rise Media|booking-pr|Vietnamplus.vn|PR bao dien tu|Trang chủ|17200000|||Gia goc niem yet NCC: 20.000.000 d - CK 14.0% - gia von sau CK: 17.200.000 d - 1000 từ, 3 ảnh|https://www.vietnamplus.vn/
+Rise Media|booking-pr|Vietnamfinance|PR bao dien tu|Chuyên mục|8400000|||Gia goc niem yet NCC: 12.000.000 d - CK 30.0% - gia von sau CK: 8.400.000 d - 1000 chữ, 3 ảnh, free 1 link|https://vietnamfinance.vn/
 Rise Media|booking-pr|Doanhnhanplus.vn|PR bao dien tu|Trang chủ|11040000|||Gia goc niem yet NCC: 12.000.000 d - CK 8.0% - gia von sau CK: 11.040.000 d|https://doanhnhanplus.vn/
-Rise Media|booking-pr|Sgtiepthi.vn|PR bao dien tu|thông tin DN|4000000|2 link||Gia goc niem yet NCC: 5.000.000 d - CK 20.0% - gia von sau CK: 4.000.000 d - Bài PR 450 từ, 1 ảnh|https://sgtt.thesaigontimes.vn/
 Rise Media|booking-pr|Travellive|PR bao dien tu|Tiểu mục phù hợp|7700000|||Gia goc niem yet NCC: 10.000.000 d - CK 23.0% - gia von sau CK: 7.700.000 d|https://vntravellive.com/
-Rise Media|booking-pr|Công an nhân dân|PR bao dien tu|Mục phù hợp|4300000|||Gia goc niem yet NCC: 5.000.000 d - CK 14.0% - gia von sau CK: 4.300.000 d|https://cand.com.vn/
+Rise Media|booking-pr|Công an nhân dân|PR bao dien tu|Mục phù hợp|5500000|||Gia goc niem yet NCC: 5.500.000 d - CK 0.0% - gia von sau CK: 5.500.000 d|https://cand.com.vn/
 Rise Media|booking-pr|Kinhtedothi|PR bao dien tu|Bài chuyên mục|2310000|||Gia goc niem yet NCC: 3.000.000 d - CK 23.0% - gia von sau CK: 2.310.000 d|https://kinhtedothi.vn/
 Rise Media|booking-pr|Kinhtedothi|PR bao dien tu|Top chuyên muục|4620000|||Gia goc niem yet NCC: 6.000.000 d - CK 23.0% - gia von sau CK: 4.620.000 d|https://kinhtedothi.vn/
 Rise Media|booking-pr|Bizlive.vn|PR bao dien tu|Nhịp cầu doanh nghiệp|8000000|||Gia goc niem yet NCC: 10.000.000 d - CK 20.0% - gia von sau CK: 8.000.000 d|https://nhipsongkinhdoanh.vn/
-Rise Media|booking-pr|Bau.vn|PR bao dien tu|Lấy link|1400000|2 link||Gia goc niem yet NCC: 1.400.000 d - CK 0.0% - gia von sau CK: 1.400.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://bau.vn/
-Rise Media|booking-pr|Molistar|PR bao dien tu|Chuyên mục|5000000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 0.0% - gia von sau CK: 5.000.000 d - Bài PR dưới 1000 từ, 3 ảnh Thêm link: 500K/link|https://molistar.com/
+Rise Media|booking-pr|Bau.vn|PR bao dien tu|Lấy link|1400000|||Gia goc niem yet NCC: 1.400.000 d - CK 0.0% - gia von sau CK: 1.400.000 d - 1000 chữ, 3 ảnh, đc 2 link|https://bau.vn/
+Rise Media|booking-pr|Molistar|PR bao dien tu|Chuyên mục|5000000|1 link||Gia goc niem yet NCC: 5.000.000 d - CK 0.0% - gia von sau CK: 5.000.000 d - 1000 từ, 3 ảnh Thêm link: 500K/link|https://molistar.com/
 Rise Media|booking-pr|Baoquocte|PR bao dien tu|Lấy link|2200000|||Gia goc niem yet NCC: 2.200.000 d - CK 0.0% - gia von sau CK: 2.200.000 d - 1000 chữ, 5 ảnh, 1 triệu/link|https://baoquocte.vn/
-Rise Media|booking-pr|Otosaigon (Giá mới 2026)|PR bao dien tu|Mục phù hợp|15810000|1 link||Gia goc niem yet NCC: 17.000.000 d - CK 7.0% - gia von sau CK: 15.810.000 d - Bài PR dưới 1600 từ, 10 ảnh|https://www.otosaigon.com/
-Rise Media|booking-pr|Thuonghieucongluan|PR bao dien tu|Mục phù hợp|1880000|1 link||Gia goc niem yet NCC: 2.000.000 d - CK 6.0% - gia von sau CK: 1.880.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://thuonghieucongluan.com.vn/
+Rise Media|booking-pr|Otosaigon (Giá mới 2026)|PR bao dien tu|Mục phù hợp|15810000|1 link||Gia goc niem yet NCC: 17.000.000 d - CK 7.0% - gia von sau CK: 15.810.000 d - 1600 từ, 10 ảnh|https://www.otosaigon.com/
+Rise Media|booking-pr|Thuonghieucongluan|PR bao dien tu|Mục phù hợp|1880000|||Gia goc niem yet NCC: 2.000.000 d - CK 6.0% - gia von sau CK: 1.880.000 d - 1000 chữ, 3 ảnh, đc 2 link|https://thuonghieucongluan.com.vn/
 Rise Media|booking-pr|Autodaily|PR bao dien tu|Mục phù hợp|10920000|||Gia goc niem yet NCC: 12.000.000 d - CK 9.0% - gia von sau CK: 10.920.000 d - Dưới 600 từ, 3 ảnh, chèn link mất phí 3tr/link|https://forum.autodaily.vn/
-Rise Media|booking-pr|2Game|PR bao dien tu|Tin thường|1780000|3 link||Gia goc niem yet NCC: 2.000.000 d - CK 11.0% - gia von sau CK: 1.780.000 d - Bài PR dưới 800 từ, 3 ảnh|https://2game.vn/
+Rise Media|booking-pr|2Game|PR bao dien tu|Tin thường|1780000|3 link||Gia goc niem yet NCC: 2.000.000 d - CK 11.0% - gia von sau CK: 1.780.000 d - 800 từ, 3 ảnh|https://2game.vn/
 Rise Media|booking-pr|2Game|PR bao dien tu|Tin nổi bật|2670000|||Gia goc niem yet NCC: 3.000.000 d - CK 11.0% - gia von sau CK: 2.670.000 d|https://2game.vn/
-Rise Media|booking-pr|Lofficielvietnam|PR bao dien tu|Chuyên mục|21500000|1 link||Gia goc niem yet NCC: 25.000.000 d - CK 14.0% - gia von sau CK: 21.500.000 d - Bài PR dưới 1000 từ, 8 ảnh|https://www.lofficielvietnam.com/
+Rise Media|booking-pr|Lofficielvietnam|PR bao dien tu|Chuyên mục|21500000|1 link||Gia goc niem yet NCC: 25.000.000 d - CK 14.0% - gia von sau CK: 21.500.000 d - 1000 từ, 8 ảnh|https://www.lofficielvietnam.com/
 Rise Media|booking-pr|Lofficielvietnam|PR bao dien tu|Trang chủ|24080000|||Gia goc niem yet NCC: 28.000.000 d - CK 14.0% - gia von sau CK: 24.080.000 d|https://www.lofficielvietnam.com/
-Rise Media|booking-pr|Xedoisong|PR bao dien tu|Mục phù hợp|7760000|||Gia goc niem yet NCC: 8.000.000 d - CK 3.0% - gia von sau CK: 7.760.000 d - Bài PR dưới 800 từ, 4 ảnh|https://xedoisong.vn/
-Rise Media|booking-pr|Otoxemay.vn|PR bao dien tu|Mục phù hợp|3000000|||Gia goc niem yet NCC: 4.000.000 d - CK 25.0% - gia von sau CK: 3.000.000 d|https://otoxemay.vn/
-Rise Media|booking-pr|Bestie.vn|PR bao dien tu|Tiểu mục|2400000|0 free||Gia goc niem yet NCC: 3.000.000 d - CK 20.0% - gia von sau CK: 2.400.000 d - Bài PR dưới 1000 từ, 5-8 ảnh Thêm link: 300K/link|https://www.bestie.vn/
+Rise Media|booking-pr|Xedoisong|PR bao dien tu|Mục phù hợp|7760000|||Gia goc niem yet NCC: 8.000.000 d - CK 3.0% - gia von sau CK: 7.760.000 d - 800 từ, 4 ảnh|https://xedoisong.vn/
+Rise Media|booking-pr|Otoxemay.vn|PR bao dien tu|Mục phù hợp|3520000|||Gia goc niem yet NCC: 4.000.000 d - CK 12.0% - gia von sau CK: 3.520.000 d|https://otoxemay.vn/
+Rise Media|booking-pr|Bestie.vn|PR bao dien tu|Tiểu mục|2400000|0 free||Gia goc niem yet NCC: 3.000.000 d - CK 20.0% - gia von sau CK: 2.400.000 d - 1000 từ, 5-8 ảnh Thêm link: 300K/link|https://www.bestie.vn/
 Rise Media|booking-pr|Bestie.vn|PR bao dien tu|Chuyên mục|6160000|||Gia goc niem yet NCC: 8.000.000 d - CK 23.0% - gia von sau CK: 6.160.000 d|https://www.bestie.vn/
 Rise Media|booking-pr|Bestie.vn|PR bao dien tu|Trang chủ|11550000|||Gia goc niem yet NCC: 15.000.000 d - CK 23.0% - gia von sau CK: 11.550.000 d|https://www.bestie.vn/
-Rise Media|booking-pr|Tcdulichtphcm.vn|PR bao dien tu|Chuyên mục|3280000|||Gia goc niem yet NCC: 4.000.000 d - CK 18.0% - gia von sau CK: 3.280.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://tcdulichtphcm.vn/
-Rise Media|booking-pr|Elledecoration|PR bao dien tu|Mục phù hợp|30400000|1 link||Gia goc niem yet NCC: 40.000.000 d - CK 24.0% - gia von sau CK: 30.400.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://www.elledecoration.vn/
+Rise Media|booking-pr|Elledecoration|PR bao dien tu|Mục phù hợp|30400000|1 link||Gia goc niem yet NCC: 40.000.000 d - CK 24.0% - gia von sau CK: 30.400.000 d - 1000 từ, 5 ảnh|https://www.elledecoration.vn/
 Rise Media|booking-pr|Elledecoration|PR bao dien tu|Trang chủ|45600000|||Gia goc niem yet NCC: 60.000.000 d - CK 24.0% - gia von sau CK: 45.600.000 d|https://www.elledecoration.vn/
-Rise Media|booking-pr|Tintuconline|PR bao dien tu|Tiểu mục|1925000|0 free||Gia goc niem yet NCC: 2.500.000 d - CK 23.0% - gia von sau CK: 1.925.000 d - Bài PR dưới 1000 từ, 5 ảnh Thêm link: 6tr/link|https://tintuconline.com.vn/
-Rise Media|booking-pr|Giaoduc.net|PR bao dien tu|Trang chuyên mục tương ứng|9500000|1 link||Gia goc niem yet NCC: 10.000.000 d - CK 5.0% - gia von sau CK: 9.500.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://giaoduc.net/
+Rise Media|booking-pr|Tintuconline|PR bao dien tu|Tiểu mục|1850000|0 free||Gia goc niem yet NCC: 2.500.000 d - CK 26.0% - gia von sau CK: 1.850.000 d - 1000 từ, 5 ảnh Thêm link: 6tr/link|https://tintuconline.com.vn/
 Rise Media|booking-pr|Techrum|PR bao dien tu|Mục phù hợp|5700000|||Gia goc niem yet NCC: 6.000.000 d - CK 5.0% - gia von sau CK: 5.700.000 d|https://techrum.vn/
 Rise Media|booking-pr|Baotintuc.vn|PR bao dien tu|Mục phù hợp|4200000|0 free||Gia goc niem yet NCC: 4.200.000 d - CK 0.0% - gia von sau CK: 4.200.000 d - Bài 1000 từ + 2 ảnh + 1 link dạng text (mua 2 ảnh thêm phí 500k/ảnh,1 bài không quá 4 ảnh)|https://baotintuc.vn/
-Rise Media|booking-pr|Nông nghiệp môi trường|PR bao dien tu|Chuyên mục|7700000|0 free||Gia goc niem yet NCC: 10.000.000 d - CK 23.0% - gia von sau CK: 7.700.000 d - Bài PR dưới 1000 từ, 4 ảnh Thêm link: 2tr/link|https://nongnghiepmoitruong.vn/
-Rise Media|booking-pr|Nông nghiệp môi trường|PR bao dien tu|Tiêu điểm trang chủ|9240000|||Gia goc niem yet NCC: 12.000.000 d - CK 23.0% - gia von sau CK: 9.240.000 d|https://nongnghiepmoitruong.vn/
-Rise Media|booking-pr|Nông nghiệp môi trường|PR bao dien tu|Nóng trang chủ|11550000|||Gia goc niem yet NCC: 15.000.000 d - CK 23.0% - gia von sau CK: 11.550.000 d|https://nongnghiepmoitruong.vn/
-Rise Media|booking-pr|VietQ.vn|PR bao dien tu|Mục phù hợp|2625000|1 link||Gia goc niem yet NCC: 3.500.000 d - CK 25.0% - gia von sau CK: 2.625.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://vietq.vn/
-Rise Media|booking-pr|phunuhiendai.vn|PR bao dien tu|Mục phù hợp|1050000|2 link||Gia goc niem yet NCC: 1.500.000 d - CK 30.0% - gia von sau CK: 1.050.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://phunuhiendai.vn/
-Rise Media|booking-pr|Giadinhvaphapluat.vn|PR bao dien tu|Mục phù hợp|1400000|2 link||Gia goc niem yet NCC: 1.400.000 d - CK 0.0% - gia von sau CK: 1.400.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://giadinhvaphapluat.vn/
-Rise Media|booking-pr|Songdep.com.vn|PR bao dien tu|Mục phù hợp|1350000|2 link||Gia goc niem yet NCC: 1.350.000 d - CK 0.0% - gia von sau CK: 1.350.000 d - Bài PR dưới 1000 từ, 3 ảnh Thêm link: 300K/link|https://songdep.com.vn/
-Rise Media|booking-pr|Suckhoeviet.org.vn|PR bao dien tu|Mục phù hợp|2460000|2 link||Gia goc niem yet NCC: 3.000.000 d - CK 18.0% - gia von sau CK: 2.460.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://suckhoeviet.org.vn/
-Rise Media|booking-pr|Vnfinance.vn|PR bao dien tu|Mục phù hợp|2750000|2 link||Gia goc niem yet NCC: 2.750.000 d - CK 0.0% - gia von sau CK: 2.750.000 d - Bài PR dưới 1000 từ, 5 ảnh|https://vnfinance.vn/
-Rise Media|booking-pr|Home.vn|PR bao dien tu|Chuyên mục|1700000|||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 chữ, 5 ảnh, đc 2 link|Home.vn
+Rise Media|booking-pr|Nông nghiệp môi trường|PR bao dien tu|Chuyên mục|8700000|0 free||Gia goc niem yet NCC: 10.000.000 d - CK 13.0% - gia von sau CK: 8.700.000 d - 1000 từ, 4 ảnh Thêm link: 2tr/link|https://nongnghiepmoitruong.vn/
+Rise Media|booking-pr|VietQ.vn|PR bao dien tu|Mục phù hợp|2300000|||Gia goc niem yet NCC: 2.300.000 d - CK 0.0% - gia von sau CK: 2.300.000 d - 1000 chữ, 3 ảnh, đc 2 link|https://vietq.vn/
+Rise Media|booking-pr|Giadinhvaphapluat.vn|PR bao dien tu|Mục phù hợp|1250000|||Gia goc niem yet NCC: 1.250.000 d - CK 0.0% - gia von sau CK: 1.250.000 d - 1000 chữ, 3 ảnh, đc 2 link|https://giadinhvaphapluat.vn/
+Rise Media|booking-pr|Songdep.com.vn|PR bao dien tu|Mục phù hợp|1350000|2 link||Gia goc niem yet NCC: 1.350.000 d - CK 0.0% - gia von sau CK: 1.350.000 d - 1000 từ, 3 ảnh Thêm link: 300K/link|https://songdep.com.vn/
+Rise Media|booking-pr|Suckhoeviet.org.vn|PR bao dien tu|Mục phù hợp|2460000|||Gia goc niem yet NCC: 3.000.000 d - CK 18.0% - gia von sau CK: 2.460.000 d - 1000 chữ, 3 ảnh, đc 2 link|https://suckhoeviet.org.vn/
+Rise Media|booking-pr|Vnfinance.vn|PR bao dien tu|Mục phù hợp|2000000|||Gia goc niem yet NCC: 2.000.000 d - CK 0.0% - gia von sau CK: 2.000.000 d - 1000 chữ, 5 ảnh, đc 2 link|https://vnfinance.vn/
+Rise Media|booking-pr|Home.vn|PR bao dien tu|Chuyên mục|1600000|||Gia goc niem yet NCC: 1.600.000 d - CK 0.0% - gia von sau CK: 1.600.000 d - 1000 chữ, 5 ảnh, đc 2 link|Home.vn
+Rise Media|booking-pr|Nguoiquansat.vn|PR bao dien tu|Chuyên mục|2460000|||Gia goc niem yet NCC: 3.000.000 d - CK 18.0% - gia von sau CK: 2.460.000 d - 1000 chữ, 3-5 ảnh, free 1 link, mua thêm 300k|Nguoiquansat.vn
+Rise Media|booking-pr|Daibieunhandan.vn|PR bao dien tu|Chuyên mục kinh tế xã hội|5040000|||Gia goc niem yet NCC: 6.000.000 d - CK 16.0% - gia von sau CK: 5.040.000 d - 1000 chữ, 3-5 ảnh, free 1-2 link|Daibieunhandan.vn
+Rise Media|booking-pr|Daibieunhandan.vn|PR bao dien tu|Chuyên mục công nghệ văn hóa|4200000|||Gia goc niem yet NCC: 5.000.000 d - CK 16.0% - gia von sau CK: 4.200.000 d - 1000 chữ, 3-5 ảnh, free 1-2 link|Daibieunhandan.vn
+Rise Media|booking-pr|https://thoibaotaichinhvietnam.vn/|PR bao dien tu|Chuyên mục: Chứng khoán; Ngân hàng - Bảo hiểm; Hạ tầng - Bất động sản; Doanh nghiệp|6700000|||Gia goc niem yet NCC: 10.000.000 d - CK 33.0% - gia von sau CK: 6.700.000 d - Số từ trong bài: <1000 từ, 4 ảnh|https://thoibaotaichinhvietnam.vn/
+Rise Media|booking-pr|https://thoibaotaichinhvietnam.vn/|PR bao dien tu|Chuyên mục: Thời sự; Tài chính; Đầu tư; Thuế - Hải quan; Thị trường|5360000|||Gia goc niem yet NCC: 8.000.000 d - CK 33.0% - gia von sau CK: 5.360.000 d|https://thoibaotaichinhvietnam.vn/
+Rise Media|booking-pr|Daidoanket.vn|PR bao dien tu|Chuyên mục kinh tế , bđs|8200000|||Gia goc niem yet NCC: 10.000.000 d - CK 18.0% - gia von sau CK: 8.200.000 d - 1000 chữ, 3 ảnh, free 1 link, mua thêm 500k|Daidoanket.vn
+Rise Media|booking-pr|Daidoanket.vn|PR bao dien tu|Chuyên mục khác|4100000|||Gia goc niem yet NCC: 5.000.000 d - CK 18.0% - gia von sau CK: 4.100.000 d - 1000 chữ, 3 ảnh, free 1 link, mua thêm 500k|Daidoanket.vn
+Rise Media|booking-pr|Daidoanket.vn|PR bao dien tu|Mục TTDN|3200000|||Gia goc niem yet NCC: 3.200.000 d - CK 0.0% - gia von sau CK: 3.200.000 d - 1000 chữ, 3 ảnh, free 1 link, mua thêm 500k|Daidoanket.vn
+Rise Media|booking-pr|Kinhtemoitruong.vn|PR bao dien tu|Chuyên mục|2300000|||Gia goc niem yet NCC: 2.300.000 d - CK 0.0% - gia von sau CK: 2.300.000 d - 1000 chữ, 3 ảnh, free 2 link|Kinhtemoitruong.vn
+Rise Media|booking-pr|Phobienphapluat.vn|PR bao dien tu|Chuyên mục|2000000|||Gia goc niem yet NCC: 2.000.000 d - CK 0.0% - gia von sau CK: 2.000.000 d - 1000 chữ, 3 ảnh, free 2 link|Phobienphapluat.vn
+Rise Media|booking-pr|Nguoidothi.net.vn|PR bao dien tu|Chuyên mục|3000000|||Gia goc niem yet NCC: 3.000.000 d - CK 0.0% - gia von sau CK: 3.000.000 d - 500 chữ 2 ảnh, đc 2 link|Nguoidothi.net.vn
+Rise Media|booking-pr|Thuonghieuvaphapluat.vn|PR bao dien tu|Chuyên mục|1700000|||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 chữ, 3 ảnh, free 2 link|Thuonghieuvaphapluat.vn
+Rise Media|booking-pr|vanhoavaphattrien.vn|PR bao dien tu|Chuyên mục|1700000|||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 chữ, 3 ảnh, free 2 link|vanhoavaphattrien.vn
+Rise Media|booking-pr|Hoinhap.vanhoavaphattrien|PR bao dien tu|Chuyên mục|1700000|||Gia goc niem yet NCC: 1.700.000 d - CK 0.0% - gia von sau CK: 1.700.000 d - 1000 chữ, 3 ảnh, free 2 link|Hoinhap.vanhoavaphattrien
+Rise Media|booking-pr|Thoibaonganhang.vn|PR bao dien tu|Tiểu mục|2700000|||Gia goc niem yet NCC: 2.700.000 d - CK 0.0% - gia von sau CK: 2.700.000 d - 1000 chữ, 3 ảnh, đc 1 link k bán thêm|Thoibaonganhang.vn
+Rise Media|booking-pr|Doanhnghiephoinhap.vn|PR bao dien tu|Tiểu mục|2700000|||Gia goc niem yet NCC: 2.700.000 d - CK 0.0% - gia von sau CK: 2.700.000 d - 1000 chữ 3 ảnh đc 1 link, mua thêm 500k|Doanhnghiephoinhap.vn
+Rise Media|booking-pr|vanhoavadoisong.vn|PR bao dien tu|Chuyên mục|1500000|||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.500.000 d - 1000 chữ, 3 ảnh, free 2 link|vanhoavadoisong.vn
+Rise Media|booking-pr|Tiepthigiadinh.vn|PR bao dien tu|Chuyên mục|2460000|||Gia goc niem yet NCC: 3.000.000 d - CK 18.0% - gia von sau CK: 2.460.000 d - 1000 chữ, 3-5 ảnh, 1 triệu /link|Tiepthigiadinh.vn
+Rise Media|booking-pr|Phapluat.suckhoedoisong.vn|PR bao dien tu|Chuyên mục|3600000|||Gia goc niem yet NCC: 5.000.000 d - CK 28.0% - gia von sau CK: 3.600.000 d - 1000 chữ, 3 ảnh, free 1 link, mua thêm 500k|Phapluat.suckhoedoisong.vn
+Rise Media|booking-pr|thebestvietnam.vn|PR bao dien tu|Lấy link|1200000|||Gia goc niem yet NCC: 1.200.000 d - CK 0.0% - gia von sau CK: 1.200.000 d - dưới 1000 chữ, tối đa 5 hình, Thêm hình 150k/hình, dư từ 5k/từ, Backlink: 300k/link|thebestvietnam.vn
+Rise Media|booking-pr|ngoisaodoanhnhan.vn|PR bao dien tu|Lấy link|1100000|||Gia goc niem yet NCC: 1.100.000 d - CK 0.0% - gia von sau CK: 1.100.000 d - dưới 1000 chữ, tối đa 5 hình, Thêm hình 150k/hình, dư từ 5k/từ, Backlink: 300k/link|ngoisaodoanhnhan.vn
+Rise Media|booking-pr|thewoman.vn|PR bao dien tu|Lấy link|1000000|||Gia goc niem yet NCC: 1.000.000 d - CK 0.0% - gia von sau CK: 1.000.000 d - dưới 1000 chữ, tối đa 5 hình, Thêm hình 150k/hình, dư từ 5k/từ, Backlink: 300k/link|thewoman.vn
+Rise Media|booking-pr|diemhendulich.vn|PR bao dien tu|Lấy link|800000|||Gia goc niem yet NCC: 800.000 d - CK 0.0% - gia von sau CK: 800.000 d - dưới 1000 chữ, tối đa 5 hình, Thêm hình 150k/hình, dư từ 5k/từ, Backlink: 300k/link|diemhendulich.vn
+Rise Media|booking-pr|doanhnhansaoviet.net|PR bao dien tu|Lấy link|800000|||Gia goc niem yet NCC: 800.000 d - CK 0.0% - gia von sau CK: 800.000 d - dưới 1000 chữ, tối đa 5 hình, Thêm hình 150k/hình, dư từ 5k/từ, Backlink: 300k/link|doanhnhansaoviet.net
+Rise Media|booking-pr|kolsvietnam.vn|PR bao dien tu|Lấy link|800000|||Gia goc niem yet NCC: 800.000 d - CK 0.0% - gia von sau CK: 800.000 d - dưới 1000 chữ, tối đa 5 hình, Thêm hình 150k/hình, dư từ 5k/từ, Backlink: 300k/link|kolsvietnam.vn
 Rise Media|booking-pr|Kienthuc.net.vn|PR bao dien tu|Chuyên mục|3200000|||Gia goc niem yet NCC: 3.200.000 d - CK 0.0% - gia von sau CK: 3.200.000 d - 1000 chữ, 3 ảnh, đc 1 link|Kienthuc.net.vn
-Rise Media|booking-pr|Đầu tư Việt Nam|PR bao dien tu|Mục phù hợp|1500000|2 link||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.500.000 d - Bài PR dưới 1000 từ, 3 ảnh|https://Dautuvietnam.com.vn
+Rise Media|booking-pr|Thoibaodoanhnhan|PR bao dien tu|Mục phù hợp|900000|||Gia goc niem yet NCC: 900.000 d - CK 0.0% - gia von sau CK: 900.000 d|https://Thoibaodoanhnhan.net
+Rise Media|booking-pr|https://ngaymoionline.com.vn/|PR bao dien tu|Mục phù hợp|2000000|||Gia goc niem yet NCC: 2.000.000 d - CK 0.0% - gia von sau CK: 2.000.000 d|https://ngaymoionline.com.vn/
+Rise Media|booking-pr|Đầu tư Việt Nam|PR bao dien tu|Mục phù hợp|1500000|||Gia goc niem yet NCC: 1.500.000 d - CK 0.0% - gia von sau CK: 1.500.000 d - 1000 từ, 3 ảnh, 2 link|https://Dautuvietnam.com.vn
+
+Rise Media|booking-pr|Baodanang.vn|Bao tinh / bao dang|Mục phù hợp|850000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 850.000 d - da nhan 1.1 - DR 72 - traffic 338.2K - có DKKD|
+Rise Media|booking-pr|Baotayninh.vn|Bao tinh / bao dang|Mục phù hợp|1300000|2 link Do|1000 từ - 5 ảnh|Gia cuoi NCC: 1.300.000 d - da nhan 1.1 - DR 54 - traffic 396.6K|
+Rise Media|booking-pr|Baothainguyen.vn|Bao tinh / bao dang|Mục phù hợp|1350000|2 link Do|800 từ - 3 ảnh|Gia cuoi NCC: 1.350.000 d - da nhan 1.1 - DR 60 - traffic 209.3K - có DKKD|
+Rise Media|booking-pr|Baophutho.vn|Bao tinh / bao dang|Mục phù hợp|1050000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 1.050.000 d - da nhan 1.1 - DR 51 - traffic 253.2K - rất khó duyệt|
+Rise Media|booking-pr|Baotuyenquang.com.vn|Bao tinh / bao dang|Mục phù hợp|900000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 900.000 d - da nhan 1.1 - DR 57 - traffic 131.8K|
+Rise Media|booking-pr|Daklak24h.com.vn|Bao tinh / bao dang|Mục phù hợp|1200000|0|1000 từ - 5 ảnh|Gia cuoi NCC: 1.200.000 d - da nhan 1.1 - DR 49 - traffic 48.7K|
+Rise Media|booking-pr|Baodongnai.com.vn|Bao tinh / bao dang|Mục phù hợp|1050000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 1.050.000 d - da nhan 1.1 - DR 68 - traffic 453.6K|
+Rise Media|booking-pr|Baohatinh.vn|Bao tinh / bao dang|Mục phù hợp|950000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 950.000 d - da nhan 1.1 - DR 71 - traffic 1.7M|
+Rise Media|booking-pr|Baothanhhoa.vn|Bao tinh / bao dang|Mục phù hợp|1250000|2 link Do|1000 từ - 4 ảnh|Gia cuoi NCC: 1.250.000 d - da nhan 1.1 - DR 65 - traffic 698.1K - Yêu cầu DKKD - chỉ gắn link .vn|
+Rise Media|booking-pr|Baoangiang.com.vn|Bao tinh / bao dang|Mục phù hợp|1050000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 1.050.000 d - da nhan 1.1 - DR 62 - traffic 549.7K|
+Rise Media|booking-pr|Https://angiangtv.vn/|Bao tinh / bao dang|Mục phù hợp|800000|||Gia cuoi NCC: 800.000 d - da nhan 1.1|
+Rise Media|booking-pr|Baocamau.com.vn|Bao tinh / bao dang|Mục phù hợp|1200000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 1.200.000 d - da nhan 1.1 - DR 60 - traffic 85.7K|
+Rise Media|booking-pr|Baolaocai.vn|Bao tinh / bao dang|Mục phù hợp|3600000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 3.600.000 d - da nhan 1.1 - DR 51 - traffic 108.2K|
+Rise Media|booking-pr|Quangbinh24h.com|Bao tinh / bao dang|Chuyên mục phù hợp|1500000|2 link Do|800 từ - 3-4 ảnh|Gia cuoi NCC: 1.500.000 d - da nhan 1.1|
+Rise Media|booking-pr|Baolamdong.vn|Bao tinh / bao dang|Chuyên mục phù hợp|1500000|2 link Do|1000 từ - 5 ảnh|Gia cuoi NCC: 1.500.000 d - da nhan 1.1 - DR 60 - traffic 548.5K - Có DKKD|
+Rise Media|booking-pr|Baoquangninh.com.vn|Bao tinh / bao dang|thông tin doanh nghiệp|1400000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 1.400.000 d - da nhan 1.1 - DR 56 - traffic 630.2K - Có DKKD|
+Rise Media|booking-pr|Baocantho.com.vn|Bao tinh / bao dang|Doanh nghiệp viết|1450000|2 link Do|800 từ - 2 ảnh|Gia cuoi NCC: 1.450.000 d - da nhan 1.1 - DR 64 - traffic 149.5K - Mua thêm ảnh 100k chưa VAT|
+Rise Media|booking-pr|Baolangson.vn|Bao tinh / bao dang|Mục phù hợp|1650000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 1.650.000 d - da nhan 1.1 - DR 65 - traffic 161.1K|
+Rise Media|booking-pr|Truyenhinhnghean.vn|Bao tinh / bao dang|Mục phù hợp|1850000|2 link Do|1000 từ - 5 ảnh|Gia cuoi NCC: 1.850.000 d - da nhan 1.1 - DR 46 - traffic 149.5K - Có dkkd, lên bài hơi lâu|
+Rise Media|booking-pr|Baovinhlong.vn|Bao tinh / bao dang|Mục phù hợp|1200000|2 link Do|1000 từ - 5 ảnh|Gia cuoi NCC: 1.200.000 d - da nhan 1.1 - DR 26 - traffic 15.2K - Phải có DKKD, Khách scan nội dung, ký mớ gửi duyệt|
+Rise Media|booking-pr|Baodongthap.vn|Bao tinh / bao dang|Mục phù hợp|2100000|2 link Do|<500 từ - 3 ảnh|Gia cuoi NCC: 2.100.000 d - da nhan 1.1 - DR 46 - traffic 86.3K|
+Rise Media|booking-pr|Baodongthap.vn|Bao tinh / bao dang|Mục phù hợp|2850000|2 link Do|<800 từ - 3 ảnh|Gia cuoi NCC: 2.850.000 d - da nhan 1.1 - DR 46 - traffic 86.3K|
+Rise Media|booking-pr|Daklak.com.vn|Bao tinh / bao dang|Mục phù hợp|4300000|1 link Do|1000 từ - 3 ảnh|Gia cuoi NCC: 4.300.000 d - da nhan 1.1 - DR 51 - traffic 165.7K|
+Rise Media|booking-pr|Huengaynay.vn|Bao tinh / bao dang|Mục phù hợp|1200000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 1.200.000 d - da nhan 1.1 - DR 64 - traffic 5.4K - Link và bài tồn tại trong 1 năm|
+Rise Media|booking-pr|Baohungyen.vn|Bao tinh / bao dang|Mục phù hợp|1050000|2 link Do|1200 từ - 5 ảnh|Gia cuoi NCC: 1.050.000 d - da nhan 1.1 - DR 58 - traffic 187.1K - Nhận .vn, nếu .com hay tên miền khác thì check trên thongbaotienmien.vn|
+Rise Media|booking-pr|Baodienbienphu.vn|Bao tinh / bao dang|Mục phù hợp|1100000|2 link Do|1000 từ - 5 ảnh|Gia cuoi NCC: 1.100.000 d - da nhan 1.1|
+Rise Media|booking-pr|Baocaobang.vn|Bao tinh / bao dang|Mục phù hợp|1650000|2 link Do|1000 từ - 5 ảnh|Gia cuoi NCC: 1.650.000 d - da nhan 1.1|
+Rise Media|booking-pr|Bienphong.com.vn|Bao tinh / bao dang|Mục phù hợp|1350000|2 link Do|1000 từ - 4 ảnh|Gia cuoi NCC: 1.350.000 d - da nhan 1.1 - DR 70 - traffic 95.5K|
+Rise Media|booking-pr|Nghean24h.vn|Bao tinh / bao dang|Mục phù hợp|2800000|2 link Do|800 chữ - 3 ảnh|Gia cuoi NCC: 2.800.000 d - da nhan 1.1 - Có dkkd|
+Rise Media|booking-pr|Nguoihanoi.vn|Bao tinh / bao dang|Mục phù hợp|2150000|2 link Do|1000 từ - 5 ảnh|Gia cuoi NCC: 2.150.000 d - da nhan 1.1 - Có dkkd|
+Rise Media|booking-pr|Techz.vn|Bao tinh / bao dang|Mục phù hợp|2050000|1 link No|K giới hạn chữ + ảnh|Gia cuoi NCC: 2.050.000 d - da nhan 1.1 - Thêm 500k/link chưa VAT|
+Rise Media|booking-pr|Vietstock|Bao tinh / bao dang|Mục cần biết|1500000|2 link Do|1000 từ - 3 ảnh|Gia cuoi NCC: 1.500.000 d - da nhan 1.1 - Có dkkd - 800k/link. Bài viết đăng đồng thời trên website fili.vn. Vietstock lên chậm hơn fili.vn 1 tiếng|
+Rise Media|booking-pr|Vietbao.vn|Bao tinh / bao dang|Mục phù hợp|1650000|2 link Do|1000 từ - 3 ảnh|Gia cuoi NCC: 1.650.000 d - da nhan 1.1 - traffic 197.1K - Có dkkd|
+Rise Media|booking-pr|Thethaovanhoa.vn|Bao tinh / bao dang|Mục cần biết|1650000|2 link Do|1000 từ - 3 ảnh|Gia cuoi NCC: 1.650.000 d - da nhan 1.1 - traffic 36.2M - Có dkkd|
+Rise Media|booking-pr|Baoxaydung.vn|Bao tinh / bao dang|Mục phù hợp|3100000|1 link No|800-900 từ - 2 ảnh|Gia cuoi NCC: 3.100.000 d - da nhan 1.1 - DR 70 - traffic 132.8K|
+Rise Media|booking-pr|Hatinh24h.com.vn|Bao tinh / bao dang|Mục phù hợp|2600000|2 link Do|800 từ - 3-4 ảnh|Gia cuoi NCC: 2.600.000 d - da nhan 1.1|
+Rise Media|booking-pr|Quangbinh24h.com|Bao tinh / bao dang|Mục phù hợp|1600000|2 link Do|800 từ - 3-4 ảnh|Gia cuoi NCC: 1.600.000 d - da nhan 1.1|
+Rise Media|booking-pr|Thanhhoa24h.net.vn|Bao tinh / bao dang|Mục phù hợp|1600000|2 link Do|800 từ - 3-4 ảnh|Gia cuoi NCC: 1.600.000 d - da nhan 1.1|
+Rise Media|booking-pr|Danang24h.vn|Bao tinh / bao dang|Mục phù hợp|1600000|2 link Do|800 từ - 3-4 ảnh|Gia cuoi NCC: 1.600.000 d - da nhan 1.1|
+Rise Media|booking-pr|Haiphong24h.org|Bao tinh / bao dang|Mục phù hợp|1600000|2 link Do|800 từ - 3-4 ảnh|Gia cuoi NCC: 1.600.000 d - da nhan 1.1|
+Rise Media|booking-pr|Vinh24h.vn|Bao tinh / bao dang|Mục phù hợp|1600000|2 link Do|800 từ - 3-4 ảnh|Gia cuoi NCC: 1.600.000 d - da nhan 1.1|
+Rise Media|booking-pr|Cantho24h.com.vn|Bao tinh / bao dang|Mục phù hợp|1400000|2 link Do|800 từ - 3-4 ảnh|Gia cuoi NCC: 1.400.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://thanhhoa24h.net.vn/|Bao tinh / bao dang|Mục phù hợp|1700000|2 link Do|1000 từ - 4-5 ảnh|Gia cuoi NCC: 1.700.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://nongthonvaphattrien.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://nongthonvaphattrien.vn/
+Rise Media|booking-pr|https://kinhtevataichinh.vn/|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|https://kinhtevataichinh.vn/
+Rise Media|booking-pr|https://chuyendongthitruong.vn|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://chuyendongthitruong.vn
+Rise Media|booking-pr|https://kinhtevadautu.info/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://kinhtevadautu.info/
+Rise Media|booking-pr|https://radiovnnews.com/|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|https://radiovnnews.com/
+Rise Media|booking-pr|https://tiepthiinfo.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://tiepthiinfo.com
+Rise Media|booking-pr|https://doisongvaphattrien.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://doisongvaphattrien.vn/
+Rise Media|booking-pr|https://gocnhinthoidai.com/|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|https://gocnhinthoidai.com/
+Rise Media|booking-pr|https://muasamvatieudung.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://muasamvatieudung.com
+Rise Media|booking-pr|https://vanhoadoisong.net/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://vanhoadoisong.net/
+Rise Media|booking-pr|https://nhipsonghiendai.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://nhipsonghiendai.com
+Rise Media|booking-pr|https://nguoisanglap.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://nguoisanglap.net
+Rise Media|booking-pr|https://khoahoccuocsong.com/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://khoahoccuocsong.com/
+Rise Media|booking-pr|https://giadinhvasuckhoe.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://giadinhvasuckhoe.com
+Rise Media|booking-pr|​https://thoibaosaigon.org|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://wikimedia.net.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://wikimedia.net.vn/
+Rise Media|booking-pr|https://tintucdoday.com/|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://tintucdoday.com/
+Rise Media|booking-pr|https://founder.com.vn|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://founder.com.vn
+Rise Media|booking-pr|https://suckhoevacongdong.com/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://suckhoevacongdong.com/
+Rise Media|booking-pr|https://ngoisaovavanhoa.com/|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://ngoisaovavanhoa.com/
+Rise Media|booking-pr|https://cafeboss.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://cafeboss.info
+Rise Media|booking-pr|https://propr.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://propr.vn/
+Rise Media|booking-pr|https://vanhoaonline.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://vanhoaonline.net
+Rise Media|booking-pr|https://saigoninfo.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://saigoninfo.net
+Rise Media|booking-pr|https://vietnamhuongsac.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://vietnamhuongsac.vn/
+Rise Media|booking-pr|https://doanhnhanvathitruong.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://doanhnhanvathitruong.com
+Rise Media|booking-pr|https://taichinhforum.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://taichinhforum.com
+Rise Media|booking-pr|https://phano.info/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://phano.info/
+Rise Media|booking-pr|https://doisongvaxahoi.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://doisongvaxahoi.net
+Rise Media|booking-pr|https://kinhdoanhnews.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://kinhdoanhnews.com
+Rise Media|booking-pr|https://tinhhoathoidai.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://tinhhoathoidai.vn/
+Rise Media|booking-pr|https://nhipcaukinhdoanh.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://nhipcaukinhdoanh.com
+Rise Media|booking-pr|​https://thoibaovietnam.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://vanhoathoidai.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://vanhoathoidai.vn/
+Rise Media|booking-pr|https://kinhtevathoidai.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://kinhtevathoidai.com
+Rise Media|booking-pr|https://doanhnhanngaynay.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://doanhnhanngaynay.com
+Rise Media|booking-pr|https://thegioinguoidep.info/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://thegioinguoidep.info/
+Rise Media|booking-pr|https://ketnoicuocsong.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://ketnoicuocsong.com
+Rise Media|booking-pr|https://tamnhindautu.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://tamnhindautu.net
+Rise Media|booking-pr|https://ketnoithuonghieu.info/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://ketnoithuonghieu.info/
+Rise Media|booking-pr|https://taichinhkinhdoanhso.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://taichinhkinhdoanhso.com
+Rise Media|booking-pr|​https://dautuforum.vn|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://saoviet.biz/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://saoviet.biz/
+Rise Media|booking-pr|https://thitruongngaynay.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://thitruongngaynay.com
+Rise Media|booking-pr|https://thuongtruong.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://thuongtruong.net
+Rise Media|booking-pr|https://thuonghieudoanhnhan.net|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://thuonghieudoanhnhan.net
+Rise Media|booking-pr|https://suckhoengaynay.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://suckhoengaynay.net
+Rise Media|booking-pr|https://doanhnhanasean.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://doanhnhanasean.com
+Rise Media|booking-pr|https://suckhoevasacdep.com.vn|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://suckhoevasacdep.com.vn
+Rise Media|booking-pr|https://doanhnhanvathoidai.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://doanhnhanvathoidai.com
+Rise Media|booking-pr|https://econoview.vn|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://econoview.vn
+Rise Media|booking-pr|https://dantriviet.info/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://dantriviet.info/
+Rise Media|booking-pr|https://hoinhapdautu.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://hoinhapdautu.com
+Rise Media|booking-pr|https://kenhkinhte.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://kenhkinhte.vn/
+Rise Media|booking-pr|https://kinhdoanhvatieudung.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://kinhdoanhvatieudung.com
+Rise Media|booking-pr|khoedepnet.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://giaoduccuocsong.vn|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://giaoduccuocsong.vn
+Rise Media|booking-pr|https://ngoisaovn.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://ngoisaovn.com
+Rise Media|booking-pr|batdongsantaichinh.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://amnhaccuocsong.net/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://amnhaccuocsong.net/
+Rise Media|booking-pr|https://tieudungtiepthi.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://tieudungtiepthi.com
+Rise Media|booking-pr|phunudoisong.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://sukien24h.net/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://sukien24h.net/
+Rise Media|booking-pr|https://doanhnghiepvathuonghieu.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://doanhnghiepvathuonghieu.com
+Rise Media|booking-pr|doanhnghiepphapluat.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://phapluatkinhdoanh.com/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://phapluatkinhdoanh.com/
+Rise Media|booking-pr|https://gocnhindautu.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://gocnhindautu.net
+Rise Media|booking-pr|https://phapluatcuocsong.com/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://phapluatcuocsong.com/
+Rise Media|booking-pr|https://baohiemvadoanhnghiep.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://baohiemvadoanhnghiep.com
+Rise Media|booking-pr|Baodoanhnhanonline.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://vanhienviet.com.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://vanhienviet.com.vn/
+Rise Media|booking-pr|https://taichinhvathuonghieu.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://taichinhvathuonghieu.com
+Rise Media|booking-pr|Baothuonggia.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://vietnambest.net/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://vietnambest.net/
+Rise Media|booking-pr|https://khoahocvathoidai.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://khoahocvathoidai.com
+Rise Media|booking-pr|Camnangdoanhnhanviet.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://phapluatvathoidai.net/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://phapluatvathoidai.net/
+Rise Media|booking-pr|https://thuonghieuvathoidai.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://thuonghieuvathoidai.com
+Rise Media|booking-pr|Camnangnguoilamdep.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://thuonghieuvacuocsong.info/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://thuonghieuvacuocsong.info/
+Rise Media|booking-pr|https://phunuvasacdep.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://phunuvasacdep.net
+Rise Media|booking-pr|Camnangsaoviet.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://nhiepanhvacuocsong.net/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://nhiepanhvacuocsong.net/
+Rise Media|booking-pr|https://kinhdoanhvadautu.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://kinhdoanhvadautu.com
+Rise Media|booking-pr|Camnangsuckhoeso.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://thitruongvataichinh.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://thitruongvataichinh.com
+Rise Media|booking-pr|Camnangthucphamchucnang.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://tapchiamnhac.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://tapchiamnhac.vn/
+Rise Media|booking-pr|https://doanhnghiepvacuocsong.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://doanhnghiepvacuocsong.com
+Rise Media|booking-pr|Congdongmang.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://thuonghieusacdep.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://thuonghieusacdep.vn/
+Rise Media|booking-pr|https://doanhnhanvaxahoi.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://doanhnhanvaxahoi.com
+Rise Media|booking-pr|Congdongtieudung.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://www.propr.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://www.propr.vn/
+Rise Media|booking-pr|https://kinhtevahoinhap.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://kinhtevahoinhap.net
+Rise Media|booking-pr|Congnghedoisong.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://vanhoaviet.asia|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://vanhoaviet.asia
+Rise Media|booking-pr|https://vivubonphuong.com/|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2linkdo|Gia ban NCC: 550.000 d - da nhan 1.1|https://vivubonphuong.com/
+Rise Media|booking-pr|Chuyendongthitruong.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://sige.edu.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://sige.edu.vn/
+Rise Media|booking-pr|Depkhoe24h.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://vanhoaphattrien.vn/|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://vanhoaphattrien.vn/
+Rise Media|booking-pr|deponline.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|https://vanhoathuonghieu.vn|Bao nho / SEO|Bai dang|500000||1000 từ, 5 ảnh, 2link|Gia ban NCC: 500.000 d - da nhan 1.1|https://vanhoathuonghieu.vn
+Rise Media|booking-pr|Depphongcach.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Diendandoanhnhanvietnam.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Diendannhalanhdao.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|doanhnghiepphattrien.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Doanhnhanvakinhte.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Doanhnhanvanhoa.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|doanhnhangiadinh.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Doanhnhanhoinhap.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|doisongphapluat.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Doisongtoancanh.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|doisongvanhoa.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|doisongxahoi.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Dulichgiaitri.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Giadinhvaphapluat.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Giaitrivanhoa.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Giaoduccuocsong.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Giaoducngaynay.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Giaoducvagiaitri.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Kinhdoanhplus.biz|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Kinhdoanhvathitruong.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|kinhtevacongnghe.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|kinhtevadoisong.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Kinhtevadubao.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Kinhtevaphapluat.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Kinhtevasuckhoe.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Kinhtexahoi.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|khoedeponline.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Nguoinoitiengonline.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Nhipsongdothi.biz|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|phapluatthuongmai.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|phattrienkinhte.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Phunungaynay.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Phunusuckhoeonline.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Phunuvasuckhoe.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Sacdepvasuckhoe.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|saigoneconomy.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Saostyle.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Suckhoecongdongonline.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|suckhoecongnghe.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Suckhoedanong.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Suckhoedoanhnghiep.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Suckhoegiadinhvietnam.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Suckhoengoisao.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Suckhoephunuonline.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Suckhoethammy.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Suckhoevacuocsong.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Taichinhthitruong.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Tiepthiplus.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Tiepthisaigon.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Tiepthivatieudung.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|tieudung24g.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Tieudungtiepthi.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|tincongnghe.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|topthuonghieu.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Thammylamdep.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Thitruongngaynay.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Thitruongtaichinh.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|thuonghieumanh.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|thuonghieuphattrien.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Thuonghieutieudung.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Thuonghieuvacuocsong.com|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Thuonghieuvadoanhnhan.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|thuonghieuvadoisong.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Trithucdoanhnhan.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Vanhoadoanhnhanvietnam.net|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Vanhoathoidai.info|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|Thuonghieuvang.net.vn|Bao nho / SEO|Bai dang|550000||1000 từ, 5 ảnh, 2link dof|Gia ban NCC: 550.000 d - da nhan 1.1|
+Rise Media|booking-pr|nguoihanoi.vn|Site gia re|bài rẻ nhất|1700000|||Gia niem yet NCC: 1.700.000 d - CK 0% - gia sau CK: 1.700.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|thanhnienviet.vn|Site gia re|bài rẻ nhất|1500000|||Gia niem yet NCC: 1.500.000 d - CK 0% - gia sau CK: 1.500.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|sohuutritue.net.vn|Site gia re|bài rẻ nhất|1700000|||Gia niem yet NCC: 1.700.000 d - CK 0% - gia sau CK: 1.700.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|diaoc.nld.com.vn|Site gia re|bài rẻ nhất|2000000|||Gia niem yet NCC: 2.000.000 d - CK 0% - gia sau CK: 2.000.000 d - da nhan 1.1 - 1000 từ, 3 ảnh- 2 link Do|
+Rise Media|booking-pr|hanoimoi.vn|Site gia re|chuyên mục|5100000|||Gia niem yet NCC: 6.000.000 d - CK 15% - gia sau CK: 5.100.000 d - da nhan 1.1 - ko gắn link -1000 từ + 3 ảnh- chuyen muc|
+Rise Media|booking-pr|baoxaydung.vn|Site gia re|mục cần biết|2050000|||Gia niem yet NCC: 2.050.000 d - CK 0% - gia sau CK: 2.050.000 d - da nhan 1.1 - 800 từ - 2 anh-ko dc free , mua link 1 tr/ link|
+Rise Media|booking-pr|tapchixaydung.vn|Site gia re|bài rẻ nhất|2600000|||Gia niem yet NCC: 2.600.000 d - CK 0% - gia sau CK: 2.600.000 d - da nhan 1.1 - 1000 từ - 3 ảnh - 2 link Do|
+Rise Media|booking-pr|vietbao.vn|Site gia re|bài rẻ nhất|1700000|||Gia niem yet NCC: 1.700.000 d - CK 0% - gia sau CK: 1.700.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|thethaovanhoa.vn|Site gia re|bài rẻ nhất|1800000|||Gia niem yet NCC: 1.800.000 d - CK 0% - gia sau CK: 1.800.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|tuoitrexahoi.vn|Site gia re|bài rẻ nhất|1100000|||Gia niem yet NCC: 1.100.000 d - CK 0% - gia sau CK: 1.100.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|bienphong.com.vn|Site gia re|bài rẻ nhất|1650000|||Gia niem yet NCC: 1.650.000 d - CK 0% - gia sau CK: 1.650.000 d - da nhan 1.1 - 1000 từ - 3 ảnh - 2 link Do|
+Rise Media|booking-pr|vietstock.vn|Site gia re|bài rẻ nhất|1600000|||Gia niem yet NCC: 1.600.000 d - CK 0% - gia sau CK: 1.600.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|anninhthudo.vn|Site gia re|Chuyên mục đời sống|2600000|||Gia niem yet NCC: 2.600.000 d - CK 0% - gia sau CK: 2.600.000 d - da nhan 1.1 - 1000 từ - 2 ảnh - 2 link Do|
+Rise Media|booking-pr|thuonghieuvaphapluat.vn|Site gia re|bài rẻ nhất|1600000|||Gia niem yet NCC: 1.600.000 d - CK 0% - gia sau CK: 1.600.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|kinhtemoitruong.vn|Site gia re|bài rẻ nhất|2200000|||Gia niem yet NCC: 2.200.000 d - CK 0% - gia sau CK: 2.200.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 1 link - mua link 500k/link|
+Rise Media|booking-pr|giaoducthudo.giaoducthoidai.vn|Site gia re|bài rẻ nhất|1300000|||Gia niem yet NCC: 1.300.000 d - CK 0% - gia sau CK: 1.300.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|phapluat.suckhoedoisong.vn|Site gia re|bài rẻ nhất|2250000|||Gia niem yet NCC: 3.000.000 d - CK 25% - gia sau CK: 2.250.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 1 link - mua link 500k/link|
+Rise Media|booking-pr|vietq.vn|Site gia re|bài rẻ nhất|2500000|||Gia niem yet NCC: 2.500.000 d - CK 0% - gia sau CK: 2.500.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|nhipcaudautu.vn|Site gia re|bài rẻ nhất|7000000|||Gia niem yet NCC: 7.000.000 d - CK 0% - gia sau CK: 7.000.000 d - da nhan 1.1 - 1000 từ - 5 ảnh|
+Rise Media|booking-pr|nguoidothi.net.vn|Site gia re|bài rẻ nhất|3300000|||Gia niem yet NCC: 3.300.000 d - CK 0% - gia sau CK: 3.300.000 d - da nhan 1.1 - 500 từ - 2 ảnh - 2 link Do|
+Rise Media|booking-pr|giaoduc.edu.vn|Site gia re|bài rẻ nhất|2790000|||Gia niem yet NCC: 3.000.000 d - CK 7% - gia sau CK: 2.790.000 d - da nhan 1.1 - 1 link - 800 từ - 3 ảnh|
+Rise Media|booking-pr|golfviet.vn|Site gia re|bài rẻ nhất|2100000|||Gia niem yet NCC: 2.100.000 d - CK 0% - gia sau CK: 2.100.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|suckhoecongdongonline.vn|Site gia re|bài rẻ nhất|2400000|||Gia niem yet NCC: 2.400.000 d - CK 0% - gia sau CK: 2.400.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - ko dc gắn link|
+Rise Media|booking-pr|songdep.com.vn|Site gia re|bài rẻ nhất|1200000|||Gia niem yet NCC: 1.200.000 d - CK 0% - gia sau CK: 1.200.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|vnfinance.vn|Site gia re|bài rẻ nhất|2200000|||Gia niem yet NCC: 2.200.000 d - CK 0% - gia sau CK: 2.200.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|hoinhap.vanhoavaphattrien.vn|Site gia re|bài rẻ nhất|1600000|||Gia niem yet NCC: 1.600.000 d - CK 0% - gia sau CK: 1.600.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|hanghoathuonghieu.vn|Site gia re|bài rẻ nhất|850000|||Gia niem yet NCC: 850.000 d - CK 0% - gia sau CK: 850.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|home.vn|Site gia re|bài rẻ nhất|1600000|||Gia niem yet NCC: 1.600.000 d - CK 0% - gia sau CK: 1.600.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|phunusuckhoe.giadinhonline.vn|Site gia re|bài rẻ nhất|1900000|||Gia niem yet NCC: 1.900.000 d - CK 0% - gia sau CK: 1.900.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 1 link Do|
+Rise Media|booking-pr|phunuvagiadinh.vn|Site gia re|bài rẻ nhất|1800000|||Gia niem yet NCC: 1.800.000 d - CK 0% - gia sau CK: 1.800.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link|
+Rise Media|booking-pr|https://saigoneconomy.net/|Site gia re|bài rẻ nhất|1000000|||Gia niem yet NCC: 1.000.000 d - CK 0% - gia sau CK: 1.000.000 d - da nhan 1.1 - Free 2 link Do - 1000 từ - 5 ảnh|
+Rise Media|booking-pr|phunutoday.vn|Site gia re|bài rẻ nhất|3200000|||Gia niem yet NCC: 3.200.000 d - CK 0% - gia sau CK: 3.200.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|phapluatvacuocsong.vn|Site gia re|bài rẻ nhất|1300000|||Gia niem yet NCC: 1.300.000 d - CK 0% - gia sau CK: 1.300.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|phapluatvathoidai.vn đổi thành phapluatvathoidai.net|Site gia re|bài rẻ nhất|700000|||Gia niem yet NCC: 700.000 d - CK 0% - gia sau CK: 700.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|phapluatkinhdoanh.vn đổi thành phapluatkinhdoanh.com|Site gia re|bài rẻ nhất|700000|||Gia niem yet NCC: 700.000 d - CK 0% - gia sau CK: 700.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|phunumoi.net.vn|Site gia re|bài rẻ nhất|1300000|||Gia niem yet NCC: 1.300.000 d - CK 0% - gia sau CK: 1.300.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|angiangtv.vn|Site gia re|bài rẻ nhất|1200000|||Gia niem yet NCC: 1.200.000 d - CK 0% - gia sau CK: 1.200.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|daklak24h.com.vn|Site gia re|bài rẻ nhất|1200000|||Gia niem yet NCC: 1.200.000 d - CK 0% - gia sau CK: 1.200.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|giadinhvaphapluat.vn|Site gia re|bài rẻ nhất|1200000|||Gia niem yet NCC: 1.200.000 d - CK 0% - gia sau CK: 1.200.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|vanhoavaphattrien.vn|Site gia re|bài rẻ nhất|1600000|||Gia niem yet NCC: 1.600.000 d - CK 0% - gia sau CK: 1.600.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|xahoi.com.vn|Site gia re|bài rẻ nhất|1700000|||Gia niem yet NCC: 1.700.000 d - CK 0% - gia sau CK: 1.700.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|lamchame.vn|Site gia re|bài rẻ nhất|1100000|||Gia niem yet NCC: 1.100.000 d - CK 0% - gia sau CK: 1.100.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|vnreview.vn|Site gia re|bài rẻ nhất|1800000|||Gia niem yet NCC: 1.800.000 d - CK 0% - gia sau CK: 1.800.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 2 link Do|
+Rise Media|booking-pr|xaluannews.com|Site gia re|bài rẻ nhất|1200000|||Gia niem yet NCC: 1.200.000 d - CK 0% - gia sau CK: 1.200.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 1 link Do - mua 300k/link|
+Rise Media|booking-pr|techz.vn|Site gia re|bài rẻ nhất|2300000|||Gia niem yet NCC: 2.300.000 d - CK 0% - gia sau CK: 2.300.000 d - da nhan 1.1 - 1000 từ - 5 ảnh - 1 link No mua link phí 500k|
+Rise Media|booking-pr|thethao247.vn|Site gia re|bài rẻ nhất|3850000|||Gia niem yet NCC: 3.850.000 d - CK 0% - gia sau CK: 3.850.000 d - da nhan 1.1 - 800-1000 từ, 5 ảnh - free 1 link No|

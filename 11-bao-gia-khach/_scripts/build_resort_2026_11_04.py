@@ -29,7 +29,7 @@ GK = "Theo yêu cầu"
 B.update({
  "k_vnn": (GK, "Vietnamnet.vn", "Bài 1 - Mục Đời sống (tiểu mục Du lịch / Mẹo vặt cuộc sống, theo duyệt của toà soạn)", "Bài hiển thị từ top 6 trở xuống trong tiểu mục", "1.000 từ, 5 ảnh", 4500000, T31),
  "k_afa": (GK, "Afamily.vn", "Bài 2 - Chuyên mục Gia đình / Du lịch", "Bài hiển thị trong chuyên mục phù hợp", "1.000 từ, 5 ảnh", 3320000, T31),
- "k_vne": (GK, "Vnexpress.net", "Bài 3 (phương án A) - Tiểu mục Du lịch", "Bài hiển thị trong tiểu mục Du lịch", "Dưới 1.000 từ, tối đa 3 ảnh thật (không thiết kế, không chèn chữ, logo)", 6600000, RM),
+ "k_vne": (GK, "Vnexpress.net", "Bài 3 (phương án A) - Tiểu mục Doanh nghiệp viết, duy trì 6 tháng", "Bài hiển thị trong tiểu mục Doanh nghiệp viết 6 tháng, đồng thời lên box Thông tin doanh nghiệp ở trang chủ (lùi dần khi có bài mới)", "1.000 từ, 3 ảnh", 7300000, T28),
  "k_dt": (GK, "Dantri.com.vn", "Bài 3 (phương án B) - Tiểu mục thuộc Đời sống (đề xuất Du lịch, theo duyệt của toà soạn)", "Bài hiển thị trong tiểu mục phù hợp của Đời sống", "1.000 từ, 5 ảnh", 10350000, T28),
 })
 random.seed(20261104 + 7)
@@ -132,7 +132,7 @@ for lab, b3 in (("Tổng 3 bài nếu Bài 3 đăng VnExpress", "k_vne"), ("Tổ
         a = ws.cell(r, 1, l2); a.font = F(bold=True); a.alignment = Alignment(horizontal="right")
         c = ws.cell(r, 8, val); c.number_format = "#,##0"; c.font = F(bold=bold, color="0E8C7F" if bold else "000000"); c.border = BD; r += 1
 notes(ws, r + 1, len(HD), ["Ghi chú:",
- "- Bài 3 chọn 1 trong 2 phương án: VnExpress Du lịch hoặc Dân trí Du lịch. Dạng bài ảnh/tin nhanh vẫn tính theo giá bài PR tiểu mục.",
+ "- Bài 3 chọn 1 trong 2 phương án: VnExpress (tiểu mục Doanh nghiệp viết, bài duy trì 6 tháng) hoặc Dân trí (tiểu mục thuộc Đời sống). Dạng bài ảnh/tin nhanh vẫn tính theo giá bài PR tiểu mục.",
  "- Các gói báo quy định dưới 1.000 từ; bài 1.200 từ có thể phát sinh phụ phí hoặc toà soạn biên tập rút gọn. Digicom xác nhận với toà soạn trước khi đặt.",
  "- Tiêu đề, góc tiếp cận (angle) do toà soạn duyệt và có thể chỉnh theo quy định của báo. Tiểu mục đăng cụ thể do toà soạn xếp theo nội dung bài.",
  "- Giá không chèn link, chưa gồm VAT 8%. Lịch đăng tuần sau: gửi bài + ảnh trước ít nhất 2 ngày làm việc. Sheet \"Bảng giá\" có thêm các báo khác để tham khảo."])
@@ -161,7 +161,7 @@ cA = sum(P[k][5] for k in ("k_vnn", "k_afa", "k_vne")); sA = sum(P[k][7] for k i
 cB = sum(P[k][5] for k in ("k_vnn", "k_afa", "k_dt")); sB = sum(P[k][7] for k in ("k_vnn", "k_afa", "k_dt"))
 notes(ws, r + 1, len(hd), [
  f"3 báo khách chọn - PA VnExpress: vốn {cA:,.0f}, bán {sA:,.0f}, lãi {sA-cA:,.0f}. PA Dân trí: vốn {cB:,.0f}, bán {sB:,.0f}, lãi {sB-cB:,.0f}.",
- "Vietnamnet + Dân trí lấy Goodcom (Hiếu chốt 04/11). Dân trí Goodcom tab 28.10 tiểu mục Kinh doanh/Đời sống - hỏi Goodcom vào được Du lịch không. VnExpress Du lịch: giá Rise Media (mã NCC 4) bảng 29/07 - CŨ, hỏi lại trước khi chốt.",
+ "Cả 3 báo khách chọn lấy Goodcom (Hiếu chốt 04/11). Goodcom KHÔNG có VnExpress mục Du lịch -> dùng gói Doanh nghiệp viết 6 tháng (tab 28.10). Dân trí tab 28.10 tiểu mục Kinh doanh/Đời sống - hỏi Goodcom vào được Du lịch không. Vietnamnet tab 31.10 mục Đời sống.",
  "Vietnamnet: gói Goodcom 31.10 ghi 'Mẹo vặt cuộc sống/Đời sống' - hỏi Goodcom vào được tiểu mục Du lịch không.",
  f"Combo rẻ nhất (Tuổi Trẻ + Dulichvietnam + Hoa Học Trò): bán {cheap:,.0f} chưa VAT.",
  "Nguồn: Drive 'Báo giá booking Combat_ 2026.xlsx' (Goodcom). Tab 28.10 hết 07/11 (VnExpress), 31.10 hết 10/11, Y tế 27.10 hết 06/11 (Znews).",

@@ -1,5 +1,8 @@
 # LOG - digicomvn.com
 
+## 2026-11-05 (Báo giá traffic user MISA)
+- 4 gói traffic người dùng thật VN, giá = 90% trung vị 13 bên (Google 1 bước 1.080đ, 2 bước 1.350đ, trực tiếp 760đ, MXH 920đ/lượt), CK hiển thị 20-29%. NOIBO ghi nguồn rẻ nhất cùng quy cách + rủi ro (Google không xác nhận lợi ích xếp hạng, AdSense invalid traffic, nhiễu GA4). Chưa chọn NCC.
+
 ## 2026-11-02 (Báo giá Thùy Dương: gộp báo nước ngoài + báo VN tiếng Anh + tiếng Việt)
 - Thêm tab "Báo VN tiếng Anh" (VnExpress International, Tuoi Tre News, VTV News, Dân trí International, Viet Nam News 2 vị trí, VIR; Goodcom tab 02.11.2026 x1,1) và "Báo tiếng Việt" (21 báo chia 3 nhóm lĩnh vực, giá như báo giá A&P 31/10; 24h đổi mục Kinh doanh 4,5tr). Mục lục + hoá đơn: nước ngoài không VAT, báo VN chưa VAT 8% có hoá đơn. Kiểm 45 domain Safe Browsing sạch; upload đè 2 Sheet giữ link. Rule bang-gia-booking.md thêm ngoại lệ Goodcom cho báo VN tiếng Anh.
 
@@ -5051,3 +5054,22 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - 03/11/2026: Báo giá booking báo mẹ và bé chị Diệu Liên (17 vị trí, Goodcom còn hạn, x1,1), 2 Google Sheet + dòng tab Báo giá khách hàng.
 
 - 04/11/2026: Báo giá booking báo khai trương Dailyve (chị Thục Quyên), 2 phương án 20tr/10tr, Goodcom còn hạn x1,1, 2 Google Sheet + dòng tab Báo giá khách hàng.
+- 04/11/2026: Gom bảng giá NCC Global Book Corp (18 báo quốc tế top, 64 hạng mục) lên Sheet NOIBO 191V9KPDePFhkorO4sOo7fIhJhIfMro5uYWoLJXBxg_M, CK 3%.
+- 05/11/2026: Báo giá PR K-pop Khánh Linh (công ty PR Hàn Quốc): 3 báo Kenh14/SaoStar/Tiin 10,23tr gồm VAT + bảng 10 báo giải trí + trả lời 5 câu hỏi, 2 Google Sheet + dòng tab Báo giá khách hàng.
+
+## 2026-11-05 (trưa)
+- Báo giá guest post MISA (vjst 9tr, saigonreview + topaz 1,2tr), 2 Google Sheet khách + NOIBO, ghi tab Báo giá khách hàng + K26.
+- Báo giá K-pop Khánh Linh: song ngữ, đúng tên khách 바다와하늘처럼 / Wooram Lee, trả lời 5 câu hỏi email; đẩy lại vào link cũ.
+- File tổng quan: G7 (giá Rise + LuatVietnam) dời về bảng chính dòng 115 sau khi lỡ chèn vào khối công thức.
+- Báo giá MISA: thêm LuatVietnam.vn tất cả 4 vị trí + dịch vụ thêm, giá = rate card chính chủ x1,1; đẩy lại cùng link (Sheet chưa bị sửa nội dung).
+
+## 2026-11-05 chiều - K-pop gợi ý thêm báo
+- Thêm sheet gợi ý 23 vị trí/báo (khách + NOIBO), SaoStar/Ngoisao/Afamily sang Rise rẻ hơn, Tiin đổi tên Tiim.com.vn: Goodcom mục Nhạc 4tr-24% (vốn 3,04tr, bán 3,344tr), mục Sao 5tr-24%. Tổng 3 báo 10.124.000 chưa VAT. Đẩy đè 2 link cũ (sheet khách chưa bị sửa).
+- 05/11 10:05: Gửi mail tiếng Việt báo giá K-pop từ sales@ (Lark, reply thread gốc), BCC hieudx3107. MISA: LuatVietnam chỉ chào vị trí thấp nhất 5,5tr (vốn 5tr), bỏ 3 dòng rate card 2025 cũ.
+- 05/11: LuatVietnam web: draft 3 vị trí rẻ (8092, 8093, 8059), 8091 = vị trí cơ bản 5.500.000; bỏ 3 dòng khỏi ncc-khac/master/gia-web.
+
+## 2026-11-05 - Rà nguồn NOIBO báo giá
+- [05/11 15:30] XONG rà nguồn rẻ hơn cho NOIBO 10 báo giá (chỉ sửa NOIBO, giá bán + file khách giữ nguyên): A&P +3,62tr, Dailyve +3,35tr, Diệu Liên +4,48tr, Resort +3,71tr, K-pop +1,08tr, EPC dofollow +7,08tr, EPC điện mặt trời +11,06tr, Y tế +0,65tr, Thùy Dương +3,93tr, Giáo dục +0,37tr (nếu đặt đủ). Đổi chủ yếu Goodcom/DanaSEO -> Rise/Fame, cột ghi chú 'Rà nguồn 05/11/2026' từng dòng. Đã đẩy Sheet NOIBO + Drive, ghi cột Ghi chú tab Báo giá khách hàng + K19. Script scratchpad recheck.py; backup ~/Claude-Workspace/_backups/edits/2026-11-05/digicom/noibo-recheck/. Tiếp theo: khi khách chốt đơn, xác nhận quy cách với Rise/Fame trước khi đặt. Còn: báo giá traffic user MISA (đã research thị trường, chưa dựng).
+
+- 05/11 tối: báo giá traffic user MISA làm lại theo bảng giá NCC Hiếu gửi qua Zalo x1,1 (nguồn chất lượng cao 3.850-4.950đ, nguồn tiêu chuẩn 1.650-2.750đ/lượt). Script `11-bao-gia-khach/_scripts/build_misa_traffic_2026_11_05.py`, 2 Sheet giữ link.
+- 05/11 tối (sửa): bán đúng giá gốc NCC, đơn tối thiểu 5tr (NCC giảm 10% khi nạp từ 5tr, 15%/20% khi 20tr/50tr, hiệu lực 30 ngày).

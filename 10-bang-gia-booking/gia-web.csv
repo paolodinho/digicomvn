@@ -1,525 +1,1017 @@
 dich_vu,dau_bao,hang_muc,vi_tri,gia,so_link,quy_cach,so_ncc,gia_cao_nhat_thi_truong,ngay_cap_nhat,ma_ncc
-backlink-quocte,forbes.com,Backlink quoc te,DA 90+,192290000,1 link dofollow,Guest post Forbes - do-follow,1,192290000,2026-07-29,
-backlink-quocte,entrepreneur.com,Backlink quoc te,DA 90,103740000,1 link dofollow,Guest post Entrepreneur - do-follow,1,103740000,2026-07-29,
-backlink-quocte,nytimes.com,Backlink quoc te,DA 90,95070000,1 link dofollow,Guest post New York Times,1,95070000,2026-07-29,
-backlink-quocte,bloomberg.com,Backlink quoc te,DA 90,61750000,1 link dofollow,Bai PR Bloomberg,1,61750000,2026-07-29,
-backlink-quocte,usatoday.com,Backlink quoc te,DA 90,59280000,1 link dofollow,Bai PR USA Today,1,59280000,2026-07-29,
-backlink-quocte,wsj.com,Backlink quoc te,DA 90,59280000,1 link dofollow,Bai PR Wall Street Journal,1,59280000,2026-07-29,
-backlink-quocte,bbc.com,Backlink quoc te,DA 90,59280000,1 link dofollow,Bai PR BBC News,1,59280000,2026-07-29,
-backlink-quocte,cnbc.com,Backlink quoc te,DA 90,59280000,1 link dofollow,Bai PR CNBC,1,59280000,2026-07-29,
-backlink-quocte,msn.com,Backlink quoc te,DA 90,22230000,1 link dofollow,Bai PR MSN,1,22230000,2026-07-29,
-backlink-quocte,cnet.com,Backlink quoc te,DA 90,20748000,1 link dofollow,Guest post CNET,1,20748000,2026-07-29,
-backlink-quocte,businessinsider.com,Backlink quoc te,DA 94,18500000,1 link dofollow,Guest post Business Insider,1,18500000,2026-07-29,
-backlink-quocte,news.yahoo.com,Backlink quoc te,DA 90,14573000,1 link dofollow,Bai PR Yahoo News,1,14573000,2026-07-29,
-backlink-quocte,benzinga.com,Backlink quoc te,DA 80,11115000,1 link dofollow,Bai PR Benzinga (tai chinh),1,11115000,2026-07-29,
-backlink-quocte,apnews.com,Backlink quoc te,DA 90,8398000,1 link dofollow,Bai PR AP News,1,8398000,2026-07-29,
-backlink-quocte,marketwatch.com,Backlink quoc te,DA 90,6150000,1 link dofollow,Bai PR MarketWatch,1,6150000,2026-07-29,
-backlink-quocte,digitaljournal.com,Backlink quoc te,DA 80+,3680000,1 link dofollow,Bai PR Digital Journal,1,3680000,2026-07-29,
-backlink-quocte,streetinsider.com,Backlink quoc te,DA 80,3211000,1 link dofollow,Bai PR Street Insider,1,3211000,2026-07-29,
-backlink-quocte,zerohedge.com,Backlink quoc te,DA 80,1729000,1 link dofollow,Bai dang ZeroHedge,1,1729000,2026-07-29,
-booking-pr,thanhnien.vn,Bai PR chuyen muc,Tiểu mục phù hợp,14725000,2 link no  (thêm 1 link/600k),"Bài PR dưới 1000 từ, dưới 3 ảnh",1,14725000,2026-07-29,1
-booking-pr,vnexpress.net,Bai PR chuyen muc,Doanh nghiệp viết 3 - tồn tại theo domain,14535000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,14535000,2026-07-29,1
-booking-pr,vnexpress.net,Bai PR chuyen muc,Doanh nghiệp viết 2 - tồn tại 24 tháng,11210000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,11210000,2026-07-29,1
-booking-pr,tinhte.vn,Bai PR chuyen muc,Mục phù hợp,10355000,2 link nof,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,10355000,2026-07-29,1
-booking-pr,cafeland.vn,Bai PR chuyen muc,Mục phù hợp,10260000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,10260000,2026-07-29,1
-booking-pr,dantri.com.vn,Bai PR chuyen muc,Tiểu mục Nhóm 1,9975000,Mua 500k/link - 3 link 1tr,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,9975000,2026-07-29,1
-booking-pr,cafef.vn,Bai PR chuyen muc,"Chuyên mục 1 ((BDS, DN, Tài Chính - Ngân hàng, Chứng khoán. Smart Money)",9880000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,9880000,2026-07-29,1
-booking-pr,znews.vn,Bai PR chuyen muc,Tiểu mục,8930000,,,1,8930000,2026-07-29,1
-booking-pr,dantri.com.vn,Bai PR chuyen muc,Tiểu mục Nhóm 2,8740000,Mua 500k/link - 3 link 1tr,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,8740000,2026-07-29,1
-booking-pr,vnexpress.net,Bai PR chuyen muc,"Giáo dục, số hóa",8740000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,8740000,2026-07-29,1
-booking-pr,dep.com.vn,Bai PR chuyen muc,Mục phù hợp,8645000,1tr/link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,8645000,2026-07-29,1
-booking-pr,vtv.vn,Bai PR chuyen muc,Mục phù hợp,8550000,1 link nof,,1,8550000,2026-07-29,1
-booking-pr,vnexpress.net,Bai PR chuyen muc,Doanh nghiệp viết 1 - tồn tại 6 tháng,7410000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,7410000,2026-07-29,1
-booking-pr,congthuong.vn,Bai PR chuyen muc,Tin,7125000,free 1 link BBT duyệt,"Bài PR dưới 500 từ, dưới 3 ảnh",1,7125000,2026-07-29,1
-booking-pr,vneconomy.vn,Bai PR chuyen muc,Mục phù hợp,7125000,không chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,7125000,2026-07-29,1
-booking-pr,znews.vn,Bai PR chuyen muc,Tiểu mục,7030000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,7030000,2026-07-29,1
-booking-pr,cafef.vn,Bai PR chuyen muc,Chuyên mục nhóm 2 (CM còn lại),6745000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,6745000,2026-07-29,1
-booking-pr,cafebiz.vn,Bai PR chuyen muc,Bài thương hiệu,6650000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,6650000,2026-07-29,1
-booking-pr,thitruong.nld.com.vn,Bai PR chuyen muc,Mục phù hợp,6650000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,6650000,2026-07-29,1
-booking-pr,kenh14.vn,Bai PR chuyen muc,Xem-Mua-Luôn/Ăn- Quẩy-Đi/ Beauty&Fashion,6460000,,"Bài PR dưới 1000 từ, dưới 7 ảnh",1,6460000,2026-07-29,1
-booking-pr,tuoitre.vn,Bai PR chuyen muc,Cần biết,6175000,không chèn link,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,6175000,2026-07-29,1
-booking-pr,nhandan.vn,Bai PR chuyen muc,Mục phù hợp,5890000,không chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,5890000,2026-07-29,1
-booking-pr,kenh14.vn,Bai PR chuyen muc,Xem - Ăn - Chơi,5795000,,"Bài PR dưới 1000 từ, dưới 7 ảnh",1,5795000,2026-07-29,1
-booking-pr,vtv.vn,Bai PR chuyen muc,Mục phù hợp,5700000,Ko chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,5700000,2026-07-29,1
-booking-pr,laodong.vn,Bai PR chuyen muc,Thông tin doanh nghiệp,5700000,3tr/ link,"dưới 700 từ, dưới 3 ảnh",1,5700000,2026-07-29,1
-booking-pr,autopro.com.vn,Bai PR chuyen muc,Chuyên mục,5225000,1 link no - thêm link 300k,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,5225000,2026-07-29,1
-booking-pr,congan.com.vn,Bai PR chuyen muc,Mục phù hợp,5225000,gắn link 500k/link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,5225000,2026-07-29,1
-booking-pr,giaoducthoidai.vn,Bai PR chuyen muc,Mục phù hợp,5130000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,5130000,2026-07-29,1
-booking-pr,gamek.vn,Bai PR chuyen muc,Chuyên mục,5035000,1 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,5035000,2026-07-29,1
-booking-pr,vietnamnet.vn,Bai PR chuyen muc,Tiểu mục,4750000,5tr/link no 3 tháng,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4750000,2026-07-29,1
-booking-pr,webtretho.com,Bai PR chuyen muc,Mục phù hợp,4750000,2 link redirect,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4750000,2026-07-29,1
-booking-pr,cafeland.vn,Bai PR chuyen muc,Tin ngắn,4560000,không chèn link,"400 từ, 1 ảnh",1,4560000,2026-07-29,1
-booking-pr,24h.com.vn,Bai PR chuyen muc,PR loại 2 (Kinh doanh -  Thị trường tiêu dùng),4275000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,4275000,2026-07-29,1
-booking-pr,cafebiz.vn,Bai PR chuyen muc,Chuyên Mục,4275000,1 link no - thêm link 500k,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-07-29,1
-booking-pr,vov.vn,Bai PR chuyen muc,Mục phù hợp,4275000,Không chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-07-29,1
-booking-pr,ngoisao.vnexpress.net,Bai PR chuyen muc,Mục phù hợp,4275000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-07-29,1
-booking-pr,yan.vn,Bai PR chuyen muc,Mục phù hợp,4275000,Ko chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-07-29,1
-booking-pr,thethao247.vn,Bai PR chuyen muc,Mục phù hợp,4275000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-07-29,1
-booking-pr,tienphong.vn,Bai PR chuyen muc,bài chuyên mục phù hợp,4180000,Free 1 link đuôi .vn - Mua thêm link 2tr/link,"Bài PR dưới 800 từ, dưới 2 ảnh",1,4180000,2026-07-29,1
-booking-pr,phunutoday.vn,Bai PR chuyen muc,Mục phù hợp,3990000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3990000,2026-07-29,1
-booking-pr,congluan.vn,Bai PR chuyen muc,chuyên mục phù hợp,3800000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3800000,2026-07-29,1
-booking-pr,suckhoedoisong.vn,Bai PR chuyen muc,Mục phù hợp,3800000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3800000,2026-07-29,1
-booking-pr,baodautu.vn,Bai PR chuyen muc,TT doanh nghiệp,3705000,1tr/link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3705000,2026-07-29,1
-booking-pr,24h.com.vn,Bai PR chuyen muc,PR loại 2 (Thời trang Hitech/Công nghệ thông tin/Ô tô/Xe máy/Thể thao/Sức khỏe/Đẹp/Giải trí/Bạn trẻ cuộc sống/Ăn - Chơi/Giáo dục),3610000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,3610000,2026-07-29,1
-booking-pr,afamily.vn,Bai PR chuyen muc,Chuyên mục,3610000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3610000,2026-07-29,1
-booking-pr,kenh14.vn,Bai PR chuyen muc,Tiểu mục ( Học đường/Công nghệ/Sao/Âm nhạc/Phim),3515000,1 link no - thêm link 300k,"Bài PR dưới 1000 từ, dưới 7 ảnh",1,3515000,2026-07-29,1
-booking-pr,thanhnien.vn,Bai PR chuyen muc,PR cần biết,3515000,1link no (thêm 1 link/600k),"Bài PR 300 từ, 1 ảnh",1,3515000,2026-07-29,1
-booking-pr,genk.vn,Bai PR chuyen muc,Chuyên mục,3515000,1 link no - thêm link 300k,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,3515000,2026-07-29,1
-booking-pr,eva.vn,Bai PR chuyen muc,Bài hot Tiểu mục,3515000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,3515000,2026-07-29,1
-booking-pr,congly.vn,Bai PR chuyen muc,Mục phù hợp,3420000,500k/Link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3420000,2026-07-29,1
-booking-pr,thitruong.nld.com.vn,Bai PR chuyen muc,Tin ngắn,3420000,1 link no,"400 từ, 1 ảnh",1,3420000,2026-07-29,1
-booking-pr,yeah1.com,Bai PR chuyen muc,Tin chuyên mục,3325000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3325000,2026-07-29,1
-booking-pr,vtcnews.vn,Bai PR chuyen muc,Mục doanh nghiệp - doanh nhân,3230000,1 link no đuôi .vn,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3230000,2026-07-29,1
-booking-pr,vtcnews.vn,Bai PR chuyen muc,Trang tiểu mục,3230000,,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3230000,2026-07-29,1
-booking-pr,phunuvietnam.vn,Bai PR chuyen muc,Mục phù hợp,3230000,500k/link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3230000,2026-07-29,1
-booking-pr,saostar.vn,Bai PR chuyen muc,Mục phù hợp,3040000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3040000,2026-07-29,1
-booking-pr,danviet.vn,Bai PR chuyen muc,Mục phù hợp,2850000,Mua 1 link nof/1tr6,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,2850000,2026-07-29,1
-booking-pr,nguoiquansat.vn,Bai PR chuyen muc,Chuyên mục,2755000,1 link nof (thêm link 500k/link),"Bài PR dưới 1800 từ, 5 ảnh",1,2755000,2026-07-29,1
-booking-pr,genk.vn,Bai PR chuyen muc,Tiểu mục,2755000,,,1,2755000,2026-07-29,1
-booking-pr,ngoisao.vn,Bai PR chuyen muc,chuyên mục phù hợp,2755000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,2755000,2026-07-29,1
-booking-pr,baoquocte.vn,Bai PR chuyen muc,Mục phù hợp,2660000,1tr/link tối đa 1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,2660000,2026-07-29,1
-booking-pr,tiin.vn,Bai PR chuyen muc,Mục phù hợp,2470000,1 link no,700 từ,1,2470000,2026-07-29,1
-booking-pr,vietnambiz.vn,Bai PR chuyen muc,Mục phù hợp,2090000,500k/link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,2090000,2026-07-29,1
-booking-pr,vietnammoi.vn,Bai PR chuyen muc,Mục phù hợp,2090000,500k/link no,"Bài dưới 300 từ, 1 ảnh",1,2090000,2026-07-29,1
-booking-pr,techz.vn,Bai PR chuyen muc,Mục phù hợp,1900000,1 link nof,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,1900000,2026-07-29,1
-booking-pr,nguoiduatin.vn,Bai PR chuyen muc,Mục phù hợp,1615000,không chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,1615000,2026-07-29,1
-booking-pr,emdep.vn,Bai PR chuyen muc,Mục phù hợp,1520000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,1520000,2026-07-29,1
-booking-pr,giadinhmoi.vn,Bai PR chuyen muc,Mục phù hợp,1330000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,1330000,2026-07-29,1
-booking-pr,nhipcaudautu.vn,Bao link dofollow,SKDN,10925000,1 Link Dof(thêm link 500k),300 từ 1 ảnh bài event,1,10925000,2026-07-29,1
-booking-pr,wiki.batdongsan.com.vn,Bao link dofollow,Mục phù hợp,4940000,2 Link Nof,,1,4940000,2026-07-29,1
-booking-pr,thesaigontimes.vn,Bao link dofollow,TTDN,4418000,3 link Do,dưới 450 từ + 1 ảnh,1,4418000,2026-07-29,1
-booking-pr,doanhnghiepvn.vn,Bao link dofollow,Bài đi lấy link,2992000,1 Link Dof(thêm link 300k),,1,2992000,2026-07-29,1
-booking-pr,nguoidothi.net.vn,Bao link dofollow,Mục phù hợp,2945000,2 Link Dofollow,500 từ 3 ảnh 2 link dof,1,2945000,2026-07-29,1
-booking-pr,phapluat.suckhoedoisong.vn,Bao link dofollow,Mục phù hợp,2565000,1 Link Dof,Mua thêm link 300k,1,2565000,2026-07-29,1
-booking-pr,diendandoanhnghiep.vn,Bao link dofollow,Mục phù hợp,2565000,2 Link Dofollow,700 từ + 3 ảnh,1,2565000,2026-07-29,1
-booking-pr,suckhoecongdongonline.vn,Bao link dofollow,Mục phù hợp,2565000,1 link Dof(thêm link 500k),1000 từ 3 ảnh 2 link dof,1,2565000,2026-07-29,1
-booking-pr,nghean24h.vn,Bao link dofollow,Mục phù hợp,2375000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,2375000,2026-07-29,1
-booking-pr,suckhoeviet.org.vn,Bao link dofollow,Mục phù hợp,2375000,2 Link Dofollow,1001 từ 3 ảnh 2 link dof,1,2375000,2026-07-29,1
-booking-pr,vietq.vn,Bao link dofollow,Mục phù hợp,2328000,2 Link Dofollow,,1,2328000,2026-07-29,1
-booking-pr,petrotimes.vn,Bao link dofollow,Mục phù hợp,2280000,1 link Doffollow (thêm link 200k),,1,2280000,2026-07-29,1
-booking-pr,thuonghieucongluan.com.vn,Bao link dofollow,Mục phù hợp,2185000,1000 từ 3 ảnh 1 link dof,Mua thêm link 400k,1,2185000,2026-07-29,1
-booking-pr,vnreview.vn,Bao link dofollow,Mục phù hợp,2185000,2 link Dofollow,,1,2185000,2026-07-29,1
-booking-pr,xahoi.com.vn,Bao link dofollow,Mục phù hợp,2138000,2 Link Dofollow,1001 từ 3 ảnh 2 link dof,1,2138000,2026-07-29,1
-booking-pr,xaluannews.com,Bao link dofollow,,2090000,1 link dof,1000 từ  - 3 ảnh - thêm link 500k/link,1,2090000,2026-07-29,1
-booking-pr,vanhoavaphattrien.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-07-29,1
-booking-pr,golfviet.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-07-29,1
-booking-pr,songdep.com.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-07-29,1
-booking-pr,vnfinance.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-07-29,1
-booking-pr,thitruongbiz.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-07-29,1
-booking-pr,thanhnienviet.vn,Bao link dofollow,Mục phù hợp,1900000,2 link Dofollow,1500 từ 5 ảnh 2 link dof,1,1900000,2026-07-29,1
-booking-pr,doisongvietnam.vn,Bao link dofollow,Mục phù hợp,1805000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1805000,2026-07-29,1
-booking-pr,phunusuckhoe.giadinhonline.vn,Bao link dofollow,Mục phù hợp,1710000,1 link Doffollow,1000 từ 3 ảnh 2 link dof,1,1710000,2026-07-29,1
-booking-pr,suckhoephapluat.nguoiduatin.vn,Bao link dofollow,Mục phù hợp,1662000,2 Link Dofollow,,1,1662000,2026-07-29,1
-booking-pr,hoinhap.vanhoavaphattrien.vn,Bao link dofollow,Mục phù hợp,1615000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1615000,2026-07-29,1
-booking-pr,cafedautu.vn,Bao link dofollow,Mục phù hợp,1615000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1615000,2026-07-29,1
-booking-pr,bau.vn,Bao link dofollow,Mục phù hợp,1615000,2 link Doffollow,1001 từ 3 ảnh 2 link dof,1,1615000,2026-07-29,1
-booking-pr,tuyensinhhuongnghiep.vn,Bao link dofollow,Mục phù hợp,1568000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1568000,2026-07-29,1
-booking-pr,phunuvagiadinh.vn,Bao link dofollow,Bài đi lấy link,1568000,2 link Dofollow,1000 từ 3 ảnh 2 link dof,1,1568000,2026-07-29,1
-booking-pr,giadinhvaphapluat.vn,Bao link dofollow,phapluatkinhdoanh,1568000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1568000,2026-07-29,1
-booking-pr,doisongphapluat.com.vn,Bao link dofollow,Mục phù hợp,1520000,1000 từ  - 5 ảnh,không chèn link,1,1520000,2026-07-29,1
-booking-pr,home.vn,Bao link dofollow,Mục phù hợp,1425000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1425000,2026-07-29,1
-booking-pr,phapluatvacuocsong.vn,Bao link dofollow,Mục phù hợp,1330000,2 Link Dofollow,1001 từ 3 ảnh 2 link dof,1,1330000,2026-07-29,1
-booking-pr,phunuhiendai.vn,Bao link dofollow,Mục phù hợp,1140000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1140000,2026-07-29,1
-booking-pr,daklak24h.com.vn,Bao link dofollow,Mục phù hợp,1045000,2 link Doffollow (thêm link 200k),1000 từ 3 ảnh 2 link dof,1,1045000,2026-07-29,1
-booking-pr,kinhtethoidai.net,Bao link dofollow,Mục phù hợp,1045000,2 link Dofollow,1000 từ 3 ảnh 2 link dof,1,1045000,2026-07-29,1
-booking-pr,hanghoathuonghieu.vn,Bao link dofollow,Mục phù hợp,950000,2 link Doffollow,1000 từ 3 ảnh 2 link dof,1,950000,2026-07-29,1
-booking-pr,tieudungtiepthi.vn,Bao link dofollow,Mục phù hợp,950000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,950000,2026-07-29,1
-booking-pr,khoahoccuocsong.com,Bao link dofollow,Mục phù hợp,855000,2 link Dofollow,1000 từ 3 ảnh 2 link dof,1,855000,2026-07-29,1
-booking-pr,thitruongngaynay.vn,Bao link dofollow,Mục phù hợp,665000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,665000,2026-07-29,1
-booking-pr,suckhoegiadinhvietnam.com,Bao link dofollow,Mục phù hợp,665000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,665000,2026-07-29,1
-booking-pr,thuonghieuphattrien.com,Bao link dofollow,Mục phù hợp,665000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,665000,2026-07-29,1
-booking-pr,camnangsuckhoeso.net,Bao link dofollow,Mục phù hợp,665000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,665000,2026-07-29,1
-booking-pr,baodaklak.vn,Bao tinh / bao dang,Muc phu hop,4275000,,800 từ  - 2 ảnh - 1 link dof,1,4275000,2026-07-29,1
-booking-pr,baolaocai.vn,Bao tinh / bao dang,Muc phu hop,3610000,,1000 từ  - 3 ảnh - 2 link nof,1,3610000,2026-07-29,1
-booking-pr,kinhtemoitruong.vn,Bao tinh / bao dang,Muc phu hop,2850000,,1000 từ  - 3 ảnh - 1 link dof,1,2850000,2026-07-29,1
-booking-pr,baodongthap.vn,Bao tinh / bao dang,Muc phu hop,2755000,,700 từ  - 3-5 ảnh - 2 link dof,1,2755000,2026-07-29,1
-booking-pr,anninhthudo.vn,Bao tinh / bao dang,Muc phu hop,2470000,,800-1000 từ  - 2 ảnh - 2 link,1,2470000,2026-07-29,1
-booking-pr,vietnam.vn,Bao tinh / bao dang,Muc phu hop,2375000,,1000 từ  - 3 ảnh - 2 link (Bài và link tồn tại 5 năm),1,2375000,2026-07-29,1
-booking-pr,baonghean.vn,Bao tinh / bao dang,Muc phu hop,2328000,,1000 từ  - 3 ảnh - 2 link nof + ĐKKD,1,2328000,2026-07-29,1
-booking-pr,nguoihanoi.vn,Bao tinh / bao dang,Muc phu hop,2280000,,1500 từ  - 5 ảnh - 2 link dof,1,2280000,2026-07-29,1
-booking-pr,tapchixaydung.vn,Bao tinh / bao dang,Muc phu hop,1995000,,1000 từ  - 3 ảnh - 2 link dof,1,1995000,2026-07-29,1
-booking-pr,thethaovanhoa.vn,Bao tinh / bao dang,Muc phu hop,1900000,,1000 từ  - 3 ảnh - 2 link dof,1,1900000,2026-07-29,1
-booking-pr,vietstock.vn,Bao tinh / bao dang,Muc phu hop,1899000,,1000 từ  - 3 ảnh - 2 link dof - - đăng đồng thời trên fili.vn FREE,1,1899000,2026-07-29,1
-booking-pr,vietbao.vn,Bao tinh / bao dang,Muc phu hop,1881000,,1000 từ  - 3 ảnh - 2 link dof,1,1881000,2026-07-29,1
-booking-pr,truyenhinhnghean.vn,Bao tinh / bao dang,Muc phu hop,1805000,,1000 từ  - 5 ảnh - 2 link dof + ĐKKD,1,1805000,2026-07-29,1
-booking-pr,baoxaydung.vn,Bao tinh / bao dang,Muc phu hop,1805000,,"1000 từ  - 3 ảnh (1,1tr/link nof)",1,1805000,2026-07-29,1
-booking-pr,baolangson.vn,Bao tinh / bao dang,Muc phu hop,1710000,,1000 từ  - 5 ảnh - 2 link dof,1,1710000,2026-07-29,1
-booking-pr,baoquangtri.vn,Bao tinh / bao dang,Muc phu hop,1710000,,1000 từ  - 5 ảnh - 2 link dof + ĐKKD,1,1710000,2026-07-29,1
-booking-pr,baocaobang.vn,Bao tinh / bao dang,Muc phu hop,1710000,,1000 từ  - 5 ảnh - 2 link dof,1,1710000,2026-07-29,1
-booking-pr,thuonghieuvaphapluat.vn,Bao tinh / bao dang,Muc phu hop,1615000,,1000 từ  - 5 ảnh - 2 link dof,1,1615000,2026-07-29,1
-booking-pr,baolamdong.vn,Bao tinh / bao dang,Muc phu hop,1520000,,1000 từ  - 5 ảnh - 2 link dof,1,1520000,2026-07-29,1
-booking-pr,baocantho.com.vn,Bao tinh / bao dang,Muc phu hop,1520000,,1000 từ  - 4 ảnh - 2 link dof,1,1520000,2026-07-29,1
-booking-pr,baoquangninh.vn,Bao tinh / bao dang,Muc phu hop,1520000,,1000 từ  - 5 ảnh - 2 link dof + ĐKKD,1,1520000,2026-07-29,1
-booking-pr,baotayninh.vn,Bao tinh / bao dang,Muc phu hop,1472000,,1000 từ  - 5 ảnh - 2 link dof,1,1472000,2026-07-29,1
-booking-pr,sohuutritue.net.vn,Bao tinh / bao dang,Muc phu hop,1472000,,1000 từ  - 5 ảnh - 2 link dof,1,1472000,2026-07-29,1
-booking-pr,baothanhhoa.vn,Bao tinh / bao dang,Muc phu hop,1425000,,1000 từ  - 4 ảnh - 2 link dof chỉ nhận domain .vn + ĐKKD,1,1425000,2026-07-29,1
-booking-pr,baothainguyen.vn,Bao tinh / bao dang,Muc phu hop,1425000,,800 từ  - 3 ảnh - 2 link dof - Có ĐKKD,1,1425000,2026-07-29,1
-booking-pr,giaoducthudo.giaoducthoidai.vn,Bao tinh / bao dang,Muc phu hop,1425000,,1000 từ  - 3 ảnh - 2 link dof,1,1425000,2026-07-29,1
-booking-pr,baocamau.vn,Bao tinh / bao dang,Muc phu hop,1330000,,1000 từ  - 3-5 ảnh - 2 link dof,1,1330000,2026-07-29,1
-booking-pr,bienphong.com.vn,Bao tinh / bao dang,Muc phu hop,1330000,,1000 từ - 3 ảnh - 2 link dof,1,1330000,2026-07-29,1
-booking-pr,baovinhlong.com.vn,Bao tinh / bao dang,Muc phu hop,1282000,,1000 từ  - 2 ảnh - 2 link dof,1,1282000,2026-07-29,1
-booking-pr,baophutho.vn,Bao tinh / bao dang,Muc phu hop,1235000,,1000 từ  - 5 ảnh - 2 link dof,1,1235000,2026-07-29,1
-booking-pr,baoangiang.com.vn,Bao tinh / bao dang,Muc phu hop,1140000,,1000 từ  - 5 ảnh - 2 link dof,1,1140000,2026-07-29,1
-booking-pr,phunumoi.net.vn,Bao tinh / bao dang,Muc phu hop,1140000,,1000 từ  - 3-5 ảnh - 2 link dof,1,1140000,2026-07-29,1
-booking-pr,baodienbienphu.vn,Bao tinh / bao dang,Muc phu hop,1140000,,1000 từ  - 5 ảnh - 2 link dof,1,1140000,2026-07-29,1
-booking-pr,tuoitrexahoi.vn,Bao tinh / bao dang,Muc phu hop,1140000,,1000 từ  - 3 ảnh - 2 link dof,1,1140000,2026-07-29,1
-booking-pr,baodongnai.com.vn,Bao tinh / bao dang,Muc phu hop,1045000,,1000 từ  - 5 ảnh - 2 link dof,1,1045000,2026-07-29,1
-booking-pr,baotuyenquang.com.vn,Bao tinh / bao dang,Muc phu hop,998000,,1000 từ  - 5 ảnh - 2 link dof,1,998000,2026-07-29,1
-booking-pr,baohatinh.vn,Bao tinh / bao dang,Muc phu hop,998000,,1000 từ  - 5 ảnh - 2 link dof,1,998000,2026-07-29,1
-booking-pr,baodanang.vn,Bao tinh / bao dang,Muc phu hop,950000,,1000 từ  - 5 ảnh - 2 link dof - Có ĐKKD,1,950000,2026-07-29,1
-booking-pr,cafebiz.vn,Vi tri noi bat trang chu,Trang chủ,9975000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,9975000,2026-07-29,1
-booking-pr,kenh14.vn,Vi tri noi bat trang chu,Trang Chủ,9690000,,"Bài PR dưới 1000 từ, dưới 7 ảnh",1,9690000,2026-07-29,1
-booking-pr,genk.vn,Vi tri noi bat trang chu,Trang chủ,9595000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,9595000,2026-07-29,1
-booking-pr,gamek.vn,Vi tri noi bat trang chu,Trang chủ,8645000,1 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,8645000,2026-07-29,1
-booking-pr,autopro.com.vn,Vi tri noi bat trang chu,Trang chủ,8170000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,8170000,2026-07-29,1
-booking-pr,nguoiquansat.vn,Vi tri noi bat trang chu,Trang chủ,7600000,1 link nof (thêm link 500k/link),"Bài PR dưới 1800 từ, 5 ảnh",1,7600000,2026-07-29,1
-booking-pr,24h.com.vn,Vi tri noi bat trang chu,PR loại 1 (2h trang chủ): Kinh doanh/Thị trường tiêu dùng/Thời trang Hitech/Công nghệ thông tin/Ô tô/Xe máy/Sức khỏe/Đẹp,6935000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,6935000,2026-07-29,1
-booking-pr,cafef.vn,Vi tri noi bat trang chu,Tin doanh nghiệp (Trang chủ 1 ngày),6270000,,,1,6270000,2026-07-29,1
-booking-pr,cafef.vn,Vi tri noi bat trang chu,Box Thông Cáo Báo chí (Trang chủ 1 ngày),5130000,1 link no - thêm link 500k,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,5130000,2026-07-29,1
-booking-pr,24h.com.vn,Vi tri noi bat trang chu,PR loại 1 (2h trang chủ): Thể thao/Giải trí/Bạn trẻ cuộc sống/Ăn - Chơi/Giáo dục,4940000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,4940000,2026-07-29,1
-booking-pr,soha.vn,Vi tri noi bat trang chu,bài stream tren trang chủ,4370000,1 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,4370000,2026-07-29,1
-booking-pr,vtcnews.vn,Vi tri noi bat trang chu,Trang chuyên mục,3800000,,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3800000,2026-07-29,1
-booking-pr,alobacsi.com,Vi tri noi bat trang chu,Bài loại 7 trang chuyên mục,1900000,1 link no,"Bài PR dưới 800 từ, dưới 3 ảnh",1,1900000,2026-07-29,1
-guest-post,vietnam.travel,Guest post,Bai dang tren site,23750000,,"1000 từ, 3-5 ảnh, 2 link nof",1,23750000,2026-07-29,1
-guest-post,powersteam.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link nof",1,1140000,2026-07-29,1
-guest-post,topaz.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link nof",1,1140000,2026-07-29,1
-guest-post,hanoireview.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-07-29,1
-guest-post,saigonreview.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-07-29,1
-guest-post,quynhonreview.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-07-29,1
-guest-post,hellodanang.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-07-29,1
-guest-post,binhduongreview.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-07-29,1
-guest-post,wikithammy.com,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link nof",1,1140000,2026-07-29,1
-guest-post,hcmtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,hanoitoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,top10danang.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,chonthuonghieu.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,danhgiasao.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,angiangtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,bentretoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,ngheantoplist.net,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,phuthotoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,thanhhoatoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,quangnamtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,thaibinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,binhduongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,quangbinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,dongnaitoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,thanhpho.danang.vn,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,huetoplist.vn,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,binhdinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,haiphongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,bacninhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,quangninhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,hatinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,tiengiangtoplist.vn,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,lamdongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,ninhbinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,vinhlongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,haiduongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,dongthaptoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,hungyentoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,thucanh.vn,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-07-29,1
-guest-post,kichcaudulichtphcm.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-07-29,1
-guest-post,bariavungtautourism.com.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-07-29,1
-guest-post,duonggiahotel.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-07-29,1
-guest-post,dulichhatinh.com.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-07-29,1
-guest-post,dulichsontra.com,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-07-29,1
-guest-post,qta.org.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-07-29,1
-guest-post,chuabaidinhninhbinh.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-07-29,1
-guest-post,nhahangbachkim.com,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-07-29,1
-guest-post,arcencielhotel.com.vn,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-07-29,1
-guest-post,hotelnikkohanoi.com.vn,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-07-29,1
-guest-post,suoiluong.com.vn,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-07-29,1
-guest-post,bietdienhotel.com.vn,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,home.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,congly.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,home.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,congly.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,home.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,home.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,congly.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,congly.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,home.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,congly.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,home.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,congly.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,home.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,congly.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,home.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,congly.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-07-29,1
-textlink,baodanang.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,baodongnai.com.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,giaoducthoidai.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,baophapluat.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,vnreview.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,home.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,congly.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,anninhthudo.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,hanoimoi.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-07-29,1
-textlink,hanoitimes.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,thieunien.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,thanhnienviet.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,tapchinghiencuuphathoc.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,phunuvagiadinh.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,reatimes.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,doanhnghiephoinhap.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baothainguyen.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,huengaynay.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baocamau.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baotuyenquang.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baogialai.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,nguoidothi.net.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baolangson.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baolaocai.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baoangiang.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baocantho.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,truyenhinhnghean.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,thuonghieucongluan.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,baovanhoa.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-textlink,tapchitoaan.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-07-29,1
-toplist,cotrang.org,Toplist,Top 1 (1 nam),5700000,1 link,Toplist quang cao doanh nghiep,1,5700000,2026-07-29,
-toplist,quangninhcogi.vn,Toplist,Top 2-3 (1 nam),4275000,1 link,Gioi thieu - Google Maps - khung review,2,5700000,2026-07-29,
-toplist,danhgiathuonghieu.vn,Toplist,Top 3 (1 nam),1710000,1 link,Thue vi tri Top 3 trong bai toplist,3,3040000,2026-07-29,
-toplist,inhat.vn,Toplist,Dang bai toplist,1615000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,1615000,2026-07-29,
-toplist,golook.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,toplistdanang.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,toplisthanoi.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,toplistcantho.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,ohay.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,ubeauty.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,travelist.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,topdongnai.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,danangaz.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,toplistsaigon.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,tophaiphong.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,topbinhduong.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,hanoi.inhat.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,hcm.inhat.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-07-29,
-toplist,itoplist.vn,Toplist,Bai moi (khach gui content),760000,2 link dofollow,"<1000 tu + 5 anh, vinh vien",5,3325000,2026-07-29,
-toplist,top10riviu.com,Toplist,Bai khach tu gui,760000,2 link dofollow,Duoi 1000 tu - tu 5 anh,6,3325000,2026-07-29,
-toplist,hcmtoplist.com,Toplist,Bai khach tu gui,760000,2 link nofollow,Tren 1000 tu - tu 5 anh - 1 nam,6,4275000,2026-07-29,
-toplist,toplistviet.org,Toplist,Bai moi (nganh thuong),190000,,Vinh vien,1,190000,2026-07-29,
+backlink-quocte,forbes.com,Backlink quoc te,DA 90+,192290000,1 link dofollow,Guest post Forbes - do-follow,1,192290000,2026-11-05,
+backlink-quocte,entrepreneur.com,Backlink quoc te,DA 90,103740000,1 link dofollow,Guest post Entrepreneur - do-follow,1,103740000,2026-11-05,
+backlink-quocte,nytimes.com,Backlink quoc te,DA 90,95070000,1 link dofollow,Guest post New York Times,1,95070000,2026-11-05,
+backlink-quocte,bloomberg.com,Backlink quoc te,DA 90,61750000,1 link dofollow,Bai PR Bloomberg,1,61750000,2026-11-05,
+backlink-quocte,usatoday.com,Backlink quoc te,DA 90,59280000,1 link dofollow,Bai PR USA Today,1,59280000,2026-11-05,
+backlink-quocte,wsj.com,Backlink quoc te,DA 90,59280000,1 link dofollow,Bai PR Wall Street Journal,1,59280000,2026-11-05,
+backlink-quocte,bbc.com,Backlink quoc te,DA 90,59280000,1 link dofollow,Bai PR BBC News,1,59280000,2026-11-05,
+backlink-quocte,cnbc.com,Backlink quoc te,DA 90,59280000,1 link dofollow,Bai PR CNBC,1,59280000,2026-11-05,
+backlink-quocte,msn.com,Backlink quoc te,DA 90,22230000,1 link dofollow,Bai PR MSN,1,22230000,2026-11-05,
+backlink-quocte,cnet.com,Backlink quoc te,DA 90,20748000,1 link dofollow,Guest post CNET,1,20748000,2026-11-05,
+backlink-quocte,businessinsider.com,Backlink quoc te,DA 94,18500000,1 link dofollow,Guest post Business Insider,1,18500000,2026-11-05,
+backlink-quocte,news.yahoo.com,Backlink quoc te,DA 90,14573000,1 link dofollow,Bai PR Yahoo News,1,14573000,2026-11-05,
+backlink-quocte,benzinga.com,Backlink quoc te,DA 80,11115000,1 link dofollow,Bai PR Benzinga (tai chinh),1,11115000,2026-11-05,
+backlink-quocte,apnews.com,Backlink quoc te,DA 90,8398000,1 link dofollow,Bai PR AP News,1,8398000,2026-11-05,
+backlink-quocte,marketwatch.com,Backlink quoc te,DA 90,6150000,1 link dofollow,Bai PR MarketWatch,1,6150000,2026-11-05,
+backlink-quocte,digitaljournal.com,Backlink quoc te,DA 80+,3680000,1 link dofollow,Bai PR Digital Journal,1,3680000,2026-11-05,
+backlink-quocte,streetinsider.com,Backlink quoc te,DA 80,3211000,1 link dofollow,Bai PR Street Insider,1,3211000,2026-11-05,
+backlink-quocte,zerohedge.com,Backlink quoc te,DA 80,1729000,1 link dofollow,Bai dang ZeroHedge,1,1729000,2026-11-05,
+booking-pr,elledecoration.vn,Bai PR chuyen muc,Mục phù hợp,33440000,1 link,,1,33440000,2026-11-05,4
+booking-pr,elle.vn,Bai PR chuyen muc,Hiên thị trong chuyên mục,32120000,1 link,,1,32120000,2026-11-05,4
+booking-pr,vietcetera.com,Bai PR chuyen muc,Song Ngữ,32010000,,,1,32010000,2026-11-05,4
+booking-pr,vietcetera.com,Bai PR chuyen muc,1 ngôn ngữ,26675000,2 - 3 link,,1,26675000,2026-11-05,4
+booking-pr,lofficielvietnam.com,Bai PR chuyen muc,Chuyên mục,23650000,1 link,,1,23650000,2026-11-05,4
+booking-pr,otosaigon.com,Bai PR chuyen muc,Mục phù hợp,17391000,1 link,,1,17391000,2026-11-05,4
+booking-pr,dep.com.vn,Bai PR chuyen muc,Chuyên mục,15048000,,,1,15048000,2026-11-05,4
+booking-pr,thanhnien.vn,Bai PR chuyen muc,Tiểu mục phù hợp,14725000,2 link no  (thêm 1 link/600k),"Bài PR dưới 1000 từ, dưới 3 ảnh",1,14725000,2026-11-05,1
+booking-pr,vnexpress.net,Bai PR chuyen muc,Doanh nghiệp viết 3 - tồn tại theo domain,14535000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,14535000,2026-11-05,1
+booking-pr,vnexpress.net,Bai PR chuyen muc,Mục doanh nghiệp viết (không thời hạn),14520000,,,1,14520000,2026-11-05,4
+booking-pr,vnexpress.net,Bai PR chuyen muc,Tiểu mục Kinh doanh,14520000,,,1,14520000,2026-11-05,4
+booking-pr,xehay.vn,Bai PR chuyen muc,Tiểu mục phù hợp,14300000,,,1,14300000,2026-11-05,4
+booking-pr,sggp.org.vn,Bai PR chuyen muc,Chuyên mục phụ,14190000,,,1,14190000,2026-11-05,4
+booking-pr,vietnamplus.vn,Bai PR chuyen muc,Chuyên mục,14190000,0 free,,1,14190000,2026-11-05,4
+booking-pr,otofun.net.vn,Bai PR chuyen muc,Bài PR 3,14025000,,,1,14025000,2026-11-05,4
+booking-pr,nhipcaudautu.vn,Bai PR chuyen muc,Chuyên mục,12705000,,,1,12705000,2026-11-05,4
+booking-pr,autodaily.vn,Bai PR chuyen muc,Mục phù hợp,12012000,,,1,12012000,2026-11-05,4
+booking-pr,sggp.org.vn,Bai PR chuyen muc,Chuyên mục chính,11352000,,,1,11352000,2026-11-05,4
+booking-pr,vnexpress.net,Bai PR chuyen muc,Doanh nghiệp viết 2 - tồn tại 24 tháng,11210000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,11210000,2026-11-05,1
+booking-pr,nhandan.vn,Bai PR chuyen muc,Chuyên mục,11000000,0 link,,1,11000000,2026-11-05,4
+booking-pr,vnexpress.net,Bai PR chuyen muc,Mục doanh nghiệp viết (bài tồn tại 2 năm),10890000,,,1,10890000,2026-11-05,4
+booking-pr,vnexpress.net,Bai PR chuyen muc,"Tiểu mục còn lại (sức khỏe, đời sống, bđs…)",10890000,,,1,10890000,2026-11-05,4
+booking-pr,tinhte.vn,Bai PR chuyen muc,Chuyên mục phù hợp,10560000,01 link,,1,10560000,2026-11-05,4
+booking-pr,tinhte.vn,Bai PR chuyen muc,Mục phù hợp,10355000,2 link nof,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,10355000,2026-11-05,1
+booking-pr,bongdaplus.vn,Bai PR chuyen muc,Chuyên mục,10340000,,,1,10340000,2026-11-05,4
+booking-pr,cafeland.vn,Bai PR chuyen muc,Mục phù hợp,10260000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,10260000,2026-11-05,1
+booking-pr,dantri.com.vn,Bai PR chuyen muc,Tiểu mục Nhóm 1,9975000,Mua 500k/link - 3 link 1tr,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,9975000,2026-11-05,1
+booking-pr,qdnd.vn,Bai PR chuyen muc,Mục phù hợp,9900000,,,1,9900000,2026-11-05,4
+booking-pr,cafef.vn,Bai PR chuyen muc,"Chuyên mục 1 ((BDS, DN, Tài Chính - Ngân hàng, Chứng khoán. Smart Money)",9880000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,9880000,2026-11-05,1
+booking-pr,nongnghiepmoitruong.vn,Bai PR chuyen muc,Chuyên mục,9570000,0 free,,1,9570000,2026-11-05,4
+booking-pr,vietnamfinance.vn,Bai PR chuyen muc,Chuyên mục,9240000,,,1,9240000,2026-11-05,4
+booking-pr,daidoanket.vn,Bai PR chuyen muc,"Chuyên mục kinh tế , bđs",9020000,,,1,9020000,2026-11-05,4
+booking-pr,znews.vn,Bai PR chuyen muc,Tiểu mục,8930000,,,1,8930000,2026-11-05,1
+booking-pr,bizlive.vn,Bai PR chuyen muc,Nhịp cầu doanh nghiệp,8800000,,,1,8800000,2026-11-05,4
+booking-pr,dantri.com.vn,Bai PR chuyen muc,Tiểu mục Nhóm 2,8740000,Mua 500k/link - 3 link 1tr,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,8740000,2026-11-05,1
+booking-pr,vnexpress.net,Bai PR chuyen muc,"Giáo dục, số hóa",8740000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,8740000,2026-11-05,1
+booking-pr,vnexpress.net,Bai PR chuyen muc,"Tiểu mục khoa học công nghệ, xe",8712000,,,1,8712000,2026-11-05,4
+booking-pr,vneconomy.vn,Bai PR chuyen muc,Vị trí 4 - Chuyên mục,8712000,,,1,8712000,2026-11-05,4
+booking-pr,dep.com.vn,Bai PR chuyen muc,Mục phù hợp,8645000,1tr/link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,8645000,2026-11-05,1
+booking-pr,vtv.vn,Bai PR chuyen muc,Mục phù hợp,8550000,1 link nof,,1,8550000,2026-11-05,1
+booking-pr,xedoisong.vn,Bai PR chuyen muc,Mục phù hợp,8536000,,,1,8536000,2026-11-05,4
+booking-pr,theleader.vn,Bai PR chuyen muc,"Bài số 2,3,4,5 Chuyên mục",8470000,,,1,8470000,2026-11-05,4
+booking-pr,vntravellive.com,Bai PR chuyen muc,Tiểu mục phù hợp,8470000,,,1,8470000,2026-11-05,4
+booking-pr,vietstock.vn,Bai PR chuyen muc,Tin chính 2 Chứng khoán/ Doanh nghiệp/ BĐS/ Tài chính (giờ thường),8415000,,,1,8415000,2026-11-05,4
+booking-pr,kenh14.vn,Bai PR chuyen muc,Bài Loại 3 STREAM 3 PC,8360000,,,1,8360000,2026-11-05,4
+booking-pr,nhipcaudautu.vn,Bai PR chuyen muc,Tin ngắn 300 chữ,7700000,1 link,,1,7700000,2026-11-05,4
+booking-pr,baophapluat.vn,Bai PR chuyen muc,Chuyên mục,7700000,không chèn link,,1,7700000,2026-11-05,4
+booking-pr,vnexpress.net,Bai PR chuyen muc,Doanh nghiệp viết 1 - tồn tại 6 tháng,7410000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,7410000,2026-11-05,1
+booking-pr,vir.com.vn,Bai PR chuyen muc,Bài chính chuyên mục,7370000,,,1,7370000,2026-11-05,4
+booking-pr,thoibaotaichinhvietnam.vn,Bai PR chuyen muc,Chuyên mục: Chứng khoán; Ngân hàng - Bảo hiểm; Hạ tầng - Bất động sản; Doanh nghiệp,7370000,,,1,7370000,2026-11-05,4
+booking-pr,vnexpress.net,Bai PR chuyen muc,Mục doanh nghiệp viết (bài tồn tại 6 tháng),7260000,2-3 link,,1,7260000,2026-11-05,4
+booking-pr,vnexpress.net,Bai PR chuyen muc,"Tiểu mục (giáo dục, du lịch)",7260000,,,1,7260000,2026-11-05,4
+booking-pr,znews.vn,Bai PR chuyen muc,Mục Thông tin doanh nghiệp/Tiểu mục,7260000,1-2 link,,1,7260000,2026-11-05,4
+booking-pr,kienviet.net,Bai PR chuyen muc,Chuyên mục,7227000,0 free link,,1,7227000,2026-11-05,4
+booking-pr,congthuong.vn,Bai PR chuyen muc,Tin,7125000,free 1 link BBT duyệt,"Bài PR dưới 500 từ, dưới 3 ảnh",1,7125000,2026-11-05,1
+booking-pr,vneconomy.vn,Bai PR chuyen muc,Mục phù hợp,7125000,không chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,7125000,2026-11-05,1
+booking-pr,znews.vn,Bai PR chuyen muc,Tiểu mục,7030000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,7030000,2026-11-05,1
+booking-pr,tapchikientruc.com.vn,Bai PR chuyen muc,Chuyên mục,6952000,,,1,6952000,2026-11-05,4
+booking-pr,cafef.vn,Bai PR chuyen muc,Chuyên mục nhóm 2 (CM còn lại),6745000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,6745000,2026-11-05,1
+booking-pr,kenh14.vn,Bai PR chuyen muc,Bài loại 4 Xem ăn chơi,6688000,,,1,6688000,2026-11-05,4
+booking-pr,genk.vn,Bai PR chuyen muc,BÀI LOẠI 3 STREAM 2,6688000,,,1,6688000,2026-11-05,4
+booking-pr,cafebiz.vn,Bai PR chuyen muc,Bài thương hiệu,6650000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,6650000,2026-11-05,1
+booking-pr,thitruong.nld.com.vn,Bai PR chuyen muc,Mục phù hợp,6650000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,6650000,2026-11-05,1
+booking-pr,vietstock.vn,Bai PR chuyen muc,Tin chính chuyên mục khác,6545000,,,1,6545000,2026-11-05,4
+booking-pr,otofun.net.vn,Bai PR chuyen muc,Bài PR 4,6545000,1 link,,1,6545000,2026-11-05,4
+booking-pr,bestie.vn,Bai PR chuyen muc,Chuyên mục,6512000,,,2,6776000,2026-11-05,4
+booking-pr,kenh14.vn,Bai PR chuyen muc,Xem-Mua-Luôn/Ăn- Quẩy-Đi/ Beauty&Fashion,6460000,,"Bài PR dưới 1000 từ, dưới 7 ảnh",1,6460000,2026-11-05,1
+booking-pr,cafef.vn,Bai PR chuyen muc,Bài loại 8 - Tin doanh nghiệp,6270000,,,1,6270000,2026-11-05,4
+booking-pr,techrum.vn,Bai PR chuyen muc,Mục phù hợp,6270000,,,1,6270000,2026-11-05,4
+booking-pr,tuoitre.vn,Bai PR chuyen muc,Cần biết,6175000,không chèn link,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,6175000,2026-11-05,1
+booking-pr,cand.com.vn,Bai PR chuyen muc,Mục phù hợp,6050000,,,1,6050000,2026-11-05,4
+booking-pr,theleader.vn,Bai PR chuyen muc,Nhịp cầu kinh doanh,5929000,,,1,5929000,2026-11-05,4
+booking-pr,thoibaotaichinhvietnam.vn,Bai PR chuyen muc,Chuyên mục: Thời sự; Tài chính; Đầu tư; Thuế - Hải quan; Thị trường,5896000,,,1,5896000,2026-11-05,4
+booking-pr,nhandan.vn,Bai PR chuyen muc,Mục phù hợp,5890000,không chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,5890000,2026-11-05,1
+booking-pr,afamily.vn,Bai PR chuyen muc,Bài loại 3 Box Chuyên mục / Stream 2,5852000,,,1,5852000,2026-11-05,4
+booking-pr,baomoi.com,Bai PR chuyen muc,Tiểu mục phù hợp,5808000,,,1,5808000,2026-11-05,4
+booking-pr,kenh14.vn,Bai PR chuyen muc,Xem - Ăn - Chơi,5795000,,"Bài PR dưới 1000 từ, dưới 7 ảnh",1,5795000,2026-11-05,1
+booking-pr,laodong.vn,Bai PR chuyen muc,Thông tin doanh nghiệp,5775000,0 free link,,1,5775000,2026-11-05,4
+booking-pr,vtv.vn,Bai PR chuyen muc,Mục phù hợp,5700000,Ko chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,5700000,2026-11-05,1
+booking-pr,laodong.vn,Bai PR chuyen muc,Thông tin doanh nghiệp,5700000,3tr/ link,"dưới 700 từ, dưới 3 ảnh",1,5700000,2026-11-05,1
+booking-pr,baoxaydung.vn,Bai PR chuyen muc,Chuyên mục,5610000,,,1,5610000,2026-11-05,4
+booking-pr,hanoimoi.vn,Bai PR chuyen muc,Chuyên mục,5610000,,,1,5610000,2026-11-05,4
+booking-pr,daibieunhandan.vn,Bai PR chuyen muc,Chuyên mục kinh tế xã hội,5544000,,,1,5544000,2026-11-05,4
+booking-pr,webtretho.com,Bai PR chuyen muc,Mục phù hợp,5478000,1 link,,1,5478000,2026-11-05,4
+booking-pr,phunutoday.vn,Bai PR chuyen muc,Bài PR ở top chuyên mục,5264000,,,1,5264000,2026-11-05,4
+booking-pr,ngoisao.net,Bai PR chuyen muc,Mục phù hợp,5236000,2 link,,1,5236000,2026-11-05,4
+booking-pr,autopro.com.vn,Bai PR chuyen muc,Chuyên mục,5225000,1 link no - thêm link 300k,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,5225000,2026-11-05,1
+booking-pr,congan.com.vn,Bai PR chuyen muc,Mục phù hợp,5225000,gắn link 500k/link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,5225000,2026-11-05,1
+booking-pr,vtv.vn,Bai PR chuyen muc,Loại 7 Chuyên mục,5214000,0 free,,1,5214000,2026-11-05,4
+booking-pr,vir.com.vn,Bai PR chuyen muc,Bài chuyên mục,5159000,,,1,5159000,2026-11-05,4
+booking-pr,giaoducthoidai.vn,Bai PR chuyen muc,Mục phù hợp,5130000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,5130000,2026-11-05,1
+booking-pr,baovanhoa.vn,Bai PR chuyen muc,Mục phù hợp,5082000,1 link,,1,5082000,2026-11-05,4
+booking-pr,gamek.vn,Bai PR chuyen muc,Chuyên mục,5035000,1 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,5035000,2026-11-05,1
+booking-pr,cafef.vn,Bai PR chuyen muc,Bài loại 9 -Thông cáo báo chí,5016000,1 link,,1,5016000,2026-11-05,4
+booking-pr,autopro.com.vn,Bai PR chuyen muc,Bài loại 4 chuyên mục,5016000,1 link,,1,5016000,2026-11-05,4
+booking-pr,gamek.vn,Bai PR chuyen muc,Mục phù hợp,5016000,,,1,5016000,2026-11-05,4
+booking-pr,giaoducthoidai.vn,Bai PR chuyen muc,Mục phù hợp,4884000,1 link,,1,4884000,2026-11-05,4
+booking-pr,congthuong.vn,Bai PR chuyen muc,Tin,4840000,0 link,,1,4840000,2026-11-05,4
+booking-pr,vietnamnet.vn,Bai PR chuyen muc,Tiểu mục,4750000,5tr/link no 3 tháng,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4750000,2026-11-05,1
+booking-pr,webtretho.com,Bai PR chuyen muc,Mục phù hợp,4750000,2 link redirect,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4750000,2026-11-05,1
+booking-pr,cafeland.vn,Bai PR chuyen muc,Tin ngắn/Sự kiện,4730000,,,1,4730000,2026-11-05,4
+booking-pr,baotintuc.vn,Bai PR chuyen muc,Mục phù hợp,4620000,0 free,,1,4620000,2026-11-05,4
+booking-pr,daibieunhandan.vn,Bai PR chuyen muc,Chuyên mục công nghệ văn hóa,4620000,,,1,4620000,2026-11-05,4
+booking-pr,congan.com.vn,Bai PR chuyen muc,Tiểu mục phù hợp,4565000,,,1,4565000,2026-11-05,4
+booking-pr,cafeland.vn,Bai PR chuyen muc,Tin ngắn,4560000,không chèn link,"400 từ, 1 ảnh",1,4560000,2026-11-05,1
+booking-pr,bongda.com.vn,Bai PR chuyen muc,Chuyên mục,4510000,,,1,4510000,2026-11-05,4
+booking-pr,daidoanket.vn,Bai PR chuyen muc,Chuyên mục khác,4510000,,,1,4510000,2026-11-05,4
+booking-pr,24h.com.vn,Bai PR chuyen muc,PR loại 2 (Kinh doanh -  Thị trường tiêu dùng),4275000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,4275000,2026-11-05,1
+booking-pr,cafebiz.vn,Bai PR chuyen muc,Chuyên Mục,4275000,1 link no - thêm link 500k,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-11-05,1
+booking-pr,vov.vn,Bai PR chuyen muc,Mục phù hợp,4275000,Không chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-11-05,1
+booking-pr,ngoisao.vnexpress.net,Bai PR chuyen muc,Mục phù hợp,4275000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-11-05,1
+booking-pr,yan.vn,Bai PR chuyen muc,Mục phù hợp,4275000,Ko chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-11-05,1
+booking-pr,thethao247.vn,Bai PR chuyen muc,Mục phù hợp,4275000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,4275000,2026-11-05,1
+booking-pr,vietstock.vn,Bai PR chuyen muc,Tin chính 2 chuyên mục khác,4208000,,,1,4208000,2026-11-05,4
+booking-pr,tienphong.vn,Bai PR chuyen muc,bài chuyên mục phù hợp,4180000,Free 1 link đuôi .vn - Mua thêm link 2tr/link,"Bài PR dưới 800 từ, dưới 2 ảnh",1,4180000,2026-11-05,1
+booking-pr,cafebiz.vn,Bai PR chuyen muc,Loại 4 Chuyên mục,4180000,1 link,,1,4180000,2026-11-05,4
+booking-pr,kenh14.vn,Bai PR chuyen muc,"Bài loại 5 Tiểu mục (Sao Việt (Star); Phim Việt, phim Âu Mỹ, phim Châu Á (Cine), tiểu mục của Musik; Tiểu mục Du học, 46 News (Học Đường), 2tek vui (2tek)",4180000,1 link,,1,4180000,2026-11-05,4
+booking-pr,soha.vn,Bai PR chuyen muc,Chuyên mục,4180000,1 link,,1,4180000,2026-11-05,4
+booking-pr,genk.vn,Bai PR chuyen muc,Chuyên mục,4180000,1 link,,1,4180000,2026-11-05,4
+booking-pr,24h.com.vn,Bai PR chuyen muc,"PR loại 2 nhóm 1 (kinh doanh, TTTD,…)",4026000,,,1,4026000,2026-11-05,4
+booking-pr,phunutoday.vn,Bai PR chuyen muc,Mục phù hợp,3990000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3990000,2026-11-05,1
+booking-pr,thethao247.vn,Bai PR chuyen muc,Mục phù hợp,3960000,1 link,,1,3960000,2026-11-05,4
+booking-pr,thethaovanhoa.vn,Bai PR chuyen muc,pr cá nhân,3960000,,,1,3960000,2026-11-05,4
+booking-pr,phapluat.suckhoedoisong.vn,Bai PR chuyen muc,Chuyên mục,3960000,,,1,3960000,2026-11-05,4
+booking-pr,otoxemay.vn,Bai PR chuyen muc,Mục phù hợp,3872000,,,1,3872000,2026-11-05,4
+booking-pr,congluan.vn,Bai PR chuyen muc,chuyên mục phù hợp,3800000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3800000,2026-11-05,1
+booking-pr,suckhoedoisong.vn,Bai PR chuyen muc,Mục phù hợp,3800000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3800000,2026-11-05,1
+booking-pr,ngoisao.vn,Bai PR chuyen muc,Chuyên mục,3762000,,,1,3762000,2026-11-05,4
+booking-pr,baodautu.vn,Bai PR chuyen muc,TT doanh nghiệp,3705000,1tr/link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3705000,2026-11-05,1
+booking-pr,anninhthudo.vn,Bai PR chuyen muc,Mục phù hợp,3685000,1 link,,1,3685000,2026-11-05,4
+booking-pr,phunutoday.vn,Bai PR chuyen muc,PR Trang trong,3630000,,,1,3630000,2026-11-05,4
+booking-pr,congluan.vn,Bai PR chuyen muc,Mục phù hợp,3630000,1 link,,1,3630000,2026-11-05,4
+booking-pr,24h.com.vn,Bai PR chuyen muc,PR loại 2 (Thời trang Hitech/Công nghệ thông tin/Ô tô/Xe máy/Thể thao/Sức khỏe/Đẹp/Giải trí/Bạn trẻ cuộc sống/Ăn - Chơi/Giáo dục),3610000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,3610000,2026-11-05,1
+booking-pr,afamily.vn,Bai PR chuyen muc,Chuyên mục,3610000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3610000,2026-11-05,1
+booking-pr,bongda24h.vn,Bai PR chuyen muc,Chuyên mục,3542000,1 link,,1,3542000,2026-11-05,4
+booking-pr,tinnhanhchungkhoan.vn,Bai PR chuyen muc,Loại 6 - Thông báo - Bố cáo,3520000,,,1,3520000,2026-11-05,4
+booking-pr,congly.vn,Bai PR chuyen muc,Mục phù hợp,3520000,0 free,,1,3520000,2026-11-05,4
+booking-pr,daidoanket.vn,Bai PR chuyen muc,Mục TTDN,3520000,,,1,3520000,2026-11-05,4
+booking-pr,kienthuc.net.vn,Bai PR chuyen muc,Chuyên mục,3520000,,,1,3520000,2026-11-05,4
+booking-pr,kenh14.vn,Bai PR chuyen muc,Tiểu mục ( Học đường/Công nghệ/Sao/Âm nhạc/Phim),3515000,1 link no - thêm link 300k,"Bài PR dưới 1000 từ, dưới 7 ảnh",1,3515000,2026-11-05,1
+booking-pr,thanhnien.vn,Bai PR chuyen muc,PR cần biết,3515000,1link no (thêm 1 link/600k),"Bài PR 300 từ, 1 ảnh",1,3515000,2026-11-05,1
+booking-pr,genk.vn,Bai PR chuyen muc,Chuyên mục,3515000,1 link no - thêm link 300k,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,3515000,2026-11-05,1
+booking-pr,eva.vn,Bai PR chuyen muc,Bài hot Tiểu mục,3515000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,3515000,2026-11-05,1
+booking-pr,congly.vn,Bai PR chuyen muc,Mục phù hợp,3420000,500k/Link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3420000,2026-11-05,1
+booking-pr,thitruong.nld.com.vn,Bai PR chuyen muc,Tin ngắn,3420000,1 link no,"400 từ, 1 ảnh",1,3420000,2026-11-05,1
+booking-pr,vietnammoi.vn,Bai PR chuyen muc,Chuyên mục,3410000,,,1,3410000,2026-11-05,4
+booking-pr,24h.com.vn,Bai PR chuyen muc,"PR loại 2 nhóm 2 (giáo dục, giải trí, thời trang đời sống, xe….)",3355000,"3 link, pr cá nhân 1 link",,1,3355000,2026-11-05,4
+booking-pr,afamily.vn,Bai PR chuyen muc,Bài loại 5 Chuyên mục / Loại 4 XAC,3344000,1 link,,1,3344000,2026-11-05,4
+booking-pr,phunuvietnam.vn,Bai PR chuyen muc,Trong chuyên mục,3344000,,,1,3344000,2026-11-05,4
+booking-pr,yeah1.com,Bai PR chuyen muc,Tin chuyên mục,3325000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3325000,2026-11-05,1
+booking-pr,baodautu.vn,Bai PR chuyen muc,TT doanh nghiệp,3300000,không chèn link,,1,3300000,2026-11-05,4
+booking-pr,nguoidothi.net.vn,Bai PR chuyen muc,Chuyên mục,3300000,,,1,3300000,2026-11-05,4
+booking-pr,vtcnews.vn,Bai PR chuyen muc,Mục doanh nghiệp - doanh nhân,3230000,1 link no đuôi .vn,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3230000,2026-11-05,1
+booking-pr,vtcnews.vn,Bai PR chuyen muc,Trang tiểu mục,3230000,,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3230000,2026-11-05,1
+booking-pr,phunuvietnam.vn,Bai PR chuyen muc,Mục phù hợp,3230000,500k/link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3230000,2026-11-05,1
+booking-pr,viez.vn,Bai PR chuyen muc,Chuyên mục,3168000,0 link,,1,3168000,2026-11-05,4
+booking-pr,phunusuckhoe.vn,Bai PR chuyen muc,Mục phù hợp,3168000,2 link,,1,3168000,2026-11-05,4
+booking-pr,saostar.vn,Bai PR chuyen muc,Mục phù hợp,3080000,2 link,,1,3080000,2026-11-05,4
+booking-pr,yeah1.com,Bai PR chuyen muc,Tin chuyên mục,3080000,1 link,,1,3080000,2026-11-05,4
+booking-pr,doanhnghiepvn.vn,Bai PR chuyen muc,Mục phù hợp,3080000,1 link,,1,3080000,2026-11-05,4
+booking-pr,danviet.vn,Bai PR chuyen muc,Bài thường trả link,3069000,0 link,,1,3069000,2026-11-05,4
+booking-pr,saostar.vn,Bai PR chuyen muc,Mục phù hợp,3040000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3040000,2026-11-05,1
+booking-pr,thoibaonganhang.vn,Bai PR chuyen muc,Tiểu mục,2970000,,,1,2970000,2026-11-05,4
+booking-pr,doanhnghiephoinhap.vn,Bai PR chuyen muc,Tiểu mục,2970000,,,1,2970000,2026-11-05,4
+booking-pr,danviet.vn,Bai PR chuyen muc,Mục phù hợp,2850000,Mua 1 link nof/1tr6,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,2850000,2026-11-05,1
+booking-pr,nguoiquansat.vn,Bai PR chuyen muc,Chuyên mục,2755000,1 link nof (thêm link 500k/link),"Bài PR dưới 1800 từ, 5 ảnh",1,2755000,2026-11-05,1
+booking-pr,genk.vn,Bai PR chuyen muc,Tiểu mục,2755000,,,1,2755000,2026-11-05,1
+booking-pr,ngoisao.vn,Bai PR chuyen muc,chuyên mục phù hợp,2755000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,2755000,2026-11-05,1
+booking-pr,diendandoanhnghiep.vn,Bai PR chuyen muc,Mục doanh nghiệp - thị trường / TTDN/ SP- thị trường,2750000,1 link,,1,2750000,2026-11-05,4
+booking-pr,techz.vn,Bai PR chuyen muc,Hiển thị trong chuyên mục,2750000,1 link,,1,2750000,2026-11-05,4
+booking-pr,suckhoeviet.org.vn,Bai PR chuyen muc,Mục phù hợp,2706000,,,1,2706000,2026-11-05,4
+booking-pr,nguoiquansat.vn,Bai PR chuyen muc,Chuyên mục,2706000,,,1,2706000,2026-11-05,4
+booking-pr,tiepthigiadinh.vn,Bai PR chuyen muc,Chuyên mục,2706000,,,1,2706000,2026-11-05,4
+booking-pr,baoquocte.vn,Bai PR chuyen muc,Mục phù hợp,2660000,1tr/link tối đa 1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,2660000,2026-11-05,1
+booking-pr,tiin.vn,Bai PR chuyen muc,Mục phù hợp,2541000,,,1,2541000,2026-11-05,4
+booking-pr,guu.vn,Bai PR chuyen muc,Mục phù hợp,2530000,,,1,2530000,2026-11-05,4
+booking-pr,vietq.vn,Bai PR chuyen muc,Mục phù hợp,2530000,,,1,2530000,2026-11-05,4
+booking-pr,kinhtemoitruong.vn,Bai PR chuyen muc,Chuyên mục,2530000,,,1,2530000,2026-11-05,4
+booking-pr,ngoisao.vn,Bai PR chuyen muc,Mục phù hợp,2508000,2 link,,1,2508000,2026-11-05,4
+booking-pr,doanhnhanvn.vn,Bai PR chuyen muc,Chuyên mục,2508000,0 free link,,1,2508000,2026-11-05,4
+booking-pr,giadinh.suckhoedoisong,Bai PR chuyen muc,Hiển thị trong chuyên mục,2475000,1 link,,1,2475000,2026-11-05,4
+booking-pr,tiin.vn,Bai PR chuyen muc,Mục phù hợp,2470000,1 link no,700 từ,1,2470000,2026-11-05,1
+booking-pr,bestie.vn,Bai PR chuyen muc,Tiểu mục,2442000,0 free link,,2,2640000,2026-11-05,4
+booking-pr,baoquocte.vn,Bai PR chuyen muc,Lấy link,2420000,,,1,2420000,2026-11-05,4
+booking-pr,thethaovanhoa.vn,Bai PR chuyen muc,pr doanh nghiêp,2376000,1 link,,1,2376000,2026-11-05,4
+booking-pr,hoahoctro.tienphong.vn,Bai PR chuyen muc,Chuyên mục,2376000,1 link,,1,2376000,2026-11-05,4
+booking-pr,nguoiduatin.vn,Bai PR chuyen muc,Chuyên mục phù hợp,2310000,,,1,2310000,2026-11-05,4
+booking-pr,molistar.com,Bai PR chuyen muc,Chuyên mục,2226000,1 link,,2,5500000,2026-11-05,4
+booking-pr,baoxaydung.vn,Bai PR chuyen muc,Mục cần biết,2200000,0 link,,1,2200000,2026-11-05,4
+booking-pr,vnfinance.vn,Bai PR chuyen muc,Mục phù hợp,2200000,,,1,2200000,2026-11-05,4
+booking-pr,phobienphapluat.vn,Bai PR chuyen muc,Chuyên mục,2200000,,,1,2200000,2026-11-05,4
+booking-pr,ngaymoionline.com.vn,Bai PR chuyen muc,Mục phù hợp,2200000,,,1,2200000,2026-11-05,4
+booking-pr,vietnambiz.vn,Bai PR chuyen muc,Mục phù hợp,2090000,500k/link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,2090000,2026-11-05,1
+booking-pr,vietnammoi.vn,Bai PR chuyen muc,Mục phù hợp,2090000,500k/link no,"Bài dưới 300 từ, 1 ảnh",1,2090000,2026-11-05,1
+booking-pr,xahoi.com.vn,Bai PR chuyen muc,Chuyên mục,2090000,2 link,,1,2090000,2026-11-05,4
+booking-pr,thuonghieucongluan.com.vn,Bai PR chuyen muc,Mục phù hợp,2068000,,,1,2068000,2026-11-05,4
+booking-pr,vietnambiz.vn,Bai PR chuyen muc,Chuyên mục,2046000,0 free link,,1,2046000,2026-11-05,4
+booking-pr,vietnammoi.vn,Bai PR chuyen muc,Chuyên mục cần biết,2046000,0 free link,,1,2046000,2026-11-05,4
+booking-pr,tintuconline.com.vn,Bai PR chuyen muc,Tiểu mục,2035000,0 free,,1,2035000,2026-11-05,4
+booking-pr,emdep.vn,Bai PR chuyen muc,Chuyên mục,2024000,,,1,2024000,2026-11-05,4
+booking-pr,doisongvietnam.vn,Bai PR chuyen muc,Mục phù hợp,1980000,2 link,,1,1980000,2026-11-05,4
+booking-pr,2game.vn,Bai PR chuyen muc,Tin thường,1958000,3 link,,1,1958000,2026-11-05,4
+booking-pr,techz.vn,Bai PR chuyen muc,Mục phù hợp,1900000,1 link nof,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,1900000,2026-11-05,1
+booking-pr,vietstock.vn,Bai PR chuyen muc,Bạn cần biết,1870000,2 link,,1,1870000,2026-11-05,4
+booking-pr,vnreview.vn,Bai PR chuyen muc,Mục phù hợp,1870000,,,1,1870000,2026-11-05,4
+booking-pr,vietbao.vn,Bai PR chuyen muc,Mục phù hợp,1870000,2 link,,1,1870000,2026-11-05,4
+booking-pr,bienphong.com.vn,Bai PR chuyen muc,Mục phù hợp,1870000,,,1,1870000,2026-11-05,4
+booking-pr,sohuutritue.net.vn,Bai PR chuyen muc,Mục phù hợp,1870000,2 link,,1,1870000,2026-11-05,4
+booking-pr,thuonghieuvaphapluat.vn,Bai PR chuyen muc,Chuyên mục,1870000,,,1,1870000,2026-11-05,4
+booking-pr,vanhoavaphattrien.vn,Bai PR chuyen muc,Chuyên mục,1870000,,,1,1870000,2026-11-05,4
+booking-pr,hoinhap.vanhoavaphattrien,Bai PR chuyen muc,Chuyên mục,1870000,,,1,1870000,2026-11-05,4
+booking-pr,nhipsongdothi.vn,Bai PR chuyen muc,Mục phù hợp,1804000,2 link,,1,1804000,2026-11-05,4
+booking-pr,phunumoi.net.vn,Bai PR chuyen muc,Chuyên mục,1760000,,,1,1760000,2026-11-05,4
+booking-pr,nguoiduatin.vn,Bai PR chuyen muc,Mục cần biết,1760000,0 gắn link,,1,1760000,2026-11-05,4
+booking-pr,home.vn,Bai PR chuyen muc,Chuyên mục,1760000,,,1,1760000,2026-11-05,4
+booking-pr,lamchame.vn,Bai PR chuyen muc,Chuyên mục,1650000,1 link,,1,1650000,2026-11-05,4
+booking-pr,doisongphapluat.com.vn,Bai PR chuyen muc,Mục cần biết,1650000,0 gắn link,,1,1650000,2026-11-05,4
+booking-pr,megafun.vn,Bai PR chuyen muc,Mục phù hợp,1650000,2 link,,1,1650000,2026-11-05,4
+booking-pr,vanhoavadoisong.vn,Bai PR chuyen muc,Chuyên mục,1650000,,,1,1650000,2026-11-05,4
+booking-pr,dautuvietnam.com.vn,Bai PR chuyen muc,Mục phù hợp,1650000,,,1,1650000,2026-11-05,4
+booking-pr,nguoiduatin.vn,Bai PR chuyen muc,Mục phù hợp,1615000,không chèn link,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,1615000,2026-11-05,1
+booking-pr,alobacsi.com,Bai PR chuyen muc,Mục phù hợp,1584000,1 link,,1,1584000,2026-11-05,4
+booking-pr,bau.vn,Bai PR chuyen muc,Lấy link,1540000,,,1,1540000,2026-11-05,4
+booking-pr,emdep.vn,Bai PR chuyen muc,Mục phù hợp,1520000,1 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,1520000,2026-11-05,1
+booking-pr,xaluannews.com,Bai PR chuyen muc,Mục phù hợp,1485000,1 link,,1,1485000,2026-11-05,4
+booking-pr,cafedautu.vn,Bai PR chuyen muc,Mục phù hợp,1430000,2 free link,,1,1430000,2026-11-05,4
+booking-pr,songdep.com.vn,Bai PR chuyen muc,Mục phù hợp,1430000,2 link,,2,1485000,2026-11-05,4
+booking-pr,giadinhvaphapluat.vn,Bai PR chuyen muc,Mục phù hợp,1375000,,,1,1375000,2026-11-05,4
+booking-pr,giadinhmoi.vn,Bai PR chuyen muc,Mục phù hợp,1330000,2 link no,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,1330000,2026-11-05,1
+booking-pr,phunuhiendai.vn,Bai PR chuyen muc,Mục phù hợp,1320000,,,1,1320000,2026-11-05,4
+booking-pr,thebestvietnam.vn,Bai PR chuyen muc,Lấy link,1320000,,,1,1320000,2026-11-05,4
+booking-pr,tuoitrexahoi.vn,Bai PR chuyen muc,Mục phù hợp,1265000,,,1,1265000,2026-11-05,4
+booking-pr,ngoisaodoanhnhan.vn,Bai PR chuyen muc,Lấy link,1210000,,,1,1210000,2026-11-05,4
+booking-pr,emdep.vn,Bai PR chuyen muc,Lấy bài k hiển thị,1100000,1 link,,1,1100000,2026-11-05,4
+booking-pr,thewoman.vn,Bai PR chuyen muc,Lấy link,1100000,,,1,1100000,2026-11-05,4
+booking-pr,diemhendulich.vn,Bai PR chuyen muc,Lấy link,880000,,,1,880000,2026-11-05,4
+booking-pr,doanhnhansaoviet.net,Bai PR chuyen muc,Lấy link,880000,,,1,880000,2026-11-05,4
+booking-pr,kolsvietnam.vn,Bai PR chuyen muc,Lấy link,880000,,,1,880000,2026-11-05,4
+booking-pr,kinhtevataichinh.vn,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,chuyendongthitruong.vn,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,radiovnnews.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,tiepthiinfo.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,gocnhinthoidai.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,muasamvatieudung.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,nhipsonghiendai.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,nguoisanglap.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,giadinhvasuckhoe.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,​https://thoibaosaigon.org,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,tintucdoday.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,founder.com.vn,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,ngoisaovavanhoa.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,cafeboss.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,vanhoaonline.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,saigoninfo.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,doanhnhanvathitruong.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,taichinhforum.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,doisongvaxahoi.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,kinhdoanhnews.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,nhipcaukinhdoanh.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,​https://thoibaovietnam.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,kinhtevathoidai.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,doanhnhanngaynay.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,ketnoicuocsong.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,tamnhindautu.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,taichinhkinhdoanhso.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,​https://dautuforum.vn,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,thitruongngaynay.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,thuongtruong.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,suckhoengaynay.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,doanhnhanasean.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,doanhnhanvathoidai.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,econoview.vn,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,hoinhapdautu.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,kinhdoanhvatieudung.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,khoedepnet.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,ngoisaovn.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,batdongsantaichinh.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,tieudungtiepthi.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,phunudoisong.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,doanhnghiepvathuonghieu.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,doanhnghiepphapluat.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,gocnhindautu.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,baohiemvadoanhnghiep.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,baodoanhnhanonline.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,taichinhvathuonghieu.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,baothuonggia.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,khoahocvathoidai.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,camnangdoanhnhanviet.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thuonghieuvathoidai.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,camnangnguoilamdep.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,phunuvasacdep.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,camnangsaoviet.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhdoanhvadautu.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,camnangsuckhoeso.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thitruongvataichinh.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,camnangthucphamchucnang.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doanhnghiepvacuocsong.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,congdongmang.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doanhnhanvaxahoi.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,congdongtieudung.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhtevahoinhap.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,congnghedoisong.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,vivubonphuong.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2linkdo",1,605000,2026-11-05,4
+booking-pr,chuyendongthitruong.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,depkhoe24h.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,deponline.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,depphongcach.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,diendandoanhnhanvietnam.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,diendannhalanhdao.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doanhnghiepphattrien.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doanhnhanvakinhte.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doanhnhanvanhoa.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doanhnhangiadinh.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doanhnhanhoinhap.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doisongphapluat.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doisongtoancanh.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doisongvanhoa.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,doisongxahoi.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,dulichgiaitri.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,giadinhvaphapluat.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,giaitrivanhoa.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,giaoduccuocsong.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,giaoducngaynay.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,giaoducvagiaitri.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhdoanhplus.biz,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhdoanhvathitruong.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhtevacongnghe.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhtevadoisong.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhtevadubao.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhtevaphapluat.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhtevasuckhoe.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,kinhtexahoi.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,khoedeponline.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,nguoinoitiengonline.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,nhipsongdothi.biz,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,phapluatthuongmai.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,phattrienkinhte.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,phunungaynay.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,phunusuckhoeonline.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,phunuvasuckhoe.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,sacdepvasuckhoe.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,saigoneconomy.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,saostyle.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoecongdongonline.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoecongnghe.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoedanong.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoedoanhnghiep.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoegiadinhvietnam.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoengoisao.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoephunuonline.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoethammy.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,suckhoevacuocsong.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,taichinhthitruong.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,tiepthiplus.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,tiepthisaigon.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,tiepthivatieudung.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,tieudung24g.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,tieudungtiepthi.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,tincongnghe.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,topthuonghieu.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thammylamdep.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thitruongngaynay.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thitruongtaichinh.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thuonghieumanh.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thuonghieuphattrien.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thuonghieutieudung.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thuonghieuvacuocsong.com,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thuonghieuvadoanhnhan.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thuonghieuvadoisong.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,trithucdoanhnhan.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,vanhoadoanhnhanvietnam.net,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,vanhoathoidai.info,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,thuonghieuvang.net.vn,Bai PR chuyen muc,Bai dang,605000,,"1000 từ, 5 ảnh, 2link dof",1,605000,2026-11-05,4
+booking-pr,nongthonvaphattrien.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,kinhtevadautu.info,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,doisongvaphattrien.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,vanhoadoisong.net,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,khoahoccuocsong.com,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,wikimedia.net.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,suckhoevacongdong.com,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,propr.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",2,550000,2026-11-05,4
+booking-pr,vietnamhuongsac.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,phano.info,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,tinhhoathoidai.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,vanhoathoidai.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,thegioinguoidep.info,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,ketnoithuonghieu.info,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,saoviet.biz,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,thuonghieudoanhnhan.net,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,suckhoevasacdep.com.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,dantriviet.info,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,kenhkinhte.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,giaoduccuocsong.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,amnhaccuocsong.net,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,sukien24h.net,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,phapluatkinhdoanh.com,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,phapluatcuocsong.com,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,vanhienviet.com.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,vietnambest.net,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,phapluatvathoidai.net,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,thuonghieuvacuocsong.info,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,nhiepanhvacuocsong.net,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,tapchiamnhac.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,thuonghieusacdep.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,vanhoaviet.asia,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,vanhoaphattrien.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,vanhoathuonghieu.vn,Bai PR chuyen muc,Bai dang,550000,,"1000 từ, 5 ảnh, 2link",1,550000,2026-11-05,4
+booking-pr,nhipcaudautu.vn,Bao link dofollow,SKDN,10925000,1 Link Dof(thêm link 500k),300 từ 1 ảnh bài event,1,10925000,2026-11-05,1
+booking-pr,nhipcaudautu.vn,Bao link dofollow,bài rẻ nhất,7700000,,,1,7700000,2026-11-05,4
+booking-pr,hanoimoi.vn,Bao link dofollow,chuyên mục,5610000,,,1,5610000,2026-11-05,4
+booking-pr,wiki.batdongsan.com.vn,Bao link dofollow,Mục phù hợp,4940000,2 Link Nof,,1,4940000,2026-11-05,1
+booking-pr,thesaigontimes.vn,Bao link dofollow,TTDN,4418000,3 link Do,dưới 450 từ + 1 ảnh,1,4418000,2026-11-05,1
+booking-pr,thethao247.vn,Bao link dofollow,bài rẻ nhất,4235000,,,1,4235000,2026-11-05,4
+booking-pr,nguoidothi.net.vn,Bao link dofollow,bài rẻ nhất,3630000,,,1,3630000,2026-11-05,4
+booking-pr,phunutoday.vn,Bao link dofollow,bài rẻ nhất,3520000,,,1,3520000,2026-11-05,4
+booking-pr,doanhnghiepvn.vn,Bao link dofollow,Bài đi lấy link,2992000,1 Link Dof(thêm link 300k),,1,2992000,2026-11-05,1
+booking-pr,nguoidothi.net.vn,Bao link dofollow,Mục phù hợp,2945000,2 Link Dofollow,500 từ 3 ảnh 2 link dof,1,2945000,2026-11-05,1
+booking-pr,tapchixaydung.vn,Bao link dofollow,bài rẻ nhất,2860000,,,1,2860000,2026-11-05,4
+booking-pr,anninhthudo.vn,Bao link dofollow,Chuyên mục đời sống,2860000,,,1,2860000,2026-11-05,4
+booking-pr,vietq.vn,Bao link dofollow,bài rẻ nhất,2750000,,,1,2750000,2026-11-05,4
+booking-pr,suckhoecongdongonline.vn,Bao link dofollow,bài rẻ nhất,2640000,,,1,2640000,2026-11-05,4
+booking-pr,phapluat.suckhoedoisong.vn,Bao link dofollow,Mục phù hợp,2565000,1 Link Dof,Mua thêm link 300k,1,2565000,2026-11-05,1
+booking-pr,diendandoanhnghiep.vn,Bao link dofollow,Mục phù hợp,2565000,2 Link Dofollow,700 từ + 3 ảnh,1,2565000,2026-11-05,1
+booking-pr,suckhoecongdongonline.vn,Bao link dofollow,Mục phù hợp,2565000,1 link Dof(thêm link 500k),1000 từ 3 ảnh 2 link dof,1,2565000,2026-11-05,1
+booking-pr,techz.vn,Bao link dofollow,bài rẻ nhất,2530000,,,1,2530000,2026-11-05,4
+booking-pr,phapluat.suckhoedoisong.vn,Bao link dofollow,bài rẻ nhất,2475000,,,1,2475000,2026-11-05,4
+booking-pr,kinhtemoitruong.vn,Bao link dofollow,bài rẻ nhất,2420000,,,1,2420000,2026-11-05,4
+booking-pr,vnfinance.vn,Bao link dofollow,bài rẻ nhất,2420000,,,1,2420000,2026-11-05,4
+booking-pr,nghean24h.vn,Bao link dofollow,Mục phù hợp,2375000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,2375000,2026-11-05,1
+booking-pr,suckhoeviet.org.vn,Bao link dofollow,Mục phù hợp,2375000,2 Link Dofollow,1001 từ 3 ảnh 2 link dof,1,2375000,2026-11-05,1
+booking-pr,vietq.vn,Bao link dofollow,Mục phù hợp,2328000,2 Link Dofollow,,1,2328000,2026-11-05,1
+booking-pr,golfviet.vn,Bao link dofollow,bài rẻ nhất,2310000,,,1,2310000,2026-11-05,4
+booking-pr,petrotimes.vn,Bao link dofollow,Mục phù hợp,2280000,1 link Doffollow (thêm link 200k),,1,2280000,2026-11-05,1
+booking-pr,baoxaydung.vn,Bao link dofollow,mục cần biết,2255000,,,1,2255000,2026-11-05,4
+booking-pr,diaoc.nld.com.vn,Bao link dofollow,bài rẻ nhất,2200000,,,1,2200000,2026-11-05,4
+booking-pr,thuonghieucongluan.com.vn,Bao link dofollow,Mục phù hợp,2185000,1000 từ 3 ảnh 1 link dof,Mua thêm link 400k,1,2185000,2026-11-05,1
+booking-pr,vnreview.vn,Bao link dofollow,Mục phù hợp,2185000,2 link Dofollow,,1,2185000,2026-11-05,1
+booking-pr,xahoi.com.vn,Bao link dofollow,Mục phù hợp,2138000,2 Link Dofollow,1001 từ 3 ảnh 2 link dof,1,2138000,2026-11-05,1
+booking-pr,xaluannews.com,Bao link dofollow,,2090000,1 link dof,1000 từ  - 3 ảnh - thêm link 500k/link,1,2090000,2026-11-05,1
+booking-pr,phunusuckhoe.giadinhonline.vn,Bao link dofollow,bài rẻ nhất,2090000,,,1,2090000,2026-11-05,4
+booking-pr,vanhoavaphattrien.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-11-05,1
+booking-pr,golfviet.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-11-05,1
+booking-pr,songdep.com.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-11-05,1
+booking-pr,vnfinance.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-11-05,1
+booking-pr,thitruongbiz.vn,Bao link dofollow,Mục phù hợp,1995000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1995000,2026-11-05,1
+booking-pr,thethaovanhoa.vn,Bao link dofollow,bài rẻ nhất,1980000,,,1,1980000,2026-11-05,4
+booking-pr,phunuvagiadinh.vn,Bao link dofollow,bài rẻ nhất,1980000,,,1,1980000,2026-11-05,4
+booking-pr,vnreview.vn,Bao link dofollow,bài rẻ nhất,1980000,,,1,1980000,2026-11-05,4
+booking-pr,thanhnienviet.vn,Bao link dofollow,Mục phù hợp,1900000,2 link Dofollow,1500 từ 5 ảnh 2 link dof,1,1900000,2026-11-05,1
+booking-pr,nguoihanoi.vn,Bao link dofollow,bài rẻ nhất,1870000,,,1,1870000,2026-11-05,4
+booking-pr,sohuutritue.net.vn,Bao link dofollow,bài rẻ nhất,1870000,,,1,1870000,2026-11-05,4
+booking-pr,vietbao.vn,Bao link dofollow,bài rẻ nhất,1870000,,,1,1870000,2026-11-05,4
+booking-pr,xahoi.com.vn,Bao link dofollow,bài rẻ nhất,1870000,,,1,1870000,2026-11-05,4
+booking-pr,bienphong.com.vn,Bao link dofollow,bài rẻ nhất,1815000,,,1,1815000,2026-11-05,4
+booking-pr,doisongvietnam.vn,Bao link dofollow,Mục phù hợp,1805000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1805000,2026-11-05,1
+booking-pr,vietstock.vn,Bao link dofollow,bài rẻ nhất,1760000,,,1,1760000,2026-11-05,4
+booking-pr,thuonghieuvaphapluat.vn,Bao link dofollow,bài rẻ nhất,1760000,,,1,1760000,2026-11-05,4
+booking-pr,hoinhap.vanhoavaphattrien.vn,Bao link dofollow,bài rẻ nhất,1760000,,,1,1760000,2026-11-05,4
+booking-pr,home.vn,Bao link dofollow,bài rẻ nhất,1760000,,,1,1760000,2026-11-05,4
+booking-pr,vanhoavaphattrien.vn,Bao link dofollow,bài rẻ nhất,1760000,,,1,1760000,2026-11-05,4
+booking-pr,phunusuckhoe.giadinhonline.vn,Bao link dofollow,Mục phù hợp,1710000,1 link Doffollow,1000 từ 3 ảnh 2 link dof,1,1710000,2026-11-05,1
+booking-pr,suckhoephapluat.nguoiduatin.vn,Bao link dofollow,Mục phù hợp,1662000,2 Link Dofollow,,1,1662000,2026-11-05,1
+booking-pr,thanhnienviet.vn,Bao link dofollow,bài rẻ nhất,1650000,,,1,1650000,2026-11-05,4
+booking-pr,hoinhap.vanhoavaphattrien.vn,Bao link dofollow,Mục phù hợp,1615000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1615000,2026-11-05,1
+booking-pr,cafedautu.vn,Bao link dofollow,Mục phù hợp,1615000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1615000,2026-11-05,1
+booking-pr,bau.vn,Bao link dofollow,Mục phù hợp,1615000,2 link Doffollow,1001 từ 3 ảnh 2 link dof,1,1615000,2026-11-05,1
+booking-pr,tuyensinhhuongnghiep.vn,Bao link dofollow,Mục phù hợp,1568000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1568000,2026-11-05,1
+booking-pr,phunuvagiadinh.vn,Bao link dofollow,Bài đi lấy link,1568000,2 link Dofollow,1000 từ 3 ảnh 2 link dof,1,1568000,2026-11-05,1
+booking-pr,giadinhvaphapluat.vn,Bao link dofollow,phapluatkinhdoanh,1568000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1568000,2026-11-05,1
+booking-pr,doisongphapluat.com.vn,Bao link dofollow,Mục phù hợp,1520000,1000 từ  - 5 ảnh,không chèn link,1,1520000,2026-11-05,1
+booking-pr,giaoducthudo.giaoducthoidai.vn,Bao link dofollow,bài rẻ nhất,1430000,,,1,1430000,2026-11-05,4
+booking-pr,phapluatvacuocsong.vn,Bao link dofollow,bài rẻ nhất,1430000,,,1,1430000,2026-11-05,4
+booking-pr,phunumoi.net.vn,Bao link dofollow,bài rẻ nhất,1430000,,,1,1430000,2026-11-05,4
+booking-pr,home.vn,Bao link dofollow,Mục phù hợp,1425000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1425000,2026-11-05,1
+booking-pr,phapluatvacuocsong.vn,Bao link dofollow,Mục phù hợp,1330000,2 Link Dofollow,1001 từ 3 ảnh 2 link dof,1,1330000,2026-11-05,1
+booking-pr,songdep.com.vn,Bao link dofollow,bài rẻ nhất,1320000,,,1,1320000,2026-11-05,4
+booking-pr,angiangtv.vn,Bao link dofollow,bài rẻ nhất,1320000,,,1,1320000,2026-11-05,4
+booking-pr,daklak24h.com.vn,Bao link dofollow,bài rẻ nhất,1320000,,,1,1320000,2026-11-05,4
+booking-pr,giadinhvaphapluat.vn,Bao link dofollow,bài rẻ nhất,1320000,,,1,1320000,2026-11-05,4
+booking-pr,xaluannews.com,Bao link dofollow,bài rẻ nhất,1320000,,,1,1320000,2026-11-05,4
+booking-pr,tuoitrexahoi.vn,Bao link dofollow,bài rẻ nhất,1210000,,,1,1210000,2026-11-05,4
+booking-pr,lamchame.vn,Bao link dofollow,bài rẻ nhất,1210000,,,1,1210000,2026-11-05,4
+booking-pr,phunuhiendai.vn,Bao link dofollow,Mục phù hợp,1140000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,1140000,2026-11-05,1
+booking-pr,saigoneconomy.net,Bao link dofollow,bài rẻ nhất,1100000,,,1,1100000,2026-11-05,4
+booking-pr,daklak24h.com.vn,Bao link dofollow,Mục phù hợp,1045000,2 link Doffollow (thêm link 200k),1000 từ 3 ảnh 2 link dof,1,1045000,2026-11-05,1
+booking-pr,kinhtethoidai.net,Bao link dofollow,Mục phù hợp,1045000,2 link Dofollow,1000 từ 3 ảnh 2 link dof,1,1045000,2026-11-05,1
+booking-pr,hanghoathuonghieu.vn,Bao link dofollow,Mục phù hợp,950000,2 link Doffollow,1000 từ 3 ảnh 2 link dof,1,950000,2026-11-05,1
+booking-pr,tieudungtiepthi.vn,Bao link dofollow,Mục phù hợp,950000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,950000,2026-11-05,1
+booking-pr,hanghoathuonghieu.vn,Bao link dofollow,bài rẻ nhất,935000,,,1,935000,2026-11-05,4
+booking-pr,khoahoccuocsong.com,Bao link dofollow,Mục phù hợp,855000,2 link Dofollow,1000 từ 3 ảnh 2 link dof,1,855000,2026-11-05,1
+booking-pr,phapluatvathoidai.vn đổi thành phapluatvathoidai.net,Bao link dofollow,bài rẻ nhất,770000,,,1,770000,2026-11-05,4
+booking-pr,phapluatkinhdoanh.vn đổi thành phapluatkinhdoanh.com,Bao link dofollow,bài rẻ nhất,770000,,,1,770000,2026-11-05,4
+booking-pr,thitruongngaynay.vn,Bao link dofollow,Mục phù hợp,665000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,665000,2026-11-05,1
+booking-pr,suckhoegiadinhvietnam.com,Bao link dofollow,Mục phù hợp,665000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,665000,2026-11-05,1
+booking-pr,thuonghieuphattrien.com,Bao link dofollow,Mục phù hợp,665000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,665000,2026-11-05,1
+booking-pr,camnangsuckhoeso.net,Bao link dofollow,Mục phù hợp,665000,2 Link Dofollow,1000 từ 3 ảnh 2 link dof,1,665000,2026-11-05,1
+booking-pr,daklak.com.vn,Bao tinh / bao dang,Mục phù hợp,4730000,1 link Do,1000 từ - 3 ảnh,1,4730000,2026-11-05,4
+booking-pr,baodaklak.vn,Bao tinh / bao dang,Muc phu hop,4275000,,800 từ  - 2 ảnh - 1 link dof,1,4275000,2026-11-05,1
+booking-pr,baolaocai.vn,Bao tinh / bao dang,Mục phù hợp,3960000,2 link Do,1200 từ - 5 ảnh,1,3960000,2026-11-05,4
+booking-pr,baolaocai.vn,Bao tinh / bao dang,Muc phu hop,3610000,,1000 từ  - 3 ảnh - 2 link nof,1,3610000,2026-11-05,1
+booking-pr,baoxaydung.vn,Bao tinh / bao dang,Mục phù hợp,3410000,1 link No,800-900 từ - 2 ảnh,1,3410000,2026-11-05,4
+booking-pr,baodongthap.vn,Bao tinh / bao dang,Mục phù hợp,3135000,2 link Do,<800 từ - 3 ảnh,1,3135000,2026-11-05,4
+booking-pr,nghean24h.vn,Bao tinh / bao dang,Mục phù hợp,3080000,2 link Do,800 chữ - 3 ảnh,1,3080000,2026-11-05,4
+booking-pr,hatinh24h.com.vn,Bao tinh / bao dang,Mục phù hợp,2860000,2 link Do,800 từ - 3-4 ảnh,1,2860000,2026-11-05,4
+booking-pr,kinhtemoitruong.vn,Bao tinh / bao dang,Muc phu hop,2850000,,1000 từ  - 3 ảnh - 1 link dof,1,2850000,2026-11-05,1
+booking-pr,baodongthap.vn,Bao tinh / bao dang,Muc phu hop,2755000,,700 từ  - 3-5 ảnh - 2 link dof,1,2755000,2026-11-05,1
+booking-pr,anninhthudo.vn,Bao tinh / bao dang,Muc phu hop,2470000,,800-1000 từ  - 2 ảnh - 2 link,1,2470000,2026-11-05,1
+booking-pr,vietnam.vn,Bao tinh / bao dang,Muc phu hop,2375000,,1000 từ  - 3 ảnh - 2 link (Bài và link tồn tại 5 năm),1,2375000,2026-11-05,1
+booking-pr,nguoihanoi.vn,Bao tinh / bao dang,Mục phù hợp,2365000,2 link Do,1000 từ - 5 ảnh,1,2365000,2026-11-05,4
+booking-pr,baonghean.vn,Bao tinh / bao dang,Muc phu hop,2328000,,1000 từ  - 3 ảnh - 2 link nof + ĐKKD,1,2328000,2026-11-05,1
+booking-pr,baodongthap.vn,Bao tinh / bao dang,Mục phù hợp,2310000,2 link Do,<500 từ - 3 ảnh,1,2310000,2026-11-05,4
+booking-pr,nguoihanoi.vn,Bao tinh / bao dang,Muc phu hop,2280000,,1500 từ  - 5 ảnh - 2 link dof,1,2280000,2026-11-05,1
+booking-pr,techz.vn,Bao tinh / bao dang,Mục phù hợp,2255000,1 link No,K giới hạn chữ + ảnh,1,2255000,2026-11-05,4
+booking-pr,truyenhinhnghean.vn,Bao tinh / bao dang,Mục phù hợp,2035000,2 link Do,1000 từ - 5 ảnh,1,2035000,2026-11-05,4
+booking-pr,tapchixaydung.vn,Bao tinh / bao dang,Muc phu hop,1995000,,1000 từ  - 3 ảnh - 2 link dof,1,1995000,2026-11-05,1
+booking-pr,thethaovanhoa.vn,Bao tinh / bao dang,Muc phu hop,1900000,,1000 từ  - 3 ảnh - 2 link dof,1,1900000,2026-11-05,1
+booking-pr,vietstock.vn,Bao tinh / bao dang,Muc phu hop,1899000,,1000 từ  - 3 ảnh - 2 link dof - - đăng đồng thời trên fili.vn FREE,1,1899000,2026-11-05,1
+booking-pr,vietbao.vn,Bao tinh / bao dang,Muc phu hop,1881000,,1000 từ  - 3 ảnh - 2 link dof,1,1881000,2026-11-05,1
+booking-pr,thanhhoa24h.net.vn,Bao tinh / bao dang,Mục phù hợp,1870000,2 link Do,1000 từ - 4-5 ảnh,1,1870000,2026-11-05,4
+booking-pr,baolangson.vn,Bao tinh / bao dang,Mục phù hợp,1815000,2 link Do,1200 từ - 5 ảnh,1,1815000,2026-11-05,4
+booking-pr,baocaobang.vn,Bao tinh / bao dang,Mục phù hợp,1815000,2 link Do,1000 từ - 5 ảnh,1,1815000,2026-11-05,4
+booking-pr,vietbao.vn,Bao tinh / bao dang,Mục phù hợp,1815000,2 link Do,1000 từ - 3 ảnh,1,1815000,2026-11-05,4
+booking-pr,thethaovanhoa.vn,Bao tinh / bao dang,Mục cần biết,1815000,2 link Do,1000 từ - 3 ảnh,1,1815000,2026-11-05,4
+booking-pr,truyenhinhnghean.vn,Bao tinh / bao dang,Muc phu hop,1805000,,1000 từ  - 5 ảnh - 2 link dof + ĐKKD,1,1805000,2026-11-05,1
+booking-pr,baoxaydung.vn,Bao tinh / bao dang,Muc phu hop,1805000,,"1000 từ  - 3 ảnh (1,1tr/link nof)",1,1805000,2026-11-05,1
+booking-pr,quangbinh24h.com,Bao tinh / bao dang,Mục phù hợp,1760000,2 link Do,800 từ - 3-4 ảnh,1,1760000,2026-11-05,4
+booking-pr,thanhhoa24h.net.vn,Bao tinh / bao dang,Mục phù hợp,1760000,2 link Do,800 từ - 3-4 ảnh,1,1760000,2026-11-05,4
+booking-pr,danang24h.vn,Bao tinh / bao dang,Mục phù hợp,1760000,2 link Do,800 từ - 3-4 ảnh,1,1760000,2026-11-05,4
+booking-pr,haiphong24h.org,Bao tinh / bao dang,Mục phù hợp,1760000,2 link Do,800 từ - 3-4 ảnh,1,1760000,2026-11-05,4
+booking-pr,vinh24h.vn,Bao tinh / bao dang,Mục phù hợp,1760000,2 link Do,800 từ - 3-4 ảnh,1,1760000,2026-11-05,4
+booking-pr,baolangson.vn,Bao tinh / bao dang,Muc phu hop,1710000,,1000 từ  - 5 ảnh - 2 link dof,1,1710000,2026-11-05,1
+booking-pr,baoquangtri.vn,Bao tinh / bao dang,Muc phu hop,1710000,,1000 từ  - 5 ảnh - 2 link dof + ĐKKD,1,1710000,2026-11-05,1
+booking-pr,baocaobang.vn,Bao tinh / bao dang,Muc phu hop,1710000,,1000 từ  - 5 ảnh - 2 link dof,1,1710000,2026-11-05,1
+booking-pr,quangbinh24h.com,Bao tinh / bao dang,Chuyên mục phù hợp,1650000,2 link Do,800 từ - 3-4 ảnh,1,1650000,2026-11-05,4
+booking-pr,baolamdong.vn,Bao tinh / bao dang,Chuyên mục phù hợp,1650000,2 link Do,1000 từ - 5 ảnh,1,1650000,2026-11-05,4
+booking-pr,vietstock.vn,Bao tinh / bao dang,Mục cần biết,1650000,2 link Do,1000 từ - 3 ảnh,1,1650000,2026-11-05,4
+booking-pr,thuonghieuvaphapluat.vn,Bao tinh / bao dang,Muc phu hop,1615000,,1000 từ  - 5 ảnh - 2 link dof,1,1615000,2026-11-05,1
+booking-pr,baocantho.com.vn,Bao tinh / bao dang,Doanh nghiệp viết,1595000,2 link Do,800 từ - 2 ảnh,1,1595000,2026-11-05,4
+booking-pr,baoquangninh.com.vn,Bao tinh / bao dang,thông tin doanh nghiệp,1540000,2 link Do,1200 từ - 5 ảnh,1,1540000,2026-11-05,4
+booking-pr,cantho24h.com.vn,Bao tinh / bao dang,Mục phù hợp,1540000,2 link Do,800 từ - 3-4 ảnh,1,1540000,2026-11-05,4
+booking-pr,baolamdong.vn,Bao tinh / bao dang,Muc phu hop,1520000,,1000 từ  - 5 ảnh - 2 link dof,1,1520000,2026-11-05,1
+booking-pr,baocantho.com.vn,Bao tinh / bao dang,Muc phu hop,1520000,,1000 từ  - 4 ảnh - 2 link dof,1,1520000,2026-11-05,1
+booking-pr,baoquangninh.vn,Bao tinh / bao dang,Muc phu hop,1520000,,1000 từ  - 5 ảnh - 2 link dof + ĐKKD,1,1520000,2026-11-05,1
+booking-pr,baothainguyen.vn,Bao tinh / bao dang,Mục phù hợp,1485000,2 link Do,800 từ - 3 ảnh,1,1485000,2026-11-05,4
+booking-pr,bienphong.com.vn,Bao tinh / bao dang,Mục phù hợp,1485000,2 link Do,1000 từ - 4 ảnh,1,1485000,2026-11-05,4
+booking-pr,baotayninh.vn,Bao tinh / bao dang,Muc phu hop,1472000,,1000 từ  - 5 ảnh - 2 link dof,1,1472000,2026-11-05,1
+booking-pr,sohuutritue.net.vn,Bao tinh / bao dang,Muc phu hop,1472000,,1000 từ  - 5 ảnh - 2 link dof,1,1472000,2026-11-05,1
+booking-pr,baotayninh.vn,Bao tinh / bao dang,Mục phù hợp,1430000,2 link Do,1000 từ - 5 ảnh,1,1430000,2026-11-05,4
+booking-pr,baothanhhoa.vn,Bao tinh / bao dang,Muc phu hop,1425000,,1000 từ  - 4 ảnh - 2 link dof chỉ nhận domain .vn + ĐKKD,1,1425000,2026-11-05,1
+booking-pr,baothainguyen.vn,Bao tinh / bao dang,Muc phu hop,1425000,,800 từ  - 3 ảnh - 2 link dof - Có ĐKKD,1,1425000,2026-11-05,1
+booking-pr,giaoducthudo.giaoducthoidai.vn,Bao tinh / bao dang,Muc phu hop,1425000,,1000 từ  - 3 ảnh - 2 link dof,1,1425000,2026-11-05,1
+booking-pr,baothanhhoa.vn,Bao tinh / bao dang,Mục phù hợp,1375000,2 link Do,1000 từ - 4 ảnh,1,1375000,2026-11-05,4
+booking-pr,baocamau.vn,Bao tinh / bao dang,Muc phu hop,1330000,,1000 từ  - 3-5 ảnh - 2 link dof,1,1330000,2026-11-05,1
+booking-pr,bienphong.com.vn,Bao tinh / bao dang,Muc phu hop,1330000,,1000 từ - 3 ảnh - 2 link dof,1,1330000,2026-11-05,1
+booking-pr,daklak24h.com.vn,Bao tinh / bao dang,Mục phù hợp,1320000,0,1000 từ - 5 ảnh,1,1320000,2026-11-05,4
+booking-pr,baocamau.com.vn,Bao tinh / bao dang,Mục phù hợp,1320000,2 link Do,1200 từ - 5 ảnh,1,1320000,2026-11-05,4
+booking-pr,baovinhlong.vn,Bao tinh / bao dang,Mục phù hợp,1320000,2 link Do,1000 từ - 5 ảnh,1,1320000,2026-11-05,4
+booking-pr,huengaynay.vn,Bao tinh / bao dang,Mục phù hợp,1320000,2 link Do,1200 từ - 5 ảnh,1,1320000,2026-11-05,4
+booking-pr,baovinhlong.com.vn,Bao tinh / bao dang,Muc phu hop,1282000,,1000 từ  - 2 ảnh - 2 link dof,1,1282000,2026-11-05,1
+booking-pr,baophutho.vn,Bao tinh / bao dang,Muc phu hop,1235000,,1000 từ  - 5 ảnh - 2 link dof,1,1235000,2026-11-05,1
+booking-pr,baodienbienphu.vn,Bao tinh / bao dang,Mục phù hợp,1210000,2 link Do,1000 từ - 5 ảnh,1,1210000,2026-11-05,4
+booking-pr,baophutho.vn,Bao tinh / bao dang,Mục phù hợp,1155000,2 link Do,1200 từ - 5 ảnh,1,1155000,2026-11-05,4
+booking-pr,baodongnai.com.vn,Bao tinh / bao dang,Mục phù hợp,1155000,2 link Do,1200 từ - 5 ảnh,1,1155000,2026-11-05,4
+booking-pr,baoangiang.com.vn,Bao tinh / bao dang,Mục phù hợp,1155000,2 link Do,1200 từ - 5 ảnh,1,1155000,2026-11-05,4
+booking-pr,baohungyen.vn,Bao tinh / bao dang,Mục phù hợp,1155000,2 link Do,1200 từ - 5 ảnh,1,1155000,2026-11-05,4
+booking-pr,baoangiang.com.vn,Bao tinh / bao dang,Muc phu hop,1140000,,1000 từ  - 5 ảnh - 2 link dof,1,1140000,2026-11-05,1
+booking-pr,phunumoi.net.vn,Bao tinh / bao dang,Muc phu hop,1140000,,1000 từ  - 3-5 ảnh - 2 link dof,1,1140000,2026-11-05,1
+booking-pr,baodienbienphu.vn,Bao tinh / bao dang,Muc phu hop,1140000,,1000 từ  - 5 ảnh - 2 link dof,1,1140000,2026-11-05,1
+booking-pr,tuoitrexahoi.vn,Bao tinh / bao dang,Muc phu hop,1140000,,1000 từ  - 3 ảnh - 2 link dof,1,1140000,2026-11-05,1
+booking-pr,baodongnai.com.vn,Bao tinh / bao dang,Muc phu hop,1045000,,1000 từ  - 5 ảnh - 2 link dof,1,1045000,2026-11-05,1
+booking-pr,baohatinh.vn,Bao tinh / bao dang,Mục phù hợp,1045000,2 link Do,1200 từ - 5 ảnh,1,1045000,2026-11-05,4
+booking-pr,baotuyenquang.com.vn,Bao tinh / bao dang,Muc phu hop,998000,,1000 từ  - 5 ảnh - 2 link dof,1,998000,2026-11-05,1
+booking-pr,baohatinh.vn,Bao tinh / bao dang,Muc phu hop,998000,,1000 từ  - 5 ảnh - 2 link dof,1,998000,2026-11-05,1
+booking-pr,baotuyenquang.com.vn,Bao tinh / bao dang,Mục phù hợp,990000,2 link Do,1200 từ - 5 ảnh,1,990000,2026-11-05,4
+booking-pr,baodanang.vn,Bao tinh / bao dang,Muc phu hop,950000,,1000 từ  - 5 ảnh - 2 link dof - Có ĐKKD,1,950000,2026-11-05,1
+booking-pr,baodanang.vn,Bao tinh / bao dang,Mục phù hợp,935000,2 link Do,1200 từ - 5 ảnh,1,935000,2026-11-05,4
+booking-pr,angiangtv.vn,Bao tinh / bao dang,Mục phù hợp,880000,,,1,880000,2026-11-05,4
+booking-pr,elledecoration.vn,Vi tri noi bat trang chu,Trang chủ,50160000,,,1,50160000,2026-11-05,4
+booking-pr,elle.vn,Vi tri noi bat trang chu,Trang chủ,48180000,,,1,48180000,2026-11-05,4
+booking-pr,lofficielvietnam.com,Vi tri noi bat trang chu,Trang chủ,26488000,,,1,26488000,2026-11-05,4
+booking-pr,bongdaplus.vn,Vi tri noi bat trang chu,Trang chủ,20680000,,,1,20680000,2026-11-05,4
+booking-pr,batdongsan.com.vn,Vi tri noi bat trang chu,Hiển thị trang chủ,20625000,2 link,,1,20625000,2026-11-05,4
+booking-pr,vietnamplus.vn,Vi tri noi bat trang chu,Trang chủ,18920000,,,1,18920000,2026-11-05,4
+booking-pr,tinhte.vn,Vi tri noi bat trang chu,Hiển thị trang chủ,17600000,,,1,17600000,2026-11-05,4
+booking-pr,cafeland.vn,Vi tri noi bat trang chu,PR Trang chủ Nổi bật,17028000,1 link,,1,17028000,2026-11-05,4
+booking-pr,tuoitre.vn,Vi tri noi bat trang chu,"Trang chuyên mục Nhóm 2: Video, Xe, Du lịch, Văn hóa, Giải trí, Nhịp sống trẻ, Bạn đọc, Doanh nghiệp, Khoa học",16940000,,,1,16940000,2026-11-05,4
+booking-pr,brandsvietnam.com,Vi tri noi bat trang chu,Trang chủ,16830000,1 link,,1,16830000,2026-11-05,4
+booking-pr,advertisingvietnam.com,Vi tri noi bat trang chu,Trang chủ,16082000,,,1,16082000,2026-11-05,4
+booking-pr,baoxaydung.vn,Vi tri noi bat trang chu,Trang chủ,15895000,,,1,15895000,2026-11-05,4
+booking-pr,webtretho.com,Vi tri noi bat trang chu,Trang chủ,14586000,,,1,14586000,2026-11-05,4
+booking-pr,tuoitre.vn,Vi tri noi bat trang chu,"Trang chuyên mục Nhóm 3: Trang cấp 2 của các chuyên mục Nhóm 1 và 2, Việc làm, Tuổi Trẻ Cười, Giả - Thật",12705000,,,1,12705000,2026-11-05,4
+booking-pr,kenh14.vn,Vi tri noi bat trang chu,Bài loại 2 HOME MOBILE STREAM 2,12540000,,,1,12540000,2026-11-05,4
+booking-pr,autopro.com.vn,Vi tri noi bat trang chu,Bài loại 2 trang chủ,12540000,,,1,12540000,2026-11-05,4
+booking-pr,bestie.vn,Vi tri noi bat trang chu,Trang chủ,12210000,,,2,12705000,2026-11-05,4
+booking-pr,doanhnhanplus.vn,Vi tri noi bat trang chu,Trang chủ,12144000,,,1,12144000,2026-11-05,4
+booking-pr,cafeland.vn,Vi tri noi bat trang chu,PR Trang chủ Tiêu chuẩn,11352000,1 link,,1,11352000,2026-11-05,4
+booking-pr,vneconomy.vn,Vi tri noi bat trang chu,Vị trí 5 - Mục sự kiện - hiển thị ảnh và tiêu đề về sự kiện tại trang chủ,10890000,,,1,10890000,2026-11-05,4
+booking-pr,vtv.vn,Vi tri noi bat trang chu,Loại 6 nổi bật chuyên mục,10428000,,,1,10428000,2026-11-05,4
+booking-pr,afamily.vn,Vi tri noi bat trang chu,Bài loại 2 nổi bật mục,10032000,,,1,10032000,2026-11-05,4
+booking-pr,doanhnhanvn.vn,Vi tri noi bat trang chu,Trang chủ loại 2,10032000,,,1,10032000,2026-11-05,4
+booking-pr,cafebiz.vn,Vi tri noi bat trang chu,Trang chủ,9975000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,9975000,2026-11-05,1
+booking-pr,kenh14.vn,Vi tri noi bat trang chu,Trang Chủ,9690000,,"Bài PR dưới 1000 từ, dưới 7 ảnh",1,9690000,2026-11-05,1
+booking-pr,genk.vn,Vi tri noi bat trang chu,Trang chủ,9595000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,9595000,2026-11-05,1
+booking-pr,bongda.com.vn,Vi tri noi bat trang chu,Trang chủ,9020000,,,1,9020000,2026-11-05,4
+booking-pr,ngoisao.net,Vi tri noi bat trang chu,Trang chủ,8976000,,,1,8976000,2026-11-05,4
+booking-pr,vietnamnews.vn,Vi tri noi bat trang chu,"Đặt tại các trang chuyên mục economy, society, lifestyle, sport",8910000,,,1,8910000,2026-11-05,4
+booking-pr,gamek.vn,Vi tri noi bat trang chu,Trang chủ,8645000,1 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,8645000,2026-11-05,1
+booking-pr,tuoitre.vn,Vi tri noi bat trang chu,Hiển thị trang chủ,8470000,,,1,8470000,2026-11-05,4
+booking-pr,autopro.com.vn,Vi tri noi bat trang chu,Bài loại 3 trang chủ,8360000,,,1,8360000,2026-11-05,4
+booking-pr,gamek.vn,Vi tri noi bat trang chu,Trang chủ,8360000,1 link,,1,8360000,2026-11-05,4
+booking-pr,danviet.vn,Vi tri noi bat trang chu,Top 3 Tiểu mục,8184000,,,1,8184000,2026-11-05,4
+booking-pr,autopro.com.vn,Vi tri noi bat trang chu,Trang chủ,8170000,,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,8170000,2026-11-05,1
+booking-pr,tienphong.vn,Vi tri noi bat trang chu,"Top 1 trang chủ (giáo dục, giải trí, thể thao….)",7920000,,,1,7920000,2026-11-05,4
+booking-pr,thethao247.vn,Vi tri noi bat trang chu,Trang chủ,7920000,,,1,7920000,2026-11-05,4
+booking-pr,diendandoanhnghiep.vn,Vi tri noi bat trang chu,Top 2 Bài nổi bật chuyên mục trên trang chủ,7810000,,,1,7810000,2026-11-05,4
+booking-pr,nguoiquansat.vn,Vi tri noi bat trang chu,Trang chủ,7600000,1 link nof (thêm link 500k/link),"Bài PR dưới 1800 từ, 5 ảnh",1,7600000,2026-11-05,1
+booking-pr,anninhthudo.vn,Vi tri noi bat trang chu,Trang chủ,7370000,,,1,7370000,2026-11-05,4
+booking-pr,reatimes.vn,Vi tri noi bat trang chu,Loại 3 Top 1 chuyên mục trên trang chủ,7260000,,,1,7260000,2026-11-05,4
+booking-pr,24h.com.vn,Vi tri noi bat trang chu,PR loại 1 (2h trang chủ): Kinh doanh/Thị trường tiêu dùng/Thời trang Hitech/Công nghệ thông tin/Ô tô/Xe máy/Sức khỏe/Đẹp,6935000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,6935000,2026-11-05,1
+booking-pr,vietnambiz.vn,Vi tri noi bat trang chu,Nổi bật chuyên mục có title ở trang chủ,6820000,,,1,6820000,2026-11-05,4
+booking-pr,cafebiz.vn,Vi tri noi bat trang chu,Trang chủ loại 3,6688000,,,1,6688000,2026-11-05,4
+booking-pr,doanhnhanvn.vn,Vi tri noi bat trang chu,Trang chủ loại 1,6688000,,,1,6688000,2026-11-05,4
+booking-pr,tienphong.vn,Vi tri noi bat trang chu,"Top 2,3,4 trên trang chủ (thể thao, giáo dục, sức khoẻ...)",6600000,,,1,6600000,2026-11-05,4
+booking-pr,tinnhanhchungkhoan.vn,Vi tri noi bat trang chu,"Loại 4 - Bài hiển thị trang chủ, vị trí tiêu điểm 1 chuyên mục (2h)",6336000,,,1,6336000,2026-11-05,4
+booking-pr,cafef.vn,Vi tri noi bat trang chu,Tin doanh nghiệp (Trang chủ 1 ngày),6270000,,,1,6270000,2026-11-05,1
+booking-pr,ngoisao.vn,Vi tri noi bat trang chu,Trang chủ,6270000,,,1,6270000,2026-11-05,4
+booking-pr,diendandoanhnghiep.vn,Vi tri noi bat trang chu,Top 3 Bài nổi bật chuyên mục trên trang chủ,6248000,,,1,6248000,2026-11-05,4
+booking-pr,yeah1.com,Vi tri noi bat trang chu,Tiêu điểm chuyên mục,6160000,,,1,6160000,2026-11-05,4
+booking-pr,soha.vn,Vi tri noi bat trang chu,Trang chủ streaming 3,5852000,,,1,5852000,2026-11-05,4
+booking-pr,bongda24h.vn,Vi tri noi bat trang chu,Trang chủ,5566000,,,1,5566000,2026-11-05,4
+booking-pr,alobacsi.com,Vi tri noi bat trang chu,Trang chủ,5544000,,,1,5544000,2026-11-05,4
+booking-pr,luatvietnam.vn,Vi tri noi bat trang chu,Bài PR tin tức pháp luật - vị trí cơ bản,5500000,1 link (them link +1.000.000),"Toi da 5 anh, 90KB/anh",1,5500000,2026-11-05,7
+booking-pr,tuoitre.vn,Vi tri noi bat trang chu,Trang chuyên mục Cần biết,5159000,không chèn link,,1,5159000,2026-11-05,4
+booking-pr,cafef.vn,Vi tri noi bat trang chu,Box Thông Cáo Báo chí (Trang chủ 1 ngày),5130000,1 link no - thêm link 500k,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,5130000,2026-11-05,1
+booking-pr,danviet.vn,Vi tri noi bat trang chu,Top 2 Mục Doanh nghiệp – Trang chủ,5115000,,,1,5115000,2026-11-05,4
+booking-pr,giadinh.suckhoedoisong,Vi tri noi bat trang chu,Trang chủ,4950000,,,1,4950000,2026-11-05,4
+booking-pr,24h.com.vn,Vi tri noi bat trang chu,PR loại 1 (2h trang chủ): Thể thao/Giải trí/Bạn trẻ cuộc sống/Ăn - Chơi/Giáo dục,4940000,3 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,4940000,2026-11-05,1
+booking-pr,yeah1.com,Vi tri noi bat trang chu,Tin đặc biệt chuyên mục,4928000,,,1,4928000,2026-11-05,4
+booking-pr,vietnammoi.vn,Vi tri noi bat trang chu,Tiêu điểm chuyên mục,4774000,,,1,4774000,2026-11-05,4
+booking-pr,2sao.vn,Vi tri noi bat trang chu,Top 1 box chuyên mục tại trang chủ,4422000,,,1,4422000,2026-11-05,4
+booking-pr,soha.vn,Vi tri noi bat trang chu,bài stream tren trang chủ,4370000,1 link no,"Bài PR dưới 1000 từ, dưới 5 ảnh",1,4370000,2026-11-05,1
+booking-pr,vov.vn,Vi tri noi bat trang chu,Trang chuyên mục,4015000,0 free link,,1,4015000,2026-11-05,4
+booking-pr,tienphong.vn,Vi tri noi bat trang chu,"Trang chuyên mục (xã hội, kinh tế, giải trí, sức khoẻ…)",3960000,1 link đuôi.vn,,1,3960000,2026-11-05,4
+booking-pr,hoahoctro.tienphong.vn,Vi tri noi bat trang chu,Trang chủ Tiêu điểm top 2 xuống,3960000,,,1,3960000,2026-11-05,4
+booking-pr,giadinhmoi.vn,Vi tri noi bat trang chu,"Top 1,2,3 trang chủ",3850000,,,1,3850000,2026-11-05,4
+booking-pr,vtcnews.vn,Vi tri noi bat trang chu,Trang chuyên mục,3800000,,"Bài PR dưới 1000 từ, dưới 3 ảnh",1,3800000,2026-11-05,1
+booking-pr,tinnhanhchungkhoan.vn,Vi tri noi bat trang chu,"Loại 5 - Bài hiển thị trang chủ, mục chuyển động doanh nghiệp",3520000,,,1,3520000,2026-11-05,4
+booking-pr,vietnambiz.vn,Vi tri noi bat trang chu,Chuyên mục có title ở trang chủ,3410000,,,1,3410000,2026-11-05,4
+booking-pr,phunuvagiadinh.vn,Vi tri noi bat trang chu,Top 5 trở xuống,3168000,1 link,,1,3168000,2026-11-05,4
+booking-pr,2game.vn,Vi tri noi bat trang chu,Tin nổi bật,2937000,,,1,2937000,2026-11-05,4
+booking-pr,giadinhmoi.vn,Vi tri noi bat trang chu,Top 1 chuyên mục,2310000,,,1,2310000,2026-11-05,4
+booking-pr,2sao.vn,Vi tri noi bat trang chu,Top 6-11 trang chuyên mục,2211000,,,1,2211000,2026-11-05,4
+booking-pr,alobacsi.com,Vi tri noi bat trang chu,Bài loại 7 trang chuyên mục,1900000,1 link no,"Bài PR dưới 800 từ, dưới 3 ảnh",1,1900000,2026-11-05,1
+booking-pr,2sao.vn,Vi tri noi bat trang chu,Top 12 trang chuyên mục trở xuống,1843000,0 free link,,1,1843000,2026-11-05,4
+booking-pr,giadinhmoi.vn,Vi tri noi bat trang chu,"Top 2,3,4",1540000,2 link,,1,1540000,2026-11-05,4
+guest-post,vietnam.travel,Guest post,Bai dang tren site,23750000,,"1000 từ, 3-5 ảnh, 2 link nof",1,23750000,2026-11-05,1
+guest-post,powersteam.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link nof",1,1140000,2026-11-05,1
+guest-post,topaz.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link nof",1,1140000,2026-11-05,1
+guest-post,hanoireview.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-11-05,1
+guest-post,saigonreview.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-11-05,1
+guest-post,quynhonreview.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-11-05,1
+guest-post,hellodanang.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-11-05,1
+guest-post,binhduongreview.vn,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link dof",1,1140000,2026-11-05,1
+guest-post,wikithammy.com,Guest post,Bai dang tren site,1140000,,"1000 từ, 3-5 ảnh, 2 link nof",1,1140000,2026-11-05,1
+guest-post,hcmtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,hanoitoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,top10danang.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,chonthuonghieu.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,danhgiasao.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,angiangtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,bentretoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,ngheantoplist.net,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,phuthotoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,thanhhoatoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,quangnamtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,thaibinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,binhduongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,quangbinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,dongnaitoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,thanhpho.danang.vn,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,huetoplist.vn,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,binhdinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,haiphongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,bacninhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,quangninhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,hatinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,tiengiangtoplist.vn,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,lamdongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,ninhbinhtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,vinhlongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,haiduongtoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,dongthaptoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,hungyentoplist.com,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,thucanh.vn,Guest post,Bai dang tren site,950000,,"1000 từ, 3-5 ảnh, 2 link nof",1,950000,2026-11-05,1
+guest-post,kichcaudulichtphcm.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-11-05,1
+guest-post,bariavungtautourism.com.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-11-05,1
+guest-post,duonggiahotel.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-11-05,1
+guest-post,dulichhatinh.com.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-11-05,1
+guest-post,dulichsontra.com,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-11-05,1
+guest-post,qta.org.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-11-05,1
+guest-post,chuabaidinhninhbinh.vn,Guest post,Bai dang tren site,760000,,"1000 từ, 3-5 ảnh, 2 link nof",1,760000,2026-11-05,1
+guest-post,nhahangbachkim.com,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-11-05,1
+guest-post,arcencielhotel.com.vn,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-11-05,1
+guest-post,hotelnikkohanoi.com.vn,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-11-05,1
+guest-post,suoiluong.com.vn,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-11-05,1
+guest-post,bietdienhotel.com.vn,Guest post,Bai dang tren site,475000,,"1000 từ, 3-5 ảnh, 2 link nof",1,475000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,home.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,congly.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link fullsite - 12 thang,5700000,1 link,12 thang,1,5700000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,home.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,congly.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link fullsite - 6 thang,4750000,1 link,6 thang,1,4750000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link fullsite - 12 thang,4275000,1 link,12 thang,1,4275000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,home.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,home.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,congly.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,congly.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link trang chu - 12 thang,3800000,1 link,12 thang,1,3800000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link fullsite - 3 thang,3800000,1 link,3 thang,1,3800000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link fullsite - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,home.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,congly.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link trang chu - 6 thang,3325000,1 link,6 thang,1,3325000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,home.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,congly.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link trang chu - 3 thang,2850000,1 link,3 thang,1,2850000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link trang chu - 12 thang,2375000,1 link,12 thang,1,2375000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link fullsite - 3 thang,2375000,1 link,3 thang,1,2375000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link trang chu - 6 thang,1710000,1 link,6 thang,1,1710000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link trang chu - 3 thang,1425000,1 link,3 thang,1,1425000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link fullsite - 12 thang,1330000,1 link,12 thang,1,1330000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link fullsite - 6 thang,1140000,1 link,6 thang,1,1140000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link trang chu - 12 thang,1045000,1 link,12 thang,1,1045000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link fullsite - 3 thang,950000,1 link,3 thang,1,950000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link trang chu - 6 thang,855000,1 link,6 thang,1,855000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,home.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,congly.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link chuyen muc - 12 thang,855000,1 link,12 thang,1,855000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,home.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,congly.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link chuyen muc - 6 thang,760000,1 link,6 thang,1,760000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link trang chu - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link chuyen muc - 12 thang,665000,1 link,12 thang,1,665000,2026-11-05,1
+textlink,baodanang.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,baodongnai.com.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,giaoducthoidai.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,baophapluat.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,vnreview.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,home.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,congly.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,anninhthudo.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,hanoimoi.vn,Textlink,Link chuyen muc - 3 thang,665000,1 link,3 thang,1,665000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link chuyen muc - 6 thang,570000,1 link,6 thang,1,570000,2026-11-05,1
+textlink,hanoitimes.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,thieunien.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,thanhnienviet.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,tapchinghiencuuphathoc.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,phunuvagiadinh.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,reatimes.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,doanhnghiephoinhap.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baothainguyen.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,huengaynay.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baocamau.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baotuyenquang.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baogialai.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,nguoidothi.net.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baolangson.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baolaocai.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baoangiang.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baocantho.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,truyenhinhnghean.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,thuonghieucongluan.com.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,baovanhoa.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+textlink,tapchitoaan.vn,Textlink,Link chuyen muc - 3 thang,475000,1 link,3 thang,1,475000,2026-11-05,1
+toplist,cotrang.org,Toplist,Top 1 (1 nam),5700000,1 link,Toplist quang cao doanh nghiep,1,5700000,2026-11-05,
+toplist,quangninhcogi.vn,Toplist,Top 2-3 (1 nam),4275000,1 link,Gioi thieu - Google Maps - khung review,2,5700000,2026-11-05,
+toplist,danhgiathuonghieu.vn,Toplist,Top 3 (1 nam),1710000,1 link,Thue vi tri Top 3 trong bai toplist,3,3040000,2026-11-05,
+toplist,inhat.vn,Toplist,Dang bai toplist,1615000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,1615000,2026-11-05,
+toplist,golook.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,toplistdanang.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,toplisthanoi.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,toplistcantho.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,ohay.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,ubeauty.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,travelist.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,topdongnai.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,danangaz.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,toplistsaigon.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,tophaiphong.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,topbinhduong.com,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,hanoi.inhat.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,hcm.inhat.vn,Toplist,Dang bai toplist,950000,2 link Dofollow,1000 tu - 3-5 anh - 2 link dofollow,1,950000,2026-11-05,
+toplist,itoplist.vn,Toplist,Bai moi (khach gui content),760000,2 link dofollow,"<1000 tu + 5 anh, vinh vien",5,3325000,2026-11-05,
+toplist,top10riviu.com,Toplist,Bai khach tu gui,760000,2 link dofollow,Duoi 1000 tu - tu 5 anh,6,3325000,2026-11-05,
+toplist,hcmtoplist.com,Toplist,Bai khach tu gui,760000,2 link nofollow,Tren 1000 tu - tu 5 anh - 1 nam,6,4275000,2026-11-05,
+toplist,toplistviet.org,Toplist,Bai moi (nganh thuong),190000,,Vinh vien,1,190000,2026-11-05,

@@ -530,3 +530,17 @@ suy luận - đặc biệt với dữ liệu nhập từ nhiều nguồn không 
 - CÔNG TY TNHH TRUYỀN THÔNG GOODCOM VIỆT NAM (Cầu Giấy, Hà Nội), đầu mối Ms Thu 0988866152. File báo giá gửi Combat: Drive xlsx 1n_CBWN_3wYF6JZ35qhkMb2dSaOSMgDpV, mỗi đợt 1 tab (theo khách/ngày).
 - Giá cột "Thành tiền" đã trừ CK, chưa VAT, chưa phí edit, hiệu lực 10 ngày. Báo giá tay: giá bán = thành tiền x1,1; so với DanaSEO chọn rẻ hơn cho khách cùng quy cách (giữ DanaSEO khi nhiều link hơn).
 - Có các báo DanaSEO không có: Hoahoctro, Dulichvietnam, Dulichtoday, Vneconomy, Congthuong, fanpage/TikTok báo.
+
+## NCC Global Book Corp - báo quốc tế hạng top (ghi nhận 04/11/2026)
+- Global Book Corporation - CTCP Sách Toàn Cầu (448 Tên Lửa, Bình Trị Đông, TP.HCM), info@globalbookcorp.com, Zalo 0902 932 392. Đại diện tại VN của Economist, CNBC, BBC, Reuters, WSJ, WaPo, FT, NYT, VICE, Nikkei, Caixin, SCMP, Straits Times, Business Times, Tech in Asia, Network18, Business Traveller.
+- Digicom được chiết khấu 3% -> giá vốn = giá NCC x 0,97. Giá chưa VAT, tỷ giá chốt lúc ký HĐ, HĐ dưới 50.000 USD trả trước 100%, báo giá hiệu lực 1 tháng. Đề xuất mã NCC 6.
+- Sheet NOIBO (64 hạng mục): https://docs.google.com/spreadsheets/d/191V9KPDePFhkorO4sOo7fIhJhIfMro5uYWoLJXBxg_M/edit ; nguồn PDF `10-bang-gia-booking/raw/globalbook-quoc-te/GlobalBook-truyen-thong-quoc-te-2026-11.pdf`.
+- Phân khúc khác IAC (IAC = site tổng hợp giá vài trăm USD; Global Book = báo top 7.000-205.000 USD). Khách cần báo quốc tế hạng top mới dùng nguồn này; giá bán cho khách chưa chốt công thức, hỏi Hiếu.
+
+## Rise Media + LuatVietnam lên web, giá NCC x1,1 (Hiếu chốt 05/11/2026)
+- Hiếu: Rise Media (Sheet 1uOvzvsZ-3clQR0bCPtr2JoCPJ3RyuTGF, 4 tab) dùng cho báo giá, "giá này cần thêm 10%"; LuatVietnam (rate card chính chủ, `raw/luatvietnam-chinh-chu/`) "cũng thêm 10%".
+- Master lưu GIÁ VỐN (parse-rise-media*.py MARKUP 1.0, LuatVietnam trong raw/ncc-khac.csv). Báo giá tay + web = vốn x1,1 (`MARKUP_NCC_10` trong export-web.py). Bảng tra nhanh: `NOIBO-gia-rise-media-bao-gia-2026-11-05.csv`.
+- `CHI_NCC` = DanaSEO (x0,95) + Rise Media + LuatVietnam (chính chủ). Mã NCC: Rise 4, LuatVietnam 7.
+- Đẩy live 05/11: 319 dòng sửa giá (170 dòng Rise draft 09/08 mở lại), 55 dòng mới; publish 1002 -> 1227. Chỉ mở lại/tạo dòng Rise/LuatVietnam, không mở dòng DanaSEO draft. Payload `payload-rise-luatvn-2026-11-05.json`, backup `~/Claude-Workspace/_backups/routines/2026-11-05/gia-rise-luatvn/live-BEFORE.json` (rollback: set lại gia_km + draft các ID republish).
+- Rebuild master làm mất 12 dòng Batdongsan (chính chủ) nhập tay: sau mỗi lần build_master.py phải chép lại từ bản trước.
+- LuatVietnam (Hiếu 05/11 chiều): vị trí thấp nhất vốn 5.000.000, bán 5.500.000. Web chỉ giữ 1 dòng (ID 8091 'vị trí cơ bản'); 8092/8093/8059 (3,3-4,4tr theo rate card 2025) đã draft, đã xoá khỏi ncc-khac/master/gia-web để export không đẩy lại. Backup `_backups/routines/2026-11-05/luatvietnam-web/before.json`.
