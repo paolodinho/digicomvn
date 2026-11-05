@@ -40,10 +40,10 @@ for k in ("A", "B"):
 
 G = "Traffic user - người dùng thật, tại Việt Nam"
 wb = Workbook(); ws = wb.active; ws.title = "Bảng giá traffic user"; ws.sheet_properties.tabColor = "0E8C7F"
-hd = ["STT", "Gói", "Nguồn truy cập", "Thời gian trên trang", "Đơn giá niêm yết (đ/lượt)", "Chiết khấu", "Đơn giá ưu đãi (đ/lượt)"]
+hd = ["STT", "Gói", "Nguồn truy cập", "Thời gian trên trang", "Đơn giá niêm yết (đ/lượt)", "Chiết khấu", "Đơn giá ưu đãi (đ/lượt)", "Đơn hàng tối thiểu (đ)"]
 r = banner(ws, len(hd), "BÁO GIÁ TRAFFIC USER - MISA", "1C2035")
-rows = [(d["src"] + " - " + d["srcd"], i, d["name"], d["src"], d["onsite"], d["ny"], f"{d['ck']}%", d["sell"]) for i, d in enumerate(D, 1)]
-r = table(ws, r, hd, rows, [6, 34, 20, 28, 16, 11, 16], [5, 7], "0E8C7F")
+rows = [(d["src"] + " - " + d["srcd"], i, d["name"], d["src"], d["onsite"], d["ny"], f"{d['ck']}%", d["sell"], MIN) for i, d in enumerate(D, 1)]
+r = table(ws, r, hd, rows, [6, 34, 20, 28, 16, 11, 16, 16], [5, 8, 7], "0E8C7F")
 notes(ws, r + 1, len(hd), ["Ghi chú:",
  "- Giá trị đơn hàng tối thiểu: 5.000.000đ (chưa VAT), có thể kết hợp nhiều gói.",
  "- Đơn giá tính theo lượt truy cập, chưa gồm VAT 8%, có xuất hoá đơn.",
