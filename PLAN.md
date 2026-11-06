@@ -2,6 +2,7 @@
 - digicomvn.com (Textlink, Backlink, Guest Post, Booking báo & PR)
 
 ## Đang làm dở (checkpoint)
+- [06/11 11:00] XONG sửa 2 bài PR Dailyve theo ý khách (thêm định hướng nền tảng dịch vụ du lịch: di chuyển, đặt phòng, tour) trực tiếp trên Google Doc https://docs.google.com/document/d/1vMo5Hkkb2I4-r6Qw3Ft61fR5UChaHvOyjg1vWuQNDzk/edit (bản md Dailyve/bai-pr-2026-11/ chưa đồng bộ, Doc là bản chính). Tiếp theo: CHỜ Hiếu gửi lại khách duyệt.
 - [06/11 10:30] XONG thêm thethaovanhoa.vn vào báo giá guest post MISA (cùng 2 link Sheet, sửa đúng dòng): Du lịch <700 từ 1.610.000, 700-1.000 từ 2.415.000 (Goodcom 1,4/2,1tr x1,15, tạm coi '25%' đã trừ sẵn), mục Bạn cần biết 1.898.000 (Rise 1,65tr x1,15). Tiếp theo: CHỜ Hiếu hỏi chị Thu '25%' trừ thêm hay đã trừ (nếu trừ thêm thì lãi cao hơn, không cần sửa giá); CHỜ Hiếu gửi khách.
 - 06/11 09:58: Chuyển hoá đơn P.A lên VPS: script /opt/pa-hoadon-forward/forward_imap.py đã có trên VPS (IMAP/SMTP Lark). XONG 09:28: Hiếu đã dán mã, VPS cron 10 phút chạy, bản Mac đã tắt. Task: xong
 - 06/11 08:50: XONG tự chuyển hoá đơn đại lý (hoadon@pavietnam.vn -> sales@ Lark) tới ketoan.digitocombat@gmail.com + CC hieudx3107@gmail.com, LaunchAgent com.hieu.pa-hoadon-forward 10 phút/lần, script ~/Claude-Workspace/_global/scripts/pa-hoadon-forward/forward.py. Đã gửi thật HĐ 178897 (đủ PDF+XML). Đã gửi thêm 15 HĐ cũ 09:10 (Hiếu duyệt). Task: xong
