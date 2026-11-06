@@ -5073,3 +5073,22 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 
 - 05/11 tối: báo giá traffic user MISA làm lại theo bảng giá NCC Hiếu gửi qua Zalo x1,1 (nguồn chất lượng cao 3.850-4.950đ, nguồn tiêu chuẩn 1.650-2.750đ/lượt). Script `11-bao-gia-khach/_scripts/build_misa_traffic_2026_11_05.py`, 2 Sheet giữ link.
 - 05/11 tối (sửa): bán đúng giá gốc NCC, đơn tối thiểu 5tr (NCC giảm 10% khi nạp từ 5tr, 15%/20% khi 20tr/50tr, hiệu lực 30 ngày).
+
+## 2026-11-05 22:30 - Nang gia 5% dich vu dai ly
+- dgc_hosting_rows: +5% moi goi tru starter/unlimited 1/business 1. dgc_web_rows: +5% Email Pro, SSL, cloud server. Giu ten mien, Google Workspace, M365. Deploy live, backup _backups/routines/2026-11-05/digicom-hosting-5pct/.
+- 2026-11-05 22:50: dgc_tm_notify_admin gui ca ketoan.digitocombat@gmail.com + hieudx3107@gmail.com (xuat hoa don). Backup domain-order.php.live-before cung thu muc.
+- 2026-11-05 23:05: dgc_ten_mien_rows tinh VAT: gia han = von x1,1 x1,15; nam dau .vn = gia re nhat thi truong (>= von x1,1), quoc te = von x1,21; combo >= von x1,21. Backup *.before-tm-vat trong _backups/routines/2026-11-05/digicom-hosting-5pct/.
+- 2026-11-05 22:45: mail don hang them khoi THONG TIN XUAT HOA DON, gui lai DGCYMEN5G cho ke toan. Trang /ho-tro-ky-thuat/ (page 8096, inc/support-ticket.php, page-ho-tro-ky-thuat.php, option support_to). Backup live ~/backups/2026-11-05/support/before.tgz.
+- 2026-11-05 22:55: wp_mail_from_name DigicomVN, from no-reply@ (hoac sales@ qua SMTP Lark khi co DGC_SMTP_PASS trong wp-config).
+- 2026-11-06 08:50: Tu chuyen hoa don P.A (hoadon@pavietnam.vn) toi ke toan + Hieu: forward.py + LaunchAgent com.hieu.pa-hoadon-forward 10 phut. Gui thu HD 178897 OK (PDF+XML).
+- 06/11: hoá đơn P.A -> VPS (forward_imap.py, chờ mã uỷ quyền Lark)
+- 06/11 09:10: gửi kế toán 15 HĐ P.A cũ (96365-175543)
+- 2026-11-06 09:15: support_to live = kythuat@pavietnam.vn, phieu /ho-tro-ky-thuat/ tu chuyen ky thuat dai ly + CC Hieu.
+- 2026-11-06 09:40: form /ho-tro-ky-thuat/ 15 dich vu + loai van de + ma don; chi dich vu ha tang chuyen dai ly, con lai ve Hieu.
+- 2026-11-06 09:25: gui phieu that HT261106UVM (khach Le Nhut Tam, tposolar.io.vn, don DGCTR3X4Q): eKYC tren quanly.digicomvn.com bi chan camera; nguyen nhan https quanly tra chung chi access.dotvndns.vn (khong khop). Them loai van de eKYC vao form.
+- 06/11 09:28: bản VPS hoá đơn P.A chạy (cron 10 phút), tắt bản Mac; sửa lọc IMAP đúng địa chỉ hoadon@
+
+- 06/11: Form hỗ trợ có ô tải ảnh đính kèm email (inc/support-ticket.php dgc_sp_save_shots, page-ho-tro-ky-thuat.php multipart). Gửi bổ sung ảnh cho phiếu HT261106UVM tới P.A.
+- 06/11: Luồng phản hồi phiếu hỗ trợ: P.A -> sales@ -> VPS support_relay.py lọc tên đại lý -> khách (BCC Hiếu); khách trả lời -> P.A. Form bắt buộc email.
+- 2026-11-06 09:40: SSL quanly: cổng đại lý đã lưu đúng chứng chỉ ECC (29/10) nhưng máy chủ vẫn trả cert access.dotvndns.vn. Cấp thêm chứng chỉ RSA 2048 (~/Claude-Workspace/digicom/ssl-quanly/acme/quanly.digicomvn.com/, hạn 04/02/2027, khoá dạng RSA PRIVATE KEY ở rsa-traditional.key), đã điền Certificate + CA vào Cấu hình Control Panel; chờ Hiếu dán Private Key (đã copy sẵn clipboard) và bấm Cập nhật. Bản ECC giữ ở thư mục _ecc để quay lại.
+- 2026-11-06 09:55: Cổng đại lý ĐÃ LƯU chứng chỉ RSA cho quanly (Certificate + RSA key + CA YR1, chọn https). Máy chủ access.dotvndns.vn vẫn trả cert của chính nó -> đại lý chưa cài lên máy chủ (bản ECC 29/10 cũng không được cài sau 8 ngày). Cần kỹ thuật đại lý kích hoạt.

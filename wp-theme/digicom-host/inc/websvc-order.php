@@ -62,12 +62,12 @@ function dgc_ws_mail_cost() {
 	return $out;
 }
 
-/** Ma goi dai ly cho 1 dong email (0 = kich hoat tay). Chi tu dong khi gia ban >= gia von x1,1. */
+/** Ma goi dai ly cho 1 dong email (0 = kich hoat tay). Chi tu dong khi gia ban >= gia von x1,1 VAT x1,15 lai. */
 function dgc_ws_pid( $v, $m, $amount ) {
 	if ( 'email-doanh-nghiep' !== $v['s'] || $v['per'] ) return 0;
 	$k = strtolower( preg_replace( '/\s+/', ' ', trim( $v['n'] ) ) );
 	$c = dgc_ws_mail_cost()[ $k ][ $m ] ?? null;
-	return ( $c && $amount >= $c[1] * 1.21 ) ? (int) $c[0] : 0;
+	return ( $c && $amount >= $c[1] * 1.265 ) ? (int) $c[0] : 0;
 }
 
 function dgc_ws_public() {

@@ -254,3 +254,12 @@ Hiếu yêu cầu research và rà toàn site. Quy tắc chốt ở .claude/rule
 
 ## 2026-10-30 - Khối Báo chí trang chủ giữ đủ 12 logo
 Hiếu thử chỉ hiện 4 báo có link rồi đổi lại: hiện đủ 12 logo (báo có bài thì có link Đọc bài). Giữ 3 lời khách Kiến Vàng, Hồng Phát, Nha Khoa Thịnh An (Hiếu xác nhận).
+
+| 2026-11-05 | Gia ten mien + dich vu dai ly tinh ca VAT (gia von dai ly chua VAT) | Gia han ten mien lai 15% sau VAT; nam dau .vn bang gia re nhat thi truong (khong duoi von + VAT); quoc te von x1,21. Hosting goi lon, Email Pro, SSL, cloud +5%. Mail don hang gui ketoan.digitocombat@gmail.com de xuat hoa don. |
+
+## 2026-11-05 - Hệ số giá báo giá tay: DanaSEO ×1,05, NCC khác ×1,15
+**Quyết định (Hiếu):** báo giá dịch vụ Digicom lấy giá NCC chưa VAT nhân 1,05 (DanaSEO) hoặc 1,15 (mọi NCC khác), thay ×1,00/×1,10 (29/10).
+**Lý do:** kỳ vọng mọi đơn lãi tối thiểu 15%. Không áp hồi tố báo giá đã gửi. Cùng tối Hiếu "đổi đi": giá web dgc_gia cũng áp hệ số này, đã đẩy 1003 dòng.
+
+## 2026-11-05 tối - Lãi tối thiểu dịch vụ đại lý tên miền/hosting
+Hiếu: dịch vụ đại lý trừ tên miền năm đầu (lãi 10%) còn lại phải lãi 15%. Đã áp sàn x1,265 (giá đại lý chưa VAT) cho gia hạn, hosting, email, SSL, cloud, M365, Workspace, chăm sóc web, BCT; tên miền năm đầu sàn x1,1 trên vốn thực trả, bỏ ngoại lệ .vn giá rẻ nhất thị trường (W42) vì .vn bị lãi dưới 10% -> .vn năm đầu 495k -> 545k. Không giá nào bị hạ.

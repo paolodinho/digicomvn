@@ -163,6 +163,18 @@ require_once get_template_directory() . '/inc/handover.php';
 require_once get_template_directory() . '/inc/web-svc.php';
 require_once get_template_directory() . '/inc/websvc-order.php';
 require_once get_template_directory() . '/inc/page-parts.php';
+require_once get_template_directory() . '/inc/support-ticket.php';
+
+/* Email gui khach / dai ly / ke toan: khong hien 'WordPress' (Hieu 05/11/2026).
+ * Co DGC_SMTP_PASS (ma uy quyen Lark cua sales@digicomvn.com, dat trong wp-config.php, KHONG commit) thi gui qua SMTP Lark
+ * de qua SPF (SPF digicomvn.com chi cho phep Lark). Chua co thi gui bang mail() cua host, ten nguoi gui DigicomVN. */
+add_filter( 'wp_mail_from_name', function () { return 'DigicomVN'; } );
+add_filter( 'wp_mail_from', function ( $f ) { return defined( 'DGC_SMTP_PASS' ) ? 'sales@digicomvn.com' : ( 0 === strpos( $f, 'wordpress@' ) ? 'no-reply@digicomvn.com' : $f ); } );
+add_action( 'phpmailer_init', function ( $m ) {
+	if ( ! defined( 'DGC_SMTP_PASS' ) ) return;
+	$m->isSMTP(); $m->Host = 'smtp.larksuite.com'; $m->Port = 465; $m->SMTPSecure = 'ssl'; $m->SMTPAuth = true;
+	$m->Username = 'sales@digicomvn.com'; $m->Password = DGC_SMTP_PASS;
+} );
 
 /**
  * Helper doc 1 option.

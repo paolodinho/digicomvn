@@ -105,7 +105,8 @@ NCC_MA = {"danaseo": "1", "media viet nam": "2", "fame media": "3", "rise media"
 # bang-gia-master.csv (du lieu tham khao), nhung KHONG xuat ra gia-web.csv.
 CHI_NCC = {"danaseo", "rise media", "luatvietnam (chinh chu)"}
 # Hieu 2026-11-05: them Rise Media + LuatVietnam (chinh chu), gia web = gia NCC x 1,1 (MARKUP_NCC_10).
-MARKUP_NCC_10 = {"rise media": 1.10, "luatvietnam (chinh chu)": 1.10}
+# Hieu 2026-11-05 toi: doi 1,10 -> 1,15 (moi don lai toi thieu 15%).
+MARKUP_NCC_10 = {"rise media": 1.15, "luatvietnam (chinh chu)": 1.15}
 # NGOAI LE (Hieu 2026-07-18): Toplist va Backlink quoc te KHONG co du lieu DanaSEO
 # -> se trong trang neu ap dung CHI_NCC. Giu nguyen hanh vi CU (moi NCC) de trang khong
 # bi trong bang gia - nhung van qua web_gia() nen van duoc markup 5% nhu duoi.
@@ -114,7 +115,7 @@ DICH_VU_NGOAI_LE_CHI_NCC = {"toplist", "backlink-quocte"}
 # Hieu 2026-08-18: "gia niem yet bang gia DanaSEO tru 5%". DanaSEO chiet khau NGAM them 10%
 # rieng cho Hieu (gia von THAT = gia DanaSEO bao x 0,90) nen ban o muc x0,95 van lai ~5,56%
 # tren gia von that - xem bao-gia-khach-hang.md muc 3 (cung cong thuc dung cho bao gia tay).
-MARKUP_DANASEO = 0.95
+MARKUP_DANASEO = 1.05  # Hieu 2026-11-05 toi: 0,95 -> 1,05
 
 def web_gia(r):
     """Gia hien thi len web = gia DanaSEO bao (gia_ban_digicom) x 0,95 (Hieu 2026-08-18),

@@ -1,0 +1,93 @@
+{
+ "labels": {
+  "VnExpress.net": "Không in chữ \"Quảng cáo\". Cuối bài có biểu tượng nhỏ \"Nội dung được tài trợ\"; bài vẫn nằm trong chuyên mục (vd Giải trí › Làm đẹp)",
+  "Dantri.com.vn": "Không in chữ \"Quảng cáo\" cạnh tiêu đề; bài nằm trong chuyên mục, chú thích ảnh ghi nguồn thương hiệu",
+  "Tuoitre.vn": "Bài thuộc chuyên mục \"Cần biết\" (ghi trên tiêu đề), tác giả ghi tên viết tắt",
+  "Thanhnien.vn": "Dòng tác giả ghi \"Thông tin dịch vụ\" hoặc \"Nguồn: <tên doanh nghiệp>\"",
+  "Kenh14.vn": "Không in nhãn. Dòng tác giả ghi \"Theo <tên báo đối tác>\"",
+  "Vtv.vn": "Bài thuộc chuyên mục \"Góc doanh nghiệp\" (ghi trên tiêu đề)",
+  "Ngoisao.vnexpress.net": "Không in nhãn \"Quảng cáo\"; bài nằm trong mục"
+ },
+ "label_answer": "Không báo nào trong 6 báo in chữ \"Quảng cáo\" hay \"Bài PR\" ngay cạnh tiêu đề. Theo Luật Quảng cáo (sửa đổi bởi Luật 75/2025/QH15, hiệu lực 01/01/2026), nội dung quảng cáo trên báo điện tử phải có dấu hiệu phân biệt với tin tức, nên mỗi báo đánh dấu theo cách riêng: VnExpress có biểu tượng nhỏ \"Nội dung được tài trợ\" cuối bài; Thanh Niên ghi \"Thông tin dịch vụ\" ở dòng tác giả; Tuổi Trẻ xếp vào chuyên mục \"Cần biết\"; VTV xếp vào chuyên mục \"Góc doanh nghiệp\"; Kenh14 và Dân Trí không in nhãn, bài nằm trong chuyên mục như bài thường. Cách hiển thị do toà soạn quyết định và có thể thay đổi. Chi tiết từng báo ở cột \"Nhãn hiển thị trên bài\" và sheet \"Bài mẫu\" (kiểm trên trang báo ngày 05/11/2026).",
+ "sample_answer": "Sheet \"Bài mẫu\" có 2 bài PR đăng gần đây trên mỗi báo (kiểm ngày 05/11/2026), ưu tiên mỹ phẩm, thương hiệu Hàn Quốc, để quý khách xem thực tế cách trình bày, nhãn hiển thị và vị trí link.",
+ "sample_note": "Các bài dưới đây là bài PR của doanh nghiệp khác đã đăng trên từng báo (kiểm ngày 05/11/2026), dùng để tham khảo cách trình bày, nhãn hiển thị, vị trí link. Đây không phải bài do DigicomVN thực hiện.",
+ "samples": {
+  "VnExpress.net": [
+   {
+    "title": "Vacure Treat mang giải pháp dưỡng da chuyên sâu tới Việt Nam (mỹ phẩm Hàn, 10/2026)",
+    "url": "https://vnexpress.net/vacure-treat-mang-giai-phap-duong-da-chuyen-sau-toi-viet-nam-5130168.html",
+    "note": "Mục Giải trí › Làm đẹp; 1 link nofollow; biểu tượng \"Nội dung được tài trợ\" cuối bài"
+   },
+   {
+    "title": "Thương hiệu mỹ phẩm Pháp ra mắt sản phẩm lấy cảm hứng từ ánh sáng (08/2026)",
+    "url": "https://vnexpress.net/thuong-hieu-my-pham-phap-ra-mat-san-pham-lay-cam-hung-tu-anh-sang-5113191.html",
+    "note": "1 link nofollow"
+   }
+  ],
+  "Dantri.com.vn": [
+   {
+    "title": "Vựa Tốt - nền tảng mua sắm đồ cũ tại Việt Nam (09/2026)",
+    "url": "https://dantri.com.vn/doi-song/vua-tot-nen-tang-mua-sam-do-cu-tai-viet-nam-20260921102604057.htm",
+    "note": "Mục Đời sống; 2 link nofollow"
+   },
+   {
+    "title": "Thương hiệu Kitimop làm mới sản phẩm gia dụng (09/2026)",
+    "url": "https://dantri.com.vn/doi-song/thuong-hieu-kitimop-lam-moi-san-pham-gia-dung-tu-nhu-cau-thuc-te-20260925142248667.htm",
+    "note": "Mục Đời sống; không link"
+   }
+  ],
+  "Tuoitre.vn": [
+   {
+    "title": "Keyshu chiến thắng hạng mục mặt nạ của năm tại L'Officiel 2026 (11/2026)",
+    "url": "https://tuoitre.vn/keyshu-chien-thang-hang-muc-mat-na-cua-nam-tai-lofficiel-2026-100261102194414967.htm",
+    "note": "Chuyên mục Cần biết; không link"
+   },
+   {
+    "title": "Kính mắt Anna đạt kỷ lục Việt Nam về hệ thống cửa hàng (11/2026)",
+    "url": "https://tuoitre.vn/kinh-mat-anna-dat-ky-luc-viet-nam-ve-he-thong-cua-hang-kinh-mat-lon-nhat-100261102105239955.htm",
+    "note": "Chuyên mục Cần biết; không link"
+   }
+  ],
+  "Thanhnien.vn": [
+   {
+    "title": "Shinique - thương hiệu dược mỹ phẩm Hàn Quốc ra mắt thị trường Việt Nam (03/2026)",
+    "url": "https://thanhnien.vn/shinique-thuong-hieu-duoc-my-pham-han-quoc-cao-cap-chinh-thuc-ra-mat-thi-truong-viet-nam-185260311143009092.htm",
+    "note": "Doanh nghiệp Hàn Quốc ra mắt tại Việt Nam"
+   },
+   {
+    "title": "Hachi Hachi ra mắt Plus, mở rộng lựa chọn cho gia đình Việt (10/2026)",
+    "url": "https://thanhnien.vn/hachi-hachi-ra-mat-plus-mo-rong-lua-chon-cho-gia-dinh-viet-18526103109300295.htm",
+    "note": "Tác giả ghi \"Thông tin dịch vụ\"; 3 link nofollow"
+   }
+  ],
+  "Kenh14.vn": [
+   {
+    "title": "Hội mê mỹ phẩm Hàn Quốc có thêm chỗ để shopping, check-in và săn quà (10/2026)",
+    "url": "https://kenh14.vn/hoi-me-my-pham-han-quoc-co-them-cho-de-shopping-check-in-va-san-qua-215261020190722012.chn",
+    "note": "K-beauty; 1 link nofollow"
+   },
+   {
+    "title": "Công ty Hansung E ra mắt thương hiệu Spicule X tại Việt Nam (01/2025)",
+    "url": "https://kenh14.vn/cong-ty-hansung-e-ra-mat-thuong-hieu-spicule-x-tai-viet-nam-215250115124653272.chn",
+    "note": "Doanh nghiệp Hàn Quốc ra mắt thương hiệu"
+   }
+  ],
+  "Vtv.vn": [
+   {
+    "title": "Festival Mẹ bầu - Em bé KidsPlaza 2026 (10/2026)",
+    "url": "https://vtv.vn/festival-me-bau-em-be-kidsplaza-2026-hang-nghin-gia-dinh-cung-hoi-tu-trong-ngay-hoi-quy-mo-lon-100261007172943121.htm",
+    "note": "Chuyên mục Góc doanh nghiệp; không link"
+   },
+   {
+    "title": "Đập tan định kiến nóng bí và sụt lún với nệm foam công nghệ mới iComfy (09/2026)",
+    "url": "https://vtv.vn/dap-tan-dinh-kien-nong-bi-va-sut-lun-voi-nem-foam-cong-nghe-moi-icomfy-100260928103834049.htm",
+    "note": "Chuyên mục Góc doanh nghiệp"
+   }
+  ]
+ },
+ "noibo_notes": [
+  "Nhãn PR + bài mẫu: agent mở trang thật 05/11/2026. Bài mẫu là PR của DN khác, đã ghi rõ không phải Digicom làm. Bản 06/11 bỏ câu hứa gửi link bài Digicom; muốn gửi thì Hiếu thêm 2-3 link thật vào email.",
+  "Nully (nullylab.com): đào tạo tài năng K-Culture (NULLY Academy: K-pop, KOL, KOC), NULLY LAB đưa thương hiệu Hàn vào VN. Góc bài hợp nhất: Giải trí/Ngôi sao (đào tạo, debut), không phải Làm đẹp thuần.",
+  "Pháp lý: Luật QC sửa đổi 75/2025 Điều 23 khoản 2 điểm a yêu cầu dấu hiệu nhận diện rõ ràng QC trên mạng."
+ ]
+}

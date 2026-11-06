@@ -21,8 +21,8 @@
 - Mỗi báo giá gửi khách phải có ít nhất 1 yếu tố tạo cảm giác lợi ích rõ ràng: giá đã tối
   ưu theo combo, so sánh mức tiết kiệm so với phương án cao hơn, hoặc ưu đãi kèm theo.
 - **Không được lỗi vốn** - chiết khấu/khuyến mãi phải nằm trong sàn giá vốn thật của NCC
-  (xem `bang-gia-booking.md` mục "SÀN GIÁ VỐN cho chiết khấu combo" - markup hiện tại chỉ
-  ~3%, combo giảm tối đa an toàn ~2,9%).
+  (xem `bang-gia-booking.md` mục "SÀN GIÁ VỐN cho chiết khấu combo" - markup web ~3%; báo giá tay từ 05/11 lãi ~15%,
+  CK thật cho khách không được ăn quá phần lãi này).
 - Khi báo giá có nhiều phương án theo hạng mục (thời hạn đăng, vị trí chuyên mục...) -
   trình bày rõ bảng so sánh mức giá + mức tiết kiệm bằng số tiền cụ thể, không chỉ nói
   chung chung "giá tốt".
@@ -35,17 +35,21 @@
 > không riêng digicom. Mục này là phần tính toán NỘI BỘ - không được đưa nguyên văn vào
 > file gửi khách (xem mục 4 ngay dưới).
 
+- **ÁP DỤNG TỪ 05/11/2026 (Hiếu chốt, ĐÈ mọi công thức cũ bên dưới):** lấy giá NCC báo
+  CHƯA VAT rồi nhân: **DanaSEO × 1,05**; **mọi NCC khác (Goodcom, Media Việt Nam, Rise Media,
+  Fame...) × 1,15**. Lý do: kỳ vọng mọi đơn lãi tối thiểu 15% (DanaSEO còn CK ngầm 10% nên
+  ×1,05 đã lãi ~16%). VAT tính sau trên giá bán. Làm tròn LÊN nghìn. Vẫn chọn phương án rẻ
+  nhất cho khách giữa các NCC cùng quy cách. Báo giá đã gửi trước 05/11 giữ nguyên số.
 - **"Giá DanaSEO báo"** = số trong sheet DanaSEO. DanaSEO còn CHIẾT KHẤU THÊM 10% cho Hiếu
   trên số này → **giá vốn thật = giá DanaSEO báo × 0.90**.
-- **SỬA 2026-10-29 (Hiếu, báo giá Hannah): giá bán thật = GIÁ GỐC DanaSEO báo (không ×0,95)**
+- (Cũ 29/10, thay bằng mục 05/11 ở trên) **SỬA 2026-10-29 (Hiếu, báo giá Hannah): giá bán thật = GIÁ GỐC DanaSEO báo (không ×0,95)**
   → lãi = 10% chiết khấu ngầm. **NCC khác (Media Việt Nam, Rise Media, Fame...) = giá họ báo
   × 1,10.** Mỗi báo chọn phương án RẺ NHẤT cho khách giữa 2 cách tính, cùng quy cách (số link,
   loại link, số chữ/ảnh). Thay cho dòng ×0,95 cũ bên dưới.
 - (Cũ, không dùng cho báo giá tay nữa) Giá bán = giá DanaSEO báo × 0.95.
 - **Báo giá mới và báo giá cũ (cùng đầu báo/vị trí) không được chênh lệch nhau** - đối chiếu
   lại số cũ trước khi gửi; lệch nhiều phải giải thích lý do, không im lặng đổi số.
-- Không áp dụng mục này cho giá hiển thị trên website (`dgc_gia` CPT) - nơi đó vẫn theo
-  công thức ×1.05 đã chốt trong `bang-gia-booking.md`.
+- Từ 05/11/2026 tối giá web (`dgc_gia`) dùng CÙNG hệ số này (DanaSEO ×1,05, Rise/LuatVietnam ×1,15) - xem `bang-gia-booking.md`.
 
 ## 4. Cách HIỂN THỊ giá trong file gửi khách (chốt 2026-08-18 - BẮT BUỘC, xem ảnh sự cố)
 

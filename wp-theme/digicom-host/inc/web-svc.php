@@ -5,7 +5,7 @@
  * - Bang gia: option 'web_gia_<slug>' (WP Admin > DigicomVN > muc 12). De trong = bang mac dinh duoi day.
  *   Moi dong: nhom | ten goi | gia | don vi (vd /thang, /nam, /user/thang, /website) | gia goc gach ngang | thong so 1; thong so 2; ...
  * - Gia mac dinh (Hieu 31/10, moi san pham lai >= 10% tren so tien thuc tra dai ly, da gom VAT 10%):
- *   gia ban >= gia dai ly x 1,1 (VAT) x 1,1. Doi chieu: file NOIBO noi bo (khong commit). Doi gia o WP Admin phai giu san nay.
+ *   gia ban >= gia dai ly x 1,1 (VAT) x 1,1. Tu 05/11/2026 toi: lai >= 15% (x1,265), nang tu dong trong dgc_web_rows(). Doi chieu: file NOIBO noi bo (khong commit). Doi gia o WP Admin phai giu san nay.
  * - KHONG ghi ten nha cung cap o bat ky dau (rule bao-gia-khong-lo-gia-von).
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -75,11 +75,22 @@ function dgc_web_rows( $slug ) {
 	foreach ( preg_split( '/\r\n|\r|\n/', $raw ) as $line ) {
 		$l = array_map( 'trim', explode( '|', $line ) );
 		if ( count( $l ) < 2 || '' === $l[1] ) continue;
+		$gia = (int) preg_replace( '/\D/', '', $l[2] ?? '' );
+		$goc = (int) preg_replace( '/\D/', '', $l[4] ?? '' );
+		/* Nang 5% dich vu dai ly: Email Pro, SSL, cloud server (Hieu duyet 05/11/2026). Khong ap Google Workspace / Microsoft 365. */
+		if ( in_array( $slug, array( 'chung-chi-ssl', 'cloud-server' ), true ) || ( 'email-doanh-nghiep' === $slug && 0 === strpos( $l[0], 'Email' ) ) ) {
+			$up  = function ( $v ) { return $v ? (int) ( ceil( $v * 1.05 / ( $v >= 50000 ? 1000 : 100 ) ) * ( $v >= 50000 ? 1000 : 100 ) ) : 0; };
+			$gia = $up( $gia ); $goc = $up( $goc );
+		} elseif ( 'thiet-ke-website' !== $slug ) {
+			/* Hieu 05/11 toi: moi dich vu dai ly lai >= 15% (gia mac dinh dat o san x1,21 = lai 10%) -> nhan 1,265/1,21. Nhom tren (x1,05) da du x1,27. */
+			$up  = function ( $v ) { return $v ? (int) ( ceil( $v * 1.265 / 1.21 / ( $v >= 50000 ? 1000 : 100 ) ) * ( $v >= 50000 ? 1000 : 100 ) ) : 0; };
+			$gia = $up( $gia ); $goc = $up( $goc );
+		}
 		$out[ $l[0] ][] = array(
 			'goi'  => $l[1],
-			'gia'  => (int) preg_replace( '/\D/', '', $l[2] ?? '' ),
+			'gia'  => $gia,
 			'dv'   => $l[3] ?? '',
-			'goc'  => (int) preg_replace( '/\D/', '', $l[4] ?? '' ),
+			'goc'  => $goc,
 			'spec' => array_values( array_filter( array_map( 'trim', explode( ';', $l[5] ?? '' ) ) ) ),
 		);
 	}

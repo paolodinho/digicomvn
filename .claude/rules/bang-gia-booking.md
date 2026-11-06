@@ -177,7 +177,11 @@ Backup trước khi import: `~/Claude-Workspace/_backups/routines/<ngày>/bang-g
 
 `build_master.py` tự áp: `gia_ban_digicom = gia_ncc_km or gia_ncc_goc`.
 
-## CHỈ DANASEO, GIÁ = GIÁ DANASEO x 0,95 (chốt 2026-08-18, GHI ĐÈ mục "CHỈ DANASEO + LÃI 5%" ngay dưới)
+## HỆ SỐ WEB MỚI 05/11/2026 (Hiếu "đổi đi", GHI ĐÈ x0,95 và x1,1)
+- Giá web = giá NCC chưa VAT x1,05 (DanaSEO) / x1,15 (Rise Media, LuatVietnam), giống báo giá tay. `export-web.py`: MARKUP_DANASEO 1.05, MARKUP_NCC_10 1.15.
+- Đẩy live 05/11 tối: 1003 dòng (565 DanaSEO, 437 Rise, 1 LuatVietnam 5.500.000 -> 5.750.000). Không đụng: textlink bảng nhiều mức, IAC, toplist, truyền hình, dòng mã 2/3/9. Backup `~/Claude-Workspace/_backups/routines/2026-11-05/gia-web-he-so-moi/live-BEFORE.json`, payload `10-bang-gia-booking/payload-he-so-moi-2026-11-05.json`.
+
+## (LỊCH SỬ) CHỈ DANASEO, GIÁ = GIÁ DANASEO x 0,95 (chốt 2026-08-18, GHI ĐÈ mục "CHỈ DANASEO + LÃI 5%" ngay dưới)
 
 Hiếu: "toàn bộ sản phẩm niêm yết trên digicomvn chỉ lấy của danaseo và giá sẽ bằng giá danaseo -5%".
 
@@ -524,11 +528,11 @@ suy luận - đặc biệt với dữ liệu nhập từ nhiều nguồn không 
 - Bảo hành 3 tháng: bài mất thì IAC đăng lại; sau đó bài tồn tại tới khi site ngừng hoạt động.
 - Web: 61 dòng nhóm `backlink-quoc-te` (ID 7930-7990: 3 gói + 58 site lẻ), tạo 30/10/2026. Rollback: draft các ID này.
 - **Báo/PR nước ngoài CHỈ lấy nguồn IAC Digital** (Hiếu chốt 02/11/2026). KHÔNG dùng Rankifyer, newswire (PR Newswire, EIN, ACCESS, King Newswire...) hay NCC quốc tế khác trong `bang-gia-master.csv` cho báo giá khách. Mẫu báo giá: `11-bao-gia-khach/Bao-Gia-Booking-Bao-Nuoc-Ngoai-Thuy-Duong-2026-11-02.xlsx` (lọc 19/58 site IAC là trang tin/tạp chí khi khách hỏi "báo").
-- **Ngoại lệ (Hiếu 02/11/2026): báo VIỆT NAM bản tiếng Anh** (e.vnexpress.net, news.tuoitre.vn, english.vtv.vn, dtinews.dantri.com.vn, vietnamnews.vn, vir.com.vn) lấy nguồn Goodcom, giá bán = thành tiền Goodcom x1,1. Gộp chung 1 file báo giá với báo nước ngoài (IAC) + báo tiếng Việt khi khách cần, mỗi nhóm 1 tab; nhóm báo VN ghi chưa VAT 8%, có xuất hoá đơn.
+- **Ngoại lệ (Hiếu 02/11/2026): báo VIỆT NAM bản tiếng Anh** (e.vnexpress.net, news.tuoitre.vn, english.vtv.vn, dtinews.dantri.com.vn, vietnamnews.vn, vir.com.vn) lấy nguồn Goodcom, giá bán = thành tiền Goodcom x1,15 (từ 05/11/2026). Gộp chung 1 file báo giá với báo nước ngoài (IAC) + báo tiếng Việt khi khách cần, mỗi nhóm 1 tab; nhóm báo VN ghi chưa VAT 8%, có xuất hoá đơn.
 
 ## NCC Goodcom Việt Nam - booking báo lớn (ghi nhận 31/10/2026)
 - CÔNG TY TNHH TRUYỀN THÔNG GOODCOM VIỆT NAM (Cầu Giấy, Hà Nội), đầu mối Ms Thu 0988866152. File báo giá gửi Combat: Drive xlsx 1n_CBWN_3wYF6JZ35qhkMb2dSaOSMgDpV, mỗi đợt 1 tab (theo khách/ngày).
-- Giá cột "Thành tiền" đã trừ CK, chưa VAT, chưa phí edit, hiệu lực 10 ngày. Báo giá tay: giá bán = thành tiền x1,1; so với DanaSEO chọn rẻ hơn cho khách cùng quy cách (giữ DanaSEO khi nhiều link hơn).
+- Giá cột "Thành tiền" đã trừ CK, chưa VAT, chưa phí edit, hiệu lực 10 ngày. Báo giá tay: giá bán = thành tiền x1,15 (từ 05/11/2026, trước là x1,1); so với DanaSEO chọn rẻ hơn cho khách cùng quy cách (giữ DanaSEO khi nhiều link hơn).
 - Có các báo DanaSEO không có: Hoahoctro, Dulichvietnam, Dulichtoday, Vneconomy, Congthuong, fanpage/TikTok báo.
 
 ## NCC Global Book Corp - báo quốc tế hạng top (ghi nhận 04/11/2026)
@@ -539,7 +543,7 @@ suy luận - đặc biệt với dữ liệu nhập từ nhiều nguồn không 
 
 ## Rise Media + LuatVietnam lên web, giá NCC x1,1 (Hiếu chốt 05/11/2026)
 - Hiếu: Rise Media (Sheet 1uOvzvsZ-3clQR0bCPtr2JoCPJ3RyuTGF, 4 tab) dùng cho báo giá, "giá này cần thêm 10%"; LuatVietnam (rate card chính chủ, `raw/luatvietnam-chinh-chu/`) "cũng thêm 10%".
-- Master lưu GIÁ VỐN (parse-rise-media*.py MARKUP 1.0, LuatVietnam trong raw/ncc-khac.csv). Báo giá tay + web = vốn x1,1 (`MARKUP_NCC_10` trong export-web.py). Bảng tra nhanh: `NOIBO-gia-rise-media-bao-gia-2026-11-05.csv`.
+- Master lưu GIÁ VỐN (parse-rise-media*.py MARKUP 1.0, LuatVietnam trong raw/ncc-khac.csv). Web = vốn x1,1 (`MARKUP_NCC_10` trong export-web.py); báo giá tay từ 05/11/2026 = vốn x1,15 (`bao-gia-khach-hang.md` mục 3). Bảng tra nhanh: `NOIBO-gia-rise-media-bao-gia-2026-11-05.csv`.
 - `CHI_NCC` = DanaSEO (x0,95) + Rise Media + LuatVietnam (chính chủ). Mã NCC: Rise 4, LuatVietnam 7.
 - Đẩy live 05/11: 319 dòng sửa giá (170 dòng Rise draft 09/08 mở lại), 55 dòng mới; publish 1002 -> 1227. Chỉ mở lại/tạo dòng Rise/LuatVietnam, không mở dòng DanaSEO draft. Payload `payload-rise-luatvn-2026-11-05.json`, backup `~/Claude-Workspace/_backups/routines/2026-11-05/gia-rise-luatvn/live-BEFORE.json` (rollback: set lại gia_km + draft các ID republish).
 - Rebuild master làm mất 12 dòng Batdongsan (chính chủ) nhập tay: sau mỗi lần build_master.py phải chép lại từ bản trước.

@@ -360,14 +360,33 @@ function dgc_tm_order_summary( $id ) {
 function dgc_tm_notify_admin( $id, $subject ) {
 	$o   = (array) get_post_meta( $id, '_tm_owner', true );
 	$typ = 'org' === ( $o['type'] ?? '' ) ? 'Tổ chức' : 'Cá nhân';
-	$msg = dgc_tm_order_summary( $id ) . "\nTrạng thái: " . ( dgc_tm_status_labels()[ get_post_meta( $id, '_tm_status', true ) ] ?? '' )
+	/* Khoi cho ke toan xuat hoa don (Hieu 05/11/2026): dich vu, ky han, don gia, thanh toan. Khong dua mat khau cPanel. */
+	$kt = "THÔNG TIN XUẤT HOÁ ĐƠN\nMã đơn: " . get_post_meta( $id, '_tm_code', true ) . "\nNgày đặt: " . get_the_date( 'd/m/Y H:i', $id ) . "\n\nDịch vụ:\n";
+	$i = 0;
+	foreach ( (array) get_post_meta( $id, '_tm_lines', true ) as $l ) {
+		$i++;
+		$t = $l['t'] ?? '';
+		if ( 'h' === $t )      { $ten = 'Hosting ' . $l['n'] . ' - tên miền ' . $l['d']; $ky = $l['m'] . ' tháng'; }
+		elseif ( 'w' === $t )  { $ten = function_exists( 'dgc_ws_line_text' ) ? dgc_ws_line_text( $l ) : ( $l['n'] ?? 'Dịch vụ' ); $ky = ( $l['m'] ?? '' ) . ' tháng'; }
+		else                   { $ten = 'Tên miền ' . $l['d']; $ky = $l['y'] . ' năm'; }
+		$kt .= "$i. $ten | Kỳ hạn: $ky | Số lượng: 1 | Thành tiền: " . dgc_vnd( $l['amount'] ) . "\n";
+	}
+	$sub = (int) get_post_meta( $id, '_tm_sub', true ); $vat = (int) get_post_meta( $id, '_tm_vat', true );
+	$kt .= "Cộng tiền dịch vụ: " . dgc_vnd( $sub ?: get_post_meta( $id, '_tm_total', true ) ) . "\nVAT: " . ( $vat ? dgc_vnd( $vat ) : 'giá đã gồm VAT (đơn không tách VAT)' ) . "\nTổng thanh toán: " . dgc_vnd( get_post_meta( $id, '_tm_total', true ) ) . "\n";
+	$tx = (array) get_post_meta( $id, '_tm_txn', true );
+	$kt .= "\nThanh toán: chuyển khoản ngân hàng\nSố tiền đã nhận: " . dgc_vnd( (int) get_post_meta( $id, '_tm_paid', true ) )
+		. ( ! empty( $tx['ref'] ) ? "\nMã giao dịch ngân hàng: " . $tx['ref'] : '' ) . ( ! empty( $tx['time'] ) ? "\nThời gian nhận tiền: " . $tx['time'] : '' )
+		. "\nTài khoản nhận: " . dgc( 'tm_bank_acc', '567898838' ) . ' - MB Bank - ' . dgc( 'tm_bank_owner', 'CONG TY TNHH DVTT DIGITO COMBAT' ) . "\n\n";
+	$msg = $kt . "CHI TIẾT ĐƠN\n" . dgc_tm_order_summary( $id ) . "\nTrạng thái: " . ( dgc_tm_status_labels()[ get_post_meta( $id, '_tm_status', true ) ] ?? '' )
 		. "\nĐã nhận: " . dgc_vnd( (int) get_post_meta( $id, '_tm_paid', true ) )
 		. "\n\nChủ thể ($typ): " . ( $o['name'] ?? '' ) . "\nCCCD/MST: " . ( $o['idno'] ?? '' )
 		. ( 'org' === ( $o['type'] ?? '' ) ? "\nNgười đại diện: " . ( $o['rep'] ?? '' ) : "\nNgày sinh: " . ( $o['dob'] ?? '' ) )
 		. "\nĐịa chỉ: " . ( $o['addr'] ?? '' ) . ', ' . ( $o['city'] ?? '' ) . "\nĐiện thoại: " . ( $o['phone'] ?? '' ) . "\nEmail: " . ( $o['email'] ?? '' )
 		. ( ! empty( $o['note'] ) ? "\nGhi chú: " . $o['note'] : '' )
 		. "\n\nXem đơn: " . admin_url( 'post.php?post=' . $id . '&action=edit' );
-	wp_mail( dgc( 'lead_email', get_option( 'admin_email' ) ), '[Đơn hàng] ' . $subject, $msg );
+	/* Moi thong bao don hang gui ca ke toan de xuat hoa don (Hieu 05/11/2026). */
+	$to = array_unique( array_filter( array_map( 'trim', array( dgc( 'lead_email', get_option( 'admin_email' ) ), 'ketoan.digitocombat@gmail.com', 'hieudx3107@gmail.com' ) ) ) );
+	wp_mail( array_values( $to ), '[Đơn hàng] ' . $subject, $msg );
 }
 
 function dgc_tm_mail_customer( $id, $kind ) {
@@ -387,6 +406,7 @@ function dgc_tm_mail_customer( $id, $kind ) {
 			. ( $has_d && function_exists( 'dgc_hd_domain_guide' ) ? "\n" . dgc_hd_domain_guide() : '' )
 			. "\nCần trỏ tên miền về hosting hoặc cài đặt website, vui lòng trả lời email này hoặc gọi " . dgc( 'hotline', '0988 769 317' ) . '.';
 	}
+	if ( 'paid' !== $kind && function_exists( 'dgc_support_line' ) ) $msg .= dgc_support_line();
 	wp_mail( $o['email'], $sub, $msg . "\n\nDigicomVN\nHotline: " . dgc( 'hotline', '0988 769 317' ) . "\nEmail: sales@digicomvn.com" );
 }
 

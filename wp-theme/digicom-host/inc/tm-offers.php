@@ -44,7 +44,7 @@ function dgc_tm_combo() {
 	/* Hieu 31/10: combo chi chay khi gia ca bo >= tong von dang ky x 1,1, thieu von 1 duoi -> tat. */
 	$von = 0;
 	foreach ( $t as $x ) { $v = function_exists( 'dgc_tm_reg_cost' ) ? dgc_tm_reg_cost( $x ) : 0; if ( ! $v ) return false; $von += $v; }
-	if ( $price < $von * 1.1 ) return false;
+	if ( $price < $von * 1.21 ) return false; // von chua VAT: x1,1 VAT x1,1 lai (Hieu 05/11)
 	return array( 'tlds' => array_values( array_unique( $t ) ), 'price' => $price, 'label' => $p[2] ?? 'Kết hợp và tiết kiệm' );
 }
 

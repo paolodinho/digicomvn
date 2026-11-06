@@ -18,7 +18,7 @@ function dgc_hd_domain_guide() {
 }
 
 function dgc_hd_footer() {
-	return "\n\nCần hỗ trợ, trả lời email này hoặc gọi " . dgc( 'hotline', '0988 769 317' ) . ".\n\nDigicomVN\nHotline: " . dgc( 'hotline', '0988 769 317' ) . "\nEmail: sales@digicomvn.com";
+	return ( function_exists( 'dgc_support_line' ) ? dgc_support_line() : '' ) . "\n\nCần hỗ trợ khác, trả lời email này hoặc gọi " . dgc( 'hotline', '0988 769 317' ) . ".\n\nDigicomVN\nHotline: " . dgc( 'hotline', '0988 769 317' ) . "\nEmail: sales@digicomvn.com";
 }
 
 /** Noi dung email ban giao tu du lieu form. Tra ve array( subject, body ). */
