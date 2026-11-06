@@ -534,6 +534,7 @@ suy luận - đặc biệt với dữ liệu nhập từ nhiều nguồn không 
 - CÔNG TY TNHH TRUYỀN THÔNG GOODCOM VIỆT NAM (Cầu Giấy, Hà Nội), đầu mối Ms Thu 0988866152. File báo giá gửi Combat: Drive xlsx 1n_CBWN_3wYF6JZ35qhkMb2dSaOSMgDpV, mỗi đợt 1 tab (theo khách/ngày).
 - Giá cột "Thành tiền" đã trừ CK, chưa VAT, chưa phí edit, hiệu lực 10 ngày. Báo giá tay: giá bán = thành tiền x1,15 (từ 05/11/2026, trước là x1,1); so với DanaSEO chọn rẻ hơn cho khách cùng quy cách (giữ DanaSEO khi nhiều link hơn).
 - Có các báo DanaSEO không có: Hoahoctro, Dulichvietnam, Dulichtoday, Vneconomy, Congthuong, fanpage/TikTok báo.
+- Thethaovanhoa.vn (chị Thu xác nhận 06/11/2026): rate card (ghi 'đã gồm VAT') tin bài thường 2tr (<=700 chữ, 5 ảnh) / 3tr (>700 chữ); trang phụ Cống hiến, Du lịch, Bùi Xuân Phái = 70% trang chính (1,4 / 2,1tr); sau đó Goodcom chiết khấu THÊM 25% -> vốn 1,05 / 1,575tr. 1 hyperlink miễn phí, từ link thứ 2: 500K/link.
 
 ## NCC Global Book Corp - báo quốc tế hạng top (ghi nhận 04/11/2026)
 - Global Book Corporation - CTCP Sách Toàn Cầu (448 Tên Lửa, Bình Trị Đông, TP.HCM), info@globalbookcorp.com, Zalo 0902 932 392. Đại diện tại VN của Economist, CNBC, BBC, Reuters, WSJ, WaPo, FT, NYT, VICE, Nikkei, Caixin, SCMP, Straits Times, Business Times, Tech in Asia, Network18, Business Traveller.
