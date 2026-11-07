@@ -1,0 +1,167 @@
+g-tk-treo | Nếu tài khoản bị tạm ngưng (Suspended), mọi quảng cáo dừng, tài khoản chỉ còn chế độ xem
+g-tk-treo-nghiemtrong | Nếu lý do là vi phạm nghiêm trọng (egregious, ví dụ lách hệ thống) và bị treo ngay không cảnh báo
+g-tk-strike | Nếu nhận cảnh cáo vi phạm lặp lại (strike) hoặc thông báo cảnh báo trước khi treo
+g-tk-thanhtoan-tuchoi | Nếu thanh toán bị từ chối (Payment declined), quảng cáo sắp dừng hoặc đã dừng
+g-tk-thanhtoan-ngo | Nếu tài khoản bị tạm dừng vì hoạt động thanh toán đáng ngờ (Suspicious payment activity)
+g-tk-xacminh | Nếu có thông báo yêu cầu xác minh nhà quảng cáo (Advertiser verification) kèm hạn chót
+g-tk-chiphi-vuot | Nếu một ngày chi gần gấp đôi ngân sách ngày đã đặt
+g-kc-tongquat | Nếu chiến dịch đang bật mà 0 lượt hiển thị trong 24 giờ
+g-kc-review | Nếu quảng cáo ở trạng thái Under review quá lâu
+g-kc-disapproved | Nếu quảng cáo/asset bị từ chối (Disapproved)
+g-kc-limited | Nếu trạng thái Eligible (limited) ở quảng cáo
+g-kc-lowvol | Nếu từ khoá ở trạng thái Low search volume
+g-kc-ngansach | Nếu chiến dịch Limited by budget và hết tiền từ sáng
+g-kc-lich | Nếu quảng cáo chỉ chạy một số khung giờ hoặc không chạy vào giờ cần
+g-kc-vitri | Nếu không hiển thị ở khu vực mong muốn hoặc hiển thị cho người ở nơi khác
+g-kc-giathau | Nếu từ khoá Below first page bid hoặc Search lost IS (rank) rất cao, gần như không thắng phiên đấu giá
+g-kc-trung | Nếu có từ khoá giống nhau ở nhiều nhóm/chiến dịch và nhóm mong muốn không nhận traffic
+g-kc-phudinh | Nếu hiển thị tụt hẳn ngay sau ngày thêm từ khoá phủ định
+g-kc-learning | Nếu chiến dịch vừa đổi chiến lược giá thầu và hiển thị/chi tiêu dao động mạnh trong vài ngày
+g-cs-healthcare | Nếu quảng cáo dịch vụ y tế, thuốc bị từ chối hoặc giới hạn vì Healthcare and medicines
+g-cs-persad | Nếu quảng cáo dịch vụ sức khoẻ bị từ chối/giới hạn vì Personalized advertising: Health
+g-cs-fertility | Nếu quảng cáo dịch vụ sinh sản, tránh thai, xét nghiệm không hiển thị ở một số nước
+g-cs-dest | Nếu bị từ chối Destination not working, Destination mismatch hoặc trang đích không xem được
+g-cs-malware | Nếu bị từ chối vì phần mềm độc hại/trang bị xâm nhập (Compromised site)
+g-cs-thuthapdulieu | Nếu bị từ chối vì thu thập dữ liệu (Data collection and use), ví dụ form hỏi thông tin nhạy cảm
+g-cs-appeal-thatbai | Nếu đã khiếu nại 3 lần cho cùng 1 quảng cáo mà vẫn bị từ chối
+g-is-budget | Nếu Search lost IS (budget) cao, ví dụ trên 20%
+g-is-rank | Nếu Search lost IS (rank) cao trong khi ngân sách còn dư
+g-is-tis | Nếu muốn giữ hiển thị đầu trang cho từ khoá thương hiệu
+g-ctr-giam | Nếu CTR giảm rõ so với kỳ trước (cùng số ngày, cùng thứ trong tuần)
+g-ctr-qc | Nếu Expected CTR là Below average ở từ khoá chính
+g-ctr-asset | Nếu quảng cáo ít khi hiện sitelink, callout, call asset
+g-ctr-hienthi | Nếu CTR thấp chỉ vì chiến dịch Search bật thêm Display Network hoặc Search partners
+g-cpc-tang | Nếu CPC trung bình tăng trên 20-30% trong 1-2 tuần mà không ai sửa gì
+g-cpc-tran | Nếu dùng Maximize clicks và CPC bị đẩy quá cao
+g-cpc-target | Nếu CPC tăng ngay sau khi nâng tCPA hoặc hạ tROAS
+g-cpc-qs | Nếu QS của từ khoá đắt nhất chỉ 1-4
+g-qs-relevance | Nếu Ad relevance là Below average
+g-qs-lp | Nếu Landing page experience là Below average
+g-qs-ctr | Nếu Expected CTR là Below average
+g-qs-nodata | Nếu QS hiện dấu gạch (chưa có điểm)
+g-qs-adstrength | Nếu Ad Strength Poor/Average và lo ảnh hưởng xếp hạng
+g-kcd-doluong | Nếu có hàng chục click mà 0 chuyển đổi kể cả những ngày khách báo có lead
+g-kcd-truyvan | Nếu tracking đúng nhưng search terms nhiều truy vấn lạc đề (tuyển dụng, miễn phí, tài liệu, nơi khác)
+g-kcd-trang | Nếu truy vấn đúng ý định nhưng tỷ lệ chuyển đổi thấp, nhất là trên mobile
+g-kcd-thoigian | Nếu chuyển đổi về muộn (lead offline, B2B chu kỳ dài) nên 3-7 ngày gần nhất luôn trống
+g-cpa-tach | Nếu CPL tăng trên 30% so kỳ trước
+g-cpa-limited-budget | Nếu chiến dịch tCPA bị Limited by budget và từ sau 17/08/2026 CPA tăng dần về đúng mức target
+g-cpa-aimax | Nếu CPA tăng sau khi AI Max bật (kể cả tự nâng cấp 09/2026 từ broad match cấp chiến dịch hoặc ACA)
+g-cpa-mua | Nếu CPA tăng đồng loạt mọi đối thủ trong mùa thấp điểm (lễ, Tết) và Explanations báo search interest giảm
+g-dl-ve0 | Nếu chuyển đổi về 0 từ một ngày cụ thể trong khi click ổn
+g-dl-tang-ao | Nếu chuyển đổi tăng vọt bất thường, CPA đẹp bất ngờ
+g-dl-oci | Nếu chuyển đổi offline (import từ CRM/Sheet) ngừng về sau 15/06/2026
+g-dl-consent | Nếu chuyển đổi giảm sau khi gắn banner cookie/Consent Mode
+g-dl-ga4 | Nếu số Google Ads và GA4 lệch nhau nhiều
+g-lr-click-ao | Nếu nghi đối thủ/bot click nhiều (nhiều click cùng IP, cùng giờ, không chuyển đổi)
+g-lr-form-rac | Nếu lead form nhiều số ảo, tên vô nghĩa, gửi lặp
+g-lr-pmax-display | Nếu PMax/Demand Gen ra nhiều lead rác và Channel performance cho thấy chi phí dồn vào Display/YouTube
+g-st-exact-lac | Nếu từ khoá Exact vẫn khớp truy vấn khác chữ
+g-st-broad | Nếu dùng Broad match và truy vấn quá rộng, chi phí lan man
+g-st-phudinh-sot | Nếu đã thêm phủ định mà truy vấn tương tự vẫn lọt
+g-st-other | Nếu dòng Other search terms chiếm phần lớn chi phí
+g-st-thuonghieu | Nếu chiến dịch non-brand hoặc PMax ăn truy vấn thương hiệu của mình, làm CPL đẹp giả
+g-bd-moi | Nếu chiến dịch mới, chưa có chuyển đổi nào
+g-bd-tcpa | Nếu đã có chuyển đổi đều và muốn giữ CPA ở một mức
+g-bd-troas | Nếu muốn dùng tROAS cho lead gen hoặc bán hàng
+g-bd-hoc | Nếu Bid strategy status báo Learning kéo dài
+g-bd-it-du-lieu | Nếu chiến dịch dưới 15-30 chuyển đổi/30 ngày và tCPA chạy chập chờn
+g-bd-tran | Nếu cần trần CPC khi dùng Smart Bidding
+g-bd-ngansach | Nếu ngân sách ngày nhỏ hơn CPA mục tiêu
+g-bd-doi | Nếu muốn đổi chiến lược giá thầu (ví dụ Maximize clicks sang Maximize conversions)
+g-ex-nhanban | Nếu định nhân bản chiến dịch để thử giá thầu/trang đích mới
+g-ex-power | Nếu experiment chạy 2 tuần mà kết quả không có ý nghĩa thống kê
+g-cd-primary | Nếu không rõ hành động nào đang dạy Smart Bidding
+g-cd-count | Nếu lead bị đếm nhiều lần cho cùng 1 người
+g-cd-ec | Nếu muốn tăng khớp chuyển đổi (người dùng chặn cookie, nhiều thiết bị)
+g-cd-oci | Nếu muốn dạy Google biết lead nào thành khách thật
+g-cd-gia-tri | Nếu muốn chuyển sang đặt giá theo giá trị nhưng lead không có doanh thu online
+g-cd-ga4-import | Nếu import key event từ GA4 vào Google Ads
+g-cd-dda | Nếu tranh cãi chuyển đổi được gán cho chiến dịch nào
+g-pm-khi-nao | Nếu đang cân nhắc mở PMax cho lead gen
+g-pm-searchterms | Nếu PMax chi vào truy vấn lạc đề
+g-pm-trangdich | Nếu PMax/AI Max đưa khách tới trang blog, tuyển dụng, trang không có form
+g-pm-asset-kem | Nếu asset trong PMax có nhãn Low
+g-pm-aimax-bat | Nếu chiến dịch Search có AI Max đang bật (kể cả do tự nâng cấp 09/2026)
+g-pm-dsa | Nếu còn chiến dịch DSA
+g-pm-dg | Nếu Demand Gen ra CPL cao hơn nhiều so với Search
+g-lc-khongdo | Nếu tài khoản số +84 bật call reporting mà cuộc gọi từ quảng cáo không được ghi nhận
+g-lc-callasset-tuchoi | Nếu call asset bị từ chối Unverified phone number
+g-lc-callonly | Nếu còn call-only ads
+g-lc-goi-nho | Nếu cuộc gọi đến ngoài giờ không ai nghe
+g-lc-location | Nếu location asset không hiện hoặc sai địa chỉ
+g-rsa-ghim | Nếu phải hiện câu bắt buộc (tên cơ sở, thông tin pháp lý) nhưng sợ ghim làm kém
+g-rsa-it | Nếu nhóm chỉ có 1 RSA với ít headline
+g-rsa-sitelink | Nếu sitelink bị từ chối hoặc không hiện
+g-rsa-ai-text | Nếu asset do Google tạo (Added by = Google AI) có câu sai sự thật/vi phạm
+g-td-cham | Nếu trang đích mobile chậm (LCP trên 2,5 giây)
+g-td-lechydinh | Nếu người tìm 'giá' mà trang không có giá, hoặc người tìm 'gần đây' mà trang không có địa chỉ
+g-td-form | Nếu nhiều người mở form rồi bỏ
+g-sc-khinao | Nếu CPA đạt mục tiêu 2-4 tuần liên tục và Search lost IS (budget) còn cao
+g-sc-het-cho | Nếu đã tăng ngân sách mà chi không tăng (không còn mất IS do ngân sách)
+g-sc-goiy | Nếu Google gợi ý (Recommendations) tăng ngân sách, đổi sang broad, bật tự động áp dụng
+g-bc-lech | Nếu Google báo nhiều chuyển đổi hơn số lead CRM
+g-bc-it-hon | Nếu CRM có nhiều lead từ quảng cáo hơn Google ghi nhận
+g-bc-ngay | Nếu số ngày trong báo cáo Google thay đổi sau vài ngày
+g-mv-khuyenmai | Nếu sắp có khuyến mãi ngắn ngày dự kiến tỷ lệ chuyển đổi tăng mạnh
+g-mv-dongcua | Nếu cơ sở nghỉ lễ, đóng cửa vài ngày
+g-mv-dotbien | Nếu chi phí/hiển thị nhảy bất thường 1 ngày rồi trở lại
+g-ct-brand | Nếu brand và non-brand chung 1 chiến dịch
+g-ct-qua-nho | Nếu tài khoản ngân sách nhỏ chia quá nhiều chiến dịch/nhóm, mỗi cái vài click/ngày
+g-ct-tat-cap | Nếu cần dừng 1 quảng cáo/từ khoá kém
+g-ct-mangtimkiem | Nếu chiến dịch Search đang bật Display Network/Search partners mà không biết hiệu quả
+fg-tk-moi-bi-treo | Tài khoản mới tạo, nạp tiền chạy được 1-2 ngày thì bị treo vì 'lách hệ thống' hoặc 'hoạt động thanh toán đáng ngờ', tôi chưa làm gì sai, phải làm sao?
+fg-tk-moi-thanh-toan | Nếu lý do là 'hoạt động thanh toán đáng ngờ' (Suspicious payment activity)
+fg-xac-minh-nqc | Google bắt xác minh nhà quảng cáo (Advertiser verification), không làm kịp thì sao? Cần giấy tờ gì?
+fg-tk-ca-nhan-hay-dn | Nên mở tài khoản Google Ads bằng Gmail cá nhân hay email công ty? Sau này nhân viên nghỉ thì sao?
+fg-nhieu-tk-1-email | 1 email được tạo bao nhiêu tài khoản Google Ads? Tôi quản lý nhiều khách thì làm thế nào?
+fg-the-bi-tu-choi | Thẻ Visa/Mastercard bị từ chối thanh toán, quảng cáo dừng hết, xử lý thế nào?
+fg-hoa-don-vn | Hoá đơn Google Ads ở Việt Nam bây giờ xuất thế nào, thuế GTGT bao nhiêu, có phải tự nộp thuế nhà thầu 5% + 5% không?
+fg-hoan-tien | Tài khoản bị treo hoặc muốn ngừng chạy thì tiền còn dư trong tài khoản có lấy lại được không?
+fg-tien-ma | Google trừ tiền nhiều hơn ngân sách ngày tôi đặt, có phải bị trừ sai không?
+fg-tin-dung-click-ao-hoa-don | Thấy dòng 'Invalid activity' hoặc 'điều chỉnh' trên hoá đơn là gì?
+fg-treo-lach-he-thong | Bị treo vì 'Circumventing systems' (lách hệ thống) dù không cố tình lách, khiếu nại có thắng được không?
+fg-khieu-nai-bao-lau | Gửi khiếu nại rồi mà mấy tuần không thấy trả lời, có gửi lại nhiều lần cho nhanh được không?
+fg-treo-lien-quan | Một tài khoản bị treo kéo theo cả tài khoản khác cùng MCC/cùng thẻ, vì sao?
+fg-strike | Nhận 'cảnh cáo' (strike) vì vi phạm chính sách, bao nhiêu lần thì bị treo?
+fg-truy-cap-trai-phep | Tài khoản bị người lạ đăng nhập chạy quảng cáo, rồi Google tạm ngưng, giờ làm sao?
+fg-tu-choi-trang-dich | Quảng cáo bị từ chối 'Trang đích không hoạt động' (Destination not working) dù tôi mở web vẫn bình thường?
+fg-y-te | Phòng khám/nha khoa/thuốc chạy Google Ads bị 'Hạn chế' hoặc từ chối vì chính sách y tế, phải làm gì?
+fg-tu-khoa-thuong-hieu | Có được đặt từ khoá là tên thương hiệu đối thủ không? Bị đối thủ khiếu nại nhãn hiệu thì sao?
+fg-trinh-bay-sai-lech | Bị treo vì 'Misrepresentation' (trình bày sai lệch) dù chỉ bán hàng bình thường?
+fg-tai-chinh | Quảng cáo vay tiền, đầu tư, tiền điện tử có chạy Google Ads ở Việt Nam được không?
+fg-du-dieu-kien-0-hien-thi | Chiến dịch báo 'Đủ điều kiện' (Eligible) cả ngày mà 0 hiển thị, 0 đồng chi, tại sao?
+fg-chi-khong-het | Ngân sách 500 nghìn/ngày mà chỉ tiêu 100 nghìn, làm sao cho tiêu hết?
+fg-dot-ngot-tut-hien-thi | Chiến dịch đang chạy tốt tự nhiên tụt hiển thị một nửa, không ai sửa gì?
+fg-dia-ly-sai | Nhắm Hà Nội mà vẫn có click từ tỉnh khác, nước ngoài?
+fg-cpc-cao | CPC ngành tôi quá cao, đối thủ trả bao nhiêu mà tôi luôn đứng dưới?
+fg-qs-thap | Điểm chất lượng 3/10, sửa thế nào? Điểm chất lượng có ảnh hưởng giá không?
+fg-chon-gia-thau | Mới chạy nên chọn Tối đa hoá lượt click, Tối đa hoá chuyển đổi hay CPC thủ công?
+fg-click-khong-lead | Chạy 3 triệu, 200 click mà không có cuộc gọi hay form nào, vấn đề ở đâu?
+fg-cpa-tang | CPA tháng này tăng gấp đôi mà không đổi gì, làm sao tìm nguyên nhân?
+fg-lead-rac | Form về nhiều nhưng toàn số ảo, lead rác, xử lý sao?
+fg-search-partner | Có nên tắt Đối tác tìm kiếm (Search partners) và Mạng hiển thị trong chiến dịch Search?
+fg-lech-ga4 | Google Ads báo 20 chuyển đổi mà GA4 chỉ có 12, cái nào đúng?
+fg-do-cuoc-goi | Khách chủ yếu gọi điện, làm sao đo cuộc gọi từ Google Ads?
+fg-consent | Có cần cài Consent Mode không? Không cài thì có mất dữ liệu?
+fg-enhanced | Chuyển đổi nâng cao (Enhanced conversions) là gì, có nên bật?
+fg-doi-thu-click | Nghi đối thủ bấm phá quảng cáo hằng ngày, Google có hoàn tiền không?
+fg-chan-ip | Chặn IP trong Google Ads được bao nhiêu? Phần mềm chặn click ảo có hiệu quả không?
+fg-tu-click | Tôi tự bấm quảng cáo của mình để kiểm tra có bị tính tiền không, có bị phạt không?
+fg-bh-thue-tk | Tài khoản bị treo, có nên thuê 'tài khoản agency' hoặc 'tài khoản trust' bên dịch vụ để chạy tiếp không?
+fg-bh-mua-tk-cu | Mua tài khoản Google Ads cũ (aged account, đã tiêu nhiều tiền) thì có 'trust' hơn, ít bị khoá hơn không?
+fg-bh-the-ao | Dùng thẻ Visa ảo, thẻ mượn, thẻ mua trên mạng để thanh toán Google Ads có được không?
+fg-bh-cloaking | Cloaking là gì, nghe nói dùng cloak thì chạy được sản phẩm bị cấm trên Google Ads?
+fg-bh-san-pham-cam | Bán thuốc kê đơn, hàng fake, vũ khí, đồ cấm có cách nào chạy Google Ads không?
+fg-bh-xac-minh-gia | Không có giấy phép kinh doanh, mượn giấy tờ người khác để qua xác minh nhà quảng cáo được không?
+fg-bh-nhieu-tk-may | Chạy nhiều tài khoản trên cùng máy, dùng VPS, trình duyệt antidetect, proxy để Google không liên kết được, có an toàn không?
+fg-bh-chiem-dau-gia | Tạo 2-3 tài khoản cùng chạy 1 website để chiếm nhiều vị trí quảng cáo cùng lúc được không?
+fg-bh-thuong-hieu | Chạy quảng cáo đứng tên thương hiệu người khác (giả làm hãng chính, đại lý chính thức) để lấy khách có được không?
+fg-bh-tool-click-doi-thu | Có tool/dịch vụ click ảo đốt tiền quảng cáo đối thủ, dùng có bị phát hiện không?
+fg-pmax-lead | Ngành dịch vụ (lead) có nên chạy Performance Max không, hay chỉ ra lead rác?
+fg-pmax-thuong-hieu | PMax ăn hết từ khoá thương hiệu, báo cáo đẹp nhưng không có khách mới?
+fg-dsa-ai-max | DSA bị chuyển sang AI Max, có nên bật AI Max cho chiến dịch Search không?
+fg-ag-so-huu | Thuê agency chạy Google Ads, tài khoản nên đứng tên ai? Hết hợp đồng agency không trả tài khoản thì sao?
+fg-ag-phi | Phí quản lý Google Ads thường tính thế nào, agency báo 'nạp qua tài khoản agency được giảm giá' có thật không?
+fg-ag-diem-toi-uu | Agency/Google gọi điện bảo nâng 'Điểm tối ưu hoá' lên 100%, có nên làm theo?
+fg-ag-ban-giao | Đổi agency/nhân viên mới, bàn giao tài khoản Google Ads thế nào để không mất dữ liệu?

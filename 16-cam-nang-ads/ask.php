@@ -7,7 +7,7 @@ header('Cache-Control: no-store');
 $home = getenv('HOME') ?: dirname(__DIR__, 4); // /home/<user>
 $KEY_FILE = $home . '/.cam-nang/openrouter_key';
 $STATE = sys_get_temp_dir() . '/cam-nang-ask';
-$MODELS = ['nvidia/nemotron-3-ultra-550b-a55b:free', 'google/gemma-4-31b-it:free', 'google/gemini-2.5-flash-lite']; // tối đa 3 model; free trước (hết credit vẫn chạy), trả phí sau
+$MODELS = ['nvidia/nemotron-3-ultra-550b-a55b:free', 'dots-studio/dots-3-note-preview:free']; // Hiếu chốt 07/11: chỉ dùng model free, không nạp credit OpenRouter
 $LIMIT_IP = 60; $LIMIT_ALL = 600; // lượt/ngày
 function out($a){ echo json_encode($a, JSON_UNESCAPED_UNICODE); exit; }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') out(['error' => 'Chỉ nhận POST']);
@@ -56,11 +56,41 @@ foreach ($top as [$s, $n]) { $i++; $hits[] = ['id' => $n['id'], 'score' => round
     foreach (['check' => 'Kiểm tra', 'do' => 'Xử lý', 'avoid' => 'Tránh'] as $k => $lab) if (!empty($n[$k])) $block .= "$lab: " . implode(' | ', $n[$k]) . "\n";
     $block .= 'Loại: ' . ($n['hat'] ?? 'white') . '; Độ tin cậy: ' . ($n['evidence'] ?? '') . '; Nguồn: ' . implode('; ', array_map(fn($x) => ($x['title'] ?? '') . ' ' . ($x['url'] ?? ''), $n['sources'] ?? [])) . "\n\n";
     if (mb_strlen($ctx) + mb_strlen($block) > $budget) break; $ctx .= $block; }
-$sys = "Bạn là người đồng nghiệp giàu kinh nghiệm giải thích cho người làm nghề quảng cáo Google Ads, Meta Ads và SEO tại Việt Nam. CHỈ dùng thông tin trong các mục cẩm nang được cung cấp; không thêm kiến thức ngoài, không bịa số liệu. Mục nào cẩm nang chưa có thì nói rõ 'cẩm nang chưa có mục này'.
-CÁCH VIẾT (bắt buộc): viết CHI TIẾT và DỄ HIỂU như đang giải thích cho người mới, không viết tắt kiểu ghi chú. Mỗi ý là câu đầy đủ, nói rõ VÌ SAO (cơ chế, nền tảng xét gì) chứ không chỉ liệt kê việc phải làm. Thuật ngữ (ví dụ learning phase, SpamBrain, manual action, CAPI, Quality Score) thì giải thích ngắn trong ngoặc ở lần đầu nhắc. Khi mục cẩm nang có số liệu hoặc ngưỡng thì nêu đúng con số và nói ngưỡng đó từ nguồn chính thức hay kinh nghiệm.
-BỐ CỤC: dùng tiêu đề in đậm theo đúng thứ tự: **Tóm tắt** (2-3 câu trả lời thẳng câu hỏi) / **Vì sao xảy ra** (nguyên nhân thường gặp, giải thích cơ chế) / **Kiểm tra trước** (từng bước, ghi rõ vào đâu, nhìn cái gì, kết quả thế nào thì kết luận gì) / **Cách xử lý** (từng bước theo thứ tự ưu tiên, mỗi bước nói làm gì và mong đợi gì) / **Tránh** (sai lầm hay gặp và hậu quả) / **Lưu ý về nguồn** (ý nào có nguồn chính thức, ý nào chỉ là kinh nghiệm). Dùng gạch đầu dòng '- ' cho các bước. Sau mỗi ý lấy từ mục nào thì ghi [số].
-Mục loại 'black' hoặc 'gray' là vi phạm hoặc vùng xám: nói rõ người ta làm gì, chính sách nói gì, hậu quả thật, rồi cách làm đúng; không hướng dẫn cách lách. Tiếng Việt tự nhiên, không dùng dấu gạch dài, chỉ dùng '-'. Độ dài 500-800 từ, đủ ý quan trọng hơn ngắn.";
-$payload = ['models' => $MODELS, 'messages' => [['role' => 'system', 'content' => $sys], ['role' => 'user', 'content' => "CÁC MỤC CẨM NANG:\n\n$ctx\nCÂU HỎI: $q"]], 'temperature' => 0.2, 'max_tokens' => 3000, 'reasoning' => ['effort' => 'low']];
+$sys = "Bạn là trưởng nhóm performance marketing 8 năm chạy Google Ads, Meta Ads và làm SEO cho doanh nghiệp vừa và nhỏ ở Việt Nam (phòng khám, bất động sản, giáo dục, bán lẻ, B2B). Người hỏi là nhân viên trong team cần câu trả lời để LÀM NGAY, không cần bài giảng.
+CÁCH TRẢ LỜI:
+1. Câu đầu tiên là kết luận thẳng: Nên / Không nên / Tuỳ trường hợp, kèm lý do chính trong 1 câu. Câu hỏi mơ hồ thì hiểu theo nghĩa người làm nghề hay hỏi nhất (vd 'chạy tăng like' thường là chạy quảng cáo mục tiêu tương tác/lượt thích Trang, không phải mua like ảo); nếu có 2 nghĩa thì trả lời nghĩa phổ biến trước, nghĩa kia 1-2 câu.
+2. Sau đó viết theo đúng việc người hỏi cần, chỉ dùng các phần có ích (bỏ phần không liên quan, không độn): **Khi nào nên / khi nào không** (tình huống cụ thể: ngân sách, giai đoạn tài khoản, ngành, mục tiêu), **Làm thế nào** (từng bước thao tác thật: vào đâu trong giao diện, chọn mục tiêu/cài đặt gì, ngân sách khởi điểm, chạy bao lâu thì đánh giá), **Đo thế nào là ổn** (chỉ số nhìn vào, ngưỡng tham khảo, sau bao lâu thì tắt/tăng), **Sai lầm hay gặp** (kèm hậu quả thật).
+3. Đưa 1 ví dụ cụ thể, đặt tiêu đề **Ví dụ minh hoạ (giả định)**, tối đa 3 câu, không trình bày như ca thật của khách; so sánh với phương án thay thế tốt hơn nếu có.
+NGUỒN VÀ ĐỘ TIN CẬY: ưu tiên thông tin trong các mục cẩm nang, ghi [số] sau ý lấy từ mục đó. Được bổ sung kinh nghiệm thực tế của người làm nghề nếu cẩm nang thiếu, nhưng ý đó phải ghi [Kinh nghiệm] và không được bịa chính sách, tên tính năng hay số liệu chính thức. Con số không có trong cẩm nang thì ghi rõ là ước lượng thực tế, dao động theo ngành.
+Mục loại 'black' hoặc 'gray' (vi phạm, vùng xám): nói rõ rủi ro và hậu quả thật, đưa cách làm đúng thay thế; không hướng dẫn cách lách.
+Định dạng: tiêu đề phần in đậm trên dòng riêng, gạch đầu dòng '- ', câu ngắn, tiếng Việt tự nhiên như nói với đồng nghiệp, không mở bài, không kết luận lặp lại, không dùng dấu gạch dài. Độ dài 250-450 từ, viết hết ý trong giới hạn này, không bỏ dở câu cuối.";
+$payload = ['models' => $MODELS, 'messages' => [['role' => 'system', 'content' => $sys], ['role' => 'user', 'content' => "CÁC MỤC CẨM NANG:\n\n$ctx\nCÂU HỎI: $q"]], 'temperature' => 0.2, 'max_tokens' => 1900];
+$meta = 'Trả lời chỉ từ ' . count($hits) . ' mục cẩm nang được chọn; kiểm lại nguồn gốc trước khi làm việc lớn.';
+if (!empty($in['stream'])) {
+    // Trả dần từng đoạn (SSE): người dùng thấy chữ sau 1-2 giây thay vì chờ cả bài
+    @ini_set('zlib.output_compression', '0'); while (ob_get_level()) ob_end_clean();
+    header('Content-Type: text/event-stream; charset=utf-8'); header('X-Accel-Buffering: no'); header('X-LiteSpeed-Cache-Control: no-cache');
+    $send = function($ev, $d){ echo "event: $ev\ndata: " . json_encode($d, JSON_UNESCAPED_UNICODE) . "\n\n"; @ob_flush(); flush(); };
+    echo ':' . str_repeat(' ', 2048) . "\n\n"; $send('hits', ['hits' => $hits]);
+    $payload['stream'] = true; $buf = ''; $model = ''; $got = 0; $err = '';
+    $ch = curl_init('https://openrouter.ai/api/v1/chat/completions');
+    curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_TIMEOUT => 90,
+        CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Authorization: Bearer ' . $key, 'HTTP-Referer: https://digicomvn.com', 'X-Title: Cam nang Ads SEO'],
+        CURLOPT_POSTFIELDS => json_encode($payload, JSON_UNESCAPED_UNICODE),
+        CURLOPT_WRITEFUNCTION => function($c, $chunk) use (&$buf, &$model, &$got, &$err, $send) {
+            $buf .= $chunk;
+            while (($p = strpos($buf, "\n")) !== false) { $line = trim(substr($buf, 0, $p)); $buf = substr($buf, $p + 1);
+                if (strpos($line, 'data:') !== 0) continue; $d = trim(substr($line, 5)); if ($d === '[DONE]') continue;
+                $j = json_decode($d, true); if (!$j) continue;
+                if (!empty($j['error'])) { $err = $j['error']['message'] ?? 'lỗi'; continue; }
+                if (!empty($j['model'])) $model = $j['model'];
+                $t = $j['choices'][0]['delta']['content'] ?? ''; if ($t !== '') { $got++; $send('t', ['t' => str_replace(['—', '–'], '-', $t)]); } }
+            return strlen($chunk); }]);
+    curl_exec($ch); $code = curl_getinfo($ch, CURLINFO_HTTP_CODE); curl_close($ch);
+    if (!$got) { $j = json_decode($buf, true); $msg = $err ?: ($j['error']['message'] ?? ('HTTP ' . $code));
+        $send('t', ['t' => "AI tạm không trả lời được ($msg). Các mục liên quan nhất ở dưới, mở để đọc trực tiếp."]); }
+    $send('done', ['meta' => ($model ? "Model: $model. " : '') . $meta]); exit;
+}
 $ch = curl_init('https://openrouter.ai/api/v1/chat/completions');
 curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 60,
     CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Authorization: Bearer ' . $key, 'HTTP-Referer: https://digicomvn.com', 'X-Title: Cam nang Ads SEO'],
@@ -73,4 +103,4 @@ if ($code !== 200 || $ans === '') {
     out(['answer' => "AI tạm không trả lời được ($msg). Các mục liên quan nhất ở dưới, mở để đọc trực tiếp.", 'hits' => $hits, 'meta' => '']);
 }
 $ans = str_replace(['—', '–'], '-', $ans);
-out(['answer' => $ans, 'hits' => $hits, 'meta' => 'Model: ' . ($j['model'] ?? '') . '. Trả lời chỉ từ ' . count($hits) . ' mục cẩm nang được chọn; kiểm lại nguồn gốc trước khi làm việc lớn.']);
+out(['answer' => $ans, 'hits' => $hits, 'meta' => 'Model: ' . ($j['model'] ?? '') . '. ' . $meta]);

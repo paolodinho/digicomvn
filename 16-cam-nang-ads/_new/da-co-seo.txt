@@ -1,0 +1,187 @@
+s-idx-chua-index | Nếu trang quan trọng không có trên Google (tìm site:url hoặc URL Inspection báo 'URL is not on Google')
+s-idx-crawled-not | Nếu Page indexing báo 'Crawled - currently not indexed' (đã thu thập, hiện chưa lập chỉ mục)
+s-idx-discovered-not | Nếu báo 'Discovered - currently not indexed' (đã phát hiện, chưa thu thập)
+s-idx-canon-khac | Nếu báo 'Duplicate, Google chose different canonical than user' (Google chọn canonical khác)
+s-idx-soft404 | Nếu báo 'Soft 404'
+s-idx-robots | Nếu báo 'Blocked by robots.txt' hoặc 'Indexed, though blocked by robots.txt'
+s-idx-noindex-nham | Nếu cả site hoặc nhiều trang bỗng rơi khỏi index sau khi cập nhật theme/plugin hoặc mở site từ bản dựng thử
+s-idx-site-moi | Nếu site mới hoàn toàn mà sau vài tuần vẫn gần như không có trang nào được index
+s-drop-chan-doan | Nếu traffic tự nhiên giảm mạnh trong vài ngày mà chưa rõ vì sao
+s-drop-core | Nếu ngày giảm trùng một core update (ví dụ March 2026: 27/03-08/04, May 2026: 21/05-02/06)
+s-drop-spam-update | Nếu ngày giảm trùng một spam update (2026 có các đợt 03, 06, 08, 09) và không có manual action
+s-drop-manual | Nếu GSC có thông báo trong Manual actions
+s-drop-ky-thuat | Nếu giảm đi kèm lỗi kỹ thuật tăng (5xx, robots.txt không tải được, 404 hàng loạt, noindex)
+s-drop-mua-vu | Nếu cả ngành cùng giảm (Google Trends đi xuống) hoặc vị trí giữ nguyên nhưng click giảm
+s-drop-doi-thu | Nếu chỉ vài từ khoá rơi vài bậc và đối thủ mới vượt lên
+s-ma-quy-trinh | Nếu nhận manual action bất kỳ và cần biết quy trình gỡ
+s-ma-link-den | Nếu manual action 'Unnatural links to your site' (link nhân tạo trỏ về site)
+s-ma-link-di | Nếu manual action 'Unnatural links from your site' (site bán hoặc đặt link ra trả phí)
+s-ma-thin | Nếu manual action 'Thin content with little or no added value'
+s-ma-cloaking | Nếu manual action 'Cloaking and/or sneaky redirects' hoặc 'Sneaky mobile redirects'
+s-ma-hidden | Nếu manual action 'Hidden text and/or keyword stuffing'
+s-ma-sd | Nếu manual action 'Structured data issue'
+s-ma-ugc | Nếu manual action 'User-generated spam' hoặc 'Site abused with third-party spam'
+s-ma-major | Nếu manual action 'Major spam problems' (spam nghiêm trọng, thường cả site)
+s-ma-backbutton | Nếu manual action 'Back button hijacking' (cưỡng chế từ 15/06/2026)
+s-core-bi-anh-huong | Nếu site mất hạng sau core update và muốn biết sửa gì
+s-core-bao-lau | Nếu hỏi 'sửa xong bao lâu thì hồi lại?'
+s-core-xoa-bai | Nếu định xoá bớt bài cũ ít traffic để 'site nhẹ hơn'
+s-core-eeat | Nếu cần đánh giá E-E-A-T của site/bài (kinh nghiệm, chuyên môn, uy tín, độ tin cậy)
+s-core-discover | Nếu traffic Google Discover giảm mạnh
+s-ai-co-bi-phat | Nếu hỏi 'Google có phạt bài viết bằng AI không?'
+s-ai-boom-bust | Nếu site đăng hàng trăm bài AI, traffic tăng nhanh rồi sụp sau vài tháng
+s-ai-programmatic | Nếu làm programmatic SEO (hàng loạt trang theo mẫu: dịch vụ x tỉnh, sản phẩm x thuộc tính)
+s-ai-dich-may | Nếu định dịch máy nội dung sang ngôn ngữ khác để có thêm trang
+s-sra-cho-thue | Nếu site (báo, trường, site y tế) đang cho bên ngoài đăng chuyên mục mã giảm giá, review, casino, vay tiền lạc chủ đề
+s-sra-booking-bao | Nếu agency booking bài PR/guest post trên báo lớn để đẩy hạng trang của khách
+s-dup-cannibal | Nếu 2 hoặc nhiều trang của site thay nhau lên xuống cho cùng một từ khoá (ăn thịt từ khoá)
+s-dup-bien-the-url | Nếu cùng một trang có nhiều phiên bản URL (http/https, www/không www, có/không dấu /, tham số UTM)
+s-dup-syndication | Nếu bài gốc của mình bị site khác chép hoặc bản đăng lại (syndication) xếp hạng cao hơn
+s-dup-hreflang | Nếu bản tiếng Anh hiện cho người Việt (hoặc bản sai quốc gia hiển thị), hreflang báo lỗi
+s-tech-crawl-budget | Nếu lo 'crawl budget' vì Google crawl chậm trang mới
+s-tech-js | Nếu site dùng JavaScript (React, Vue, Next) mà Google không thấy nội dung hoặc link
+s-tech-sitemap | Nếu sitemap báo 'Couldn't fetch', lỗi, hoặc 'Submitted URL not indexed' nhiều
+s-tech-redirect | Nếu có chuỗi redirect, vòng lặp redirect, hoặc dùng 302 cho thay đổi vĩnh viễn
+s-tech-404-410 | Nếu GSC báo nhiều 404 và lo bị ảnh hưởng xếp hạng
+s-tech-5xx | Nếu Googlebot gặp lỗi 5xx, 429 hoặc bị firewall/CDN chặn
+s-tech-mobile | Nếu bản mobile thiếu nội dung, thiếu structured data hoặc link so với bản desktop
+s-tech-2mb | Nếu trang HTML rất nặng (CSS/JS inline lớn, ảnh base64) và Google bỏ sót phần cuối trang
+s-cau-truc-mo-coi | Nếu trang quan trọng không có link nội bộ nào trỏ tới (trang mồ côi) hoặc nằm sâu nhiều lần bấm
+s-cau-truc-anchor | Nếu link nội bộ dùng anchor 'xem thêm', 'bấm vào đây' hoặc ngược lại nhồi từ khoá khớp chính xác
+s-cau-truc-cum | Nếu muốn tổ chức cụm chủ đề (pillar - cluster) mà bài rải rác, không liên kết
+s-bl-toxic | Nếu công cụ SEO báo 'toxic links' và khuyên disavow
+s-bl-mat-link | Nếu mất nhiều backlink giá trị (Ahrefs báo lost referring domains)
+s-bl-anchor | Nếu tỉ lệ anchor khớp chính xác (exact match) về site quá cao
+s-bl-guest | Nếu muốn làm guest post mà không bị coi là link spam
+s-bl-digital-pr | Nếu muốn có link bền vững thay vì mua link
+s-gbp-treo | Nếu hồ sơ Google Business Profile bị tạm ngưng hoặc vô hiệu (suspended/disabled)
+s-gbp-review-xau | Nếu nhận đánh giá xấu giả, đánh giá từ đối thủ, hoặc spam đánh giá
+s-gbp-review-mat | Nếu đánh giá thật của khách bị Google tự xoá
+s-gbp-doi-thu-spam | Nếu đối thủ nhồi từ khoá vào tên hồ sơ, tạo hồ sơ ảo, địa chỉ giả để chiếm Maps
+s-gbp-xac-minh | Nếu không xác minh được hồ sơ (video verification bị từ chối)
+s-gbp-rot-hang | Nếu hồ sơ rớt khỏi local pack (top 3 bản đồ)
+s-ymyl-yte | Nếu bài y tế không lên hạng dù viết dài, hoặc mất hạng sau core update
+s-ymyl-quangcao | Nếu trang dịch vụ y tế/tài chính tại Việt Nam vừa cần SEO vừa phải đúng luật quảng cáo
+s-ymyl-taichinh | Nếu site tài chính (vay, đầu tư, bảo hiểm) bị mất hạng hoặc bị coi là kém tin cậy
+s-geo-mat-click | Nếu thứ hạng giữ nguyên nhưng click giảm mạnh vì truy vấn có AI Overview
+s-geo-duoc-trich | Nếu muốn được trích dẫn trong AI Overviews / AI Mode
+s-geo-llms | Nếu hỏi 'có cần llms.txt, schema đặc biệt, viết kiểu AEO/GEO riêng không?'
+s-geo-chan-ai | Nếu muốn hạn chế Google dùng nội dung cho AI (Gemini, AI Overviews)
+s-geo-brand | Nếu thương hiệu không được AI nhắc tới khi hỏi 'nên chọn bên nào'
+s-tmdt-het-hang | Nếu sản phẩm tạm hết hàng
+s-tmdt-ngung-ban | Nếu sản phẩm ngừng kinh doanh vĩnh viễn
+s-tmdt-bien-the | Nếu sản phẩm có nhiều biến thể (màu, size) tạo nhiều URL trùng nhau
+s-tmdt-loc | Nếu bộ lọc (faceted navigation) sinh hàng triệu URL tham số, Google crawl tràn lan
+s-tmdt-phan-trang | Nếu trang danh mục phân trang hoặc dùng 'tải thêm', cuộn vô hạn mà sản phẩm ở trang sau không được index
+s-tmdt-merchant | Nếu kết quả sản phẩm (giá, sao, tình trạng hàng) không hiện hoặc GSC báo lỗi Merchant listings/Product snippets
+s-move-doi-domain | Nếu đổi tên miền hoặc đổi cấu trúc URL và traffic chưa hồi
+s-move-redesign | Nếu đổi giao diện (redesign) giữ nguyên URL mà traffic giảm
+s-move-hosting | Nếu chuyển hosting/CDN (không đổi URL)
+s-move-gop-site | Nếu gộp nhiều site/tên miền về một site
+s-hack-spam-chen | Nếu Google hiện trang lạ của site (tiếng Nhật, cờ bạc, thuốc) hoặc site:domain ra hàng nghìn URL không phải của mình
+s-hack-malware | Nếu trình duyệt/Google cảnh báo 'trang web có thể gây hại' hoặc 'trang lừa đảo'
+s-hack-negative-seo | Nếu nghi đối thủ đánh negative SEO bằng hàng nghìn backlink spam
+s-hack-bi-report | Nếu lo đối thủ gửi báo cáo spam về site mình
+s-sd-faq-mat | Nếu FAQ rich result (câu hỏi xổ xuống dưới kết quả) biến mất
+s-sd-sao-mat | Nếu sao đánh giá (review stars) không hiện hoặc mất
+s-sd-loi | Nếu GSC báo lỗi/cảnh báo structured data sau khi đổi theme hoặc plugin
+s-sd-title-viet-lai | Nếu Google tự viết lại tiêu đề (title link) hoặc đoạn mô tả khác thẻ của mình
+s-sd-site-name | Nếu tên site hoặc favicon hiển thị sai trên kết quả
+s-cwv-anh-huong | Nếu hỏi 'Core Web Vitals kém có làm rớt hạng không?'
+s-cwv-lcp | Nếu LCP chậm (trên 2,5 giây)
+s-cwv-inp | Nếu INP kém (trên 200ms)
+s-cwv-cls | Nếu CLS cao (trên 0,1)
+s-do-gsc-ga4 | Nếu click trong GSC không khớp số phiên organic trong GA4
+s-do-vi-tri | Nếu vị trí trung bình trong GSC khác thứ hạng công cụ check hạng hoặc khác khi tự tìm
+s-do-tre | Nếu GSC không có dữ liệu mấy ngày gần nhất hoặc số đột ngột về 0 cho cả site
+s-do-impr-tang-click-giam | Nếu lượt hiện tăng mạnh nhưng click không tăng, CTR giảm
+s-bh-pbn | Nếu khách hỏi 'dựng PBN (mạng blog vệ tinh) để đẩy hạng có được không?'
+s-bh-mua-link | Nếu hỏi 'mua backlink báo, mua gói backlink có an toàn không?'
+s-bh-trao-doi-link | Nếu hỏi 'trao đổi link với site khác, link vòng tròn có sao không?'
+s-bh-cloaking | Nếu hỏi 'cloaking (cho Google xem một nội dung, người dùng xem nội dung khác) có còn hiệu quả?'
+s-bh-doorway | Nếu hỏi 'làm hàng loạt trang "dịch vụ X tại [quận/tỉnh]" chỉ đổi tên địa danh có được không?'
+s-bh-spam-comment | Nếu hỏi 'spam comment, chữ ký diễn đàn, hồ sơ thành viên, social bookmark để lấy link?'
+s-bh-expired-domain | Nếu hỏi 'mua domain hết hạn còn backlink mạnh để làm site mới cho nhanh lên top?'
+s-bh-301-expired | Nếu hỏi 'redirect 301 domain hết hạn (hoặc nhiều domain) về site chính để dồn sức mạnh link?'
+s-bh-nhoi-tu | Nếu hỏi 'nhồi từ khoá, lặp từ khoá nhiều lần có giúp lên top?'
+s-bh-an-chu | Nếu hỏi 'ẩn chữ/link (chữ trắng nền trắng, font 0, đẩy ra ngoài màn hình) có bị phát hiện không?'
+s-bh-parasite | Nếu hỏi 'parasite SEO: thuê đăng bài trên site lớn (báo, Medium, LinkedIn, subdomain trường học) để lên top nhanh?'
+s-bh-auto-gen | Nếu hỏi 'dùng AI/tool tự động sinh hàng nghìn bài, spin lại bài đối thủ có lên được không?'
+s-bh-spam-review | Nếu hỏi 'mua đánh giá 5 sao Google Maps, nhờ người quen đánh giá, tặng quà đổi đánh giá?'
+s-bh-entity-gia | Nếu hỏi 'tạo tác giả ảo, chuyên gia ảo, hồ sơ doanh nghiệp ảo, mạo danh thương hiệu để tăng E-E-A-T/entity?'
+s-bh-ctr-bot | Nếu hỏi 'dùng bot/traffic ảo, thuê click để tăng CTR, tăng thời gian trên trang cho lên top?'
+s-bh-hack-dat-link | Nếu hỏi 'chèn link vào site khác qua lỗ hổng, mua link từ site bị hack?'
+s-bh-negative-seo | Nếu hỏi 'đánh negative SEO đối thủ (spam link, chép nội dung, báo cáo giả, đánh giá xấu giả)?'
+faq-seo-bao-lau-len-top | Làm SEO bao lâu thì lên top Google?
+faq-seo-bao-lau-tu-canh-tranh | SEO từ khoá cạnh tranh cao thì cần ngân sách bao nhiêu?
+faq-seo-cam-ket-top | Có dịch vụ cam kết top 1 Google không, có nên tin?
+faq-seo-can-hoc-gi | Mới bắt đầu học SEO thì nên học gì trước?
+faq-seo-thue-agency | Thuê agency/freelancer SEO thì cần hỏi gì để không bị lừa?
+faq-seo-con-gia-tri | AI Overviews và ChatGPT ra rồi, SEO còn đáng làm không?
+faq-seo-web-moi-bao-lau-index | Web mới/bài mới bao lâu thì Google index?
+faq-seo-crawled-not-indexed | Search Console báo 'Đã thu thập dữ liệu - hiện chưa được lập chỉ mục' thì làm sao?
+faq-seo-discovered-not-indexed | Báo 'Đã phát hiện - hiện chưa được lập chỉ mục' với rất nhiều URL?
+faq-seo-sandbox | Google sandbox có thật không? Web mới bị 'giam' mấy tháng?
+faq-seo-site-khong-ra-ket-qua | Gõ site:tenmien.com không ra trang nào hoặc ra rất ít?
+faq-seo-mat-do-tu-khoa | Mật độ từ khoá bao nhiêu % là chuẩn?
+faq-seo-doc-intent | Làm sao biết từ khoá này nên làm bài blog hay trang sản phẩm?
+faq-seo-tu-khoa-volume-0 | Từ khoá volume 0 trong Keyword Planner có nên viết không?
+faq-seo-an-thit-tu-khoa | Nhiều bài trên site cùng nhắm một từ khoá có bị 'ăn thịt' nhau không?
+faq-seo-bai-ai-bi-phat | Viết bài bằng AI có bị Google phạt không?
+faq-seo-auto-ai-hang-loat | Dùng tool AI tự viết và tự đăng hàng trăm bài/ngày để phủ từ khoá có được không?
+faq-seo-spin-bai-doi-thu | Copy bài đối thủ rồi dùng AI viết lại/spin cho khác chữ có bị phát hiện không?
+faq-seo-bao-nhieu-tu | Bài SEO bao nhiêu từ là đủ? Có cần dài hơn top 10?
+faq-seo-tan-suat-dang | Mỗi ngày đăng bao nhiêu bài thì tốt? Đăng đều có lên hạng không?
+faq-seo-noi-dung-trung-lap | Nội dung trùng lặp có bị Google phạt không? Bị site khác copy bài thì sao?
+faq-seo-doi-ngay-bai | Sửa ngày đăng bài thành ngày mới cho Google tưởng bài mới có tác dụng không?
+faq-seo-xoa-bai-cu | Có nên xoá bớt bài cũ ít traffic để site 'sạch' hơn?
+faq-seo-mua-backlink | Mua backlink có bị Google phạt không?
+faq-seo-guest-post | Guest post có tính phí có an toàn không? Giá guest post bao nhiêu là hợp lý?
+faq-seo-textlink | Đặt textlink chân trang/sidebar trên site khác có còn tác dụng?
+faq-seo-booking-bao | Đăng bài PR trên báo (booking báo) có link dofollow có được không?
+faq-seo-nofollow | Backlink nofollow có tác dụng gì không?
+faq-seo-da-dr | DA/DR bao nhiêu thì tốt? Google có dùng DA không?
+faq-seo-can-bao-nhieu-backlink | Cần bao nhiêu backlink để lên top?
+faq-seo-disavow | Có nên disavow backlink 'độc hại' mà tool báo không?
+faq-seo-backlink-an-toan | Muốn có backlink an toàn thì làm cách nào?
+faq-seo-toc-do-cwv | Điểm PageSpeed thấp có làm tụt hạng không? CWV quan trọng tới đâu?
+faq-seo-plugin-wordpress | Rank Math hay Yoast tốt hơn cho SEO? Đạt điểm xanh trong plugin là chuẩn SEO chưa?
+faq-seo-schema | Gắn schema có giúp lên top không? FAQ schema còn dùng được không?
+faq-seo-sitemap | Có bắt buộc sitemap không? Gửi sitemap rồi mà vẫn không index?
+faq-seo-javascript | Web làm bằng React/JS thuần thì Google có đọc được không?
+faq-seo-doi-ten-mien | Đổi tên miền mới có mất thứ hạng không? Làm sao cho an toàn?
+faq-seo-tut-sau-core-update | Site tụt mạnh sau core update thì làm sao để hồi phục?
+faq-seo-tut-xoa-bai | Sau core update có nên xoá hoặc noindex hết bài kém?
+faq-seo-manual-action | Nhận thông báo Manual action (thao tác thủ công) trong Search Console thì xử lý thế nào?
+faq-seo-tut-dot-ngot | Traffic tụt gần như về 0 trong 1-2 ngày, không có update nào?
+faq-seo-len-top-maps | Làm sao để hồ sơ Google Business lên top Maps khu vực?
+faq-seo-ten-gbp-nhoi-tu | Thêm từ khoá dịch vụ vào tên hồ sơ Google Business để lên top nhanh có được không?
+faq-seo-mua-review-maps | Mua đánh giá 5 sao Google Maps hoặc nhờ người quen review có sao không?
+faq-seo-review-xau-doi-thu | Bị đối thủ vào đánh giá 1 sao bôi nhọ thì xử lý thế nào?
+faq-seo-dia-chi-ao | Thuê văn phòng ảo/địa chỉ ở nhiều quận để tạo nhiều hồ sơ Maps có được không?
+faq-seo-len-ai-overview | Làm sao để bài xuất hiện trong AI Overview của Google?
+faq-seo-llms-txt | Có cần tạo file llms.txt cho SEO/GEO không?
+faq-seo-chatgpt-nhac-ten | Làm sao để ChatGPT, Gemini nhắc tên thương hiệu mình khi người ta hỏi?
+faq-seo-gai-mention-ai | Thuê người seeding hàng loạt bài/bình luận giả trên Reddit, forum để AI học và nhắc tên có hiệu quả không?
+faq-seo-aio-giam-click | Từ khi có AI Overview, lượt hiển thị tăng mà click giảm, có phải site kém đi?
+faq-seo-do-hien-thi-ai | Đo bài mình hiện trong AI Overview/AI Mode bằng cách nào?
+faq-seo-chan-bot-ai | Chặn Google-Extended có làm mất thứ hạng hoặc mất khỏi AI Overview không?
+faq-seo-gsc-vs-ahrefs | Số traffic/từ khoá trong Ahrefs, Semrush khác hẳn Search Console, tin cái nào?
+faq-seo-vi-tri-trung-binh | Vị trí trung bình trong Search Console tính thế nào mà khác thứ hạng mình tự tìm?
+faq-seo-tool-scrape-rank | Dùng tool tự quét Google hàng nghìn từ khoá mỗi ngày để theo dõi thứ hạng có vi phạm gì không?
+faq-seo-gsc-ga4-lech | Click trong Search Console và session organic trong GA4 lệch nhau nhiều, sai ở đâu?
+faq-seo-tach-brand | Làm sao biết traffic tăng là nhờ SEO hay do người ta tìm tên thương hiệu?
+faq-seo-pbn | PBN (mạng blog vệ tinh) còn dùng được không?
+faq-seo-expired-domain | Mua domain hết hạn có nhiều backlink để làm site mới hoặc 301 về site chính có lợi không?
+faq-seo-parasite | Đăng bài lên site uy tín khác (parasite SEO, thuê chuyên mục báo) để chiếm top có được không?
+faq-seo-cloaking | Cloaking, redirect lén, giấu chữ/link có còn ai làm? Rủi ro thế nào?
+faq-seo-ctr-bot | Dùng bot/traffic ảo bấm vào kết quả (CTR manipulation) để tăng hạng web hoặc Maps có tác dụng không?
+faq-seo-link-farm-tool | Dùng tool tự động tạo hàng nghìn backlink (profile, comment, web 2.0, link farm) có còn ăn không?
+faq-seo-doi-domain-ne-phat | Site bị phạt thì đổi sang domain mới và 301 để 'thoát' có được không?
+faq-seo-negative-seo | Đối thủ bắn hàng nghìn backlink bẩn (negative SEO) về site mình thì làm gì?
+faq-seo-hack-chen-link | Hack site khác để chèn link hoặc site mình bị hack chèn từ khoá lạ (tiếng Nhật, cá cược) thì sao?
+faq-seo-kpi-hop-dong | Hợp đồng SEO nên cam kết KPI gì cho an toàn?
+faq-seo-bao-gia-seo | Báo giá SEO một tháng bao nhiêu là hợp lý?
+faq-seo-bao-cao-khach | Báo cáo SEO hằng tháng cho khách gồm những gì?
+faq-seo-quyen-truy-cap | Agency xin quyền Owner Search Console và quản trị web, có nên cấp?
+faq-seo-khach-doi-black-hat | Khách đòi mua link, làm PBN cho nhanh lên top thì agency nên xử lý thế nào?

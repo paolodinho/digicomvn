@@ -263,3 +263,9 @@ Hiếu thử chỉ hiện 4 báo có link rồi đổi lại: hiện đủ 12 lo
 
 ## 2026-11-05 tối - Lãi tối thiểu dịch vụ đại lý tên miền/hosting
 Hiếu: dịch vụ đại lý trừ tên miền năm đầu (lãi 10%) còn lại phải lãi 15%. Đã áp sàn x1,265 (giá đại lý chưa VAT) cho gia hạn, hosting, email, SSL, cloud, M365, Workspace, chăm sóc web, BCT; tên miền năm đầu sàn x1,1 trên vốn thực trả, bỏ ngoại lệ .vn giá rẻ nhất thị trường (W42) vì .vn bị lãi dưới 10% -> .vn năm đầu 495k -> 545k. Không giá nào bị hạ.
+
+## 2026-11-07 - Cẩm nang ads: Hỏi AI chỉ dùng model free
+Hiếu chốt: không nạp credit OpenRouter, giữ model free (nemotron-3-ultra free, dự phòng dots-3-note free). Chấp nhận chậm (~8-20 giây chữ đầu, ~17-27 giây xong). Bỏ gemini-2.5-flash-lite khỏi ask.php.
+
+## 2026-11-07 - Cẩm nang ads: AI được bổ sung kinh nghiệm thực tế
+Hiếu chê câu trả lời không thực chiến. Đổi: AI trả lời như trưởng nhóm performance (kết luận trước, thao tác, ngưỡng đo), được dùng kinh nghiệm ngoài cẩm nang nhưng phải ghi [Kinh nghiệm]; chính sách/số liệu chính thức chỉ lấy từ cẩm nang; ví dụ luôn ghi "giả định".

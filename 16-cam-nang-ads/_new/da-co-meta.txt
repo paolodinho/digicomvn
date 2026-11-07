@@ -1,0 +1,203 @@
+tk-han-che | Nếu tài khoản QC, trang hoặc Business Portfolio báo bị hạn chế quảng cáo (Restricted)
+tk-han-che-canh-bao | Nếu trạng thái tài khoản là Needs attention (có cảnh báo, chưa bị khoá)
+tk-han-che-sau-go | Nếu đã được gỡ hạn chế nhưng ads vẫn không chạy
+tk-hack | Nếu thấy admin lạ, chiến dịch lạ, chi tiêu hoặc hoá đơn tăng bất thường
+tk-hack-phong | Nếu muốn phòng bị hack (rà bảo mật định kỳ)
+tk-xac-minh | Nếu Meta yêu cầu xác minh (số điện thoại, vị trí doanh nghiệp, danh tính) mới cho đăng ads
+tk-tao-moi | Nếu không tạo thêm được tài khoản QC trong Business Portfolio
+tk-quyen-ig | Nếu lỗi 1815199 (tài khoản QC không có quyền dùng Instagram) hoặc lỗi quyền khi tạo ads
+tt-that-bai | Nếu thanh toán thất bại, tài khoản báo unsettled hoặc bị tạm khoá do nợ
+tt-ngan-hang | Nếu thanh toán qua tài khoản ngân hàng bị từ chối dù thông tin đúng
+tt-van-dung | Nếu đã trả nợ hoặc chưa chạm ngân sách mà ads vẫn bị dừng
+tt-han-muc | Nếu ads dừng vì chạm Account spending limit
+tt-phong | Nếu muốn tránh ads bị dừng giữa chiến dịch vì thanh toán
+tt-chi-vuot | Nếu một ngày chi cao hơn ngân sách ngày đã đặt
+d-review-lau | Nếu ads ở trạng thái In review quá lâu
+d-tu-choi | Nếu ads bị Rejected
+d-thuoc-tinh | Nếu lý do là Personal attributes (thường gặp ở y tế: câu gán bệnh cho người xem)
+d-suc-khoe | Nếu lý do là Personal health and appearance, hứa kết quả hoặc ngôn ngữ giật gân
+d-trang-dich | Nếu lý do liên quan trang đích (link hỏng, nội dung trang khác quảng cáo)
+d-luat-vn | Nếu ads y tế đã qua chính sách Meta nhưng chưa rõ có đúng luật quảng cáo Việt Nam
+d-duyet-roi-tu-choi | Nếu ads đã chạy vài ngày rồi bỗng bị từ chối
+d-sua-xet-lai | Nếu định sửa ads hoặc ad set đang chạy và lo bị xét duyệt lại
+d-form-cam | Nếu lead ad không chạy vì instant form có câu hỏi bị cấm
+d-lap-lai | Nếu nhiều ads bị từ chối trong thời gian ngắn
+y-phan-loai | Nếu Events Manager báo nguồn dữ liệu bị phân loại Health and wellness
+y-core | Nếu mức hạn chế là Core setup
+y-chan-su-kien | Nếu sự kiện giữa và cuối phễu (Lead, Purchase...) bị chặn
+y-chan-toan-bo | Nếu bị hạn chế toàn bộ (không dùng được Business Tools cho quảng cáo)
+y-custom-event | Nếu custom event bỗng không về hoặc bị chặn
+y-cong-benh-nhan | Nếu Pixel đang gắn trên trang bệnh án, cổng bệnh nhân, trang kết quả xét nghiệm
+y-sac | Nếu phân vân có cần chọn Special Ad Category cho phòng khám
+y-tuoi | Nếu chạy sức khoẻ sinh sản, IVF, thẩm mỹ
+y-lead-form | Nếu muốn biết lead form có bị hạn chế dữ liệu sức khoẻ ảnh hưởng không
+p-moi-0 | Nếu chiến dịch mới bật vài giờ mà 0 hiển thị
+p-adset-0 | Nếu ad set chạy nhưng gần như không tiêu tiền
+p-ngan-sach | Nếu ngân sách thấp so với chi phí sự kiện tối ưu (hoặc báo lỗi Budget is too low)
+p-gia-thau | Nếu dùng bid cap hoặc cost per result goal mà phân phối ít
+p-doi-tuong-hep | Nếu đối tượng quá hẹp (khu vực nhỏ, nhiều loại trừ, interest chồng nhau)
+p-48h | Nếu đã đăng trên 48 giờ, đã kiểm hết mà 1 ads vẫn không phân phối
+p-cham-lai | Nếu chiến dịch đang chạy tốt bỗng chậm lại hoặc dừng
+p-overlap | Nếu nhiều ad set cùng tệp, ad set nào cũng ít kết quả, kẹt Learning limited
+p-cbo-lech | Nếu dùng campaign budget và 1 ad set/ads gần như không được chi
+p-update-required | Nếu ads báo Update required (lỗi 2859002)
+p-gioi-han | Nếu không tạo hoặc sửa được ads vì báo vượt giới hạn (lỗi 3253001, 1487809)
+h-learning | Nếu ad set ở trạng thái Learning và CPL dao động mạnh
+h-limited | Nếu ad set Learning limited kéo dài
+h-limited-nho | Nếu ngân sách nhỏ, CPL cao, không bao giờ đạt 50 lead/tuần mỗi ad set
+h-limited-su-kien | Nếu sự kiện tối ưu quá hiếm (vd Purchase, Schedule ít ỏi)
+h-truoc-khi-sua | Nếu định sửa ad set đang chạy và muốn biết có làm học lại không
+h-them-ads | Nếu muốn thêm creative mới vào ad set đang chạy
+h-nghi-le | Nếu muốn nghỉ chạy cuối tuần, lễ Tết rồi chạy lại
+c-dong-loat | Nếu CPM tăng đồng loạt ở mọi chiến dịch, mọi khách cùng lúc
+c-mot-adset | Nếu CPM cao bất thường ở 1 ad set so với các ad set khác
+c-quality | Nếu Quality ranking dưới trung bình
+c-vi-tri | Nếu chỉ chọn ít vị trí hiển thị (vd chỉ Facebook Feed) và CPM cao
+ctr-thap | Nếu CTR link thấp (mốc nội bộ Alpha: dưới 0,5%) ngay từ đầu
+ctr-giam-dan | Nếu CTR giảm dần trong khi tần suất tăng
+cpc-cao | Nếu CPC cao
+ctr-cat-chu | Nếu ads chạy nhiều vị trí và chữ trên ảnh/video bị cắt ở Stories, Reels
+l-lpv-thap | Nếu link click nhiều nhưng landing page view thấp hơn hẳn
+l-toc-do | Nếu trang tải chậm trên di động
+l-nhieu-dich | Nếu ads có nhiều đích (tiêu đề trỏ 1 nơi, nút trỏ nơi khác)
+l-pixel | Nếu nghi trang tải được nhưng LPV không được đếm
+l-co-traffic-khong-lead | Nếu LPV tốt nhưng không ra lead
+l-sai-muc-tieu | Nếu chiến dịch Traffic tối ưu click được dùng để đánh giá CPL
+cpl-buoc0 | Nếu thấy CPL tăng trong 1-2 ngày
+cpl-tracking | Nếu CVR tụt đột ngột trong khi CPM, CTR bình thường
+cpl-vua-sua | Nếu CPL tăng ngay sau khi có chỉnh sửa
+cpl-tach | Nếu đã loại trừ tracking và learning, cần biết nghẽn ở đâu
+cpl-breakdown | Nếu thấy 1 vị trí/ad set/ads 'rẻ' bị ít tiền còn phần 'đắt' được nhiều tiền
+cpl-0-lead | Nếu ad set chi tiền mà 0 lead
+cpl-tat-ads | Nếu quyết định tắt ads kém
+q-form-rac | Nếu instant form ra nhiều lead rác, gọi không nghe, sai số
+q-cau-hoi-loc | Nếu cần câu hỏi lọc
+q-otp | Nếu nhiều SĐT ảo, số máy bàn, số người khác
+q-qualified | Nếu muốn Meta tối ưu theo lead chất lượng thay vì lead thô
+q-goi-lai | Nếu CPL ổn nhưng tỷ lệ gọi được, đặt lịch thấp
+q-lookalike | Nếu định tạo lookalike/tệp tương tự từ danh sách lead
+q-messenger | Nếu chiến dịch tin nhắn có nhiều hội thoại nhưng ít khách để lại SĐT
+q-crm-khong-ve | Nếu lead form có trong Ads Manager nhưng không về CRM/Sheet
+q-whatsapp | Nếu chạy click-to-WhatsApp mà không chọn được đích WhatsApp
+q-hen-lich | Nếu dùng câu hỏi Appointment request trong form mà ads phân phối ít
+q-zalo | Nếu khách muốn chạy về Zalo
+cr-fatigue | Nếu ads báo Creative limited hoặc Creative fatigue
+cr-da-dang | Nếu ad set có nhiều ads nhưng hiệu quả kém, ads trông giống nhau
+cr-cung-anh | Nếu tạo bản mới chỉ bằng cách đổi tít/chữ trên cùng 1 ảnh
+cr-blame | Nếu kết quả kém và đội đổ lỗi cho Andromeda
+cr-qua-nhieu | Nếu ad set có quá nhiều ads, mỗi ads chỉ vài hiển thị
+cr-enhance | Nếu ads y tế bật Advantage+ creative enhancements (AI viết lại chữ, sinh ảnh)
+cr-test | Nếu cần biết phương án nào thắng (video bác sĩ vs ảnh cơ sở, form vs tin nhắn)
+cr-dynamic | Nếu không tạo được dynamic creative cho Sales/App
+cr-phu-de | Nếu video tiếng Việt không có phụ đề hoặc phụ đề tự động sai
+s-phan-manh | Nếu tài khoản chia 5-10 ad set nhỏ theo interest/khu vực/vị trí
+s-cbo-abo | Nếu phân vân dùng campaign budget (CBO) hay ad set budget (ABO)
+s-adv-audience | Nếu dùng Advantage+ audience và lo quảng cáo ra ngoài vùng phục vụ/độ tuổi
+s-adv-leads | Nếu tạo chiến dịch Leads mà không thấy chọn cách thiết lập thủ công
+s-dinh-dang | Nếu báo lỗi 1815159 (định dạng không hợp mục tiêu)
+s-nhieu-tk | Nếu định chia nhiều tài khoản/nhiều trang cho cùng 1 doanh nghiệp
+px-khong-ve | Nếu sự kiện tối ưu không về Events Manager
+px-dem-doi | Nếu lead trên Meta nhiều hơn hẳn lead thật, nghi đếm đôi
+px-coverage | Nếu event coverage CAPI so với Pixel dưới 75%
+px-emq | Nếu Event Match Quality thấp
+px-aem | Nếu checklist cũ yêu cầu xếp 8 sự kiện AEM cho tên miền
+px-agency | Nếu agency cần quét chất lượng dữ liệu nhiều khách hàng tuần
+px-crm | Nếu muốn gửi trạng thái lead từ CRM/Sheet về Meta
+px-api-cua-so | Nếu báo cáo tự động qua API mất cột 7 ngày xem/28 ngày xem
+b-meta-lon-hon | Nếu Meta báo nhiều lead hơn CRM
+b-crm-lon-hon | Nếu CRM có nhiều khách hơn Meta báo
+b-attribution | Nếu so hiệu quả giữa các ad set có attribution setting khác nhau
+b-so-hom-nay | Nếu số liệu hôm nay/hôm qua lệch so với lúc xem lại sau
+b-qualified | Nếu khách hỏi vì sao số qualified lead của Meta khác CRM
+b-tin-nhan | Nếu báo cáo tin nhắn dùng 'hội thoại bắt đầu' như lead
+lv-dung-ads | Nếu muốn dừng 1 mẫu QC kém
+lv-doi-noi-dung | Nếu muốn đổi nội dung (ảnh, chữ, form, bài viết) của ads đang chạy
+lv-sua-adset | Nếu cần sửa cài đặt ad set (ngân sách, đối tượng, vị trí)
+lv-tat-nham | Nếu lỡ tắt nhầm ad set hoặc campaign
+lv-meta-khuyen-tat | Nếu gợi ý của Meta (Opportunity score, auction overlap) khuyên tắt ad set
+lv-ai-chat | Nếu nhân bản hoặc tạo ads tin nhắn cho khách y tế
+u-can-cap-nhat | Nếu sau khi sửa ad set (tuổi, đối tượng, bên thanh toán), ads dùng bài viết cũ chuyển 'Cần cập nhật' (lỗi 1487891, Invalid Creative For Objective) và tự dừng
+u-khong-qc-duoc | Nếu báo bài viết không quảng cáo được (lỗi 1487472) hoặc bật lại ads bài cũ thất bại
+u-bai-xoa | Nếu bài viết của ads đã bị xoá, ẩn, hoặc không còn quyền (lỗi 1885557, 2446289)
+u-boost | Nếu nút trên bài là Boost unavailable, Not boosted hoặc Boosted bởi người khác
+u-vi-tri-loi | Nếu mở sửa ad set báo lỗi vị trí (location_types, lỗi 1870199 hoặc tương tự)
+sc-khi-nao | Nếu đang cân nhắc tăng ngân sách
+sc-bao-nhieu | Nếu cần quyết tăng bao nhiêu mỗi lần
+sc-gio | Nếu định đổi ngân sách buổi tối
+sc-giua-tuan | Nếu đổi ngân sách giữa tuần và chi tiêu cuối tuần khác dự tính
+sc-nhan-ban | Nếu định scale ngang bằng nhân bản ad set/campaign cùng đối tượng
+sc-cpl-tang | Nếu vừa tăng ngân sách và CPL tăng
+fm-bm-co-can-khong | Chạy QC bằng TKQC cá nhân hay phải tạo BM? BM khác TKQC chỗ nào?
+fm-bm50-bm350 | BM50, BM350, BM2500, BM limit/nolimit là loại gì? Meta có bán loại nào không?
+fm-phan-quyen-agency | Cho agency/nhân viên vào chạy QC thì cấp quyền thế nào cho an toàn?
+fm-mat-quyen-admin | Nhân viên/freelancer cũ là admin duy nhất của BM, nghỉ việc rồi không trả quyền thì làm sao?
+fm-bi-hack | Via/BM bị hack, có người lạ thêm vào và tiêu tiền thẻ của mình
+fm-xac-minh-dn | Có nên xác minh doanh nghiệp cho BM? Hộ kinh doanh, cá nhân có xác minh được không?
+fm-tkqc-bi-khoa | TKQC bị vô hiệu hoá dù mình không vi phạm gì, kháng ở đâu, bao lâu có kết quả?
+fm-tkqc-khang-truot | Nếu kháng bị từ chối, có cách nào khác không?
+fm-hcqc-ca-nhan | Nick cá nhân bị hạn chế quảng cáo (HCQC), TKQC nào gắn với nick cũng không chạy được
+fm-xac-minh-lien-tuc | Bị đòi xác minh danh tính, quay video selfie, xác minh số điện thoại liên tục
+fm-tao-tk-moi-sau-khoa | Bị khoá rồi thì tạo TKQC/BM/page mới chạy tiếp được không?
+fm-dich-vu-khang | Có nên thuê dịch vụ kháng TKQC, kháng 902, 'mở khoá BM' không?
+fm-tien-du-tk-khoa | TKQC bị khoá còn tiền nạp trước chưa tiêu, có lấy lại được không?
+fm-nguong-la-gi | Ngưỡng thanh toán là gì? Sao một ngày bị trừ tiền thẻ nhiều lần?
+fm-tang-nguong | Làm sao tăng ngưỡng nhanh? Sao ngưỡng không lên hoặc bị hạ?
+fm-gioi-han-ngay | TKQC bị giới hạn chi tiêu ngày (limit 50$, 250$), nâng thế nào?
+fm-the-bi-tu-choi | Thẻ đủ tiền vẫn báo thanh toán thất bại, TKQC bị khoá vì thanh toán / bị 'hold tiền'
+fm-no-quang-cao | Không trả tiền nợ quảng cáo thì sao? Bỏ tài khoản là xong?
+fm-thue-vat | Meta thu thuế VAT bao nhiêu %? Hoá đơn Meta có khấu trừ VAT đầu vào được không?
+fm-tra-truoc-tra-sau | Nạp tiền trả trước (số dư khả dụng) và gắn thẻ trả sau khác nhau gì?
+fm-tk-invoice | Tài khoản invoice (lập hoá đơn hàng tháng, hạn mức tín dụng) là gì, ai được dùng?
+fm-bi-tu-choi | QC bị từ chối thì sửa lại hay kháng? Kháng bao lâu?
+fm-duyet-roi-bi-tat | QC đã duyệt chạy mấy ngày rồi tự nhiên bị từ chối
+fm-dang-xem-xet-lau | QC 'Đang xem xét' cả ngày không lên
+fm-truoc-sau | Ảnh trước/sau (giảm cân, thẩm mỹ, da) có được chạy không?
+fm-thuoc-tinh-ca-nhan | Viết 'Bạn đang bị đau dạ dày?', 'Bạn nợ xấu?' sao bị từ chối?
+fm-hang-muc-dac-biet | Hạng mục quảng cáo đặc biệt là gì? QC tài chính, tuyển dụng, bất động sản ở VN có phải chọn?
+fm-y-te-tpcn | Phòng khám, thực phẩm chức năng, thuốc có chạy Facebook được không?
+fm-hang-cam | Mặt hàng nào cấm hẳn trên Facebook Ads?
+fm-khong-can-tien | Camp không cắn tiền, đã bật mà chi tiêu 0đ
+fm-dang-chay-tu-dung | Camp đang chạy ngon tự nhiên tiêu ít hẳn hoặc dừng
+fm-tieu-vuot | Camp tiêu vượt ngân sách ngày, đốt tiền nhanh trong vài giờ
+fm-tk-moi-nuoi | TKQC/BM mới không tiêu, có phải 'nuôi' tài khoản vài ngày trước khi chạy?
+fm-learning-limited | Learning limited (học bị giới hạn) có phải camp chết? Bao nhiêu chuyển đổi mới thoát học?
+fm-sua-camp-reset | Sửa camp (đổi đối tượng, creative, ngân sách) có làm học lại từ đầu không?
+fm-tang-ngan-sach | Tăng ngân sách bao nhiêu % mỗi lần để không reset học?
+fm-nhan-ban-camp | Nhân bản (duplicate) camp thắng ra nhiều bản để scale có tốt không?
+fm-cpm-cao | CPM tự nhiên tăng gấp đôi, có phải Meta đang 'ăn tiền'?
+fm-ctr-cao-khong-don | CTR cao, click rẻ mà không ra đơn, không ra lead
+fm-tan-suat | Tần suất bao nhiêu là cao, creative 'mệt' khi nào?
+fm-breakdown | Sao Meta dồn tiền vào vị trí/nhóm có CPA cao hơn? Có nên tắt vị trí đó?
+fm-lead-form-rac | Lead form toàn số ảo, tên linh tinh
+fm-tin-nhan-rac | Chạy tin nhắn ra nhiều hội thoại 'tư vấn' rồi im, không để số
+fm-form-hay-tin-nhan | Nên chạy lead form, tin nhắn hay về website?
+fm-toi-uu-lead-chat-luong | Làm sao để Meta tìm lead chất lượng chứ không phải lead rẻ?
+fm-capi-can-khong | Có cần Conversions API (CAPI) không hay chỉ pixel là đủ?
+fm-ios14 | Sau iOS 14 số chuyển đổi tụt, cần làm gì?
+fm-emq | Điểm chất lượng khớp sự kiện (EMQ) thấp có sao không?
+fm-du-lieu-suc-khoe | Website phòng khám bị Meta chặn sự kiện, không tối ưu chuyển đổi được
+fm-lech-so-lieu | Số chuyển đổi Meta báo khác số đơn thật / số Google Analytics
+fm-pixel-khong-ghi | Pixel cài rồi mà Events Manager không thấy sự kiện
+fm-bai-can-cap-nhat | Ads dùng bài viết có sẵn báo 'Cần cập nhật', bài viết không quảng cáo được
+fm-ti-le-video | Video nên tỉ lệ nào, 3 giây đầu quan trọng đến mức nào?
+fm-andromeda-creative | Andromeda là gì? Cần bao nhiêu creative, đổi chữ trên ảnh có tính là creative mới?
+fm-advantage-aud | Có nên bật Advantage+ đối tượng / chạy đối tượng rộng?
+fm-creative-enhancement | Meta tự đổi chữ, thêm nhạc, chỉnh ảnh QC của tôi (Advantage+ creative)
+fm-chon-muc-tieu | Chọn mục tiêu nào: Tương tác, Lưu lượng, Khách hàng tiềm năng hay Doanh số?
+fm-nuoi-mua-via | Nuôi via, mua via cổ/via ngoại để chạy QC cho 'trâu' có ổn không?
+fm-mua-bm | Mua BM50, BM350, BM2500, 'BM kháng', 'BM xác minh sẵn' về chạy được không?
+fm-thue-tk-agency | Thuê tài khoản agency / tài khoản invoice, phí 3-8%, 'nhận mọi ngành' có an toàn?
+fm-chay-bung | Chạy bùng / chạy nợ ngưỡng rồi bỏ tài khoản có bị gì không?
+fm-cloaking | Cloaking / landing 2 lớp để QC qua duyệt có dùng được không?
+fm-prelander-bao-gia | Dùng trang 'báo giả', bài review giả làm pre-lander dẫn sang trang bán
+fm-mao-danh | Dùng ảnh/video người nổi tiếng, MC, bác sĩ nổi tiếng để chạy QC
+fm-lach-chu | Viết lách chữ (k.e.m, ký tự đặc biệt, che ảnh) để chạy sản phẩm cấm/nhạy cảm
+fm-doi-ten-domain | Bị chặn domain/trang thì đổi domain mới, đổi tên trang để chạy tiếp
+fm-antidetect-vps | Dùng VPS, proxy, trình duyệt antidetect, nhiều nick trên một máy để 'tách trust'
+fm-tool-spam | Tool spam comment, inbox hàng loạt, mua like, seeding ảo cho bài QC
+fm-tk-cua-ai | Agency nên tạo TKQC trong BM agency hay BM của khách?
+fm-ban-giao | Kết thúc hợp đồng, bàn giao tài khoản, pixel, trang cho khách thế nào?
+fm-ads-so | 'Ads số' là gì? Có nên mua gói chạy ads số / nạp tiền qua đại lý?
+fm-phi-agency | Phí quản lý QC Facebook thường tính thế nào (% ngân sách, cố định)?
+fm-bao-cao-khach | Khách nói số lead Meta báo cao hơn số họ nhận được
+fm-meta-partner | Làm sao để agency có hỗ trợ ưu tiên từ Meta, thành đối tác Meta?

@@ -191,7 +191,7 @@ footer{color:var(--mute);font-size:13px;padding:30px 0 50px;max-width:900px}
   <div id="newslist"></div></div></div>
  <div class="view" id="v-ask">
   <div class="askbox"><h2>Hỏi AI, trả lời từ chính cẩm nang này</h2>
-  <p class="note">Gõ câu hỏi như hỏi đồng nghiệp. Máy quét toàn bộ tình huống trong cẩm nang, chọn đoạn liên quan nhất rồi để AI viết câu trả lời chỉ dựa trên các đoạn đó, có dẫn về từng mục để bấm kiểm. AI không tự bịa ngoài cẩm nang; không thấy trong cẩm nang sẽ nói "chưa có".</p>
+  <p class="note">Gõ câu hỏi như hỏi đồng nghiệp. Máy quét toàn bộ tình huống trong cẩm nang, chọn đoạn liên quan nhất rồi để AI trả lời kiểu người chạy ads thật: kết luận trước, khi nào nên, làm thế nào, đo ra sao. Ý lấy từ cẩm nang có số [1] bấm kiểm được; ý ngoài cẩm nang ghi [Kinh nghiệm], nên kiểm lại trước khi làm việc lớn.</p>
   <div class="ask-row"><textarea class="ask-in" id="askq" placeholder="Ví dụ: camp Google không tiêu tiền 3 ngày rồi, đã kiểm thanh toán, giờ làm gì?"></textarea>
   <select id="askscope"><option value="all">Toàn bộ</option><option value="google">Google Ads</option><option value="meta">Meta Ads</option><option value="seo">SEO</option><option value="faq">Hỏi đáp</option></select>
   <button class="btn" id="askbtn">Hỏi</button></div>
@@ -346,9 +346,20 @@ $('#sugg').innerHTML=SUGG.map(function(s){return '<button>'+esc(s)+'</button>'})
 $('#sugg').addEventListener('click',function(e){var b=e.target.closest('button');if(b){$('#askq').value=b.textContent;ask()}});
 function md(s){s=esc(s);s=s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');var out=[],ul=false;s.split(/\n/).forEach(function(l){var h=l.match(/^\s*<b>(.+)<\/b>\s*$/);if(h){if(ul){out.push('</ul>');ul=false}out.push('<h4>'+h[1]+'</h4>');return}var m=l.match(/^\s*[-*•]\s+(.*)/);if(m){if(!ul){out.push('<ul>');ul=true}out.push('<li>'+m[1]+'</li>')}else{if(ul){out.push('</ul>');ul=false}if(l.trim())out.push('<p>'+l+'</p>')}});if(ul)out.push('</ul>');return out.join('')}
 function ask(){var qv=$('#askq').value.trim();if(!qv)return;var ans=$('#ans');ans.classList.remove('hide');ans.innerHTML='<p class="spin">Đang quét cẩm nang và soạn câu trả lời...</p>';$('#askbtn').disabled=true;
- fetch('ask.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({q:qv,scope:$('#askscope').value})}).then(function(r){return r.json()}).then(function(j){$('#askbtn').disabled=false;if(j.error){ans.innerHTML='<p class="none">'+esc(j.error)+'</p>';return}
-  var hits=(j.hits||[]).map(function(h){var n=IDX[h.id];if(!n)return '';return '<a href="#'+esc(h.id)+'" data-open="'+esc(h.id)+'">'+esc(n.if)+'<small>'+esc(n._path.join(' › '))+'</small></a>'}).join('');
-  ans.innerHTML='<div class="txt">'+md(j.answer||'')+'</div>'+(hits?'<h4>Mục liên quan trong cẩm nang (bấm để mở)</h4><div class="hits">'+hits+'</div>':'')+'<p class="asked">'+esc(j.meta||'')+'</p>'}).catch(function(){$('#askbtn').disabled=false;ans.innerHTML='<p class="none">Không gọi được máy chủ. Thử lại sau.</p>'})}
+ var hitsHtml='',txt='',box,meta;
+ function draw(){box.innerHTML=md(txt)}
+ function hitsOf(arr){return (arr||[]).map(function(h){var n=IDX[h.id];if(!n)return '';return '<a href="#'+esc(h.id)+'" data-open="'+esc(h.id)+'">'+esc(n.if)+'<small>'+esc(n._path.join(' › '))+'</small></a>'}).join('')}
+ function fail(m){$('#askbtn').disabled=false;ans.innerHTML='<p class="none">'+esc(m)+'</p>'}
+ fetch('ask.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({q:qv,scope:$('#askscope').value,stream:1})}).then(function(r){
+  var ct=r.headers.get('content-type')||'';
+  if(ct.indexOf('event-stream')<0||!r.body){return r.json().then(function(j){if(j.error)return fail(j.error);ans.innerHTML='<div class="txt">'+md(j.answer||'')+'</div>'+(j.hits&&j.hits.length?'<h4>Mục liên quan trong cẩm nang (bấm để mở)</h4><div class="hits">'+hitsOf(j.hits)+'</div>':'')+'<p class="asked">'+esc(j.meta||'')+'</p>';$('#askbtn').disabled=false})}
+  ans.innerHTML='<div class="txt"><p class="spin">Đã chọn mục liên quan, AI đang viết...</p></div><div class="hitwrap"></div><p class="asked"></p>';box=ans.querySelector('.txt');
+  var rd=r.body.getReader(),dec=new TextDecoder(),buf='',pend=false;
+  function onEv(ev,d){if(ev==='hits'){var h=hitsOf(d.hits);if(h)ans.querySelector('.hitwrap').innerHTML='<h4>Mục liên quan trong cẩm nang (bấm để mở)</h4><div class="hits">'+h+'</div>'}
+   else if(ev==='t'){txt+=d.t;if(!pend){pend=true;requestAnimationFrame(function(){pend=false;draw()})}}
+   else if(ev==='done'){draw();ans.querySelector('p.asked').textContent=d.meta||'';$('#askbtn').disabled=false}}
+  function pump(){return rd.read().then(function(x){if(x.done){draw();$('#askbtn').disabled=false;return}buf+=dec.decode(x.value,{stream:true});var i;while((i=buf.indexOf('\n\n'))>=0){var blk=buf.slice(0,i);buf=buf.slice(i+2);var ev='message',data='';blk.split('\n').forEach(function(l){if(l.indexOf('event:')===0)ev=l.slice(6).trim();else if(l.indexOf('data:')===0)data+=l.slice(5).trim()});if(data){try{onEv(ev,JSON.parse(data))}catch(e){}}}return pump()})}
+  return pump()}).catch(function(){fail('Không gọi được máy chủ. Thử lại sau.')})}
 $('#askbtn').addEventListener('click',ask);$('#askq').addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask()}});
 $('#ans').addEventListener('click',function(e){var o=e.target.closest('a[data-open]');if(o){e.preventDefault();openNode(o.dataset.open)}});
 // init
