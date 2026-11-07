@@ -1,0 +1,1385 @@
+{
+ "platform": "faq-meta",
+ "updated": "2026-11-07",
+ "groups": [
+  {
+   "id": "tc-m-cau-truc",
+   "title": "Thực chiến: Cấu trúc camp và ngân sách nhỏ",
+   "intro": "Dựng camp thế nào khi ngân sách SME chỉ vài trăm nghìn đến vài triệu mỗi ngày: số ad set, cách tính ngân sách theo CPL, khi nào tách, remarketing và boost.",
+   "nodes": [
+    {
+     "id": "tc-m-1camp-1adset",
+     "if": "Ngân sách chỉ khoảng 1-1,5 triệu đồng/ngày (khoảng 50 USD) thì nên dựng bao nhiêu campaign, ad set, ads?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Với ngân sách khoảng 50 USD/ngày trở xuống, Jon Loomer khuyên dựng 1 campaign, 1 ad set, vài ads là đủ. Chia nhỏ ra nhiều ad set chỉ khiến mỗi phần có quá ít tiền để Meta học. Gom lại một chỗ thì máy có nhiều dữ liệu hơn và kết quả thường ổn định hơn.",
+     "visao": "Meta tối ưu dựa trên số sự kiện (lead, tin nhắn) mà mỗi ad set nhận được. Ví dụ của Loomer: 100 USD đổ vào 1 ad set hiệu quả hơn chia đều 20 USD cho 5 ad set, vì mỗi ad set nhỏ chỉ ra vài lead mỗi tuần, không đủ để máy phân biệt ai hay ai dở. Tương tự, với ngân sách nhỏ Meta thường chỉ đẩy 2-3 ads, nên chạy nhiều hơn 3 ads ít khi có lợi.",
+     "check": [
+      "Vào Ads Manager, tab Ad sets, đếm số ad set đang bật trong cùng một mục tiêu; nếu có từ 3 ad set trở lên mà tổng ngân sách dưới 50 USD/ngày thì đang chia quá mỏng.",
+      "Xem cột Results theo từng ad set trong 7 ngày; ad set nào dưới khoảng 10 kết quả/tuần là ad set đang thiếu dữ liệu để học.",
+      "Ở cấp ads, xem cột Amount spent; nếu 1-2 ads ăn gần hết tiền còn các ads khác gần như 0 thì việc thêm ads đang không giúp gì."
+     ],
+     "do": [
+      "Gộp các ad set cùng mục tiêu, cùng khu vực thành 1 ad set, đặt ngân sách tổng vào đó; mong đợi sau 1-2 tuần chi phí mỗi kết quả bớt nhảy lên xuống.",
+      "Giữ khoảng 3 ads mạnh nhất trong ad set; muốn thử ads mới thì thay ads yếu nhất thay vì cộng thêm.",
+      "Chỉ tách ad set khi có lý do thật (khác địa điểm phục vụ, khác thông điệp hẳn), xem node tc-m-ly-do-tach-adset.",
+      "Ghi lại số liệu trước khi gộp (CPL, số lead/tuần) để so sau 14 ngày, tránh đánh giá theo cảm giác."
+     ],
+     "avoid": [
+      "Không chia mỗi sở thích, mỗi độ tuổi thành một ad set khi ngân sách nhỏ; mỗi phần sẽ kẹt ở trạng thái học mãi, chi phí cao và khó đọc số.",
+      "Không nhồi 8-10 ads vào ngân sách 1 triệu/ngày; phần lớn ads không được chi tiền, bạn mất công làm mà không có dữ liệu."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Small Budget Advertisers Should Keep it Simple (2024)",
+       "url": "https://www.jonloomer.com/qvt/small-budget-advertisers-should-keep-it-simple/"
+      },
+      {
+       "title": "Jon Loomer - How Many Active Ad Sets in a Meta Ads Campaign",
+       "url": "https://www.jonloomer.com/active-ad-sets-meta-ads-campaign/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-tinh-ngan-sach-theo-cpl",
+     "if": "Làm sao tính ngân sách tối thiểu cho camp lead/tin nhắn thay vì đặt bừa 200-300 nghìn/ngày?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Tính ngược từ chi phí mỗi kết quả (CPL, cost per lead) bạn dự kiến. Jon Loomer gợi ý lấy CPL dự kiến nhân 50 ra ngân sách tuần, rồi chia 7 ra ngân sách ngày; trong bài về learning phase ông còn khuyên nhân ít nhất 75 cho an toàn. Ngân sách thấp hơn nhiều so với mức này vẫn chạy được, nhưng phải chấp nhận kết quả kém ổn định.",
+     "visao": "Meta cần khoảng 50 sự kiện tối ưu trong 7 ngày trên một ad set để thoát giai đoạn học (learning phase, thời gian máy thử nghiệm phân phối). Nếu CPL dự kiến là 100 nghìn thì 50 lead/tuần cần khoảng 5 triệu/tuần, tức khoảng 700 nghìn/ngày. Đặt 200 nghìn/ngày thì cả tuần chỉ ra khoảng 14 lead, máy không đủ dữ liệu.",
+     "check": [
+      "Lấy CPL thực tế 30 ngày gần nhất trong Ads Manager (cột Cost per result); chưa chạy bao giờ thì dùng CPL các camp tương tự của khách cùng ngành.",
+      "Nhân CPL với 50 rồi chia 7; so với ngân sách ngày hiện tại. Nếu ngân sách hiện tại dưới một nửa con số này thì gần như chắc ad set sẽ báo Learning limited.",
+      "Xem cột Delivery của ad set; dòng Learning limited (học bị giới hạn) kéo dài hơn 1 tuần là dấu hiệu ngân sách hoặc tệp đang quá nhỏ so với CPL."
+     ],
+     "do": [
+      "Trình bày phép tính này cho khách ngay từ lúc báo giá: CPL dự kiến x 50 / 7 = ngân sách ngày đề xuất; khách hiểu vì sao 200 nghìn/ngày khó ra kết quả ổn định.",
+      "Nếu khách chỉ chi được thấp hơn nhiều, dồn toàn bộ vào 1 ad set duy nhất (node tc-m-1camp-1adset) để mỗi đồng đều góp vào cùng một chỗ học.",
+      "Loomer lưu ý con số 50 không còn cứng nhắc (có tài khoản thấy mốc 10-25), nên đây là mức chuẩn bị cho trường hợp xấu, thực tế có thể cần ít hơn.",
+      "Sau 2 tuần, tính lại bằng CPL thật và điều chỉnh ngân sách."
+     ],
+     "avoid": [
+      "Không hứa với khách sẽ ổn định ngay với ngân sách thấp hơn phép tính; kết quả nhảy lên xuống tuần đầu sẽ bị hiểu là agency làm kém.",
+      "Không vội tăng gấp đôi ngân sách chỉ để chạy cho đủ 50; tăng đột ngột cũng làm ad set học lại (xem nhóm scale)."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - How to Determine Your Facebook Ads Budget",
+       "url": "https://www.jonloomer.com/how-to-determine-your-facebook-ads-budget/"
+      },
+      {
+       "title": "Jon Loomer - Facebook Ads and the Learning Phase",
+       "url": "https://www.jonloomer.com/facebook-ads-learning-phase/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-ngan-sach-qua-nho",
+     "if": "Ngân sách quá nhỏ so với giá trị chuyển đổi (khách dịch vụ đắt, CPL vài trăm nghìn) thì có nên vẫn tối ưu theo lead không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Nếu tính ra ngân sách chỉ đủ vài lead mỗi tuần, Jon Loomer gợi ý cân nhắc tối ưu cho một sự kiện dễ đạt hơn (lượt xem trang đích, tin nhắn) hoặc nhắm tệp nóng nhất. Không có lời giải hoàn hảo: bạn đổi giữa chất lượng tín hiệu và lượng dữ liệu. Ghi rõ cho khách đây là giai đoạn gom dữ liệu.",
+     "visao": "Ví dụ của Loomer: sản phẩm 100 USD mà ngân sách 10 USD/ngày thì 1 tuần chỉ có 70 USD, muốn thoát học phải có 1 sự kiện mỗi 1,4 USD, gần như bất khả thi với sự kiện mua hàng. Sự kiện nhẹ (lượt xem trang đích, tin nhắn) có nhiều hơn nên máy học được, đổi lại người hành động ít cam kết hơn. Ông cũng nhắc không thoát được learning không phải án tử, chỉ là kết quả kém ổn định hơn.",
+     "check": [
+      "Tính số kết quả dự kiến mỗi tuần = ngân sách tuần chia CPL dự kiến; dưới khoảng 10 kết quả/tuần là vùng rất thiếu dữ liệu.",
+      "Xem tệp nóng có sẵn: số người tương tác trang 365 ngày, khách cũ (danh sách SĐT); tệp này lớn vài nghìn người trở lên mới đáng tách riêng.",
+      "Kiểm tra form/landing có đang chặn quá nhiều (quá nhiều câu hỏi) làm CPL vượt khả năng ngân sách hay không."
+     ],
+     "do": [
+      "Phương án 1: giữ tối ưu lead nhưng gom 1 ad set, chấp nhận Learning limited và đánh giá theo 2-4 tuần thay vì từng ngày.",
+      "Phương án 2: chuyển sang camp tin nhắn (thường rẻ hơn mỗi kết quả) rồi lọc chất lượng bằng kịch bản trả lời (node tc-m-messenger-generate-leads).",
+      "Phương án 3: dồn ngân sách vào tệp nóng (người đã tương tác, khách cũ) với tối ưu Reach hoặc lượt xem trang đích, như Loomer gợi ý cho ngân sách nhỏ.",
+      "Chọn 1 phương án, chạy ít nhất 2 tuần rồi so CPL thật và tỉ lệ khách chốt, không đổi qua lại mỗi vài ngày."
+     ],
+     "avoid": [
+      "Không tối ưu theo lượt click hay tương tác rồi báo khách số lead rẻ; người click không phải người cần dịch vụ, khách sẽ thấy gọi lại toàn số không có nhu cầu.",
+      "Không coi trạng thái Learning limited là lỗi phải sửa bằng mọi giá; đổi liên tục để cố thoát học còn làm tệ hơn."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Facebook Ads and the Learning Phase",
+       "url": "https://www.jonloomer.com/facebook-ads-learning-phase/"
+      },
+      {
+       "title": "Jon Loomer - The Learning Phase Is Just a Label",
+       "url": "https://pubcast.jonloomer.com/the-learning-phase-is-just-a-label/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-ly-do-tach-adset",
+     "if": "Khi nào mới thật sự nên tách thêm ad set (ví dụ phòng khám có 2 chi nhánh, BĐS có 2 dự án)?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Theo Jon Loomer, chỉ tách khi có lý do cụ thể: khác địa điểm phục vụ, khác thông điệp/sản phẩm, hoặc cần chia theo nhóm khách khi đã có nhiều ads cho từng nhóm. Tách chỉ vì muốn thử sở thích này với sở thích kia thì không còn hợp với cách Meta phân phối hiện nay. Mỗi lần thêm một campaign hay ad set, hãy trả lời được câu hỏi: nó giải quyết vấn đề gì.",
+     "visao": "Mỗi ad set tách ra phải tự gom đủ dữ liệu (khoảng 50 sự kiện/tuần). Loomer đưa ví dụ: CPL 2 USD thì 100 USD/ngày ra khoảng 50 lead, dư sức tách; dịch vụ chuyên nghiệp CPL 500 USD thì 1.000 USD/ngày cũng chỉ ra 2 lead, không nên tách. Hai chi nhánh ở hai tỉnh thì buộc phải tách vì khu vực và lời mời khác nhau; còn hai nhóm sở thích cùng thành phố thì Meta tự tìm người được.",
+     "check": [
+      "Liệt kê từng ad set đang chạy và ghi lý do tồn tại của nó; ad set nào lý do chỉ là “thử targeting khác” thì là ứng viên để gộp.",
+      "So khu vực nhắm của các ad set; nếu 2 ad set nhắm cùng một khu vực, cùng độ tuổi và cùng dùng ads giống nhau thì chúng đang cạnh tranh nhau.",
+      "Kiểm tra tổng ngân sách chia cho số ad set có đạt mức CPL x 50 / 7 cho mỗi ad set không (node tc-m-tinh-ngan-sach-theo-cpl)."
+     ],
+     "do": [
+      "Tách khi địa điểm phục vụ khác nhau (2 chi nhánh xa nhau, 2 dự án ở 2 khu vực) vì ads phải ghi đúng địa chỉ và bán kính.",
+      "Tách khi thông điệp khác hẳn (gói khám tổng quát và gói IVF; căn hộ cao cấp và đất nền) và mỗi bên có bộ ads riêng.",
+      "Nếu chưa đủ ngân sách để mỗi ad set tách ra có đủ dữ liệu, ưu tiên ad set mang lại doanh thu cao nhất, phần còn lại gộp hoặc tạm dừng.",
+      "Muốn thử góc thông điệp mới, thêm ads vào ad set hiện có thay vì tạo ad set mới (node tc-m-test-trong-adset-chinh)."
+     ],
+     "avoid": [
+      "Không nhân bản ad set y hệt để “chạy thêm cho nhiều”; hai ad set giống nhau đấu giá chồng lên nhau và chia nhỏ dữ liệu.",
+      "Không tách theo từng độ tuổi hay giới tính khi chưa có nhiều ads khác nhau cho từng nhóm; Meta tự phân bổ tốt hơn khi gom lại."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - How Many Active Ad Sets in a Meta Ads Campaign",
+       "url": "https://www.jonloomer.com/active-ad-sets-meta-ads-campaign/"
+      },
+      {
+       "title": "Jon Loomer - Ad Brief: Simplified Campaign Construction",
+       "url": "https://www.jonloomer.com/ad-brief-example-simplified-campaign-construction/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-remarketing-con-can",
+     "if": "Có nên dựng riêng một camp remarketing (bám đuổi người đã tương tác, đã nhắn tin) cho khách phòng khám, BĐS không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Thường là không cần dựng riêng như trước. Jon Loomer ghi nhận khi chạy tệp rộng hoặc Advantage+ audience, khoảng 25% ngân sách trở lên đã tự rơi vào người từng tương tác hoặc từng mua. Kết quả của camp remarketing riêng còn hay bị thổi phồng vì tính cả lượt xem mà không bấm. Chỉ dựng riêng khi có mục đích rõ ràng (xem node tc-m-remarketing-bac-thang).",
+     "visao": "Remarketing (quảng cáo bám đuổi) nhắm vào người sắp hành động sẵn, nên Meta dễ ghi nhận chuyển đổi cho nó dù không có quảng cáo họ vẫn quay lại. Loomer kể một ca ROAS 27 lần nhưng khoảng một nửa là chuyển đổi tính theo lượt xem (view-through, người chỉ thấy quảng cáo rồi tự quay lại mua). Ngoài ra tệp remarketing nhỏ nên không scale được, tiền thêm vào chỉ làm tăng tần suất.",
+     "check": [
+      "Trong Ads Manager, chọn camp đang chạy rộng, bấm Breakdown và tìm phần phân khúc đối tượng (audience segments) nếu tài khoản có; xem tỉ lệ chi tiêu cho người đã tương tác.",
+      "Mở camp remarketing riêng (nếu có), đổi Attribution setting so sánh 7 ngày click với 7 ngày click cộng 1 ngày xem; nếu kết quả giảm mạnh khi bỏ phần xem thì phần lớn kết quả là view-through.",
+      "So số lead của camp remarketing với số lead mới thật trong CRM (khách chưa từng liên hệ); nếu trùng nhiều với khách đã có thì camp đang nhận công của kênh khác."
+     ],
+     "do": [
+      "Ưu tiên một camp tệp rộng tốt; người đã tương tác vẫn được Meta tự đưa vào phân phối.",
+      "Nếu đang có camp remarketing riêng, giảm ngân sách xuống mức nhỏ và theo dõi tổng lead thật trong CRM 2-3 tuần; nếu tổng không giảm thì camp đó không tạo thêm khách.",
+      "Báo cáo cho khách bằng số lead thật theo CRM thay vì ROAS của camp remarketing.",
+      "Dùng remarketing riêng cho các mục đích cụ thể như nhắc lịch hẹn, ưu đãi có hạn, hoặc mô hình bậc thang."
+     ],
+     "avoid": [
+      "Không báo cáo ROAS hay CPL cực đẹp của camp remarketing như thành tích; khi khách cắt các kênh khác, con số này sụp và mất uy tín.",
+      "Không dồn nhiều tiền vào tệp vài nghìn người; tần suất tăng vọt, người xem khó chịu, chi phí mỗi kết quả tăng."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Is Remarketing Still Relevant? (2024)",
+       "url": "https://www.jonloomer.com/qvt/is-remarketing-still-relevant/"
+      },
+      {
+       "title": "Jon Loomer - The New Role of Remarketing (2025)",
+       "url": "https://pubcast.jonloomer.com/the-new-role-of-remarketing/"
+      },
+      {
+       "title": "Jon Loomer - Remarketing Doesn't Make Sense Anymore (2026)",
+       "url": "https://www.jonloomer.com/qvt/remarketing-doesnt-make-sense-anymore/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-remarketing-bac-thang",
+     "if": "Vậy trường hợp nào remarketing riêng vẫn đáng làm, và làm thế nào cho đúng?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Jon Loomer cho rằng remarketing vẫn hợp lý với mô hình bậc thang: khách mua hoặc dùng dịch vụ rẻ trước, rồi mới được mời lên gói lớn hơn. Ví dụ phòng khám: người đã khám gói cơ bản được mời gói tầm soát; trung tâm giáo dục: người học thử được mời khoá chính. Cách ông làm là chạy nhận diện (Awareness) tối ưu Maximize Reach, giới hạn tần suất 1-2 lần/ngày.",
+     "visao": "Ở mô hình này, người trong tệp đã có quan hệ thật với doanh nghiệp, nên mục tiêu là được nhìn thấy đều đặn với thông điệp nâng cấp, không phải để Meta đi săn chuyển đổi. Tối ưu Reach với giới hạn tần suất giúp chi phí thấp và không làm phiền. Tắt Advantage+ audience để Meta không mở rộng ra người lạ, và chỉ chọn vị trí feed, reels, stories để đảm bảo người ta thật sự thấy nội dung.",
+     "check": [
+      "Kiểm tra doanh nghiệp có bậc sản phẩm rõ ràng (dịch vụ khởi đầu và dịch vụ nâng cấp) hay không; không có thì remarketing riêng ít giá trị.",
+      "Kiểm tra quy mô tệp: danh sách khách cũ đã tải lên (Custom Audience, tệp tự tạo) phải khớp được ít nhất vài nghìn người mới chạy ổn.",
+      "Xem cột Frequency theo ngày của camp này; nếu vượt 2 lần/ngày thì giới hạn tần suất chưa được đặt đúng."
+     ],
+     "do": [
+      "Tạo camp mục tiêu Awareness, tối ưu Maximize Reach, đặt giới hạn tần suất 1-2 lần/ngày theo gợi ý của Loomer.",
+      "Tắt Advantage+ audience, chọn đúng tệp khách cũ hoặc người đã dùng dịch vụ khởi đầu.",
+      "Chọn tay vị trí feed, reels, stories; bỏ các vị trí ít người xem kỹ.",
+      "Đo bằng số khách nâng cấp trong CRM theo tháng, không đo bằng CPL trong Ads Manager."
+     ],
+     "avoid": [
+      "Không dùng mục tiêu lead với tệp nhỏ này rồi so CPL với camp tệp rộng; hai camp có vai trò khác nhau.",
+      "Không để camp chạy không giới hạn tần suất; khách cũ thấy cùng một quảng cáo 5-6 lần mỗi ngày sẽ phản cảm với thương hiệu."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - When Does Remarketing Actually Make Sense? (2025)",
+       "url": "https://pubcast.jonloomer.com/when-does-remarketing-actually-make-sense/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-boost-hay-ads-manager",
+     "if": "Khách hỏi: sao không bấm “Quảng cáo bài viết” (boost) trên fanpage cho nhanh, mà phải chạy trong Ads Manager?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Boost chỉ là một campaign, một ad set, một ads được tạo nhanh, ít tuỳ chọn. Thử nghiệm của Biteable (2021) cho thấy boost có CPM rẻ hơn (2,63 USD so với 7,72 USD) và nhiều reaction hơn, nhưng CPC đắt gấp khoảng 3 lần (3,09 USD so với 1,04 USD) và ít click hơn. Nghĩa là boost tốt cho tương tác, kém cho khách hành động.",
+     "visao": "Khi boost, Meta thường tối ưu cho tương tác hoặc tiếp cận, nên tìm người hay bấm thích, bình luận, không nhất thiết là người cần dịch vụ. Ads Manager cho chọn mục tiêu lead hoặc tin nhắn, form, theo dõi chuyển đổi, nhiều ads trong một ad set. Jon Loomer ghi nhận Ads Manager nay có lựa chọn “Boost Post” thay cho “Use Existing Post”, tức là vẫn dùng bài viết cũ được nhưng với đủ tuỳ chọn.",
+     "check": [
+      "Vào Ads Manager xem các camp có tên kiểu “Post: ...” (do boost tạo); kiểm tra mục tiêu đang là gì.",
+      "So CPL hoặc chi phí mỗi tin nhắn của camp boost với camp lead/tin nhắn tạo trong Ads Manager trong cùng khoảng thời gian.",
+      "Xem bài boost có nhiều tương tác nhưng ít tin nhắn hay không; nếu có thì boost đang mua tương tác thay vì khách."
+     ],
+     "do": [
+      "Dùng boost cho mục tiêu xã hội: tăng bình luận, chia sẻ cho bài thông báo, sự kiện, bằng chứng uy tín.",
+      "Bài nào boost được nhiều tương tác tốt, lấy chính bài đó (giữ nguyên lượt tương tác) đưa vào camp lead/tin nhắn trong Ads Manager, như Biteable gợi ý.",
+      "Với mục tiêu ra khách, luôn dựng trong Ads Manager để chọn đúng mục tiêu, lịch, form và đo lường.",
+      "Giải thích cho khách bằng bảng so sánh CPL thật của 2 cách sau 2 tuần."
+     ],
+     "avoid": [
+      "Không để chủ doanh nghiệp tự boost song song với camp agency đang chạy cùng tệp; hai bên cạnh tranh nhau và số liệu rối.",
+      "Không đánh giá hiệu quả boost bằng số lượt thích; lượt thích không trả tiền dịch vụ."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Boost in Ads Manager (2025)",
+       "url": "https://www.jonloomer.com/qvt/boost-ads-manager/"
+      },
+      {
+       "title": "Biteable - Facebook Boost vs Ads Manager (2021, thử nghiệm có số liệu)",
+       "url": "https://biteable.com/blog/facebook-boost-vs-ads/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tc-m-test-tat",
+   "title": "Thực chiến: Test creative và quy tắc tắt ads",
+   "intro": "Ngân sách test, ngưỡng tắt ads tính bằng bội số CPL, ads không được chi tiền, khi nào gọi là ads thắng và tắt theo chất lượng lead.",
+   "nodes": [
+    {
+     "id": "tc-m-ngan-sach-test-3x-cpa",
+     "if": "Test một creative mới thì cần bao nhiêu tiền mỗi ngày, chạy bao lâu mới đủ để kết luận?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Các media buyer có tên dùng mốc theo bội số CPA (chi phí mỗi kết quả mục tiêu). Kyle (phỏng vấn trên MediaBuyer.com, 2025) đặt ngân sách test mỗi ngày bằng 3 lần CPA mục tiêu; Ben Radack đánh giá sau khi ad chi 2-3 lần CPA mỗi ngày trong 3-4 ngày. Với SME Việt Nam, nghĩa là CPL mục tiêu 150 nghìn thì test nên có khoảng 300-450 nghìn/ngày cho phần test.",
+     "visao": "Nếu ngân sách test thấp hơn 1 lần CPA mỗi ngày, có ngày ra 1 lead có ngày ra 0, con số dao động quá mạnh để kết luận. Bội số CPA giúp quy đổi mọi ngành về cùng một quy tắc: dịch vụ đắt (CPL cao) cần nhiều tiền hơn để có cùng mức tin cậy. Đây là số liệu từ thị trường Mỹ, chủ yếu thương mại điện tử; logic bội số dùng được nhưng mốc chính xác cần tự hiệu chỉnh.",
+     "check": [
+      "Xác định CPL mục tiêu (mức khách chịu được) trước khi test; không có mục tiêu thì không có mốc để so.",
+      "Tính ngân sách test ngày = 2-3 lần CPL mục tiêu; nếu ngân sách tổng không đủ, giảm số creative test mỗi đợt thay vì chia mỏng.",
+      "Xem ad đã chạy đủ 3-4 ngày chưa (có cả ngày thường và cuối tuần nếu được) trước khi đọc kết quả."
+     ],
+     "do": [
+      "Đặt ngân sách cho phần test bằng 2-3 lần CPL mục tiêu mỗi ngày.",
+      "Không động vào ad trong 72 giờ đầu, như Kyle làm và như Meta khuyên chờ tối thiểu 72 giờ.",
+      "Mỗi đợt test 3-6 biến thể cùng một ý tưởng (đổi hook, hình mở đầu, câu đầu) để biết chính xác yếu tố nào tạo khác biệt.",
+      "Ghi lịch đánh giá cố định (ví dụ thứ Hai và thứ Năm) để không bị cám dỗ xem số mỗi giờ."
+     ],
+     "avoid": [
+      "Không test 10 creative với tổng 300 nghìn/ngày; mỗi creative chỉ được vài chục nghìn, bạn sẽ tắt nhầm cái tốt vì thiếu dữ liệu.",
+      "Không coi các mốc 2x, 3x là chuẩn của Meta; đây là quy tắc kinh nghiệm của chuyên gia, cần điều chỉnh theo dữ liệu tài khoản."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "MediaBuyer.com - 10X Kill Switch, phỏng vấn media buyer Kyle (2025)",
+       "url": "https://mediabuyer.com/insights/009"
+      },
+      {
+       "title": "Ben Radack (LinkedIn) - The 3 questions I ask before I turn off any ad (2026)",
+       "url": "https://www.linkedin.com/posts/benradack_the-3-questions-i-ask-before-i-turn-off-any-activity-7447632595334463488-gNTg"
+      },
+      {
+       "title": "AdsEditor - Facebook Ads Creative Testing (2026)",
+       "url": "https://adseditor.app/blog/facebook-ads-creative-testing"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-nguong-tat-ads",
+     "if": "Ads mới chạy đã tiêu tiền mà chưa ra lead: tiêu đến bao nhiêu thì tắt là hợp lý?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Dùng ngưỡng theo bội số CPL thay vì cảm giác. Mức chặt: AdsEditor (2026) tắt khi chi 2 lần CPA mà 0 kết quả; Jason Hornung chỉ đánh giá sau khi ad chi 2 lần CPL mục tiêu. Mức rộng: Kyle (MediaBuyer.com) tắt khi chi 10 lần CPA không có chuyển đổi nào. SME ngân sách nhỏ nên dùng mức 2-3 lần, vì không đủ tiền để chờ tới 10 lần.",
+     "visao": "Ngưỡng bội số giúp bạn biết lúc nào số liệu đủ ý nghĩa. Corey Haines giải thích trong hệ thống ra quyết định của mình: nếu CPL thật đúng bằng mục tiêu thì chi 3 lần mục tiêu sẽ ra khoảng 3 lead; vẫn 0 lead ở mức đó thì xác suất chỉ khoảng 5%, đủ tin để tắt. Tắt ở 2 lần thì khoảng 13% khả năng tắt nhầm ad tốt.",
+     "check": [
+      "Mở cấp Ads, thêm cột Amount spent và Results; chia Amount spent cho CPL mục tiêu để biết ad đã chi bao nhiêu lần mục tiêu.",
+      "Xem từng ngày (Breakdown theo ngày) thay vì chỉ trung bình, như Ben Radack làm: xu hướng xấu đều hay chỉ một ngày tệ kéo trung bình xuống.",
+      "Kiểm tra ad đó có phải ad chi tiêu nhiều nhất trong ad set không; ad dẫn đầu có thể đang nuôi phễu cho ads khác, cần xem kỹ hơn trước khi tắt."
+     ],
+     "do": [
+      "Ghi ngưỡng tắt ra văn bản cho từng tài khoản trước khi chạy, ví dụ: chi 3 lần CPL mục tiêu mà 0 lead thì tắt.",
+      "Ad đã có lead nhưng CPL cao hơn mục tiêu 10-25%: theo Kyle, cho thêm thời gian, tổng 5-7 ngày, không cải thiện mới tắt.",
+      "Ad có CPL gấp đôi mục tiêu trở lên sau ngưỡng chi tiêu: tắt và thay bằng biến thể mới.",
+      "Chỉ tắt ads, không tắt ad set hay campaign (theo nguyên tắc tắt cấp nhỏ nhất của agency)."
+     ],
+     "avoid": [
+      "Không tắt ad sau nửa ngày vì “chưa có lead”; bạn trả tiền cho giai đoạn thử rồi bỏ đi trước khi có kết quả.",
+      "Không để ad chạy mãi vì “hy vọng”; ad dở ăn tiền của ad tốt trong cùng ad set."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "AdsEditor - Facebook Ads Creative Testing (2026)",
+       "url": "https://adseditor.app/blog/facebook-ads-creative-testing"
+      },
+      {
+       "title": "Jason Hornung (LinkedIn) - Kill decision framework (2026)",
+       "url": "https://www.linkedin.com/posts/jasonhornung_metaads-facebookads-paidmedia-activity-7464639006543097857-2jod"
+      },
+      {
+       "title": "MediaBuyer.com - 10X Kill Switch, phỏng vấn media buyer Kyle (2025)",
+       "url": "https://mediabuyer.com/insights/009"
+      },
+      {
+       "title": "Ben Radack (LinkedIn) - The 3 questions I ask before I turn off any ad (2026)",
+       "url": "https://www.linkedin.com/posts/benradack_the-3-questions-i-ask-before-i-turn-off-any-activity-7447632595334463488-gNTg"
+      },
+      {
+       "title": "Corey Haines, marketingskills (GitHub) - Meta decision system",
+       "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/meta-decision-system.md"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-ads-khong-duoc-chi",
+     "if": "Trong ad set có 6-10 ads nhưng Meta chỉ tiêu tiền vào 2-3 cái, các cái còn lại gần như 0 đồng. Có phải lỗi không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Không phải lỗi, đây là cách Meta vận hành. Andrew Foxwell (2026) ghi nhận trong 10 ads thì thường 2-3 ads ăn tới 80% chi tiêu; Jon Loomer cũng nói với ngân sách nhỏ Meta thường chỉ đẩy 2-3 ads. Việc cần làm là đọc tín hiệu này: ads không được chi thường là ads Meta đoán sẽ kém.",
+     "visao": "Meta dự đoán trước ads nào có khả năng ra kết quả với từng người, rồi dồn tiền vào ads có dự đoán tốt nhất. Corey Haines coi việc phân bổ chi tiêu này là một bước sàng lọc: sau 7 ngày, ads chi dưới một nửa mức chia đều là ads bị Meta ưu tiên thấp. Ads bị đẩy ra không có nghĩa nó chắc chắn dở, nhưng nếu muốn nó có cơ hội thì phải test riêng.",
+     "check": [
+      "Vào cấp Ads của ad set, xem cột Amount spent 7 ngày; tính mức chia đều = ngân sách ad set x 7 / số ads.",
+      "Ads nào chi dưới một nửa mức chia đều (Haines) hoặc gần 0 đồng là ads bị Meta ưu tiên thấp.",
+      "So nội dung ads được chi nhiều với ads bị bỏ: khác ở hook, hình mở đầu hay định dạng; đó là gợi ý cho đợt creative sau."
+     ],
+     "do": [
+      "Tắt ads gần như không được chi để giảm nhiễu, theo cách thứ 2 trong bài của Foxwell (test trong camp chính, tắt ads không được chi).",
+      "Với ads bị bỏ mà bạn vẫn tin, sửa phần mở đầu (hook, hình, định dạng) chứ không sửa nội dung phía sau, vì người xem chưa đi tới phần đó (Haines).",
+      "Muốn ép một ý tưởng mới được chi tiền công bằng, test ở ad set riêng ABO (ngân sách cấp ad set) với cùng brief, như cách 1 của Foxwell.",
+      "Giữ số ads trong 1 ad set ở mức vừa phải theo ngân sách: ngân sách nhỏ khoảng 3 ads; ngân sách lớn Foxwell dùng 10-20 ads."
+     ],
+     "avoid": [
+      "Không thêm ads liên tục với hy vọng Meta sẽ chi đều; nó vẫn dồn vào 2-3 ads, bạn chỉ tốn công sản xuất.",
+      "Không đánh giá ads chi 50 nghìn với ads chi 2 triệu bằng cùng con số CPL; ads chi ít chưa có đủ dữ liệu để so."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Andrew Foxwell, Foxwell Digital - Meta Creative Testing Frameworks Top Brands Use in 2026",
+       "url": "https://www.foxwelldigital.com/blog/the-meta-creative-testing-frameworks-top-brands-use-in-2026"
+      },
+      {
+       "title": "Jon Loomer - Small Budget Advertisers Should Keep it Simple (2024)",
+       "url": "https://www.jonloomer.com/qvt/small-budget-advertisers-should-keep-it-simple/"
+      },
+      {
+       "title": "Corey Haines, marketingskills (GitHub) - Meta decision system",
+       "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/meta-decision-system.md"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-test-trong-adset-chinh",
+     "if": "Test creative nên tạo campaign test riêng hay thêm thẳng vào ad set đang chạy?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Với ngân sách nhỏ, Jon Loomer khuyên test ngay trong ad set chính, dùng công cụ test creative của Meta (creative testing tool) thay vì tách campaign test. Andrew Foxwell (2026) mô tả hai cách các thương hiệu lớn dùng: mỗi đợt một ad set ABO riêng với 1-10 ads cùng brief, hoặc test thẳng trong camp chính (CBO) với 10-20 ads/ad set. SME thường hợp cách thứ hai ở quy mô nhỏ.",
+     "visao": "Campaign test riêng chia ngân sách ra hai nơi, cả hai cùng thiếu dữ liệu. Thêm vào ad set chính thì ads mới được đánh giá ngay trong môi trường thật, cùng tệp, cùng ngân sách. Nhược điểm là Meta có thể không chi cho ads mới; công cụ test creative của Meta giúp ép một phần ngân sách cho ads mới trong thời gian test.",
+     "check": [
+      "Xem tổng ngân sách: nếu dưới khoảng 50 USD/ngày (khoảng 1,3 triệu) thì gần như chắc nên test trong ad set chính.",
+      "Kiểm tra ad set chính có đang ổn định không; nếu đang trong giai đoạn học, thêm ads mới sẽ làm nó học lại.",
+      "Trong Ads Manager, mở phần ads, tìm tuỳ chọn test creative để xem tài khoản đã có tính năng này chưa."
+     ],
+     "do": [
+      "Ngân sách nhỏ: thêm 1-3 ads mới vào ad set chính, dùng creative testing tool nếu có, giữ ads cũ đang tốt.",
+      "Ngân sách lớn hơn và cần thử nhiều ý tưởng: tạo ad set ABO riêng cho từng đợt, mỗi đợt một brief, như cách 1 của Foxwell.",
+      "Sau khi đủ ngưỡng chi tiêu (node tc-m-nguong-tat-ads), giữ ads thắng, tắt ads thua.",
+      "Khi đưa ads thắng từ ad set test sang ad set chính, Kyle khuyên tăng ngân sách ngay tại chỗ test trước để chắc ads chịu được khi chi nhiều hơn."
+     ],
+     "avoid": [
+      "Không tạo campaign test với 200 nghìn/ngày bên cạnh campaign chính 500 nghìn/ngày; cả hai cùng thiếu dữ liệu.",
+      "Không thêm ads mới mỗi 1-2 ngày vào ad set chính; mỗi lần thêm có thể làm ad set học lại và không ads nào kịp được đánh giá."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Ad Brief: Simplified Campaign Construction",
+       "url": "https://www.jonloomer.com/ad-brief-example-simplified-campaign-construction/"
+      },
+      {
+       "title": "Andrew Foxwell, Foxwell Digital - Meta Creative Testing Frameworks Top Brands Use in 2026",
+       "url": "https://www.foxwelldigital.com/blog/the-meta-creative-testing-frameworks-top-brands-use-in-2026"
+      },
+      {
+       "title": "MediaBuyer.com - 10X Kill Switch, phỏng vấn media buyer Kyle (2025)",
+       "url": "https://mediabuyer.com/insights/009"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-goi-winner",
+     "if": "Ads mới có CPL tốt 2 ngày đầu: đã gọi là ads thắng (winner) để tăng tiền được chưa?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Chưa nên. Courtney Fritts (Foxwell Digital, 2025) chỉ gọi winner sau ít nhất 1 tuần. AdsEditor (2026) đặt mốc cụ thể hơn: có khoảng 10 chuyển đổi, chạy 5-7 ngày, và CPA thấp hơn khoảng 20% so với ads cũ. Hai ngày đầu thường là giai đoạn may mắn hoặc Meta đang thử nhóm người dễ chuyển đổi.",
+     "visao": "Ở vài ngày đầu, chỉ một hai lead may mắn cũng đủ kéo CPL xuống rất đẹp. Chạy đủ 1 tuần giúp ads đi qua cả ngày thường và cuối tuần, khi hành vi người dùng khác nhau. Mốc thấp hơn 20% giúp chắc đây là khác biệt thật chứ không phải dao động ngẫu nhiên.",
+     "check": [
+      "Đếm số lead ads đó đã ra; dưới khoảng 10 lead thì CPL còn rất dễ đổi.",
+      "Xem ads đã chạy đủ 5-7 ngày, có cả cuối tuần chưa.",
+      "So CPL với ads tốt nhất hiện có trong cùng khoảng thời gian; chênh dưới 20% thì coi như ngang nhau.",
+      "Đối chiếu với CRM: lead từ ads mới có tỉ lệ nghe máy, đặt lịch tương đương ads cũ không."
+     ],
+     "do": [
+      "Chờ đủ 1 tuần và khoảng 10 lead mới quyết định tăng ngân sách hoặc nhân rộng ý tưởng.",
+      "Khi đạt mốc, ghi lại vì sao nó thắng (hook, góc thông điệp, định dạng) để làm biến thể tiếp theo.",
+      "Tăng ngân sách theo nhóm scale (node tc-m-scale-theo-quy-mo), không tăng gấp đôi ngay.",
+      "Nếu sau 1 tuần CPL quay về ngang ads cũ, giữ nó như một ads bình thường, không gọi là winner."
+     ],
+     "avoid": [
+      "Không tăng gấp đôi ngân sách sau 2 ngày đẹp; ads bị đẩy vào tệp rộng hơn trước khi đủ ổn định, CPL thường bật lên.",
+      "Không báo khách “đã tìm ra mẫu thắng” sau 2 ngày; khi số quay đầu, khách mất niềm tin."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Courtney Fritts, Foxwell Digital - Meta Creative Testing: Finding Your Path to Consistent Winners (2025)",
+       "url": "https://www.foxwelldigital.com/blog/meta-creative-testing-finding-your-path-to-consistent-winners"
+      },
+      {
+       "title": "AdsEditor - Facebook Ads Creative Testing (2026)",
+       "url": "https://adseditor.app/blog/facebook-ads-creative-testing"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-phan-lon-ads-thua",
+     "if": "Làm 10 mẫu thì 8-9 mẫu không ra gì, có phải creative của mình quá kém?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Không hẳn. Common Thread Collective (2026, dữ liệu thương mại điện tử Mỹ) ghi nhận chỉ khoảng 3,5% ads trở thành ads vượt trội, và 79% ads bị tắt trước khi chi 1.000 USD trong 72 giờ. Tỉ lệ thua cao là bình thường; cái cần là quy trình test rẻ và đều để tìm ra số ít ads thắng.",
+     "visao": "Người xem phản ứng với creative rất khó đoán trước, kể cả với người làm lâu năm. Vì vậy các đơn vị lớn coi test creative như bài toán xác suất: càng thử nhiều ý tưởng khác nhau với chi phí hợp lý, càng có cơ hội gặp ads tốt. CTC còn đề xuất tắt ads theo ngưỡng chi tiêu, không theo thời gian, và dành 40-50% ngân sách cho test ở giai đoạn đầu, 20-30% khi tài khoản đã ổn định.",
+     "check": [
+      "Tính tỉ lệ ads đạt mục tiêu trong 3 tháng gần nhất của tài khoản; đó là tỉ lệ thắng thực tế của bạn.",
+      "Kiểm tra các ads thua có khác nhau thật không, hay chỉ đổi màu, đổi chữ nhỏ; ý tưởng giống nhau thì thua cùng lúc.",
+      "Xem phần trăm ngân sách đang dành cho ads mới so với ads cũ."
+     ],
+     "do": [
+      "Đặt kỳ vọng với khách ngay từ đầu: phần lớn mẫu sẽ không thắng, đó là chi phí để tìm ra mẫu tốt.",
+      "Dành một phần ngân sách cố định cho test; CTC gợi ý 40-50% giai đoạn đầu, 20-30% khi đã có ads ổn định (số liệu TMĐT Mỹ, SME Việt Nam nên bắt đầu thấp hơn tuỳ khả năng khách).",
+      "Mỗi đợt thử các ý tưởng khác nhau thật (góc thông điệp, người nói, định dạng) thay vì đổi chi tiết nhỏ.",
+      "Tắt theo ngưỡng chi tiêu (node tc-m-nguong-tat-ads), không tắt vì đã chạy 2 ngày."
+     ],
+     "avoid": [
+      "Không bỏ test sau 1-2 đợt thua; ads cũ sẽ mỏi dần và bạn không có mẫu thay thế.",
+      "Không dùng tỉ lệ 3,5% hay 79% làm chuẩn cho khách Việt; đây là dữ liệu TMĐT Mỹ, chỉ để hiểu rằng thua nhiều là bình thường."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Common Thread Collective - The Ecommerce Creative Testing Framework (2026)",
+       "url": "https://commonthreadco.com/blogs/coachs-corner/the-ecommerce-creative-testing-framework-from-gambling-to-math"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-tat-theo-lead-dat",
+     "if": "Hai ads có CPL trên Ads Manager giống nhau, nhưng sale nói lead từ một ads toàn không nghe máy. Tắt theo cái gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Tắt theo chi phí mỗi lead đạt (qualified lead, lead đúng nhu cầu và liên lạc được), không chỉ theo CPL. Corey Haines đặt quy tắc: tỉ lệ lead đạt dưới 40% thì thay ads vì nó đang hút sai người; 40-60% theo dõi thêm 1 tuần; từ 60% trở lên mới xét tiếp chi phí. Muốn làm được phải có cột đánh dấu đạt/không đạt trong file lead hoặc CRM.",
+     "visao": "Meta chỉ biết người đó đã gửi form hay nhắn tin, không biết sale gọi có được không. Haines tính: với tỉ lệ đạt 40%, chi phí thật cho mỗi lead đạt bằng 2,5 lần CPL bạn thấy trên Ads Manager, nên hai ads giống nhau trên nền tảng có thể chênh hơn 60% chi phí thật. Ads có thông điệp chung chung, ưu đãi quá hấp dẫn thường kéo nhiều người tò mò.",
+     "check": [
+      "Đảm bảo file lead có cột tên ads hoặc mã ads (qua tham số UTM hoặc trường ẩn trong form) để biết lead đến từ ads nào.",
+      "Mỗi tuần, đếm theo từng ads: tổng lead, số lead đạt (nghe máy, đúng nhu cầu); tính tỉ lệ đạt và chi phí mỗi lead đạt.",
+      "Chỉ đánh giá khi ads đã chi tối thiểu 3 lần CPL mục tiêu (mốc dữ liệu của Haines)."
+     ],
+     "do": [
+      "Tỉ lệ đạt dưới 40%: thay ads, giữ định dạng nhưng đổi góc thông điệp, thêm câu lọc rõ đối tượng (ví dụ nêu khoảng giá, khu vực phục vụ).",
+      "Có lead trên Meta nhưng 0 lead đạt: thay ads, đổi góc tiếp cận.",
+      "Chi phí mỗi lead đạt cao hơn mục tiêu 1,5 lần trở lên: thay; trong khoảng 1-1,5 lần: theo dõi, đây là dao động bình thường theo Haines.",
+      "Báo cáo cho khách bằng chi phí mỗi lead đạt bên cạnh CPL."
+     ],
+     "avoid": [
+      "Không giữ ads chỉ vì CPL rẻ nhất; nếu lead không nghe máy, nó là ads đắt nhất.",
+      "Không để sale tự đánh giá cảm tính; cần tiêu chí đạt viết ra (ví dụ nghe máy trong 2 lần gọi, đúng khu vực, có nhu cầu trong 3 tháng)."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Corey Haines, marketingskills (GitHub) - Meta decision system",
+       "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/meta-decision-system.md"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tc-m-video-creative",
+   "title": "Thực chiến: Đọc chỉ số video và creative",
+   "intro": "Hook rate, hold rate, khung đầu, kịch bản UGC theo khối, nhịp làm mới creative và cách không chẩn đoán nhầm creative mỏi.",
+   "nodes": [
+    {
+     "id": "tc-m-hook-rate",
+     "if": "Video quảng cáo có CTR thấp: làm sao biết lỗi ở 3 giây đầu hay ở phần sau?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Tính hook rate (tỉ lệ giữ chân 3 giây, còn gọi là thumbstop) = lượt xem video 3 giây chia số lần hiển thị, nhân 100. Nếu hook rate thấp thì người ta lướt qua ngay, lỗi ở hình và câu mở đầu. Spark UGC (2026) tổng hợp mốc của Ryze: tệp lạnh 25-35%, tệp remarketing 35-45%, dưới 15% coi như hỏng; Vaizle đưa mốc 20-25%.",
+     "visao": "Meta dùng phản ứng ở những giây đầu để quyết định có tiếp tục đưa video tới nhiều người hay không, nên 3 giây đầu như cửa hàng có biển hiệu: người không dừng lại thì nội dung bên trong hay đến đâu cũng vô ích. Tách riêng chỉ số này giúp bạn biết cần sửa phần mở đầu hay phần thân video. Số liệu toàn cầu, phần lớn từ thương mại điện tử; thị trường Việt Nam và ngành dịch vụ thường khác, nên tự lập mốc riêng.",
+     "check": [
+      "Trong Ads Manager, chọn Columns, Customize columns, thêm “3-second video plays” và “Impressions”; tạo cột tuỳ chỉnh 3-second video plays / Impressions.",
+      "So hook rate của từng ads với trung bình tài khoản trong 30 ngày, như Motion khuyên tự lập mốc riêng thay vì dùng số chung.",
+      "Hook rate thấp hơn hẳn trung bình tài khoản và dưới khoảng 15%: lỗi ở mở đầu. Hook rate tốt mà CTR thấp: lỗi ở phần sau hoặc lời kêu gọi."
+     ],
+     "do": [
+      "Tạo cột hook rate một lần, lưu thành bộ cột mặc định cho mọi tài khoản video.",
+      "Ads hook rate thấp: giữ nguyên thân video, làm 3 phiên bản mở đầu khác nhau (câu hỏi đúng nỗi đau, kết quả trước/sau hợp lệ, người thật nói thẳng vào camera).",
+      "Ghi lại các mở đầu có hook rate cao nhất của từng ngành (phòng khám, BĐS, giáo dục) thành thư viện nội bộ.",
+      "Sau 2-3 tháng, dùng số trung bình của chính tài khoản làm mốc thay cho số toàn cầu."
+     ],
+     "avoid": [
+      "Không sửa cả video khi chỉ có 3 giây đầu yếu; bạn bỏ mất phần thân đang tốt.",
+      "Không so hook rate của tệp remarketing với tệp lạnh; tệp quen thuộc luôn dừng lại nhiều hơn."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Spark UGC - Creative metrics glossary: thumbstop, hook rate, hold rate (2026, tổng hợp Ryze, Vaizle, ATTN)",
+       "url": "https://www.sparkugc.com/resources/creative-metrics-glossary-thumbstop-hook-hold-rate"
+      },
+      {
+       "title": "Motion - Thumbstop guide: How to stop a scroll in 3 seconds",
+       "url": "https://motionapp.com/thumbstop-guide/how-to-stop-a-scroll-in-3-seconds/"
+      },
+      {
+       "title": "Motion - Metrics cheat sheet (2026)",
+       "url": "https://help.motionapp.com/en/articles/7730931-metrics-cheat-sheet"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-hold-rate",
+     "if": "Người xem dừng lại nhưng xem được vài giây rồi bỏ, không ai nhắn tin. Đo bằng chỉ số gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Đo hold rate (tỉ lệ giữ người xem) = lượt ThruPlay chia lượt xem 3 giây. ThruPlay là lượt xem tới 15 giây hoặc hết video nếu ngắn hơn. Spark UGC tổng hợp mốc của Ryze 2026: tệp lạnh khoảng 20-25%, dưới 18% là có vấn đề; Vaizle đưa mốc cao hơn 40-50%, cho thấy mốc giữa các nguồn chênh nhau nhiều.",
+     "visao": "Hook rate cho biết người ta có dừng lại không; hold rate cho biết phần giữa có đủ hấp dẫn để họ nghe tiếp đến đoạn chào dịch vụ hay không. Video SME hay mắc lỗi: mở đầu tốt rồi chuyển sang giới thiệu công ty dài dòng, người xem bỏ đi trước khi tới phần lợi ích và ưu đãi. Motion cũng theo dõi tỉ lệ 15 giây trên 3 giây với cùng mục đích. Số liệu toàn cầu, phần lớn từ thương mại điện tử; thị trường Việt Nam và ngành dịch vụ thường khác, nên tự lập mốc riêng.",
+     "check": [
+      "Thêm cột ThruPlays và 3-second video plays, tạo cột tuỳ chỉnh ThruPlays / 3-second video plays.",
+      "Xem biểu đồ giữ chân trong phần xem trước ads (video retention) để thấy giây nào người xem rời nhiều nhất.",
+      "So hold rate từng ads với trung bình tài khoản; thấp hơn hẳn trung bình là phần thân video có vấn đề."
+     ],
+     "do": [
+      "Cắt bỏ đoạn giới thiệu công ty, đưa lợi ích và bằng chứng lên sớm hơn, ngay sau câu mở đầu.",
+      "Đổi nhịp mỗi 2-3 giây (cắt cảnh, thêm chữ trên màn hình) để giữ mắt người xem.",
+      "Đặt lời kêu gọi (gọi, nhắn tin, đăng ký) trước giây 15 vì ThruPlay chỉ tính tới đó.",
+      "Làm lại phần thân, giữ nguyên câu mở đầu đang có hook rate tốt, rồi so lại sau ngưỡng chi tiêu."
+     ],
+     "avoid": [
+      "Không chỉ nhìn số lượt xem video; lượt xem 3 giây nhiều mà hold rate thấp vẫn là video không bán được.",
+      "Không áp mốc 40-50% của một nguồn rồi kết luận mọi video đều hỏng; mốc giữa các nguồn chênh rất xa, dùng mốc của tài khoản."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Spark UGC - Creative metrics glossary: thumbstop, hook rate, hold rate (2026, tổng hợp Ryze, Vaizle, ATTN)",
+       "url": "https://www.sparkugc.com/resources/creative-metrics-glossary-thumbstop-hook-hold-rate"
+      },
+      {
+       "title": "Motion - Metrics cheat sheet (2026)",
+       "url": "https://help.motionapp.com/en/articles/7730931-metrics-cheat-sheet"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-khung-dau-90",
+     "if": "Video ngắn có mở đầu bằng logo, intro hiệu ứng: có ảnh hưởng gì không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Có. Motion (2026) theo dõi chỉ số giữ chân khung đầu (1st frame retention, tỉ lệ người còn xem sau khung hình đầu tiên) và khuyên đổi khung đầu khi chỉ số này dưới 90%. Logo, màn hình đen, chữ chạy giới thiệu ở khung đầu thường làm mất người ngay lập tức. Khung đầu nên là hình ảnh hoặc câu nói đúng vấn đề của người xem.",
+     "visao": "Trên bảng tin, video tự chạy và người dùng lướt rất nhanh; khung hình đầu gần như là ảnh bìa quyết định họ có dừng tay không. Dara Denney cũng nhấn mạnh Meta dựa vào 3 giây đầu để phân phối, và hook có thể đến từ hình ảnh hoặc chữ trên màn hình, không chỉ lời nói. Logo không trả lời câu hỏi “cái này có liên quan đến tôi không”.",
+     "check": [
+      "Xem lại 1 giây đầu của các video đang chạy: có logo, intro, màn hình đen hay chữ quá nhỏ không.",
+      "Nếu dùng công cụ phân tích creative có chỉ số khung đầu, so với mốc 90% của Motion; nếu không có, so hook rate (node tc-m-hook-rate) giữa video có intro và video vào thẳng.",
+      "Xem video ở chế độ tắt tiếng; nếu khung đầu không tự nói được nội dung thì phần lớn người xem tắt tiếng sẽ không hiểu."
+     ],
+     "do": [
+      "Bỏ intro logo; đặt logo nhỏ ở góc hoặc ở cuối video.",
+      "Khung đầu dùng hình người thật đang nói, kết quả cụ thể, hoặc chữ lớn nêu đúng vấn đề (ví dụ một câu hỏi người bệnh hay hỏi).",
+      "Làm 2-3 phiên bản khung đầu cho cùng một video, chạy song song rồi giữ bản có hook rate cao nhất.",
+      "Thêm phụ đề ngay từ giây đầu cho người xem tắt tiếng."
+     ],
+     "avoid": [
+      "Không mở đầu bằng 3-5 giây giới thiệu “Chào mừng đến với...”; người xem lướt qua trước khi nghe tới điều quan trọng.",
+      "Không dùng khung đầu là ảnh trước/sau phản cảm với ngành y tế; vừa bị từ chối duyệt vừa làm người xem khó chịu."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Motion - Metrics cheat sheet (2026)",
+       "url": "https://help.motionapp.com/en/articles/7730931-metrics-cheat-sheet"
+      },
+      {
+       "title": "Dara Denney - cấu trúc quảng cáo UGC (video YouTube, bản chép lời)",
+       "url": "https://pickscribe.com/v/yNTlVKvuX0o"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-kich-ban-ugc-khoi",
+     "if": "Viết kịch bản video UGC (người thật quay điện thoại) cho dịch vụ thế nào để dễ test và dễ ghép?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Chia kịch bản thành các khối theo cách Dara Denney trình bày: hook, khơi vấn đề, giải pháp, tính năng/lợi ích, bằng chứng, lời kêu gọi. Mỗi khối quay riêng vài phiên bản, rồi ghép thành nhiều video khác nhau. Savannah Sanchez gợi ý mỗi đợt test dùng 3 hook khác nhau cho cùng phần thân.",
+     "visao": "Khi quay theo khối, bạn có thể đổi riêng phần mở đầu mà không phải quay lại cả video, nên một buổi quay ra được nhiều biến thể để test. Đây đúng là phần dễ thay đổi kết quả nhất, vì hook quyết định người ta có xem tiếp không. Với dịch vụ (phòng khám, giáo dục), khối bằng chứng (chứng chỉ, quy trình, lời kể khách thật có đồng ý) thường quyết định họ có liên hệ hay không.",
+     "check": [
+      "Đọc lại kịch bản hiện có, đánh dấu từng khối; thiếu khối bằng chứng hoặc lời kêu gọi là lỗi hay gặp.",
+      "Kiểm tra lời kể khách hàng có giấy đồng ý và không vi phạm quy định quảng cáo y tế trước khi đưa vào khối bằng chứng.",
+      "Xem dữ liệu cũ: ads nào hook rate cao thì giữ phần mở đầu đó làm mẫu."
+     ],
+     "do": [
+      "Viết kịch bản theo 6 khối, mỗi khối 1-3 câu ngắn; riêng hook viết ít nhất 3 phiên bản.",
+      "Quay mỗi khối thành clip riêng, đặt tên rõ (hook-1, hook-2, van-de-1...) để dựng ghép nhanh.",
+      "Đợt test đầu: giữ nguyên thân video, chỉ đổi 3 hook; giữ hook thắng rồi mới thử đổi phần thân.",
+      "Gói sản xuất nhỏ: Savannah Sanchez gợi ý mỗi tuần 2 ý tưởng lớn kèm biến thể, thay vì nhiều ý tưởng làm vội."
+     ],
+     "avoid": [
+      "Không viết kịch bản liền một mạch rồi quay một lần; muốn đổi mở đầu là phải quay lại từ đầu.",
+      "Không bịa lời khách hay dùng diễn viên đóng giả bệnh nhân; vừa sai sự thật vừa vi phạm chính sách quảng cáo và luật quảng cáo y tế."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Dara Denney - cấu trúc quảng cáo UGC (video YouTube, bản chép lời)",
+       "url": "https://pickscribe.com/v/yNTlVKvuX0o"
+      },
+      {
+       "title": "Savannah Sanchez trên OMG Commerce podcast - Crafting ad creative that converts (2024)",
+       "url": "https://www.omgcommerce.com/ecommerce-evolution-podcast/crafting-ad-creative-that-converts-combining-data-boldness"
+      },
+      {
+       "title": "Savannah Sanchez trên Motion - quy trình creative (bản chép lời)",
+       "url": "https://viewrankai.com/tools/youtube-transcript/76KH-GZZ5w4"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-nhip-lam-moi-creative",
+     "if": "Bao lâu thì phải làm creative mới? Khách hỏi có cần quay video mới mỗi tuần không.",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Phụ thuộc ngân sách. Ben Heath cho biết với ngân sách khoảng 20 USD/ngày, thay creative khoảng 2 tháng/lần là đủ; ngân sách lớn hơn thì khoảng 1 lần/tuần. Savannah Sanchez (OMG Commerce, 2024) đưa quy tắc với ngân sách lớn: cứ thêm 25.000 USD chi tiêu/tháng thì thêm 1 đợt test mỗi tuần, mỗi đợt 3 hook.",
+     "visao": "Ngân sách càng lớn thì cùng một tệp người thấy quảng cáo càng nhiều lần, creative mỏi nhanh hơn. Ngân sách nhỏ thì nhiều người trong tệp còn chưa thấy quảng cáo lần nào, nên vấn đề thường là thiếu phân phối chứ chưa phải creative mỏi. Jon Loomer cũng nói tần suất làm mới phụ thuộc ngân sách, độ lớn tệp và số ads.",
+     "check": [
+      "Tính tổng chi tiêu tháng và quy đổi USD để biết tài khoản ở nhóm nào (khoảng 20 USD/ngày hay lớn hơn nhiều).",
+      "Xem CPL theo tuần (Breakdown theo tuần) của ads chính; CPL ổn định thì chưa cần thay gấp.",
+      "Với khách địa phương tệp nhỏ (một quận, một thị xã), xem Frequency 7 ngày; tăng nhanh thì creative mỏi sớm hơn bình thường."
+     ],
+     "do": [
+      "Khách ngân sách nhỏ (dưới khoảng 1 triệu/ngày): lên kế hoạch 1 bộ creative mới mỗi 1-2 tháng, thay sớm hơn khi số xấu đi rõ.",
+      "Khách ngân sách lớn: lịch cố định mỗi tuần 1 đợt test với 3 hook, theo cách của Savannah Sanchez.",
+      "Thống nhất lịch sản xuất trong hợp đồng để khách chuẩn bị tư liệu (ảnh, người nói, ca thực tế).",
+      "Dùng chỉ số trong node tc-m-chan-doan-nham-fatigue để quyết định thay, không thay theo lịch máy móc."
+     ],
+     "avoid": [
+      "Không bắt khách nhỏ quay video mỗi tuần; tốn tiền sản xuất mà tệp chưa xem hết bộ cũ.",
+      "Không để khách lớn chạy một video suốt 3 tháng; CPL tăng dần mà không có mẫu thay thế."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Ben Heath - How To Scale Facebook Ad Campaigns (YouTube, 2022)",
+       "url": "https://www.youtube.com/watch?v=Zz1nffslEc8"
+      },
+      {
+       "title": "Savannah Sanchez trên OMG Commerce podcast - Crafting ad creative that converts (2024)",
+       "url": "https://www.omgcommerce.com/ecommerce-evolution-podcast/crafting-ad-creative-that-converts-combining-data-boldness"
+      },
+      {
+       "title": "Jon Loomer - How Often Should You Update Facebook Ad Creative?",
+       "url": "https://www.jonloomer.com/how-often-should-you-update-facebook-ad-creative/amp/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-chan-doan-nham-fatigue",
+     "if": "CPL tăng dần sau 2-3 tuần, mọi người bảo do creative mỏi (fatigue). Làm sao chắc đúng là do creative?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Kiểm tra trước khi thay. Jon Loomer chỉ ra nhiều người chẩn đoán nhầm: kết quả giảm thường do Meta chuyển từ người đã tương tác (rẻ) sang người lạ (đắt hơn), không phải do creative mỏi. Meta có hai nhãn để tham khảo: Creative Limited khi CPR (chi phí mỗi kết quả) cao hơn ads cũ nhưng dưới 2 lần, Creative Fatigue khi từ 2 lần trở lên.",
+     "visao": "Tuần đầu, Meta thường tìm thấy người quen thuộc với thương hiệu trước vì họ dễ chuyển đổi, nên CPL rất đẹp. Khi nhóm này đã thấy quảng cáo, máy phải đi xa hơn tới người lạ và CPL tự tăng, dù creative không hề kém đi. Loomer lưu ý doanh nghiệp địa phương có tệp nhỏ thì mỏi thật dễ xảy ra hơn, nên càng phải nhìn số trước khi kết luận.",
+     "check": [
+      "Trong Ads Manager, chọn ads, Breakdown, By Time, Week để thấy CPL theo từng tuần thay vì trung bình.",
+      "Dùng Breakdown theo phân khúc đối tượng (audience segments) nếu có, xem tỉ lệ chi tiêu cho người đã tương tác có giảm dần qua các tuần không; nếu có thì CPL tăng do đổi tệp.",
+      "Xem cột Delivery hoặc thông báo của Meta ở cấp ads có nhãn Creative Limited hay Creative Fatigue không.",
+      "So CTR và hook rate theo tuần; nếu hai chỉ số này giữ nguyên mà CPL tăng thì creative không phải lỗi chính."
+     ],
+     "do": [
+      "Nếu CPL tăng do chuyển sang người lạ: giữ creative, chấp nhận CPL mới hoặc làm creative giúp người lạ hiểu nhanh hơn (giới thiệu rõ hơn, bằng chứng nhiều hơn).",
+      "Nếu có nhãn Creative Fatigue hoặc CTR, hook rate giảm đều nhiều tuần: làm biến thể mới cùng ý tưởng, thay ads đó.",
+      "Thêm creative mới bên cạnh ads cũ trước khi tắt ads cũ, để ad set không bị trống.",
+      "Ghi lại vòng đời ads (bao nhiêu tuần thì mỏi) cho từng khách để lần sau lập lịch sản xuất."
+     ],
+     "avoid": [
+      "Không thay toàn bộ creative mỗi khi CPL tăng 1 tuần; bạn có thể bỏ đi ads tốt nhất chỉ vì Meta đã chuyển sang tệp khó hơn.",
+      "Không dựa duy nhất vào tần suất để kết luận mỏi; xem thêm node tc-m-frequency-boi-canh."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Why You Are Misdiagnosing Creative Fatigue",
+       "url": "https://pubcast.jonloomer.com/why-you-are-misdiagnosing-creative-fatigue/"
+      },
+      {
+       "title": "Jon Loomer - How Often Should You Update Facebook Ad Creative?",
+       "url": "https://www.jonloomer.com/how-often-should-you-update-facebook-ad-creative/amp/"
+      },
+      {
+       "title": "Jon Loomer - Creative Fatigue: What It Is",
+       "url": "https://www.jonloomer.com/creative-fatigue-meta-ads/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-frequency-boi-canh",
+     "if": "Camp BĐS hoặc phòng khám tệp nhỏ có tần suất (frequency) 4-5, có phải đang làm phiền và phải tắt?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Chưa chắc. Jon Loomer dẫn nghiên cứu của Meta năm 2022: hiệu quả giảm khoảng 45% khi tần suất trung bình đạt 4, nhưng ông nhấn mạnh phải xét bối cảnh (cấp nào, vị trí nào, khung thời gian nào). Với BĐS, ô tô, khách cần thấy nhiều lần mới quyết định. Jason Hornung cũng để nguyên ads có tần suất trên 4,5 nếu kết quả vẫn đạt mục tiêu.",
+     "visao": "Tần suất là số lần trung bình mỗi người thấy quảng cáo trong khoảng thời gian bạn chọn. Tần suất 4 trong 1 ngày rất khác tần suất 4 trong 30 ngày; tần suất cấp campaign gộp nhiều ads khác nhau cũng khác tần suất của một ads. Với sản phẩm giá trị cao, người mua thường cân nhắc nhiều tuần, nên thấy lại nhiều lần có thể là cần thiết.",
+     "check": [
+      "Ghi rõ khoảng thời gian khi đọc Frequency (7 ngày, 30 ngày) và cấp đang xem (campaign, ad set hay ads).",
+      "So tần suất với CPL và chất lượng lead cùng kỳ; nếu CPL vẫn trong mục tiêu và lead vẫn tốt thì tần suất cao chưa phải vấn đề.",
+      "Đọc bình luận dưới ads; phàn nàn kiểu “thấy hoài” hoặc ẩn quảng cáo tăng là dấu hiệu làm phiền thật."
+     ],
+     "do": [
+      "Kết quả vẫn đạt: giữ nguyên, theo quy tắc ngoại lệ của Jason Hornung.",
+      "Kết quả giảm và tần suất cao ở tệp nhỏ: thêm creative mới khác hẳn để cùng người thấy nội dung mới, hoặc mở rộng khu vực nếu dịch vụ phục vụ được.",
+      "Với camp nhắc khách cũ, đặt giới hạn tần suất (xem node tc-m-remarketing-bac-thang).",
+      "Báo cáo tần suất kèm khoảng thời gian để khách không hiểu lầm."
+     ],
+     "avoid": [
+      "Không đặt quy tắc tự động tắt mọi ads khi tần suất vượt 3 hay 4; bạn có thể tắt ads đang ra khách tốt nhất.",
+      "Không so tần suất của khách BĐS với khách bán lẻ giá thấp; hành vi mua khác nhau."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Frequency Is Not Your Problem",
+       "url": "https://pubcast.jonloomer.com/frequency-is-not-your-problem/"
+      },
+      {
+       "title": "Jason Hornung (LinkedIn) - Kill decision framework (2026)",
+       "url": "https://www.linkedin.com/posts/jasonhornung_metaads-facebookads-paidmedia-activity-7464639006543097857-2jod"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tc-m-lead-tin-nhan",
+   "title": "Thực chiến: Lead form, tin nhắn và chất lượng lead",
+   "intro": "Tốc độ gọi lại, lead ngoài giờ, instant form so với form website, Conversion Leads với dữ liệu CRM, kịch bản Messenger và cách trả lời tin nhắn.",
+   "nodes": [
+    {
+     "id": "tc-m-goi-lai-5-phut",
+     "if": "Lead form về nhiều nhưng sale gọi lại toàn không nghe máy hoặc khách bảo “đã tìm được chỗ khác”. Có phải do gọi chậm?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Rất có thể. InsideSales (2021) ghi nhận tỉ lệ chuyển đổi cao gấp 8 lần khi liên hệ trong 5 phút đầu, trong khi 57,1% lần gọi đầu tiên diễn ra sau hơn 1 tuần. Nghiên cứu cũ của Leads360 cho thấy gọi trong 1 phút tăng chuyển đổi 391%, trong 1 giờ chỉ còn tăng 36%. Mục tiêu thực tế cho khách SME: gọi lại trong 5 phút giờ hành chính.",
+     "visao": "Người điền form trên Facebook thường đang cùng lúc xem nhiều chỗ; vài phút sau họ đã lướt sang việc khác và quên mình vừa điền gì. Gọi ngay khi họ còn nhớ quảng cáo thì cuộc gọi tự nhiên; gọi sau một ngày thì giống cuộc gọi lạ. Lưu ý các số liệu này từ thị trường Mỹ, đa số không riêng Facebook; nghiên cứu MIT/InsideSales (2007) và Harvard Business Review (2011) đã cũ, chỉ dùng để thấy xu hướng.",
+     "check": [
+      "Lấy file lead 2 tuần, so giờ lead về với giờ sale gọi lần đầu; tính thời gian trung bình.",
+      "So tỉ lệ nghe máy giữa nhóm gọi trong 5 phút, trong 1 giờ và sau 1 giờ; thường sẽ thấy khác biệt rõ.",
+      "Kiểm tra lead có được đẩy tự động về điện thoại/nhóm chat của sale không, hay phải chờ ai đó tải file thủ công."
+     ],
+     "do": [
+      "Nối lead form về Google Sheet hoặc CRM tự động, kèm thông báo tức thì (Zalo, email, ứng dụng CRM) cho sale trực.",
+      "Đặt quy định: lead trong giờ hành chính gọi trong 5 phút; không nghe thì nhắn tin giới thiệu và gọi lại lần 2 vào khung giờ khác.",
+      "Leads360 ghi nhận 88% lead chuyển đổi được gọi trong 24 giờ, nên lead ngoài giờ phải được gọi ngay đầu giờ hôm sau.",
+      "Đo tỉ lệ nghe máy hằng tuần và báo cùng CPL để khách thấy phần việc của sale ảnh hưởng thế nào."
+     ],
+     "avoid": [
+      "Không đánh giá chất lượng lead của camp khi sale gọi sau 1-2 ngày; lead tốt cũng nguội.",
+      "Không để lead nằm trong Meta Business Suite chờ tải tay; lead form có thể bị bỏ quên nhiều ngày."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "InsideSales - Response Time Matters (2021)",
+       "url": "https://www.insidesales.com/response-time-matters/"
+      },
+      {
+       "title": "Leads360 - Speed to Call (whitepaper)",
+       "url": "https://cdn2.hubspot.net/hubfs/69576/leads360%5Fwp%5Fspeed%5Fto%5Fcall.pdf"
+      },
+      {
+       "title": "LimeCall - Speed to Lead (tổng hợp nghiên cứu MIT/InsideSales 2007, Harvard Business Review 2011)",
+       "url": "https://www.limecall.com/speed-to-lead/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-lead-ngoai-gio",
+     "if": "Phần lớn lead đến buổi tối và cuối tuần, sale không trực. Có nên tắt quảng cáo ngoài giờ?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Thường không nên tắt vội. LeadSync (2026) ghi nhận khoảng 75% lead Facebook đến ngoài giờ hành chính, cao điểm khoảng 21 giờ; đây là số liệu nước ngoài, nhưng hành vi lướt điện thoại buổi tối của người Việt cũng tương tự. Thay vì tắt, hãy có quy trình tiếp nhận lead ngoài giờ: tin nhắn tự động, hẹn gọi lại, và gọi ngay đầu giờ hôm sau.",
+     "visao": "Người dùng có thời gian rảnh lướt mạng xã hội chủ yếu buổi tối và cuối tuần, nên đây thường là lúc nhiều người có nhu cầu nhất. Tắt quảng cáo ngoài giờ là bỏ đúng khung giờ đông khách và còn làm Meta mất dữ liệu học. Điều cần sửa là khoảng trống giữa lúc khách gửi thông tin và lúc có người phản hồi.",
+     "check": [
+      "Xuất báo cáo Breakdown theo giờ (By Time, Time of day) trong Ads Manager để xem lead tập trung khung giờ nào.",
+      "So tỉ lệ nghe máy của lead tối/cuối tuần với lead trong giờ; nếu thấp hơn nhiều thì vấn đề là phản hồi chậm.",
+      "Kiểm tra form đã có màn hình hoàn tất nói rõ khi nào sẽ được gọi lại chưa."
+     ],
+     "do": [
+      "Viết màn hình hoàn tất của form: “Cảm ơn anh/chị, chuyên viên sẽ gọi trong giờ làm việc, sớm nhất từ 8 giờ sáng mai”.",
+      "Gửi tin nhắn tự động (SMS, Zalo OA hoặc email) ngay khi có lead, nhắc lại tên doanh nghiệp và lý do sẽ gọi.",
+      "Xếp ca trực ngắn buổi tối (ví dụ 19-22 giờ) nếu ngân sách khách cho phép, ưu tiên ngành có quyết định nhanh như phòng khám.",
+      "Chỉ cân nhắc lịch chạy theo giờ khi dữ liệu 4 tuần cho thấy lead ngoài giờ có tỉ lệ chốt thấp hẳn sau khi đã sửa quy trình phản hồi."
+     ],
+     "avoid": [
+      "Không tắt quảng cáo buổi tối chỉ vì sale không trực; bạn cắt khung giờ đông người và CPL ban ngày thường tăng.",
+      "Không coi số 75% là chuẩn của thị trường Việt Nam; hãy xem báo cáo theo giờ của chính tài khoản."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "LeadSync - Speed to Lead (2026)",
+       "url": "https://leadsync.me/blog/speed-to-lead/"
+      },
+      {
+       "title": "Leads360 - Speed to Call (whitepaper)",
+       "url": "https://cdn2.hubspot.net/hubfs/69576/leads360%5Fwp%5Fspeed%5Fto%5Fcall.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-instant-form-vs-web",
+     "if": "Form ngay trên Facebook (instant form) có chắc chắn kém chất lượng hơn form trên website không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Không chắc. Jon Loomer tự test cùng một quà tặng (lead magnet), cùng cài đặt, ra 630 lead: instant form 392 lead giá 2,04 USD, form website 238 lead giá 3,77 USD. Tỉ lệ lead chất lượng (có bấm link trong email) gần như bằng nhau: 29,1% và 29,0%. Vì vậy chi phí mỗi lead chất lượng của instant form chỉ khoảng một nửa (7,03 USD so với 13,01 USD).",
+     "visao": "Nhiều người mặc định instant form kém vì điền quá dễ. Thử nghiệm của Loomer cho thấy độ dễ làm tăng số lượng mà không nhất thiết làm giảm tỉ lệ người thật sự quan tâm. Ông cũng thấy tỉ lệ email gửi được của instant form thấp hơn (83,7% so với 92,4%), một phần do người cũ đã huỷ đăng ký. Đây là một thử nghiệm riêng lẻ ở thị trường Mỹ, với lead magnet giáo dục, nên kết quả từng ngành có thể khác.",
+     "check": [
+      "Xác định tiêu chí lead chất lượng có thể đo được (nghe máy, đặt lịch, đến khám) trước khi so hai loại form.",
+      "Nếu đang chạy cả hai, so theo chi phí mỗi lead chất lượng chứ không chỉ CPL.",
+      "Kiểm tra instant form đang để loại More Volume hay Higher Intent và có câu hỏi tự gõ nào không."
+     ],
+     "do": [
+      "Tự test như Loomer: cùng ads, cùng ngân sách, một bên instant form, một bên form website, chạy đến khi mỗi bên có ít nhất vài chục lead.",
+      "Đo lead chất lượng trong 2 tuần sau khi nhận (Loomer để lead có ít nhất 2 tuần trước khi kết luận).",
+      "Muốn tăng chất lượng mà vẫn dùng instant form, thêm câu hỏi bắt người điền phải suy nghĩ; Loomer chỉ ra càng nhiều câu hỏi thì số lượng giảm nhưng chất lượng tăng.",
+      "Chọn loại form theo chi phí mỗi lead chất lượng của chính khách, không theo định kiến."
+     ],
+     "avoid": [
+      "Không chuyển hết sang form website chỉ vì nghe nói instant form toàn rác; bạn có thể trả gấp đôi cho mỗi khách thật.",
+      "Không coi kết quả của Loomer là chân lý cho mọi ngành; phòng khám, BĐS ở Việt Nam cần tự kiểm."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Results: Testing Quality Leads from Instant Forms vs. Website",
+       "url": "https://www.jonloomer.com/testing-quality-leads/"
+      },
+      {
+       "title": "Jon Loomer - 16 Ways to Improve Lead Quality",
+       "url": "https://www.jonloomer.com/improve-lead-quality/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-conversion-leads-nguon",
+     "if": "Muốn Meta tối ưu ra lead chất lượng hơn bằng mục tiêu Conversion Leads, cần chuẩn bị nguồn dữ liệu gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Conversion Leads là cách tối ưu cho lead có khả năng thành khách, dựa trên dữ liệu bạn gửi ngược về Meta. Jon Loomer (2025) mô tả 4 lựa chọn nguồn dữ liệu: CRM, cuộc gọi (Calls), tin nhắn (Messages), hoặc không có (None). Với SME, nguồn khả thi nhất thường là CRM đơn giản hoặc Google Sheet có trạng thái lead, gửi về qua tích hợp CRM hoặc CAPI (Conversions API, kênh gửi sự kiện từ máy chủ).",
+     "visao": "Meta chỉ thấy người gửi form; muốn nó tìm người giống khách thật, bạn phải cho nó biết lead nào đã thành khách. Loomer giải thích sự kiện sau lead cần xảy ra trong 7 ngày và đủ số lượng để máy học được. Ông cũng nhận xét thiết lập Conversion Leads thành công là việc không dễ, nhiều tài khoản bỏ dở.",
+     "check": [
+      "Kiểm tra khách có nơi ghi trạng thái lead (CRM, Google Sheet) với các bước rõ: mới, đã liên hệ, đạt, đã chốt.",
+      "Đếm số lead đạt mỗi tuần; nếu chỉ vài lead thì máy khó học, cần chọn bước phễu sớm hơn (ví dụ đã liên hệ được) làm sự kiện tối ưu.",
+      "Vào Events Manager xem dataset của khách đã nhận sự kiện CRM nào chưa."
+     ],
+     "do": [
+      "Chọn nguồn dữ liệu phù hợp: có CRM thì chọn CRM; khách chủ yếu nhận cuộc gọi thì cân nhắc Calls; camp tin nhắn thì Messages.",
+      "Định nghĩa một bước trong phễu xảy ra trong 7 ngày sau lead (ví dụ: đã liên hệ được, đã đặt lịch) để gửi về Meta.",
+      "Gửi sự kiện từ CRM ít nhất hơn 7 ngày trước khi cấu hình phễu (xem node tc-m-conversion-leads-thoi-gian).",
+      "Khi đã có đủ dữ liệu, tạo camp mới tối ưu Conversion Leads, chạy song song với camp cũ để so chi phí mỗi lead đạt."
+     ],
+     "avoid": [
+      "Không chọn sự kiện chốt hợp đồng mất 2-3 tháng mới xảy ra; Meta cần sự kiện trong 7 ngày.",
+      "Không gửi dữ liệu có thông tin nhạy cảm (bệnh lý) về Meta; chỉ gửi trạng thái phễu và thông tin định danh đã băm theo hướng dẫn tích hợp."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Conversion Leads Data Sources (2025)",
+       "url": "https://www.jonloomer.com/qvt/conversion-leads-data-sources/"
+      },
+      {
+       "title": "Jon Loomer - 16 Ways to Improve Lead Quality",
+       "url": "https://www.jonloomer.com/improve-lead-quality/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-conversion-leads-thoi-gian",
+     "if": "Khách muốn bật tích hợp CRM với Meta tuần này để có lead chất lượng ngay: có làm được không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Không nhanh như vậy. Jon Loomer (2023) ghi lại Meta nói thiết lập Conversion Leads qua CRM mất khoảng 3 tháng. Theo bài 2024, phải gửi sự kiện CRM hơn 7 ngày mới cấu hình phễu được, và phân tích phễu có thể mất tới 3 tuần. Cần nói rõ với khách đây là dự án trung hạn.",
+     "visao": "Meta phải nhận đủ dữ liệu sự kiện qua nhiều tuần để hiểu các bước trong phễu của doanh nghiệp, bước nào thường dẫn tới bước nào và mất bao lâu. Chỉ khi hiểu phễu, nó mới chọn được bước phù hợp để tối ưu. Loomer cũng cho biết có đường dẫn “Request support for conversion leads integration” trong Events Manager, mục Settings, để xin hỗ trợ khi bị kẹt.",
+     "check": [
+      "Vào Events Manager, chọn dataset, mục Settings, tìm phần tích hợp Conversion Leads để xem trạng thái hiện tại.",
+      "Kiểm tra sự kiện CRM đã gửi đều mỗi ngày bao lâu rồi; dưới 7 ngày thì chưa cấu hình phễu được.",
+      "Xem kế hoạch ngân sách của khách có duy trì đủ 2-3 tháng để chờ tích hợp hoàn tất không."
+     ],
+     "do": [
+      "Lập lộ trình với khách: tháng 1 thiết lập gửi dữ liệu, tháng 2 cấu hình phễu và chờ phân tích, tháng 3 chạy thử camp Conversion Leads.",
+      "Trong lúc chờ, vẫn cải thiện chất lượng bằng câu hỏi lọc, loại form Higher Intent, gọi lại nhanh.",
+      "Gặp lỗi tích hợp, dùng đường dẫn xin hỗ trợ trong Events Manager như Loomer hướng dẫn.",
+      "Ghi mốc thời gian vào file tổng quan dự án để theo dõi, tránh quên giữa chừng."
+     ],
+     "avoid": [
+      "Không hứa với khách tích hợp xong là lead tốt ngay tuần sau; khi không thấy thay đổi, khách sẽ nghĩ làm sai.",
+      "Không ngừng gửi dữ liệu giữa chừng (đổi CRM, lỗi kết nối) mà không phát hiện; phễu phải xây lại."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Conversion Leads CRM Integration (2023)",
+       "url": "https://www.jonloomer.com/qvt/conversion-leads-crm-ingegration/"
+      },
+      {
+       "title": "Jon Loomer - Configure Your Funnel for Conversion Leads (2024)",
+       "url": "https://www.jonloomer.com/qvt/configure-your-funnel-for-conversion-leads/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-connect-messenger",
+     "if": "Tuỳ chọn “Connect with leads in Messenger” trong lead form có nên bật cho khách BĐS, giáo dục không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Có thể hữu ích với ngành cần trao đổi trước khi quyết định. Jon Loomer (2025) cho biết tuỳ chọn này hợp với BĐS, ô tô, nơi người mua thường muốn hỏi thêm sau khi để lại thông tin. Ông không khuyên dùng cho lead magnet (quà tặng tài liệu), vì ô tick đồng ý dễ bị bỏ sót.",
+     "visao": "Tính năng này cho phép người gửi form tick đồng ý để doanh nghiệp nhắn tin cho họ qua Messenger. Với dịch vụ giá trị cao, nhắn tin là cách tự nhiên để hỏi thêm thông tin, gửi tài liệu, hẹn lịch, nhất là khi họ không nghe máy. Nhưng nó chỉ có ích khi có người trực trả lời tin nhắn kịp thời.",
+     "check": [
+      "Kiểm tra trang có người trực Messenger trong giờ làm việc không; không có thì bật lên chỉ tạo thêm tin nhắn bị bỏ qua.",
+      "Xem trong lead form có ô đồng ý nhắn tin chưa và vị trí của nó.",
+      "Đếm bao nhiêu phần trăm lead tick đồng ý sau 2 tuần để biết khách có dùng không."
+     ],
+     "do": [
+      "Bật cho khách BĐS, giáo dục, dịch vụ giá trị cao có người trực tin nhắn.",
+      "Chuẩn bị tin nhắn đầu tiên có tên người phụ trách, nhắc lại dự án/khoá học khách quan tâm và một câu hỏi mở.",
+      "Dùng Messenger như kênh liên hệ thứ hai khi gọi không nghe máy.",
+      "Không dùng cho form chỉ để tải tài liệu miễn phí, theo lưu ý của Loomer."
+     ],
+     "avoid": [
+      "Không bật rồi để tin nhắn tồn nhiều ngày; khách đã đồng ý trao đổi mà không ai trả lời thì mất thiện cảm.",
+      "Không gửi tin nhắn quảng cáo hàng loạt cho người đã tick; chỉ trao đổi về đúng nhu cầu họ để lại."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - Connect With Leads in Messenger (2025)",
+       "url": "https://www.jonloomer.com/qvt/connect-with-leads-in-messenger/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-messenger-generate-leads",
+     "if": "Camp tin nhắn ra nhiều cuộc trò chuyện nhưng ít số điện thoại. Có cách nào lọc và xin thông tin ngay trong Messenger không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Có. Meta có mẫu tin nhắn Generate Leads (thu thập khách tiềm năng) chạy ngay trong Messenger: lời chào, các câu hỏi có đáp án chọn sẵn, tin nhắn nhắc nếu người dùng bỏ dở và tin hoàn tất. Jon Loomer và KlientBoost đều hướng dẫn dùng câu hỏi loại trừ: mỗi đáp án dẫn tới bước tiếp theo hoặc kết thúc lịch sự với người không phù hợp.",
+     "visao": "Camp tin nhắn thường rẻ mỗi kết quả nhưng nhiều người nhắn chỉ để hỏi cho biết. Mẫu Generate Leads biến cuộc trò chuyện thành một form ngắn có cấu trúc, nên bạn có ngay khu vực, nhu cầu, số điện thoại mà không phụ thuộc người trực. KlientBoost lưu ý mẫu này hợp với tệp có ý định cao hơn; với tệp lạnh nên hỏi ít và đưa ra thứ có giá trị trước.",
+     "check": [
+      "Vào phần tạo ads của camp tin nhắn, mục Message template, kiểm tra đang dùng mẫu nào.",
+      "Đọc 30 cuộc trò chuyện gần nhất, ghi lại câu hỏi khách hay hỏi và lý do không để lại số.",
+      "Đếm tỉ lệ cuộc trò chuyện có số điện thoại; đây là chỉ số để so trước và sau khi đổi mẫu."
+     ],
+     "do": [
+      "Tạo mẫu Generate Leads: câu đầu hỏi khách có muốn tiếp tục không (KlientBoost gợi ý để không ép buộc), sau đó 2-3 câu chọn sẵn.",
+      "Thêm 1 câu loại trừ đúng tiêu chí của khách (khu vực phục vụ, khoảng ngân sách, độ tuổi học viên); đáp án không phù hợp dẫn tới lời cảm ơn và kết thúc.",
+      "Bật tin nhắn nhắc cho người bỏ dở và viết tin hoàn tất nói rõ khi nào sẽ được liên hệ.",
+      "Sau 2 tuần, so tỉ lệ có số điện thoại và chi phí mỗi lead đạt với mẫu cũ."
+     ],
+     "avoid": [
+      "Không hỏi quá nhiều câu với tệp lạnh; người lạ bỏ cuộc trước khi để lại số.",
+      "Không bỏ trống người trực chỉ vì đã có mẫu tự động; khách vẫn có thể gõ câu hỏi riêng bất kỳ lúc nào."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Jon Loomer - How to Use Messenger Ads to Generate Leads (2020)",
+       "url": "https://www.jonloomer.com/facebook-messenger-ads-to-generate-leads/"
+      },
+      {
+       "title": "KlientBoost - The Expert Guide To Facebook Messenger Ads",
+       "url": "https://www.klientboost.com/facebook/facebook-messenger-ads/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-tra-loi-theo-nhiet-do",
+     "if": "Khách nhắn hỏi giá rồi im, nhân viên trả lời bằng bảng giá dài kèm lời mời chốt. Kịch bản trả lời nên đổi thế nào?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Trả lời theo mức độ sẵn sàng của tệp quảng cáo. KlientBoost chỉ ra: khách đến từ quảng cáo tệp lạnh (người chưa biết thương hiệu) thường đang tìm hiểu, nên tin nhắn đầu phải trả lời đúng câu họ hỏi rồi mới gợi bước tiếp theo. Mời đặt lịch, xin số điện thoại ngay câu đầu chỉ hợp với tệp đã quen thương hiệu.",
+     "visao": "Người nhắn từ quảng cáo tệp lạnh chưa tin doanh nghiệp; bị ép chốt ngay họ sẽ im lặng. KlientBoost nhấn mạnh không ai thích nói chuyện với doanh nghiệp mà mỗi câu trả lời đều cố bán. Trả lời đúng câu hỏi giúp tạo niềm tin, sau đó xin thông tin trở nên tự nhiên hơn. Ông cũng khuyên phản hồi đều đặn trong ngày, không cần trả lời trong 30 giây nhưng phải nhất quán.",
+     "check": [
+      "Đọc lại 20-30 cuộc trò chuyện bị im lặng, xem câu trả lời đầu tiên của nhân viên có trả lời đúng câu khách hỏi không.",
+      "Xem quảng cáo dẫn tới tin nhắn đang nhắm tệp lạnh hay tệp đã tương tác.",
+      "Đo thời gian phản hồi trung bình trong Meta Business Suite, mục Inbox."
+     ],
+     "do": [
+      "Câu trả lời đầu: trả lời thẳng câu hỏi (ví dụ giá từ bao nhiêu, gồm những gì), ngắn gọn, rồi hỏi 1 câu để hiểu nhu cầu.",
+      "Chỉ xin số điện thoại khi đã có lý do rõ (gửi báo giá chi tiết, xếp lịch tư vấn), nói rõ ai sẽ gọi và khi nào.",
+      "Với tệp lạnh, đưa thứ có ích trước (bảng giá tham khảo, tài liệu, hình ảnh thực tế) thay vì ép đặt lịch.",
+      "Đặt lịch kiểm hộp thư cố định trong ngày, KlientBoost gợi ý vài lần cố định hoặc mỗi vài giờ, quan trọng là nhất quán."
+     ],
+     "avoid": [
+      "Không gửi một tin nhắn dài gồm bảng giá, giới thiệu công ty và lời mời chốt cùng lúc; khách đọc lướt rồi bỏ.",
+      "Không né câu hỏi giá bằng “anh/chị để lại số em tư vấn”; nhiều khách coi đó là dấu hiệu giá cao và rời đi."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "KlientBoost - The Expert Guide To Facebook Messenger Ads",
+       "url": "https://www.klientboost.com/facebook/facebook-messenger-ads/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tc-m-scale-benchmark",
+   "title": "Thực chiến: Scale và benchmark",
+   "intro": "Tăng ngân sách theo quy mô, quy tắc tự động tăng 3%/ngày, hạ ngân sách thay vì tắt, trần scale và cách dùng số liệu ngành nước ngoài cho đúng.",
+   "nodes": [
+    {
+     "id": "tc-m-scale-theo-quy-mo",
+     "if": "Camp đang ra lead tốt, tăng ngân sách bao nhiêu phần trăm mỗi lần là an toàn?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Tuỳ quy mô ngân sách hiện tại. Ben Heath (2021) chỉ ra ngân sách thấp có thể tăng phần trăm lớn (ví dụ 10 lên 20-30 bảng Anh/ngày), còn ngân sách lớn thì không. Sau mỗi lần tăng, chờ khoảng 1 tuần để số ổn định rồi mới tăng tiếp. Quan trọng nhất là còn khoảng cách giữa CPL hiện tại và CPL tối đa chịu được.",
+     "visao": "Khi tăng tiền, Meta phải tìm thêm người ngoài nhóm đang ra kết quả tốt, thường đắt hơn một chút. Ở ngân sách nhỏ, tăng gấp đôi vẫn chỉ là thêm một ít người, nên ảnh hưởng nhỏ; ở ngân sách lớn, cùng phần trăm đó là lượng người mới rất lớn. Heath giải thích camp dễ scale nhất là camp có CPL hiện tại thấp hơn nhiều so với mức chịu được, vì có chỗ cho CPL tăng mà vẫn có lời.",
+     "check": [
+      "So CPL hiện tại với CPL tối đa khách chịu được; nếu đã sát mức tối đa thì gần như không còn chỗ để scale.",
+      "Xem ngày thay đổi ngân sách gần nhất trong Account Activity (lịch sử hoạt động tài khoản); dưới 1 tuần thì chưa nên tăng tiếp.",
+      "Theo dõi CPL theo ngày trong tuần sau khi tăng; tăng nhẹ rồi ổn định lại là bình thường."
+     ],
+     "do": [
+      "Ngân sách nhỏ (vài trăm nghìn/ngày): có thể tăng mạnh hơn, ví dụ gấp rưỡi đến gấp đôi, theo ví dụ của Heath.",
+      "Ngân sách lớn: tăng từng nấc nhỏ hơn và chờ khoảng 1 tuần mỗi nấc.",
+      "Ghi lại CPL trước và sau mỗi nấc tăng để biết tài khoản chịu được mức tăng nào.",
+      "Kiểm tra sale có xử lý kịp lượng lead tăng thêm không trước khi tăng."
+     ],
+     "avoid": [
+      "Không tăng ngân sách hằng ngày liên tục; mỗi lần đổi lớn có thể làm ad set học lại và không lần nào kịp ổn định.",
+      "Không scale camp đã có CPL sát mức tối đa; tăng tiền chỉ đẩy CPL vượt mức khách chịu được."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Ben Heath, Heath Media - How to SCALE a Facebook Ad Campaign (2021)",
+       "url": "https://heathmedia.co.uk/how-to-scale-a-facebook-ad-campaign/"
+      },
+      {
+       "title": "Ben Heath - How To Scale Facebook Ad Campaigns (YouTube, 2022)",
+       "url": "https://www.youtube.com/watch?v=Zz1nffslEc8"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-rule-3-phan-tram",
+     "if": "Có cách tăng ngân sách tự động, đều đặn mà không phải ngồi chỉnh tay mỗi ngày không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Có. Ben Heath (2023) dùng quy tắc tự động (automated rule) trong Ads Manager: tăng ngân sách khoảng 3%/ngày, kèm trần ngân sách tối đa và điều kiện CPR (chi phí mỗi kết quả) phải dưới ngưỡng. Mức tăng nhỏ đều đặn ít gây xáo trộn hơn những lần tăng lớn bằng tay.",
+     "visao": "Tăng 3% mỗi ngày nghe nhỏ nhưng cộng dồn sau một tháng là mức tăng đáng kể, trong khi mỗi bước đủ nhỏ để Meta không phải thay đổi cách phân phối nhiều. Điều kiện CPR đảm bảo quy tắc chỉ tăng khi camp vẫn đang tốt; trần ngân sách ngăn quy tắc tăng vượt khả năng chi của khách.",
+     "check": [
+      "Vào Ads Manager, mục Automated rules (Quy tắc tự động), xem tài khoản đã có quy tắc nào đang chạy để tránh chồng chéo.",
+      "Xác định CPR tối đa và ngân sách tối đa khách đồng ý trước khi tạo quy tắc.",
+      "Sau 1-2 tuần, xem lịch sử quy tắc để biết nó đã tăng bao nhiêu lần và CPL có giữ được không."
+     ],
+     "do": [
+      "Tạo quy tắc áp cho ad set hoặc campaign đang tốt: tăng ngân sách 3% mỗi ngày.",
+      "Thêm điều kiện: chỉ chạy khi chi phí mỗi kết quả trong 3-7 ngày gần nhất thấp hơn mức mục tiêu.",
+      "Đặt trần ngân sách tối đa đúng mức khách đã duyệt.",
+      "Kiểm tra hằng tuần; khi CPL tiến sát mục tiêu, quy tắc tự ngừng nhờ điều kiện CPR."
+     ],
+     "avoid": [
+      "Không tạo quy tắc tăng ngân sách mà không có trần; một camp đang tốt có thể chi vượt ngân sách khách trong vài tuần.",
+      "Không để quy tắc tăng và chỉnh tay cùng lúc trên một ad set; không biết thay đổi nào gây ra kết quả."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Ben Heath, Heath Media - The Easiest Way to Scale Facebook Ads (2023)",
+       "url": "https://heathmedia.co.uk/how-to-scale-facebook-ads/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-ha-ngan-sach-thay-tat",
+     "if": "Camp có CPL vượt mục tiêu một chút trong vài ngày: tắt hẳn hay giảm ngân sách?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Ben Heath khuyên khi CPR cao thì hạ ngân sách thay vì tắt. Camp vẫn giữ dữ liệu đã học, chi phí giảm, và có cơ hội quay lại mức tốt. Tắt hẳn rồi bật lại sau vài ngày thường phải học lại từ đầu.",
+     "visao": "Ngân sách thấp hơn giúp Meta tập trung vào nhóm người dễ ra kết quả nhất, nên CPL thường dịu lại. Camp đang tắt thì không nhận dữ liệu gì; khi bật lại, hệ thống phải thử lại phân phối. Đây cũng là lý do agency có nguyên tắc chỉ tắt ở cấp nhỏ nhất (ads), giữ ad set và campaign.",
+     "check": [
+      "Xem CPL theo ngày 7 ngày gần nhất: vượt mục tiêu đều hay chỉ 1-2 ngày nhảy.",
+      "Kiểm tra có thay đổi gì gần đây (thêm ads, đổi form, đổi ngân sách) trong lịch sử tài khoản.",
+      "Xem ads nào trong ad set đang kéo CPL lên; có thể chỉ cần tắt 1 ads."
+     ],
+     "do": [
+      "Vượt mục tiêu nhẹ 1-2 ngày: giữ nguyên, theo dõi tiếp.",
+      "Vượt đều nhiều ngày: tắt ads kéo CPL lên trước; nếu vẫn cao, giảm ngân sách ad set một phần rồi theo dõi 1 tuần.",
+      "Khi CPL quay về mục tiêu, tăng lại dần theo node tc-m-scale-theo-quy-mo.",
+      "Chỉ tắt ad set hoặc campaign khi khách quyết định dừng dịch vụ đó."
+     ],
+     "avoid": [
+      "Không tắt camp rồi tạo camp mới y hệt để “làm mới”; mất dữ liệu đã học và phải trả chi phí học lại.",
+      "Không giảm ngân sách quá sâu chỉ sau một ngày xấu; dữ liệu một ngày chưa đủ nói lên xu hướng."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Ben Heath, Heath Media - How to SCALE a Facebook Ad Campaign (2021)",
+       "url": "https://heathmedia.co.uk/how-to-scale-a-facebook-ad-campaign/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-tran-scale",
+     "if": "Tăng ngân sách mãi mà CPL tăng theo, lead không thêm nhiều. Có phải camp đã chạm trần?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Có thể. Ben Heath (2022) nói mỗi camp có trần scale, và đôi khi lựa chọn đúng là dừng ở mức ngân sách cho lợi nhuận tốt nhất thay vì cố tăng. Với SME địa phương, khu vực phục vụ nhỏ là lý do trần thấp. Muốn vượt trần thường phải mở rộng khu vực, thêm dịch vụ hoặc thêm góc thông điệp mới.",
+     "visao": "Mỗi khu vực và mỗi lời mời chỉ có một lượng người có nhu cầu nhất định. Khi đã tiếp cận gần hết họ, tiền thêm vào buộc Meta tìm người ít phù hợp hơn, nên CPL tăng còn số lead tăng chậm. Heath cũng khuyên không nhân bản ad set y hệt để vượt trần, vì chúng đấu giá chồng lên nhau.",
+     "check": [
+      "Vẽ bảng ngân sách ngày và số lead/ngày qua các nấc tăng; nếu ngân sách tăng 50% mà lead chỉ tăng 10% thì đang gần trần.",
+      "Xem Reach và Frequency 30 ngày; Reach gần như không tăng còn Frequency tăng là đã phủ gần hết tệp.",
+      "Kiểm tra khu vực nhắm có thể mở rộng mà doanh nghiệp vẫn phục vụ được không."
+     ],
+     "do": [
+      "Lùi ngân sách về nấc có CPL tốt nhất và giữ ở đó; đây là mức lợi nhuận tốt nhất hiện tại.",
+      "Muốn tăng tiếp: thêm góc thông điệp/creative mới để tiếp cận nhóm người khác trong cùng khu vực.",
+      "Mở rộng khu vực hoặc thêm dịch vụ mới nếu doanh nghiệp đáp ứng được, tách ad set theo node tc-m-ly-do-tach-adset.",
+      "Báo khách rõ mức trần hiện tại và điều kiện để vượt, tránh kỳ vọng tăng tiền là tăng khách tương ứng."
+     ],
+     "avoid": [
+      "Không nhân bản ad set y hệt để vượt trần; Heath chỉ ra chúng cạnh tranh nhau trong đấu giá.",
+      "Không tiếp tục đổ tiền khi CPL đã vượt mức khách có lời; doanh thu tăng không bù được chi phí."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Ben Heath - How To Scale Facebook Ad Campaigns (YouTube, 2022)",
+       "url": "https://www.youtube.com/watch?v=Zz1nffslEc8"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-benchmark-nganh",
+     "if": "Khách hỏi: CPL như vậy là cao hay thấp so với ngành? Có số liệu tham khảo không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Có số liệu tham khảo nhưng là của Mỹ. WordStream 2025 (dữ liệu 04/2024-06/2025, số trung vị) ghi nhận camp lead trung bình có CTR 2,59%, CPC 1,92 USD, tỉ lệ chuyển đổi 7,72%, CPL 27,66 USD (tăng 21% so với năm trước). Theo ngành: BĐS CPL 16,61 USD, giáo dục 28,22 USD, bác sĩ/phẫu thuật 47,47 USD, làm đẹp 51,42 USD, nha khoa 76,71 USD, công nghiệp/thương mại 37,34 USD.",
+     "visao": "Số liệu thị trường Mỹ, Việt Nam thường khác rất xa về giá đấu thầu và hành vi, nên không dùng để kết luận CPL của khách Việt cao hay thấp. Giá trị của bảng này nằm ở thứ tự tương đối: ngành y tế, nha khoa thường đắt hơn BĐS, giáo dục; CTR nha khoa thấp (1,05%) trong khi BĐS cao (3,75%). Mốc so sánh chính xác nhất vẫn là dữ liệu chính tài khoản qua thời gian.",
+     "check": [
+      "Lấy CPL 3 tháng gần nhất của khách theo tháng để có mốc riêng.",
+      "Nếu agency có nhiều khách cùng ngành, gom số liệu nội bộ (ẩn tên khách) để có mốc ngành tại Việt Nam.",
+      "So xu hướng: CPL của khách tăng hay giảm so với chính nó, thay vì so với số Mỹ."
+     ],
+     "do": [
+      "Dùng bảng WordStream để giải thích vì sao ngành y tế, nha khoa thường đắt hơn các ngành khác.",
+      "Khi báo cáo, ghi rõ “số liệu thị trường Mỹ 2025, Việt Nam thường khác” cạnh mọi con số tham khảo.",
+      "Xây bảng mốc nội bộ theo ngành của Digicom, cập nhật mỗi quý.",
+      "Đánh giá camp bằng chi phí mỗi lead đạt và tỉ lệ chốt, vì CPL thấp chưa chắc có lời."
+     ],
+     "avoid": [
+      "Không nói với khách “CPL của anh đang thấp hơn chuẩn ngành” khi chỉ so với số Mỹ; khi đối chiếu, khách sẽ thấy so sánh không cùng thị trường.",
+      "Không quy đổi thẳng USD sang VND rồi đặt làm KPI; giá quảng cáo ở Việt Nam có mặt bằng khác."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "WordStream - Facebook Ads Benchmarks 2025 (dữ liệu Mỹ 04/2024-06/2025)",
+       "url": "https://www.wordstream.com/blog/facebook-ads-benchmarks-2025"
+      },
+      {
+       "title": "Search Engine Land - Facebook ad costs jump (đưa tin số liệu WordStream 2025)",
+       "url": "https://searchengineland.com/facebook-ad-costs-jump-beat-google-461690"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-m-benchmark-ctr-video-anh",
+     "if": "Nên chạy video hay ảnh tĩnh? Có số liệu CTR của hai định dạng không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Có số liệu toàn cầu: Spark UGC (2026) dẫn ATTN cho thấy CTR video khoảng 1,9%, ảnh tĩnh khoảng 1,1%. Video thường thu hút click tốt hơn, nhưng ảnh tĩnh rẻ và nhanh làm, hợp để thử góc thông điệp. Cách thực tế: chạy cả hai trong cùng ad set và để kết quả của khách quyết định.",
+     "visao": "Video có chuyển động nên dễ làm người lướt dừng tay hơn, và có thời gian giải thích dịch vụ. Ảnh tĩnh truyền đạt một thông điệp duy nhất rất nhanh, phù hợp với ưu đãi đơn giản hoặc bảng giá. Số liệu toàn cầu, phần lớn từ thương mại điện tử; thị trường Việt Nam và ngành dịch vụ thường khác, nên tự lập mốc riêng.",
+     "check": [
+      "Trong Ads Manager, Breakdown theo loại creative hoặc so cột CTR (link click-through rate) giữa ads video và ads ảnh trong cùng ad set.",
+      "So chi phí mỗi lead đạt của hai định dạng, không chỉ CTR.",
+      "Xem Meta đang dồn chi tiêu vào định dạng nào; đó cũng là một tín hiệu."
+     ],
+     "do": [
+      "Mỗi ad set có ít nhất một ads video và một ads ảnh tĩnh để Meta chọn theo từng người.",
+      "Dùng ảnh tĩnh để thử nhanh góc thông điệp mới; góc nào thắng thì đầu tư quay video.",
+      "Với dịch vụ cần giải thích (phòng khám, khoá học), ưu tiên video ngắn có phụ đề.",
+      "Ghi lại định dạng thắng theo ngành để làm mốc nội bộ."
+     ],
+     "avoid": [
+      "Không bỏ hẳn ảnh tĩnh vì nghe nói video luôn tốt hơn; nhiều tài khoản dịch vụ địa phương có ảnh tĩnh ra lead rẻ hơn.",
+      "Không dùng mốc 1,9% và 1,1% để đánh giá tài khoản Việt Nam; dùng trung bình của chính tài khoản."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Spark UGC - Creative metrics glossary: thumbstop, hook rate, hold rate (2026, tổng hợp Ryze, Vaizle, ATTN)",
+       "url": "https://www.sparkugc.com/resources/creative-metrics-glossary-thumbstop-hook-hold-rate"
+      }
+     ],
+     "children": []
+    }
+   ]
+  }
+ ]
+}
