@@ -1,0 +1,973 @@
+{
+ "platform": "faq-google",
+ "updated": "2026-11-07",
+ "groups": [
+  {
+   "id": "tc-g-cau-truc",
+   "title": "Thực chiến: Cấu trúc và ngân sách nhỏ",
+   "intro": "Cách người chạy thật dựng tài khoản khi ngân sách eo hẹp: bắt đầu từ mấy chiến dịch, khi nào tách, khi nào gộp, và 30 ngày đầu làm gì từng tuần.",
+   "nodes": [
+    {
+     "id": "tc-g-ct-khoi-dong-1-chien-dich",
+     "if": "Ngân sách nhỏ (phòng khám, trung tâm, cửa hàng địa phương) thì chiến dịch đầu tiên nên dựng thế nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Với ngân sách nhỏ, hãy bắt đầu bằng đúng 1 chiến dịch Search, 1-2 nhóm quảng cáo, 10-20 từ khoá dạng cụm từ và chính xác. Tắt Display và đối tác tìm kiếm, chỉ nhắm người đang ở trong khu vực. Mục tiêu tháng đầu là gom đủ dữ liệu sạch về một chỗ, chưa phải mở rộng.",
+     "visao": "Google tối ưu dựa trên dữ liệu; tiền ít mà chia nhiều chiến dịch thì mỗi chiến dịch chỉ có vài click, không cái nào đủ dữ liệu để học hay để bạn đọc kết quả. Gom về một chiến dịch giống như dồn nước vào một ống: chảy đủ mạnh để nhìn ra vấn đề. SEM Insider gọi đây là khung khởi động một chiến dịch, áp cho ngân sách khoảng 1.500-2.500 USD/tháng (số liệu thị trường Mỹ, VN thường khác).",
+     "check": [
+      "Vào Chiến dịch > Cài đặt > Mạng: nếu đang tích Mạng hiển thị hoặc Đối tác tìm kiếm thì tiền đang chảy ra ngoài Google Search.",
+      "Vào Cài đặt > Vị trí > Tuỳ chọn vị trí: nếu đang để Sự hiện diện hoặc sự quan tâm thì quảng cáo có thể hiện cho người ở tỉnh khác chỉ vì họ quan tâm đến khu vực.",
+      "Đếm số từ khoá trong nhóm: nếu đã có trên 30 từ hoặc nhiều từ đối sánh rộng (broad match) ngay từ đầu thì dữ liệu sẽ loãng.",
+      "Xem nguồn lead chủ yếu là gọi điện hay form: nếu là gọi điện thì lịch chạy ngoài giờ làm đang lãng phí."
+     ],
+     "do": [
+      "Dựng 1 chiến dịch Search, 1-2 nhóm quảng cáo theo dịch vụ chính, mỗi nhóm 2 mẫu RSA (quảng cáo tìm kiếm thích ứng).",
+      "Chọn 10-20 từ khoá đối sánh cụm từ (phrase) và chính xác (exact); SEM Insider khuyên chưa dùng đối sánh rộng khi tài khoản chưa có chuyển đổi.",
+      "Tắt Mạng hiển thị và Đối tác tìm kiếm, đặt vị trí là Sự hiện diện (Presence, người đang ở hoặc thường ở khu vực).",
+      "Nếu lead đến qua điện thoại, đặt lịch chạy theo giờ có người nghe máy.",
+      "Chọn Tối đa hoá lượt nhấp có đặt trần giá mỗi click, hoặc CPC thủ công, theo khung của SEM Insider; sau 2-4 tuần đọc báo cáo cụm từ tìm kiếm để biết từ nào ra lead."
+     ],
+     "avoid": [
+      "Không dựng sẵn 5-10 chiến dịch cho gọn mắt: mỗi chiến dịch chỉ nhận vài click/ngày, không đọc được gì sau cả tháng.",
+      "Không bật đối sánh rộng ngay ngày đầu khi chưa có chuyển đổi: Google sẽ mở rộng sang truy vấn lạc mà chưa có tín hiệu nào để tự sửa.",
+      "Không để mặc định Mạng hiển thị trong chiến dịch Search: click rẻ nhưng thường không ra lead, làm méo số liệu tháng đầu."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "SEM Insider - Google Ads account structure for small budgets (2026)",
+       "url": "https://seminsider.com/google-ads-account-structure-for-small-budgets-the-one-campaign-launch-framework/"
+      },
+      {
+       "title": "Reddit r/PPC (bản lưu reddit.sentinel-team.org, 2026)",
+       "url": "https://reddit.sentinel-team.org/posts/1ucvvc9/snapshots/2026-06-23T21%3A53%3A02.45961Z"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-ct-khi-nao-tach",
+     "if": "Đang chạy 1 chiến dịch ổn, khi nào thì nên tách thêm chiến dịch thứ hai?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Chỉ tách khi bạn cần điều khiển khác nhau: khác ngân sách, khác giá thầu, khác vị trí hoặc khác lịch chạy. Nếu chiến dịch đang mất trên 20% hiển thị vì thiếu ngân sách thì tăng ngân sách trước, chưa cần thêm chiến dịch. Từ khoá thương hiệu ăn nhiều tiền thì tách thương hiệu ra riêng.",
+     "visao": "SEM Insider tóm gọn: tách để kiểm soát, không tách cho gọn gàng. Mỗi lần tách là chia nhỏ dữ liệu, nên chỉ đáng khi nó cho bạn một nút điều khiển mới. Từ khoá thương hiệu có CPA rẻ hơn hẳn, để chung sẽ che mất hiệu quả thật của từ khoá dịch vụ.",
+     "check": [
+      "Vào Chiến dịch, bật cột Tỷ lệ hiển thị bị mất (ngân sách) (Search lost IS budget): trên 20% nghĩa là ngân sách đang là nút thắt.",
+      "Lọc báo cáo cụm từ tìm kiếm theo tên thương hiệu: nếu truy vấn có tên thương hiệu chiếm phần lớn chi phí hoặc chuyển đổi thì nên tách.",
+      "Hỏi khách: có dịch vụ nào cần ngân sách riêng, giờ chạy riêng hoặc khu vực riêng không; nếu không thì chưa có lý do tách."
+     ],
+     "do": [
+      "Lost IS budget trên 20%: tăng ngân sách chiến dịch hiện có trước, theo dõi 1-2 tuần xem lead có tăng tương ứng không.",
+      "Thương hiệu chiếm nhiều chi phí: tách chiến dịch thương hiệu, từ khoá exact, ngân sách nhỏ cố định.",
+      "Dịch vụ cần lịch hoặc vùng khác (ví dụ chi nhánh khác tỉnh): tách theo đúng lý do đó, không tách theo từng từ khoá.",
+      "Khi chiến dịch đạt khoảng 30 chuyển đổi/30 ngày, SEM Insider gợi ý thử Tối đa hoá lượt chuyển đổi hoặc CPA mục tiêu trước khi nghĩ tới tách tiếp."
+     ],
+     "avoid": [
+      "Không tách theo từng nhóm từ khoá nhỏ cho đẹp báo cáo: mỗi chiến dịch mỏng dữ liệu, Smart Bidding học chậm hơn.",
+      "Không thêm chiến dịch mới khi chiến dịch cũ còn đang hụt ngân sách: hai chiến dịch cùng đói tiền, không cái nào chạy đủ."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "SEM Insider - Google Ads account structure for small budgets (2026)",
+       "url": "https://seminsider.com/google-ads-account-structure-for-small-budgets-the-one-campaign-launch-framework/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-ct-gop-chien-dich",
+     "if": "Tài khoản có hơn chục chiến dịch, mỗi chiến dịch chỉ vài chuyển đổi một tháng, có nên gộp lại không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Search Engine Land"
+     ],
+     "tomtat": "Nên gộp, nhưng gộp từng đợt chứ không gộp hết một lần. Heather Brousell (Search Engine Land) cho rằng Smart Bidding cần khoảng 30-50 chuyển đổi mỗi chiến dịch mỗi tháng; tài khoản 12 chiến dịch mỗi cái 8-12 chuyển đổi là ví dụ điển hình của chia quá mỏng.",
+     "visao": "Cùng tổng số chuyển đổi, chia làm 12 phần thì mỗi phần quá ít để thuật toán nhận ra mẫu người hay chuyển đổi. Gộp lại giống gom 12 cuốn sổ ghi chép rời thành một cuốn: cùng nội dung nhưng đọc ra xu hướng được. Gộp từng đợt để nếu kết quả xấu đi thì biết đợt nào gây ra.",
+     "check": [
+      "Vào Chiến dịch, đặt khoảng 30 ngày, sắp theo cột Chuyển đổi: đếm bao nhiêu chiến dịch dưới 30 chuyển đổi.",
+      "Đánh dấu các chiến dịch cùng dịch vụ, cùng vùng, cùng mục tiêu chuyển đổi: đây là ứng viên gộp đầu tiên.",
+      "Kiểm các chiến dịch có lý do riêng thật sự (ngân sách khách chỉ định, vùng khác, thương hiệu): giữ riêng."
+     ],
+     "do": [
+      "Đợt 1: gộp 2-3 chiến dịch giống nhau nhất về dịch vụ và mục tiêu, chuyển từ khoá và mẫu quảng cáo sang chiến dịch giữ lại.",
+      "Chờ hết ít nhất 1 chu kỳ chuyển đổi (thời gian từ click tới lead) rồi so CPA và số lead với trước khi gộp.",
+      "Nếu ổn, làm đợt tiếp theo; nếu xấu đi, xem lại nhóm vừa gộp có khác ý định tìm kiếm không.",
+      "Mục tiêu cuối là mỗi chiến dịch còn lại tiến gần ngưỡng 30-50 chuyển đổi/tháng mà Brousell nêu."
+     ],
+     "avoid": [
+      "Không gộp tất cả trong một ngày: nếu hiệu quả giảm sẽ không biết nguyên nhân, và có thể làm nhiều chiến dịch cùng vào giai đoạn học lại.",
+      "Không gộp dịch vụ khác giá trị hẳn nhau vào chung một mục tiêu CPA: dịch vụ rẻ sẽ hút hết ngân sách của dịch vụ đắt."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Land, Heather Brousell - How campaign structure shapes Google Ads performance (07/2026)",
+       "url": "https://searchengineland.com/how-campaign-structure-shapes-google-ads-performance-481332"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-ct-lich-30-ngay",
+     "if": "Tài khoản lead gen mới chạy, 30 ngày đầu nên kiểm việc gì theo từng tuần?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Pink Dog Digital đưa lịch 4 tuần: tuần 1 kiểm đo lường, tuần 2 dọn cụm từ tìm kiếm, tuần 3 chỉnh mức liên quan giữa từ khoá, quảng cáo và trang đích, tuần 4 dời ngân sách sang nhóm đang ra lead. Làm theo thứ tự này vì mỗi tuần dựa trên dữ liệu của tuần trước.",
+     "visao": "Nếu đo lường sai ngay từ đầu thì mọi quyết định sau đều dựa trên số sai. Tuần 2 mới có đủ truy vấn thật để biết tiền đi đâu. Đến tuần 4 mới đủ dữ liệu để biết nhóm nào đáng được thêm tiền.",
+     "check": [
+      "Tuần 1: tự điền thử form và gọi thử, rồi xem trong Mục tiêu > Chuyển đổi có ghi nhận đúng 1 lần không.",
+      "Tuần 2: vào Thông tin chi tiết và báo cáo > Cụm từ tìm kiếm, xem truy vấn nào tốn tiền mà không liên quan.",
+      "Tuần 3: so tiêu đề quảng cáo với từ khoá và tiêu đề trang đích, thấy lệch ý thì sửa.",
+      "Tuần 4: so CPA giữa các nhóm quảng cáo, nhóm nào CPA tốt hơn rõ thì là ứng viên nhận thêm ngân sách."
+     ],
+     "do": [
+      "Tuần 1 chỉ sửa đo lường và lỗi cài đặt, chưa đổi giá thầu hay từ khoá.",
+      "Tuần 2 thêm từ khoá phủ định từ báo cáo cụm từ tìm kiếm, kỳ vọng tỷ lệ truy vấn liên quan tăng dần.",
+      "Tuần 3 sửa tiêu đề quảng cáo và trang đích cho khớp truy vấn chính.",
+      "Tuần 4 dời ngân sách sang nhóm đang ra lead, tạm giảm nhóm chỉ tốn tiền."
+     ],
+     "avoid": [
+      "Không đổi giá thầu, từ khoá và trang đích cùng lúc trong tuần đầu: không biết thay đổi nào tạo ra kết quả.",
+      "Không kết luận chiến dịch hỏng sau 5-7 ngày khi lead của ngành cần vài ngày mới quyết định."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Pink Dog Digital - Google Ads account structure for lead generation on a modest budget (2026)",
+       "url": "https://pinkdogdigital.com/google-ads-account-structure-for-lead-generation-on-a-modest-budget/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tc-g-gia-thau",
+   "title": "Thực chiến: Giá thầu và thay đổi mục tiêu",
+   "intro": "Con số cụ thể khi đặt CPA mục tiêu, đổi target có làm học lại không, nghe Google hay nghe agency, và cách gán giá trị cho từng loại lead.",
+   "nodes": [
+    {
+     "id": "tc-g-gt-dat-tcpa-ban-dau",
+     "if": "Chuyển sang CPA mục tiêu (tCPA) thì nên đặt con số ban đầu bao nhiêu, và siết xuống thế nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Đừng đặt tCPA thấp hơn hẳn CPA đang có. Buttercup khuyên đặt cao hơn CPA thực tế 10-20%; Jesse Heslinga (Groove Media) đặt bằng CPL hiện tại rồi chỉnh từng 10%. Khi chiến dịch ổn định 2-3 tuần mới siết dần.",
+     "visao": "tCPA là lời dặn Google: chỉ trả giá cho phiên đấu giá nào dự đoán ra lead ở mức này. Đặt quá thấp thì Google bỏ qua phần lớn phiên đấu giá, chiến dịch gần như ngừng chạy. Heslinga nêu ví dụ CPL thực 60 EUR mà đặt 30 EUR thì chiến dịch rớt khỏi đấu giá.",
+     "check": [
+      "Vào Chiến dịch, đặt 30 ngày, đọc CPA thực tế (Chi phí / chuyển đổi) của chiến dịch định chuyển.",
+      "Đếm chuyển đổi 30 ngày: Buttercup dùng mốc 10-15 chuyển đổi thật để chuyển sang Tối đa hoá lượt chuyển đổi chưa đặt target, 30 trở lên mới đặt tCPA.",
+      "Sau khi đặt, xem cột Chi phí và Số lần hiển thị theo ngày: nếu tụt mạnh ngay thì target đang quá chặt."
+     ],
+     "do": [
+      "Dưới 10-15 chuyển đổi/30 ngày: giữ CPC thủ công hoặc Tối đa hoá lượt chuyển đổi không target (mốc của Buttercup và Groove Media).",
+      "Từ 30 chuyển đổi: đặt tCPA bằng hoặc cao hơn CPA thực 10-20%.",
+      "Để chiến dịch chạy ổn định 2-3 tuần, rồi mới hạ tCPA khoảng 10% mỗi lần.",
+      "Buttercup khuyên không đổi target quá 1 lần mỗi 2 tuần; trong thời gian chờ, mỗi tuần vẫn thêm từ khoá phủ định.",
+      "Kỳ vọng: CPA dịch dần về target qua vài tuần, số lead không sụt quá mạnh; nếu sụt mạnh thì nới target lại."
+     ],
+     "avoid": [
+      "Không đặt tCPA bằng một nửa CPA hiện tại vì khách muốn rẻ: chiến dịch mất phân phối, tháng đó gần như không có lead.",
+      "Không hạ target mỗi vài ngày: Google chưa kịp phản hồi lần chỉnh trước đã nhận lệnh mới, số liệu dao động khó đọc."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Buttercup Digital - Smart Bidding without enough conversion data (06/2026)",
+       "url": "https://buttercup.digital/resources/smart-bidding-without-enough-conversion-data"
+      },
+      {
+       "title": "Groove Media, Jesse Heslinga - Manual CPC vs Target CPA vs Maximize Conversions for lead gen (08/2026)",
+       "url": "https://groovemedia.io/post/manual-cpc-vs-target-cpa-vs-maximize-conversions-lead-gen"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-gt-doi-target-co-hoc-lai",
+     "if": "Chỉnh tCPA, tROAS hoặc ngân sách có làm chiến dịch vào lại learning (giai đoạn học) không? Quy tắc mỗi lần không quá 20% có đúng?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "LinkedIn PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Theo Tal Akabas, quản lý sản phẩm Google Ads, trên podcast Ads Decoded (15/10/2026): đổi target hoặc ngân sách ở chiến dịch đang ổn định không tạo ra giai đoạn học. Chiến dịch mới, đổi cấu trúc, đổi chiến lược giá thầu hoặc đổi mục tiêu chuyển đổi thì có. Nên chờ hết 1 chu kỳ chuyển đổi trước khi đổi tiếp.",
+     "visao": "Learning (giai đoạn học) là lúc thuật toán phải dựng lại mô hình vì dữ kiện đầu vào thay đổi bản chất. Đổi con số target chỉ là chỉnh mức hung hăng của mô hình đã có, không bắt nó học lại. Corey Frankosky (Surfside PPC) gọi quy tắc 20% là chuyện truyền miệng; tuy vậy nhiều agency vẫn chỉnh từng bước 10-20% để dễ đọc kết quả (kinh nghiệm cộng đồng, chưa có số chính thức).",
+     "check": [
+      "Vào Chiến dịch, xem cột Trạng thái chiến lược giá thầu: chỉ chữ Đang học (Learning) mới là giai đoạn học thật.",
+      "Xem Lịch sử thay đổi: thay đổi gần nhất là đổi target/ngân sách hay đổi chiến lược, mục tiêu chuyển đổi.",
+      "Ước chu kỳ chuyển đổi của ngành (thời gian từ click tới lead/đặt lịch) để biết phải chờ bao lâu mới đọc kết quả."
+     ],
+     "do": [
+      "Đổi target/ngân sách ở chiến dịch ổn định khi cần, không sợ reset học; nhưng chờ hết 1 chu kỳ chuyển đổi rồi mới đổi lần tiếp theo.",
+      "Muốn dễ đọc kết quả, vẫn có thể chỉnh từng bước vừa phải; đây là lựa chọn để quản lý, không phải luật của Google.",
+      "Các thay đổi có tạo giai đoạn học (đổi chiến lược, đổi mục tiêu chuyển đổi, đổi cấu trúc) thì gom lại làm một lần.",
+      "Ghi lại ngày đổi và con số cũ, mới vào ghi chú để sau 1-2 tuần đối chiếu."
+     ],
+     "avoid": [
+      "Không đổi chiến lược giá thầu hay mục tiêu chuyển đổi nhiều lần trong tháng: mỗi lần là một lần học lại, CPA dao động.",
+      "Không đánh giá kết quả sau 2-3 ngày khi chu kỳ chuyển đổi của ngành là 1-2 tuần: sẽ quay ngược quyết định đúng.",
+      "Không coi tuyên bố trên podcast là có số liệu kiểm chứng: Google chưa công bố dữ liệu đi kèm, vẫn theo dõi chiến dịch của mình."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "PPC Land, Luis Rijo - Google Ads PM says target or budget changes cause no learning period (10/2026)",
+       "url": "https://ppc.land/google-ads-pm-says-target-or-budget-changes-cause-no-learning-period/"
+      },
+      {
+       "title": "Google Ads Decoded podcast (Ginny Marvin, Tal Akabas) - Budget and bidding controls (10/2026)",
+       "url": "https://business.google.com/us/accelerate/podcasts/how-to-guide-campaign-spend-with-google-ads-budget-and-bidding-controls/"
+      },
+      {
+       "title": "Surfside PPC, Corey Frankosky - Target changes don't reset learning (11/2026)",
+       "url": "https://surfsideppc.com/blogs/news/google-ads-target-changes-dont-reset-learning"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-gt-max-clicks-hay-max-conv",
+     "if": "Google bảo chiến dịch mới nên bắt đầu bằng Tối đa hoá lượt chuyển đổi, nhiều người chạy lại bảo Tối đa hoá lượt nhấp có trần. Nghe ai?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Cả hai đều có lý, tuỳ đo lường và ngân sách. Tal Akabas (Google) khuyên chiến dịch mới bắt đầu bằng Tối đa hoá lượt chuyển đổi. SEM Insider và nhiều người trên r/PPC chọn Tối đa hoá lượt nhấp có trần CPC cho tài khoản nhỏ chưa có chuyển đổi. Nếu đo lường đã chuẩn và ngân sách ngày đủ cho vài click đắt, thử theo Google; nếu chưa, đi đường an toàn.",
+     "visao": "Tối đa hoá lượt chuyển đổi cần tín hiệu chuyển đổi để biết click nào đáng trả giá cao; chưa có tín hiệu thì nó đoán theo dữ liệu chung. Tối đa hoá lượt nhấp có trần giữ giá mỗi click trong tầm kiểm soát, giúp ngân sách nhỏ mua đủ click để có dữ liệu ban đầu. Đây là đánh đổi giữa tốc độ học và kiểm soát chi phí.",
+     "check": [
+      "Mở Mục tiêu > Chuyển đổi: hành động chính (primary) có đang ghi nhận đúng lead thật không; nếu chưa thì chưa nên giao cho Smart Bidding.",
+      "So ngân sách ngày với CPC ước tính trong Kế hoạch từ khoá: nếu ngân sách chỉ đủ vài click/ngày thì Smart Bidding khó có dữ liệu.",
+      "Sau 1-2 tuần, xem CPC trung bình: nếu Tối đa hoá lượt chuyển đổi đẩy CPC lên quá cao so với ngân sách thì cân nhắc chuyển lại."
+     ],
+     "do": [
+      "Đo lường chuẩn, ngân sách đủ: bắt đầu bằng Tối đa hoá lượt chuyển đổi chưa đặt target, theo khuyến nghị của Google.",
+      "Đo lường chưa chắc hoặc ngân sách rất nhỏ: dùng Tối đa hoá lượt nhấp có trần CPC, song song sửa đo lường.",
+      "Khi đã có khoảng 30 chuyển đổi/30 ngày, chuyển sang Tối đa hoá lượt chuyển đổi rồi tCPA theo node đặt tCPA ban đầu.",
+      "Ghi rõ lựa chọn và lý do cho khách, hẹn mốc xem lại sau 2-4 tuần."
+     ],
+     "avoid": [
+      "Không chọn Tối đa hoá lượt chuyển đổi khi hành động chính đang đếm cả lượt xem trang: Google sẽ tối ưu cho lượt xem trang, không phải lead.",
+      "Không để Tối đa hoá lượt nhấp không đặt trần: một vài click giá rất cao có thể ăn hết ngân sách ngày."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "PPC Land, Luis Rijo - Google Ads PM says target or budget changes cause no learning period (10/2026)",
+       "url": "https://ppc.land/google-ads-pm-says-target-or-budget-changes-cause-no-learning-period/"
+      },
+      {
+       "title": "SEM Insider - Google Ads account structure for small budgets (2026)",
+       "url": "https://seminsider.com/google-ads-account-structure-for-small-budgets-the-one-campaign-launch-framework/"
+      },
+      {
+       "title": "Reddit r/PPC (bản lưu reddit.sentinel-team.org, 2026)",
+       "url": "https://reddit.sentinel-team.org/posts/1ucvvc9/snapshots/2026-06-23T21%3A53%3A02.45961Z"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-gt-gia-tri-lead-bao-nhieu",
+     "if": "Muốn chạy đặt giá theo giá trị cho lead gen, cụ thể gán mỗi loại lead bao nhiêu tiền?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "LinkedIn PPC"
+     ],
+     "tomtat": "Cách tính dễ nhất: giá trị một lead bằng giá trị đơn hàng trung bình nhân tỷ lệ lead thành khách. Ví dụ của Adrythm: 5 lead chốt 1, mỗi khách mang lại 3.000 USD lợi nhuận thì mỗi lead đáng 600 USD. Lead đã được sale xác nhận chất lượng thì gán cao hơn hẳn lead thường.",
+     "visao": "Tối đa hoá giá trị chuyển đổi và ROAS mục tiêu đặt giá dựa trên con số giá trị bạn gửi. Ginny Marvin (Search Engine Journal) nhấn mạnh giá trị không cần chính xác tuyệt đối, chỉ cần phản ánh đúng tương quan giữa các loại lead. Adrythm lưu ý mặc định của hành động chuyển đổi web là giá trị 1, để nguyên thì lead gần như không có trọng lượng so với hành động khác được gán số thật.",
+     "check": [
+      "Lấy 3-6 tháng dữ liệu CRM: đếm số lead và số lead thành khách để ra tỷ lệ chốt.",
+      "Tính giá trị đơn hàng hoặc lợi nhuận gộp trung bình mỗi khách.",
+      "Vào Mục tiêu > Chuyển đổi > Tóm tắt, mở từng hành động chính, xem mục Giá trị đang để 1 hay số thật.",
+      "So tỷ lệ chốt của cuộc gọi và form: nếu khác nhau rõ thì phải gán giá trị riêng cho từng loại."
+     ],
+     "do": [
+      "Tính giá trị lead = giá trị đơn trung bình x tỷ lệ chốt, làm riêng cho gọi điện và form nếu tỷ lệ khác nhau.",
+      "Vào từng hành động chuyển đổi > Chỉnh sửa cài đặt > Giá trị, nhập số vừa tính; Adrythm lưu ý giá trị mới chỉ áp cho chuyển đổi phát sinh sau khi lưu.",
+      "Nếu có CRM, gán bậc giá trị theo chất lượng như ví dụ Munro Agency: lead đạt 100, lead không đạt 1, hợp đồng ký lấy doanh thu thật.",
+      "Sau vài ngày, thêm cột Giá trị chuyển đổi, chia cho số chuyển đổi: kết quả phải gần giá trị bạn đặt, không còn gần 1.",
+      "Chỉ chuyển sang Tối đa hoá giá trị chuyển đổi sau khi giá trị đã chạy đúng vài tuần."
+     ],
+     "avoid": [
+      "Không để giá trị mặc định 1 cho lead trong khi hành động khác có giá trị thật: Google sẽ dồn tiền sang hành động có số to hơn.",
+      "Không gán mọi lead cùng một giá trị rồi chạy tROAS: không khác gì tối ưu theo số lượng lead.",
+      "Không so sánh số liệu giá trị trước và sau ngày đổi trong cùng khoảng ngày: chuyển đổi cũ giữ giá trị cũ."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Adrythm, Grant Epley - Give your lead conversions a real value",
+       "url": "https://adrythm.com/how-to/give-lead-conversions-a-real-value"
+      },
+      {
+       "title": "Search Engine Journal, Ginny Marvin - Assigning conversion values for value-based bidding in lead gen (2024)",
+       "url": "https://www.searchenginejournal.com/assigning-conversion-values-to-make-value-based-bidding-work-for-lead-gen/526349/"
+      },
+      {
+       "title": "The Munro Agency - Case study Scotwork (07/2025)",
+       "url": "https://www.munro.agency/case-studies/ppc-training-consultancy/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tc-g-tu-khoa",
+   "title": "Thực chiến: Từ khoá và cụm từ tìm kiếm",
+   "intro": "Số liệu thật về kiểu đối sánh trong lead gen, cách dọn cụm từ tìm kiếm bằng n-gram, ngưỡng lọc phủ định và cách chấm sức khoẻ truy vấn mỗi tuần.",
+   "nodes": [
+    {
+     "id": "tc-g-tk-doi-sanh-lead-gen-so-lieu",
+     "if": "Lead gen nên dồn tiền vào đối sánh nào? Có số liệu thật so sánh exact, phrase, broad không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "LinkedIn PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Có. Frederick Vallaeys (Optmyzr, 05/2026) phân tích khoảng 30.000 tài khoản: exact hiệu quả nhất; riêng lead gen, phrase chiếm phần lớn chi tiêu và chuyển đổi; broad yếu hơn rõ ở lead gen. Từ khoá thương hiệu nên để exact. Với tài khoản nhỏ, nền phrase + exact là lựa chọn an toàn.",
+     "visao": "Exact và phrase giữ truy vấn gần ý định bạn chọn, nên tiền ít bị chảy sang truy vấn lạc. Broad dựa vào Smart Bidding để lọc, cần nhiều tín hiệu chuyển đổi mới lọc tốt; lead gen ít chuyển đổi nên broad thường kém hơn. Optmyzr cũng ghi nhận tỷ trọng chi tiêu của exact giảm 9,5 điểm từ 2022, tức nhiều tài khoản đang dồn sang broad dù số liệu không ủng hộ ở lead gen.",
+     "check": [
+      "Vào Từ khoá, thêm cột Loại đối sánh, đặt 30-90 ngày: so CPA và tỷ lệ chuyển đổi theo exact, phrase, broad.",
+      "Nếu broad chiếm phần lớn chi phí mà CPA cao hơn hẳn: tiền đang trả cho mở rộng chưa hiệu quả.",
+      "Mở Cụm từ tìm kiếm, lọc theo từ khoá broad: đếm bao nhiêu truy vấn không liên quan."
+     ],
+     "do": [
+      "Đặt nền là phrase + exact cho dịch vụ chính; thương hiệu dùng exact riêng.",
+      "Chỉ thử broad khi chiến dịch đã có chuyển đổi đều; trên r/PPC người chạy local hay dùng mốc khoảng 15 chuyển đổi/tuần (kinh nghiệm cộng đồng, chưa có số chính thức).",
+      "Khi thử broad, tách nhóm riêng hoặc dùng thử nghiệm để so CPA với nhóm phrase/exact.",
+      "Mỗi tuần đọc cụm từ tìm kiếm của nhóm broad, thêm phủ định ngay; giữ broad nếu CPA trong khoảng chấp nhận được sau 3-4 tuần."
+     ],
+     "avoid": [
+      "Không chuyển hết sang broad vì Google khuyên: ở lead gen, dữ liệu Optmyzr cho thấy broad kém hơn rõ.",
+      "Không áp số liệu này như luật cho mọi tài khoản: đây là tổng hợp số đông tài khoản phần lớn ở thị trường Mỹ/toàn cầu, VN thường khác, vẫn phải đo tài khoản của mình."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Optmyzr, Frederick Vallaeys - Google Ads match type performance (05/2026)",
+       "url": "https://www.optmyzr.com/blog/google-ads-match-type-performance/"
+      },
+      {
+       "title": "Reddit r/PPC (bản lưu reddit.sentinel-team.org, 2026)",
+       "url": "https://reddit.sentinel-team.org/posts/1ucvvc9/snapshots/2026-06-23T21%3A53%3A02.45961Z"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-tk-ngram",
+     "if": "Báo cáo cụm từ tìm kiếm có hàng nghìn dòng, làm sao dọn nhanh mà không bỏ sót?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Dùng phân tích n-gram: tách truy vấn thành từng từ đơn hoặc cụm 2-3 từ, cộng chi phí và chuyển đổi theo từng từ. Brad Geddes (Adalysis) chỉ ra một phủ định gốc như \"-wine\" có thể thay cho 99 phủ định lẻ. Bạn sẽ thấy ngay những từ như \"miễn phí\", \"tuyển dụng\" hay tên tỉnh khác đang tốn bao nhiêu tiền.",
+     "visao": "Mỗi truy vấn riêng lẻ chỉ tốn vài nghìn đồng nên nhìn từng dòng không thấy vấn đề. Gộp theo từ thì các khoản nhỏ cộng lại thành con số rõ ràng. Geddes lấy ví dụ từ \"in\" (kèm địa danh): gộp lại mới thấy truy vấn có địa danh không chuyển đổi.",
+     "check": [
+      "Xuất báo cáo Cụm từ tìm kiếm 90 ngày ra Google Sheet (cột truy vấn, chi phí, click, chuyển đổi).",
+      "Tách mỗi truy vấn thành từ đơn, cộng chi phí và chuyển đổi theo từ; sắp theo chi phí giảm dần.",
+      "Từ nào tốn nhiều tiền mà 0 chuyển đổi: ứng viên phủ định. Từ nào chuyển đổi tốt: ứng viên từ khoá mới."
+     ],
+     "do": [
+      "Lập bảng n-gram 1 từ và 2 từ từ báo cáo cụm từ tìm kiếm, sắp theo chi phí.",
+      "Với từ rõ ràng không đúng ý định (việc làm, miễn phí, tài liệu, tỉnh không phục vụ), thêm một phủ định gốc ở cấp danh sách phủ định của tài khoản.",
+      "Với từ chuyển đổi tốt mà chưa có trong danh sách từ khoá, thêm thành từ khoá phrase hoặc exact.",
+      "Lặp lại mỗi tháng; kỳ vọng tỷ lệ chi phí vào truy vấn không liên quan giảm dần qua 2-3 vòng."
+     ],
+     "avoid": [
+      "Không phủ định từ đơn có hai nghĩa mà chưa xem truy vấn gốc: có thể chặn luôn truy vấn tốt.",
+      "Không chỉ thêm phủ định từng truy vấn đầy đủ: danh sách phình to mà biến thể mới vẫn lọt."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Adalysis, Brad Geddes - N-gram analysis for search term management (04/2025)",
+       "url": "https://adalysis.com/blog/n-gram-analysis-the-secret-to-scalable-search-term-management-in-google-ads/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-tk-nguong-loc-phu-dinh",
+     "if": "Truy vấn tốn bao nhiêu mà không ra chuyển đổi thì nên phủ định? Có ngưỡng cụ thể không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Brad Geddes (Adalysis) dùng hai bộ lọc nhanh: truy vấn có trên 150 click mà 0 chuyển đổi, hoặc lọc 0 chuyển đổi rồi sắp theo chi phí. Nhưng phải cảnh giác truy vấn có chuyển đổi lẻ như 0,01 do mô hình phân bổ chia nhỏ, vì nó trông như có chuyển đổi mà thật ra gần như không.",
+     "visao": "Mô hình phân bổ theo dữ liệu (DDA) chia một chuyển đổi cho nhiều click, nên một truy vấn có thể chỉ nhận 0,01 chuyển đổi. Geddes nêu ví dụ CPA 17.377 USD chỉ vì truy vấn đó có 0,01 chuyển đổi. Nhìn cột chuyển đổi khác 0 rồi giữ lại là bỏ sót truy vấn đang đốt tiền.",
+     "check": [
+      "Mở Cụm từ tìm kiếm 90 ngày, lọc Chuyển đổi = 0, sắp theo Chi phí giảm dần.",
+      "Lọc thêm Click > 150 và Chuyển đổi = 0 theo mốc Geddes; với tài khoản nhỏ có thể hạ mốc theo CPA mục tiêu.",
+      "Lọc Chuyển đổi < 1: xem truy vấn nào có số lẻ như 0,01-0,3 mà chi phí cao."
+     ],
+     "do": [
+      "Phủ định truy vấn tốn nhiều tiền, 0 chuyển đổi và không đúng ý định, ưu tiên theo chi phí.",
+      "Truy vấn đúng ý định nhưng 0 chuyển đổi: kiểm trang đích và quảng cáo trước khi phủ định.",
+      "Truy vấn có chuyển đổi lẻ do phân bổ: tính CPA thật (chi phí / số chuyển đổi), nếu quá cao so mục tiêu thì xử lý như 0 chuyển đổi.",
+      "Kỳ vọng sau 2-4 tuần: chi phí dồn về truy vấn có chuyển đổi, CPA chung giảm."
+     ],
+     "avoid": [
+      "Không phủ định chỉ vì vài click không ra lead: dữ liệu quá ít, dễ chặn nhầm truy vấn tốt.",
+      "Không tin cột chuyển đổi khác 0 là truy vấn đang hiệu quả: số lẻ do phân bổ có thể che truy vấn đốt tiền."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Adalysis, Brad Geddes - N-gram analysis for search term management (04/2025)",
+       "url": "https://adalysis.com/blog/n-gram-analysis-the-secret-to-scalable-search-term-management-in-google-ads/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-tk-ty-le-lien-quan-top50",
+     "if": "Làm sao biết nhanh tài khoản đang có bao nhiêu phần truy vấn đúng ý định, có con số chuẩn không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Lấy 50 truy vấn tốn tiền nhất và chấm từng cái liên quan hay không. Antoine Martin (Web Marketing International) đặt chuẩn trên 80% liên quan, và cho biết thường thấy chỉ 50-60% ở các tài khoản khi audit. Đây là bài kiểm 5 phút cho biết tài khoản đang lãng phí cỡ nào.",
+     "visao": "Top 50 truy vấn thường chiếm phần lớn chi phí, nên tỷ lệ liên quan ở đây phản ánh khá sát tiền đang đi đúng chỗ hay không. Dưới 80% nghĩa là cứ 10 đồng thì hơn 2 đồng trả cho người không định mua dịch vụ của bạn.",
+     "check": [
+      "Vào Cụm từ tìm kiếm, 30 ngày, sắp theo Chi phí, lấy 50 dòng đầu.",
+      "Đánh dấu từng dòng: liên quan (đúng dịch vụ, đúng khu vực, có ý định) hoặc không.",
+      "Tính tỷ lệ liên quan: trên 80% là tốt theo chuẩn của Web Marketing International, quanh 50-60% là cần dọn gấp."
+     ],
+     "do": [
+      "Dưới 80%: thêm phủ định cho các truy vấn lạc, xem lại từ khoá broad nào kéo chúng về.",
+      "Làm bài kiểm này mỗi tuần trong tháng đầu, sau đó mỗi tháng.",
+      "Ghi tỷ lệ vào báo cáo cho khách như một chỉ số sức khoẻ tài khoản, kỳ vọng tăng dần sau mỗi vòng dọn."
+     ],
+     "avoid": [
+      "Không chấm theo số dòng của cả báo cáo: hàng trăm truy vấn lẻ ít tiền làm méo bức tranh.",
+      "Không coi mốc 80% là chuẩn của Google: đây là chuẩn kinh nghiệm của một agency, dùng để so sánh tài khoản với chính nó theo thời gian."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Web Marketing International, Antoine Martin - Google Ads audit checklist (04/2026)",
+       "url": "https://webmarketinginternational.com/google-ads-audit-checklist/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-tk-danh-sach-phu-dinh-khoi-dau",
+     "if": "Tài khoản dịch vụ địa phương mới chạy, có nên dựng sẵn danh sách phủ định từ đầu không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Có. Trong ca audit CPL 447 USD của AdGoose (10/2026), một nguyên nhân là tài khoản chỉ có vài phủ định thêm từ năm trước. Danh sách đúng phải phủ các nhóm: sửa chữa tự làm, hướng dẫn cách làm, việc làm và tuyển dụng, đặt ở cấp tài khoản. Với SME Việt Nam, thêm các nhóm như miễn phí, tài liệu, tuyển dụng, tỉnh không phục vụ.",
+     "visao": "Có những nhóm truy vấn gần như ngành nào cũng gặp và không bao giờ ra khách: người tìm việc, người muốn tự làm, người tìm tài liệu. Chặn từ đầu tiết kiệm tiền ngay tuần đầu thay vì chờ báo cáo mới phát hiện. Đặt ở cấp tài khoản để mọi chiến dịch mới đều được bảo vệ.",
+     "check": [
+      "Vào Công cụ > Thư viện dùng chung > Danh sách từ khoá phủ định: tài khoản đã có danh sách nào áp cho mọi chiến dịch chưa.",
+      "Lọc Cụm từ tìm kiếm theo các từ như việc làm, tuyển, lương, miễn phí, cách tự, tài liệu: xem đang tốn bao nhiêu.",
+      "Kiểm khu vực phục vụ thật của khách để biết tỉnh nào cần phủ định khi người ta gõ kèm tên tỉnh."
+     ],
+     "do": [
+      "Dựng danh sách phủ định chung theo nhóm: việc làm/tuyển dụng, tự làm/hướng dẫn, miễn phí/tài liệu, khu vực không phục vụ.",
+      "Áp danh sách cho mọi chiến dịch Search và PMax nếu loại chiến dịch cho phép.",
+      "Sau 2 tuần, đọc cụm từ tìm kiếm để bổ sung từ phát sinh theo ngành riêng của khách.",
+      "Một số người chạy trên r/PPC còn khuyên phủ định truy vấn tên đối thủ khi không chủ động nhắm (kinh nghiệm cộng đồng, chưa có số chính thức)."
+     ],
+     "avoid": [
+      "Không phủ định \"giá\" hoặc \"bao nhiêu tiền\" theo phản xạ: với dịch vụ, người hỏi giá thường là khách thật.",
+      "Không dùng một danh sách phủ định chép từ ngành khác mà không đọc: có thể chặn đúng từ khách của bạn hay gõ."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "AdGoose newsletter - The $400 CPL autopsy (10/2026)",
+       "url": "https://adgoose.beehiiv.com/p/the-400-cpl-autopsy"
+      },
+      {
+       "title": "Reddit r/PPC - Decreasing inbound lead quality (bản lưu 2026)",
+       "url": "https://reddit.sentinel-team.org/posts/1urqnl5/snapshots/2026-07-10T06%3A42%3A15.032341Z"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tc-g-lead",
+   "title": "Thực chiến: Lead chất lượng và cuộc gọi",
+   "intro": "Cách người chạy thật chặn lead rác từ PMax và lead form, chọn ngưỡng thời lượng cuộc gọi cho phòng khám, và đổi mục tiêu tối ưu từ số lead sang lead chốt được.",
+   "nodes": [
+    {
+     "id": "tc-g-ld-pmax-loai-placement",
+     "if": "PMax ra nhiều lead rác, chặn ở đâu cho đúng chỗ?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Travis Moher (Theory Road, 10/2026) chỉ ra rác chủ yếu đến từ Đối tác tìm kiếm, mạng Hiển thị, lead form để chế độ nhiều lượt và bot. Chặn vị trí ở Công cụ > Mức độ phù hợp của nội dung > Cài đặt nâng cao > Vị trí bị loại trừ: danh sách này áp cho cả tài khoản, kể cả PMax, có hiệu lực sau khoảng 12 giờ.",
+     "visao": "PMax tự chọn nơi hiện quảng cáo trên mọi kênh, và những nơi click rẻ thường cũng là nơi bot hoặc người bấm nhầm. Loại trừ vị trí ở cấp tài khoản là một trong ít cách can thiệp trực tiếp vào PMax. Moher lưu ý loại trừ thương hiệu không chặn được bot, vì bot không đến từ truy vấn thương hiệu.",
+     "check": [
+      "Xem lead rác có đặc điểm chung gì: giờ gửi, nội dung vô nghĩa, số điện thoại sai dạng.",
+      "Vào báo cáo Nơi quảng cáo đã hiển thị (nếu có cho PMax) hoặc báo cáo kênh của PMax: xem chi phí dồn vào Display, YouTube hay đối tác.",
+      "Kiểm lead form asset đang để chế độ Nhiều lượt hơn (More volume) hay Chất lượng hơn (More qualified)."
+     ],
+     "do": [
+      "Thêm ứng dụng, trang web kém chất lượng vào Vị trí bị loại trừ ở Mức độ phù hợp của nội dung; chờ khoảng 12 giờ để có hiệu lực.",
+      "Chuyển lead form sang chế độ Chất lượng hơn nếu đang để Nhiều lượt hơn.",
+      "Thêm lớp chặn bot trên form web (reCAPTCHA, trường ẩn honeypot) theo khuyến nghị của Laura Schiele (Search Engine Land).",
+      "Theo dõi tỷ lệ lead rác trong CRM 2-3 tuần sau khi chặn để biết nguồn nào đã sạch."
+     ],
+     "avoid": [
+      "Không dựa vào loại trừ thương hiệu để chặn bot: Moher chỉ ra cách này không có tác dụng với bot.",
+      "Không để form web không có lớp chặn bot: rác vẫn được đếm là chuyển đổi và dạy Google tìm thêm rác."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Theory Road, Travis Moher - Google Ads spam leads (10/2026)",
+       "url": "https://www.theoryroad.com/insights/google-ads-spam-leads"
+      },
+      {
+       "title": "Search Engine Land, Laura Schiele - How to reduce low-quality leads from Performance Max (02/2026)",
+       "url": "https://searchengineland.com/how-to-reduce-low-quality-leads-from-performance-max-campaigns-468687"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-ld-pmax-primary-lead-dat",
+     "if": "PMax lead gen nên tối ưu theo lead thô hay lead đã được sale xác nhận? Thiếu dữ liệu thì sao?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "LinkedIn PPC"
+     ],
+     "tomtat": "Riverstone (10/2026) khuyên đặt lead đạt chất lượng làm chuyển đổi chính (primary) nếu có ít nhất 15 chuyển đổi trong 30 ngày; chưa đủ thì để nó là phụ (secondary) và tiếp tục gửi về. Kèm theo đó tắt Mở rộng URL cuối cùng (Final URL expansion) và bật loại trừ thương hiệu, trừ khi thương hiệu chiếm dưới 1% chuyển đổi.",
+     "visao": "PMax tối ưu theo đúng thứ bạn đặt làm mục tiêu: đặt lead thô thì nó tìm người dễ điền form nhất, kể cả người không có nhu cầu. Lead đạt chất lượng là tín hiệu tốt hơn nhưng ít hơn, nên cần đủ số lượng để thuật toán học được. Mở rộng URL cho phép PMax gửi người tới trang bất kỳ trên web, kể cả trang tuyển dụng hay blog không có form.",
+     "check": [
+      "Vào Mục tiêu > Chuyển đổi: đếm số lead đạt chất lượng được gửi về trong 30 ngày.",
+      "Mở cài đặt PMax: xem Mở rộng URL cuối cùng đang bật hay tắt.",
+      "Xem tỷ trọng chuyển đổi đến từ truy vấn thương hiệu trong báo cáo thông tin chi tiết của PMax."
+     ],
+     "do": [
+      "Đủ 15 lead đạt/30 ngày: đặt lead đạt làm primary, lead thô làm secondary (mốc của Riverstone).",
+      "Chưa đủ: giữ lead thô làm primary, vẫn gửi lead đạt về làm secondary để tích luỹ dữ liệu.",
+      "Tắt Mở rộng URL cuối cùng để người dùng chỉ vào trang đích có form.",
+      "Bật loại trừ thương hiệu để PMax không ăn truy vấn thương hiệu, trừ khi thương hiệu chiếm dưới 1% chuyển đổi.",
+      "Laura Schiele (Search Engine Land) gợi ý thêm: dùng danh sách khách giá trị cao làm tín hiệu đối tượng và Customer Match (danh sách khách hàng tải lên)."
+     ],
+     "avoid": [
+      "Không chuyển sang tối ưu lead đạt khi mới có vài lead đạt mỗi tháng: chiến dịch thiếu tín hiệu, phân phối chậm và dao động.",
+      "Không kỳ vọng việc không thêm video sẽ giữ PMax khỏi YouTube: Riverstone ghi rõ cách này không bảo đảm."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Riverstone Marketing Solutions - Performance Max spam leads (10/2026)",
+       "url": "https://riverstonemarketingsolutions.com/performance-max-spam-leads/"
+      },
+      {
+       "title": "Search Engine Land, Laura Schiele - How to reduce low-quality leads from Performance Max (02/2026)",
+       "url": "https://searchengineland.com/how-to-reduce-low-quality-leads-from-performance-max-campaigns-468687"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-ld-lead-form-chat-luong",
+     "if": "Lead form asset của Google ra nhiều lead nhưng gọi lại không ai nghe, chỉnh gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Lead form mặc định ở chế độ Nhiều lượt hơn; Liam McDonald (Clique, 10/2026) khuyên chuyển sang Chất lượng hơn. Bật xác minh số điện thoại bằng mã OTP nếu có (tháng 10/2026 mới có ở Search), thêm câu hỏi lọc, và đẩy lead về CRM bằng webhook vì lead chỉ lưu trong Google Ads 60 ngày.",
+     "visao": "Form điền sẵn thông tin từ tài khoản Google nên điền rất dễ, kể cả người bấm thử hay bấm nhầm. Chế độ Chất lượng hơn và OTP thêm chút ma sát để lọc người không thật sự quan tâm. Câu hỏi lọc giúp sale biết trước nhu cầu; Jyll Saskin Gales (Search Engine Land) cũng khuyên đẩy lead vào CRM để chấm chất lượng.",
+     "check": [
+      "Mở lead form asset: xem đang để Nhiều lượt hơn hay Chất lượng hơn.",
+      "Xem form có câu hỏi lọc nào không, hay chỉ tên và số điện thoại.",
+      "Kiểm lead đang được lấy về bằng cách nào: tải tay CSV hay webhook tự động vào CRM.",
+      "Hỏi sale tỷ lệ lead form nghe máy và có nhu cầu so với lead từ trang web."
+     ],
+     "do": [
+      "Chuyển chế độ sang Chất lượng hơn; kỳ vọng số lead giảm nhưng tỷ lệ nghe máy tăng.",
+      "Bật xác minh số điện thoại OTP nếu chiến dịch Search có tuỳ chọn này.",
+      "Thêm 1-2 câu hỏi lọc (dịch vụ quan tâm, thời gian muốn làm); một câu hỏi lọc có thể giảm tỷ lệ hoàn thành, nên cân nhắc số câu.",
+      "Kết nối webhook để lead vào CRM ngay, không để quá 60 ngày rồi mất.",
+      "Clique khuyên chỉ bắn chuyển đổi khi hệ thống của bạn đã chấp nhận lead, không bắn khi form vừa được bấm gửi."
+     ],
+     "avoid": [
+      "Không để chế độ mặc định rồi đánh giá chất lượng kênh: kết luận lead form tệ khi chưa chỉnh cài đặt cơ bản.",
+      "Không tải lead bằng tay thỉnh thoảng: lead quá 60 ngày bị xoá khỏi Google Ads, và gọi lại muộn làm mất khách."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Clique, Liam McDonald - Spam leads in Google Ads (10/2026)",
+       "url": "https://clique.agency/learn/spam-leads/"
+      },
+      {
+       "title": "Search Engine Land, Jyll Saskin Gales - Call assets, lead forms, message assets (05/2026)",
+       "url": "https://searchengineland.com/google-ads-call-assets-lead-forms-message-assets-476618"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-ld-nguong-thoi-luong-cuoc-goi",
+     "if": "Phòng khám đếm cuộc gọi là chuyển đổi, nên đặt ngưỡng thời lượng bao nhiêu giây?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Không có con số đúng cho mọi nơi. Salem Sidi (Wellness Practice Marketing, 10/2026) khuyên lấy ngưỡng từ lịch sử cuộc gọi thật của chính phòng khám: xem cuộc gọi đặt lịch thường kéo dài bao lâu. Lễ tân là người định nghĩa thế nào là một cuộc gọi đạt.",
+     "visao": "Ngưỡng quá thấp thì cuộc gọi nhầm số, hỏi đường, chào hàng cũng thành chuyển đổi, Google sẽ học tìm thêm người gọi kiểu đó. Ngưỡng quá cao thì bỏ sót cuộc đặt lịch ngắn, thiếu tín hiệu. Lấy từ dữ liệu thật giúp ngưỡng phản ánh đúng cách khách của phòng khám đó nói chuyện.",
+     "check": [
+      "Lấy danh sách cuộc gọi 1-2 tháng (tổng đài hoặc công cụ theo dõi cuộc gọi), đánh dấu cuộc nào đặt lịch được.",
+      "Xem thời lượng của cuộc đặt lịch được ngắn nhất và phổ biến nhất.",
+      "Vào Mục tiêu > Chuyển đổi > hành động cuộc gọi: xem ngưỡng thời lượng đang đặt bao nhiêu giây."
+     ],
+     "do": [
+      "Đặt ngưỡng thời lượng theo dữ liệu thật: đủ dài để loại cuộc gọi nhầm, đủ ngắn để không bỏ sót cuộc đặt lịch ngắn.",
+      "Tách hành động chuyển đổi cuộc gọi theo nguồn (gọi từ quảng cáo, gọi từ trang web) để biết nguồn nào ra lịch.",
+      "Chọn hành động nào là chính (primary) và phụ (secondary), chỉ để hành động gần với lịch hẹn nhất làm chính.",
+      "Gọi thử từ quảng cáo và từ trang web để kiểm hệ thống ghi nhận đúng trước khi tin số liệu.",
+      "Xem lại ngưỡng sau 1-2 tháng cùng lễ tân."
+     ],
+     "avoid": [
+      "Không chép ngưỡng của phòng khám khác hay của bài viết nước ngoài: cách khách gọi ở mỗi nơi khác nhau.",
+      "Không đếm mọi cuộc gọi bất kể thời lượng làm chuyển đổi chính: Google sẽ tối ưu cho cuộc gọi rác."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Wellness Practice Marketing, Salem Sidi - Call tracking for clinic Google Ads (10/2026)",
+       "url": "https://www.wellnesspracticemarketing.com/blog/call-tracking-for-clinic-google-ads"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-ld-toi-uu-lead-dat-lich",
+     "if": "Đã có hàng trăm lead form mà khách chẳng chốt mấy, người chạy thật xử lý thế nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "LinkedIn PPC"
+     ],
+     "tomtat": "Kinh nghiệm cộng đồng trên r/PPC (chưa có nguồn chính thức): đổi mục tiêu tối ưu từ lượt điền form sang lead đã đặt lịch hoặc đã được sale xác nhận, gửi từ CRM về Google Ads. Một người chạy cho agency thiết kế web kể mất khoảng 3-4 tuần để chiến dịch ổn định lại nhưng chất lượng lead tốt lên nhiều.",
+     "visao": "Smart Bidding chỉ biết thứ bạn gửi cho nó. Một người chia sẻ đã tối ưu theo lead thô hơn một năm và thuật toán rất giỏi tìm người điền form xong rồi biến mất. Gửi lead đặt lịch về giống như chỉ cho thuật toán xem ảnh khách thật thay vì ảnh người qua đường.",
+     "check": [
+      "Đối chiếu CRM: bao nhiêu phần trăm lead form thành lịch hẹn hoặc thành khách.",
+      "Kiểm form web có lưu GCLID (mã click Google) hoặc email/số điện thoại để ghép lead với click không.",
+      "Xem hành động chuyển đổi chính hiện là lượt gửi form hay trạng thái sau đó."
+     ],
+     "do": [
+      "Gửi trạng thái lead đặt lịch hoặc lead đạt về Google Ads qua cách đang được hỗ trợ (enhanced conversions for leads, Data Manager).",
+      "Khi đủ số lượng, đặt trạng thái này làm chuyển đổi chính, lead thô làm phụ.",
+      "Chuẩn bị tinh thần chiến dịch dao động vài tuần; người chia sẻ trên r/PPC thấy ổn định sau khoảng 3-4 tuần (kinh nghiệm cộng đồng).",
+      "Một bình luận khác nói chi phí mỗi lead đạt giảm 30-40% sau 6-8 tuần; đây là trải nghiệm cá nhân, chưa có nguồn chính thức, không dùng để hứa với khách."
+     ],
+     "avoid": [
+      "Không hứa với khách mức giảm chi phí cụ thể dựa trên chia sẻ diễn đàn: mỗi tài khoản khác nhau.",
+      "Không đổi mục tiêu khi lead đạt quá ít mỗi tháng: chiến dịch thiếu tín hiệu và có thể sụt mạnh."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [
+      {
+       "title": "Reddit r/PPC (bản lưu reddit.sentinel-team.org, 2026)",
+       "url": "https://reddit.sentinel-team.org/posts/1ucvvc9/snapshots/2026-06-23T21%3A53%3A02.45961Z"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-ld-b2b-gmail-tang",
+     "if": "Chạy lead B2B, gần đây lead dùng Gmail nhiều hẳn, gọi lại khách không nhớ đã điền form. Bot hay Google lỏng tay?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "LinkedIn PPC"
+     ],
+     "tomtat": "Kinh nghiệm cộng đồng trên r/PPC (chưa có nguồn chính thức): thường là cả hai, Google mở rộng truy vấn lỏng hơn (nhất là PMax và broad) và một phần lead đến từ bot hoặc công cụ tự điền. Việc đầu tiên là xem 90 ngày cụm từ tìm kiếm và vị trí hiển thị xem lead rác có dồn vào nhóm truy vấn hay nơi hiện nào không.",
+     "visao": "Nếu chiến dịch tối ưu theo số lượng lead thì Google sẽ tìm người dễ điền form nhất, không phân biệt doanh nghiệp hay cá nhân. Một người chia sẻ đã dựng chuyển đổi riêng: form thường giá trị 0, form có email tên miền công ty có giá trị, lead đạt có giá trị cao hơn, để thuật toán ưu tiên đúng loại lead.",
+     "check": [
+      "Xuất cụm từ tìm kiếm và báo cáo vị trí hiển thị 90 ngày, đánh dấu lead rác theo nguồn.",
+      "Đếm tỷ lệ lead dùng email miễn phí so với email tên miền công ty theo tháng.",
+      "Kiểm form có lớp chặn bot và có lưu nguồn click không."
+     ],
+     "do": [
+      "Nếu lead rác dồn vào một nhóm truy vấn hoặc vị trí: phủ định hoặc loại trừ đúng nhóm đó.",
+      "Gán giá trị khác nhau theo loại lead (email công ty, lead đạt) và chuyển dần sang tối ưu theo giá trị (xem node gán giá trị lead).",
+      "Cân nhắc thêm trường bắt buộc email công ty nếu khách chỉ bán cho doanh nghiệp; số lead giảm nhưng chất hơn.",
+      "Thêm lớp chặn bot trên form và theo dõi tỷ lệ lead rác sau 2-3 tuần."
+     ],
+     "avoid": [
+      "Không vội kết luận là đối thủ phá: phần lớn trường hợp trong thread là do cách tối ưu và mở rộng truy vấn.",
+      "Không bắt buộc email công ty với khách SME Việt Nam vốn hay dùng Gmail cho công việc: có thể chặn luôn khách thật."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [
+      {
+       "title": "Reddit r/PPC - Decreasing inbound lead quality (bản lưu 2026)",
+       "url": "https://reddit.sentinel-team.org/posts/1urqnl5/snapshots/2026-07-10T06%3A42%3A15.032341Z"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tc-g-toi-uu",
+   "title": "Thực chiến: Thử nghiệm, audit và benchmark",
+   "intro": "Cách thử nghiệm mẫu quảng cáo cho ra kết luận thật, audit nhanh tài khoản theo thứ tự đúng, và dùng benchmark ngành sao cho không bị lừa bởi số liệu nước ngoài.",
+   "nodes": [
+    {
+     "id": "tc-g-qa-test-rsa",
+     "if": "Muốn A/B test hai mẫu quảng cáo RSA, nhìn chỉ số nào và chạy bao lâu mới đủ kết luận?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Đừng chỉ nhìn CTR hay tỷ lệ chuyển đổi. Frederick Vallaeys (Search Engine Journal) khuyên đưa số lần hiển thị vào phân tích, tức so chuyển đổi trên mỗi lần hiển thị. Scaletrics ước cần khoảng 5.000 lần hiển thị mỗi phiên bản để thấy khác biệt CTR 10% với độ tin cậy 95%, nên tài khoản nhỏ phải chạy lâu hoặc chấp nhận kết luận mang tính định hướng.",
+     "visao": "Mẫu quảng cáo được Google cho hiện nhiều hơn có thể vào thêm những phiên đấu giá CTR thấp, nên CTR của nó trông kém dù mang về nhiều lead hơn. Google cũng nói trong trang hướng dẫn: mẫu được hệ thống hiện thường xuyên hơn thường là vì nó thắng đấu giá tốt hơn. Chuyển đổi trên mỗi lần hiển thị gộp cả hai yếu tố, nên công bằng hơn.",
+     "check": [
+      "Ước số lần hiển thị mỗi tháng của nhóm quảng cáo, chia cho số phiên bản: xem bao lâu mới đạt khoảng 5.000 lần hiển thị mỗi phiên bản.",
+      "Kiểm 2 tuần gần đây có đổi chiến lược giá thầu, cấu trúc hay ngân sách lớn không; có thì chưa nên bắt đầu test.",
+      "Xác định rõ yếu tố đang test (thông điệp, lời kêu gọi), các phần còn lại giữ giống nhau."
+     ],
+     "do": [
+      "Viết giả thuyết trước: đổi gì, kỳ vọng chỉ số nào cải thiện, vì sao.",
+      "Ghim câu đang test vào vị trí 1 ở cả hai phiên bản để tín hiệu rõ ràng, theo gợi ý của Scaletrics.",
+      "Dùng Biến thể quảng cáo (Ad variations) hoặc thử nghiệm chiến dịch của Google để chia lưu lượng công bằng.",
+      "Đặt ngày đọc kết quả theo khối lượng dự kiến, không theo lịch tháng; so chuyển đổi trên mỗi lần hiển thị.",
+      "Tài khoản không đủ khối lượng: ghi kết quả là định hướng, kiểm lại ở vòng sau."
+     ],
+     "avoid": [
+      "Không chọn mẫu thắng chỉ vì CTR cao hơn: mẫu đó có thể mang về ít lead hơn.",
+      "Không test nhiều phiên bản cùng lúc trên nhóm ít hiển thị: không phiên bản nào đủ dữ liệu.",
+      "Không bắt đầu test ngay sau khi đổi chiến lược giá thầu: biến động do giá thầu bị nhầm thành do mẫu quảng cáo."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Journal, Frederick Vallaeys - How to A/B test responsive search ads (2021)",
+       "url": "https://www.searchenginejournal.com/how-to-test-responsive-search-ads/429270/"
+      },
+      {
+       "title": "Scaletrics, Ulvi B. - Ad variation testing: 2.400 tests (03/2025)",
+       "url": "https://www.scaletrics.com/blog/ad-variation-testing-what-actually-works"
+      },
+      {
+       "title": "Google Ads Help - Test and optimize creative messages (6167129)",
+       "url": "https://support.google.com/google-ads/answer/6167129?hl=en"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-qa-asset-dang-hoc",
+     "if": "Tiêu đề trong RSA cứ báo Đang học (Learning) mãi, bao giờ mới có xếp hạng? Asset bị Thấp (Low) thì xoá luôn?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Theo tài liệu của Google, asset chỉ có xếp hạng khi chính nó đạt hơn 500 lần hiển thị và mẫu quảng cáo đạt hơn 2.000 lần hiển thị ở vị trí đầu trang Google Search trong 30 ngày. Asset Thấp nên được thay bằng câu mới, không chỉ xoá đi.",
+     "visao": "Xếp hạng asset được tính bằng so sánh với các asset khác trên cùng tập truy vấn, nên cần đủ lần hiện mới có độ tin cậy. Nhóm quảng cáo ít hiển thị có thể ở trạng thái Đang học rất lâu. Google giải thích xoá asset mà không thay sẽ làm giảm số tổ hợp quảng cáo có thể tạo ra.",
+     "check": [
+      "Mở mẫu RSA > Xem chi tiết asset: xem từng tiêu đề đang Đang học, Thấp, Tốt hay Tốt nhất.",
+      "Xem số lần hiển thị của mẫu quảng cáo trong 30 ngày: dưới 2.000 ở vị trí đầu trang thì Đang học là bình thường.",
+      "Với asset Thấp, đọc lại nội dung: có trùng ý với tiêu đề khác hay lệch với truy vấn chính không."
+     ],
+     "do": [
+      "Nhóm ít hiển thị: chờ đủ ngưỡng, hoặc gộp nhóm để mẫu quảng cáo có nhiều lần hiển thị hơn.",
+      "Asset Thấp: viết câu thay thế với ý khác (lợi ích, giá, địa điểm, bằng chứng) rồi thay vào, không để trống.",
+      "Sau khi thay, chờ thêm một vòng 30 ngày để có xếp hạng mới trước khi thay tiếp.",
+      "Đánh giá mẫu quảng cáo bằng chuyển đổi của cả nhóm, không chỉ bằng xếp hạng từng asset."
+     ],
+     "avoid": [
+      "Không xoá asset Thấp mà không thay: số tổ hợp giảm, quảng cáo ít cơ hội khớp truy vấn.",
+      "Không thay asset Đang học khi chưa đủ dữ liệu: bạn đang bỏ câu có thể tốt trước khi Google kịp đánh giá."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google - Responsive search ads: a guide to writing ads that perform (2023, PDF)",
+       "url": "https://services.google.com/fh/files/misc/responsive_search_ads_a_guide_to_writing_ads_that_perform_2023.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-qa-audit-30-phut",
+     "if": "Nhận một tài khoản Google Ads mới, audit nhanh trong 30 phút thì xem những gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Antoine Martin (Web Marketing International, 04/2026) chia audit thành 6 phần, mỗi phần khoảng 5 phút. Phần đáng làm đầu tiên là đo lường và cụm từ tìm kiếm, vì đó là chỗ tiền mất nhiều nhất. Nên audit xong hết rồi mới sửa, không vừa xem vừa sửa.",
+     "visao": "Audit nhanh nhằm tìm chỗ rò lớn nhất trước, không phải sửa mọi thứ. Đo lường sai thì mọi chỉ số khác vô nghĩa; truy vấn lạc thì tiền chảy ra ngoài ngay hôm nay. Ghi lại hết rồi mới sửa giúp bạn sắp ưu tiên đúng thay vì sửa chỗ dễ thấy trước.",
+     "check": [
+      "Đo lường: vào Mục tiêu > Chuyển đổi, xem hành động nào là chính, có đếm trùng hay đếm cả lượt xem trang không.",
+      "Cụm từ tìm kiếm: lấy top 50 truy vấn theo chi phí, chấm tỷ lệ liên quan; chuẩn của Martin là trên 80%.",
+      "Cài đặt: mạng (Display, đối tác), vị trí (Sự hiện diện hay quan tâm), lịch chạy.",
+      "Cấu trúc và giá thầu: số chiến dịch so với số chuyển đổi, chiến lược giá thầu có hợp với lượng dữ liệu không.",
+      "Quảng cáo và trang đích: tiêu đề có khớp truy vấn, trang đích có form và tải nhanh không."
+     ],
+     "do": [
+      "Ghi mọi phát hiện vào một bảng, mỗi dòng: vấn đề, bằng chứng, mức ảnh hưởng ước tính.",
+      "Sắp ưu tiên: đo lường trước, rồi truy vấn lạc và cài đặt rò tiền, sau cùng mới đến cấu trúc và quảng cáo.",
+      "Gửi khách bản tóm tắt 3-5 vấn đề lớn nhất trước khi bắt tay sửa.",
+      "Sửa theo thứ tự ưu tiên, mỗi đợt ghi ngày để đo trước và sau."
+     ],
+     "avoid": [
+      "Không vừa audit vừa sửa: dễ sửa chỗ nhỏ dễ thấy mà bỏ qua lỗi đo lường gây hại lớn nhất.",
+      "Không bỏ qua bước kiểm đo lường vì tài khoản trông có nhiều chuyển đổi: số chuyển đổi đẹp có thể do đếm trùng hoặc đếm sai hành động."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Web Marketing International, Antoine Martin - Google Ads audit checklist (04/2026)",
+       "url": "https://webmarketinginternational.com/google-ads-audit-checklist/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-qa-do-luong-truoc-target",
+     "if": "CPL tăng vọt, nên đặt tCPA chặt lại ngay không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Chưa. Trong ca audit của AdGoose (10/2026), CPL lên 447 USD do quy tắc URL trang cảm ơn của hành động chuyển đổi bị sai, khiến Google đếm nhầm và bỏ sót lead. Thứ tự sửa của họ: dựng lại chuyển đổi và gửi thử form thật, tắt AI Max, thêm phủ định cấp tài khoản, sửa đối tượng nhân khẩu học, sau cùng mới đặt tCPA.",
+     "visao": "tCPA đặt trên đo lường sai chỉ khiến Google tối ưu thật hiệu quả cho một mục tiêu sai. Tác giả gọi đó là tối ưu theo ảo tưởng: Smart Bidding không phân biệt được chuyển đổi thật hay giả. Mỗi bước sửa dựa vào bước trước, nên làm sai thứ tự sẽ không biết bước nào có tác dụng.",
+     "check": [
+      "Vào Mục tiêu > Chuyển đổi, mở hành động chính, đọc quy tắc URL: có khớp đúng URL trang cảm ơn thật không.",
+      "Gửi thử một form thật, sau vài giờ xem chuyển đổi có được ghi đúng 1 lần không.",
+      "Xem chiến dịch có đang bật AI Max hoặc broad rộng làm truy vấn lạc tăng không.",
+      "Mở danh sách phủ định cấp tài khoản: có đủ các nhóm việc làm, tự làm, hướng dẫn không."
+     ],
+     "do": [
+      "Bước 1: dựng lại hành động chuyển đổi với quy tắc URL đúng, xác nhận bằng một lần gửi form thật.",
+      "Bước 2: tắt hoặc thu hẹp phần mở rộng truy vấn (AI Max, broad) đang kéo truy vấn lạc.",
+      "Bước 3: thêm danh sách phủ định cấp tài khoản.",
+      "Bước 4: kiểm nhắm mục tiêu nhân khẩu học, vị trí cho khớp khách thật.",
+      "Bước 5: khi đo lường đã đáng tin, mới đặt tCPA làm mục tiêu cho Smart Bidding."
+     ],
+     "avoid": [
+      "Không hạ tCPA khi chưa kiểm đo lường: chiến dịch có thể sụt phân phối mà vẫn tối ưu sai.",
+      "Không bỏ qua bước gửi form thử: quy tắc URL trông đúng trên giấy vẫn có thể không bắt được trang thật."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "AdGoose newsletter - The $400 CPL autopsy (10/2026)",
+       "url": "https://adgoose.beehiiv.com/p/the-400-cpl-autopsy"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-qa-ngoai-bid-con-gi",
+     "if": "Chạy Google Ads mấy năm mà việc tối ưu chỉ là chỉnh tCPA và nhân bản chiến dịch khi tụt, còn gì để tối ưu nữa?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Đây là câu hỏi có thật trên r/PPC, và câu trả lời của nhiều người chạy lâu năm (kinh nghiệm cộng đồng, chưa có nguồn chính thức) khá giống nhau: nhìn ra ngoài tài khoản. Ưu tiên là đo lường tốt hơn, gửi dữ liệu CRM về Google, tối ưu trang đích và rút ngắn thời gian sale gọi lại lead.",
+     "visao": "Giá thầu và target chỉ là lớp ngoài cùng; thuật toán chỉ tốt bằng tín hiệu nó nhận. Một người trả lời cho rằng hầu hết nhà quảng cáo chưa gửi kết quả offline về, nên ai làm được đã hơn phần đông. Nhân bản chiến dịch mỗi khi tụt là bỏ đi dữ liệu đã học và bắt đầu lại từ đầu.",
+     "check": [
+      "Kiểm đo lường: có enhanced conversions, có gửi trạng thái lead từ CRM về không.",
+      "Kiểm cấu trúc: số chiến dịch có quá nhiều so với số chuyển đổi không.",
+      "Kiểm trang đích: form có quá nhiều trường, thông điệp đầu trang có rõ không.",
+      "Hỏi sale: lead được gọi lại sau bao lâu, bao nhiêu lead không ai gọi."
+     ],
+     "do": [
+      "Ưu tiên gửi dữ liệu lead chất lượng từ CRM về Google Ads thay vì chỉnh target liên tục.",
+      "Gộp chiến dịch để mỗi chiến dịch có nhiều chuyển đổi hơn; một người trả lời nêu mục tiêu khoảng 50 chuyển đổi/chiến dịch/tháng (kinh nghiệm cộng đồng).",
+      "Thử nghiệm trang đích: rút gọn form, làm rõ giá trị ở đầu trang.",
+      "Phối hợp với sale đo thời gian phản hồi lead; một bình luận nói phản hồi dưới 5 phút chốt gấp khoảng 2 lần, nhưng người nói là bên bán công cụ nên chỉ xem là tham khảo."
+     ],
+     "avoid": [
+      "Không nhân bản chiến dịch mỗi khi hiệu quả giảm: mất dữ liệu học và thường chỉ đẩy vấn đề sang chỗ khác.",
+      "Không đánh đồng tối ưu với chỉnh giá thầu: phần lớn đòn bẩy nằm ở đo lường, trang đích và quy trình sale."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [
+      {
+       "title": "Reddit r/PPC (bản lưu reddit.sentinel-team.org, 2026)",
+       "url": "https://reddit.sentinel-team.org/posts/1ucvvc9/snapshots/2026-06-23T21%3A53%3A02.45961Z"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "tc-g-qa-benchmark-nganh",
+     "if": "Khách hỏi CPC, tỷ lệ chuyển đổi ngành mình bao nhiêu là bình thường, có benchmark không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Việt Nam"
+     ],
+     "tomtat": "Có benchmark nhưng là số liệu thị trường Mỹ/toàn cầu, VN thường khác. WordStream 2025 (16.446 chiến dịch tại Mỹ, số trung vị): trung bình CTR 6,66%, CPC 5,26 USD, tỷ lệ chuyển đổi 7,52%, chi phí mỗi lead 70,11 USD. Dùng để hiểu tương quan giữa các ngành, không dùng làm chỉ tiêu cho tài khoản Việt Nam.",
+     "visao": "Giá click phụ thuộc mức cạnh tranh và giá trị khách của từng thị trường, nên số Mỹ không chuyển thẳng sang VN được. Nhưng tương quan giữa các ngành vẫn có ích: ví dụ ở Mỹ, bất động sản có CPC thấp nhưng tỷ lệ chuyển đổi cũng thấp, giáo dục và bác sĩ có tỷ lệ chuyển đổi cao. Mốc so sánh tốt nhất vẫn là chính tài khoản của khách theo thời gian.",
+     "check": [
+      "So chỉ số của khách với chính họ 3-6 tháng trước, trước khi so với benchmark.",
+      "Nếu dùng benchmark, ghi rõ nguồn, năm và thị trường trong báo cáo gửi khách.",
+      "Xem ngành của khách trong bảng WordStream để biết tương quan CPC và tỷ lệ chuyển đổi, không lấy con số tuyệt đối."
+     ],
+     "do": [
+      "Tham khảo số WordStream 2025 (Mỹ, trung vị) theo ngành: nha khoa CPC 7,85 USD, tỷ lệ chuyển đổi 9,08%; bác sĩ, phẫu thuật CPC 5,00 USD, 11,62%.",
+      "Bất động sản CPC 2,53 USD, tỷ lệ chuyển đổi 3,28%, CTR 8,43%; giáo dục CPC 6,23 USD, 11,38%.",
+      "Dịch vụ doanh nghiệp CPC 5,58 USD, 5,14%; công nghiệp CPC 5,70 USD, 7,17%; quà tặng, mua sắm CPC 3,49 USD, 3,83%.",
+      "WordStream cũng ghi nhận 87% ngành có CPC tăng so với năm trước, nên chi phí tăng dần là xu hướng chung, không hẳn lỗi tài khoản.",
+      "Với khách Việt Nam, dựng benchmark nội bộ từ các tài khoản cùng ngành Digicom quản lý, cập nhật mỗi quý."
+     ],
+     "avoid": [
+      "Không dùng CPC Mỹ để báo giá hay đặt chỉ tiêu cho khách Việt Nam: chênh lệch lớn, gây kỳ vọng sai.",
+      "Không dùng bảng chi phí mỗi lead theo ngành từ các trang tổng hợp không rõ phương pháp: nhiều bảng chép lại sai số liệu gốc."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "WordStream - Google Ads benchmarks 2025",
+       "url": "https://www.wordstream.com/blog/2025-google-ads-benchmarks"
+      }
+     ],
+     "children": []
+    }
+   ]
+  }
+ ]
+}
