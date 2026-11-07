@@ -1,0 +1,2129 @@
+{
+ "platform": "faq-google",
+ "updated": "2026-11-07",
+ "groups": [
+  {
+   "id": "fg-mo-tk",
+   "title": "Mở và xác minh tài khoản",
+   "intro": "Câu hỏi khi mới tạo tài khoản, bị yêu cầu xác minh nhà quảng cáo, hoặc lo bị khoá ngay từ đầu.",
+   "nodes": [
+    {
+     "id": "fg-tk-moi-bi-treo",
+     "if": "Tài khoản mới tạo, nạp tiền chạy được 1-2 ngày thì bị treo vì 'lách hệ thống' hoặc 'hoạt động thanh toán đáng ngờ', tôi chưa làm gì sai, phải làm sao?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Google Ads Help Community",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Tài khoản mới bị treo sau 1-2 ngày thường không phải do bạn cố tình gian lận, mà do Google thấy dấu hiệu rủi ro ở thẻ thanh toán, trang đích hoặc mối liên hệ với một tài khoản từng bị treo. Việc đầu tiên là đọc đúng tên chính sách trong thông báo đỏ, tìm và sửa nguyên nhân, rồi gửi một đơn khiếu nại trung thực. Nếu nguyên nhân đã được xử lý và giấy tờ khớp, tài khoản có cơ hội được mở lại.",
+     "visao": "Tài khoản mới chưa có lịch sử nên Google dựa vào các tín hiệu đi kèm để đánh giá: tên chủ thẻ, email, website và việc chúng có từng gắn với tài khoản bị treo nào không. Google ghi rõ tài khoản liên quan tới tài khoản đã bị treo cũng có thể bị treo, nên chỉ một điểm dính líu cũ cũng đủ kéo tài khoản mới theo. Trang đích chuyển hướng lạ hoặc bị hack chèn mã cũng trông giống hành vi lách hệ thống (Circumventing systems, tức cố né cơ chế kiểm duyệt của Google). Khiếu nại chỉ có tác dụng khi người duyệt thấy nguồn rủi ro đã thật sự được gỡ bỏ.",
+     "check": [
+      "Đọc thông báo đỏ để biết đúng tên chính sách bị nêu: Circumventing systems (lách hệ thống), Suspicious payment activity (thanh toán đáng ngờ) hay Unpaid balance (số dư chưa thanh toán); mỗi lý do cần cách xử lý khác nhau.",
+      "Kiểm tra thẻ thanh toán có đúng tên chủ doanh nghiệp hoặc người quản lý tài khoản không, và thẻ đó có từng gắn với tài khoản nào đã bị treo không; nếu có thì gần như chắc đây là nguyên nhân.",
+      "Mở trang đích và kiểm tra có chuyển hướng lạ, popup che nội dung, hoặc dấu hiệu website bị hack chèn mã không; nếu có thì Google rất dễ xếp vào lách hệ thống."
+     ],
+     "do": [
+      "Rà xem email, thẻ thanh toán và website có dính tới tài khoản cũ nào từng bị treo không, vì Google ghi rõ tài khoản liên quan tới tài khoản đã bị treo cũng có thể bị treo.",
+      "Sửa nguyên nhân trước, sau đó khiếu nại qua nút Contact Us (Liên hệ) ngay trong thông báo treo; mỗi tài khoản chỉ gửi 1 đơn và trình bày trung thực đã sửa những gì.",
+      "Nếu Google yêu cầu xác minh nhà quảng cáo (Advertiser verification) thì làm việc này trước tiên; Google nói xác minh danh tính thất bại 3 lần thì không còn được khiếu nại.",
+      "Bạn có ít nhất 6 tháng kể từ ngày bị treo để khiếu nại, nên không cần vội; nếu đơn bị từ chối, vẫn nộp lại được khi có thêm bằng chứng mới."
+     ],
+     "avoid": [
+      "Không mở tài khoản mới để chạy tiếp trong lúc chờ, vì Google coi việc tạo tài khoản mới sau khi bị treo là lách hệ thống, và tài khoản mới cũng sẽ bị treo.",
+      "Không nộp nhiều đơn khiếu nại cùng lúc, vì nếu lạm dụng, Google có thể tạm ngừng xử lý khiếu nại của bạn 7 ngày, khiến việc mở lại còn chậm hơn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      },
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      },
+      {
+       "title": "Billing and payment suspensions: Suspicious payment activity",
+       "url": "https://support.google.com/adspolicy/answer/15983318"
+      }
+     ],
+     "children": [
+      {
+       "id": "fg-tk-moi-thanh-toan",
+       "if": "Nếu lý do là 'hoạt động thanh toán đáng ngờ' (Suspicious payment activity)",
+       "hat": "white",
+       "asked": [
+        "Google Ads Help Community",
+        "Nhóm FB Cộng đồng Google Ads Việt Nam"
+       ],
+       "tomtat": "Lý do này nghĩa là Google nghi phương thức thanh toán không thật sự thuộc về doanh nghiệp đang quảng cáo, chưa chắc bạn đã gian lận. Việc cần làm trước tiên là gửi khiếu nại kèm giấy tờ chứng minh bạn có quyền dùng thẻ đó, như sao kê hoặc giấy tờ mang tên chủ thẻ. Khi giấy tờ khớp, tài khoản có cơ hội được mở lại; từ đó chỉ dùng một hồ sơ thanh toán ổn định đứng tên doanh nghiệp thật.",
+       "visao": "Google phải chặn quảng cáo trả bằng thẻ mượn hoặc thẻ không rõ chủ, nên hệ thống đối chiếu tên trên thẻ với hồ sơ thanh toán. Tài khoản mới dùng thẻ khác tên, hoặc đổi liên tục nhiều thẻ khác tên, trông rất giống hành vi gian lận nên dễ bị treo vì Suspicious payment activity (hoạt động thanh toán đáng ngờ). Giấy tờ đúng tên giúp người duyệt xác nhận bạn là người được phép dùng phương thức thanh toán đó.",
+       "check": [
+        "Kiểm tra thẻ đang dùng có phải của chính doanh nghiệp hoặc người đại diện không; nếu là thẻ mượn của người khác thì đây gần như chắc chắn là lý do bị nghi.",
+        "So tên in trên thẻ với tên trong hồ sơ thanh toán của tài khoản; nếu hai tên khác nhau thì cần có giấy tờ giải thích mối liên hệ hoặc đổi sang thẻ chính chủ."
+       ],
+       "do": [
+        "Gửi khiếu nại và chuẩn bị giấy tờ chứng minh quyền dùng phương thức thanh toán (sao kê, giấy tờ mang tên chủ thẻ) đúng theo yêu cầu Google gửi trong quá trình xét.",
+        "Sau khi được mở lại, dùng một hồ sơ thanh toán ổn định đứng tên doanh nghiệp thật cho mọi lần thanh toán, không xoay vòng thẻ."
+       ],
+       "avoid": [
+        "Không thay liên tục nhiều thẻ khác tên trên cùng một tài khoản, vì đó chính là kiểu hành vi khiến Google đánh giá là thanh toán đáng ngờ và tài khoản bị treo lại."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Billing and payment suspensions: Suspicious payment activity",
+         "url": "https://support.google.com/adspolicy/answer/15983318"
+        },
+        {
+         "title": "Billing and payment suspensions",
+         "url": "https://support.google.com/google-ads/answer/13704200"
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "fg-xac-minh-nqc",
+     "if": "Google bắt xác minh nhà quảng cáo (Advertiser verification), không làm kịp thì sao? Cần giấy tờ gì?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/googleads"
+     ],
+     "tomtat": "Không làm kịp thì quảng cáo có thể bị hạn chế, và có trường hợp cả tài khoản bị tạm dừng tới khi xác minh xong, nên cần làm sớm trước hạn chót. Việc đầu tiên là đọc thông báo trong tài khoản để biết hạn chót và loại xác minh, rồi để người có quyền Quản trị (Admin) chuẩn bị giấy tờ khớp đúng tên tổ chức. Sau khi nộp, trạng thái có thể mất tới 5 ngày làm việc mới cập nhật.",
+     "visao": "Xác minh nhà quảng cáo (Advertiser verification) là cách Google kiểm tra người đứng sau quảng cáo là ai và kinh doanh gì, để người xem quảng cáo biết rõ nguồn gốc. Vì mục đích là xác thực danh tính, giấy tờ phải khớp đúng tên tổ chức, còn hạn và đủ thông tin; giấy tờ lệch tên hoặc mượn của người khác sẽ bị từ chối. Cung cấp thông tin sai ở bước này bị Google xếp vào lách hệ thống, là vi phạm nghiêm trọng chứ không chỉ là hồ sơ thiếu sót.",
+     "check": [
+      "Đọc thông báo xác minh trong tài khoản để biết hạn chót và loại xác minh được yêu cầu (xác minh danh tính hay xác minh hoạt động kinh doanh), từ đó chuẩn bị đúng loại giấy tờ.",
+      "Đối chiếu giấy tờ định nộp với tên tổ chức đã khai: Google có thể từ chối giấy tờ không khớp tên, đã hết hạn hoặc thiếu thông tin, nên sửa trước khi nộp."
+     ],
+     "do": [
+      "Giao việc xác minh cho người có quyền Quản trị (Admin), vì chỉ Admin mới bắt đầu và hoàn tất được xác minh nhà quảng cáo.",
+      "Làm ngay khi tài khoản được chọn xác minh: Google nói lúc này một số quảng cáo có thể bị hạn chế, và có trường hợp tài khoản bị tạm dừng tới khi xác minh xong.",
+      "Sau khi nộp, chờ tối đa 5 ngày làm việc để trạng thái xác minh cập nhật trong tài khoản trước khi kết luận có vấn đề.",
+      "Khai tuổi đúng là tuổi của người dùng tài khoản, không phải tuổi doanh nghiệp, vì người dùng Google Ads phải từ 18 tuổi trở lên."
+     ],
+     "avoid": [
+      "Không nộp giấy tờ mượn hoặc không khớp tên, vì cung cấp thông tin sai trong xác minh bị liệt vào lách hệ thống, một vi phạm nghiêm trọng có thể dẫn tới treo tài khoản."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Advertiser verification",
+       "url": "https://support.google.com/adspolicy/answer/9703665"
+      },
+      {
+       "title": "About access levels in your Google Ads account",
+       "url": "https://support.google.com/google-ads/answer/9978556"
+      },
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-tk-ca-nhan-hay-dn",
+     "if": "Nên mở tài khoản Google Ads bằng Gmail cá nhân hay email công ty? Sau này nhân viên nghỉ thì sao?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Quora"
+     ],
+     "tomtat": "Nên để quyền Quản trị (Admin) nằm ở email do chính doanh nghiệp kiểm soát, không phụ thuộc Gmail cá nhân của một nhân viên. Việc cần làm trước tiên là kiểm tra ai đang là Admin và bảo đảm có ít nhất 2 Admin thuộc doanh nghiệp; nhân viên hay agency chỉ cần quyền Chuẩn. Khi nhân viên nghỉ, Admin gỡ quyền người đó ngay và doanh nghiệp vẫn giữ nguyên tài khoản cùng dữ liệu.",
+     "visao": "Tài khoản Google Ads gắn với các email được cấp quyền, và chỉ Admin mới cấp, thu quyền hoặc liên kết tài khoản người quản lý. Nếu Admin duy nhất là Gmail cá nhân của nhân viên, quyền kiểm soát thực chất nằm trong tay người đó, giống như giao chìa khoá cửa hàng cho một người rồi không giữ bản sao. Tách bạch quyền Admin của doanh nghiệp và quyền làm việc của nhân viên giúp việc nghỉ việc hay đổi agency không làm gián đoạn quảng cáo.",
+     "check": [
+      "Mở mục quyền truy cập của tài khoản và xem ai đang giữ quyền Quản trị (Admin); nếu chưa có ít nhất 2 Admin thuộc doanh nghiệp thì cần bổ sung ngay."
+     ],
+     "do": [
+      "Nắm 5 cấp quyền của Google Ads: chỉ email, thanh toán, chỉ đọc, chuẩn, quản trị; trong đó chỉ Admin mới cấp, thu quyền và liên kết tài khoản người quản lý.",
+      "Giữ quyền Admin bằng email do doanh nghiệp kiểm soát, còn nhân viên hoặc agency chỉ cần quyền Chuẩn để chạy và tối ưu quảng cáo.",
+      "Khi nhân viên nghỉ, Admin vào mục quyền truy cập của tài khoản và gỡ quyền của người đó ngay khi họ nghỉ."
+     ],
+     "avoid": [
+      "Không để duy nhất một Gmail cá nhân của nhân viên làm Admin, vì khi người đó nghỉ việc doanh nghiệp có thể mất quyền kiểm soát tài khoản và toàn bộ lịch sử dữ liệu."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About access levels in your Google Ads account",
+       "url": "https://support.google.com/google-ads/answer/9978556"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-nhieu-tk-1-email",
+     "if": "1 email được tạo bao nhiêu tài khoản Google Ads? Tôi quản lý nhiều khách thì làm thế nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Google Ads Help Community",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Một địa chỉ email được gắn tối đa 20 tài khoản Google Ads, tính cả tài khoản người quản lý. Nếu quản lý nhiều khách, hãy dùng tài khoản người quản lý (MCC, Manager account) để xem và quản lý mọi tài khoản ở một nơi. Mỗi khách nên có tài khoản và hồ sơ thanh toán riêng đứng tên khách để rủi ro không lan sang nhau.",
+     "visao": "Giới hạn 20 tài khoản cho mỗi email là quy định của Google, nên agency không mở mãi tài khoản trên một email được. Tài khoản người quản lý (MCC) sinh ra để giải bài toán này: một nơi đăng nhập, nhiều tài khoản khách bên dưới. Việc tách hồ sơ thanh toán theo từng khách quan trọng vì Google có thể treo cả các tài khoản liên quan khi một tài khoản bị treo, và dùng chung hồ sơ thanh toán là một mối liên hệ rõ ràng.",
+     "check": [
+      "Đếm số tài khoản Google Ads đang gắn với email đăng nhập; nếu gần chạm mức 20 thì cần chuyển sang quản lý qua tài khoản người quản lý."
+     ],
+     "do": [
+      "Ghi nhớ giới hạn: tối đa 20 tài khoản Google Ads, gồm cả tài khoản người quản lý, gắn với một địa chỉ email.",
+      "Quản lý nhiều hơn thì tạo tài khoản người quản lý (MCC) và liên kết các tài khoản khách vào đó để xem, quản lý tập trung ở một nơi.",
+      "Để mỗi khách có tài khoản và hồ sơ thanh toán riêng đứng tên khách, không dùng chung thanh toán giữa các khách."
+     ],
+     "avoid": [
+      "Không dồn nhiều doanh nghiệp không liên quan vào một hồ sơ thanh toán, vì một tài khoản bị treo có thể kéo theo các tài khoản liên quan khác."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About Google Ads manager accounts",
+       "url": "https://support.google.com/google-ads/answer/6139186"
+      },
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-thanh-toan",
+   "title": "Thanh toán, thẻ, hoá đơn, thuế Việt Nam",
+   "intro": "Thẻ bị từ chối, nợ chưa thanh toán, hoá đơn VAT Việt Nam, hoàn tiền khi đóng tài khoản.",
+   "nodes": [
+    {
+     "id": "fg-the-bi-tu-choi",
+     "if": "Thẻ Visa/Mastercard bị từ chối thanh toán, quảng cáo dừng hết, xử lý thế nào?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/googleads"
+     ],
+     "tomtat": "Gần như chắc chắn vấn đề nằm ở thẻ hoặc ngân hàng (thẻ hết hạn, không đủ số dư, ngân hàng chặn giao dịch quốc tế hoặc trực tuyến), chưa phải tài khoản bị phạt. Việc cần làm trước tiên là đọc thông báo lỗi trong mục Thanh toán, gọi ngân hàng mở giao dịch, rồi sửa thẻ hoặc thêm phương thức dự phòng và thanh toán lại số nợ. Trả xong số dư thì quảng cáo chạy lại được.",
+     "visao": "Google Ads thu tiền theo phương thức thanh toán đã khai; khi khoản thu bị từ chối, Google dừng phân phối để không phát sinh thêm nợ. Nếu số dư chưa thanh toán (Unpaid balance) kéo dài, tài khoản có thể bị tạm ngưng vì lý do này, nhưng gốc rễ vẫn là khoản tiền chưa thu được. Một số trường hợp tài khoản chỉ bị tạm dừng để xác nhận phương thức thanh toán, chưa phải bị treo, nên đọc kỹ thông báo giúp chọn đúng cách xử lý.",
+     "check": [
+      "Mở mục Thanh toán trong tài khoản và đọc thông báo lỗi để biết nguyên nhân: thẻ hết hạn, thiếu số dư hay ngân hàng chặn giao dịch quốc tế hoặc trực tuyến.",
+      "Gọi ngân hàng phát hành thẻ để kiểm tra thẻ đã bật thanh toán trực tuyến và giao dịch quốc tế chưa; nếu chưa bật thì đây là lý do bị từ chối."
+     ],
+     "do": [
+      "Sửa thông tin thẻ hoặc thêm một phương thức thanh toán dự phòng, rồi thanh toán lại số nợ theo hướng dẫn Google hiển thị trong mục Thanh toán.",
+      "Nếu số dư chưa thanh toán kéo dài và tài khoản bị tạm ngưng vì Unpaid balance (số dư chưa thanh toán), hãy trả hết số dư; chỉ sau đó quảng cáo mới chạy lại được.",
+      "Nếu thông báo chỉ là tạm dừng kèm yêu cầu xác nhận phương thức thanh toán, làm đúng yêu cầu xác nhận đó; trường hợp này chưa phải bị treo tài khoản."
+     ],
+     "avoid": [
+      "Không mở tài khoản mới để né khoản nợ cũ, vì tài khoản mới dùng chung thông tin với tài khoản đang nợ có thể bị treo theo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Resolve a declined payment in Google Ads",
+       "url": "https://support.google.com/google-ads/answer/1723046"
+      },
+      {
+       "title": "Billing and payment suspensions",
+       "url": "https://support.google.com/google-ads/answer/13704200"
+      },
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-hoa-don-vn",
+     "if": "Hoá đơn Google Ads ở Việt Nam bây giờ xuất thế nào, thuế GTGT bao nhiêu, có phải tự nộp thuế nhà thầu 5% + 5% không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Blog/forum marketing Việt (Brands Vietnam, ladigi...)",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Từ 01/04/2025, hoá đơn Google Ads cho khách Việt Nam do Công ty TNHH Google Việt Nam xuất bằng VND kèm thuế GTGT 10% (theo Tuổi Trẻ, 06/12/2024), nên khi đã nhận hoá đơn này thì không tự áp thuế nhà thầu 5% + 5%. Việc đầu tiên là xem chứng từ trong mục Thanh toán để biết bên bán là pháp nhân nào, và kiểm tra mã số thuế, tên, địa chỉ trong hồ sơ thanh toán khớp đăng ký thuế. Thuế suất cụ thể từng thời kỳ phải để kế toán đối chiếu văn bản hiện hành; đây không phải tư vấn thuế.",
+     "visao": "Thuế nhà thầu (5% GTGT + 5% TNDN do bên Việt Nam khấu trừ, nộp thay) chỉ áp khi trả tiền cho nhà cung cấp nước ngoài chưa xuất hoá đơn tại Việt Nam. Khi bên bán là Google Việt Nam và xuất hoá đơn VND, khoản chi được hạch toán như mua dịch vụ trong nước, nên áp thêm 5% + 5% là nộp trùng. Hoá đơn chỉ hợp lệ để khấu trừ khi thông tin người mua khớp đăng ký thuế, nên sai mã số thuế, tên hay địa chỉ là mất quyền khấu trừ.",
+     "check": [
+      "Vào Thanh toán > Chứng từ và xem bên bán ghi trên chứng từ là Công ty TNHH Google Việt Nam hay Google Asia Pacific Pte. Ltd.; cách hạch toán thuế phụ thuộc vào pháp nhân này.",
+      "Kiểm tra hồ sơ thanh toán đã khai mã số thuế, tên và địa chỉ đúng như đăng ký với cơ quan thuế chưa; sai một trong ba thì hoá đơn không hợp lệ để khấu trừ."
+     ],
+     "do": [
+      "Theo Tuổi Trẻ (06/12/2024), Google Việt Nam phụ trách khách hàng quảng cáo từ 01/03/2025 và xuất hoá đơn VND kèm thuế GTGT 10% từ 01/04/2025; cập nhật mã số thuế, tên, địa chỉ khớp đăng ký thuế để hoá đơn hợp lệ.",
+      "Với giai đoạn trước đó, trang thông tin thuế Việt Nam của Google Payments ghi Google thu VAT 5% trên giao dịch áp dụng và in mã số thuế (10 hoặc 13 chữ số) lên hoá đơn.",
+      "Chỉ khấu trừ, nộp thay thuế nhà thầu 5% GTGT + 5% TNDN khi trả cho nhà cung cấp nước ngoài chưa xuất hoá đơn tại Việt Nam; có hoá đơn VND của Google Việt Nam thì hạch toán như hoá đơn trong nước.",
+      "Để kế toán đối chiếu thuế suất theo văn bản thuế hiện hành, vì có giai đoạn thuế GTGT được giảm theo nghị định; nội dung ở đây không phải tư vấn thuế."
+     ],
+     "avoid": [
+      "Không tự áp thêm 5% + 5% thuế nhà thầu khi đã có hoá đơn GTGT bằng VND của Google Việt Nam, vì dễ nộp thừa thuế hoặc kê khai sai.",
+      "Không khai mã số thuế sai tên hoặc địa chỉ trong hồ sơ thanh toán, vì hoá đơn xuất ra sẽ không hợp lệ để khấu trừ."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Văn phòng Google Việt Nam hoạt động từ năm tới (Tuổi Trẻ, 06/12/2024)",
+       "url": "https://tuoitre.vn/van-phong-google-viet-nam-hoat-dong-tu-nam-toi-20241206144146855.htm"
+      },
+      {
+       "title": "Vietnam Tax Info (Google Payments Center)",
+       "url": "https://support.google.com/paymentscenter/contact/vietnam_tax_info"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-hoan-tien",
+     "if": "Tài khoản bị treo hoặc muốn ngừng chạy thì tiền còn dư trong tài khoản có lấy lại được không?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Có, phần tiền nạp chưa dùng có thể lấy lại kể cả khi tài khoản đang bị treo, bằng cách huỷ tài khoản để Google hoàn tiền (Google cập nhật từ 06/2024). Việc đầu tiên là xem số dư chưa dùng trong mục Thanh toán và phân biệt đâu là tiền nạp, đâu là tín dụng khuyến mãi, vì tín dụng khuyến mãi không được hoàn. Sau khi huỷ, tiền thường về trong 4-12 tuần.",
+     "visao": "Tiền bạn nạp trước là tiền trả trước cho dịch vụ chưa dùng, nên khi tài khoản đóng lại Google hoàn phần còn dư về phương thức đã thanh toán. Tín dụng khuyến mãi là khoản Google tặng, không phải tiền bạn bỏ ra, nên không có gì để hoàn. Thời gian hoàn phụ thuộc phương thức thanh toán, vì tiền phải đi ngược qua ngân hàng hoặc tổ chức thẻ.",
+     "check": [
+      "Mở mục Thanh toán và xem số dư chưa dùng, tách riêng tiền đã nạp với tín dụng khuyến mãi; chỉ phần tiền nạp mới được tính vào khoản hoàn."
+     ],
+     "do": [
+      "Dùng quyền Admin để huỷ tài khoản; tài khoản đang bị treo vẫn được huỷ và yêu cầu hoàn tiền theo cập nhật của Google từ 06/2024.",
+      "Sau khi huỷ, chờ Google tự xử lý hoàn phần chưa dùng, thường trong 4-12 tuần; với thẻ tín dụng khoảng 2-3 tuần, chuyển khoản khoảng 3-4 tuần.",
+      "Nếu không thấy hoàn tự động, tìm nút 'Hoàn tất việc hoàn tiền' trong tài khoản và làm theo hướng dẫn."
+     ],
+     "avoid": [
+      "Không mong lấy lại tín dụng khuyến mãi, vì Google không hoàn phần này.",
+      "Không yêu cầu ngân hàng hoàn tiền (chargeback, tức đòi ngân hàng đảo giao dịch) để lấy lại tiền, vì Google liệt chargeback là một lý do treo tài khoản."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Update to functionality of suspended Google Ads accounts (June 2024)",
+       "url": "https://support.google.com/adspolicy/answer/14899401"
+      },
+      {
+       "title": "Refund estimates on canceled Google Ads accounts",
+       "url": "https://support.google.com/google-ads/answer/9374819"
+      },
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-tien-ma",
+     "if": "Google trừ tiền nhiều hơn ngân sách ngày tôi đặt, có phải bị trừ sai không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/googleads",
+      "Google Ads Help Community",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Không phải bị trừ sai: Google cho phép chi trong một ngày tới 2 lần ngân sách ngày trung bình, nhưng cả tháng không tính quá 30,4 lần ngân sách ngày. Việc nên làm là so chi phí từng ngày với tổng chi trong tháng thay vì chỉ nhìn một ngày. Nếu tổng tháng không vượt mức này thì mọi thứ bình thường, Google nói bạn không bao giờ phải trả nhiều hơn giới hạn chi tiêu của tháng.",
+     "visao": "Ngân sách ngày trong Google Ads là mức trung bình, không phải trần cứng mỗi ngày. Lượt tìm kiếm lên xuống theo ngày, nên Google cho chi nhiều hơn vào ngày đông người tìm và ít hơn vào ngày vắng, miễn tổng tháng không vượt giới hạn. Cách tính này giúp bạn không bỏ lỡ ngày cao điểm mà vẫn giữ được tổng ngân sách.",
+     "check": [
+      "Xuất chi phí từng ngày trong tháng và so với ngân sách ngày; nếu có ngày chi gần gấp đôi nhưng tổng tháng không vượt 30,4 lần ngân sách ngày thì không có gì sai."
+     ],
+     "do": [
+      "Hiểu quy tắc: một ngày có thể chi tới 2 lần ngân sách ngày trung bình, nhưng trong tháng Google không tính quá 30,4 lần ngân sách ngày.",
+      "Theo dõi theo tổng tháng thay vì từng ngày, vì Google nói bạn không bao giờ phải trả nhiều hơn giới hạn chi tiêu của tháng."
+     ],
+     "avoid": [
+      "Không đặt ngân sách sát số tiền thực có trong thẻ, vì ngày cao điểm có thể chi gấp đôi ngân sách ngày và làm thanh toán bị từ chối."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About overdelivery and your average daily budget",
+       "url": "https://support.google.com/google-ads/answer/2375423"
+      },
+      {
+       "title": "Understanding credits and adjustments to your account",
+       "url": "https://support.google.com/google-ads/answer/1704323"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-tin-dung-click-ao-hoa-don",
+     "if": "Thấy dòng 'Invalid activity' hoặc 'điều chỉnh' trên hoá đơn là gì?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Đây là khoản Google ghi có (trả lại) cho bạn khi phát hiện hoạt động không hợp lệ (Invalid activity, như click không thật) sau khi đã lập hoá đơn, nên là tin tốt chứ không phải phí thêm. Việc cần làm là mở Hoạt động thanh toán để xem khoản điều chỉnh này thuộc tháng phát sinh nào. Khi báo cáo cho khách, dùng chi phí đã trừ tín dụng thay vì chi phí thô.",
+     "visao": "Có những hoạt động không hợp lệ chỉ được Google phát hiện sau khi hoá đơn đã lập; Google không công bố chi tiết cách phát hiện. Khi đó khoản tiền tương ứng được trả lại dưới dạng một dòng điều chỉnh, nên nhìn vào hoá đơn dễ tưởng là khoản phí lạ. Báo cáo Invalid Activity Credit Report giúp nối khoản trả lại với chiến dịch và chi phí gốc.",
+     "check": [
+      "Mở Thanh toán > Hoạt động thanh toán, tìm dòng điều chỉnh hoạt động không hợp lệ và xem tháng phát sinh gốc của khoản điều chỉnh đó."
+     ],
+     "do": [
+      "Hiểu đây là khoản Google ghi có lại khi phát hiện hoạt động không hợp lệ sau khi đã lập hoá đơn, tức tiền được trả về chứ không bị trừ thêm.",
+      "Với chiến dịch Search và Performance Max, xem báo cáo Invalid Activity Credit Report: báo cáo hiển thị chi phí đã điều chỉnh bằng chi phí trên hoá đơn trừ đi tín dụng."
+     ],
+     "avoid": [
+      "Không lấy chi phí thô để báo cáo cho khách khi đã có tín dụng điều chỉnh, vì số tiền thực chi thấp hơn và báo cáo sẽ sai."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Understanding credits and adjustments to your account",
+       "url": "https://support.google.com/google-ads/answer/1704323"
+      },
+      {
+       "title": "About the Invalid Activity Credit Report",
+       "url": "https://support.google.com/google-ads/answer/16826168"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-treo",
+   "title": "Tài khoản bị treo, khoá và khiếu nại",
+   "intro": "Các câu hỏi sau khi tài khoản bị tạm ngưng: vì sao, khiếu nại ra sao, bao lâu, có cứu được không.",
+   "nodes": [
+    {
+     "id": "fg-treo-lach-he-thong",
+     "if": "Bị treo vì 'Circumventing systems' (lách hệ thống) dù không cố tình lách, khiếu nại có thắng được không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Google Ads Help Community",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Có thể thắng, nhưng chỉ khi bạn tìm ra và gỡ được thứ khiến Google nghĩ bạn lách hệ thống (Circumventing systems), vì Google chỉ khôi phục 'trong trường hợp thuyết phục'. Thủ phạm hay gặp là chuyển hướng lạ trên trang đích, trình theo dõi click chuyển sang domain khác, site bị hack chèn mã, hoặc liên quan tới tài khoản từng bị treo. Sửa xong mới khiếu nại, và trong đơn nêu cụ thể đã gỡ những gì.",
+     "visao": "Lách hệ thống là hành vi cố né cơ chế kiểm duyệt, ví dụ cho Google thấy một trang nhưng người dùng thấy trang khác. Google xếp đây là vi phạm nghiêm trọng: treo ngay khi phát hiện, không cảnh báo, và không được quảng cáo lại nếu vi phạm là thật. Hệ thống không biết ý định của bạn, nó chỉ thấy dấu hiệu kỹ thuật, nên một chuyển hướng theo thiết bị hay mã độc do hacker chèn cũng đủ bị đánh giá như cố tình. Vì vậy đơn khiếu nại phải chỉ ra được dấu hiệu đó đã bị gỡ bỏ thế nào.",
+     "check": [
+      "Mở trang đích trên nhiều thiết bị và mạng, kiểm tra có chuyển hướng theo thiết bị hoặc IP, link rút gọn, trình theo dõi click chuyển sang domain khác, hay popup che nội dung không; có thì đó là nghi phạm số một.",
+      "Kiểm tra website có bị hack chèn mã chuyển hướng không, bằng Search Console và quét mã nguồn; có mã lạ thì phải làm sạch site trước mọi bước khác.",
+      "Rà các tài khoản dùng chung email, thẻ thanh toán hoặc website với tài khoản này xem có tài khoản nào đã từng bị treo không; nếu có thì việc treo có thể đến từ mối liên hệ đó."
+     ],
+     "do": [
+      "Hiểu mức độ: Google xếp lách hệ thống là vi phạm nghiêm trọng, treo ngay khi phát hiện, không cảnh báo, và không được quảng cáo lại nếu vi phạm là thật.",
+      "Gỡ hết chuyển hướng, trình theo dõi, mã lạ, rồi viết khiếu nại nêu cụ thể từng thứ đã gỡ và gỡ thế nào, vì Google chỉ khôi phục 'trong trường hợp thuyết phục'.",
+      "Nếu site bị hack, xử lý theo chính sách trang bị xâm nhập (Compromised sites): làm sạch website hoàn toàn rồi mới gửi khiếu nại.",
+      "Thành viên r/googleads hay khuyên xem Googlebot (trình thu thập của Google) hiển thị trang thế nào trong Search Console trước khi nghĩ tới thuê dịch vụ khôi phục; đây là kinh nghiệm cộng đồng, chưa có nguồn chính thức."
+     ],
+     "avoid": [
+      "Không mua dịch vụ 'mở khoá cam kết', vì Google không có kênh ưu tiên trả phí nào cho khiếu nại; bạn mất tiền mà không tăng cơ hội.",
+      "Không tạo tài khoản mới trong lúc chờ khiếu nại, vì chính tài khoản mới đó bị coi là lách hệ thống và làm hồ sơ của bạn xấu thêm."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      },
+      {
+       "title": "Abusing the ad network",
+       "url": "https://support.google.com/adspolicy/answer/6020954"
+      },
+      {
+       "title": "Compromised sites",
+       "url": "https://support.google.com/adspolicy/answer/15938376"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-khieu-nai-bao-lau",
+     "if": "Gửi khiếu nại rồi mà mấy tuần không thấy trả lời, có gửi lại nhiều lần cho nhanh được không?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Không nên, gửi lại nhiều lần chỉ làm chậm hơn chứ không nhanh hơn. Mỗi tài khoản bị treo chỉ cần 1 đơn; gửi quá nhiều đơn cho cùng một lần treo có thể không được xử lý, và nếu lạm dụng Google có thể ngừng xử lý một số khiếu nại của bạn 7 ngày. Việc nên làm là theo dõi trạng thái trong Trình quản lý chính sách hoặc email phản hồi và kiên nhẫn chờ.",
+     "visao": "Đơn khiếu nại được xếp hàng xét duyệt, nên đơn trùng không chen lên trước mà chỉ làm hàng chờ dài thêm. Google còn coi việc gửi dồn dập là lạm dụng quy trình và có thể tạm ngừng xử lý khiếu nại, giống như gọi tổng đài liên tục rồi bị chặn số. Gửi một đơn đầy đủ bằng chứng là cách nhanh nhất để được xem xét kịp thời.",
+     "check": [
+      "Mở Trình quản lý chính sách (Policy Manager) trong tài khoản hoặc kiểm tra email phản hồi để xem trạng thái khiếu nại; nếu đơn vẫn đang được xét thì không cần gửi thêm."
+     ],
+     "do": [
+      "Gửi 1 đơn riêng cho mỗi tài khoản bị treo và chỉ gửi 1 đơn mỗi lần để được xem xét kịp thời.",
+      "Biết rằng gửi quá nhiều đơn cho cùng một lần treo có thể không được xử lý, và nếu lạm dụng, Google có thể ngừng xử lý một số khiếu nại của bạn 7 ngày.",
+      "Với quảng cáo bị từ chối (không phải treo tài khoản), mỗi quảng cáo được khiếu nại tối đa 3 lần, các lần nên cách nhau ít nhất 24 giờ.",
+      "Lưu ý từ 21/07/2026, quyết định chính sách cũ hơn 6 tháng không khiếu nại trực tiếp trong tài khoản được nữa mà phải liên hệ bộ phận hỗ trợ."
+     ],
+     "avoid": [
+      "Không spam biểu mẫu khiếu nại, vì việc này làm quá trình xét chậm hơn chứ không nhanh hơn, và có thể khiến khiếu nại bị tạm ngừng xử lý."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      },
+      {
+       "title": "Fix a disapproved ad or appeal a policy decision",
+       "url": "https://support.google.com/adspolicy/answer/9338593"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-treo-lien-quan",
+     "if": "Một tài khoản bị treo kéo theo cả tài khoản khác cùng MCC/cùng thẻ, vì sao?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Google Ads Help Community",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Vì Google xét cả các tài khoản có liên quan với nhau: tài khoản dùng chung thẻ, email, website hoặc giấy tờ xác minh với tài khoản bị treo cũng có thể bị treo theo. Việc cần làm trước tiên là liệt kê các tài khoản dính chung với tài khoản bị treo và tập trung khôi phục tài khoản gốc trước. Nếu bị treo chỉ vì dùng chung giấy tờ xác minh, tài khoản sẽ tự khôi phục khi tài khoản kia khiếu nại thành công.",
+     "visao": "Google không chỉ nhìn từng tài khoản riêng lẻ mà nhìn cả người hoặc doanh nghiệp đứng sau, thông qua các điểm chung như thẻ, email, website, giấy tờ xác minh. Khi một tài khoản bị kết luận vi phạm, các tài khoản có cùng điểm chung bị coi là cùng một chủ thể rủi ro, kể cả tài khoản mới tạo. Vì nguồn gốc nằm ở tài khoản gốc, gỡ được tài khoản gốc thì các tài khoản kéo theo mới có cơ sở để mở lại.",
+     "check": [
+      "Liệt kê mọi tài khoản dùng chung thẻ thanh toán, email, website hoặc giấy tờ xác minh với tài khoản bị treo; đây là danh sách tài khoản có nguy cơ bị kéo theo."
+     ],
+     "do": [
+      "Hiểu rằng Google ghi rõ tài khoản liên quan tới tài khoản bị treo có thể bị treo, và tài khoản mới tạo cũng có thể bị treo theo.",
+      "Nếu bị treo vì tài khoản khác dùng cùng giấy tờ xác minh, tập trung giúp tài khoản kia khiếu nại; khi nó thành công, tài khoản của bạn sẽ tự được khôi phục.",
+      "Trước khi khiếu nại, bảo đảm mọi tài khoản liên kết đều đã tuân thủ chính sách, tránh để một tài khoản còn vi phạm làm hỏng cả nhóm."
+     ],
+     "avoid": [
+      "Không khiếu nại tài khoản phụ trước tài khoản gốc bị treo, vì Google khuyên khôi phục tài khoản gốc trước; làm ngược thường không có kết quả."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-strike",
+     "if": "Nhận 'cảnh cáo' (strike) vì vi phạm chính sách, bao nhiêu lần thì bị treo?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Với vi phạm không nghiêm trọng, Google gửi cảnh báo trước ít nhất 7 ngày, sau đó vi phạm lặp lại sẽ nhận tối đa 3 strike (lần cảnh cáo) cho mỗi chính sách, mức phạt tăng dần tới treo tài khoản. Việc cần làm ngay là đọc email và thông báo để biết đây là cảnh báo hay strike thứ mấy và thuộc chính sách nào. Sau đó sửa hoặc gỡ toàn bộ quảng cáo vi phạm; nếu thấy bị xét nhầm thì khiếu nại strike.",
+     "visao": "Hệ thống strike là cách Google xử lý vi phạm lặp lại theo bậc thang: nhắc nhở trước, rồi phạt nặng dần nếu không sửa. Strike được đếm theo từng chính sách, nên vi phạm cùng một chính sách nhiều lần sẽ đẩy nhanh tới mức treo tài khoản. Gỡ hết quảng cáo vi phạm sau cảnh báo là cách duy nhất chặn bậc phạt tiếp theo.",
+     "check": [
+      "Đọc email và thông báo trong tài khoản để xác định đây là cảnh báo hay strike thứ mấy, và vi phạm chính sách nào; từ đó biết còn bao nhiêu bước trước khi bị treo."
+     ],
+     "do": [
+      "Nắm cơ chế: vi phạm không nghiêm trọng được cảnh báo ít nhất 7 ngày trước khi treo; vi phạm lặp lại nhận tối đa 3 strike mỗi chính sách, mức phạt tăng dần tới treo tài khoản.",
+      "Sửa hoặc gỡ toàn bộ quảng cáo vi phạm ngay sau cảnh báo, không chỉ quảng cáo bị nêu tên.",
+      "Nếu cho rằng Google xét nhầm, gửi khiếu nại strike để được xem xét lại."
+     ],
+     "avoid": [
+      "Không để quảng cáo vi phạm tiếp tục chạy sau khi đã nhận cảnh báo, vì strike tiếp theo sẽ khiến tài khoản bị tạm dừng."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "What happens if you violate our policies",
+       "url": "https://support.google.com/adspolicy/answer/7187501"
+      },
+      {
+       "title": "About enforcement procedures for repeat violations",
+       "url": "https://support.google.com/adspolicy/answer/10922738"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-truy-cap-trai-phep",
+     "if": "Tài khoản bị người lạ đăng nhập chạy quảng cáo, rồi Google tạm ngưng, giờ làm sao?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Reddit r/googleads"
+     ],
+     "tomtat": "Google tạm ngưng tài khoản khi phát hiện truy cập trái phép để chặn các khoản phí bạn không cho phép, nên đây là biện pháp bảo vệ chứ không phải phạt bạn. Việc đầu tiên là báo cáo qua biểu mẫu truy cập trái phép trong trang hỗ trợ để Google bảo mật lại tài khoản. Song song, Admin gỡ người dùng lạ, đổi mật khẩu và bật xác minh 2 bước cho mọi Gmail có quyền trước khi chạy lại.",
+     "visao": "Khi kẻ lạ chiếm được một email có quyền, họ có thể tạo chiến dịch và tiêu tiền bằng phương thức thanh toán của bạn. Google tạm ngưng tài khoản để ngăn những khoản phí đó tiếp tục phát sinh. Chỉ khi mọi lối vào trái phép đã bị đóng (người dùng lạ bị gỡ, mật khẩu đổi, xác minh 2 bước bật) thì chạy lại mới an toàn.",
+     "check": [
+      "Kiểm tra danh sách người dùng của tài khoản, lịch sử thay đổi, phương thức thanh toán và các chiến dịch; thấy người dùng, thẻ hoặc chiến dịch lạ thì xác nhận tài khoản đã bị xâm nhập.",
+      "Với quyền Admin, xem phương thức xác thực và lần đăng nhập cuối của từng người dùng để tìm tài khoản đăng nhập bất thường."
+     ],
+     "do": [
+      "Báo cáo qua biểu mẫu truy cập trái phép trong trang hỗ trợ Google Ads để Google bảo mật lại tài khoản.",
+      "Gỡ toàn bộ người dùng lạ khỏi tài khoản và bật xác minh 2 bước cho mọi Gmail đang có quyền."
+     ],
+     "avoid": [
+      "Không cho tài khoản chạy tiếp khi chưa đổi mật khẩu và chưa gỡ người dùng lạ, vì kẻ xâm nhập vẫn có thể quay lại tạo chi phí."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      },
+      {
+       "title": "About access levels in your Google Ads account",
+       "url": "https://support.google.com/google-ads/answer/9978556"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-chinh-sach",
+   "title": "Quảng cáo không được duyệt và chính sách",
+   "intro": "Quảng cáo bị từ chối, bị hạn chế, ngành y tế, tài chính, nhãn hiệu, trình bày sai lệch.",
+   "nodes": [
+    {
+     "id": "fg-tu-choi-trang-dich",
+     "if": "Quảng cáo bị từ chối 'Trang đích không hoạt động' (Destination not working) dù tôi mở web vẫn bình thường?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Reddit r/googleads",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Gần như chắc chắn là trình thu thập của Google (bot Google dùng để kiểm tra trang) không mở được trang, dù bạn mở trên máy mình vẫn bình thường. Hay gặp nhất là firewall hoặc Cloudflare chặn bot, chặn theo quốc gia, hoặc URL chuyển hướng lỗi. Sửa cho trang trả mã 200 với cả người dùng lẫn bot Google, rồi khiếu nại hoặc sửa quảng cáo để Google xét lại, thường trong 1 ngày làm việc.",
+     "visao": "Google yêu cầu trang đích hoạt động, không lỗi, và truy cập được cho cả người dùng lẫn trình thu thập của Google. Bạn mở được trang vì đang ở đúng mạng, đúng quốc gia, đúng trình duyệt; còn bot Google đến từ máy chủ khác và có thể bị tường lửa coi là truy cập lạ rồi chặn. Khi bot bị chặn, Google không xác nhận được trang hoạt động nên từ chối quảng cáo.",
+     "check": [
+      "Mở URL cuối cùng của quảng cáo trên điện thoại dùng 4G, ở chế độ ẩn danh, và từ nước khác nếu đang nhắm nước khác; nếu không mở được ở một trong các trường hợp này thì đã thấy nguyên nhân.",
+      "Kiểm tra firewall hoặc Cloudflare có đang chặn bot Google không, URL có trả mã 200 (trang mở bình thường) không, và có chuyển hướng lỗi không."
+     ],
+     "do": [
+      "Sửa để trang đích hoạt động, không lỗi, cho cả người dùng và trình thu thập của Google truy cập được, đúng yêu cầu về trang đích của Google.",
+      "Sửa xong thì khiếu nại hoặc sửa quảng cáo để Google xét lại; quảng cáo thường được xét trong 1 ngày làm việc, quảng cáo được duyệt là dấu hiệu đã ổn."
+     ],
+     "avoid": [
+      "Không cài chặn theo quốc gia hoặc chặn bot mà quên mở cho trình thu thập của Google, vì quảng cáo sẽ tiếp tục bị từ chối dù người dùng vẫn vào được trang."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Destination requirements",
+       "url": "https://support.google.com/google-ads/answer/6368661"
+      },
+      {
+       "title": "About the ad review process",
+       "url": "https://support.google.com/adspolicy/answer/1722120"
+      },
+      {
+       "title": "Fix a disapproved ad or appeal a policy decision",
+       "url": "https://support.google.com/adspolicy/answer/9338593"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-y-te",
+     "if": "Phòng khám/nha khoa/thuốc chạy Google Ads bị 'Hạn chế' hoặc từ chối vì chính sách y tế, phải làm gì?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Cần đọc đúng chính sách y tế bị nêu rồi sửa quảng cáo và trang đích cho khớp: mô tả dịch vụ, không hứa kết quả, không nhắc thuốc kê đơn nếu chưa được phép. Google hạn chế quảng cáo y tế theo quốc gia và một số loại (thuốc kê đơn, nhà thuốc online) cần chứng nhận, nên trạng thái 'Hạn chế' không có nghĩa là bị cấm hẳn. Sau khi sửa, quảng cáo phải khớp đúng giấy phép hoạt động của cơ sở.",
+     "visao": "Y tế là lĩnh vực nhạy cảm, nên Google kiểm soát chặt từ ngữ, sản phẩm và cách nhắm đối tượng để tránh quảng cáo gây hiểu nhầm hoặc khai thác tình trạng sức khoẻ của người xem. Từ như 'cam kết khỏi bệnh', 'chữa dứt điểm' hay tên thuốc kê đơn là những tín hiệu dễ khiến quảng cáo bị từ chối. Quảng cáo cá nhân hoá theo tình trạng sức khoẻ bị cấm, nên danh sách đối tượng hay tiếp thị lại (remarketing, nhắm lại người đã vào web) theo bệnh cũng không được dùng.",
+     "check": [
+      "Đọc tên chính sách cụ thể Google nêu: thuốc kê đơn, dịch vụ y tế chưa được chứng minh, hay nhắm mục tiêu cá nhân hoá theo sức khoẻ; mỗi loại có cách sửa khác nhau.",
+      "Rà từ ngữ trong quảng cáo và trang đích, tìm các cụm như 'cam kết khỏi bệnh', 'chữa dứt điểm' hoặc tên thuốc kê đơn; có thì đó là chỗ phải sửa."
+     ],
+     "do": [
+      "Hiểu rằng Google hạn chế quảng cáo y tế theo quốc gia, và một số loại như thuốc kê đơn, nhà thuốc online cần có chứng nhận mới được chạy.",
+      "Viết lại quảng cáo theo hướng mô tả dịch vụ, không hứa kết quả, và khớp đúng giấy phép hoạt động của cơ sở.",
+      "Gỡ mọi danh sách đối tượng hoặc tiếp thị lại dựng theo tình trạng sức khoẻ, vì loại nhắm mục tiêu này bị cấm trong quảng cáo cá nhân hoá."
+     ],
+     "avoid": [
+      "Không dùng trang đích 'sạch' cho Google xem và trang khác cho người dùng, vì đó là cloaking (che giấu nội dung thật với Google) và có thể khiến tài khoản bị treo vĩnh viễn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Healthcare and medicines",
+       "url": "https://support.google.com/adspolicy/answer/176031"
+      },
+      {
+       "title": "Google Ads policies",
+       "url": "https://support.google.com/adspolicy/answer/6008942"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-tu-khoa-thuong-hieu",
+     "if": "Có được đặt từ khoá là tên thương hiệu đối thủ không? Bị đối thủ khiếu nại nhãn hiệu thì sao?",
+     "hat": "gray",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Quora"
+     ],
+     "tomtat": "Được đặt tên thương hiệu đối thủ làm từ khoá, vì Google không hạn chế việc dùng nhãn hiệu làm từ khoá; điều bị hạn chế là đưa nhãn hiệu đó vào chữ trong quảng cáo. Nếu chủ nhãn hiệu khiếu nại, Google sẽ hạn chế bạn dùng tên đó trong tiêu đề, mô tả quảng cáo, và vi phạm loại này được cảnh báo ít nhất 7 ngày trước khi treo. Về hiệu quả, cộng đồng hay cảnh báo cách này CTR thấp và CPC đắt; chưa có số chính thức.",
+     "visao": "Từ khoá chỉ là tín hiệu để quảng cáo xuất hiện khi người dùng tìm, người xem không nhìn thấy nó, nên Google không coi đó là dùng nhãn hiệu. Chữ trong quảng cáo thì người xem đọc được, nên dùng tên người khác ở đó dễ gây nhầm lẫn về nguồn gốc, và chủ nhãn hiệu có quyền khiếu nại. Người đang tìm đúng tên một thương hiệu thường muốn vào chính trang của thương hiệu đó, nên quảng cáo của bên khác ít được bấm, kéo điểm chất lượng (Quality Score) xuống và đẩy giá mỗi click lên.",
+     "check": [
+      "Xem tên đối thủ chỉ nằm trong danh sách từ khoá hay đã xuất hiện trong tiêu đề hoặc mô tả quảng cáo; nằm trong chữ quảng cáo thì đó là phần có thể bị khiếu nại nhãn hiệu."
+     ],
+     "do": [
+      "(1) Người ta đặt tên thương hiệu đối thủ làm từ khoá để quảng cáo của mình hiện ra khi khách đang tìm đối thủ, hy vọng giành được một phần khách đó.",
+      "(2) Google không hạn chế dùng nhãn hiệu làm từ khoá, chỉ hạn chế chữ trong quảng cáo; đại lý chính hãng, trang thông tin được dùng nhãn hiệu nếu trang đích rõ ràng bán hoặc nói về sản phẩm đó.",
+      "(3) Khi chủ nhãn hiệu khiếu nại, Google hạn chế đối thủ trực tiếp dùng nhãn hiệu trong quảng cáo hoặc dùng gây nhầm lẫn; vi phạm nhãn hiệu không bị treo ngay mà được cảnh báo ít nhất 7 ngày trước khi treo.",
+      "(3) Hậu quả thực tế hay gặp: CTR (tỷ lệ bấm) thấp, điểm chất lượng thấp, CPC (giá mỗi click) đắt; đây là cảnh báo của cộng đồng, chưa có số chính thức.",
+      "(4) Nếu vẫn muốn tiếp cận người đang tìm đối thủ, chỉ để tên đó trong từ khoá, còn quảng cáo viết bằng tên và lợi thế của chính doanh nghiệp mình, trang đích là trang của mình."
+     ],
+     "avoid": [
+      "Không viết quảng cáo giả làm chính thương hiệu đối thủ, vì ngoài nhãn hiệu còn có thể dính chính sách trình bày sai lệch (Misrepresentation) ở dạng mạo danh.",
+      "Không kỳ vọng chạy tên đối thủ sẽ rẻ: cộng đồng hay gặp CTR thấp, điểm chất lượng thấp và CPC đắt, chưa có số chính thức."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Trademarks",
+       "url": "https://support.google.com/adspolicy/answer/6118"
+      },
+      {
+       "title": "Misrepresentation",
+       "url": "https://support.google.com/adspolicy/answer/6020955"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-trinh-bay-sai-lech",
+     "if": "Bị treo vì 'Misrepresentation' (trình bày sai lệch) dù chỉ bán hàng bình thường?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Reddit r/googleads",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Gần như chắc chắn Google thấy website hoặc quảng cáo thiếu minh bạch, ví dụ thiếu thông tin doanh nghiệp, giá không rõ, phí ẩn hoặc cam kết khó tin, dù bạn bán hàng bình thường. Trình bày sai lệch (Misrepresentation) thuộc nhóm vi phạm nghiêm trọng nên bị treo ngay, không cảnh báo trước. Việc cần làm là bổ sung đủ thông tin doanh nghiệp thật, giá và điều kiện rõ ràng trên site và quảng cáo, rồi mới khiếu nại.",
+     "visao": "Chính sách này bảo vệ người mua khỏi bị lừa, nên Google đánh giá xem một người lạ vào site có đủ căn cứ để tin bạn không: doanh nghiệp là ai, ở đâu, giá bao nhiêu, đổi trả và giao hàng thế nào. Website thiếu các thông tin này trông giống trang lừa đảo dù bạn làm ăn tử tế. Bổ sung minh bạch là cách duy nhất cho người duyệt thấy bạn không thuộc nhóm bị cấm.",
+     "check": [
+      "Mở website và kiểm tra có đủ thông tin doanh nghiệp, địa chỉ, chính sách đổi trả, chính sách giao hàng và giá rõ ràng không; thiếu mục nào thì đó là điểm cần bổ sung.",
+      "Đọc lại quảng cáo xem có giá thấp hơn thực tế, phí ẩn, cam kết khó xảy ra hoặc tiêu đề giật tít không; có thì phải sửa trước khi khiếu nại."
+     ],
+     "do": [
+      "Nắm những gì Google cấm: giá không minh bạch, cam kết không đáng tin, quảng cáo giật tít, che giấu danh tính, giả mạo, và bán thứ không giao được.",
+      "Hiểu đây là vi phạm nghiêm trọng: Google treo ngay khi phát hiện, không cảnh báo trước, nên không có thời gian sửa dần.",
+      "Sửa website cho đủ thông tin doanh nghiệp thật, giá và điều kiện rõ ràng, rồi mới gửi khiếu nại."
+     ],
+     "avoid": [
+      "Không đặt tên doanh nghiệp trên quảng cáo khác với doanh nghiệp thật, vì tên phải phản ánh đúng doanh nghiệp đang quảng cáo; lệch tên là dấu hiệu trình bày sai lệch."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Misrepresentation",
+       "url": "https://support.google.com/adspolicy/answer/6020955"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-tai-chinh",
+     "if": "Quảng cáo vay tiền, đầu tư, tiền điện tử có chạy Google Ads ở Việt Nam được không?",
+     "hat": "white",
+     "asked": [
+      "Google Ads Help Community",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Tuỳ loại sản phẩm và quốc gia nhắm: Google cho phép quảng cáo tài chính trong khuôn khổ chính sách sản phẩm tài chính, nhưng một số quốc gia yêu cầu xác minh dịch vụ tài chính và một số loại tiền điện tử cần chứng nhận. Việc đầu tiên là đọc chính sách sản phẩm tài chính và kiểm tra quốc gia mình nhắm có nằm trong danh sách phải xác minh không. Trang đích phải công bố đủ phí, lãi suất và thông tin pháp nhân.",
+     "visao": "Tài chính là lĩnh vực dễ gây thiệt hại cho người xem, nên Google đòi hỏi người quảng cáo chứng minh mình hoạt động hợp pháp và công bố rõ điều kiện. Yêu cầu khác nhau theo quốc gia vì quy định pháp luật mỗi nơi khác nhau. Sản phẩm không có giấy phép, như app vay hoặc sàn không được phép, có thể bị coi là kinh doanh không được chấp nhận chứ không chỉ là quảng cáo bị từ chối.",
+     "check": [
+      "Đọc chính sách sản phẩm và dịch vụ tài chính của Google, rồi xem quốc gia đang nhắm có yêu cầu xác minh dịch vụ tài chính không; danh sách quốc gia nằm ở trang xác minh riêng."
+     ],
+     "do": [
+      "Nếu quốc gia nhắm nằm trong danh sách, hoàn tất xác minh dịch vụ tài chính trước khi chạy.",
+      "Với tiền điện tử, kiểm tra loại sản phẩm của mình thuộc nhóm cần hay không cần chứng nhận; chỉ quảng cáo trong giới hạn chính sách cho phép.",
+      "Cập nhật trang đích công bố đủ phí, lãi suất và thông tin pháp nhân theo yêu cầu chính sách."
+     ],
+     "avoid": [
+      "Không chạy quảng cáo cho app vay không có giấy phép hoặc sàn không được phép, vì có thể bị coi là hoạt động kinh doanh không được chấp nhận."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Financial products and services",
+       "url": "https://support.google.com/adspolicy/answer/2464998"
+      },
+      {
+       "title": "Misrepresentation",
+       "url": "https://support.google.com/adspolicy/answer/6020955"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-khong-tieu",
+   "title": "Chiến dịch không tiêu tiền, ít hiển thị",
+   "intro": "Chiến dịch 'Đủ điều kiện' nhưng 0 hiển thị, chi không hết ngân sách, từ khoá lượng tìm kiếm thấp.",
+   "nodes": [
+    {
+     "id": "fg-du-dieu-kien-0-hien-thi",
+     "if": "Chiến dịch báo 'Đủ điều kiện' (Eligible) cả ngày mà 0 hiển thị, 0 đồng chi, tại sao?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/googleads",
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "'Đủ điều kiện' (Eligible) chỉ có nghĩa là quảng cáo được phép chạy, chưa chắc có phiên đấu giá nào để thắng. Nguyên nhân hay gặp là từ khoá có lượng tìm kiếm thấp, giá thầu hoặc CPA mục tiêu (chi phí mục tiêu cho mỗi chuyển đổi) đặt quá thấp, hoặc cài đặt lịch, vị trí, từ khoá phủ định đang chặn. Việc đầu tiên là mở công cụ Xem trước và chẩn đoán quảng cáo để xem Google báo lý do gì.",
+     "visao": "Quảng cáo chỉ hiện khi có người tìm đúng từ khoá, trong đúng giờ, đúng nơi bạn cài, và bạn thắng phiên đấu giá. Từ khoá 'Lượng tìm kiếm thấp' không kích hoạt quảng cáo tới khi có đủ lượt tìm, còn giá thầu quá thấp so với đối thủ thì Google gần như không chi. Với Smart Bidding (đặt giá thầu tự động theo chuyển đổi), chiến dịch mới cần thời gian học, và Google nói giai đoạn học liên quan tới số chuyển đổi và chu kỳ chuyển đổi.",
+     "check": [
+      "Mở công cụ Xem trước và chẩn đoán quảng cáo (Ad preview and diagnosis) để Google chỉ ra lý do quảng cáo không hiển thị cho một lượt tìm cụ thể.",
+      "Kiểm tra lịch chạy, vị trí, ngôn ngữ, từ khoá phủ định ở mọi cấp và trạng thái từng từ khoá; một cài đặt sai là đủ chặn toàn bộ hiển thị.",
+      "So giá thầu hoặc CPA mục tiêu đang đặt với CPC thực tế của ngành; nếu thấp hơn nhiều thì gần như chắc đây là lý do không chi."
+     ],
+     "do": [
+      "Với từ khoá trạng thái 'Lượng tìm kiếm thấp', hiểu rằng nó sẽ không kích hoạt quảng cáo tới khi có đủ lượng tìm; cần bổ sung từ khoá có người tìm thật.",
+      "Nếu CPA mục tiêu hoặc giá thầu quá thấp so với mặt bằng đấu giá, nâng lên mức sát thực tế để Google có thể tham gia đấu giá và chi tiền.",
+      "Với chiến dịch Smart Bidding mới, cho chiến dịch thời gian học; Google nói giai đoạn học thường liên quan tới số chuyển đổi và chu kỳ chuyển đổi."
+     ],
+     "avoid": [
+      "Không sửa đi sửa lại chiến dịch mỗi vài giờ, vì mỗi thay đổi lớn làm chiến lược giá thầu phải học lại từ đầu và càng lâu ổn định."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About the Ad preview and diagnosis tool",
+       "url": "https://support.google.com/google-ads/answer/148778"
+      },
+      {
+       "title": "Low search volume: Definition",
+       "url": "https://support.google.com/google-ads/answer/2616014"
+      },
+      {
+       "title": "About keyword status",
+       "url": "https://support.google.com/google-ads/answer/2453978"
+      },
+      {
+       "title": "About Smart Bidding learning",
+       "url": "https://support.google.com/google-ads/answer/13020501"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-chi-khong-het",
+     "if": "Ngân sách 500 nghìn/ngày mà chỉ tiêu 100 nghìn, làm sao cho tiêu hết?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Chi không hết thường không phải do thiếu ngân sách mà do quảng cáo thua đấu giá hoặc thị trường nhỏ, ít người tìm. Việc đầu tiên là xem tỷ lệ hiển thị bị mất do thứ hạng và do ngân sách: mất do thứ hạng thì cần tăng giá thầu hoặc chất lượng quảng cáo. Nếu lượng tìm thật sự ít thì mở rộng từ khoá cùng ý định, khu vực hoặc giờ chạy, và chấp nhận thị trường nhỏ thì chi thấp.",
+     "visao": "Google chỉ chi tiền khi có người tìm và quảng cáo của bạn thắng phiên đấu giá. Thứ hạng quảng cáo (Ad Rank) phụ thuộc giá thầu và chất lượng, nên khi thua về thứ hạng thì nâng ngân sách không giúp gì, giống như có nhiều tiền hơn nhưng vẫn trả giá thấp hơn người khác. Nếu số người tìm trong khu vực vốn ít thì dù thắng hết vẫn không tiêu hết ngân sách.",
+     "check": [
+      "Xem chỉ số tỷ lệ hiển thị bị mất (impression share lost) do thứ hạng và do ngân sách; mất chủ yếu do thứ hạng thì vấn đề là giá thầu hoặc chất lượng, không phải ngân sách.",
+      "Đếm lượng tìm kiếm thật của bộ từ khoá ở đúng khu vực đang nhắm; nếu tổng lượt tìm thấp thì thị trường nhỏ là lý do chính."
+     ],
+     "do": [
+      "Nếu mất hiển thị do thứ hạng, tăng giá thầu hoặc cải thiện chất lượng quảng cáo thay vì tăng ngân sách.",
+      "Nếu thị trường thật sự nhỏ, mở rộng từ khoá cùng ý định, nới loại đối sánh, nới khu vực hoặc giờ chạy.",
+      "Chấp nhận rằng thị trường nhỏ thì chi thấp; cố ép chi bằng từ khoá lạc đề chỉ làm tăng click rác."
+     ],
+     "avoid": [
+      "Không bật đối sánh rộng (broad match) cho toàn bộ từ khoá mà không thêm từ khoá phủ định, vì tiền sẽ bị tiêu hết vào các lượt tìm không liên quan."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About impression share",
+       "url": "https://support.google.com/google-ads/answer/2497703"
+      },
+      {
+       "title": "Ad Rank: Definition",
+       "url": "https://support.google.com/google-ads/answer/1752122"
+      },
+      {
+       "title": "About keyword matching options",
+       "url": "https://support.google.com/google-ads/answer/7478529"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-dot-ngot-tut-hien-thi",
+     "if": "Chiến dịch đang chạy tốt tự nhiên tụt hiển thị một nửa, không ai sửa gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Không ai sửa gì không có nghĩa là không có gì thay đổi: đối thủ mới vào đấu giá, mùa vụ giảm, quảng cáo bị hạn chế mới hoặc thẻ thanh toán gặp lỗi đều có thể làm tụt hiển thị. Việc đầu tiên là xem lịch sử thay đổi, trạng thái quảng cáo, thẻ thanh toán, rồi mở Thông tin chi tiết đấu giá. Mục Giải thích (Explanations) trong Google Ads cũng giúp chỉ ra lý do hiệu suất thay đổi.",
+     "visao": "Kết quả quảng cáo phụ thuộc cả những gì bên ngoài tài khoản bạn: đối thủ trả giá cao hơn sẽ lấy bớt phần hiển thị dù bạn giữ nguyên mọi thứ. Thông tin chi tiết đấu giá (Auction insights) cho thấy ai đang cạnh tranh cùng phiên với bạn và họ xuất hiện thường xuyên tới đâu. Vì vậy dữ liệu đấu giá và lượng tìm kiếm là nơi cần xem trước khi kết luận.",
+     "check": [
+      "Xem lịch sử thay đổi của tài khoản, trạng thái quảng cáo (có bị hạn chế mới không) và thẻ thanh toán; một quảng cáo bị hạn chế mới hoặc thẻ lỗi có thể giải thích ngay việc tụt.",
+      "Mở Thông tin chi tiết đấu giá để xem có đối thủ mới vào không, và kiểm tra mùa vụ có làm lượng tìm giảm không."
+     ],
+     "do": [
+      "Trong Thông tin chi tiết đấu giá, xem tỷ lệ chồng chéo và tỷ lệ vị trí trên của đối thủ; đối thủ mới tăng giá thầu sẽ làm tỷ lệ hiển thị của bạn giảm.",
+      "Dùng mục Giải thích (Explanations) trong Google Ads để xem Google chỉ ra lý do nào khiến hiệu suất thay đổi."
+     ],
+     "avoid": [
+      "Không vội kết luận 'Google bóp' khi chưa xem dữ liệu đấu giá và lượng tìm kiếm, vì sẽ sửa nhầm chỗ và bỏ qua nguyên nhân thật."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Use auction insights to compare performance",
+       "url": "https://support.google.com/google-ads/answer/2579754"
+      },
+      {
+       "title": "About impression share",
+       "url": "https://support.google.com/google-ads/answer/2497703"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-dia-ly-sai",
+     "if": "Nhắm Hà Nội mà vẫn có click từ tỉnh khác, nước ngoài?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/googleads",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Rất có thể chiến dịch đang dùng tuỳ chọn vị trí mặc định 'Hiện diện hoặc quan tâm', cho phép người ở ngoài Hà Nội nhưng quan tâm tới Hà Nội vẫn thấy quảng cáo. Việc cần làm là xem báo cáo vị trí người dùng thực tế, rồi đổi sang 'Hiện diện' nếu chỉ muốn người đang ở Hà Nội. Đồng thời loại trừ các quốc gia, tỉnh không phục vụ.",
+     "visao": "Google phân biệt người đang ở một nơi với người quan tâm tới nơi đó, ví dụ người ở tỉnh khác tìm 'phòng khám Hà Nội'. Tuỳ chọn mặc định gộp cả hai nhóm, nên click từ ngoài khu vực là đúng theo cài đặt chứ không phải lỗi. Chọn 'Hiện diện' thu hẹp về những người thật sự đang ở khu vực bạn nhắm.",
+     "check": [
+      "Mở báo cáo Vị trí người dùng (Where your users were) để xem click thực tế đến từ đâu, rồi đối chiếu với tuỳ chọn vị trí đang dùng trong cài đặt chiến dịch."
+     ],
+     "do": [
+      "Nếu chỉ muốn người đang ở khu vực, đổi tuỳ chọn vị trí từ mặc định 'Hiện diện hoặc quan tâm' sang 'Hiện diện'.",
+      "Thêm các quốc gia, tỉnh không phục vụ vào danh sách loại trừ vị trí."
+     ],
+     "avoid": [
+      "Không chỉ nhìn cài đặt chiến dịch mà bỏ qua báo cáo vị trí thực tế, vì cài đặt đúng chữ nhưng tuỳ chọn mặc định vẫn cho người ngoài khu vực thấy quảng cáo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Target ads to geographic locations",
+       "url": "https://support.google.com/google-ads/answer/1722043"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-cpc",
+   "title": "CPC, giá thầu và điểm chất lượng",
+   "intro": "CPC cao, chọn chiến lược giá thầu, điểm chất lượng thấp.",
+   "nodes": [
+    {
+     "id": "fg-cpc-cao",
+     "if": "CPC ngành tôi quá cao, đối thủ trả bao nhiêu mà tôi luôn đứng dưới?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Quora"
+     ],
+     "tomtat": "Bạn không xem được đối thủ trả bao nhiêu, nhưng có thể xem họ thắng bạn thường xuyên tới đâu trong Thông tin chi tiết đấu giá (Auction insights). Đứng dưới thường không chỉ do giá thầu thấp, vì thứ hạng quảng cáo còn phụ thuộc chất lượng quảng cáo và trang đích; chất lượng cao giúp trả ít hơn cho cùng vị trí. Việc nên làm trước là xem điểm chất lượng của các từ khoá đắt nhất, tách nhóm theo ý định và bổ sung từ khoá dài ít cạnh tranh.",
+     "visao": "Thứ hạng quảng cáo (Ad Rank) được tính từ giá thầu, chất lượng quảng cáo và trang đích, ngưỡng thứ hạng, ngữ cảnh tìm kiếm và tác động của asset (phần mở rộng như số điện thoại, đường dẫn phụ). Vì không chỉ có tiền quyết định, quảng cáo liên quan hơn có thể đứng trên quảng cáo trả giá cao hơn. Từ khoá dài, ý định rõ thường ít người đấu giá hơn từ khoá chung, nên giá mỗi click mềm hơn.",
+     "check": [
+      "Mở Thông tin chi tiết đấu giá và xem tỷ lệ hiển thị, tỷ lệ vượt trên và tỷ lệ vị trí trên của đối thủ; đối thủ có tỷ lệ vượt trên cao nghĩa là họ thường xuyên đứng trên bạn.",
+      "Xem điểm chất lượng (Quality Score, điểm 1-10 Google chấm cho từ khoá) và 3 thành phần của nó ở các từ khoá đắt nhất; thành phần nào 'Dưới trung bình' là chỗ đang làm bạn phải trả đắt."
+     ],
+     "do": [
+      "Hiểu rằng thứ hạng dựa trên giá thầu, chất lượng quảng cáo và trang đích, ngưỡng, ngữ cảnh tìm kiếm và tác động của asset, nên nâng chất lượng giúp trả ít hơn cho cùng vị trí.",
+      "Tách nhóm quảng cáo theo ý định tìm kiếm, viết tiêu đề chứa đúng cụm từ người dùng gõ, và làm trang đích trả lời đúng câu hỏi đó.",
+      "Thêm từ khoá dài, có ý định rõ, vì loại này thường ít cạnh tranh hơn từ khoá chung."
+     ],
+     "avoid": [
+      "Không đua giá thầu với từ khoá chung khi chưa có dữ liệu chuyển đổi, vì dễ tiêu nhiều tiền mà không biết click nào mang lại khách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Ad Rank: Definition",
+       "url": "https://support.google.com/google-ads/answer/1752122"
+      },
+      {
+       "title": "Use auction insights to compare performance",
+       "url": "https://support.google.com/google-ads/answer/2579754"
+      },
+      {
+       "title": "About Quality Score for Search campaigns",
+       "url": "https://support.google.com/google-ads/answer/6167118"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-qs-thap",
+     "if": "Điểm chất lượng 3/10, sửa thế nào? Điểm chất lượng có ảnh hưởng giá không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Điểm chất lượng (Quality Score) 3/10 là tín hiệu quảng cáo hoặc trang đích chưa khớp người tìm, và cần sửa theo thành phần đang yếu. Google nói điểm này là công cụ chẩn đoán, không phải đầu vào trực tiếp của đấu giá, nhưng các thành phần của nó phản ánh chất lượng ảnh hưởng tới thứ hạng và giá. Việc đầu tiên là xem 3 thành phần (CTR dự kiến, mức độ liên quan quảng cáo, trải nghiệm trang đích) để biết sửa chỗ nào.",
+     "visao": "Điểm chất lượng giống phiếu điểm tổng kết: bản thân nó không được dùng để xếp hạng, nhưng các môn tạo nên nó (khả năng được bấm, độ khớp của quảng cáo, chất lượng trang đích) chính là thứ Google đánh giá trong đấu giá. Vì vậy sửa đúng thành phần yếu mới cải thiện hiệu quả thật. Mỗi thành phần có cách sửa riêng, nên chẩn đoán đúng trước khi sửa giúp không tốn công.",
+     "check": [
+      "Xem 3 thành phần của điểm chất lượng: CTR dự kiến (khả năng được bấm), mức độ liên quan quảng cáo, trải nghiệm trang đích; mỗi thành phần chấm Dưới trung bình/Trung bình/Trên trung bình, mục 'Dưới trung bình' là chỗ cần sửa trước."
+     ],
+     "do": [
+      "Nếu mức độ liên quan quảng cáo thấp, đưa từ khoá vào tiêu đề quảng cáo và tách nhóm quảng cáo theo chủ đề hẹp hơn.",
+      "Nếu CTR dự kiến thấp, viết tiêu đề cụ thể hơn và thêm asset (phần mở rộng quảng cáo).",
+      "Nếu trải nghiệm trang đích thấp, tăng tốc độ tải trang và làm nội dung khớp ý định người tìm.",
+      "Nhớ rằng Google gọi điểm chất lượng là công cụ chẩn đoán, không phải đầu vào trực tiếp của đấu giá; mục tiêu là sửa các thành phần chứ không phải làm đẹp con số."
+     ],
+     "avoid": [
+      "Không xoá rồi tạo lại từ khoá để 'reset' điểm, vì không có nguồn nào cho thấy cách này hiệu quả, và bạn mất lịch sử dữ liệu của từ khoá."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About Quality Score for Search campaigns",
+       "url": "https://support.google.com/google-ads/answer/6167118"
+      },
+      {
+       "title": "5 ways to use Quality Score to improve your performance",
+       "url": "https://support.google.com/google-ads/answer/6167130"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-chon-gia-thau",
+     "if": "Mới chạy nên chọn Tối đa hoá lượt click, Tối đa hoá chuyển đổi hay CPC thủ công?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Tuỳ vào việc bạn đã đo chuyển đổi đúng và có đủ chuyển đổi chưa. Nếu đo lường đã đúng và mục tiêu là chuyển đổi, Google khuyên dùng Tối đa hoá chuyển đổi hoặc CPA mục tiêu; nếu chưa có chuyển đổi đo được thì Smart Bidding không có tín hiệu để học, và cộng đồng hay bắt đầu bằng Tối đa hoá lượt click có trần CPC (chưa có số chính thức). Việc đầu tiên là kiểm tra đo lường chuyển đổi và đếm số chuyển đổi mỗi tháng.",
+     "visao": "Smart Bidding (đặt giá thầu tự động) học từ dữ liệu chuyển đổi để biết lượt tìm nào đáng trả giá cao, giống nhân viên mới học từ các đơn hàng đã chốt. Không có chuyển đổi thì không có gì để học, nên máy chỉ đoán. CPA mục tiêu (chi phí mục tiêu cho mỗi chuyển đổi) đặt quá thấp so với thực tế sẽ khiến hệ thống thấy hầu như không phiên đấu giá nào đạt mục tiêu và gần như không chi.",
+     "check": [
+      "Kiểm tra chuyển đổi đã được đo đúng chưa và mỗi tháng có bao nhiêu chuyển đổi; câu trả lời quyết định nên dùng chiến lược giá thầu nào."
+     ],
+     "do": [
+      "Chọn chiến lược theo mục tiêu như Google khuyên: mục tiêu chuyển đổi thì dùng Tối đa hoá chuyển đổi hoặc CPA mục tiêu, khi đo lường đã đúng.",
+      "Nếu chưa có chuyển đổi đo được, nhớ rằng Smart Bidding không có tín hiệu để học; cộng đồng hay bắt đầu bằng Tối đa hoá lượt click có trần CPC, chưa có số chính thức.",
+      "Khi dùng CPA mục tiêu, đặt mức gần CPA thực tế gần đây, không đặt quá thấp khiến chiến dịch không chi."
+     ],
+     "avoid": [
+      "Không đổi chiến lược giá thầu nhiều lần trong tuần, vì mỗi lần đổi là chiến lược phải học lại và hiệu quả khó ổn định."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Pick the right bid strategy",
+       "url": "https://support.google.com/google-ads/answer/6167148"
+      },
+      {
+       "title": "About Target CPA bidding",
+       "url": "https://support.google.com/google-ads/answer/6268632"
+      },
+      {
+       "title": "About Maximize conversions bidding",
+       "url": "https://support.google.com/google-ads/answer/7381968"
+      },
+      {
+       "title": "About Smart Bidding learning",
+       "url": "https://support.google.com/google-ads/answer/13020501"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-chuyen-doi",
+   "title": "Có click nhưng không ra chuyển đổi, CPA cao",
+   "intro": "Click nhiều mà không ra đơn/lead, CPA tăng, lead kém chất lượng.",
+   "nodes": [
+    {
+     "id": "fg-click-khong-lead",
+     "if": "Chạy 3 triệu, 200 click mà không có cuộc gọi hay form nào, vấn đề ở đâu?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/googleads"
+     ],
+     "tomtat": "Vấn đề thường nằm ở một trong ba chỗ: người bấm không phải khách thật (cụm từ tìm kiếm lạc đề), trang đích không thuyết phục hoặc tải chậm trên điện thoại, hoặc chuyển đổi có xảy ra nhưng không được ghi nhận. Việc đầu tiên là mở báo cáo cụm từ tìm kiếm và tự bấm thử form, nút gọi trên điện thoại. Chưa chắc đo lường đúng thì chưa tăng ngân sách.",
+     "visao": "Một click chỉ thành lead khi đúng người, gặp đúng trang và hành động đó được đo lại. Từ khoá có thể khớp với những lượt tìm khác hẳn ý bạn, nên 200 click có thể phần lớn là người không có nhu cầu. Nếu thẻ chuyển đổi (đoạn mã ghi nhận form gửi, cuộc gọi) không chạy, tài khoản sẽ báo 0 dù khách vẫn liên hệ, và Smart Bidding cũng học sai theo.",
+     "check": [
+      "Mở báo cáo cụm từ tìm kiếm (Search terms) để xem người dùng thật sự gõ gì trước khi bấm; thấy nhiều cụm lạc đề thì click đang đổ vào sai người.",
+      "Tự bấm thử form và nút gọi trên điện thoại, xem chúng có hoạt động và có ghi nhận chuyển đổi trong tài khoản không; không ghi nhận thì vấn đề là đo lường.",
+      "So tốc độ tải trang trên di động và nội dung phần đầu trang với lời hứa trong quảng cáo; trang chậm hoặc nói khác quảng cáo thì người dùng rời đi."
+     ],
+     "do": [
+      "Lọc các cụm từ không liên quan trong báo cáo cụm từ tìm kiếm và thêm chúng làm từ khoá phủ định; Google cho xem phần lớn cụm từ tìm kiếm có lượng đủ lớn.",
+      "Kiểm tra thẻ chuyển đổi bắn đúng bằng Tag Assistant và trạng thái của hành động chuyển đổi trong tài khoản.",
+      "Đưa giá, địa chỉ và nút gọi lên ngay màn hình đầu của trang đích; đạt ngưỡng 'tốt' của Core Web Vitals (bộ chỉ số tốc độ và độ ổn định trang của Google) giúp trải nghiệm trên di động tốt hơn."
+     ],
+     "avoid": [
+      "Không tăng ngân sách khi chưa biết chuyển đổi có được đo đúng không, vì có thể chỉ đang đổ thêm tiền vào click rác hoặc vào một trang không ghi nhận lead."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About the search terms report",
+       "url": "https://support.google.com/google-ads/answer/2472708"
+      },
+      {
+       "title": "About negative keywords",
+       "url": "https://support.google.com/google-ads/answer/2453972"
+      },
+      {
+       "title": "Set up your web conversions",
+       "url": "https://support.google.com/google-ads/answer/6095821"
+      },
+      {
+       "title": "Web Vitals (web.dev)",
+       "url": "https://web.dev/articles/vitals"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-cpa-tang",
+     "if": "CPA tháng này tăng gấp đôi mà không đổi gì, làm sao tìm nguyên nhân?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "CPA (chi phí mỗi chuyển đổi) tăng gấp đôi luôn do một trong ba thứ: CPC tăng, tỷ lệ chuyển đổi giảm, hoặc chuyển đổi bị đo hụt. Việc đầu tiên là chia số liệu theo ngày để xem cái nào thay đổi và từ ngày nào. Nếu chuyển đổi tụt đột ngột cùng lúc ở nhiều chiến dịch, hãy kiểm tra đo lường trước khi sửa chiến dịch.",
+     "visao": "CPA bằng chi phí chia số chuyển đổi, nên nó tăng khi mỗi click đắt hơn, khi ít click thành khách hơn, hoặc khi chuyển đổi thật vẫn có nhưng không được đếm. Ba nguyên nhân này cần ba cách sửa khác nhau, nên tách đúng nguyên nhân trước là quan trọng nhất. Khi nhiều chiến dịch cùng tụt một lúc, khả năng cao là thứ dùng chung (thẻ đo, form) bị hỏng chứ không phải từng chiến dịch cùng xấu đi.",
+     "check": [
+      "Chia số liệu theo ngày để xem CPA tăng do CPC tăng, tỷ lệ chuyển đổi giảm hay chuyển đổi bị đo hụt, và xác định ngày bắt đầu thay đổi.",
+      "Xem lịch sử thay đổi, đối thủ trong Thông tin chi tiết đấu giá và yếu tố mùa vụ quanh ngày đó để tìm nguyên nhân bên ngoài."
+     ],
+     "do": [
+      "Nếu chuyển đổi tụt đột ngột cùng lúc ở nhiều chiến dịch, kiểm tra đo lường trước (thẻ bị mất, form bị đổi) rồi mới sửa chiến dịch.",
+      "Nếu CPC tăng, xem đối thủ trong Thông tin chi tiết đấu giá và điểm chất lượng của từ khoá.",
+      "Nếu tỷ lệ chuyển đổi giảm, xem lại trang đích và các cụm từ tìm kiếm mới xuất hiện trong báo cáo cụm từ tìm kiếm."
+     ],
+     "avoid": [
+      "Không hạ CPA mục tiêu đột ngột để 'ép' chi phí xuống lại, vì việc này có thể làm chiến dịch gần như ngừng chi."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Use auction insights to compare performance",
+       "url": "https://support.google.com/google-ads/answer/2579754"
+      },
+      {
+       "title": "About Target CPA bidding",
+       "url": "https://support.google.com/google-ads/answer/6268632"
+      },
+      {
+       "title": "About the search terms report",
+       "url": "https://support.google.com/google-ads/answer/2472708"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-lead-rac",
+     "if": "Form về nhiều nhưng toàn số ảo, lead rác, xử lý sao?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC",
+      "Reddit r/googleads"
+     ],
+     "tomtat": "Nguyên nhân gốc thường là chiến dịch đang được tối ưu theo lượt gửi form thô, nên máy tìm thêm đúng kiểu người gửi form, kể cả form rác. Việc cần làm là tách lead theo nguồn để thấy rác đến từ đâu, thêm chống spam cho form, và nhập lại kết quả lead thật vào Google Ads để Google tối ưu theo lead thật. Khi đã có chuyển đổi lead chất lượng làm chính, chuyển hành động 'bấm form' sang phụ.",
+     "visao": "Smart Bidding (đặt giá thầu tự động) học từ thứ bạn bảo nó là chuyển đổi chính. Nếu mọi lượt gửi form đều được tính là thành công, máy không phân biệt được khách thật với số ảo và sẽ tìm thêm người giống những người đã gửi form. Nhập chuyển đổi ngoại tuyến (offline conversion import, đưa kết quả chốt khách từ CRM ngược vào Google Ads) hoặc chuyển đổi nâng cao cho lead (enhanced conversions for leads) cho máy biết lead nào thật sự có giá trị.",
+     "check": [
+      "Tách lead theo từ khoá hoặc cụm từ tìm kiếm, theo giờ và theo vị trí hiển thị (Search, đối tác tìm kiếm, kênh hiển thị của Performance Max); nhóm nào tập trung nhiều lead rác thì đó là nguồn cần xử lý."
+     ],
+     "do": [
+      "Nhập lại kết quả lead thật (đủ chất lượng, chốt được) bằng nhập chuyển đổi ngoại tuyến hoặc chuyển đổi nâng cao cho lead, để Google tối ưu theo lead thật thay vì lượt gửi form.",
+      "Thêm lớp chống spam cho form (trường ẩn, kiểm tra số điện thoại) trước khi lượt gửi form được tính là chuyển đổi.",
+      "Khi đã có chuyển đổi lead đủ chất lượng làm chuyển đổi chính, chuyển hành động 'bấm form' sang chuyển đổi phụ (secondary, chỉ để theo dõi, không dùng cho đặt giá thầu)."
+     ],
+     "avoid": [
+      "Không để Smart Bidding tối ưu theo lượt gửi form thô, vì máy sẽ đi tìm thêm người gửi form rác và lead rác càng nhiều."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About offline conversion imports",
+       "url": "https://support.google.com/google-ads/answer/2998031"
+      },
+      {
+       "title": "About enhanced conversions for leads",
+       "url": "https://support.google.com/google-ads/answer/15713840"
+      },
+      {
+       "title": "About primary and secondary conversion actions",
+       "url": "https://support.google.com/google-ads/answer/11461796"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-search-partner",
+     "if": "Có nên tắt Đối tác tìm kiếm (Search partners) và Mạng hiển thị trong chiến dịch Search?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Không nên tắt hay giữ theo cảm tính; hãy phân đoạn báo cáo theo Mạng để so CPA của Google Tìm kiếm, Đối tác tìm kiếm (Search partners, các trang khác hiển thị quảng cáo tìm kiếm của Google) và Mạng hiển thị, rồi tắt mạng có CPA cao rõ rệt. Với chiến dịch Search mới, cộng đồng hay tắt Mạng hiển thị để tách ngân sách, nhưng đây là kinh nghiệm, chưa có số chính thức.",
+     "visao": "Mỗi mạng mang lại người xem có hành vi khác nhau, nên cùng một chiến dịch có thể có CPA rất khác nhau giữa các mạng. Phân đoạn theo Mạng cho bạn thấy riêng từng phần thay vì một con số trung bình che lấp mạng kém. Lý do cộng đồng hay tách Mạng hiển thị khỏi chiến dịch Search là để ngân sách tìm kiếm không bị chia sang chỗ khác; Google không công bố khuyến nghị cụ thể cho việc này.",
+     "check": [
+      "Trong bảng báo cáo chiến dịch, dùng phân đoạn Mạng (có tách đối tác tìm kiếm) để so CPA của từng mạng; mạng nào CPA cao rõ rệt so với Google Tìm kiếm là ứng viên để tắt."
+     ],
+     "do": [
+      "Dùng phân đoạn Mạng (có đối tác tìm kiếm) trong bảng báo cáo để so hiệu quả, rồi tắt mạng có CPA cao rõ rệt.",
+      "Với chiến dịch Search mới, cộng đồng hay tắt Mạng hiển thị để tách ngân sách; đây là kinh nghiệm thực tế, chưa có nguồn chính thức và chưa có số chính thức."
+     ],
+     "avoid": [
+      "Không tắt hoặc bật mạng theo cảm tính khi chưa đủ dữ liệu của từng mạng, vì có thể cắt nhầm phần đang mang lại chuyển đổi."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [
+      {
+       "title": "Use segments in your tables",
+       "url": "https://support.google.com/google-ads/answer/2454072"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-do-luong",
+   "title": "Đo lường, tracking, GA4",
+   "intro": "Lệch số giữa Google Ads và GA4, cài chuyển đổi, đo cuộc gọi, Consent Mode.",
+   "nodes": [
+    {
+     "id": "fg-lech-ga4",
+     "if": "Google Ads báo 20 chuyển đổi mà GA4 chỉ có 12, cái nào đúng?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Không bên nào sai hẳn, lệch giữa Google Ads và GA4 là chuyện bình thường vì hai bên đếm theo quy tắc khác nhau. Việc cần làm trước tiên là kiểm xem hai bên có đang đếm cùng một hành động, cùng cách phân bổ, cùng múi giờ và cùng khoảng thời gian tính không. Sau đó chỉ để một nguồn làm chuyển đổi chính cho mỗi hành động để Google tối ưu theo số sạch, không bị đếm đôi.",
+     "visao": "Google Ads ghi chuyển đổi vào ngày người dùng bấm quảng cáo, còn GA4 ghi vào ngày sự kiện thực sự xảy ra, nên cùng một khách có thể nằm ở hai ngày khác nhau trên hai báo cáo. Hai bên còn có thể dùng mô hình phân bổ (attribution, cách chia công cho các lần chạm quảng cáo) khác nhau, nên tổng không bao giờ khớp tuyệt đối. Vấn đề thật chỉ xuất hiện khi cùng một hành động bị đặt làm chuyển đổi chính ở cả hai nguồn: Smart Bidding (đặt giá thầu tự động) sẽ học theo con số bị nhân đôi.",
+     "check": [
+      "Đặt cạnh nhau định nghĩa chuyển đổi ở hai bên và xem có cùng một hành động (ví dụ cùng là gửi form) không; nếu khác hành động thì việc lệch số là đương nhiên.",
+      "So mô hình phân bổ, múi giờ và cửa sổ chuyển đổi (số ngày sau lần bấm còn được tính) của hai bên; chỉ cần một thông số khác là hai con số đã lệch nhau.",
+      "Mở danh sách hành động chuyển đổi trong Google Ads và xem có đang nhập chuyển đổi GA4 lẫn thẻ Google Ads cùng làm chuyển đổi chính cho một hành động không; nếu có thì đang bị đếm đôi."
+     ],
+     "do": [
+      "Chấp nhận mức lệch do khác ngày ghi nhận: Google Ads tính theo ngày click, GA4 tính theo ngày xảy ra sự kiện, cộng thêm khác biệt mô hình phân bổ.",
+      "Với mỗi hành động, chỉ để một nguồn làm chuyển đổi chính (primary), nguồn kia đặt làm chuyển đổi phụ (secondary) để vẫn xem được số mà không ảnh hưởng tối ưu.",
+      "Bật tự động gắn thẻ (auto-tagging) để GA4 nhận được mã gclid (mã định danh mỗi lần bấm quảng cáo), nhờ đó hai bên khớp dữ liệu tốt hơn."
+     ],
+     "avoid": [
+      "Không đặt cả sự kiện 'gửi form' của GA4 và thẻ chuyển đổi Google Ads cùng làm chuyển đổi chính, vì Smart Bidding sẽ tối ưu theo số đếm đôi và báo cáo trông đẹp hơn thực tế."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Measure web key events from Google Analytics properties",
+       "url": "https://support.google.com/google-ads/answer/9520128"
+      },
+      {
+       "title": "About primary and secondary conversion actions",
+       "url": "https://support.google.com/google-ads/answer/11461796"
+      },
+      {
+       "title": "About auto-tagging",
+       "url": "https://support.google.com/google-ads/answer/3095550"
+      },
+      {
+       "title": "About data-driven attribution",
+       "url": "https://support.google.com/google-ads/answer/6394265"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-do-cuoc-goi",
+     "if": "Khách chủ yếu gọi điện, làm sao đo cuộc gọi từ Google Ads?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Đo được, Google Ads có sẵn cách đo cuộc gọi đến từ quảng cáo và từ website. Việc cần làm trước tiên là gắn asset cuộc gọi (phần số điện thoại hiển thị kèm quảng cáo) và đo cả cuộc gọi tới số trên web. Sau đó đặt thời lượng cuộc gọi tối thiểu để chỉ những cuộc gọi đủ dài mới được tính là chuyển đổi, nhờ vậy số liệu sát với khách thật.",
+     "visao": "Khi khách gọi thay vì điền form, không có trang cảm ơn nào để thẻ đo ghi nhận, nên phải đo bằng cơ chế riêng cho cuộc gọi. Google Ads theo dõi cuộc gọi từ quảng cáo, cuộc gọi tới số hiện trên web và lượt bấm vào số trên web di động. Một lượt bấm số chưa chắc là một cuộc gọi thật, và cuộc gọi vài giây thường là gọi nhầm, nên ngưỡng thời lượng giúp lọc bớt nhiễu.",
+     "check": [
+      "Kiểm tra chiến dịch đã có asset cuộc gọi (hoặc asset vị trí) với số điện thoại đã xác minh chưa; chưa có thì cuộc gọi bấm thẳng từ quảng cáo sẽ không được đo.",
+      "Vào cài đặt tài khoản xem báo cáo cuộc gọi (call reporting) đã bật chưa; đây là điều kiện để Google ghi nhận cuộc gọi.",
+      "Kiểm tra website có hiển thị số điện thoại không và quốc gia của doanh nghiệp có được hỗ trợ số chuyển tiếp của Google không; đây là điều kiện để đo cuộc gọi tới số trên web."
+     ],
+     "do": [
+      "Thiết lập đo cả ba nguồn mà Google Ads hỗ trợ: cuộc gọi từ quảng cáo (asset cuộc gọi), cuộc gọi tới số trên web, và lượt bấm vào số trên web di động.",
+      "Đặt thời lượng cuộc gọi tối thiểu để được tính là chuyển đổi, để những cuộc gọi quá ngắn không bị tính là lead và số chuyển đổi sát với cuộc gọi thật."
+     ],
+     "avoid": [
+      "Không tính mọi lượt bấm vào số điện thoại là lead, vì nhiều lượt bấm không thành cuộc gọi; làm vậy sẽ thổi phồng số lead và khiến hệ thống tối ưu sai hướng."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Measure calls from ads",
+       "url": "https://support.google.com/google-ads/answer/6095882"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-consent",
+     "if": "Có cần cài Consent Mode không? Không cài thì có mất dữ liệu?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Tuỳ người dùng của bạn ở đâu: nếu site có người dùng EU/EEA thì Google yêu cầu thu thập đồng ý, và Consent Mode (chế độ đồng ý, cách truyền trạng thái đồng ý của người dùng cho thẻ Google) là cách làm việc đó. Site chỉ nhắm Việt Nam không chịu chính sách EU này nhưng vẫn phải tuân luật dữ liệu cá nhân Việt Nam. Dù trường hợp nào, đừng chặn sạch thẻ khi chưa có đồng ý mà không có cách bù, vì sẽ mất nhiều chuyển đổi.",
+     "visao": "Consent Mode cho thẻ Google biết người dùng đã đồng ý hay từ chối, để thẻ điều chỉnh việc thu thập dữ liệu thay vì chạy như nhau với mọi người. Với người dùng EEA, chính sách đồng ý người dùng EU của Google bắt buộc phải có bước thu thập đồng ý. Nếu chỉ đơn giản tắt hết thẻ khi chưa có đồng ý mà không có mô hình bù (ước tính phần dữ liệu bị thiếu), báo cáo và Smart Bidding sẽ thiếu nhiều chuyển đổi.",
+     "check": [
+      "Kiểm tra website có người dùng EU/EEA truy cập hoặc đang dùng banner cookie không; có thì cần Consent Mode để thẻ Google nhận đúng trạng thái đồng ý."
+     ],
+     "do": [
+      "Với người dùng EEA, thu thập đồng ý theo chính sách đồng ý người dùng EU của Google và dùng Consent Mode để truyền trạng thái đồng ý đó cho thẻ Google.",
+      "Với site chỉ nhắm Việt Nam, vẫn phải tuân luật dữ liệu cá nhân Việt Nam; cách triển khai cụ thể (có banner hay không, đồng ý mặc định thế nào) cần đối chiếu với tư vấn pháp lý."
+     ],
+     "avoid": [
+      "Không chặn hết thẻ khi người dùng chưa đồng ý mà không có mô hình bù, vì sẽ mất nhiều chuyển đổi trong báo cáo và hệ thống đặt giá thầu học trên dữ liệu thiếu."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Consent mode reference",
+       "url": "https://support.google.com/google-ads/answer/13802165"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-enhanced",
+     "if": "Chuyển đổi nâng cao (Enhanced conversions) là gì, có nên bật?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads"
+     ],
+     "tomtat": "Chuyển đổi nâng cao (Enhanced conversions) là cách gửi thêm dữ liệu khách đã được băm (mã hoá một chiều) như email, số điện thoại để Google khớp chuyển đổi chính xác hơn; nên bật nếu form của bạn có thu các thông tin này. Việc cần làm trước tiên là kiểm form có thu email hoặc số điện thoại không và chính sách bảo mật đã nêu việc chia sẻ dữ liệu chưa. Với ngành lead, phiên bản cho lead còn giúp nhập lại kết quả lead ngoại tuyến mà không cần lưu gclid.",
+     "visao": "Thẻ đo thông thường dựa vào cookie và mã bấm quảng cáo, nên khi cookie bị chặn hoặc khách đổi thiết bị thì chuyển đổi dễ bị mất. Chuyển đổi nâng cao gửi kèm dữ liệu khách đã băm để Google đối chiếu với tài khoản Google đã đăng nhập, từ đó ghi nhận lại phần bị hụt. Bản dành cho lead dùng chính email/số điện thoại làm khoá nối, nên khi lead chốt thành khách ngoài hệ thống bạn vẫn báo lại được cho Google mà không phải lưu gclid (mã định danh mỗi lần bấm quảng cáo).",
+     "check": [
+      "Kiểm tra form trên trang đích có thu email hoặc số điện thoại không; không có các trường này thì chuyển đổi nâng cao không có dữ liệu để gửi.",
+      "Đọc lại chính sách bảo mật của website xem đã nêu việc chia sẻ dữ liệu khách với bên quảng cáo chưa; chưa có thì cần bổ sung trước khi bật."
+     ],
+     "do": [
+      "Bật chuyển đổi nâng cao để gửi dữ liệu khách đã băm (email, số điện thoại), giúp Google khớp chuyển đổi chính xác hơn.",
+      "Với ngành có lead, dùng chuyển đổi nâng cao cho lead để nhập lại kết quả lead ngoại tuyến (khách đã chốt, đã đến khám...) mà không cần lưu gclid."
+     ],
+     "avoid": [
+      "Không gửi dữ liệu nhạy cảm như thông tin sức khoẻ, vì trái chính sách thu thập và sử dụng dữ liệu của Google và có thể khiến tài khoản gặp vấn đề chính sách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About enhanced conversions",
+       "url": "https://support.google.com/google-ads/answer/9888656"
+      },
+      {
+       "title": "About enhanced conversions for leads",
+       "url": "https://support.google.com/google-ads/answer/15713840"
+      },
+      {
+       "title": "Data collection and use",
+       "url": "https://support.google.com/adspolicy/answer/6020956"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-click-ao",
+   "title": "Click ảo, đối thủ click, chặn IP",
+   "intro": "Nghi đối thủ phá click, có nên dùng phần mềm chặn click, Google có hoàn tiền không.",
+   "nodes": [
+    {
+     "id": "fg-doi-thu-click",
+     "if": "Nghi đối thủ bấm phá quảng cáo hằng ngày, Google có hoàn tiền không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Có, Google tự lọc phần lớn click không hợp lệ (click không phản ánh nhu cầu thật, ví dụ bấm phá) trước khi tính tiền, và ghi có (hoàn lại vào hoá đơn) khi phát hiện muộn sau khi đã lập hoá đơn. Việc cần làm trước tiên là xem số lượt nhấp không hợp lệ và báo cáo tín dụng để biết Google đã lọc, đã hoàn bao nhiêu. Chỉ khi có bằng chứng cụ thể còn sót thì mới gửi yêu cầu điều tra.",
+     "visao": "Google định nghĩa click không hợp lệ gồm cả click thủ công nhằm đẩy chi phí của nhà quảng cáo lên, tức đúng kiểu đối thủ bấm phá. Hệ thống tự động nhận diện các click này, loại khỏi số liệu và không tính tiền; phần nào phát hiện sau khi đã tính tiền thì được ghi có vào hoá đơn kế tiếp khi phù hợp. Vì vậy số tiền mất thật thường thấp hơn nhiều so với cảm giác, và việc cần làm là kiểm số liệu thay vì đoán.",
+     "check": [
+      "Thêm cột 'Lượt nhấp không hợp lệ' và 'Tỷ lệ nhấp không hợp lệ' vào bảng chiến dịch để xem Google đã lọc bao nhiêu; trang Tổng quan cũng có thẻ Lưu lượng không hợp lệ cho khoảng ngày đang chọn.",
+      "Mở Chiến dịch > Trình chỉnh sửa báo cáo (Report Editor), chọn mẫu 'Invalid Activity Credit Report: Search & PMax' để xem khoản ghi có theo chiến dịch và chi phí đã trừ ghi có.",
+      "Đối chiếu log máy chủ: cùng một IP lặp lại, thời gian ở trang gần 0 giây, truy cập vào giờ bất thường là dấu hiệu nên gom làm bằng chứng."
+     ],
+     "do": [
+      "Hiểu đúng cơ chế: Google tự lọc phần lớn click không hợp lệ trước khi tính tiền, và ghi có lại phần phát hiện sau khi đã lập hoá đơn.",
+      "Theo dõi báo cáo tín dụng hoạt động không hợp lệ cho Search và PMax (Performance Max) để biết đã được ghi có bao nhiêu và chi phí thực sau khi trừ.",
+      "Nếu có bằng chứng cụ thể (IP, thời điểm, hành vi lặp), gửi yêu cầu điều tra click không hợp lệ qua trang hỗ trợ của Google Ads."
+     ],
+     "avoid": [
+      "Không bấm lại quảng cáo đối thủ để 'trả đũa', vì đó chính là tạo click không hợp lệ: Google sẽ lọc và hoàn tiền cho họ, còn bạn mang rủi ro vi phạm."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Invalid clicks: Definition",
+       "url": "https://support.google.com/google-ads/answer/42995"
+      },
+      {
+       "title": "Understanding credits and adjustments to your account",
+       "url": "https://support.google.com/google-ads/answer/1704323"
+      },
+      {
+       "title": "About the Invalid Activity Credit Report",
+       "url": "https://support.google.com/google-ads/answer/16826168"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-chan-ip",
+     "if": "Chặn IP trong Google Ads được bao nhiêu? Phần mềm chặn click ảo có hiệu quả không?",
+     "hat": "gray",
+     "asked": [
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Google cho loại trừ tối đa 500 địa chỉ IP mỗi chiến dịch, nhưng chặn IP chỉ có ích với IP cố định như văn phòng đối thủ. IP 4G ở Việt Nam đổi liên tục nên chặn theo IP hiệu quả hạn chế (đây là kinh nghiệm cộng đồng). Phần mềm chặn click bên thứ ba chỉ nên dùng để ghi nhận và đẩy IP vào danh sách loại trừ, vì việc lọc click không hợp lệ đã do Google tự làm.",
+     "visao": "Loại trừ IP chỉ làm một việc: không cho quảng cáo hiện với những địa chỉ IP trong danh sách. Nếu người bấm phá dùng mạng di động, mỗi lần kết nối lại có thể nhận IP mới, nên danh sách chặn luôn chạy sau họ. Trong khi đó, bộ lọc click không hợp lệ của Google hoạt động ở phía Google và không phụ thuộc vào phần mềm bạn cài trên web.",
+     "check": [
+      "Xem danh sách IP định chặn có ổn định qua nhiều ngày không; nếu IP thay đổi liên tục (thường gặp với 4G Việt Nam) thì chặn IP sẽ ít tác dụng.",
+      "Kiểm tra loại chiến dịch: loại trừ IP ở cấp chiến dịch không áp dụng cho Performance Max, video, App, khách sạn và Hiển thị thông minh; các loại này phải dùng loại trừ ở cấp tài khoản."
+     ],
+     "do": [
+      "(1) Người ta chặn IP và mua phần mềm chặn click ảo vì lo đối thủ bấm phá làm hao ngân sách.",
+      "(2) Google cho loại trừ tối đa 500 IP mỗi chiến dịch (Cài đặt chiến dịch > Cài đặt bổ sung > Loại trừ IP), hoặc ở Quản trị > Cài đặt tài khoản > Loại trừ IP để áp mọi chiến dịch.",
+      "(2) Google tự lọc click không hợp lệ ở phía mình, không phụ thuộc phần mềm bên thứ ba.",
+      "(3) Chặn IP chỉ có ích với IP cố định như văn phòng đối thủ; IP di động thay đổi nên hiệu quả hạn chế (kinh nghiệm cộng đồng, chưa có số chính thức).",
+      "(3) Công cụ chuyển hướng người dùng qua trang trung gian có thể bị coi là lách hệ thống và khiến tài khoản bị treo.",
+      "(4) Cách đúng: chặn các IP cố định đã xác định được; nếu dùng phần mềm bên thứ ba thì chỉ để ghi nhận và đẩy IP vào danh sách loại trừ, không can thiệp vào đường đi của người dùng."
+     ],
+     "avoid": [
+      "Không cài công cụ chuyển hướng người dùng qua trang trung gian để 'lọc' click, vì chuyển hướng lạ có thể bị Google đánh giá là lách hệ thống hoặc cloaking (cho hệ thống duyệt và người dùng thấy hai trang khác nhau)."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Exclude IP addresses",
+       "url": "https://support.google.com/google-ads/answer/2456098"
+      },
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-tu-click",
+     "if": "Tôi tự bấm quảng cáo của mình để kiểm tra có bị tính tiền không, có bị phạt không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Quora",
+      "Google Ads Help Community"
+     ],
+     "tomtat": "Không nên tự bấm quảng cáo của mình để kiểm tra: dễ làm sai số liệu và click lặp lại có thể bị hệ thống lọc như click không hợp lệ. Muốn biết quảng cáo có hiện hay không, hãy dùng công cụ Xem trước và chẩn đoán quảng cáo, công cụ này cho xem quảng cáo mà không tạo lượt hiển thị hay lượt nhấp.",
+     "visao": "Google định nghĩa click không hợp lệ gồm cả click thủ công không mang lại giá trị, nên việc chủ tài khoản bấm đi bấm lại quảng cáo của mình rơi đúng vào nhóm này. Ngay cả việc tự tìm kiếm để xem quảng cáo cũng có thể được tính là một lượt hiển thị, làm CTR (tỷ lệ nhấp) và số liệu hiệu suất bị lệch. Công cụ xem trước mô phỏng kết quả tìm kiếm nhưng không ghi nhận lượt hiển thị, nên kiểm tra thoải mái mà không ảnh hưởng dữ liệu.",
+     "check": [
+      "Xác định mục đích: nếu chỉ cần biết quảng cáo có hiện cho từ khoá, khu vực, thiết bị cụ thể hay không thì không cần bấm vào quảng cáo."
+     ],
+     "do": [
+      "Mở Công cụ > Khắc phục sự cố > Xem trước và chẩn đoán quảng cáo để kiểm tra quảng cáo hiện hay không mà không tạo lượt hiển thị hay lượt nhấp.",
+      "Ghi nhớ rằng click không hợp lệ theo định nghĩa của Google gồm cả click thủ công không mang lại giá trị; click lặp lại của chính mình có thể bị lọc và làm lệch số liệu."
+     ],
+     "avoid": [
+      "Không tự tìm và bấm quảng cáo của mình nhiều lần, vì làm sai dữ liệu CTR và có thể bị lọc như click không hợp lệ."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About the Ad preview and diagnosis tool",
+       "url": "https://support.google.com/google-ads/answer/148778"
+      },
+      {
+       "title": "Invalid clicks: Definition",
+       "url": "https://support.google.com/google-ads/answer/42995"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-vung-xam",
+   "title": "Vùng xám và black hat",
+   "intro": "Những câu hỏi hay gặp trên BlackHatWorld và nhóm Việt về cách 'lách': tài khoản thuê, thẻ ảo, cloaking, hàng cấm. Trả lời theo khung: làm gì, chính sách nói gì, hậu quả thật, cách làm đúng.",
+   "nodes": [
+    {
+     "id": "fg-bh-thue-tk",
+     "if": "Tài khoản bị treo, có nên thuê 'tài khoản agency' hoặc 'tài khoản trust' bên dịch vụ để chạy tiếp không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Không nên. Dùng tài khoản thuê để chạy tiếp sau khi bị treo bị Google xếp vào hành vi lách hệ thống, và khi bị phát hiện thì tài khoản bị treo ngay, tiền đã nạp cho bên cho thuê thường không lấy lại được. Việc nên làm trước tiên là tìm đúng lý do tài khoản gốc bị treo, sửa nguyên nhân và khiếu nại; hoặc làm việc với agency thật quản lý tài khoản đứng tên chính doanh nghiệp bạn.",
+     "visao": "Google không chỉ treo một tài khoản mà treo hành vi: nếu người hoặc doanh nghiệp đã bị treo quay lại bằng tài khoản khác, đó là cố né lệnh treo. Google đối chiếu các điểm chung như website, thông tin thanh toán, người dùng để liên kết các tài khoản với nhau, nên tài khoản thuê chạy đúng website cũ rất dễ bị nối lại. Khi đó bạn mất cả tài khoản lẫn tiền, vì tài khoản không đứng tên bạn nên bạn không có quyền khiếu nại hay đòi lại số dư.",
+     "check": [
+      "Đọc lại thông báo treo để biết lý do tài khoản gốc bị treo là gì; lý do quyết định cách sửa và nội dung khiếu nại.",
+      "Kiểm tra đã gửi khiếu nại cho tài khoản gốc chưa; nếu chưa thì đó là bước phải làm trước mọi phương án khác."
+     ],
+     "do": [
+      "(1) Người ta thuê tài khoản do agency hoặc bên thứ ba sở hữu, nạp tiền qua họ, để né việc tài khoản mình đã bị treo hoặc né bước xác minh.",
+      "(2) Google ghi rõ: cố dùng lại Google Ads bằng tài khoản mới sau khi bị treo là lách hệ thống (circumventing systems); chạy nội dung vi phạm trên 2 tài khoản trở lên cũng bị cấm.",
+      "(3) Vi phạm bị treo ngay khi phát hiện, không cảnh báo, không được quảng cáo lại; tài khoản liên quan (cùng thẻ, website, người dùng) có thể bị treo theo.",
+      "(3) Tiền đã nạp cho bên cho thuê thường không lấy lại được, vì tài khoản không đứng tên mình.",
+      "(4) Cách đúng: sửa nguyên nhân rồi khiếu nại tài khoản gốc (mọi nhà quảng cáo có ít nhất 6 tháng kể từ ngày bị treo để khiếu nại), hoặc làm việc với agency thật quản lý tài khoản đứng tên chính doanh nghiệp mình."
+     ],
+     "avoid": [
+      "Không đưa website đã bị treo lên tài khoản thuê, vì Google đối chiếu website và thông tin thanh toán để liên kết tài khoản; tài khoản thuê sẽ bị treo theo và bạn mất tiền nạp.",
+      "Không tin lời quảng cáo 'tài khoản không bao giờ bị khoá', vì không có tài khoản nào được miễn chính sách của Google."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      },
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-mua-tk-cu",
+     "if": "Mua tài khoản Google Ads cũ (aged account, đã tiêu nhiều tiền) thì có 'trust' hơn, ít bị khoá hơn không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "WarriorForum",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Không, Google không công bố cơ chế 'tài khoản trust' nào cả, chính sách áp như nhau cho tài khoản mới và cũ. Mua tài khoản cũ để chạy nội dung vi phạm hay né lệnh treo vẫn là lách hệ thống, và người bán còn có thể là Admin (quyền quản trị cao nhất) để thu hồi quyền bất cứ lúc nào. Cách an toàn là tạo tài khoản mới đứng tên doanh nghiệp, xác minh thật và tuân thủ ngay từ đầu.",
+     "visao": "Niềm tin 'tài khoản lâu năm được ưu ái' là truyền miệng; Google không công bố cơ chế như vậy, và cái bị xét là nội dung, hành vi, danh tính đứng sau tài khoản. Nếu thiết lập cũ (website, sản phẩm, cách chạy) vẫn vi phạm thì tài khoản mua về cũng bị treo như thường; thành viên BlackHatWorld ghi nhận nhiều trường hợp bị treo gần như ngay (kinh nghiệm cộng đồng). Ngoài ra, tài khoản không đứng tên mình nghĩa là quyền kiểm soát, dữ liệu và tiền đều nằm trong tay người khác.",
+     "check": [
+      "Xem tài khoản đứng tên ai, hồ sơ thanh toán của ai và ai đang giữ quyền Admin; nếu không phải doanh nghiệp bạn thì bạn không thật sự sở hữu tài khoản đó."
+     ],
+     "do": [
+      "(1) Người ta tin tài khoản lâu năm, có lịch sử chi tiêu lớn sẽ được Google 'tin' hơn nên mua về để chạy ngành rủi ro.",
+      "(2) Google không công bố cơ chế 'trust account'; chính sách áp như nhau, và người chạy nội dung vi phạm hoặc dùng tài khoản để né lệnh treo là lách hệ thống.",
+      "(3) Người bán vẫn có thể là Admin và thu quyền bất cứ lúc nào; thành viên BlackHatWorld cũng ghi nhận tài khoản mua về bị treo gần như ngay nếu thiết lập cũ vẫn vi phạm (kinh nghiệm cộng đồng).",
+      "(4) Cách đúng: tạo tài khoản mới đứng tên doanh nghiệp, hoàn thành xác minh nhà quảng cáo (advertiser verification) bằng danh tính thật, thanh toán ổn định, nội dung tuân thủ ngay từ đầu."
+     ],
+     "avoid": [
+      "Không nhận tài khoản mà mình không phải Admin duy nhất, vì người còn lại có thể gỡ bạn ra và bạn mất quyền kiểm soát dữ liệu lẫn tiền."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      },
+      {
+       "title": "About access levels in your Google Ads account",
+       "url": "https://support.google.com/google-ads/answer/9978556"
+      },
+      {
+       "title": "Advertiser verification",
+       "url": "https://support.google.com/adspolicy/answer/9703665"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-the-ao",
+     "if": "Dùng thẻ Visa ảo, thẻ mượn, thẻ mua trên mạng để thanh toán Google Ads có được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "WarriorForum"
+     ],
+     "tomtat": "Không được nếu thẻ không đứng tên doanh nghiệp hoặc người quản lý thật: dùng thẻ mượn, thẻ mua trên mạng để tách danh tính là lý do phổ biến khiến tài khoản bị treo vì hoạt động thanh toán đáng ngờ. Thẻ ảo hợp pháp đứng tên chính doanh nghiệp thì không vi phạm. Cách làm đúng là dùng thẻ doanh nghiệp hoặc thẻ của chính người đại diện và khai mã số thuế để nhận hoá đơn hợp lệ.",
+     "visao": "Google phải chặn quảng cáo trả bằng thẻ không rõ chủ, nên hệ thống xem xét phương thức thanh toán có thật sự thuộc người quảng cáo không. Thẻ của người khác, thẻ mua trên mạng hay việc đổi thẻ liên tục đều khiến tài khoản trông giống gian lận, và Google có thể yêu cầu giấy tờ chứng minh quyền dùng thẻ. Một thẻ đã gắn với tài khoản bị treo còn trở thành điểm chung để nối các tài khoản khác lại với nhau.",
+     "check": [
+      "Kiểm tra thẻ thanh toán có đứng tên doanh nghiệp hoặc người quản lý thật của tài khoản không; nếu không thì đây là rủi ro bị treo vì thanh toán đáng ngờ."
+     ],
+     "do": [
+      "(1) Người ta dùng thẻ ảo, thẻ của người khác để tách danh tính khỏi tài khoản bị treo hoặc để mở nhiều tài khoản.",
+      "(2) Google treo tài khoản vì hoạt động thanh toán đáng ngờ (suspicious payment activity), và tạo tài khoản mới sau khi bị treo là lách hệ thống.",
+      "(3) Thanh toán đáng ngờ dẫn tới treo, và Google có thể yêu cầu giấy tờ chứng minh quyền dùng thẻ.",
+      "(3) Thẻ đã gắn với tài khoản bị treo có thể kéo tài khoản khác bị treo theo; thẻ mua trái phép còn là rủi ro pháp lý.",
+      "(4) Cách đúng: dùng thẻ doanh nghiệp hoặc thẻ của chính người đại diện, khai mã số thuế để nhận hoá đơn hợp lệ."
+     ],
+     "avoid": [
+      "Thẻ ảo hợp pháp đứng tên chính doanh nghiệp không phải vi phạm, nhưng không nên đổi thẻ liên tục vì vẫn dễ bị Google xét là thanh toán đáng ngờ và treo tài khoản."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Billing and payment suspensions: Suspicious payment activity",
+       "url": "https://support.google.com/adspolicy/answer/15983318"
+      },
+      {
+       "title": "Billing and payment suspensions",
+       "url": "https://support.google.com/google-ads/answer/13704200"
+      },
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-cloaking",
+     "if": "Cloaking là gì, nghe nói dùng cloak thì chạy được sản phẩm bị cấm trên Google Ads?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "WarriorForum",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Cloaking (che giấu trang thật) là cho hệ thống duyệt của Google thấy một trang hợp lệ còn người dùng thấy trang khác; không nên dùng, vì đây là vi phạm lách hệ thống bị treo ngay không cảnh báo. Nếu sản phẩm bị cấm thì không có cách hợp lệ nào để chạy Google Ads. Nếu sản phẩm chỉ bị hạn chế thì làm trang đích tuân thủ và xin chứng nhận khi chính sách cho phép.",
+     "visao": "Quảng cáo được duyệt dựa trên những gì hệ thống của Google nhìn thấy; cloaking cố tình đánh lừa bước duyệt này để đưa nội dung bị cấm tới người dùng. Vì vậy Google xếp nó vào nhóm nặng nhất, gồm cả chuyển người dùng sang trang vi phạm dù cùng domain, dùng popup che phần lớn site, hay quảng cáo một chủ đề rồi dẫn sang chủ đề khác. Hậu quả không dừng ở một tài khoản: tài khoản liên quan bị treo theo, và chính BlackHatWorld cũng cảnh báo các thiết lập này thường bị khoá cả tài khoản lẫn hạ tầng.",
+     "check": [
+      "Kiểm tra trang đích có hiển thị khác nhau theo IP, thiết bị hay nguồn truy cập không; nếu người duyệt và khách thật thấy hai nội dung khác nhau thì đó là cloaking."
+     ],
+     "do": [
+      "(1) Cloaking là cho hệ thống duyệt của Google thấy trang hợp lệ còn người dùng thấy trang khác, nhằm chạy sản phẩm hoặc nội dung bị cấm.",
+      "(2) Google nêu rõ cloaking thuộc lách hệ thống, gồm cả chuyển người dùng sang trang vi phạm dù cùng domain, dùng popup che phần lớn site, quảng cáo một chủ đề rồi dẫn sang chủ đề khác.",
+      "(3) Bị treo ngay khi phát hiện, không cảnh báo, không được quảng cáo lại; tài khoản liên quan bị treo theo; diễn đàn BlackHatWorld cũng cảnh báo các thiết lập này thường bị khoá cả tài khoản lẫn hạ tầng.",
+      "(4) Cách đúng: nếu sản phẩm bị cấm thì không chạy Google Ads; nếu chỉ bị hạn chế thì làm trang đích tuân thủ và xin chứng nhận khi chính sách cho phép."
+     ],
+     "avoid": [
+      "Không dùng 'trình theo dõi click' (click tracker) chuyển hướng sang trang khác với trang đã khai báo, vì Google coi click tracker dẫn tới trang độc hại là một ví dụ của cloaking."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      },
+      {
+       "title": "Abusing the ad network",
+       "url": "https://support.google.com/adspolicy/answer/6020954"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-san-pham-cam",
+     "if": "Bán thuốc kê đơn, hàng fake, vũ khí, đồ cấm có cách nào chạy Google Ads không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "WarriorForum"
+     ],
+     "tomtat": "Không có cách hợp lệ nào. Google cấm hàng giả nhái và sản phẩm nguy hiểm (ma tuý, vũ khí), còn thuốc kê đơn thuộc nhóm bị hạn chế; mọi kiểu che tên, đổi chữ, dùng domain phụ để chạy đều là lách hệ thống và bị treo ngay. Ngoài tài khoản, kinh doanh hàng cấm còn là rủi ro pháp luật Việt Nam. Hướng đúng là chỉ quảng cáo sản phẩm hợp pháp, chính hãng; sản phẩm y tế bị hạn chế thì xin chứng nhận ở quốc gia cho phép.",
+     "visao": "Google phân biệt hai loại: sản phẩm bị cấm hẳn (không quảng cáo dưới bất kỳ hình thức nào) và sản phẩm bị hạn chế (được quảng cáo khi đáp ứng điều kiện, ví dụ có chứng nhận). Khi người quảng cáo cố tình đổi biến thể quảng cáo hay domain để né bộ lọc, Google coi đó là ý đồ đánh lừa hệ thống, nặng hơn bản thân lỗi nội dung. Vì vậy hậu quả là treo không cảnh báo và không được quảng cáo lại, chứ không chỉ là một quảng cáo bị từ chối.",
+     "check": [
+      "Tra chính sách Google Ads xem sản phẩm thuộc danh mục bị cấm (hàng giả, sản phẩm nguy hiểm) hay bị hạn chế (như thuốc kê đơn); bị cấm thì dừng, bị hạn chế thì xem điều kiện chứng nhận."
+     ],
+     "do": [
+      "(1) Người ta tìm cách che tên sản phẩm, đổi từ ngữ, dùng domain phụ để chạy hàng cấm.",
+      "(2) Google cấm hàng giả nhái (replica, fake), sản phẩm nguy hiểm (ma tuý, vũ khí) và hạn chế thuốc kê đơn; đổi biến thể quảng cáo hay domain để né là lách hệ thống.",
+      "(3) Hàng giả và lách hệ thống là vi phạm nghiêm trọng: treo ngay không cảnh báo, không được quảng cáo lại; ngoài ra còn rủi ro pháp luật Việt Nam về kinh doanh hàng cấm.",
+      "(4) Cách đúng: chỉ quảng cáo sản phẩm hợp pháp, chính hãng; sản phẩm y tế bị hạn chế thì xin chứng nhận ở quốc gia cho phép."
+     ],
+     "avoid": [
+      "Không cố viết sai chính tả hay chèn ký tự đặc biệt vào tên sản phẩm, vì Google coi đây là thao túng nội dung quảng cáo để né phát hiện và xử lý như lách hệ thống."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Counterfeit goods",
+       "url": "https://support.google.com/adspolicy/answer/176017"
+      },
+      {
+       "title": "Dangerous products or services",
+       "url": "https://support.google.com/adspolicy/answer/6014299"
+      },
+      {
+       "title": "Healthcare and medicines",
+       "url": "https://support.google.com/adspolicy/answer/176031"
+      },
+      {
+       "title": "Abusing the ad network",
+       "url": "https://support.google.com/adspolicy/answer/6020954"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-xac-minh-gia",
+     "if": "Không có giấy phép kinh doanh, mượn giấy tờ người khác để qua xác minh nhà quảng cáo được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Không được. Mượn hay mua giấy tờ của người khác để qua xác minh nhà quảng cáo (advertiser verification) là nộp thông tin gian lận, Google coi là lách hệ thống và có thể treo tài khoản vĩnh viễn. Người bán hàng thật cần xác minh bằng hộ kinh doanh, doanh nghiệp hoặc cá nhân của chính mình, kể cả khi agency chạy hộ.",
+     "visao": "Chương trình xác minh tồn tại để người xem biết ai thật sự đứng sau quảng cáo; giấy tờ mượn phá đúng mục đích đó nên bị xử lý nặng. Google ghi rõ thông tin sai hoặc gian lận có thể làm thất bại xác minh hoặc mất trạng thái đã xác minh, và tài khoản bị treo. Một bộ giấy tờ đã dính vào tài khoản bị treo cũng trở thành điểm nối khiến các tài khoản khác dùng chung giấy tờ bị treo theo.",
+     "check": [
+      "Xác định doanh nghiệp hoặc người thật đứng sau quảng cáo là ai; giấy tờ xác minh phải là của chính chủ thể đó, không phải của agency hay người quen."
+     ],
+     "do": [
+      "(1) Người ta mượn hoặc mua giấy tờ để qua xác minh khi không đủ điều kiện hoặc đã bị treo.",
+      "(2) Google ghi nộp thông tin sai hoặc gian lận trong chương trình xác minh là lách hệ thống, có thể làm thất bại xác minh hoặc mất trạng thái đã xác minh.",
+      "(3) Tài khoản bị treo vĩnh viễn; tài khoản khác dùng cùng giấy tờ có thể bị treo theo; giả mạo giấy tờ còn là rủi ro pháp lý.",
+      "(4) Cách đúng: xác minh bằng hộ kinh doanh, doanh nghiệp hoặc cá nhân thật của người bán hàng; agency chạy hộ thì khách vẫn phải tự xác minh danh tính của mình."
+     ],
+     "avoid": [
+      "Không dùng một bộ giấy tờ cho nhiều tài khoản không liên quan, vì khi một tài khoản bị treo, các tài khoản dùng chung giấy tờ có thể bị treo theo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      },
+      {
+       "title": "Advertiser verification",
+       "url": "https://support.google.com/adspolicy/answer/9703665"
+      },
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-nhieu-tk-may",
+     "if": "Chạy nhiều tài khoản trên cùng máy, dùng VPS, trình duyệt antidetect, proxy để Google không liên kết được, có an toàn không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "WarriorForum",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Không an toàn nếu mục đích là chạy lại sau khi bị treo hoặc chạy vi phạm song song: đó là lách hệ thống, và Google ghi rõ tài khoản liên quan bị treo theo. Ngược lại, quản lý nhiều khách hợp pháp trên cùng một máy là hoàn toàn bình thường. Cách làm đúng là dùng tài khoản người quản lý MCC (Manager account, tài khoản quản lý nhiều tài khoản con), mỗi khách một tài khoản và hồ sơ thanh toán riêng.",
+     "visao": "Thứ Google cấm không phải là có nhiều tài khoản, mà là tạo thêm tài khoản để tiếp tục vi phạm sau khi bị treo hoặc chạy vi phạm trên 2 tài khoản trở lên. VPS, trình duyệt antidetect (trình duyệt giả lập nhiều dấu vết máy khác nhau) hay proxy chỉ nhằm che giấu việc đó, nên bản thân việc dùng chúng cho mục đích này đã cho thấy ý đồ né lệnh treo. Google không công bố cách liên kết tài khoản; nhiều nguồn ngành nêu Google đối chiếu thanh toán, website, thông tin doanh nghiệp, nhưng chưa có danh sách chính thức.",
+     "check": [
+      "Tự hỏi mục đích có nhiều tài khoản là gì: quản lý nhiều khách hợp pháp thì dùng MCC là đủ; nếu là để né lệnh treo thì đó là vi phạm, không có cấu hình nào khiến nó hợp lệ."
+     ],
+     "do": [
+      "(1) Người ta dùng VPS, antidetect, proxy để tách dấu vết giữa các tài khoản nhằm chạy lại sau khi bị treo hoặc chạy nội dung vi phạm song song.",
+      "(2) Google cấm tạo thêm tài khoản sau khi bị treo để tiếp tục vi phạm, và cấm chạy vi phạm trên 2 tài khoản trở lên.",
+      "(3) Google không công bố cách liên kết tài khoản, nhưng ghi rõ tài khoản liên quan bị treo theo; nhiều nguồn ngành nêu Google đối chiếu thanh toán, website, thông tin doanh nghiệp (chưa có danh sách chính thức).",
+      "(4) Cách đúng: quản lý nhiều khách hợp pháp bằng tài khoản người quản lý (MCC), mỗi khách 1 tài khoản và hồ sơ thanh toán riêng; quản lý trên cùng máy là bình thường."
+     ],
+     "avoid": [
+      "Không ẩn danh tính để chạy tiếp khi đã bị treo, vì mọi tài khoản mới đều có thể bị treo ngay khi bị liên kết lại với tài khoản cũ."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Circumventing systems (Google Ads policy)",
+       "url": "https://support.google.com/adspolicy/answer/15938075"
+      },
+      {
+       "title": "Google Ads account suspensions overview",
+       "url": "https://support.google.com/google-ads/answer/9841640"
+      },
+      {
+       "title": "About Google Ads manager accounts",
+       "url": "https://support.google.com/google-ads/answer/6139186"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-chiem-dau-gia",
+     "if": "Tạo 2-3 tài khoản cùng chạy 1 website để chiếm nhiều vị trí quảng cáo cùng lúc được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Không được. Dùng 2-3 tài khoản quảng cáo cùng một doanh nghiệp hoặc website để chiếm nhiều vị trí cùng lúc vi phạm chính sách lợi thế không công bằng của Google, thuộc nhóm lạm dụng mạng quảng cáo và bị treo ngay. Cách hợp lệ để chiếm nhiều diện tích hơn là một tài khoản cho một doanh nghiệp, nâng chất lượng quảng cáo và bổ sung asset để quảng cáo ở một vị trí trở nên lớn hơn.",
+     "visao": "Phiên đấu giá của Google được thiết kế để các nhà quảng cáo cạnh tranh công bằng với nhau; nếu một doanh nghiệp đặt nhiều tài khoản cùng đấu một từ khoá thì người tham gia khác bị đẩy xuống một cách không công bằng. Vì vậy chính sách lợi thế không công bằng (unfair advantage) cấm dùng mạng quảng cáo để giành lợi thế lưu lượng so với người tham gia đấu giá khác, và xếp vào nhóm lạm dụng mạng quảng cáo. Muốn quảng cáo nổi hơn thì hợp lệ nhất là làm quảng cáo chất lượng hơn và thêm asset (các phần thông tin bổ sung hiển thị kèm quảng cáo) để chiếm nhiều diện tích ở một vị trí.",
+     "check": [
+      "Kiểm tra các tài khoản bạn quản lý có đang quảng cáo cùng một doanh nghiệp hoặc website cho cùng từ khoá không; nếu có thì đang rơi vào chính sách lợi thế không công bằng."
+     ],
+     "do": [
+      "(1) Người ta muốn chiếm 2-3 vị trí trên cùng trang kết quả để đẩy đối thủ xuống.",
+      "(2) Chính sách lợi thế không công bằng cấm dùng mạng quảng cáo để giành lợi thế lưu lượng không công bằng so với người tham gia đấu giá khác.",
+      "(3) Hành vi này thuộc nhóm lạm dụng mạng quảng cáo: vi phạm nghiêm trọng, treo ngay, không được quảng cáo lại.",
+      "(4) Cách đúng: 1 tài khoản cho 1 doanh nghiệp, tăng chất lượng quảng cáo và asset để chiếm diện tích lớn hơn ở 1 vị trí."
+     ],
+     "avoid": [
+      "Không mở thêm tài khoản cho cùng một website rồi cho cùng đấu một bộ từ khoá, vì đây là lạm dụng mạng quảng cáo và có thể khiến các tài khoản bị treo, không được quảng cáo lại."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Abusing the ad network",
+       "url": "https://support.google.com/adspolicy/answer/6020954"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-thuong-hieu",
+     "if": "Chạy quảng cáo đứng tên thương hiệu người khác (giả làm hãng chính, đại lý chính thức) để lấy khách có được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Không được. Giả làm hãng chính hoặc đại lý chính thức khi không phải là vi phạm chính sách trình bày sai lệch (misrepresentation) của Google, bị treo ngay không cảnh báo, và chủ nhãn hiệu còn có thể khiếu nại để hạn chế quảng cáo. Nếu bạn là đại lý thật, hãy ghi rõ mình là đại lý hoặc nhà bán lại, và chỉ dùng tên hãng trong quảng cáo theo điều kiện của chính sách nhãn hiệu.",
+     "visao": "Người xem tin quảng cáo mang tên hãng lớn hơn, nên mạo danh làm CTR (tỷ lệ nhấp) tăng nhưng đồng thời đánh lừa người dùng về người bán thật. Chính sách trình bày sai lệch của Google cấm ngụ ý sai rằng mình được thương hiệu khác bảo trợ, mạo danh hay che giấu danh tính, và xếp đây là vi phạm nghiêm trọng. Song song, chính sách nhãn hiệu cho phép chủ nhãn hiệu khiếu nại để hạn chế việc người khác dùng tên của họ trong quảng cáo.",
+     "check": [
+      "Xác định bạn có phải đại lý được hãng uỷ quyền không; nếu không thì không được ngụ ý mình là hãng hay đại lý chính thức.",
+      "Đọc lại tiêu đề, mô tả và trang đích xem người xem có thể tưởng nhầm đây là hãng chính không; nếu có thì cần sửa trước khi chạy."
+     ],
+     "do": [
+      "(1) Người ta mạo danh hãng hoặc thương hiệu lớn để có CTR cao và niềm tin của khách.",
+      "(2) Google cấm ngụ ý sai được thương hiệu khác bảo trợ, mạo danh, che giấu danh tính (chính sách trình bày sai lệch); chủ nhãn hiệu còn có thể khiếu nại để hạn chế quảng cáo (chính sách nhãn hiệu).",
+      "(3) Trình bày sai lệch là vi phạm nghiêm trọng: tài khoản bị treo ngay, không cảnh báo.",
+      "(4) Cách đúng: đại lý chính hãng ghi rõ mình là đại lý hoặc nhà bán lại; muốn dùng tên hãng trong quảng cáo thì theo điều kiện của chính sách nhãn hiệu."
+     ],
+     "avoid": [
+      "Không dùng các cụm như 'trang chính thức' hay 'đại lý chính thức' khi chưa được hãng uỷ quyền, vì đó là ngụ ý sai được bảo trợ và dẫn tới treo tài khoản không cảnh báo.",
+      "Không dùng tên hãng trong quảng cáo khi chưa đối chiếu điều kiện của chính sách nhãn hiệu, vì chủ nhãn hiệu có thể khiếu nại và quảng cáo của bạn bị hạn chế."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Misrepresentation",
+       "url": "https://support.google.com/adspolicy/answer/6020955"
+      },
+      {
+       "title": "Trademarks",
+       "url": "https://support.google.com/adspolicy/answer/6118"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-bh-tool-click-doi-thu",
+     "if": "Có tool/dịch vụ click ảo đốt tiền quảng cáo đối thủ, dùng có bị phát hiện không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Quora"
+     ],
+     "tomtat": "Không nên dùng. Click thủ công hoặc tự động nhằm làm đối thủ tốn tiền là click không hợp lệ theo định nghĩa của Google, sẽ bị lọc và ghi có lại cho đối thủ nên thường không gây thiệt hại như mong muốn. Trong khi đó người làm có thể chịu trách nhiệm pháp lý về hành vi phá hoại. Cách cạnh tranh hiệu quả là làm quảng cáo, trang đích và ưu đãi tốt hơn.",
+     "visao": "Hệ thống của Google được xây để nhận diện click không phản ánh nhu cầu thật, gồm cả bot, công cụ tự động và người bấm nhằm đẩy chi phí lên. Click bị nhận diện sẽ bị loại khỏi số liệu và không tính tiền, phần phát hiện muộn được ghi có vào hoá đơn của đối thủ. Vì vậy tiền mua dịch vụ 'đốt tiền' phần lớn mất trắng, còn rủi ro pháp lý thì vẫn còn đó.",
+     "check": [
+      "Xác định bạn đang cân nhắc dùng hay đang nghi bị dùng: nếu nghi bị đối thủ bấm phá, hãy xem cột 'Lượt nhấp không hợp lệ' và báo cáo tín dụng hoạt động không hợp lệ thay vì đánh trả.",
+      "Đánh giá lại lời hứa của bên bán dịch vụ: Google lọc và ghi có lại click không hợp lệ cho đối thủ, nên không có cơ sở cho cam kết 'đốt sạch ngân sách đối thủ'."
+     ],
+     "do": [
+      "(1) Người ta dùng bot, proxy hoặc người bấm thuê để làm đối thủ hết ngân sách.",
+      "(2) Click thủ công hoặc tự động nhằm tăng chi phí của nhà quảng cáo là click không hợp lệ theo định nghĩa của Google.",
+      "(3) Google lọc và ghi có lại cho đối thủ nên thường không gây thiệt hại như mong muốn; người làm có thể chịu trách nhiệm pháp lý về hành vi phá hoại.",
+      "(4) Cách đúng: cạnh tranh bằng chất lượng quảng cáo, trang đích và giá trị ưu đãi."
+     ],
+     "avoid": [
+      "Không mua dịch vụ 'đốt tiền đối thủ', vì vừa vô ích (Google lọc và hoàn tiền cho họ) vừa mang rủi ro pháp lý cho chính bạn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Invalid clicks: Definition",
+       "url": "https://support.google.com/google-ads/answer/42995"
+      },
+      {
+       "title": "Understanding credits and adjustments to your account",
+       "url": "https://support.google.com/google-ads/answer/1704323"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-pmax",
+   "title": "Performance Max, DSA và AI Max",
+   "intro": "Có nên chạy PMax, PMax ăn từ khoá thương hiệu, DSA chuyển sang AI Max.",
+   "nodes": [
+    {
+     "id": "fg-pmax-lead",
+     "if": "Ngành dịch vụ (lead) có nên chạy Performance Max không, hay chỉ ra lead rác?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Nên chạy được, với điều kiện Performance Max (PMax, chiến dịch tự động phân phối trên mọi kênh của Google) được tối ưu theo lead đủ chất lượng chứ không theo lượt gửi form thô. Việc cần làm trước tiên là nhập kết quả lead thật (lead đủ chất lượng, lead chốt ngoại tuyến) về Google Ads, kèm chuyển đổi nâng cao cho lead. Sau đó theo dõi báo cáo hiệu suất theo kênh để biết ngân sách đang chảy vào đâu.",
+     "visao": "PMax tự tìm khách trên Search, YouTube, Hiển thị, Gmail dựa vào tín hiệu chuyển đổi bạn đưa cho nó. Nếu tín hiệu chỉ là 'có người gửi form', máy sẽ tìm thêm những người dễ gửi form nhất, kể cả người điền bừa, nên lead rác tăng. Khi bạn báo lại lead nào đủ chất lượng, máy có mục tiêu đúng để học, và báo cáo theo kênh cho bạn thấy kênh nào đang tiêu tiền.",
+     "check": [
+      "Kiểm tra trong danh sách chuyển đổi xem PMax đang tối ưu theo lead đủ chất lượng hoặc lead nhập ngoại tuyến, hay chỉ theo gửi form thô; nếu chỉ là gửi form thô thì đây là nguyên nhân hay gặp của lead rác."
+     ],
+     "do": [
+      "Theo khuyến nghị của Google cho PMax ngành lead: tối ưu theo chuyển đổi lead đủ chất lượng, dùng chuyển đổi nâng cao cho lead (gửi dữ liệu khách đã băm để khớp lead) và nhập kết quả ngoại tuyến.",
+      "Xem báo cáo hiệu suất theo kênh của PMax để biết ngân sách đi vào Search, YouTube, Hiển thị hay Gmail, rồi đối chiếu với nơi lead chất lượng thật sự đến từ."
+     ],
+     "avoid": [
+      "Không chạy PMax với mục tiêu gửi form thô cho ngành dễ có lead rác, vì máy sẽ học theo chính những lead rác đó và đưa về thêm lead cùng loại."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Performance Max best practices for lead generation",
+       "url": "https://support.google.com/google-ads/answer/13775965"
+      },
+      {
+       "title": "About enhanced conversions for leads",
+       "url": "https://support.google.com/google-ads/answer/15713840"
+      },
+      {
+       "title": "Channel performance reporting coming to Performance Max (blog Google)",
+       "url": "https://blog.google/products/ads-commerce/channel-performance-reporting-coming-to-performance-max/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-pmax-thuong-hieu",
+     "if": "PMax ăn hết từ khoá thương hiệu, báo cáo đẹp nhưng không có khách mới?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads"
+     ],
+     "tomtat": "Rất có thể đúng: PMax (Performance Max) hay hút lưu lượng của người đã tìm đúng tên thương hiệu, nên tổng chuyển đổi trông đẹp nhưng phần lớn là khách vốn đã biết bạn. Việc cần làm trước tiên là xem cụm từ tìm kiếm của PMax có bao nhiêu phần là tên thương hiệu. Nếu tỷ lệ lớn, dùng loại trừ thương hiệu (brand exclusions) để PMax phải đi tìm khách mới.",
+     "visao": "Người tìm tên thương hiệu là nhóm dễ chuyển đổi nhất, nên một chiến dịch tối ưu theo số chuyển đổi sẽ tự nhiên ưu tiên họ. Kết quả là báo cáo ghi nhận nhiều chuyển đổi, nhưng những khách này có thể đã tìm đến bạn ngay cả khi không có quảng cáo. Loại trừ thương hiệu tách phần lưu lượng này ra, để bạn đánh giá PMax theo khả năng mang về khách mới.",
+     "check": [
+      "Mở phần cụm từ tìm kiếm hoặc thông tin chi tiết (insights) của chiến dịch PMax và ước lượng bao nhiêu phần đến từ truy vấn có tên thương hiệu; phần này lớn nghĩa là PMax chủ yếu thu khách đã biết bạn."
+     ],
+     "do": [
+      "Áp dụng loại trừ thương hiệu (brand exclusions) cho PMax và chiến dịch Search khi muốn tách riêng lưu lượng tìm tên thương hiệu.",
+      "Dùng từ khoá phủ định ở cấp chiến dịch cho PMax khi cần chặn thêm truy vấn, trong giới hạn Google hiện hỗ trợ."
+     ],
+     "avoid": [
+      "Không đánh giá PMax bằng tổng chuyển đổi khi phần lớn đến từ người đã tìm tên thương hiệu, vì sẽ tưởng chiến dịch hiệu quả trong khi gần như không có khách mới."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Apply brand exclusions to Performance Max or Search campaigns",
+       "url": "https://support.google.com/google-ads/answer/14505308"
+      },
+      {
+       "title": "Negative keywords in Performance Max campaigns",
+       "url": "https://support.google.com/google-ads/answer/15726455"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-dsa-ai-max",
+     "if": "DSA bị chuyển sang AI Max, có nên bật AI Max cho chiến dịch Search không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads"
+     ],
+     "tomtat": "Có thể bật, nhưng nên bật dạng thử nghiệm và chỉ khi chiến dịch Search đã có đủ chuyển đổi và danh sách phủ định tốt. Google đã thông báo nâng cấp DSA (quảng cáo tìm kiếm động) lên AI Max (blog 15/04/2026). Vì AI Max tự mở rộng truy vấn và tự viết nội dung, việc đầu tiên sau khi bật là theo dõi báo cáo cụm từ tìm kiếm và tiêu đề do AI tạo.",
+     "visao": "AI Max cho phép Google khớp quảng cáo với nhiều truy vấn rộng hơn từ khoá bạn đặt và tự sinh tiêu đề, nội dung từ website. Chiến dịch có đủ dữ liệu chuyển đổi và phủ định chặt thì máy có ranh giới để mở rộng đúng hướng; thiếu hai thứ này thì dễ mở rộng sang truy vấn lạc đề. Ở ngành nhạy cảm như y tế, câu chữ tự sinh còn có nguy cơ vi phạm chính sách quảng cáo hoặc pháp luật.",
+     "check": [
+      "Xem chiến dịch đã có đủ chuyển đổi và danh sách từ khoá phủ định tốt chưa; nếu chưa thì nên làm chắc phần này trước khi bật AI Max."
+     ],
+     "do": [
+      "Ghi nhận rằng Google đã thông báo nâng cấp DSA lên AI Max (blog Google 15/04/2026), nên chiến dịch DSA cũ sẽ chuyển sang cách vận hành mới.",
+      "Bật AI Max theo dạng thử nghiệm, vì tính năng này mở rộng khớp cụm từ tìm kiếm và tự tạo nội dung quảng cáo.",
+      "Sau khi bật, theo dõi đều báo cáo cụm từ tìm kiếm và tiêu đề do AI tạo để phát hiện truy vấn hoặc câu chữ không phù hợp."
+     ],
+     "avoid": [
+      "Không bật AI Max cho ngành nhạy cảm như y tế mà không kiểm nội dung tự sinh, vì AI có thể tạo câu chữ vi phạm chính sách và làm quảng cáo bị từ chối."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About AI Max for Search campaigns",
+       "url": "https://support.google.com/google-ads/answer/15910366"
+      },
+      {
+       "title": "DSA upgrade to AI Max (blog Google 15/04/2026)",
+       "url": "https://blog.google/products/ads-commerce/dsa-upgrade-to-ai-max-2026/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fg-agency",
+   "title": "Freelancer, agency, MCC và bàn giao tài khoản",
+   "intro": "Thuê người chạy, phí quản lý, quyền sở hữu tài khoản, điểm tối ưu hoá.",
+   "nodes": [
+    {
+     "id": "fg-ag-so-huu",
+     "if": "Thuê agency chạy Google Ads, tài khoản nên đứng tên ai? Hết hợp đồng agency không trả tài khoản thì sao?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Quora"
+     ],
+     "tomtat": "Tài khoản nên đứng tên doanh nghiệp: doanh nghiệp tự tạo tài khoản, giữ quyền Admin (quyền quản trị cao nhất) và hồ sơ thanh toán, rồi mới cấp quyền cho agency. Làm vậy thì hết hợp đồng, doanh nghiệp chỉ cần huỷ liên kết với agency là xong, không mất lịch sử. Nếu tài khoản đang đứng tên agency, hãy đưa điều khoản 'tài khoản, dữ liệu, chuyển đổi thuộc về khách' vào hợp đồng.",
+     "visao": "Trong Google Ads, ai giữ quyền Admin và hồ sơ thanh toán thì người đó thật sự kiểm soát tài khoản. Agency chỉ cần quyền Chuẩn (Standard, đủ để chạy và tối ưu) hoặc liên kết qua MCC (tài khoản người quản lý của agency) là làm việc được. Admin của tài khoản khách có thể huỷ liên kết với tài khoản người quản lý bất cứ lúc nào, nên quyền chủ động luôn nằm ở doanh nghiệp.",
+     "check": [
+      "Vào phần quản lý quyền truy cập xem ai đang là Admin; nếu không có ai bên doanh nghiệp giữ quyền Admin thì doanh nghiệp chưa kiểm soát tài khoản.",
+      "Kiểm tra hồ sơ thanh toán đứng tên ai và tài khoản có đang liên kết với MCC của agency không, để biết khi chấm dứt hợp tác cần gỡ những gì."
+     ],
+     "do": [
+      "Doanh nghiệp tự tạo tài khoản, giữ quyền Admin và hồ sơ thanh toán, sau đó cấp quyền Chuẩn hoặc chấp nhận liên kết MCC cho agency.",
+      "Khi chấm dứt hợp tác, Admin của tài khoản khách huỷ liên kết với tài khoản người quản lý của agency; việc này làm được bất cứ lúc nào.",
+      "Ghi rõ trong hợp đồng: tài khoản, dữ liệu và các hành động chuyển đổi thuộc về khách."
+     ],
+     "avoid": [
+      "Không chạy trên tài khoản đứng tên agency nếu muốn giữ dữ liệu lâu dài, vì hết hợp đồng là mất toàn bộ lịch sử chạy quảng cáo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About access levels in your Google Ads account",
+       "url": "https://support.google.com/google-ads/answer/9978556"
+      },
+      {
+       "title": "About Google Ads manager accounts",
+       "url": "https://support.google.com/google-ads/answer/6139186"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-ag-phi",
+     "if": "Phí quản lý Google Ads thường tính thế nào, agency báo 'nạp qua tài khoản agency được giảm giá' có thật không?",
+     "hat": "gray",
+     "asked": [
+      "Nhóm FB Cộng đồng Google Ads Việt Nam",
+      "Reddit r/PPC",
+      "Quora"
+     ],
+     "tomtat": "Phí quản lý thường tính theo một trong ba kiểu: phần trăm trên chi tiêu, phí cố định theo tháng, hoặc theo kết quả; chưa có số chính thức nào về mức phí chuẩn. Còn lời mời 'nạp qua tài khoản agency được giảm giá' thì không có nguồn chính thức nào cho thấy tài khoản agency được giá thầu rẻ hơn, vì chi phí do Google tính theo đấu giá. Điều quan trọng nhất là đòi quyền xem tài khoản để tự đối chiếu chi tiêu thật.",
+     "visao": "Giá mỗi lượt nhấp được quyết định trong phiên đấu giá của Google, nên tài khoản đứng tên ai cũng không làm giá thầu tự rẻ đi. Khi tiền đi qua agency mà bạn không xem được tài khoản, bạn không phân biệt được đâu là tiền quảng cáo thật trả cho Google và đâu là phần agency giữ lại. Quyền xem tài khoản và hoá đơn do Google xuất là hai thứ giúp bạn kiểm được điều đó.",
+     "check": [
+      "Xem hoá đơn chi phí quảng cáo do Google xuất cho ai; nếu hoá đơn đứng tên agency thì bạn chỉ thấy con số agency báo lại.",
+      "Liệt kê agency thu thêm những khoản gì ngoài tiền quảng cáo (phí quản lý, phí nạp, phí khác) để so với chi tiêu thật trong tài khoản."
+     ],
+     "do": [
+      "(1) Agency thu phí theo 3 kiểu cộng đồng hay gặp: % trên chi tiêu, phí cố định tháng, hoặc theo kết quả; một số nơi còn chào 'nạp qua tài khoản agency được giảm giá'.",
+      "(1) Đây là kinh nghiệm cộng đồng, chưa có nguồn chính thức về mức phí chuẩn.",
+      "(2) Chi phí quảng cáo do Google tính theo đấu giá; không có nguồn chính thức nào cho thấy tài khoản agency được giá thầu rẻ hơn.",
+      "(3) Rủi ro thật: nếu chuyển tiền mà không được xem tài khoản, bạn không kiểm được chi tiêu thật so với số tiền đã chuyển.",
+      "(4) Cách đúng: yêu cầu agency cấp quyền xem tài khoản để đối chiếu chi tiêu thật với tiền đã chuyển, và thoả thuận rõ phí quản lý tách riêng khỏi tiền quảng cáo."
+     ],
+     "avoid": [
+      "Không chuyển tiền quảng cáo khi chưa được xem tài khoản, vì sẽ không kiểm được chi tiêu thật và khó phát hiện chênh lệch."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [
+      {
+       "title": "About access levels in your Google Ads account",
+       "url": "https://support.google.com/google-ads/answer/9978556"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-ag-diem-toi-uu",
+     "if": "Agency/Google gọi điện bảo nâng 'Điểm tối ưu hoá' lên 100%, có nên làm theo?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/googleads",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Không nên làm theo chỉ vì muốn điểm lên 100%. Theo Google, điểm tối ưu hoá (optimization score) chỉ là ước tính tài khoản có thể hoạt động tốt đến đâu, không phải chỉ số hiệu quả, và bạn được phép bỏ qua đề xuất không phù hợp (bỏ qua cũng làm điểm tăng). Hãy xem từng đề xuất theo mục tiêu kinh doanh rồi mới quyết định áp dụng.",
+     "visao": "Điểm tối ưu hoá đo mức độ tài khoản đã xử lý các đề xuất của Google, chứ không đo lead hay doanh thu. Nhiều đề xuất như tăng ngân sách hay chuyển sang đối sánh rộng có thể hợp với tài khoản này nhưng không hợp với tài khoản khác. Vì bỏ qua một đề xuất cũng làm điểm tăng, điểm cao không có nghĩa là bạn phải chấp nhận mọi gợi ý.",
+     "check": [
+      "Mở danh sách đề xuất và đọc từng cái cụ thể là gì: tăng ngân sách, chuyển sang đối sánh rộng hay bật tự áp dụng đề xuất; đề xuất nào làm tăng chi tiêu hoặc mở rộng từ khoá cần cân nhắc kỹ."
+     ],
+     "do": [
+      "Hiểu đúng điểm tối ưu hoá: Google mô tả đây là ước tính mức độ tài khoản có thể hoạt động tốt, không phải chỉ số hiệu quả, và có thể bỏ qua đề xuất không phù hợp (bỏ qua cũng tăng điểm).",
+      "Xem từng đề xuất theo mục tiêu kinh doanh, chỉ áp dụng cái phù hợp và bỏ qua phần còn lại."
+     ],
+     "avoid": [
+      "Không bật 'tự động áp dụng đề xuất' cho mọi loại, vì hệ thống có thể tự thêm từ khoá rộng và tự tăng ngân sách mà bạn không kiểm soát."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About optimization score",
+       "url": "https://support.google.com/google-ads/answer/9061546"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fg-ag-ban-giao",
+     "if": "Đổi agency/nhân viên mới, bàn giao tài khoản Google Ads thế nào để không mất dữ liệu?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Google Ads Việt Nam"
+     ],
+     "tomtat": "Không cần tạo tài khoản mới: Admin (quyền quản trị cao nhất) bên doanh nghiệp chỉ cần cấp quyền cho bên mới, rồi huỷ liên kết MCC và gỡ người dùng của bên cũ. Trước khi bàn giao, hãy ghi lại các hành động chuyển đổi chính/phụ, danh sách từ khoá phủ định và nhật ký thay đổi. Cách này giữ nguyên lịch sử dữ liệu để Smart Bidding (đặt giá thầu tự động) tiếp tục học.",
+     "visao": "Smart Bidding dựa vào lịch sử chuyển đổi của chính tài khoản để đặt giá thầu, nên tài khoản cũ là tài sản. Đổi agency chỉ là đổi người có quyền truy cập, việc này làm hoàn toàn trong phần quản lý quyền và liên kết MCC (tài khoản người quản lý). Tạo tài khoản mới đồng nghĩa với xoá trắng dữ liệu mà hệ thống đang dùng để tối ưu.",
+     "check": [
+      "Lập danh sách người dùng đang có quyền và các MCC đang liên kết với tài khoản, để biết sau khi bàn giao cần gỡ ai.",
+      "Ghi lại các hành động chuyển đổi (cái nào chính, cái nào phụ) và các liên kết GA4, Merchant Center, để kiểm lại sau bàn giao không bị mất."
+     ],
+     "do": [
+      "Admin bên doanh nghiệp cấp quyền cho bên mới trước, sau đó huỷ liên kết MCC và gỡ người dùng của bên cũ.",
+      "Trước khi bàn giao, lưu lại các hành động chuyển đổi chính/phụ, danh sách từ khoá phủ định và nhật ký thay đổi để bên mới nắm được tài khoản đang chạy thế nào."
+     ],
+     "avoid": [
+      "Không tạo lại tài khoản mới chỉ vì đổi agency, vì sẽ mất lịch sử dữ liệu mà Smart Bidding đang dùng để tối ưu."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About access levels in your Google Ads account",
+       "url": "https://support.google.com/google-ads/answer/9978556"
+      },
+      {
+       "title": "About Google Ads manager accounts",
+       "url": "https://support.google.com/google-ads/answer/6139186"
+      },
+      {
+       "title": "About primary and secondary conversion actions",
+       "url": "https://support.google.com/google-ads/answer/11461796"
+      }
+     ],
+     "children": []
+    }
+   ]
+  }
+ ]
+}

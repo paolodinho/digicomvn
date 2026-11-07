@@ -1,0 +1,2783 @@
+{
+ "platform": "faq-seo",
+ "updated": "2026-11-07",
+ "groups": [
+  {
+   "id": "nguoi-moi-nghe-seo",
+   "title": "Người mới và nghề SEO",
+   "intro": "Câu hỏi mở đầu của người mới học SEO hoặc chủ doanh nghiệp lần đầu thuê SEO: bao lâu có kết quả, có cam kết top không, cần học gì, thuê ai.",
+   "nodes": [
+    {
+     "id": "faq-seo-bao-lau-len-top",
+     "if": "Làm SEO bao lâu thì lên top Google?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/juststart",
+      "Brands Vietnam (cộng đồng)"
+     ],
+     "tomtat": "Không ai nói chắc được ngày lên top, kể cả Google, vì thời gian phụ thuộc site mới hay cũ, độ khó từ khoá và nguồn lực bạn bỏ ra. Theo kinh nghiệm cộng đồng (chưa có số chính thức), site mới thường cần khoảng 4-12 tháng cho từ khoá có cạnh tranh, còn từ thương hiệu hoặc từ ngách có thể lên sau vài ngày tới vài tuần. Việc nên làm trước tiên là đánh giá hiện trạng site và top 10, rồi đưa khách lộ trình theo mốc đo được thay vì hứa ngày lên top 1.",
+     "visao": "Google không công bố mốc thời gian, vì xếp hạng là kết quả so sánh liên tục giữa trang của bạn và mọi trang khác cùng nhắm một câu hỏi. Khi bạn cải thiện chất lượng, Google nói có thay đổi có hiệu lực sau vài ngày, nhưng có thể mất vài tháng để hệ thống xác nhận cả site đã tốt lên. Site mới chưa có lịch sử nên cần thêm thời gian để Google hiểu, giống người mới vào nghề cần thời gian để được tin. Vì vậy đo theo mốc trung gian giúp cả agency và khách thấy tiến độ thật trước khi có thứ hạng cao.",
+     "check": [
+      "Mở Search Console để xem site là site mới hay đã có lịch sử: đã có trang được index và có lượt hiển thị, click chưa; site đã có dữ liệu thì thường đi nhanh hơn site mới hoàn toàn.",
+      "Tìm từ khoá mục tiêu và xem top 10 hiện tại là ai, dạng trang gì (bài viết, trang bán, danh mục), họ mạnh tới đâu; top 10 toàn tên lớn thì phải tính thời gian dài hơn.",
+      "Liệt kê nguồn lực thật: mỗi tháng làm được bao nhiêu bài, có người viết am hiểu ngành không, có ngân sách PR (truyền thông để được báo, cộng đồng nhắc tên) không; nguồn lực mỏng thì mốc thời gian phải giãn ra."
+     ],
+     "do": [
+      "Hỏi và trả lời theo đúng cách trang Do you need an SEO? của Google gợi ý: nói rõ kết quả nào, trong khung thời gian nào, đo bằng chỉ số gì, thay vì một con số tháng chung chung.",
+      "Giải thích cho khách rằng theo Google, thay đổi chất lượng có thể có hiệu lực sau vài ngày, nhưng có thể mất vài tháng để hệ thống xác nhận cả site đã tốt lên, nên cần kiên nhẫn sau mỗi đợt cải thiện.",
+      "Dùng mốc kinh nghiệm cộng đồng như tham khảo (chưa có số chính thức): site mới cần khoảng 4-12 tháng cho từ khoá có cạnh tranh, tín hiệu sớm như lượt hiển thị và từ khoá dài thường xuất hiện sau 3-4 tháng.",
+      "Với từ khoá thương hiệu hoặc từ ngách ít đối thủ, đặt kỳ vọng ngắn hơn: có thể lên trong vài ngày tới vài tuần sau khi trang được index.",
+      "Lập lộ trình theo mốc đo được: trang đã index, lượt hiển thị tăng, số từ vào top 20, rồi top 10; báo cáo theo các mốc này để khách thấy tiến độ thay vì chỉ chờ top 1."
+     ],
+     "avoid": [
+      "Không hứa ngày lên top cụ thể: Google viết rõ không ai đảm bảo được thứ hạng số 1, hứa sai sẽ làm mất uy tín và dễ thành tranh chấp hợp đồng.",
+      "Không lấy số tháng của một case chia sẻ trên mạng để áp cho mọi ngành, vì mỗi ngành có độ cạnh tranh và nguồn lực khác hẳn nhau, dẫn tới kỳ vọng sai."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Do you need an SEO?",
+       "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+      },
+      {
+       "title": "Google Search Central - Google Search's core updates and your website",
+       "url": "https://developers.google.com/search/docs/appearance/core-updates"
+      }
+     ],
+     "children": [
+      {
+       "id": "faq-seo-bao-lau-tu-canh-tranh",
+       "if": "SEO từ khoá cạnh tranh cao thì cần ngân sách bao nhiêu?",
+       "hat": "white",
+       "asked": [
+        "Reddit r/bigseo",
+        "Brands Vietnam (cộng đồng)"
+       ],
+       "tomtat": "Không có con số ngân sách chuẩn nào cho từ khoá cạnh tranh; số tiền phụ thuộc khoảng cách giữa site của bạn và top 10, không phụ thuộc chữ trong từ khoá. Việc nên làm trước tiên là đo khoảng cách đó, rồi tính chi phí theo khối lượng việc cụ thể (bài cần viết, kỹ thuật cần sửa, PR). Đây là kinh nghiệm nghề, chưa có nguồn chính thức về mức chi.",
+       "visao": "Cùng một từ khoá, site đã có nhiều bài cùng chủ đề và được nhắc tên nhiều sẽ cần ít việc hơn hẳn site mới. Vì vậy ngân sách hợp lý là tổng chi phí để lấp khoảng trống so với top 10, giống như dự toán sửa nhà phải xem hiện trạng căn nhà chứ không chỉ xem tên khu phố. Khi top 10 toàn thương hiệu lớn, đi từ các từ dài ít cạnh tranh trong cùng cụm giúp site tích luỹ độ phủ chủ đề trước khi đối đầu trực tiếp.",
+       "check": [
+        "Đếm trong top 10 có bao nhiêu trang thuộc thương hiệu lớn, báo, sàn thương mại điện tử; càng nhiều thì khoảng cách càng lớn và ngân sách, thời gian càng phải nhiều.",
+        "So site của mình với top 10 ở ba điểm: chất lượng nội dung, số trang cùng chủ đề đã có, và tín hiệu thương hiệu (được nhắc tên, được tìm theo tên); điểm nào thua xa là hạng mục cần dồn ngân sách."
+       ],
+       "do": [
+        "Nói rõ với khách: không có con số chính thức, ngân sách phụ thuộc khoảng cách giữa site và top 10, không phụ thuộc chữ trong từ khoá.",
+        "Lập ngân sách theo đầu việc thực tế: số trang cần viết mới hoặc làm lại cho cả cụm chủ đề, phần công nghệ cần sửa, và hoạt động PR để thương hiệu được nhắc tên.",
+        "Nếu top 10 toàn thương hiệu lớn, bắt đầu bằng các từ dài cùng cụm để xây độ phủ chủ đề, sau đó mới đánh từ chính.",
+        "Ghi rõ trong đề xuất rằng cách tính này là kinh nghiệm nghề, chưa có nguồn chính thức về mức chi."
+       ],
+       "avoid": [
+        "Không báo giá kiểu 'bao top từ khoá X giá Y', vì thứ hạng không kiểm soát được; không đạt thì vừa mất khách vừa dễ bị đòi hoàn tiền."
+       ],
+       "evidence": "kinh-nghiem",
+       "sources": [],
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "faq-seo-cam-ket-top",
+     "if": "Có dịch vụ cam kết top 1 Google không, có nên tin?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Quora",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không nên tin, vì chính Google viết rõ không ai có thể đảm bảo thứ hạng số 1 trên Google. Trước khi ký, hãy đọc kỹ hợp đồng và hỏi bên làm SEO sẽ làm gì cụ thể trên site. Cam kết hợp lý là cam kết đầu việc và chỉ số trung gian, kèm báo cáo minh bạch.",
+     "visao": "Thứ hạng do Google quyết định và thay đổi liên tục theo đối thủ và thuật toán, nên không bên ngoài nào nắm được kết quả cuối. Bên dám cam kết top thường phải dựa vào thủ thuật tác động nhanh như mua link, vốn nằm trong nhóm Google coi là spam. Khi bị phát hiện, người chịu hậu quả là site của khách chứ không phải bên bán dịch vụ.",
+     "check": [
+      "Đọc hợp đồng xem cam kết từ khoá gì, đo bằng công cụ nào, ở vị trí địa lý nào; điều khoản mập mờ ở ba điểm này thì kết quả 'lên top' rất dễ bị đo theo cách có lợi cho bên làm.",
+      "Hỏi bên làm SEO sẽ làm gì cụ thể với site và có cho bạn xem mọi thay đổi không; nếu họ né trả lời thì đó là dấu hiệu rủi ro."
+     ],
+     "do": [
+      "Lấy câu của Google làm chuẩn khi trao đổi: không ai có thể đảm bảo thứ hạng số 1 trên Google.",
+      "Đối chiếu với các dấu hiệu đáng ngờ Google liệt kê: hứa đảm bảo thứ hạng, nói có 'quan hệ đặc biệt' với Google, giấu cách làm, gửi site tới hàng nghìn công cụ tìm kiếm; gặp các dấu hiệu này thì không nên ký.",
+      "Thay cam kết top bằng cam kết đầu việc và chỉ số trung gian: số trang đạt chuẩn, lỗi kỹ thuật đã sửa, lượt hiển thị tăng, kèm báo cáo minh bạch định kỳ."
+     ],
+     "avoid": [
+      "Không ký hợp đồng 'không lên top hoàn tiền' mà bên kia không nói cách làm: kiểu cam kết này thường đi kèm mua link hoặc thủ thuật có thể khiến site bị phạt, mất thứ hạng lâu dài."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Do you need an SEO?",
+       "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-can-hoc-gi",
+     "if": "Mới bắt đầu học SEO thì nên học gì trước?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/juststart",
+      "Quora"
+     ],
+     "tomtat": "Nên học luật chơi chính thức của Google trước: đọc SEO Starter Guide và Search Essentials, rồi Spam policies để biết ranh giới. Sau đó học theo thứ tự từ khoá, nội dung, link nội bộ, kỹ thuật cơ bản và đọc Search Console, vừa học vừa thực hành trên một site thật. Cách này giúp bạn có nền đúng và tránh học nhầm thủ thuật bị cấm.",
+     "visao": "SEO là làm cho Google tìm thấy (crawl, tức là bot đi đọc trang), lưu vào kho dữ liệu (index) và xếp hạng trang của bạn; hiểu ba bước này thì mới biết lỗi nằm ở đâu. Tài liệu của Google là luật chính thức, còn mẹo trên mạng có thể đã lỗi thời hoặc vi phạm. Thực hành trên site thật và ghi lại kết quả giúp bạn thấy nguyên nhân, kết quả bằng dữ liệu của chính mình thay vì tin theo lời đồn.",
+     "check": [
+      "Tự kiểm xem đã hiểu Google crawl, index, xếp hạng thế nào chưa; nếu chưa giải thích được ba bước này thì chưa nên học sang mẹo hay công cụ.",
+      "Kiểm xem đã có một site thật (dù nhỏ) và quyền Search Console để thực hành chưa; chưa có thì nên dựng một site nhỏ trước khi học sâu."
+     ],
+     "do": [
+      "Đọc SEO Starter Guide và Search Essentials của Google trước, vì đây là luật chơi chính thức.",
+      "Học tiếp theo thứ tự: nghiên cứu từ khoá và intent (ý định tìm kiếm), viết nội dung hữu ích, cấu trúc link nội bộ, kỹ thuật cơ bản (index, canonical tức thẻ chỉ URL chính, tốc độ), rồi đọc Search Console.",
+      "Đọc Spam policies để biết ranh giới, tránh học nhầm thủ thuật bị cấm.",
+      "Thực hành trên site của mình, ghi lại từng thay đổi và kết quả trong Search Console để tự rút kinh nghiệm."
+     ],
+     "avoid": [
+      "Không bắt đầu bằng việc mua tool đắt tiền hoặc khoá học 'lên top thần tốc': tốn tiền trong khi chưa có nền, dễ học phải thủ thuật vi phạm chính sách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - SEO Starter Guide",
+       "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+       "title": "Google Search Essentials",
+       "url": "https://developers.google.com/search/docs/essentials"
+      },
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-thue-agency",
+     "if": "Thuê agency/freelancer SEO thì cần hỏi gì để không bị lừa?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Brands Vietnam (cộng đồng)"
+     ],
+     "tomtat": "Hãy hỏi theo bộ câu hỏi Google gợi ý và yêu cầu bằng chứng thật: case cũ có dữ liệu Search Console, cách làm cụ thể, cam kết tuân thủ chính sách. Ghi rõ trong hợp đồng những việc cấm làm và cách báo cáo. Làm vậy giúp bạn loại được bên làm ẩu trước khi giao site.",
+     "visao": "Bên làm SEO có quyền can thiệp vào site của bạn, nên sai lầm của họ (như mua link) sẽ để lại hậu quả trên site của bạn. Google đã nêu đích danh các dấu hiệu của bên làm ăn không minh bạch để chủ doanh nghiệp tự lọc. Dữ liệu Search Console và GA4 khó làm giả hơn ảnh chụp thứ hạng, nên yêu cầu báo cáo theo nguồn này giúp bạn thấy kết quả thật.",
+     "check": [
+      "Hỏi họ có case thật không và có cho xem dữ liệu Search Console của khách cũ (đã được khách cho phép) không; chỉ đưa ảnh chụp thứ hạng thì chưa đủ tin.",
+      "Xem họ xin quyền gì: Google khuyên khi audit (rà soát) chỉ cấp quyền xem Search Console; bên đòi quyền cao ngay từ đầu cần được hỏi lý do."
+     ],
+     "do": [
+      "Dùng bộ câu hỏi Google gợi ý: ví dụ việc đã làm, kết quả mong đợi trong khung thời gian nào, kinh nghiệm ngành, có tuân thủ Search Essentials không, có báo mọi thay đổi trên site không.",
+      "Yêu cầu báo cáo theo dữ liệu Search Console và GA4, không chỉ ảnh chụp thứ hạng.",
+      "Ghi rõ trong hợp đồng: không mua bán link chuyển PageRank (giá trị xếp hạng truyền qua link), không dùng kỹ thuật nằm trong Spam policies."
+     ],
+     "avoid": [
+      "Tránh bên gửi email chào hàng không mời, bên giấu cách làm, bên đòi bạn đặt link về site của họ: Google nêu đích danh các dấu hiệu này, thuê phải dễ gặp rủi ro bị phạt hoặc mất kiểm soát site."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Do you need an SEO?",
+       "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-con-gia-tri",
+     "if": "AI Overviews và ChatGPT ra rồi, SEO còn đáng làm không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Vẫn đáng làm, vì tính năng AI trong Google Search như AI Overviews (phần tóm tắt AI trên đầu kết quả) dựa trên chính hệ thống xếp hạng và chất lượng cốt lõi của Google. Điều cần đổi là cách đo: người dùng bấm link ít hơn khi có tóm tắt AI, nên KPI phải thêm chỉ số thương hiệu và chuyển đổi. Kết luận: đổi cách đo, không bỏ kênh.",
+     "visao": "Google nói trang chỉ cần được index và đủ điều kiện hiện snippet (đoạn trích) là có thể xuất hiện trong tính năng AI, không có yêu cầu riêng. Google còn gọi AEO/GEO (tối ưu để được AI trả lời, trích dẫn) cũng là SEO, nên nền tảng vẫn là làm SEO tốt. Phần thay đổi là hành vi người dùng: nghiên cứu Pew (07/2025) cho thấy họ ít bấm link hơn khi đã đọc tóm tắt, nên chỉ đếm click sẽ đánh giá thấp giá trị kênh.",
+     "check": [
+      "Mở Search Console, xem lượt hiển thị và click của site thay đổi thế nào trong 6-12 tháng qua, tách theo truy vấn; hiển thị giữ mà click giảm thường do người dùng đọc câu trả lời ngay trên trang kết quả.",
+      "Xem báo cáo Generative AI performance nếu tài khoản Search Console đã có báo cáo này."
+     ],
+     "do": [
+      "Giải thích cho khách rằng theo Google, tính năng AI trong Search dựa trên hệ thống xếp hạng và chất lượng cốt lõi; trang chỉ cần được index và đủ điều kiện hiện snippet, không có yêu cầu riêng.",
+      "Bỏ qua các 'mẹo AEO/GEO' như chunking (cắt nhỏ nội dung cho máy) hay llms.txt, vì Google gọi AEO/GEO cũng là SEO và khuyên không cần các mẹo này.",
+      "Bổ sung KPI về thương hiệu và chuyển đổi bên cạnh click, dựa trên nghiên cứu Pew (07/2025) cho thấy người dùng ít bấm link hơn khi có tóm tắt AI.",
+      "Chốt hướng đi: SEO vẫn là nền để được AI trích dẫn; đổi cách đo, không bỏ kênh."
+     ],
+     "avoid": [
+      "Không bán dịch vụ 'GEO' tách rời SEO kèm lời hứa chắc chắn được AI nhắc tên: Google không có yêu cầu riêng nào bảo đảm điều đó, hứa sai sẽ làm mất uy tín."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - AI features and your website",
+       "url": "https://developers.google.com/search/docs/appearance/ai-features"
+      },
+      {
+       "title": "Google Search Central - Optimizing your website for generative AI features",
+       "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      },
+      {
+       "title": "Pew Research Center - Người dùng ít bấm link hơn khi có tóm tắt AI (07/2025)",
+       "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "index-web-moi",
+   "title": "Index và web mới",
+   "intro": "Trang mới chưa vào Google, trạng thái lạ trong báo cáo Page indexing, chuyện sandbox và cách yêu cầu Google thu thập lại.",
+   "nodes": [
+    {
+     "id": "faq-seo-web-moi-bao-lau-index",
+     "if": "Web mới/bài mới bao lâu thì Google index?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Reddit r/SEO",
+      "Reddit r/TechSEO"
+     ],
+     "tomtat": "Theo Google, việc thu thập (crawl) một trang có thể mất từ vài ngày tới vài tuần, và yêu cầu crawl không đảm bảo trang vào kết quả ngay. Việc nên làm trước tiên là kiểm tra trang bằng URL Inspection để chắc không bị chặn, sau đó gửi yêu cầu index cho vài URL quan trọng, gửi sitemap cho phần còn lại và đặt link nội bộ tới bài mới. Làm đủ các bước này thì trang thường được Google tìm thấy và xử lý trong khoảng thời gian trên.",
+     "visao": "Google tìm trang mới chủ yếu bằng cách đi theo link từ những trang nó đã biết, sau đó mới quyết định có lưu trang vào chỉ mục (index, kho dữ liệu dùng để trả kết quả) hay không. Sitemap (tệp liệt kê các URL của site) là cách quan trọng để Google phát hiện URL, đặc biệt khi site mới ra mắt. Nút yêu cầu index chỉ đẩy trang vào hàng chờ, có hạn ngạch theo URL, nên bấm nhiều lần không làm nhanh hơn.",
+     "check": [
+      "Dán URL vào URL Inspection trong Search Console để xem URL đã có trên Google chưa, lần crawl gần nhất, có bị thẻ noindex hoặc robots.txt (tệp chặn bot) chặn không; bị chặn thì phải gỡ trước, gửi yêu cầu cũng vô ích.",
+      "Kiểm tra trang đã có link nội bộ trỏ tới từ trang khác trên site và đã nằm trong sitemap chưa; thiếu cả hai thì Google rất khó tìm ra trang."
+     ],
+     "do": [
+      "Đặt kỳ vọng đúng với khách: Google nói thu thập có thể mất từ vài ngày tới vài tuần, và yêu cầu crawl không đảm bảo trang vào kết quả ngay hay có vào hay không.",
+      "Dùng URL Inspection để Request indexing (yêu cầu lập chỉ mục) cho vài URL quan trọng; cần là chủ sở hữu hoặc người dùng toàn quyền của property Search Console mới gửi được.",
+      "Khi có nhiều URL, gửi sitemap thay vì gửi từng URL; sitemap đặc biệt hữu ích sau khi ra mắt site mới hoặc chuyển site.",
+      "Gắn cho mỗi bài mới ít nhất một link nội bộ từ trang đã được index, vì đa số trang mới Google tìm qua link.",
+      "Theo dõi tiến độ bằng URL Inspection hoặc báo cáo Page indexing; nhớ rằng việc gửi yêu cầu có hạn ngạch theo URL và gửi lại nhiều lần một URL không làm nhanh hơn."
+     ],
+     "avoid": [
+      "Không dùng công cụ 'ép index' bên thứ ba gọi Indexing API cho bài thường: API này chỉ dành cho trang có JobPosting (tin tuyển dụng) hoặc BroadcastEvent (sự kiện phát trực tiếp), dùng sai mục đích là trái hướng dẫn Google.",
+      "Không bấm Request indexing lặp lại nhiều lần cho cùng một URL: tốn hạn ngạch mà không làm trang được crawl nhanh hơn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Ask Google to recrawl your URLs",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl"
+      },
+      {
+       "title": "Google Search Central - Build and submit a sitemap",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      },
+      {
+       "title": "Google Search Central - Indexing API quickstart",
+       "url": "https://developers.google.com/search/apis/indexing-api/v3/quickstart"
+      }
+     ],
+     "children": [
+      {
+       "id": "faq-seo-crawled-not-indexed",
+       "if": "Search Console báo 'Đã thu thập dữ liệu - hiện chưa được lập chỉ mục' thì làm sao?",
+       "hat": "white",
+       "asked": [
+        "Google Search Central Help Community",
+        "Reddit r/TechSEO",
+        "Reddit r/SEO"
+       ],
+       "tomtat": "Trạng thái này nghĩa là Google đã crawl (đọc) trang nhưng chưa lưu vào chỉ mục, và có thể sẽ index sau; Google nói đây là thông báo phổ biến, không nhất thiết là lỗi. Với trang quan trọng, hãy nâng chất lượng và độ khác biệt nội dung, thêm link nội bộ từ trang mạnh rồi mới yêu cầu index lại. Trang mỏng không cần thiết thì gộp hoặc noindex thay vì cố ép.",
+       "visao": "Google không index mọi trang trên web, nên sau khi đọc, hệ thống sẽ cân xem trang có đáng giữ hay không. Google không công bố chi tiết tiêu chí, nhưng trang trùng hoặc gần trùng trang khác, hoặc không thêm giá trị so với trang cùng chủ đề, thường là ứng viên bị gác lại. Vì vậy sửa nội dung và tăng link nội bộ mới thay đổi được tình hình, còn bấm gửi lại thì không đổi đánh giá chất lượng.",
+       "check": [
+        "Mở báo cáo Page indexing, lọc trạng thái 'Đã thu thập dữ liệu - hiện chưa được lập chỉ mục' (Crawled - currently not indexed), rồi kiểm trang quan trọng bằng URL Inspection.",
+        "So nội dung trang với các trang khác cùng chủ đề trên site và trên Google: trang có nội dung riêng, đủ giá trị không; nếu na ná trang khác thì đây là điểm cần sửa.",
+        "Xem trang có trùng hoặc gần trùng trang khác không, như trang thẻ (tag), phân trang, biến thể sản phẩm; loại này thường nên gộp chứ không nên ép index."
+       ],
+       "do": [
+        "Hiểu đúng trạng thái: Google mô tả đây là đã crawl, chưa index, có thể được index sau; không cần gửi lại liên tục.",
+        "Với trang quan trọng: viết lại cho nội dung tốt hơn và khác biệt rõ, thêm link nội bộ từ trang mạnh, sau đó mới dùng URL Inspection để yêu cầu index lại.",
+        "Với trang mỏng không cần thiết (thẻ rỗng, trang lọc): gộp vào trang chính hoặc gắn noindex thay vì cố ép index.",
+        "Sau khi sửa hàng loạt, có thể bấm Validate fix (xác thực bản sửa) một lần trong báo cáo; Google nói xác thực thường mất tới khoảng hai tuần, có khi lâu hơn."
+       ],
+       "avoid": [
+        "Không spam nút Request indexing mỗi ngày: việc này không thay đổi được đánh giá chất lượng, chỉ tốn hạn ngạch.",
+        "Không bấm Validate fix lặp lại khi lần xác thực trước chưa có kết quả thành công hoặc thất bại."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Search Console Help - Page indexing report",
+         "url": "https://support.google.com/webmasters/answer/7440203"
+        },
+        {
+         "title": "Google Search Central - Ask Google to recrawl your URLs",
+         "url": "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl"
+        }
+       ],
+       "children": []
+      },
+      {
+       "id": "faq-seo-discovered-not-indexed",
+       "if": "Báo 'Đã phát hiện - hiện chưa được lập chỉ mục' với rất nhiều URL?",
+       "hat": "white",
+       "asked": [
+        "Google Search Central Help Community",
+        "Reddit r/TechSEO"
+       ],
+       "tomtat": "Trạng thái này nghĩa là Google đã biết URL nhưng chưa crawl, thường vì muốn tránh làm quá tải site nên hoãn lịch crawl. Nếu xuất hiện với rất nhiều URL, việc cần làm là kiểm tốc độ, lỗi server và lượng URL rác, rồi chặn URL rác và tăng link nội bộ tới trang quan trọng. Với site nhỏ, nguyên nhân thường nằm ở chất lượng hoặc link nội bộ hơn là crawl budget.",
+       "visao": "Google phân bổ lượt crawl có giới hạn cho mỗi site để không làm sập server; khi server chậm hoặc site sinh ra quá nhiều URL, Google sẽ xếp lịch lại cho sau, nên ngày crawl gần nhất trong báo cáo để trống. Crawl budget (ngân sách crawl, tức lượng trang Google sẵn sàng đọc) theo Google chủ yếu là việc của site rất lớn, cỡ hàng triệu URL. Vì vậy với site nhỏ, giảm URL rác và tăng link nội bộ là cách để Google ưu tiên đúng trang.",
+       "check": [
+        "Mở báo cáo Crawl stats trong Search Console để xem server có chậm hoặc trả lỗi 5xx (lỗi máy chủ) khi Googlebot vào không; có lỗi nhiều thì đó là lý do Google hoãn crawl.",
+        "Kiểm xem site có sinh quá nhiều URL rác như URL có tham số, trang bộ lọc, trang tìm kiếm nội bộ không; danh sách URL bị hoãn toàn loại này thì cần chặn bớt.",
+        "Xem các trang bị hoãn có link nội bộ trỏ tới không; trang không có link nội bộ thường bị ưu tiên thấp."
+       ],
+       "do": [
+        "Hiểu đúng: Google biết URL nhưng hoãn crawl, thường để tránh làm quá tải site.",
+        "Kiểm và tăng link nội bộ tới các trang quan trọng, đồng thời xem lại sức chịu của server.",
+        "Chặn URL rác (tham số, bộ lọc, tìm kiếm nội bộ) bằng robots.txt để Google dành lượt crawl cho trang có giá trị.",
+        "Nhớ rằng Google nói crawl budget chủ yếu là việc của site rất lớn (cỡ hàng triệu URL); site nhỏ gặp tình trạng này thường do chất lượng hoặc link nội bộ."
+       ],
+       "avoid": [
+        "Không tạo hàng loạt trang tự động mỏng: càng nhiều URL kém, Google càng hoãn crawl, kéo theo cả trang tốt chậm được index."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Search Console Help - Page indexing report",
+         "url": "https://support.google.com/webmasters/answer/7440203"
+        },
+        {
+         "title": "Search Engine Journal - Gary Illyes: đa số site không cần lo crawl budget",
+         "url": "https://www.searchenginejournal.com/google-most-sites-dont-need-to-worry-about-crawl-budget/378729/"
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "faq-seo-sandbox",
+     "if": "Google sandbox có thật không? Web mới bị 'giam' mấy tháng?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "BlackHatWorld",
+      "Blog/forum SEO Việt (GTV SEO, Vietmoz...)"
+     ],
+     "tomtat": "Không có 'sandbox' (bộ lọc giam site mới) như một cơ chế riêng, theo những người làm ở Google như John Mueller và Gary Illyes. Tuy vậy Google cần thời gian để hiểu site mới, nên giai đoạn đầu dễ trông giống bị giam. Cách làm đúng là xuất bản đều nội dung tốt, xây link nội bộ, có tín hiệu thương hiệu thật và đo tiến độ bằng lượt hiển thị.",
+     "visao": "Site mới chưa có lịch sử, chưa được nhắc tên hay có link tự nhiên, nên Google có ít dữ liệu để tin và xếp cao; hiện tượng 'đứng yên vài tháng' chủ yếu đến từ đó. Tài liệu API của Google bị rò rỉ năm 2024 có thuộc tính hostAge gắn với chống spam site mới, nhưng không ai biết trọng số và cách dùng, nên không thể kết luận có bộ lọc giam site. Theo dõi lượt hiển thị giúp thấy site đang tiến lên trước khi thứ hạng nhảy rõ.",
+     "check": [
+      "Mở Search Console xem trang đã được index chưa và đã có lượt hiển thị chưa; có lượt hiển thị tăng dần nghĩa là site đang được Google đánh giá, chưa có thì kiểm lại vấn đề index trước.",
+      "Kiểm site đã có tín hiệu nào từ bên ngoài như được nhắc tên, có link tự nhiên chưa; chưa có thì cần thời gian và hoạt động thương hiệu thật."
+     ],
+     "do": [
+      "Nói rõ với khách: John Mueller và Gary Illyes nhiều lần nói không có 'sandbox' như một bộ lọc riêng cho site mới.",
+      "Giải thích thêm: Mueller cũng nói Google cần thời gian để hiểu site mới, nên giai đoạn đầu dễ trông giống bị giam.",
+      "Khi nhắc tới tài liệu API rò rỉ 2024: chỉ nói có thuộc tính hostAge gắn với chống spam site mới, không biết trọng số và cách dùng.",
+      "Làm đúng: xuất bản đều nội dung tốt, xây link nội bộ, có tín hiệu thương hiệu thật, và đo bằng lượt hiển thị thay vì chỉ nhìn thứ hạng."
+     ],
+     "avoid": [
+      "Không mua link dồn dập cho site mới để 'thoát sandbox': mẫu link nhân tạo dễ bị vô hiệu hoá hoặc bị manual action (hình phạt do nhân viên Google áp), mất cả tiền lẫn thời gian."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Roundtable (Barry Schwartz) - Google: There Is No Sandbox",
+       "url": "https://www.seroundtable.com/google-sandbox-nope-28082.html"
+      },
+      {
+       "title": "Ahrefs (Joshua Hardwick) - Google Sandbox: Does Google Really Hate New Websites?",
+       "url": "https://ahrefs.com/blog/google-sandbox/"
+      },
+      {
+       "title": "iPullRank (Mike King) - Phân tích tài liệu API Google bị rò rỉ 2024",
+       "url": "https://ipullrank.com/google-algo-leak"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-site-khong-ra-ket-qua",
+     "if": "Gõ site:tenmien.com không ra trang nào hoặc ra rất ít?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Reddit r/TechSEO",
+      "WebmasterWorld"
+     ],
+     "tomtat": "Gần như chắc là site đang bị chặn index (thẻ noindex sót lại, robots.txt chặn) hoặc dính hình phạt, nhưng trước hết cần biết toán tử site: chỉ cho mẫu, không phải số trang index chính xác. Hãy kiểm noindex, robots.txt, Manual actions và Security issues trong Search Console, rồi xem báo cáo Page indexing. Gỡ chặn xong thì gửi sitemap và yêu cầu index trang chủ.",
+     "visao": "Khi dựng site, nhiều người bật chế độ không cho Google index rồi quên tắt, khiến Google bỏ qua toàn bộ trang. Robots.txt chặn crawl thì Google không vào đọc được trang, còn manual action (hình phạt do nhân viên Google áp khi thấy vi phạm chính sách spam) có thể gỡ trang khỏi kết quả. Lệnh site: chỉ trả về một mẫu, nên số liệu index chính xác phải lấy từ báo cáo Page indexing.",
+     "check": [
+      "Kiểm xem còn thẻ noindex sót lại từ lúc dựng site không: với WordPress, xem Settings > Reading và cài đặt của plugin SEO; còn noindex thì đây là nguyên nhân phổ biến nhất.",
+      "Mở tệp robots.txt của site xem có dòng chặn toàn site không; có thì Googlebot không được vào đọc trang.",
+      "Mở báo cáo Manual actions và Security issues trong Search Console; có cảnh báo thì phải xử lý đúng lỗi được nêu trước mọi việc khác.",
+      "Dùng báo cáo Page indexing để xem số trang index thật; mục xem dữ liệu trang đã index cho lịch sử số lượng và mẫu tới 1.000 URL."
+     ],
+     "do": [
+      "Không dựa vào lệnh site: để đếm trang, vì toán tử này chỉ cho mẫu; dùng báo cáo Page indexing để có số chính xác.",
+      "Gỡ thẻ noindex hoặc dòng chặn trong robots.txt, sau đó gửi sitemap và dùng URL Inspection yêu cầu index trang chủ.",
+      "Nếu có manual action: sửa đúng lỗi được nêu trên TẤT CẢ trang bị ảnh hưởng (Google nói sửa một phần không được khôi phục một phần), rồi bấm Request Review để gửi yêu cầu xem xét lại.",
+      "Trong yêu cầu xem xét lại, nêu rõ vấn đề, việc đã sửa và kết quả; Google cho biết đa số yêu cầu mất vài ngày tới vài tuần và sẽ gửi email khi có kết quả."
+     ],
+     "avoid": [
+      "Không chặn trang bằng robots.txt khi muốn trang biến khỏi kết quả: Google không crawl được nên không thấy thẻ noindex, trang có thể vẫn nằm trong kết quả.",
+      "Không gửi lại yêu cầu xem xét khi yêu cầu trước vẫn đang chờ xử lý."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Block search indexing with noindex",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+      },
+      {
+       "title": "Search Console Help - Page indexing report",
+       "url": "https://support.google.com/webmasters/answer/7440203"
+      },
+      {
+       "title": "Search Console Help - Manual actions report",
+       "url": "https://support.google.com/webmasters/answer/9044175"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "tu-khoa-intent",
+   "title": "Từ khoá và search intent",
+   "intro": "Chọn từ khoá, đọc ý định tìm kiếm, mật độ từ khoá, nhiều trang cùng nhắm một từ.",
+   "nodes": [
+    {
+     "id": "faq-seo-mat-do-tu-khoa",
+     "if": "Mật độ từ khoá bao nhiêu % là chuẩn?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Quora",
+      "Blog/forum SEO Việt (GTV SEO, Vietmoz...)"
+     ],
+     "tomtat": "Không có mật độ chuẩn nào, vì Google không công bố con số lý tưởng và còn coi nhồi từ khoá (keyword stuffing) là vi phạm Spam policies. Hãy dùng đúng từ người đọc hay dùng, đặt ở tiêu đề, heading và nội dung một cách tự nhiên. Bài đọc trôi chảy, trả lời đúng câu hỏi sẽ tốt hơn bài cố đạt một tỷ lệ phần trăm.",
+     "visao": "Hệ thống của Google hiểu được biến thể và cách diễn đạt khác của cùng một ý, nên không cần lặp từ khoá chính xác nhiều lần mới được hiểu. Ngược lại, lặp gượng hoặc chèn danh sách từ khoá vô nghĩa là dấu hiệu viết cho máy, đúng loại hành vi chính sách spam nhắm tới. Điểm % mật độ trong các công cụ chấm bài chỉ là thước đo của công cụ, không phải tín hiệu Google dùng.",
+     "check": [
+      "Đọc to từng đoạn văn: nếu nghe thấy từ khoá lặp gượng, hoặc có đoạn chỉ là danh sách từ khoá ghép lại, thì đó là dấu hiệu nhồi từ khoá cần sửa ngay."
+     ],
+     "do": [
+      "Bỏ mục tiêu % mật độ: Google không công bố mật độ lý tưởng nào, và nhồi từ khoá là vi phạm Spam policies.",
+      "Dùng từ mà người đọc sẽ dùng khi tìm, đặt ở tiêu đề, heading và trong nội dung một cách tự nhiên, theo đúng khuyên của Google.",
+      "Không cần nhét mọi biến thể từ dài vào bài, vì Google nói hệ thống hiểu được biến thể và cách diễn đạt khác."
+     ],
+     "avoid": [
+      "Không viết theo công cụ chấm điểm % mật độ: đó không phải tín hiệu của Google, viết theo nó dễ làm văn mất tự nhiên, người đọc bỏ đi.",
+      "Không chèn danh sách từ khoá vô nghĩa vào bài hay chân trang: đây là dạng nhồi từ khoá nằm trong Spam policies, có thể khiến trang bị đánh giá thấp."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Search Central - SEO Starter Guide",
+       "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+       "title": "Google Search Central - Optimizing your website for generative AI features",
+       "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-doc-intent",
+     "if": "Làm sao biết từ khoá này nên làm bài blog hay trang sản phẩm?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Hãy để Google trả lời giúp bạn: tìm thật từ khoá đó ở chế độ ẩn danh, mở từng kết quả top 10 và xem loại trang nào chiếm đa số. Top 10 phần lớn là trang bán, danh mục thì làm trang sản phẩm; phần lớn là bài hướng dẫn thì làm bài blog. Đây là phương pháp kinh nghiệm nghề, chưa có nguồn chính thức.",
+     "visao": "Intent (ý định tìm kiếm) là điều người gõ từ khoá thật sự muốn: mua, xem giá, tìm hiểu hay so sánh. Google chỉ nói chung là hãy viết cho đúng thứ người tìm cần, và dạng trang đang đứng top là dấu vết rõ nhất cho thấy Google đang hiểu người tìm muốn gì. Chữ trong từ khoá có thể đánh lừa, còn top 10 thật thì phản ánh hành vi người tìm, nên đọc top 10 chính xác hơn đoán theo chữ.",
+     "check": [
+      "Tìm từ khoá ở chế độ ẩn danh (không đăng nhập), đúng vị trí và ngôn ngữ của thị trường mục tiêu, để kết quả không bị cá nhân hoá theo lịch sử của bạn.",
+      "Mở từng kết quả top 10 và đếm từng loại: trang bán, danh mục, bài hướng dẫn, danh sách, video, bản đồ; loại nào chiếm đa số là dạng trang bạn nên làm.",
+      "Đọc tiêu đề top 10: có giá, có câu hỏi, có số lượng (top 10, 5 loại) cho biết người tìm muốn mua, muốn hỏi hay muốn so sánh."
+     ],
+     "do": [
+      "Kết luận intent theo loại trang chiếm đa số top 10, không theo chữ trong từ khoá.",
+      "Dùng đặc điểm tiêu đề top 10 (giá, câu hỏi, số lượng) để chọn cách đặt tiêu đề và cách trình bày cho trang của mình.",
+      "Ghi lại các khối trên trang kết quả như AI Overview, Mọi người cũng hỏi, bản đồ, mua sắm để biết trang cần thêm phần nào, ví dụ thêm mục hỏi đáp khi có khối Mọi người cũng hỏi.",
+      "Lưu ý với khách: phương pháp đọc top 10 là kinh nghiệm nghề, chưa có nguồn chính thức; Google chỉ nói chung là viết cho đúng thứ người tìm cần."
+     ],
+     "avoid": [
+      "Không ép một từ có intent mua hàng thành bài blog dài chỉ vì dễ viết: sai dạng trang thì rất khó lên top dù bài viết tốt, công viết bị phí."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [
+      {
+       "title": "Google Search Central - Creating helpful, reliable, people-first content",
+       "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-tu-khoa-volume-0",
+     "if": "Từ khoá volume 0 trong Keyword Planner có nên viết không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/juststart",
+      "Reddit r/SEO"
+     ],
+     "tomtat": "Có thể nên viết, vì volume 0 trong Keyword Planner thường chỉ là lượt tìm dưới ngưỡng hiển thị hoặc bị gộp vào biến thể gần, người thật vẫn có thể tìm. Cách làm phụ thuộc intent: cùng intent với bài đã có thì thêm vào bài đó; intent riêng và có ích thì có thể làm trang riêng với nội dung riêng thật. Đây là kinh nghiệm cộng đồng, chưa có nguồn chính thức.",
+     "visao": "Keyword Planner là công cụ của Google Ads, con số trong đó được làm tròn và gom nhóm, và Google không công bố cách làm tròn; nên số 0 không có nghĩa là không ai tìm. Nếu từ đó có cùng ý định với một bài sẵn có, tách thành trang riêng chỉ tạo ra hai trang na ná nhau cạnh tranh lẫn nhau. Thêm nó thành heading hoặc câu hỏi trong bài sẵn có giúp bài trả lời trọn hơn mà không đẻ thêm trang mỏng.",
+     "check": [
+      "So top 10 của từ volume 0 với top 10 của từ đã có bài: nếu kết quả gần giống nhau thì hai từ cùng intent và nên dùng chung một bài."
+     ],
+     "do": [
+      "Hiểu đúng con số: volume 0 thường là dưới ngưỡng hiển thị hoặc bị gộp vào biến thể gần; người thật vẫn có thể tìm.",
+      "Nếu cùng intent với bài đã có: thêm từ đó thành heading hoặc câu hỏi trong bài đó.",
+      "Nếu intent riêng và có ích cho khách: có thể làm trang riêng, nhưng trang phải có nội dung riêng thật.",
+      "Ghi chú khi báo cáo: đây là kinh nghiệm cộng đồng, chưa có nguồn chính thức; Google không công bố cách Keyword Planner làm tròn số."
+     ],
+     "avoid": [
+      "Không đẻ mỗi biến thể từ khoá một trang gần giống nhau: dễ thành doorway (trang cửa ngõ chỉ để hứng từ khoá) hoặc scaled content (sản xuất hàng loạt trang ít giá trị), đều nằm trong Spam policies."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-an-thit-tu-khoa",
+     "if": "Nhiều bài trên site cùng nhắm một từ khoá có bị 'ăn thịt' nhau không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Blog/forum SEO Việt (GTV SEO, Vietmoz...)"
+     ],
+     "tomtat": "Không bị phạt riêng, nhưng có thể bị 'ăn thịt' theo nghĩa tín hiệu bị chia ra và Google phải tự chọn trang để xếp hạng. Hãy xem dữ liệu Search Console trước: nếu các trang gần trùng thì gộp về trang tốt nhất và 301 hoặc dùng canonical; nếu khác intent thì giữ và làm rõ khác biệt. 'Ăn thịt từ khoá' là khái niệm cộng đồng, Google chỉ có hướng dẫn chính thức về trang trùng lặp và canonical.",
+     "visao": "Khi nhiều trang cùng trả lời một câu hỏi, Google phải chọn một trang đại diện, và lựa chọn có thể đổi qua lại khiến thứ hạng dao động. Gộp nội dung rồi chuyển hướng 301 (chuyển vĩnh viễn) hoặc đặt canonical (thẻ chỉ URL chính) giúp dồn tín hiệu về một trang rõ ràng. Còn nếu mỗi trang trả lời một ý khác, việc làm rõ tiêu đề và link nội bộ giúp Google hiểu trang nào dành cho ý nào.",
+     "check": [
+      "Vào Search Console, mở báo cáo hiệu suất theo truy vấn đó và xem trang nào nhận lượt hiển thị: nếu nhiều URL của site thay nhau hiện và thứ hạng dao động thì có dấu hiệu chia tín hiệu.",
+      "Đọc lại các bài liên quan xem chúng có thật sự cùng intent hay mỗi bài trả lời một câu hỏi khác; khác câu hỏi thì không phải vấn đề cần gộp."
+     ],
+     "do": [
+      "Hiểu đúng: không có hình phạt riêng cho việc này; vấn đề là tín hiệu bị chia và Google phải tự chọn trang.",
+      "Nếu các trang gần trùng: gộp nội dung vào trang tốt nhất và 301 các trang còn lại về đó, hoặc dùng canonical.",
+      "Nếu khác intent: giữ cả hai, làm rõ khác biệt ở tiêu đề và đặt link nội bộ trỏ đúng trang cho đúng ý.",
+      "Khi trao đổi với khách: 'ăn thịt từ khoá' là khái niệm cộng đồng; Google chỉ có hướng dẫn chính thức về trang trùng lặp và canonical."
+     ],
+     "avoid": [
+      "Không xoá hàng loạt bài cũ khi chưa xem dữ liệu: có thể mất traffic từ các từ khoá dài mà những bài đó vẫn đang mang về."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - How to specify a canonical URL",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "noi-dung-ai",
+   "title": "Nội dung và AI",
+   "intro": "Bài viết bằng AI, độ dài bài, tần suất đăng, nội dung trùng lặp, đổi ngày, xoá bài cũ.",
+   "nodes": [
+    {
+     "id": "faq-seo-bai-ai-bi-phat",
+     "if": "Viết bài bằng AI có bị Google phạt không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không, Google không xếp hạng khác chỉ vì bài do AI tạo; thứ bị xử lý là tạo nhiều trang không thêm giá trị (scaled content abuse, lạm dụng nội dung quy mô lớn), bất kể làm bằng cách nào. Điều cần làm là để người am hiểu kiểm chứng và duyệt từng bài, và bài phải có thông tin, dữ liệu, kinh nghiệm gốc. Làm vậy thì dùng AI hỗ trợ không phải là rủi ro.",
+     "visao": "Google đánh giá kết quả cuối cùng có giúp người đọc hay không, chứ không đánh giá công cụ dùng để viết. Vấn đề của AI là mô hình có thể viết sai và rất dễ sản xuất hàng loạt bài na ná nhau, đúng kiểu hành vi chính sách spam nhắm tới. Vì vậy Google yêu cầu kiểm chứng, áp cả cho title, meta description (đoạn mô tả), structured data (dữ liệu có cấu trúc) và alt ảnh, và khuyên cân nhắc cho người đọc biết nội dung được tạo thế nào.",
+     "check": [
+      "Đọc bài và tự hỏi: có thông tin, dữ liệu hay kinh nghiệm gốc nào mà các trang khác chưa có không; nếu không có gì mới thì bài dễ bị coi là không thêm giá trị.",
+      "Kiểm quy trình: có người am hiểu kiểm chứng số liệu và duyệt trước khi đăng không, áp cho cả title, mô tả và alt ảnh; chưa có bước này thì chưa nên đăng."
+     ],
+     "do": [
+      "Giải thích cho khách: Google không xếp hạng khác chỉ vì nội dung do AI tạo; mối lo là tạo nhiều trang không thêm giá trị (scaled content abuse).",
+      "Bắt buộc bước kiểm chứng vì mô hình có thể sai, và áp việc kiểm duyệt cho cả title, meta description, structured data, alt ảnh như Google yêu cầu.",
+      "Nhớ rằng theo Spam policies, scaled content abuse bị xử lý 'bất kể nội dung được tạo bằng cách nào', nên không có cách viết nào được miễn.",
+      "Cân nhắc cho người đọc biết nội dung được tạo thế nào khi họ có thể thắc mắc, theo đúng khuyên của Google."
+     ],
+     "avoid": [
+      "Không bịa hồ sơ tác giả, ảnh đại diện tạo bằng AI hay bằng cấp giả: Google gọi đây là lừa dối, làm mất niềm tin của người đọc và đi ngược mọi tiêu chí chất lượng."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Using generative AI content",
+       "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+      },
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Search Central - Creating helpful, reliable, people-first content",
+       "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+     ],
+     "children": [
+      {
+       "id": "faq-seo-auto-ai-hang-loat",
+       "if": "Dùng tool AI tự viết và tự đăng hàng trăm bài/ngày để phủ từ khoá có được không?",
+       "hat": "black",
+       "asked": [
+        "BlackHatWorld",
+        "Reddit r/blackhatSEO",
+        "Nhóm FB SEO Việt Nam"
+       ],
+       "tomtat": "Không nên, đây là scaled content abuse (lạm dụng nội dung quy mô lớn) trong Spam policies của Google, bất kể dùng AI hay cách khác. Hậu quả có thể là cả site tụt hạng hoặc biến khỏi kết quả và công viết hàng nghìn bài thành vô ích. Cách đúng là chọn số bài theo số intent thật và để người am hiểu duyệt từng bài.",
+       "visao": "Pipeline tự viết tự đăng tạo ra rất nhiều trang chỉ khác nhau ở từ khoá, nên mỗi trang gần như không có giá trị riêng cho người đọc. Spam policies định nghĩa đúng hành vi này: tạo nhiều trang chủ yếu để thao túng xếp hạng, ít giá trị. Google phát hiện bằng hệ thống tự động lẫn người duyệt, và khi bị đánh giá thì ảnh hưởng thường lan ra cả site chứ không chỉ các bài tự động.",
+       "check": [
+        "Xem mỗi bài có người duyệt không, có giá trị riêng không, hay chỉ là một khuôn thay từ khoá; nếu là khuôn thay từ khoá thì đã thuộc đúng mô tả scaled content abuse."
+       ],
+       "do": [
+        "(1) Người ta làm vậy để phủ nhanh hàng nghìn từ khoá dài với chi phí gần bằng 0.",
+        "(2) Spam policies gọi đây là scaled content abuse: tạo nhiều trang chủ yếu để thao túng xếp hạng, ít giá trị, bất kể dùng AI hay cách khác.",
+        "(3) Google phát hiện bằng hệ thống tự động và người duyệt; hậu quả là cả site tụt hạng hoặc biến khỏi kết quả, có thể nhận manual action (hình phạt do nhân viên Google áp), công viết hàng nghìn bài thành vô ích.",
+        "(4) Cách đúng: chọn số bài bằng số intent thật, dùng AI để nghiên cứu và viết nháp, người am hiểu thêm dữ liệu gốc và duyệt từng bài trước khi đăng."
+       ],
+       "avoid": [
+        "Không chạy pipeline đăng tự động không người duyệt cho site thương mại của khách: rủi ro site khách tụt hạng hoặc bị phạt rơi vào khách, agency mất hợp đồng và uy tín."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Google Search Central - Spam policies for Google web search",
+         "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+        },
+        {
+         "title": "Google Search Central - Using generative AI content",
+         "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+        },
+        {
+         "title": "Google Search Quality Rater Guidelines (PDF, bản 11/09/2025)",
+         "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf"
+        }
+       ],
+       "children": []
+      },
+      {
+       "id": "faq-seo-spin-bai-doi-thu",
+       "if": "Copy bài đối thủ rồi dùng AI viết lại/spin cho khác chữ có bị phát hiện không?",
+       "hat": "black",
+       "asked": [
+        "BlackHatWorld",
+        "WarriorForum",
+        "Nhóm FB SEO Việt Nam"
+       ],
+       "tomtat": "Không nên, chép bài rồi viết lại hay spin (đảo chữ, thay từ đồng nghĩa) là vi phạm: Spam policies coi scraping (lấy nội dung site khác đăng lại, đổi chút ít) là spam. Qua được công cụ kiểm trùng không có nghĩa qua được hệ thống chất lượng của Google. Cách đúng là đọc đối thủ để tìm khoảng trống rồi viết bài có dữ liệu, kinh nghiệm của chính doanh nghiệp.",
+       "visao": "Công cụ kiểm trùng chỉ so chữ, còn Google đánh giá bài có thêm được gì so với nguồn gốc hay không. Quality Rater Guidelines (bộ hướng dẫn cho người chấm chất lượng của Google) xếp nội dung chép, diễn đạt lại, đổi từ đồng nghĩa ít công sức vào mức thấp nhất (Lowest). Bài spin không thêm thông tin mới nên dù khác chữ vẫn bị xem là ít giá trị, và site có nhiều bài kiểu này dễ bị đánh giá thấp toàn site.",
+       "check": [
+        "So bài với bài gốc của đối thủ: ngoài nội dung đã có ở bài gốc, bài của mình có thêm được dữ liệu, ví dụ hay kinh nghiệm nào không; không thêm gì thì bài thuộc nhóm nội dung chép lại."
+       ],
+       "do": [
+        "(1) Người ta làm vậy để có bài nhanh và qua được công cụ kiểm trùng.",
+        "(2) Spam policies coi scraping (lấy nội dung site khác, đăng lại, đổi chút ít) là vi phạm; Quality Rater Guidelines xếp nội dung chép, diễn đạt lại, đổi từ đồng nghĩa ít công sức vào mức Lowest.",
+        "(3) Qua được công cụ kiểm trùng không có nghĩa qua được hệ thống chất lượng; site đầy bài loại này dễ bị đánh giá thấp toàn site, và còn có thể bị chủ bài gốc khiếu nại bản quyền.",
+        "(4) Cách đúng: đọc đối thủ để biết khoảng trống, rồi viết bài có dữ liệu, ví dụ, kinh nghiệm của chính doanh nghiệp."
+       ],
+       "avoid": [
+        "Không dùng tool spin hay đổi từ đồng nghĩa: chính tài liệu Google liệt kê đây là dấu hiệu spam, site có thể bị đánh giá thấp toàn bộ."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Google Search Central - Spam policies for Google web search",
+         "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+        },
+        {
+         "title": "Google Search Quality Rater Guidelines (PDF, bản 11/09/2025)",
+         "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf"
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "faq-seo-bao-nhieu-tu",
+     "if": "Bài SEO bao nhiêu từ là đủ? Có cần dài hơn top 10?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/juststart",
+      "Blog/forum SEO Việt (GTV SEO, Vietmoz...)"
+     ],
+     "tomtat": "Không có số từ chuẩn: John Mueller (Google) nói rõ số từ không phải yếu tố xếp hạng và trang top không cần nhiều chữ nhất. Bài nên dài vừa đủ để trả lời trọn intent (ý định tìm kiếm), không cần dài hơn top 10. Thước đo đúng là người đọc có tìm được câu trả lời nhanh không.",
+     "visao": "Google xếp hạng theo việc trang có đáp ứng đúng câu hỏi hay không, chứ không đếm chữ. Quality Rater Guidelines (bộ hướng dẫn cho người chấm chất lượng của Google) coi nội dung độn (filler) đặt trước phần hữu ích là trải nghiệm kém, vì người đọc phải lội qua chữ thừa mới tới câu trả lời. Viết dài để vượt đối thủ vì vậy có thể làm bài tệ hơn chứ không tốt hơn.",
+     "check": [
+      "Đọc top 10 xem họ trả lời câu hỏi đó trong bao nhiêu nội dung, phần nào thừa, phần nào thiếu; phần thiếu là chỗ bài của mình nên bổ sung, phần thừa thì không cần chép theo."
+     ],
+     "do": [
+      "Lấy câu của Mueller làm căn cứ khi khách hỏi: số từ không phải yếu tố xếp hạng, và trang top không cần nhiều chữ nhất.",
+      "Viết độ dài vừa đủ để trả lời trọn intent, và đưa phần hữu ích lên sớm, vì Quality Rater Guidelines coi nội dung độn đặt trước phần hữu ích là trải nghiệm kém.",
+      "Đo chất lượng bài bằng việc người đọc có tìm được câu trả lời nhanh không, không bằng đếm chữ."
+     ],
+     "avoid": [
+      "Không kéo dài bài bằng mở bài vòng vo hay định nghĩa ai cũng biết chỉ để vượt số chữ đối thủ: người đọc mất kiên nhẫn và bài bị đánh giá là nội dung độn."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Roundtable - John Mueller: Word Count Is Not A Ranking Factor",
+       "url": "https://www.seroundtable.com/google-word-count-is-not-a-ranking-factor-27994.html"
+      },
+      {
+       "title": "Google Search Quality Rater Guidelines (PDF, bản 11/09/2025)",
+       "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-tan-suat-dang",
+     "if": "Mỗi ngày đăng bao nhiêu bài thì tốt? Đăng đều có lên hạng không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/juststart",
+      "Reddit r/SEO",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không có con số tốt cố định: John Mueller (Google) nói tần suất xuất bản không phải tín hiệu xếp hạng, đăng nhiều hơn không tự giúp lên hạng. Hãy chọn nhịp đăng theo số chủ đề thật cần phủ và năng lực duyệt bài của đội. Giữ chất lượng đều quan trọng hơn giữ số bài mỗi ngày.",
+     "visao": "Google đánh giá từng trang theo giá trị của nó, nên đăng đều chỉ có lợi khi mỗi bài đều tốt. Mueller cũng nói riêng tần suất thì không làm nội dung thành spam; điều quyết định là chất lượng và mục đích của bài. Đăng nhanh hơn khả năng duyệt thì chất lượng tụt, và đó mới là thứ ảnh hưởng tới site.",
+     "check": [
+      "Kiểm đội có đủ người duyệt để giữ chất lượng ở nhịp đăng định chọn không; không đủ thì phải giảm nhịp hoặc tăng người duyệt trước."
+     ],
+     "do": [
+      "Giải thích với khách: Mueller nói tần suất xuất bản không phải tín hiệu xếp hạng; đăng nhiều hơn không tự giúp xếp hạng tốt hơn.",
+      "Nói thêm: Mueller cũng nói chỉ tần suất thì không làm nội dung thành spam; vấn đề là chất lượng và mục đích.",
+      "Chọn nhịp đăng theo số chủ đề thật cần phủ và năng lực duyệt, không theo một con số cố định."
+     ],
+     "avoid": [
+      "Không đăng dồn hàng trăm bài mỏng chỉ để 'site trông hoạt động': không giúp xếp hạng mà còn kéo chất lượng chung của site đi xuống."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Roundtable - Google: Content Publishing Frequency Not A Ranking Signal",
+       "url": "https://www.seroundtable.com/google-content-frequency-25367.html"
+      },
+      {
+       "title": "Search Engine Roundtable - Google: Publishing Frequency Does Not Make Something Spam",
+       "url": "https://www.seroundtable.com/google-publishing-frequency-spam-34744.html"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-noi-dung-trung-lap",
+     "if": "Nội dung trùng lặp có bị Google phạt không? Bị site khác copy bài thì sao?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Google Search Central Help Community",
+      "Quora"
+     ],
+     "tomtat": "Không, Google nói không có 'hình phạt nội dung trùng lặp' cho trùng lặp thông thường; Google chỉ gom các bản trùng và chọn một URL đại diện. Trùng trong nội bộ site thì dùng canonical hoặc 301 về URL chính. Bị site khác copy thì thường Google vẫn nhận bản gốc; nếu bản chép lấn bản gốc thì gửi khiếu nại bản quyền (DMCA) theo quy trình của Google.",
+     "visao": "Trùng lặp thông thường xảy ra rất nhiều, như cùng một trang có nhiều URL do tham số hay bản in, nên Google xử lý bằng cách chọn một bản để hiển thị thay vì phạt. Canonical (thẻ chỉ URL chính) và chuyển hướng 301 (chuyển vĩnh viễn) giúp bạn chủ động nói cho Google biết bản nào là chính. Chỉ khi chép nội dung để thao túng như scraping hay dựng site nhân bản thì mới thuộc phạm vi Spam policies.",
+     "check": [
+      "Xác định trùng lặp nằm ở đâu: trùng trong nội bộ site (biến thể URL, bản in, tham số) hay bị site khác sao chép; hai trường hợp xử lý khác nhau."
+     ],
+     "do": [
+      "Hiểu đúng: Google nói không có 'hình phạt nội dung trùng lặp' cho trùng lặp thông thường; Google gom các bản trùng và chọn một URL đại diện.",
+      "Trùng nội bộ: đặt canonical hoặc chuyển hướng 301 về URL chính.",
+      "Chỉ lo khi có chép để thao túng (scraping, site nhân bản): đây mới là phần thuộc Spam policies.",
+      "Bị copy: thường Google vẫn nhận bản gốc; nếu bản chép lấn bản gốc thì gửi khiếu nại bản quyền (DMCA) theo quy trình của Google."
+     ],
+     "avoid": [
+      "Không dùng robots.txt hay noindex để 'chọn' canonical: Google khuyên không dùng cách này, vì có thể làm Google không đọc được trang hoặc bỏ trang khỏi kết quả thay vì gom về bản chính."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central Blog - Demystifying the duplicate content penalty",
+       "url": "https://developers.google.com/search/blog/2008/09/demystifying-duplicate-content-penalty"
+      },
+      {
+       "title": "Google Search Central - How to specify a canonical URL",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      },
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-doi-ngay-bai",
+     "if": "Sửa ngày đăng bài thành ngày mới cho Google tưởng bài mới có tác dụng không?",
+     "hat": "gray",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo"
+     ],
+     "tomtat": "Không có tác dụng, còn bị Google liệt kê là dấu hiệu nội dung làm cho máy chứ không phải cho người. Nếu muốn bài được xem là mới, hãy cập nhật thật (số liệu mới, mục mới, sửa sai) rồi mới ghi ngày cập nhật.",
+     "visao": "Ngày đăng chỉ có ý nghĩa khi phản ánh nội dung đã thay đổi; đổi ngày mà nội dung giữ nguyên là cố làm bài trông mới để tác động kết quả. Google nêu rõ hành vi đổi ngày khi nội dung không đổi đáng kể trong danh sách dấu hiệu nội dung viết cho công cụ tìm kiếm. Người đọc thấy ngày mới mà thông tin cũ cũng sẽ mất tin tưởng, nên cách này vừa không có lợi vừa có hại.",
+     "check": [
+      "So bản hiện tại với bản cũ: bài có thay đổi nội dung đáng kể không hay chỉ đổi ngày; chỉ đổi ngày thì không nên cập nhật ngày."
+     ],
+     "do": [
+      "(1) Người ta đổi ngày đăng để bài trông mới, mong Google và người đọc ưu tiên.",
+      "(2) Google liệt kê việc đổi ngày để trông mới khi nội dung không đổi đáng kể là dấu hiệu nội dung làm cho máy, không phải cho người.",
+      "(3) Việc này không mang lại lợi ích thứ hạng, còn làm người đọc mất tin tưởng khi thấy ngày mới mà thông tin cũ.",
+      "(4) Cách đúng: cập nhật thật (số liệu mới, mục mới, sửa sai) rồi mới ghi ngày cập nhật."
+     ],
+     "avoid": [
+      "Không đổi ngày hàng loạt bằng plugin: không có lợi cho thứ hạng, còn làm người đọc mất tin tưởng vào toàn bộ nội dung của site."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Creating helpful, reliable, people-first content",
+       "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-xoa-bai-cu",
+     "if": "Có nên xoá bớt bài cũ ít traffic để site 'sạch' hơn?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo"
+     ],
+     "tomtat": "Thường là không nên xoá vội: Google nói xoá nội dung là phương án cuối, chỉ khi không thể cứu, nên ưu tiên viết lại hoặc cấu trúc lại. Trước khi quyết, xem từng bài còn traffic, link ngoài, chuyển đổi không. Chỉ khi có nhiều mục làm ra để lấy traffic chứ không cho người đọc thì xoá phần không hữu ích mới có thể giúp phần tốt hoạt động tốt hơn.",
+     "visao": "Một bài ít traffic vẫn có thể mang về khách từ từ khoá dài, có link ngoài trỏ về hoặc tạo chuyển đổi, nên xoá là mất luôn các giá trị đó. Google đánh giá chất lượng ở cả mức site, vì vậy khi site có nhiều trang làm ra chỉ để lấy traffic, dọn bớt phần vô ích có thể giúp phần tốt nổi lên. Với các bài trùng chủ đề, gộp vào bài mạnh nhất rồi chuyển hướng 301 giữ lại được giá trị thay vì vứt đi.",
+     "check": [
+      "Xem trong Search Console và GA4 từng bài còn traffic, link ngoài và chuyển đổi nào không; bài còn bất kỳ giá trị nào trong ba thứ này thì ưu tiên sửa hoặc gộp thay vì xoá."
+     ],
+     "do": [
+      "Theo Google, coi xoá nội dung là phương án cuối, chỉ khi không thể cứu; ưu tiên viết lại, cấu trúc lại.",
+      "Nếu nhiều mục được tạo để lấy traffic chứ không phải cho người đọc, xoá phần không hữu ích có thể giúp phần tốt hoạt động tốt hơn.",
+      "Với bài trùng chủ đề: gộp nội dung vào bài mạnh nhất và chuyển hướng 301 (chuyển vĩnh viễn) các bài còn lại về đó."
+     ],
+     "avoid": [
+      "Không xoá hàng loạt theo một ngưỡng traffic cố định mà không xem từng nhóm bài: dễ xoá nhầm bài đang có link ngoài hoặc chuyển đổi, mất traffic không lấy lại được."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Google Search's core updates and your website",
+       "url": "https://developers.google.com/search/docs/appearance/core-updates"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "backlink",
+   "title": "Backlink",
+   "intro": "Mua link, guest post, textlink, booking báo, nofollow, DA/DR, disavow và số lượng backlink cần có.",
+   "nodes": [
+    {
+     "id": "faq-seo-mua-backlink",
+     "if": "Mua backlink có bị Google phạt không?",
+     "hat": "black",
+     "asked": [
+      "Reddit r/SEO",
+      "BlackHatWorld",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Có, mua backlink (link từ site khác trỏ về site mình) để tăng hạng là link spam theo Spam policies của Google; link trả tiền chỉ hợp lệ khi gắn rel=sponsored hoặc nofollow. Rủi ro là link bị vô hiệu hoá (tiền mua mất trắng) hoặc nặng hơn là site nhận manual action. Cách bền vững là kiếm link bằng digital PR, nội dung có dữ liệu và quan hệ đối tác thật.",
+     "visao": "Link vẫn là một tín hiệu xếp hạng, nên Google phải ngăn việc dùng tiền để mua tín hiệu đó; Google định nghĩa link spam là tạo link chủ yếu để thao túng xếp hạng. SpamBrain (hệ thống tự động chống spam của Google) phát hiện và vô hiệu hoá link không tự nhiên ở cả bên mua lẫn bên bán, nên link mua thường chỉ mất tác dụng âm thầm. Khi mẫu link nhân tạo lớn, người duyệt của Google có thể áp manual action (hình phạt thủ công) lên một phần hoặc cả site.",
+     "check": [
+      "Rà danh sách link: link nào có trả tiền, đổi hàng hoặc đổi dịch vụ; link loại này không gắn rel=sponsored hoặc nofollow thì đúng là link spam theo chính sách.",
+      "Xem phân bố anchor (chữ được gắn link): nếu một cụm từ khoá chính xác lặp trên nhiều site khác nhau thì đó là dấu hiệu mẫu link nhân tạo dễ bị phát hiện.",
+      "Mở báo cáo Manual actions trong Search Console để xem site đã có hình phạt 'Unnatural links to your site' (link không tự nhiên trỏ về site) chưa."
+     ],
+     "do": [
+      "(1) Người ta mua link vì link vẫn là một tín hiệu xếp hạng, và mua thì nhanh hơn tự kiếm.",
+      "(2) Spam policies: trả tiền lấy link, hoặc lấy bài có link, mà link đó chuyển ranking credit (giá trị xếp hạng) là link spam; chỉ hợp lệ khi gắn rel=sponsored hoặc nofollow. Đổi hàng, đổi dịch vụ lấy link cũng tính như vậy.",
+      "(3) SpamBrain vô hiệu hoá link không tự nhiên ở cả bên mua lẫn bên bán: credit mất, tiền không lấy lại được; mẫu lớn có thể nhận manual action 'Unnatural links to your site', ảnh hưởng một phần hoặc cả site.",
+      "(4) Cách đúng: digital PR (truyền thông để báo, cộng đồng tự nhắc và link), nội dung có dữ liệu để báo trích dẫn, tài trợ có gắn sponsored, quan hệ đối tác thật."
+     ],
+     "avoid": [
+      "Không mua gói 'backlink dofollow giá rẻ' số lượng lớn: rủi ro bị phạt rơi vào site của khách, không phải bên bán link.",
+      "Không lặp một anchor từ khoá chính xác trên nhiều site: đây là mẫu link nhân tạo dễ nhận diện nhất."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Search Central Blog - December 2022 link spam update",
+       "url": "https://developers.google.com/search/blog/2022/12/december-22-link-spam-update"
+      },
+      {
+       "title": "Search Console Help - Manual actions report",
+       "url": "https://support.google.com/webmasters/answer/9044175"
+      }
+     ],
+     "children": [
+      {
+       "id": "faq-seo-guest-post",
+       "if": "Guest post có tính phí có an toàn không? Giá guest post bao nhiêu là hợp lý?",
+       "hat": "gray",
+       "asked": [
+        "Reddit r/SEO",
+        "BlackHatWorld",
+        "Brands Vietnam (cộng đồng)"
+       ],
+       "tomtat": "Guest post (bài viết khách đăng trên site khác) chỉ an toàn khi bài viết thật cho độc giả site đó và link trả phí được gắn rel=sponsored; Google vi phạm hoá khi mục đích chính là xây link quy mô lớn. Không có giá chuẩn chính thức cho guest post, và giá cao không đồng nghĩa an toàn. Giá trị đúng của bài trả phí là traffic giới thiệu và nhận diện thương hiệu.",
+       "visao": "Google không phản đối việc viết bài cho site khác để chia sẻ kiến thức với độc giả của họ. Vấn đề nằm ở chiến dịch đăng bài hàng loạt để lấy link, vì khi đó link không phản ánh sự giới thiệu thật mà là link mua. Google nêu các dấu hiệu nhận diện: anchor nhồi từ khoá, bài rải trên nhiều site không liên quan, nội dung lặp na ná giữa các bài.",
+       "check": [
+        "Đọc bài guest post: bài có viết cho độc giả của site đó không, hay là bài khung chỉ thay tên thương hiệu; bài khung là dấu hiệu chiến dịch xây link.",
+        "Xem site nhận bài có bán guest post công khai cho mọi chủ đề không; site nhận mọi chủ đề thường là site bán link, giá trị thấp và rủi ro cao."
+       ],
+       "do": [
+        "(1) Người ta mua guest post để có link từ site khác trong một bài viết trông tự nhiên, nhanh hơn chờ được nhắc tên.",
+        "(2) Google không phản đối bài viết khách mang thông tin cho độc giả; vi phạm khi mục đích chính là xây link quy mô lớn. Bài trả phí thì link nên gắn rel=sponsored.",
+        "(3) Google nêu dấu hiệu nhận diện: anchor (chữ gắn link) nhồi từ khoá, bài rải trên nhiều site không liên quan, nội dung lặp na ná giữa các bài; link thuộc chiến dịch như vậy bị coi là link spam.",
+        "(4) Cách đúng: viết bài thật cho độc giả site đúng ngành, gắn sponsored cho link trả phí, coi giá trị là traffic giới thiệu và nhận diện thương hiệu. Giá không có chuẩn chính thức; giá cao không đồng nghĩa an toàn."
+       ],
+       "avoid": [
+        "Không đặt cùng một anchor exact-match (khớp chính xác từ khoá) ở hàng chục bài guest post: đây là đúng dấu hiệu Google nêu, link dễ bị vô hiệu hoá và site có thể bị xử lý."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Google Search Central Blog - A reminder about links in large-scale article campaigns (2017)",
+         "url": "https://developers.google.com/search/blog/2017/05/a-reminder-about-links-in-large-scale"
+        },
+        {
+         "title": "Google Search Central - Qualify your outbound links to Google",
+         "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links"
+        }
+       ],
+       "children": []
+      },
+      {
+       "id": "faq-seo-textlink",
+       "if": "Đặt textlink chân trang/sidebar trên site khác có còn tác dụng?",
+       "hat": "black",
+       "asked": [
+        "Nhóm FB SEO Việt Nam",
+        "BlackHatWorld"
+       ],
+       "tomtat": "Không nên, textlink chân trang (footer) hoặc sidebar trên site khác bị Spam policies nêu đích danh là link spam. Loại link này dễ nhận diện nhất nên thường bị vô hiệu hoá, tiền thuê theo tháng mất trắng. Nếu cần hiện diện trên site khác, hãy mua chỗ quảng cáo có rel=sponsored để lấy traffic, không để lấy thứ hạng.",
+       "visao": "Link nằm trong footer hoặc template xuất hiện trên mọi trang của site đặt (sitewide), và cùng một mẫu link được rải trên nhiều site, nên rất dễ nhận ra đây là link mua chứ không phải sự giới thiệu tự nhiên. Spam policies liệt kê rõ link phân phối rộng trong footer hoặc template của nhiều site, cùng textlink quảng cáo không chặn ranking credit, là link spam. Khi bị nhận diện, link chỉ đơn giản mất tác dụng, còn mẫu lớn có thể kéo theo hình phạt.",
+       "check": [
+        "Xem vị trí từng link thuê: nằm ở footer, sidebar, xuất hiện toàn site (sitewide) hay nằm trong thân bài có liên quan; footer, sidebar, sitewide là nhóm rủi ro cao nhất."
+       ],
+       "do": [
+        "(1) Textlink được bán theo tháng vì rẻ và hiện trên mọi trang của site đặt.",
+        "(2) Spam policies nêu đích danh link trong footer hoặc template phân phối trên nhiều site, và textlink trả tiền không chặn ranking credit (giá trị xếp hạng), là link spam.",
+        "(3) Loại link này dễ nhận diện nhất, thường bị vô hiệu hoá; mẫu lớn có thể dẫn tới manual action (hình phạt do nhân viên Google áp), tiền thuê theo tháng mất trắng.",
+        "(4) Nếu cần hiện diện trên site khác, mua chỗ quảng cáo có rel=sponsored để lấy traffic, không để lấy thứ hạng."
+       ],
+       "avoid": [
+        "Không thuê textlink sitewide có anchor (chữ gắn link) là từ khoá cho site khách: vừa mất tiền hằng tháng, vừa đặt site khách vào rủi ro bị phạt."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Google Search Central - Spam policies for Google web search",
+         "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+        }
+       ],
+       "children": []
+      },
+      {
+       "id": "faq-seo-booking-bao",
+       "if": "Đăng bài PR trên báo (booking báo) có link dofollow có được không?",
+       "hat": "gray",
+       "asked": [
+        "Brands Vietnam (cộng đồng)",
+        "Nhóm FB SEO Việt Nam"
+       ],
+       "tomtat": "Đăng bài PR trên báo thì được, nhưng link dofollow (link chuyển giá trị xếp hạng) trong bài trả tiền là link spam theo Google, kể cả thông cáo báo chí; link nên gắn sponsored hoặc nofollow. Giá trị thật của bài báo là uy tín khi khách tra tên, traffic giới thiệu và được nhắc tên. Anchor nên là tên thương hiệu hoặc URL.",
+       "visao": "Google phân biệt hai chuyện: bản thân bài advertorial (bài quảng cáo dạng tin tức) và cái link trong bài. Site reputation policy nói advertorial viết cho độc giả và thông cáo báo chí không bị coi là vi phạm chính sách đó; vấn đề chỉ nằm ở link. Khi bài trả tiền mà link vẫn chuyển ranking credit, đó là mua link, nên phải gắn nhãn sponsored hoặc nofollow để bài hợp lệ.",
+       "check": [
+        "Xem bài có nhãn 'nội dung tài trợ' hoặc 'PR' không, và link trong bài có gắn rel=sponsored hoặc nofollow không; bài trả tiền mà link không gắn nhãn thì thuộc nhóm link spam."
+       ],
+       "do": [
+        "(1) Người ta booking báo kèm link dofollow để vừa có uy tín báo chí vừa có link từ site mạnh.",
+        "(2) Google coi advertorial trả tiền mà link vẫn chuyển ranking credit là link spam, kể cả thông cáo báo chí; site reputation policy nói advertorial cho độc giả và thông cáo báo chí không vi phạm chính sách đó, vấn đề ở link.",
+        "(3) Google xếp loại link này vào link spam, và theo Spam policies, site vi phạm có thể bị xếp hạng thấp hơn hoặc không xuất hiện trong kết quả; vì vậy lời hứa 'tăng hạng nhờ link báo' không có cơ sở chắc chắn.",
+        "(4) Cách đúng: khai thác giá trị thật của bài báo là uy tín khi khách tra tên, traffic giới thiệu, được nhắc tên; anchor (chữ gắn link) nên là tên thương hiệu hoặc URL, link gắn sponsored hoặc nofollow."
+       ],
+       "avoid": [
+        "Không bán cho khách lời hứa 'link báo dofollow tăng hạng' như một cam kết: Google coi loại link này là link spam, cam kết sai dễ thành tranh chấp và mất uy tín."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Google Search Central - Spam policies for Google web search",
+         "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+        },
+        {
+         "title": "Google Search Central Blog - Updating our site reputation abuse policy (11/2024)",
+         "url": "https://developers.google.com/search/blog/2024/11/site-reputation-abuse"
+        },
+        {
+         "title": "Google Search Central - Qualify your outbound links to Google",
+         "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links"
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "faq-seo-nofollow",
+     "if": "Backlink nofollow có tác dụng gì không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Quora",
+      "Blog/forum SEO Việt (GTV SEO, Vietmoz...)"
+     ],
+     "tomtat": "Có tác dụng, chắc chắn nhất là traffic và nhận diện thương hiệu; còn giá trị xếp hạng thì Google không nói truyền bao nhiêu. Từ 2019, Google coi nofollow, sponsored, ugc là gợi ý (hint) chứ không phải lệnh tuyệt đối. Vì vậy link nofollow ở nơi người đọc thật sự bấm vẫn đáng có.",
+     "visao": "Nofollow là thuộc tính báo cho Google rằng site đặt link không muốn bảo chứng cho link đó; sponsored dành cho link trả tiền, ugc dành cho nội dung người dùng tạo. Khi Google chuyển sang coi đây là gợi ý, Google có thể tự quyết có dùng link đó hay không, nhưng không công bố mức giá trị. Khảo sát BuzzStream cho thấy đa số người làm PR tin link nofollow có được tính nhưng không bằng link thường; đây là niềm tin, không phải xác nhận của Google.",
+     "check": [
+      "Xem link nằm ở nơi người đọc thật sự bấm không, như bài báo hay diễn đàn đúng ngành; có người bấm thì link nofollow vẫn mang lại khách và nhận diện."
+     ],
+     "do": [
+      "Giải thích với khách: từ 2019 Google coi nofollow, sponsored, ugc là gợi ý (hint), không phải lệnh tuyệt đối.",
+      "Nói rõ phần chưa chắc: Google không nói nofollow truyền bao nhiêu giá trị; khảo sát BuzzStream cho thấy đa số người làm PR tin có tính nhưng không bằng link thường, đây là niềm tin, không phải xác nhận.",
+      "Đánh giá link nofollow theo giá trị chắc chắn của nó: traffic và nhận diện thương hiệu."
+     ],
+     "avoid": [
+      "Không gỡ hoặc đòi site đặt bỏ nofollow ở link đã trả tiền: chính thuộc tính đó giữ cho link hợp lệ, bỏ đi là biến nó thành link spam."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Qualify your outbound links to Google",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links"
+      },
+      {
+       "title": "BuzzStream - State of Digital PR 2025 (khảo sát người làm digital PR)",
+       "url": "https://www.buzzstream.com/blog/state-of-digital-pr-2025/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-da-dr",
+     "if": "DA/DR bao nhiêu thì tốt? Google có dùng DA không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không có mức DA/DR 'tốt' theo Google, vì Google không dùng các chỉ số này: John Mueller nói Google không dùng Domain Authority trong thuật toán. DA (của Moz) và DR (của Ahrefs) là chỉ số do công cụ bên thứ ba tự tính. Chỉ dùng chúng để lọc sơ bộ, còn quyết định đặt link phải dựa trên độ liên quan, traffic và độ tin cậy của site.",
+     "visao": "Google có trang riêng nói công cụ bên thứ ba không có dữ liệu xếp hạng nội bộ của Google, nên DA, DR chỉ là ước đoán của từng công cụ dựa trên dữ liệu link họ thu thập. Vì chỉ số tính chủ yếu từ link, nó có thể bị thổi lên bằng cách đổ link rác vào site. Một site đúng ngành, có người đọc thật và có biên tập mới là nơi link có giá trị thật.",
+     "check": [
+      "Mở site định đặt link và kiểm: có traffic thật không, có đúng chủ đề với site mình không, có biên tập (bài được chọn lọc, không nhận đăng mọi thứ) không; thiếu các điểm này thì DR cao cũng không đáng."
+     ],
+     "do": [
+      "Nói rõ với khách: Mueller nói Google không dùng Domain Authority trong thuật toán; DA (Moz), DR (Ahrefs) là chỉ số của công cụ bên thứ ba.",
+      "Dẫn thêm trang của Google nói công cụ bên thứ ba không có dữ liệu xếp hạng nội bộ của Google.",
+      "Dùng DA/DR để lọc sơ bộ danh sách site, rồi quyết định theo độ liên quan, traffic và độ tin cậy của từng site."
+     ],
+     "avoid": [
+      "Không mua link chỉ vì DR cao: DR có thể bị thổi bằng link rác, mua theo con số này dễ trả tiền cho site không có giá trị thật."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Roundtable - Google: We Still Use PageRank Internally (không dùng Domain Authority)",
+       "url": "https://www.seroundtable.com/google-still-uses-pagerank-29056.html"
+      },
+      {
+       "title": "Google Search Central - Third-party SEO tools and services",
+       "url": "https://developers.google.com/search/docs/fundamentals/third-party-seo"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-can-bao-nhieu-backlink",
+     "if": "Cần bao nhiêu backlink để lên top?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/juststart",
+      "Quora"
+     ],
+     "tomtat": "Không có số chuẩn nào; Gary Illyes (Google) từng nói Google cần rất ít link để xếp hạng một trang (rồi chính ông nói lẽ ra không nên nói vậy). Điều quan trọng là link đến từ đâu, không phải bao nhiêu: vài link từ nguồn đúng ngành, có biên tập giá trị hơn hàng trăm link rác. Hãy xem đối thủ top 10 có link từ đâu rồi lập kế hoạch theo nguồn.",
+     "visao": "Link có giá trị vì nó là lời giới thiệu từ nơi đáng tin, nên một link từ hiệp hội hay báo đúng ngành mang tín hiệu mạnh hơn nhiều link từ site vô danh. SEO Starter Guide nói truyền miệng là cách bền nhất để được nhắc tới, và Search còn nhiều thứ ngoài link. Đặt mục tiêu theo số lượng sẽ kéo người làm tới nguồn link rẻ và rác, đúng loại Google bỏ qua hoặc coi là spam.",
+     "check": [
+      "Xem đối thủ top 10 có link từ đâu (báo, hiệp hội, nhà cung cấp), không chỉ đếm số; nguồn của họ là gợi ý nơi mình nên có mặt."
+     ],
+     "do": [
+      "Nói thẳng với khách: không có số chuẩn; Gary Illyes từng nói Google cần rất ít link để xếp hạng một trang (rồi tự nói lẽ ra không nên nói vậy).",
+      "Dựa trên SEO Starter Guide: truyền miệng là cách bền nhất để được nhắc tới, và Search còn nhiều thứ ngoài link.",
+      "Ưu tiên chất lượng: vài link từ nguồn đúng ngành, có biên tập, giá trị hơn hàng trăm link rác."
+     ],
+     "avoid": [
+      "Không đặt KPI theo số lượng backlink mỗi tháng: dễ đẩy người làm đi mua link rác, đặt site vào rủi ro bị phạt."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Journal - Gary Illyes: Google needs very few links",
+       "url": "https://www.searchenginejournal.com/google-needs-very-few-links/514494/"
+      },
+      {
+       "title": "Google Search Central - SEO Starter Guide",
+       "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-disavow",
+     "if": "Có nên disavow backlink 'độc hại' mà tool báo không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/TechSEO",
+      "Google Search Central Help Community"
+     ],
+     "tomtat": "Thường là không nên: Google nói disavow (công cụ báo Google bỏ qua link) chỉ dùng khi site có nhiều link spam hoặc nhân tạo và đã hoặc có khả năng bị manual action; dùng sai có thể hại hiệu suất. John Mueller cũng nói disavow 'toxic links' theo điểm của tool không lấy lại được thứ hạng, vì spam thường đã bị Google bỏ qua. Chỉ khi có manual action về link thì mới làm quy trình gỡ link, disavow và xin xem xét lại.",
+     "visao": "Google vốn đã tự bỏ qua phần lớn link spam, nên disavow những link đó không thay đổi gì, còn nếu chọn nhầm thì bạn đang tự bảo Google bỏ qua cả link tốt. 'Toxic score' (điểm độc hại) là đánh giá của công cụ bên thứ ba, không phải của Google. Disavow chỉ thật sự cần khi site đã tự tạo khối lớn link nhân tạo và bị (hoặc sắp bị) manual action (hình phạt do nhân viên Google áp), vì khi đó Google cần thấy bạn đã dọn dẹp.",
+     "check": [
+      "Mở báo cáo Manual actions trong Search Console xem có hình phạt về link (Unnatural links to your site) không; không có thì gần như không cần disavow.",
+      "Xem lại lịch sử site: trước đây có tự mua hoặc tự tạo khối lớn link nhân tạo không; có thì mới thuộc trường hợp Google cho phép cân nhắc disavow."
+     ],
+     "do": [
+      "Chỉ dùng disavow khi có nhiều link spam hoặc nhân tạo và đã hoặc có khả năng bị manual action, vì Google nói dùng sai có thể hại hiệu suất.",
+      "Giải thích với khách: Mueller nói disavow 'toxic links' theo điểm của tool không lấy lại được thứ hạng, và spam thường đã bị Google bỏ qua.",
+      "Khi có manual action: tải danh sách link từ Search Console, xin chủ site gỡ link trước, rồi disavow phần không gỡ được, ưu tiên theo domain (dòng bắt đầu bằng 'domain:' trong tệp .txt).",
+      "Sau đó gửi yêu cầu xem xét lại kèm hồ sơ link đã gỡ và giải thích link không gỡ được; Google cảnh báo chỉ disavow toàn bộ mà không thử gỡ có thể bị từ chối.",
+      "Biết trước thời gian: sau khi tải tệp lên, Google cần vài tuần để đưa danh sách vào xử lý; yêu cầu xem xét lại thường mất vài ngày tới vài tuần."
+     ],
+     "avoid": [
+      "Không disavow theo 'toxic score' của tool: có thể vô tình bỏ cả link tốt, làm site mất giá trị đang có.",
+      "Không disavow toàn bộ link mà không thử xin gỡ khi xử lý manual action: yêu cầu xem xét lại có thể bị từ chối."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Search Console Help - Disavow links to your site",
+       "url": "https://support.google.com/webmasters/answer/2648487"
+      },
+      {
+       "title": "Search Engine Roundtable - Google: You Won't Get Your Rankings Back By Disavowing Toxic Links",
+       "url": "https://www.seroundtable.com/google-rankings-disavowing-toxic-links-36881.html"
+      },
+      {
+       "title": "Search Console Help - Manual actions report",
+       "url": "https://support.google.com/webmasters/answer/9044175"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-backlink-an-toan",
+     "if": "Muốn có backlink an toàn thì làm cách nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Brands Vietnam (cộng đồng)"
+     ],
+     "tomtat": "Cách an toàn là để link đến từ lý do thật: digital PR (truyền thông để báo, cộng đồng tự nhắc và link), nội dung có dữ liệu, bình luận chuyên gia và quan hệ đối tác thật. John Mueller gọi digital PR tốt là quan trọng ngang SEO kỹ thuật, có khi hơn. Bắt đầu bằng việc tìm xem doanh nghiệp có dữ liệu, chuyên gia, câu chuyện gì báo chí hoặc cộng đồng quan tâm.",
+     "visao": "Link an toàn là link người khác đặt vì nội dung của bạn có ích cho độc giả của họ, nên không có gì để Google phải vô hiệu hoá. Khảo sát BuzzStream (11-12/2024) cho thấy 87,3% người làm digital PR không bao giờ trả tiền đặt link, và chiến thuật chính của họ là nội dung dữ liệu và bình luận chuyên gia. Những nguồn như đối tác, hiệp hội, báo trích dẫn số liệu tạo ra link có lý do tồn tại thật, nên bền theo thời gian.",
+     "check": [
+      "Liệt kê doanh nghiệp có dữ liệu, chuyên gia, câu chuyện gì mà báo chí hoặc cộng đồng quan tâm; đây là nguyên liệu để có link tự nhiên, chưa có thì cần tạo ra trước."
+     ],
+     "do": [
+      "Đầu tư digital PR: Mueller gọi digital PR tốt là quan trọng ngang SEO kỹ thuật, có khi hơn.",
+      "Làm nội dung dữ liệu và bình luận chuyên gia, theo khảo sát BuzzStream (11-12/2024): 87,3% người làm digital PR không bao giờ trả tiền đặt link, đây là chiến thuật chính của họ.",
+      "Khai thác nguồn link thật: đối tác, nhà cung cấp, hiệp hội ngành, báo trích dẫn số liệu, sự kiện, tài trợ có gắn rel=sponsored."
+     ],
+     "avoid": [
+      "Không trao đổi link quá mức hoặc làm trang 'đối tác' chỉ để link chéo: Spam policies nêu rõ đây là link spam, link có thể bị vô hiệu hoá và site bị xử lý."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Journal - John Mueller praises digital PR",
+       "url": "https://www.searchenginejournal.com/john-mueller-praises-digital-pr/393464/"
+      },
+      {
+       "title": "BuzzStream - State of Digital PR 2025 (khảo sát người làm digital PR)",
+       "url": "https://www.buzzstream.com/blog/state-of-digital-pr-2025/"
+      },
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "ky-thuat",
+   "title": "SEO kỹ thuật",
+   "intro": "Tốc độ và Core Web Vitals, plugin WordPress, schema, sitemap, JavaScript, đổi tên miền.",
+   "nodes": [
+    {
+     "id": "faq-seo-toc-do-cwv",
+     "if": "Điểm PageSpeed thấp có làm tụt hạng không? CWV quan trọng tới đâu?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/TechSEO",
+      "Reddit r/SEO",
+      "Google Search Central Help Community"
+     ],
+     "tomtat": "Có ảnh hưởng nhưng nhỏ: Google xác nhận Core Web Vitals (CWV, bộ chỉ số đo tốc độ hiện nội dung, độ phản hồi và độ ổn định bố cục của trang) được hệ thống xếp hạng dùng, nhưng điểm cao không đảm bảo thứ hạng cao. Việc nên làm trước tiên là xem báo cáo Core Web Vitals trong Search Console thay vì nhìn một lần đo PageSpeed. Sau đó ưu tiên sửa trang nhiều traffic và chuyển đổi; lợi ích rõ nhất thường là trải nghiệm và tỷ lệ chuyển đổi, không phải nhảy hạng.",
+     "visao": "Google nói nội dung liên quan vẫn quan trọng hơn, nên một trang chậm hơn nhưng trả lời đúng câu hỏi vẫn có thể đứng trên trang nhanh mà nội dung kém. Điểm Lighthouse (công cụ đo tốc độ trong môi trường giả lập, chạy một lần) dao động theo máy và mạng lúc đo, còn báo cáo Core Web Vitals trong Search Console lấy dữ liệu người dùng thật nên phản ánh đúng hơn những gì khách gặp. Giống đo huyết áp: một lần đo ở phòng khám chưa nói hết, số theo dõi nhiều ngày mới đáng tin.",
+     "check": [
+      "Mở báo cáo Core Web Vitals trong Search Console (dữ liệu từ người dùng thật) và xem nhóm URL nào bị xếp chưa đạt; đây là căn cứ chính, không dựa vào điểm Lighthouse của một lần đo.",
+      "So chỉ số với ngưỡng 'tốt' Google công bố: LCP (thời gian hiện phần nội dung lớn nhất) trong 2,5 giây, INP (độ trễ phản hồi khi bấm, gõ) từ 200 ms trở xuống, CLS (mức xô lệch bố cục) từ 0,1 trở xuống.",
+      "Với từng nhóm trang chậm, xác định nguyên nhân thuộc loại nào: ảnh nặng, script bên thứ ba (mã nhúng từ dịch vụ bên ngoài) hay server phản hồi chậm, vì mỗi loại có cách sửa khác nhau."
+     ],
+     "do": [
+      "Lập danh sách trang có traffic và chuyển đổi cao đang vượt ngưỡng, sửa nhóm này trước vì tác động tới khách và doanh thu rõ nhất.",
+      "Sửa đúng nguyên nhân đã xác định (ảnh, script bên thứ ba hoặc server), rồi theo dõi lại báo cáo Core Web Vitals trong Search Console để xác nhận nhóm URL đã chuyển sang đạt.",
+      "Đặt kỳ vọng đúng với khách: Google nói CWV được hệ thống xếp hạng dùng nhưng điểm cao không đảm bảo thứ hạng cao, nội dung liên quan vẫn quan trọng hơn.",
+      "Dẫn thêm ý kiến John Mueller (chuyên viên hỗ trợ tìm kiếm của Google), người nhiều lần nói tác động thứ hạng của CWV nhỏ; giá trị lớn hơn là trải nghiệm và chuyển đổi.",
+      "Đo kết quả bằng tỷ lệ chuyển đổi trước và sau khi sửa, thay vì chỉ nhìn thứ hạng."
+     ],
+     "avoid": [
+      "Không bỏ chức năng quan trọng cho khách chỉ để đạt 100 điểm Lighthouse; điểm đẹp hơn nhưng khách khó liên hệ, khó mua thì thiệt hại lớn hơn lợi ích.",
+      "Không báo cáo tiến độ bằng một lần đo PageSpeed, vì điểm dao động theo từng lần đo và dễ khiến khách hiểu sai tình trạng thật."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Understanding Core Web Vitals and Google search results",
+       "url": "https://developers.google.com/search/docs/appearance/core-web-vitals"
+      },
+      {
+       "title": "Search Engine Journal - Mueller nói về mức ảnh hưởng của Core Web Vitals tới thứ hạng",
+       "url": "https://www.searchenginejournal.com/googles-mueller-dismisses-core-web-vitals-impact-on-rankings/530715/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-plugin-wordpress",
+     "if": "Rank Math hay Yoast tốt hơn cho SEO? Đạt điểm xanh trong plugin là chuẩn SEO chưa?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Nhóm FB SEO Việt Nam",
+      "Blog/forum SEO Việt (GTV SEO, Vietmoz...)"
+     ],
+     "tomtat": "Không plugin nào giúp lên hạng hơn plugin nào: Google không ưu tiên Rank Math hay Yoast, cả hai chỉ là công cụ xuất thẻ (title, canonical, noindex) và sitemap. Điểm xanh trong plugin cũng không phải 'chuẩn SEO' theo Google. Việc cần làm là kiểm tra plugin đang xuất đúng các thẻ quan trọng, rồi chọn plugin theo nhu cầu quản trị của site.",
+     "visao": "Google chỉ đọc kết quả cuối cùng trên trang: thẻ title, canonical (thẻ báo đâu là bản gốc của trang), noindex (lệnh không cho hiện trên kết quả tìm kiếm), nội dung; Google không quan tâm site dùng plugin nào để tạo ra chúng. Điểm xanh là thang điểm do nhà làm plugin tự đặt, và Google nói công cụ bên thứ ba không có dữ liệu xếp hạng nội bộ của Google. Chạy theo điểm 100 giống học theo đề cương của người khác, trong khi đề thi thật là người đọc và hệ thống của Google.",
+     "check": [
+      "Mở mã nguồn vài trang tiêu biểu (bài viết, danh mục, trang lưu trữ) và xem thẻ title, thẻ canonical có đúng URL của chính trang đó không; sai ở đây ảnh hưởng thật, còn điểm plugin thì không.",
+      "Kiểm tra sitemap (file liệt kê URL gửi cho Google) do plugin tạo có đủ trang cần index không, và các trang mỏng như trang lưu trữ đã được đặt noindex chưa."
+     ],
+     "do": [
+      "Chọn plugin theo nhu cầu thực tế: cần quản lý redirect (chuyển hướng URL), schema (dữ liệu có cấu trúc), sitemap, noindex trang lưu trữ thì chọn plugin làm tốt những việc đó.",
+      "Cấu hình đúng ở cấp toàn site (mẫu title, canonical, sitemap, noindex), sau đó kiểm lại bằng cách xem mã nguồn trang như ở bước kiểm tra; quan trọng là cấu hình đúng, không phải tên plugin.",
+      "Giải thích rõ với khách và nhân viên: Google không ưu tiên plugin nào, điểm xanh là thước đo của nhà làm plugin, không phải tín hiệu của Google."
+     ],
+     "avoid": [
+      "Không nhồi từ khoá để đạt 'điểm 100' trong plugin; câu văn gượng gạo làm người đọc khó chịu trong khi điểm đó không phải tín hiệu xếp hạng của Google."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Third-party SEO tools and services",
+       "url": "https://developers.google.com/search/docs/fundamentals/third-party-seo"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-schema",
+     "if": "Gắn schema có giúp lên top không? FAQ schema còn dùng được không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/TechSEO",
+      "Reddit r/SEO",
+      "Google Search Central Help Community"
+     ],
+     "tomtat": "Không trực tiếp: schema (structured data, đoạn mã mô tả nội dung trang cho máy đọc) giúp Google hiểu trang và đủ điều kiện hiện kết quả nhiều định dạng (rich result), chứ không phải nút đẩy lên top. FAQ rich result thì Google đã ngừng hiển thị cho mọi site, nên bài mới không bắt buộc thêm FAQ schema, còn markup cũ không cần vội gỡ. Đáng làm nhất là Organization schema ở trang chủ hoặc trang giới thiệu để Google phân biệt thương hiệu.",
+     "visao": "Schema giống tờ khai đi kèm sản phẩm: giúp Google đọc nhanh doanh nghiệp là ai, trang nói về gì, nhưng không làm nội dung tốt hơn. Kể cả khi mã qua kiểm tra không lỗi, Google nói vẫn không đảm bảo có rich result, nên 'gắn schema là có sao vàng' là hiểu sai. Ngược lại, khai những thứ người đọc không thấy trên trang hoặc review giả là khai sai sự thật, có thể bị manual action (hình phạt do nhân viên Google áp trực tiếp).",
+     "check": [
+      "So từng thông tin trong schema với nội dung người đọc nhìn thấy trên trang (tên, đánh giá, câu hỏi); thông tin nào chỉ có trong mã mà không hiện trên trang thì phải bỏ.",
+      "Chạy Rich Results Test (công cụ kiểm tra kết quả nhiều định dạng của Google) cho trang và xem có báo lỗi không; có lỗi thì sửa trước khi kỳ vọng hiển thị.",
+      "Kiểm tra trang chủ hoặc trang giới thiệu đã có Organization schema với name, url, logo, sameAs (danh sách link hồ sơ chính thức của thương hiệu ở nơi khác) chưa."
+     ],
+     "do": [
+      "Làm Organization schema (name, url, logo, sameAs) ở trang chủ hoặc trang giới thiệu trước, vì nó giúp Google phân biệt thương hiệu.",
+      "Gắn các loại schema khớp đúng nội dung từng trang, chạy Rich Results Test sau khi gắn, và hiểu rằng qua kiểm tra không đảm bảo có rich result.",
+      "Với FAQ schema: Google đã ngừng hiển thị FAQ rich result cho mọi site (thông báo trên trang tài liệu FAQPage của Google); markup cũ không cần vội gỡ, bài mới không bắt buộc thêm."
+     ],
+     "avoid": [
+      "Không đánh dấu nội dung người đọc không thấy hoặc gắn review giả vào schema: có thể bị manual action về structured data.",
+      "Không hứa với khách rằng gắn schema sẽ lên top hoặc chắc chắn hiện rich result, vì Google nói qua kiểm tra không đảm bảo có rich result."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - General structured data guidelines",
+       "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies"
+      },
+      {
+       "title": "Google Search Central - FAQPage structured data (thông báo ngừng FAQ rich result)",
+       "url": "https://developers.google.com/search/docs/appearance/structured-data/faqpage"
+      },
+      {
+       "title": "Google Search Central - Organization structured data",
+       "url": "https://developers.google.com/search/docs/appearance/structured-data/organization"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-sitemap",
+     "if": "Có bắt buộc sitemap không? Gửi sitemap rồi mà vẫn không index?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Reddit r/TechSEO"
+     ],
+     "tomtat": "Không bắt buộc nhưng nên có: sitemap (file liệt kê các URL của site gửi cho Google) giúp Google tìm URL, nhất là site lớn hoặc site mới ít link. Nằm trong sitemap không đảm bảo được index (đưa vào kho để hiện trên kết quả tìm kiếm). Đã gửi mà vẫn không index thì xem báo cáo Page indexing, vì nguyên nhân thường là chất lượng hoặc trùng lặp chứ không phải sitemap.",
+     "visao": "Sitemap giống danh bạ gửi cho Google: giúp Googlebot (bot thu thập dữ liệu của Google) biết có những trang nào để ghé, còn việc đưa trang vào kết quả là quyết định riêng dựa trên chất lượng và mức trùng lặp. Site mới ít link từ nơi khác trỏ về thì Google khó tự tìm thấy trang, nên sitemap có ích nhất ở đây. Danh bạ lẫn địa chỉ sai (chuyển hướng, 404, noindex) thì chính bạn cũng khó theo dõi trang nào thật sự cần index.",
+     "check": [
+      "Rà sitemap xem có URL nào không trả mã 200, không phải bản canonical (bản gốc được chọn của trang), hoặc đang gắn noindex; gặp loại nào thì loại khỏi sitemap.",
+      "Kiểm tra lastmod (ngày sửa cuối khai trong sitemap) có đổi theo lần sửa nội dung thật không; ngày đổi mà nội dung không đổi là tín hiệu sai cần chỉnh.",
+      "Mở báo cáo Page indexing (báo cáo lập chỉ mục trang) trong Search Console để xem lý do từng nhóm URL chưa được index; nếu đa số là lý do chất lượng hoặc trùng lặp thì vấn đề nằm ở nội dung."
+     ],
+     "do": [
+      "Gửi sitemap trong Search Console hoặc khai đường dẫn sitemap trong robots.txt (file hướng dẫn bot thu thập dữ liệu), rồi theo dõi số URL Google đã đọc được.",
+      "Dọn sitemap để chỉ giữ URL trả 200, là canonical và không gắn noindex.",
+      "Với URL không được index vì chất lượng hoặc trùng lặp: cải thiện nội dung hoặc xử lý trang trùng, thay vì gửi lại sitemap nhiều lần."
+     ],
+     "avoid": [
+      "Không đưa URL noindex, URL chuyển hướng hay URL 404 vào sitemap; sitemap sẽ chứa tín hiệu mâu thuẫn và số liệu theo dõi bị rối.",
+      "Không coi việc URL có trong sitemap là cam kết được index khi báo cáo với khách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Build and submit a sitemap",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      },
+      {
+       "title": "Search Console Help - Page indexing report",
+       "url": "https://support.google.com/webmasters/answer/7440203"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-javascript",
+     "if": "Web làm bằng React/JS thuần thì Google có đọc được không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/TechSEO",
+      "Google Search Central Help Community"
+     ],
+     "tomtat": "Đọc được, nhưng có rủi ro: Google xử lý trang JavaScript qua 3 bước crawl (thu thập), render (chạy mã để dựng trang) và index, nên nội dung chỉ hiện sau khi chạy JS phải qua thêm một khâu. Google vẫn khuyên dùng server-side rendering (máy chủ dựng sẵn HTML) hoặc pre-render (dựng sẵn trước), vì không phải bot nào cũng chạy JS. Việc đầu tiên là dùng URL Inspection xem HTML Google đã render có đủ nội dung, link, title không.",
+     "visao": "Với trang dựng hoàn toàn ở trình duyệt bằng React/JS, HTML gửi về ban đầu có thể gần như trống và nội dung chỉ xuất hiện sau bước render, nên có thêm một khâu có thể trục trặc. Link chỉ được Google đi theo khi là thẻ a có href, nên nút bấm chuyển trang bằng JS có thể khiến Google không thấy trang đích. Một số tín hiệu như noindex được đọc ngay từ HTML gốc: nếu HTML gốc có noindex, Google có thể bỏ qua bước render nên đoạn JS gỡ noindex không kịp có tác dụng.",
+     "check": [
+      "Dùng URL Inspection (công cụ kiểm tra URL trong Search Console), xem HTML đã render và kiểm tra nội dung chính, link, title có hiện đầy đủ không; thiếu phần nào thì Google cũng không thấy phần đó.",
+      "Kiểm tra link điều hướng có phải thẻ a có href không, và thẻ canonical (thẻ báo bản gốc của trang) có nằm trong HTML gốc, trước khi chạy JS, không.",
+      "Kiểm tra HTML gốc có chứa noindex không; nếu có, Google có thể bỏ qua bước render nên JS gỡ noindex không cứu được."
+     ],
+     "do": [
+      "Ưu tiên server-side rendering hoặc pre-render để HTML gửi về đã có sẵn nội dung, vì không phải bot nào cũng chạy JS.",
+      "Chuyển mọi link điều hướng sang thẻ a có href và đặt canonical ngay trong HTML gốc.",
+      "Nếu trang cần index, bỏ noindex khỏi HTML gốc thay vì để JS gỡ sau.",
+      "Sau khi sửa, kiểm lại bằng URL Inspection để xác nhận HTML đã render hiện đủ nội dung, link, title."
+     ],
+     "avoid": [
+      "Không dựa vào dynamic rendering (trả cho bot một bản dựng sẵn, cho người dùng bản chạy JS) như giải pháp lâu dài: Google gọi đây là cách tạm, không khuyến nghị."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - JavaScript SEO basics",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-doi-ten-mien",
+     "if": "Đổi tên miền mới có mất thứ hạng không? Làm sao cho an toàn?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/TechSEO",
+      "WebmasterWorld"
+     ],
+     "tomtat": "Thường có dao động thứ hạng tạm thời trong lúc Google xử lý lại, nhưng làm đúng quy trình thì giữ được nền tảng. Cốt lõi là redirect 301 (chuyển hướng vĩnh viễn) từng URL cũ sang URL mới tương ứng, cập nhật canonical, link nội bộ, sitemap, rồi khai báo bằng công cụ Change of Address trong Search Console. Google khuyên giữ redirect ít nhất 1 năm.",
+     "visao": "Thứ hạng gắn với từng URL cụ thể. Redirect 301 từng URL sang đúng trang tương ứng giúp Google hiểu mỗi trang cũ đã chuyển sang địa chỉ nào; trong lúc Google thu thập và xử lý lại toàn bộ, thứ hạng dao động là bình thường. Nếu dồn tất cả về trang chủ mới, Google không tìm thấy trang tương ứng nên các trang cũ coi như biến mất. Giống chuyển nhà: báo địa chỉ mới cho từng người quen thì thư từ đến đúng chỗ, chỉ dán một tờ giấy ở cổng khu phố thì thư thất lạc.",
+     "check": [
+      "Lập bảng map đủ mọi URL cũ sang URL mới tương ứng (bài với bài, danh mục với danh mục); URL nào thiếu trong bảng sẽ thành lỗi sau khi chuyển.",
+      "Tra lịch sử tên miền mới xem từng bị dùng cho spam hay bị phạt chưa, trước khi quyết định chuyển.",
+      "Trước ngày chuyển, kiểm tra site mới đã gỡ noindex (lệnh không cho hiện trên kết quả tìm kiếm) và lệnh chặn trong robots.txt dùng lúc dựng site chưa."
+     ],
+     "do": [
+      "Cài redirect 301 từng URL cũ sang URL mới tương ứng theo bảng map.",
+      "Cập nhật canonical (thẻ báo bản gốc của trang), link nội bộ và sitemap trên site mới để tất cả trỏ về địa chỉ mới.",
+      "Dùng công cụ Change of Address (thay đổi địa chỉ) trong Search Console để báo Google về việc chuyển tên miền.",
+      "Giữ redirect ít nhất 1 năm theo khuyến nghị của Google, và báo trước với khách rằng thứ hạng thường dao động tạm thời trong lúc Google xử lý lại."
+     ],
+     "avoid": [
+      "Không redirect toàn bộ URL cũ về trang chủ mới: các trang cũ mất trang tương ứng và thứ hạng của chúng khó được giữ.",
+      "Không quên gỡ noindex hoặc lệnh chặn robots.txt dùng lúc dựng site mới; quên bước này thì site mới không được index sau khi chuyển.",
+      "Không gỡ redirect sớm hơn 1 năm, trái với khuyến nghị của Google."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Site moves with URL changes",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "rot-hang-hinh-phat",
+   "title": "Rớt hạng và hình phạt",
+   "intro": "Tụt traffic sau core update, manual action, tụt đột ngột không rõ lý do và cách phục hồi.",
+   "nodes": [
+    {
+     "id": "faq-seo-tut-sau-core-update",
+     "if": "Site tụt mạnh sau core update thì làm sao để hồi phục?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Đừng vội đi tìm 'lỗi bị phạt': Google nói core update (đợt cập nhật lớn của hệ thống xếp hạng lõi) không nhắm site cụ thể, và tụt hạng không có nghĩa là bị phạt. Việc đầu tiên là xác nhận ngày tụt trùng core update trên Google Search Status Dashboard, rồi xem trang và truy vấn nào tụt trong Search Console. Sau đó tự đánh giá nội dung theo bộ câu hỏi helpful content của Google và cải thiện có ý nghĩa cho người đọc; hồi phục có thể sau vài ngày nhưng cũng có thể mất vài tháng.",
+     "visao": "Core update là lúc Google đánh giá lại tổng thể trang nào hữu ích hơn cho từng truy vấn, nên site tụt thường vì trang khác được đánh giá tốt hơn, không phải vì site bị gắn cờ vi phạm. Vì không có một 'lỗi' cụ thể để gỡ, các sửa vặt kiểu bỏ một thành phần vì nghe nói hại SEO thường không giải quyết được gì. Google nói thay đổi cần thời gian để được ghi nhận, đôi khi phải chờ core update kế tiếp, dù Google còn có các core update nhỏ không công bố.",
+     "check": [
+      "Đối chiếu ngày traffic bắt đầu tụt với Google Search Status Dashboard (trang Google công bố các đợt cập nhật) xem lúc đó có core update hay spam update không.",
+      "Trong Search Console, so sánh trước và sau ngày tụt để biết tụt ở trang nào, truy vấn nào, và tụt dồn vào một nhóm trang hay rải toàn site.",
+      "Với các truy vấn mất hạng, mở trang đang thắng của đối thủ và so xem họ trả lời người tìm tốt hơn ở điểm nào."
+     ],
+     "do": [
+      "Tự đánh giá các trang tụt theo bộ câu hỏi helpful content (nội dung hữu ích, đáng tin, làm cho người đọc trước tiên) của Google.",
+      "Cải thiện có ý nghĩa cho người đọc, tránh sửa kiểu 'quick fix' (sửa nhanh cho có, như bỏ một thành phần vì nghe nói hại SEO).",
+      "Kiên nhẫn theo dõi: Google nói có thay đổi có hiệu lực sau vài ngày, nhưng có thể mất vài tháng; đôi khi phải chờ core update kế tiếp, dù Google còn có các core update nhỏ không công bố.",
+      "Chỉ xoá nội dung như phương án cuối, khi không thể cứu bằng cách cải thiện."
+     ],
+     "avoid": [
+      "Không disavow (khai báo để Google bỏ qua link trỏ về) hàng loạt hay đổi domain ngay sau core update: core update không phải hình phạt link, làm vậy chỉ tốn công và thêm rủi ro mới.",
+      "Không sửa vội nhiều thứ cùng lúc theo tin đồn trên mạng, vì vừa không đúng hướng Google khuyên vừa khó biết thay đổi nào có tác dụng."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Google Search's core updates and your website",
+       "url": "https://developers.google.com/search/docs/appearance/core-updates"
+      },
+      {
+       "title": "Google Search Status Dashboard",
+       "url": "https://status.search.google.com/"
+      },
+      {
+       "title": "Google Search Central - Creating helpful, reliable, people-first content",
+       "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+     ],
+     "children": [
+      {
+       "id": "faq-seo-tut-xoa-bai",
+       "if": "Sau core update có nên xoá hoặc noindex hết bài kém?",
+       "hat": "white",
+       "asked": [
+        "Reddit r/bigseo",
+        "Reddit r/SEO"
+       ],
+       "tomtat": "Không nên xoá hay noindex (lệnh không cho hiện trên kết quả tìm kiếm) hàng loạt theo cảm giác. Trước hết xác định nhóm bài tụt có phải được làm chủ yếu để lấy traffic chứ không phục vụ người đọc: bài còn cứu được thì viết lại, cấu trúc lại hoặc gộp bài trùng; chỉ phần thật sự không hữu ích mới tính tới chuyện xoá.",
+       "visao": "Google nói nếu bạn đang cân nhắc xoá cả một mục lớn, đó có thể là dấu hiệu mục đó được làm cho máy tìm kiếm chứ không cho người đọc. Xoá phần không hữu ích có thể giúp phần tốt còn lại hoạt động tốt hơn, nhưng bài có giá trị bị xoá nhầm thì mất luôn các truy vấn nó đang mang về. Vì vậy cần xét theo mục đích và chất lượng của từng nhóm bài, không theo một con số traffic cứng.",
+       "check": [
+        "Lọc nhóm bài tụt trong Search Console rồi đọc lại từng nhóm: bài được viết để trả lời câu hỏi thật của khách, hay được tạo ra để lấy traffic.",
+        "Tìm các bài trùng chủ đề, trùng mục đích tìm kiếm có thể gộp làm một bài đầy đủ hơn."
+       ],
+       "do": [
+        "Với bài còn cứu được: viết lại cho hữu ích hơn, cấu trúc lại, hoặc gộp các bài trùng thành một.",
+        "Với cả một mục làm chủ yếu cho máy tìm kiếm và không thể cứu: cân nhắc xoá, vì Google nói xoá phần không hữu ích có thể giúp phần tốt hoạt động tốt hơn."
+       ],
+       "avoid": [
+        "Không xoá hoặc noindex theo cảm giác hay theo một ngưỡng traffic cứng (kiểu 'dưới X lượt là xoá'); dễ xoá nhầm bài có giá trị và mất các truy vấn bài đó đang có."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Google Search Central - Google Search's core updates and your website",
+         "url": "https://developers.google.com/search/docs/appearance/core-updates"
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "faq-seo-manual-action",
+     "if": "Nhận thông báo Manual action (thao tác thủ công) trong Search Console thì xử lý thế nào?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Reddit r/SEO",
+      "WebmasterWorld"
+     ],
+     "tomtat": "Manual action (thao tác thủ công) là hình phạt do nhân viên Google áp khi xác định site vi phạm chính sách, nên phải sửa thật rồi mới xin gỡ. Việc đầu tiên là đọc đúng loại vi phạm, URL mẫu và phạm vi (một phần hay toàn site) trong báo cáo Manual actions của Search Console. Sửa xong trên mọi trang bị ảnh hưởng thì gửi yêu cầu xem xét lại (reconsideration) mô tả chính xác đã sửa gì, kèm bằng chứng.",
+     "visao": "Khác với tụt hạng do thuật toán, manual action là kết luận của người xét duyệt rằng site vi phạm một chính sách cụ thể, nên chỉ được gỡ khi họ thấy vấn đề đã được xử lý. URL mẫu chỉ là ví dụ: sửa mỗi trang mẫu thì phần còn lại vẫn vi phạm và yêu cầu dễ bị từ chối. Trong thời gian còn manual action, structured data (dữ liệu có cấu trúc giúp hiện kết quả nhiều định dạng) của trang có thể bị bỏ qua.",
+     "check": [
+      "Mở báo cáo Manual actions trong Search Console, đọc đúng tên loại vi phạm được nêu và các URL mẫu Google đưa ra.",
+      "Xác định phạm vi ảnh hưởng là một phần site hay toàn site, để biết cần rà bao nhiêu trang."
+     ],
+     "do": [
+      "Sửa đúng loại vấn đề được nêu trên mọi trang bị ảnh hưởng, không chỉ trên trang mẫu.",
+      "Nếu vi phạm liên quan tới link: xin gỡ các link xấu, lưu danh sách đã xin gỡ, và disavow (dùng công cụ khai báo để Google bỏ qua link) phần không gỡ được.",
+      "Gửi yêu cầu xem xét lại mô tả chính xác vấn đề và đã sửa gì, kèm bằng chứng (với link là danh sách đã xin gỡ và phần đã disavow).",
+      "Báo trước với khách rằng trong lúc chưa xử lý xong, structured data của trang có thể bị bỏ qua."
+     ],
+     "avoid": [
+      "Không gửi yêu cầu xem xét lại khi chưa sửa xong: dễ bị từ chối và kéo dài thời gian bị phạt."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Search Console Help - Manual actions report",
+       "url": "https://support.google.com/webmasters/answer/9044175"
+      },
+      {
+       "title": "Search Console Help - Disavow links to your site",
+       "url": "https://support.google.com/webmasters/answer/2648487"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-tut-dot-ngot",
+     "if": "Traffic tụt gần như về 0 trong 1-2 ngày, không có update nào?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Reddit r/TechSEO",
+      "Reddit r/SEO"
+     ],
+     "tomtat": "Khi không có đợt cập nhật nào, tụt gần về 0 trong 1-2 ngày thường là do sự cố kỹ thuật hoặc lỗi đo, không phải Google đánh giá lại site. Thủ phạm hay gặp là deploy (đưa bản sửa lên web) sót noindex, đổi URL không redirect, server lỗi kéo dài, hoặc bị hack. Việc đầu tiên là kiểm URL Inspection cho trang chính, các báo cáo Security issues, Manual actions, Crawl stats và mã theo dõi GA4; sửa xong thì yêu cầu index lại các trang quan trọng.",
+     "visao": "Google làm theo đúng tín hiệu site gửi ra, nên một dòng noindex (lệnh không cho hiện trên kết quả) vô tình hay lệnh chặn trong robots.txt là đủ để trang rời khỏi kết quả. Google nói lỗi máy chủ 5xx kéo dài làm chậm việc thu thập và URL có thể rớt khỏi index, còn mọi mã 4xx trừ 429 làm URL bị gỡ. Cũng có trường hợp traffic thật vẫn còn nhưng mã GA4 bị mất khi sửa web nên báo cáo về 0, tức là lỗi đo chứ không phải lỗi SEO.",
+     "check": [
+      "Dùng URL Inspection cho trang chủ và các trang chính: xem có noindex, canonical (thẻ báo bản gốc) trỏ sai, hay robots.txt chặn không; gặp một trong các lỗi này là đã tìm ra thủ phạm.",
+      "Trong Search Console, mở Security issues (vấn đề bảo mật, như bị hack) và Manual actions (hình phạt thủ công) xem có cảnh báo không.",
+      "Mở Crawl stats (thống kê thu thập dữ liệu) xem lỗi server 5xx có tăng quanh ngày tụt không.",
+      "Kiểm tra mã theo dõi GA4 còn chạy không; nếu Search Console vẫn ghi nhận click mà GA4 về 0 thì đây là lỗi đo, không phải lỗi SEO."
+     ],
+     "do": [
+      "Sửa đúng nguyên nhân tìm được: gỡ noindex sót sau deploy, cài redirect cho URL đã đổi, xử lý server lỗi, hoặc làm sạch site bị hack.",
+      "Xử lý lỗi server ngay, vì Google nói 5xx kéo dài làm chậm crawl và URL có thể rớt khỏi index, còn mọi 4xx trừ 429 làm URL bị gỡ.",
+      "Sửa xong thì yêu cầu index lại các trang quan trọng bằng URL Inspection.",
+      "Theo dõi click và số trang được index theo từng ngày để xác nhận đang hồi lại."
+     ],
+     "avoid": [
+      "Không vội kết luận 'bị Google phạt' khi chưa kiểm kỹ thuật và tracking; đi sai hướng (viết lại nội dung, disavow link) làm mất thời gian trong khi lỗi thật vẫn còn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Search Console Help - Page indexing report",
+       "url": "https://support.google.com/webmasters/answer/7440203"
+      },
+      {
+       "title": "Google Search Central - How HTTP status codes, and network and DNS errors affect Google Search",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+      },
+      {
+       "title": "Google Search Central - Block search indexing with noindex",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "local-seo-maps",
+   "title": "Local SEO và Google Maps",
+   "intro": "Lên top Google Maps, tên hồ sơ, đánh giá, địa chỉ ảo, review xấu từ đối thủ.",
+   "nodes": [
+    {
+     "id": "faq-seo-len-top-maps",
+     "if": "Làm sao để hồ sơ Google Business lên top Maps khu vực?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Local Search Forum",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không có mẹo tắt: Google nói kết quả địa phương chủ yếu dựa trên mức liên quan, khoảng cách và độ nổi bật. Việc đầu tiên là chọn đúng danh mục chính, điền đủ và đúng thông tin hồ sơ Google Business Profile (hồ sơ doanh nghiệp hiện trên Google Maps và Tìm kiếm), giữ tên, địa chỉ, số điện thoại khớp ở mọi nơi. Sau đó đều đặn cập nhật giờ, thêm ảnh thật, xin và trả lời đánh giá để tăng độ nổi bật.",
+     "visao": "Mức liên quan là hồ sơ khớp với điều người ta tìm đến đâu; khoảng cách là từ người tìm tới doanh nghiệp, phụ thuộc địa điểm thật nên không thể 'kéo' bằng địa chỉ giả; độ nổi bật là doanh nghiệp được biết đến cỡ nào, Google nói dựa cả vào link tới doanh nghiệp và số lượng đánh giá. Google không công bố chi tiết cách cân các yếu tố, nhưng hồ sơ đầy đủ và thông tin nhất quán giữa các nơi giúp hồ sơ khớp đúng hơn với truy vấn của khách.",
+     "check": [
+      "Mở hồ sơ Google Business và kiểm tra danh mục chính có đúng ngành nghề không; danh mục sai khiến hồ sơ khó khớp với điều khách tìm.",
+      "Kiểm tra giờ mở cửa, danh sách dịch vụ và ảnh đã điền đủ và còn đúng thực tế chưa.",
+      "So tên, địa chỉ, số điện thoại giữa hồ sơ, website và các trang danh bạ; chỗ nào lệch thì sửa cho khớp."
+     ],
+     "do": [
+      "Điền đủ, đúng thông tin hồ sơ, cập nhật giờ khi có thay đổi, thêm ảnh thật của doanh nghiệp.",
+      "Xin đánh giá từ khách thật và trả lời các đánh giá, vì Google nói độ nổi bật dựa cả vào số lượng đánh giá.",
+      "Củng cố website và link tới doanh nghiệp, vì Google nói độ nổi bật dựa cả vào link tới doanh nghiệp.",
+      "Tham khảo thêm khảo sát chuyên gia của Whitespark (đơn vị nghiên cứu local SEO), xếp danh mục chính, đánh giá và tín hiệu website vào nhóm được cho là quan trọng; đây là ý kiến chuyên gia, không phải Google xác nhận."
+     ],
+     "avoid": [
+      "Không dời ghim bản đồ hoặc khai địa chỉ không có thật để gần trung tâm hơn; đây là trình bày sai doanh nghiệp, trái hướng dẫn Business Profile và đặt hồ sơ vào rủi ro."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Business Profile Help - Tips to improve your local ranking on Google",
+       "url": "https://support.google.com/business/answer/7091"
+      },
+      {
+       "title": "Google Business Profile Help - Guidelines for representing your business on Google",
+       "url": "https://support.google.com/business/answer/3038177"
+      },
+      {
+       "title": "Whitespark - Local Search Ranking Factors",
+       "url": "https://whitespark.ca/local-search-ranking-factors/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-ten-gbp-nhoi-tu",
+     "if": "Thêm từ khoá dịch vụ vào tên hồ sơ Google Business để lên top nhanh có được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Local Search Forum",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không nên, đây là vi phạm hướng dẫn của Google Business Profile (hồ sơ doanh nghiệp trên Google Maps): tên hồ sơ phải là tên thật doanh nghiệp dùng ngoài đời, không được thêm từ khoá dịch vụ hay khu vực. Hồ sơ vi phạm có thể bị sửa tên hoặc bị tạm ngưng. Muốn hiện cho từ khoá dịch vụ, hãy chọn đúng danh mục chính, khai dịch vụ trong mục Dịch vụ và làm trang địa phương rõ ràng trên website.",
+     "visao": "Người ta nhồi từ khoá vì tên hồ sơ có ảnh hưởng tới kết quả Maps, và chính vì thế hướng dẫn quy định tên phải đúng tên thật. Hồ sơ có tên sai quy định có thể bị bất kỳ ai báo sửa, kể cả đối thủ, hoặc bị Google tự sửa, tạm ngưng. Lợi thế ngắn hạn đổi lấy rủi ro mất hồ sơ và mất đánh giá đã tích luỹ là thương vụ lỗ.",
+     "check": [
+      "So tên hồ sơ với tên trên biển hiệu và giấy tờ; tên có thêm từ khoá, khu vực, khẩu hiệu hay số điện thoại là đang vi phạm hướng dẫn."
+     ],
+     "do": [
+      "(1) Người ta làm gì và vì sao: nhét từ khoá dịch vụ, khu vực vào tên hồ sơ vì tên có ảnh hưởng tới kết quả Maps.",
+      "(2) Chính sách nói gì: hướng dẫn Business Profile yêu cầu tên là tên thật dùng ngoài đời; không được thêm tagline (khẩu hiệu), thông tin dịch vụ, địa chỉ, số điện thoại, ký tự đặc biệt.",
+      "(3) Phát hiện và hậu quả: hồ sơ vi phạm có thể bị người khác báo sửa, bị Google tự sửa, hoặc bị tạm ngưng; lấy lại hồ sơ mất nhiều thời gian, nếu phải tạo lại thì mất các đánh giá đã có.",
+      "(4) Cách làm đúng: chọn danh mục chính đúng ngành, mô tả dịch vụ trong mục Dịch vụ của hồ sơ, và làm trang địa phương rõ ràng trên website."
+     ],
+     "avoid": [
+      "Không đổi tên hồ sơ liên tục: dễ kích hoạt việc Google yêu cầu xác minh lại hồ sơ.",
+      "Không thêm từ khoá vào tên với ý 'chờ xem có bị phát hiện không'; khi hồ sơ đã bị tạm ngưng thì công sức lấy lại lớn hơn nhiều so với lợi ích."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Business Profile Help - Guidelines for representing your business on Google",
+       "url": "https://support.google.com/business/answer/3038177"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-mua-review-maps",
+     "if": "Mua đánh giá 5 sao Google Maps hoặc nhờ người quen review có sao không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/SEO",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không nên, mua đánh giá hay nhờ người viết đánh giá theo yêu cầu đều vi phạm chính sách nội dung của Google Maps. Chính sách ghi rõ nội dung tương tác giả sẽ bị gỡ, nên tiền bỏ ra mất trắng và khách mất tin khi thấy đánh giá biến mất. Cách bền vững là xin đánh giá từ khách thật sau khi dùng dịch vụ, không kèm điều kiện, và trả lời mọi đánh giá.",
+     "visao": "Số đánh giá và điểm sao ảnh hưởng tới quyết định của khách và độ nổi bật trên Maps, nên đây là chỗ hay bị thao túng. Chính sách Maps bảo vệ việc đánh giá phản ánh trải nghiệm thật; đánh giá được trả tiền, đổi bằng quà hoặc ưu đãi, hay đăng từ nhiều tài khoản theo yêu cầu một người đều không còn là trải nghiệm thật. Giống phiếu bình chọn bị mua: một khi lộ ra, cả bảng kết quả mất giá trị trong mắt khách.",
+     "check": [
+      "Rà các đánh giá đang có và cách đang xin đánh giá: đánh giá có đến từ khách đã dùng dịch vụ thật không, có kèm quà, giảm giá hay điều kiện nào không; nếu có thì cần dừng ngay."
+     ],
+     "do": [
+      "(1) Người ta làm gì và vì sao: mua đánh giá 5 sao hoặc nhờ người quen viết, vì số đánh giá và điểm sao ảnh hưởng tới quyết định của khách và độ nổi bật trên Maps.",
+      "(2) Chính sách nói gì: chính sách nội dung Maps cấm đánh giá được trả tiền trực tiếp hay bằng hiện vật, nội dung đăng từ nhiều tài khoản theo yêu cầu của một người, và việc tặng ưu đãi để đổi lấy đánh giá.",
+      "(3) Phát hiện và hậu quả: nội dung tương tác giả bị gỡ; báo chí ngành đưa tin Google còn hạn chế hồ sơ tái phạm (chưa thấy ghi trên trang chính sách); tiền mua mất trắng, khách mất tin.",
+      "(4) Cách làm đúng: xin đánh giá từ khách thật sau dịch vụ bằng link hoặc mã QR, không kèm điều kiện, và trả lời mọi đánh giá."
+     ],
+     "avoid": [
+      "Không tặng quà hay giảm giá để khách sửa hoặc xoá đánh giá xấu: hành vi này cũng bị chính sách Maps cấm.",
+      "Không 'tặng quà cảm ơn' để đổi lấy đánh giá, kể cả với khách thật: đó vẫn là ưu đãi để đổi lấy đánh giá theo chính sách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Maps User Contributed Content Policy - Prohibited & restricted content",
+       "url": "https://support.google.com/contributionpolicy/answer/7400114"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-review-xau-doi-thu",
+     "if": "Bị đối thủ vào đánh giá 1 sao bôi nhọ thì xử lý thế nào?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Local Search Forum",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Báo cáo đánh giá vi phạm ngay trong hồ sơ doanh nghiệp, vì chính sách nội dung Google Maps cấm đăng nội dung lên hồ sơ của đối thủ để hạ uy tín. Song song, trả lời công khai, lịch sự, đúng sự thật để khách khác thấy cách bạn xử lý. Về lâu dài, tăng đánh giá thật từ khách thật để đánh giá xấu chỉ còn chiếm tỷ trọng nhỏ.",
+     "visao": "Báo cáo chỉ có tác dụng khi đánh giá thật sự vi phạm chính sách, ví dụ không phải trải nghiệm thật hoặc do đối thủ đăng để hạ uy tín, nên cần chỉ rõ đánh giá vi phạm điểm nào. Phần trả lời công khai là thứ khách sau đọc cùng đánh giá, nên một câu trả lời bình tĩnh, đúng sự thật giúp hạn chế tác hại. Khi có nhiều đánh giá thật, một vài đánh giá 1 sao chỉ còn chiếm phần nhỏ trong bức tranh chung.",
+     "check": [
+      "Đối chiếu đánh giá với dữ liệu khách: người viết có từng là khách không, nội dung có phải trải nghiệm thật không, có dấu hiệu là đối thủ đăng để hạ uy tín không; có thì đánh giá đó vi phạm chính sách."
+     ],
+     "do": [
+      "Báo cáo đánh giá vi phạm trong hồ sơ doanh nghiệp, chọn đúng lý do vi phạm (không phải trải nghiệm thật, nội dung đối thủ đăng để hạ uy tín).",
+      "Trả lời công khai, lịch sự, đúng sự thật để khách khác thấy cách doanh nghiệp xử lý.",
+      "Đẩy mạnh xin đánh giá từ khách thật để giảm tỷ trọng đánh giá xấu."
+     ],
+     "avoid": [
+      "Không trả đũa bằng đánh giá giả cho đối thủ: chính mình vi phạm cùng chính sách đó.",
+      "Không trả lời gay gắt, công kích người viết; phần phản hồi công khai là thứ khách khác đọc để đánh giá doanh nghiệp."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Maps User Contributed Content Policy - Prohibited & restricted content",
+       "url": "https://support.google.com/contributionpolicy/answer/7400114"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-dia-chi-ao",
+     "if": "Thuê văn phòng ảo/địa chỉ ở nhiều quận để tạo nhiều hồ sơ Maps có được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Local Search Forum",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không được, văn phòng ảo (thuê địa chỉ nhưng không hoạt động tại đó) không đủ điều kiện có hồ sơ Google Business Profile. Hồ sơ không đủ điều kiện có thể bị tạm ngưng và kéo theo nghi ngờ với các hồ sơ khác cùng tài khoản. Doanh nghiệp đi tới khách thì khai vùng phục vụ và ẩn địa chỉ; chỉ chi nhánh có thật mới có hồ sơ riêng.",
+     "visao": "Hồ sơ Maps đại diện cho một địa điểm thật nơi doanh nghiệp hoạt động; khách thấy hồ sơ gần mình rồi tới nơi không có ai là trải nghiệm hỏng, đó là lý do hướng dẫn đặt điều kiện về nhân viên, biển hiệu, giờ đón khách. Co-working (văn phòng làm việc chung) chỉ được chấp nhận khi đáp ứng đủ các điều kiện đó. Khi nhiều hồ sơ cùng một tài khoản, một hồ sơ không đủ điều kiện có thể kéo theo nghi ngờ với cả nhóm.",
+     "check": [
+      "Xác nhận từng địa chỉ có nhân viên làm việc và đón khách trong giờ mở cửa không; không có thì địa chỉ đó không đủ điều kiện có hồ sơ.",
+      "Với chỗ ngồi tại co-working: kiểm tra có biển hiệu, có đón khách và có nhân viên trong giờ làm không."
+     ],
+     "do": [
+      "(1) Người ta làm gì và vì sao: thuê văn phòng ảo hoặc địa chỉ ở nhiều quận để tạo nhiều hồ sơ, nhằm phủ nhiều khu vực trên Maps.",
+      "(2) Chính sách nói gì: hướng dẫn Business Profile nêu văn phòng ảo không đủ điều kiện có hồ sơ; co-working chỉ được nếu có biển hiệu, đón khách và có nhân viên trong giờ làm.",
+      "(3) Phát hiện và hậu quả: hồ sơ không đủ điều kiện có thể bị tạm ngưng, kéo theo nghi ngờ với các hồ sơ khác cùng tài khoản.",
+      "(4) Cách làm đúng: doanh nghiệp đi tới khách thì khai vùng phục vụ và ẩn địa chỉ; mỗi chi nhánh có thật thì một hồ sơ."
+     ],
+     "avoid": [
+      "Không tạo nhiều hồ sơ cho cùng một địa điểm; ngoài việc trái hướng dẫn, nó khiến cả nhóm hồ sơ trong tài khoản dễ bị nghi ngờ."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Business Profile Help - Guidelines for representing your business on Google",
+       "url": "https://support.google.com/business/answer/3038177"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "geo-ai-search",
+   "title": "GEO, AI Overviews, ChatGPT",
+   "intro": "Xuất hiện trong AI Overviews/AI Mode và chatbot, llms.txt, click giảm do AI, đo hiển thị AI.",
+   "nodes": [
+    {
+     "id": "faq-seo-len-ai-overview",
+     "if": "Làm sao để bài xuất hiện trong AI Overview của Google?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không có thủ thuật riêng: Google nói không có yêu cầu bổ sung nào để xuất hiện trong AI Overviews (phần tóm tắt do AI tạo ở đầu trang kết quả) hay AI Mode (chế độ tìm kiếm hỏi đáp bằng AI), cũng không cần schema đặc biệt. Điều kiện tối thiểu là trang đã được index và được phép hiện snippet (đoạn trích). Phần còn lại là làm SEO nền tảng và nội dung độc đáo, do chuyên gia làm, có giá trị vượt kiến thức phổ thông.",
+     "visao": "Trang chỉ có thể được dẫn trong tính năng AI khi đã được index và được phép trích đoạn, nên trang chưa index hoặc gắn nosnippet, max-snippet:0 (lệnh cấm đoạn trích) thì không đủ điều kiện. Google cho biết hệ thống hiểu ý nghĩa câu hỏi và chạy nhiều truy vấn phụ (query fan-out, tách câu hỏi thành nhiều truy vấn nhỏ để tìm nguồn), nên không cần lo thiếu từ khoá dài. Google không công bố cơ chế chọn nguồn theo từng truy vấn, nhưng hướng dẫn của họ nhấn mạnh nội dung có giá trị ngoài kiến thức phổ thông, tức thứ không có sẵn ở mọi nơi.",
+     "check": [
+      "Dùng URL Inspection trong Search Console để xác nhận trang đã được index.",
+      "Xem mã trang có thẻ nosnippet hoặc max-snippet:0 đặt ngoài ý muốn không; có thì trang không đủ điều kiện hiện snippet và cần gỡ nếu muốn xuất hiện."
+     ],
+     "do": [
+      "Áp dụng các thực hành SEO nền tảng như với kết quả tìm kiếm thường, vì Google nói không có yêu cầu bổ sung và không cần schema (dữ liệu có cấu trúc) đặc biệt cho AI Overviews hay AI Mode.",
+      "Làm nội dung độc đáo, do chuyên gia làm, có giá trị ngoài kiến thức phổ thông, theo hướng dẫn tối ưu cho tính năng AI tạo sinh của Google (05/2026).",
+      "Viết tự nhiên cho người đọc, không cố nhồi thêm biến thể từ khoá dài, vì Google nói hệ thống hiểu ý nghĩa và chạy nhiều truy vấn phụ."
+     ],
+     "avoid": [
+      "Không hứa với khách 'chắc chắn lên AI Overview': Google không công bố cơ chế chọn nguồn theo từng truy vấn, nên cam kết như vậy không có cơ sở và dễ mất uy tín khi không đạt."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - AI features and your website",
+       "url": "https://developers.google.com/search/docs/appearance/ai-features"
+      },
+      {
+       "title": "Google Search Central - Optimizing your website for generative AI features",
+       "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-llms-txt",
+     "if": "Có cần tạo file llms.txt cho SEO/GEO không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/TechSEO",
+      "Reddit r/SEO"
+     ],
+     "tomtat": "Không cần cho Google: Google nói với Google Search có thể bỏ qua việc tạo file kiểu llms.txt (file văn bản tóm tắt nội dung site dành cho mô hình AI đọc). Nên làm xong việc cơ bản trước: trang được index, nội dung tốt, link nội bộ hợp lý. Nếu muốn hỗ trợ AI agent (trợ lý AI tự đi lấy thông tin) hoặc công cụ khác thì có thể thêm vì chi phí thấp, nhưng đừng coi đó là việc SEO.",
+     "visao": "Hướng dẫn tối ưu cho tính năng AI tạo sinh của Google nói rõ với Google Search có thể bỏ qua file kiểu llms.txt, nghĩa là file này không phải điều kiện để xuất hiện trong kết quả hay tính năng AI của Google. Cùng hướng dẫn đó, Google cũng xếp chunking nội dung (cắt bài thành các đoạn nhỏ cho AI dễ trích) và săn mention (lượt nhắc tên) không thật vào nhóm việc có thể bỏ qua. Thời gian đó nên dồn vào nội dung và nền tảng kỹ thuật.",
+     "check": [
+      "Rà xem site đã xong việc cơ bản chưa: trang quan trọng đã index, nội dung đáp ứng người đọc, link nội bộ dẫn tới các trang chính; chưa xong thì làm phần này trước.",
+      "Xác định site có thật sự cần hỗ trợ AI agent hay công cụ ngoài Google không, trước khi bỏ công làm llms.txt."
+     ],
+     "do": [
+      "Ưu tiên index, nội dung và link nội bộ, vì Google nói với Google Search có thể bỏ qua llms.txt, chunking nội dung hay săn mention không thật.",
+      "Nếu muốn hỗ trợ AI agent hoặc công cụ khác, có thể thêm llms.txt vì chi phí thấp, và ghi rõ trong báo cáo đây không phải hạng mục SEO."
+     ],
+     "avoid": [
+      "Không bán llms.txt như một gói dịch vụ tăng thứ hạng: Google đã nói không cần cho Search, khách phát hiện ra sẽ mất tin vào agency."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Optimizing your website for generative AI features",
+       "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-chatgpt-nhac-ten",
+     "if": "Làm sao để ChatGPT, Gemini nhắc tên thương hiệu mình khi người ta hỏi?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Brands Vietnam (cộng đồng)"
+     ],
+     "tomtat": "Cách có cơ sở nhất là để thương hiệu được nhắc thật ở nhiều nơi trên web (báo, diễn đàn, review, video): nghiên cứu của Ahrefs trên 75.000 thương hiệu thấy số lần nhắc tên tương quan mạnh nhất với việc được AI Overviews nhắc, hơn cả backlink (link từ site khác trỏ về). Bắt đầu bằng việc rà xem thương hiệu đang được nhắc ở đâu và tên có viết nhất quán không, rồi làm PR có dữ liệu và xuất hiện ở nơi khách thảo luận. Đây là tương quan, chưa chứng minh nhân quả, nên không thể cam kết kết quả.",
+     "visao": "Google nói tính năng AI của họ có thể thể hiện điều được nói về sản phẩm trên blog, video, diễn đàn, nên những gì web nói về thương hiệu là nguyên liệu cho câu trả lời. Các nền tảng không công bố chi tiết cách chọn, nhưng thương hiệu được nhắc ở nhiều nguồn độc lập và viết tên nhất quán thì dễ được nhận ra là cùng một thực thể hơn. Lưu ý số liệu Ahrefs đo trên AI Overviews của Google, chưa chắc áp đúng cho ChatGPT hay Gemini.",
+     "check": [
+      "Tìm xem thương hiệu đã được nhắc ở đâu trên web (báo, diễn đàn, review, video) và được nhắc trong bối cảnh nào.",
+      "So cách viết tên thương hiệu giữa website, schema (dữ liệu có cấu trúc) và các trang mạng xã hội; chỗ nào viết khác thì thống nhất lại."
+     ],
+     "do": [
+      "Hiểu đúng số liệu: Ahrefs (75.000 thương hiệu) thấy số lần nhắc tên tương quan mạnh nhất với việc được AI Overviews nhắc (Spearman 0,664, hệ số đo mức đi cùng nhau), hơn backlink; đây là tương quan, chưa chứng minh nhân quả.",
+      "Làm PR có dữ liệu để báo chí và cộng đồng có lý do nhắc tới thương hiệu.",
+      "Xuất hiện ở nơi khách thảo luận bằng người thật, tài khoản thật của doanh nghiệp.",
+      "Gắn Organization schema với sameAs (danh sách link hồ sơ chính thức của thương hiệu ở nơi khác) đúng trên website.",
+      "Nhớ rằng Google nói săn mention (lượt nhắc tên) không thật là vô ích; chỉ lượt nhắc tự nhiên mới có giá trị."
+     ],
+     "avoid": [
+      "Không cài người đăng bài giả trên diễn đàn, Reddit để 'gài' tên thương hiệu; đây là nội dung giả, xem câu hỏi về seeding hàng loạt bên dưới.",
+      "Không hứa khách ChatGPT hay Gemini chắc chắn nhắc tên, vì dữ liệu hiện có chỉ là tương quan và được đo trên AI Overviews."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Ahrefs (Louise Linehan) - Tương quan nhắc tên thương hiệu và AI Overviews",
+       "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/"
+      },
+      {
+       "title": "Google Search Central - Optimizing your website for generative AI features",
+       "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      },
+      {
+       "title": "Google Search Central - Organization structured data",
+       "url": "https://developers.google.com/search/docs/appearance/structured-data/organization"
+      }
+     ],
+     "children": [
+      {
+       "id": "faq-seo-gai-mention-ai",
+       "if": "Thuê người seeding hàng loạt bài/bình luận giả trên Reddit, forum để AI học và nhắc tên có hiệu quả không?",
+       "hat": "black",
+       "asked": [
+        "Reddit r/blackhatSEO",
+        "BlackHatWorld"
+       ],
+       "tomtat": "Không nên, đây là spam: Google nói săn mention (lượt nhắc tên) không thật là việc nên bỏ, và từ 15/05/2026 chính sách spam của Google áp cả cho nội dung trong câu trả lời AI của Google. Diễn đàn gỡ bài, khoá tài khoản, và khi cộng đồng phát hiện thì chính phần 'được nhắc' quay sang tiêu cực. Cách đúng là người thật của doanh nghiệp tham gia trả lời công khai danh tính, và làm sản phẩm, nghiên cứu đáng để người ta tự nhắc.",
+       "visao": "Người ta kỳ vọng gài được tên vì AI và Google hay trích diễn đàn, nơi được xem là có trải nghiệm thật của người dùng; seeding (gieo bài, bình luận dàn dựng) giả hàng loạt phá đúng giá trị đó. Với chính diễn đàn, nội dung đăng hộ hàng loạt là user-generated spam (spam do người dùng đăng), nên họ có lý do gỡ sạch và khoá tài khoản. Rủi ro lớn nhất không phải mất bài mà là thương hiệu bị gắn với chuyện gian dối ngay tại nơi khách thảo luận.",
+       "check": [
+        "Rà các bài, bình luận đang có về thương hiệu: nội dung có phải từ người dùng thật, kể trải nghiệm thật không; nếu do agency hoặc tài khoản ảo đăng theo kịch bản thì đó là nội dung giả."
+       ],
+       "do": [
+        "(1) Người ta làm gì và vì sao: thuê seeding hàng loạt bài, bình luận giả trên Reddit, forum vì AI và Google hay trích diễn đàn, hy vọng 'gài' được thương hiệu vào câu trả lời.",
+        "(2) Chính sách nói gì: Google nói săn mention không thật là việc nên bỏ; từ 15/05/2026 Spam policies (chính sách spam) áp cả cho nội dung trong câu trả lời AI của Google.",
+        "(2) Chính sách nói gì (tiếp): nội dung đăng hộ hàng loạt trên site khác cũng là user-generated spam đối với chính site đó.",
+        "(3) Phát hiện và hậu quả: diễn đàn gỡ bài và khoá tài khoản; thương hiệu bị cộng đồng phát hiện thì mất uy tín, chính phần 'được nhắc' quay sang tiêu cực.",
+        "(4) Cách làm đúng: người thật của doanh nghiệp tham gia trả lời với danh tính công khai, và làm sản phẩm hoặc nghiên cứu đáng để người ta tự nhắc."
+       ],
+       "avoid": [
+        "Không dùng tài khoản ảo để tự khen sản phẩm, kể cả với số lượng ít; đó vẫn là nội dung giả và chịu cùng hậu quả khi bị phát hiện."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Google Search Central - Optimizing your website for generative AI features",
+         "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+        },
+        {
+         "title": "Google Search Central - Spam policies for Google web search",
+         "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "faq-seo-aio-giam-click",
+     "if": "Từ khi có AI Overview, lượt hiển thị tăng mà click giảm, có phải site kém đi?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Google Search Central Help Community"
+     ],
+     "tomtat": "Chưa chắc site kém đi: Pew (07/2025) thấy người dùng ít bấm link hơn khi trang kết quả có tóm tắt AI, Seer Interactive cũng đo CTR (tỷ lệ nhấp) giảm ở truy vấn có AI Overview. Việc đầu tiên là tách số liệu theo loại truy vấn để xem CTR giảm ở truy vấn thông tin hay ở truy vấn thương hiệu, mua hàng. Sau đó đánh giá hiệu quả bằng chuyển đổi và truy vấn thương hiệu, không chỉ bằng click.",
+     "visao": "Khi AI Overview (tóm tắt do AI ở đầu trang kết quả) đã trả lời một phần câu hỏi, nhiều người đọc xong là đủ và không bấm tiếp, nên trang vẫn được hiển thị mà click không tăng theo. Lượt hiển thị và click từ AI Overviews, AI Mode được Google tính vào loại Web trong Search Console, nên số tổng đã gồm phần này mà không tách riêng. Tóm tắt AI không xuất hiện ở mọi truy vấn, vì vậy phải tách theo truy vấn mới biết phần giảm đến từ đâu.",
+     "check": [
+      "Trong báo cáo hiệu suất của Search Console, lọc theo truy vấn và nhóm thành truy vấn thông tin, truy vấn thương hiệu, truy vấn mua hàng; so CTR từng nhóm trước và sau.",
+      "Nếu CTR giảm chủ yếu ở truy vấn thông tin (loại có AI Overview) mà truy vấn thương hiệu, mua hàng vẫn ổn, thì nhiều khả năng do tóm tắt AI chứ không phải nội dung kém đi.",
+      "Ghi nhớ lượt hiển thị và click từ AI Overviews, AI Mode được tính vào loại Web trong Search Console khi đọc số liệu."
+     ],
+     "do": [
+      "Giải thích với khách bằng dữ liệu: Pew (07/2025) thấy người dùng ít bấm link hơn khi có tóm tắt AI; Seer Interactive cũng đo CTR giảm ở truy vấn có AI Overview.",
+      "Chuyển thước đo chính sang chuyển đổi và lượng truy vấn thương hiệu, thay vì chỉ đếm click."
+     ],
+     "avoid": [
+      "Không kết luận nội dung tệ đi chỉ vì CTR giảm khi chưa tách theo truy vấn; viết lại hàng loạt bài trong trường hợp này tốn công mà không đúng nguyên nhân."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Pew Research Center - Người dùng ít bấm link hơn khi có tóm tắt AI (07/2025)",
+       "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+      },
+      {
+       "title": "Seer Interactive - Tác động của AI Overviews tới CTR (cập nhật 2026)",
+       "url": "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update"
+      },
+      {
+       "title": "Search Console Help - What are impressions, position, and clicks?",
+       "url": "https://support.google.com/webmasters/answer/7042828"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-do-hien-thi-ai",
+     "if": "Đo bài mình hiện trong AI Overview/AI Mode bằng cách nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Google Search Central Help Community"
+     ],
+     "tomtat": "Dùng báo cáo Generative AI performance (hiệu suất trong tính năng AI tạo sinh) trong Search Console: Google công bố báo cáo này vào 06/2026, cho xem lượt hiển thị, trang, quốc gia, thiết bị. Việc đầu tiên là kiểm tra tài khoản Search Console của bạn đã có báo cáo này chưa. Số từ công cụ bên thứ ba đo 'AI visibility' (mức hiện diện trong câu trả lời AI) chỉ nên coi là số tham khảo.",
+     "visao": "Báo cáo trong Search Console lấy từ dữ liệu của chính Google nên phản ánh những lần trang thật sự được hiển thị. Công cụ bên thứ ba tự chạy một mẫu truy vấn riêng rồi đếm, nên kết quả phụ thuộc vào bộ truy vấn họ chọn; Google nói công cụ ngoài không có dữ liệu xếp hạng nội bộ. Giống đo nhiệt độ thành phố bằng vài nhiệt kế đặt ở vài góc phố: có ích để xem xu hướng, không thay được số chính thức.",
+     "check": [
+      "Mở Search Console xem tài khoản đã có báo cáo Generative AI performance chưa; nếu chưa có thì ghi rõ hạn chế này khi báo cáo cho khách."
+     ],
+     "do": [
+      "Dùng báo cáo Generative AI performance (Google công bố 06/2026) để theo dõi lượt hiển thị, trang, quốc gia, thiết bị.",
+      "Nếu dùng công cụ bên thứ ba đo 'AI visibility', ghi rõ đây là số tham khảo đo bằng mẫu truy vấn riêng, vì Google nói công cụ ngoài không có dữ liệu xếp hạng nội bộ."
+     ],
+     "avoid": [
+      "Không dùng điểm 'AI visibility' của tool làm KPI (chỉ số cam kết) hợp đồng duy nhất: số này phụ thuộc cách tool chọn truy vấn, dễ gây tranh cãi khi nghiệm thu."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central Blog - Generative AI performance report trong Search Console (06/2026)",
+       "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports"
+      },
+      {
+       "title": "Google Search Central - Third-party SEO tools and services",
+       "url": "https://developers.google.com/search/docs/fundamentals/third-party-seo"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-chan-bot-ai",
+     "if": "Chặn Google-Extended có làm mất thứ hạng hoặc mất khỏi AI Overview không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/TechSEO",
+      "WebmasterWorld"
+     ],
+     "tomtat": "Không: Google nói Google-Extended (token, tức tên khai trong robots.txt, để điều khiển việc Google dùng nội dung cho AI) không ảnh hưởng tới Google Search, nên chặn nó không làm mất thứ hạng. Nó chỉ điều khiển việc dùng nội dung để huấn luyện Gemini và grounding (làm căn cứ cho câu trả lời) trong Gemini Apps, Vertex AI, nên cũng không phải cách để rút trang khỏi AI Overview. Muốn hạn chế trang hiện trong tính năng AI của Search thì dùng nosnippet, data-nosnippet, max-snippet hoặc noindex, và chấp nhận đánh đổi với kết quả thường.",
+     "visao": "Google tách hai việc: Google Search, kể cả tính năng AI trong Search, được điều khiển bằng các lệnh hiển thị của Search; còn Google-Extended là token riêng để bạn quyết định có cho Google dùng nội dung vào Gemini và Vertex AI hay không. Các lệnh như nosnippet, noindex tác động tới cả cách trang hiện trong kết quả thường, nên dùng chúng là đánh đổi. Chặn Googlebot (bot thu thập dữ liệu của Google Search) để né AI thì giống đóng cửa hàng để tránh một vị khách: mất luôn mọi khách khác.",
+     "check": [
+      "Mở robots.txt (file hướng dẫn bot thu thập dữ liệu) và xem đang chặn user-agent (tên bot) nào; nếu thấy chặn Googlebot thì site đang tự loại mình khỏi kết quả tìm kiếm thường.",
+      "Phân biệt dòng chặn Google-Extended (liên quan Gemini, Vertex AI) với dòng chặn Googlebot (ảnh hưởng Google Search)."
+     ],
+     "do": [
+      "Nếu chỉ muốn không cho nội dung dùng vào huấn luyện Gemini và grounding trong Gemini Apps, Vertex AI: chặn Google-Extended trong robots.txt; Google nói việc này không ảnh hưởng tới Google Search.",
+      "Nếu muốn hạn chế trang xuất hiện trong tính năng AI của Search: dùng nosnippet (cấm đoạn trích), data-nosnippet (cấm trích một phần trang), max-snippet (giới hạn độ dài đoạn trích) hoặc noindex (không cho index).",
+      "Cân nhắc kỹ trước khi dùng các lệnh trên, vì chúng có đánh đổi với kết quả tìm kiếm thường."
+     ],
+     "avoid": [
+      "Không chặn Googlebot để 'tránh AI': mất luôn kết quả tìm kiếm thường.",
+      "Không gắn noindex cho cả site chỉ để né AI Overview, vì các trang sẽ biến mất khỏi kết quả tìm kiếm thường."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Google's common crawlers (Google-Extended)",
+       "url": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers"
+      },
+      {
+       "title": "Google Search Central - AI features and your website",
+       "url": "https://developers.google.com/search/docs/appearance/ai-features"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "cong-cu-do-luong",
+   "title": "Công cụ và đo lường",
+   "intro": "Search Console so với Ahrefs/Semrush, vị trí trung bình, điểm SEO của tool, theo dõi thứ hạng, lệch số GSC và GA4.",
+   "nodes": [
+    {
+     "id": "faq-seo-gsc-vs-ahrefs",
+     "if": "Số traffic/từ khoá trong Ahrefs, Semrush khác hẳn Search Console, tin cái nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Reddit r/bigseo",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Tin Search Console khi đo site của chính mình. Search Console là dữ liệu Google ghi nhận thật về site của bạn, còn Ahrefs, Semrush chỉ là ước tính dựa trên bộ từ khoá và mô hình tỷ lệ bấm (CTR) riêng của từng công cụ. Trước hết hãy so đúng cùng khoảng thời gian, quốc gia và loại tìm kiếm; sau đó dùng tool bên thứ ba để soi đối thủ, còn báo cáo site mình thì lấy từ Search Console.",
+     "visao": "Ahrefs hay Semrush không nhìn được dữ liệu bên trong Google; chính Google nói công cụ bên thứ ba không có quyền truy cập dữ liệu xếp hạng nội bộ. Chúng tự theo dõi một bộ từ khoá, ước lượng lượng tìm và tỷ lệ bấm theo vị trí, rồi nhân ra traffic. Site có nhiều truy vấn mà tool không theo dõi thì số ước tính lệch xa. Search Console đếm lượt hiển thị (impression) và lượt bấm (click) thật trên Google, giống sổ quỹ so với lời đoán của người ngoài.",
+     "check": [
+      "Mở báo cáo Hiệu suất (Performance) trong Search Console và đặt cùng khoảng thời gian, cùng quốc gia, cùng loại tìm kiếm Web với số đang xem trên Ahrefs hoặc Semrush; chưa khớp các điều kiện này thì chưa so được.",
+      "So danh sách truy vấn: tool chỉ thấy những từ nằm trong bộ từ khoá của nó, nên nếu Search Console có nhiều truy vấn mà tool không có thì phần lệch chủ yếu đến từ đây."
+     ],
+     "do": [
+      "Coi Search Console là nguồn chính khi đo site của mình, vì đây là dữ liệu của chính Google; Ahrefs, Semrush là ước tính từ bộ từ khoá và mô hình CTR riêng.",
+      "Khi khách hỏi vì sao số khác nhau, dẫn trang của Google nói công cụ bên thứ ba không có quyền truy cập dữ liệu xếp hạng nội bộ và không thể đảm bảo hiệu quả.",
+      "Dùng tool bên thứ ba cho đúng việc nó làm tốt: soi đối thủ và tìm ý tưởng từ khoá, nội dung; dùng Search Console để đo site mình."
+     ],
+     "avoid": [
+      "Không báo cáo khách bằng traffic ước tính của tool khi đã có Search Console; khách đối chiếu thấy lệch sẽ mất tin vào cả báo cáo.",
+      "Không coi số trên tool là 'số của Google'; Google cảnh báo nhiều người đọc nhầm dữ liệu của dịch vụ bên thứ ba như thể đến từ Google."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Third-party SEO tools and services",
+       "url": "https://developers.google.com/search/docs/fundamentals/third-party-seo"
+      },
+      {
+       "title": "Search Console Help - What are impressions, position, and clicks?",
+       "url": "https://support.google.com/webmasters/answer/7042828"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-vi-tri-trung-binh",
+     "if": "Vị trí trung bình trong Search Console tính thế nào mà khác thứ hạng mình tự tìm?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Reddit r/SEO"
+     ],
+     "tomtat": "Vị trí trung bình (average position) không phải thứ hạng bạn thấy khi tự gõ tìm, mà là trung bình của vị trí cao nhất site đạt được trong các lần hiển thị thật cho người dùng. Người tìm ở nhiều nơi, nhiều thiết bị và kết quả bị cá nhân hoá, nên con số này gần như luôn khác lần bạn tự tìm. Muốn kiểm một từ, lọc đúng truy vấn, quốc gia, thiết bị trong Search Console rồi so với kết quả tìm ẩn danh.",
+     "visao": "Mỗi lần link của site xuất hiện, Search Console ghi lại vị trí cao nhất mà link thuộc site đạt được; lần nào người dùng không thấy kết quả thì không có vị trí. Sau đó nó lấy trung bình. Ví dụ của Google: truy vấn 1 site có link ở vị trí 2, 4, 6 thì tính 2; truy vấn 2 ở vị trí 3, 5, 9 thì tính 3; trung bình là 2,5. Lần bạn tự tìm chỉ là một mẫu, bị ảnh hưởng bởi lịch sử tìm, vị trí và thiết bị của chính bạn.",
+     "check": [
+      "Trong báo cáo Hiệu suất của Search Console, xem bạn đang đọc vị trí theo truy vấn (Queries) hay theo trang (Pages); số theo trang gộp nhiều truy vấn nên thường khác số của từng từ.",
+      "Kiểm tra đã lọc quốc gia và thiết bị chưa; chưa lọc thì con số đang trộn người tìm ở nhiều nước, trên cả máy tính lẫn điện thoại.",
+      "Ô vị trí hiện dấu gạch (-) nghĩa là không ghi nhận được vị trí vì người dùng chưa từng thấy kết quả đó, không phải lỗi dữ liệu."
+     ],
+     "do": [
+      "Giải thích đúng định nghĩa cho khách: vị trí trung bình là vị trí cao nhất của site trong mỗi lần hiển thị, lấy trung bình trên các lần hiển thị.",
+      "Nói rõ kết quả cá nhân hoá, vị trí địa lý và thiết bị làm số lệch so với lúc tự tìm.",
+      "Muốn kiểm tra một từ khoá: tìm ở chế độ ẩn danh, đúng vị trí địa lý, rồi so với số của đúng truy vấn đó trong Search Console đã lọc quốc gia và thiết bị.",
+      "Theo dõi vị trí theo từng truy vấn hoặc nhóm truy vấn quan trọng thay vì một con số chung cho cả site."
+     ],
+     "avoid": [
+      "Không dùng vị trí trung bình theo cả site làm KPI: con số bị pha trộn hàng nghìn truy vấn, site xuất hiện thêm ở nhiều từ mới hạng thấp là số trung bình tụt dù SEO đang tốt lên."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Search Console Help - What are impressions, position, and clicks?",
+       "url": "https://support.google.com/webmasters/answer/7042828"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-tool-scrape-rank",
+     "if": "Dùng tool tự quét Google hàng nghìn từ khoá mỗi ngày để theo dõi thứ hạng có vi phạm gì không?",
+     "hat": "gray",
+     "asked": [
+      "Reddit r/TechSEO",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Có, theo chính sách spam của Google thì tự gửi truy vấn tự động, kể cả quét trang kết quả để kiểm tra thứ hạng mà không được phép, là vi phạm (gọi là machine-generated traffic, tức traffic do máy tạo). Rủi ro thực tế chủ yếu là IP bị chặn, gặp CAPTCHA và vi phạm điều khoản dịch vụ, không phải site bị phạt thứ hạng. Cách an toàn: dùng Search Console cho site mình, mua dữ liệu từ nhà cung cấp SERP có trách nhiệm pháp lý riêng, tự quét thì ít và thưa.",
+     "visao": "Google phục vụ kết quả tìm kiếm cho người dùng thật; hàng nghìn truy vấn tự động mỗi ngày bị chính sách xếp vào nhóm cấm. Khi thấy lượng truy vấn bất thường, Google chặn bằng CAPTCHA (bài kiểm tra người hay máy) hoặc chặn IP. Google không công bố chi tiết cách nhận diện, nhưng chính sách nhắm vào hành vi gửi truy vấn chứ không nhắm vào site được theo dõi, nên hậu quả rơi vào công cụ quét nhiều hơn là thứ hạng.",
+     "check": [
+      "Hỏi nhà cung cấp hoặc đội kỹ thuật xem tool lấy dữ liệu Google bằng cách nào: qua API được phép hay tự động quét trang kết quả; nếu là tự quét thì đang nằm trong định nghĩa machine-generated traffic.",
+      "Xem tool có thường xuyên báo gặp CAPTCHA hoặc IP bị chặn không; đây là dấu hiệu Google đang chặn lượng truy vấn tự động đó."
+     ],
+     "do": [
+      "(1) Người ta tự quét Google hàng nghìn từ khoá mỗi ngày vì muốn có số thứ hạng chi tiết hằng ngày cho mọi từ đang theo dõi.",
+      "(2) Spam policies định nghĩa machine-generated traffic gồm việc gửi truy vấn tự động tới Google, kể cả quét kết quả để kiểm tra thứ hạng mà không có sự cho phép rõ ràng.",
+      "(3) Rủi ro chủ yếu là IP bị chặn, gặp CAPTCHA và vi phạm điều khoản dịch vụ của Google, không phải site bị phạt thứ hạng.",
+      "(4) Cách đúng: dựa vào Search Console cho site mình; cần dữ liệu SERP (trang kết quả tìm kiếm) diện rộng thì dùng nhà cung cấp có trách nhiệm pháp lý riêng; tự kiểm tra thì quét ít và thưa."
+     ],
+     "avoid": [
+      "Không cố vượt CAPTCHA hay xoay vòng proxy lớn để né chặn; làm vậy là cố tình vượt rào của Google, đẩy việc từ vùng xám sang vi phạm rõ ràng."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Search Central - Third-party SEO tools and services",
+       "url": "https://developers.google.com/search/docs/fundamentals/third-party-seo"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-gsc-ga4-lech",
+     "if": "Click trong Search Console và session organic trong GA4 lệch nhau nhiều, sai ở đâu?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Reddit r/SEO"
+     ],
+     "tomtat": "Thường không sai ở đâu cả: click trong Search Console và session (phiên truy cập) organic trong GA4 là hai đơn vị khác nhau, đo ở hai chỗ khác nhau, nên lệch là bình thường. Việc nên làm trước là kiểm GA4 có mất dữ liệu do banner đồng ý cookie, trình chặn quảng cáo hay trang thiếu mã đo không. Sau đó đánh giá xu hướng theo từng nguồn riêng, không cộng trừ chéo giữa hai nguồn.",
+     "visao": "Search Console đếm click ngay trên trang kết quả của Google, không phụ thuộc mã nào trên site. GA4 chỉ ghi nhận khi mã đo chạy được trên trình duyệt người dùng; ai từ chối cookie hoặc chặn script thì GA4 không thấy, dù Google vẫn đếm click của họ. Giống đếm người qua cổng so với đếm người ký sổ trong phòng: hai con số đo hai việc khác nhau nên không bao giờ khớp hoàn toàn.",
+     "check": [
+      "Kiểm tra site có banner đồng ý cookie (consent) không và GA4 có bị tắt khi người dùng bấm từ chối không; nếu có thì phần lệch lớn nhiều khả năng đến từ đây.",
+      "Tính đến người dùng có trình chặn quảng cáo (adblock) chặn script đo: Search Console vẫn đếm click của họ nhưng GA4 không ghi được.",
+      "Rà xem có trang nào thiếu mã đo GA4 không, nhất là trang mới tạo; traffic vào trang thiếu mã sẽ không xuất hiện trong GA4."
+     ],
+     "do": [
+      "Giải thích cho khách: click (Search Console) và session (GA4) là hai đơn vị khác nhau, đo ở hai chỗ khác nhau, nên lệch là bình thường.",
+      "Nêu rõ GA4 mất dữ liệu khi người dùng từ chối cookie hoặc chặn script, còn Search Console không phụ thuộc mã trên site.",
+      "Đánh giá xu hướng theo cùng một nguồn (so kỳ này với kỳ trước trong Search Console, hoặc trong GA4), không cộng trừ chéo giữa hai nguồn.",
+      "Mức lệch thế nào là 'bình thường' chưa có số chính thức; đừng tự đặt ngưỡng rồi báo khách như quy chuẩn."
+     ],
+     "avoid": [
+      "Không kết luận mất traffic SEO chỉ dựa trên GA4 khi Search Console vẫn ổn định; nguyên nhân có thể chỉ là mã đo hoặc cài đặt cookie vừa thay đổi."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Search Console Help - What are impressions, position, and clicks?",
+       "url": "https://support.google.com/webmasters/answer/7042828"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-tach-brand",
+     "if": "Làm sao biết traffic tăng là nhờ SEO hay do người ta tìm tên thương hiệu?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/bigseo",
+      "Google Search Central Help Community"
+     ],
+     "tomtat": "Hãy tách truy vấn thương hiệu (người gõ tên công ty, tên sản phẩm riêng) khỏi truy vấn không thương hiệu; chỉ phần tăng ở nhóm không thương hiệu mới phản ánh SEO giành được từ khoá mới. Search Console đã có bộ lọc truy vấn thương hiệu/không thương hiệu (Google ra mắt 11/2025, có cho mọi site đủ điều kiện từ 11/03/2026). Site chưa có bộ lọc thì lọc truy vấn bằng biểu thức chính quy (regex) chứa tên thương hiệu.",
+     "visao": "Người đã biết thương hiệu tự gõ tên để tìm thì traffic đó đến từ quảng cáo, truyền miệng hay độ nổi tiếng, không phải do SEO giành thêm từ khoá. Gộp chung thì một đợt quảng cáo hay PR làm nhiều người tìm tên công ty sẽ khiến SEO trông như tăng mạnh. Bộ lọc của Google dùng hệ thống phân loại có AI hỗ trợ, không so khớp theo từ khoá hay regex, nên đôi khi xếp nhầm một số truy vấn.",
+     "check": [
+      "Mở báo cáo Hiệu suất kết quả tìm kiếm trong Search Console xem đã có bộ lọc Thương hiệu / Không thương hiệu chưa; thẻ Insights mới cũng chia tổng click thành hai nhóm này.",
+      "Nếu không thấy bộ lọc, kiểm tra loại property: chỉ property cấp cao nhất được hỗ trợ, property theo đường dẫn URL hoặc subdomain thì không; site cũng cần đủ lượng truy vấn và lượt hiển thị."
+     ],
+     "do": [
+      "Dùng bộ lọc truy vấn thương hiệu/không thương hiệu trong Search Console (Google ra 11/2025) nếu property đã có; bộ lọc cho xem click, hiển thị, vị trí trung bình và CTR của từng nhóm.",
+      "Site chưa có bộ lọc: dùng bộ lọc truy vấn theo biểu thức chính quy chứa tên thương hiệu để tách hai nhóm.",
+      "Báo cáo SEO tách riêng hai nhóm; mức tăng ở nhóm không thương hiệu mới phản ánh SEO giành được từ khoá mới.",
+      "Thỉnh thoảng rà danh sách truy vấn của mỗi nhóm, vì Google lưu ý bộ lọc có thể xếp nhầm."
+     ],
+     "avoid": [
+      "Không gộp truy vấn thương hiệu vào KPI tăng trưởng SEO; số sẽ phình lên theo quảng cáo, PR và khi giảm thì SEO dễ bị đổ lỗi oan."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central Blog - Branded queries filter trong Search Console (11/2025)",
+       "url": "https://developers.google.com/search/blog/2025/11/search-console-branded-filter"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "vung-xam-black-hat",
+   "title": "Vùng xám và black hat",
+   "intro": "PBN, domain hết hạn, parasite SEO, cloaking, CTR bot, negative SEO, đổi domain né phạt, link farm, site bị hack chèn link. Trả lời theo khung: họ làm gì, Google nói gì, hậu quả, cách làm đúng.",
+   "nodes": [
+    {
+     "id": "faq-seo-pbn",
+     "if": "PBN (mạng blog vệ tinh) còn dùng được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/blackhatSEO",
+      "Brands Vietnam (cộng đồng)"
+     ],
+     "tomtat": "Không nên. PBN (private blog network, mạng blog vệ tinh tự dựng để trỏ link về site chính) là cách thao túng link mà chính sách spam của Google cấm, dù văn bản không gọi đích danh tên PBN. Ngay trên diễn đàn black hat năm 2026, nhiều người cũng thừa nhận rủi ro cao và PBN rẻ hầu như hết tác dụng. Tiền định dồn cho PBN nên chuyển sang nội dung có dữ liệu, PR và quan hệ đối tác.",
+     "visao": "Google muốn link là lời giới thiệu tự nhiên từ người khác, còn PBN là tự giới thiệu mình qua nhiều site do cùng một chủ dựng. SpamBrain (hệ thống AI chống spam của Google) được dùng để nhận ra và vô hiệu hoá link không tự nhiên. Google không công bố chi tiết cách phát hiện từng mạng, nhưng khi một mạng bị lộ thì toàn bộ link mất giá trị cùng lúc, và site nhận link còn có thể bị nhân viên Google xử phạt.",
+     "check": [
+      "Khi audit site khách hoặc nhận bàn giao, xem các site đang trỏ link về có chung chủ, nội dung na ná nhau, dùng chung anchor (chữ gắn link) không; nếu có thì nhiều khả năng đó là mạng vệ tinh.",
+      "Kiểm tra các site trỏ link đó có người đọc thật không; site chỉ tồn tại để đặt link là nội dung làm ra chủ yếu để thao túng link.",
+      "Mở báo cáo Thao tác thủ công (Manual actions) trong Search Console xem có thông báo 'Unnatural links to your site' (link không tự nhiên trỏ về site) không."
+     ],
+     "do": [
+      "(1) Người ta mua domain cũ còn link, dựng blog rồi trỏ link về site chính để đẩy hạng; trên BlackHatWorld năm 2026 vẫn tranh cãi, nhiều người thừa nhận rủi ro cao và PBN rẻ hầu như hết tác dụng.",
+      "(2) Spam policies không gọi tên PBN nhưng cấm tạo nội dung giá trị thấp chủ yếu để thao túng link, trao đổi link quá mức và expired domain abuse (mua domain hết hạn để lợi dụng xếp hạng).",
+      "(3) SpamBrain vô hiệu hoá link không tự nhiên; mạng bị lộ thì mất toàn bộ chi phí domain, hosting, nội dung.",
+      "(3) Site chính có thể nhận manual action (hình phạt do nhân viên Google áp) 'Unnatural links' và mất phần lớn traffic; Google lưu ý xin xem xét lại về link thường lâu hơn bình thường.",
+      "(4) Cách đúng: chuyển tiền định dồn cho PBN sang nội dung có dữ liệu riêng, PR và quan hệ đối tác.",
+      "(4) Nếu có site vệ tinh thì đó phải là site thật có người đọc, và link phải gắn đúng thuộc tính rel theo tính chất link."
+     ],
+     "avoid": [
+      "Không dựng PBN cho site khách: rủi ro rơi thẳng vào domain của khách và không hoàn tác được nhanh.",
+      "Không coi lời khẳng định 'PBN vẫn chạy' trên diễn đàn là bằng chứng; chính người trong các diễn đàn đó cũng thừa nhận rủi ro cao."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Search Central Blog - December 2022 link spam update",
+       "url": "https://developers.google.com/search/blog/2022/12/december-22-link-spam-update"
+      },
+      {
+       "title": "Search Console Help - Manual actions report",
+       "url": "https://support.google.com/webmasters/answer/9044175"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-expired-domain",
+     "if": "Mua domain hết hạn có nhiều backlink để làm site mới hoặc 301 về site chính có lợi không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/blackhatSEO",
+      "WarriorForum"
+     ],
+     "tomtat": "Không có lợi như mong đợi và có thể bị phạt. Mua domain hết hạn rồi dùng lại chủ yếu để thao túng xếp hạng là expired domain abuse (lạm dụng domain hết hạn), bị chính sách spam của Google cấm. Redirect 301 (chuyển hướng vĩnh viễn) domain cũ về site có nội dung khác hẳn cũng không được coi là chuyển site, nên link cũ không truyền sức mạnh như kỳ vọng. Chỉ mua domain cũ khi tiếp nối đúng dự án, thương hiệu cũ hoặc làm thương hiệu mới thật.",
+     "visao": "Link và độ tin cậy của một domain được tích luỹ nhờ nội dung và người làm ra nó trước đây. Google không công bố chi tiết cách xử lý, nhưng khi domain đổi chủ và chuyển sang nội dung khác chủ đề thì các link cũ không còn phản ánh đúng site mới. Google tìm các trường hợp này bằng hệ thống tự động và nhân viên duyệt; ví dụ Google nêu là nội dung affiliate trên site cũ của cơ quan nhà nước.",
+     "check": [
+      "Tra xem domain cũ từng thuộc chủ đề gì, phục vụ đối tượng nào; nếu nội dung bạn định đặt lên khác chủ đề hoặc khác đối tượng thì đó đúng là kiểu dùng lại mà chính sách nhắm tới.",
+      "Soát kỹ domain từng thuộc trường học, cơ quan, tổ chức y tế; đặt nội dung thương mại lên các domain này là dạng Google nêu làm ví dụ vi phạm."
+     ],
+     "do": [
+      "(1) Người ta mua domain cũ để hưởng link và độ tin cậy tích luỹ của chủ trước, rồi làm site mới trên đó hoặc 301 về site chính.",
+      "(2) Spam policies gọi đây là expired domain abuse: mua domain hết hạn và dùng lại chủ yếu để thao túng xếp hạng với nội dung ít giá trị, ví dụ affiliate trên site cũ của cơ quan nhà nước.",
+      "(3) Google phát hiện bằng hệ thống tự động và người duyệt; site có thể tụt hạng hoặc biến khỏi kết quả.",
+      "(3) John Mueller (đại diện Google Search) nói redirect domain sang site có nội dung khác hẳn không được coi là chuyển site, nên link cũ không 'chảy' như mong đợi.",
+      "(4) Cách đúng: chỉ mua domain cũ khi tiếp nối đúng dự án hoặc thương hiệu cũ, hoặc làm thương hiệu mới thật; xây giá trị bằng nội dung mới, không dựa vào link cũ."
+     ],
+     "avoid": [
+      "Không mua domain của trường học, cơ quan, tổ chức y tế cũ để đặt nội dung thương mại; đây đúng là dạng Google nêu trong chính sách, dễ bị tụt hạng hoặc biến khỏi kết quả."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Search Engine Roundtable - Google: There Is No Way To Redirect A Penalized Site Safely",
+       "url": "https://www.seroundtable.com/google-redirect-penalty-safe-22120.html"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-parasite",
+     "if": "Đăng bài lên site uy tín khác (parasite SEO, thuê chuyên mục báo) để chiếm top có được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/blackhatSEO",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không nên. Đăng bài thương mại lên site uy tín của người khác chủ yếu để mượn sức xếp hạng (parasite SEO, SEO ký sinh) vi phạm chính sách site reputation abuse (lạm dụng uy tín site) của Google, kể cả khi bạn thuê chuyên mục và site chủ có giám sát. Muốn có bài trên báo thì làm PR viết cho độc giả của báo và gắn nhãn tài trợ; muốn xếp hạng thì xây trên site của chính mình.",
+     "visao": "Site lớn có tín hiệu xếp hạng mạnh nhờ nội dung và biên tập của chính họ; bài bên thứ ba lạc chủ đề đặt vào đó là mượn uy tín không thuộc về mình. Tháng 11/2024 Google làm rõ chính sách áp dụng dù site chủ có giám sát nội dung bên thứ ba hay không, vì điều Google xét là mục đích hưởng tín hiệu của site chủ. Hình phạt áp vào phần nội dung vi phạm, nên bài bạn trả tiền đặt có thể biến khỏi kết quả.",
+     "check": [
+      "Xem nội dung định đăng có liên quan tới chủ đề và độc giả của site chủ không; bài vay, cá cược, review sản phẩm trên site khác chủ đề là dạng điển hình bị nhắm.",
+      "Hỏi site chủ có biên tập, chọn lọc nội dung không, nhưng nhớ rằng từ 11/2024 có giám sát hay không thì chính sách vẫn áp dụng.",
+      "Với site của khách đang cho bên khác đăng bài, mở báo cáo Thao tác thủ công trong Search Console xem có thông báo vi phạm chính sách site reputation không."
+     ],
+     "do": [
+      "(1) Người ta đặt bài thương mại (vay, cá cược, review sản phẩm) trên site có uy tín, thường bằng cách thuê chuyên mục, để mượn sức xếp hạng của site đó.",
+      "(2) Site reputation policy cấm nội dung bên thứ ba đăng chủ yếu để hưởng tín hiệu xếp hạng của site chủ; Google làm rõ 11/2024 là áp dụng dù site chủ có giám sát hay không.",
+      "(3) Phần nội dung đó bị manual action (hình phạt do nhân viên Google áp) hoặc bị loại khỏi xếp hạng; tiền thuê chỗ mất, site chủ cũng bị ảnh hưởng.",
+      "(4) Cách đúng: viết bài PR cho đúng độc giả của báo, gắn nhãn tài trợ và link sponsored (thuộc tính đánh dấu link trả tiền); muốn xếp hạng thì xây trên site của chính mình."
+     ],
+     "avoid": [
+      "Không bán chuyên mục trên site của khách cho bên thứ ba lạc chủ đề; phần đó có thể bị manual action và khách sẽ quy trách nhiệm cho agency."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Search Central Blog - Updating our site reputation abuse policy (11/2024)",
+       "url": "https://developers.google.com/search/blog/2024/11/site-reputation-abuse"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-cloaking",
+     "if": "Cloaking, redirect lén, giấu chữ/link có còn ai làm? Rủi ro thế nào?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/blackhatSEO",
+      "WebmasterWorld"
+     ],
+     "tomtat": "Vẫn có người làm, nhưng rủi ro rất cao: cloaking (cho bot Google thấy một nội dung, người dùng thấy nội dung khác), redirect lén và giấu chữ, giấu link đều được chính sách spam của Google liệt kê riêng. Vi phạm loại này thường bị manual action toàn site, domain có thể bị loại khỏi kết quả. Cách đúng là một nội dung cho mọi người; trang cần khác nhau theo vùng hay thiết bị thì làm minh bạch.",
+     "visao": "Google xếp hạng dựa trên thứ bot đọc được; nếu người dùng nhận trang khác (thường là cá cược, thuốc) thì kết quả tìm kiếm thành công cụ lừa người dùng. Vì vậy Google có hẳn loại thao tác thủ công 'Cloaking and/or sneaky redirects'. Từ 15/06/2026 Google còn xử lý back button hijacking (can thiệp lịch sử trình duyệt để người dùng không bấm quay lại được) bằng manual action hoặc tự động hạ hạng.",
+     "check": [
+      "Dùng công cụ Kiểm tra URL (URL Inspection) trong Search Console xem trang Google thu thập được, rồi so với trang mở bằng trình duyệt; nội dung khác nhau là dấu hiệu cloaking hoặc redirect lén.",
+      "Rà mã nguồn xem có script chuyển hướng theo user-agent (loại trình duyệt hoặc bot) hay theo nguồn truy cập không; ví dụ Google nêu là người dùng điện thoại bị chuyển sang domain spam.",
+      "Kiểm tra cả thư viện và nền tảng quảng cáo gắn trên site, vì Google lưu ý back button hijacking có thể do các thành phần này gây ra chứ không chỉ do mã của site.",
+      "Mở báo cáo Thao tác thủ công trong Search Console xem có thông báo 'Cloaking and/or sneaky redirects' không."
+     ],
+     "do": [
+      "(1) Người ta cho bot thấy nội dung tối ưu còn người dùng thấy trang khác (thường là cá cược, thuốc), hoặc giấu chữ trắng trên nền trắng để nhồi từ khoá.",
+      "(2) Spam policies liệt kê riêng cloaking, sneaky redirects (chuyển hướng lén), hidden text and links (chữ, link ẩn); từ 06/2026 (áp dụng từ 15/06) back button hijacking cũng thành vi phạm.",
+      "(3) Loại vi phạm này thường bị manual action toàn site; domain có thể bị loại khỏi kết quả.",
+      "(3) Phải sửa sạch trên mọi trang bị ảnh hưởng mới xin xem xét lại; Google nói sửa một phần không được trả lại một phần, và xét lại thường mất vài ngày đến vài tuần.",
+      "(4) Cách đúng: một nội dung cho mọi người; trang cần khác theo vùng hoặc thiết bị thì làm minh bạch, để bot cũng thấy như người dùng."
+     ],
+     "avoid": [
+      "Không cài script redirect theo user-agent hay theo nguồn truy cập; đây đúng là hành vi Google gọi là chuyển hướng lén và có thể dẫn tới manual action toàn site.",
+      "Không gắn mã quảng cáo hay thư viện can thiệp nút quay lại của trình duyệt; từ 15/06/2026 trang có thể bị manual action hoặc tự động hạ hạng."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Search Central Blog - Back button hijacking (04/2026)",
+       "url": "https://developers.google.com/search/blog/2026/04/back-button-hijacking"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-ctr-bot",
+     "if": "Dùng bot/traffic ảo bấm vào kết quả (CTR manipulation) để tăng hạng web hoặc Maps có tác dụng không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/blackhatSEO",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không nên. Mua lượt tìm và lượt bấm giả (CTR manipulation, thao túng tỷ lệ bấm) vi phạm chính sách spam của Google về traffic do máy tạo, và với Google Maps thì vi phạm chính sách cấm tương tác giả. Không có nguồn chính thức nào xác nhận cách này hiệu quả bền, trong khi hồ sơ Maps có thể bị hạn chế và dữ liệu đo bị nhiễu. Muốn tăng tỷ lệ bấm thì sửa tiêu đề, mô tả cho đúng nhu cầu người tìm, dùng ảnh và đánh giá thật.",
+     "visao": "Nhiều người tin tỷ lệ bấm (CTR) là tín hiệu xếp hạng nên tìm cách bơm lượt bấm. Google không công bố chi tiết cách dùng dữ liệu hành vi, nhưng chính sách xếp truy vấn tự động và tương tác giả lập vào nhóm bị cấm, tức các lượt bấm này bị coi là nhiễu chứ không phải tín hiệu tốt. Kết quả là bạn trả tiền cho thứ không được công nhận, đồng thời làm hỏng chính số liệu Search Console và GA4 dùng để ra quyết định.",
+     "check": [
+      "Xem nguồn traffic vào site hoặc vào hồ sơ Maps có phải người dùng thật không; nếu đang chạy gói mua lượt tìm, lượt bấm thì số liệu giai đoạn đó không dùng được để đánh giá SEO.",
+      "Hỏi nhà cung cấp gói 'traffic Google', 'search Maps' họ tạo lượt bấm bằng gì; nếu là bot, giả lập hay thiết bị can thiệp thì đó chính là tương tác giả bị cấm."
+     ],
+     "do": [
+      "(1) Người ta tin tỷ lệ bấm ảnh hưởng thứ hạng nên mua lượt tìm và lượt bấm giả, nhất là cho Google Maps.",
+      "(2) Spam policies cấm gửi truy vấn tự động tới Google (machine-generated traffic); chính sách nội dung do người dùng đóng góp trên Maps cấm tương tác giả, kể cả tạo bằng giả lập hay thiết bị can thiệp.",
+      "(3) Hậu quả thật: tiền mua traffic mất, dữ liệu Search Console và GA4 bị nhiễu không đọc được, hồ sơ Maps có thể bị hạn chế. Không có nguồn chính thức xác nhận cách này hiệu quả bền.",
+      "(4) Cách đúng: tăng CTR thật bằng tiêu đề, mô tả trả lời đúng intent (ý định tìm kiếm); trên Maps thì dùng ảnh thật và đánh giá thật của khách."
+     ],
+     "avoid": [
+      "Không mua gói 'traffic Google' hay 'search Maps' cho khách; hồ sơ Maps của khách có thể bị hạn chế và người chịu thiệt là khách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Maps User Contributed Content Policy - Prohibited & restricted content",
+       "url": "https://support.google.com/contributionpolicy/answer/7400114"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-link-farm-tool",
+     "if": "Dùng tool tự động tạo hàng nghìn backlink (profile, comment, web 2.0, link farm) có còn ăn không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "WarriorForum",
+      "Reddit r/blackhatSEO"
+     ],
+     "tomtat": "Không còn ăn, và còn có hại. Link tạo hàng loạt bằng tool (hồ sơ người dùng, comment, web 2.0, link farm tức trang trại link) được chính sách spam của Google nêu đích danh và bị vô hiệu hoá gần như ngay. Mẫu link lớn kèm anchor (chữ gắn link) tối ưu đột biến có thể dẫn tới manual action, rồi tốn công gỡ và disavow. Thay vào đó, tập trung lấy một ít link từ nguồn đúng ngành có biên tập.",
+     "visao": "Link có giá trị khi một người biên tập thật chọn trỏ về bạn; link do máy rải hàng nghìn chỗ không mang ý nghĩa đó. Google cho biết SpamBrain (hệ thống AI chống spam) được dùng để phát hiện và vô hiệu hoá link spam, nên phần lớn link loại này không được tính. Rủi ro nằm ở chỗ khối lượng lớn cùng anchor tối ưu dồn dập tạo thành mẫu thao túng rõ ràng, đủ để nhân viên Google xử phạt.",
+     "check": [
+      "Khi audit backlink, xem link nằm ở đâu: hồ sơ người dùng, comment, chữ ký diễn đàn, directory và bookmark chất lượng thấp, site tạo hàng loạt; tỷ lệ lớn nằm ở các chỗ này là dấu hiệu từng chạy tool.",
+      "Xem phân bố anchor: anchor chứa đúng từ khoá thương mại tăng đột biến là mẫu mà manual action về link nhắm tới.",
+      "Mở báo cáo Thao tác thủ công trong Search Console xem có thông báo 'Unnatural links to your site' không."
+     ],
+     "do": [
+      "(1) Người ta chạy tool vì rẻ và tạo được số lượng link lớn trong vài giờ.",
+      "(2) Spam policies nêu đích danh: dùng chương trình hoặc dịch vụ tự động tạo link, link trong comment hay chữ ký diễn đàn có anchor tối ưu, link từ directory và bookmark kém chất lượng.",
+      "(3) Link loại này bị vô hiệu hoá gần như ngay; mẫu lớn và đột biến anchor có thể dẫn tới manual action (phạt tay của Google), rồi phải tốn công gỡ link và disavow (khai báo để Google bỏ qua link).",
+      "(4) Cách đúng: lấy một ít link từ nguồn đúng ngành có biên tập (xem nhóm Backlink)."
+     ],
+     "avoid": [
+      "Không đặt KPI số lượng link mỗi tháng cho đội SEO; KPI kiểu này đẩy nhân viên tìm đến tool rải link và đặt site vào rủi ro manual action."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Google Search Central Blog - December 2022 link spam update",
+       "url": "https://developers.google.com/search/blog/2022/12/december-22-link-spam-update"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-doi-domain-ne-phat",
+     "if": "Site bị phạt thì đổi sang domain mới và 301 để 'thoát' có được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/SEO",
+      "WebmasterWorld"
+     ],
+     "tomtat": "Không thoát được, và còn có thể kéo hình phạt sang domain mới. John Mueller (đại diện Google Search) nói không có cách nào redirect site bị phạt sang site mới mà không có nguy cơ site mới bị phạt theo. Việc đúng là xác định site bị manual action hay chỉ tụt do core update, sửa nguyên nhân gốc và xử lý ngay trên domain đang có.",
+     "visao": "Redirect 301 (chuyển hướng vĩnh viễn) là cách bạn báo với Google rằng site mới chính là site cũ chuyển nhà, nên tín hiệu tốt lẫn xấu đều có thể đi theo. Mueller còn nói Google có thể nhận ra việc chuyển dù không redirect, nếu nội dung gần như y hệt. Trong khi đó lỗi gốc vẫn nằm nguyên. Còn tụt do core update (đợt cập nhật thuật toán lõi) không phải manual action, nên không có hình phạt nào để né; cách khắc phục là cải thiện nội dung.",
+     "check": [
+      "Mở báo cáo Thao tác thủ công (Manual actions) trong Search Console: có thông báo thì site bị phạt tay; không có mà traffic tụt trùng thời điểm một core update thì đây là thuật toán đánh giá lại.",
+      "Liệt kê lý do gốc khiến site bị phạt hoặc tụt và kiểm tra đã sửa hết chưa; chưa sửa thì đổi domain chỉ mang lỗi sang nhà mới."
+     ],
+     "do": [
+      "(1) Người ta mong domain mới không mang theo hình phạt nhưng vẫn giữ được link cũ qua 301.",
+      "(2) Mueller nói không có cách nào redirect site bị phạt sang site mới mà không có nguy cơ site mới bị phạt theo; đây là phát biểu của đại diện Google, không phải văn bản chính sách.",
+      "(2) Mueller cũng nói Google có thể nhận ra việc chuyển site dù không redirect, nếu nội dung gần như y hệt.",
+      "(3) Hậu quả: mất thứ hạng trên cả domain mới, mất thời gian và tiền xây lại, trong khi lỗi gốc vẫn còn.",
+      "(4) Cách đúng với manual action: sửa nguyên nhân trên mọi trang bị ảnh hưởng rồi gửi yêu cầu xem xét lại (Request Review) trong báo cáo Thao tác thủ công.",
+      "(4) Việc xét lại thường mất vài ngày đến vài tuần, yêu cầu liên quan tới link có thể lâu hơn.",
+      "(4) Cách đúng khi tụt do core update: cải thiện nội dung trên chính domain đang có."
+     ],
+     "avoid": [
+      "Không đổi domain chỉ vì tụt sau core update; bạn mất lịch sử và thương hiệu gắn với domain cũ trong khi nội dung vẫn chưa tốt hơn."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Roundtable - Google: There Is No Way To Redirect A Penalized Site Safely",
+       "url": "https://www.seroundtable.com/google-redirect-penalty-safe-22120.html"
+      },
+      {
+       "title": "Search Console Help - Manual actions report",
+       "url": "https://support.google.com/webmasters/answer/9044175"
+      },
+      {
+       "title": "Google Search Central - Google Search's core updates and your website",
+       "url": "https://developers.google.com/search/docs/appearance/core-updates"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-negative-seo",
+     "if": "Đối thủ bắn hàng nghìn backlink bẩn (negative SEO) về site mình thì làm gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "BlackHatWorld",
+      "Google Search Central Help Community"
+     ],
+     "tomtat": "Phần lớn trường hợp không cần làm gì. Google nhiều lần nói có thể bỏ qua đe doạ negative SEO (SEO bẩn, cố tình bắn link xấu về site người khác), vì hệ thống được thiết kế để không tính link spam ngẫu nhiên. Trước hết kiểm Search Console có manual action không và traffic có thật sự giảm đúng lúc link xuất hiện không. Chỉ cân nhắc disavow khi có manual action hoặc thấy khối link lớn rõ ràng gây lo ngại thật.",
+     "visao": "Google không công bố chi tiết, nhưng nếu ai cũng hạ được đối thủ bằng cách mua link rác thì hệ thống xếp hạng sẽ bị lợi dụng, nên Google chọn bỏ qua loại link này thay vì phạt site nhận link. John Mueller còn nhận xét spammer thích khiến bạn mất thời gian disavow (khai báo để Google bỏ qua link). Google cũng nói trong đa số trường hợp họ tự đánh giá được link nào đáng tin, và dùng công cụ disavow sai có thể làm hại hiệu suất của site.",
+     "check": [
+      "Mở báo cáo Thao tác thủ công trong Search Console; không có thông báo 'Unnatural links to your site' thì Google chưa xử phạt gì vì link.",
+      "Đặt mốc thời gian khối link xấu xuất hiện cạnh biểu đồ click trong Search Console; traffic không giảm trùng thời điểm đó thì không có bằng chứng link đang gây hại."
+     ],
+     "do": [
+      "Không có manual action và traffic ổn thì cứ bỏ qua: Mueller nói link spam ngẫu nhiên không cần xử lý vì hệ thống đã được thiết kế để không tính. Đây là phát biểu của đại diện Google, không phải văn bản chính sách.",
+      "Dồn thời gian vào nội dung và kỹ thuật thay vì soát từng link rác; Mueller nói spammer thích khiến bạn mất thời gian disavow.",
+      "Chỉ cân nhắc disavow theo domain (mỗi dòng dạng domain:tenmien.com trong tệp .txt) khi có manual action hoặc thấy khối link lớn rõ ràng gắn với site và lo ngại thật; Google khuyên thử gỡ link trước.",
+      "Sau khi tải tệp lên, chờ vài tuần để Google đưa danh sách vào xử lý; tệp tải sau sẽ thay toàn bộ danh sách cũ của property đó, và công cụ không hỗ trợ Domain property."
+     ],
+     "avoid": [
+      "Không trả đũa bằng negative SEO: bạn tự đặt mình vào vi phạm chính sách spam.",
+      "Không disavow tràn lan mọi link trông xấu; Google cảnh báo dùng sai công cụ này có thể làm giảm hiệu suất của site trên Google."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Search Engine Roundtable - Google: You Can Ignore Negative SEO Threats",
+       "url": "https://www.seroundtable.com/google-ignore-negative-seo-26831.html"
+      },
+      {
+       "title": "Search Engine Roundtable - Google: Spammers Encourage You To Waste Time Disavowing Links",
+       "url": "https://www.seroundtable.com/google-spammers-encourage-waste-time-disavowing-links-38797.html"
+      },
+      {
+       "title": "Search Console Help - Disavow links to your site",
+       "url": "https://support.google.com/webmasters/answer/2648487"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-hack-chen-link",
+     "if": "Hack site khác để chèn link hoặc site mình bị hack chèn từ khoá lạ (tiếng Nhật, cá cược) thì sao?",
+     "hat": "black",
+     "asked": [
+      "Google Search Central Help Community",
+      "BlackHatWorld",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Hack site khác để chèn link là phạm pháp, không phải vùng xám; còn nếu site của bạn bị chèn từ khoá lạ (tiếng Nhật, cá cược) thì đó là dấu hiệu bị hack, cần xử lý ngay. Việc đầu tiên là xem báo cáo Vấn đề bảo mật (Security issues) trong Search Console và tìm site:tenmien.com kèm từ lạ để khoanh vùng. Sau đó cách ly, vá lỗ hổng, dọn sạch rồi yêu cầu Google xem xét lại.",
+     "visao": "Kẻ tấn công nhắm vào site có uy tín để mượn uy tín đó đẩy trang, link, redirect của chúng lên hạng. Google xếp nội dung bị đặt lên site trái phép (hacked content) vào nhóm spam, có thể gắn cảnh báo trên kết quả và hạ site, vì người bấm vào có thể bị dẫn tới trang độc hại. Nếu chỉ xoá trang lạ mà không vá lỗ hổng, kẻ tấn công vẫn còn cửa vào để chèn lại.",
+     "check": [
+      "Mở Search Console > Security issues (Vấn đề bảo mật) xem Google có báo dấu hiệu site bị hack không.",
+      "Tìm trên Google site:tenmien.com kèm từ lạ (tiếng Nhật, cá cược) để xem trang lạ nào đã bị lập chỉ mục.",
+      "Trên quản trị web và hosting, kiểm tra tài khoản admin lạ, plugin lạ hoặc chưa cập nhật, và các file mới xuất hiện."
+     ],
+     "do": [
+      "(1) Kẻ tấn công chèn trang, link, redirect vào site có uy tín để đẩy hạng site của chúng; đây là hành vi phạm pháp, không phải 'vùng xám'.",
+      "(2) Spam policies liệt kê hacked content (nội dung đặt lên site không được phép qua lỗ hổng bảo mật), gồm chèn mã, chèn trang, chèn nội dung và chuyển hướng; Google có thể gắn cảnh báo và hạ site bị chèn.",
+      "(3) Site bị hack mất traffic, mất tin tưởng người dùng, có thể bị cảnh báo trên kết quả tìm kiếm và trên trình duyệt.",
+      "(4) Nếu bạn là nạn nhân: cách ly site, tìm lỗ hổng, đổi mật khẩu, dọn mã và trang lạ, cập nhật plugin.",
+      "(4) Dọn sạch xong thì yêu cầu Google xem xét lại theo hướng dẫn cho site bị hack để gỡ cảnh báo."
+     ],
+     "avoid": [
+      "Không chỉ xoá trang lạ mà không vá lỗ hổng: site sẽ bị chèn lại."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "web.dev (Google) - Help for hacked sites",
+       "url": "https://web.dev/articles/hacked"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "agency-freelancer",
+   "title": "Agency và freelancer SEO",
+   "intro": "Nhận dự án, báo giá, KPI hợp đồng, báo cáo khách, quyền truy cập và khi khách đòi làm black hat.",
+   "nodes": [
+    {
+     "id": "faq-seo-kpi-hop-dong",
+     "if": "Hợp đồng SEO nên cam kết KPI gì cho an toàn?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/bigseo",
+      "Reddit r/SEO",
+      "Brands Vietnam (cộng đồng)"
+     ],
+     "tomtat": "An toàn nhất là cam kết đầu việc và chỉ số đo được, không cam kết thứ hạng, vì chính Google nói không ai đảm bảo được hạng 1 trên Google. KPI nên gồm đầu việc (số trang, lỗi kỹ thuật đã sửa), chỉ số trung gian (lượt hiển thị, click không thương hiệu, số từ vào top 10) và chuyển đổi đo được. Trước khi chốt, hỏi rõ khách cần khách hàng tiềm năng, đơn hàng hay độ phủ thương hiệu.",
+     "visao": "Thứ hạng do Google quyết định nên không bên nào kiểm soát được; cam kết thứ hạng là đặt cược tiền vào thứ nằm ngoài tay mình. Google còn khuyên chủ doanh nghiệp tìm người khác nếu SEO hứa đưa lên vị trí đầu tiên. Đầu việc và chỉ số đo bằng Search Console, GA4 thì cả hai bên cùng kiểm chứng được, và nối thẳng với mục tiêu kinh doanh thật của khách.",
+     "check": [
+      "Hỏi khách cần gì thật: khách hàng tiềm năng, đơn hàng hay độ phủ thương hiệu; mỗi mục tiêu cần bộ KPI khác nhau.",
+      "Kiểm tra khách đã có Search Console và GA4 chưa, vì đây là nơi đo KPI và lấy mốc so sánh đầu kỳ ghi trong hợp đồng."
+     ],
+     "do": [
+      "Giải thích với khách rằng Google nói không ai đảm bảo được hạng 1; cam kết thứ hạng cụ thể là rủi ro cho cả hai bên.",
+      "Chọn KPI theo ba tầng: đầu việc (số trang, lỗi kỹ thuật đã sửa), chỉ số trung gian (lượt hiển thị, click không thương hiệu, số từ vào top 10), và chuyển đổi đo được.",
+      "Ghi rõ trong hợp đồng cách đo (Search Console, GA4), mốc so sánh và khung thời gian đánh giá.",
+      "Thêm điều khoản cam kết không dùng kỹ thuật vi phạm Spam policies (chính sách spam của Google) để bảo vệ domain của khách.",
+      "Lưu ý đây là khuyến nghị nghề; Google không quy định mẫu hợp đồng SEO."
+     ],
+     "avoid": [
+      "Không ký điều khoản phạt tiền theo thứ hạng một từ khoá trên công cụ quét bên thứ ba; số đó phụ thuộc cách công cụ đo, dễ thành tranh chấp.",
+      "Không hứa đưa khách lên vị trí số 1; Google khuyên chủ doanh nghiệp tìm SEO khác khi được hứa như vậy."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Do you need an SEO?",
+       "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+      },
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-bao-gia-seo",
+     "if": "Báo giá SEO một tháng bao nhiêu là hợp lý?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/SEO",
+      "Quora",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Không có mức giá chuẩn chính thức nào; giá hợp lý là giá khớp với phạm vi việc và chất lượng nhân sự làm. Trước khi báo, liệt kê phạm vi (số trang viết hoặc sửa, kỹ thuật, PR, báo cáo) và xem ngành có thuộc YMYL (Your Money or Your Life, nhóm chủ đề như y tế, tài chính) cần chuyên gia duyệt không. Báo giá theo đầu việc và giờ công, kèm mô tả quy trình.",
+     "visao": "Chi phí SEO chủ yếu là công người: nghiên cứu, viết, sửa kỹ thuật, làm PR, nên phạm vi càng rộng và người làm càng giỏi thì giá càng cao. Ngành YMYL tốn thêm vì cần chuyên gia duyệt nội dung. Gói rẻ bất thường thường đạt mức giá đó bằng cách thay công người bằng nội dung tự động và mua link số lượng lớn, tức là chuyển rủi ro sang domain của khách.",
+     "check": [
+      "Liệt kê phạm vi việc: số trang cần viết hoặc sửa, đầu việc kỹ thuật, PR, báo cáo; thiếu phạm vi thì báo giá không so được với bên khác.",
+      "Xác định ngành của khách có thuộc YMYL (y tế, tài chính) không; nếu có thì phải tính công chuyên gia duyệt nội dung.",
+      "Gặp gói giá rẻ bất thường (của bên khác mà khách đang so), hỏi rõ cách làm: nội dung tạo bằng cách nào, link lấy từ đâu."
+     ],
+     "do": [
+      "Báo giá theo đầu việc và giờ công, kèm mô tả quy trình, thay vì theo 'gói từ khoá lên top'.",
+      "Giải thích với khách rằng không có giá chuẩn chính thức; giá phụ thuộc phạm vi việc và chất lượng nhân sự.",
+      "Khi khách đưa báo giá rẻ hơn nhiều, chỉ ra rằng gói giá rẻ bất thường thường dựa vào nội dung tự động và mua link số lượng lớn, rồi đề nghị khách hỏi rõ cách làm.",
+      "Lưu ý: toàn bộ phần này là kinh nghiệm nghề, chưa có nguồn chính thức về mức giá SEO."
+     ],
+     "avoid": [
+      "Không báo giá kèm cam kết thứ hạng; thứ hạng không ai kiểm soát được nên dễ thành tranh chấp khi kết quả không như hứa."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [],
+     "children": []
+    },
+    {
+     "id": "faq-seo-bao-cao-khach",
+     "if": "Báo cáo SEO hằng tháng cho khách gồm những gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/bigseo",
+      "Reddit r/SEO"
+     ],
+     "tomtat": "Báo cáo nên gồm số liệu thật từ Search Console và GA4/CRM, phần tăng trưởng từ truy vấn không thương hiệu, việc đã làm kèm link, việc tiếp theo và việc cần khách quyết. Trước hết hỏi khách quan tâm chỉ số nào và xin quyền xem Search Console, GA4 để số liệu đến từ nguồn khách tự kiểm được. Báo cáo như vậy cho khách thấy rõ phần SEO tạo ra, thay vì một ảnh chụp thứ hạng.",
+     "visao": "Search Console là dữ liệu Google ghi nhận về click, lượt hiển thị, truy vấn; GA4 hoặc CRM (phần mềm quản lý khách hàng) cho biết bao nhiêu người thành khách. Tách truy vấn thương hiệu ra vì người tìm tên công ty thường đã biết công ty, không phải do SEO kéo về. Ảnh chụp thứ hạng từ máy cá nhân bị cá nhân hoá theo người chụp nên không đại diện cho khách hàng thật.",
+     "check": [
+      "Hỏi khách quan tâm chỉ số nào nhất để đưa lên đầu báo cáo.",
+      "Kiểm tra agency đã có quyền xem Search Console và GA4 của khách chưa; chưa có thì xin quyền trước kỳ báo cáo đầu tiên.",
+      "Xem property Search Console đã có bộ lọc truy vấn thương hiệu chưa; bộ lọc chỉ có ở property cấp cao nhất và site đủ lượng truy vấn."
+     ],
+     "do": [
+      "Lấy số từ Search Console: click, lượt hiển thị, truy vấn không thương hiệu, các trang tăng hoặc giảm; lấy chuyển đổi từ GA4 hoặc CRM.",
+      "Tách truy vấn thương hiệu bằng bộ lọc của Search Console (Google ra 11/2025) để thấy phần SEO tạo ra.",
+      "Liệt kê việc đã làm kèm link trang cụ thể, việc tiếp theo, và việc cần khách quyết."
+     ],
+     "avoid": [
+      "Không báo cáo bằng ảnh chụp thứ hạng từ máy cá nhân, vì kết quả bị cá nhân hoá; khách tự tìm thấy khác sẽ mất tin vào báo cáo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central Blog - Branded queries filter trong Search Console (11/2025)",
+       "url": "https://developers.google.com/search/blog/2025/11/search-console-branded-filter"
+      },
+      {
+       "title": "Search Console Help - What are impressions, position, and clicks?",
+       "url": "https://support.google.com/webmasters/answer/7042828"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-quyen-truy-cap",
+     "if": "Agency xin quyền Owner Search Console và quản trị web, có nên cấp?",
+     "hat": "white",
+     "asked": [
+      "Google Search Central Help Community",
+      "Reddit r/SEO"
+     ],
+     "tomtat": "Không nên cấp quyền Owner (chủ sở hữu). Google khuyên khi thuê SEO audit chỉ cấp quyền xem (read) Search Console, chưa cấp quyền ghi; quyền sửa chỉ cấp khi agency thật sự cần sửa trực tiếp. Chủ doanh nghiệp luôn giữ quyền Owner và tài khoản đăng ký tên miền, cấp quyền theo tài khoản riêng từng người và thu hồi khi hết hợp đồng.",
+     "visao": "Ai giữ quyền cao nhất thì người đó kiểm soát dữ liệu và việc cấp quyền; nếu không phải chủ doanh nghiệp mà quan hệ đổ vỡ, doanh nghiệp có thể mất quyền kiểm soát tài sản của mình. Google cũng nhắc chủ site chịu trách nhiệm cho hành động của công ty mình thuê, và SEO có quyền truy cập máy chủ phải sẵn sàng giải thích mọi thay đổi. Tài khoản riêng từng người giúp biết ai đã làm gì và thu hồi đúng người.",
+     "check": [
+      "Hỏi rõ agency cần làm gì cụ thể: chỉ audit hay sửa trực tiếp trên web; chỉ audit thì quyền xem là đủ.",
+      "Rà danh sách người có quyền trong Search Console và trang quản trị web xem ai đang là Owner; Owner không phải người của doanh nghiệp thì cần chuyển lại."
+     ],
+     "do": [
+      "Giai đoạn audit: chỉ cấp quyền xem (read) Search Console, không cấp quyền ghi, đúng như Google khuyên.",
+      "Khi agency cần sửa trực tiếp: cấp quyền theo vai trò, theo tài khoản riêng của từng người; người có quyền truy cập máy chủ phải giải thích được mọi thay đổi trên site.",
+      "Doanh nghiệp luôn giữ quyền Owner Search Console và tài khoản đăng ký tên miền.",
+      "Khi kết thúc hợp đồng, thu hồi quyền của agency."
+     ],
+     "avoid": [
+      "Không chia sẻ mật khẩu chung qua chat; không biết ai đã làm gì và khó thu hồi khi đổi agency."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Do you need an SEO?",
+       "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "faq-seo-khach-doi-black-hat",
+     "if": "Khách đòi mua link, làm PBN cho nhanh lên top thì agency nên xử lý thế nào?",
+     "hat": "gray",
+     "asked": [
+      "Reddit r/bigseo",
+      "BlackHatWorld",
+      "Nhóm FB SEO Việt Nam"
+     ],
+     "tomtat": "Nên giải thích rủi ro bằng văn bản và đề xuất cách khác đạt cùng mục tiêu, thay vì làm theo. Mua link và PBN (mạng blog vệ tinh) vi phạm chính sách spam của Google; link có thể bị vô hiệu hoá, site có thể nhận manual action (hình phạt do nhân viên Google áp), và rủi ro rơi vào domain của khách. Nếu khách vẫn muốn, ghi nhận quyết định và phạm vi trách nhiệm bằng văn bản; agency có quyền từ chối phần việc vi phạm.",
+     "visao": "Khách thường đòi vì muốn nhanh, và mua link là lối tắt dễ thấy. Google coi việc mua bán link để xếp hạng là link spam: hệ thống tự động vô hiệu hoá link, còn nhân viên Google có thể áp manual action 'Unnatural links' (link không tự nhiên) lên site nhận link. Domain là tài sản lâu dài của khách còn hợp đồng agency thì có thời hạn, nên khách phải hiểu rủi ro và tự quyết bằng văn bản.",
+     "check": [
+      "Kiểm tra khách đã hiểu rủi ro chưa: link bị vô hiệu hoá, có thể bị manual action, và domain của khách là nơi chịu hậu quả.",
+      "Đánh giá site khách có giá trị thương hiệu lâu dài không; site càng quan trọng thì cái giá khi bị phạt càng lớn."
+     ],
+     "do": [
+      "(1) Khách đòi mua link, làm PBN vì muốn lên top nhanh hơn cách làm nội dung và PR.",
+      "(2) Spam policies xếp mua bán link để xếp hạng và tạo nội dung giá trị thấp chủ yếu để thao túng link vào link spam; gửi khách giải thích này bằng văn bản.",
+      "(3) Hậu quả thật: link bị vô hiệu hoá, site có thể nhận manual action, rủi ro nằm ở domain của khách; xin xem xét lại về link thường lâu hơn bình thường.",
+      "(4) Đề xuất phương án cùng mục tiêu: bài PR có gắn sponsored (thuộc tính đánh dấu link trả tiền), nội dung có dữ liệu, tối ưu các trang đang ở vị trí 4-20.",
+      "(4) Nếu khách vẫn muốn, ghi nhận quyết định và phạm vi trách nhiệm bằng văn bản; agency có quyền từ chối phần việc vi phạm."
+     ],
+     "avoid": [
+      "Không âm thầm mua link cho khách để đạt KPI; khi site bị phạt, agency mất uy tín và phải chịu trách nhiệm với khách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Google Search Central - Spam policies for Google web search",
+       "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+       "title": "Search Console Help - Manual actions report",
+       "url": "https://support.google.com/webmasters/answer/9044175"
+      }
+     ],
+     "children": []
+    }
+   ]
+  }
+ ]
+}

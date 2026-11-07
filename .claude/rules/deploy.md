@@ -33,3 +33,8 @@ mysqldump --no-tablespaces -h"$H" -u"$U" -p"$P" "$DB" > ~/backups/<ngay>/db.sql
 ## Database live (dgc_settings)
 - Field `email` (hien thi cong khai) va `lead_email` (nhan lead form) la 2 field TACH RIENG -
   xem `wp option get dgc_settings --format=json --allow-root`. KHONG gop chung 2 muc dich nay lai.
+
+## DNS digicomvn.com (từ 06/11/2026)
+- DNS quản lý ở P.A (cổng quanly.digicomvn.com/dns, NS ns1/ns2/ns3.dotvndns.vn), KHÔNG còn ở Namecheap. Web vẫn ở Hostinger (A @/www 145.79.26.63), mail Lark (MX mx1/2/3.larksuite.com, SPF include:spf.onlarksuite.com).
+- Thêm subdomain/bản ghi mới: sửa ở cổng P.A. CNAME quanly -> secureaccess.dotvndns.vn (cổng đại lý white-label).
+- Bản ghi DKIM Lark BẮT BUỘC có trong zone: TXT `lark2512201015._domainkey` (từng bị sót khi chuyển DNS 06/11, Lark báo Invalid). Đổi DNS lần sau: đối chiếu đủ bản ghi con (`_domainkey`, CNAME) chứ không chỉ bản ghi @.

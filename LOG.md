@@ -1,5 +1,8 @@
 # LOG - digicomvn.com
 
+## 2026-11-07 (Báo giá chính thức MISA)
+- Báo giá chính thức 0711/2026/BG-DGC: GP topaz + saigonreview + traffic 5tr, 7.992.000 gồm VAT; Google Doc + docx; phụ lục quy đổi lượt theo 6 gói traffic; ô thông tin xuất hoá đơn bên mua để trống.
+
 ## 2026-11-05 (Báo giá traffic user MISA)
 - 4 gói traffic người dùng thật VN, giá = 90% trung vị 13 bên (Google 1 bước 1.080đ, 2 bước 1.350đ, trực tiếp 760đ, MXH 920đ/lượt), CK hiển thị 20-29%. NOIBO ghi nguồn rẻ nhất cùng quy cách + rủi ro (Google không xác nhận lợi ích xếp hạng, AdSense invalid traffic, nhiễu GA4). Chưa chọn NCC.
 
@@ -5092,3 +5095,7 @@ Hiếu: vẫn xấu, thiết kế lại, hiệu ứng 3D khi cuộn. Hero mới 
 - 06/11: Luồng phản hồi phiếu hỗ trợ: P.A -> sales@ -> VPS support_relay.py lọc tên đại lý -> khách (BCC Hiếu); khách trả lời -> P.A. Form bắt buộc email.
 - 2026-11-06 09:40: SSL quanly: cổng đại lý đã lưu đúng chứng chỉ ECC (29/10) nhưng máy chủ vẫn trả cert access.dotvndns.vn. Cấp thêm chứng chỉ RSA 2048 (~/Claude-Workspace/digicom/ssl-quanly/acme/quanly.digicomvn.com/, hạn 04/02/2027, khoá dạng RSA PRIVATE KEY ở rsa-traditional.key), đã điền Certificate + CA vào Cấu hình Control Panel; chờ Hiếu dán Private Key (đã copy sẵn clipboard) và bấm Cập nhật. Bản ECC giữ ở thư mục _ecc để quay lại.
 - 2026-11-06 09:55: Cổng đại lý ĐÃ LƯU chứng chỉ RSA cho quanly (Certificate + RSA key + CA YR1, chọn https). Máy chủ access.dotvndns.vn vẫn trả cert của chính nó -> đại lý chưa cài lên máy chủ (bản ECC 29/10 cũng không được cài sau 8 ngày). Cần kỹ thuật đại lý kích hoạt.
+- 2026-11-06 10:10: KT đại lý (Đăng Nguyễn) yêu cầu đổi CNAME quanly -> secureaccess.dotvndns.vn (112.213.82.189) để bật SSL. Chờ Hiếu sửa ở Namecheap.
+- 2026-11-06 10:45: Chuyển quản lý DNS digicomvn.com từ zone Namecheap mồ côi sang DNS P.A (NS ns1/ns2/ns3.dotvndns.vn). Website VẪN ở Hostinger (A @/www 145.79.26.63), mail Lark giữ nguyên (3 MX + SPF + 2 TXT Lark/verify + TXT anthropic). Thêm CNAME quanly -> secureaccess.dotvndns.vn. DKIM Lark ký bằng miền larksuite.com nên không cần bản ghi trong zone. Kiểm: 4 NS P.A trả đúng, web 200, mx1 Lark cổng 25 mở. Resolver công cộng chuyển dần trong tối đa 48 giờ. Rollback: NS về dns1/dns2.registrar-servers.com. Còn: máy chủ secureaccess trả cert ECC quanly thiếu chứng chỉ trung gian -> KT đại lý cài kèm CA.
+- 2026-11-06 16:30: DKIM Lark báo lỗi sau khi chuyển DNS sang P.A (ghi chú 10:45 "DKIM không cần bản ghi" là SAI). Đã thêm TXT lark2512201015._domainkey (giá trị chép từ zone Namecheap, khớp Lark) ở cổng DNS P.A (vào qua daily.pavietnam.vn > Quản lý Domain, đổi host quanly -> secureaccess.dotvndns.vn vì quanly lỗi chứng chỉ). 4 NS P.A trả đúng. Backup zone trước khi sửa: ~/Claude-Workspace/_backups/routines/2026-11-06/dns-dkim/.
+- 2026-11-06 16:47: Email Footer cổng đại lý thêm dòng 'Báo sự cố kỹ thuật: digicomvn.com/ho-tro-ky-thuat/' (đã lưu, đọc lại đúng; domain/NS/cert giữ nguyên).

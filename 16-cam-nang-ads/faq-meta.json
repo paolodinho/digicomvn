@@ -1,0 +1,2815 @@
+{
+ "platform": "faq-meta",
+ "updated": "2026-11-07",
+ "groups": [
+  {
+   "id": "fm-g-tai-khoan",
+   "title": "Tài khoản cá nhân, BM, tài khoản QC",
+   "intro": "Câu hỏi về cấu trúc nick cá nhân (via), Business Portfolio (BM), tài khoản quảng cáo (TKQC), phân quyền, bảo mật và xác minh.",
+   "nodes": [
+    {
+     "id": "fm-bm-co-can-khong",
+     "if": "Chạy QC bằng TKQC cá nhân hay phải tạo BM? BM khác TKQC chỗ nào?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Quora"
+     ],
+     "tomtat": "Chạy cho một trang nhỏ của chính bạn thì TKQC (tài khoản quảng cáo) cá nhân vẫn chạy được, không bắt buộc tạo BM. Khi có nhân viên, agency, nhiều trang hoặc pixel thì nên dùng BM (Business Portfolio, trước gọi là Business Manager) để chia quyền theo từng tài sản. Việc đầu tiên là tạo Business Portfolio trong Meta Business Suite rồi thêm hoặc tạo TKQC trong đó.",
+     "visao": "Hai thứ này khác tầng: BM là \"ngôi nhà\" chứa toàn bộ tài sản của doanh nghiệp (trang, TKQC, pixel/dataset, người dùng), còn TKQC chỉ là một phòng trong đó, nơi đặt chiến dịch và phương thức thanh toán. Khi chỉ một người làm một trang, ngôi nhà là thừa. Khi nhiều người cùng làm, BM cho phép giao đúng phòng cho đúng người, ai nghỉ thì thu chìa khoá mà không ảnh hưởng tài sản.",
+     "check": [
+      "Xác định bạn đang chạy cho một trang của chính mình hay cho nhiều trang, nhiều khách; nếu chỉ một trang nhỏ thì TKQC cá nhân là đủ, nếu nhiều trang hoặc nhiều khách thì nên dùng Business Portfolio.",
+      "Xem bạn có cần chia quyền cho nhân viên hoặc agency không; nếu có, đó là lý do chính để chuyển sang Business Portfolio thay vì chạy bằng TKQC cá nhân."
+     ],
+     "do": [
+      "Hiểu đúng hai khái niệm: Business Portfolio chứa trang, TKQC, pixel/dataset (bộ dữ liệu sự kiện) và người dùng của một doanh nghiệp; TKQC chứa chiến dịch và phương thức thanh toán.",
+      "Nếu có nhân viên, agency, nhiều trang hoặc pixel, tạo Business Portfolio trong Meta Business Suite, rồi thêm TKQC đang có hoặc tạo TKQC mới ngay bên trong portfolio đó.",
+      "Bật xác thực 2 lớp cho mọi người có quyền trong portfolio, để mỗi lần đăng nhập đều cần thêm một mã xác nhận ngoài mật khẩu.",
+      "Giữ ít nhất 2 quản trị viên tin cậy, để một người mất nick hoặc nghỉ việc thì doanh nghiệp vẫn còn người quản lý tài sản."
+     ],
+     "avoid": [
+      "Không dùng chung một nick đăng nhập cho nhiều người: bạn mất dấu ai đã làm gì trong tài khoản, và việc đăng nhập từ nhiều thiết bị, nhiều nơi dễ khiến nick bị khoá vì đăng nhập bất thường."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Create a business portfolio in Meta Business Suite",
+       "url": "https://www.facebook.com/business/help/1710077379203657"
+      },
+      {
+       "title": "Add an ad account to your business portfolio in Meta Business Suite",
+       "url": "https://www.facebook.com/business/help/915885887059947"
+      },
+      {
+       "title": "Best practices for making a business portfolio more secure",
+       "url": "https://www.facebook.com/business/help/608572510632070"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-bm50-bm350",
+     "if": "BM50, BM350, BM2500, BM limit/nolimit là loại gì? Meta có bán loại nào không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld",
+      "Blog/forum Việt (Brands Vietnam, blog agency)"
+     ],
+     "tomtat": "Không, Meta không bán loại nào cả: BM50, BM350, BM2500, BM limit/nolimit là tên gọi của chợ mua bán tài khoản ở Việt Nam và trên diễn đàn BlackHatWorld, chưa có tài liệu Meta nào dùng tên này. Con số 50, 250, 350 thường chỉ giới hạn chi tiêu hằng ngày ban đầu của TKQC (tài khoản quảng cáo). Muốn chi nhiều hơn, cách đúng là để giới hạn tự tăng theo lịch sử chi tiêu và thanh toán ổn định.",
+     "visao": "Meta tự đặt giới hạn chi tiêu hằng ngày cho mỗi TKQC dựa trên lịch sử quảng cáo và thanh toán của chính tài khoản đó, giống ngân hàng cấp hạn mức thẻ theo lịch sử trả nợ. Vì vậy không có cách mua chính thức một mức giới hạn cao: chợ chỉ bán lại tài khoản đã có sẵn lịch sử, mà việc mua bán tài sản nền tảng thì bị cấm.",
+     "check": [
+      "Vào Thanh toán > Cài đặt thanh toán của TKQC và xem giới hạn chi tiêu hằng ngày đang hiển thị; đó là con số thật Meta đặt cho tài khoản của bạn, không phụ thuộc tên gọi trên chợ."
+     ],
+     "do": [
+      "Hiểu rằng BM50, BM350, BM2500 không phải sản phẩm hay hạng mục của Meta mà là tên gọi của chợ mua bán tài khoản; con số đi kèm thường chỉ giới hạn chi tiêu hằng ngày ban đầu.",
+      "Để giới hạn tự tăng, chi tiêu đều và thanh toán ổn định trên chính tài khoản của bạn, vì Meta đặt giới hạn theo lịch sử quảng cáo và thanh toán của tài khoản.",
+      "Không có cách mua chính thức một mức giới hạn cao; giới hạn chỉ tự tăng theo lịch sử của chính tài khoản.",
+      "Nếu cần chi lớn ngay, dùng Business Portfolio (BM) thật đã xác minh doanh nghiệp và thanh toán đều, hoặc làm việc với agency là đối tác của Meta."
+     ],
+     "avoid": [
+      "Không mua BM theo các tên gọi này: mua bán tài sản nền tảng bị cấm trong Community Standards (Tiêu chuẩn cộng đồng) của Meta, nên bạn dựa vào tài sản vi phạm ngay từ đầu (xem nhóm Vùng xám và black hat)."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About daily spending limits set by Meta",
+       "url": "https://www.facebook.com/business/help/563129151097553"
+      },
+      {
+       "title": "Spam (Community Standards: cloaking, chuyển hướng lừa, cấm mua bán tài khoản/trang)",
+       "url": "https://transparency.meta.com/policies/community-standards/spam/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-phan-quyen-agency",
+     "if": "Cho agency/nhân viên vào chạy QC thì cấp quyền thế nào cho an toàn?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Meta Business Help Community",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "An toàn nhất là không đưa mật khẩu cho ai: agency thì thêm làm Đối tác (Partner) bằng ID Business Portfolio của họ, nhân viên thì thêm làm người dùng và giao từng tài sản với quyền một phần. Chủ doanh nghiệp luôn giữ quyền sở hữu TKQC (tài khoản quảng cáo), trang, pixel trong portfolio của mình. Làm đúng như vậy, khi chấm dứt hợp tác bạn chỉ cần gỡ quyền là xong, tài sản vẫn ở lại.",
+     "visao": "Meta tách \"sở hữu\" và \"được dùng\": tài sản nằm trong Business Portfolio (BM) của ai thì người đó sở hữu, người khác chỉ được chia quyền như cho mượn chìa khoá từng phòng. Cách này vừa kiểm soát được ai làm gì, vừa tránh việc đăng nhập nick cá nhân từ thiết bị lạ, vốn dễ kích hoạt khoá bảo mật.",
+     "check": [
+      "Hỏi agency có Business Portfolio riêng không và xin ID portfolio của họ; nếu không có ID thì chưa thể thêm họ làm đối tác theo đúng cơ chế của Meta.",
+      "Kiểm tra bạn có toàn quyền (full control) trong portfolio của mình không; nếu không, bạn sẽ không tự chia hoặc thu hồi quyền được và cần người có toàn quyền làm."
+     ],
+     "do": [
+      "Với agency: thêm họ làm Đối tác bằng ID portfolio của họ, chỉ chia đúng tài sản cần (TKQC, trang, dataset tức bộ dữ liệu sự kiện) và đúng mức quyền cần cho công việc.",
+      "Với nhân viên: thêm làm người dùng của portfolio, rồi gán từng tài sản với quyền một phần thay vì toàn quyền.",
+      "Giữ quyền sở hữu TKQC, trang, pixel trong portfolio của chính doanh nghiệp; agency chỉ được chia quyền, không đứng tên sở hữu.",
+      "Rà danh sách người dùng và đối tác định kỳ, gỡ ngay người đã nghỉ hoặc agency đã ngừng hợp tác."
+     ],
+     "avoid": [
+      "Không đưa mật khẩu nick cá nhân cho agency: Meta đã có cơ chế đối tác để không phải làm vậy, và đăng nhập từ nơi lạ dễ kích hoạt khoá bảo mật, làm bạn mất cả nick lẫn tài sản gắn với nick."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Give a partner access to business assets in your business portfolio",
+       "url": "https://www.facebook.com/business/help/1717412048538897"
+      },
+      {
+       "title": "Add people to a business portfolio and assign a business asset",
+       "url": "https://www.facebook.com/business/help/2169003770027706"
+      },
+      {
+       "title": "Best practices for making a business portfolio more secure",
+       "url": "https://www.facebook.com/business/help/608572510632070"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-mat-quyen-admin",
+     "if": "Nhân viên/freelancer cũ là admin duy nhất của BM, nghỉ việc rồi không trả quyền thì làm sao?",
+     "hat": "white",
+     "asked": [
+      "Meta Business Help Community",
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Trước tiên hãy liên hệ người đó, yêu cầu thêm bạn làm quản trị viên toàn quyền rồi gỡ quyền của họ. Nếu họ không hợp tác hoặc tài khoản bị chiếm, dùng quy trình khôi phục Business Portfolio (BM) bị xâm phạm của Meta, kèm giấy tờ doanh nghiệp chứng minh sở hữu. Sau khi lấy lại, luôn giữ ít nhất 2 quản trị viên là người của doanh nghiệp.",
+     "visao": "Meta chỉ nghe người đang có quyền quản trị, nên khi admin duy nhất là người ngoài thì doanh nghiệp giống chủ nhà đưa chùm chìa khoá duy nhất cho người khác. Khi người đó không trả, bằng chứng duy nhất bạn là chủ thật là giấy tờ doanh nghiệp, vì vậy portfolio đã xác minh doanh nghiệp bằng giấy tờ của bạn sẽ dễ chứng minh hơn nhiều.",
+     "check": [
+      "Xem ai đang là quản trị viên có toàn quyền trong portfolio; nếu chỉ còn một người và đó là nhân viên hoặc freelancer cũ thì bạn đang ở thế phụ thuộc hoàn toàn vào họ.",
+      "Kiểm tra tài khoản hoặc BM có xác minh doanh nghiệp bằng giấy tờ của bạn không; nếu có, việc chứng minh sở hữu khi khôi phục sẽ có căn cứ rõ ràng."
+     ],
+     "do": [
+      "Liên hệ người đó, yêu cầu thêm bạn làm quản trị viên toàn quyền; khi đã có quyền, gỡ quyền của họ ra khỏi portfolio.",
+      "Nếu người đó không hợp tác hoặc portfolio bị chiếm, làm theo quy trình khôi phục portfolio bị xâm phạm của Meta và chuẩn bị giấy tờ doanh nghiệp chứng minh bạn là chủ sở hữu.",
+      "Phòng ngừa về sau: luôn có ít nhất 2 quản trị viên là người của doanh nghiệp và bật xác thực 2 lớp cho họ."
+     ],
+     "avoid": [
+      "Không mua \"dịch vụ lấy lại BM\" qua người trung gian: họ thường đòi giao quyền đăng nhập, và bạn có nguy cơ mất luôn những tài sản còn lại vào tay người lạ."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Recover a hacked or compromised business portfolio",
+       "url": "https://www.facebook.com/business/help/25302697499431030"
+      },
+      {
+       "title": "Best practices for making a business portfolio more secure",
+       "url": "https://www.facebook.com/business/help/608572510632070"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-bi-hack",
+     "if": "Via/BM bị hack, có người lạ thêm vào và tiêu tiền thẻ của mình",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Phải xử lý theo thứ tự: lấy lại nick cá nhân trước qua facebook.com/hacked, rồi mới dọn Business Portfolio (BM) và TKQC (tài khoản quảng cáo), đồng thời gọi ngân hàng khoá thẻ. Gỡ người lạ, gỡ thẻ khỏi TKQC bị dùng và báo hoạt động lạ cho Meta. Làm nhanh thì hạn chế được số tiền bị tiêu thêm và có căn cứ khiếu nại giao dịch với ngân hàng.",
+     "visao": "Kẻ gian thường vào qua nick cá nhân (via) có quyền trong BM, rồi thêm người hoặc TKQC của họ để tiêu tiền thẻ bạn đã gắn. Nếu chưa lấy lại nick mà đã gỡ người lạ, họ vẫn còn đường vào để thêm lại. Còn tiền đã bị trừ là chuyện giữa bạn và ngân hàng, nên phải báo ngân hàng song song.",
+     "check": [
+      "Mở Lịch sử thanh toán của TKQC và tìm giao dịch lạ; nếu có, ghi lại để báo Meta và khiếu nại với ngân hàng.",
+      "Rà danh sách người dùng và TKQC trong portfolio; người hoặc TKQC bạn không nhận ra là dấu hiệu portfolio đã bị chiếm quyền."
+     ],
+     "do": [
+      "Khôi phục nick cá nhân trước qua facebook.com/hacked, đổi mật khẩu và bật xác thực 2 lớp để kẻ gian không quay lại được.",
+      "Gỡ người lạ khỏi portfolio, gỡ thẻ khỏi TKQC bị dùng, rồi báo hoạt động lạ theo hướng dẫn \"unrecognized activity\" (hoạt động không nhận ra) của Meta.",
+      "Gọi ngân hàng khoá thẻ và khiếu nại giao dịch nếu tiền đã bị trừ.",
+      "Nếu chính portfolio bị chiếm và bạn không còn quyền, làm theo quy trình khôi phục portfolio bị xâm phạm của Meta."
+     ],
+     "avoid": [
+      "Không bấm link \"kháng nghị\", \"vi phạm bản quyền\" gửi qua tin nhắn hoặc email lạ: đây là kiểu lừa lấy cookie (dữ liệu phiên đăng nhập) phổ biến nhất, giúp kẻ gian vào nick mà không cần mật khẩu và chiếm BM."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "facebook.com/hacked (khôi phục tài khoản cá nhân)",
+       "url": "https://www.facebook.com/hacked"
+      },
+      {
+       "title": "Troubleshoot unrecognized activity on your ad account",
+       "url": "https://www.facebook.com/business/help/524424920973484"
+      },
+      {
+       "title": "Recover a hacked or compromised business portfolio",
+       "url": "https://www.facebook.com/business/help/25302697499431030"
+      },
+      {
+       "title": "Best practices for making a business portfolio more secure",
+       "url": "https://www.facebook.com/business/help/608572510632070"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-xac-minh-dn",
+     "if": "Có nên xác minh doanh nghiệp cho BM? Hộ kinh doanh, cá nhân có xác minh được không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Có, nếu là doanh nghiệp thật thì nên xác minh: Meta yêu cầu xác minh doanh nghiệp để mở một số tính năng quảng cáo, thanh toán và chi tiêu, và khi có sự cố bạn dễ kháng nghị, dễ chứng minh sở hữu hơn. Về thuế, Meta chỉ công nhận tổ chức/doanh nghiệp đã đăng ký; hộ kinh doanh và cá nhân không thuộc diện tự kê khai FCT-VAT (thuế nhà thầu nước ngoài phần VAT). Việc cần làm trước là đối chiếu thông tin giấy đăng ký với portfolio cho khớp.",
+     "visao": "Xác minh doanh nghiệp là cách Meta gắn Business Portfolio (BM) với một pháp nhân có thật. Khi đã gắn, mọi tranh chấp về quyền sở hữu hay kháng nghị đều có hồ sơ gốc để đối chiếu. Ngược lại, thông tin không khớp với chủ thật làm hồ sơ mất giá trị chứng minh.",
+     "check": [
+      "So tên, địa chỉ, số điện thoại trong giấy đăng ký kinh doanh với thông tin đang khai trong portfolio; nếu lệch thì sửa cho khớp trước khi gửi xác minh."
+     ],
+     "do": [
+      "Xác minh doanh nghiệp trong Meta Business Suite bằng một trong các phương thức Meta cung cấp: email, điện thoại, tin nhắn, WhatsApp hoặc xác minh tên miền.",
+      "Ưu tiên xác minh nếu là doanh nghiệp thật, vì khi có sự cố bạn dễ kháng nghị và dễ chứng minh quyền sở hữu tài sản.",
+      "Về thuế: chỉ tổ chức/doanh nghiệp đã đăng ký mới được Meta công nhận để tự kê khai FCT-VAT; hộ kinh doanh và cá nhân không thuộc diện này (xem câu về thuế VAT)."
+     ],
+     "avoid": [
+      "Không mượn giấy tờ công ty khác hoặc mua \"BM xác minh sẵn\": thông tin không khớp chủ thật làm bạn mất khả năng kháng nghị và tài sản có thể bị coi là không xác thực."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Verify your business in Meta Business Suite",
+       "url": "https://www.facebook.com/business/help/2058515294227817"
+      },
+      {
+       "title": "About Vietnam value added tax (VAT) - Meta Business Help",
+       "url": "https://www.facebook.com/business/help/938907633499274"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-vo-hieu",
+   "title": "Bị vô hiệu hoá, hạn chế quảng cáo, kháng",
+   "intro": "TKQC, nick cá nhân hoặc BM bị khoá, bị hạn chế quảng cáo (HCQC), bị đòi xác minh; cách kháng và những việc làm cho tình hình tệ hơn.",
+   "nodes": [
+    {
+     "id": "fm-tkqc-bi-khoa",
+     "if": "TKQC bị vô hiệu hoá dù mình không vi phạm gì, kháng ở đâu, bao lâu có kết quả?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Trước hết xem lý do khoá là thanh toán hay chính sách, vì cách xử lý khác hẳn nhau. Lý do thanh toán thì chỉ cần trả dư nợ, không phải kháng; lý do chính sách mà bạn tin là nhầm thì quản trị viên bấm Yêu cầu xem xét trong Business Support Home. Meta ghi việc xét lại thường mất khoảng 48 giờ, có thể lâu hơn, và quyết định sau xét lại có thể là cuối cùng.",
+     "visao": "TKQC (tài khoản quảng cáo) bị vô hiệu vì hai nhóm lý do: Meta chưa thu được tiền, hoặc hệ thống đánh giá tài khoản vi phạm chính sách quảng cáo. Nhóm thanh toán tự mở khi hết nợ; nhóm chính sách cần người xét lại. Chỉ quản trị viên mới gửi được yêu cầu, và số lần gửi có giới hạn, nên gửi một lần cho đúng có giá trị hơn gửi nhiều lần.",
+     "check": [
+      "Vào Business Support Home > Tổng quan trạng thái tài khoản và đọc lý do ghi là chính sách hay thanh toán; từ đó mới chọn đúng đường xử lý.",
+      "Kiểm tra bạn có phải quản trị viên của TKQC không; nếu không, bạn sẽ không gửi được yêu cầu xem xét và cần nhờ quản trị viên làm.",
+      "Xem tài khoản còn dư nợ chưa thanh toán không; còn nợ thì đây nhiều khả năng là lý do thanh toán chứ không phải vi phạm."
+     ],
+     "do": [
+      "Nếu lý do là thanh toán: trả dư nợ bằng nút Thanh toán ngay hoặc thêm phương thức thanh toán mới; đây không phải đơn kháng chính sách.",
+      "Nếu lý do là chính sách và bạn tin là nhầm: quản trị viên bấm Yêu cầu xem xét trong mục \"Bạn có thể làm gì\".",
+      "Chờ kết quả: Meta ghi việc xét lại thường mất khoảng 48 giờ, có thể lâu hơn; quyết định sau xét lại có thể là cuối cùng.",
+      "Khi được mở lại, tự bật lại đúng các ads đã chạy trước đó, vì Meta không tự bật lại.",
+      "Nếu không thấy mục \"Bạn có thể làm gì\", nghĩa là hiện không còn bước nào để gửi."
+     ],
+     "avoid": [
+      "Không gửi kháng liên tục nhiều lần: số lần có giới hạn và gửi dồn không làm kết quả đến nhanh hơn.",
+      "Không tạo TKQC mới để chạy tiếp cùng nội dung: Meta coi đó là né thực thi và có thể hạn chế cả tài sản mới (xem câu bên dưới)."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Troubleshoot a disabled or restricted account",
+       "url": "https://www.facebook.com/business/help/968402779873601"
+      },
+      {
+       "title": "Request a review for a restricted advertising account",
+       "url": "https://www.facebook.com/business/help/530209463124901"
+      },
+      {
+       "title": "About ad account status in Business Support Home",
+       "url": "https://www.facebook.com/business/help/28817317414622604"
+      },
+      {
+       "title": "Fix a failed payment issue on Meta",
+       "url": "https://www.facebook.com/business/help/268196136699959"
+      }
+     ],
+     "children": [
+      {
+       "id": "fm-tkqc-khang-truot",
+       "if": "Nếu kháng bị từ chối, có cách nào khác không?",
+       "hat": "white",
+       "asked": [
+        "Reddit r/FacebookAds",
+        "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+       ],
+       "tomtat": "Kháng bị từ chối chưa chắc đã hết đường: nếu thông báo còn cho xét lại thì gửi lại kèm bằng chứng mới, và tài khoản có lịch sử chi tiêu có thể chat với hỗ trợ của Meta. Nếu quyết định là cuối cùng, hãy sửa nguyên nhân rồi chuyển sang tài sản hợp lệ khác của doanh nghiệp, không chạy lại nội dung vi phạm.",
+       "visao": "Lần xét lại thứ hai chỉ có ý nghĩa khi có thông tin mới mà lần trước Meta chưa thấy, ví dụ giấy tờ doanh nghiệp hoặc trang đích đã sửa. Gửi lại y nguyên thì kết quả gần như không đổi. Khi quyết định đã là cuối cùng thì chỉ Meta thay đổi được, không bên ngoài nào can thiệp được.",
+       "check": [
+        "Đọc kỹ thông báo từ chối xem có còn cho xét lại thêm lần nữa không; nếu có thì còn cơ hội, nếu ghi là quyết định cuối cùng thì chuyển sang hướng dùng tài sản hợp lệ khác."
+       ],
+       "do": [
+        "Nếu thông báo còn cho xét lại: gửi yêu cầu mới kèm bằng chứng mới như giấy tờ doanh nghiệp hoặc trang đích đã sửa.",
+        "Nếu tài khoản có lịch sử chi tiêu: tìm nút chat hỗ trợ trong Business Support Home và dùng mã yêu cầu cũ khi chat để nhân viên tra lại hồ sơ.",
+        "Nếu quyết định là cuối cùng: sửa nguyên nhân trước, rồi mới chuyển sang tài sản hợp lệ khác của doanh nghiệp; không chạy lại nội dung vi phạm."
+       ],
+       "avoid": [
+        "Không trả tiền cho người hứa \"mở 100%\": không ai ngoài Meta quyết định được kết quả, nên bạn mất tiền mà tài khoản vẫn như cũ."
+       ],
+       "evidence": "chinh-thuc",
+       "sources": [
+        {
+         "title": "Request a review for a restricted advertising account",
+         "url": "https://www.facebook.com/business/help/530209463124901"
+        },
+        {
+         "title": "Troubleshoot a disabled or restricted account",
+         "url": "https://www.facebook.com/business/help/968402779873601"
+        }
+       ],
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "fm-hcqc-ca-nhan",
+     "if": "Nick cá nhân bị hạn chế quảng cáo (HCQC), TKQC nào gắn với nick cũng không chạy được",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Đây là hạn chế ở cấp người dùng: chính nick bị HCQC (hạn chế quảng cáo) không quảng cáo được trên mọi TKQC (tài khoản quảng cáo), nhưng người khác trong cùng TKQC vẫn chạy được. Việc cần làm ngay là để quản trị viên khác tạm điều hành TKQC, còn người bị hạn chế gửi yêu cầu xem xét từ Business Support Home của chính nick đó.",
+     "visao": "Meta không chỉ đánh giá từng tài khoản quảng cáo mà còn đánh giá người đứng sau, nên hạn chế đi theo người chứ không theo tài khoản. Lý do hay gặp là vi phạm lặp lại ở các trang hoặc TKQC mà nick đó quản lý. Vì vậy dùng nick khác chạy tiếp cùng nội dung chính là hành vi chính sách Account Integrity (Tính toàn vẹn tài khoản) mô tả.",
+     "check": [
+      "Xem trạng thái trong Business Support Home của chính nick (không phải của TKQC); nếu hạn chế nằm ở nick thì đổi sang TKQC khác cũng không chạy được.",
+      "Rà xem nick có từng quản lý tài sản bị khoá không; nếu có, đó là manh mối về lý do nick bị hạn chế."
+     ],
+     "do": [
+      "Để quản trị viên khác tạm điều hành TKQC, vì người khác trong cùng TKQC vẫn có thể chạy quảng cáo.",
+      "Người bị hạn chế gửi yêu cầu xem xét từ Business Support Home của chính mình.",
+      "Rà lại các trang và TKQC nick đó quản lý, tìm và sửa vi phạm lặp lại ở tài sản liên kết, vì đây là lý do hay gặp."
+     ],
+     "avoid": [
+      "Không gỡ nick bị HCQC ra rồi dùng nick khác chạy cùng nội dung: đây chính là hành vi Meta mô tả trong chính sách Account Integrity, dễ khiến hình phạt lan sang cả người và tài sản mới."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Introduction to the Advertising Standards (Meta Transparency Center)",
+       "url": "https://transparency.meta.com/policies/ad-standards/"
+      },
+      {
+       "title": "Request a review for a restricted advertising account",
+       "url": "https://www.facebook.com/business/help/530209463124901"
+      },
+      {
+       "title": "Account Integrity (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/business-assets/account-integrity/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-xac-minh-lien-tuc",
+     "if": "Bị đòi xác minh danh tính, quay video selfie, xác minh số điện thoại liên tục",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Cách duy nhất là làm đúng loại xác minh được yêu cầu bằng giấy tờ thật của chính người dùng. Meta có thể đòi xác minh thêm khi thấy hành vi đáng ngờ hoặc khi bạn ở ngành dễ bị lừa đảo, và nhà quảng cáo mới thường phải xác minh số điện thoại trước khi chạy. Trong giai đoạn đầu, giữ ổn định thiết bị, vị trí đăng nhập và thông tin thanh toán để bớt bị hỏi lại.",
+     "visao": "Yêu cầu xác minh là cách Meta kiểm tra người đang chạy quảng cáo có đúng là người thật, đúng chủ tài khoản hay không. Meta không công bố chi tiết điều gì kích hoạt, nhưng những thay đổi đột ngột như đổi thiết bị, đổi nơi đăng nhập, đổi thẻ thường trông giống tài khoản bị người khác dùng. Giấy tờ thật khớp với chủ tài khoản là thứ giúp qua xác minh.",
+     "check": [
+      "Đọc thông báo để biết đang bị yêu cầu xác minh loại gì (danh tính, số điện thoại hay xác minh nhà quảng cáo); mỗi loại cần giấy tờ hoặc thao tác khác nhau."
+     ],
+     "do": [
+      "Làm đúng loại xác minh được yêu cầu bằng giấy tờ thật của chính người dùng; Meta có thể yêu cầu thêm khi thấy hành vi đáng ngờ hoặc ngành dễ bị lừa đảo.",
+      "Nếu là nhà quảng cáo mới, chuẩn bị xác minh số điện thoại trước khi chạy, vì đây là yêu cầu thường gặp.",
+      "Giữ ổn định thiết bị, vị trí đăng nhập và thông tin thanh toán trong giai đoạn đầu; đây là kinh nghiệm cộng đồng, chưa có ngưỡng chính thức."
+     ],
+     "avoid": [
+      "Không dùng giấy tờ người khác hay ảnh đã chỉnh sửa: xác minh thất bại thường dẫn tới tài khoản bị khoá hẳn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Verification requirements for advertisers",
+       "url": "https://www.facebook.com/business/help/810450577622394"
+      },
+      {
+       "title": "How do I verify my phone number as a new Meta advertiser?",
+       "url": "https://www.facebook.com/business/help/1064155054687612"
+      },
+      {
+       "title": "Unacceptable Business Practices (Advertising Standards)",
+       "url": "https://transparency.meta.com/en-us/policies/ad-standards/fraud-scams/unacceptable-business-practices"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tao-tk-moi-sau-khoa",
+     "if": "Bị khoá rồi thì tạo TKQC/BM/page mới chạy tiếp được không?",
+     "hat": "gray",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Không nên, nếu tài sản cũ bị khoá vì vi phạm: Meta cấm tạo tài sản kinh doanh mới sau khi tài sản cũ bị hạn chế, và có thể hạn chế cả tài sản mới được tạo để né. Nếu bạn tin bị khoá nhầm, hãy kháng nghị trên tài sản cũ trước. Chỉ dùng tài sản hợp lệ khác của doanh nghiệp khi nội dung đã đúng chính sách.",
+     "visao": "Meta không chỉ khoá một tài khoản mà theo dõi cả chủ đứng sau: theo chính sách Account Integrity (Tính toàn vẹn tài khoản), tài sản được tạo hoặc dùng lại để né lần xử lý trước có thể bị hạn chế, kể cả khi Meta chỉ đánh giá là có chung chủ sở hữu. Vì vậy tài khoản mới chạy lại nội dung cũ không phải \"làm lại từ đầu\" mà là mở rộng vụ vi phạm.",
+     "check": [
+      "Xác định lý do bị khoá đã được sửa chưa; nếu chưa, tài sản mới sẽ lặp lại đúng vi phạm cũ.",
+      "So tài sản mới với tài sản cũ: cùng chủ, cùng thẻ, cùng nội dung thì rất dễ bị Meta xếp vào trường hợp né thực thi."
+     ],
+     "do": [
+      "(1) Người ta làm gì và vì sao: bị khoá thì tạo ngay TKQC (tài khoản quảng cáo), BM (Business Portfolio) hoặc trang mới để chạy tiếp, vì muốn quảng cáo không bị gián đoạn.",
+      "(2) Chính sách nói gì: Meta cấm tạo tài sản kinh doanh mới sau khi tài sản cũ bị hạn chế vì vi phạm, và có thể hạn chế tài sản tạo hoặc dùng lại để né xử lý, kể cả khi chung chủ.",
+      "(3) Hậu quả thật: khi bị phát hiện, Meta mở rộng hình phạt sang người dùng, trang và portfolio liên quan, nên doanh nghiệp có thể mất nhiều tài sản hơn ban đầu.",
+      "(4) Cách làm đúng: bị khoá nhầm thì kháng nghị trên tài sản cũ trước; vẫn cần chạy thì chỉ dùng tài sản hợp lệ khác của doanh nghiệp khi nội dung đã đúng chính sách, và luôn nói thật khi xác minh."
+     ],
+     "avoid": [
+      "Không tạo hàng loạt tài sản để chạy lại nội dung bị từ chối: khi bị phát hiện, Meta mở rộng hình phạt sang người dùng, trang và portfolio liên quan."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Account Integrity (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/business-assets/account-integrity/"
+      },
+      {
+       "title": "Circumventing Systems and Evading Enforcement, Jon Loomer (14/10/2024)",
+       "url": "https://www.jonloomer.com/qvt/circumventing-systems-and-evading-enforcement/"
+      },
+      {
+       "title": "Our Prohibited Commercial Practices policy (Meta Transparency Center)",
+       "url": "https://transparency.meta.com/policies/other-policies/our-prohibited-commercial-practices-policy/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-dich-vu-khang",
+     "if": "Có nên thuê dịch vụ kháng TKQC, kháng 902, 'mở khoá BM' không?",
+     "hat": "gray",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Blog/forum Việt (Brands Vietnam, blog agency)",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Không nên thuê dịch vụ đòi đăng nhập hay quyền admin: đơn kháng chỉ gửi được bởi quản trị viên qua Business Support Home/Account Quality, và không ai ngoài Meta quyết định kết quả, kể cả với \"kháng 902\" hay \"mở khoá BM\". Nếu cần người giúp, hãy thuê người hướng dẫn để bạn tự làm, hoặc dùng kênh chat hỗ trợ của Meta trong Business Support Home.",
+     "visao": "Dịch vụ kháng không có cửa riêng nào vào Meta; họ cũng phải gửi đúng đơn mà quản trị viên tự gửi được. Thứ họ cần ở bạn là mật khẩu, cookie (dữ liệu phiên đăng nhập) hoặc quyền admin, tức chìa khoá vào tài sản và thẻ thanh toán của bạn. Đó là lý do rủi ro lớn nhất nằm ở chỗ giao quyền, không nằm ở kết quả kháng.",
+     "check": [
+      "Hỏi rõ dịch vụ đòi gì: mật khẩu, cookie, quyền admin hay chỉ hướng dẫn; nếu đòi bất kỳ quyền đăng nhập nào thì đó là rủi ro mất tài sản và mất thẻ."
+     ],
+     "do": [
+      "(1) Người ta làm gì và vì sao: thuê dịch vụ \"kháng TKQC\", \"kháng 902\", \"mở khoá BM\" vì nghĩ có người quen hoặc mẹo để Meta mở nhanh hơn.",
+      "(2) Chính sách và cơ chế nói gì: đơn kháng chỉ gửi được qua Business Support Home/Account Quality bởi quản trị viên, và không ai ngoài Meta quyết định kết quả.",
+      "(3) Hậu quả thật: dịch vụ đòi đăng nhập hoặc quyền admin là rủi ro mất tài sản và mất thẻ; chưa có số liệu chính thức về tỉ lệ lừa đảo, đây là cảnh báo của cộng đồng.",
+      "(4) Cách làm đúng: tự gửi yêu cầu xem xét với tư cách quản trị viên; nếu cần người hỗ trợ thì thuê người hướng dẫn bạn tự làm, hoặc dùng kênh chat hỗ trợ của Meta trong Business Support Home."
+     ],
+     "avoid": [
+      "Không giao mật khẩu, mã 2FA (mã xác thực 2 lớp) hay cookie cho bất kỳ ai: có những thứ này là người khác vào được tài khoản như chính bạn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Request a review for a restricted advertising account",
+       "url": "https://www.facebook.com/business/help/530209463124901"
+      },
+      {
+       "title": "Best practices for making a business portfolio more secure",
+       "url": "https://www.facebook.com/business/help/608572510632070"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tien-du-tk-khoa",
+     "if": "TKQC bị khoá còn tiền nạp trước chưa tiêu, có lấy lại được không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Không chắc lấy lại được: Điều khoản quảng cáo tự phục vụ của Meta cho phép Meta thu hồi số dư nhà quảng cáo khi vi phạm, trong phạm vi luật cho phép. Nếu bị khoá nhầm thì kháng nghị trước, được mở lại thì số dư dùng tiếp. Với tài khoản bị khoá vĩnh viễn, chưa có trang Meta công bố quy trình hoàn số dư, nên hãy liên hệ hỗ trợ và giữ biên lai nạp tiền.",
+     "visao": "Tiền nạp trước nằm trong số dư khả dụng của TKQC (tài khoản quảng cáo) và chịu Điều khoản quảng cáo tự phục vụ bạn đã đồng ý khi chạy quảng cáo. Khi tài khoản bị khoá vì vi phạm, điều khoản đó cho Meta quyền thu hồi số dư. Vì vậy cách phòng thủ tốt nhất là đừng để nhiều tiền nằm sẵn trong tài khoản có rủi ro.",
+     "check": [
+      "Xem TKQC dùng phương thức trả trước (số dư khả dụng) hay trả sau (thẻ); chỉ tài khoản trả trước mới có số dư nằm sẵn có thể bị ảnh hưởng.",
+      "Đọc lý do khoá là vi phạm chính sách hay nhầm; khoá nhầm thì còn đường kháng nghị để giữ số dư."
+     ],
+     "do": [
+      "Nếu bị khoá nhầm: kháng nghị trước; khi được mở lại thì số dư được dùng tiếp.",
+      "Nếu bị khoá vĩnh viễn: liên hệ hỗ trợ qua Business Support Home và giữ biên lai nạp tiền, vì chưa tìm thấy trang Meta công bố quy trình hoàn số dư cho trường hợp này.",
+      "Hiểu rủi ro: Điều khoản quảng cáo tự phục vụ cho phép Meta thu hồi số dư nhà quảng cáo khi vi phạm, trong phạm vi luật cho phép.",
+      "Phòng ngừa: với tài khoản mới hoặc ngành rủi ro, chỉ nạp vừa đủ cho vài ngày chạy."
+     ],
+     "avoid": [
+      "Không nạp số tiền lớn vào tài khoản đang có cảnh báo trạng thái: nếu tài khoản bị khoá vì vi phạm, số dư đó có thể bị thu hồi."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Meta Self-Serve Ad Terms (Điều khoản quảng cáo tự phục vụ)",
+       "url": "https://www.facebook.com/legal/self_service_ads_terms"
+      },
+      {
+       "title": "About ad account status in Business Support Home",
+       "url": "https://www.facebook.com/business/help/28817317414622604"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-thanh-toan",
+   "title": "Thanh toán, ngưỡng, thẻ, nợ, hoá đơn, thuế",
+   "intro": "Ngưỡng thanh toán, giới hạn chi tiêu ngày, thẻ bị từ chối, giữ tiền, nợ quảng cáo, tài khoản lập hoá đơn hàng tháng, thuế VAT ở Việt Nam.",
+   "nodes": [
+    {
+     "id": "fm-nguong-la-gi",
+     "if": "Ngưỡng thanh toán là gì? Sao một ngày bị trừ tiền thẻ nhiều lần?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Ngưỡng thanh toán (payment threshold) là số tiền quảng cáo được tiêu trước khi Meta trừ thẻ; mỗi lần tiêu chạm ngưỡng, Meta trừ đúng số đó, nên ngưỡng càng nhỏ thì càng bị trừ nhiều lần trong ngày. Tài khoản mới có ngưỡng nhỏ nên hay gặp tình trạng này, và mỗi lần trả thành công ngưỡng có thể được nâng. Đây là chuyện bình thường, không làm dừng quảng cáo.",
+     "visao": "Với tài khoản trả sau, Meta cho bạn tiêu trước rồi thu sau, giống một khoản tín dụng nhỏ. Tài khoản mới chưa có lịch sử nên Meta chỉ cho \"nợ\" một khoản nhỏ rồi thu ngay; khi bạn trả đều, Meta tin hơn và có thể cho hạn mức lớn hơn. Đến ngày lập hoá đơn hàng tháng, Meta trừ nốt phần đã tiêu mà chưa chạm ngưỡng.",
+     "check": [
+      "Vào Thanh toán > Cài đặt thanh toán, xem ngưỡng hiện tại và ngày lập hoá đơn hàng tháng; ngưỡng nhỏ là lý do bị trừ nhiều lần trong một ngày.",
+      "Đối chiếu số tiền mỗi lần bị trừ với ngưỡng; ở Việt Nam số bị trừ có thể lớn hơn ngưỡng vì VAT được cộng thêm vào mỗi lần trừ."
+     ],
+     "do": [
+      "Hiểu cách trừ tiền: chạm ngưỡng thì Meta trừ đúng số đó; đến ngày lập hoá đơn hàng tháng thì trừ phần còn lại.",
+      "Giữ thẻ thanh toán thành công đều đặn, vì mỗi lần trả thành công ngưỡng có thể được nâng, từ đó số lần bị trừ trong ngày giảm dần.",
+      "Nhớ rằng chạm ngưỡng không làm dừng quảng cáo; chỉ ngân sách, giới hạn chi tiêu và số dư khả dụng mới làm quảng cáo dừng.",
+      "Khi đối soát chi phí ở Việt Nam, tính cả VAT cộng thêm vào mỗi lần trừ, vì vậy số bị trừ có thể lớn hơn ngưỡng."
+     ],
+     "avoid": [
+      "Không nhầm ngưỡng thanh toán với giới hạn chi tiêu hằng ngày do Meta đặt: ngưỡng quyết định khi nào bị trừ tiền, giới hạn quyết định mỗi ngày tiêu tối đa bao nhiêu; xử lý nhầm cái này không giải quyết được cái kia."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About payment thresholds for Meta ads",
+       "url": "https://www.facebook.com/business/help/776240779095515"
+      },
+      {
+       "title": "When you'll pay for Facebook ads",
+       "url": "https://www.facebook.com/business/help/105373712886516"
+      },
+      {
+       "title": "About Vietnam value added tax (VAT) - Meta Business Help",
+       "url": "https://www.facebook.com/business/help/938907633499274"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tang-nguong",
+     "if": "Làm sao tăng ngưỡng nhanh? Sao ngưỡng không lên hoặc bị hạ?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Không có cách tăng ngưỡng nhanh: bạn chỉ đặt được mức tối đa, còn ngưỡng tự lên dần sau các lần trả thành công và cần Meta chấp thuận. Ngưỡng không lên hoặc bị hạ thường do lịch sử thanh toán có lần thất bại, có khiếu nại hoàn tiền (chargeback), hoặc tài khoản vi phạm chính sách. Cách đúng duy nhất là thanh toán đều và không vi phạm.",
+     "visao": "Ngưỡng thanh toán (payment threshold) giống hạn mức nợ Meta cho bạn: Meta xem lại hạn mức theo lịch sử thanh toán, gồm các lần trả thành công và các lần khiếu nại thẻ, cùng việc tuân thủ Điều khoản và Tiêu chuẩn quảng cáo. Một lần chargeback (yêu cầu ngân hàng hoàn tiền giao dịch) là tín hiệu xấu với bên cho nợ, nên ngưỡng có thể bị hạ. Hạ ngưỡng thì có hiệu lực ngay vì rủi ro cho Meta giảm.",
+     "check": [
+      "Mở lịch sử thanh toán, tìm lần thanh toán thất bại hoặc khiếu nại hoàn tiền (chargeback); nếu có, đó là lý do hợp lý nhất khiến ngưỡng không lên hoặc bị hạ."
+     ],
+     "do": [
+      "Hiểu giới hạn của bạn: bạn chỉ đặt được mức tối đa; hạ ngưỡng có hiệu lực ngay, còn tăng thì ngưỡng tự lên dần sau các lần trả thành công và cần Meta chấp thuận.",
+      "Thanh toán đều, đúng hạn, vì Meta xem lại ngưỡng theo lịch sử thanh toán gồm các lần trả thành công và khiếu nại thẻ.",
+      "Không khiếu nại hoàn tiền các giao dịch Meta và tuân thủ Điều khoản, Tiêu chuẩn quảng cáo, vì vi phạm có thể khiến ngưỡng bị hạ."
+     ],
+     "avoid": [
+      "Không mua \"tài khoản ngưỡng cao\" hoặc dịch vụ \"buff ngưỡng\": mục đích thường là chạy bùng, tức tiêu tiền quảng cáo rồi không trả (xem nhóm black hat)."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Adjust your payment threshold",
+       "url": "https://www.facebook.com/business/help/1342874532544030"
+      },
+      {
+       "title": "About payment thresholds for Meta ads",
+       "url": "https://www.facebook.com/business/help/776240779095515"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-gioi-han-ngay",
+     "if": "TKQC bị giới hạn chi tiêu ngày (limit 50$, 250$), nâng thế nào?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Giới hạn chi tiêu hằng ngày (các mức 50$, 250$) do Meta tự đặt cho phần lớn nhà quảng cáo dựa trên lịch sử quảng cáo và thanh toán, chạm giới hạn thì quảng cáo dừng đến hôm sau. Giới hạn thường tăng khi tài khoản tiêu sát giới hạn và thanh toán ổn định; Meta không công bố bậc tăng. Nếu cần chi cao ngay, hãy xác minh doanh nghiệp hoặc đăng ký lập hoá đơn hàng tháng nếu đủ điều kiện.",
+     "visao": "Giới hạn này là cách Meta kiểm soát rủi ro với tài khoản chưa đủ lịch sử, giống hạn mức thẻ tín dụng của người mới mở. Khi bạn dùng hết hạn mức và vẫn trả tiền đều, Meta có thêm bằng chứng để nới. Xác minh doanh nghiệp hoặc lập hoá đơn hàng tháng cho Meta thông tin chắc chắn hơn về người trả tiền.",
+     "check": [
+      "Vào Cài đặt thanh toán, xem mục Số dư hiện tại để biết giới hạn chi tiêu hằng ngày đang là bao nhiêu; nếu quảng cáo dừng giữa ngày và đã tiêu bằng con số này thì nguyên nhân là chạm giới hạn."
+     ],
+     "do": [
+      "Hiểu rằng chạm giới hạn thì quảng cáo dừng đến hôm sau; đây là giới hạn do Meta đặt, khác với ngưỡng thanh toán.",
+      "Để giới hạn tăng: cho tài khoản tiêu sát giới hạn và giữ thanh toán ổn định; Meta không công bố bậc tăng nên không có mốc chính xác để chờ.",
+      "Nếu cần chi cao ngay: xác minh doanh nghiệp trong Meta Business Suite, hoặc đăng ký lập hoá đơn hàng tháng nếu doanh nghiệp đủ điều kiện."
+     ],
+     "avoid": [
+      "Không chia ngân sách ra nhiều TKQC (tài khoản quảng cáo) mới tạo cùng lúc chỉ để vượt giới hạn: dễ bị coi là hành vi bất thường và kéo theo rủi ro bị hạn chế."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About daily spending limits set by Meta",
+       "url": "https://www.facebook.com/business/help/563129151097553"
+      },
+      {
+       "title": "Verify your business in Meta Business Suite",
+       "url": "https://www.facebook.com/business/help/2058515294227817"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-the-bi-tu-choi",
+     "if": "Thẻ đủ tiền vẫn báo thanh toán thất bại, TKQC bị khoá vì thanh toán / bị 'hold tiền'",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Blog/forum Việt (Brands Vietnam, blog agency)"
+     ],
+     "tomtat": "Thẻ đủ tiền mà vẫn thất bại thì gần như luôn do phía thẻ hoặc ngân hàng chặn: chưa bật thanh toán quốc tế/trực tuyến, thẻ hết hạn, sai tên, hoặc bị giới hạn mỗi giao dịch. Khi thanh toán thất bại, quảng cáo dừng và TKQC (tài khoản quảng cáo) bị vô hiệu đến khi trả dư nợ. Việc cần làm là gọi ngân hàng mở giao dịch rồi vào Thanh toán bấm Thanh toán ngay.",
+     "visao": "Meta là bên nước ngoài trừ tiền tự động, nên giao dịch phải qua được bộ lọc của ngân hàng về thanh toán quốc tế, thanh toán định kỳ và hạn mức mỗi giao dịch. Nếu một lần trừ theo ngưỡng thanh toán (payment threshold) lớn hơn hạn mức mỗi giao dịch của thẻ, ngân hàng sẽ từ chối dù tài khoản đủ tiền. Còn \"hold tiền\" mà cộng đồng hay nói thường là khoản ngân hàng tạm giữ để xác thực khi thêm thẻ.",
+     "check": [
+      "Kiểm tra thẻ đã bật thanh toán quốc tế/trực tuyến chưa, còn hạn không, tên có đúng không; sai một trong các điểm này là đủ để giao dịch thất bại.",
+      "Hỏi ngân hàng có chặn giao dịch nước ngoài hoặc giới hạn số tiền mỗi giao dịch không; nếu có giới hạn, so với ngưỡng thanh toán của tài khoản."
+     ],
+     "do": [
+      "Vào Thanh toán, bấm Thanh toán ngay để trả dư nợ hoặc thêm phương thức thanh toán khác; quảng cáo và TKQC chỉ hoạt động lại khi hết dư nợ.",
+      "Gọi ngân hàng mở giao dịch quốc tế và thanh toán định kỳ cho thẻ.",
+      "Nếu thẻ có giới hạn mỗi giao dịch, hạ ngưỡng thanh toán xuống thấp hơn giới hạn đó để mỗi lần trừ đều lọt qua.",
+      "Với khoản \"hold tiền\": đây thường là khoản ngân hàng tạm giữ để xác thực khi thêm thẻ, do ngân hàng xử lý; chưa có trang Meta mô tả riêng, nên hỏi ngân hàng."
+     ],
+     "avoid": [
+      "Không thử thẻ liên tục nhiều lần và không thêm nhiều thẻ lạ vào một tài khoản: đây là tín hiệu rủi ro thanh toán, có thể khiến tài khoản bị nghi ngờ thêm."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Fix a failed payment issue on Meta",
+       "url": "https://www.facebook.com/business/help/268196136699959"
+      },
+      {
+       "title": "Adjust your payment threshold",
+       "url": "https://www.facebook.com/business/help/1342874532544030"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-no-quang-cao",
+     "if": "Không trả tiền nợ quảng cáo thì sao? Bỏ tài khoản là xong?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Không, bỏ tài khoản không xoá được nợ: theo Điều khoản quảng cáo tự phục vụ của Meta, bạn phải trả đủ số tiền của mỗi đơn hàng, số quá hạn chịu lãi và Meta có quyền dùng bên thu nợ thứ ba. Trong thực tế TKQC (tài khoản quảng cáo) bị vô hiệu đến khi trả, và nick, thẻ, portfolio liên kết mang theo lịch sử nợ đó. Lỡ nợ do thẻ lỗi thì trả sớm để tài khoản hoạt động lại.",
+     "visao": "Mỗi lần chạy quảng cáo là một đơn hàng theo hợp đồng bạn đã đồng ý, nên số tiền đã tiêu là nghĩa vụ trả, không phải khoản Meta \"cho qua\". Vì nợ gắn với các tài sản liên kết chứ không chỉ một TKQC, bỏ tài khoản này sang tài khoản khác vẫn mang theo lịch sử nợ.",
+     "check": [
+      "Kiểm tra dư nợ hiện tại của mọi TKQC liên kết với nick, thẻ và Business Portfolio (BM) của bạn; một khoản nợ ở đâu cũng ảnh hưởng các tài sản liên kết."
+     ],
+     "do": [
+      "Trả đủ số tiền của mỗi đơn hàng như Điều khoản quảng cáo tự phục vụ yêu cầu; số quá hạn chịu lãi 1%/tháng hoặc mức tối đa luật cho phép, lấy mức thấp hơn.",
+      "Lưu ý Meta có quyền dùng bên thu nợ thứ ba và bạn chịu chi phí thu nợ, gồm phí luật sư hợp lý.",
+      "Nếu lỡ nợ do thẻ lỗi, trả sớm để TKQC hoạt động lại, vì tài khoản bị vô hiệu đến khi trả."
+     ],
+     "avoid": [
+      "Không coi nợ quảng cáo là \"không ai đòi\": đây là nghĩa vụ hợp đồng, có lãi quá hạn, có thể bị thu nợ qua bên thứ ba và để lại lịch sử nợ trên nick, thẻ, portfolio liên kết."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Meta Self-Serve Ad Terms (Điều khoản quảng cáo tự phục vụ)",
+       "url": "https://www.facebook.com/legal/self_service_ads_terms"
+      },
+      {
+       "title": "Fix a failed payment issue on Meta",
+       "url": "https://www.facebook.com/business/help/268196136699959"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-thue-vat",
+     "if": "Meta thu thuế VAT bao nhiêu %? Hoá đơn Meta có khấu trừ VAT đầu vào được không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Blog/forum Việt (Brands Vietnam, blog agency)"
+     ],
+     "tomtat": "Hiện Meta tính VAT 10% cho dịch vụ quảng cáo số mua từ Meta (từ 01/07/2025 theo luật VAT sửa đổi; trước đó từ 01/06/2022 là 5%). Thẻ tự phục vụ thì Meta cộng 10% vào mỗi lần trừ tiền và ghi VAT thành dòng riêng trên hoá đơn thương mại. Doanh nghiệp đã đăng ký và được Meta xác thực giấy đăng ký kinh doanh thì Meta không thu VAT, doanh nghiệp tự kê khai, nộp FCT-VAT (thuế nhà thầu nước ngoài phần VAT) 10%. Khấu trừ VAT đầu vào thì phải hỏi kế toán.",
+     "visao": "Meta Platforms Ireland là nhà cung cấp nước ngoài, nên VAT được xử lý theo một trong hai cách: Meta thu hộ và cộng vào hoá đơn, hoặc doanh nghiệp Việt Nam tự kê khai thay. Meta chỉ cho doanh nghiệp tự kê khai khi xác thực được giấy đăng ký kinh doanh, vì vậy hộ kinh doanh và cá nhân vẫn bị cộng VAT. Còn việc hoá đơn đó có được khấu trừ hay không là câu hỏi của luật thuế Việt Nam, Meta nói không tư vấn thuế.",
+     "check": [
+      "Xem quốc gia của bên mua trong địa chỉ tài khoản có phải Việt Nam không; quy định VAT ở đây áp cho tài khoản ở Việt Nam.",
+      "Vào Thanh toán, kiểm tra đã khai mã số thuế, tên doanh nghiệp và tải giấy đăng ký kinh doanh chưa; chưa khai thì Meta vẫn cộng VAT vào mỗi lần trừ."
+     ],
+     "do": [
+      "Nắm mốc thuế suất: từ 01/06/2022 Meta cộng 5% VAT; từ 01/07/2025 mức này là 10% cho dịch vụ quảng cáo số mua từ Meta theo luật VAT sửa đổi.",
+      "Nếu trả bằng thẻ tự phục vụ: dự trù 10% VAT cộng vào mỗi lần trừ tiền; VAT được ghi thành dòng riêng trên hoá đơn thương mại của Meta Platforms Ireland.",
+      "Nếu là doanh nghiệp/tổ chức đã đăng ký: khai mã số thuế và tải giấy đăng ký kinh doanh để Meta xác thực (yêu cầu từ 12/10/2026); khi đó Meta không thu VAT, doanh nghiệp tự kê khai, nộp FCT-VAT 10%.",
+      "Hộ kinh doanh và cá nhân không thuộc diện tự kê khai, nên vẫn bị Meta cộng VAT.",
+      "Về khấu trừ VAT đầu vào và hạch toán: hỏi kế toán hoặc cơ quan thuế, vì Meta nói không tư vấn thuế."
+     ],
+     "avoid": [
+      "Không ghi \"VAT 5%\" trong báo giá cho khách: mức đã là 10% từ 01/07/2025, ghi sai sẽ làm lệch chi phí thật và phải giải trình lại với khách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About Vietnam value added tax (VAT) - Meta Business Help",
+       "url": "https://www.facebook.com/business/help/938907633499274"
+      },
+      {
+       "title": "Meta's New TIN Verification Requirements in Vietnam, JPA (23/10/2026)",
+       "url": "https://jpa.vn/metas-new-tin-verification-requirements-in-vietnam-october-2026/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tra-truoc-tra-sau",
+     "if": "Nạp tiền trả trước (số dư khả dụng) và gắn thẻ trả sau khác nhau gì?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Khác nhau ở thời điểm trả tiền: trả sau (thẻ, PayPal) là tiêu trước, Meta trừ khi chạm ngưỡng thanh toán và vào ngày lập hoá đơn; trả trước là nạp tiền vào số dư khả dụng rồi Meta trừ dần hằng ngày. Kiểu thanh toán được quyết định bởi phương thức đầu tiên khi tạo quảng cáo. Nếu chạy trả trước thì phải theo dõi số dư, vì hết số dư là quảng cáo dừng.",
+     "visao": "Trả sau giống dùng thẻ tín dụng: Meta cho bạn tiêu đến một ngưỡng (payment threshold) rồi mới thu. Trả trước giống thẻ trả trước: tiêu đến đâu trừ đến đó trong khoản đã nạp, nên thường không cần ngưỡng. Vì tiền đã nằm sẵn trong tài khoản, ở Việt Nam VAT được tính ngay lúc nạp.",
+     "check": [
+      "Nhớ lại phương thức thanh toán đầu tiên dùng khi tạo quảng cáo, vì nó quyết định kiểu thanh toán của TKQC (tài khoản quảng cáo) là trả trước hay trả sau."
+     ],
+     "do": [
+      "Với trả sau (thẻ, PayPal): theo dõi ngưỡng thanh toán, vì Meta trừ khi chạm ngưỡng và vào ngày lập hoá đơn.",
+      "Với trả trước: nạp tiền vào số dư khả dụng, Meta trừ dần hằng ngày; kiểu này thường không có ngưỡng và không đặt được giới hạn chi tiêu tài khoản.",
+      "Nếu chạy trả trước, theo dõi số dư thường xuyên vì hết số dư thì quảng cáo dừng.",
+      "Ở Việt Nam, với số dư khả dụng, tính VAT ngay khi nạp tiền chứ không phải lúc tiêu."
+     ],
+     "avoid": [
+      "Không nạp số dư lớn vào tài khoản mới hoặc đang bị cảnh báo: nếu tài khoản bị khoá vì vi phạm, số dư nằm sẵn trong đó có rủi ro bị thu hồi (xem câu về tiền dư khi TKQC bị khoá)."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "How to pay for your Meta ads",
+       "url": "https://www.facebook.com/business/help/1814143615511573"
+      },
+      {
+       "title": "When you'll pay for Facebook ads",
+       "url": "https://www.facebook.com/business/help/105373712886516"
+      },
+      {
+       "title": "About Vietnam value added tax (VAT) - Meta Business Help",
+       "url": "https://www.facebook.com/business/help/938907633499274"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tk-invoice",
+     "if": "Tài khoản invoice (lập hoá đơn hàng tháng, hạn mức tín dụng) là gì, ai được dùng?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Tài khoản invoice là hình thức lập hoá đơn hàng tháng, thực chất là hạn mức tín dụng: bạn chi trong kỳ 30 ngày trong giới hạn tín dụng, cuối kỳ nhận hoá đơn và trả bằng chuyển khoản. Meta cấp hình thức này cho doanh nghiệp đủ điều kiện, thường qua đội bán hàng hoặc đối tác của Meta. Doanh nghiệp không đủ quy mô hoặc không làm việc trực tiếp với Meta/đại lý chính thức thì thường không được dùng.",
+     "visao": "Lập hoá đơn hàng tháng nghĩa là Meta cho doanh nghiệp nợ cả tháng, nên Meta chỉ cấp khi đã đánh giá được doanh nghiệp qua đội bán hàng hoặc đối tác. Ở Việt Nam, doanh nghiệp dùng hình thức này tự kê khai FCT-VAT (thuế nhà thầu nước ngoài phần VAT) thay vì để Meta cộng VAT vào hoá đơn.",
+     "check": [
+      "Đánh giá doanh nghiệp có chi tiêu đủ lớn và đang làm việc trực tiếp với Meta hoặc đại lý chính thức không; nếu không, khả năng được cấp lập hoá đơn hàng tháng là thấp."
+     ],
+     "do": [
+      "Hiểu cơ chế: chi trong kỳ 30 ngày trong giới hạn tín dụng, cuối kỳ nhận hoá đơn và thanh toán bằng chuyển khoản.",
+      "Nếu doanh nghiệp đủ điều kiện, liên hệ qua đội bán hàng hoặc đối tác của Meta để được xét cấp.",
+      "Ở Việt Nam, chuẩn bị tự kê khai FCT-VAT khi dùng lập hoá đơn hàng tháng.",
+      "Phân biệt với chuyện \"thuê tài khoản invoice\" trên chợ: đó là việc khác hẳn, xem nhóm Vùng xám."
+     ],
+     "avoid": [
+      "Không mượn tài khoản invoice của công ty khác để chạy hàng của mình: bạn không có quyền sở hữu dữ liệu, và vi phạm của bạn ảnh hưởng trực tiếp tới chủ tài khoản."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About monthly invoicing credit lines and credit limits",
+       "url": "https://www.facebook.com/business/help/183197756325469"
+      },
+      {
+       "title": "About Vietnam value added tax (VAT) - Meta Business Help",
+       "url": "https://www.facebook.com/business/help/938907633499274"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-duyet",
+   "title": "Duyệt quảng cáo và chính sách",
+   "intro": "QC bị từ chối, xét duyệt lâu, ảnh trước/sau, thuộc tính cá nhân, ngành y tế và thực phẩm chức năng, hạng mục đặc biệt, mặt hàng cấm.",
+   "nodes": [
+    {
+     "id": "fm-bi-tu-choi",
+     "if": "QC bị từ chối thì sửa lại hay kháng? Kháng bao lâu?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Tuỳ lý do: nếu quảng cáo thật sự vi phạm thì sửa lại (hoặc tạo quảng cáo mới đã sửa); nếu bạn tin Meta xét nhầm thì yêu cầu xem xét lại, Meta thường quyết định trong khoảng 48 giờ. Việc đầu tiên là đọc đúng lý do từ chối trong Business Support Home (trang hỗ trợ tài khoản doanh nghiệp của Meta) và xem phần nào bị nêu. Đừng quên kiểm cả trang đích, vì Meta xét cả trang đích chứ không chỉ chữ và ảnh.",
+     "visao": "Meta duyệt quảng cáo theo Tiêu chuẩn quảng cáo (Advertising Standards), xét mọi thứ người xem sẽ gặp: chữ, ảnh, video và trang đích khi bấm vào. Vì vậy một quảng cáo có chữ và ảnh 'sạch' vẫn có thể bị từ chối do nội dung trên trang đích. Mỗi lần bị từ chối đều được ghi vào lịch sử tài khoản; Meta không công bố cách tính chi tiết, nhưng đăng lại y nguyên nhiều lần có thể dẫn tới hạn chế, nên sửa đúng chỗ ngay từ đầu quan trọng hơn là thử vận may.",
+     "check": [
+      "Mở Business Support Home, tìm quảng cáo bị từ chối và đọc lý do Meta ghi; đây là căn cứ để quyết định nên sửa hay nên kháng.",
+      "Xem lý do nêu phần nào: chữ, ảnh, video hay trang đích; nếu phần bị nêu đúng là có nội dung vi phạm chính sách thì nên sửa thay vì kháng.",
+      "Mở trang đích của quảng cáo và đọc kỹ như người duyệt; trang có nội dung vi phạm thì quảng cáo vẫn có thể bị từ chối dù chữ và ảnh không có vấn đề."
+     ],
+     "do": [
+      "Nếu đúng là vi phạm: sửa quảng cáo đúng phần bị nêu, hoặc tạo quảng cáo mới với nội dung đã sửa, rồi gửi duyệt lại.",
+      "Nếu bạn tin Meta xét nhầm: gửi yêu cầu xem xét lại (kháng); Meta thường ra quyết định trong khoảng 48 giờ.",
+      "Trước khi sửa hoặc kháng, đọc lại trang đích vì Meta xét cả trang đích chứ không chỉ chữ và ảnh; trang có điểm vi phạm thì sửa trang cùng lúc."
+     ],
+     "avoid": [
+      "Không đăng lại y nguyên quảng cáo bị từ chối nhiều lần: mỗi lần bị từ chối đều tính vào lịch sử tài khoản và có thể dẫn tới tài khoản bị hạn chế quảng cáo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "How to troubleshoot a rejected ad",
+       "url": "https://www.facebook.com/business/help/1210227555661027"
+      },
+      {
+       "title": "Introduction to the Advertising Standards (Meta Transparency Center)",
+       "url": "https://transparency.meta.com/policies/ad-standards/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-duyet-roi-bi-tat",
+     "if": "QC đã duyệt chạy mấy ngày rồi tự nhiên bị từ chối",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Chuyện này có thể xảy ra: Meta có quyền xét lại quảng cáo bất cứ lúc nào, kể cả sau khi đã duyệt và chạy được vài ngày. Nguyên nhân thường là có người dùng báo cáo quảng cáo, hoặc Meta xét lại định kỳ. Việc cần làm là đọc lý do, sửa đúng phần vi phạm, hoặc kháng nếu bạn tin là Meta xét nhầm.",
+     "visao": "Lần duyệt đầu không phải giấy phép vĩnh viễn; quảng cáo vẫn nằm trong diện kiểm tra suốt thời gian chạy. Báo cáo từ người xem hoặc đợt xét định kỳ khiến Meta nhìn lại quảng cáo và trang đích ở thời điểm hiện tại. Nếu trang đích đã bị đổi khác với lúc duyệt, Meta có thể coi đó là dấu hiệu cloaking (cho người duyệt xem một nội dung, cho người dùng xem nội dung khác), một hành vi bị cấm.",
+     "check": [
+      "Xem có dấu hiệu quảng cáo bị người dùng báo cáo không; báo cáo là một nguyên nhân khiến Meta xét lại quảng cáo đã duyệt.",
+      "Đối chiếu nội dung trang đích hiện tại với lúc quảng cáo được duyệt; nếu trang đã đổi nội dung thì nhiều khả năng đó là lý do bị từ chối."
+     ],
+     "do": [
+      "Hiểu rằng Meta có thể xét lại quảng cáo bất cứ lúc nào, kể cả sau khi đã chạy, do người dùng báo cáo hoặc do xét định kỳ; bị từ chối muộn không có nghĩa lần duyệt đầu là sai.",
+      "Đọc lý do từ chối, sửa đúng phần vi phạm (chữ, ảnh, video hoặc trang đích) rồi gửi duyệt lại.",
+      "Nếu tin là Meta xét nhầm, gửi yêu cầu xem xét lại thay vì sửa nội dung."
+     ],
+     "avoid": [
+      "Không đổi trang đích sang nội dung khác với quảng cáo sau khi đã được duyệt: đây là dấu hiệu cloaking (che giấu nội dung thật với người duyệt), hành vi Meta cấm, quảng cáo sẽ bị từ chối khi bị xét lại."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Why some ads are approved, then rejected",
+       "url": "https://www.facebook.com/business/help/133691315402558"
+      },
+      {
+       "title": "Introduction to the Advertising Standards (Meta Transparency Center)",
+       "url": "https://transparency.meta.com/policies/ad-standards/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-dang-xem-xet-lau",
+     "if": "QC 'Đang xem xét' cả ngày không lên",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Chưa cần lo: Meta nói xét duyệt thường xong trong 24 giờ nhưng có thể lâu hơn. Việc nên làm là để yên quảng cáo, không sửa đi sửa lại, vì mỗi lần sửa có thể đưa quảng cáo về xét duyệt lại. Nếu chờ quá lâu, liên hệ hỗ trợ trong Business Support Home (trang hỗ trợ tài khoản doanh nghiệp của Meta).",
+     "visao": "Mỗi quảng cáo phải qua bước xét duyệt trước khi được phân phối, và thời gian chờ phụ thuộc phía Meta, không cố định. Khi bạn sửa quảng cáo, phiên bản mới cần được xét lại, nên sửa liên tục giống như liên tục xếp lại cuối hàng. Xoá đi tạo lại cũng vậy: quảng cáo mới vẫn phải xét từ đầu, lại mất dữ liệu của quảng cáo cũ.",
+     "check": [
+      "Ghi lại quảng cáo đã nằm ở trạng thái 'Đang xem xét' bao lâu; dưới 24 giờ thì vẫn trong mức thông thường Meta nêu.",
+      "Xem trong thời gian chờ có ai sửa quảng cáo lần nào không; nếu có thì việc chờ lâu nhiều khả năng do mỗi lần sửa đã đưa quảng cáo về xét lại."
+     ],
+     "do": [
+      "Chờ trong khoảng 24 giờ, mức Meta nói thường xét xong; có trường hợp lâu hơn mức này.",
+      "Nếu cần sửa, gom mọi chỉnh sửa và sửa một lần, vì mỗi lần sửa có thể đưa quảng cáo về xét duyệt lại.",
+      "Nếu đã chờ quá lâu, liên hệ đội hỗ trợ trong Business Support Home để hỏi tình trạng xét duyệt."
+     ],
+     "avoid": [
+      "Không xoá rồi tạo lại quảng cáo liên tục: cách này không giúp duyệt nhanh hơn, mà còn làm mất dữ liệu của quảng cáo cũ."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About ads in review",
+       "url": "https://www.facebook.com/business/help/204798856225114"
+      },
+      {
+       "title": "Introduction to the Advertising Standards (Meta Transparency Center)",
+       "url": "https://transparency.meta.com/policies/ad-standards/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-truoc-sau",
+     "if": "Ảnh trước/sau (giảm cân, thẩm mỹ, da) có được chạy không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Được, nhưng có điều kiện: Meta cho phép quảng cáo thủ thuật hoặc sản phẩm thẩm mỹ có hình ảnh biến đổi trước/sau khi nhắm người từ 18 tuổi trở lên. Riêng sản phẩm giảm cân thì không được dùng ảnh cận cảnh véo mỡ, câu chê ngoại hình, hay hứa kết quả trong thời gian cụ thể mà không có lưu ý. Trước khi chạy, xác định sản phẩm thuộc nhóm nào và đặt đối tượng từ 18 tuổi.",
+     "visao": "Chính sách Health and Wellness (Sức khoẻ và thể chất) của Meta nhằm tránh quảng cáo khiến người xem tự ti về cơ thể hoặc tin vào kết quả phi thực tế. Vì vậy Meta không cấm hẳn ảnh trước/sau mà giới hạn người xem ở tuổi trưởng thành và chặn những cách thể hiện gây áp lực ngoại hình. Tuyên bố chữa khỏi bệnh nặng là vấn đề khác: đó là lời hứa sai lệch về sức khoẻ nên bị cấm.",
+     "check": [
+      "Xác định sản phẩm thuộc nhóm nào: thủ thuật hoặc sản phẩm thẩm mỹ, mỹ phẩm hay giảm cân; nhóm giảm cân có thêm giới hạn về cách thể hiện.",
+      "Mở phần đối tượng của nhóm quảng cáo và xem độ tuổi tối thiểu đã đặt từ 18 trở lên chưa; chưa đặt thì quảng cáo trước/sau không đủ điều kiện Meta cho phép.",
+      "Đọc lại chữ và ảnh xem có cận cảnh véo mỡ, câu chê ngoại hình, hay hứa kết quả trong thời gian cụ thể mà không kèm lưu ý không."
+     ],
+     "do": [
+      "Đặt đối tượng từ 18 tuổi trở lên cho mọi quảng cáo thủ thuật, sản phẩm thẩm mỹ có ảnh biến đổi trước/sau; đây là điều kiện để Meta cho phép.",
+      "Với sản phẩm giảm cân: bỏ ảnh cận cảnh véo mỡ, bỏ câu chê ngoại hình, không hứa kết quả trong thời gian cụ thể nếu không có lưu ý đi kèm.",
+      "Không tuyên bố chữa khỏi các bệnh trong danh sách bệnh nan y như tiểu đường, ung thư."
+     ],
+     "avoid": [
+      "Không viết kiểu 'giảm 10kg trong 7 ngày' hay 'bạn béo quá': đây là vi phạm chính sách Health and Wellness, quảng cáo sẽ bị từ chối."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Health and Wellness (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness"
+      },
+      {
+       "title": "Personal health and appearance (Advertising Standards)",
+       "url": "https://www.facebook.com/business/help/2489235377779939"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-thuoc-tinh-ca-nhan",
+     "if": "Viết 'Bạn đang bị đau dạ dày?', 'Bạn nợ xấu?' sao bị từ chối?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Vì Meta cấm quảng cáo khẳng định hoặc ngụ ý rằng mình biết đặc điểm cá nhân của người xem, như tình trạng sức khoẻ, tài chính, tôn giáo. Câu 'Bạn đang bị đau dạ dày?' ngụ ý bạn biết người xem có bệnh, nên bị từ chối. Cách sửa là viết về sản phẩm, dịch vụ thay vì về người xem, ví dụ 'Dịch vụ khám dạ dày tại...'.",
+     "visao": "Chính sách Personal attributes (Thuộc tính cá nhân) bảo vệ người dùng khỏi cảm giác bị theo dõi: thấy quảng cáo gọi đúng bệnh hay khoản nợ của mình, người ta dễ nghĩ thông tin riêng đã bị lộ. Vì vậy Meta xét cách câu chữ hướng vào người xem, chứ không cấm nói về chủ đề sức khoẻ hay tài chính. Đổi chủ ngữ từ 'bạn' sang 'dịch vụ' giữ nguyên thông điệp mà không còn ngụ ý biết gì về người xem.",
+     "check": [
+      "Đọc từng câu trong quảng cáo, kể cả chữ trên ảnh: câu nào khẳng định hoặc ngụ ý biết người xem đang bị bệnh, đang nợ, theo tôn giáo nào thì gần như chắc đó là lý do bị từ chối."
+     ],
+     "do": [
+      "Nắm nguyên tắc: Meta cấm quảng cáo khẳng định hoặc ngụ ý thuộc tính cá nhân của người xem (sức khoẻ, tài chính, tôn giáo...).",
+      "Viết lại theo kiểu nói về sản phẩm, dịch vụ: 'Dịch vụ khám dạ dày tại...' thay cho 'Bạn bị đau dạ dày?'.",
+      "Rà toàn bộ quảng cáo, sửa mọi câu có cùng kiểu rồi mới gửi duyệt lại."
+     ],
+     "avoid": [
+      "Không dùng kiểu 'bạn' hoặc 'chị đang bị + tên bệnh' trong quảng cáo sức khoẻ: đây đúng là dạng Meta coi là ngụ ý thuộc tính cá nhân, quảng cáo sẽ bị từ chối."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Personal attributes (Advertising Standards)",
+       "url": "https://www.facebook.com/business/help/2557868957763449"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-hang-muc-dac-biet",
+     "if": "Hạng mục quảng cáo đặc biệt là gì? QC tài chính, tuyển dụng, bất động sản ở VN có phải chọn?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Hạng mục quảng cáo đặc biệt (Special Ad Category) là phần khai báo bắt buộc khi chiến dịch thuộc nhà ở, việc làm, sản phẩm dịch vụ tài chính, hoặc vấn đề xã hội, bầu cử, chính trị; không thuộc thì chọn không. Quảng cáo tài chính, tuyển dụng, bất động sản ở Việt Nam có phải khai hay không phụ thuộc phạm vi áp dụng theo quốc gia, và phạm vi này có thay đổi. Vì vậy trước khi chạy, xem màn hình tạo chiến dịch có hỏi khai báo không và đọc trang trợ giúp về quảng cáo tài chính.",
+     "visao": "Các lĩnh vực này ảnh hưởng tới cơ hội của người xem (có nhà, có việc, tiếp cận dịch vụ tài chính) hoặc tới chính trị, nên Meta giới hạn tuỳ chọn nhắm mục tiêu cho chúng. Khai báo giúp hệ thống áp đúng giới hạn đó cho chiến dịch. Nếu khai sai, quảng cáo có thể bị tạm dừng tới khi bạn sửa lại chiến dịch.",
+     "check": [
+      "Khi tạo chiến dịch, xem màn hình có hỏi khai báo hạng mục quảng cáo đặc biệt cho quốc gia bạn nhắm không; nếu có hỏi và sản phẩm thuộc một trong các nhóm trên thì phải khai.",
+      "Đối chiếu sản phẩm với 4 nhóm: nhà ở, việc làm, sản phẩm dịch vụ tài chính, vấn đề xã hội/bầu cử/chính trị; không thuộc nhóm nào thì chọn không."
+     ],
+     "do": [
+      "Khai báo hạng mục khi chiến dịch thuộc nhà ở, việc làm, sản phẩm dịch vụ tài chính, hoặc vấn đề xã hội, bầu cử, chính trị; không thuộc thì chọn không.",
+      "Lên kế hoạch đối tượng với lưu ý: ở các hạng mục này, tuỳ chọn nhắm mục tiêu bị giới hạn.",
+      "Khai đúng ngay từ đầu, vì khai sai có thể làm quảng cáo bị tạm dừng tới khi sửa chiến dịch.",
+      "Vì phạm vi áp dụng theo quốc gia có thay đổi, kiểm tra màn hình tạo chiến dịch và trang trợ giúp quảng cáo tài chính trước mỗi lần chạy."
+     ],
+     "avoid": [
+      "Không cố ý không khai để được dùng nhắm mục tiêu chi tiết: hệ thống và người duyệt vẫn phát hiện được, và quảng cáo có thể bị tạm dừng tới khi sửa chiến dịch."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Special Ad Category (Meta for Developers)",
+       "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/audiences/special-ad-category"
+      },
+      {
+       "title": "About ads for financial products and services",
+       "url": "https://www.facebook.com/business/help/1157846251802527"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-y-te-tpcn",
+     "if": "Phòng khám, thực phẩm chức năng, thuốc có chạy Facebook được không?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Phòng khám và dịch vụ y tế chạy được nếu tuân thủ chính sách Health and Wellness (Sức khoẻ và thể chất) và không nhắm hay khẳng định thuộc tính cá nhân của người xem. Thực phẩm chức năng, sản phẩm giảm cân chạy được khi nhắm từ 18 tuổi và không tuyên bố quá mức. Thuốc kê đơn thì gần như không: chỉ chạy được khi có chứng nhận và ở số ít quốc gia đủ điều kiện (Mỹ, Canada, New Zealand).",
+     "visao": "Meta xếp y tế vào nhóm hàng hoá, dịch vụ bị hạn chế vì nội dung sai có thể gây hại sức khoẻ người xem. Ngoài khâu duyệt quảng cáo, Meta còn có thể xếp website y tế vào hạng mục dữ liệu sức khoẻ; khi đó sự kiện tối ưu chuyển đổi gửi từ website có thể bị hạn chế, làm việc tối ưu kém hơn. Luật Việt Nam về quảng cáo y tế, thực phẩm chức năng là một lớp yêu cầu riêng: đạt chính sách Meta chưa có nghĩa là đúng luật.",
+     "check": [
+      "Xác định sản phẩm có phải thuốc kê đơn không; nếu có thì không chạy được ở Việt Nam, vì chỉ số ít quốc gia (Mỹ, Canada, New Zealand) đủ điều kiện.",
+      "Đọc lại trang đích xem có tuyên bố chữa khỏi hay cam kết kết quả không; có thì phải sửa trước khi chạy.",
+      "Kiểm xem website có bị Meta xếp vào hạng mục dữ liệu sức khoẻ (data source category) không; nếu có thì sự kiện tối ưu chuyển đổi có thể bị hạn chế."
+     ],
+     "do": [
+      "Với phòng khám, dịch vụ y tế: viết theo chính sách Health and Wellness và không nhắm hoặc khẳng định thuộc tính cá nhân của người xem.",
+      "Với thuốc kê đơn: chỉ chạy khi có chứng nhận (LegitScript, một đơn vị chứng nhận bên thứ ba, hoặc Meta xét) và chỉ ở số ít quốc gia đủ điều kiện như Mỹ, Canada, New Zealand.",
+      "Với thực phẩm chức năng, giảm cân: đặt đối tượng từ 18 tuổi trở lên và không tuyên bố công dụng quá mức.",
+      "Nếu website bị xếp hạng mục dữ liệu sức khoẻ, sự kiện tối ưu chuyển đổi có thể bị hạn chế; xem nhóm câu hỏi về Pixel để chọn cách đo lường phù hợp.",
+      "Kiểm thêm luật Việt Nam về quảng cáo y tế, thực phẩm chức năng theo quy định hiện hành; đây là yêu cầu riêng, nằm ngoài chính sách Meta."
+     ],
+     "avoid": [
+      "Không viết 'khỏi hẳn', 'đặc trị', 'số 1': vi phạm cả chính sách Meta lẫn luật quảng cáo, vừa bị từ chối quảng cáo vừa có rủi ro pháp lý."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Health and Wellness (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness"
+      },
+      {
+       "title": "Drugs and Pharmaceuticals (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/drugs-pharmaceuticals"
+      },
+      {
+       "title": "About data source categories (Health and wellness)",
+       "url": "https://www.facebook.com/business/help/1402913027039332"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-hang-cam",
+     "if": "Mặt hàng nào cấm hẳn trên Facebook Ads?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Danh sách hàng bị cấm hoặc hạn chế nằm ở trang Restricted Goods and Services (Hàng hoá và dịch vụ bị hạn chế) của Meta, gồm: ma tuý và chất kích thích, thuốc kê đơn không chứng nhận, vũ khí, thuốc lá và sản phẩm liên quan, giấy tờ giả, động vật hoang dã, hàng nguy hiểm, cờ bạc trực tuyến không được phép... Một số nhóm như rượu, cờ bạc hợp pháp vẫn chạy được khi có điều kiện và đúng quy định địa phương. Trước khi nhận chạy một sản phẩm lạ, đối chiếu với danh mục này.",
+     "visao": "Meta chia làm hai mức: hàng cấm hẳn vì nguy hiểm hoặc phạm pháp, và hàng bị hạn chế chỉ được chạy khi đáp ứng điều kiện và đúng quy định địa phương. Danh mục chi tiết nằm ở trang Restricted Goods and Services và từng trang Tiêu chuẩn quảng cáo, nên khi nghi ngờ phải đọc đúng trang của nhóm hàng đó thay vì đoán. Viết khéo không thay đổi được bản chất sản phẩm, nên hàng cấm thì không có cách chạy hợp lệ.",
+     "check": [
+      "Đối chiếu sản phẩm với trang Restricted Goods and Services và trang Tiêu chuẩn quảng cáo tương ứng; nếu sản phẩm nằm trong danh mục cấm thì không chạy được dù viết khéo đến đâu.",
+      "Nếu sản phẩm thuộc nhóm chạy có điều kiện như rượu, cờ bạc hợp pháp, xem điều kiện kèm theo và quy định địa phương nơi bạn nhắm có cho phép không."
+     ],
+     "do": [
+      "Nắm các nhóm bị cấm hoặc hạn chế: ma tuý, chất kích thích, thuốc kê đơn không chứng nhận, vũ khí, thuốc lá và sản phẩm liên quan, giấy tờ giả, động vật hoang dã, hàng nguy hiểm, cờ bạc trực tuyến không được phép...",
+      "Với nhóm như rượu, cờ bạc hợp pháp: chỉ chạy khi đáp ứng điều kiện và đúng quy định địa phương.",
+      "Gặp sản phẩm chưa rõ thì đọc danh mục chi tiết ở trang Restricted Goods and Services và từng trang Tiêu chuẩn quảng cáo trước khi nhận chạy."
+     ],
+     "avoid": [
+      "Không 'lách chữ' (cố ý viết tránh, viết sai chính tả) để chạy hàng cấm; xem câu hỏi về lách chữ trong nhóm black hat để biết hậu quả."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Restricted Goods and Services (Community Standards)",
+       "url": "https://transparency.meta.com/policies/community-standards/restricted-goods-services"
+      },
+      {
+       "title": "Drugs and Pharmaceuticals (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/drugs-pharmaceuticals"
+      },
+      {
+       "title": "Introduction to the Advertising Standards (Meta Transparency Center)",
+       "url": "https://transparency.meta.com/policies/ad-standards/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-khong-tieu",
+   "title": "Camp không cắn tiền, phân phối thấp",
+   "intro": "Chiến dịch bật mà không tiêu, đang chạy tự dừng, hoặc tiêu vượt ngân sách.",
+   "nodes": [
+    {
+     "id": "fm-khong-can-tien",
+     "if": "Camp không cắn tiền, đã bật mà chi tiêu 0đ",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Meta Business Help Community"
+     ],
+     "tomtat": "Gần như luôn có một chỗ đang chặn: quảng cáo chưa duyệt hoặc đang tắt ở một cấp, ngân sách quá thấp, chạm giới hạn chi tiêu, thanh toán lỗi, hoặc đối tượng quá hẹp. Việc đầu tiên là xem cột Phân phối ở cả ba cấp chiến dịch, nhóm quảng cáo, quảng cáo và đi theo công cụ khắc phục phân phối của Meta. Gỡ đúng chỗ chặn thì chiến dịch mới có thể bắt đầu chi tiêu.",
+     "visao": "Quảng cáo chỉ tiêu tiền khi được đưa vào đấu giá và thắng lượt hiển thị; muốn vậy cả ba cấp phải đang bật, quảng cáo đã duyệt, còn ngân sách và thanh toán phải ổn. Thanh toán lỗi làm dừng toàn tài khoản, nên mọi chiến dịch cùng đứng. Ngân sách quá thấp so với sự kiện tối ưu, đối tượng quá hẹp hoặc giá thầu/giới hạn chi phí quá chặt khiến quảng cáo hiếm khi thắng đấu giá, nên chi tiêu gần như bằng 0.",
+     "check": [
+      "Xem cột Phân phối của chiến dịch, nhóm quảng cáo và từng quảng cáo; cấp nào báo đang tắt, bị từ chối hay có lỗi thì đó là chỗ đang chặn.",
+      "Kiểm quảng cáo đã được duyệt chưa; còn đang xét duyệt hoặc bị từ chối thì chưa thể chi tiêu.",
+      "Xem ngân sách, lịch chạy, giới hạn chi tiêu của tài khoản và giới hạn chi tiêu hằng ngày; đã chạm giới hạn hoặc chưa tới giờ trong lịch chạy thì chi tiêu sẽ bằng 0.",
+      "Xem kích thước đối tượng; đối tượng quá hẹp khiến hệ thống rất khó tìm được chỗ hiển thị."
+     ],
+     "do": [
+      "Đi theo công cụ khắc phục phân phối (Troubleshoot ad delivery) của Meta, kiểm lần lượt từng cấp xem cái gì đang tắt hoặc bị từ chối và sửa chỗ đó trước.",
+      "Kiểm giới hạn chi tiêu hằng ngày và tình trạng thanh toán; thanh toán lỗi làm dừng toàn tài khoản, phải xử lý xong thì mọi chiến dịch mới chạy lại.",
+      "Nếu ngân sách quá thấp so với sự kiện tối ưu (hành động bạn yêu cầu Meta tìm người thực hiện), tăng ngân sách hoặc chọn sự kiện phía trên phễu, tức sự kiện xảy ra nhiều hơn.",
+      "Mở rộng đối tượng và bỏ giá thầu hoặc giới hạn chi phí (mức chi phí tối đa bạn đặt cho mỗi kết quả) nếu đang đặt quá chặt."
+     ],
+     "avoid": [
+      "Không nhân bản chiến dịch hàng loạt để 'ép cắn tiền': các bản sao tạo chồng chéo đấu giá (tự cạnh tranh nhau giành cùng người xem), phân phối càng kém."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Troubleshoot ad delivery",
+       "url": "https://www.facebook.com/business/help/236201204528536"
+      },
+      {
+       "title": "Troubleshoot ad delivery: one of your ad sets isn't running",
+       "url": "https://www.facebook.com/business/help/164406965378460"
+      },
+      {
+       "title": "Budget is too low",
+       "url": "https://www.facebook.com/business/help/1870791083202806"
+      },
+      {
+       "title": "About daily spending limits set by Meta",
+       "url": "https://www.facebook.com/business/help/563129151097553"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-dang-chay-tu-dung",
+     "if": "Camp đang chạy ngon tự nhiên tiêu ít hẳn hoặc dừng",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Thường có nguyên nhân cụ thể; Meta nêu các lý do hay gặp là vừa sửa lớn, creative (mẫu quảng cáo: ảnh, video, chữ) bị mệt, đối tượng bão hoà hoặc ngân sách bị đổi. Việc đầu tiên là xem gần đây có ai sửa gì không, và nhìn xu hướng 3-7 ngày chứ đừng phản ứng theo một ngày. Biến động theo ngày là bình thường; chỉ xử lý khi xu hướng giảm kéo dài.",
+     "visao": "Chi tiêu và kết quả trên Meta dao động theo đấu giá mỗi ngày, nên một ngày thấp chưa nói lên điều gì. Khi sửa lớn, nhóm quảng cáo phải học lại nên có thể chậm lại. Khi creative mệt hoặc đối tượng bão hoà (phần lớn người phù hợp đã thấy quảng cáo nhiều lần), quảng cáo kém hấp dẫn hơn trong đấu giá nên được phân phối ít đi. Bật tắt liên tục cũng làm hệ thống học lại, khiến tình trạng tệ hơn.",
+     "check": [
+      "Rà xem gần đây có sửa gì không (đối tượng, creative, ngân sách); nếu có sửa lớn thì việc giảm chi tiêu có thể do nhóm quảng cáo đang học lại.",
+      "So tần suất (số lần trung bình một người thấy quảng cáo), CPM (chi phí cho 1.000 lượt hiển thị) và xếp hạng chất lượng trước và sau khi giảm; cả ba xấu đi là dấu hiệu creative mệt hoặc đối tượng bão hoà."
+     ],
+     "do": [
+      "Dùng hướng dẫn 'chiến dịch chậm lại hoặc dừng' của Meta để rà nguyên nhân; hay gặp nhất là sửa lớn, creative mệt, đối tượng bão hoà, ngân sách đổi.",
+      "Nhìn xu hướng 3-7 ngày trước khi sửa, vì biến động theo ngày là bình thường.",
+      "Khi đã xác định nguyên nhân, xử lý đúng nguyên nhân đó và gom thay đổi để sửa một lần."
+     ],
+     "avoid": [
+      "Không bật tắt chiến dịch liên tục: mỗi lần như vậy làm hệ thống học lại, chi tiêu và kết quả càng thất thường."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Troubleshoot ad delivery: your campaign slowed down or stopped",
+       "url": "https://www.facebook.com/business/help/388669258876309"
+      },
+      {
+       "title": "Understand fluctuations in ad performance and spend",
+       "url": "https://www.facebook.com/business/help/220698029821552"
+      },
+      {
+       "title": "Avoid frequent pausing and end of day budget changes",
+       "url": "https://www.facebook.com/business/help/414038972972624"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tieu-vuot",
+     "if": "Camp tiêu vượt ngân sách ngày, đốt tiền nhanh trong vài giờ",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Đây là cơ chế bình thường của ngân sách ngày, không phải lỗi: ngân sách ngày là mức trung bình, Meta có thể chi cao hơn ngân sách ngày tới 75% ở một số ngày, nhưng tổng một tuần không vượt 7 lần ngân sách ngày. Hãy kiểm chi tiêu cả tuần thay vì một ngày. Nếu cần chặn cứng, đặt giới hạn chi tiêu cho chiến dịch hoặc tài khoản.",
+     "visao": "Lượng người xem và cơ hội hiển thị tốt thay đổi theo ngày; cho phép chi nhiều hơn vào ngày có cơ hội và ít hơn vào ngày khác giúp Meta tận dụng cơ hội mà tổng tuần vẫn trong khuôn khổ. Vì vậy một ngày tiêu nhanh thường được cân lại bằng những ngày chi ít hơn. Giới hạn chi tiêu chiến dịch hoặc tài khoản là mức trần cứng, khác với ngân sách ngày vốn chỉ là trung bình.",
+     "check": [
+      "Xem ngân sách ngày đặt bao nhiêu và chi thực tế cả tuần bao nhiêu; nếu tổng tuần không vượt 7 lần ngân sách ngày thì Meta đang chi đúng cơ chế.",
+      "Xem ngày bị 'vượt' có chi quá 75% trên ngân sách ngày không; trong mức này là bình thường."
+     ],
+     "do": [
+      "Hiểu ngân sách ngày là trung bình: Meta có thể chi cao hơn ngân sách ngày tới 75% ở một số ngày, nhưng không vượt 7 lần ngân sách ngày trong một tuần.",
+      "Nếu khách hàng hoặc dòng tiền không chấp nhận dao động theo ngày, đặt giới hạn chi tiêu chiến dịch hoặc giới hạn chi tiêu tài khoản để chặn cứng."
+     ],
+     "avoid": [
+      "Không chỉnh ngân sách vào cuối ngày để 'bù' phần đã chi vượt: Meta khuyên tránh thay đổi ngân sách cuối ngày, và cơ chế trung bình theo tuần vốn đã tự cân lại."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About daily budgets (chi tối đa +75%/ngày, 7 lần/tuần)",
+       "url": "https://www.facebook.com/business/help/214319341922580"
+      },
+      {
+       "title": "Avoid frequent pausing and end of day budget changes",
+       "url": "https://www.facebook.com/business/help/414038972972624"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tk-moi-nuoi",
+     "if": "TKQC/BM mới không tiêu, có phải 'nuôi' tài khoản vài ngày trước khi chạy?",
+     "hat": "gray",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Không cần 'nuôi' theo nghĩa làm hoạt động giả: Meta không có quy định nào như vậy. Tài khoản quảng cáo (TKQC) hoặc BM (Business Manager, tài khoản quản lý doanh nghiệp) mới có giới hạn chi tiêu ngày thấp và ngưỡng thanh toán nhỏ, các mức này tăng dần theo lịch sử. Việc nên làm là hoàn tất xác minh số điện thoại, thanh toán, có quảng cáo được duyệt, rồi chạy ngân sách nhỏ và tăng dần.",
+     "visao": "Với tài khoản mới chưa có lịch sử, Meta đặt giới hạn chi tiêu ngày và ngưỡng thanh toán (mức chi tới đó thì bị trừ tiền) ở mức thấp, rồi tăng dần theo lịch sử của tài khoản. Đó là lý do tài khoản mới 'không tiêu được nhiều', chứ không phải vì chưa được 'nuôi'. Hoạt động giả như like, comment, kết bạn tự động không tạo ra lịch sử hợp lệ, mà còn là tín hiệu không xác thực theo chính sách Spam.",
+     "check": [
+      "Kiểm tài khoản đã xác minh số điện thoại chưa, đã có phương thức thanh toán chưa và đã có quảng cáo nào được duyệt chưa; thiếu bước nào thì hoàn tất bước đó trước.",
+      "Xem giới hạn chi tiêu hằng ngày Meta đang đặt cho tài khoản; mức này thấp với tài khoản mới là bình thường, không phải dấu hiệu bị phạt."
+     ],
+     "do": [
+      "(1) Người ta 'nuôi' tài khoản vài ngày (chạy thử, tạo hoạt động) vì tài khoản mới tiêu được rất ít và họ lo chạy mạnh ngay sẽ gặp vấn đề.",
+      "(2) Chính sách: Meta không có quy định 'nuôi tài khoản'; tài khoản mới có giới hạn chi tiêu ngày thấp và ngưỡng thanh toán nhỏ, tăng dần theo lịch sử.",
+      "(3) 'Nuôi' bằng hoạt động giả (like, comment, kết bạn tự động) vi phạm chính sách Spam và tạo tín hiệu không xác thực, nên có thể bị xử lý theo chính sách này thay vì được tin tưởng hơn.",
+      "(4) Cách đúng: tài khoản thật của doanh nghiệp chỉ cần thông tin đúng, thanh toán ổn định, nội dung đúng chính sách; có thể chạy ngân sách nhỏ rồi tăng dần (kinh nghiệm cộng đồng, chưa có số chính thức)."
+     ],
+     "avoid": [
+      "Không 'nuôi' bằng hoạt động giả như like, comment, kết bạn tự động: vi phạm chính sách Spam và tạo tín hiệu không xác thực, trong khi giới hạn chi tiêu chỉ tăng theo lịch sử thật của tài khoản."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About daily spending limits set by Meta",
+       "url": "https://www.facebook.com/business/help/563129151097553"
+      },
+      {
+       "title": "About payment thresholds for Meta ads",
+       "url": "https://www.facebook.com/business/help/776240779095515"
+      },
+      {
+       "title": "Spam (Community Standards: cloaking, chuyển hướng lừa, cấm mua bán tài khoản/trang)",
+       "url": "https://transparency.meta.com/policies/community-standards/spam/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-hoc-may",
+   "title": "Học máy, Learning limited, sửa camp",
+   "intro": "Giai đoạn học, Learning limited, sửa camp có làm học lại không, tăng ngân sách bao nhiêu, nhân bản camp.",
+   "nodes": [
+    {
+     "id": "fm-learning-limited",
+     "if": "Learning limited (học bị giới hạn) có phải camp chết? Bao nhiêu chuyển đổi mới thoát học?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Không, Learning limited (học bị giới hạn) không có nghĩa là chiến dịch đã hỏng. Meta cần khoảng 50 sự kiện tối ưu (hành động bạn yêu cầu Meta tìm người thực hiện, ví dụ gửi form) trong 7 ngày sau lần sửa lớn cuối để thoát giai đoạn học (learning phase); không đủ thì báo Learning limited. Việc cần làm là xem chi phí và kết quả hiện tại có chấp nhận được không; nếu không, gộp nhóm, mở rộng đối tượng, tăng ngân sách hoặc chọn sự kiện xảy ra nhiều hơn.",
+     "visao": "Giai đoạn học là lúc hệ thống thử phân phối cho nhiều kiểu người để tìm ra ai dễ thực hiện sự kiện bạn tối ưu. Cần đủ số lần sự kiện xảy ra thì hệ thống mới có dữ liệu để ổn định; khoảng 50 lần trong 7 ngày là mốc Meta đưa ra. Khi ngân sách bị chia cho nhiều nhóm nhỏ hoặc sự kiện quá hiếm, từng nhóm không gom đủ dữ liệu nên kẹt ở Learning limited, dù kết quả thực tế có thể vẫn chấp nhận được.",
+     "check": [
+      "Đếm số sự kiện tối ưu của nhóm quảng cáo trong 7 ngày kể từ lần sửa lớn cuối; dưới khoảng 50 thì nhãn Learning limited là do thiếu dữ liệu.",
+      "Xem có nhiều nhóm quảng cáo nhỏ cùng chia ngân sách không; nếu có, đó là nguyên nhân phổ biến khiến từng nhóm không đủ sự kiện.",
+      "So chi phí mỗi kết quả hiện tại với mức bạn chấp nhận được; vẫn trong ngưỡng thì không cần vội sửa."
+     ],
+     "do": [
+      "Đánh giá theo chi phí và kết quả thực tế, không theo nhãn Learning limited; kết quả chấp nhận được thì có thể để chạy tiếp.",
+      "Nếu cần cải thiện, gộp các nhóm quảng cáo nhỏ lại để dồn sự kiện về ít nhóm hơn.",
+      "Mở rộng đối tượng hoặc tăng ngân sách để nhóm có cơ hội đạt khoảng 50 sự kiện tối ưu trong 7 ngày.",
+      "Nếu sự kiện đang tối ưu quá hiếm, chọn sự kiện xảy ra nhiều hơn."
+     ],
+     "avoid": [
+      "Không tách quá nhiều nhóm quảng cáo nhỏ ngân sách thấp: mỗi nhóm không đủ sự kiện nên đều kẹt ở Learning limited."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About Learning limited",
+       "url": "https://www.facebook.com/business/help/269269737396981"
+      },
+      {
+       "title": "Significant edits and the learning phase",
+       "url": "https://www.facebook.com/business/help/316478108955072"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-sua-camp-reset",
+     "if": "Sửa camp (đổi đối tượng, creative, ngân sách) có làm học lại từ đầu không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Có, nếu đó là sửa lớn (significant edit): đổi đối tượng, creative (mẫu quảng cáo: ảnh, video, chữ), sự kiện tối ưu, chiến lược giá thầu, bật lại sau 7 ngày tắt, hoặc đổi ngân sách đáng kể đều đưa nhóm quảng cáo vào học lại. Trước khi sửa, xác định thay đổi đó lớn hay nhỏ. Cách làm đúng là gom các thay đổi lại và sửa một lần.",
+     "visao": "Hệ thống học dựa trên dữ liệu của chính cấu hình hiện tại: quảng cáo nào, cho ai, tối ưu theo hành động gì. Khi đổi một yếu tố lớn, dữ liệu cũ không còn khớp với cấu hình mới nên nhóm quảng cáo vào giai đoạn học (learning phase) lại. Sửa lắt nhắt nhiều lần nghĩa là học lại nhiều lần, nhóm quảng cáo khó ổn định.",
+     "check": [
+      "Xác định thay đổi định làm là sửa lớn hay nhỏ: đổi đối tượng, creative, sự kiện tối ưu, chiến lược giá thầu, bật lại sau 7 ngày tắt hoặc đổi ngân sách đáng kể là sửa lớn."
+     ],
+     "do": [
+      "Liệt kê các thay đổi định làm và gom lại sửa một lần, thay vì sửa lắt nhắt nhiều lần.",
+      "Sau một lần sửa lớn, chấp nhận nhóm quảng cáo vào học lại và theo dõi kết quả tính từ lần sửa đó."
+     ],
+     "avoid": [
+      "Không tắt bật nhóm quảng cáo liên tục và không đổi ngân sách vào cuối ngày: Meta khuyên tránh, vì các thay đổi này khiến hệ thống phải học lại."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Significant edits and the learning phase",
+       "url": "https://www.facebook.com/business/help/316478108955072"
+      },
+      {
+       "title": "Avoid frequent pausing and end of day budget changes",
+       "url": "https://www.facebook.com/business/help/414038972972624"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tang-ngan-sach",
+     "if": "Tăng ngân sách bao nhiêu % mỗi lần để không reset học?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Meta không công bố một mức % cố định; Meta chỉ nói thay đổi ngân sách đáng kể là sửa lớn, có thể đưa nhóm quảng cáo vào học lại. Chuyên gia và cộng đồng hay dùng quy ước tăng 10-20% mỗi lần, cách nhau khoảng 24-48 giờ, nhưng đây chưa phải số chính thức. Chỉ tăng khi chiến dịch đã có kết quả ổn định 2-3 ngày.",
+     "visao": "Ngân sách quyết định hệ thống phải tìm bao nhiêu người để chi hết tiền. Tăng một bước lớn buộc hệ thống tìm thêm nhiều người mới chưa có dữ liệu, gần như một cấu hình mới, nên Meta coi đó là sửa lớn. Tăng từng nấc nhỏ giúp mở rộng dần; vì Meta không công bố ngưỡng chính xác, mức 10-20% chỉ là quy ước thận trọng của người làm nghề.",
+     "check": [
+      "Xem chiến dịch đã có kết quả ổn định 2-3 ngày liên tục chưa; chưa ổn định thì chưa nên tăng ngân sách."
+     ],
+     "do": [
+      "Chỉ tăng ngân sách khi chiến dịch đã có kết quả ổn định 2-3 ngày.",
+      "Tăng mỗi lần khoảng 10-20%, cách nhau khoảng 24-48 giờ; đây là quy ước của chuyên gia và cộng đồng, chưa có số chính thức từ Meta.",
+      "Sau mỗi lần tăng, theo dõi chi phí mỗi kết quả trước khi quyết định tăng tiếp."
+     ],
+     "avoid": [
+      "Không nhân ngân sách gấp đôi, gấp ba trong một lần trên nhóm đang ổn định: đây là thay đổi ngân sách đáng kể, dễ đưa nhóm vào học lại."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Significant edits and the learning phase",
+       "url": "https://www.facebook.com/business/help/316478108955072"
+      },
+      {
+       "title": "Meta ads learning phase 2026, Jetfuel Agency (quy ước 10-20%)",
+       "url": "https://jetfuel.agency/what-is-the-meta-ads-learning-phase-how-to-exit-it-faster-in-2026/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-nhan-ban-camp",
+     "if": "Nhân bản (duplicate) camp thắng ra nhiều bản để scale có tốt không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Thường không tốt: nhiều nhóm quảng cáo cùng đối tượng sẽ cạnh tranh nhau trong đấu giá (chồng chéo đấu giá, auction overlap), và Meta chỉ cho một nhóm vào đấu giá mỗi lần nên các nhóm còn lại phân phối kém. Muốn scale (mở rộng quy mô), hãy tăng ngân sách dần trên nhóm đang thắng, hoặc gộp các nhóm lại.",
+     "visao": "Khi nhiều nhóm quảng cáo của bạn cùng nhắm một nhóm người xem, Meta không để chúng đấu giá với nhau mà chỉ cho một nhóm vào đấu giá mỗi lần. Các bản nhân bản vì vậy chia nhau cơ hội hiển thị và dữ liệu, nhóm nào cũng ít kết quả hơn. Dồn ngân sách vào nhóm đã thắng giữ được dữ liệu nhóm đó đã học.",
+     "check": [
+      "So các bản nhân bản: nếu cùng đối tượng và cùng creative (mẫu quảng cáo) thì chúng đang chồng chéo đấu giá với nhau."
+     ],
+     "do": [
+      "Muốn scale, tăng ngân sách dần trên nhóm quảng cáo đang thắng thay vì tạo thêm bản sao.",
+      "Nếu đã có nhiều nhóm cùng đối tượng, gộp lại thành ít nhóm hơn để tránh tự cạnh tranh."
+     ],
+     "avoid": [
+      "Không nhân bản hàng loạt nhóm quảng cáo cùng đối tượng: các bản tự cạnh tranh nhau, mỗi lần chỉ một nhóm được vào đấu giá nên phần còn lại phân phối kém."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Understand auction overlap",
+       "url": "https://www.facebook.com/business/help/537699989762051"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-cpm-ctr",
+   "title": "CPM cao, CTR thấp, tần suất",
+   "intro": "Chi phí hiển thị cao, click nhiều mà không ra đơn, tần suất cao, Meta dồn tiền vào chỗ CPA cao.",
+   "nodes": [
+    {
+     "id": "fm-cpm-cao",
+     "if": "CPM tự nhiên tăng gấp đôi, có phải Meta đang 'ăn tiền'?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Không có cơ sở để nói Meta 'ăn tiền': CPM (chi phí cho 1.000 lượt hiển thị) do đấu giá quyết định, nhiều nhà quảng cáo cạnh tranh cùng người xem thì giá lên, nhất là mùa cao điểm, cuối năm. Ngoài ra xếp hạng chất lượng thấp so với đối thủ, đối tượng hẹp và tần suất cao cũng đẩy CPM lên. Hãy xem chẩn đoán mức độ liên quan và xu hướng nhiều ngày trước khi kết luận.",
+     "visao": "Mỗi lượt hiển thị là một phiên đấu giá; giá bạn trả phụ thuộc số nhà quảng cáo cùng muốn tiếp cận người đó và mức độ liên quan của quảng cáo. Quảng cáo có xếp hạng chất lượng thấp so với đối thủ phải trả đắt hơn để thắng. Đối tượng hẹp và tần suất (số lần trung bình một người thấy quảng cáo) cao nghĩa là hệ thống phải cạnh tranh trong một nhóm người nhỏ, nên CPM cũng bị đẩy lên.",
+     "check": [
+      "Mở chẩn đoán mức độ liên quan (ad relevance diagnostics) của từng quảng cáo, xem xếp hạng chất lượng, xếp hạng tương tác, xếp hạng chuyển đổi; xếp hạng thấp so với đối thủ là một lý do khiến CPM tăng.",
+      "Xem thời điểm: đang vào mùa cao điểm hoặc cuối năm thì CPM tăng do cạnh tranh đấu giá là bình thường.",
+      "Xem tần suất và kích thước đối tượng; đối tượng hẹp kèm tần suất cao cho thấy CPM tăng một phần vì đối tượng quá hẹp."
+     ],
+     "do": [
+      "Theo dõi xu hướng CPM nhiều ngày; nếu trùng mùa cao điểm thì chủ yếu do cạnh tranh đấu giá.",
+      "Nếu xếp hạng chất lượng thấp so với đối thủ, làm mới creative (mẫu quảng cáo: ảnh, video, chữ) để quảng cáo liên quan hơn, thắng đấu giá với chi phí thấp hơn.",
+      "Nếu đối tượng hẹp và tần suất cao, mở rộng đối tượng hoặc thêm vị trí hiển thị."
+     ],
+     "avoid": [
+      "Không kết luận 'bị bóp' sau 1 ngày CPM tăng: cần xem xu hướng nhiều ngày, tránh sửa lớn không cần thiết khiến nhóm quảng cáo phải học lại."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About ad relevance diagnostics",
+       "url": "https://www.facebook.com/business/help/403110480493160"
+      },
+      {
+       "title": "Understand fluctuations in ad performance and spend",
+       "url": "https://www.facebook.com/business/help/220698029821552"
+      },
+      {
+       "title": "Frequency",
+       "url": "https://www.facebook.com/business/help/1546570362238584"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-ctr-cao-khong-don",
+     "if": "CTR cao, click rẻ mà không ra đơn, không ra lead",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Gần như chắc vấn đề nằm sau cú click: trang đích chậm hoặc lỗi, nội dung không khớp quảng cáo, hoặc chiến dịch đang tối ưu theo click nên Meta tìm người hay click chứ không phải người có nhu cầu. CTR (tỉ lệ người bấm trên số lượt hiển thị) cao chỉ cho thấy quảng cáo thu hút. Việc đầu tiên là so lượt click liên kết với lượt xem trang đích, rồi chuyển sang tối ưu theo sự kiện chuyển đổi nếu đang tối ưu theo click.",
+     "visao": "Meta làm đúng điều bạn yêu cầu: tối ưu theo click thì hệ thống tìm những người hay bấm, mà nhiều người trong số đó không định mua. Click liên kết và lượt xem trang đích là hai số khác nhau; lượt xem chỉ tính khi người dùng thật sự vào được tới trang, nên chênh lệch lớn cho thấy trang chậm hoặc click nhầm. Một số vị trí hiển thị như Audience Network (mạng ứng dụng, website đối tác hiển thị quảng cáo Meta) có thể chiếm nhiều click, nên cần xem click đến từ đâu.",
+     "check": [
+      "So số lượt xem trang đích với số click liên kết; chênh lớn nghĩa là trang chậm hoặc nhiều click nhầm.",
+      "Mở trang đích trên điện thoại, xem tốc độ tải và thử gửi form; trang chậm hoặc form không chạy thì click không thể thành đơn.",
+      "Chia nhỏ kết quả theo vị trí hiển thị xem vị trí nào chiếm click (ví dụ Audience Network); click dồn vào vị trí không ra đơn là tín hiệu cần xem lại chất lượng click."
+     ],
+     "do": [
+      "Chuyển sang tối ưu theo sự kiện chuyển đổi (đơn, lead) thay vì theo click, vì tối ưu click thì Meta tìm người hay click.",
+      "Sửa trang đích: tăng tốc độ trên điện thoại, nội dung khớp với quảng cáo, nút gọi hành động rõ ràng.",
+      "Kiểm form hoặc nút đặt hàng chạy được thật trước khi tăng ngân sách."
+     ],
+     "avoid": [
+      "Không chọn mục tiêu Lưu lượng truy cập (Traffic) nếu thứ bạn cần là đơn hoặc lead: Meta sẽ tối ưu theo click, ra nhiều click rẻ nhưng ít khách thật."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Understand the difference between link clicks and landing page views",
+       "url": "https://www.facebook.com/business/help/172641445757289"
+      },
+      {
+       "title": "Choose the right objective in Meta Ads Manager",
+       "url": "https://www.facebook.com/business/help/1621419411431034"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tan-suat",
+     "if": "Tần suất bao nhiêu là cao, creative 'mệt' khi nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Meta không có ngưỡng tần suất chính thức; cộng đồng hay bắt đầu để ý khi tần suất (số lần trung bình một người thấy quảng cáo) trên khoảng 3-5 kèm CTR giảm và CPM tăng, nhưng đây chưa phải số chính thức. Dấu hiệu rõ hơn là Meta tự đưa đề xuất cảnh báo creative mệt (creative fatigue) khi chi phí mỗi kết quả tăng vì người xem thấy quảng cáo quá nhiều. Lúc đó cần thêm creative mới khác hẳn hoặc mở rộng đối tượng.",
+     "visao": "Người xem thấy cùng một quảng cáo nhiều lần sẽ lướt qua, nên tỉ lệ bấm giảm, quảng cáo kém cạnh tranh trong đấu giá và chi phí mỗi kết quả tăng. Một con số tần suất đơn lẻ không đủ để kết luận, vì mỗi sản phẩm, mỗi đối tượng chịu đựng khác nhau; phải nhìn tần suất cùng CTR (tỉ lệ bấm) và CPM (chi phí cho 1.000 lượt hiển thị) theo thời gian. Đổi vài chữ trên cùng một ảnh thì người xem vẫn thấy quen, nên không giải quyết được tình trạng mệt.",
+     "check": [
+      "Theo dõi tần suất theo thời gian cùng CTR và CPM của từng quảng cáo; tần suất tăng trong khi CTR giảm, CPM tăng là dấu hiệu creative đang mệt.",
+      "Xem Ads Manager có hiện đề xuất cảnh báo creative mệt không; có nghĩa là Meta thấy chi phí mỗi kết quả tăng do người xem thấy quá nhiều."
+     ],
+     "do": [
+      "Dựa vào đề xuất creative mệt của Meta và xu hướng CTR, CPM thay vì một con số tần suất cố định.",
+      "Nếu cần ngưỡng tham khảo: cộng đồng hay theo dõi khi tần suất trên khoảng 3-5 kèm CTR giảm, CPM tăng (chưa có số chính thức).",
+      "Xử lý bằng cách thêm creative mới khác hẳn và mở rộng đối tượng."
+     ],
+     "avoid": [
+      "Không chỉ đổi chữ trên cùng một ảnh rồi coi là creative mới: người xem vẫn thấy quen, tình trạng mệt không cải thiện."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Frequency",
+       "url": "https://www.facebook.com/business/help/1546570362238584"
+      },
+      {
+       "title": "About creative fatigue recommendations in Meta Ads Manager",
+       "url": "https://www.facebook.com/business/help/1346816142327858"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-breakdown",
+     "if": "Sao Meta dồn tiền vào vị trí/nhóm có CPA cao hơn? Có nên tắt vị trí đó?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Đây là hiệu ứng phân tích (breakdown effect), không phải Meta tiêu sai: hệ thống tối ưu theo chi phí biên (chi phí để có thêm kết quả tiếp theo), nên phần có CPA (chi phí mỗi chuyển đổi) trung bình cao vẫn có thể giúp tổng CPA thấp hơn. Vì vậy thường không nên tắt vị trí hay nhóm đó chỉ dựa vào bảng chia nhỏ. Nếu nghi ngờ, kiểm bằng thử nghiệm A/B (chạy song song có và không có phần đó để so).",
+     "visao": "Ở mỗi vị trí, những kết quả đầu tiên thường rẻ, càng lấy thêm càng đắt. Hệ thống phân bổ tiền theo chi phí của kết quả tiếp theo chứ không theo trung bình đã qua, nên một vị trí có CPA trung bình cao vẫn có thể đang mang lại kết quả tiếp theo rẻ hơn nơi khác. Tắt nó đi, ngân sách dồn về các phần còn lại và phải mua kết quả đắt hơn ở đó, khiến tổng kết quả thường tệ hơn.",
+     "check": [
+      "Khi xem bảng chia nhỏ theo vị trí hoặc nhóm, phân biệt chi phí trung bình (bảng hiển thị) với chi phí biên (cái hệ thống dùng để tối ưu); CPA trung bình cao chưa chứng minh phần đó làm hại tổng kết quả."
+     ],
+     "do": [
+      "Đánh giá theo tổng CPA của chiến dịch thay vì CPA trung bình của từng phần, vì hệ thống tối ưu theo chi phí biên.",
+      "Nếu vẫn muốn tắt một vị trí hoặc nhóm, chạy thử nghiệm A/B so có và không có phần đó, rồi quyết định theo tổng kết quả."
+     ],
+     "avoid": [
+      "Không cắt vị trí hoặc nhóm chỉ dựa trên CPA trung bình trong bảng chia nhỏ mà không thử A/B: việc này thường làm tổng kết quả tệ hơn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About the breakdown effect",
+       "url": "https://www.facebook.com/business/help/770303663944673"
+      },
+      {
+       "title": "Breakdown effect, Jon Loomer (19/05/2025)",
+       "url": "https://www.jonloomer.com/breakdown-effect/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-lead",
+   "title": "Lead rác, tin nhắn rác, Messenger",
+   "intro": "Form nhiều số ảo, tin nhắn 'tư vấn' rồi im, chọn form hay tin nhắn, tối ưu theo lead chất lượng.",
+   "nodes": [
+    {
+     "id": "fm-lead-form-rac",
+     "if": "Lead form toàn số ảo, tên linh tinh",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Nguyên nhân hay gặp là form quá dễ gửi, nên người bấm nhầm hoặc điền bừa cũng thành lead. Việc nên làm trước tiên là chuyển form sang dạng 'Ý định cao hơn' (Higher intent, có bước xem lại trước khi gửi), bật xác minh số điện thoại bằng mã SMS nếu có, và thêm câu hỏi lọc. Về lâu dài, gửi trạng thái lead từ CRM (hệ thống quản lý khách hàng) về Meta để hệ thống tối ưu theo lead chất lượng.",
+     "visao": "Lead form (form điền ngay trên Facebook) gửi được chỉ bằng vài lần bấm, nên dễ có người gửi mà không thật sự quan tâm. Bước xem lại, xác minh SMS hay câu hỏi tự gõ tạo thêm một chút 'ma sát' khiến người không có nhu cầu dừng lại; số lead có thể ít đi nhưng sạch hơn. Khi Meta nhận được trạng thái lead từ CRM, hệ thống biết lead nào là lead tốt để tối ưu theo đó thay vì chỉ đếm số form.",
+     "check": [
+      "Mở cài đặt form và xem loại form đang dùng là 'Nhiều lượt hơn' (More volume) hay 'Ý định cao hơn'; nếu là 'Nhiều lượt hơn' thì đây là nguyên nhân hay gặp của lead rác.",
+      "Xem form có câu hỏi lọc (câu tự gõ hoặc câu hỏi điều kiện) không; chỉ có tên và số điện thoại thì rất dễ bị điền bừa.",
+      "Xem form đã bật xác minh số điện thoại bằng mã SMS chưa, nếu tính năng có sẵn cho tài khoản."
+     ],
+     "do": [
+      "Chuyển form sang dạng 'Ý định cao hơn' để người dùng phải xem lại thông tin trước khi gửi.",
+      "Bật xác minh số điện thoại bằng mã SMS nếu tính năng có sẵn.",
+      "Thêm câu hỏi lọc tự gõ hoặc câu hỏi điều kiện để người không có nhu cầu dừng lại.",
+      "Gửi trạng thái lead từ CRM về Meta để hệ thống tối ưu theo lead chất lượng thay vì lead thô."
+     ],
+     "avoid": [
+      "Không chỉ nhìn CPL (chi phí mỗi lead) rẻ: lead rẻ mà rác thì tốn chi phí gọi lại, chi phí thật để có một khách tăng lên."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Instant form types (More volume, Higher intent, Rich creative)",
+       "url": "https://www.facebook.com/business/help/252352181957512"
+      },
+      {
+       "title": "Enable the SMS verification feature to help improve lead quality",
+       "url": "https://www.facebook.com/business/help/898260175547909"
+      },
+      {
+       "title": "Custom questions for instant forms",
+       "url": "https://www.facebook.com/business/help/774623835981457"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tin-nhan-rac",
+     "if": "Chạy tin nhắn ra nhiều hội thoại 'tư vấn' rồi im, không để số",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Chuyện này thường gặp vì chỉ số 'Số cuộc trò chuyện bắt đầu' chỉ đếm hội thoại, không phải lead: người nhắn 'tư vấn' rồi im vẫn được tính. Cách cải thiện là dùng câu hỏi gợi ý có chọn lọc để hỏi nhu cầu cụ thể ngay đầu, trả lời thật nhanh, và nếu có thì tối ưu theo sự kiện lead trong tin nhắn thay vì theo hội thoại. Khi báo cáo, tách riêng hội thoại và lead.",
+     "visao": "Khi chiến dịch tối ưu theo hội thoại, Meta tìm người dễ bắt đầu nhắn tin, không phân biệt người đó có để số hay không. Vì vậy số hội thoại cao chưa nói lên chất lượng. Câu hỏi gợi ý hỏi đúng nhu cầu ngay đầu giúp dẫn khách thật vào cuộc trò chuyện, còn phản hồi chậm làm cả khách thật cũng bỏ đi.",
+     "check": [
+      "Xem mục tiêu và sự kiện tối ưu của chiến dịch: nếu đang tối ưu theo hội thoại thì nhiều hội thoại 'tư vấn' rồi im là kết quả dễ hiểu.",
+      "Đọc lời chào và câu hỏi tự động khách thấy khi mở tin nhắn; nếu chỉ là lời chào chung chung thì khách không được dẫn tới việc nói nhu cầu, để số."
+     ],
+     "do": [
+      "Dùng câu hỏi gợi ý có chọn lọc, hỏi nhu cầu cụ thể ngay đầu cuộc trò chuyện.",
+      "Bố trí người trực để trả lời nhanh, vì phản hồi chậm làm khách bỏ.",
+      "Nếu có tuỳ chọn, chuyển sang tối ưu theo sự kiện lead trong tin nhắn thay vì theo hội thoại."
+     ],
+     "avoid": [
+      "Không đếm hội thoại là lead khi báo cáo: số liệu bị thổi phồng, người đọc báo cáo đánh giá sai hiệu quả quảng cáo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Messaging conversations started",
+       "url": "https://www.facebook.com/business/help/1234867544104505"
+      },
+      {
+       "title": "About ads that click to message",
+       "url": "https://www.facebook.com/business/help/269324800441478"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-form-hay-tin-nhan",
+     "if": "Nên chạy lead form, tin nhắn hay về website?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Quora"
+     ],
+     "tomtat": "Chọn theo hành động bạn thật sự cần, vì mỗi mục tiêu Meta tối ưu khác nhau. Lead form nhanh và ra nhiều nhưng dễ rác; tin nhắn hợp tư vấn 1-1 khi có người trực chat; về website cho lead chất lượng hơn khi đo lường tốt (có pixel và CAPI). Nếu ngân sách đủ, thử A/B giữa hai cách và quyết theo tỉ lệ chốt chứ không theo CPL.",
+     "visao": "Meta tối ưu theo đúng hành động bạn chọn: form thì tìm người dễ gửi form, tin nhắn thì tìm người dễ nhắn, website thì tìm người dễ thực hiện chuyển đổi trên web. Form gửi nhanh nên ra nhiều nhưng dễ lẫn rác; website cần đo lường chạy tốt, tức pixel (đoạn mã đo lường gắn trên website) và CAPI (Conversions API, gửi sự kiện từ máy chủ về Meta), thì Meta mới học được người nào chuyển đổi thật. Thử A/B (chạy song song hai phương án, chia đều ngân sách để so) cho câu trả lời bằng số liệu của chính bạn.",
+     "check": [
+      "Kiểm website có tải nhanh và đã cài pixel/CAPI đo đúng chuyển đổi chưa; chưa có thì chạy về website khó đo và khó tối ưu.",
+      "Hỏi đội tư vấn có người trực chat không; không có thì chạy tin nhắn dễ mất khách vì trả lời chậm."
+     ],
+     "do": [
+      "Chọn mục tiêu theo hành động bạn thật sự cần: lead để gọi lại, tư vấn qua chat, hay chuyển đổi trên website.",
+      "Cân nhắc đặc điểm từng cách: lead form nhanh, nhiều, dễ rác; tin nhắn hợp tư vấn 1-1; website chất lượng hơn khi đo lường tốt.",
+      "Nếu ngân sách đủ, chạy thử nghiệm A/B giữa 2 cách để so bằng số liệu thật."
+     ],
+     "avoid": [
+      "Không chọn cách chỉ vì CPL (chi phí mỗi lead) rẻ nhất mà bỏ qua tỉ lệ chốt: lead rẻ mà không chốt được thì chi phí cho mỗi khách thật vẫn cao."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Choose the right objective in Meta Ads Manager",
+       "url": "https://www.facebook.com/business/help/1621419411431034"
+      },
+      {
+       "title": "About A/B testing",
+       "url": "https://www.facebook.com/business/help/1738164643098669"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-toi-uu-lead-chat-luong",
+     "if": "Làm sao để Meta tìm lead chất lượng chứ không phải lead rẻ?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Cách chính là cho Meta biết lead nào là lead tốt: kết nối CRM (hệ thống quản lý khách hàng) và gửi giai đoạn phễu (đã gọi, đã hẹn, đã mua) về Meta qua Conversions API cho CRM. Khi đủ dữ liệu, dùng mục tiêu hiệu quả 'lead chất lượng' và theo dõi chỉ số lead chất lượng trong Ads Manager. Điều kiện trước tiên là CRM phải ghi trạng thái từng lead.",
+     "visao": "Nếu chỉ nhận sự kiện 'có lead', Meta coi mọi lead như nhau nên sẽ tìm lead dễ có nhất. Khi được báo lead nào đi tiếp tới hẹn, tới mua, hệ thống có tín hiệu để tối ưu theo lead chất lượng. Ngược lại, dựng tệp tương tự (lookalike, tệp người giống một danh sách mẫu) từ danh sách lead rác sẽ dạy hệ thống tìm thêm người giống lead rác.",
+     "check": [
+      "Kiểm CRM có ghi trạng thái lead (đã gọi, hẹn, mua) không; chưa có thì chưa có dữ liệu để gửi về Meta.",
+      "Xem CRM đã được kết nối với Meta (tích hợp CRM cho lead ads, hoặc Conversions API cho CRM) chưa."
+     ],
+     "do": [
+      "Chuẩn hoá trạng thái lead trong CRM (đã gọi, hẹn, mua) để có dữ liệu gửi đi.",
+      "Kết nối CRM và gửi giai đoạn phễu về Meta qua Conversions API cho CRM.",
+      "Khi đủ dữ liệu, chuyển sang mục tiêu hiệu quả 'lead chất lượng'.",
+      "Theo dõi chỉ số lead chất lượng trong Ads Manager để đánh giá chiến dịch thay vì chỉ nhìn số lead thô."
+     ],
+     "avoid": [
+      "Không dựng tệp tương tự từ danh sách lead rác: hệ thống sẽ tìm thêm người giống lead rác, chất lượng càng kém."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About performance goals for lead ads (qualified leads)",
+       "url": "https://www.facebook.com/business/help/782657799338685"
+      },
+      {
+       "title": "About CRM system integrations for lead ads",
+       "url": "https://www.facebook.com/business/help/301355140655035"
+      },
+      {
+       "title": "Send CRM funnel stages to Meta",
+       "url": "https://www.facebook.com/business/help/279369167153556"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-pixel",
+   "title": "Pixel, CAPI, sự kiện, iOS",
+   "intro": "Pixel không ghi nhận, có cần Conversions API, iOS 14, điểm EMQ, dữ liệu sức khoẻ bị chặn, số liệu lệch.",
+   "nodes": [
+    {
+     "id": "fm-capi-can-khong",
+     "if": "Có cần Conversions API (CAPI) không hay chỉ pixel là đủ?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Nên có, chỉ pixel thì dễ mất sự kiện. Meta khuyên chạy song song pixel (đoạn mã đặt trên website, chạy trong trình duyệt) và Conversions API (CAPI, kênh gửi sự kiện thẳng từ máy chủ của bạn sang Meta) theo kiểu thiết lập dự phòng. Việc đầu tiên là xem website đang dùng nền tảng nào, vì nhiều nền tảng như Shopify, WooCommerce đã có tích hợp CAPI sẵn. Làm đúng thì Meta nhận đủ sự kiện hơn mà không bị đếm đôi.",
+     "visao": "Pixel chạy trong trình duyệt của khách nên có thể bị trình duyệt hoặc trình chặn quảng cáo chặn, khi đó sự kiện không về Meta. CAPI gửi từ máy chủ nên không phụ thuộc trình duyệt, giống như có thêm một đường dây thứ hai khi đường thứ nhất đứt. Vì cùng một hành động có thể được gửi qua cả hai đường, Meta cần một mã chung (event_id) để biết đó là một sự kiện và chỉ đếm một lần.",
+     "check": [
+      "Kiểm tra xem pixel có đang bị trình duyệt hoặc trình chặn quảng cáo chặn không; nếu có, đó là dấu hiệu chỉ dùng pixel sẽ hụt sự kiện và cần thêm CAPI.",
+      "Xác định website chạy trên nền tảng nào (Shopify, WooCommerce...) và nền tảng đó đã có tích hợp CAPI sẵn chưa; có sẵn thì ưu tiên bật tích hợp đó thay vì tự lập trình."
+     ],
+     "do": [
+      "Thiết lập pixel và CAPI chạy song song (thiết lập dự phòng) theo khuyến nghị của Meta, để sự kiện bị mất ở trình duyệt vẫn về được qua máy chủ.",
+      "Gửi cùng một event_id (mã định danh sự kiện) cho cùng một hành động ở cả pixel và CAPI, để Meta khử trùng lặp (gộp hai bản gửi thành một sự kiện).",
+      "Nếu website dùng nền tảng có tích hợp CAPI sẵn như Shopify hoặc WooCommerce, bật tích hợp đó trước để triển khai nhanh và ít lỗi."
+     ],
+     "avoid": [
+      "Không gửi sự kiện qua cả pixel lẫn CAPI mà thiếu event_id, vì Meta sẽ đếm đôi chuyển đổi, báo cáo bị thổi phồng và hệ thống tối ưu theo số sai."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Best practices for Conversions API (redundant setup)",
+       "url": "https://www.facebook.com/business/help/586304118741779"
+      },
+      {
+       "title": "About deduplication for Meta Pixel and Conversions API events",
+       "url": "https://www.facebook.com/business/help/823677331451951"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-ios14",
+     "if": "Sau iOS 14 số chuyển đổi tụt, cần làm gì?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Số chuyển đổi tụt sau iOS 14 phần lớn là do cách đo thay đổi, không hẳn do quảng cáo kém đi. Với sự kiện web từ thiết bị iOS, Meta dùng Đo lường sự kiện tổng hợp (AEM, Aggregated Event Measurement) và một phần chuyển đổi được mô hình hoá (ước tính bằng thống kê) thay vì đếm đủ từng lượt. Việc nên làm trước tiên là kiểm tra tên miền đã xác minh chưa, sau đó bổ sung CAPI và thông tin khớp khách hàng để tăng độ phủ sự kiện.",
+     "visao": "Từ iOS 14, Apple thay đổi cách ứng dụng được theo dõi người dùng iPhone, nên Meta không còn thấy đủ hành vi của một phần người dùng trên website. Meta chuyển sang đo theo kiểu tổng hợp và bù phần thiếu bằng mô hình, nên số trong Ads Manager là con số có phần ước tính, không khớp từng ngày với số thật. Gửi thêm sự kiện qua CAPI (Conversions API, gửi từ máy chủ) kèm thông tin khớp khách hàng giúp Meta nhận ra nhiều sự kiện hơn, nhờ đó số báo cáo và việc tối ưu sát thực tế hơn.",
+     "check": [
+      "Kiểm tra tên miền website đã được xác minh trong tài khoản Meta chưa; chưa xác minh thì xử lý việc này trước khi đánh giá số liệu.",
+      "Xem cài đặt phân bổ (attribution setting, quy tắc tính một chuyển đổi cho quảng cáo nào và trong bao lâu) đang dùng, vì cài đặt khác nhau cho ra số chuyển đổi khác nhau."
+     ],
+     "do": [
+      "Hiểu rằng với sự kiện web từ iOS, Meta dùng AEM và một phần chuyển đổi là số mô hình hoá; đánh giá xu hướng thay vì đòi khớp tuyệt đối từng lượt.",
+      "Bổ sung CAPI và gửi thêm thông tin khớp khách hàng (thông tin giúp Meta nhận ra người đã chuyển đổi) để tăng độ phủ sự kiện."
+     ],
+     "avoid": [
+      "Không so số Meta với số thật theo từng ngày rồi kết luận quảng cáo hỏng, vì số Meta có phần mô hình hoá nên chênh lệch ngày lẻ là bình thường; kết luận vội dễ dẫn tới tắt nhầm chiến dịch đang tốt."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About Aggregated Event Measurement",
+       "url": "https://www.facebook.com/business/help/721422165168355"
+      },
+      {
+       "title": "Best practices for Conversions API (redundant setup)",
+       "url": "https://www.facebook.com/business/help/586304118741779"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-emq",
+     "if": "Điểm chất lượng khớp sự kiện (EMQ) thấp có sao không?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Reddit r/PPC"
+     ],
+     "tomtat": "Có ảnh hưởng: điểm EMQ (Event Match Quality, điểm chất lượng khớp sự kiện) thấp nghĩa là Meta khó nhận ra sự kiện đó thuộc về tài khoản Meta nào. Việc cần làm là xem bạn đang gửi kèm những tham số khách hàng nào, rồi bổ sung các tham số được phép, băm (mã hoá một chiều) đúng hướng dẫn. Khớp được nhiều người hơn thì Meta ghi nhận và tối ưu theo chuyển đổi tốt hơn.",
+     "visao": "Khi website báo 'có người vừa gửi form', Meta phải tìm xem người đó là ai trên Facebook/Instagram thì mới gắn được với quảng cáo họ đã xem. EMQ đánh giá mức thông tin khách hàng bạn gửi kèm sự kiện có đủ để làm việc khớp này không. Gửi càng nhiều tham số hợp lệ như email, SĐT đã băm, fbp, fbc thì Meta càng dễ khớp, giống như có nhiều manh mối hơn để nhận diện đúng người.",
+     "check": [
+      "Xem sự kiện đang gửi kèm những tham số khách hàng nào: email, SĐT đã băm, fbp, fbc (các mã cookie của Meta), địa chỉ IP, user agent (thông tin trình duyệt); thiếu nhiều tham số thì đó là lý do EMQ thấp."
+     ],
+     "do": [
+      "Hiểu rằng EMQ đánh giá mức thông tin khách hàng gửi kèm sự kiện giúp Meta khớp sự kiện với tài khoản Meta.",
+      "Thêm các tham số được phép còn thiếu, băm theo đúng hướng dẫn của Meta trước khi gửi, để tăng tỉ lệ khớp."
+     ],
+     "avoid": [
+      "Không gửi dữ liệu nhạy cảm như tình trạng sức khoẻ trong sự kiện để 'tăng thông tin', vì đây là dữ liệu không được gửi và có thể khiến nguồn dữ liệu bị hạn chế."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About Event Match Quality",
+       "url": "https://www.facebook.com/business/help/765081237991954"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-du-lieu-suc-khoe",
+     "if": "Website phòng khám bị Meta chặn sự kiện, không tối ưu chuyển đổi được",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Meta Business Help Community",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Gần như chắc chắn là Meta đã xếp nguồn dữ liệu (pixel/dataset) của website vào hạng mục sức khoẻ và hạn chế sự kiện. Việc đầu tiên là vào Events Manager (Trình quản lý sự kiện) xem nguồn dữ liệu có bị xếp hạng mục Sức khoẻ và hạn chế không. Sau đó rà và gỡ thông tin nhạy cảm khỏi URL và tham số; trong lúc sự kiện web bị chặn, chuyển sang lead form (form ngay trên Facebook) hoặc quảng cáo tin nhắn để vẫn có khách.",
+     "visao": "Meta không muốn nhận dữ liệu cho biết một người có vấn đề sức khoẻ gì, nên khi website thuộc lĩnh vực sức khoẻ, Meta có thể hạn chế các sự kiện phía dưới phễu (như gửi form, đặt lịch), URL chi tiết và tham số. Chẳng hạn URL chứa tên bệnh cũng đã là thông tin nhạy cảm. Khi các sự kiện này bị chặn, quảng cáo không còn tín hiệu để tối ưu chuyển đổi trên web, nên lead form hoặc tin nhắn, vốn ghi nhận ngay trên nền tảng Meta, là đường thay thế hợp lệ.",
+     "check": [
+      "Mở Events Manager, xem nguồn dữ liệu của website có bị xếp vào hạng mục Sức khoẻ và đang bị hạn chế không; nếu có, đây là nguyên nhân không tối ưu chuyển đổi được.",
+      "Rà URL và tham số sự kiện xem có chứa thông tin nhạy cảm (tên bệnh, dịch vụ khám cụ thể...) không; có thì đó là phần cần gỡ."
+     ],
+     "do": [
+      "Hiểu rằng Meta có thể xếp nguồn dữ liệu vào hạng mục sức khoẻ và hạn chế sự kiện phía dưới phễu, URL chi tiết và tham số; đây là chính sách, không phải lỗi kỹ thuật.",
+      "Rà nguồn dữ liệu, gỡ thông tin nhạy cảm khỏi URL và tham số gửi cho Meta.",
+      "Khi sự kiện web vẫn bị chặn, chuyển sang mục tiêu dùng lead form hoặc tin nhắn để tiếp tục thu khách hàng tiềm năng."
+     ],
+     "avoid": [
+      "Không đổi tên sự kiện hay đổi domain để né hạn chế, vì đây là hành vi né hệ thống và có thể khiến tài sản quảng cáo bị xử lý nặng hơn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About data source categories (Health and wellness)",
+       "url": "https://www.facebook.com/business/help/1402913027039332"
+      },
+      {
+       "title": "About restrictions on data sources",
+       "url": "https://www.facebook.com/business/help/511197658391698"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-lech-so-lieu",
+     "if": "Số chuyển đổi Meta báo khác số đơn thật / số Google Analytics",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Lệch là bình thường, vì Meta và Google Analytics (GA) đếm theo hai cách khác nhau. Meta tính chuyển đổi theo cửa sổ phân bổ và ghi nhận vào ngày quảng cáo được hiển thị, còn GA tính theo phiên truy cập và mô hình khác. Việc nên làm là so sánh trên cùng một khoảng thời gian dài và đối chiếu với CRM (hệ thống quản lý khách hàng) để biết số thật.",
+     "visao": "Ví dụ khách xem quảng cáo hôm thứ Hai, ba ngày sau mới vào web mua: Meta có thể ghi chuyển đổi về ngày thứ Hai, còn GA ghi vào phiên ngày thứ Năm và có thể gán cho kênh khác. Cửa sổ phân bổ (attribution window, khoảng thời gian sau khi click hoặc xem quảng cáo mà một chuyển đổi vẫn được tính cho quảng cáo) như 7 ngày click hay 1 ngày xem cũng làm số khác nhau. Mỗi hệ thống tự nhận công cho mình, nên chỉ CRM mới phản ánh số đơn thật.",
+     "check": [
+      "Xem cài đặt phân bổ đang dùng trong Meta (ví dụ 7 ngày click, 1 ngày xem) để biết Meta tính một chuyển đổi trong khoảng thời gian nào.",
+      "Kiểm tra múi giờ và cách đếm của từng hệ thống (Meta, GA, CRM); khác múi giờ hoặc khác định nghĩa chuyển đổi là đủ để số lệch nhau."
+     ],
+     "do": [
+      "Giải thích với nhóm và khách rằng Meta tính theo cửa sổ phân bổ, ghi vào ngày hiển thị quảng cáo, còn GA tính theo phiên với mô hình khác.",
+      "So sánh các nguồn trên cùng một khoảng thời gian đủ dài, rồi đối chiếu với CRM để chốt số thật."
+     ],
+     "avoid": [
+      "Không cộng số chuyển đổi của các nền tảng lại thành tổng doanh số, vì một đơn có thể được nhiều nền tảng cùng nhận công và tổng sẽ bị thổi phồng."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About attribution settings",
+       "url": "https://www.facebook.com/business/help/460276478298895"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-pixel-khong-ghi",
+     "if": "Pixel cài rồi mà Events Manager không thấy sự kiện",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Thường là pixel chưa thật sự bắn sự kiện, hoặc bị chặn trên trình duyệt. Việc đầu tiên là dùng Meta Pixel Helper (tiện ích trình duyệt của Meta) và mục Kiểm tra sự kiện (Test Events) trong Events Manager để xem sự kiện có về không. Sau đó kiểm từng bước: mã có trên trang, sự kiện bắn đúng lúc, tên miền đã xác minh; bổ sung CAPI để không phụ thuộc trình duyệt.",
+     "visao": "Pixel chỉ gửi được sự kiện khi đoạn mã thật sự chạy trên trang lúc khách thực hiện hành động. Nếu mã không có trên trang đó, sự kiện được gắn sai thời điểm, hoặc trình quản lý cookie (công cụ xin phép cookie trên web) chặn pixel, thì Events Manager sẽ trống. CAPI (Conversions API) gửi sự kiện từ máy chủ nên vẫn hoạt động khi trình duyệt chặn pixel.",
+     "check": [
+      "Mở trang web với Meta Pixel Helper và theo dõi mục Kiểm tra sự kiện trong Events Manager khi tự thao tác thử; không thấy sự kiện xuất hiện nghĩa là pixel chưa bắn.",
+      "Kiểm tra website có trình quản lý cookie đang chặn pixel không; nếu có, sự kiện chỉ về khi khách đồng ý cookie."
+     ],
+     "do": [
+      "Kiểm từng bước theo thứ tự: mã pixel có trên trang chưa, sự kiện bắn đúng lúc khách thực hiện hành động chưa, tên miền đã xác minh chưa.",
+      "Bổ sung CAPI để sự kiện không phụ thuộc vào trình duyệt; khi dùng cả hai thì gửi cùng event_id để Meta không đếm đôi."
+     ],
+     "avoid": [
+      "Không cài nhiều pixel trùng nhau cho cùng một sự kiện, vì dữ liệu bị phân tán hoặc đếm lặp, càng khó tìm lỗi."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Best practices for Conversions API (redundant setup)",
+       "url": "https://www.facebook.com/business/help/586304118741779"
+      },
+      {
+       "title": "About deduplication for Meta Pixel and Conversions API events",
+       "url": "https://www.facebook.com/business/help/823677331451951"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-creative",
+   "title": "Creative, bài viết, Advantage+, Andromeda, mục tiêu",
+   "intro": "Bài viết không quảng cáo được, tỉ lệ video, cần bao nhiêu creative thời Andromeda, Advantage+ có nên bật, chọn mục tiêu.",
+   "nodes": [
+    {
+     "id": "fm-bai-can-cap-nhat",
+     "if": "Ads dùng bài viết có sẵn báo 'Cần cập nhật', bài viết không quảng cáo được",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Trạng thái 'Cần cập nhật' (Update required) nghĩa là ads không còn khớp với cài đặt hiện tại, thường sau khi bạn sửa ad set hoặc bài viết thay đổi. Cách xử lý trước tiên là mở ads, chọn lại bài viết, bật và đăng lại. Nếu bài có nội dung không đạt chuẩn quảng cáo thì không boost (quảng cáo bài viết) được nữa, khi đó tạo ads mới từ nội dung khác.",
+     "visao": "Ads dùng bài viết có sẵn được gắn chặt với bài đó và với cài đặt của ad set (nhóm quảng cáo). Khi ad set vừa đổi đối tượng hoặc bên thanh toán, hay bài bị sửa, xoá, chuyển khỏi chế độ công khai, Meta coi ads cũ không còn hợp lệ và dừng phân phối cho tới khi bạn xác nhận lại. Thao tác chọn lại bài và đăng lại là cách báo cho Meta kiểm tra lại ads theo cài đặt mới.",
+     "check": [
+      "Mở bài viết gốc xem còn ở chế độ công khai không, có bị sửa hoặc xoá không; bài đã xoá hoặc không công khai thì không chọn lại được.",
+      "Xem ad set chứa ads vừa bị sửa đối tượng hoặc bên thanh toán không; nếu có, đây gần như chắc là nguyên nhân ads chuyển sang 'Cần cập nhật'."
+     ],
+     "do": [
+      "Mở ads trong Ads Manager, chọn lại bài viết, bật ads và bấm đăng lại; ads chạy lại khi trạng thái hết báo 'Cần cập nhật'.",
+      "Nếu bài có nội dung không đạt chuẩn quảng cáo nên không boost được, tạo ads mới từ nội dung khác thay vì cố sửa ads cũ."
+     ],
+     "avoid": [
+      "Không xoá bài đang chạy làm ads, vì sẽ mất toàn bộ tương tác đã tích luỹ trên bài và ads dùng bài đó hỏng theo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Troubleshoot Facebook ad delivery issues with an Update required status",
+       "url": "https://www.facebook.com/business/help/301791827326004"
+      },
+      {
+       "title": "How to troubleshoot a rejected ad",
+       "url": "https://www.facebook.com/business/help/1210227555661027"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-ti-le-video",
+     "if": "Video nên tỉ lệ nào, 3 giây đầu quan trọng đến mức nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Nên làm video dọc 9:16 cho Reels và Stories, 4:5 hoặc 1:1 cho Feed (bảng tin); nếu thiếu tỉ lệ, Meta tự điều chỉnh theo vị trí nhưng kết quả không chủ động bằng. 3 giây đầu rất quan trọng: Meta khuyên phải thu hút ngay trong 3 giây đầu và thiết kế để xem không tiếng vẫn hiểu. Việc đầu tiên là xác định vị trí hiển thị chính rồi dựng đúng tỉ lệ cho vị trí đó.",
+     "visao": "Mỗi vị trí hiển thị có khung khác nhau: Reels, Stories chiếm trọn màn hình dọc, còn Feed hiển thị khung vuông hoặc gần vuông. Video sai tỉ lệ sẽ bị viền đen, bị cắt hoặc thu nhỏ, làm mất chữ và giảm sức hút. Trên Reels, Stories còn có vùng bị giao diện che (nút, tên trang), gọi là ngoài vùng an toàn, nên chữ đặt ở đó dễ bị che mất. Người xem lướt rất nhanh và nhiều người tắt tiếng, nên 3 giây đầu và phụ đề quyết định họ có dừng lại không.",
+     "check": [
+      "Xác định vị trí chính của quảng cáo (Reels, Stories hay Feed) để chọn tỉ lệ video phù hợp.",
+      "Kiểm tra chữ và logo có nằm trong vùng an toàn (safe zone, phần không bị giao diện Stories/Reels che) không; nằm ngoài thì dễ bị che khi hiển thị."
+     ],
+     "do": [
+      "Dựng bản 9:16 cho Reels và Stories, bản 4:5 hoặc 1:1 cho Feed; nếu thiếu bản nào, Meta tự điều chỉnh theo vị trí nhưng nên chủ động làm đủ.",
+      "Đặt chữ và logo trong vùng an toàn của Stories và Reels.",
+      "Theo khuyến nghị của Meta, đưa điểm thu hút vào 3 giây đầu và thiết kế để xem không tiếng vẫn hiểu (ví dụ có chữ, phụ đề)."
+     ],
+     "avoid": [
+      "Không dùng một video ngang cho mọi vị trí, vì trên Reels và Stories video sẽ nhỏ, nhiều khoảng trống và kém thu hút so với video dọc."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Aspect ratios and automatic placement adjustments",
+       "url": "https://www.facebook.com/business/help/103816146375741"
+      },
+      {
+       "title": "Safe zones for ads in Stories and Reels",
+       "url": "https://www.facebook.com/business/help/980593475366490"
+      },
+      {
+       "title": "Best practices for video ads (3 giây đầu)",
+       "url": "https://www.facebook.com/business/help/188534925073536"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-andromeda-creative",
+     "if": "Andromeda là gì? Cần bao nhiêu creative, đổi chữ trên ảnh có tính là creative mới?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Andromeda là hệ thống truy xuất quảng cáo (khâu chọn ra các quảng cáo ứng viên) mà Meta công bố tháng 12/2024, chọn quảng cáo cho từng người dựa nhiều vào nội dung creative (hình, video, chữ của mẫu quảng cáo). Meta chưa công bố cần bao nhiêu creative; chuyên gia khuyên đa dạng creative thật, khác concept, hình và định dạng, thay vì làm nhiều bản gần giống. Bản chỉ đổi chữ trên cùng một ảnh thường bị hệ thống xem gần như cùng một quảng cáo.",
+     "visao": "Theo bài công bố của Meta Engineering, Andromeda chọn ứng viên quảng cáo theo nội dung creative cho từng người. Vì vậy mỗi creative khác biệt thật giống như một 'cửa' mới tiếp cận một nhóm người khác, còn mười bản gần giống chỉ là một cửa. Meta không công bố ngưỡng thế nào là 'giống nhau'; nhận định rằng đổi chữ trên cùng ảnh gần như không tính là mới là của chuyên gia, chưa phải số chính thức.",
+     "check": [
+      "So các creative trong cùng nhóm: chúng có khác nhau thật về hình, góc thể hiện, định dạng không; nếu chỉ khác dòng chữ trên cùng một ảnh thì gần như là một creative."
+     ],
+     "do": [
+      "Hiểu Andromeda là hệ thống truy xuất quảng cáo của Meta (công bố 12/2024), chọn ứng viên quảng cáo theo nội dung creative cho từng người.",
+      "Theo khuyến nghị của chuyên gia, làm creative đa dạng thật: khác concept, khác hình, khác định dạng (ảnh, video, băng chuyền), thay vì nhiều bản gần giống.",
+      "Coi bản chỉ đổi chữ trên cùng ảnh là gần như cùng một quảng cáo (nhận định chuyên gia, Meta chưa công bố ngưỡng); muốn có creative mới thì đổi hẳn hình hoặc cách thể hiện."
+     ],
+     "avoid": [
+      "Không nhồi hàng chục biến thể gần giống nhau vào một nhóm quảng cáo, vì hệ thống xem chúng gần như một, ngân sách dồn vào vài bản và bạn tốn công mà không có thêm tiếp cận mới."
+     ],
+     "evidence": "chuyen-gia",
+     "sources": [
+      {
+       "title": "Meta Andromeda, 02/12/2024 (Meta Engineering)",
+       "url": "https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/"
+      },
+      {
+       "title": "Meta Andromeda, Jon Loomer (cập nhật 15/12/2025)",
+       "url": "https://www.jonloomer.com/meta-andromeda/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-advantage-aud",
+     "if": "Có nên bật Advantage+ đối tượng / chạy đối tượng rộng?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Có thể bật, nhưng chỉ khi chiến dịch tối ưu chuyển đổi và có tín hiệu tốt. Advantage+ đối tượng (Advantage+ audience, chế độ để Meta tự tìm người xem) dùng gợi ý đối tượng của bạn làm điểm bắt đầu và có thể mở rộng ra ngoài. Việc nên làm trước là chạy thử A/B (so sánh hai phương án song song) với đối tượng hiện tại rồi mới chuyển hẳn.",
+     "visao": "Khi để đối tượng rộng, Meta dựa vào tín hiệu chuyển đổi (ai đã mua, đã gửi form) để học xem nên tìm người như thế nào. Có nhiều tín hiệu tốt thì hệ thống tìm được người phù hợp ngoài nhóm bạn tự chọn; thiếu tín hiệu thì nó dễ tìm người chỉ hay bấm mà không chuyển đổi. Thử A/B giúp so sánh công bằng trước khi đổi hẳn cách nhắm.",
+     "check": [
+      "Kiểm tra chiến dịch đã có dữ liệu chuyển đổi tốt chưa (sự kiện đo đủ và đúng); chưa có thì Advantage+ đối tượng khó phát huy.",
+      "Xem ngành của bạn có bị giới hạn nhắm mục tiêu không; ngành bị giới hạn thì các tuỳ chọn đối tượng có thể khác."
+     ],
+     "do": [
+      "Hiểu rằng Advantage+ đối tượng lấy gợi ý của bạn làm điểm bắt đầu và có thể mở rộng ra ngoài gợi ý đó.",
+      "Chỉ dùng cho chiến dịch tối ưu chuyển đổi có tín hiệu tốt; chạy thử nghiệm A/B với đối tượng hiện tại trước khi chuyển hẳn."
+     ],
+     "avoid": [
+      "Không bật cho chiến dịch thiếu đo lường rồi đánh giá theo số click, vì hệ thống không có tín hiệu chuyển đổi để học và click nhiều không có nghĩa là ra khách."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About Advantage+ audience",
+       "url": "https://www.facebook.com/business/help/793748385630490"
+      },
+      {
+       "title": "About A/B testing",
+       "url": "https://www.facebook.com/business/help/1738164643098669"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-creative-enhancement",
+     "if": "Meta tự đổi chữ, thêm nhạc, chỉnh ảnh QC của tôi (Advantage+ creative)",
+     "hat": "white",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Đây là các cải tiến tự động của Advantage+ creative (tính năng để Meta tự chỉnh mẫu quảng cáo), có thể đang bật mặc định. Bạn tắt được từng tuỳ chọn không phù hợp trong phần sửa ads. Ngành cần kiểm duyệt câu chữ như y tế, tài chính nên tắt các tuỳ chọn tự đổi văn bản để chữ hiển thị đúng như đã duyệt.",
+     "visao": "Meta thêm các cải tiến như chỉnh ảnh, thêm nhạc, đổi văn bản với kỳ vọng tăng hiệu quả cho từng người xem. Vì có thể được bật mặc định, quảng cáo hiển thị ra ngoài có thể khác bản bạn đã soạn. Với ngành nhạy cảm, một câu chữ do máy viết lại có thể sai chuyên môn hoặc vi phạm quy định quảng cáo, nên cần kiểm soát từng tuỳ chọn.",
+     "check": [
+      "Mở phần sửa ads, xem các tuỳ chọn cải tiến creative đang bật ở cấp ads (chỉnh ảnh, thêm nhạc, đổi văn bản...)."
+     ],
+     "do": [
+      "Hiểu rằng Advantage+ creative có các cải tiến tự động như chỉnh ảnh, thêm nhạc, đổi văn bản, và có thể bật mặc định.",
+      "Tắt từng tuỳ chọn không phù hợp trong phần sửa ads, ưu tiên tắt với ngành cần kiểm duyệt câu chữ như y tế, tài chính."
+     ],
+     "avoid": [
+      "Không để AI tự viết lại chữ quảng cáo cho ngành nhạy cảm mà không kiểm, vì câu chữ hiển thị có thể sai so với bản đã duyệt và gây vi phạm."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About Advantage+ creative enhancements",
+       "url": "https://www.facebook.com/business/help/1082295769403815"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-chon-muc-tieu",
+     "if": "Chọn mục tiêu nào: Tương tác, Lưu lượng, Khách hàng tiềm năng hay Doanh số?",
+     "hat": "white",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds",
+      "Quora"
+     ],
+     "tomtat": "Chọn mục tiêu gần nhất với kết quả kinh doanh bạn cần: cần lead thì chọn Khách hàng tiềm năng, cần đơn thì chọn Doanh số. Meta phân phối quảng cáo cho người dễ làm đúng hành động của mục tiêu đã chọn. Tương tác và Lưu lượng chỉ để hỗ trợ, không dùng để ra lead hay đơn.",
+     "visao": "Mục tiêu là lệnh cho Meta biết bạn muốn tối ưu hành động gì. Chọn Tương tác thì Meta tìm người hay thích, bình luận; chọn Lưu lượng thì tìm người hay bấm link; những người này không nhất thiết là người sẽ để lại thông tin hay mua. Vì vậy muốn ra lead hay đơn thì phải nói đúng điều đó với Meta qua mục tiêu.",
+     "check": [
+      "Xác định hành động cuối cùng bạn cần là gì (để lại thông tin, nhắn tin, mua hàng) trước khi chọn mục tiêu."
+     ],
+     "do": [
+      "Chọn mục tiêu gần nhất với kết quả kinh doanh, vì Meta phân phối cho người dễ làm đúng hành động của mục tiêu.",
+      "Chỉ dùng Tương tác hoặc Lưu lượng để hỗ trợ (ví dụ tăng nhận biết), không dùng để kỳ vọng ra lead hay đơn."
+     ],
+     "avoid": [
+      "Không chạy mục tiêu Tương tác vì thấy 'rẻ' rồi kỳ vọng ra đơn, vì Meta đang tìm người hay tương tác chứ không phải người mua, nên tiền tiêu ra không thành đơn."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Choose the right objective in Meta Ads Manager",
+       "url": "https://www.facebook.com/business/help/1621419411431034"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-xam-den",
+   "title": "Vùng xám và black hat",
+   "intro": "Những câu hỏi về nuôi via, mua BM, thuê tài khoản, chạy bùng, cloaking, mạo danh, lách chữ, né thực thi. Trả lời theo khung 4 phần, không hướng dẫn cách lách.",
+   "nodes": [
+    {
+     "id": "fm-nuoi-mua-via",
+     "if": "Nuôi via, mua via cổ/via ngoại để chạy QC cho 'trâu' có ổn không?",
+     "hat": "black",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld",
+      "Blog/forum Việt (Brands Vietnam, blog agency)"
+     ],
+     "tomtat": "Không nên. Mua via (nick Facebook cá nhân của người khác, thường là nick cũ hoặc nick nước ngoài) hay nuôi nhiều nick để chạy quảng cáo là vi phạm Community Standards (Tiêu chuẩn cộng đồng) của Meta về mua bán tài khoản và hành vi không xác thực. Khi bị khoá, bạn mất tiền mua, mất số dư và không kháng được vì không chứng minh được danh tính. Cách đúng là chạy bằng nick thật của người phụ trách trong Business Portfolio đã xác minh.",
+     "visao": "Meta đòi hỏi mỗi tài khoản quảng cáo gắn với một người thật chịu trách nhiệm, để khi có vi phạm thì biết ai chịu. Nick mua lại không phải của bạn nên khi Meta yêu cầu xác minh, bạn không có giấy tờ khớp và mất quyền kháng nghị. Ngoài ra chủ cũ của via vẫn có thể lấy lại nick bất cứ lúc nào, nên đây là một tài sản bạn không thật sự sở hữu.",
+     "check": [
+      "Xác định nick đang dùng để chạy quảng cáo có phải của chính người chạy (đứng tên, có giấy tờ khớp) không; nếu là nick mua hoặc nick 'nuôi' thì tài khoản đang ở trạng thái rủi ro cao."
+     ],
+     "do": [
+      "(1) Người ta mua nick cá nhân cũ (via) hoặc tự 'nuôi' nhiều nick để có tài khoản ít bị khoá, chạy song song nhiều tài khoản và thay nhanh khi bị khoá.",
+      "(2) Community Standards về Spam cấm mua, bán, trao đổi tài sản nền tảng như tài khoản, trang; chính sách Inauthentic Behavior (hành vi không xác thực) cấm dùng tài sản không xác thực để lừa Meta hoặc né thực thi.",
+      "(3) Meta khoá nick và khoá cả tài sản liên kết; người mua mất tiền mua via, mất số dư, chủ cũ có thể lấy lại nick, và không kháng được vì không chứng minh được danh tính.",
+      "(4) Cách đúng: chạy bằng nick thật của người phụ trách, trong Business Portfolio (tài khoản doanh nghiệp, trước gọi là BM) đã xác minh, và thêm 2 quản trị viên dự phòng để không phụ thuộc một nick."
+     ],
+     "avoid": [
+      "Không mua via, không thuê dịch vụ 'nuôi nick', vì toàn bộ tiền và tài sản quảng cáo đặt trên một nền móng mà bạn không sở hữu và có thể mất bất cứ lúc nào."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Spam (Community Standards: cloaking, chuyển hướng lừa, cấm mua bán tài khoản/trang)",
+       "url": "https://transparency.meta.com/policies/community-standards/spam/"
+      },
+      {
+       "title": "Inauthentic Behavior (Community Standards)",
+       "url": "https://transparency.meta.com/policies/community-standards/inauthentic-behavior/"
+      },
+      {
+       "title": "Account Integrity (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/business-assets/account-integrity/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-mua-bm",
+     "if": "Mua BM50, BM350, BM2500, 'BM kháng', 'BM xác minh sẵn' về chạy được không?",
+     "hat": "black",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld",
+      "Blog/forum Việt (Brands Vietnam, blog agency)"
+     ],
+     "tomtat": "Không nên. Mua BM (Business Manager, nay là Business Portfolio) dạng BM50, BM350, BM2500, 'BM kháng', 'BM xác minh sẵn' là mua bán tài sản nền tảng, bị cấm trong Community Standards về Spam, và dùng tài sản không xác thực để né thực thi cũng bị cấm. Khi BM bị khoá, mọi tài khoản quảng cáo, pixel trong đó dừng và bạn không kháng được. Cách đúng là tự tạo Business Portfolio, xác minh doanh nghiệp và để giới hạn chi tiêu tăng dần theo lịch sử.",
+     "visao": "Giới hạn chi tiêu và độ tin cậy của một BM được Meta xây dựng theo lịch sử hoạt động của chính chủ sở hữu. Mua một BM 'cao cấp' của người khác giống như mượn hồ sơ tín dụng của người lạ: thông tin xác minh không khớp với bạn, nên khi có sự cố, bạn không chứng minh được mình là chủ. Người bán vẫn giữ quyền truy cập nên có thể chiếm lại bất cứ lúc nào.",
+     "check": [
+      "Kiểm tra Business Portfolio và tài sản trong đó có đứng tên doanh nghiệp của bạn không; nếu xác minh bằng giấy tờ của người khác thì tài sản đó không thật sự thuộc về bạn."
+     ],
+     "do": [
+      "(1) Người ta mua BM có giới hạn chi tiêu cao hoặc 'đã kháng' để chạy ngay, chạy ngành bị hạn chế, hoặc có sẵn tài khoản thay thế khi bị khoá.",
+      "(2) Mua bán tài sản nền tảng bị cấm trong Community Standards về Spam; dùng tài sản không xác thực để né thực thi bị cấm trong Inauthentic Behavior (hành vi không xác thực) và Account Integrity (tính toàn vẹn tài khoản).",
+      "(3) BM bị khoá (die) thì mọi tài khoản quảng cáo (TKQC), pixel trong đó dừng; thông tin xác minh không khớp chủ thật nên không kháng được; tiền mua và số dư mất, người bán có thể chiếm lại.",
+      "(4) Cách đúng: tự tạo Business Portfolio, xác minh doanh nghiệp, để giới hạn chi tiêu tăng theo lịch sử; cần chi lớn ngay thì làm việc với đối tác của Meta."
+     ],
+     "avoid": [
+      "Không mua BM 'xác minh sẵn' bằng giấy tờ của người khác, vì đó là tài sản không xác thực, có thể bị khoá cả cụm và bạn không có cơ sở nào để kháng nghị."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Spam (Community Standards: cloaking, chuyển hướng lừa, cấm mua bán tài khoản/trang)",
+       "url": "https://transparency.meta.com/policies/community-standards/spam/"
+      },
+      {
+       "title": "Inauthentic Behavior (Community Standards)",
+       "url": "https://transparency.meta.com/policies/community-standards/inauthentic-behavior/"
+      },
+      {
+       "title": "Account Integrity (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/business-assets/account-integrity/"
+      },
+      {
+       "title": "About daily spending limits set by Meta",
+       "url": "https://www.facebook.com/business/help/563129151097553"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-thue-tk-agency",
+     "if": "Thuê tài khoản agency / tài khoản invoice, phí 3-8%, 'nhận mọi ngành' có an toàn?",
+     "hat": "gray",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Tuỳ bên cho thuê: làm với agency thật, có hợp đồng và hoá đơn là hợp lệ; thuê tài khoản quảng cáo (TKQC) của người bán trên diễn đàn là vùng xám nhiều rủi ro; còn bên quảng cáo 'nhận mọi ngành', 'nhận ngành cấm' hay 'hỗ trợ cloaking' thì đã là black hat. Việc đầu tiên là kiểm bên cho thuê là đối tác chính thức của Meta hay chỉ là người bán, và ai sở hữu TKQC, pixel, dữ liệu. An toàn nhất là tài khoản nằm trong portfolio của bạn hoặc agency chính thức xuất hoá đơn.",
+     "visao": "Khi bạn chạy trên tài khoản của người khác, mọi thứ có giá trị như lịch sử, pixel, dữ liệu khách hàng, số dư đều nằm trong tay họ. Nếu bên cho thuê nhận cả hàng cấm, tài khoản của họ dễ bị khoá và kéo theo cả hệ thống tài khoản liên quan, trong đó có phần bạn đang chạy. Agency thật thì làm theo cơ chế chia quyền tài sản của Meta, có hợp đồng ràng buộc, nên quyền sở hữu rõ ràng.",
+     "check": [
+      "Kiểm tra bên cho thuê là đối tác chính thức của Meta (có thể đối chiếu qua Meta Success Center for Agencies) hay chỉ là người bán trên diễn đàn.",
+      "Đọc kỹ quảng cáo dịch vụ của họ: có nhận ngành cấm, có 'hỗ trợ cloaking' (cho hệ thống duyệt thấy trang khác người xem) không; có thì đây là black hat.",
+      "Xác định ai sở hữu TKQC, pixel và dữ liệu; nếu không phải bạn thì tính sẵn kịch bản mất tất cả khi tài khoản bị khoá."
+     ],
+     "do": [
+      "(1) Người ta thuê TKQC 'agency' hoặc tài khoản trả sau theo hoá đơn (invoice), trả phí 3-8%, để chạy được ngay, ít bị khoá hơn hoặc chạy ngành khó.",
+      "(2) Làm việc với agency thật là hợp lệ: agency là đối tác, bạn chia quyền tài sản, có hợp đồng và hoá đơn rõ ràng. Thuê TKQC của người khác trên diễn đàn để chạy hàng của mình là vùng xám.",
+      "(3) Ở vùng xám, bạn không sở hữu tài khoản, dữ liệu và có thể mất số dư khi tài khoản bị khoá.",
+      "(3) Bên quảng cáo 'nhận ngành cấm', 'hỗ trợ cloaking' (thấy rất nhiều trên BlackHatWorld) là black hat: vi phạm trực tiếp chính sách và có thể kéo theo toàn bộ hệ thống tài khoản.",
+      "(4) Cách đúng: tài khoản nằm trong portfolio của bạn, hoặc agency chính thức xuất hoá đơn, nội dung quảng cáo đúng chính sách."
+     ],
+     "avoid": [
+      "Không chuyển tiền lớn cho bên cho thuê tài khoản không có pháp nhân, không có hợp đồng, vì khi tài khoản bị khoá hoặc bên đó biến mất, bạn không có cơ sở đòi lại."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Give a partner access to business assets in your business portfolio",
+       "url": "https://www.facebook.com/business/help/1717412048538897"
+      },
+      {
+       "title": "Share access to legal entity",
+       "url": "https://www.facebook.com/business/help/323709732376703"
+      },
+      {
+       "title": "Meta Success Center for Agencies",
+       "url": "https://www.facebook.com/business/agencies/about"
+      },
+      {
+       "title": "Account Integrity (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/business-assets/account-integrity/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-chay-bung",
+     "if": "Chạy bùng / chạy nợ ngưỡng rồi bỏ tài khoản có bị gì không?",
+     "hat": "black",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld",
+      "Blog/forum Việt (Brands Vietnam, blog agency)"
+     ],
+     "tomtat": "Có, và hậu quả nặng. Chạy bùng (tiêu đến ngưỡng thanh toán rồi không trả, bỏ tài khoản) là không trả tiền cho dịch vụ đã dùng: theo Điều khoản quảng cáo tự phục vụ của Meta, bạn vẫn nợ, chịu lãi quá hạn và có thể bị thu nợ. Tài khoản, nick, thẻ, portfolio liên kết mang lịch sử nợ và bị hạn chế. Cách đúng là đặt ngưỡng thanh toán bằng khả năng chi, hoặc dùng trả trước.",
+     "visao": "Với hình thức trả sau, Meta cho bạn chạy trước rồi trừ tiền khi chạm ngưỡng thanh toán (payment threshold), tức là Meta đang cho bạn nợ ngắn hạn. Bỏ tài khoản không xoá khoản nợ đó, vì nghĩa vụ trả tiền nằm trong điều khoản bạn đã đồng ý. Các tài sản dùng chung (nick, thẻ, portfolio) bị gắn với lịch sử nợ nên cũng bị hạn chế theo.",
+     "check": [
+      "Không có gì để 'kiểm cho an toàn' ở đây: đây là hành vi không trả tiền cho dịch vụ đã dùng."
+     ],
+     "do": [
+      "(1) Người ta dùng tài khoản có ngưỡng cao, thẻ không đủ tiền hoặc thẻ ảo để tiêu đến ngưỡng rồi không thanh toán và bỏ tài khoản.",
+      "(2) Điều khoản quảng cáo tự phục vụ (Self-Serve Ad Terms) yêu cầu trả đủ; quá hạn chịu lãi 1%/tháng; Meta có thể dùng bên thu nợ và bạn chịu chi phí thu nợ, phí luật sư.",
+      "(3) TKQC bị vô hiệu; nick, thẻ, portfolio liên kết mang lịch sử nợ và bị hạn chế; với tổ chức, đây là nghĩa vụ hợp đồng có thể bị đòi.",
+      "(3) Dùng thẻ không phải của mình để chạy rồi bỏ nợ có thể là hành vi gian lận theo pháp luật.",
+      "(4) Cách đúng: đặt ngưỡng thanh toán tối đa bằng khả năng chi, dùng hình thức trả trước nếu dòng tiền eo hẹp."
+     ],
+     "avoid": [
+      "Không mua 'tài khoản ngưỡng', không tham gia 'chạy bùng chia %', vì người tham gia vẫn gánh rủi ro pháp lý và mất các tài sản quảng cáo liên kết."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Meta Self-Serve Ad Terms (Điều khoản quảng cáo tự phục vụ)",
+       "url": "https://www.facebook.com/legal/self_service_ads_terms"
+      },
+      {
+       "title": "Fix a failed payment issue on Meta",
+       "url": "https://www.facebook.com/business/help/268196136699959"
+      },
+      {
+       "title": "Adjust your payment threshold",
+       "url": "https://www.facebook.com/business/help/1342874532544030"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-cloaking",
+     "if": "Cloaking / landing 2 lớp để QC qua duyệt có dùng được không?",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Không dùng được, đây là vi phạm nặng. Cloaking (che giấu trang đích) là cho hệ thống duyệt thấy trang 'sạch' còn người bấm vào thấy trang khác; Community Standards về Spam của Meta cấm rõ hành vi này. Meta khoá cả tài khoản người dùng lẫn TKQC liên quan và đã từng khởi kiện người bán công cụ cloaking. Cách đúng là một trang đích cho mọi người, nội dung khớp quảng cáo.",
+     "visao": "Quy trình duyệt quảng cáo chỉ có ý nghĩa khi người duyệt và người xem thấy cùng một thứ. Cloaking phá đúng điểm đó nên Meta coi là lừa dối có chủ đích, xử lý nặng hơn nhiều so với một quảng cáo bị từ chối thông thường. Vụ kiện năm 2020 cho thấy Meta theo đuổi cả về pháp lý, không chỉ khoá tài khoản.",
+     "check": [
+      "Kiểm tra người xem và hệ thống duyệt có thấy cùng một trang không; nếu khác thì đó là cloaking.",
+      "Kiểm tra trang đích có chuyển hướng theo IP, user agent (thông tin trình duyệt), quốc gia nhằm che trang thật không; có thì phải gỡ ngay."
+     ],
+     "do": [
+      "(1) Cloaking là cho hệ thống duyệt thấy trang 'sạch' còn người click thấy trang khác, thường để chạy hàng cấm hoặc lừa đảo.",
+      "(2) Community Standards về Spam định nghĩa cloaking là cố ý hiển thị nội dung ngoài nền tảng khác nhau để né chính sách; chuyển hướng tự động sang tên miền khác hẳn cũng bị cấm.",
+      "(3) Meta khoá tài khoản người dùng và TKQC liên quan, và đã kiện: năm 2020 Facebook kiện Basant Gajjar (LeadCloak) vì bán phần mềm cloaking, đòi bồi thường và lệnh cấm.",
+      "(4) Cách đúng: một trang đích cho mọi người, nội dung khớp quảng cáo; sản phẩm không chạy được trên Meta thì chọn kênh khác hợp pháp."
+     ],
+     "avoid": [
+      "Không mua dịch vụ 'cloak', không chặn crawler (bot thu thập trang) của Meta khỏi trang đích, vì đây chính là dấu hiệu né duyệt và dẫn tới khoá tài khoản."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Spam (Community Standards: cloaking, chuyển hướng lừa, cấm mua bán tài khoản/trang)",
+       "url": "https://transparency.meta.com/policies/community-standards/spam/"
+      },
+      {
+       "title": "Facebook sues Bangkok resident for selling fraudulent ad tools, Reuters (09/04/2020)",
+       "url": "https://www.reuters.com/article/us-facebook-lawsuit/facebook-sues-bangkok-resident-for-selling-fraudulent-ad-tools-idUSKCN21R3CH/"
+      },
+      {
+       "title": "Facebook v. Gajjar (LeadCloak), đơn kiện vụ 3:20-cv-02429, toà Bắc California",
+       "url": "https://digitalcommons.law.scu.edu/cgi/viewcontent.cgi?article=3196&context=historical"
+      },
+      {
+       "title": "Circumventing Systems and Evading Enforcement, Jon Loomer (14/10/2024)",
+       "url": "https://www.jonloomer.com/qvt/circumventing-systems-and-evading-enforcement/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-prelander-bao-gia",
+     "if": "Dùng trang 'báo giả', bài review giả làm pre-lander dẫn sang trang bán",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Reddit r/FacebookAds",
+      "WarriorForum"
+     ],
+     "tomtat": "Không nên, đây là vi phạm. Trang giả giao diện báo hoặc bài review giả làm pre-lander (trang trung gian trước trang bán) bị chính sách Unacceptable Business Practices, nay gộp vào Prohibited Commercial Practices, cấm vì là tuyên bố lừa dối và mạo danh. Meta gỡ quảng cáo, hạn chế tài khoản và mở rộng hình phạt khi tái phạm. Cách đúng là trang bán thật với đánh giá thật của khách có thể kiểm chứng.",
+     "visao": "Trang giả báo khiến người xem tưởng đây là tin tức độc lập, trong khi thực chất là quảng cáo; đó là lừa dối người dùng, điều Meta coi là nghiêm trọng vì gây thiệt hại trực tiếp cho người mua. Kiểu trang này hay gặp ở thực phẩm chức năng, đầu tư, nên các ngành này bị soi kỹ hơn. Hình phạt không dừng ở một quảng cáo mà có thể lan sang người dùng, trang và portfolio liên quan.",
+     "check": [
+      "Xem trang có giả giao diện báo, dùng tên báo hoặc chuyên gia không có thật, hoặc dùng tên khi họ không đồng ý không; có bất kỳ dấu hiệu nào thì trang đó vi phạm."
+     ],
+     "do": [
+      "(1) Người ta làm trang giống bài báo hoặc bài review để tăng niềm tin rồi dẫn sang trang bán, hay gặp ở thực phẩm chức năng và đầu tư.",
+      "(2) Chính sách Unacceptable Business Practices (nay gộp vào Prohibited Commercial Practices) cấm tuyên bố lừa dối, mạo danh tổ chức hay tờ báo để lừa người xem.",
+      "(3) Meta gỡ quảng cáo, giảm phân phối, hạn chế TKQC, yêu cầu xác minh nhà quảng cáo, khoá tài khoản, và mở rộng hình phạt sang người dùng, trang, portfolio liên quan khi tái phạm.",
+      "(4) Cách đúng: trang bán thật, đánh giá thật của khách có thể kiểm chứng, nội dung khớp quảng cáo."
+     ],
+     "avoid": [
+      "Không giả giao diện báo, không bịa chuyên gia, không bịa đánh giá, vì đây là nội dung lừa dối, vừa bị Meta xử lý vừa làm mất uy tín thương hiệu khi bị phát hiện."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Unacceptable Business Practices (Advertising Standards)",
+       "url": "https://transparency.meta.com/en-us/policies/ad-standards/fraud-scams/unacceptable-business-practices"
+      },
+      {
+       "title": "Our Prohibited Commercial Practices policy (Meta Transparency Center)",
+       "url": "https://transparency.meta.com/policies/other-policies/our-prohibited-commercial-practices-policy/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-mao-danh",
+     "if": "Dùng ảnh/video người nổi tiếng, MC, bác sĩ nổi tiếng để chạy QC",
+     "hat": "black",
+     "asked": [
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Không được, trừ khi có hợp đồng cho phép dùng hình ảnh. Ghép ảnh, video, giọng nói người nổi tiếng (kể cả deepfake, tức hình hoặc giọng giả do AI tạo) để dụ click bị Meta cấm; chính sách Prohibited Commercial Practices (2026) còn mở rộng thực thi với 'celebrity-bait' (dùng người nổi tiếng làm mồi) ở cả quảng cáo lẫn bài thường. Cách đúng là dùng người thật đã ký hợp đồng và ghi rõ hợp tác thương hiệu.",
+     "visao": "Hình ảnh người nổi tiếng tạo niềm tin rất nhanh, nên bị lợi dụng nhiều trong lừa đảo; Meta xem đây là thủ thuật gây hiểu lầm cho người xem. Ngoài chính sách nền tảng, người bị dùng hình còn có quyền khởi kiện theo luật về quyền hình ảnh, nên rủi ro không dừng ở việc mất tài khoản.",
+     "check": [
+      "Kiểm tra có hợp đồng cho phép dùng hình ảnh, giọng nói của người xuất hiện trong quảng cáo không; không có thì không được dùng."
+     ],
+     "do": [
+      "(1) Người ta ghép ảnh, video, giọng nói (kể cả deepfake) của người nổi tiếng, MC, bác sĩ nổi tiếng để thu hút click.",
+      "(2) Meta cấm dùng hình ảnh người nổi tiếng kèm thủ thuật gây hiểu lầm để dụ tương tác; chính sách Prohibited Commercial Practices (2026) mở rộng thực thi với 'celebrity-bait' ở cả quảng cáo lẫn bài thường.",
+      "(3) Quảng cáo bị gỡ, tài khoản bị hạn chế hoặc khoá; người bị mạo danh có thể kiện theo luật về quyền hình ảnh.",
+      "(4) Cách đúng: dùng người thật đã ký hợp đồng, ghi rõ là hợp tác thương hiệu."
+     ],
+     "avoid": [
+      "Không dùng AI tạo giọng hoặc hình người nổi tiếng, vì vừa vi phạm chính sách Meta vừa có thể bị chính người đó kiện."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Our Prohibited Commercial Practices policy (Meta Transparency Center)",
+       "url": "https://transparency.meta.com/policies/other-policies/our-prohibited-commercial-practices-policy/"
+      },
+      {
+       "title": "Unacceptable Business Practices (Advertising Standards)",
+       "url": "https://transparency.meta.com/en-us/policies/ad-standards/fraud-scams/unacceptable-business-practices"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-lach-chu",
+     "if": "Viết lách chữ (k.e.m, ký tự đặc biệt, che ảnh) để chạy sản phẩm cấm/nhạy cảm",
+     "hat": "black",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Không nên, và hàng cấm thì không được quảng cáo dưới bất kỳ cách viết nào. Tách chữ (k.e.m), thay ký tự đặc biệt, làm mờ ảnh để né duyệt bị Meta coi là lách hệ thống (circumventing systems), hậu quả nặng hơn một lần từ chối thường. Việc đầu tiên là kiểm sản phẩm có thuộc danh mục hàng hạn chế (Restricted Goods and Services) không; hàng được phép thì viết rõ ràng, nhắm đúng độ tuổi.",
+     "visao": "Một quảng cáo bị từ chối vì nội dung chỉ là lỗi nội dung; nhưng cố tình che chữ, che hình để qua duyệt cho thấy ý định đánh lừa hệ thống, nên Meta xử lý vào hành vi của người quảng cáo chứ không chỉ quảng cáo đó. Vì vậy hình phạt có thể lan tới tài sản kinh doanh như TKQC, trang, portfolio.",
+     "check": [
+      "Đối chiếu sản phẩm với danh mục Restricted Goods and Services (hàng hoá, dịch vụ bị hạn chế) của Meta để biết được quảng cáo, được quảng cáo có điều kiện hay bị cấm."
+     ],
+     "do": [
+      "(1) Người ta tách chữ, thay ký tự, làm mờ ảnh để hệ thống không nhận ra nội dung bị cấm.",
+      "(2) Meta coi việc dùng ký tự unicode, ký hiệu để che từ ngữ và làm mờ ảnh nhằm né duyệt là lách hệ thống (circumventing systems).",
+      "(3) Hậu quả nặng hơn từ chối thường: tài sản kinh doanh bị hạn chế vì hành vi, có thể khoá TKQC, trang, portfolio.",
+      "(4) Cách đúng: đọc danh mục hàng hạn chế; hàng được phép thì viết rõ ràng, nhắm đúng độ tuổi; hàng cấm thì không quảng cáo trên Meta."
+     ],
+     "avoid": [
+      "Không chạy hàng cấm dưới bất kỳ cách viết nào, vì bị phát hiện là mất cả hệ thống tài khoản chứ không chỉ một quảng cáo."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Circumventing Systems and Evading Enforcement, Jon Loomer (14/10/2024)",
+       "url": "https://www.jonloomer.com/qvt/circumventing-systems-and-evading-enforcement/"
+      },
+      {
+       "title": "Restricted Goods and Services (Community Standards)",
+       "url": "https://transparency.meta.com/policies/community-standards/restricted-goods-services"
+      },
+      {
+       "title": "Account Integrity (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/business-assets/account-integrity/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-doi-ten-domain",
+     "if": "Bị chặn domain/trang thì đổi domain mới, đổi tên trang để chạy tiếp",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Không nên. Đổi domain hoặc đổi tên trang để thoát lịch sử vi phạm bị Meta xem là né thực thi theo chính sách Account Integrity (tính toàn vẹn tài khoản); tài sản mới bị khoá nhanh hơn và kéo theo tài sản liên kết. Việc đầu tiên là tìm hiểu domain hoặc trang bị chặn vì lý do gì, sửa nội dung rồi kháng nghị trên chính tài sản cũ.",
+     "visao": "Theo Account Integrity, Meta có thể hạn chế tài sản được tạo hoặc dùng lại để né lần xử lý trước, kể cả khi đánh giá thấy có chung chủ sở hữu và nội dung. Nghĩa là đổi tên miền mà giữ nguyên chủ và nội dung thì vấn đề vẫn còn nguyên, chỉ thêm một vi phạm né thực thi. Chuyển hướng sang domain khác hẳn cũng bị cấm trong chính sách Spam.",
+     "check": [
+      "Xác định domain hoặc trang bị chặn vì lý do gì và nội dung vi phạm đã được sửa chưa; chưa sửa thì mọi tài sản mới dùng lại nội dung đó đều sẽ gặp lại vấn đề."
+     ],
+     "do": [
+      "(1) Người ta mua domain mới hoặc đổi tên trang để thoát lịch sử vi phạm.",
+      "(2) Account Integrity: Meta có thể hạn chế tài sản tạo hoặc dùng lại để né lần xử lý trước, gồm khi đánh giá có chung chủ sở hữu và nội dung; chuyển hướng sang domain khác hẳn bị cấm trong chính sách Spam.",
+      "(3) Tài sản mới bị khoá nhanh hơn và kéo theo các tài sản liên kết.",
+      "(4) Cách đúng: sửa nội dung trang và kháng nghị trên tài sản cũ; nếu đổi thương hiệu thật thì cập nhật minh bạch."
+     ],
+     "avoid": [
+      "Không xoay vòng domain để né chặn, vì mỗi lần đổi là thêm một bằng chứng né thực thi và rủi ro lan sang cả hệ thống tài sản."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Account Integrity (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/business-assets/account-integrity/"
+      },
+      {
+       "title": "Spam (Community Standards: cloaking, chuyển hướng lừa, cấm mua bán tài khoản/trang)",
+       "url": "https://transparency.meta.com/policies/community-standards/spam/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-antidetect-vps",
+     "if": "Dùng VPS, proxy, trình duyệt antidetect, nhiều nick trên một máy để 'tách trust'",
+     "hat": "black",
+     "asked": [
+      "BlackHatWorld",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Reddit r/FacebookAds"
+     ],
+     "tomtat": "Nếu mục đích là che liên kết giữa các nick, BM để 'tách trust' thì không nên, đây là né thực thi. Chính sách Inauthentic Behavior cấm dùng tài sản không xác thực để lừa Meta về danh tính hoặc né thực thi, và Account Integrity cho phép Meta hạn chế các tài sản có chung chủ sở hữu bị dùng để né xử lý. Agency quản lý nhiều khách hợp lệ không cần che giấu gì: dùng cơ chế Đối tác trong Business Portfolio, mỗi người một nick thật.",
+     "visao": "Trình duyệt antidetect (trình duyệt giả lập nhiều 'máy' khác nhau), proxy, VPS được dùng để Meta không thấy các tài khoản có chung một chủ. Nhưng khi Meta vẫn liên kết được, toàn bộ cụm tài sản bị xử lý cùng lúc, nên cách này thường làm thiệt hại lớn hơn. Ngược lại, cơ chế Đối tác cho phép một agency làm việc với nhiều khách một cách minh bạch, không có gì phải che.",
+     "check": [
+      "Tự hỏi mục đích thật: để quản lý nhiều khách hợp lệ, hay để che liên kết giữa các tài sản đã bị khoá; nếu là vế sau thì đó là né thực thi."
+     ],
+     "do": [
+      "(1) Người ta dùng antidetect, proxy để Meta không liên kết các nick, BM với nhau, nhằm một cái bị khoá không kéo cái khác.",
+      "(2) Inauthentic Behavior cấm dùng tài sản không xác thực để lừa Meta về danh tính hoặc né thực thi; Account Integrity cho phép Meta hạn chế tài sản có chung chủ sở hữu bị dùng để né xử lý.",
+      "(3) Khi bị liên kết, Meta xử lý cả cụm tài sản; người làm mất toàn bộ via, BM và số dư.",
+      "(4) Cách đúng: agency quản lý nhiều khách bằng cơ chế Đối tác (partner) trong Business Portfolio, mỗi người dùng một nick thật, không cần che giấu."
+     ],
+     "avoid": [
+      "Không mua 'combo via + proxy + antidetect', vì đây là bộ công cụ né thực thi và khi bị phát hiện thì mất cả cụm tài sản."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Inauthentic Behavior (Community Standards)",
+       "url": "https://transparency.meta.com/policies/community-standards/inauthentic-behavior/"
+      },
+      {
+       "title": "Account Integrity (Advertising Standards)",
+       "url": "https://transparency.meta.com/policies/ad-standards/business-assets/account-integrity/"
+      },
+      {
+       "title": "Give a partner access to business assets in your business portfolio",
+       "url": "https://www.facebook.com/business/help/1717412048538897"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-tool-spam",
+     "if": "Tool spam comment, inbox hàng loạt, mua like, seeding ảo cho bài QC",
+     "hat": "black",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "BlackHatWorld"
+     ],
+     "tomtat": "Không nên. Mua like, comment, chia sẻ hay dùng tool spam comment, inbox, seeding ảo bị Community Standards về Spam cấm. Trang và nick bị hạn chế, tương tác ảo bị gỡ, và tín hiệu ảo còn làm học máy của Meta tối ưu sai. Cách đúng là tăng tương tác thật bằng nội dung, chạy quảng cáo đúng mục tiêu và trả lời bình luận thật.",
+     "visao": "Hệ thống quảng cáo học từ phản ứng của người xem để tìm thêm người giống họ. Nếu tương tác đến từ tài khoản ảo hoặc tool, Meta học theo nhóm 'người' không có thật, nên quảng cáo được phân phối sai người và tốn tiền hơn. Bên cạnh đó, việc mua bán tương tác và hành vi tự động tần suất cao là thứ chính sách Spam nhắm thẳng tới.",
+     "check": [
+      "Kiểm tra tương tác trên bài đến từ người thật hay từ tài khoản ảo, tool; nếu là ảo thì số liệu tương tác đang không phản ánh khách thật."
+     ],
+     "do": [
+      "(1) Người ta mua like, comment, chia sẻ hoặc dùng tool để bài trông 'uy tín' và kéo khách.",
+      "(2) Community Standards về Spam cấm mua bán tương tác, và cấm đăng bài, tương tác tự động với tần suất rất cao.",
+      "(3) Trang và nick bị hạn chế, tương tác ảo bị gỡ; tín hiệu ảo còn làm học máy tối ưu sai.",
+      "(4) Cách đúng: tăng tương tác thật bằng nội dung, chạy quảng cáo đúng mục tiêu, trả lời bình luận thật."
+     ],
+     "avoid": [
+      "Không mua tương tác, vì vừa có nguy cơ bị hạn chế trang vừa làm hệ thống phân phối quảng cáo tới sai người."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Spam (Community Standards: cloaking, chuyển hướng lừa, cấm mua bán tài khoản/trang)",
+       "url": "https://transparency.meta.com/policies/community-standards/spam/"
+      }
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "fm-g-agency",
+   "title": "Agency, freelancer, ads số, bàn giao",
+   "intro": "Tài khoản đứng tên ai, bàn giao khi kết thúc hợp đồng, phí quản lý, 'ads số', báo cáo cho khách.",
+   "nodes": [
+    {
+     "id": "fm-tk-cua-ai",
+     "if": "Agency nên tạo TKQC trong BM agency hay BM của khách?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Nên tạo trong Business Portfolio (tài khoản doanh nghiệp trên Meta, trước gọi là BM) của khách, đây là mặc định an toàn cho khách. TKQC (tài khoản quảng cáo), trang, pixel nằm trong portfolio của khách, agency được chia quyền dạng Đối tác. Nếu agency trả tiền hộ khách thì dùng tính năng chia sẻ pháp nhân (legal entity) để agency tạo TKQC với bên thanh toán phù hợp; dù cách nào cũng ghi rõ quyền sở hữu tài sản và dữ liệu trong hợp đồng.",
+     "visao": "Pixel, đối tượng tuỳ chỉnh và lịch sử tài khoản là tài sản tích luỹ nhiều tháng của khách; nằm ở portfolio nào thì portfolio đó nắm quyền. Đặt tài sản ở phía khách giúp khách yên tâm và việc bàn giao khi kết thúc hợp đồng chỉ là gỡ quyền đối tác. Chia sẻ pháp nhân giải quyết bài toán hoá đơn khi agency là bên trả tiền mà không phải chuyển tài sản về phía agency.",
+     "check": [
+      "Kiểm tra khách đã có Business Portfolio chưa; chưa có thì hướng dẫn khách tạo trước khi tạo TKQC.",
+      "Xác định ai là bên thanh toán và hoá đơn đứng tên ai, để chọn giữa chia quyền Đối tác thông thường hay chia sẻ pháp nhân thanh toán."
+     ],
+     "do": [
+      "Mặc định đặt TKQC, trang, pixel trong portfolio của khách; agency nhận quyền dạng Đối tác (partner).",
+      "Nếu agency trả tiền hộ khách, dùng chia sẻ pháp nhân thanh toán (legal entity) để agency tạo TKQC với bên thanh toán phù hợp.",
+      "Ghi rõ trong hợp đồng ai sở hữu tài sản (TKQC, trang, pixel) và dữ liệu."
+     ],
+     "avoid": [
+      "Không để dữ liệu pixel, đối tượng của khách nằm trong tài khoản agency mà không có thoả thuận bàn giao, vì khi chấm dứt hợp tác rất dễ phát sinh tranh chấp và khách mất dữ liệu đã tích luỹ."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Give a partner access to business assets in your business portfolio",
+       "url": "https://www.facebook.com/business/help/1717412048538897"
+      },
+      {
+       "title": "Share access to legal entity",
+       "url": "https://www.facebook.com/business/help/323709732376703"
+      },
+      {
+       "title": "Add an ad account to your business portfolio in Meta Business Suite",
+       "url": "https://www.facebook.com/business/help/915885887059947"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-ban-giao",
+     "if": "Kết thúc hợp đồng, bàn giao tài khoản, pixel, trang cho khách thế nào?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Cách bàn giao phụ thuộc tài sản đang nằm ở portfolio nào. Nếu tài sản ở portfolio của khách, khách chỉ cần gỡ quyền đối tác của agency. Nếu tài sản ở portfolio agency, agency chia quyền cho portfolio khách hoặc hai bên thống nhất xuất dữ liệu, còn trang có thể chuyển quyền sở hữu sang portfolio khách theo yêu cầu. Sau bàn giao, kiểm lại danh sách người dùng và đổi quyền thanh toán.",
+     "visao": "Trên Meta, quyền với tài sản đi theo Business Portfolio (tài khoản doanh nghiệp) chứ không theo người, nên bàn giao thực chất là thay đổi portfolio nào nắm quyền. Bước kiểm danh sách người dùng và quyền thanh toán là để không còn ai ở phía cũ giữ quyền truy cập hay tiếp tục bị trừ tiền sau khi hợp tác kết thúc.",
+     "check": [
+      "Xác định từng tài sản (TKQC, pixel, trang) đang nằm ở portfolio của khách hay của agency để chọn đúng cách bàn giao."
+     ],
+     "do": [
+      "Tài sản ở portfolio khách: khách gỡ quyền đối tác của agency.",
+      "Tài sản ở portfolio agency: chia quyền cho portfolio khách, hoặc thống nhất cách xuất dữ liệu; trang có thể chuyển quyền sở hữu sang portfolio khách theo yêu cầu.",
+      "Sau bàn giao, kiểm danh sách người dùng còn quyền trên tài sản và đổi quyền thanh toán sang đúng bên."
+     ],
+     "avoid": [
+      "Không giữ tài sản của khách làm 'con tin' khi tranh chấp phí, vì agency chịu rủi ro pháp lý và mất uy tín với các khách khác."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Give a partner access to business assets in your business portfolio",
+       "url": "https://www.facebook.com/business/help/1717412048538897"
+      },
+      {
+       "title": "Add people to a business portfolio and assign a business asset",
+       "url": "https://www.facebook.com/business/help/2169003770027706"
+      },
+      {
+       "title": "Best practices for making a business portfolio more secure",
+       "url": "https://www.facebook.com/business/help/608572510632070"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-ads-so",
+     "if": "'Ads số' là gì? Có nên mua gói chạy ads số / nạp tiền qua đại lý?",
+     "hat": "gray",
+     "asked": [
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam",
+      "Blog/forum Việt (Brands Vietnam, blog agency)"
+     ],
+     "tomtat": "'Ads số' trong cộng đồng Việt Nam thường chỉ việc chạy quảng cáo bằng tài khoản của đơn vị trung gian, nạp tiền theo số và tính phí %, nhưng chưa có định nghĩa chính thức. Mua gói này chỉ hợp lệ khi bên cung cấp là agency có hợp đồng, hoá đơn và nội dung quảng cáo đúng chính sách. Gói hứa 'chạy mọi ngành, không lo khoá' thì nên tránh.",
+     "visao": "Khi chạy trên tài khoản của bên trung gian, tài khoản, dữ liệu và lịch sử học máy (dữ liệu Meta đã học để phân phối quảng cáo) không thuộc về bạn. Nếu tài khoản đó bị khoá, số dư và mọi thứ đã tích luỹ phụ thuộc hoàn toàn vào bên cung cấp. Lời hứa 'không lo khoá' với mọi ngành chỉ có thể đến từ cách làm vi phạm chính sách, nên rủi ro càng cao.",
+     "check": [
+      "Kiểm tra bên bán có pháp nhân, hợp đồng, hoá đơn không; thiếu thì không có cơ sở đòi quyền lợi khi có sự cố.",
+      "Xác định tài khoản quảng cáo đứng tên ai; nếu không phải bạn thì bạn không sở hữu tài khoản và dữ liệu."
+     ],
+     "do": [
+      "(1) Người ta mua gói 'ads số', nạp tiền qua đại lý để chạy ngay, trả phí % trên số tiền nạp. Cách hiểu này là theo cộng đồng Việt Nam, chưa có nguồn chính thức và có thể khác giữa các nhóm.",
+      "(2) Hình thức này hợp lệ khi bên cung cấp là agency có hợp đồng, hoá đơn và nội dung quảng cáo đúng chính sách.",
+      "(3) Rủi ro: bạn không sở hữu tài khoản và dữ liệu; tài khoản bị khoá thì số dư và lịch sử học máy phụ thuộc bên cung cấp.",
+      "(4) Cách đúng: chọn agency có pháp nhân, hợp đồng, hoá đơn, và ưu tiên tài khoản đứng tên chính bạn."
+     ],
+     "avoid": [
+      "Không mua gói 'ads số chạy mọi ngành, không lo khoá', vì loại gói này thường đi kèm thuê tài khoản black hat, dễ mất cả tiền lẫn dữ liệu."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [],
+     "children": []
+    },
+    {
+     "id": "fm-phi-agency",
+     "if": "Phí quản lý QC Facebook thường tính thế nào (% ngân sách, cố định)?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Meta không quy định phí agency, nên không có mức 'chuẩn'; cộng đồng hay gặp 3 kiểu: % ngân sách, phí cố định theo tháng, hoặc cố định cộng thưởng theo kết quả. Việc đầu tiên là chốt phạm vi công việc (chỉ chạy quảng cáo hay cả creative, landing, báo cáo), vì phạm vi quyết định mức phí hợp lý. Mọi điều kiện cần ghi rõ trong hợp đồng.",
+     "visao": "Mỗi kiểu phí hợp với một hoàn cảnh: % ngân sách tăng theo quy mô chi tiêu, phí cố định ổn định cho cả hai bên khi khối lượng việc rõ, còn thưởng theo kết quả gắn lợi ích hai bên với nhau. Tuy nhiên kết quả cuối (lead, đơn) còn phụ thuộc sản phẩm và khâu tư vấn của khách, những thứ agency không kiểm soát được. Đây là kinh nghiệm thị trường, không phải quy định của Meta.",
+     "check": [
+      "Làm rõ phạm vi việc: chỉ chạy quảng cáo, hay cả creative, landing page, báo cáo; phạm vi càng rộng thì phí càng phải phản ánh đúng khối lượng."
+     ],
+     "do": [
+      "Chọn một trong 3 kiểu cộng đồng hay dùng: % ngân sách, phí cố định tháng, hoặc kết hợp cố định + thưởng theo kết quả (chưa có nguồn chính thức, Meta không quy định phí agency).",
+      "Ghi rõ trong hợp đồng: phạm vi công việc, ai sở hữu tài khoản, báo cáo những gì, ngưỡng ngân sách tối thiểu."
+     ],
+     "avoid": [
+      "Không cam kết số lead hoặc CPL (chi phí cho mỗi lead) cố định khi agency không kiểm soát được sản phẩm và khâu tư vấn của khách, vì dễ dẫn tới tranh chấp khi kết quả không đạt."
+     ],
+     "evidence": "kinh-nghiem",
+     "sources": [],
+     "children": []
+    },
+    {
+     "id": "fm-bao-cao-khach",
+     "if": "Khách nói số lead Meta báo cao hơn số họ nhận được",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Reddit r/FacebookAds",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Thường là do Meta và khách đang đếm hai thứ khác nhau: Meta đếm sự kiện theo cách của nó (form gửi, hội thoại...), còn khách đếm số người thật sự nhận được. Việc nên làm là báo cáo theo lead thật đã đối chiếu CRM (hệ thống quản lý khách hàng), không theo cột 'kết quả' thô. Đồng thời giải thích cửa sổ phân bổ và cách Meta đếm, dùng chỉ số lead chất lượng nếu có.",
+     "visao": "Cột 'kết quả' trong Ads Manager đếm theo sự kiện tối ưu và theo cửa sổ phân bổ (khoảng thời gian sau khi xem hoặc bấm quảng cáo mà một hành động vẫn được tính cho quảng cáo đó). Một hội thoại bắt đầu không phải là một lead, và một form gửi có thể không về được CRM nếu khâu đồng bộ lỗi. Đối chiếu với CRM giúp cả hai bên nói chung một con số.",
+     "check": [
+      "Xem Meta đang đếm sự kiện gì cho cột kết quả: form gửi, hội thoại bắt đầu, hay lead chất lượng (qualified lead).",
+      "Kiểm tra CRM của khách đã nhận đủ lead từ Meta chưa; thiếu thì có thể khâu đồng bộ đang lỗi."
+     ],
+     "do": [
+      "Báo cáo cho khách theo lead thật đã đối chiếu CRM, không dùng cột 'kết quả' thô.",
+      "Giải thích cho khách cửa sổ phân bổ và cách Meta đếm; nếu có, dùng chỉ số lead chất lượng (qualified leads)."
+     ],
+     "avoid": [
+      "Không gộp số hội thoại với số lead trong báo cáo cho khách, vì con số bị thổi phồng và khách mất niềm tin khi đối chiếu với thực tế."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "About attribution settings",
+       "url": "https://www.facebook.com/business/help/460276478298895"
+      },
+      {
+       "title": "Qualified leads metrics",
+       "url": "https://www.facebook.com/business/help/1544628789462866"
+      },
+      {
+       "title": "Messaging conversations started",
+       "url": "https://www.facebook.com/business/help/1234867544104505"
+      }
+     ],
+     "children": []
+    },
+    {
+     "id": "fm-meta-partner",
+     "if": "Làm sao để agency có hỗ trợ ưu tiên từ Meta, thành đối tác Meta?",
+     "hat": "white",
+     "asked": [
+      "Reddit r/PPC",
+      "Nhóm FB Cộng đồng Facebook Ads Việt Nam"
+     ],
+     "tomtat": "Meta có chương trình và tài nguyên riêng cho agency (Meta Success Center for Agencies), điều kiện tham gia tuỳ từng chương trình. Việc đầu tiên là xem quy mô chi tiêu và số khách agency đang quản lý có phù hợp điều kiện chương trình nào không. Trong lúc chưa đủ điều kiện, dùng kênh hỗ trợ trong Business Support Home cho từng tài khoản.",
+     "visao": "Hỗ trợ ưu tiên từ Meta gắn với các chương trình dành cho agency, mỗi chương trình có điều kiện riêng, nên không có cách 'mua' danh hiệu đối tác. Business Support Home là kênh hỗ trợ chung mà mọi tài khoản đều dùng được, phù hợp khi agency còn nhỏ.",
+     "check": [
+      "Tổng hợp quy mô chi tiêu và số khách agency đang quản lý để đối chiếu với điều kiện của từng chương trình trên Meta Success Center for Agencies."
+     ],
+     "do": [
+      "Tìm hiểu các chương trình và tài nguyên cho agency trên Meta Success Center for Agencies; điều kiện tham gia theo từng chương trình.",
+      "Trong lúc chưa đủ điều kiện, dùng kênh hỗ trợ trong Business Support Home cho từng tài khoản."
+     ],
+     "avoid": [
+      "Không tin người tự nhận là 'Meta partner' (đối tác Meta) mà không kiểm chứng được, vì bạn có thể giao tài khoản hoặc tiền cho một bên không có quan hệ gì với Meta."
+     ],
+     "evidence": "chinh-thuc",
+     "sources": [
+      {
+       "title": "Meta Success Center for Agencies",
+       "url": "https://www.facebook.com/business/agencies/about"
+      }
+     ],
+     "children": []
+    }
+   ]
+  }
+ ]
+}
